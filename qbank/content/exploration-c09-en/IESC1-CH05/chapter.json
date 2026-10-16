@@ -1,0 +1,144 @@
+{
+  "chapter_id": "IESC1-CH05",
+  "title": "Exploring Mixtures and their Separation",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "IESC1-CH05-T1",
+      "topic_number": 1,
+      "title": "Classifying mixtures: homogeneous and heterogeneous",
+      "ncert_sections": "5.1",
+      "concepts": [
+        {
+          "concept_tag": "homogeneous-mixtures",
+          "learning_objective": "Identify homogeneous mixtures (solutions) by their uniform composition."
+        },
+        {
+          "concept_tag": "heterogeneous-mixtures",
+          "learning_objective": "Recognise heterogeneous mixtures, including those with a gas as one component."
+        }
+      ]
+    },
+    {
+      "topic_id": "IESC1-CH05-T2",
+      "topic_number": 2,
+      "title": "Solutions and their concentration",
+      "ncert_sections": "5.2, 5.2.1, 5.2.2",
+      "concepts": [
+        {
+          "concept_tag": "concentration-of-solution",
+          "learning_objective": "Explain what the concentration of a solution means and why the right proportion matters."
+        },
+        {
+          "concept_tag": "percentage-concentration",
+          "learning_objective": "Calculate concentration as % m/m, % m/v and % v/v and choose the suitable form."
+        }
+      ]
+    },
+    {
+      "topic_id": "IESC1-CH05-T3",
+      "topic_number": 3,
+      "title": "Solubility and solubility curves",
+      "ncert_sections": "5.2.3",
+      "concepts": [
+        {
+          "concept_tag": "solubility-and-saturation",
+          "learning_objective": "Define solubility and a saturated solution at a given temperature."
+        },
+        {
+          "concept_tag": "temperature-and-solubility",
+          "learning_objective": "Interpret solubility data and curves to predict the effect of temperature."
+        }
+      ]
+    },
+    {
+      "topic_id": "IESC1-CH05-T4",
+      "topic_number": 4,
+      "title": "Crystallization",
+      "ncert_sections": "5.3.1",
+      "concepts": [
+        {
+          "concept_tag": "crystallization-principle",
+          "learning_objective": "Explain crystallization as separation based on change of solubility with temperature."
+        },
+        {
+          "concept_tag": "crystal-growth",
+          "learning_objective": "Relate the rate of cooling to the size and shape of crystals formed."
+        }
+      ]
+    },
+    {
+      "topic_id": "IESC1-CH05-T5",
+      "topic_number": 5,
+      "title": "Distillation and paper chromatography",
+      "ncert_sections": "5.3.2, 5.3.3",
+      "concepts": [
+        {
+          "concept_tag": "distillation",
+          "learning_objective": "Use boiling point differences to decide when simple or fractional distillation applies."
+        },
+        {
+          "concept_tag": "paper-chromatography",
+          "learning_objective": "Explain how paper chromatography separates the components of a coloured mixture."
+        }
+      ]
+    },
+    {
+      "topic_id": "IESC1-CH05-T6",
+      "topic_number": 6,
+      "title": "Immiscible liquids, sublimation and alloys",
+      "ncert_sections": "5.4.1, 5.4.2",
+      "concepts": [
+        {
+          "concept_tag": "separating-funnel",
+          "learning_objective": "Separate two immiscible liquids using a separating funnel based on density."
+        },
+        {
+          "concept_tag": "sublimation",
+          "learning_objective": "Separate a sublimable solid from a non-sublimable one by sublimation."
+        },
+        {
+          "concept_tag": "alloys",
+          "learning_objective": "Describe alloys as homogeneous mixtures whose components cannot be separated physically."
+        }
+      ]
+    },
+    {
+      "topic_id": "IESC1-CH05-T7",
+      "topic_number": 7,
+      "title": "Suspensions, centrifugation and coagulation",
+      "ncert_sections": "5.4.3",
+      "concepts": [
+        {
+          "concept_tag": "suspensions",
+          "learning_objective": "Describe the properties of suspensions."
+        },
+        {
+          "concept_tag": "centrifugation",
+          "learning_objective": "Explain how centrifugation separates heavier particles from a liquid."
+        },
+        {
+          "concept_tag": "coagulation",
+          "learning_objective": "Explain how a coagulant such as alum clears muddy water."
+        }
+      ]
+    },
+    {
+      "topic_id": "IESC1-CH05-T8",
+      "topic_number": 8,
+      "title": "Colloids and the Tyndall effect",
+      "ncert_sections": "5.4.4, 5.5",
+      "concepts": [
+        {
+          "concept_tag": "colloids",
+          "learning_objective": "Distinguish colloids from solutions and suspensions by particle size and behaviour."
+        },
+        {
+          "concept_tag": "tyndall-effect",
+          "learning_objective": "Explain the Tyndall effect and identify mixtures that show it."
+        }
+      ]
+    }
+  ]
+}

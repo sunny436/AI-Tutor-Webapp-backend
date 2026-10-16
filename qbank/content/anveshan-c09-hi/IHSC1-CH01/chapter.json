@@ -1,0 +1,112 @@
+{
+ "chapter_id": "IHSC1-CH01",
+ "title": "अन्वेषण — माध्यमिक विज्ञान के संसार में प्रवेश",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSC1-CH01-T1",
+   "topic_number": 1,
+   "title": "विज्ञान में मॉडल और सरलीकरण",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "model-aur-saralikaran",
+     "learning_objective": "समझना कि मॉडल वास्तविक प्रणाली का सरल रूप है जिसमें केवल महत्वपूर्ण विवरण रखे जाते हैं।"
+    },
+    {
+     "concept_tag": "vivaran-ki-upeksha",
+     "learning_objective": "किसी प्रश्न के लिए कौन-से विवरण आवश्यक हैं और कौन-से जानबूझकर छोड़े जा सकते हैं, यह पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH01-T2",
+   "topic_number": 2,
+   "title": "विज्ञान की भाषा: शब्द, प्रतीक और मानक मात्रक",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vaigyanik-shabd-pratik",
+     "learning_objective": "वैज्ञानिक शब्दों और प्रतीकों के विशिष्ट, सटीक अर्थ तथा उनकी अंतरराष्ट्रीय सहमति को समझना।"
+    },
+    {
+     "concept_tag": "manak-matrak",
+     "learning_objective": "मानक मात्रकों (SI) के महत्व और मात्रकों की गड़बड़ी से होने वाली त्रुटियों को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH01-T3",
+   "topic_number": 3,
+   "title": "विज्ञान में गणित की भूमिका",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "ganit-vichar-ki-bhasha",
+     "learning_objective": "समझना कि समीकरण राशियों के बीच संबंध का संक्षिप्त विवरण है, केवल परिकलन का साधन नहीं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH01-T4",
+   "topic_number": 4,
+   "title": "नियम, सिद्धांत और आधारभूत सिद्धांत",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "niyam-siddhant-antar",
+     "learning_objective": "नियम, सिद्धांत और आधारभूत सिद्धांत के वैज्ञानिक अर्थों में अंतर करना।"
+    },
+    {
+     "concept_tag": "vigyan-ki-parivartansheelta",
+     "learning_objective": "समझना कि नए प्रमाण मिलने पर वैज्ञानिक विचारों में परिवर्तन और परिष्करण होता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH01-T5",
+   "topic_number": 5,
+   "title": "पूर्वानुमान और प्रमाणों पर आधारित जाँच",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "purvanuman",
+     "learning_objective": "वैज्ञानिक पूर्वानुमान को प्रमाणों पर आधारित तर्कयुक्त अपेक्षा के रूप में समझना और परखना।"
+    },
+    {
+     "concept_tag": "dava-ki-jaanch",
+     "learning_objective": "प्रचलित दावों को मापने योग्य प्रश्नों और प्रमाणों के आधार पर जाँचना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH01-T6",
+   "topic_number": 6,
+   "title": "अनुमान आधारित आकलन",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "anumanit-aaklan",
+     "learning_objective": "सन्निकट मानों से आकलन करके यह जाँचना कि कोई उत्तर तर्कसंगत है या नहीं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH01-T7",
+   "topic_number": 7,
+   "title": "विज्ञान की शाखाओं का परस्पर संबंध",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "shakhaon-ka-sambandh",
+     "learning_objective": "समझना कि वास्तविक समस्याओं को हल करने के लिए विज्ञान की अनेक शाखाओं का ज्ञान एक साथ चाहिए।"
+    },
+    {
+     "concept_tag": "vigyan-manviya-gatividhi",
+     "learning_objective": "विज्ञान को जिज्ञासा, सहयोग और प्रश्न पूछने से विकसित होने वाली मानवीय गतिविधि के रूप में समझना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LHGY3-CH02",
+ "title": "आंकड़ों का प्रक्रमण",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHGY3-CH02-T1",
+   "topic_number": 1,
+   "title": "केंद्रीय प्रवृत्ति के माप: अर्थ और सांख्यिकीय तकनीकें",
+   "ncert_sections": "परिचय; केंद्रीय प्रवृत्ति के माप",
+   "concepts": [
+    {
+     "concept_tag": "kendriya-pravritti-arth",
+     "learning_objective": "केंद्रीय प्रवृत्ति के माप का अर्थ तथा उसे सांख्यिकीय औसत कहे जाने का कारण समझना।"
+    },
+    {
+     "concept_tag": "sankhyiki-takneek-prakar",
+     "learning_objective": "केंद्रीय प्रवृत्ति, प्रकीर्णन और संबंध के मापों के उद्देश्य में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH02-T2",
+   "topic_number": 2,
+   "title": "अवर्गीकृत आंकड़ों से माध्य का परिकलन",
+   "ncert_sections": "माध्य; अवर्गीकृत आंकड़ों से माध्य",
+   "concepts": [
+    {
+     "concept_tag": "pratyaksh-vidhi-avargikrit",
+     "learning_objective": "प्रत्यक्ष विधि से अवर्गीकृत आंकड़ों का माध्य ज्ञात करना।"
+    },
+    {
+     "concept_tag": "apratyaksh-vidhi-kootan",
+     "learning_objective": "कल्पित माध्य और कूटन द्वारा अप्रत्यक्ष विधि से माध्य ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH02-T3",
+   "topic_number": 3,
+   "title": "वर्गीकृत आंकड़ों से माध्य का परिकलन",
+   "ncert_sections": "वर्गीकृत आंकड़ों से माध्य",
+   "concepts": [
+    {
+     "concept_tag": "vargikrit-pratyaksh-madhya",
+     "learning_objective": "मध्य-बिंदुओं और बारंबारताओं से प्रत्यक्ष विधि द्वारा माध्य ज्ञात करना।"
+    },
+    {
+     "concept_tag": "vargikrit-apratyaksh-madhya",
+     "learning_objective": "कल्पित माध्य समूह की सहायता से अप्रत्यक्ष विधि द्वारा माध्य ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH02-T4",
+   "topic_number": 4,
+   "title": "माध्यिका",
+   "ncert_sections": "माध्यिका; अवर्गीकृत तथा वर्गीकृत आंकड़ों से माध्यिका",
+   "concepts": [
+    {
+     "concept_tag": "madhyika-avargikrit",
+     "learning_objective": "क्रमबद्ध श्रेणी में केंद्रीय स्थिति के मान के रूप में माध्यिका ज्ञात करना।"
+    },
+    {
+     "concept_tag": "madhyika-vargikrit",
+     "learning_objective": "संचयी बारंबारता और सूत्र से वर्गीकृत आंकड़ों की माध्यिका ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH02-T5",
+   "topic_number": 5,
+   "title": "बहुलक",
+   "ncert_sections": "बहुलक; अवर्गीकृत आंकड़ों से बहुलक",
+   "concepts": [
+    {
+     "concept_tag": "bahulak-arth",
+     "learning_objective": "बहुलक को सर्वाधिक बारंबारता वाले मान के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "bahulak-prakar",
+     "learning_objective": "श्रेणी को एकबहुलकी, द्विबहुलकी, त्रिबहुलकी या बहुलक-रहित के रूप में वर्गीकृत करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH02-T6",
+   "topic_number": 6,
+   "title": "माध्य, माध्यिका और बहुलक की तुलना",
+   "ncert_sections": "माध्य, माध्यिका और बहुलक की तुलना; सामान्य वितरण वक्र; विषमता",
+   "concepts": [
+    {
+     "concept_tag": "samanya-vitaran-vakra",
+     "learning_objective": "सामान्य वितरण वक्र में तीनों मापों की स्थिति समझना।"
+    },
+    {
+     "concept_tag": "vishamta-tulna",
+     "learning_objective": "विषम वितरण और चरम मानों के संदर्भ में तीनों मापों की उपयुक्तता का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

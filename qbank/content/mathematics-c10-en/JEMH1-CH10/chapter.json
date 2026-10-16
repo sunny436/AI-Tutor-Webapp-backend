@@ -1,0 +1,112 @@
+{
+ "chapter_id": "JEMH1-CH10",
+ "title": "Circles",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH10-T1",
+   "topic_number": 1,
+   "title": "A circle and a line in a plane",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "line-circle-positions",
+     "learning_objective": "Classify a line as non-intersecting, secant or tangent by the number of points it shares with a circle."
+    },
+    {
+     "concept_tag": "secant-and-tangent-meaning",
+     "learning_objective": "State the meaning of a secant and a tangent to a circle and recognise them in real situations."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH10-T2",
+   "topic_number": 2,
+   "title": "Tangent to a circle and its existence",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "tangent-meaning",
+     "learning_objective": "Describe a tangent, its point of contact and how many tangents a circle can have."
+    },
+    {
+     "concept_tag": "tangent-as-limiting-secant",
+     "learning_objective": "Explain a tangent as the limiting position of a secant when the two ends of its chord coincide."
+    },
+    {
+     "concept_tag": "parallel-tangents",
+     "learning_objective": "Reason that at most two tangents to a circle can be parallel to a given secant or line."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH10-T3",
+   "topic_number": 3,
+   "title": "Tangent perpendicular to the radius (Theorem 10.1)",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "tangent-perpendicular-to-radius",
+     "learning_objective": "Use the fact that the tangent at a point of a circle is perpendicular to the radius through the point of contact."
+    },
+    {
+     "concept_tag": "tangent-length-by-pythagoras",
+     "learning_objective": "Calculate lengths in the right triangle formed by a radius, a tangent and the line joining the centre to an external point."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH10-T4",
+   "topic_number": 4,
+   "title": "Number of tangents from a point and length of a tangent",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "tangents-from-point-by-position",
+     "learning_objective": "State how many tangents pass through a point inside, on or outside a circle."
+    },
+    {
+     "concept_tag": "length-of-tangent",
+     "learning_objective": "Define and calculate the length of the tangent from an external point to a circle."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH10-T5",
+   "topic_number": 5,
+   "title": "Equal tangents from an external point (Theorem 10.2)",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "equal-tangent-lengths",
+     "learning_objective": "Prove and use the fact that the two tangents from an external point to a circle are equal in length."
+    },
+    {
+     "concept_tag": "angle-between-tangents",
+     "learning_objective": "Find angles formed by two tangents from an external point, the radii and the chord of contact."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH10-T6",
+   "topic_number": 6,
+   "title": "Applications: concentric circles and circumscribed figures",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "concentric-circles-chord",
+     "learning_objective": "Find the chord of the larger of two concentric circles that touches the smaller circle."
+    },
+    {
+     "concept_tag": "circumscribed-quadrilateral",
+     "learning_objective": "Use equal tangents to relate the sides of a quadrilateral circumscribing a circle."
+    },
+    {
+     "concept_tag": "circumscribed-triangle",
+     "learning_objective": "Find the sides of a triangle circumscribing a circle using equal tangent lengths and areas."
+    }
+   ]
+  }
+ ]
+}

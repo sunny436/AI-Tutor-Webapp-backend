@@ -1,0 +1,144 @@
+{
+ "chapter_id": "KEPH1-CH06",
+ "title": "Systems of Particles and Rotational Motion",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPH1-CH06-T1",
+   "topic_number": 1,
+   "title": "Rigid bodies and the centre of mass",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "rigid-body-motion",
+     "learning_objective": "Distinguish pure translation from rotation and identify the motion possible for a rigid body fixed along a line."
+    },
+    {
+     "concept_tag": "centre-of-mass-location",
+     "learning_objective": "Locate the centre of mass of a system of particles and of symmetric bodies."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH06-T2",
+   "topic_number": 2,
+   "title": "Motion of the centre of mass and linear momentum of a system",
+   "ncert_sections": "6.3, 6.4",
+   "concepts": [
+    {
+     "concept_tag": "motion-of-centre-of-mass",
+     "learning_objective": "Explain that the centre of mass moves as if all mass were concentrated there and all external forces acted on it."
+    },
+    {
+     "concept_tag": "linear-momentum-of-system",
+     "learning_objective": "Relate the total linear momentum of a system to its mass and the velocity of its centre of mass."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH06-T3",
+   "topic_number": 3,
+   "title": "Vector product of two vectors",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "vector-product-properties",
+     "learning_objective": "State the magnitude, direction and properties of the vector product."
+    },
+    {
+     "concept_tag": "vector-product-components",
+     "learning_objective": "Evaluate vector products using unit vectors and use them to find areas."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH06-T4",
+   "topic_number": 4,
+   "title": "Angular velocity, torque and angular momentum",
+   "ncert_sections": "6.6, 6.7",
+   "concepts": [
+    {
+     "concept_tag": "angular-velocity-relation",
+     "learning_objective": "Use v = omega x r to relate linear and angular velocity."
+    },
+    {
+     "concept_tag": "torque-moment-of-force",
+     "learning_objective": "Calculate torque as the moment of a force, r x F."
+    },
+    {
+     "concept_tag": "angular-momentum-of-particle",
+     "learning_objective": "Define the angular momentum of a particle and relate its rate of change to torque."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH06-T5",
+   "topic_number": 5,
+   "title": "Equilibrium of a rigid body",
+   "ncert_sections": "6.8",
+   "concepts": [
+    {
+     "concept_tag": "conditions-of-equilibrium",
+     "learning_objective": "State the conditions for translational and rotational equilibrium and the effect of a couple."
+    },
+    {
+     "concept_tag": "principle-of-moments",
+     "learning_objective": "Apply the principle of moments to levers and balanced rods."
+    },
+    {
+     "concept_tag": "centre-of-gravity",
+     "learning_objective": "Explain when the centre of gravity coincides with the centre of mass."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH06-T6",
+   "topic_number": 6,
+   "title": "Moment of inertia",
+   "ncert_sections": "6.9",
+   "concepts": [
+    {
+     "concept_tag": "moment-of-inertia",
+     "learning_objective": "Define moment of inertia and identify the factors on which it depends."
+    },
+    {
+     "concept_tag": "radius-of-gyration",
+     "learning_objective": "Define and calculate the radius of gyration of a body."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH06-T7",
+   "topic_number": 7,
+   "title": "Kinematics and dynamics of rotational motion about a fixed axis",
+   "ncert_sections": "6.10, 6.11",
+   "concepts": [
+    {
+     "concept_tag": "rotational-kinematics",
+     "learning_objective": "Use the equations of uniformly accelerated rotational motion."
+    },
+    {
+     "concept_tag": "torque-angular-acceleration",
+     "learning_objective": "Apply tau = I alpha to bodies rotating about a fixed axis."
+    },
+    {
+     "concept_tag": "rotational-work-power",
+     "learning_objective": "Calculate work and power in rotational motion."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH06-T8",
+   "topic_number": 8,
+   "title": "Angular momentum for rotation about a fixed axis",
+   "ncert_sections": "6.12",
+   "concepts": [
+    {
+     "concept_tag": "conservation-of-angular-momentum",
+     "learning_objective": "Apply conservation of angular momentum, I omega = constant, when external torque is zero."
+    }
+   ]
+  }
+ ]
+}

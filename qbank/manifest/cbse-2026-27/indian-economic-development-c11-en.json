@@ -1,0 +1,1033 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "indian-economic-development-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "economics",
+  "language": "english",
+  "title": "Indian Economic Development",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "keec1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEEC1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Indian Economy on the Eve of Independence",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keec101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEEC1-CH01-T1",
+     "topic_number": 1,
+     "title": "Colonial rule and the low level of economic development",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "colonial-economic-policy",
+       "learning_objective": "Explain how colonial economic policy turned India into a supplier of raw materials and a consumer of British finished goods."
+      },
+      {
+       "concept_tag": "national-income-estimates",
+       "learning_objective": "Identify the estimators of national and per capita income in the colonial period and the growth rates they found."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH01-T2",
+     "topic_number": 2,
+     "title": "Agricultural sector under colonial rule",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "agricultural-stagnation",
+       "learning_objective": "Explain the causes of agricultural stagnation and low productivity under British rule."
+      },
+      {
+       "concept_tag": "zamindari-system",
+       "learning_objective": "Analyse how the zamindari system and its revenue terms harmed cultivators."
+      },
+      {
+       "concept_tag": "commercialisation-of-agriculture",
+       "learning_objective": "Evaluate why commercialisation of agriculture did little to improve farmers' condition."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH01-T3",
+     "topic_number": 3,
+     "title": "Industrial sector and de-industrialisation",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "de-industrialisation",
+       "learning_objective": "State the two-fold motive behind the systematic de-industrialisation of India."
+      },
+      {
+       "concept_tag": "modern-industry-growth",
+       "learning_objective": "Describe the slow growth of modern industry and the absence of a capital goods industry before independence."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH01-T4",
+     "topic_number": 4,
+     "title": "Foreign trade and the drain of wealth",
+     "ncert_sections": "1.5",
+     "concepts": [
+      {
+       "concept_tag": "composition-direction-of-trade",
+       "learning_objective": "Describe the composition and direction of India's foreign trade under colonial rule."
+      },
+      {
+       "concept_tag": "export-surplus-drain",
+       "learning_objective": "Explain why India's export surplus led to the drain of Indian wealth."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH01-T5",
+     "topic_number": 5,
+     "title": "Demographic condition",
+     "ncert_sections": "1.6",
+     "concepts": [
+      {
+       "concept_tag": "census-demographic-transition",
+       "learning_objective": "Recall the first census and the stages of demographic transition in British India."
+      },
+      {
+       "concept_tag": "social-indicators",
+       "learning_objective": "Interpret the literacy, mortality and life-expectancy figures of the colonial period."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH01-T6",
+     "topic_number": 6,
+     "title": "Occupational structure",
+     "ncert_sections": "1.7",
+     "concepts": [
+      {
+       "concept_tag": "sectoral-workforce-share",
+       "learning_objective": "State the shares of the workforce in agriculture, manufacturing and services before independence."
+      },
+      {
+       "concept_tag": "regional-variation",
+       "learning_objective": "Analyse the regional variation in occupational structure across presidencies and states."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH01-T7",
+     "topic_number": 7,
+     "title": "Infrastructure and the state of the economy at independence",
+     "ncert_sections": "1.8, 1.9",
+     "concepts": [
+      {
+       "concept_tag": "colonial-infrastructure",
+       "learning_objective": "Explain the real motives behind colonial development of roads, railways, waterways and communications."
+      },
+      {
+       "concept_tag": "challenges-at-independence",
+       "learning_objective": "Summarise the economic challenges facing India at independence."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEEC1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "INDIAN ECONOMY 1950-1990",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keec102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEEC1-CH02-T1",
+     "topic_number": 1,
+     "title": "Economic Systems and the Beginning of Planning",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "types-of-economic-systems",
+       "learning_objective": "Distinguish how capitalist, socialist and mixed economies answer what, how and for whom to produce."
+      },
+      {
+       "concept_tag": "planning-in-india",
+       "learning_objective": "Describe India's choice of a mixed economy, the Planning Commission and Mahalanobis's role in planning."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH02-T2",
+     "topic_number": 2,
+     "title": "The Goals of Five Year Plans",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "growth-and-modernisation",
+       "learning_objective": "Explain growth and modernisation as goals of planning."
+      },
+      {
+       "concept_tag": "self-reliance-and-equity",
+       "learning_objective": "Explain self-reliance and equity as goals of planning and possible conflicts among goals."
+      },
+      {
+       "concept_tag": "structural-change-service-sector",
+       "learning_objective": "Interpret India's peculiar structural change with a large service sector by 1990."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH02-T3",
+     "topic_number": 3,
+     "title": "Agriculture: Land Reforms",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "abolition-of-intermediaries",
+       "learning_objective": "Explain the abolition of intermediaries and the incentive effect of land to the tiller."
+      },
+      {
+       "concept_tag": "land-ceiling",
+       "learning_objective": "Explain land ceiling legislation and why land reforms had limited success."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH02-T4",
+     "topic_number": 4,
+     "title": "Agriculture: Green Revolution and Subsidies",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "green-revolution-hyv",
+       "learning_objective": "Describe the green revolution, its phases, requirements and risks."
+      },
+      {
+       "concept_tag": "marketed-surplus",
+       "learning_objective": "Explain marketed surplus and its effect on food prices and procurement."
+      },
+      {
+       "concept_tag": "agricultural-subsidies-debate",
+       "learning_objective": "Evaluate the arguments for and against agricultural subsidies."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH02-T5",
+     "topic_number": 5,
+     "title": "Industrial Development: Public Sector, IPR 1956 and Small-Scale Industry",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "public-sector-role",
+       "learning_objective": "Explain why the state took a leading role in industrial development."
+      },
+      {
+       "concept_tag": "ipr-1956-licensing",
+       "learning_objective": "Describe the three categories of IPR 1956 and the industrial licensing system."
+      },
+      {
+       "concept_tag": "small-scale-industry",
+       "learning_objective": "Explain the definition and protection of small-scale industries."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH02-T6",
+     "topic_number": 6,
+     "title": "Trade Policy and the Effects of Policies (1950-1990)",
+     "ncert_sections": "2.5, 2.6",
+     "concepts": [
+      {
+       "concept_tag": "import-substitution",
+       "learning_objective": "Explain import substitution and protection through tariffs and quotas."
+      },
+      {
+       "concept_tag": "evaluation-of-policies",
+       "learning_objective": "Evaluate the achievements and shortcomings of industrial and trade policies during 1950-1990."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEEC1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "LIBERALISATION, PRIVATISATION AND GLOBALISATION: AN APPRAISAL",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keec103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEEC1-CH03-T1",
+     "topic_number": 1,
+     "title": "Background of the 1991 Crisis and the New Economic Policy",
+     "ncert_sections": "3.1, 3.2",
+     "concepts": [
+      {
+       "concept_tag": "balance-of-payments-crisis-1991",
+       "learning_objective": "Explain the fiscal and external causes of India's 1991 economic crisis."
+      },
+      {
+       "concept_tag": "stabilisation-vs-structural-reforms",
+       "learning_objective": "Distinguish between short-term stabilisation measures and long-term structural reform measures of the NEP."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH03-T2",
+     "topic_number": 2,
+     "title": "Liberalisation",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "industrial-deregulation",
+       "learning_objective": "Describe how industrial licensing, reservation and price controls were relaxed after 1991."
+      },
+      {
+       "concept_tag": "financial-and-tax-reforms",
+       "learning_objective": "Explain the changes in the role of the RBI and in direct and indirect taxes under the reforms."
+      },
+      {
+       "concept_tag": "foreign-exchange-and-trade-reforms",
+       "learning_objective": "Explain rupee devaluation and the removal of quantitative restrictions and tariffs in trade policy."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH03-T3",
+     "topic_number": 3,
+     "title": "Privatisation",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "disinvestment",
+       "learning_objective": "Define privatisation and disinvestment and state the government's reasons for them."
+      },
+      {
+       "concept_tag": "maharatna-navratna-miniratna",
+       "learning_objective": "Explain why selected PSEs were given maharatna, navratna and miniratna status."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH03-T4",
+     "topic_number": 4,
+     "title": "Globalisation",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "outsourcing",
+       "learning_objective": "Explain outsourcing as an outcome of globalisation and why India became an outsourcing destination."
+      },
+      {
+       "concept_tag": "world-trade-organisation",
+       "learning_objective": "Describe the origin, aims and India's role in the World Trade Organisation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH03-T5",
+     "topic_number": 5,
+     "title": "Indian Economy during Reforms: An Assessment",
+     "ncert_sections": "3.6, 3.7",
+     "concepts": [
+      {
+       "concept_tag": "growth-and-external-sector-outcomes",
+       "learning_objective": "Interpret post-reform trends in GDP growth, foreign investment and foreign exchange reserves."
+      },
+      {
+       "concept_tag": "criticism-of-reforms",
+       "learning_objective": "Evaluate the criticisms of reforms relating to agriculture, industry, disinvestment and fiscal policy."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEEC1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "HUMAN CAPITAL FORMATION IN INDIA",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keec104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEEC1-CH04-T1",
+     "topic_number": 1,
+     "title": "Meaning of Human Capital",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "human-resource-to-human-capital",
+       "learning_objective": "Explain how human resources are turned into human capital through investment."
+      },
+      {
+       "concept_tag": "benefits-of-education",
+       "learning_objective": "Identify the economic and non-economic benefits that make people seek education."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH04-T2",
+     "topic_number": 2,
+     "title": "Sources of Human Capital",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "education-and-health-investment",
+       "learning_objective": "Explain why spending on education and health is a source of human capital formation."
+      },
+      {
+       "concept_tag": "on-the-job-training",
+       "learning_objective": "Explain why firms invest in on-the-job training and expect workers to stay afterwards."
+      },
+      {
+       "concept_tag": "migration-and-information",
+       "learning_objective": "Explain how expenditure on migration and on market information forms human capital."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH04-T3",
+     "topic_number": 3,
+     "title": "Physical Capital and Human Capital",
+     "ncert_sections": "Box 4.1",
+     "concepts": [
+      {
+       "concept_tag": "tangibility-and-separability",
+       "learning_objective": "Distinguish physical and human capital in terms of tangibility, separability and mobility."
+      },
+      {
+       "concept_tag": "depreciation-and-external-benefits",
+       "learning_objective": "Compare the depreciation and the private and social benefits of the two forms of capital."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH04-T4",
+     "topic_number": 4,
+     "title": "Human Capital and Economic Growth",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "productivity-and-innovation",
+       "learning_objective": "Explain how human capital raises labour productivity and the ability to absorb new technology."
+      },
+      {
+       "concept_tag": "two-way-causality",
+       "learning_objective": "Evaluate the evidence on the link between human capital and economic growth, including two-way causality."
+      },
+      {
+       "concept_tag": "growth-indicators-table",
+       "learning_objective": "Interpret the indicators of education, health and income in Table 4.1."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH04-T5",
+     "topic_number": 5,
+     "title": "Human Capital and Human Development",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "means-versus-end",
+       "learning_objective": "Distinguish human capital (people as a means) from human development (people as ends in themselves)."
+      },
+      {
+       "concept_tag": "knowledge-economy",
+       "learning_objective": "Discuss whether IT-based services can make India a knowledge economy and lead to human development."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH04-T6",
+     "topic_number": 6,
+     "title": "Need for Government Intervention",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "case-for-intervention",
+       "learning_objective": "Explain why government must intervene in the education and health service markets."
+      },
+      {
+       "concept_tag": "regulatory-organisations",
+       "learning_objective": "Identify the organisations that facilitate institutions in the education and health sectors."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH04-T7",
+     "topic_number": 7,
+     "title": "Education Sector in India",
+     "ncert_sections": "4.6",
+     "concepts": [
+      {
+       "concept_tag": "education-expenditure-measures",
+       "learning_objective": "Interpret education expenditure as a share of total government expenditure and of GDP."
+      },
+      {
+       "concept_tag": "commissions-and-policy",
+       "learning_objective": "Recall the recommendations, acts and cess aimed at expanding education in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH04-T8",
+     "topic_number": 8,
+     "title": "Future Prospects",
+     "ncert_sections": "4.7, 4.8",
+     "concepts": [
+      {
+       "concept_tag": "education-for-all",
+       "learning_objective": "Assess why education for all remains a distant goal in India."
+      },
+      {
+       "concept_tag": "gender-equity-in-education",
+       "learning_objective": "Explain the need to promote women's education in India using literacy data."
+      },
+      {
+       "concept_tag": "higher-education-and-unemployment",
+       "learning_objective": "Analyse the steep education pyramid and unemployment among educated youth."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEEC1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Rural Development",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keec105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEEC1-CH05-T1",
+     "topic_number": 1,
+     "title": "Meaning and need of rural development",
+     "ncert_sections": "5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "rural-development-meaning",
+       "learning_objective": "Explain what rural development covers and the key areas needing fresh initiatives."
+      },
+      {
+       "concept_tag": "rural-agriculture-slowdown",
+       "learning_objective": "Explain why agricultural growth slowed after 1991 and how it affects rural development."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH05-T2",
+     "topic_number": 2,
+     "title": "Rural credit and the banking system",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "rural-credit-institutions",
+       "learning_objective": "Identify the multi-agency institutions of rural credit and the role of NABARD."
+      },
+      {
+       "concept_tag": "self-help-groups-microcredit",
+       "learning_objective": "Explain how SHGs and micro-credit fill gaps in formal rural credit."
+      },
+      {
+       "concept_tag": "rural-banking-appraisal",
+       "learning_objective": "Evaluate the achievements and weaknesses of rural banking, including Jan-Dhan Yojana."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH05-T3",
+     "topic_number": 3,
+     "title": "Agricultural market system",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "government-marketing-measures",
+       "learning_objective": "Describe the four government measures to improve agricultural marketing."
+      },
+      {
+       "concept_tag": "alternate-marketing-channels",
+       "learning_objective": "Identify emerging alternate marketing channels and assess contract farming."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH05-T4",
+     "topic_number": 4,
+     "title": "Diversification and animal husbandry",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "need-for-diversification",
+       "learning_objective": "Explain the two aspects of diversification and why it is needed."
+      },
+      {
+       "concept_tag": "non-farm-sector",
+       "learning_objective": "Distinguish dynamic non-farm sub-sectors from those lacking infrastructure."
+      },
+      {
+       "concept_tag": "animal-husbandry-dairy",
+       "learning_objective": "Describe the role of livestock and Operation Flood in rural livelihoods."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH05-T5",
+     "topic_number": 5,
+     "title": "Fisheries, horticulture and IT as livelihood options",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "fisheries-sector",
+       "learning_objective": "Describe the structure and problems of the Indian fisheries sector."
+      },
+      {
+       "concept_tag": "horticulture-sector",
+       "learning_objective": "Explain the contribution of horticulture to output, employment and livelihoods."
+      },
+      {
+       "concept_tag": "it-in-rural-development",
+       "learning_objective": "Assess the role of information technology in rural development and food security."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH05-T6",
+     "topic_number": 6,
+     "title": "Sustainable development and organic farming",
+     "ncert_sections": "5.6, 5.7",
+     "concepts": [
+      {
+       "concept_tag": "organic-farming-benefits",
+       "learning_objective": "Explain the meaning and benefits of organic farming for sustainable development."
+      },
+      {
+       "concept_tag": "organic-farming-limitations",
+       "learning_objective": "Evaluate the challenges in popularising organic farming in India."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEEC1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Employment: Growth, Informalisation and Other Issues",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keec106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEEC1-CH06-T1",
+     "topic_number": 1,
+     "title": "Workers, Economic Activity and Employment",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "economic-activity-gnp",
+       "learning_objective": "Explain economic activities as those activities that contribute to the gross national product."
+      },
+      {
+       "concept_tag": "definition-of-worker",
+       "learning_objective": "Identify who counts as a worker, including the self-employed, helpers and those temporarily absent from work."
+      },
+      {
+       "concept_tag": "unpaid-work-of-women",
+       "learning_objective": "Evaluate why unpaid household and farm work of women leads to under-estimation of women workers."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH06-T2",
+     "topic_number": 2,
+     "title": "Participation of People in Employment",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "worker-population-ratio",
+       "learning_objective": "Define and calculate the worker-population ratio."
+      },
+      {
+       "concept_tag": "rural-urban-gender-participation",
+       "learning_objective": "Interpret differences in worker-population ratio between rural and urban areas and between men and women."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH06-T3",
+     "topic_number": 3,
+     "title": "Self-employed and Hired Workers",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "status-of-workers",
+       "learning_objective": "Distinguish self-employed workers, casual wage labourers and regular salaried employees."
+      },
+      {
+       "concept_tag": "employment-status-distribution",
+       "learning_objective": "Interpret the distribution of workers by status across gender and region."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH06-T4",
+     "topic_number": 4,
+     "title": "Employment in Firms, Factories and Offices",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "sectors-of-economy",
+       "learning_objective": "Classify the eight industrial divisions into the primary, secondary and service sectors."
+      },
+      {
+       "concept_tag": "sectoral-distribution-of-workforce",
+       "learning_objective": "Interpret the distribution of the workforce across sectors by region and sex."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH06-T5",
+     "topic_number": 5,
+     "title": "Growth and Changing Structure of Employment",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "jobless-growth",
+       "learning_objective": "Explain jobless growth as a widening gap between GDP growth and employment growth."
+      },
+      {
+       "concept_tag": "structural-shift-of-workforce",
+       "learning_objective": "Analyse the shift of the workforce from farm to non-farm work over five decades."
+      },
+      {
+       "concept_tag": "casualisation",
+       "learning_objective": "Explain casualisation of the workforce and why it makes workers vulnerable."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH06-T6",
+     "topic_number": 6,
+     "title": "Informalisation of Indian Workforce",
+     "ncert_sections": "6.7",
+     "concepts": [
+      {
+       "concept_tag": "formal-informal-sector",
+       "learning_objective": "Classify establishments and workers into the formal and informal sectors."
+      },
+      {
+       "concept_tag": "features-of-informal-sector",
+       "learning_objective": "Describe the conditions of informal sector workers and the effects of informalisation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH06-T7",
+     "topic_number": 7,
+     "title": "Unemployment and Government Employment Generation",
+     "ncert_sections": "6.8, 6.9, 6.10",
+     "concepts": [
+      {
+       "concept_tag": "types-of-unemployment",
+       "learning_objective": "Distinguish open, disguised and seasonal unemployment."
+      },
+      {
+       "concept_tag": "measuring-unemployment",
+       "learning_objective": "Identify how unemployment is defined and the sources of unemployment data in India."
+      },
+      {
+       "concept_tag": "government-employment-generation",
+       "learning_objective": "Distinguish direct and indirect employment generation by the government, including MGNREGA."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEEC1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Environment and Sustainable Development",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keec107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEEC1-CH07-T1",
+     "topic_number": 1,
+     "title": "Environment: meaning and functions",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "environment-meaning",
+       "learning_objective": "Define environment and distinguish its biotic and abiotic elements."
+      },
+      {
+       "concept_tag": "functions-of-environment",
+       "learning_objective": "Identify the four functions of the environment and the types of resources it supplies."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH07-T2",
+     "topic_number": 2,
+     "title": "Environmental crisis and global issues",
+     "ncert_sections": "7.2 (Boxes 7.1, 7.2)",
+     "concepts": [
+      {
+       "concept_tag": "reversal-of-supply-demand",
+       "learning_objective": "Explain why environmental problems have become critical through the reversal of the supply-demand relationship."
+      },
+      {
+       "concept_tag": "global-warming-ozone-depletion",
+       "learning_objective": "Describe the causes and effects of global warming and ozone depletion and the related international agreements."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH07-T3",
+     "topic_number": 3,
+     "title": "State of India's environment: resources and land degradation",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "india-natural-resources",
+       "learning_objective": "Identify India's major natural resource endowments and its priority environmental issues."
+      },
+      {
+       "concept_tag": "land-degradation",
+       "learning_objective": "Explain the causes and extent of land degradation in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH07-T4",
+     "topic_number": 4,
+     "title": "Pollution in India and pollution control",
+     "ncert_sections": "7.3 (Boxes 7.3, 7.4)",
+     "concepts": [
+      {
+       "concept_tag": "air-pollution-india",
+       "learning_objective": "Explain the sources of air pollution in India, especially vehicular emissions."
+      },
+      {
+       "concept_tag": "pollution-control-boards",
+       "learning_objective": "Describe the role of the pollution control boards and people's movements such as Appiko."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH07-T5",
+     "topic_number": 5,
+     "title": "Sustainable development",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-sustainable-development",
+       "learning_objective": "State the UNCED/Brundtland definition of sustainable development and its key phrases."
+      },
+      {
+       "concept_tag": "herman-daly-conditions",
+       "learning_objective": "Apply Herman Daly's conditions for achieving sustainable development."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH07-T6",
+     "topic_number": 6,
+     "title": "Strategies: cleaner sources of energy",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "non-conventional-energy",
+       "learning_objective": "Explain the environmental advantages of wind, solar and mini-hydel power over thermal and hydro power."
+      },
+      {
+       "concept_tag": "clean-fuels",
+       "learning_objective": "Explain how LPG, gobar gas and CNG reduce pollution in rural and urban areas."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH07-T7",
+     "topic_number": 7,
+     "title": "Strategies: traditional knowledge, biocomposting and biopest control",
+     "ncert_sections": "7.5, 7.6",
+     "concepts": [
+      {
+       "concept_tag": "traditional-knowledge",
+       "learning_objective": "Explain the value of traditional knowledge and practices such as indigenous healthcare for sustainability."
+      },
+      {
+       "concept_tag": "biocomposting-biopest-control",
+       "learning_objective": "Explain how biocomposting and biopest control reduce the harm caused by agro-chemicals."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEEC1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Comparative Development Experiences of India and Its Neighbours",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keec108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEEC1-CH08-T1",
+     "topic_number": 1,
+     "title": "Introduction: why compare with neighbours",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "regional-economic-groupings",
+       "learning_objective": "Explain why nations form regional and global economic groupings."
+      },
+      {
+       "concept_tag": "need-to-compare-neighbours",
+       "learning_objective": "Explain why developing countries study the development strategies of their neighbours."
+      },
+      {
+       "concept_tag": "political-systems-contrast",
+       "learning_objective": "Contrast the political set-ups of India, Pakistan and China."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH08-T2",
+     "topic_number": 2,
+     "title": "Developmental path: a snapshot view",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "planning-timeline",
+       "learning_objective": "Recall when India, Pakistan and China began planned development."
+      },
+      {
+       "concept_tag": "china-glf-and-reforms",
+       "learning_objective": "Describe China's Great Leap Forward, communes and the 1978 reforms."
+      },
+      {
+       "concept_tag": "pakistan-policy-shifts",
+       "learning_objective": "Trace the sequence of Pakistan's economic policies."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH08-T3",
+     "topic_number": 3,
+     "title": "Demographic indicators",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "population-and-density",
+       "learning_objective": "Compare population size and density of the three countries."
+      },
+      {
+       "concept_tag": "one-child-norm",
+       "learning_objective": "Explain the one-child norm and its implications for China."
+      },
+      {
+       "concept_tag": "sex-ratio-fertility-urbanisation",
+       "learning_objective": "Interpret sex ratio, fertility and urbanisation data for the three countries."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH08-T4",
+     "topic_number": 4,
+     "title": "Gross domestic product and sectors",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "gdp-comparison",
+       "learning_objective": "Compare GDP size and growth rates of India, China and Pakistan."
+      },
+      {
+       "concept_tag": "sectoral-shares",
+       "learning_objective": "Interpret the sectoral shares of GVA and workforce in the three countries."
+      },
+      {
+       "concept_tag": "structural-change-pattern",
+       "learning_objective": "Distinguish China's classical pattern of structural change from that of India and Pakistan."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH08-T5",
+     "topic_number": 5,
+     "title": "Indicators of human development",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "hdi-comparison",
+       "learning_objective": "Compare India, China and Pakistan on selected human development indicators."
+      },
+      {
+       "concept_tag": "liberty-indicators",
+       "learning_objective": "Explain the meaning and importance of liberty indicators."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEEC1-CH08-T6",
+     "topic_number": 6,
+     "title": "Development strategies: an appraisal and conclusion",
+     "ncert_sections": "8.6, 8.7",
+     "concepts": [
+      {
+       "concept_tag": "reform-years",
+       "learning_objective": "Recall when and why reforms were introduced in the three countries."
+      },
+      {
+       "concept_tag": "china-success-factors",
+       "learning_objective": "Evaluate the factors behind China's rapid growth and human development."
+      },
+      {
+       "concept_tag": "pakistan-slowdown",
+       "learning_objective": "Analyse the reasons for Pakistan's slowdown and re-emergence of poverty."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

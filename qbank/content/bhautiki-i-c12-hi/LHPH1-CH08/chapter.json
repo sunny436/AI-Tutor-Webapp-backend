@@ -1,0 +1,116 @@
+{
+ "chapter_id": "LHPH1-CH08",
+ "title": "वैद्युतचुंबकीय तरंगें",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHPH1-CH08-T1",
+   "topic_number": 1,
+   "title": "विस्थापन धारा",
+   "ncert_sections": "8.1, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "vistapan-dhara",
+     "learning_objective": "समय के साथ परिवर्तित विद्युत फ्लक्स से उत्पन्न विस्थापन धारा को परिभाषित करना और उसकी गणना करना।"
+    },
+    {
+     "concept_tag": "ampere-maxwell-niyam",
+     "learning_objective": "ऐम्पियर के परिपथीय नियम की असंगति और मैक्सवेल द्वारा उसके संशोधन को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH08-T2",
+   "topic_number": 2,
+   "title": "वैद्युतचुंबकीय तरंगों के स्रोत",
+   "ncert_sections": "8.3.1",
+   "concepts": [
+    {
+     "concept_tag": "tvarit-avesh-vikiran",
+     "learning_objective": "यह समझना कि केवल त्वरित आवेश ही वैद्युतचुंबकीय तरंगें विकिरित करते हैं।"
+    },
+    {
+     "concept_tag": "hertz-bose-marconi",
+     "learning_objective": "हर्ट्ज़, जगदीश चंद्र बोस और मार्कोनी के प्रयोगों का महत्व पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH08-T3",
+   "topic_number": 3,
+   "title": "वैद्युतचुंबकीय तरंगों की प्रकृति",
+   "ncert_sections": "8.3.2",
+   "concepts": [
+    {
+     "concept_tag": "anuprasth-prakriti",
+     "learning_objective": "विद्युत क्षेत्र, चुंबकीय क्षेत्र और संचरण दिशा के परस्पर लंबवत होने को समझना।"
+    },
+    {
+     "concept_tag": "tarang-chal-sambandh",
+     "learning_objective": "c = 1/√(μ0ε0), νλ = c और B0 = E0/c संबंधों का उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH08-T4",
+   "topic_number": 4,
+   "title": "वैद्युतचुंबकीय स्पेक्ट्रम: रेडियो तरंगें और सूक्ष्म तरंगें",
+   "ncert_sections": "8.4, 8.4.1, 8.4.2",
+   "concepts": [
+    {
+     "concept_tag": "spectrum-vargikaran",
+     "learning_objective": "वैद्युतचुंबकीय स्पेक्ट्रम के आवृत्ति के अनुसार वर्गीकरण और उसकी अतीक्ष्ण सीमाओं को समझना।"
+    },
+    {
+     "concept_tag": "radio-tarangen",
+     "learning_objective": "रेडियो तरंगों के उत्पादन तथा विभिन्न प्रसारण बैंडों को पहचानना।"
+    },
+    {
+     "concept_tag": "sukshm-tarangen",
+     "learning_objective": "सूक्ष्म तरंगों के उत्पादन तथा रडार और माइक्रोवेव ओवन में उनके उपयोग को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH08-T5",
+   "topic_number": 5,
+   "title": "अवरक्त, दृश्य और पराबैंगनी किरणें",
+   "ncert_sections": "8.4.3, 8.4.4, 8.4.5",
+   "concepts": [
+    {
+     "concept_tag": "avrakt-tarangen",
+     "learning_objective": "अवरक्त तरंगों को ऊष्मा तरंगें कहने का कारण और ग्रीनहाउस प्रभाव में उनकी भूमिका समझाना।"
+    },
+    {
+     "concept_tag": "drishya-prakash",
+     "learning_objective": "दृश्य प्रकाश की आवृत्ति और तरंगदैर्ध्य परिसर पहचानना।"
+    },
+    {
+     "concept_tag": "parabaingani-kiranen",
+     "learning_objective": "पराबैंगनी किरणों के स्रोत, प्रभाव, उपयोग और ओज़ोन परत की सुरक्षात्मक भूमिका समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH08-T6",
+   "topic_number": 6,
+   "title": "एक्स-किरणें और गामा किरणें",
+   "ncert_sections": "8.4.6, 8.4.7",
+   "concepts": [
+    {
+     "concept_tag": "x-kiranen",
+     "learning_objective": "एक्स-किरणों के उत्पादन और चिकित्सा में उपयोग को पहचानना।"
+    },
+    {
+     "concept_tag": "gama-kiranen",
+     "learning_objective": "गामा किरणों के स्रोत, तरंगदैर्ध्य परिसर और उपयोग को समझना।"
+    },
+    {
+     "concept_tag": "spectrum-kram",
+     "learning_objective": "विभिन्न वैद्युतचुंबकीय तरंगों की तरंगदैर्ध्य और आवृत्ति के क्रम की तुलना करना।"
+    }
+   ]
+  }
+ ]
+}

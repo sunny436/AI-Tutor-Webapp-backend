@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KHMH1-CH13",
+ "title": "सांख्यिकी",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH13-T1",
+   "topic_number": 1,
+   "title": "प्रकीर्णन की माप तथा परिसर",
+   "ncert_sections": "13.1, 13.2, 13.3",
+   "concepts": [
+    {
+     "concept_tag": "prakirnan-ki-maap",
+     "learning_objective": "समान केंद्रीय प्रवृत्ति वाले आँकड़ों में भी प्रकीर्णन की माप की आवश्यकता समझना।"
+    },
+    {
+     "concept_tag": "parisar",
+     "learning_objective": "आँकड़ों का परिसर ज्ञात करना और उस पर परिवर्तनों का प्रभाव जानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH13-T2",
+   "topic_number": 2,
+   "title": "असमूहित आँकड़ों के लिए माध्य विचलन",
+   "ncert_sections": "13.4, 13.4.1",
+   "concepts": [
+    {
+     "concept_tag": "madhya-vichalan-madhya-ke-paritah",
+     "learning_objective": "असमूहित आँकड़ों के लिए माध्य के परितः माध्य विचलन ज्ञात करना।"
+    },
+    {
+     "concept_tag": "madhya-vichalan-madhyika-ke-paritah",
+     "learning_objective": "असमूहित आँकड़ों के लिए माध्यिका के परितः माध्य विचलन ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH13-T3",
+   "topic_number": 3,
+   "title": "समूहित आँकड़ों के लिए माध्य विचलन",
+   "ncert_sections": "13.4.2, 13.4.3",
+   "concepts": [
+    {
+     "concept_tag": "vivikt-barambarta-madhya-vichalan",
+     "learning_objective": "असतत बारंबारता बंटन के लिए माध्य विचलन ज्ञात करना।"
+    },
+    {
+     "concept_tag": "satat-barambarta-madhya-vichalan",
+     "learning_objective": "वर्गों के मध्य-बिंदु लेकर सतत बारंबारता बंटन का माध्य विचलन ज्ञात करना।"
+    },
+    {
+     "concept_tag": "madhya-vichalan-ki-simayen",
+     "learning_objective": "माध्य विचलन की सीमाओं का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH13-T4",
+   "topic_number": 4,
+   "title": "प्रसरण और मानक विचलन",
+   "ncert_sections": "13.5, 13.5.1",
+   "concepts": [
+    {
+     "concept_tag": "prasaran",
+     "learning_objective": "असमूहित आँकड़ों के लिए प्रसरण की परिभाषा और गणना करना।"
+    },
+    {
+     "concept_tag": "manak-vichalan",
+     "learning_objective": "मानक विचलन को प्रसरण के धनात्मक वर्गमूल के रूप में समझना और उसके गुणधर्म जानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH13-T5",
+   "topic_number": 5,
+   "title": "बारंबारता बंटन का मानक विचलन",
+   "ncert_sections": "13.5.2, 13.5.3",
+   "concepts": [
+    {
+     "concept_tag": "vivikt-barambarta-manak-vichalan",
+     "learning_objective": "असतत बारंबारता बंटन का प्रसरण और मानक विचलन ज्ञात करना।"
+    },
+    {
+     "concept_tag": "satat-barambarta-manak-vichalan",
+     "learning_objective": "सतत बारंबारता बंटन का प्रसरण और मानक विचलन ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH13-T6",
+   "topic_number": 6,
+   "title": "प्रसरण और मानक विचलन ज्ञात करने की लघु विधि",
+   "ncert_sections": "13.5.4",
+   "concepts": [
+    {
+     "concept_tag": "laghu-vidhi",
+     "learning_objective": "पद-विचलन yᵢ = (xᵢ – A)/h लेकर माध्य, प्रसरण और मानक विचलन ज्ञात करना।"
+    },
+    {
+     "concept_tag": "prasaran-sutra-anuprayog",
+     "learning_objective": "σ² = Σxᵢ²/n – x̄² का प्रयोग करके अज्ञात प्रेक्षण ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

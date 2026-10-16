@@ -1,0 +1,1004 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "manovigyan-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "psychology",
+  "language": "hindi",
+  "title": "Manovigyan",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "lhpy1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHPY1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "मनोवैज्ञानिक गुणों में विविधताएँ",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhpy101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPY1-CH01-T1",
+     "topic_number": 1,
+     "title": "व्यक्तिगत भिन्नताएँ और मनोवैज्ञानिक गुणों का मूल्यांकन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vyaktigat-bhinnata-aur-sthitivad",
+       "learning_objective": "व्यक्तिगत भिन्नताओं का अर्थ और स्थितिवाद के दृष्टिकोण को समझना।"
+      },
+      {
+       "concept_tag": "manovaigyanik-gun-kshetra",
+       "learning_objective": "बुद्धि, अभिक्षमता, रुचि, व्यक्तित्व और मूल्य जैसे मनोवैज्ञानिक गुणों में अंतर करना।"
+      },
+      {
+       "concept_tag": "mulyankan-vidhiyan",
+       "learning_objective": "मनोवैज्ञानिक परीक्षण, साक्षात्कार, व्यक्ति अध्ययन, प्रेक्षण और आत्म-प्रतिवेदन विधियों की विशेषताएँ बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH01-T2",
+     "topic_number": 2,
+     "title": "बुद्धि और बुद्धि के मनोमितिक सिद्धांत",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "buddhi-paribhasha-aur-upagam",
+       "learning_objective": "बुद्धि की परिभाषा तथा मनोमितिक और सूचना-प्रक्रमण उपागमों में अंतर समझना।"
+      },
+      {
+       "concept_tag": "spearman-thurstone-siddhant",
+       "learning_objective": "स्पीयरमैन के द्वि-कारक सिद्धांत और थर्स्टन की प्राथमिक मानसिक योग्यताओं की पहचान करना।"
+      },
+      {
+       "concept_tag": "jensen-guilford-model",
+       "learning_objective": "जेन्सेन के पदानुक्रमित मॉडल और गिलफोर्ड के बौद्धिक संरचना मॉडल को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH01-T3",
+     "topic_number": 3,
+     "title": "बहु-बुद्धि, त्रिचापीय सिद्धांत और पास मॉडल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gardner-bahu-buddhi",
+       "learning_objective": "गार्डनर द्वारा बताई गई विभिन्न स्वतंत्र बुद्धियों की पहचान करना।"
+      },
+      {
+       "concept_tag": "sternberg-trichapiya-siddhant",
+       "learning_objective": "स्टर्नबर्ग की घटकीय, आनुभविक और सांदर्भिक बुद्धि में अंतर करना।"
+      },
+      {
+       "concept_tag": "pass-model",
+       "learning_objective": "पास मॉडल की भाव-प्रबोधन/अवधान, सहकालिक-आनुक्रमिक प्रक्रमण और योजना प्रक्रियाओं को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH01-T4",
+     "topic_number": 4,
+     "title": "बुद्धि में व्यक्तिगत भिन्नताएँ और बुद्धि का मूल्यांकन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "anuvanshikta-aur-paryavaran",
+       "learning_objective": "बुद्धि पर आनुवंशिकता और पर्यावरण की अंतःक्रिया के प्रमाणों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "buddhi-labdhi",
+       "learning_objective": "मानसिक आयु और कालानुक्रमिक आयु से बुद्धि-लब्धि की गणना और उसकी व्याख्या करना।"
+      },
+      {
+       "concept_tag": "baudhik-aksamata-aur-pratibhashalita",
+       "learning_objective": "बौद्धिक अक्षमता के स्तरों और बौद्धिक प्रतिभाशालिता की विशेषताओं को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH01-T5",
+     "topic_number": 5,
+     "title": "बुद्धि परीक्षणों के प्रकार और भारत में बुद्धि परीक्षण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vyaktigat-aur-samuh-pariksha",
+       "learning_objective": "व्यक्तिगत और समूह बुद्धि परीक्षणों में अंतर करना।"
+      },
+      {
+       "concept_tag": "shabdik-nishpadan-sanskriti-nishpaksh",
+       "learning_objective": "शाब्दिक, अशाब्दिक, निष्पादन तथा संस्कृति-निष्पक्ष परीक्षणों की विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "bharat-me-buddhi-parikshan",
+       "learning_objective": "भारत में बुद्धि परीक्षणों के विकास से जुड़े प्रमुख प्रयासों की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH01-T6",
+     "topic_number": 6,
+     "title": "संस्कृति और बुद्धि तथा संवेगात्मक बुद्धि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sanskriti-aur-buddhi",
+       "learning_objective": "बुद्धि के विकास में संस्कृति की भूमिका और तकनीकी बुद्धि की अवधारणा समझना।"
+      },
+      {
+       "concept_tag": "bhartiya-samakalit-buddhi",
+       "learning_objective": "भारतीय परंपरा में समाकलित बुद्धि और बुद्धि की अवधारणा का वर्णन करना।"
+      },
+      {
+       "concept_tag": "sanvegatmak-buddhi",
+       "learning_objective": "संवेगात्मक बुद्धि का अर्थ और संवेगात्मक रूप से बुद्धिमान व्यक्ति की विशेषताएँ बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH01-T7",
+     "topic_number": 7,
+     "title": "विशेष योग्यताएँ: अभिक्षमता और सृजनात्मकता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "abhikshamata-aur-ruchi",
+       "learning_objective": "अभिक्षमता का अर्थ तथा सफलता के लिए अभिक्षमता और रुचि दोनों का महत्त्व समझना।"
+      },
+      {
+       "concept_tag": "abhikshamata-parikshan",
+       "learning_objective": "स्वतंत्र अभिक्षमता परीक्षणों और बहु अभिक्षमता परीक्षण मालाओं में अंतर करना।"
+      },
+      {
+       "concept_tag": "srijanatmakta-aur-buddhi",
+       "learning_objective": "सृजनात्मकता के स्वरूप, सृजनात्मकता परीक्षणों और बुद्धि से उसके संबंध का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPY1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "आत्म एवं व्यक्तित्व",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhpy102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPY1-CH02-T1",
+     "topic_number": 1,
+     "title": "आत्म का संप्रत्यय",
+     "ncert_sections": "आत्म का संप्रत्यय; कर्ता एवं कर्म के रूप में आत्म; आत्म के प्रकार",
+     "concepts": [
+      {
+       "concept_tag": "aatm-ki-avdharna",
+       "learning_objective": "कर्ता और कर्म के रूप में आत्म तथा जैविक आत्म के उद्भव को समझना।"
+      },
+      {
+       "concept_tag": "vyaktigat-samajik-aatm",
+       "learning_objective": "व्यक्तिगत तथा सामाजिक अनन्यता और व्यक्तिगत तथा सामाजिक आत्म में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH02-T2",
+     "topic_number": 2,
+     "title": "आत्म के संज्ञानात्मक एवं व्यवहारात्मक पक्ष",
+     "ncert_sections": "आत्म-सम्मान, आत्म-सक्षमता एवं आत्म-नियमन",
+     "concepts": [
+      {
+       "concept_tag": "aatm-sammaan",
+       "learning_objective": "आत्म-संप्रत्यय और आत्म-सम्मान के अर्थ, क्षेत्रों और व्यवहार से उनके संबंध को समझना।"
+      },
+      {
+       "concept_tag": "aatm-sakshamta",
+       "learning_objective": "बंडूरा के सामाजिक अधिगम सिद्धांत पर आधारित आत्म-सक्षमता की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "aatm-niyaman",
+       "learning_objective": "आत्म-नियंत्रण की मनोवैज्ञानिक तकनीकों को पहचानना और लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH02-T3",
+     "topic_number": 3,
+     "title": "संस्कृति एवं आत्म तथा व्यक्तित्व का संप्रत्यय",
+     "ncert_sections": "संस्कृति एवं आत्म; व्यक्तित्व का संप्रत्यय; बॉक्स 2.1",
+     "concepts": [
+      {
+       "concept_tag": "sanskriti-aur-aatm",
+       "learning_objective": "आत्म के भारतीय और पाश्चात्य दृष्टिकोणों की तुलना करना।"
+      },
+      {
+       "concept_tag": "vyaktitva-ki-avdharna",
+       "learning_objective": "व्यक्तित्व के अर्थ और उसकी मुख्य विशेषताओं को समझना।"
+      },
+      {
+       "concept_tag": "vyaktitva-sambandhi-shabd",
+       "learning_objective": "स्वभाव, विशेषक, चरित्र, आदत और मूल्य जैसे संबंधित शब्दों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH02-T4",
+     "topic_number": 4,
+     "title": "प्ररूप एवं विशेषक उपागम",
+     "ncert_sections": "प्ररूप उपागम; विशेषक उपागम; पंच-कारक मॉडल (बॉक्स 2.2)",
+     "concepts": [
+      {
+       "concept_tag": "prarup-upagam",
+       "learning_objective": "हिप्पोक्रेटीज़, चरक, शेल्डन, युंग तथा फ्रीडमैन और रोज़ेनमैन के प्ररूपों को पहचानना।"
+      },
+      {
+       "concept_tag": "visheshak-upagam",
+       "learning_objective": "ऑलपोर्ट, कैटेल और आइज़ेंक के विशेषक सिद्धांतों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "panch-karak-model",
+       "learning_objective": "पंच-कारक मॉडल के पाँच कारकों को व्यवहार के उदाहरणों पर लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH02-T5",
+     "topic_number": 5,
+     "title": "मनोगतिक उपागम",
+     "ncert_sections": "मनोगतिक उपागम; उत्तर-फ्रायडवादी उपागम",
+     "concepts": [
+      {
+       "concept_tag": "freud-ki-sanrachna",
+       "learning_objective": "इदं, अहं, पराहं तथा मनोलैंगिक विकास की अवस्थाओं को समझना।"
+      },
+      {
+       "concept_tag": "raksha-yuktiyan",
+       "learning_objective": "अहं रक्षा युक्तियों को पहचानना और उनके उदाहरणों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "uttar-freudvadi",
+       "learning_objective": "युंग, हॉर्नी, एडलर, फ्रॉम और एरिक्सन के योगदान में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH02-T6",
+     "topic_number": 6,
+     "title": "व्यवहारवादी, सांस्कृतिक एवं मानवतावादी उपागम",
+     "ncert_sections": "व्यवहारवादी उपागम; सांस्कृतिक उपागम; मानवतावादी उपागम",
+     "concepts": [
+      {
+       "concept_tag": "vyavaharvadi-upagam",
+       "learning_objective": "व्यवहारवादी उपागम में अनुक्रिया और प्रबलन की भूमिका को समझना।"
+      },
+      {
+       "concept_tag": "sanskritik-upagam",
+       "learning_objective": "व्यक्तित्व को पारिस्थितिकी और संस्कृति के प्रति अनुकूलन के रूप में समझाना।"
+      },
+      {
+       "concept_tag": "manavtavadi-upagam",
+       "learning_objective": "रोजर्स और मास्लो के मानवतावादी विचारों का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH02-T7",
+     "topic_number": 7,
+     "title": "व्यक्तित्व का मूल्यांकन",
+     "ncert_sections": "आत्म-प्रतिवेदन माप; प्रक्षेपी तकनीकें; व्यवहारपरक विश्लेषण",
+     "concepts": [
+      {
+       "concept_tag": "aatm-prativedan",
+       "learning_objective": "आत्म-प्रतिवेदन मापों और उनकी समस्याओं को पहचानना।"
+      },
+      {
+       "concept_tag": "prakshepi-takneek",
+       "learning_objective": "प्रक्षेपी तकनीकों के आधार और प्रमुख परीक्षणों को समझना।"
+      },
+      {
+       "concept_tag": "vyavaharparak-vishleshan",
+       "learning_objective": "साक्षात्कार, प्रेक्षण और अन्य व्यवहारपरक विधियों के उपयोग का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPY1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "जीवन की चुनौतियों का सामना",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhpy103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPY1-CH03-T1",
+     "topic_number": 1,
+     "title": "दबाव की प्रकृति और संज्ञानात्मक मूल्यांकन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dabav-ki-prakriti",
+       "learning_objective": "दबाव, दबावकारक और तनाव (विकृति) का अर्थ तथा सेल्ये की परिभाषा समझना।"
+      },
+      {
+       "concept_tag": "sangyanatmak-mulyankan",
+       "learning_objective": "लेज़ारस के प्राथमिक और द्वितीयक मूल्यांकन तथा दबाव-अनुभव को प्रभावित करने वाले कारकों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH03-T2",
+     "topic_number": 2,
+     "title": "दबाव के प्रकार, संकेत और स्रोत",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dabav-ke-prakar",
+       "learning_objective": "भौतिक एवं पर्यावरणीय, मनोवैज्ञानिक और सामाजिक दबाव में अंतर करना।"
+      },
+      {
+       "concept_tag": "dabav-ke-srot",
+       "learning_objective": "जीवन घटनाओं, दैनिक उलझनों और अभिघातज घटनाओं को दबाव के स्रोत के रूप में पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH03-T3",
+     "topic_number": 3,
+     "title": "मनोवैज्ञानिक प्रकार्यों पर दबाव का प्रभाव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dabav-ke-prabhav",
+       "learning_objective": "दबाव के संवेगात्मक, शरीरक्रियात्मक, संज्ञानात्मक और व्यवहारात्मक प्रभावों को पहचानना।"
+      },
+      {
+       "concept_tag": "pariksha-chinta-aur-thakan",
+       "learning_objective": "परीक्षा दुश्चिंता और दीर्घकालिक दबाव से उत्पन्न बर्नआउट (थकान) की स्थिति को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH03-T4",
+     "topic_number": 4,
+     "title": "दबाव और स्वास्थ्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samanya-anukulan-sanlakshan",
+       "learning_objective": "सेल्ये के सामान्य अनुकूलन संलक्षण के तीन चरणों का क्रम और लक्षण समझना।"
+      },
+      {
+       "concept_tag": "pratiraksha-tantra",
+       "learning_objective": "दबाव का प्रतिरक्षा तंत्र पर प्रभाव तथा मनस्तंत्रिका प्रतिरक्षा विज्ञान का अर्थ समझना।"
+      },
+      {
+       "concept_tag": "jeevan-shaili",
+       "learning_objective": "दबाव और स्वास्थ्य-हानिकारक जीवन शैली के संबंध का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH03-T5",
+     "topic_number": 5,
+     "title": "दबाव का सामना और दबाव प्रबंधन तकनीकें",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samna-yuktiyan",
+       "learning_objective": "एंडलर-पार्कर तथा लेज़ारस-फोकमैन द्वारा बताई गई सामना युक्तियों में अंतर करना।"
+      },
+      {
+       "concept_tag": "dabav-prabandhan-takniken",
+       "learning_objective": "विश्रांति, ध्यान, जैवप्रतिप्राप्ति, सर्जनात्मक मानस-चित्रण और संज्ञानात्मक व्यवहारात्मक तकनीकों को लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH03-T6",
+     "topic_number": 6,
+     "title": "सकारात्मक स्वास्थ्य, जीवन कौशल और सामाजिक अवलंब",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kathorta-aur-jeevan-kaushal",
+       "learning_objective": "दबाव-प्रतिरोधी व्यक्तित्व (प्रतिबद्धता, नियंत्रण, चुनौती) और जीवन कौशलों को समझना।"
+      },
+      {
+       "concept_tag": "samajik-avlamb",
+       "learning_objective": "आहार, व्यायाम, आशावाद, सामाजिक अवलंब और लोचशीलता की दबाव-प्रतिरोधक भूमिका का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPY1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "मनोवैज्ञानिक विकार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhpy104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPY1-CH04-T1",
+     "topic_number": 1,
+     "title": "असामान्यता की संकल्पना एवं ऐतिहासिक पृष्ठभूमि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "asamanyata-ke-chaar-lakshan",
+       "learning_objective": "मनोवैज्ञानिक विकार की परिभाषाओं में पाए जाने वाले चार सामान्य लक्षणों को पहचानना।"
+      },
+      {
+       "concept_tag": "samajik-manak-evam-kuanukulan",
+       "learning_objective": "असामान्यता को सामाजिक मानकों से विचलन और कुअनुकूलक व्यवहार के रूप में देखने वाले दृष्टिकोणों में अंतर करना।"
+      },
+      {
+       "concept_tag": "aitihasik-prishthabhumi",
+       "learning_objective": "विभिन्न युगों में असामान्य व्यवहार की अलौकिक, जैविक और मनोवैज्ञानिक व्याख्याओं का वर्णन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH04-T2",
+     "topic_number": 2,
+     "title": "मनोवैज्ञानिक विकारों का वर्गीकरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vargikaran-pranaliyan",
+       "learning_objective": "डीएसएम-5 और आईसीडी-10 वर्गीकरण प्रणालियों तथा उनके निर्माताओं को पहचानना।"
+      },
+      {
+       "concept_tag": "vargikaran-ki-upyogita",
+       "learning_objective": "विकारों के वर्गीकरण की उपयोगिता की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "vyavahar-ka-sandarbh",
+       "learning_objective": "किसी व्यवहार को असामान्य कहने में परिस्थिति और संदर्भ की भूमिका समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH04-T3",
+     "topic_number": 3,
+     "title": "असामान्य व्यवहार के जैविक एवं मनोवैज्ञानिक मॉडल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jaivik-model",
+       "learning_objective": "तंत्रिकासंचारकों और आनुवंशिक कारकों के आधार पर असामान्य व्यवहार की जैविक व्याख्या करना।"
+      },
+      {
+       "concept_tag": "manogatyatmak-model",
+       "learning_objective": "फ्रायड के मनोगत्यात्मक मॉडल के अनुसार असामान्य व्यवहार की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "vyavaharvadi-evam-sangyanatmak-model",
+       "learning_objective": "व्यवहारवादी और संज्ञानात्मक मॉडलों के आधार पर असामान्य व्यवहार के उदाहरणों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH04-T4",
+     "topic_number": 4,
+     "title": "सामाजिक-सांस्कृतिक एवं प्रवणता-दबाव मॉडल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samajik-sanskritik-model",
+       "learning_objective": "परिवार की संरचना, सामाजिक संजाल तथा लेबल और भूमिकाओं के असामान्य व्यवहार पर प्रभाव की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "pravanata-dabav-model",
+       "learning_objective": "प्रवणता-दबाव मॉडल के तीनों घटकों को पहचानना और उनका उपयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH04-T5",
+     "topic_number": 5,
+     "title": "दुश्चिंता, मनोग्रस्ति-बाध्यता, अभिघात एवं कायिक लक्षण विकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dushchinta-vikar",
+       "learning_objective": "सामान्यीकृत दुश्चिंता, आतंक विकार, दुर्भीतियों तथा वियोगज दुश्चिंता विकार के लक्षणों में अंतर करना।"
+      },
+      {
+       "concept_tag": "manograsti-badhyata-evam-abhighat",
+       "learning_objective": "मनोग्रस्ति-बाध्यता विकार तथा अभिघातज उत्तर दबाव विकार के लक्षणों को पहचानना।"
+      },
+      {
+       "concept_tag": "kayik-lakshan-vikar",
+       "learning_objective": "कायिक लक्षण विकार, रोग दुश्चिंता विकार और रूपांतरण विकार में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH04-T6",
+     "topic_number": 6,
+     "title": "विच्छेदी, अवसादी एवं द्विध्रुवीय विकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vichchhedi-vikar",
+       "learning_objective": "विच्छेदी स्मृतिलोप, आतुरगमन, विच्छेदी पहचान विकार और व्यक्तित्व-लोप को पहचानना।"
+      },
+      {
+       "concept_tag": "avsadi-vikar",
+       "learning_objective": "प्रमुख अवसादी विकार के लक्षणों, जोखिम-कारकों तथा आत्महत्या की रोकथाम को समझना।"
+      },
+      {
+       "concept_tag": "dvidhruviya-vikar",
+       "learning_objective": "द्विध्रुवीय विकारों में उन्माद और अवसाद के स्वरूप का वर्णन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH04-T7",
+     "topic_number": 7,
+     "title": "मनोविदलता स्पेक्ट्रम एवं अन्य मनोविक्षिप्त विकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sakaratmak-lakshan",
+       "learning_objective": "भ्रमासक्ति, विभ्रम और विचार-विकार जैसे सकारात्मक लक्षणों की पहचान करना।"
+      },
+      {
+       "concept_tag": "nakaratmak-lakshan",
+       "learning_objective": "अल्पवाक्ता, कुंठित भाव और इच्छाशक्ति-ह्रास जैसे नकारात्मक लक्षणों को पहचानना।"
+      },
+      {
+       "concept_tag": "manochalak-lakshan",
+       "learning_objective": "मनोविदलता के मनःचालक लक्षणों और कैटाटोनिया के रूपों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH04-T8",
+     "topic_number": 8,
+     "title": "तंत्रिकाविकासात्मक, आचरण, भोजन एवं मादक द्रव्य संबंधी विकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tantrikavikasatmak-vikar",
+       "learning_objective": "अवधान-न्यूनता अतिक्रियाशीलता, स्वलीनता स्पेक्ट्रम और बौद्धिक अक्षमता के लक्षणों का वर्णन करना।"
+      },
+      {
+       "concept_tag": "aacharan-evam-bhojan-vikar",
+       "learning_objective": "आचरण विकार में आक्रामकता के प्रकारों तथा भोजन विकारों में अंतर करना।"
+      },
+      {
+       "concept_tag": "madak-dravya-vikar",
+       "learning_objective": "मद्य, हेरोइन और कोकीन के दुरुपयोग के प्रभावों तथा सहनशीलता और विनिवर्तन को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPY1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "चिकित्सा उपागम",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhpy105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPY1-CH05-T1",
+     "topic_number": 1,
+     "title": "मनश्चिकित्सा की प्रकृति एवं प्रक्रिया तथा चिकित्सात्मक संबंध",
+     "ncert_sections": "मनश्चिकित्सा की प्रकृति एवं प्रक्रिया; चिकित्सात्मक संबंध",
+     "concepts": [
+      {
+       "concept_tag": "manashchikitsa-ki-prakriti",
+       "learning_objective": "मनश्चिकित्सा की विशेषताओं और उसके लक्ष्यों को पहचानना।"
+      },
+      {
+       "concept_tag": "chikitsatmak-sambandh",
+       "learning_objective": "चिकित्सात्मक मैत्री के घटकों, तदनुभूति और अशर्त सकारात्मक आदर को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH05-T2",
+     "topic_number": 2,
+     "title": "चिकित्सा के प्रकार और सेवार्थी की समस्या का निरूपण",
+     "ncert_sections": "चिकित्सा के प्रकार; सेवार्थी की समस्या-निरूपण में अंतर्निहित चरण (बॉक्स 5.1)",
+     "concepts": [
+      {
+       "concept_tag": "chikitsa-vargikaran",
+       "learning_objective": "मनोगतिक, व्यवहार और अस्तित्वपरक चिकित्साओं की कारण, विधि, संबंध, लाभ और अवधि के आधार पर तुलना करना।"
+      },
+      {
+       "concept_tag": "naidanik-nirupan",
+       "learning_objective": "नैदानिक निरूपण के लाभों और उसकी सतत प्रकृति को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH05-T3",
+     "topic_number": 3,
+     "title": "व्यवहार चिकित्सा",
+     "ncert_sections": "व्यवहार चिकित्सा; विश्रांति की विधियाँ (बॉक्स 5.2)",
+     "concepts": [
+      {
+       "concept_tag": "vyavahar-vishleshan",
+       "learning_objective": "व्यवहार विश्लेषण में दोषपूर्ण व्यवहार, पूर्ववर्ती और संपोषी कारकों को पहचानना।"
+      },
+      {
+       "concept_tag": "vyavahar-pravidhiyan",
+       "learning_objective": "प्रबलन, विरुचि अनुबंधन, टोकन अर्थव्यवस्था और विभेदक प्रबलन जैसी प्रविधियों को लागू करना।"
+      },
+      {
+       "concept_tag": "kramik-visamvedikaran",
+       "learning_objective": "क्रमिक विसंवेदीकरण, अन्योन्य प्रावरोध और विश्रांति विधियों की कार्यप्रणाली को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH05-T4",
+     "topic_number": 4,
+     "title": "संज्ञानात्मक चिकित्सा और संज्ञानात्मक व्यवहार चिकित्सा",
+     "ncert_sections": "संज्ञानात्मक चिकित्सा; संज्ञानात्मक व्यवहार चिकित्सा",
+     "concepts": [
+      {
+       "concept_tag": "tarksangat-chikitsa",
+       "learning_objective": "एलिस की तर्कसंगत भावोत्तेजक चिकित्सा के पूर्ववृत्त-विश्वास-परिणाम विश्लेषण को समझना।"
+      },
+      {
+       "concept_tag": "beck-sangyanatmak-chikitsa",
+       "learning_objective": "बेक के अनुसार मूल स्कीमा, निषेधात्मक स्वचालित विचार और संज्ञानात्मक पुनर्संरचना को समझना।"
+      },
+      {
+       "concept_tag": "sangyanatmak-vyavahar-chikitsa",
+       "learning_objective": "संज्ञानात्मक व्यवहार चिकित्सा के जैव-मनो-सामाजिक आधार का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH05-T5",
+     "topic_number": 5,
+     "title": "मानवतावादी-अस्तित्वपरक चिकित्सा",
+     "ncert_sections": "मानवतावादी-अस्तित्वपरक चिकित्सा; अस्तित्वपरक चिकित्सा; सेवार्थी-केंद्रित चिकित्सा; गेस्टाल्ट चिकित्सा",
+     "concepts": [
+      {
+       "concept_tag": "atmasiddhi",
+       "learning_objective": "आत्मसिद्धि की अवधारणा और मानवतावादी चिकित्सा के मूल अभिग्रहों को समझना।"
+      },
+      {
+       "concept_tag": "logo-chikitsa",
+       "learning_objective": "फ्रैंकल की लोगोथेरेपी में अर्थ-निर्माण और अस्तित्वपरक दुश्चिंता को समझना।"
+      },
+      {
+       "concept_tag": "sevarthi-kendrit-gestalt",
+       "learning_objective": "रोजर्स की सेवार्थी-केंद्रित चिकित्सा और पर्ल्स की गेस्टाल्ट चिकित्सा में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH05-T6",
+     "topic_number": 6,
+     "title": "उपचार में सहायक कारक और मनश्चिकित्सा में नैतिकता",
+     "ncert_sections": "मनश्चिकित्सा में स्वास्थ्य-लाभ में योगदान देने वाले कारक; मनश्चिकित्सा में नीतिपरक मानक",
+     "concepts": [
+      {
+       "concept_tag": "upchar-karak",
+       "learning_objective": "प्रविधि, चिकित्सात्मक मैत्री, भाव-विरेचन और अविशिष्ट कारकों की भूमिका को समझना।"
+      },
+      {
+       "concept_tag": "naitik-manak",
+       "learning_objective": "मनश्चिकित्सक द्वारा पालन किए जाने वाले नीतिपरक मानकों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH05-T7",
+     "topic_number": 7,
+     "title": "वैकल्पिक चिकित्सा",
+     "ncert_sections": "वैकल्पिक चिकित्सा",
+     "concepts": [
+      {
+       "concept_tag": "yog-dhyan",
+       "learning_objective": "योग, ध्यान, विपश्यना, सुदर्शन क्रिया योग और कुंडलिनी योग के उपयोगों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH05-T8",
+     "topic_number": 8,
+     "title": "मानसिक रोगियों का पुनःस्थापन",
+     "ncert_sections": "मानसिक रोगियों का पुनःस्थापन",
+     "concepts": [
+      {
+       "concept_tag": "punahsthapan",
+       "learning_objective": "पुनःस्थापन के लक्ष्य तथा व्यावसायिक, सामाजिक कौशल और संज्ञानात्मक पुनःप्रशिक्षण को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPY1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "अभिवृत्ति तथा सामाजिक संज्ञान",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhpy106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPY1-CH06-T1",
+     "topic_number": 1,
+     "title": "सामाजिक व्यवहार की व्याख्या तथा अभिवृत्ति की प्रकृति एवं घटक",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "abhivritti-ke-ghatak",
+       "learning_objective": "अभिवृत्ति के भावात्मक, संज्ञानात्मक और व्यवहारपरक घटकों को पहचानना।"
+      },
+      {
+       "concept_tag": "vishvas-aur-mulya",
+       "learning_objective": "अभिवृत्ति को विश्वास और मूल्य से अलग करके समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH06-T2",
+     "topic_number": 2,
+     "title": "अभिवृत्ति की विशेषताएँ",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "abhivritti-ki-visheshtayen",
+       "learning_objective": "कर्षण-शक्ति, चरम सीमा, सरलता या जटिलता तथा केंद्रिकता की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH06-T3",
+     "topic_number": 3,
+     "title": "अभिवृत्ति निर्माण",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "abhivritti-ka-adhigam",
+       "learning_objective": "साहचर्य, पुरस्कार-दंड, प्रतिरूपण, समूह मानक और सूचना द्वारा अभिवृत्ति सीखने की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "nirman-ke-karak",
+       "learning_objective": "परिवार, संदर्भ समूह, व्यक्तिगत अनुभव और संचार माध्यमों की भूमिका बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH06-T4",
+     "topic_number": 4,
+     "title": "अभिवृत्ति परिवर्तन की प्रक्रिया",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "santulan-ki-sankalpana",
+       "learning_objective": "हाइडर की संतुलन की संकल्पना को त्रिकोण द्वारा लागू करना।"
+      },
+      {
+       "concept_tag": "sangyanatmak-asangati",
+       "learning_objective": "फेस्टिंगर की संज्ञानात्मक असंगति तथा बीस डॉलर प्रयोग की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "dvi-charan-sankalpana",
+       "learning_objective": "मोहसिन की द्विचरण संकल्पना के दोनों चरणों को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH06-T5",
+     "topic_number": 5,
+     "title": "अभिवृत्ति परिवर्तन को प्रभावित करने वाले कारक",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "sangat-asangat-parivartan",
+       "learning_objective": "संगत और असंगत अभिवृत्ति परिवर्तन में अंतर करना।"
+      },
+      {
+       "concept_tag": "strot-sandesh-lakshya",
+       "learning_objective": "स्रोत, संदेश और लक्ष्य की विशेषताओं के प्रभाव का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH06-T6",
+     "topic_number": 6,
+     "title": "अभिवृत्ति-व्यवहार संबंध",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "abhivritti-vyavhar-sangati",
+       "learning_objective": "अभिवृत्ति और व्यवहार के बीच संगति की दशाएँ बताना।"
+      },
+      {
+       "concept_tag": "lapiere-adhyayan",
+       "learning_objective": "लापियर के अध्ययन से अभिवृत्ति-व्यवहार असंगति की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH06-T7",
+     "topic_number": 7,
+     "title": "पूर्वाग्रह और विभेदन",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "purvagrah-rudhiyukti",
+       "learning_objective": "पूर्वाग्रह, रूढ़ियुक्ति और विभेदन में अंतर करना।"
+      },
+      {
+       "concept_tag": "purvagrah-ke-strot",
+       "learning_objective": "बलि का बकरा बनाना, सत्यता का अंश और स्वतः पूर्ण भविष्यवाणी जैसे स्रोत पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH06-T8",
+     "topic_number": 8,
+     "title": "पूर्वाग्रह से निपटने की युक्तियाँ",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "purvagrah-niyantran",
+       "learning_objective": "शिक्षा, अंतर्समूह संपर्क और व्यक्तिगत पहचान पर बल जैसी युक्तियों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPY1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "सामाजिक प्रभाव एवं समूह प्रक्रम",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhpy107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPY1-CH07-T1",
+     "topic_number": 1,
+     "title": "समूह की प्रकृति और विशेषताएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samooh-paribhasha",
+       "learning_objective": "समूह की परिभाषा और उसकी प्रमुख विशेषताओं को पहचानना।"
+      },
+      {
+       "concept_tag": "samooh-bheed-dal",
+       "learning_objective": "समूह को भीड़, दल, श्रोतागण और उन्मत्त भीड़ से अलग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH07-T2",
+     "topic_number": 2,
+     "title": "लोग समूह में क्यों सम्मिलित होते हैं",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samooh-se-judne-ke-karan",
+       "learning_objective": "सुरक्षा, प्रतिष्ठा, आत्म-सम्मान, आवश्यकता-संतुष्टि, लक्ष्य-प्राप्ति और ज्ञान जैसे कारणों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH07-T3",
+     "topic_number": 3,
+     "title": "समूह निर्माण और उसकी अवस्थाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samooh-nirman-dashaen",
+       "learning_objective": "सामीप्य, समानता और समान अभिप्रेरकों को समूह निर्माण की दशाओं के रूप में समझना।"
+      },
+      {
+       "concept_tag": "tuckman-avasthaen",
+       "learning_objective": "टकमैन द्वारा बताई गई समूह विकास की पाँच अवस्थाओं का क्रम और लक्षण पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH07-T4",
+     "topic_number": 4,
+     "title": "समूह संरचना और समूह-चिंतन",
+     "ncert_sections": "बॉक्स 7.1",
+     "concepts": [
+      {
+       "concept_tag": "samooh-sanrachna",
+       "learning_objective": "भूमिका, मानक, प्रतिष्ठा और संसक्ति को समूह संरचना के तत्वों के रूप में समझना।"
+      },
+      {
+       "concept_tag": "samooh-chintan",
+       "learning_objective": "अत्यधिक संसक्ति से उत्पन्न समूह-चिंतन, उसकी दशाओं और उसे रोकने के उपायों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH07-T5",
+     "topic_number": 5,
+     "title": "समूहों के प्रकार",
+     "ncert_sections": "बॉक्स 7.2",
+     "concepts": [
+      {
+       "concept_tag": "prathamik-dviteeyak-samooh",
+       "learning_objective": "प्राथमिक और द्वितीयक तथा औपचारिक और अनौपचारिक समूहों में अंतर करना।"
+      },
+      {
+       "concept_tag": "antah-bahya-samooh",
+       "learning_objective": "अंतःसमूह और बाह्य समूह की धारणा तथा ताजफ़ेल के न्यूनतम समूह प्रयोगों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH07-T6",
+     "topic_number": 6,
+     "title": "सामाजिक श्रमावनयन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shramavanayan-arth",
+       "learning_objective": "सामाजिक श्रमावनयन का अर्थ और लताने के प्रयोग को समझना।"
+      },
+      {
+       "concept_tag": "shramavanayan-karan-upay",
+       "learning_objective": "सामाजिक श्रमावनयन के कारणों और उसे कम करने के उपायों का अनुप्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPY1-CH07-T7",
+     "topic_number": 7,
+     "title": "समूह ध्रुवीकरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samooh-dhruveekaran",
+       "learning_objective": "समूह ध्रुवीकरण का अर्थ और उसके तीन कारणों का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

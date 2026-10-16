@@ -1,0 +1,152 @@
+{
+ "chapter_id": "LECH2-CH03",
+ "title": "Aldehydes, Ketones and Carboxylic Acids",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECH2-CH03-T1",
+   "topic_number": 1,
+   "title": "Nomenclature and structure of the carbonyl group",
+   "ncert_sections": "8.1, 8.1.1, 8.1.2",
+   "concepts": [
+    {
+     "concept_tag": "carbonyl-nomenclature",
+     "learning_objective": "Write common and IUPAC names of aldehydes and ketones, including ring and unsaturated compounds."
+    },
+    {
+     "concept_tag": "carbonyl-group-structure",
+     "learning_objective": "Describe the hybridisation, geometry and polarity of the carbonyl group."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH03-T2",
+   "topic_number": 2,
+   "title": "Preparation of aldehydes and ketones",
+   "ncert_sections": "8.2, 8.2.1, 8.2.2, 8.2.3",
+   "concepts": [
+    {
+     "concept_tag": "aldehyde-preparation",
+     "learning_objective": "Choose reagents and named reactions that give aldehydes from alcohols, hydrocarbons, acyl chlorides, nitriles and esters."
+    },
+    {
+     "concept_tag": "ketone-preparation",
+     "learning_objective": "Choose methods that give ketones from acyl chlorides, nitriles, alkynes and arenes."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH03-T3",
+   "topic_number": 3,
+   "title": "Physical properties and uses of aldehydes and ketones",
+   "ncert_sections": "8.3, 8.5",
+   "concepts": [
+    {
+     "concept_tag": "carbonyl-physical-properties",
+     "learning_objective": "Explain the boiling points and solubility of aldehydes and ketones in terms of intermolecular forces."
+    },
+    {
+     "concept_tag": "carbonyl-uses",
+     "learning_objective": "State important uses of common aldehydes and ketones."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH03-T4",
+   "topic_number": 4,
+   "title": "Nucleophilic addition, reduction and oxidation of aldehydes and ketones",
+   "ncert_sections": "8.4",
+   "concepts": [
+    {
+     "concept_tag": "nucleophilic-addition",
+     "learning_objective": "Explain the mechanism of nucleophilic addition and the relative reactivity of aldehydes and ketones."
+    },
+    {
+     "concept_tag": "carbonyl-reduction",
+     "learning_objective": "Identify reagents that reduce carbonyl compounds to alcohols or to hydrocarbons."
+    },
+    {
+     "concept_tag": "carbonyl-oxidation-tests",
+     "learning_objective": "Use oxidation reactions such as Tollens', Fehling's and iodoform tests to distinguish and identify carbonyl compounds."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH03-T5",
+   "topic_number": 5,
+   "title": "Reactions due to alpha-hydrogen and other reactions",
+   "ncert_sections": "8.4",
+   "concepts": [
+    {
+     "concept_tag": "alpha-hydrogen-acidity",
+     "learning_objective": "Explain why the alpha-hydrogens of aldehydes and ketones are acidic."
+    },
+    {
+     "concept_tag": "aldol-condensation",
+     "learning_objective": "Predict the products of aldol and cross aldol condensation."
+    },
+    {
+     "concept_tag": "cannizzaro-reaction",
+     "learning_objective": "Identify aldehydes that undergo the Cannizzaro reaction and predict its products."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH03-T6",
+   "topic_number": 6,
+   "title": "Carboxylic acids: nomenclature, preparation and physical properties",
+   "ncert_sections": "8.6, 8.7, 8.8",
+   "concepts": [
+    {
+     "concept_tag": "carboxylic-acid-nomenclature",
+     "learning_objective": "Write common and IUPAC names of mono- and dicarboxylic acids."
+    },
+    {
+     "concept_tag": "carboxylic-acid-preparation",
+     "learning_objective": "Choose methods to prepare carboxylic acids from alcohols, alkylbenzenes, nitriles and Grignard reagents."
+    },
+    {
+     "concept_tag": "carboxylic-acid-physical-properties",
+     "learning_objective": "Explain the boiling points and solubility of carboxylic acids."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH03-T7",
+   "topic_number": 7,
+   "title": "Acidity of carboxylic acids",
+   "ncert_sections": "8.9.1",
+   "concepts": [
+    {
+     "concept_tag": "carboxylic-acid-acidity",
+     "learning_objective": "Compare the acidity of carboxylic acids with phenols and alcohols using conjugate base stability."
+    },
+    {
+     "concept_tag": "substituent-effect-on-acidity",
+     "learning_objective": "Predict how electron withdrawing and donating groups change the acidity of carboxylic acids."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH03-T8",
+   "topic_number": 8,
+   "title": "Other reactions and uses of carboxylic acids",
+   "ncert_sections": "8.9.2, 8.9.3, 8.9.4, 8.10",
+   "concepts": [
+    {
+     "concept_tag": "acid-derivative-formation",
+     "learning_objective": "Write reactions that replace the -OH of the carboxyl group to give acid chlorides, esters, anhydrides and amides."
+    },
+    {
+     "concept_tag": "carboxyl-group-reactions",
+     "learning_objective": "Describe reduction and decarboxylation of carboxylic acids and the reagents used."
+    },
+    {
+     "concept_tag": "hydrocarbon-part-substitution",
+     "learning_objective": "Explain the Hell-Volhard-Zelinsky reaction and ring substitution in aromatic acids."
+    }
+   ]
+  }
+ ]
+}

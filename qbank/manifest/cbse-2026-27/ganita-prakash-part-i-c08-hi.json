@@ -1,0 +1,836 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "ganita-prakash-part-i-c08-hi",
+  "curriculum": "cbse",
+  "class_level": 8,
+  "subject_code": "mathematics",
+  "language": "hindi",
+  "title": "Ganita Prakash Part-I (Hindi)",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "hhgp1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "HHGP1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "वर्ग और घन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP1-CH01-T1",
+     "topic_number": 1,
+     "title": "लॉकर पहेली और गुणनखंडों की संख्या",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gunankhandon-ki-sankhya",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि केवल पूर्ण वर्ग संख्याओं के गुणनखंडों की संख्या विषम होती है।"
+      },
+      {
+       "concept_tag": "sah-gunankhand-yugm",
+       "learning_objective": "विद्यार्थी किसी संख्या के सह-गुणनखंड युग्म पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH01-T2",
+     "topic_number": 2,
+     "title": "पूर्ण वर्ग और उनके इकाई अंक",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "varg-ikai-ank",
+       "learning_objective": "विद्यार्थी इकाई अंक देखकर बता सकेंगे कि कोई संख्या पूर्ण वर्ग नहीं है।"
+      },
+      {
+       "concept_tag": "varg-ant-shunya",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि किसी वर्ग के अंत में शून्यों की संख्या सदैव सम होती है।"
+      },
+      {
+       "concept_tag": "varg-samta",
+       "learning_objective": "विद्यार्थी किसी संख्या और उसके वर्ग की समता का संबंध बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH01-T3",
+     "topic_number": 3,
+     "title": "पूर्ण वर्ग, विषम संख्याएँ और त्रिभुजाकार संख्याएँ",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "vishm-sankhya-yog",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि पहली n विषम संख्याओं का योग n² होता है।"
+      },
+      {
+       "concept_tag": "kramagat-varg-antar",
+       "learning_objective": "विद्यार्थी क्रमागत वर्गों के अंतर और उनके बीच की संख्याओं का प्रतिरूप उपयोग कर सकेंगे।"
+      },
+      {
+       "concept_tag": "tribhujakar-sankhya",
+       "learning_objective": "विद्यार्थी त्रिभुजाकार संख्याओं और वर्ग संख्याओं का संबंध पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH01-T4",
+     "topic_number": 4,
+     "title": "वर्गमूल और उसका आकलन",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "abhajya-gunankhand-vargmul",
+       "learning_objective": "विद्यार्थी अभाज्य गुणनखंडन द्वारा पूर्ण वर्ग की जाँच कर वर्गमूल ज्ञात कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vargmul-aakalan",
+       "learning_objective": "विद्यार्थी निकटतम पूर्ण वर्गों की सहायता से वर्गमूल का आकलन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH01-T5",
+     "topic_number": 5,
+     "title": "घन संख्याएँ और हार्डी-रामानुजन संख्या",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "ghan-sankhya",
+       "learning_objective": "विद्यार्थी किसी संख्या का घन ज्ञात कर घन संख्याओं के गुणधर्म बता सकेंगे।"
+      },
+      {
+       "concept_tag": "ghan-ant-shunya",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि पूर्ण घन के अंत में शून्यों की संख्या 3 का गुणज होती है।"
+      },
+      {
+       "concept_tag": "hardy-ramanujan-sankhya",
+       "learning_objective": "विद्यार्थी 1729 की विशेषता और टैक्सीकैब संख्याओं का अर्थ बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH01-T6",
+     "topic_number": 6,
+     "title": "घनमूल, क्रमिक अंतर और थोड़ा इतिहास",
+     "ncert_sections": "1.2, 1.3",
+     "concepts": [
+      {
+       "concept_tag": "abhajya-gunankhand-ghanmul",
+       "learning_objective": "विद्यार्थी अभाज्य गुणनखंडों को तीन समान समूहों में बाँटकर घनमूल ज्ञात कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kramik-antar",
+       "learning_objective": "विद्यार्थी पूर्ण घनों के क्रमिक अंतरों का प्रतिरूप ज्ञात कर सकेंगे।"
+      },
+      {
+       "concept_tag": "ganit-itihas",
+       "learning_objective": "विद्यार्थी वर्ग, घन और मूल जैसे शब्दों की प्राचीन भारतीय उत्पत्ति बता सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHGP1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "घातों का खेल",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP1-CH02-T1",
+     "topic_number": 1,
+     "title": "घात के खेल का अनुभव",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "kagaz-modna-dugunaa",
+       "learning_objective": "कागज को बार-बार मोड़ने पर हर मोड़ के साथ मोटाई दोगुनी होने का प्रतिरूप पहचानना।"
+      },
+      {
+       "concept_tag": "charghataanki-vriddhi",
+       "learning_objective": "गुणनात्मक (चरघातांकी) वृद्धि की तीव्रता को समझना और उसका अनुमान लगाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH02-T2",
+     "topic_number": 2,
+     "title": "चरघातांकी संकेतन और संक्रियाएँ",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "ghaatank-sanketan",
+       "learning_objective": "किसी संख्या के बार-बार गुणन को आधार और घातांक के रूप में लिखना और पढ़ना।"
+      },
+      {
+       "concept_tag": "abhajya-gunankhand-ghaat-roop",
+       "learning_objective": "किसी संख्या के अभाज्य गुणनखंडों को घातांकीय रूप में व्यक्त करना।"
+      },
+      {
+       "concept_tag": "ghaat-niyam-gunan",
+       "learning_objective": "n^a × n^b = n^(a+b) और (n^a)^b = n^(ab) नियमों का उपयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH02-T3",
+     "topic_number": 3,
+     "title": "घातों का दूसरा पक्ष",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "ghaat-niyam-bhaag",
+       "learning_objective": "n^a ÷ n^b = n^(a−b) नियम से घातों का भाग करना।"
+      },
+      {
+       "concept_tag": "shoonya-rinaatmak-ghaatank",
+       "learning_objective": "शून्य और ऋणात्मक घातांक का अर्थ समझना और घात रेखा पर तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH02-T4",
+     "topic_number": 4,
+     "title": "10 की घातें",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "das-ki-ghaat-vistaarit-roop",
+       "learning_objective": "संख्याओं (दशमलव सहित) को 10 की घातों के प्रयोग से विस्तारित रूप में लिखना।"
+      },
+      {
+       "concept_tag": "vaigyaanik-sanketan",
+       "learning_objective": "बड़ी संख्याओं को मानक (वैज्ञानिक) रूप x × 10^y में लिखना और उनकी तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH02-T5",
+     "topic_number": 5,
+     "title": "क्या आपने कभी विचार किया है?",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "anumaan-aur-sannikatan",
+       "learning_objective": "उचित मान्यताओं और सन्निकटन से बड़ी राशियों का अनुमान लगाना।"
+      },
+      {
+       "concept_tag": "rekhik-banaam-charghaataanki-vriddhi",
+       "learning_objective": "योगात्मक (रैखिक) और गुणनात्मक (चरघातांकी) वृद्धि में अंतर करना।"
+      },
+      {
+       "concept_tag": "badi-sankhyaon-ki-samajh",
+       "learning_objective": "लाख, करोड़, अरब जैसी बड़ी संख्याओं को 10 की घातों से व्यक्त कर तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH02-T6",
+     "topic_number": 6,
+     "title": "इतिहास की एक झलक",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "bhaarateeya-sankhya-naam",
+       "learning_objective": "प्राचीन भारतीय ग्रंथों और आधुनिक भारतीय पद्धति में 10 की बड़ी घातों के नाम पहचानना।"
+      },
+      {
+       "concept_tag": "antarraashtreey-sankhya-naam",
+       "learning_objective": "अंतरराष्ट्रीय पद्धति के नामों और गूगोल जैसी बहुत बड़ी संख्याओं को 10 की घातों से जोड़ना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHGP1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "संख्याओं की कहानी",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP1-CH03-T1",
+     "topic_number": 1,
+     "title": "रीमा की जिज्ञासा: भारतीय अंकों की यात्रा",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "bharatiya-ankon-ka-itihas",
+       "learning_objective": "भारतीय दस-अंकीय पद्धति और शून्य के प्रारंभिक प्रमाणों तथा गणितज्ञों को पहचानना।"
+      },
+      {
+       "concept_tag": "ankon-ka-vaishvik-prasar",
+       "learning_objective": "भारतीय अंकों के अरब जगत और यूरोप तक पहुँचने के क्रम को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH03-T2",
+     "topic_number": 2,
+     "title": "गिनने की क्रियाविधि",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "ekaiki-pratichitran",
+       "learning_objective": "गिनती को वस्तुओं और मानक अनुक्रम के बीच एकैकी प्रतिचित्रण के रूप में समझाना।"
+      },
+      {
+       "concept_tag": "sankhya-paddhati-aur-sankhyank",
+       "learning_objective": "संख्या पद्धति और संख्यांक की परिभाषा देना तथा विभिन्न गिनती विधियों की सीमाएँ पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH03-T3",
+     "topic_number": 3,
+     "title": "कुछ प्रारंभिक संख्या पद्धतियाँ: मिलान चिह्न और दो-दो की गिनती",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "milan-chihn",
+       "learning_objective": "हड्डियों पर बने मिलान चिह्नों को संख्या निरूपण की प्राचीन विधि के रूप में पहचानना।"
+      },
+      {
+       "concept_tag": "do-do-ki-ginti",
+       "learning_objective": "गुमुलगल पद्धति में दो-दो के समूह से संख्या नाम बनाना और उन पर संक्रियाएँ करना।"
+      },
+      {
+       "concept_tag": "samooh-aakar-aur-bodh-seema",
+       "learning_objective": "एक नज़र में गिनने की सीमा और समूह में गिनने के विचार का संबंध समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH03-T4",
+     "topic_number": 4,
+     "title": "रोमन संख्यांक",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "roman-ankan",
+       "learning_objective": "रोमन पद्धति की सांकेतिक संख्याओं से संख्याएँ लिखना और पढ़ना।"
+      },
+      {
+       "concept_tag": "roman-ganana-ki-kathinai",
+       "learning_objective": "रोमन संख्यांकों में योग और गुणा करना तथा उनकी कठिनाई समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH03-T5",
+     "topic_number": 5,
+     "title": "आधार की अवधारणा: मिस्री पद्धति और आधार-n पद्धति",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "misri-sankhya-paddhati",
+       "learning_objective": "मिस्री पद्धति की 10 की घातों वाली सांकेतिक संख्याओं से संख्याएँ निरूपित करना।"
+      },
+      {
+       "concept_tag": "aadhar-n-paddhati",
+       "learning_objective": "आधार-n पद्धति की परिभाषा देना और उसकी सांकेतिक संख्याएँ ज्ञात करना।"
+      },
+      {
+       "concept_tag": "aadhar-ke-labh",
+       "learning_objective": "आधार वाली पद्धति में सांकेतिक संख्याओं के गुणनफल से गणना की सरलता का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH03-T6",
+     "topic_number": 6,
+     "title": "स्थानीय मान निरूपण: मेसोपोटामिया की षाष्टिक पद्धति",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "shashtik-paddhati",
+       "learning_objective": "मेसोपोटामिया की आधार-60 पद्धति में संख्याओं को 60 की घातों में समूहित करना।"
+      },
+      {
+       "concept_tag": "sthaniya-maan-aur-sthanadharak",
+       "learning_objective": "स्थानीय मान पद्धति में खाली स्थान से होने वाली अस्पष्टता और स्थानधारक शून्य की भूमिका समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH03-T7",
+     "topic_number": 7,
+     "title": "माया, चीनी और हिंदू संख्या पद्धतियाँ",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "maya-paddhati",
+       "learning_objective": "माया पद्धति की सांकेतिक संख्याओं और ऊर्ध्वाधर लेखन से संख्याएँ निरूपित करना।"
+      },
+      {
+       "concept_tag": "chini-chhad-sankhyank",
+       "learning_objective": "चीनी छड़ संख्यांकों में ज़ोंग और हेंग के प्रयोग का कारण समझाना।"
+      },
+      {
+       "concept_tag": "hindu-paddhati-aur-shoonya",
+       "learning_objective": "हिंदू संख्या पद्धति में शून्य को अंक और संख्या मानने के महत्व को पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHGP1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "चतुर्भुज",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP1-CH04-T1",
+     "topic_number": 1,
+     "title": "आयत तथा वर्ग",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "aayat-ke-gun",
+       "learning_objective": "आयत की परिभाषा और उसके कोणों, भुजाओं तथा विकर्णों के गुण पहचानना और लागू करना।"
+      },
+      {
+       "concept_tag": "varg-ke-gun",
+       "learning_objective": "वर्ग के गुण, विशेषकर विकर्णों द्वारा कोणों के समद्विभाजन, को समझना और लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH04-T2",
+     "topic_number": 2,
+     "title": "चतुर्भुज के कोण",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "chaturbhuj-kon-yog",
+       "learning_objective": "चतुर्भुज के कोणों का योग 360° होने का कारण समझना और अज्ञात कोण ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH04-T3",
+     "topic_number": 3,
+     "title": "समांतर सम्मुख भुजाओं वाले और चतुर्भुज (समांतर चतुर्भुज)",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "samantar-chaturbhuj-gun",
+       "learning_objective": "समांतर चतुर्भुज की भुजाओं, कोणों और विकर्णों के गुणों का प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH04-T4",
+     "topic_number": 4,
+     "title": "समान लंबाई की भुजाओं वाले चतुर्भुज (समचतुर्भुज)",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "samchaturbhuj-gun",
+       "learning_objective": "समचतुर्भुज के विकर्णों और कोणों के गुण समझना तथा उन्हें प्रश्नों में लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH04-T5",
+     "topic_number": 5,
+     "title": "चतुर्भुजों के साथ खेल",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "tribhuj-jodkar-chaturbhuj",
+       "learning_objective": "दो सर्वांगसम त्रिभुजों को जोड़कर बने चतुर्भुज का प्रकार तर्क से पहचानना।"
+      },
+      {
+       "concept_tag": "vikarn-se-chaturbhuj-pahchan",
+       "learning_objective": "विकर्णों की लंबाई और उनके प्रतिच्छेद के आधार पर चतुर्भुज का प्रकार पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH04-T6",
+     "topic_number": 6,
+     "title": "पतंग और समलंब चतुर्भुज",
+     "ncert_sections": "4.6",
+     "concepts": [
+      {
+       "concept_tag": "patang-gun",
+       "learning_objective": "पतंग की परिभाषा और उसके विकर्णों तथा कोणों के गुण लागू करना।"
+      },
+      {
+       "concept_tag": "samlamb-gun",
+       "learning_objective": "समलंब और समद्विबाहु समलंब के कोणों के गुणों से अज्ञात कोण ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHGP1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "संख्याओं का खेल",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP1-CH05-T1",
+     "topic_number": 1,
+     "title": "क्रमागत संख्याओं का योग और समता",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "kramagat-sankhyaon-ka-yog",
+       "learning_objective": "क्रमागत संख्याओं को बीजीय रूप में लिखकर उनके योग के गुण ज्ञात करना।"
+      },
+      {
+       "concept_tag": "vyanjakon-ki-samta",
+       "learning_objective": "किसी बीजीय व्यंजक के मान की समता (सम या विषम) बिना गणना के पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH05-T2",
+     "topic_number": 2,
+     "title": "विभाज्यता के गुण: सदैव, कभी-कभी या कभी नहीं",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "vibhajyata-ke-gun",
+       "learning_objective": "गुणजों के योग और अंतर की विभाज्यता को बीजगणित से सिद्ध करना।"
+      },
+      {
+       "concept_tag": "lsp-aur-vibhajyata",
+       "learning_objective": "दो संख्याओं से एक साथ विभाज्यता को उनके लघुत्तम समापवर्त्य से जोड़ना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH05-T3",
+     "topic_number": 3,
+     "title": "शेषफल और बीजीय व्यंजक",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "sheshphal-ke-vyanjak",
+       "learning_objective": "किसी निश्चित शेषफल वाली सभी संख्याओं को बीजीय व्यंजक से व्यक्त करना।"
+      },
+      {
+       "concept_tag": "sheshphal-ka-tark",
+       "learning_objective": "शेषफलों के जोड़ से योग और अंतर का शेषफल बिना पूरी गणना के ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH05-T4",
+     "topic_number": 4,
+     "title": "विभाज्यता की शीघ्र जाँच",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "sthaniya-maan-ka-bijiy-roop",
+       "learning_objective": "संख्या को स्थानीय मानों के योग के रूप में लिखकर विभाज्यता नियमों का कारण समझना।"
+      },
+      {
+       "concept_tag": "nau-aur-teen-se-vibhajyata",
+       "learning_objective": "अंकों के योग से 9 और 3 से विभाज्यता की जाँच करना और उसका कारण बताना।"
+      },
+      {
+       "concept_tag": "gyarah-se-vibhajyata",
+       "learning_objective": "एकांतर चिह्नों की विधि से 11 से विभाज्यता और शेषफल ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH05-T5",
+     "topic_number": 5,
+     "title": "अंकीय मूल",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "ankiya-mool",
+       "learning_objective": "अंकों को बार-बार जोड़कर किसी संख्या का अंकीय मूल ज्ञात करना।"
+      },
+      {
+       "concept_tag": "ankiya-mool-aur-sheshphal",
+       "learning_objective": "अंकीय मूल और 9 से भाग देने पर प्राप्त शेषफल के संबंध का उपयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH05-T6",
+     "topic_number": 6,
+     "title": "छुपे हुए अंकों की पहेली (गूढ़कलन)",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "goodhkalan-ke-niyam",
+       "learning_objective": "गूढ़कलन पहेलियों के नियमों को पहचानना।"
+      },
+      {
+       "concept_tag": "goodhkalan-hal-karna",
+       "learning_objective": "संख्याओं के गुणों और तर्क से गूढ़कलन पहेलियाँ हल करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHGP1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "जितना बाँटेंगे उतना बढ़ेगा",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP1-CH06-T1",
+     "topic_number": 1,
+     "title": "वितरण गुणधर्म और गुणनफल में वृद्धि",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "vitaran-gunadharm",
+       "learning_objective": "योग पर गुणन के वितरण गुणधर्म a(b + c) = ab + ac को पहचानना और लागू करना।"
+      },
+      {
+       "concept_tag": "gunanphal-mein-vriddhi",
+       "learning_objective": "एक या दोनों संख्याओं के बदलने पर गुणनफल में होने वाले परिवर्तन को बीजगणित से ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH06-T2",
+     "topic_number": 2,
+     "title": "सर्वसमिका 1 और व्यंजकों का प्रसार",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "sarvasamika-ek",
+       "learning_objective": "सर्वसमिका (a + m)(b + n) = ab + mb + an + mn को समझना और लागू करना।"
+      },
+      {
+       "concept_tag": "vyanjak-prasar",
+       "learning_objective": "समान पदों को जोड़ते हुए बीजीय व्यंजकों के गुणनफल का प्रसार करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH06-T3",
+     "topic_number": 3,
+     "title": "वितरण गुणधर्म द्वारा त्वरित गुणन",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "gyarah-se-gunan",
+       "learning_objective": "किसी संख्या को 11 से एक पंक्ति में गुणा करने की विधि समझना।"
+      },
+      {
+       "concept_tag": "ek-sau-ek-se-gunan",
+       "learning_objective": "101, 1001, 99 आदि से त्वरित गुणन के लिए वितरण गुणधर्म का प्रयोग करना।"
+      },
+      {
+       "concept_tag": "khand-gunan-itihas",
+       "learning_objective": "ब्रह्मगुप्त के खंड-गुणन और इष्ट-गुणन के ऐतिहासिक योगदान को जानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH06-T4",
+     "topic_number": 4,
+     "title": "दो संख्याओं के योग और अंतर का वर्ग",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "yog-ka-varg",
+       "learning_objective": "सर्वसमिका (a + b)² = a² + 2ab + b² का प्रयोग करना।"
+      },
+      {
+       "concept_tag": "antar-ka-varg",
+       "learning_objective": "सर्वसमिका (a − b)² = a² − 2ab + b² का प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH06-T5",
+     "topic_number": 5,
+     "title": "वर्गों का अंतर और प्रतिरूपों की खोज",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "vargon-ka-antar",
+       "learning_objective": "सर्वसमिका (a + b)(a − b) = a² − b² से गणनाएँ करना।"
+      },
+      {
+       "concept_tag": "shridharacharya-vidhi",
+       "learning_objective": "श्रीधराचार्य की विधि a² = (a + b)(a − b) + b² से वर्ग ज्ञात करना।"
+      },
+      {
+       "concept_tag": "pratirup-vyakhya",
+       "learning_objective": "सर्वसमिकाओं से संख्या प्रतिरूपों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH06-T6",
+     "topic_number": 6,
+     "title": "त्रुटि पहचान और प्रतिरूप के अनेक तरीके",
+     "ncert_sections": "6.3, 6.4",
+     "concepts": [
+      {
+       "concept_tag": "truti-pahchan",
+       "learning_objective": "बीजीय सरलीकरण में होने वाली सामान्य त्रुटियों को पहचानना और सुधारना।"
+      },
+      {
+       "concept_tag": "pratirup-vyanjak",
+       "learning_objective": "किसी प्रतिरूप के लिए विभिन्न व्यंजकों की समानता सिद्ध करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHGP1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "समानुपातिक तर्कण-1",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP1-CH07-T1",
+     "topic_number": 1,
+     "title": "परिवर्तन में समानता का अवलोकन",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "samaan-gunak-parivartan",
+       "learning_objective": "चौड़ाई और ऊँचाई के एक ही गुणक से बदलने पर चित्र के समान दिखने को पहचानना।"
+      },
+      {
+       "concept_tag": "yog-banam-gunan-parivartan",
+       "learning_objective": "समान संख्या जोड़ने-घटाने और समान गुणक से बदलने के अंतर को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH07-T2",
+     "topic_number": 2,
+     "title": "अनुपात",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "anupat-ke-pad",
+       "learning_objective": "अनुपात a : b के पदों और उसके अर्थ को समझना।"
+      },
+      {
+       "concept_tag": "anupat-gunak",
+       "learning_objective": "किसी अनुपात के दोनों पदों को एक ही गुणक से बदलकर समानुपातिक अनुपात प्राप्त करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH07-T3",
+     "topic_number": 3,
+     "title": "अपने सरलतम रूप में अनुपात",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "saraltam-roop",
+       "learning_objective": "महत्तम समापवर्तक से भाग देकर अनुपात का सरलतम रूप ज्ञात करना।"
+      },
+      {
+       "concept_tag": "samanupat-jaanch",
+       "learning_objective": "सरलतम रूप की तुलना करके जाँचना कि दो अनुपात समानुपातिक हैं या नहीं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH07-T4",
+     "topic_number": 4,
+     "title": "समानुपातिक तर्क के साथ समस्या समाधान",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "lupt-pad-gyat-karna",
+       "learning_objective": "परिवर्तन का गुणक ज्ञात करके समानुपात का अज्ञात पद निकालना।"
+      },
+      {
+       "concept_tag": "ikai-dar-tulna",
+       "learning_objective": "प्रति इकाई मूल्य या चाल की सहायता से समस्याएँ हल करना और तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH07-T5",
+     "topic_number": 5,
+     "title": "साझा कीजिए परंतु समान रूप से नहीं!",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "anupat-mein-vibhajan",
+       "learning_objective": "किसी राशि को दिए गए अनुपात m : n में बाँटना।"
+      },
+      {
+       "concept_tag": "mishran-anupat-badalna",
+       "learning_objective": "मिश्रण में कोई घटक मिलाकर उसका अनुपात बदलने की समस्याएँ हल करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP1-CH07-T6",
+     "topic_number": 6,
+     "title": "इकाई रूपांतरण",
+     "ncert_sections": "7.6",
+     "concepts": [
+      {
+       "concept_tag": "ikai-roopantaran",
+       "learning_objective": "लंबाई, क्षेत्रफल और आयतन की इकाइयों का रूपांतरण समानुपात से करना।"
+      },
+      {
+       "concept_tag": "taapman-roopantaran",
+       "learning_objective": "सेल्सियस और फ़ारेनहाइट के बीच तापमान का रूपांतरण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

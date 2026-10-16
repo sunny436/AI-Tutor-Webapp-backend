@@ -1,0 +1,128 @@
+{
+ "chapter_id": "JHSK1-CH09",
+ "title": "भूकम्पविभीषिका",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSK1-CH09-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः प्राकृतिक्यः आपदः च",
+   "ncert_sections": "प्रस्तावना",
+   "concepts": [
+    {
+     "concept_tag": "prakritika-apadah",
+     "learning_objective": "छात्रः पाठे निर्दिष्टाः प्राकृतिकीः आपदः तासां प्रभावं च अभिजानाति।"
+    },
+    {
+     "concept_tag": "patha-sandeshah",
+     "learning_objective": "छात्रः आपत्काले साहसेन यत्नस्य महत्त्वं इति पाठसन्देशं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH09-T2",
+   "topic_number": 2,
+   "title": "कच्छभूकम्पस्य विभीषिका",
+   "ncert_sections": "गद्यांशः 1-2",
+   "concepts": [
+    {
+     "concept_tag": "kachchha-bhukampa-ghatana",
+     "learning_objective": "छात्रः २००१ तमे वर्षे घटितस्य कच्छभूकम्पस्य समयं स्थानं च वर्णयति।"
+    },
+    {
+     "concept_tag": "bhukampa-vinashah",
+     "learning_objective": "छात्रः भूकम्पेन जातस्य विनाशस्य वर्णनं अवगत्य व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH09-T3",
+   "topic_number": 3,
+   "title": "काश्मीरभूकम्पः भूकम्पस्य कारणानि च",
+   "ncert_sections": "गद्यांशः 3-4",
+   "concepts": [
+    {
+     "concept_tag": "kashmira-bhukampah",
+     "learning_objective": "छात्रः २००५ तमे वर्षे काश्मीरप्रान्ते जातस्य भूकम्पस्य प्रभावं जानाति।"
+    },
+    {
+     "concept_tag": "bhukampa-vaijnanika-karanam",
+     "learning_objective": "छात्रः पाषाणशिलानां संघर्षणात् भूकम्पः कथं जायते इति वैज्ञानिककारणं व्याख्याति।"
+    },
+    {
+     "concept_tag": "jvalamukha-visphotah",
+     "learning_objective": "छात्रः ज्वालामुखविस्फोटस्य लावारसस्य च प्रक्रियां वर्णयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH09-T4",
+   "topic_number": 4,
+   "title": "भूकम्पात् रक्षणोपायाः पञ्चतत्त्वानि च",
+   "ncert_sections": "गद्यांशः 5",
+   "concepts": [
+    {
+     "concept_tag": "bhukampa-rakshanopayah",
+     "learning_objective": "छात्रः भूकम्परहस्यज्ञैः निर्दिष्टान् रक्षणोपायान् व्यवहारे प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "pancha-tattvani-prakritih",
+     "learning_objective": "छात्रः पञ्चतत्त्वानां सन्तुलनस्य प्रकृतेः च महत्त्वं विश्लेषयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH09-T5",
+   "topic_number": 5,
+   "title": "शब्दार्थाः पर्यायपदानि विलोमपदानि च",
+   "ncert_sections": "शब्दार्थाः, अभ्यासः 7",
+   "concepts": [
+    {
+     "concept_tag": "paryaya-padani",
+     "learning_objective": "छात्रः पाठगतानां पदानां समानार्थकपदानि अभिजानाति।"
+    },
+    {
+     "concept_tag": "viloma-padani",
+     "learning_objective": "छात्रः पाठगतानां पदानां विलोमपदानि अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH09-T6",
+   "topic_number": 6,
+   "title": "सन्धिः",
+   "ncert_sections": "अभ्यासः 6",
+   "concepts": [
+    {
+     "concept_tag": "parasavarna-sandhih",
+     "learning_objective": "छात्रः पाठगतेषु पदेषु परसवर्णसन्धिं सन्धिविच्छेदं च करोति।"
+    },
+    {
+     "concept_tag": "visarga-sandhih",
+     "learning_objective": "छात्रः पाठगतेषु पदेषु विसर्गसन्धिं सन्धिविच्छेदं च करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH09-T7",
+   "topic_number": 7,
+   "title": "प्रकृतिप्रत्ययाः समासाः लकाराः च",
+   "ncert_sections": "अभ्यासः 5, 8",
+   "concepts": [
+    {
+     "concept_tag": "prakriti-pratyaya",
+     "learning_objective": "छात्रः पाठगतपदानां प्रकृतिप्रत्ययविभागं करोति।"
+    },
+    {
+     "concept_tag": "samasa-vigrahah",
+     "learning_objective": "छात्रः कर्मधारयसमासस्य विग्रहं समस्तपदं च रचयति।"
+    },
+    {
+     "concept_tag": "lakara-prayogah",
+     "learning_objective": "छात्रः निर्दिष्टधातुलकारानुसारं क्रियापदानि प्रयुङ्क्ते।"
+    }
+   ]
+  }
+ ]
+}

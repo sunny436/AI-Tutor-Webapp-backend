@@ -1,0 +1,96 @@
+{
+ "chapter_id": "KEAC1-CH05",
+ "title": "Bank Reconciliation Statement",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEAC1-CH05-T1",
+   "topic_number": 1,
+   "title": "Meaning of passbook and need for reconciliation",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "passbook-and-cash-book",
+     "learning_objective": "Explain what a bank passbook records and how its balance relates to the bank column of the cash book."
+    },
+    {
+     "concept_tag": "need-for-reconciliation",
+     "learning_objective": "State the meaning of a bank reconciliation statement and why a firm prepares it."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH05-T2",
+   "topic_number": 2,
+   "title": "Timing differences",
+   "ncert_sections": "5.1.1",
+   "concepts": [
+    {
+     "concept_tag": "unpresented-and-uncollected-cheques",
+     "learning_objective": "Explain how cheques issued but not presented and cheques deposited but not collected cause a difference between the two balances."
+    },
+    {
+     "concept_tag": "direct-bank-debits-and-credits",
+     "learning_objective": "Identify direct debits, direct deposits, collections and standing-instruction payments made by the bank and their effect on the passbook balance."
+    },
+    {
+     "concept_tag": "dishonoured-cheques-and-bills",
+     "learning_objective": "Explain the effect of a dishonoured cheque or discounted bill on the passbook balance."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH05-T3",
+   "topic_number": 3,
+   "title": "Differences caused by errors",
+   "ncert_sections": "5.1.2",
+   "concepts": [
+    {
+     "concept_tag": "errors-by-firm",
+     "learning_objective": "Identify errors made by the firm in the cash book and work out their effect on the reconciliation."
+    },
+    {
+     "concept_tag": "errors-by-bank",
+     "learning_objective": "Identify errors made by the bank in the passbook and work out their effect on the reconciliation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH05-T4",
+   "topic_number": 4,
+   "title": "Preparing the statement with favourable balances",
+   "ncert_sections": "5.2, 5.2.1(a)",
+   "concepts": [
+    {
+     "concept_tag": "favourable-balance-meaning",
+     "learning_objective": "State the meaning of a favourable balance as per the cash book and as per the passbook."
+    },
+    {
+     "concept_tag": "brs-from-cash-book-balance",
+     "learning_objective": "Prepare a bank reconciliation statement starting from a favourable balance as per the cash book."
+    },
+    {
+     "concept_tag": "brs-from-passbook-balance",
+     "learning_objective": "Prepare a bank reconciliation statement starting from a favourable balance as per the passbook."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH05-T5",
+   "topic_number": 5,
+   "title": "Dealing with overdrafts",
+   "ncert_sections": "5.2.1(b)",
+   "concepts": [
+    {
+     "concept_tag": "overdraft-meaning",
+     "learning_objective": "State what an overdraft is and how it appears in the cash book and the passbook."
+    },
+    {
+     "concept_tag": "brs-with-overdraft",
+     "learning_objective": "Prepare a bank reconciliation statement when the cash book or the passbook shows an overdraft."
+    }
+   ]
+  }
+ ]
+}

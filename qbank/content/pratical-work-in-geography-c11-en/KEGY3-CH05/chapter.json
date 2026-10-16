@@ -1,0 +1,96 @@
+{
+ "chapter_id": "KEGY3-CH05",
+ "title": "Topographical Maps",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY3-CH05-T1",
+   "topic_number": 1,
+   "title": "Topographical maps and their series",
+   "ncert_sections": "Introduction",
+   "concepts": [
+    {
+     "concept_tag": "topographical-map-nature",
+     "learning_objective": "Describe topographical maps as large-scale general purpose base maps prepared by the national mapping organisation."
+    },
+    {
+     "concept_tag": "indian-toposheet-series",
+     "learning_objective": "Relate the scales of Survey of India topographical maps to their latitudinal and longitudinal coverage."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH05-T2",
+   "topic_number": 2,
+   "title": "Methods of relief representation and contours",
+   "ncert_sections": "Methods of Relief Representation; Contours",
+   "concepts": [
+    {
+     "concept_tag": "relief-representation-methods",
+     "learning_objective": "Identify the methods used to show relief on maps, such as hachures, hill shading, layer tints, spot heights and contours."
+    },
+    {
+     "concept_tag": "contour-properties",
+     "learning_objective": "Explain contour interval, horizontal equivalent and the basic features of contour lines."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH05-T3",
+   "topic_number": 3,
+   "title": "Types of slope",
+   "ncert_sections": "Types of slope",
+   "concepts": [
+    {
+     "concept_tag": "slope-types-contour-spacing",
+     "learning_objective": "Distinguish gentle, steep, concave and convex slopes from the spacing of contours."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH05-T4",
+   "topic_number": 4,
+   "title": "Landforms shown by contours",
+   "ncert_sections": "Types of Landform; Valley; Cliff; Waterfall and Rapids",
+   "concepts": [
+    {
+     "concept_tag": "hill-plateau-contours",
+     "learning_objective": "Recognise conical hills, plateaus, cliffs and waterfalls from their contour patterns."
+    },
+    {
+     "concept_tag": "valley-gorge-spur",
+     "learning_objective": "Distinguish V-shaped valleys, U-shaped valleys, gorges and spurs on a contour map."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH05-T5",
+   "topic_number": 5,
+   "title": "Drawing a cross-section",
+   "ncert_sections": "Steps for Drawing a Cross-section",
+   "concepts": [
+    {
+     "concept_tag": "cross-section-steps",
+     "learning_objective": "Apply the steps for drawing a cross-section from contours using a suitable vertical scale."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH05-T6",
+   "topic_number": 6,
+   "title": "Cultural features and map interpretation",
+   "ncert_sections": "Identification of Cultural Features; Interpretation of Topographical Maps; Map Interpretation Procedure",
+   "concepts": [
+    {
+     "concept_tag": "settlement-transport-patterns",
+     "learning_objective": "Identify settlement types, sites and transport patterns shown on topographical sheets."
+    },
+    {
+     "concept_tag": "map-interpretation-procedure",
+     "learning_objective": "Interpret a topographical sheet under its standard heads and by superimposing feature maps."
+    }
+   ]
+  }
+ ]
+}

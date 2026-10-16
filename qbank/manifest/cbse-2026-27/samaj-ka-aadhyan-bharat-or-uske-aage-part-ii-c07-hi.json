@@ -1,0 +1,1225 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "samaj-ka-aadhyan-bharat-or-uske-aage-part-ii-c07-hi",
+  "curriculum": "cbse",
+  "class_level": 7,
+  "subject_code": "social_science",
+  "language": "hindi",
+  "title": "Samaj Ka Aadhyan: Bharat or uske aage Part-II",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "ghes2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "GHES2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "भारत में कृषि की यात्रा",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghes201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHES2-CH01-T1",
+     "topic_number": 1,
+     "title": "भारत का कृषि परिदृश्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "krishi-ka-arth-aur-kshetra",
+       "learning_objective": "विद्यार्थी कृषि का अर्थ और उसमें सम्मिलित सहायक गतिविधियों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "krishi-ka-arthik-mahatva",
+       "learning_objective": "विद्यार्थी भारत की अर्थव्यवस्था और आजीविका में कृषि के महत्व को आँकड़ों के आधार पर समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH01-T2",
+     "topic_number": 2,
+     "title": "अतीत की गूँज: भारतीय कृषि का इतिहास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pragaitihasik-krishi",
+       "learning_objective": "विद्यार्थी प्रागैतिहासिक और हड़प्पा काल की फसलों तथा कृषि प्रथाओं को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "prachin-krishi-granth",
+       "learning_objective": "विद्यार्थी कृषि से संबंधित प्राचीन ग्रंथों और उनमें वर्णित विधियों को बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH01-T3",
+     "topic_number": 3,
+     "title": "जलवायु, ऋतुएँ तथा फसलें",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "krishi-jalvayu-kshetra",
+       "learning_objective": "विद्यार्थी भारत की जलवायु विविधता और कृषि जलवायु क्षेत्रों का उद्देश्य समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "mansoon-aur-krishi",
+       "learning_objective": "विद्यार्थी दोनों मानसूनों का भारत के विभिन्न क्षेत्रों की खेती पर प्रभाव स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kharif-rabi-zayad",
+       "learning_objective": "विद्यार्थी खरीफ, रबी और जायद फसलों को उनकी ऋतु और उदाहरणों सहित वर्गीकृत कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH01-T4",
+     "topic_number": 4,
+     "title": "मृदा: निर्माण और प्रकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mrida-nirman",
+       "learning_objective": "विद्यार्थी आधार शैल, अपक्षय और ह्यूमस की सहायता से मृदा निर्माण की प्रक्रिया समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "mrida-ke-prakar",
+       "learning_objective": "विद्यार्थी भारत की छह प्रमुख मृदाओं की विशेषताएँ और उनसे जुड़ी फसलें पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH01-T5",
+     "topic_number": 5,
+     "title": "मृदा की देखभाल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "paramparik-mrida-sanrakshan",
+       "learning_objective": "विद्यार्थी फसल चक्र, बहुफसली पद्धति और समोच्च जुताई जैसी पारंपरिक विधियों के लाभ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "adhunik-mrida-sanrakshan",
+       "learning_objective": "विद्यार्थी सीढ़ीदार खेती, वनीकरण और मल्चिंग जैसी विधियों से मृदा संरक्षण समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH01-T6",
+     "topic_number": 6,
+     "title": "जल: वर्षा-आधारित और सिंचित कृषि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "varsha-adharit-krishi",
+       "learning_objective": "विद्यार्थी वर्षा-आधारित कृषि का अर्थ और उसकी कठिनाइयों से निपटने के उपाय बता सकेंगे।"
+      },
+      {
+       "concept_tag": "sinchai-pranaliyan",
+       "learning_objective": "विद्यार्थी पारंपरिक और आधुनिक सिंचाई प्रणालियों में अंतर स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH01-T7",
+     "topic_number": 7,
+     "title": "बीज तथा कृषि पद्धतियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "beej-sanrakshan",
+       "learning_objective": "विद्यार्थी बीजों के पारंपरिक संरक्षण, उपचार और कंपनियों पर निर्भरता के प्रश्न को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "paramparik-krishi-pranali",
+       "learning_objective": "विद्यार्थी कुलागर और गोकृषि जैसी पारंपरिक कृषि प्रणालियों की विशेषताएँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "harit-kranti-aur-sandharniya-krishi",
+       "learning_objective": "विद्यार्थी हरित क्रांति के लाभ-हानि का मूल्यांकन कर संधारणीय कृषि की आवश्यकता समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH01-T8",
+     "topic_number": 8,
+     "title": "सरकार की भूमिका और कृषकों की चुनौतियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sarkar-ki-bhumika",
+       "learning_objective": "विद्यार्थी कृषकों की सहायता हेतु सरकार द्वारा किए गए उपायों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "krishakon-ki-chunautiyan",
+       "learning_objective": "विद्यार्थी छोटी भू-जोत, जलवायु परिवर्तन और ऋण जैसी चुनौतियों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHES2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "भारत का पड़ोसी देशों से संबंध",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghes202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHES2-CH02-T1",
+     "topic_number": 1,
+     "title": "पड़ोस की रूपरेखा: स्थलीय और समुद्री पड़ोसी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sthaliya-aur-samudri-padosi",
+       "learning_objective": "विद्यार्थी स्थलीय और समुद्री पड़ोसी देशों में अंतर करके भारत के पड़ोसियों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "hind-mahasagar-mahatva",
+       "learning_objective": "विद्यार्थी हिंद महासागर और भारत की समुद्री स्थिति का महत्व समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "kshetriya-sahyog",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि क्षेत्रीय सहयोग अच्छे पड़ोसी होने को भू-सीमाओं से आगे ले जाता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH02-T2",
+     "topic_number": 2,
+     "title": "भारत और उसका सबसे बड़ा पड़ोसी: चीन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "cheen-seema-aur-bauddh-sambandh",
+       "learning_objective": "विद्यार्थी भारत-चीन सीमा और बौद्ध धर्म के माध्यम से बने सांस्कृतिक संबंधों का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "cheen-vyapar",
+       "learning_objective": "विद्यार्थी भारत-चीन व्यापार और व्यापार संतुलन की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH02-T3",
+     "topic_number": 3,
+     "title": "भारत और पाकिस्तान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vibhajan-aur-sangharsh",
+       "learning_objective": "विद्यार्थी विभाजन, संघर्षों और साझा सीमा के संदर्भ में भारत-पाकिस्तान संबंधों को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "kartarpur-galiyara",
+       "learning_objective": "विद्यार्थी करतारपुर गलियारे का महत्व शांति और संवाद के उदाहरण के रूप में बता सकेंगे।"
+      },
+      {
+       "concept_tag": "sajhi-virasat",
+       "learning_objective": "विद्यार्थी पाकिस्तान में स्थित साझा धार्मिक-सांस्कृतिक विरासत के स्थलों को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH02-T4",
+     "topic_number": 4,
+     "title": "एक नवनिर्मित पड़ोसी राष्ट्र: बांग्लादेश",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bangladesh-itihas-aur-seema",
+       "learning_objective": "विद्यार्थी बांग्लादेश के जन्म और भारत-बांग्लादेश सीमा से जुड़े तथ्य बता सकेंगे।"
+      },
+      {
+       "concept_tag": "sundarban-aur-nadiyan",
+       "learning_objective": "विद्यार्थी साझा नदियों और सुंदरबन के महत्व तथा जलवायु परिवर्तन की चुनौती का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH02-T5",
+     "topic_number": 5,
+     "title": "हिमालय की गोद में: नेपाल और भूटान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bharat-nepal-sambandh",
+       "learning_objective": "विद्यार्थी शांति और मैत्री संधि तथा मुक्त सीमा नीति के आधार पर भारत-नेपाल संबंधों को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "bharat-bhutan-sambandh",
+       "learning_objective": "विद्यार्थी बौद्ध विरासत और जलविद्युत सहयोग के आधार पर भारत-भूटान संबंधों का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sakal-rashtriya-prasannata",
+       "learning_objective": "विद्यार्थी सकल राष्ट्रीय प्रसन्नता सूचकांक की तुलना सकल घरेलू उत्पाद से कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH02-T6",
+     "topic_number": 6,
+     "title": "म्यांमार और स्थलरुद्ध पड़ोसी अफगानिस्तान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "myanmar-pravesh-dwar",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि म्यांमार दक्षिण-पूर्व एशिया के लिए भारत का प्रवेश-द्वार क्यों है।"
+      },
+      {
+       "concept_tag": "afghanistan-sambandh",
+       "learning_objective": "विद्यार्थी उत्तरापथ और बौद्ध विरासत के आधार पर भारत-अफगानिस्तान के प्राचीन संबंधों का वर्णन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH02-T7",
+     "topic_number": 7,
+     "title": "निकटतम समुद्री पड़ोसी: श्रीलंका, मालदीव और थाईलैंड",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shrilanka-sambandh",
+       "learning_objective": "विद्यार्थी भारत-श्रीलंका की भौगोलिक निकटता और साझा बौद्ध विरासत को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "maldive-sambandh",
+       "learning_objective": "विद्यार्थी मालदीव की भाषा, संस्कृति और जलवायु संबंधी चुनौतियों में भारत से संबंधों का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "thailand-sanskritik-prabhav",
+       "learning_objective": "विद्यार्थी थाई राज्यों के नामों में भारतीय परंपराओं के प्रभाव की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH02-T8",
+     "topic_number": 8,
+     "title": "मलय प्रायद्वीप, सिंगापुर, इंडोनेशिया, ईरान और ओमान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dakshin-purv-asia-samudri-padosi",
+       "learning_objective": "विद्यार्थी मलेशिया, सिंगापुर और इंडोनेशिया के साथ भारत के सांस्कृतिक और व्यापारिक संबंधों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "iran-sambandh",
+       "learning_objective": "विद्यार्थी प्राचीन और आधुनिक काल में भारत-ईरान संबंधों की व्याख्या कर सकेंगे।"
+      },
+      {
+       "concept_tag": "oman-sambandh",
+       "learning_objective": "विद्यार्थी हड़प्पाकालीन ताँबा व्यापार और सुरक्षा सहयोग के आधार पर भारत-ओमान संबंधों की तुलना कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHES2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "साम्राज्य और राज्य : छठी से 10वीं शताब्दी",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghes203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHES2-CH03-T1",
+     "topic_number": 1,
+     "title": "हर्षवर्धन का साम्राज्य और श्वेनजांग की यात्रा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "harshavardhan-shasan",
+       "learning_objective": "हर्षवर्धन के शासन, साहित्यिक संरक्षण और धार्मिक उदारता को समझना।"
+      },
+      {
+       "concept_tag": "shvenjang-yatra",
+       "learning_objective": "श्वेनजांग की भारत-यात्रा के उद्देश्य और उसके वृत्तांत के ऐतिहासिक महत्त्व को समझाना।"
+      },
+      {
+       "concept_tag": "harsh-ki-seema",
+       "learning_objective": "हर्ष के साम्राज्य-विस्तार की सीमाओं और उनके कारणों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH03-T2",
+     "topic_number": 2,
+     "title": "कन्नौज के लिए त्रिपक्षीय संघर्ष और पाल वंश",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tripakshiya-sangharsh",
+       "learning_objective": "कन्नौज के लिए हुए त्रिपक्षीय संघर्ष की शक्तियों और उसके परिणाम को समझना।"
+      },
+      {
+       "concept_tag": "pal-vansh",
+       "learning_objective": "पाल वंश के उदय, विस्तार और समृद्धि के आधारों को समझाना।"
+      },
+      {
+       "concept_tag": "vikramashila-vishvavidyalay",
+       "learning_objective": "विक्रमशिला विश्वविद्यालय की संरचना और प्रवेश-व्यवस्था का वर्णन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH03-T3",
+     "topic_number": 3,
+     "title": "गुर्जर-प्रतिहार और राष्ट्रकूट",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gurjar-pratihar",
+       "learning_objective": "गुर्जर-प्रतिहार वंश की स्थापना, राजधानी और मिहिर भोज के शासन को समझना।"
+      },
+      {
+       "concept_tag": "rashtrakut-vansh",
+       "learning_objective": "राष्ट्रकूट शासकों की उपलब्धियों, संरक्षण और धार्मिक नीति का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH03-T4",
+     "topic_number": 4,
+     "title": "कश्मीर: कल्हण और राजतरंगिणी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kalhan-rajatarangini",
+       "learning_objective": "कल्हण की राजतरंगिणी और उनकी इतिहास-लेखन पद्धति को समझना।"
+      },
+      {
+       "concept_tag": "kashmir-shasak",
+       "learning_objective": "कश्मीर के प्रमुख शासकों, जैसे ललितादित्य मुक्तापीड और रानी दिद्दा, की पहचान करना।"
+      },
+      {
+       "concept_tag": "kashmir-sanskritik-kendra",
+       "learning_objective": "कश्मीर के शेष भारत से सांस्कृतिक और बौद्धिक जुड़ाव का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH03-T5",
+     "topic_number": 5,
+     "title": "दक्कन और सुदूर दक्षिण के राजवंश",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "chalukya-vansh",
+       "learning_objective": "चालुक्य वंश की राजधानी, पुलकेशिन द्वितीय और ऐहोल अभिलेख को समझना।"
+      },
+      {
+       "concept_tag": "pallav-vansh",
+       "learning_objective": "पल्लवों की उपलब्धियों, व्यापार और राजनैतिक निर्णयों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "chol-pandya-cher",
+       "learning_objective": "सुदूर दक्षिण में पांड्य, चेर और चोल राजवंशों के उदय की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH03-T6",
+     "topic_number": 6,
+     "title": "राज्य-व्यवस्था, अर्थव्यवस्था और सामाजिक जीवन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samant-prashasan",
+       "learning_objective": "सामंतों के माध्यम से शासन की व्यवस्था, उसके लाभ और कमजोरियों को समझना।"
+      },
+      {
+       "concept_tag": "krishi-vyapar-nagar",
+       "learning_objective": "भूमि अनुदान, कृषि-विकास और समुद्री व्यापार के प्रभावों को समझाना।"
+      },
+      {
+       "concept_tag": "jati-samaj",
+       "learning_objective": "जातियों की वृद्धि और वर्ण-जाति व्यवस्था के लचीलेपन का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH03-T7",
+     "topic_number": 7,
+     "title": "सांस्कृतिक जीवन, भक्ति और गणित-खगोल परंपरा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dharmik-paramparayen",
+       "learning_objective": "इस काल की बौद्ध, जैन और तांत्रिक परंपराओं के प्रसार को समझना।"
+      },
+      {
+       "concept_tag": "bhakti-andolan",
+       "learning_objective": "आलवार-नायनार संतों और भक्ति आंदोलन की विशेषताओं का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "ganit-khagol",
+       "learning_objective": "ब्रह्मगुप्त, भास्कर प्रथम और महावीर जैसे गणितज्ञों के योगदान की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH03-T8",
+     "topic_number": 8,
+     "title": "विदेशी आक्रमण: हूण और अरब",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "hun-chunauti",
+       "learning_objective": "हूणों के आक्रमण, उनकी पराजय और भारतीय समाज में उनके समाहित होने को समझना।"
+      },
+      {
+       "concept_tag": "arab-aakraman",
+       "learning_objective": "सिंध पर अरब विजय और भारतीय शासकों के प्रतिरोध का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "bharat-arab-sampark",
+       "learning_objective": "भारत और अरब के बीच व्यापारिक और वैज्ञानिक आदान-प्रदान को समझाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHES2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "संघर्ष एवं परिवर्तन का काल : 11वीं और 12वीं शताब्दी",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghes204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHES2-CH04-T1",
+     "topic_number": 1,
+     "title": "गज़नवी आक्रमण और हिंदू शाही प्रतिरोध",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "hindu-shahi-aur-khaibar-darra",
+       "learning_objective": "विद्यार्थी हिंदू शाही राजवंश और खैबर दर्रे के ऐतिहासिक महत्त्व को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "mahmud-ghaznavi-ke-abhiyan",
+       "learning_objective": "विद्यार्थी महमूद गज़नवी के अभियानों, उनकी प्रकृति और उद्देश्यों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH04-T2",
+     "topic_number": 2,
+     "title": "अल-बरूनी और भास्कराचार्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "al-biruni",
+       "learning_objective": "विद्यार्थी अल-बरूनी के भारत संबंधी अध्ययन और उनके अवलोकनों को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "bhaskaracharya",
+       "learning_objective": "विद्यार्थी भास्कराचार्य के ग्रंथों और गणित में उनके योगदान को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH04-T3",
+     "topic_number": 3,
+     "title": "पूर्वी भारत: सेन और पूर्वी गंग वंश",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sen-vansh",
+       "learning_objective": "विद्यार्थी बंगाल के सेन वंश की राजधानी, धार्मिक नीति और साहित्यिक संरक्षण को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "purvi-gang-vansh",
+       "learning_objective": "विद्यार्थी कलिंग के पूर्वी गंग वंश के विस्तार और उनके मंदिर-निर्माण को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH04-T4",
+     "topic_number": 4,
+     "title": "दक्षिण की ओर: काकतीय और होयसल वंश",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kakatiya-vansh",
+       "learning_objective": "विद्यार्थी काकतीय वंश की राजधानी, प्रशासन और स्थापत्य की विशेषताएँ समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "hoysala-vansh",
+       "learning_objective": "विद्यार्थी होयसल वंश की उत्पत्ति-कथा, राजधानियों और मंदिर-शैली को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH04-T5",
+     "topic_number": 5,
+     "title": "चोल वंश: समुद्रों के अधिपति",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rajaraja-chola",
+       "learning_objective": "विद्यार्थी राजराज चोल की विजयों, मंदिर-निर्माण और धार्मिक सहिष्णुता को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "rajendra-chola-nausena",
+       "learning_objective": "विद्यार्थी राजेंद्र चोल प्रथम के अभियानों, विशेषकर श्रीविजय के विरुद्ध नौसैनिक अभियान, का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH04-T6",
+     "topic_number": 6,
+     "title": "परमार वंश और विद्वान-राजा भोज",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "parmar-vansh",
+       "learning_objective": "विद्यार्थी परमार वंश के उदय, राजधानी, विस्तार और पतन को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "bhoj-vidvan-raja",
+       "learning_objective": "विद्यार्थी राजा भोज के जनकल्याण कार्यों और विद्वत्तापूर्ण रचनाओं का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH04-T7",
+     "topic_number": 7,
+     "title": "एक निर्णायक मोड़: भारत में गोरी वंश",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gori-ke-abhiyan",
+       "learning_objective": "विद्यार्थी मुहम्मद गोरी के अभियानों और तराइन के युद्धों के परिणामों को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "chaulukya-aur-chahaman",
+       "learning_objective": "विद्यार्थी चौलुक्य और चाहमान वंशों द्वारा किए गए प्रतिरोध को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "bakhtiyar-khilji-ke-abhiyan",
+       "learning_objective": "विद्यार्थी बख्तियार खिलजी के अभियानों और नालंदा जैसे शिक्षा-केंद्रों के विनाश के प्रभाव का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH04-T8",
+     "topic_number": 8,
+     "title": "शासन, व्यापार और सांस्कृतिक जीवन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shasan-aur-vyapar",
+       "learning_objective": "विद्यार्थी इस काल की प्रशासनिक व्यवस्था, व्यापार और कृषि-आधारित अर्थव्यवस्था का मूल्यांकन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sant-vicharak",
+       "learning_objective": "विद्यार्थी रामानुजाचार्य और बसवेश्वर के विचारों तथा सामाजिक योगदान को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sanskritik-prasar",
+       "learning_objective": "विद्यार्थी अंकोरवाट के उदाहरण से दक्षिण-पूर्व एशिया में भारतीय संस्कृति के प्रसार को पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHES2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "भारत : एक सुरक्षित आश्रय-स्थल",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghes205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHES2-CH05-T1",
+     "topic_number": 1,
+     "title": "भारतीय यहूदियों की कथा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bene-israel",
+       "learning_objective": "विद्यार्थी बेने इजराइल समुदाय के भारत आगमन और बसने की कथा बता सकेंगे।"
+      },
+      {
+       "concept_tag": "kochi-yahudi-sinegog",
+       "learning_objective": "विद्यार्थी कोच्चि में यहूदियों को मिले आश्रय और सिनेगॉग के महत्व को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "vivekanand-shikago-sandesh",
+       "learning_objective": "विद्यार्थी स्वामी विवेकानंद के शिकागो उद्बोधन में शरण देने की भारतीय परंपरा को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH05-T2",
+     "topic_number": 2,
+     "title": "सीरियाई ईसाई समुदाय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "syriai-isai-utpidan",
+       "learning_objective": "विद्यार्थी रोमन और फारसी साम्राज्यों में सीरियाई ईसाइयों के उत्पीड़न के कारणों की तुलना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "malabar-aagaman",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि सीरियाई ईसाई मालाबार तट पर कब और क्यों पहुँचे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH05-T3",
+     "topic_number": 3,
+     "title": "बुद्धिमान पारसी व्यक्ति, दूध और चीनी की कहानी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "parsi-aagaman",
+       "learning_objective": "विद्यार्थी पारसियों के फारस छोड़कर गुजरात तट पर बसने की परिस्थितियाँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "doodh-aur-cheeni",
+       "learning_objective": "विद्यार्थी दूध और चीनी की किंवदंती का प्रतीकात्मक अर्थ स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "jarthustra-vaidik-sambandh",
+       "learning_objective": "विद्यार्थी जरथुस्त्रवाद और वैदिक परंपरा की समानताओं और भेदों की तुलना कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH05-T4",
+     "topic_number": 4,
+     "title": "अरब व्यापारी समुदाय और अफ्रीकी संबंध",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "arab-vyapari-mappila",
+       "learning_objective": "विद्यार्थी पश्चिमी तट पर बसे अरब व्यापारियों और माप्पला समुदाय की भूमिका समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "siddi-samuday",
+       "learning_objective": "विद्यार्थी सिद्दी समुदाय के भारत आगमन और उनकी मिली-जुली सांस्कृतिक पहचान का वर्णन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH05-T5",
+     "topic_number": 5,
+     "title": "भारत में आर्मेनियाई लोग और बहाई समुदाय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "armeniai-bastiyan",
+       "learning_objective": "विद्यार्थी भारत में आर्मेनियाई बस्तियों और मुगल काल में उनकी भूमिका बता सकेंगे।"
+      },
+      {
+       "concept_tag": "bahai-samuday",
+       "learning_objective": "विद्यार्थी बहाई धर्म की शिक्षाओं और भारत में इस समुदाय के विकास को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH05-T6",
+     "topic_number": 6,
+     "title": "'गुड महाराजा' और पोलिश बच्चे",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gud-maharaja",
+       "learning_objective": "विद्यार्थी नवानगर के महाराजा दिग्विजयसिंहजी के मानवीय योगदान को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "polish-sharanarthi",
+       "learning_objective": "विद्यार्थी द्वितीय विश्व युद्ध के समय पोलिश शरणार्थियों को मिले आश्रय का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH05-T7",
+     "topic_number": 7,
+     "title": "भारत में तिब्बती शरणार्थी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tibbat-baudh-itihas",
+       "learning_objective": "विद्यार्थी तिब्बत में बौद्ध धर्म के प्रसार और दलाई लामा परंपरा को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "dalai-lama-sharan",
+       "learning_objective": "विद्यार्थी दलाई लामा और तिब्बती शरणार्थियों को भारत में मिले आश्रय और पुनर्वास का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sowa-rigpa",
+       "learning_objective": "विद्यार्थी सोवा रिग्पा चिकित्सा प्रणाली की विशेषताओं को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH05-T8",
+     "topic_number": 8,
+     "title": "'संपूर्ण विश्व एक परिवार है' और भारत के बाहर भारतीय जीवन-मूल्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vasudhaiv-kutumbakam",
+       "learning_objective": "विद्यार्थी वसुधैव कुटुम्बकम्, अतिथि देवो भव जैसे भारतीय मूल्यों का अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "bharatiya-mulya-videsh",
+       "learning_objective": "विद्यार्थी विदेशों में बसे भारतीय प्रवासी समुदाय की छवि और योगदान समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "samaveshan-sanskriti",
+       "learning_objective": "विद्यार्थी भारत की समावेशन और स्वीकार्यता की संस्कृति का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHES2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "राज्य, सरकार और नागरिक",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghes206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHES2-CH06-T1",
+     "topic_number": 1,
+     "title": "राज्य क्या है? — राज्य के चार घटक",
+     "ncert_sections": "राज्य क्या है?",
+     "concepts": [
+      {
+       "concept_tag": "rajya-ke-chaar-ghatak",
+       "learning_objective": "विद्यार्थी राज्य के चार आवश्यक घटकों — निश्चित भूभाग, स्थायी जनसंख्या, सरकार और संप्रभुता — को पहचानता है।"
+      },
+      {
+       "concept_tag": "sthayi-jansankhya-aur-bhubhag",
+       "learning_objective": "विद्यार्थी समझाता है कि स्थायी जनसंख्या और स्पष्ट सीमाओं वाला भूभाग राज्य के लिए क्यों आवश्यक हैं।"
+      },
+      {
+       "concept_tag": "samprabhuta",
+       "learning_objective": "विद्यार्थी संप्रभुता का अर्थ बताता है और समझाता है कि यह राज्य की अनिवार्य विशेषता क्यों है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH06-T2",
+     "topic_number": 2,
+     "title": "सरकार क्या है? — राज्य और सरकार में अंतर",
+     "ncert_sections": "सरकार क्या है?; जनता, पुलिस और सरकार",
+     "concepts": [
+      {
+       "concept_tag": "sarkar-ka-arth-aur-karya",
+       "learning_objective": "विद्यार्थी सरकार का अर्थ और उसके मुख्य कार्य बताता है।"
+      },
+      {
+       "concept_tag": "rajya-aur-sarkar-mein-antar",
+       "learning_objective": "विद्यार्थी राज्य और सरकार के बीच अंतर को उदाहरण सहित स्पष्ट करता है।"
+      },
+      {
+       "concept_tag": "police-aur-sarkar",
+       "learning_objective": "विद्यार्थी पुलिस को राज्य सरकार के अंग के रूप में पहचानता है और उसकी भूमिका व सीमाएँ बताता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH06-T3",
+     "topic_number": 3,
+     "title": "लोकतंत्र और गणराज्य",
+     "ncert_sections": "लोकतंत्र और गणराज्य; भारत — एक गणराज्य, जो सभी के अधिकारों की रक्षा करता है",
+     "concepts": [
+      {
+       "concept_tag": "loktantra-ka-arth",
+       "learning_objective": "विद्यार्थी लोकतंत्र का मूल विचार 'जनता का शासन' समझाता है।"
+      },
+      {
+       "concept_tag": "ganrajya-ka-arth",
+       "learning_objective": "विद्यार्थी गणराज्य की पहचान बताता है और लोकतंत्र से उसका अंतर उदाहरणों से स्पष्ट करता है।"
+      },
+      {
+       "concept_tag": "bahumat-ka-varchasva-aur-adhikar",
+       "learning_objective": "विद्यार्थी विश्लेषण करता है कि संविधान बहुमत के वर्चस्व से अल्पसंख्यकों के अधिकारों की रक्षा कैसे करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH06-T4",
+     "topic_number": 4,
+     "title": "विधायिका और कार्यपालिका",
+     "ncert_sections": "विधायिका; कार्यपालिका; राजनैतिक और स्थायी कार्यपालिका",
+     "concepts": [
+      {
+       "concept_tag": "vidhayika-ka-karya",
+       "learning_objective": "विद्यार्थी विधायिका को कानून बनाने वाले अंग के रूप में पहचानता है।"
+      },
+      {
+       "concept_tag": "rajnaitik-karyapalika",
+       "learning_objective": "विद्यार्थी राजनैतिक कार्यपालिका के सदस्यों और उनके कार्यों को पहचानता है।"
+      },
+      {
+       "concept_tag": "sthayi-karyapalika",
+       "learning_objective": "विद्यार्थी स्थायी कार्यपालिका (अधिकारी-तंत्र) के चयन, स्वरूप और कार्यों को समझाता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH06-T5",
+     "topic_number": 5,
+     "title": "सरकार और आप",
+     "ncert_sections": "सरकार और आप",
+     "concepts": [
+      {
+       "concept_tag": "sarkar-ki-bhoomikayen",
+       "learning_objective": "विद्यार्थी सरकार की संरक्षक, सेवा-प्रदाता और नियामक भूमिकाओं को उदाहरणों से पहचानता है।"
+      },
+      {
+       "concept_tag": "soochna-ka-adhikar",
+       "learning_objective": "विद्यार्थी बताता है कि सूचना का अधिकार अधिनियम शासन में पारदर्शिता और उत्तरदायित्व कैसे लाता है।"
+      },
+      {
+       "concept_tag": "nagrik-sahbhagita",
+       "learning_objective": "विद्यार्थी शिकायत निवारण, जनसंचार, नागरिक समाज संगठन, पत्र और मतदान जैसे सहभागिता के उपाय पहचानता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH06-T6",
+     "topic_number": 6,
+     "title": "न्यायपालिका — 'हितप्रहरी'",
+     "ncert_sections": "न्यायपालिका — 'हितप्रहरी'",
+     "concepts": [
+      {
+       "concept_tag": "nyayapalika-ke-karya",
+       "learning_objective": "विद्यार्थी न्यायपालिका के कार्य — कानूनों की व्याख्या, विवादों का निपटारा और अधिकारों की रक्षा — बताता है।"
+      },
+      {
+       "concept_tag": "swatantra-nyayapalika-aur-vidhi-ka-shasan",
+       "learning_objective": "विद्यार्थी स्वतंत्र न्यायपालिका और 'विधि के शासन' का महत्त्व समझाता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH06-T7",
+     "topic_number": 7,
+     "title": "सरकार के स्तर और विकेंद्रीकरण",
+     "ncert_sections": "सरकार के स्तर; विकेंद्रीकरण क्या है?; विकेंद्रीकरण क्यों महत्त्वपूर्ण है?",
+     "concepts": [
+      {
+       "concept_tag": "sarkar-ke-teen-star",
+       "learning_objective": "विद्यार्थी सरकार के तीन स्तरों — संघ, राज्य और स्थानीय — तथा उनके विषयों को पहचानता है।"
+      },
+      {
+       "concept_tag": "panchayati-raj-aur-sanshodhan",
+       "learning_objective": "विद्यार्थी बताता है कि संविधान संशोधन से स्थानीय सरकारें तीसरा स्तर कैसे बनीं।"
+      },
+      {
+       "concept_tag": "vikendrikaran-ka-mahatva",
+       "learning_objective": "विद्यार्थी विकेंद्रीकरण का अर्थ और उसके महत्त्व के कारणों का मूल्यांकन करता है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHES2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "अवसंरचना : भारत के विकास की नींव",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghes207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHES2-CH07-T1",
+     "topic_number": 1,
+     "title": "भौतिक अवसंरचना : अर्थ और प्रकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhautik-avsanrachna-arth",
+       "learning_objective": "विद्यार्थी भौतिक अवसंरचना का अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "avsanrachna-ke-prakar",
+       "learning_objective": "विद्यार्थी परिवहन, मूलभूत सेवाएँ, संचार और ऊर्जा अवसंरचना के उदाहरण पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH07-T2",
+     "topic_number": 2,
+     "title": "भौतिक अवसंरचना क्यों महत्त्वपूर्ण है?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rishabh-satish-udaharan",
+       "learning_objective": "विद्यार्थी ऋषभ की यात्रा और सतीश के टमाटरों के उदाहरण से अवसंरचना के जुड़े हुए स्वरूप को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "avsanrachna-ka-mahatva",
+       "learning_objective": "विद्यार्थी व्यापार, पर्यटन, आपदा-सहायता और राष्ट्रीय सुरक्षा में अवसंरचना की भूमिका समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH07-T3",
+     "topic_number": 3,
+     "title": "सड़क एवं राजमार्ग नेटवर्क",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sadak-rajmarg",
+       "learning_objective": "विद्यार्थी सड़कों के प्रकार, उनके निर्माण के उत्तरदायी स्तर और प्रमुख राजमार्गों को बता सकेंगे।"
+      },
+      {
+       "concept_tag": "pul-aur-jeevit-jad-setu",
+       "learning_objective": "विद्यार्थी दुर्गम क्षेत्रों में पुलों, ढोला सदिया सेतु और जीवंत जड़ सेतुओं का महत्त्व समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH07-T4",
+     "topic_number": 4,
+     "title": "भारतीय रेलमार्ग और मेट्रो रेल प्रणालियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rail-itihas",
+       "learning_objective": "विद्यार्थी औपनिवेशिक काल में रेल के आरंभ के उद्देश्य समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "rail-vartaman",
+       "learning_objective": "विद्यार्थी वर्तमान भारतीय रेल की विशेषताओं और रोजगार में उसकी भूमिका को बता सकेंगे।"
+      },
+      {
+       "concept_tag": "metro-rail",
+       "learning_objective": "विद्यार्थी मेट्रो रेल के लाभ समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH07-T5",
+     "topic_number": 5,
+     "title": "वायु परिवहन, नौवहन और पत्तन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vayu-parivahan",
+       "learning_objective": "विद्यार्थी वायु परिवहन की विशेषताएँ और उपयोग बता सकेंगे।"
+      },
+      {
+       "concept_tag": "nauvahan-pattan",
+       "learning_objective": "विद्यार्थी समुद्री तटरेखा, पत्तनों और जहाजों द्वारा परिवहन का महत्त्व समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH07-T6",
+     "topic_number": 6,
+     "title": "संचार अवसंरचना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sanchar-tantra",
+       "learning_objective": "विद्यार्थी संचार अवसंरचना के घटकों और उसके लाभों को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sanchar-itihas",
+       "learning_objective": "विद्यार्थी संचार प्रणालियों के विकास की समय-रेखा की प्रमुख घटनाएँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "jc-bose",
+       "learning_objective": "विद्यार्थी वायरलेस संचार में जगदीश चंद्र बसु के योगदान को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH07-T7",
+     "topic_number": 7,
+     "title": "अवसंरचना के प्रति सामूहिक उत्तरदायित्व और अर्थशास्त्र में अवसंरचना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samajik-avsanrachna",
+       "learning_objective": "विद्यार्थी सामाजिक अवसंरचना के उदाहरण पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "samuhik-uttardayitva",
+       "learning_objective": "विद्यार्थी सार्वजनिक अवसंरचना की देखभाल और संधारणीय अवसंरचना में नागरिकों की भूमिका समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "arthashastra-avsanrachna",
+       "learning_objective": "विद्यार्थी कौटिल्य के अर्थशास्त्र में सड़कों और जल-संसाधनों से जुड़े नियमों को बता सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHES2-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "बैंक एवं वित्तीय सेवाएँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghes208.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHES2-CH08-T1",
+     "topic_number": 1,
+     "title": "वित्तीय अवसंरचना और बैंक का परिचय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vittiya-avsanrachna",
+       "learning_objective": "विद्यार्थी वित्तीय अवसंरचना के घटकों और भौतिक अवसंरचना से उसके संबंध को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "bank-madhyasth",
+       "learning_objective": "विद्यार्थी बैंक को बचतकर्ताओं और ऋण लेने वालों के बीच मध्यस्थ के रूप में पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH08-T2",
+     "topic_number": 2,
+     "title": "बैंक खाते और जमा पर ब्याज",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bank-khate-ke-prakar",
+       "learning_objective": "विद्यार्थी बचत, चालू और सावधि जमा खातों में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "byaj-aur-chakravriddhi",
+       "learning_objective": "विद्यार्थी ब्याज और चक्रवृद्धि की गणना कर उसका महत्त्व समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH08-T3",
+     "topic_number": 3,
+     "title": "ऋण, बैंकों की आय और जन धन योजना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rin-aur-bank-ki-aay",
+       "learning_objective": "विद्यार्थी ऋण तथा ब्याज-दरों के अंतर से बैंक की आय की गणना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "jan-dhan-yojana",
+       "learning_objective": "विद्यार्थी जन धन योजना के उद्देश्य और प्रभाव की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH08-T4",
+     "topic_number": 4,
+     "title": "अन्य वित्तीय संस्थान और भारतीय रिज़र्व बैंक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "anya-vittiya-sansthan",
+       "learning_objective": "विद्यार्थी डाकघर, नाबार्ड जैसे संस्थानों की वित्तीय भूमिका पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "bhartiya-reserve-bank",
+       "learning_objective": "विद्यार्थी भारतीय रिज़र्व बैंक के 'बैंकों के बैंक' के रूप में कार्य बता सकेंगे।"
+      },
+      {
+       "concept_tag": "prachin-bharat-ke-mandir",
+       "learning_objective": "विद्यार्थी प्राचीन भारत में मंदिरों की बैंक-जैसी भूमिका का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH08-T5",
+     "topic_number": 5,
+     "title": "भुगतान के माध्यम और प्रणालियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nakad-nikasi-aur-chek",
+       "learning_objective": "विद्यार्थी निकासी पर्ची, ए.टी.एम. और चेक से धन के लेन-देन की प्रक्रिया समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "electronic-bhugtan",
+       "learning_objective": "विद्यार्थी पी.ओ.एस. यंत्र और इंटरनेट बैंकिंग जैसे इलेक्ट्रॉनिक भुगतानों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "upi",
+       "learning_objective": "विद्यार्थी यू.पी.आई. लेन-देन के चरणों और उसके लाभों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH08-T6",
+     "topic_number": 6,
+     "title": "शेयर बाजार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "share-aur-stock",
+       "learning_objective": "विद्यार्थी शेयर, स्टॉक और शेयर विनिमय का अर्थ समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "share-kimat-utar-chadhav",
+       "learning_objective": "विद्यार्थी शेयर-कीमतों के उतार-चढ़ाव के कारणों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHES2-CH08-T7",
+     "topic_number": 7,
+     "title": "वित्तीय धोखाधड़ी और उनसे बचाव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dhokhadhadi-ke-tarike",
+       "learning_objective": "विद्यार्थी डिजिटल धोखाधड़ी के सामान्य तरीकों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "suraksha-ke-upay",
+       "learning_objective": "विद्यार्थी डिजिटल भुगतान करते समय सुरक्षित रहने के उपाय अपना सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

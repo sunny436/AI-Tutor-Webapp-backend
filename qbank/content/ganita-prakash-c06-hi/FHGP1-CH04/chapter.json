@@ -1,0 +1,92 @@
+{
+ "chapter_id": "FHGP1-CH04",
+ "title": "आँकड़ों का प्रबंधन और प्रस्तुतिकरण",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHGP1-CH04-T1",
+   "topic_number": 1,
+   "title": "आँकड़ों का संग्रहण और संगठन",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "aankde-sangrahan",
+     "learning_objective": "आँकड़े क्या हैं, यह बताना और पहचानना कि किन प्रश्नों के उत्तर के लिए आँकड़े संग्रहित करने पड़ते हैं।"
+    },
+    {
+     "concept_tag": "milan-chinh-barambarta",
+     "learning_objective": "मिलान चिह्नों से आँकड़ों को सारणी में संगठित करना और बारंबारता ज्ञात करना।"
+    },
+    {
+     "concept_tag": "aarohi-kram-vyavastha",
+     "learning_objective": "आँकड़ों को आरोही क्रम में व्यवस्थित करके उनसे प्रश्नों के उत्तर ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH04-T2",
+   "topic_number": 2,
+   "title": "चित्रालेख",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "chitralekh-padhna",
+     "learning_objective": "चित्रालेख को पढ़कर प्रतीकों की संख्या से वास्तविक बारंबारता ज्ञात करना।"
+    },
+    {
+     "concept_tag": "chitralekh-paimana",
+     "learning_objective": "चित्रालेख के लिए उपयुक्त पैमाना या कुंजी चुनना और उसके अनुसार प्रतीक बनाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH04-T3",
+   "topic_number": 3,
+   "title": "दंड आलेख",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "dand-aalekh-padhna",
+     "learning_objective": "दंड आलेख को पढ़कर मान ज्ञात करना, उनकी तुलना करना और निष्कर्ष निकालना।"
+    },
+    {
+     "concept_tag": "dand-aalekh-visheshtayen",
+     "learning_objective": "दंड आलेख की विशेषताएँ बताना, जैसे समान चौड़ाई के दंड, समान दूरी और शून्य से प्रारंभ पैमाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH04-T4",
+   "topic_number": 4,
+   "title": "दंड आलेख खींचना",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "paimana-chunna",
+     "learning_objective": "आँकड़ों के न्यूनतम और अधिकतम मानों को देखकर दंड आलेख के लिए उपयुक्त पैमाना चुनना।"
+    },
+    {
+     "concept_tag": "dand-unchai-ganana",
+     "learning_objective": "पैमाने के अनुसार प्रत्येक दंड की ऊँचाई इकाइयों में परिकलित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH04-T5",
+   "topic_number": 5,
+   "title": "कलात्मक और सौंदर्यात्मक विचार",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "kshaitij-urdhvadhar-dand",
+     "learning_objective": "यह तय करना कि आँकड़ों के लिए क्षैतिज दंड उपयुक्त हैं या ऊर्ध्वाधर दंड (स्तंभ आलेख)।"
+    },
+    {
+     "concept_tag": "infographic-bhramak",
+     "learning_objective": "इन्फोग्राफिक्स को पढ़ते और बनाते समय पहचानना कि आकर्षक चित्र कब भ्रामक हो सकते हैं।"
+    }
+   ]
+  }
+ ]
+}

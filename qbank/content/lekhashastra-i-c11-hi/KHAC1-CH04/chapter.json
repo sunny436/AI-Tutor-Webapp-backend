@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KHAC1-CH04",
+ "title": "लेन-देनों का अभिलेखन-II",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHAC1-CH04-T1",
+   "topic_number": 1,
+   "title": "रोकड़ बही और एकल खाना रोकड़ बही",
+   "ncert_sections": "4.1, 4.1.1",
+   "concepts": [
+    {
+     "concept_tag": "rokad-bahi-swaroop",
+     "learning_objective": "रोकड़ बही को प्रारंभिक प्रविष्टि की पुस्तक तथा रोकड़ खाते दोनों के रूप में समझना।"
+    },
+    {
+     "concept_tag": "ekal-khana-rokad-bahi",
+     "learning_objective": "एकल खाना रोकड़ बही में नकद प्राप्तियाँ और भुगतान लिखकर उसका शेष निकालना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH04-T2",
+   "topic_number": 2,
+   "title": "दोहरा खाना रोकड़ बही और बैंक लेन-देन",
+   "ncert_sections": "4.1.2",
+   "concepts": [
+    {
+     "concept_tag": "dohra-khana-rokad-bahi",
+     "learning_objective": "दोहरे खाने वाली रोकड़ बही में नकद और बैंक लेन-देन को अलग खानों में लिखना।"
+    },
+    {
+     "concept_tag": "vipreet-pravishti",
+     "learning_objective": "विपरीत प्रविष्टि को पहचानना और उसकी खतौनी न होने का कारण बताना।"
+    },
+    {
+     "concept_tag": "check-aur-rekhankan",
+     "learning_objective": "चेक के प्रकार, रेखांकन और जमा पर्ची का उपयोग समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH04-T3",
+   "topic_number": 3,
+   "title": "लघु रोकड़ बही",
+   "ncert_sections": "4.1.3",
+   "concepts": [
+    {
+     "concept_tag": "laghu-rokad-bahi",
+     "learning_objective": "लघु रोकड़ बही की आवश्यकता, स्वरूप और लाभ समझना।"
+    },
+    {
+     "concept_tag": "agradhan-pranali",
+     "learning_objective": "अग्रधन प्रणाली के अंतर्गत प्रतिपूर्ति की राशि ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH04-T4",
+   "topic_number": 4,
+   "title": "रोकड़ बही का शेष निकालना",
+   "ncert_sections": "4.1.4",
+   "concepts": [
+    {
+     "concept_tag": "rokad-bahi-santulan",
+     "learning_objective": "रोकड़ बही के रोकड़ और बैंक खानों का शेष निकालकर अगली अवधि में आगे ले जाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH04-T5",
+   "topic_number": 5,
+   "title": "क्रय बही और क्रय वापसी बही",
+   "ncert_sections": "4.2, 4.3",
+   "concepts": [
+    {
+     "concept_tag": "kray-bahi",
+     "learning_objective": "क्रय बही में उधार माल क्रय को शुद्ध बीजक राशि पर लिखना और उसकी खतौनी करना।"
+    },
+    {
+     "concept_tag": "kray-vapsi-bahi",
+     "learning_objective": "क्रय वापसी बही और नाम पत्र के उपयोग को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH04-T6",
+   "topic_number": 6,
+   "title": "विक्रय बही और विक्रय वापसी बही",
+   "ncert_sections": "4.4, 4.5",
+   "concepts": [
+    {
+     "concept_tag": "vikray-bahi",
+     "learning_objective": "विक्रय बही में उधार माल विक्रय का अभिलेखन और खतौनी करना।"
+    },
+    {
+     "concept_tag": "vikray-vapsi-bahi",
+     "learning_objective": "विक्रय वापसी बही और जमा पत्र के उपयोग को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH04-T7",
+   "topic_number": 7,
+   "title": "मुख्य जर्नल और खातों का शेष निकालना",
+   "ncert_sections": "4.6, 4.7",
+   "concepts": [
+    {
+     "concept_tag": "mukhya-journal",
+     "learning_objective": "विशेष बहियों में न लिखे जाने वाले लेन-देनों को मुख्य जर्नल में पहचानना।"
+    },
+    {
+     "concept_tag": "khaton-ka-santulan",
+     "learning_objective": "खाता-बही के खातों का शेष निकालना और आय-व्यय खातों को बंद करना।"
+    }
+   ]
+  }
+ ]
+}

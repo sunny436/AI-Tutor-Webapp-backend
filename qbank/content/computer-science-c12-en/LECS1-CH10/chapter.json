@@ -1,0 +1,140 @@
+{
+ "chapter_id": "LECS1-CH10",
+ "title": "Computer Networks",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECS1-CH10-T1",
+   "topic_number": 1,
+   "title": "Introduction to computer networks and evolution of networking",
+   "ncert_sections": "10.1, 10.2",
+   "concepts": [
+    {
+     "concept_tag": "computer-network-basics",
+     "learning_objective": "Define a computer network and state the advantages of sharing data and resources over it."
+    },
+    {
+     "concept_tag": "network-nodes-and-packets",
+     "learning_objective": "Explain what a node is and how data travels across a network as packets."
+    },
+    {
+     "concept_tag": "arpanet-evolution",
+     "learning_objective": "Describe the main milestones in the evolution of networking from ARPANET to Wi-Fi."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH10-T2",
+   "topic_number": 2,
+   "title": "Types of networks: PAN, LAN, MAN and WAN",
+   "ncert_sections": "10.3, 10.3.1, 10.3.2, 10.3.3, 10.3.4",
+   "concepts": [
+    {
+     "concept_tag": "pan-and-lan",
+     "learning_objective": "Distinguish a PAN and a LAN by range, media and data transfer rate."
+    },
+    {
+     "concept_tag": "man-and-wan",
+     "learning_objective": "Classify a given network as MAN or WAN from the geographical area it covers."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH10-T3",
+   "topic_number": 3,
+   "title": "Network devices: modem, Ethernet card, RJ45 and repeater",
+   "ncert_sections": "10.4.1, 10.4.2, 10.4.3, 10.4.4",
+   "concepts": [
+    {
+     "concept_tag": "modem",
+     "learning_objective": "Explain modulation and demodulation performed by modems at the sender's and receiver's ends."
+    },
+    {
+     "concept_tag": "nic-and-rj45",
+     "learning_objective": "Describe the role of the Ethernet card (NIC) and the RJ45 connector in a wired network."
+    },
+    {
+     "concept_tag": "repeater",
+     "learning_objective": "Explain why and where a repeater is needed to regenerate weakened signals."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH10-T4",
+   "topic_number": 4,
+   "title": "Network devices: hub, switch, router and gateway",
+   "ncert_sections": "10.4.5, 10.4.6, 10.4.7, 10.4.8",
+   "concepts": [
+    {
+     "concept_tag": "hub-vs-switch",
+     "learning_objective": "Compare how a hub and a switch forward incoming data."
+    },
+    {
+     "concept_tag": "router",
+     "learning_objective": "Explain how a router analyses, repackages and forwards data to other networks."
+    },
+    {
+     "concept_tag": "gateway",
+     "learning_objective": "Describe the gateway as the entry and exit point of a network and its link with the firewall."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH10-T5",
+   "topic_number": 5,
+   "title": "Networking topologies",
+   "ncert_sections": "10.5, 10.5.1, 10.5.2, 10.5.3, 10.5.4, 10.5.5",
+   "concepts": [
+    {
+     "concept_tag": "mesh-topology",
+     "learning_objective": "Describe mesh topology and calculate the number of links in a fully connected mesh."
+    },
+    {
+     "concept_tag": "ring-bus-topology",
+     "learning_objective": "Compare the direction of data flow, cost and reliability of ring and bus topologies."
+    },
+    {
+     "concept_tag": "star-tree-topology",
+     "learning_objective": "Identify star and tree (hybrid) topologies and the effect of a failure of the central device."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH10-T6",
+   "topic_number": 6,
+   "title": "Identifying nodes: MAC address and IP address",
+   "ncert_sections": "10.6, 10.6.1, 10.6.2",
+   "concepts": [
+    {
+     "concept_tag": "mac-address",
+     "learning_objective": "State the structure of a MAC address and why it is a permanent hardware address."
+    },
+    {
+     "concept_tag": "ip-address",
+     "learning_objective": "Distinguish IPv4 and IPv6 addresses and explain why an IP address can change."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH10-T7",
+   "topic_number": 7,
+   "title": "Internet, World Wide Web and Domain Name System",
+   "ncert_sections": "10.7, 10.7.1, 10.8, 10.8.1",
+   "concepts": [
+    {
+     "concept_tag": "internet-and-web",
+     "learning_objective": "Differentiate between the Internet and the World Wide Web."
+    },
+    {
+     "concept_tag": "www-technologies",
+     "learning_objective": "Identify the roles of HTML, URL and HTTP and the parts of a URL."
+    },
+    {
+     "concept_tag": "domain-name-system",
+     "learning_objective": "Explain domain name resolution and the hierarchical arrangement of DNS servers."
+    }
+   ]
+  }
+ ]
+}

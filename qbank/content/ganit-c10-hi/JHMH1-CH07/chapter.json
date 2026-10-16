@@ -1,0 +1,92 @@
+{
+ "chapter_id": "JHMH1-CH07",
+ "title": "निर्देशांक ज्यामिति",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH07-T1",
+   "topic_number": 1,
+   "title": "परिचय: बिंदु के निर्देशांक और अक्षों पर स्थित बिंदु",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "bhuj-aur-koti",
+     "learning_objective": "विद्यार्थी किसी बिंदु के भुज और कोटि को अक्षों से उसकी दूरी के रूप में पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "akshon-par-bindu",
+     "learning_objective": "विद्यार्थी x-अक्ष और y-अक्ष पर स्थित बिंदुओं के निर्देशांकों का रूप पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH07-T2",
+   "topic_number": 2,
+   "title": "दूरी सूत्र",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "doori-sutra",
+     "learning_objective": "विद्यार्थी दूरी सूत्र द्वारा दो बिंदुओं के बीच की दूरी ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "mulbindu-se-doori",
+     "learning_objective": "विद्यार्थी मूलबिंदु से किसी बिंदु की दूरी ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH07-T3",
+   "topic_number": 3,
+   "title": "दूरी सूत्र के अनुप्रयोग: आकृतियाँ और समदूरस्थ बिंदु",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "aakriti-ki-pahchan",
+     "learning_objective": "विद्यार्थी दूरी सूत्र से त्रिभुज, वर्ग या संरेख बिंदुओं की पहचान कर सकेंगे।"
+    },
+    {
+     "concept_tag": "samdoorasth-bindu",
+     "learning_objective": "विद्यार्थी दो दिए गए बिंदुओं से समदूरस्थ बिंदु या संबंध ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH07-T4",
+   "topic_number": 4,
+   "title": "विभाजन सूत्र और मध्य-बिंदु",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "vibhajan-sutra",
+     "learning_objective": "विद्यार्थी दिए गए अनुपात में अंतः विभाजित करने वाले बिंदु के निर्देशांक ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "madhya-bindu",
+     "learning_objective": "विद्यार्थी रेखाखंड के मध्य-बिंदु का सूत्र लागू कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH07-T5",
+   "topic_number": 5,
+   "title": "विभाजन सूत्र के अनुप्रयोग: अनुपात, समत्रिभाजन और अक्षों द्वारा विभाजन",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "anupat-gyat-karna",
+     "learning_objective": "विद्यार्थी किसी दिए गए बिंदु द्वारा रेखाखंड के विभाजन का अनुपात ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "samtribhajan-bindu",
+     "learning_objective": "विद्यार्थी किसी रेखाखंड के समत्रिभाजन बिंदु ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "aksh-dwara-vibhajan",
+     "learning_objective": "विद्यार्थी अक्षों द्वारा रेखाखंड के विभाजन का अनुपात और बिंदु ज्ञात कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

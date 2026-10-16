@@ -1,0 +1,88 @@
+{
+ "chapter_id": "HSDE1-CH16",
+ "title": "धातुरूपाणि",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HSDE1-CH16-T1",
+   "topic_number": 1,
+   "title": "परस्मैपदे लट्-लकारः (वर्तमानकालः)",
+   "ncert_sections": "परिशिष्टम् ३ — परस्मैपदम्, लट्-लकारः",
+   "concepts": [
+    {
+     "concept_tag": "lat-lakarah-rupani",
+     "learning_objective": "भू-गम्-पा-नी-स्था-दृश्-इष् धातूनां लट्-लकाररूपाणि अभिजानाति।"
+    },
+    {
+     "concept_tag": "purusha-vachana-sambandhah",
+     "learning_objective": "कर्तुः पुरुषवचनानुसारं क्रियापदस्य चयनं करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH16-T2",
+   "topic_number": 2,
+   "title": "परस्मैपदे लृट्-लकारः (भविष्यत्कालः)",
+   "ncert_sections": "परिशिष्टम् ३ — परस्मैपदम्, लृट्-लकारः",
+   "concepts": [
+    {
+     "concept_tag": "lrit-lakarah-rupani",
+     "learning_objective": "धातूनां भविष्यत्कालिकानि लृट्-लकाररूपाणि जानाति।"
+    },
+    {
+     "concept_tag": "lrit-vishesha-rupani",
+     "learning_objective": "पा-नी-दृश्-इष् इत्यादीनां विशिष्टानि लृट्रूपाणि (पास्यति, नेष्यति, द्रक्ष्यति, एषिष्यति) अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH16-T3",
+   "topic_number": 3,
+   "title": "परस्मैपदे लङ्-लकारः (भूतकालः)",
+   "ncert_sections": "परिशिष्टम् ३ — परस्मैपदम्, लङ्-लकारः",
+   "concepts": [
+    {
+     "concept_tag": "lang-lakarah-rupani",
+     "learning_objective": "धातूनां भूतकालिकानि लङ्-लकाररूपाणि अभिजानाति।"
+    },
+    {
+     "concept_tag": "lang-agamah",
+     "learning_objective": "लङ्-लकारे धातोः पूर्वम् अकारस्य (इष्-धातौ ऐ इति) आगमं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH16-T4",
+   "topic_number": 4,
+   "title": "परस्मैपदे लोट्-लकारः विधिलिङ्-लकारः च",
+   "ncert_sections": "परिशिष्टम् ३ — परस्मैपदम्, लोट्-लकारः, विधिलिङ्-लकारः",
+   "concepts": [
+    {
+     "concept_tag": "lot-lakarah",
+     "learning_objective": "आज्ञार्थकस्य लोट्-लकारस्य रूपाणि प्रयोगं च जानाति।"
+    },
+    {
+     "concept_tag": "vidhiling-lakarah",
+     "learning_objective": "विध्यर्थकस्य विधिलिङ्-लकारस्य रूपाणि प्रयोगं च जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH16-T5",
+   "topic_number": 5,
+   "title": "आत्मनेपदम् — सेव्-लभ्-धातू",
+   "ncert_sections": "परिशिष्टम् ३ — आत्मनेपदम् (लट्, लृट्, लङ्, लोट्, विधिलिङ्)",
+   "concepts": [
+    {
+     "concept_tag": "atmanepada-rupani",
+     "learning_objective": "सेव्-लभ्-धातूनाम् आत्मनेपदिरूपाणि पञ्चसु लकारेषु अभिजानाति।"
+    },
+    {
+     "concept_tag": "parasmai-atmane-bhedah",
+     "learning_objective": "परस्मैपदिनाम् आत्मनेपदिनां च रूपाणां भेदं विश्लेषयति।"
+    }
+   ]
+  }
+ ]
+}

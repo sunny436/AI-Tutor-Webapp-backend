@@ -1,0 +1,116 @@
+{
+ "chapter_id": "GHGP2-CH05",
+ "title": "बिंदुओं का मिलान",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHGP2-CH05-T1",
+   "topic_number": 1,
+   "title": "प्रश्न और कथन",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "sankhyikiya-prashn",
+     "learning_objective": "विद्यार्थी पहचान सकेंगे कि कौन-सा प्रश्न आँकड़े इकट्ठा करके उत्तर दिया जाने वाला सांख्यिकीय प्रश्न है।"
+    },
+    {
+     "concept_tag": "sankhyikiya-kathan",
+     "learning_objective": "विद्यार्थी सांख्यिकीय कथन का अर्थ समझकर उसे सामान्य प्रवृत्ति के सार के रूप में पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH05-T2",
+   "topic_number": 2,
+   "title": "निरूपक मान: औसत या अंकगणितीय माध्य",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "ausat-ganana",
+     "learning_objective": "विद्यार्थी सभी मानों के योग को मानों की संख्या से भाग देकर औसत ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "uchit-bhagidari",
+     "learning_objective": "विद्यार्थी औसत को उचित या समान भागीदारी के रूप में समझकर समूहों की तुलना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "shunya-banaam-koi-maan-nahin",
+     "learning_objective": "विद्यार्थी शून्य मान और अनुपस्थित मान का अंतर समझकर सही संख्या से भाग दे सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH05-T3",
+   "topic_number": 3,
+   "title": "आँकड़ों की तुलना और बिंदु आरेख",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "bindu-aarekh",
+     "learning_objective": "विद्यार्थी बिंदु आरेख को पढ़कर उससे मिलने वाली और न मिलने वाली जानकारी पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "aankdon-ki-tulna",
+     "learning_objective": "विद्यार्थी न्यूनतम, अधिकतम, योग, औसत और उनके अंतर से आँकड़ों का वर्णन और तुलना कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH05-T4",
+   "topic_number": 4,
+   "title": "असामान्य मान, माध्यिका और केंद्रीय प्रवृत्ति",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "madhyika-ganana",
+     "learning_objective": "विद्यार्थी क्रमबद्ध आँकड़ों से विषम और सम संख्या वाले मानों की माध्यिका ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "asamanya-maan-prabhav",
+     "learning_objective": "विद्यार्थी असामान्य मान को पहचानकर माध्य और माध्यिका पर उसका प्रभाव समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "kendriya-pravritti",
+     "learning_objective": "विद्यार्थी माध्य और माध्यिका को केंद्रीय प्रवृत्ति के मापक के रूप में समझ सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH05-T5",
+   "topic_number": 5,
+   "title": "आँकड़ों का दृश्यांकन: द्वि-स्तंभ आलेख",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "dvi-stambh-aalekh",
+     "learning_objective": "विद्यार्थी सामूहिक या द्वि-स्तंभ आलेख को पहचानकर उसके दंडों की तुलना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "aalekh-paimana",
+     "learning_objective": "विद्यार्थी आलेख के पैमाने का प्रयोग करके दंड की लंबाई से मान ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "aalekh-vyakhya",
+     "learning_objective": "विद्यार्थी दो चरणों में आलेख की जानकारी पहचानकर उससे उचित निष्कर्ष निकाल सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH05-T6",
+   "topic_number": 6,
+   "title": "आँकड़ों का जासूस",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "talika-vyakhya",
+     "learning_objective": "विद्यार्थी ऊँचाई जैसी सारणी के आँकड़ों से कथनों की जाँच और तुलना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "samanyikaran-seema",
+     "learning_objective": "विद्यार्थी समझ सकेंगे कि सीमित आँकड़ों या औसत से हर व्यक्ति के विषय में निष्कर्ष नहीं निकलता।"
+    }
+   ]
+  }
+ ]
+}

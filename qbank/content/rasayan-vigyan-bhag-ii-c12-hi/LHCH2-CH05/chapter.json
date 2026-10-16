@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LHCH2-CH05",
+ "title": "जैव-अणु",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHCH2-CH05-T1",
+   "topic_number": 1,
+   "title": "कार्बोहाइड्रेट: वर्गीकरण और ग्लूकोस",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "karbohaidret-vargikaran",
+     "learning_objective": "जल-अपघटन के आधार पर कार्बोहाइड्रेटों को मोनो-, ओलिगो- और पॉलिसैकेराइड में वर्गीकृत करना।"
+    },
+    {
+     "concept_tag": "glucose-sanrachna",
+     "learning_objective": "ग्लूकोस की विवृत शृंखला और चक्रीय संरचना के प्रमाण समझना।"
+    },
+    {
+     "concept_tag": "dvisaikeraid-polisaikeraid",
+     "learning_objective": "सुक्रोस, लैक्टोस, स्टार्च, सेलुलोस और ग्लाइकोजन की संरचना और अंतर समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH05-T2",
+   "topic_number": 2,
+   "title": "प्रोटीन: ऐमीनो अम्ल और संरचना",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "amino-amla",
+     "learning_objective": "ऐमीनो अम्लों का वर्गीकरण और उनका ज्विटर आयन रूप समझना।"
+    },
+    {
+     "concept_tag": "protein-sanrachna",
+     "learning_objective": "पेप्टाइड बंध तथा प्रोटीन की प्राथमिक, द्वितीयक, तृतीयक और चतुष्क संरचना समझना।"
+    },
+    {
+     "concept_tag": "protein-vikrutikaran",
+     "learning_objective": "प्रोटीन के विकृतीकरण का अर्थ और उसके प्रभाव समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH05-T3",
+   "topic_number": 3,
+   "title": "एंज़ाइम",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "enzyme-kriyavidhi",
+     "learning_objective": "एंज़ाइमों को जैव उत्प्रेरक के रूप में और उनकी क्रियाविधि को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH05-T4",
+   "topic_number": 4,
+   "title": "विटामिन",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "vitamin-vargikaran",
+     "learning_objective": "विटामिनों को वसा-विलेय और जल-विलेय वर्गों में बाँटना।"
+    },
+    {
+     "concept_tag": "vitamin-kami-rog",
+     "learning_objective": "विटामिनों के स्रोत और उनकी कमी से होने वाले रोग पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH05-T5",
+   "topic_number": 5,
+   "title": "न्यूक्लिक अम्ल",
+   "ncert_sections": "10.5",
+   "concepts": [
+    {
+     "concept_tag": "nucleic-amla-sanghatan",
+     "learning_objective": "न्यूक्लिओसाइड, न्यूक्लिओटाइड और न्यूक्लिक अम्ल के घटक पहचानना।"
+    },
+    {
+     "concept_tag": "dna-rna-antar",
+     "learning_objective": "डी.एन.ए. और आर.एन.ए. की संरचना तथा कार्यों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH05-T6",
+   "topic_number": 6,
+   "title": "हॉर्मोन",
+   "ncert_sections": "10.6",
+   "concepts": [
+    {
+     "concept_tag": "harmon-karya",
+     "learning_objective": "हॉर्मोनों की रासायनिक प्रकृति, स्रोत और कार्य समझना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KEBO1-CH17",
+ "title": "Locomotion and Movement",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH17-T1",
+   "topic_number": 1,
+   "title": "Movement, locomotion and types of cellular movement",
+   "ncert_sections": "Introduction, 17.1",
+   "concepts": [
+    {
+     "concept_tag": "movement-and-locomotion",
+     "learning_objective": "Distinguish movement from locomotion and give the purposes of locomotion."
+    },
+    {
+     "concept_tag": "cellular-movement-types",
+     "learning_objective": "Identify amoeboid, ciliary and muscular movements shown by human cells."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH17-T2",
+   "topic_number": 2,
+   "title": "Muscle: properties and types",
+   "ncert_sections": "17.2",
+   "concepts": [
+    {
+     "concept_tag": "muscle-properties",
+     "learning_objective": "State the origin and the special properties of muscle tissue."
+    },
+    {
+     "concept_tag": "muscle-types",
+     "learning_objective": "Compare skeletal, visceral and cardiac muscles by location, appearance and control."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH17-T3",
+   "topic_number": 3,
+   "title": "Structure of skeletal muscle and contractile proteins",
+   "ncert_sections": "17.2, 17.2.1",
+   "concepts": [
+    {
+     "concept_tag": "muscle-fibre-organisation",
+     "learning_objective": "Describe the organisation of a skeletal muscle into fascicles, fibres and myofibrils."
+    },
+    {
+     "concept_tag": "sarcomere-bands",
+     "learning_objective": "Identify the A band, I band, Z line, M line and H zone of a sarcomere."
+    },
+    {
+     "concept_tag": "contractile-protein-structure",
+     "learning_objective": "Describe the structure of actin and myosin filaments and their regulatory proteins."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH17-T4",
+   "topic_number": 4,
+   "title": "Mechanism of muscle contraction",
+   "ncert_sections": "17.2.2",
+   "concepts": [
+    {
+     "concept_tag": "excitation-contraction-coupling",
+     "learning_objective": "Explain the sequence of events from a neural signal to cross bridge formation."
+    },
+    {
+     "concept_tag": "sliding-filament-theory",
+     "learning_objective": "Explain contraction as sliding of thin filaments and its effect on the bands."
+    },
+    {
+     "concept_tag": "red-and-white-fibres",
+     "learning_objective": "Distinguish red and white muscle fibres and explain muscle fatigue."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH17-T5",
+   "topic_number": 5,
+   "title": "Skeletal system",
+   "ncert_sections": "17.3",
+   "concepts": [
+    {
+     "concept_tag": "skeleton-organisation",
+     "learning_objective": "State the composition and the axial and appendicular divisions of the human skeleton."
+    },
+    {
+     "concept_tag": "vertebral-column-and-ribs",
+     "learning_objective": "Describe the vertebral column, sternum and the types of ribs."
+    },
+    {
+     "concept_tag": "appendicular-skeleton",
+     "learning_objective": "Identify the bones of the limbs and the pectoral and pelvic girdles."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH17-T6",
+   "topic_number": 6,
+   "title": "Joints",
+   "ncert_sections": "17.4",
+   "concepts": [
+    {
+     "concept_tag": "joint-classification",
+     "learning_objective": "Classify joints as fibrous, cartilaginous and synovial with examples."
+    },
+    {
+     "concept_tag": "synovial-joint-types",
+     "learning_objective": "Match types of synovial joints with their locations in the body."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH17-T7",
+   "topic_number": 7,
+   "title": "Disorders of muscular and skeletal system",
+   "ncert_sections": "17.5",
+   "concepts": [
+    {
+     "concept_tag": "muscular-disorders",
+     "learning_objective": "Identify the causes and features of myasthenia gravis, muscular dystrophy and tetany."
+    },
+    {
+     "concept_tag": "skeletal-joint-disorders",
+     "learning_objective": "Identify the causes and features of arthritis, osteoporosis and gout."
+    }
+   ]
+  }
+ ]
+}

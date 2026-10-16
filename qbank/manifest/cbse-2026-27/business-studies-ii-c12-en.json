@@ -1,0 +1,476 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "business-studies-ii-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "business_studies",
+  "language": "english",
+  "title": "Business Studies-II",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "lebs2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEBS2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Financial Management",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lebs201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEBS2-CH01-T1",
+     "topic_number": 1,
+     "title": "Business finance, financial management and its objective",
+     "ncert_sections": "Meaning of Business Finance; Financial Management; Importance; Objectives",
+     "concepts": [
+      {
+       "concept_tag": "business-finance-meaning",
+       "learning_objective": "Explain the meaning of business finance and why it is needed at every stage of a business."
+      },
+      {
+       "concept_tag": "financial-management-role",
+       "learning_objective": "Describe financial management and how its decisions shape the financial statements of a business."
+      },
+      {
+       "concept_tag": "wealth-maximisation",
+       "learning_objective": "Explain wealth maximisation as the primary objective of financial management."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH01-T2",
+     "topic_number": 2,
+     "title": "Investment decision (capital budgeting)",
+     "ncert_sections": "Investment Decision; Factors affecting Capital Budgeting Decision",
+     "concepts": [
+      {
+       "concept_tag": "investment-decision",
+       "learning_objective": "Distinguish long-term (capital budgeting) and short-term (working capital) investment decisions."
+      },
+      {
+       "concept_tag": "capital-budgeting-factors",
+       "learning_objective": "Explain the factors affecting capital budgeting decisions: cash flows, rate of return and investment criteria."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH01-T3",
+     "topic_number": 3,
+     "title": "Financing decision",
+     "ncert_sections": "Financing Decision; Factors Affecting Financing Decisions",
+     "concepts": [
+      {
+       "concept_tag": "financing-decision",
+       "learning_objective": "Explain the financing decision, financial risk and floatation cost of different sources of funds."
+      },
+      {
+       "concept_tag": "financing-decision-factors",
+       "learning_objective": "Apply the factors affecting financing decisions to business situations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH01-T4",
+     "topic_number": 4,
+     "title": "Dividend decision",
+     "ncert_sections": "Dividend Decision; Factors Affecting Dividend Decision",
+     "concepts": [
+      {
+       "concept_tag": "dividend-decision",
+       "learning_objective": "Explain the dividend decision as the split of profit between dividend and retained earnings."
+      },
+      {
+       "concept_tag": "dividend-decision-factors",
+       "learning_objective": "Apply the factors affecting dividend decisions to business situations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH01-T5",
+     "topic_number": 5,
+     "title": "Financial planning",
+     "ncert_sections": "Financial Planning; Importance",
+     "concepts": [
+      {
+       "concept_tag": "financial-planning-objectives",
+       "learning_objective": "State the meaning, process and twin objectives of financial planning."
+      },
+      {
+       "concept_tag": "financial-planning-importance",
+       "learning_objective": "Explain the importance of financial planning and how it differs from financial management."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH01-T6",
+     "topic_number": 6,
+     "title": "Capital structure and trading on equity",
+     "ncert_sections": "Capital Structure; EBIT-EPS analysis; Trading on Equity",
+     "concepts": [
+      {
+       "concept_tag": "capital-structure-meaning",
+       "learning_objective": "Explain capital structure, debt-equity ratio, financial leverage and the risk of debt."
+      },
+      {
+       "concept_tag": "trading-on-equity",
+       "learning_objective": "Use EBIT-EPS analysis to judge when trading on equity raises EPS."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH01-T7",
+     "topic_number": 7,
+     "title": "Factors affecting the choice of capital structure",
+     "ncert_sections": "Factors affecting the Choice of Capital Structure",
+     "concepts": [
+      {
+       "concept_tag": "coverage-ratios",
+       "learning_objective": "Calculate and interpret the interest coverage ratio and debt service coverage ratio."
+      },
+      {
+       "concept_tag": "capital-structure-factors",
+       "learning_objective": "Apply factors such as tax rate, cost of equity, risk, control and market conditions to capital structure choices."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH01-T8",
+     "topic_number": 8,
+     "title": "Fixed and working capital",
+     "ncert_sections": "Fixed and Working Capital: Meaning; Management of Fixed Capital; Working Capital; Factors",
+     "concepts": [
+      {
+       "concept_tag": "fixed-capital-management",
+       "learning_objective": "Explain the management of fixed capital and the factors affecting its requirement."
+      },
+      {
+       "concept_tag": "working-capital-factors",
+       "learning_objective": "Analyse the factors affecting the working capital requirement of a business."
+      },
+      {
+       "concept_tag": "net-working-capital",
+       "learning_objective": "Define current assets, current liabilities and net working capital."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEBS2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Marketing",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lebs202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEBS2-CH02-T1",
+     "topic_number": 1,
+     "title": "Meaning and features of marketing",
+     "ncert_sections": "Marketing; Understanding Market; Features of Marketing; Marketing versus Selling",
+     "concepts": [
+      {
+       "concept_tag": "marketing-meaning-and-market",
+       "learning_objective": "Explain marketing as a social process and the modern meaning of market, including its relevance beyond business firms."
+      },
+      {
+       "concept_tag": "needs-wants-and-exchange",
+       "learning_objective": "Distinguish needs from wants and state the conditions necessary for an exchange to take place."
+      },
+      {
+       "concept_tag": "marketing-versus-selling",
+       "learning_objective": "Distinguish marketing, a wide set of activities before and after production, from selling."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH02-T2",
+     "topic_number": 2,
+     "title": "Marketing management and its philosophies",
+     "ncert_sections": "Marketing Management; Marketing Management Philosophies",
+     "concepts": [
+      {
+       "concept_tag": "marketing-management",
+       "learning_objective": "Explain marketing management as choosing target markets and getting, keeping and growing customers, including managing demand."
+      },
+      {
+       "concept_tag": "production-and-product-concepts",
+       "learning_objective": "Describe the focus and assumptions of the production and product concepts."
+      },
+      {
+       "concept_tag": "selling-marketing-societal-concepts",
+       "learning_objective": "Compare the selling, marketing and societal marketing concepts on their starting point, focus, means and ends."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH02-T3",
+     "topic_number": 3,
+     "title": "Functions of marketing",
+     "ncert_sections": "Functions of Marketing",
+     "concepts": [
+      {
+       "concept_tag": "market-information-and-planning",
+       "learning_objective": "Identify gathering and analysing market information and marketing planning as marketing functions."
+      },
+      {
+       "concept_tag": "standardisation-and-grading",
+       "learning_objective": "Distinguish standardisation from grading and explain when grading is needed."
+      },
+      {
+       "concept_tag": "product-and-distribution-functions",
+       "learning_objective": "Explain functions such as customer support, storage and transportation and the gaps they remove."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH02-T4",
+     "topic_number": 4,
+     "title": "Marketing mix and classification of products",
+     "ncert_sections": "Marketing Mix; Products; Classification of Products",
+     "concepts": [
+      {
+       "concept_tag": "marketing-mix-four-ps",
+       "learning_objective": "Identify the four Ps of the marketing mix and the view of a product as a bundle of utilities."
+      },
+      {
+       "concept_tag": "consumer-product-classification",
+       "learning_objective": "Classify consumer products by shopping effort and by durability, with their marketing implications."
+      },
+      {
+       "concept_tag": "industrial-product-classification",
+       "learning_objective": "Classify industrial products into materials and parts, capital items, and supplies and business services."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH02-T5",
+     "topic_number": 5,
+     "title": "Branding, packaging and labelling",
+     "ncert_sections": "Branding; Packaging; Labelling",
+     "concepts": [
+      {
+       "concept_tag": "branding-terms",
+       "learning_objective": "Distinguish brand, brand name, brand mark and trade mark."
+      },
+      {
+       "concept_tag": "packaging-levels-and-functions",
+       "learning_objective": "Identify the levels of packaging and the functions packaging performs."
+      },
+      {
+       "concept_tag": "labelling-functions",
+       "learning_objective": "Explain the functions performed by a label on a product package."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH02-T6",
+     "topic_number": 6,
+     "title": "Pricing and factors affecting price determination",
+     "ncert_sections": "Pricing; Factors affecting Price Determination",
+     "concepts": [
+      {
+       "concept_tag": "product-cost-types",
+       "learning_objective": "Distinguish fixed, variable and semi-variable costs and compute total cost."
+      },
+      {
+       "concept_tag": "price-determination-factors",
+       "learning_objective": "Explain how cost, utility and demand, competition, government regulation and marketing methods affect price."
+      },
+      {
+       "concept_tag": "pricing-objectives",
+       "learning_objective": "Relate pricing objectives such as market share, survival and quality leadership to the price set."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH02-T7",
+     "topic_number": 7,
+     "title": "Physical distribution",
+     "ncert_sections": "Physical Distribution; Components of Physical Distribution",
+     "concepts": [
+      {
+       "concept_tag": "physical-distribution-components",
+       "learning_objective": "Identify order processing, transportation, warehousing and inventory control as components of physical distribution."
+      },
+      {
+       "concept_tag": "warehousing-and-inventory-control",
+       "learning_objective": "Analyse the cost and service trade-offs in warehousing location and inventory levels."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH02-T8",
+     "topic_number": 8,
+     "title": "Promotion mix",
+     "ncert_sections": "Promotion; Promotion Mix; Advertising; Personal Selling; Sales Promotion; Public Relations",
+     "concepts": [
+      {
+       "concept_tag": "advertising-merits-and-objections",
+       "learning_objective": "Explain the features and merits of advertising and evaluate the objections raised against it."
+      },
+      {
+       "concept_tag": "personal-selling",
+       "learning_objective": "Explain the features of personal selling and when it is preferred over advertising."
+      },
+      {
+       "concept_tag": "sales-promotion-and-public-relations",
+       "learning_objective": "Identify sales promotion activities and the role of publicity and public relations."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEBS2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Consumer Protection",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lebs203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEBS2-CH03-T1",
+     "topic_number": 1,
+     "title": "Introduction and need for consumer protection",
+     "ncert_sections": "Introduction; Importance of Consumer Protection; Need for Consumer Protection",
+     "concepts": [
+      {
+       "concept_tag": "caveat-venditor-shift",
+       "learning_objective": "Explain the shift from caveat emptor to caveat venditor and why consumer protection matters to both consumers and business."
+      },
+      {
+       "concept_tag": "consumer-malpractices",
+       "learning_objective": "Identify unfair practices such as adulteration, hoarding, overcharging and faulty weights from which consumers need protection."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH03-T2",
+     "topic_number": 2,
+     "title": "Importance from the consumers' and business's point of view",
+     "ncert_sections": "From Consumers' point of view; From the point of view of Business",
+     "concepts": [
+      {
+       "concept_tag": "importance-consumers-view",
+       "learning_objective": "Explain consumer ignorance, unorganised consumers and widespread exploitation as reasons for consumer protection."
+      },
+      {
+       "concept_tag": "importance-business-view",
+       "learning_objective": "Explain why consumer protection is in the interest of business: long-term interest, society's resources, social responsibility, moral justification and government intervention."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH03-T3",
+     "topic_number": 3,
+     "title": "The Consumer Protection Act 2019: who is a consumer and key terms",
+     "ncert_sections": "The Consumer Protection Act, 2019; Who is a Consumer?; Terms & Definitions",
+     "concepts": [
+      {
+       "concept_tag": "definition-of-consumer",
+       "learning_objective": "Decide whether a person is a consumer under the Consumer Protection Act 2019."
+      },
+      {
+       "concept_tag": "key-terms-cpa-2019",
+       "learning_objective": "Distinguish key terms of the Act such as spurious goods, defect, deficiency, unfair and restrictive trade practice."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH03-T4",
+     "topic_number": 4,
+     "title": "Consumer rights",
+     "ncert_sections": "Consumer Rights",
+     "concepts": [
+      {
+       "concept_tag": "consumer-rights",
+       "learning_objective": "Identify the six consumer rights under the Act and apply them to situations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH03-T5",
+     "topic_number": 5,
+     "title": "Consumer responsibilities",
+     "ncert_sections": "Consumer Responsibilities; Marks indicating quality",
+     "concepts": [
+      {
+       "concept_tag": "consumer-responsibilities",
+       "learning_objective": "Explain the responsibilities a consumer should observe while buying and using goods and services."
+      },
+      {
+       "concept_tag": "quality-certification-marks",
+       "learning_objective": "Match quality marks such as ISI, Agmark, FPO and Hallmark to the products they certify."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH03-T6",
+     "topic_number": 6,
+     "title": "Ways and means of consumer protection",
+     "ncert_sections": "Ways and Means of Consumer Protection",
+     "concepts": [
+      {
+       "concept_tag": "ways-and-means",
+       "learning_objective": "Distinguish self-regulation, business associations, consumer awareness, consumer organisations and government as ways of protecting consumers."
+      },
+      {
+       "concept_tag": "central-consumer-protection-authority",
+       "learning_objective": "State the role of the Central Consumer Protection Authority under the Act."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH03-T7",
+     "topic_number": 7,
+     "title": "Redressal agencies under the Consumer Protection Act",
+     "ncert_sections": "Redressal Agencies Under The Consumer Protection Act; Setting up of Consumer Mediation Cell",
+     "concepts": [
+      {
+       "concept_tag": "redressal-jurisdiction",
+       "learning_objective": "Determine the correct commission for a complaint from the value of goods or services paid as consideration."
+      },
+      {
+       "concept_tag": "appeals-and-mediation",
+       "learning_objective": "Explain appeal periods between commissions and the mediation process under the Act."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS2-CH03-T8",
+     "topic_number": 8,
+     "title": "Reliefs available and role of consumer organisations and NGOs",
+     "ncert_sections": "Relief Available; Role of Consumer Organisations and NGOs",
+     "concepts": [
+      {
+       "concept_tag": "reliefs-available",
+       "learning_objective": "Identify the reliefs a consumer commission may order and apply them to cases."
+      },
+      {
+       "concept_tag": "consumer-organisations-ngos",
+       "learning_objective": "Describe the functions of consumer organisations and NGOs in protecting consumers."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

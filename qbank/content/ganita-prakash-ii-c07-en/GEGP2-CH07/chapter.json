@@ -1,0 +1,144 @@
+{
+ "chapter_id": "GEGP2-CH07",
+ "title": "Finding the Unknown",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP2-CH07-T1",
+   "topic_number": 1,
+   "title": "Find the unknowns: balances and equations",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "balance-scale-reasoning",
+     "learning_objective": "Find an unknown weight on a balanced scale, including by removing equal weights from both plates."
+    },
+    {
+     "concept_tag": "framing-equations",
+     "learning_objective": "Frame an equation using a letter-number for an unknown quantity in a balance or pattern problem."
+    },
+    {
+     "concept_tag": "equation-lhs-rhs",
+     "learning_objective": "Identify an equation as a statement of equality between two expressions with an LHS and an RHS."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH07-T2",
+   "topic_number": 2,
+   "title": "Trial and error and the same-operation property",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "trial-and-error",
+     "learning_objective": "Solve a simple equation by substituting values until the LHS equals the RHS."
+    },
+    {
+     "concept_tag": "same-operation-both-sides",
+     "learning_objective": "Explain that performing the same operation on both sides keeps an equation true."
+    },
+    {
+     "concept_tag": "inverse-operations",
+     "learning_objective": "Use addition-subtraction and multiplication-division as inverse operations to evaluate expressions."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH07-T3",
+   "topic_number": 3,
+   "title": "Solving equations systematically",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "transposition-additive-inverse",
+     "learning_objective": "Move a term to the other side of an equation as its additive inverse."
+    },
+    {
+     "concept_tag": "removing-factor-divisor",
+     "learning_objective": "Remove a factor or divisor from one side by dividing or multiplying the other side."
+    },
+    {
+     "concept_tag": "unknowns-both-sides",
+     "learning_objective": "Solve equations with the unknown on both sides and recognise an equation with no solution."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH07-T4",
+   "topic_number": 4,
+   "title": "Solving problems with equations",
+   "ncert_sections": "7.2 (Solving Problems)",
+   "concepts": [
+    {
+     "concept_tag": "pattern-equations",
+     "learning_objective": "Use the rule of a pattern to form and solve an equation for a position number."
+    },
+    {
+     "concept_tag": "word-problem-modelling",
+     "learning_objective": "Model a real-life situation with an equation in one unknown and interpret the solution."
+    },
+    {
+     "concept_tag": "think-of-a-number",
+     "learning_objective": "Model a think-of-a-number trick algebraically to recover the starting number."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH07-T5",
+   "topic_number": 5,
+   "title": "Generating equations",
+   "ncert_sections": "7.2 (Generating Equations)",
+   "concepts": [
+    {
+     "concept_tag": "equations-with-given-solution",
+     "learning_objective": "Check whether a given value is the solution of an equation and write equations with a given solution."
+    },
+    {
+     "concept_tag": "equivalent-equation-chains",
+     "learning_objective": "Build chains of equations by the same operation on both sides, all sharing one solution."
+    },
+    {
+     "concept_tag": "real-life-situations",
+     "learning_objective": "Describe a real-life situation that an equation models."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH07-T6",
+   "topic_number": 6,
+   "title": "Mind the mistake, mend the mistake",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "identify-transposition-errors",
+     "learning_objective": "Find errors in signs when terms are moved across the equal sign."
+    },
+    {
+     "concept_tag": "correct-the-solution",
+     "learning_objective": "Correct a faulty solution step and find the right value of the unknown."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH07-T7",
+   "topic_number": 7,
+   "title": "A pinch of history",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "bijaganita-history",
+     "learning_objective": "Recall the origin of bijaganita and the word algebra, and the roles of Brahmagupta and Al-Khwarizmi."
+    },
+    {
+     "concept_tag": "ancient-notation",
+     "learning_objective": "Read an equation written in ancient Indian notation with ya and ru."
+    },
+    {
+     "concept_tag": "brahmagupta-formula",
+     "learning_objective": "Apply Brahmagupta's formula x = (D - B)/(A - C) and solve historical problems."
+    }
+   ]
+  }
+ ]
+}

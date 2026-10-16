@@ -1,0 +1,144 @@
+{
+ "chapter_id": "FEGP1-CH10",
+ "title": "The Other Side of Zero",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FEGP1-CH10-T1",
+   "topic_number": 1,
+   "title": "Bela's Building of Fun: positive and negative numbers",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "positive-and-negative-numbers",
+     "learning_objective": "Use positive and negative numbers to name floors above and below a reference level, and recognise that zero is neither positive nor negative."
+    },
+    {
+     "concept_tag": "addition-as-movement",
+     "learning_objective": "Interpret addition of integers as Starting Floor + Movement = Target Floor and as combining button presses."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH10-T2",
+   "topic_number": 2,
+   "title": "Inverses and comparing integers",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "additive-inverse",
+     "learning_objective": "Find the inverse of an integer and use it to return to zero."
+    },
+    {
+     "concept_tag": "comparing-integers",
+     "learning_objective": "Compare and order integers using floors and the symbols < and >."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH10-T3",
+   "topic_number": 3,
+   "title": "Subtraction as the movement needed",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "subtraction-as-movement-needed",
+     "learning_objective": "Interpret subtraction of integers as Target Floor - Starting Floor = Movement needed, including with larger numbers in a mine."
+    },
+    {
+     "concept_tag": "subtracting-a-negative",
+     "learning_objective": "Recognise that subtracting a negative number is the same as adding the corresponding positive number."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH10-T4",
+   "topic_number": 4,
+   "title": "The number line and the unmarked number line",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "integers-on-number-line",
+     "learning_objective": "Place integers on the number line and describe movements along it."
+    },
+    {
+     "concept_tag": "unmarked-number-line",
+     "learning_objective": "Use an unmarked number line to add and subtract larger integers."
+    },
+    {
+     "concept_tag": "converting-subtraction-to-addition",
+     "learning_objective": "Convert a subtraction into addition of the inverse, and vice versa."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH10-T5",
+   "topic_number": 5,
+   "title": "The token model",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "zero-pairs-addition",
+     "learning_objective": "Add integers with positive and negative tokens by removing zero pairs."
+    },
+    {
+     "concept_tag": "tokens-subtraction",
+     "learning_objective": "Subtract integers with tokens, adding zero pairs when there are not enough tokens to take away."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH10-T6",
+   "topic_number": 6,
+   "title": "Integers in other places",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "credits-and-debits",
+     "learning_objective": "Represent credits as positive and debits as negative numbers and find a bank balance."
+    },
+    {
+     "concept_tag": "heights-and-temperatures",
+     "learning_objective": "Use integers for heights relative to sea level and for temperatures above and below 0 degrees Celsius."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH10-T7",
+   "topic_number": 7,
+   "title": "Explorations with integers",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "border-sum-grids",
+     "learning_objective": "Find and complete border sums in hollow integer grids."
+    },
+    {
+     "concept_tag": "signs-of-results",
+     "learning_objective": "Decide whether sums and differences of positive and negative integers are positive, negative or either."
+    },
+    {
+     "concept_tag": "integer-patterns-and-puzzles",
+     "learning_objective": "Solve puzzles with integers such as listing integers between two numbers and possible dice sums."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH10-T8",
+   "topic_number": 8,
+   "title": "A pinch of history",
+   "ncert_sections": "10.5",
+   "concepts": [
+    {
+     "concept_tag": "history-of-negative-numbers",
+     "learning_objective": "Describe the early use of negative numbers in China and India and their later acceptance elsewhere."
+    },
+    {
+     "concept_tag": "brahmagupta-rules",
+     "learning_objective": "Apply Brahmagupta's rules for addition and subtraction of positive numbers, negative numbers and zero."
+    }
+   ]
+  }
+ ]
+}

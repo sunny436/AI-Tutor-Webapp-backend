@@ -1,0 +1,160 @@
+{
+ "chapter_id": "KEBO1-CH16",
+ "title": "Excretory Products and their Elimination",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH16-T1",
+   "topic_number": 1,
+   "title": "Nitrogenous wastes and excretory structures in animals",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "modes-of-nitrogenous-excretion",
+     "learning_objective": "Classify animals as ammonotelic, ureotelic or uricotelic and relate each mode to the toxicity of the waste and water availability."
+    },
+    {
+     "concept_tag": "excretory-structures-in-animals",
+     "learning_objective": "Identify protonephridia, nephridia, Malpighian tubules, green glands and kidneys with the animal groups that have them."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH16-T2",
+   "topic_number": 2,
+   "title": "Human excretory system",
+   "ncert_sections": "16.1",
+   "concepts": [
+    {
+     "concept_tag": "kidney-structure",
+     "learning_objective": "Describe the position and internal structure of the human kidney, including hilum, pelvis, calyces, cortex, medulla and columns of Bertini."
+    },
+    {
+     "concept_tag": "nephron-structure",
+     "learning_objective": "Describe the parts of a nephron and the order in which filtrate passes through them."
+    },
+    {
+     "concept_tag": "cortical-and-juxtamedullary-nephrons",
+     "learning_objective": "Distinguish cortical and juxtamedullary nephrons by the length of the loop of Henle and the vasa recta."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH16-T3",
+   "topic_number": 3,
+   "title": "Urine formation",
+   "ncert_sections": "16.2",
+   "concepts": [
+    {
+     "concept_tag": "glomerular-filtration",
+     "learning_objective": "Explain ultrafiltration across the three layers of the glomerular filter and the role of podocytes."
+    },
+    {
+     "concept_tag": "gfr-and-reabsorption",
+     "learning_objective": "State the normal GFR and use filtrate and urine volumes to show that about 99 per cent of the filtrate is reabsorbed."
+    },
+    {
+     "concept_tag": "tubular-secretion",
+     "learning_objective": "Explain how tubular secretion of H+, K+ and ammonia maintains ionic and acid-base balance."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH16-T4",
+   "topic_number": 4,
+   "title": "Function of the tubules",
+   "ncert_sections": "16.3",
+   "concepts": [
+    {
+     "concept_tag": "pct-function",
+     "learning_objective": "Describe reabsorption and selective secretion in the proximal convoluted tubule."
+    },
+    {
+     "concept_tag": "henle-loop-function",
+     "learning_objective": "Explain how the permeability of the two limbs of Henle's loop concentrates and then dilutes the filtrate."
+    },
+    {
+     "concept_tag": "dct-and-collecting-duct",
+     "learning_objective": "Describe the roles of the distal convoluted tubule and collecting duct in water, ion and pH balance."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH16-T5",
+   "topic_number": 5,
+   "title": "Mechanism of concentration of the filtrate",
+   "ncert_sections": "16.4",
+   "concepts": [
+    {
+     "concept_tag": "counter-current-mechanism",
+     "learning_objective": "Explain the counter current mechanism operating between Henle's loop and the vasa recta."
+    },
+    {
+     "concept_tag": "medullary-osmotic-gradient",
+     "learning_objective": "Describe the medullary osmotic gradient, the solutes that cause it and its role in concentrating urine."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH16-T6",
+   "topic_number": 6,
+   "title": "Regulation of kidney function",
+   "ncert_sections": "16.5",
+   "concepts": [
+    {
+     "concept_tag": "adh-regulation",
+     "learning_objective": "Explain how osmoreceptors, the hypothalamus and ADH regulate water reabsorption."
+    },
+    {
+     "concept_tag": "renin-angiotensin-mechanism",
+     "learning_objective": "Trace the renin-angiotensin-aldosterone sequence and its effect on blood pressure and GFR."
+    },
+    {
+     "concept_tag": "anf-check",
+     "learning_objective": "Explain how atrial natriuretic factor acts as a check on the renin-angiotensin mechanism."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH16-T7",
+   "topic_number": 7,
+   "title": "Micturition and role of other organs in excretion",
+   "ncert_sections": "16.6, 16.7",
+   "concepts": [
+    {
+     "concept_tag": "micturition-reflex",
+     "learning_objective": "Describe the micturition reflex from bladder stretch to the release of urine."
+    },
+    {
+     "concept_tag": "urine-characteristics",
+     "learning_objective": "State the normal characteristics of human urine and interpret abnormal constituents such as glucose and ketone bodies."
+    },
+    {
+     "concept_tag": "other-excretory-organs",
+     "learning_objective": "Describe the excretory roles of the lungs, liver, sweat glands and sebaceous glands."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH16-T8",
+   "topic_number": 8,
+   "title": "Disorders of the excretory system",
+   "ncert_sections": "16.8",
+   "concepts": [
+    {
+     "concept_tag": "uremia-and-hemodialysis",
+     "learning_objective": "Explain uremia and the working of haemodialysis using an artificial kidney."
+    },
+    {
+     "concept_tag": "kidney-transplantation",
+     "learning_objective": "Evaluate kidney transplantation as the ultimate correction of kidney failure and why a related donor is preferred."
+    },
+    {
+     "concept_tag": "renal-disorders",
+     "learning_objective": "Identify renal calculi and glomerulonephritis from their descriptions."
+    }
+   ]
+  }
+ ]
+}

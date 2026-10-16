@@ -1,0 +1,108 @@
+{
+ "chapter_id": "JSAB1-CH05",
+ "title": "रचनानुवादः (वाक्यरचनाकौशलम्)",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JSAB1-CH05-T1",
+   "topic_number": 1,
+   "title": "कारकाणि विभक्तयः च",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "karaka-parichaya",
+     "learning_objective": "छात्रः वाक्ये कर्ता-कर्म-करण-सम्प्रदान-अपादान-सम्बन्ध-अधिकरण-सम्बोधनानि अभिज्ञास्यति।"
+    },
+    {
+     "concept_tag": "karaka-vibhakti-prayoga",
+     "learning_objective": "छात्रः प्रत्येकस्मिन् कारके उचितां विभक्तिं नियमेन सह प्रयोक्ष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH05-T2",
+   "topic_number": 2,
+   "title": "उपपदविभक्तयः",
+   "ncert_sections": "2",
+   "concepts": [
+    {
+     "concept_tag": "upapada-dvitiya-tritiya-chaturthi",
+     "learning_objective": "छात्रः अभितः, सह, नमः इत्यादीनां योगे द्वितीया-तृतीया-चतुर्थीविभक्तीः ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "upapada-panchami-shashthi-saptami",
+     "learning_objective": "छात्रः भी, बहिः, उपरि, स्निह् इत्यादीनां योगे पञ्चमी-षष्ठी-सप्तमीविभक्तीः प्रयोक्ष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH05-T3",
+   "topic_number": 3,
+   "title": "कर्तृक्रियान्वितिः पुरुषवचनानि च",
+   "ncert_sections": "3, 4",
+   "concepts": [
+    {
+     "concept_tag": "kartri-kriya-anviti",
+     "learning_objective": "छात्रः ज्ञास्यति यत् क्रियापदस्य अन्वितिः कर्तृपदेन सह भवति, लिङ्गेन न परिवर्तते।"
+    },
+    {
+     "concept_tag": "purusha-vachana-roopa",
+     "learning_objective": "छात्रः कर्तुः पुरुषवचनानुसारं क्रियापदस्य उचितं रूपं चेष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH05-T4",
+   "topic_number": 4,
+   "title": "लकाराः",
+   "ncert_sections": "4",
+   "concepts": [
+    {
+     "concept_tag": "pancha-pramukha-lakara",
+     "learning_objective": "छात्रः लट्-लृट्-लङ्-लोट्-विधिलिङ्लकाराणां कालम् अर्थं च अभिज्ञाय प्रयोक्ष्यति।"
+    },
+    {
+     "concept_tag": "dasha-lakara-parichaya",
+     "learning_objective": "छात्रः संस्कृते दश लकाराः, त्रयः पुरुषाः, त्रीणि वचनानि च इति ज्ञास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH05-T5",
+   "topic_number": 5,
+   "title": "वाक्यरचना अनुवादः च",
+   "ncert_sections": "5, अभ्यासः 1",
+   "concepts": [
+    {
+     "concept_tag": "hindi-sanskrit-anuvada",
+     "learning_objective": "छात्रः हिन्दीवाक्यानां शुद्धं संस्कृतानुवादं करिष्यति।"
+    },
+    {
+     "concept_tag": "vakya-rachana-shuddhi",
+     "learning_objective": "छात्रः विभक्ति-लकार-वचनानां समन्वयेन शुद्धं वाक्यं चेष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH05-T6",
+   "topic_number": 6,
+   "title": "प्रत्ययाधारिता वाक्यसंरचना",
+   "ncert_sections": "अभ्यासः 2, 3",
+   "concepts": [
+    {
+     "concept_tag": "tavyat-aniyar",
+     "learning_objective": "छात्रः विध्यर्थे तव्यत्-अनीयर्-प्रत्यययोः प्रयोगं करिष्यति।"
+    },
+    {
+     "concept_tag": "shatri-shanach",
+     "learning_objective": "छात्रः शतृ-शानच्-प्रत्यययोः परस्मैपद-आत्मनेपद-भेदं ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "kta-ktavatu",
+     "learning_objective": "छात्रः भूतकाले क्त-क्तवतु-प्रत्यययोः वाच्यानुसारं प्रयोगं करिष्यति।"
+    }
+   ]
+  }
+ ]
+}

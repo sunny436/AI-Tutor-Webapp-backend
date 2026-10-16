@@ -1,0 +1,124 @@
+{
+ "chapter_id": "GHGP2-CH03",
+ "title": "सर्वनिष्ठ आधार की खोज",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHGP2-CH03-T1",
+   "topic_number": 1,
+   "title": "सार्व गुणनखंड और महत्तम समापवर्तक (म.स.प.)",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "sarva-gunankhand-mahattam",
+     "learning_objective": "विद्यार्थी दो या अधिक संख्याओं के सार्व गुणनखंड सूचीबद्ध करके उनका म.स.प. पहचानता है।"
+    },
+    {
+     "concept_tag": "mahattam-vyavaharik-samasya",
+     "learning_objective": "विद्यार्थी टाइल, थैली और डिब्बे जैसी दैनिक समस्याओं में म.स.प. का प्रयोग करता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH03-T2",
+   "topic_number": 2,
+   "title": "अभाज्य गुणनखंडन और विभाजन विधि",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "abhajya-gunankhandan",
+     "learning_objective": "विद्यार्थी किसी संख्या को अभाज्य संख्याओं के गुणनफल के रूप में लिखता है।"
+    },
+    {
+     "concept_tag": "vibhajan-vidhi",
+     "learning_objective": "विद्यार्थी विभाजन विधि के चरणों से किसी संख्या का अभाज्य गुणनखंडन करता है।"
+    },
+    {
+     "concept_tag": "anuman-prati-udaharan",
+     "learning_objective": "विद्यार्थी किसी अनुमान को प्रति उदाहरण द्वारा असत्य सिद्ध करना समझता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH03-T3",
+   "topic_number": 3,
+   "title": "अभाज्य गुणनखंडन से गुणनखंड और म.स.प.",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "upbhag-se-gunankhand",
+     "learning_objective": "विद्यार्थी अभाज्य गुणनखंडन के उपभागों से किसी संख्या के सभी गुणनखंड बनाता है।"
+    },
+    {
+     "concept_tag": "mahattam-nyunatam-avritti",
+     "learning_objective": "विद्यार्थी सार्व अभाज्यों की न्यूनतम आवृत्ति लेकर म.स.प. ज्ञात करता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH03-T4",
+   "topic_number": 4,
+   "title": "सार्व गुणज और लघुत्तम समापवर्त्य (ल.स.प.)",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "sarva-gunaj-laghuttam",
+     "learning_objective": "विद्यार्थी सार्व गुणजों की सूची से दो संख्याओं का ल.स.प. पहचानता है।"
+    },
+    {
+     "concept_tag": "laghuttam-vyavaharik-samasya",
+     "learning_objective": "विद्यार्थी तोरण, गजक और गायों जैसी स्थितियों में ल.स.प. का प्रयोग करता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH03-T5",
+   "topic_number": 5,
+   "title": "अभाज्य गुणनखंडन से ल.स.प.",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "gunaj-mein-abhajya-gunankhand",
+     "learning_objective": "विद्यार्थी समझता है कि किसी गुणज के अभाज्य गुणनखंडन में मूल संख्या का पूरा गुणनखंडन होता है।"
+    },
+    {
+     "concept_tag": "laghuttam-adhiktam-avritti",
+     "learning_objective": "विद्यार्थी प्रत्येक अभाज्य की अधिकतम आवृत्ति लेकर ल.स.प. ज्ञात करता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH03-T6",
+   "topic_number": 6,
+   "title": "प्रतिरूप, गुण और व्यापक कथन",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "vyapak-kathan",
+     "learning_objective": "विद्यार्थी क्रमागत, सम और सह-अभाज्य संख्याओं के म.स.प. के बारे में व्यापक कथन बनाता है।"
+    },
+    {
+     "concept_tag": "sarva-gunak-mahattam",
+     "learning_objective": "विद्यार्थी समझता है कि दोनों संख्याओं को दोगुना करने या एक ही संख्या से गुणा करने पर म.स.प. कैसे बदलता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH03-T7",
+   "topic_number": 7,
+   "title": "म.स.प. और ल.स.प. की दक्ष प्रक्रिया तथा उनका गुणनफल",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "sath-vibhajan-prakriya",
+     "learning_objective": "विद्यार्थी दोनों संख्याओं को सार्व गुणनखंडों से साथ-साथ भाग देकर म.स.प. और ल.स.प. ज्ञात करता है।"
+    },
+    {
+     "concept_tag": "mahattam-laghuttam-gunanfal",
+     "learning_objective": "विद्यार्थी म.स.प. × ल.स.प. = दोनों संख्याओं का गुणनफल संबंध का प्रयोग करता है।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "chapter_id": "IEMH2-CH01",
+ "title": "Propositions and their Converses",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IEMH2-CH01-T1",
+   "topic_number": 1,
+   "title": "Propositions and the converse of a proposition",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "proposition-meaning",
+     "learning_objective": "State that a proposition is a statement that is either true or false."
+    },
+    {
+     "concept_tag": "forming-the-converse",
+     "learning_objective": "Write the converse 'if Y then X' of a proposition of the form 'if X then Y'."
+    },
+    {
+     "concept_tag": "equivalent-phrasings",
+     "learning_objective": "Recognise 'X implies Y' and 'Y when X' as other ways of saying 'if X then Y'."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH01-T2",
+   "topic_number": 2,
+   "title": "Counterexamples",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "counterexample-meaning",
+     "learning_objective": "Explain that a single counterexample is enough to show that a proposition is false."
+    },
+    {
+     "concept_tag": "prime-generating-claims",
+     "learning_objective": "Find counterexamples to claims that expressions such as Fermat numbers, 4n^2 + 1 or n^2 + n + 11 always give primes."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH01-T3",
+   "topic_number": 3,
+   "title": "Truth of a proposition compared with its converse",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "true-proposition-false-converse",
+     "learning_objective": "Show that a true proposition can have a false converse, using examples from numbers and daily life."
+    },
+    {
+     "concept_tag": "both-true-or-both-false",
+     "learning_objective": "Give examples where a proposition and its converse are both true or both false."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH01-T4",
+   "topic_number": 4,
+   "title": "Perfect squares and an odd number of factors",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "factor-partner-pairs",
+     "learning_objective": "Use factor-partner pairs to decide whether a number has an odd or an even number of factors."
+    },
+    {
+     "concept_tag": "direction-of-a-proof",
+     "learning_objective": "Identify which of a proposition and its converse a chain of implications actually proves."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH01-T5",
+   "topic_number": 5,
+   "title": "Converses in geometry: the Baudhayana-Pythagoras theorem",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "pythagoras-converse",
+     "learning_objective": "State and apply the converse of the Baudhayana-Pythagoras theorem to decide whether a triangle is right-angled."
+    },
+    {
+     "concept_tag": "geometric-converses",
+     "learning_objective": "Judge the truth of converses of geometric propositions about lines and quadrilaterals."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH01-T6",
+   "topic_number": 6,
+   "title": "Divisibility and algebraic propositions and their converses",
+   "ncert_sections": "Exercise Set 9.1",
+   "concepts": [
+    {
+     "concept_tag": "divisibility-converses",
+     "learning_objective": "Decide whether converses of divisibility statements are true, giving counterexamples where needed."
+    },
+    {
+     "concept_tag": "algebraic-converses",
+     "learning_objective": "Decide whether converses of statements such as 'if x = y then x^2 = y^2' are true for real numbers."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1057 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "physics-part-i-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "physics",
+  "language": "english",
+  "title": "Physics Part-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "leph1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEPH1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Electric Charges and Fields",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH1-CH01-T1",
+     "topic_number": 1,
+     "title": "Electric charge, conductors and insulators",
+     "ncert_sections": "1.1, 1.2, 1.3",
+     "concepts": [
+      {
+       "concept_tag": "charging-by-rubbing",
+       "learning_objective": "Explain charging by rubbing as a transfer of electrons and predict attraction or repulsion between charged bodies."
+      },
+      {
+       "concept_tag": "conductors-and-insulators",
+       "learning_objective": "Distinguish conductors from insulators by the mobility of their charges and explain how each holds charge."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH01-T2",
+     "topic_number": 2,
+     "title": "Basic properties of electric charge",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "additivity-of-charge",
+       "learning_objective": "Add the charges of a system algebraically, treating charge as a scalar."
+      },
+      {
+       "concept_tag": "conservation-of-charge",
+       "learning_objective": "Apply conservation of charge to redistribution and particle processes in an isolated system."
+      },
+      {
+       "concept_tag": "quantisation-of-charge",
+       "learning_objective": "Use q = ne to relate the charge on a body to the number of electrons transferred."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH01-T3",
+     "topic_number": 3,
+     "title": "Coulomb's law",
+     "ncert_sections": "1.5",
+     "concepts": [
+      {
+       "concept_tag": "coulombs-law-statement",
+       "learning_objective": "State Coulomb's law and the inverse-square dependence of the force on distance."
+      },
+      {
+       "concept_tag": "coulomb-force-calculation",
+       "learning_objective": "Calculate the electrostatic force between two point charges in vacuum."
+      },
+      {
+       "concept_tag": "electric-vs-gravitational-force",
+       "learning_objective": "Compare electric and gravitational forces between charged particles."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH01-T4",
+     "topic_number": 4,
+     "title": "Forces between multiple charges",
+     "ncert_sections": "1.6",
+     "concepts": [
+      {
+       "concept_tag": "superposition-principle",
+       "learning_objective": "State the superposition principle for forces between several point charges."
+      },
+      {
+       "concept_tag": "net-force-on-charge",
+       "learning_objective": "Find the net force on a charge due to several charges by vector addition."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH01-T5",
+     "topic_number": 5,
+     "title": "Electric field and electric field lines",
+     "ncert_sections": "1.7, 1.8",
+     "concepts": [
+      {
+       "concept_tag": "electric-field-of-point-charge",
+       "learning_objective": "Define electric field and calculate the field of a point charge and its effect on charged particles."
+      },
+      {
+       "concept_tag": "electric-field-lines",
+       "learning_objective": "Interpret electric field lines and explain their general properties."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH01-T6",
+     "topic_number": 6,
+     "title": "Electric flux",
+     "ncert_sections": "1.9",
+     "concepts": [
+      {
+       "concept_tag": "electric-flux-definition",
+       "learning_objective": "Define electric flux as E.dS and calculate it for a flat surface in a uniform field."
+      },
+      {
+       "concept_tag": "area-vector",
+       "learning_objective": "Use the area vector and the outward-normal convention for closed surfaces."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH01-T7",
+     "topic_number": 7,
+     "title": "Electric dipole and dipole in an external field",
+     "ncert_sections": "1.10, 1.11",
+     "concepts": [
+      {
+       "concept_tag": "dipole-moment-and-field",
+       "learning_objective": "Describe the dipole moment and compare the fields of a short dipole on its axis and equatorial plane."
+      },
+      {
+       "concept_tag": "dipole-in-external-field",
+       "learning_objective": "Find the force and torque on a dipole in uniform and non-uniform electric fields."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH01-T8",
+     "topic_number": 8,
+     "title": "Continuous charge distribution, Gauss's law and its applications",
+     "ncert_sections": "1.12, 1.13, 1.14",
+     "concepts": [
+      {
+       "concept_tag": "charge-densities",
+       "learning_objective": "Define linear, surface and volume charge densities with their units."
+      },
+      {
+       "concept_tag": "gauss-law-statement",
+       "learning_objective": "State Gauss's law and use it to find the flux through a closed surface."
+      },
+      {
+       "concept_tag": "gauss-law-applications",
+       "learning_objective": "Apply Gauss's law to find the field of an infinite line charge and of plane sheets of charge."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPH1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Electrostatic Potential and Capacitance",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH1-CH02-T1",
+     "topic_number": 1,
+     "title": "Electrostatic potential and the potential of a point charge",
+     "ncert_sections": "2.1, 2.2, 2.3",
+     "concepts": [
+      {
+       "concept_tag": "electrostatic-potential-definition",
+       "learning_objective": "Define electrostatic potential as work done per unit test charge and relate it to the conservative nature of the Coulomb force."
+      },
+      {
+       "concept_tag": "potential-due-to-point-charge",
+       "learning_objective": "Calculate the potential due to a point charge using V = q/(4 pi epsilon0 r)."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH02-T2",
+     "topic_number": 2,
+     "title": "Potential due to an electric dipole and a system of charges",
+     "ncert_sections": "2.4, 2.5",
+     "concepts": [
+      {
+       "concept_tag": "dipole-potential",
+       "learning_objective": "Describe how the potential of a dipole depends on distance and on the angle with the dipole axis."
+      },
+      {
+       "concept_tag": "superposition-of-potentials",
+       "learning_objective": "Find the potential due to several point charges by algebraic addition of their potentials."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH02-T3",
+     "topic_number": 3,
+     "title": "Equipotential surfaces and the relation between field and potential",
+     "ncert_sections": "2.6, 2.6.1",
+     "concepts": [
+      {
+       "concept_tag": "equipotential-surfaces",
+       "learning_objective": "Identify equipotential surfaces and explain why the field is normal to them and no work is done along them."
+      },
+      {
+       "concept_tag": "field-potential-relation",
+       "learning_objective": "Use E = -dV/dl to find the magnitude and direction of the electric field from potential values."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH02-T4",
+     "topic_number": 4,
+     "title": "Potential energy of a system of charges and in an external field",
+     "ncert_sections": "2.7, 2.8",
+     "concepts": [
+      {
+       "concept_tag": "potential-energy-of-system",
+       "learning_objective": "Calculate the electrostatic potential energy of a system of point charges."
+      },
+      {
+       "concept_tag": "potential-energy-in-external-field",
+       "learning_objective": "Apply U = qV to a charge moving in an external potential."
+      },
+      {
+       "concept_tag": "dipole-energy-in-field",
+       "learning_objective": "Use U = -p.E to find the potential energy of a dipole and the work needed to rotate it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH02-T5",
+     "topic_number": 5,
+     "title": "Electrostatics of conductors, dielectrics and polarisation",
+     "ncert_sections": "2.9, 2.10",
+     "concepts": [
+      {
+       "concept_tag": "electrostatics-of-conductors",
+       "learning_objective": "State the electrostatic properties of a conductor: zero interior field, surface charge, constant potential and normal surface field."
+      },
+      {
+       "concept_tag": "dielectric-polarisation",
+       "learning_objective": "Explain polar and non-polar molecules and how polarisation reduces the field inside a dielectric."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH02-T6",
+     "topic_number": 6,
+     "title": "Capacitors, the parallel plate capacitor and the effect of a dielectric",
+     "ncert_sections": "2.11, 2.12, 2.13",
+     "concepts": [
+      {
+       "concept_tag": "capacitance-definition",
+       "learning_objective": "Define capacitance as C = Q/V and state its SI unit."
+      },
+      {
+       "concept_tag": "parallel-plate-capacitance",
+       "learning_objective": "Calculate the capacitance of a parallel plate capacitor using C = epsilon0 A/d."
+      },
+      {
+       "concept_tag": "dielectric-effect-on-capacitance",
+       "learning_objective": "Explain how a dielectric changes the capacitance, charge and potential difference of a capacitor."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH02-T7",
+     "topic_number": 7,
+     "title": "Combination of capacitors and energy stored in a capacitor",
+     "ncert_sections": "2.14, 2.15",
+     "concepts": [
+      {
+       "concept_tag": "capacitors-in-series-and-parallel",
+       "learning_objective": "Find the equivalent capacitance and charges for capacitors in series and in parallel."
+      },
+      {
+       "concept_tag": "energy-stored-in-capacitor",
+       "learning_objective": "Calculate the energy stored in a capacitor and the energy changes when capacitors share charge."
+      },
+      {
+       "concept_tag": "electric-energy-density",
+       "learning_objective": "Use u = (1/2) epsilon0 E^2 to find the energy density of an electric field."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPH1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Current Electricity",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH1-CH03-T1",
+     "topic_number": 1,
+     "title": "Electric current and currents in conductors",
+     "ncert_sections": "3.1, 3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "electric-current-definition",
+       "learning_objective": "Define electric current as the rate of net charge flow across an area and use its SI unit."
+      },
+      {
+       "concept_tag": "current-in-conductors",
+       "learning_objective": "Explain how an applied electric field turns the random motion of free charges into a steady current."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH03-T2",
+     "topic_number": 2,
+     "title": "Ohm's law, resistance and resistivity",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "ohms-law-resistance",
+       "learning_objective": "Relate resistance to the length and cross-sectional area of a conductor through R = rho l / A."
+      },
+      {
+       "concept_tag": "resistivity-current-density",
+       "learning_objective": "Use resistivity, conductivity and current density in the form j = sigma E."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH03-T3",
+     "topic_number": 3,
+     "title": "Drift of electrons and the origin of resistivity",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "drift-velocity-relaxation-time",
+       "learning_objective": "Derive and apply v_d = eE tau / m and I = n e A v_d for electrons in a metal."
+      },
+      {
+       "concept_tag": "mobility",
+       "learning_objective": "Define mobility as drift speed per unit field and state its SI unit."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH03-T4",
+     "topic_number": 4,
+     "title": "Limitations of Ohm's law and resistivity of materials",
+     "ncert_sections": "3.6, 3.7, 3.8",
+     "concepts": [
+      {
+       "concept_tag": "non-ohmic-behaviour",
+       "learning_objective": "Identify the ways in which devices such as diodes and GaAs deviate from Ohm's law."
+      },
+      {
+       "concept_tag": "classification-by-resistivity",
+       "learning_objective": "Classify conductors, semiconductors and insulators by resistivity and its behaviour with temperature."
+      },
+      {
+       "concept_tag": "temperature-coefficient-resistivity",
+       "learning_objective": "Apply rho_T = rho_0 [1 + alpha (T - T_0)] to find resistance at another temperature."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH03-T5",
+     "topic_number": 5,
+     "title": "Electrical energy and power",
+     "ncert_sections": "3.9",
+     "concepts": [
+      {
+       "concept_tag": "electrical-power-dissipation",
+       "learning_objective": "Calculate power dissipated in a resistor using P = VI = I^2 R = V^2 / R."
+      },
+      {
+       "concept_tag": "power-transmission-loss",
+       "learning_objective": "Explain why electrical power is transmitted at high voltage to reduce ohmic loss."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH03-T6",
+     "topic_number": 6,
+     "title": "Cells, emf, internal resistance and combinations of cells",
+     "ncert_sections": "3.10, 3.11",
+     "concepts": [
+      {
+       "concept_tag": "emf-internal-resistance",
+       "learning_objective": "Relate emf, terminal voltage and internal resistance through V = epsilon - I r."
+      },
+      {
+       "concept_tag": "combination-of-cells",
+       "learning_objective": "Find the equivalent emf and internal resistance of cells in series and in parallel."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH03-T7",
+     "topic_number": 7,
+     "title": "Kirchhoff's rules and the Wheatstone bridge",
+     "ncert_sections": "3.12, 3.13",
+     "concepts": [
+      {
+       "concept_tag": "kirchhoff-rules",
+       "learning_objective": "Apply Kirchhoff's junction and loop rules and state the conservation laws behind them."
+      },
+      {
+       "concept_tag": "wheatstone-bridge-balance",
+       "learning_objective": "Use the balance condition of a Wheatstone bridge to find an unknown resistance."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPH1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Moving Charges and Magnetism",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH1-CH04-T1",
+     "topic_number": 1,
+     "title": "Magnetic force: Lorentz force and force on a current-carrying conductor",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "lorentz-force",
+       "learning_objective": "Apply F = q(v x B) to find the magnitude and direction of the magnetic force on a moving charge."
+      },
+      {
+       "concept_tag": "force-on-current-carrying-conductor",
+       "learning_objective": "Use F = I l x B to find the force on a straight current-carrying conductor in a uniform magnetic field."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH04-T2",
+     "topic_number": 2,
+     "title": "Motion of a charged particle in a magnetic field",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "circular-motion-in-magnetic-field",
+       "learning_objective": "Derive and use r = mv/qB for a charge moving perpendicular to a uniform magnetic field."
+      },
+      {
+       "concept_tag": "frequency-of-revolution-and-helix",
+       "learning_objective": "Explain why the period is independent of speed and describe helical motion and its pitch."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH04-T3",
+     "topic_number": 3,
+     "title": "Biot-Savart law and field on the axis of a circular loop",
+     "ncert_sections": "4.4, 4.5",
+     "concepts": [
+      {
+       "concept_tag": "biot-savart-law",
+       "learning_objective": "State the Biot-Savart law and use it to find the magnitude and direction of the field of a current element."
+      },
+      {
+       "concept_tag": "field-on-axis-of-circular-loop",
+       "learning_objective": "Calculate the magnetic field at the centre and on the axis of a circular current loop."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH04-T4",
+     "topic_number": 4,
+     "title": "Ampere's circuital law and the solenoid",
+     "ncert_sections": "4.6, 4.7",
+     "concepts": [
+      {
+       "concept_tag": "amperes-circuital-law",
+       "learning_objective": "State Ampere's circuital law and apply it to find the field of a long straight wire."
+      },
+      {
+       "concept_tag": "solenoid-field",
+       "learning_objective": "Use B = mu0 n I for the field inside a long solenoid and describe the field outside it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH04-T5",
+     "topic_number": 5,
+     "title": "Force between two parallel currents; the ampere",
+     "ncert_sections": "4.8",
+     "concepts": [
+      {
+       "concept_tag": "force-between-parallel-currents",
+       "learning_objective": "Calculate the force per unit length between two long parallel currents and state whether it attracts or repels."
+      },
+      {
+       "concept_tag": "definition-of-ampere",
+       "learning_objective": "State the definition of the ampere in terms of the force between parallel conductors."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH04-T6",
+     "topic_number": 6,
+     "title": "Torque on a current loop; the magnetic dipole",
+     "ncert_sections": "4.9",
+     "concepts": [
+      {
+       "concept_tag": "torque-on-current-loop",
+       "learning_objective": "Use tau = m x B to find the torque on a current loop in a uniform magnetic field."
+      },
+      {
+       "concept_tag": "current-loop-as-magnetic-dipole",
+       "learning_objective": "Explain why a planar current loop behaves as a magnetic dipole of moment m = IA and use its far field."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH04-T7",
+     "topic_number": 7,
+     "title": "The moving coil galvanometer",
+     "ncert_sections": "4.10",
+     "concepts": [
+      {
+       "concept_tag": "galvanometer-principle-and-sensitivity",
+       "learning_objective": "Explain the working of a moving coil galvanometer and define its current and voltage sensitivity."
+      },
+      {
+       "concept_tag": "conversion-to-ammeter-and-voltmeter",
+       "learning_objective": "Calculate the shunt or series resistance needed to convert a galvanometer into an ammeter or voltmeter."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPH1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Magnetism and Matter",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH1-CH05-T1",
+     "topic_number": 1,
+     "title": "The bar magnet and magnetic field lines",
+     "ncert_sections": "5.1, 5.2, 5.2.1",
+     "concepts": [
+      {
+       "concept_tag": "magnetic-poles",
+       "learning_objective": "Describe the basic properties of magnetic poles, including the non-existence of isolated poles."
+      },
+      {
+       "concept_tag": "magnetic-field-lines",
+       "learning_objective": "State and apply the properties of magnetic field lines of a bar magnet."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH05-T2",
+     "topic_number": 2,
+     "title": "Bar magnet as an equivalent solenoid",
+     "ncert_sections": "5.2.2",
+     "concepts": [
+      {
+       "concept_tag": "bar-magnet-solenoid-equivalence",
+       "learning_objective": "Explain why a bar magnet can be treated as an equivalent current-carrying solenoid."
+      },
+      {
+       "concept_tag": "solenoid-magnetic-moment",
+       "learning_objective": "Calculate the magnetic moment of a solenoid and compare the far axial fields it produces."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH05-T3",
+     "topic_number": 3,
+     "title": "The dipole in a uniform magnetic field",
+     "ncert_sections": "5.2.3",
+     "concepts": [
+      {
+       "concept_tag": "torque-on-dipole",
+       "learning_objective": "Use tau = m x B to find the torque on a magnetic dipole in a uniform field."
+      },
+      {
+       "concept_tag": "dipole-potential-energy",
+       "learning_objective": "Use U = -m.B to find potential energy, work done and equilibrium positions of a dipole."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH05-T4",
+     "topic_number": 4,
+     "title": "The electrostatic analog",
+     "ncert_sections": "5.2.4",
+     "concepts": [
+      {
+       "concept_tag": "dipole-analogy",
+       "learning_objective": "Map the equations of an electric dipole onto those of a magnetic dipole."
+      },
+      {
+       "concept_tag": "axial-equatorial-field",
+       "learning_objective": "Calculate the axial and equatorial fields of a short bar magnet and their directions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH05-T5",
+     "topic_number": 5,
+     "title": "Magnetism and Gauss's law",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "gauss-law-magnetism",
+       "learning_objective": "State Gauss's law for magnetism and relate it to the absence of magnetic monopoles."
+      },
+      {
+       "concept_tag": "field-line-validity",
+       "learning_objective": "Judge whether a given field-line pattern can represent a static magnetic field."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH05-T6",
+     "topic_number": 6,
+     "title": "Magnetisation and magnetic intensity",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "magnetisation-intensity",
+       "learning_objective": "Define magnetisation M and magnetic intensity H and use B = mu0 (H + M)."
+      },
+      {
+       "concept_tag": "susceptibility-permeability",
+       "learning_objective": "Relate susceptibility, relative permeability and permeability of a material."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH05-T7",
+     "topic_number": 7,
+     "title": "Magnetic properties of materials",
+     "ncert_sections": "5.5, 5.5.1, 5.5.2, 5.5.3",
+     "concepts": [
+      {
+       "concept_tag": "diamagnetism",
+       "learning_objective": "Describe the behaviour and examples of diamagnetic substances, including superconductors."
+      },
+      {
+       "concept_tag": "paramagnetism",
+       "learning_objective": "Explain paramagnetism and the effect of field and temperature on magnetisation."
+      },
+      {
+       "concept_tag": "ferromagnetism",
+       "learning_objective": "Explain ferromagnetism using domains and distinguish hard and soft ferromagnets."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPH1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Electromagnetic Induction",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH1-CH06-T1",
+     "topic_number": 1,
+     "title": "Experiments of Faraday and Henry",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "relative-motion-induction",
+       "learning_objective": "Explain from Faraday's experiments that relative motion between a magnet (or current-carrying coil) and a coil induces a current."
+      },
+      {
+       "concept_tag": "induction-without-relative-motion",
+       "learning_objective": "Explain how a changing current in a stationary coil induces a momentary current in a nearby stationary coil."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH06-T2",
+     "topic_number": 2,
+     "title": "Magnetic flux and Faraday's law of induction",
+     "ncert_sections": "6.3, 6.4",
+     "concepts": [
+      {
+       "concept_tag": "magnetic-flux",
+       "learning_objective": "Define magnetic flux as B.A = BA cos(theta) and state its SI unit."
+      },
+      {
+       "concept_tag": "faradays-law-emf",
+       "learning_objective": "Apply Faraday's law, emf = -N dPhi/dt, to calculate induced emf and current."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH06-T3",
+     "topic_number": 3,
+     "title": "Lenz's law and conservation of energy",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "lenz-law-direction",
+       "learning_objective": "Use Lenz's law to find the direction of an induced current or the polarity of an induced emf."
+      },
+      {
+       "concept_tag": "lenz-law-energy-conservation",
+       "learning_objective": "Explain Lenz's law as a consequence of the law of conservation of energy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH06-T4",
+     "topic_number": 4,
+     "title": "Motional electromotive force",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "motional-emf-blv",
+       "learning_objective": "Derive and apply the motional emf Blv for a conductor moving in a uniform magnetic field."
+      },
+      {
+       "concept_tag": "lorentz-force-origin",
+       "learning_objective": "Explain motional emf through the Lorentz force on the free charges of a moving conductor."
+      },
+      {
+       "concept_tag": "rotating-rod-emf",
+       "learning_objective": "Calculate the emf (1/2)B omega R^2 across a rod rotating in a uniform magnetic field."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH06-T5",
+     "topic_number": 5,
+     "title": "Mutual inductance",
+     "ncert_sections": "6.7, 6.7.1",
+     "concepts": [
+      {
+       "concept_tag": "mutual-inductance-solenoids",
+       "learning_objective": "Obtain and use the mutual inductance of two long co-axial solenoids and the equality M12 = M21."
+      },
+      {
+       "concept_tag": "mutual-induced-emf",
+       "learning_objective": "Calculate the emf induced in one coil by a changing current in a neighbouring coil."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH06-T6",
+     "topic_number": 6,
+     "title": "Self-inductance and magnetic energy",
+     "ncert_sections": "6.7.2",
+     "concepts": [
+      {
+       "concept_tag": "self-inductance-solenoid",
+       "learning_objective": "Obtain and use the self-inductance of a long solenoid and the back emf -L dI/dt."
+      },
+      {
+       "concept_tag": "magnetic-energy-stored",
+       "learning_objective": "Calculate the energy (1/2)LI^2 stored in an inductor and relate it to the energy density B^2/2mu0."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH06-T7",
+     "topic_number": 7,
+     "title": "AC generator",
+     "ncert_sections": "6.8",
+     "concepts": [
+      {
+       "concept_tag": "ac-generator-principle",
+       "learning_objective": "Describe the construction and working principle of an ac generator."
+      },
+      {
+       "concept_tag": "ac-generator-emf",
+       "learning_objective": "Use emf = NBA omega sin(omega t) to find the peak and instantaneous emf of an ac generator."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPH1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Alternating Current",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH1-CH07-T1",
+     "topic_number": 1,
+     "title": "AC voltage applied to a resistor",
+     "ncert_sections": "7.1, 7.2",
+     "concepts": [
+      {
+       "concept_tag": "resistor-ac-phase",
+       "learning_objective": "Describe the phase relation between current and voltage in a resistor and why it heats up although the average current is zero."
+      },
+      {
+       "concept_tag": "rms-values",
+       "learning_objective": "Relate rms and peak values of alternating current and voltage and use them to find average power in a resistor."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH07-T2",
+     "topic_number": 2,
+     "title": "Representation of ac current and voltage by phasors",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "phasor-representation",
+       "learning_objective": "Interpret a phasor as a rotating vector whose length is the amplitude and whose vertical projection is the instantaneous value."
+      },
+      {
+       "concept_tag": "phasor-addition",
+       "learning_objective": "Explain why voltages that are out of phase must be combined using phasors rather than added algebraically."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH07-T3",
+     "topic_number": 3,
+     "title": "AC voltage applied to an inductor",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "inductive-reactance",
+       "learning_objective": "Use X_L = omega L to find the current through a pure inductor and predict how it changes with frequency."
+      },
+      {
+       "concept_tag": "inductor-phase-and-power",
+       "learning_objective": "State that current lags voltage by pi/2 in a pure inductor and explain why the average power over a cycle is zero."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH07-T4",
+     "topic_number": 4,
+     "title": "AC voltage applied to a capacitor",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "capacitive-reactance",
+       "learning_objective": "Use X_C = 1/(omega C) to find the current through a capacitor and predict how it changes with frequency."
+      },
+      {
+       "concept_tag": "capacitor-phase-and-power",
+       "learning_objective": "State that current leads voltage by pi/2 in a capacitor and that no average power is consumed by it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH07-T5",
+     "topic_number": 5,
+     "title": "AC voltage applied to a series LCR circuit and resonance",
+     "ncert_sections": "7.6, 7.6.1, 7.6.2",
+     "concepts": [
+      {
+       "concept_tag": "lcr-impedance",
+       "learning_objective": "Calculate the impedance and current of a series LCR circuit using the phasor (impedance) diagram."
+      },
+      {
+       "concept_tag": "series-resonance",
+       "learning_objective": "Find the resonant frequency of a series LCR circuit and analyse the current and voltages at resonance."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH07-T6",
+     "topic_number": 6,
+     "title": "Power in ac circuit: the power factor",
+     "ncert_sections": "7.7",
+     "concepts": [
+      {
+       "concept_tag": "average-power-power-factor",
+       "learning_objective": "Calculate average power as P = V I cos(phi) and explain the effect of power factor on transmission losses."
+      },
+      {
+       "concept_tag": "wattless-current",
+       "learning_objective": "Explain wattless current and how a capacitor improves the power factor of an inductive load."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH07-T7",
+     "topic_number": 7,
+     "title": "Transformers",
+     "ncert_sections": "7.8",
+     "concepts": [
+      {
+       "concept_tag": "transformer-principle",
+       "learning_objective": "State that a transformer works on mutual induction and needs a changing magnetic flux."
+      },
+      {
+       "concept_tag": "transformer-ratios",
+       "learning_objective": "Apply V_s/V_p = N_s/N_p and I_s/I_p = N_p/N_s and explain why power is transmitted at high voltage."
+      },
+      {
+       "concept_tag": "transformer-losses",
+       "learning_objective": "Identify the energy losses in a real transformer and how each is reduced."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPH1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Electromagnetic Waves",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH1-CH08-T1",
+     "topic_number": 1,
+     "title": "Displacement current and the Ampere-Maxwell law",
+     "ncert_sections": "8.1, 8.2",
+     "concepts": [
+      {
+       "concept_tag": "displacement-current",
+       "learning_objective": "Explain how a time-varying electric field gives rise to a displacement current i_d = ε0 dΦE/dt that equals the conduction current in a charging capacitor."
+      },
+      {
+       "concept_tag": "ampere-maxwell-law",
+       "learning_objective": "State the Ampere-Maxwell law and explain how it restores consistency and symmetry between electric and magnetic laws."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH08-T2",
+     "topic_number": 2,
+     "title": "Sources of electromagnetic waves",
+     "ncert_sections": "8.3.1",
+     "concepts": [
+      {
+       "concept_tag": "accelerated-charge-radiation",
+       "learning_objective": "Identify accelerated (oscillating) charges as the source of electromagnetic waves whose frequency equals the frequency of oscillation."
+      },
+      {
+       "concept_tag": "hertz-bose-marconi",
+       "learning_objective": "Recall the experimental work of Hertz, J.C. Bose and Marconi on producing and transmitting electromagnetic waves."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH08-T3",
+     "topic_number": 3,
+     "title": "Nature of electromagnetic waves",
+     "ncert_sections": "8.3.2",
+     "concepts": [
+      {
+       "concept_tag": "transverse-field-orientation",
+       "learning_objective": "Describe the mutually perpendicular orientation of E, B and the direction of propagation in a plane electromagnetic wave."
+      },
+      {
+       "concept_tag": "wave-relations",
+       "learning_objective": "Use the relations ω = ck, νλ = c and B0 = E0/c to analyse a plane electromagnetic wave."
+      },
+      {
+       "concept_tag": "speed-in-medium",
+       "learning_objective": "Relate the speed of electromagnetic waves to μ0, ε0 in vacuum and to μ, ε in a material medium."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH08-T4",
+     "topic_number": 4,
+     "title": "Electromagnetic spectrum: radio waves, microwaves and infrared",
+     "ncert_sections": "8.4, 8.4.1, 8.4.2, 8.4.3",
+     "concepts": [
+      {
+       "concept_tag": "spectrum-classification",
+       "learning_objective": "Explain that regions of the electromagnetic spectrum differ in wavelength or frequency and are classified by production and detection."
+      },
+      {
+       "concept_tag": "radio-and-microwaves",
+       "learning_objective": "Describe the frequency bands, production and uses of radio waves and microwaves."
+      },
+      {
+       "concept_tag": "infrared-waves",
+       "learning_objective": "Explain why infrared waves are called heat waves and their role in the greenhouse effect."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH1-CH08-T5",
+     "topic_number": 5,
+     "title": "Visible light, ultraviolet, X-rays and gamma rays",
+     "ncert_sections": "8.4.4, 8.4.5, 8.4.6, 8.4.7",
+     "concepts": [
+      {
+       "concept_tag": "visible-and-ultraviolet",
+       "learning_objective": "Recall the range of visible light and the sources, effects and absorption of ultraviolet radiation."
+      },
+      {
+       "concept_tag": "x-rays-and-gamma-rays",
+       "learning_objective": "Describe the production, wavelength ranges and uses of X-rays and gamma rays."
+      },
+      {
+       "concept_tag": "production-and-detection",
+       "learning_objective": "Match each type of electromagnetic wave with its typical production method and detector (Table 8.1)."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

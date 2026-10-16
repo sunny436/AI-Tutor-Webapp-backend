@@ -1,0 +1,144 @@
+{
+ "chapter_id": "GHCU1-CH09",
+ "title": "जंतुओं में जैव प्रक्रम",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHCU1-CH09-T1",
+   "topic_number": 1,
+   "title": "मुख गुहा में पाचन और लार की भूमिका",
+   "ncert_sections": "9.1, 9.1.1",
+   "concepts": [
+    {
+     "concept_tag": "yantrik-pachan",
+     "learning_objective": "विद्यार्थी दाँतों द्वारा भोजन के संदलन और चर्वण को यांत्रिक पाचन के रूप में पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "lar-dwara-mand-vighatan",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि लार का पाचक रस मंड को शर्करा में विघटित करता है।"
+    },
+    {
+     "concept_tag": "iodine-mand-parikshan",
+     "learning_objective": "विद्यार्थी आयोडीन परीक्षण के परिणामों से मंड की उपस्थिति या अनुपस्थिति का निष्कर्ष निकाल सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH09-T2",
+   "topic_number": 2,
+   "title": "ग्रासनली और आमाशय",
+   "ncert_sections": "9.1.1",
+   "concepts": [
+    {
+     "concept_tag": "grasnali-lahardar-gati",
+     "learning_objective": "विद्यार्थी ग्रासनली की भित्तियों के लहरदार संकुचन और शिथिलन से भोजन के आगे बढ़ने को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "amashay-ke-srav",
+     "learning_objective": "विद्यार्थी आमाशय के अम्ल, पाचक रस और श्लेष्मा के कार्य बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH09-T3",
+   "topic_number": 3,
+   "title": "क्षुद्रांत्र, यकृत, अग्न्याशय और अवशोषण",
+   "ncert_sections": "9.1.1",
+   "concepts": [
+    {
+     "concept_tag": "yakrit-agnyashay-srav",
+     "learning_objective": "विद्यार्थी पित्तरस और अग्न्याशयी रस के स्रोत और कार्य बता सकेंगे।"
+    },
+    {
+     "concept_tag": "poshak-avshoshan",
+     "learning_objective": "विद्यार्थी क्षुद्रांत्र के अँगुली जैसे प्रवर्धों द्वारा पोषकों के अवशोषण को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH09-T4",
+   "topic_number": 4,
+   "title": "बृहदांत्र और पाचन तंत्र का स्वास्थ्य",
+   "ncert_sections": "9.1.1",
+   "concepts": [
+    {
+     "concept_tag": "brihadantra-karya",
+     "learning_objective": "विद्यार्थी बृहदांत्र द्वारा जल और लवणों के अवशोषण तथा मल के बनने और बहिःक्षेपण को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "pachan-swasthya",
+     "learning_objective": "विद्यार्थी रेशे-समृद्ध और किण्वित भोजन तथा आँत के जीवाणुओं का पाचन स्वास्थ्य में महत्व बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH09-T5",
+   "topic_number": 5,
+   "title": "अन्य जंतुओं में पाचन",
+   "ncert_sections": "9.1.2",
+   "concepts": [
+    {
+     "concept_tag": "romanthan",
+     "learning_objective": "विद्यार्थी रोमंथी जंतुओं में रोमंथन की प्रक्रिया समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "pakshi-peshani",
+     "learning_objective": "विद्यार्थी दाँत न होने पर भी पक्षियों में पेषणी द्वारा भोजन के विघटन को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH09-T6",
+   "topic_number": 6,
+   "title": "मनुष्य में श्वास लेना: श्वसन तंत्र और क्रियाविधि",
+   "ncert_sections": "9.2, 9.2.1",
+   "concepts": [
+    {
+     "concept_tag": "shwasan-tantra-ke-bhag",
+     "learning_objective": "विद्यार्थी नासाद्वार से कूपिकाओं तक श्वसन तंत्र के भागों और उनके कार्यों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "antahshwasan-uchchhvasan",
+     "learning_objective": "विद्यार्थी अंतःश्वसन और उच्छ्वसन में पसलियों और डायाफ्राम की गति को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH09-T7",
+   "topic_number": 7,
+   "title": "गैसों का विनिमय और श्वसन",
+   "ncert_sections": "9.2.1",
+   "concepts": [
+    {
+     "concept_tag": "kupika-gas-vinimay",
+     "learning_objective": "विद्यार्थी कूपिकाओं में ऑक्सीजन और कार्बन डाइऑक्साइड के विनिमय तथा रक्त द्वारा उनके वहन को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "shwasan-rasayanik-prakriya",
+     "learning_objective": "विद्यार्थी श्वसन को ग्लूकोस के विघटन से ऊर्जा मुक्त करने वाली रासायनिक प्रक्रिया के रूप में श्वास लेने से अलग कर सकेंगे।"
+    },
+    {
+     "concept_tag": "chune-ka-pani-parikshan",
+     "learning_objective": "विद्यार्थी चूने के पानी के परीक्षण से उच्छ्वसित वायु में अधिक कार्बन डाइऑक्साइड का निष्कर्ष निकाल सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH09-T8",
+   "topic_number": 8,
+   "title": "अन्य जंतुओं में श्वास लेना",
+   "ncert_sections": "9.2.2",
+   "concepts": [
+    {
+     "concept_tag": "klom-shwasan",
+     "learning_objective": "विद्यार्थी मछली जैसे जलीय जंतुओं में क्लोम द्वारा गैस विनिमय को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "twacha-aur-mendhak-shwasan",
+     "learning_objective": "विद्यार्थी मेंढक और केंचुए में त्वचा तथा जीवन-अवस्था के अनुसार श्वास लेने के अनुकूलन बता सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

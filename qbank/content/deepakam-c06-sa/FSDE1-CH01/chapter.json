@@ -1,0 +1,132 @@
+{
+ "chapter_id": "FSDE1-CH01",
+ "title": "वयं वर्णमालां पठामः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FSDE1-CH01-T1",
+   "topic_number": 1,
+   "title": "स्वराः – समानाक्षराणि, सन्ध्यक्षराणि, अनुनासिक-स्वराः च",
+   "ncert_sections": "स्वराः, समानाक्षराणि, सन्ध्यक्षराणि, अनुनासिक-स्वराः",
+   "concepts": [
+    {
+     "concept_tag": "samanakshara-svarah",
+     "learning_objective": "समानाक्षर-स्वरान् तेषां ह्रस्व-दीर्घ-भेदं च अभिजानीयात्।"
+    },
+    {
+     "concept_tag": "sandhyakshara-svarah",
+     "learning_objective": "द्वयोः स्वरयोः सन्धिना जातान् सन्ध्यक्षर-स्वरान् अभिजानीयात्।"
+    },
+    {
+     "concept_tag": "anunasika-svarah",
+     "learning_objective": "मुखेन सह नासिकया उच्चारितान् अनुनासिक-स्वरान् अवगच्छेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH01-T2",
+   "topic_number": 2,
+   "title": "व्यञ्जनानि – स्पर्शाः (वर्ग्याः) वर्णाः",
+   "ncert_sections": "व्यञ्जनानि, स्पर्शाः (वर्ग्याः) वर्णाः",
+   "concepts": [
+    {
+     "concept_tag": "vyanjana-uccharanam",
+     "learning_objective": "व्यञ्जनानाम् उच्चारणार्थं अ-स्वरस्य योजनं किमर्थं भवति इति अवगच्छेत्।"
+    },
+    {
+     "concept_tag": "sparsha-vargah",
+     "learning_objective": "पञ्चसु वर्गेषु विभक्तान् स्पर्श-वर्णान् अभिजानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH01-T3",
+   "topic_number": 3,
+   "title": "अन्तःस्थाः, ऊष्माणः, अयोगवाहौ च",
+   "ncert_sections": "अन्तःस्थाः वर्णाः, ऊष्म-वर्णाः, अयोगवाहौ वर्णौ",
+   "concepts": [
+    {
+     "concept_tag": "antahstha-ardhasvarah",
+     "learning_objective": "अन्तःस्थ-वर्णाः स्वराणां स्थाने जायन्ते अतः अर्धस्वराः इति उदाहरणैः अवगच्छेत्।"
+    },
+    {
+     "concept_tag": "ushma-varnah",
+     "learning_objective": "ऊष्म-वर्णान् तेषाम् उच्चारण-वैशिष्ट्यं च जानीयात्।"
+    },
+    {
+     "concept_tag": "ayogavaha-varnau",
+     "learning_objective": "अनुस्वार-विसर्गयोः अयोगवाहत्वं तयोः उच्चारण-विधिं च जानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH01-T4",
+   "topic_number": 4,
+   "title": "गुणिताक्षराणि – स्वराणां मात्राः",
+   "ncert_sections": "गुणिताक्षराणि, वदामः लिखामः च",
+   "concepts": [
+    {
+     "concept_tag": "gunitakshara-nirmanam",
+     "learning_objective": "व्यञ्जनैः सह स्वराणां संयोजनेन गुणिताक्षराणि रचयेत्।"
+    },
+    {
+     "concept_tag": "svara-matra",
+     "learning_objective": "गुणिताक्षरे प्रयुक्तं स्वरं तस्य मात्रा-चिह्नं च अभिजानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH01-T5",
+   "topic_number": 5,
+   "title": "वर्णानाम् उच्चारण-स्थानानि",
+   "ncert_sections": "योग्यताविस्तरः – आस्ये वर्णानां षट् उच्चारण-स्थानानि, पाणिनीय-शिक्षा-सूत्राणि",
+   "concepts": [
+    {
+     "concept_tag": "shat-uccharana-sthanani",
+     "learning_objective": "आस्ये विद्यमानानि षट् उच्चारण-स्थानानि जानीयात्।"
+    },
+    {
+     "concept_tag": "ekasthaniya-varnah",
+     "learning_objective": "एकस्थानीय-वर्णानाम् उच्चारण-स्थानं निर्दिशेत्।"
+    },
+    {
+     "concept_tag": "dvisthaniya-varnah",
+     "learning_objective": "द्विस्थानीय-वर्णानाम् उच्चारण-स्थाने अभिजानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH01-T6",
+   "topic_number": 6,
+   "title": "मात्रा-कालः – ह्रस्वः, दीर्घः, प्लुतः, अर्धमात्रः च",
+   "ncert_sections": "परियोजनाकार्यम् – चाषस्तु वदते मात्राम्",
+   "concepts": [
+    {
+     "concept_tag": "matra-kalah",
+     "learning_objective": "पशुपक्षिणां ध्वनि-उदाहरणैः ह्रस्व-दीर्घ-अर्धमात्राणां कालं तोलयेत्।"
+    },
+    {
+     "concept_tag": "pluta-svarah",
+     "learning_objective": "त्रिमात्रं प्लुत-स्वरं तस्य लेखन-चिह्नं च अवगच्छेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH01-T7",
+   "topic_number": 7,
+   "title": "शब्दार्थाः पूर्ण-नामानि च",
+   "ncert_sections": "वयं शब्दार्थान् जानीमः, अभ्यासकार्यम् (पूर्ण-नामानि)",
+   "concepts": [
+    {
+     "concept_tag": "shabdarthah",
+     "learning_objective": "पाठस्य शब्दानाम् अर्थान् समानार्थकान् च जानीयात्।"
+    },
+    {
+     "concept_tag": "purna-nama-ghatakani",
+     "learning_objective": "पूर्ण-नाम्नः उपाधिः, प्रथम-नाम, मध्य-नाम, अन्त्य-नाम इति अङ्गानि अभिजानीयात्।"
+    }
+   ]
+  }
+ ]
+}

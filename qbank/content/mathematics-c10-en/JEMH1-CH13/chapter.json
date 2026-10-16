@@ -1,0 +1,92 @@
+{
+ "chapter_id": "JEMH1-CH13",
+ "title": "Statistics",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH13-T1",
+   "topic_number": 1,
+   "title": "Mean of grouped data: class marks and the direct method",
+   "ncert_sections": "13.2",
+   "concepts": [
+    {
+     "concept_tag": "class-mark",
+     "learning_objective": "Find the class mark of a class interval and explain why it represents the class."
+    },
+    {
+     "concept_tag": "mean-direct-method",
+     "learning_objective": "Calculate the mean of grouped data using the direct method."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH13-T2",
+   "topic_number": 2,
+   "title": "Assumed mean and step-deviation methods",
+   "ncert_sections": "13.2",
+   "concepts": [
+    {
+     "concept_tag": "assumed-mean-method",
+     "learning_objective": "Calculate the mean of grouped data using deviations from an assumed mean."
+    },
+    {
+     "concept_tag": "step-deviation-method",
+     "learning_objective": "Use the step-deviation method and judge when it is convenient."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH13-T3",
+   "topic_number": 3,
+   "title": "Mode of grouped data",
+   "ncert_sections": "13.3",
+   "concepts": [
+    {
+     "concept_tag": "modal-class",
+     "learning_objective": "Identify the modal class and the quantities used in the mode formula."
+    },
+    {
+     "concept_tag": "mode-formula",
+     "learning_objective": "Calculate the mode of grouped data using the mode formula."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH13-T4",
+   "topic_number": 4,
+   "title": "Cumulative frequency distributions",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "cumulative-frequency-less-than",
+     "learning_objective": "Construct and read a less than type cumulative frequency distribution."
+    },
+    {
+     "concept_tag": "cumulative-frequency-more-than",
+     "learning_objective": "Construct and read a more than or equal to type cumulative frequency distribution."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH13-T5",
+   "topic_number": 5,
+   "title": "Median of grouped data and the empirical relationship",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "median-class",
+     "learning_objective": "Locate the median class using n/2 and cumulative frequencies."
+    },
+    {
+     "concept_tag": "median-formula",
+     "learning_objective": "Calculate the median of grouped data using the median formula."
+    },
+    {
+     "concept_tag": "empirical-relationship",
+     "learning_objective": "Apply the empirical relationship 3 Median = Mode + 2 Mean."
+    }
+   ]
+  }
+ ]
+}

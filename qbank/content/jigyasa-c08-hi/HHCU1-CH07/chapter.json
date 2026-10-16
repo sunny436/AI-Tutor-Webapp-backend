@@ -1,0 +1,104 @@
+{
+ "chapter_id": "HHCU1-CH07",
+ "title": "द्रव्य की कणीय प्रकृति",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHCU1-CH07-T1",
+   "topic_number": 1,
+   "title": "द्रव्य किससे बना होता है?",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "ghatak-kan",
+     "learning_objective": "समझना कि प्रत्येक पदार्थ अति सूक्ष्म घटक कणों की बहुत बड़ी संख्या से बना होता है।"
+    },
+    {
+     "concept_tag": "kanad-parmanu",
+     "learning_objective": "आचार्य कणाद द्वारा दी गई परमाणु की अवधारणा को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH07-T2",
+   "topic_number": 2,
+   "title": "अंतराकणीय आकर्षण और ठोस अवस्था",
+   "ncert_sections": "7.2, 7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "antarakaniya-akarshan",
+     "learning_objective": "समझना कि अंतराकणीय आकर्षण बल की प्रबलता पदार्थ की भौतिक अवस्था निर्धारित करती है।"
+    },
+    {
+     "concept_tag": "thos-galnank",
+     "learning_objective": "ठोस के गुणधर्मों और गलनांक को कणों के व्यवहार से समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH07-T3",
+   "topic_number": 3,
+   "title": "द्रव अवस्था",
+   "ncert_sections": "7.2.2",
+   "concepts": [
+    {
+     "concept_tag": "drav-gundharm",
+     "learning_objective": "समझाना कि द्रव का आयतन निश्चित होता है पर आकृति निश्चित नहीं होती।"
+    },
+    {
+     "concept_tag": "kvathnank-vashpan",
+     "learning_objective": "क्वथनांक और वाष्पन में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH07-T4",
+   "topic_number": 4,
+   "title": "गैसीय अवस्था",
+   "ncert_sections": "7.2.3",
+   "concepts": [
+    {
+     "concept_tag": "gas-gundharm",
+     "learning_objective": "समझाना कि गैसों की न तो निश्चित आकृति होती है और न ही निश्चित आयतन।"
+    },
+    {
+     "concept_tag": "taral",
+     "learning_objective": "पहचानना कि द्रव और गैसें बहने के कारण तरल कहलाते हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH07-T5",
+   "topic_number": 5,
+   "title": "तीनों अवस्थाओं में अंतराकणीय स्थान",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "sampidyata",
+     "learning_objective": "गैसों की संपीड्यता और द्रवों की असंपीड्यता को अंतराकणीय स्थान से समझाना।"
+    },
+    {
+     "concept_tag": "antarakaniya-sthan",
+     "learning_objective": "विलयन बनने पर आयतन के परिवर्तन से अंतराकणीय स्थान का अनुमान लगाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH07-T6",
+   "topic_number": 6,
+   "title": "विभिन्न अवस्थाओं में कणों की गति",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "kanon-ki-gati",
+     "learning_objective": "पोटैशियम परमैंगनेट और अगरबत्ती के प्रयोगों से कणों की निरंतर गति समझना।"
+    },
+    {
+     "concept_tag": "tap-aur-gati",
+     "learning_objective": "समझाना कि ताप बढ़ने पर कणों की गति और फैलने की दर बढ़ती है।"
+    }
+   ]
+  }
+ ]
+}

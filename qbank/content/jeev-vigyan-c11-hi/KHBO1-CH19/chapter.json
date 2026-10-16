@@ -1,0 +1,140 @@
+{
+ "chapter_id": "KHBO1-CH19",
+ "title": "रासायनिक समन्वय तथा एकीकरण",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHBO1-CH19-T1",
+   "topic_number": 1,
+   "title": "अंतःस्रावी ग्रंथियाँ और हार्मोन",
+   "ncert_sections": "19.1, 19.2",
+   "concepts": [
+    {
+     "concept_tag": "endocrine-glands-ductless",
+     "learning_objective": "अंतःस्रावी ग्रंथियों को नलिकाविहीन ग्रंथियों के रूप में पहचानना और मानव शरीर की संगठित अंतःस्रावी ग्रंथियों को सूचीबद्ध करना।"
+    },
+    {
+     "concept_tag": "hormone-definition",
+     "learning_objective": "हार्मोन की पुरानी और वर्तमान वैज्ञानिक परिभाषा की तुलना करना।"
+    },
+    {
+     "concept_tag": "neural-vs-chemical-coordination",
+     "learning_objective": "तंत्रिकीय समन्वय की तुलना में हार्मोनी समन्वय की आवश्यकता समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH19-T2",
+   "topic_number": 2,
+   "title": "हाइपोथैलेमस और पीयूष ग्रंथि",
+   "ncert_sections": "19.2.1, 19.2.2",
+   "concepts": [
+    {
+     "concept_tag": "hypothalamic-hormones",
+     "learning_objective": "हाइपोथैलेमस के मोचक और निरोधी हार्मोनों द्वारा पीयूष ग्रंथि के नियमन को समझाना।"
+    },
+    {
+     "concept_tag": "anterior-pituitary-hormones",
+     "learning_objective": "अग्र पीयूष के हार्मोनों के कार्य तथा उनके असंतुलन से होने वाले विकार पहचानना।"
+    },
+    {
+     "concept_tag": "posterior-pituitary-hormones",
+     "learning_objective": "पश्च पीयूष से मुक्त ऑक्सीटोसिन और वैसोप्रेसिन के कार्य समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH19-T3",
+   "topic_number": 3,
+   "title": "पीनियल, थायरॉइड, पैराथायरॉइड और थाइमस ग्रंथियाँ",
+   "ncert_sections": "19.2.3, 19.2.4, 19.2.5, 19.2.6",
+   "concepts": [
+    {
+     "concept_tag": "pineal-thymus-hormones",
+     "learning_objective": "मेलाटोनिन और थाइमोसिन के कार्यों का वर्णन करना।"
+    },
+    {
+     "concept_tag": "thyroid-hormones-disorders",
+     "learning_objective": "थायरॉइड हार्मोनों के कार्य तथा अल्पस्राव और अतिस्राव से होने वाले विकारों का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "calcium-homeostasis",
+     "learning_objective": "रक्त कैल्शियम के नियमन में पैराथायरॉइड हार्मोन और थायरोकैल्सिटोनिन की भूमिका समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH19-T4",
+   "topic_number": 4,
+   "title": "अधिवृक्क ग्रंथि और अग्न्याशय",
+   "ncert_sections": "19.2.7, 19.2.8",
+   "concepts": [
+    {
+     "concept_tag": "adrenal-medulla-catecholamines",
+     "learning_objective": "आपात स्थिति में कैटेकोलामीन हार्मोनों की भूमिका समझाना।"
+    },
+    {
+     "concept_tag": "adrenal-cortex-corticoids",
+     "learning_objective": "ग्लूकोकॉर्टिकॉइड और मिनरलोकॉर्टिकॉइड के कार्यों में भेद करना।"
+    },
+    {
+     "concept_tag": "pancreas-insulin-glucagon",
+     "learning_objective": "इंसुलिन और ग्लूकैगॉन द्वारा रक्त ग्लूकोज़ के समस्थापन को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH19-T5",
+   "topic_number": 5,
+   "title": "वृषण और अंडाशय",
+   "ncert_sections": "19.2.9, 19.2.10",
+   "concepts": [
+    {
+     "concept_tag": "testis-androgens",
+     "learning_objective": "लीडिग कोशिकाओं से स्रावित एंड्रोजन के कार्यों का वर्णन करना।"
+    },
+    {
+     "concept_tag": "ovary-estrogen-progesterone",
+     "learning_objective": "एस्ट्रोजन और प्रोजेस्टेरॉन के स्रोत तथा कार्यों में भेद करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH19-T6",
+   "topic_number": 6,
+   "title": "हृदय, वृक्क और जठरांत्र पथ के हार्मोन",
+   "ncert_sections": "19.3",
+   "concepts": [
+    {
+     "concept_tag": "anf-erythropoietin",
+     "learning_objective": "आलिंद नेट्रियूरेटिक कारक और एरिथ्रोपोइटिन के स्रोत तथा कार्य बताना।"
+    },
+    {
+     "concept_tag": "gastrointestinal-hormones",
+     "learning_objective": "गैस्ट्रिन, सेक्रिटिन, कोलेसिस्टोकाइनिन और जठर निरोधी पेप्टाइड के कार्यों में भेद करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH19-T7",
+   "topic_number": 7,
+   "title": "हार्मोन क्रिया की क्रियाविधि",
+   "ncert_sections": "19.4",
+   "concepts": [
+    {
+     "concept_tag": "hormone-receptors",
+     "learning_objective": "हार्मोन ग्राहियों की विशिष्टता और हार्मोन-ग्राही सम्मिश्र की भूमिका समझाना।"
+    },
+    {
+     "concept_tag": "chemical-nature-of-hormones",
+     "learning_objective": "रासायनिक प्रकृति के आधार पर हार्मोनों का वर्गीकरण करना।"
+    },
+    {
+     "concept_tag": "second-messengers",
+     "learning_objective": "झिल्ली-बद्ध और अंतःकोशिकीय ग्राहियों से जुड़ने वाले हार्मोनों की क्रियाविधि की तुलना करना।"
+    }
+   ]
+  }
+ ]
+}

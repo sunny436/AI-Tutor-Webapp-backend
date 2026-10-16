@@ -1,0 +1,96 @@
+{
+ "chapter_id": "KHMH1-CH09",
+ "title": "सरल रेखाएँ",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH09-T1",
+   "topic_number": 1,
+   "title": "रेखा की ढाल",
+   "ncert_sections": "9.1, 9.2, 9.2.1",
+   "concepts": [
+    {
+     "concept_tag": "dhal-paribhasha",
+     "learning_objective": "विद्यार्थी रेखा के झुकाव और ढाल m = tan θ का संबंध समझकर ढाल अथवा झुकाव ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "do-binduon-se-dhal",
+     "learning_objective": "विद्यार्थी दो दिए गए बिंदुओं से जाने वाली रेखा की ढाल सूत्र द्वारा ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH09-T2",
+   "topic_number": 2,
+   "title": "समांतर और लंब रेखाएँ, रेखाओं के बीच कोण तथा संरेखता",
+   "ncert_sections": "9.2.2, 9.2.3",
+   "concepts": [
+    {
+     "concept_tag": "samantar-lamb-pratibandh",
+     "learning_objective": "विद्यार्थी ढालों के आधार पर दो रेखाओं के समांतर अथवा परस्पर लंब होने का प्रतिबंध लगा सकेंगे।"
+    },
+    {
+     "concept_tag": "rekhaon-ke-beech-kon",
+     "learning_objective": "विद्यार्थी tan θ = |(m₂ − m₁)/(1 + m₁m₂)| से दो रेखाओं के बीच का न्यून कोण ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "sanrekhta",
+     "learning_objective": "विद्यार्थी ढालों की सहायता से तीन बिंदुओं की संरेखता जाँच सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH09-T3",
+   "topic_number": 3,
+   "title": "क्षैतिज, ऊर्ध्वाधर रेखाएँ, बिंदु-ढाल रूप और दो-बिंदु रूप",
+   "ncert_sections": "9.3, 9.3.1, 9.3.2, 9.3.3",
+   "concepts": [
+    {
+     "concept_tag": "kshaitij-urdhvadhar",
+     "learning_objective": "विद्यार्थी अक्षों के समांतर रेखाओं के समीकरण लिख सकेंगे।"
+    },
+    {
+     "concept_tag": "bindu-dhal-roop",
+     "learning_objective": "विद्यार्थी दिए गए बिंदु और ढाल से रेखा का समीकरण ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "do-bindu-roop",
+     "learning_objective": "विद्यार्थी दो दिए गए बिंदुओं से जाने वाली रेखा का समीकरण ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH09-T4",
+   "topic_number": 4,
+   "title": "ढाल-अंतःखंड रूप और अंतःखंड रूप",
+   "ncert_sections": "9.3.4, 9.3.5",
+   "concepts": [
+    {
+     "concept_tag": "dhal-antahkhand-roop",
+     "learning_objective": "विद्यार्थी रेखा के समीकरण को y = mx + c रूप में लिखकर ढाल और y-अंतःखंड बता सकेंगे।"
+    },
+    {
+     "concept_tag": "antahkhand-roop",
+     "learning_objective": "विद्यार्थी अंतःखंड रूप x/a + y/b = 1 का प्रयोग करके रेखा का समीकरण और अंतःखंड ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH09-T5",
+   "topic_number": 5,
+   "title": "बिंदु की रेखा से दूरी और समांतर रेखाओं के बीच दूरी",
+   "ncert_sections": "9.4, 9.4.1",
+   "concepts": [
+    {
+     "concept_tag": "bindu-rekha-doori",
+     "learning_objective": "विद्यार्थी किसी बिंदु की दी गई रेखा से लांबिक दूरी ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "samantar-rekha-doori",
+     "learning_objective": "विद्यार्थी दो समांतर रेखाओं के बीच की दूरी ज्ञात कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

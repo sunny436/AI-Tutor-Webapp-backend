@@ -1,0 +1,140 @@
+{
+ "chapter_id": "KEBS1-CH11",
+ "title": "International Business",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBS1-CH11-T1",
+   "topic_number": 1,
+   "title": "Meaning of and reasons for international business",
+   "ncert_sections": "11.1, 11.1.1, 11.1.2",
+   "concepts": [
+    {
+     "concept_tag": "meaning-of-international-business",
+     "learning_objective": "Define international business and explain why it is broader than international trade."
+    },
+    {
+     "concept_tag": "reasons-for-international-business",
+     "learning_objective": "Explain how unequal resources and productivity lead nations to specialise and trade."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH11-T2",
+   "topic_number": 2,
+   "title": "International business vs. domestic business",
+   "ncert_sections": "11.1.3",
+   "concepts": [
+    {
+     "concept_tag": "domestic-vs-international-business",
+     "learning_objective": "Distinguish between domestic and international business on the bases given in the chapter."
+    },
+    {
+     "concept_tag": "currency-and-exchange-rate",
+     "learning_objective": "Explain how the use of different currencies and fluctuating exchange rates complicate international business."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH11-T3",
+   "topic_number": 3,
+   "title": "Scope of international business",
+   "ncert_sections": "11.1.4",
+   "concepts": [
+    {
+     "concept_tag": "merchandise-and-service-trade",
+     "learning_objective": "Distinguish between merchandise (visible) trade and service (invisible) trade with examples."
+    },
+    {
+     "concept_tag": "foreign-direct-and-portfolio-investment",
+     "learning_objective": "Distinguish between foreign direct investment and portfolio investment."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH11-T4",
+   "topic_number": 4,
+   "title": "Benefits of international business",
+   "ncert_sections": "11.1.5",
+   "concepts": [
+    {
+     "concept_tag": "benefits-to-nations",
+     "learning_objective": "Identify the benefits that international business offers to nations."
+    },
+    {
+     "concept_tag": "benefits-to-firms",
+     "learning_objective": "Identify the benefits that international business offers to business firms."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH11-T5",
+   "topic_number": 5,
+   "title": "Exporting, importing and contract manufacturing",
+   "ncert_sections": "11.2, 11.2.1, 11.2.2",
+   "concepts": [
+    {
+     "concept_tag": "direct-and-indirect-exporting",
+     "learning_objective": "Distinguish direct from indirect exporting and state the advantages and limitations of exporting."
+    },
+    {
+     "concept_tag": "contract-manufacturing",
+     "learning_objective": "Explain contract manufacturing, its forms, advantages and limitations."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH11-T6",
+   "topic_number": 6,
+   "title": "Licensing, franchising, joint ventures and wholly owned subsidiaries",
+   "ncert_sections": "11.2.3, 11.2.4, 11.2.5",
+   "concepts": [
+    {
+     "concept_tag": "licensing-and-franchising",
+     "learning_objective": "Explain licensing and franchising and distinguish between the two."
+    },
+    {
+     "concept_tag": "joint-ventures",
+     "learning_objective": "Explain the ways of forming a joint venture and its advantages and limitations."
+    },
+    {
+     "concept_tag": "wholly-owned-subsidiaries",
+     "learning_objective": "Explain wholly owned subsidiaries and evaluate their suitability for a firm."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH11-T7",
+   "topic_number": 7,
+   "title": "Export procedure and documents",
+   "ncert_sections": "11.3, 11.3.1",
+   "concepts": [
+    {
+     "concept_tag": "export-procedure-steps",
+     "learning_objective": "Arrange and explain the steps involved in a typical export transaction."
+    },
+    {
+     "concept_tag": "export-documents",
+     "learning_objective": "Identify the purpose of the main documents used in an export transaction."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH11-T8",
+   "topic_number": 8,
+   "title": "Import procedure and documents",
+   "ncert_sections": "11.3.2",
+   "concepts": [
+    {
+     "concept_tag": "import-procedure-steps",
+     "learning_objective": "Explain the steps involved in a typical import transaction into India."
+    },
+    {
+     "concept_tag": "import-documents",
+     "learning_objective": "Identify the purpose of the main documents used in an import transaction."
+    }
+   ]
+  }
+ ]
+}

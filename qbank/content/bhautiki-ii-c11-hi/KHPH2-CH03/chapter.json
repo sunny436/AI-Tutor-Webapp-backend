@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KHPH2-CH03",
+ "title": "द्रव्य के तापीय गुण",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH2-CH03-T1",
+   "topic_number": 1,
+   "title": "ताप, ऊष्मा और ताप का मापन",
+   "ncert_sections": "10.2, 10.3",
+   "concepts": [
+    {
+     "concept_tag": "tap-aur-ushma",
+     "learning_objective": "ताप और ऊष्मा में अंतर करना तथा ऊष्मा को ताप-अंतर के कारण स्थानांतरित ऊर्जा के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "tap-mapan-paimane",
+     "learning_objective": "सेल्सियस और फारेनहाइट पैमानों के नियत बिंदु जानना और उनके बीच रूपांतरण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH03-T2",
+   "topic_number": 2,
+   "title": "आदर्श गैस समीकरण और परम ताप",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "adarsh-gas-niyam",
+     "learning_objective": "बॉयल, चार्ल्स के नियमों और आदर्श गैस समीकरण PV = μRT का उपयोग करना।"
+    },
+    {
+     "concept_tag": "param-tap-shunya",
+     "learning_objective": "परम शून्य और केल्विन पैमाने की संकल्पना को गैस तापमापी से समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH03-T3",
+   "topic_number": 3,
+   "title": "तापीय प्रसार",
+   "ncert_sections": "10.5",
+   "concepts": [
+    {
+     "concept_tag": "rekhiy-kshetriy-ayatan-prasar",
+     "learning_objective": "रैखिक, क्षेत्रीय और आयतन प्रसार गुणांकों तथा उनके संबंध का उपयोग करना।"
+    },
+    {
+     "concept_tag": "jal-asamanya-prasar",
+     "learning_objective": "जल के असामान्य प्रसार और उसके प्राकृतिक महत्व को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH03-T4",
+   "topic_number": 4,
+   "title": "विशिष्ट ऊष्मा धारिता और ऊष्मामिति",
+   "ncert_sections": "10.6, 10.7",
+   "concepts": [
+    {
+     "concept_tag": "vishisht-ushma-dharita",
+     "learning_objective": "विशिष्ट ऊष्मा धारिता की परिभाषा, मात्रक और Q = mcΔT का उपयोग करना।"
+    },
+    {
+     "concept_tag": "ushmamiti-mishran",
+     "learning_objective": "ऊष्मामिति के सिद्धांत (दी गई ऊष्मा = ली गई ऊष्मा) से अंतिम ताप या विशिष्ट ऊष्मा ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH03-T5",
+   "topic_number": 5,
+   "title": "अवस्था परिवर्तन और गुप्त ऊष्मा",
+   "ncert_sections": "10.8, 10.8.1",
+   "concepts": [
+    {
+     "concept_tag": "avastha-parivartan",
+     "learning_objective": "गलन और क्वथन के दौरान ताप की स्थिरता तथा क्वथनांक पर दाब के प्रभाव को समझना।"
+    },
+    {
+     "concept_tag": "gupt-ushma",
+     "learning_objective": "गलन और वाष्पन की गुप्त ऊष्मा से Q = mL की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH03-T6",
+   "topic_number": 6,
+   "title": "ऊष्मा स्थानांतरण",
+   "ncert_sections": "10.9",
+   "concepts": [
+    {
+     "concept_tag": "chalan",
+     "learning_objective": "ऊष्मा चालन की दर H = KA(T₁ − T₂)/L का उपयोग करना।"
+    },
+    {
+     "concept_tag": "samvahan",
+     "learning_objective": "प्राकृतिक संवहन के उदाहरणों की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "vikiran-krishnika",
+     "learning_objective": "विकिरण, वीन के विस्थापन नियम और स्टेफ़ान के नियम का उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH03-T7",
+   "topic_number": 7,
+   "title": "न्यूटन का शीतलन नियम",
+   "ncert_sections": "10.10",
+   "concepts": [
+    {
+     "concept_tag": "nyutan-shitalan-niyam",
+     "learning_objective": "न्यूटन के शीतलन नियम को लिखना और उससे शीतलन-समय ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "chapter_id": "KEBS1-CH05",
+ "title": "Emerging Modes of Business",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBS1-CH05-T1",
+   "topic_number": 1,
+   "title": "Introduction: e-business and e-commerce",
+   "ncert_sections": "5.1, 5.2",
+   "concepts": [
+    {
+     "concept_tag": "emerging-modes-trends",
+     "learning_objective": "Identify the trends shaping business and the factors behind the emerging modes of business."
+    },
+    {
+     "concept_tag": "e-business-vs-e-commerce",
+     "learning_objective": "Distinguish e-business from e-commerce in terms of the functions each covers."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH05-T2",
+   "topic_number": 2,
+   "title": "Scope of e-business: B2B, B2C, intra-B and C2C",
+   "ncert_sections": "5.2.1",
+   "concepts": [
+    {
+     "concept_tag": "b2b-commerce",
+     "learning_objective": "Explain business-to-business transactions and the use of networks with suppliers and distributors."
+    },
+    {
+     "concept_tag": "b2c-commerce",
+     "learning_objective": "Describe B2C commerce as a wide range of marketing activities and its C2B corollary."
+    },
+    {
+     "concept_tag": "intra-b-and-c2c-commerce",
+     "learning_objective": "Explain intra-B commerce within a firm and C2C commerce between consumers with its safeguards."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH05-T3",
+   "topic_number": 3,
+   "title": "e-business versus traditional business",
+   "ncert_sections": "Table 5.1",
+   "concepts": [
+    {
+     "concept_tag": "setup-cost-and-location",
+     "learning_objective": "Compare traditional and e-business on ease of formation, location, set-up cost and operating cost."
+    },
+    {
+     "concept_tag": "operations-and-customer-contact",
+     "learning_objective": "Compare traditional and e-business on structure, process cycle, personal touch, pre-sampling and risk."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH05-T4",
+   "topic_number": 4,
+   "title": "Benefits and applications of e-business",
+   "ncert_sections": "5.3, Box A",
+   "concepts": [
+    {
+     "concept_tag": "benefits-of-e-business",
+     "learning_objective": "Explain the benefits of e-business such as ease of formation, convenience, speed, global reach and paperless working."
+    },
+    {
+     "concept_tag": "e-business-applications",
+     "learning_objective": "Identify e-business applications such as e-procurement, e-bidding, e-delivery and e-trading."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH05-T5",
+   "topic_number": 5,
+   "title": "Limitations of e-business",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "limitations-of-e-business",
+     "learning_objective": "Explain the limitations of e-business such as low personal touch, digital divide, risk and people resistance."
+    },
+    {
+     "concept_tag": "overcoming-limitations",
+     "learning_objective": "Explain how the limitations of e-business are being overcome."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH05-T6",
+   "topic_number": 6,
+   "title": "Online transactions",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "stages-of-online-transactions",
+     "learning_objective": "Describe the stages of an online transaction from registration to delivery."
+    },
+    {
+     "concept_tag": "online-payment-mechanisms",
+     "learning_objective": "Distinguish the payment mechanisms used in online shopping."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH05-T7",
+   "topic_number": 7,
+   "title": "Security and safety of e-transactions",
+   "ncert_sections": "5.6",
+   "concepts": [
+    {
+     "concept_tag": "transaction-risks",
+     "learning_objective": "Identify default on order, delivery and payment, and the safeguards against them."
+    },
+    {
+     "concept_tag": "data-storage-transmission-risks",
+     "learning_objective": "Explain viruses, hacking and cryptography as data storage and transmission concerns."
+    },
+    {
+     "concept_tag": "intellectual-property-privacy-risks",
+     "learning_objective": "Explain the risks to intellectual property and privacy once information is online."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "chapter_id": "KEBS1-CH02",
+ "title": "Forms of Business Organisation",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBS1-CH02-T1",
+   "topic_number": 1,
+   "title": "Sole proprietorship",
+   "ncert_sections": "2.1, 2.2",
+   "concepts": [
+    {
+     "concept_tag": "sole-proprietorship-features",
+     "learning_objective": "Describe the features of sole proprietorship, including unlimited liability and the absence of a separate entity."
+    },
+    {
+     "concept_tag": "sole-proprietorship-merits-limitations",
+     "learning_objective": "Explain the merits and limitations of sole proprietorship and relate them to business situations."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH02-T2",
+   "topic_number": 2,
+   "title": "Joint Hindu family business",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "jhf-business-features",
+     "learning_objective": "Describe the formation, membership, control and liability of a Joint Hindu family business."
+    },
+    {
+     "concept_tag": "jhf-business-merits-limitations",
+     "learning_objective": "Explain the merits and limitations of a Joint Hindu family business."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH02-T3",
+   "topic_number": 3,
+   "title": "Partnership: features, merits and limitations",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "partnership-features",
+     "learning_objective": "Explain the features of partnership such as unlimited joint liability, mutual agency and the number of partners."
+    },
+    {
+     "concept_tag": "partnership-merits-limitations",
+     "learning_objective": "Explain the merits and limitations of the partnership form of organisation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH02-T4",
+   "topic_number": 4,
+   "title": "Types of partners and partnerships",
+   "ncert_sections": "2.4.1, 2.4.2",
+   "concepts": [
+    {
+     "concept_tag": "types-of-partners",
+     "learning_objective": "Distinguish between active, sleeping, secret and nominal partners, partners by estoppel and holding out, and a minor admitted to benefits."
+    },
+    {
+     "concept_tag": "types-of-partnerships",
+     "learning_objective": "Classify partnerships by duration and by liability and state the features of each type."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH02-T5",
+   "topic_number": 5,
+   "title": "Partnership deed and registration",
+   "ncert_sections": "2.4.3, 2.4.4",
+   "concepts": [
+    {
+     "concept_tag": "partnership-deed",
+     "learning_objective": "State the purpose and the usual contents of a partnership deed."
+    },
+    {
+     "concept_tag": "registration-of-partnership-firm",
+     "learning_objective": "Explain the procedure of registering a partnership firm and the consequences of non-registration."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH02-T6",
+   "topic_number": 6,
+   "title": "Cooperative society",
+   "ncert_sections": "2.5, 2.5.1",
+   "concepts": [
+    {
+     "concept_tag": "cooperative-features-merits-limitations",
+     "learning_objective": "Explain the features, merits and limitations of a cooperative society."
+    },
+    {
+     "concept_tag": "types-of-cooperative-societies",
+     "learning_objective": "Identify the type of cooperative society from its members, aims and working."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH02-T7",
+   "topic_number": 7,
+   "title": "Joint stock company and its types",
+   "ncert_sections": "2.6, 2.6.1",
+   "concepts": [
+    {
+     "concept_tag": "company-features-merits-limitations",
+     "learning_objective": "Explain the features, merits and limitations of a joint stock company, including limited liability."
+    },
+    {
+     "concept_tag": "private-and-public-company",
+     "learning_objective": "Distinguish between a private company and a public company and state the privileges of a private company."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH02-T8",
+   "topic_number": 8,
+   "title": "Choice of form of business organisation",
+   "ncert_sections": "2.7",
+   "concepts": [
+    {
+     "concept_tag": "factors-in-choice-of-form",
+     "learning_objective": "Identify the factors that determine the choice of form and the form most advantageous on each."
+    },
+    {
+     "concept_tag": "evaluating-form-for-a-business",
+     "learning_objective": "Evaluate which form of organisation suits a given business as its scale and needs change."
+    }
+   ]
+  }
+ ]
+}

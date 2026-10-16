@@ -1,0 +1,144 @@
+{
+ "chapter_id": "LEEC1-CH06",
+ "title": "Open Economy Macroeconomics",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEEC1-CH06-T1",
+   "topic_number": 1,
+   "title": "Open economy, its linkages and foreign trade",
+   "ncert_sections": "Introduction",
+   "concepts": [
+    {
+     "concept_tag": "open-economy-linkages",
+     "learning_objective": "Identify the output, financial and labour market linkages through which an open economy interacts with other countries."
+    },
+    {
+     "concept_tag": "foreign-trade-and-aggregate-demand",
+     "learning_objective": "Explain how imports act as a leakage and exports as an injection in the circular flow of income."
+    },
+    {
+     "concept_tag": "international-currency-confidence",
+     "learning_objective": "Explain why a national currency is accepted internationally only when it keeps a stable purchasing power."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH06-T2",
+   "topic_number": 2,
+   "title": "Balance of payments and the current account",
+   "ncert_sections": "6.1, 6.1.1",
+   "concepts": [
+    {
+     "concept_tag": "bop-meaning",
+     "learning_objective": "Define the balance of payments and identify its main accounts."
+    },
+    {
+     "concept_tag": "current-account-components",
+     "learning_objective": "Classify trade in goods, services and transfer payments as components of the current account."
+    },
+    {
+     "concept_tag": "balance-of-trade-and-invisibles",
+     "learning_objective": "Distinguish between balance of trade and current account balance and calculate both from given data."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH06-T3",
+   "topic_number": 3,
+   "title": "Capital account and BoP surplus or deficit",
+   "ncert_sections": "6.1.2, 6.1.3",
+   "concepts": [
+    {
+     "concept_tag": "capital-account-items",
+     "learning_objective": "Identify credit and debit items of the capital account such as FDI, FII, borrowings and assistance."
+    },
+    {
+     "concept_tag": "bop-deficit-financing-reserves",
+     "learning_objective": "Calculate the overall balance of payments and explain how official reserve transactions settle a deficit or surplus."
+    },
+    {
+     "concept_tag": "autonomous-accommodating-transactions",
+     "learning_objective": "Distinguish between autonomous (above the line) and accommodating (below the line) transactions."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH06-T4",
+   "topic_number": 4,
+   "title": "The foreign exchange market and the exchange rate",
+   "ncert_sections": "6.2, 6.2.1",
+   "concepts": [
+    {
+     "concept_tag": "forex-market",
+     "learning_objective": "Describe the foreign exchange market, its participants and the meaning of the foreign exchange rate."
+    },
+    {
+     "concept_tag": "demand-supply-of-forex",
+     "learning_objective": "Explain the sources of demand for and supply of foreign exchange and how they respond to the exchange rate."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH06-T5",
+   "topic_number": 5,
+   "title": "Flexible exchange rate and its determinants",
+   "ncert_sections": "6.2.2 (Flexible Exchange Rate)",
+   "concepts": [
+    {
+     "concept_tag": "flexible-rate-depreciation-appreciation",
+     "learning_objective": "Explain how a flexible exchange rate is determined and distinguish depreciation from appreciation."
+    },
+    {
+     "concept_tag": "short-run-exchange-rate-factors",
+     "learning_objective": "Analyse how speculation, interest rate differentials and income changes affect the exchange rate in the short run."
+    },
+    {
+     "concept_tag": "purchasing-power-parity",
+     "learning_objective": "Apply the purchasing power parity theory to predict long-run exchange rates."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH06-T6",
+   "topic_number": 6,
+   "title": "Fixed exchange rates and managed floating",
+   "ncert_sections": "6.2.2 (Fixed Exchange Rates), 6.2.3, 6.2.4",
+   "concepts": [
+    {
+     "concept_tag": "fixed-exchange-rate-system",
+     "learning_objective": "Explain how a government maintains a fixed exchange rate and distinguish devaluation from revaluation."
+    },
+    {
+     "concept_tag": "fixed-vs-flexible-merits",
+     "learning_objective": "Evaluate the merits and demerits of fixed and flexible exchange rate systems, including speculative attacks."
+    },
+    {
+     "concept_tag": "managed-floating",
+     "learning_objective": "Describe managed floating as a mix of a flexible rate and central bank intervention."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH06-T7",
+   "topic_number": 7,
+   "title": "Determination of equilibrium income in an open economy",
+   "ncert_sections": "Appendix 6.1",
+   "concepts": [
+    {
+     "concept_tag": "open-economy-income-identity",
+     "learning_objective": "State the national income identity for an open economy and interpret net exports."
+    },
+    {
+     "concept_tag": "marginal-propensity-to-import",
+     "learning_objective": "Identify the marginal propensity to import from an import function and explain its role in aggregate demand."
+    },
+    {
+     "concept_tag": "open-economy-multiplier",
+     "learning_objective": "Calculate the open economy multiplier and explain why it is smaller than the closed economy multiplier."
+    }
+   ]
+  }
+ ]
+}

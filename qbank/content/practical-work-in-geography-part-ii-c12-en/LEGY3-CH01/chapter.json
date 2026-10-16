@@ -1,0 +1,136 @@
+{
+ "chapter_id": "LEGY3-CH01",
+ "title": "Data – Its Source and Compilation",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEGY3-CH01-T1",
+   "topic_number": 1,
+   "title": "What is data, need of data and its presentation",
+   "ncert_sections": "What is Data?; Need of Data; Presentation of the Data",
+   "concepts": [
+    {
+     "concept_tag": "data-and-information",
+     "learning_objective": "Distinguish data, a datum and information as defined in the chapter."
+    },
+    {
+     "concept_tag": "need-for-data",
+     "learning_objective": "Explain why quantitative data are needed to study geographical phenomena such as cropping patterns and city growth."
+    },
+    {
+     "concept_tag": "statistical-fallacy",
+     "learning_objective": "Recognise how a statistical fallacy, such as relying on an average alone, can mislead conclusions."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH01-T2",
+   "topic_number": 2,
+   "title": "Sources of primary data",
+   "ncert_sections": "Sources of Data; Sources of Primary Data",
+   "concepts": [
+    {
+     "concept_tag": "primary-data-methods",
+     "learning_objective": "Identify primary data and the methods used to collect it, including personal observation and field instruments."
+    },
+    {
+     "concept_tag": "interview-precautions",
+     "learning_objective": "State the precautions an interviewer should take while collecting information."
+    },
+    {
+     "concept_tag": "questionnaire-vs-schedule",
+     "learning_objective": "Distinguish between a questionnaire and a schedule and judge when each is suitable."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH01-T3",
+   "topic_number": 3,
+   "title": "Secondary sources of data",
+   "ncert_sections": "Secondary Source of Data; Published Sources; Unpublished Sources",
+   "concepts": [
+    {
+     "concept_tag": "published-secondary-sources",
+     "learning_objective": "Classify published secondary sources into government, quasi-government, international, private, newspaper and electronic sources."
+    },
+    {
+     "concept_tag": "unpublished-secondary-sources",
+     "learning_objective": "Identify unpublished government, quasi-government and private records as secondary sources."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH01-T4",
+   "topic_number": 4,
+   "title": "Tabulation, compilation and presentation of data",
+   "ncert_sections": "Tabulation and Classification of Data; Data Compilation and Presentation",
+   "concepts": [
+    {
+     "concept_tag": "statistical-table",
+     "learning_objective": "Describe a statistical table and its purpose in summarising raw data."
+    },
+    {
+     "concept_tag": "absolute-and-percentage-data",
+     "learning_objective": "Distinguish absolute data from percentage or ratio data and compute a rate such as literacy rate."
+    },
+    {
+     "concept_tag": "index-number",
+     "learning_objective": "Calculate and interpret an index number by the simple aggregate method."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH01-T5",
+   "topic_number": 5,
+   "title": "Processing, grouping and frequency distribution",
+   "ncert_sections": "Processing of Data; Grouping of Data; Process of Classification; Frequency Distribution",
+   "concepts": [
+    {
+     "concept_tag": "grouping-and-class-interval",
+     "learning_objective": "Decide the number of classes and the class interval from the range of raw data."
+    },
+    {
+     "concept_tag": "tally-marks",
+     "learning_objective": "Classify raw data into groups using the Four and Cross Method of tally marks."
+    },
+    {
+     "concept_tag": "simple-and-cumulative-frequency",
+     "learning_objective": "Compute simple and cumulative frequencies and interpret them."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH01-T6",
+   "topic_number": 6,
+   "title": "Exclusive and inclusive methods of grouping",
+   "ncert_sections": "Exclusive Method; Inclusive Method",
+   "concepts": [
+    {
+     "concept_tag": "exclusive-method",
+     "learning_objective": "Place marginal values correctly into classes formed by the exclusive method."
+    },
+    {
+     "concept_tag": "inclusive-method",
+     "learning_objective": "Describe how classes are formed and values counted in the inclusive method."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH01-T7",
+   "topic_number": 7,
+   "title": "Frequency polygon and Ogive",
+   "ncert_sections": "Frequency Polygon; Ogive",
+   "concepts": [
+    {
+     "concept_tag": "frequency-polygon",
+     "learning_objective": "Describe a frequency polygon and its use in comparing frequency distributions."
+    },
+    {
+     "concept_tag": "ogive",
+     "learning_objective": "Construct and interpret less than and more than Ogives from cumulative frequencies."
+    }
+   ]
+  }
+ ]
+}

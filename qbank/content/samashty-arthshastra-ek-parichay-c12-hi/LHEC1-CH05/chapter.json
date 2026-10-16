@@ -1,0 +1,140 @@
+{
+ "chapter_id": "LHEC1-CH05",
+ "title": "सरकारी बजट एवं अर्थव्यवस्था",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHEC1-CH05-T1",
+   "topic_number": 1,
+   "title": "सरकारी बजट का अर्थ और उद्देश्य",
+   "ncert_sections": "5.1, 5.1.1",
+   "concepts": [
+    {
+     "concept_tag": "bajat-arth",
+     "learning_objective": "सरकारी बजट को वित्तीय वर्ष की अनुमानित प्राप्तियों और व्यय के विवरण के रूप में समझना।"
+    },
+    {
+     "concept_tag": "sarvajanik-vastuen",
+     "learning_objective": "सार्वजनिक वस्तुओं की गैर-प्रतिद्वंद्विता, गैर-अपवर्जनीयता और मुफ़्तखोरी की समस्या को पहचानना।"
+    },
+    {
+     "concept_tag": "punarvitaran-sthirikaran",
+     "learning_objective": "बजट के आबंटन, पुनर्वितरण और स्थिरीकरण कार्यों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH05-T2",
+   "topic_number": 2,
+   "title": "सरकारी प्राप्तियों का वर्गीकरण",
+   "ncert_sections": "5.1.2",
+   "concepts": [
+    {
+     "concept_tag": "rajasv-praptiyan",
+     "learning_objective": "राजस्व प्राप्तियों के कर तथा गैर-कर भेदों और प्रत्यक्ष व अप्रत्यक्ष करों को पहचानना।"
+    },
+    {
+     "concept_tag": "punji-praptiyan",
+     "learning_objective": "पूँजीगत प्राप्तियों को देयता उत्पन्न करने या वित्तीय परिसंपत्तियाँ घटाने के आधार पर पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH05-T3",
+   "topic_number": 3,
+   "title": "सरकारी व्यय का वर्गीकरण",
+   "ncert_sections": "5.1.3",
+   "concepts": [
+    {
+     "concept_tag": "rajasv-vyay",
+     "learning_objective": "राजस्व व्यय की पहचान करना, जो परिसंपत्ति निर्माण नहीं करता।"
+    },
+    {
+     "concept_tag": "punji-vyay",
+     "learning_objective": "पूँजीगत व्यय को परिसंपत्तियों के निर्माण या देयताओं में कमी के आधार पर पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH05-T4",
+   "topic_number": 4,
+   "title": "संतुलित, आधिक्य और घाटे का बजट तथा घाटे के माप",
+   "ncert_sections": "5.2, 5.2.1",
+   "concepts": [
+    {
+     "concept_tag": "rajasv-ghata",
+     "learning_objective": "राजस्व घाटे की गणना और उसके निहितार्थ समझाना।"
+    },
+    {
+     "concept_tag": "rajkoshiya-ghata",
+     "learning_objective": "राजकोषीय घाटे की गणना कर उसे सरकार की कुल उधारी आवश्यकता के रूप में समझना।"
+    },
+    {
+     "concept_tag": "prathmik-ghata",
+     "learning_objective": "प्राथमिक घाटे की गणना और वर्तमान राजकोषीय असंतुलन से उसका संबंध समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH05-T5",
+   "topic_number": 5,
+   "title": "राजकोषीय नीति और एकमुश्त करों के साथ गुणक",
+   "ncert_sections": "बॉक्स 5.1",
+   "concepts": [
+    {
+     "concept_tag": "sarkari-vyay-gunak",
+     "learning_objective": "सरकारी व्यय गुणक 1/(1 – c) की गणना और व्याख्या करना।"
+    },
+    {
+     "concept_tag": "kar-gunak",
+     "learning_objective": "कर गुणक –c/(1 – c) की गणना कर उसके ऋणात्मक होने का कारण समझाना।"
+    },
+    {
+     "concept_tag": "santulit-bajat-gunak",
+     "learning_objective": "संतुलित बजट गुणक के इकाई होने का कारण समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH05-T6",
+   "topic_number": 6,
+   "title": "आनुपातिक कर, अंतरण और स्वचालित स्थिरीकारक",
+   "ncert_sections": "बॉक्स 5.1",
+   "concepts": [
+    {
+     "concept_tag": "anupatik-kar-gunak",
+     "learning_objective": "आनुपातिक कर की स्थिति में गुणक 1/[1 – c(1 – t)] की गणना करना।"
+    },
+    {
+     "concept_tag": "swachalit-sthirikarak",
+     "learning_objective": "स्वचालित स्थिरीकारकों और विवेकाधीन राजकोषीय नीति में अंतर करना।"
+    },
+    {
+     "concept_tag": "antaran-gunak",
+     "learning_objective": "अंतरण भुगतान गुणक c/(1 – c) की गणना और सरकारी क्रय गुणक से तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH05-T7",
+   "topic_number": 7,
+   "title": "सरकारी ऋण और घाटे में कमी",
+   "ncert_sections": "ऋण",
+   "concepts": [
+    {
+     "concept_tag": "sarkari-rin-bhar",
+     "learning_objective": "घाटे (प्रवाह) और ऋण (स्टॉक) के संबंध तथा घाटे के प्रभावों का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "rikardiyan-tulyata",
+     "learning_objective": "रिकार्डियन तुल्यता और बहिर्गमन प्रभाव के विचारों का मूल्यांकन करना।"
+    },
+    {
+     "concept_tag": "ghata-kami",
+     "learning_objective": "सरकारी घाटा कम करने के उपायों और उनकी सीमाओं को समझना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KHBS1-CH07",
+ "title": "कंपनी निर्माण",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHBS1-CH07-T1",
+   "topic_number": 1,
+   "title": "कंपनी निर्माण का परिचय एवं इसकी स्थितियाँ",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "company-nirman-sthitiyan",
+     "learning_objective": "कंपनी निर्माण की तीन स्थितियों (प्रवर्तन, समामेलन, पूँजी अभिदान) का क्रम पहचानना।"
+    },
+    {
+     "concept_tag": "niji-sarvajanik-antar",
+     "learning_objective": "निजी एवं सार्वजनिक कंपनी के निर्माण की स्थितियों में अंतर समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH07-T2",
+   "topic_number": 2,
+   "title": "प्रवर्तन: प्रवर्तक एवं उसके कार्य",
+   "ncert_sections": "7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "pravartak-arth",
+     "learning_objective": "प्रवर्तक का अर्थ एवं उसकी पहचान समझना।"
+    },
+    {
+     "concept_tag": "sambhavyata-adhyayan",
+     "learning_objective": "तकनीकी, वित्तीय एवं आर्थिक संभाव्यता अध्ययन में अंतर करना।"
+    },
+    {
+     "concept_tag": "naam-anumodan",
+     "learning_objective": "कंपनी के नाम के अनुमोदन की प्रक्रिया समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH07-T3",
+   "topic_number": 3,
+   "title": "प्रवर्तन के आवश्यक प्रलेख",
+   "ncert_sections": "7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "parshad-seema-niyam",
+     "learning_objective": "पार्षद सीमा नियम की धाराओं को पहचानना।"
+    },
+    {
+     "concept_tag": "parshad-antarniyam",
+     "learning_objective": "पार्षद अंतर्नियम एवं अन्य प्रलेखों की भूमिका समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH07-T4",
+   "topic_number": 4,
+   "title": "प्रवर्तकों की वैधानिक स्थिति एवं प्रारंभिक अनुबंध",
+   "ncert_sections": "7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "pravartak-sthiti",
+     "learning_objective": "प्रवर्तक की वैधानिक (विश्‍वासाश्रित) स्थिति समझना।"
+    },
+    {
+     "concept_tag": "prarambhik-anubandh",
+     "learning_objective": "प्रारंभिक अनुबंधों के लिए प्रवर्तकों के दायित्व का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH07-T5",
+   "topic_number": 5,
+   "title": "समामेलन",
+   "ncert_sections": "7.2.2",
+   "concepts": [
+    {
+     "concept_tag": "samamelan-pralekh",
+     "learning_objective": "समामेलन हेतु रजिस्ट्रार के पास जमा किए जाने वाले प्रलेख पहचानना।"
+    },
+    {
+     "concept_tag": "samamelan-praman-patra",
+     "learning_objective": "समामेलन प्रमाण पत्र के निर्णायक प्रभाव का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH07-T6",
+   "topic_number": 6,
+   "title": "पूँजी अभिदान",
+   "ncert_sections": "7.2.3",
+   "concepts": [
+    {
+     "concept_tag": "punji-abhidan-charan",
+     "learning_objective": "पूँजी अभिदान के चरणों का क्रम समझना।"
+    },
+    {
+     "concept_tag": "nyuntam-abhidan",
+     "learning_objective": "न्यूनतम अभिदान एवं शेयर बाज़ार में आवेदन के नियम लागू करना।"
+    }
+   ]
+  }
+ ]
+}

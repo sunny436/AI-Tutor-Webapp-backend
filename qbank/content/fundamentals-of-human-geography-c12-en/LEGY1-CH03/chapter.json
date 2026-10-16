@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LEGY1-CH03",
+ "title": "Human Development",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEGY1-CH03-T1",
+   "topic_number": 1,
+   "title": "Growth and development",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "growth-vs-development",
+     "learning_objective": "Distinguish growth as a quantitative, value-neutral change from development as a qualitative, value-positive change."
+    },
+    {
+     "concept_tag": "economic-growth-as-development-measure",
+     "learning_objective": "Explain why measuring development only by economic growth ignores changes in people's lives."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH03-T2",
+   "topic_number": 2,
+   "title": "The concept of human development",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "haq-and-sen-contributions",
+     "learning_objective": "Describe the contributions of Mahbub-ul-Haq and Amartya Sen to the idea of human development."
+    },
+    {
+     "concept_tag": "key-areas-of-human-development",
+     "learning_objective": "Identify health, education and access to resources as the key areas of human development."
+    },
+    {
+     "concept_tag": "capabilities-and-choices",
+     "learning_objective": "Explain how a lack of capability in health, education or resources limits people's choices."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH03-T3",
+   "topic_number": 3,
+   "title": "The four pillars of human development",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "equity",
+     "learning_objective": "Explain equity as equal access to opportunities irrespective of gender, race, income and caste."
+    },
+    {
+     "concept_tag": "sustainability",
+     "learning_objective": "Explain sustainability as continuity in the availability of opportunities across generations."
+    },
+    {
+     "concept_tag": "productivity-and-empowerment",
+     "learning_objective": "Explain productivity as human work efficiency and empowerment as the power to make choices."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH03-T4",
+   "topic_number": 4,
+   "title": "Approaches to human development",
+   "ncert_sections": "Table 3.1",
+   "concepts": [
+    {
+     "concept_tag": "income-and-welfare-approaches",
+     "learning_objective": "Compare the income approach and the welfare approach to human development."
+    },
+    {
+     "concept_tag": "basic-needs-and-capability-approaches",
+     "learning_objective": "Compare the basic needs approach of the ILO with the capability approach of Amartya Sen."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH03-T5",
+   "topic_number": 5,
+   "title": "Measuring human development",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "hdi-indicators",
+     "learning_objective": "Identify the indicators and weightage used in the human development index and interpret its scores."
+    },
+    {
+     "concept_tag": "human-poverty-index",
+     "learning_objective": "Explain the human poverty index as a non-income measure of the shortfall in human development."
+    },
+    {
+     "concept_tag": "gross-national-happiness",
+     "learning_objective": "Describe Bhutan's Gross National Happiness as an alternative measure of progress."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH03-T6",
+   "topic_number": 6,
+   "title": "International comparisons",
+   "ncert_sections": "Tables 3.2, 3.3",
+   "concepts": [
+    {
+     "concept_tag": "hdi-categories",
+     "learning_objective": "Classify countries into very high, high, medium and low human development using HDI scores."
+    },
+    {
+     "concept_tag": "size-and-income-not-determinants",
+     "learning_objective": "Explain why territorial size and per capita income are not directly related to human development."
+    },
+    {
+     "concept_tag": "factors-behind-hd-levels",
+     "learning_objective": "Analyse how social-sector spending, political stability, freedom and equity shape human development levels."
+    }
+   ]
+  }
+ ]
+}

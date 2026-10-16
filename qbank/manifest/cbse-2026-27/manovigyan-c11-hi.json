@@ -1,0 +1,1181 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "manovigyan-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "psychology",
+  "language": "hindi",
+  "title": "Manovigyan",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khpy1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHPY1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "मनोविज्ञान क्या है?",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khpy101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPY1-CH01-T1",
+     "topic_number": 1,
+     "title": "मनोविज्ञान क्या है?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "manovigyan-ki-paribhasha",
+       "learning_objective": "मनोविज्ञान की औपचारिक परिभाषा और उसके शब्द-मूल को बताना।"
+      },
+      {
+       "concept_tag": "manasik-prakriyayen-aur-anubhav",
+       "learning_objective": "मानसिक प्रक्रियाओं और अनुभवों की प्रकृति तथा मस्तिष्क-क्रियाओं से उनके अंतर को समझना।"
+      },
+      {
+       "concept_tag": "prakat-aur-pracchann-vyavhar",
+       "learning_objective": "व्यवहार का अर्थ समझकर प्रकट और प्रच्छन्न व्यवहार में भेद करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH01-T2",
+     "topic_number": 2,
+     "title": "एक विद्याशाखा के रूप में मनोविज्ञान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prakritik-vigyan-ke-roop-mein",
+       "learning_objective": "प्राकृतिक विज्ञान के रूप में मनोविज्ञान और परिकल्पनात्मक-निगमनात्मक मॉडल को समझाना।"
+      },
+      {
+       "concept_tag": "samajik-vigyan-ke-roop-mein",
+       "learning_objective": "सामाजिक विज्ञान के रूप में मनोविज्ञान की सामाजिक-सांस्कृतिक संदर्भ पर बल देने वाली दृष्टि को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH01-T3",
+     "topic_number": 3,
+     "title": "मन और व्यवहार की समझ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "man-aur-mastishk",
+       "learning_objective": "मन और मस्तिष्क के संबंध तथा अंतर को प्रलेखित उदाहरणों से समझाना।"
+      },
+      {
+       "concept_tag": "man-sharir-sambandh",
+       "learning_objective": "मन और शरीर के संबंध पर भावात्मक तंत्रिका-विज्ञान और मनोतंत्रिका-प्रतिरक्षा विज्ञान के निष्कर्षों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH01-T4",
+     "topic_number": 4,
+     "title": "मनोविज्ञान के बारे में लोकप्रिय धारणाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samanya-bodh-aur-pashchdrishti",
+       "learning_objective": "सामान्य बोध पर आधारित व्याख्याओं और वैज्ञानिक मनोविज्ञान में अंतर करना।"
+      },
+      {
+       "concept_tag": "dweck-ka-adhyayan",
+       "learning_objective": "ड्वेक के अध्ययन के आधार पर यह आकलन करना कि वैज्ञानिक निष्कर्ष सामान्य बोध के विपरीत कैसे हो सकते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH01-T5",
+     "topic_number": 5,
+     "title": "मनोविज्ञान का विकास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sanrachanavad-aur-prakaryavad",
+       "learning_objective": "वुंट के संरचनावाद और विलियम जेम्स के प्रकार्यवाद की पहचान और तुलना करना।"
+      },
+      {
+       "concept_tag": "gestalt-aur-vyavharvad",
+       "learning_objective": "गेस्टाल्ट मनोविज्ञान और व्यवहारवाद के मुख्य विचारों को स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "manovishleshan-manavtavad-sangyanvad",
+       "learning_objective": "मनोविश्लेषण, मानवतावादी और संज्ञानात्मक परिप्रेक्ष्यों की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH01-T6",
+     "topic_number": 6,
+     "title": "भारत में मनोविज्ञान का विकास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bharat-mein-aarambh",
+       "learning_objective": "भारत में आधुनिक मनोविज्ञान के आरंभ से जुड़े संस्थानों और व्यक्तियों को पहचानना।"
+      },
+      {
+       "concept_tag": "durganand-sinha-ke-charan",
+       "learning_objective": "दुर्गानंद सिन्हा द्वारा बताए गए भारत में मनोविज्ञान के विकास के चार चरणों को क्रम से समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH01-T7",
+     "topic_number": 7,
+     "title": "मनोविज्ञान की शाखाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "manovigyan-ki-shakhayen",
+       "learning_objective": "मनोविज्ञान की विभिन्न शाखाओं के अध्ययन-क्षेत्रों को पहचानना।"
+      },
+      {
+       "concept_tag": "naidanik-manovaigyanik-aur-manorog-chikitsak",
+       "learning_objective": "नैदानिक मनोवैज्ञानिक, परामर्श मनोवैज्ञानिक और मनोरोग चिकित्सक के बीच अंतर स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH01-T8",
+     "topic_number": 8,
+     "title": "मनोविज्ञान, अन्य विद्याशाखाएँ और दैनिक जीवन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "anya-vidyashakhaon-se-sambandh",
+       "learning_objective": "मनोविज्ञान के अन्य विद्याशाखाओं से संबंध को उदाहरणों द्वारा समझाना।"
+      },
+      {
+       "concept_tag": "dainik-jivan-mein-manovigyan",
+       "learning_objective": "दैनिक जीवन की व्यक्तिगत और सामाजिक समस्याओं में मनोविज्ञान के उपयोग का आकलन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPY1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "मनोविज्ञान में जाँच की विधियाँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khpy102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPY1-CH02-T1",
+     "topic_number": 1,
+     "title": "मनोवैज्ञानिक जाँच के लक्ष्य",
+     "ncert_sections": "परिचय; मनोवैज्ञानिक जाँच के लक्ष्य",
+     "concepts": [
+      {
+       "concept_tag": "jaanch-ke-lakshya",
+       "learning_objective": "वर्णन, पूर्वकथन, व्याख्या, नियंत्रण और अनुप्रयोग—वैज्ञानिक जाँच के इन लक्ष्यों को पहचानना और उनमें अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH02-T2",
+     "topic_number": 2,
+     "title": "वैज्ञानिक अनुसंधान के चरण और वैकल्पिक प्रतिमान",
+     "ncert_sections": "मनोवैज्ञानिक अनुसंधान के चरण; अनुसंधान के वैकल्पिक प्रतिमान",
+     "concepts": [
+      {
+       "concept_tag": "anusandhan-ke-charan",
+       "learning_objective": "समस्या के संप्रत्ययीकरण से निष्कर्षों के पुनरीक्षण तक अनुसंधान के चार चरणों और परिकल्पना की भूमिका को समझना।"
+      },
+      {
+       "concept_tag": "vaikalpik-pratiman",
+       "learning_objective": "वैज्ञानिक और व्याख्यात्मक प्रतिमानों के मूल अभिग्रहों की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH02-T3",
+     "topic_number": 3,
+     "title": "मनोवैज्ञानिक प्रदत्त का स्वरूप",
+     "ncert_sections": "मनोवैज्ञानिक प्रदत्त का स्वरूप",
+     "concepts": [
+      {
+       "concept_tag": "pradatt-ka-swaroop",
+       "learning_objective": "प्रदत्त के संदर्भ, विधि और उत्तरदाताओं से बँधे होने की विशेषता को समझना।"
+      },
+      {
+       "concept_tag": "pradatt-ke-prakar",
+       "learning_objective": "जनांकिकीय, भौतिक, दैहिक और मनोवैज्ञानिक सूचना के प्रकारों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH02-T4",
+     "topic_number": 4,
+     "title": "प्रेक्षण विधि",
+     "ncert_sections": "प्रेक्षण विधि",
+     "concepts": [
+      {
+       "concept_tag": "prekshan-vidhi",
+       "learning_objective": "वैज्ञानिक प्रेक्षण के चयन, अभिलेखन और विश्लेषण चरणों तथा उसकी सीमाओं को समझना।"
+      },
+      {
+       "concept_tag": "prekshan-ke-prakar",
+       "learning_objective": "प्राकृतिक बनाम नियंत्रित तथा सहभागी बनाम असहभागी प्रेक्षण में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH02-T5",
+     "topic_number": 5,
+     "title": "प्रायोगिक विधि",
+     "ncert_sections": "प्रायोगिक विधि; प्रयोग का एक उदाहरण (बॉक्स 2.1)",
+     "concepts": [
+      {
+       "concept_tag": "swatantra-ashrit-char",
+       "learning_objective": "स्वतंत्र, आश्रित और बाह्य चरों को किसी प्रयोग में पहचानना।"
+      },
+      {
+       "concept_tag": "prayogatmak-niyantrit-samooh",
+       "learning_objective": "प्रयोगात्मक तथा नियंत्रित समूह और चरों के नियंत्रण की प्रविधियों को लागू करना।"
+      },
+      {
+       "concept_tag": "kshetra-ardh-prayog",
+       "learning_objective": "प्रयोगशाला प्रयोग, क्षेत्र प्रयोग और अर्ध-प्रयोग की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH02-T6",
+     "topic_number": 6,
+     "title": "सहसंबंधात्मक अनुसंधान और सर्वेक्षण अनुसंधान",
+     "ncert_sections": "सहसंबंधात्मक अनुसंधान; सर्वेक्षण अनुसंधान; सर्वेक्षण विधि का उदाहरण (बॉक्स 2.2)",
+     "concepts": [
+      {
+       "concept_tag": "sahsambandh",
+       "learning_objective": "धनात्मक, ऋणात्मक और शून्य सहसंबंध तथा सहसंबंध गुणांक की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "sarvekshan-vidhi",
+       "learning_objective": "साक्षात्कार, प्रश्नावली और दूरभाष सर्वेक्षण की विशेषताएँ, लाभ और सीमाएँ समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH02-T7",
+     "topic_number": 7,
+     "title": "मनोवैज्ञानिक परीक्षण और व्यक्ति अध्ययन",
+     "ncert_sections": "मनोवैज्ञानिक परीक्षण; व्यक्ति अध्ययन",
+     "concepts": [
+      {
+       "concept_tag": "parikshan-gun",
+       "learning_objective": "वस्तुनिष्ठता, विश्वसनीयता, वैधता और मानकों के अर्थ को समझना।"
+      },
+      {
+       "concept_tag": "parikshan-ke-prakar",
+       "learning_objective": "भाषा, प्रशासन और कठिनाई स्तर के आधार पर परीक्षणों के प्रकारों में अंतर करना।"
+      },
+      {
+       "concept_tag": "vyakti-adhyayan",
+       "learning_objective": "व्यक्ति अध्ययन की गहनता, बहुविधि प्रकृति और सामान्यीकरण की सीमा को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH02-T8",
+     "topic_number": 8,
+     "title": "प्रदत्त विश्लेषण, जाँच की सीमाएँ और नैतिक मुद्दे",
+     "ncert_sections": "प्रदत्त विश्लेषण; मनोवैज्ञानिक जाँच की सीमाएँ; नैतिक मुद्दे",
+     "concepts": [
+      {
+       "concept_tag": "matratmak-gunatmak",
+       "learning_objective": "मात्रात्मक और गुणात्मक विश्लेषण विधियों की तुलना और उनकी पूरकता को समझना।"
+      },
+      {
+       "concept_tag": "jaanch-ki-seemayen",
+       "learning_objective": "वास्तविक शून्य बिंदु के अभाव और उपकरणों की सापेक्षता जैसी सीमाओं का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "naitik-mudde",
+       "learning_objective": "स्वैच्छिक सहभागिता, सूचित सहमति, वृत्तांत कथन, परिणाम साझा करना और गोपनीयता के सिद्धांतों को लागू करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPY1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "मानव विकास",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khpy103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPY1-CH03-T1",
+     "topic_number": 1,
+     "title": "विकास का अर्थ और जीवनपर्यंत परिप्रेक्ष्य",
+     "ncert_sections": "विकास का अर्थ; विकास का जीवनपर्यंत परिप्रेक्ष्य; बॉक्स 3.1",
+     "concepts": [
+      {
+       "concept_tag": "vikas-ka-arth",
+       "learning_objective": "विद्यार्थी विकास को गर्भधारण से मृत्यु तक चलने वाले क्रमबद्ध परिवर्तनों के रूप में परिभाषित कर सकेंगे और उसकी जैविक, संज्ञानात्मक व समाज-संवेगात्मक प्रक्रियाएँ पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "jeevanparyant-pariprekshya",
+       "learning_objective": "विद्यार्थी जीवनपर्यंत परिप्रेक्ष्य की मान्यताओं, जैसे बहुदिशात्मकता और लचीलेपन, को उदाहरणों से समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sanvriddhi-paripakvata-kramvikas",
+       "learning_objective": "विद्यार्थी संवृद्धि, विकास, परिपक्वता और क्रमविकास में अंतर कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH03-T2",
+     "topic_number": 2,
+     "title": "विकास को प्रभावित करने वाले कारक",
+     "ncert_sections": "विकास को प्रभावित करने वाले कारक",
+     "concepts": [
+      {
+       "concept_tag": "anuvanshikta-paryavaran",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि आनुवंशिकता सीमा तय करती है और उस सीमा के भीतर पर्यावरण विकास को प्रभावित करता है।"
+      },
+      {
+       "concept_tag": "jeenoprarup-lakshanprarup",
+       "learning_objective": "विद्यार्थी जीनप्ररूप और लक्षणप्ररूप में अंतर कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH03-T3",
+     "topic_number": 3,
+     "title": "विकास का संदर्भ",
+     "ncert_sections": "विकास का संदर्भ",
+     "concepts": [
+      {
+       "concept_tag": "bronfenbrenner-sandarbh-drishti",
+       "learning_objective": "विद्यार्थी ब्रॉनफेनब्रेनर की सूक्ष्म, मध्य, बाह्य, वृहत् और कालानुक्रमिक व्यवस्थाओं को उदाहरणों से पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "durganand-sinha-paristhitik-model",
+       "learning_objective": "विद्यार्थी दुर्गानंद सिन्हा के पारिस्थितिक मॉडल की ऊपरी दृश्य परत और चारों ओर की परत के कारकों में अंतर कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH03-T4",
+     "topic_number": 4,
+     "title": "विकासात्मक अवस्थाएँ, प्रसवपूर्व अवस्था और शैशवावस्था",
+     "ncert_sections": "विकासात्मक अवस्थाओं की समग्र दृष्टि; प्रसवपूर्व अवस्था; शैशवावस्था",
+     "concepts": [
+      {
+       "concept_tag": "vikasatmak-karya",
+       "learning_objective": "विद्यार्थी विकासात्मक अवस्था और विकासात्मक कार्य का अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "prasavpurv-avastha",
+       "learning_objective": "विद्यार्थी प्रसवपूर्व विकास को प्रभावित करने वाले मातृ-कारकों और विरूपजनों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "shaishav-vikas",
+       "learning_objective": "विद्यार्थी नवजात की प्रतिवर्त क्रियाओं, वस्तु स्थायित्व और आसक्ति को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH03-T5",
+     "topic_number": 5,
+     "title": "बाल्यावस्था",
+     "ncert_sections": "बाल्यावस्था; बॉक्स 3.2",
+     "concepts": [
+      {
+       "concept_tag": "sharirik-gatyatmak-vikas",
+       "learning_objective": "विद्यार्थी शिरःपुच्छीय और समीप-दूराभिमुख प्रवृत्तियों तथा स्थूल और सूक्ष्म गत्यात्मक कौशलों को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "piaget-bal-sangyan",
+       "learning_objective": "विद्यार्थी पूर्व-संक्रियात्मक और मूर्त संक्रियात्मक चिंतन की विशेषताओं में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "samaj-naitik-vikas",
+       "learning_objective": "विद्यार्थी एरिक्सन, कोहलबर्ग और जेंडर भूमिकाओं के आधार पर बच्चों के समाज-संवेगात्मक और नैतिक विकास को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH03-T6",
+     "topic_number": 6,
+     "title": "किशोरावस्था की चुनौतियाँ",
+     "ncert_sections": "किशोरावस्था की चुनौतियाँ",
+     "concepts": [
+      {
+       "concept_tag": "kishor-sharirik-sangyanatmak",
+       "learning_objective": "विद्यार्थी यौवनारंभ के परिवर्तनों, औपचारिक संक्रियात्मक चिंतन और किशोर अहंकेंद्रिता को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "pahchan-nirman",
+       "learning_objective": "विद्यार्थी किशोरावस्था में पहचान-निर्माण और उसे प्रभावित करने वाले कारकों का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kishor-pramukh-samasyaen",
+       "learning_objective": "विद्यार्थी अपचार, मादक द्रव्य दुरुपयोग और भोजन-विकारों के कारण और लक्षण पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH03-T7",
+     "topic_number": 7,
+     "title": "प्रौढ़ावस्था और वृद्धावस्था",
+     "ncert_sections": "प्रौढ़ावस्था एवं वृद्धावस्था",
+     "concepts": [
+      {
+       "concept_tag": "praudhavastha",
+       "learning_objective": "विद्यार्थी प्रौढ़ावस्था के मुख्य कार्यों, जीविका, विवाह, पितृत्व और मध्यावस्था के परिवर्तनों को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "vriddhavastha",
+       "learning_objective": "विद्यार्थी वृद्धावस्था की चुनौतियों, सेवानिवृत्ति और सफल वृद्धावस्था के तत्वों का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPY1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "संवेदी, अवधानिक एवं प्रात्यक्षिक प्रक्रियाएँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khpy104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPY1-CH04-T1",
+     "topic_number": 1,
+     "title": "उद्दीपक का स्वरूप एवं संवेदन प्रकारताएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gyanendriyan",
+       "learning_objective": "सात ज्ञानेंद्रियों (पाँच बाह्य और दो आंतरिक) तथा संवेदन के अर्थ को पहचानना।"
+      },
+      {
+       "concept_tag": "nirpeksh-bhed-seema",
+       "learning_objective": "निरपेक्ष सीमा और भेद सीमा का अर्थ समझकर ज्ञानेंद्रियों की कार्यात्मक सीमाओं को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH04-T2",
+     "topic_number": 2,
+     "title": "अवधानिक प्रक्रियाएँ एवं चयनात्मक अवधान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "avadhan-ke-gun",
+       "learning_objective": "अवधान के गुणों (सतर्कता, एकाग्रता, खोज) तथा उसके केंद्र और सीमांत को समझना।"
+      },
+      {
+       "concept_tag": "chayanatmak-avadhan-karak",
+       "learning_objective": "चयनात्मक अवधान को प्रभावित करने वाले बाह्य और आंतरिक कारकों की पहचान करना।"
+      },
+      {
+       "concept_tag": "chayanatmak-avadhan-siddhant",
+       "learning_objective": "चयनात्मक अवधान के फ़िल्टर, फ़िल्टर-क्षीणन और बहुविध सिद्धांतों की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH04-T3",
+     "topic_number": 3,
+     "title": "संधृत अवधान, विभक्त अवधान और अवधान विस्तृति",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sandhrit-avadhan",
+       "learning_objective": "संधृत अवधान (सतर्कता) और उसे प्रभावित करने वाले कारकों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "vibhakt-avadhan-vistriti",
+       "learning_objective": "विभक्त अवधान में स्वचालित प्रक्रमण तथा अवधान विस्तृति की सीमा को समझना।"
+      },
+      {
+       "concept_tag": "adhd",
+       "learning_objective": "अवधान न्यूनता अतिक्रिया विकार के लक्षणों और उपचार-विधियों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH04-T4",
+     "topic_number": 4,
+     "title": "प्रात्यक्षिक प्रक्रियाएँ एवं प्रत्यक्षणकर्ता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prakraman-upagam",
+       "learning_objective": "प्रत्यक्षण में नीचे से ऊपर और ऊपर से नीचे की ओर प्रक्रमण में अंतर करना।"
+      },
+      {
+       "concept_tag": "pratyakshankarta",
+       "learning_objective": "अभिप्रेरणा, प्रत्याशा, संज्ञानात्मक शैली और सांस्कृतिक अनुभव की प्रत्यक्षण में भूमिका समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH04-T5",
+     "topic_number": 5,
+     "title": "प्रात्यक्षिक संगठन के सिद्धांत",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "akriti-prishthbhumi",
+       "learning_objective": "आकृति-पृष्ठभूमि पृथक्करण और गेस्टाल्ट के 'समग्र' विचार को समझना।"
+      },
+      {
+       "concept_tag": "gestalt-niyam",
+       "learning_objective": "निकटता, समानता, निरंतरता, संवरण आदि प्रात्यक्षिक संगठन के नियमों को उदाहरणों पर लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH04-T6",
+     "topic_number": 6,
+     "title": "स्थान, गहनता तथा दूरी प्रत्यक्षण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "eknetri-sanket",
+       "learning_objective": "गहनता प्रत्यक्षण के एकनेत्री (मनोवैज्ञानिक) संकेतों को पहचानना और लागू करना।"
+      },
+      {
+       "concept_tag": "dwinetri-sanket",
+       "learning_objective": "दृष्टिपटलीय असमानता और अभिसरण जैसे द्विनेत्री संकेतों की कार्यविधि समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH04-T7",
+     "topic_number": 7,
+     "title": "प्रात्यक्षिक स्थैर्य एवं भ्रम",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pratyakshik-sthairya",
+       "learning_objective": "आकार, आकृति और चमक स्थैर्य के अर्थ को उदाहरणों द्वारा समझना।"
+      },
+      {
+       "concept_tag": "bhram",
+       "learning_objective": "ज्यामितीय भ्रमों और आभासी गति (फाई घटना) की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH04-T8",
+     "topic_number": 8,
+     "title": "प्रत्यक्षण पर सामाजिक-सांस्कृतिक प्रभाव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sanskritik-prabhav",
+       "learning_objective": "भ्रम-संवेदनशीलता और चित्र-प्रत्यक्षण पर सांस्कृतिक अनुभवों के प्रभाव का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPY1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "अधिगम",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khpy105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPY1-CH05-T1",
+     "topic_number": 1,
+     "title": "अधिगम का स्वरूप और विशेषताएँ",
+     "ncert_sections": "अधिगम का स्वरूप; अधिगम की विशेषताएँ",
+     "concepts": [
+      {
+       "concept_tag": "adhigam-paribhasha",
+       "learning_objective": "अधिगम को अनुभव से उत्पन्न व्यवहार के अपेक्षाकृत स्थायी परिवर्तन के रूप में परिभाषित करना।"
+      },
+      {
+       "concept_tag": "adhigam-banam-thakan-abhyasan",
+       "learning_objective": "थकान, अभ्यस्तता और औषधियों से होने वाले अस्थायी परिवर्तनों को अधिगम से अलग पहचानना।"
+      },
+      {
+       "concept_tag": "adhigam-aur-nishpadan",
+       "learning_objective": "अधिगम को एक अनुमानित प्रक्रिया के रूप में निष्पादन से अलग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH05-T2",
+     "topic_number": 2,
+     "title": "प्राचीन अनुबंधन",
+     "ncert_sections": "प्राचीन अनुबंधन; प्राचीन अनुबंधन के निर्धारक",
+     "concepts": [
+      {
+       "concept_tag": "pavlov-prayog",
+       "learning_objective": "पावलव के प्रयोग में अननुबंधित और अनुबंधित उद्दीपक तथा अनुक्रिया की पहचान करना।"
+      },
+      {
+       "concept_tag": "uddipak-samay-sambandh",
+       "learning_objective": "सहकालिक, विलंबित, अवशेष और पश्चगामी अनुबंधन की प्रभावशीलता की तुलना करना।"
+      },
+      {
+       "concept_tag": "kshudhavardhak-viruchikar-uddipak",
+       "learning_objective": "क्षुधावर्धक और विरुचिकर उद्दीपकों तथा उद्दीपक की तीव्रता के प्रभाव को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH05-T3",
+     "topic_number": 3,
+     "title": "क्रियाप्रसूत अनुबंधन",
+     "ncert_sections": "क्रियाप्रसूत/नैमित्तिक अनुबंधन; इसके निर्धारक; बॉक्स 5.1",
+     "concepts": [
+      {
+       "concept_tag": "skinner-kriyaprasut",
+       "learning_objective": "स्किनर बॉक्स के प्रयोग के आधार पर क्रियाप्रसूत अनुक्रिया को समझाना।"
+      },
+      {
+       "concept_tag": "dhanatmak-rinatmak-prabalan-dand",
+       "learning_objective": "धनात्मक प्रबलन, ऋणात्मक प्रबलन और दंड में अंतर करना।"
+      },
+      {
+       "concept_tag": "prabalan-anusuchi-vilamb",
+       "learning_objective": "प्रबलन की अनुसूची, मात्रा, गुणवत्ता और विलंब के प्रभाव का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH05-T4",
+     "topic_number": 4,
+     "title": "अधिगम की प्रमुख प्रक्रियाएँ",
+     "ncert_sections": "प्रबलन; विलोप; सामान्यीकरण और विभेदन; स्वतः पुनःप्राप्ति; बॉक्स 5.2",
+     "concepts": [
+      {
+       "concept_tag": "prathamik-dwitiyak-prabalak",
+       "learning_objective": "प्राथमिक और द्वितीयक प्रबलकों को पहचानना।"
+      },
+      {
+       "concept_tag": "vilop-swatah-punahprapti",
+       "learning_objective": "विलोप, विलोप-प्रतिरोध और स्वतः पुनःप्राप्ति को समझाना।"
+      },
+      {
+       "concept_tag": "samanyikaran-vibhedan",
+       "learning_objective": "सामान्यीकरण और विभेदन में अंतर करना तथा सीखी हुई असहायता को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH05-T5",
+     "topic_number": 5,
+     "title": "प्रेक्षणात्मक अधिगम और संज्ञानात्मक अधिगम",
+     "ncert_sections": "प्रेक्षणात्मक अधिगम; संज्ञानात्मक अधिगम",
+     "concepts": [
+      {
+       "concept_tag": "bandura-prekshanatmak",
+       "learning_objective": "बंडूरा के बोबो गुड़िया प्रयोग से प्रेक्षणात्मक अधिगम को समझाना।"
+      },
+      {
+       "concept_tag": "antardrishti-adhigam",
+       "learning_objective": "कोहलर के प्रयोग के आधार पर अंतर्दृष्टि अधिगम की विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "avyakt-adhigam-sangyanatmak-manchitra",
+       "learning_objective": "टॉलमैन के प्रयोग के आधार पर अव्यक्त अधिगम और संज्ञानात्मक मानचित्र को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH05-T6",
+     "topic_number": 6,
+     "title": "शाब्दिक अधिगम और कौशल अधिगम",
+     "ncert_sections": "शाब्दिक अधिगम; कौशल अधिगम",
+     "concepts": [
+      {
+       "concept_tag": "shabdik-adhigam-vidhiyan",
+       "learning_objective": "युग्मित सहचर अधिगम, क्रमिक अधिगम और मुक्त पुनःस्मरण की विधियों में अंतर करना।"
+      },
+      {
+       "concept_tag": "shabdik-adhigam-nirdharak",
+       "learning_objective": "सार्थकता, संपूर्ण समय सिद्धांत और श्रेणी गुच्छन को समझाना।"
+      },
+      {
+       "concept_tag": "kaushal-avasthayen",
+       "learning_objective": "फिट्स के अनुसार कौशल अर्जन की तीन अवस्थाओं और निष्पादन पठार को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH05-T7",
+     "topic_number": 7,
+     "title": "अधिगम को सुगम बनाने वाले कारक और अधिगम असमर्थताएँ",
+     "ncert_sections": "अधिगम को सुगम बनाने वाले कारक; अधिगम असमर्थताएँ",
+     "concepts": [
+      {
+       "concept_tag": "anshik-prabalan-prabhav",
+       "learning_objective": "सतत और आंशिक प्रबलन के प्रभाव तथा आंशिक प्रबलन प्रभाव को समझाना।"
+      },
+      {
+       "concept_tag": "abhiprerna-tatparta",
+       "learning_objective": "अधिगम में अभिप्रेरणा और अधिगम हेतु तैयारी की भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "adhigam-asamarthata-lakshan",
+       "learning_objective": "अधिगम असमर्थताओं के लक्षणों और पठन वैकल्य को पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPY1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "मानव स्मृति",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khpy106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPY1-CH06-T1",
+     "topic_number": 1,
+     "title": "स्मृति का स्वरूप",
+     "ncert_sections": "परिचय, स्मृति का स्वरूप",
+     "concepts": [
+      {
+       "concept_tag": "smriti-ki-avasthayen",
+       "learning_objective": "स्मृति की तीन अवस्थाओं कूटसंकेतन, संचयन और पुनरुद्धार को परिभाषित करना।"
+      },
+      {
+       "concept_tag": "ebbinghaus-ka-yogdan",
+       "learning_objective": "स्मृति के क्रमबद्ध अध्ययन में एबिंगहॉस के योगदान को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH06-T2",
+     "topic_number": 2,
+     "title": "सूचना प्रक्रमण उपागम: अवस्था मॉडल और स्मृति तंत्र",
+     "ncert_sections": "अवस्था मॉडल; संवेदी, अल्पकालिक एवं दीर्घकालिक स्मृति; बॉक्स 6.1",
+     "concepts": [
+      {
+       "concept_tag": "smriti-tantra",
+       "learning_objective": "संवेदी, अल्पकालिक और दीर्घकालिक स्मृति की क्षमता और अवधि में अंतर करना।"
+      },
+      {
+       "concept_tag": "niyantran-prakriyayen",
+       "learning_objective": "अवधान, अनुरक्षण पूर्वाभ्यास, खंडीयन और विस्तृत पूर्वाभ्यास जैसी नियंत्रण प्रक्रियाओं को समझाना।"
+      },
+      {
+       "concept_tag": "karyakari-smriti",
+       "learning_objective": "बैडले की कार्यकारी स्मृति के तीन घटकों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH06-T3",
+     "topic_number": 3,
+     "title": "प्रक्रमण स्तर",
+     "ncert_sections": "प्रक्रमण स्तर",
+     "concepts": [
+      {
+       "concept_tag": "prakraman-ke-star",
+       "learning_objective": "संरचनात्मक, स्वनिक और आर्थी प्रक्रमण स्तरों में अंतर करना।"
+      },
+      {
+       "concept_tag": "gahan-prakraman-ka-mahattva",
+       "learning_objective": "अधिगम में अर्थपूर्ण गहन प्रक्रमण के महत्त्व का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH06-T4",
+     "topic_number": 4,
+     "title": "दीर्घकालिक स्मृति के प्रकार",
+     "ncert_sections": "दीर्घकालिक स्मृति के प्रकार; बॉक्स 6.2, 6.3",
+     "concepts": [
+      {
+       "concept_tag": "ghoshanatmak-prakriyamoolak",
+       "learning_objective": "घोषणात्मक और प्रक्रियामूलक स्मृति में अंतर करना।"
+      },
+      {
+       "concept_tag": "ghatnaparak-aarthi",
+       "learning_objective": "घटनापरक और आर्थी स्मृति की विशेषताएँ पहचानना।"
+      },
+      {
+       "concept_tag": "smriti-mapan-vidhiyan",
+       "learning_objective": "मुक्त पुनःस्मरण, पहचान, वाक्य सत्यापन और प्रारंभन विधियों का उपयोग समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH06-T5",
+     "topic_number": 5,
+     "title": "विस्मरण का स्वरूप एवं कारण",
+     "ncert_sections": "विस्मरण का स्वरूप एवं कारण; बॉक्स 6.4",
+     "concepts": [
+      {
+       "concept_tag": "vismaran-vakra",
+       "learning_objective": "एबिंगहॉस के विस्मरण वक्र की प्रवृत्ति की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "kshay-aur-vyatikaran",
+       "learning_objective": "चिह्न क्षय सिद्धांत तथा अग्रलक्षी और पृष्ठोन्मुख व्यतिकरण में अंतर करना।"
+      },
+      {
+       "concept_tag": "punaruddhar-vifalata",
+       "learning_objective": "पुनरुद्धार संकेतों के अभाव से होने वाले विस्मरण को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH06-T6",
+     "topic_number": 6,
+     "title": "स्मृति का संवर्धन",
+     "ncert_sections": "स्मृति सुधार; प्रतिमाओं और संगठन द्वारा स्मृति सहायक संकेत",
+     "concepts": [
+      {
+       "concept_tag": "pratima-smriti-sahayak",
+       "learning_objective": "मुख्य शब्द विधि और स्थान विधि का उपयोग करना।"
+      },
+      {
+       "concept_tag": "sangathan-smriti-sahayak",
+       "learning_objective": "खंडीयन और प्रथम अक्षर तकनीक द्वारा स्मृति सुधार को समझाना।"
+      },
+      {
+       "concept_tag": "smriti-sudhar-sujhav",
+       "learning_objective": "गहन प्रक्रमण, न्यूनतम व्यतिकरण, पुनरुद्धार संकेत और अध्ययन की पाँच चरणों वाली विधि के सुझावों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPY1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "चिंतन",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khpy107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPY1-CH07-T1",
+     "topic_number": 1,
+     "title": "चिंतन का स्वरूप और विचार के निर्माण-खंड",
+     "ncert_sections": "चिंतन का स्वरूप; विचार के निर्माण-खंड; बॉक्स 7.1",
+     "concepts": [
+      {
+       "concept_tag": "chintan-ka-swaroop",
+       "learning_objective": "चिंतन को सूचना के प्रहस्तन और विश्लेषण की उच्चतर मानसिक प्रक्रिया के रूप में समझाना।"
+      },
+      {
+       "concept_tag": "pratima-aur-sampratyay",
+       "learning_objective": "मानसिक प्रतिमा और संप्रत्यय को विचार के आधार के रूप में पहचानना।"
+      },
+      {
+       "concept_tag": "sanskriti-aur-chintan",
+       "learning_objective": "विश्लेषणात्मक और समग्र चिंतन पर संस्कृति के प्रभाव की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH07-T2",
+     "topic_number": 2,
+     "title": "समस्या समाधान और उसकी बाधाएँ",
+     "ncert_sections": "समस्या समाधान; सारणी 7.1",
+     "concepts": [
+      {
+       "concept_tag": "samasya-samadhan-charan",
+       "learning_objective": "समस्या समाधान में प्रयुक्त मानसिक संक्रियाओं के क्रम को समझाना।"
+      },
+      {
+       "concept_tag": "manovritti-aur-prakaryatmak-sthirta",
+       "learning_objective": "मानसिक विन्यास, प्रकार्यात्मक स्थिरता और अभिप्रेरणा की कमी जैसी बाधाओं को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH07-T3",
+     "topic_number": 3,
+     "title": "तर्कना और निर्णयन",
+     "ncert_sections": "तर्कना; निर्णयन",
+     "concepts": [
+      {
+       "concept_tag": "nigaman-aagaman-tarkana",
+       "learning_objective": "निगमनात्मक और आगमनात्मक तर्कना में अंतर करना।"
+      },
+      {
+       "concept_tag": "sadrishyata",
+       "learning_objective": "सादृश्यता को तर्कना के एक रूप में लागू करना।"
+      },
+      {
+       "concept_tag": "nirnay-aur-nirnayan",
+       "learning_objective": "निर्णय और निर्णयन के परस्पर संबंध का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH07-T4",
+     "topic_number": 4,
+     "title": "सर्जनात्मक चिंतन का स्वरूप",
+     "ncert_sections": "सर्जनात्मक चिंतन का स्वरूप; बॉक्स 7.2",
+     "concepts": [
+      {
+       "concept_tag": "srijanatmak-chintan-lakshan",
+       "learning_objective": "नवीनता, मौलिकता और उपयुक्तता को सर्जनात्मक चिंतन के लक्षणों के रूप में बताना।"
+      },
+      {
+       "concept_tag": "abhisari-apsari-chintan",
+       "learning_objective": "अभिसारी और अपसारी चिंतन तथा अपसारी चिंतन की योग्यताओं में अंतर करना।"
+      },
+      {
+       "concept_tag": "parshvik-chintan",
+       "learning_objective": "पार्श्विक चिंतन और छह चिंतन टोपियों की तकनीक को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH07-T5",
+     "topic_number": 5,
+     "title": "सर्जनात्मक चिंतन की प्रक्रिया और युक्तियाँ",
+     "ncert_sections": "सर्जनात्मक चिंतन की प्रक्रिया; सर्जनात्मक चिंतन की युक्तियाँ",
+     "concepts": [
+      {
+       "concept_tag": "srijan-prakriya-avasthayen",
+       "learning_objective": "तैयारी, उद्भवन, प्रदीपन और सत्यापन की अवस्थाओं का क्रम पहचानना।"
+      },
+      {
+       "concept_tag": "vichar-manthan",
+       "learning_objective": "विचारावेश तकनीक और अन्य युक्तियों से सर्जनात्मकता बढ़ाने के उपाय लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH07-T6",
+     "topic_number": 6,
+     "title": "चिंतन और भाषा",
+     "ncert_sections": "चिंतन और भाषा",
+     "concepts": [
+      {
+       "concept_tag": "bhashai-sapekshata",
+       "learning_objective": "भाषा को चिंतन का निर्धारक मानने वाली भाषाई सापेक्षता परिकल्पना को समझाना।"
+      },
+      {
+       "concept_tag": "piaget-vygotsky-drishtikon",
+       "learning_objective": "चिंतन और भाषा के संबंध पर पियाजे और वाइगॉट्स्की के मतों की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH07-T7",
+     "topic_number": 7,
+     "title": "भाषा का विकास और भाषा प्रयोग",
+     "ncert_sections": "भाषा का विकास और भाषा प्रयोग; बॉक्स 7.3",
+     "concepts": [
+      {
+       "concept_tag": "bhasha-ki-visheshtayen",
+       "learning_objective": "भाषा की तीन मूल विशेषताओं को पहचानना।"
+      },
+      {
+       "concept_tag": "bhasha-vikas-avasthayen",
+       "learning_objective": "भाषा विकास की अवस्थाओं और भाषा अर्जन के सिद्धांतों को समझाना।"
+      },
+      {
+       "concept_tag": "bhasha-prayog-dvibhashita",
+       "learning_objective": "भाषा प्रयोग की व्यावहारिक उपयुक्तता और द्विभाषिकता के महत्व का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPY1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "अभिप्रेरणा एवं संवेग",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khpy108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPY1-CH08-T1",
+     "topic_number": 1,
+     "title": "अभिप्रेरणा का स्वरूप और अभिप्रेरणात्मक चक्र",
+     "ncert_sections": "अभिप्रेरणा का स्वरूप; अभिप्रेरणात्मक चक्र",
+     "concepts": [
+      {
+       "concept_tag": "abhiprerna-swaroop",
+       "learning_objective": "अभिप्रेरणा को लक्ष्य-निर्देशित व्यवहार को गति देने वाली प्रक्रिया के रूप में समझना।"
+      },
+      {
+       "concept_tag": "abhiprernatmak-chakra",
+       "learning_objective": "आवश्यकता, अंतर्नोद, लक्ष्य-निर्देशित व्यवहार और अंतर्नोद में कमी के क्रम को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH08-T2",
+     "topic_number": 2,
+     "title": "जैविक अभिप्रेरक",
+     "ncert_sections": "अभिप्रेरकों के प्रकार; जैविक अभिप्रेरक",
+     "concepts": [
+      {
+       "concept_tag": "abhiprerak-prakar",
+       "learning_objective": "जैविक और मनोसामाजिक अभिप्रेरकों का अंतर तथा उनकी परस्पर निर्भरता समझना।"
+      },
+      {
+       "concept_tag": "bhookh-pyas-adhar",
+       "learning_objective": "भूख और प्यास के शारीरिक तथा बाह्य आधारों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "kaam-abhiprerak",
+       "learning_objective": "काम अभिप्रेरक को भूख-प्यास जैसे अन्य प्राथमिक अभिप्रेरकों से अलग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH08-T3",
+     "topic_number": 3,
+     "title": "मनोसामाजिक अभिप्रेरक",
+     "ncert_sections": "मनोसामाजिक अभिप्रेरक",
+     "concepts": [
+      {
+       "concept_tag": "sambandhan-aur-shakti",
+       "learning_objective": "संबंधन आवश्यकता और शक्ति आवश्यकता के लक्ष्य तथा अभिव्यक्ति के तरीके पहचानना।"
+      },
+      {
+       "concept_tag": "upalabdhi-abhiprerna",
+       "learning_objective": "उपलब्धि अभिप्रेरणा वाले व्यक्तियों की विशेषताओं का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "jigyasa-anveshan",
+       "learning_objective": "जिज्ञासा और अन्वेषण को बिना स्पष्ट बाहरी लक्ष्य वाले अभिप्रेरक के रूप में समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH08-T4",
+     "topic_number": 4,
+     "title": "मैस्लो का आवश्यकता पदानुक्रम",
+     "ncert_sections": "मैस्लो का आवश्यकता पदानुक्रम",
+     "concepts": [
+      {
+       "concept_tag": "maslow-padanukram-kram",
+       "learning_objective": "मैस्लो के पदानुक्रम में आवश्यकताओं का सही क्रम बताना।"
+      },
+      {
+       "concept_tag": "aatm-sidhi",
+       "learning_objective": "आत्मसिद्ध व्यक्ति की विशेषताओं और पदानुक्रम की सीमाओं का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH08-T5",
+     "topic_number": 5,
+     "title": "संवेगों का स्वरूप",
+     "ncert_sections": "संवेगों का स्वरूप",
+     "concepts": [
+      {
+       "concept_tag": "samveg-bhav-manodasha",
+       "learning_objective": "संवेग, भाव और मनोदशा में अंतर स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "mool-samveg",
+       "learning_objective": "एकमैन, इज़ार्ड और प्लुचिक द्वारा बताए गए मूल संवेगों की पहचान करना।"
+      },
+      {
+       "concept_tag": "samveg-ling-bhed",
+       "learning_objective": "संवेगों की तीव्रता और गुणवत्ता तथा उन पर लिंग जैसे कारकों के प्रभाव को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH08-T6",
+     "topic_number": 6,
+     "title": "संवेगों की अभिव्यक्ति और संस्कृति",
+     "ncert_sections": "संवेगों की अभिव्यक्ति; संस्कृति और संवेगात्मक अभिव्यक्ति; संस्कृति और संवेगात्मक नामकरण",
+     "concepts": [
+      {
+       "concept_tag": "vachik-avachik-abhivyakti",
+       "learning_objective": "संवेगों की वाचिक और अवाचिक अभिव्यक्ति के माध्यमों की पहचान करना।"
+      },
+      {
+       "concept_tag": "sanskriti-abhivyakti",
+       "learning_objective": "दृष्टि-व्यवहार और संवेगों के नामकरण पर संस्कृति के प्रभाव का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH08-T7",
+     "topic_number": 7,
+     "title": "निषेधात्मक संवेगों का प्रबंधन",
+     "ncert_sections": "निषेधात्मक संवेगों का प्रबंधन; बॉक्स 8.1; बॉक्स 8.2; अपने क्रोध का प्रबंधन",
+     "concepts": [
+      {
+       "concept_tag": "nishedhatmak-samveg-prabandhan",
+       "learning_objective": "निषेधात्मक संवेगों के प्रबंधन की युक्तियों को परिस्थितियों में लागू करना।"
+      },
+      {
+       "concept_tag": "pariksha-chinta",
+       "learning_objective": "परीक्षा दुश्चिंता से निपटने की निरीक्षण और मंदन युक्तियों में भेद करना।"
+      },
+      {
+       "concept_tag": "krodh-prabandhan",
+       "learning_objective": "क्रोध को विचारों पर आधारित और नियंत्रणीय संवेग के रूप में समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPY1-CH08-T8",
+     "topic_number": 8,
+     "title": "सकारात्मक संवेगों का संवर्धन",
+     "ncert_sections": "सकारात्मक संवेगों का संवर्धन",
+     "concepts": [
+      {
+       "concept_tag": "samvegon-ka-prayojan",
+       "learning_objective": "निषेधात्मक और सकारात्मक संवेगों की अनुकूलनात्मक भूमिका समझना।"
+      },
+      {
+       "concept_tag": "sakaratmak-samveg-sanvardhan",
+       "learning_objective": "सकारात्मक संवेगों को बढ़ाने के उपायों की पहचान और उपयोग करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KEPH2-CH03",
+ "title": "Thermal Properties of Matter",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPH2-CH03-T1",
+   "topic_number": 1,
+   "title": "Temperature, heat and measurement of temperature",
+   "ncert_sections": "10.2, 10.3",
+   "concepts": [
+    {
+     "concept_tag": "temperature-and-heat",
+     "learning_objective": "Distinguish temperature as a measure of hotness from heat as energy transferred due to a temperature difference."
+    },
+    {
+     "concept_tag": "temperature-scales",
+     "learning_objective": "Convert temperatures between the Celsius, Fahrenheit and arbitrary linear scales using fixed points."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH03-T2",
+   "topic_number": 2,
+   "title": "Ideal-gas equation and absolute temperature",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "ideal-gas-equation",
+     "learning_objective": "Apply the ideal-gas equation PV = muRT to a sample of low-density gas."
+    },
+    {
+     "concept_tag": "gas-thermometer-absolute-zero",
+     "learning_objective": "Explain how a constant-volume gas thermometer leads to absolute zero and the Kelvin scale."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH03-T3",
+   "topic_number": 3,
+   "title": "Thermal expansion",
+   "ncert_sections": "10.5",
+   "concepts": [
+    {
+     "concept_tag": "thermal-expansion-coefficients",
+     "learning_objective": "Use the coefficients of linear and volume expansion and the relation between them."
+    },
+    {
+     "concept_tag": "anomalous-expansion-of-water",
+     "learning_objective": "Describe the anomalous expansion of water and its consequence for aquatic life."
+    },
+    {
+     "concept_tag": "thermal-stress",
+     "learning_objective": "Calculate the thermal stress in a rod whose expansion is prevented."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH03-T4",
+   "topic_number": 4,
+   "title": "Specific heat capacity and calorimetry",
+   "ncert_sections": "10.6, 10.7",
+   "concepts": [
+    {
+     "concept_tag": "specific-heat-capacity",
+     "learning_objective": "Define specific heat capacity and use Q = ms(delta T)."
+    },
+    {
+     "concept_tag": "principle-of-calorimetry",
+     "learning_objective": "Apply the principle that heat lost equals heat gained in an isolated system."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH03-T5",
+   "topic_number": 5,
+   "title": "Change of state and latent heat",
+   "ncert_sections": "10.8",
+   "concepts": [
+    {
+     "concept_tag": "change-of-state",
+     "learning_objective": "Describe melting, boiling, sublimation and the effect of pressure on the boiling point."
+    },
+    {
+     "concept_tag": "latent-heat",
+     "learning_objective": "Use Q = mL for latent heats of fusion and vaporisation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH03-T6",
+   "topic_number": 6,
+   "title": "Heat transfer: conduction and convection",
+   "ncert_sections": "10.9.1, 10.9.2",
+   "concepts": [
+    {
+     "concept_tag": "thermal-conduction",
+     "learning_objective": "Use H = KA(TC - TD)/L for steady-state conduction through a rod."
+    },
+    {
+     "concept_tag": "convection",
+     "learning_objective": "Explain natural and forced convection with everyday examples such as sea breeze."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH03-T7",
+   "topic_number": 7,
+   "title": "Radiation, blackbody radiation and Newton's law of cooling",
+   "ncert_sections": "10.9.3, 10.9.4, 10.10",
+   "concepts": [
+    {
+     "concept_tag": "blackbody-radiation-laws",
+     "learning_objective": "Apply Wien's displacement law and the Stefan-Boltzmann law."
+    },
+    {
+     "concept_tag": "newtons-law-of-cooling",
+     "learning_objective": "Apply Newton's law of cooling to estimate cooling times for small temperature differences."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "chapter_id": "KHST1-CH03",
+ "title": "आँकड़ों का संगठन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHST1-CH03-T1",
+   "topic_number": 1,
+   "title": "कच्चे आँकड़े और वर्गीकरण की आवश्यकता",
+   "ncert_sections": "1, 2",
+   "concepts": [
+    {
+     "concept_tag": "kachche-aankde",
+     "learning_objective": "कच्चे या अवर्गीकृत आँकड़ों की पहचान करना और उनकी सीमाएँ समझना।"
+    },
+    {
+     "concept_tag": "vargikaran-uddeshya",
+     "learning_objective": "आँकड़ों के वर्गीकरण के उद्देश्य और लाभ को स्पष्ट करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH03-T2",
+   "topic_number": 2,
+   "title": "आँकड़ों का वर्गीकरण",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "kalanukramik-sthanik",
+     "learning_objective": "कालानुक्रमिक और स्थानिक वर्गीकरण में अंतर करना।"
+    },
+    {
+     "concept_tag": "gunatmak-matratmak",
+     "learning_objective": "गुणात्मक और मात्रात्मक वर्गीकरण को उदाहरणों द्वारा पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH03-T3",
+   "topic_number": 3,
+   "title": "चर: संतत और विविक्त",
+   "ncert_sections": "4",
+   "concepts": [
+    {
+     "concept_tag": "santat-char",
+     "learning_objective": "संतत चर की विशेषता समझना और उसके उदाहरण पहचानना।"
+    },
+    {
+     "concept_tag": "vivikt-char",
+     "learning_objective": "विविक्त चर को परिभाषित करना और उसे संतत चर से अलग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH03-T4",
+   "topic_number": 4,
+   "title": "बारंबारता वितरण और उसके पद",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "varg-seema-antaral",
+     "learning_objective": "वर्ग सीमाओं और वर्ग अंतराल को पहचानना और ज्ञात करना।"
+    },
+    {
+     "concept_tag": "varg-chihn",
+     "learning_objective": "वर्ग मध्य-बिंदु या वर्ग चिह्न की गणना करना।"
+    },
+    {
+     "concept_tag": "barambarta-vakra-sapeksh",
+     "learning_objective": "बारंबारता वक्र और सापेक्ष बारंबारता की अवधारणा को लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH03-T5",
+   "topic_number": 5,
+   "title": "बारंबारता वितरण की रचना",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "samaveshi-apvarji",
+     "learning_objective": "समावेशी और अपवर्जी वर्ग अंतरालों में अंतर करना।"
+    },
+    {
+     "concept_tag": "varg-samayojan",
+     "learning_objective": "वर्ग अंतराल में समायोजन द्वारा आँकड़ों की निरंतरता स्थापित करना।"
+    },
+    {
+     "concept_tag": "milan-chihn-suchna-hani",
+     "learning_objective": "मिलान चिह्नों से वर्ग बारंबारता ज्ञात करना और सूचना की हानि को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH03-T6",
+   "topic_number": 6,
+   "title": "असमान वर्ग, बारंबारता सरणी और द्विचर बारंबारता वितरण",
+   "ncert_sections": "5, 6",
+   "concepts": [
+    {
+     "concept_tag": "asaman-varg",
+     "learning_objective": "असमान वर्ग अंतरालों के उपयोग का औचित्य समझना।"
+    },
+    {
+     "concept_tag": "barambarta-sarani",
+     "learning_objective": "विविक्त चर के लिए बारंबारता सरणी को पहचानना।"
+    },
+    {
+     "concept_tag": "dvichar-vitaran",
+     "learning_objective": "द्विचर बारंबारता वितरण की व्याख्या करना।"
+    }
+   ]
+  }
+ ]
+}

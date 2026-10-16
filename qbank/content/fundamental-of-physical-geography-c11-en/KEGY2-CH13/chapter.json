@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KEGY2-CH13",
+ "title": "Movements of Ocean Water",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH13-T1",
+   "topic_number": 1,
+   "title": "Horizontal and vertical motions of ocean water",
+   "ncert_sections": "Introduction",
+   "concepts": [
+    {
+     "concept_tag": "horizontal-vertical-motion",
+     "learning_objective": "Distinguish between the horizontal (currents, waves) and vertical (tides, upwelling, sinking) motions of ocean water."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH13-T2",
+   "topic_number": 2,
+   "title": "Waves and their characteristics",
+   "ncert_sections": "Waves; Characteristics of Waves",
+   "concepts": [
+    {
+     "concept_tag": "wave-formation-energy",
+     "learning_objective": "Explain how wind gives energy to waves and why waves slow down and break near the shore."
+    },
+    {
+     "concept_tag": "wave-characteristics",
+     "learning_objective": "Define wave crest, trough, height, amplitude, period, wavelength, speed and frequency."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH13-T3",
+   "topic_number": 3,
+   "title": "Tides and their causes",
+   "ncert_sections": "Tides",
+   "concepts": [
+    {
+     "concept_tag": "tide-generating-force",
+     "learning_objective": "Explain how the moon's and sun's gravity and the centrifugal force produce two tidal bulges."
+    },
+    {
+     "concept_tag": "tidal-bulge-coastal-shape",
+     "learning_objective": "Explain how continental shelves, islands, bays and estuaries modify tides and how tides differ from surges."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH13-T4",
+   "topic_number": 4,
+   "title": "Types of tides",
+   "ncert_sections": "Types of Tides",
+   "concepts": [
+    {
+     "concept_tag": "tides-by-frequency",
+     "learning_objective": "Distinguish semi-diurnal, diurnal and mixed tides."
+    },
+    {
+     "concept_tag": "spring-neap-tides",
+     "learning_objective": "Explain spring and neap tides from the relative positions of the sun, moon and earth."
+    },
+    {
+     "concept_tag": "perigee-perihelion-ebb-flow",
+     "learning_objective": "Relate perigee, apogee, perihelion and aphelion to tidal range, and define ebb and flow."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH13-T5",
+   "topic_number": 5,
+   "title": "Importance of tides",
+   "ncert_sections": "Importance of Tides",
+   "concepts": [
+    {
+     "concept_tag": "importance-of-tides",
+     "learning_objective": "Explain the uses of tides in navigation, fishing, desilting and tidal power."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH13-T6",
+   "topic_number": 6,
+   "title": "Ocean currents and the forces behind them",
+   "ncert_sections": "Ocean Currents",
+   "concepts": [
+    {
+     "concept_tag": "primary-forces-currents",
+     "learning_objective": "Explain how solar heating, wind, gravity and the Coriolis force start and steer ocean currents."
+    },
+    {
+     "concept_tag": "density-vertical-circulation",
+     "learning_objective": "Explain how differences in temperature and salinity drive the sinking and rising of water."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH13-T7",
+   "topic_number": 7,
+   "title": "Types and major ocean currents",
+   "ncert_sections": "Types of Ocean Currents; Major Ocean Currents; Characteristics of Ocean Currents",
+   "concepts": [
+    {
+     "concept_tag": "types-of-currents",
+     "learning_objective": "Classify ocean currents by depth and by temperature and state where warm and cold currents usually flow."
+    },
+    {
+     "concept_tag": "current-circulation-drift",
+     "learning_objective": "Relate ocean circulation to atmospheric circulation and describe the drift (speed) of currents."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH13-T8",
+   "topic_number": 8,
+   "title": "Effects of ocean currents",
+   "ncert_sections": "Effects of Ocean Currents",
+   "concepts": [
+    {
+     "concept_tag": "currents-and-climate",
+     "learning_objective": "Explain how warm and cold currents affect the climate of coastal regions."
+    },
+    {
+     "concept_tag": "mixing-zones-fishing",
+     "learning_objective": "Explain why the mixing of warm and cold currents creates rich fishing grounds."
+    }
+   ]
+  }
+ ]
+}

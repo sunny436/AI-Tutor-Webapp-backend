@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KEAC1-CH06",
+ "title": "Trial Balance and Rectification of Errors",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEAC1-CH06-T1",
+   "topic_number": 1,
+   "title": "Meaning and objectives of a trial balance",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "trial-balance-meaning",
+     "learning_objective": "State the meaning of a trial balance and the purpose it serves in the accounting process."
+    },
+    {
+     "concept_tag": "objectives-of-trial-balance",
+     "learning_objective": "Explain why a tallied trial balance checks arithmetical accuracy but is not conclusive proof of correct accounts."
+    },
+    {
+     "concept_tag": "normal-balances",
+     "learning_objective": "Identify whether an account normally shows a debit or a credit balance in the trial balance."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH06-T2",
+   "topic_number": 2,
+   "title": "Methods of preparing a trial balance",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "totals-method",
+     "learning_objective": "Prepare a trial balance by showing the debit and credit totals of each ledger account."
+    },
+    {
+     "concept_tag": "balances-method",
+     "learning_objective": "Prepare a trial balance from ledger balances and explain why this method is most used."
+    },
+    {
+     "concept_tag": "totals-cum-balances-method",
+     "learning_objective": "Describe the four-column totals-cum-balances method and its limitations."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH06-T3",
+   "topic_number": 3,
+   "title": "Significance of agreement and classification of errors",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "errors-of-commission-and-omission",
+     "learning_objective": "Distinguish errors of commission from errors of complete and partial omission."
+    },
+    {
+     "concept_tag": "errors-of-principle",
+     "learning_objective": "Identify errors of principle arising from wrong capital-revenue classification."
+    },
+    {
+     "concept_tag": "compensating-errors",
+     "learning_objective": "Explain how compensating errors leave the trial balance in agreement."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH06-T4",
+   "topic_number": 4,
+   "title": "Searching of errors",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "steps-to-locate-errors",
+     "learning_objective": "List the steps an accountant takes to detect errors when the trial balance does not tally."
+    },
+    {
+     "concept_tag": "half-difference-wrong-side",
+     "learning_objective": "Use half of the difference to trace an amount posted to the wrong side."
+    },
+    {
+     "concept_tag": "transposition-divisible-by-nine",
+     "learning_objective": "Recognise that a difference divisible by 9 suggests a transposition of figures."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH06-T5",
+   "topic_number": 5,
+   "title": "Rectification of errors not affecting the trial balance",
+   "ncert_sections": "6.6, 6.6.1",
+   "concepts": [
+    {
+     "concept_tag": "two-sided-errors",
+     "learning_objective": "Explain why two-sided errors do not affect the trial balance and are corrected by a journal entry."
+    },
+    {
+     "concept_tag": "rectification-journal-entry",
+     "learning_objective": "Pass the rectifying journal entry for errors of omission, commission and principle in two accounts."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH06-T6",
+   "topic_number": 6,
+   "title": "Suspense account and errors affecting the trial balance",
+   "ncert_sections": "6.6.2, 6.6.3",
+   "concepts": [
+    {
+     "concept_tag": "one-sided-errors",
+     "learning_objective": "Rectify one-sided errors such as wrong posting and wrong casting through a suspense account."
+    },
+    {
+     "concept_tag": "suspense-account",
+     "learning_objective": "Explain when a suspense account is opened, on which side it appears and how it is closed."
+    },
+    {
+     "concept_tag": "next-year-rectification",
+     "learning_objective": "State the account used when errors of one year are rectified in the next accounting year."
+    }
+   ]
+  }
+ ]
+}

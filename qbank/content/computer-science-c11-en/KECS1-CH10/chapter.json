@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KECS1-CH10",
+ "title": "Tuples and Dictionaries",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECS1-CH10-T1",
+   "topic_number": 1,
+   "title": "Introduction to tuples: creation, indexing and immutability",
+   "ncert_sections": "10.1, 10.1.1, 10.1.2",
+   "concepts": [
+    {
+     "concept_tag": "tuple-creation",
+     "learning_objective": "Create tuples correctly, including a single-element tuple and a tuple without parentheses."
+    },
+    {
+     "concept_tag": "tuple-indexing",
+     "learning_objective": "Access tuple elements using positive and negative indices."
+    },
+    {
+     "concept_tag": "tuple-immutability",
+     "learning_objective": "Explain that a tuple cannot be changed after creation, though a mutable element inside it can."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH10-T2",
+   "topic_number": 2,
+   "title": "Tuple operations",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "tuple-concatenation-repetition",
+     "learning_objective": "Apply the + and * operators to tuples and predict the result."
+    },
+    {
+     "concept_tag": "tuple-membership-slicing",
+     "learning_objective": "Use in, not in and slicing on tuples."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH10-T3",
+   "topic_number": 3,
+   "title": "Tuple methods, built-in functions and tuple assignment",
+   "ncert_sections": "10.3, 10.4",
+   "concepts": [
+    {
+     "concept_tag": "tuple-built-in-functions",
+     "learning_objective": "Use len(), tuple(), count(), index(), sorted(), min(), max() and sum() with tuples."
+    },
+    {
+     "concept_tag": "tuple-assignment",
+     "learning_objective": "Assign the elements of a tuple to a tuple of variables and predict unpacking errors."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH10-T4",
+   "topic_number": 4,
+   "title": "Nested tuples and tuple handling",
+   "ncert_sections": "10.5, 10.6",
+   "concepts": [
+    {
+     "concept_tag": "nested-tuples",
+     "learning_objective": "Store and access records in a nested tuple."
+    },
+    {
+     "concept_tag": "tuple-handling-programs",
+     "learning_objective": "Use tuples to swap values, return multiple values and build a tuple in a loop."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH10-T5",
+   "topic_number": 5,
+   "title": "Introduction to dictionaries",
+   "ncert_sections": "10.7",
+   "concepts": [
+    {
+     "concept_tag": "dictionary-creation-keys",
+     "learning_objective": "Create a dictionary of key: value pairs and state the rules for keys."
+    },
+    {
+     "concept_tag": "dictionary-accessing",
+     "learning_objective": "Access dictionary values through keys and recognise KeyError."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH10-T6",
+   "topic_number": 6,
+   "title": "Dictionary mutability, operations and traversal",
+   "ncert_sections": "10.8, 10.9, 10.10",
+   "concepts": [
+    {
+     "concept_tag": "dictionary-mutability",
+     "learning_objective": "Add and modify items in a dictionary."
+    },
+    {
+     "concept_tag": "dictionary-membership-traversal",
+     "learning_objective": "Use membership operators on keys and traverse a dictionary with a for loop."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH10-T7",
+   "topic_number": 7,
+   "title": "Dictionary methods and manipulating dictionaries",
+   "ncert_sections": "10.11, 10.12",
+   "concepts": [
+    {
+     "concept_tag": "dictionary-methods",
+     "learning_objective": "Use len(), dict(), keys(), values(), items(), get(), update(), del and clear()."
+    },
+    {
+     "concept_tag": "dictionary-manipulation",
+     "learning_objective": "Write and trace programs that process data stored in dictionaries."
+    }
+   ]
+  }
+ ]
+}

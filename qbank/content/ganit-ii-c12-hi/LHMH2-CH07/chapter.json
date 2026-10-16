@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LHMH2-CH07",
+ "title": "प्रायिकता",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH2-CH07-T1",
+   "topic_number": 1,
+   "title": "सप्रतिबंध प्रायिकता",
+   "ncert_sections": "13.1, 13.2",
+   "concepts": [
+    {
+     "concept_tag": "saprati-bandh-prayikta-paribhasha",
+     "learning_objective": "सूत्र P(E|F) = P(E ∩ F)/P(F) द्वारा सप्रतिबंध प्रायिकता परिभाषित करना और उसका मान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "simit-pratidarsh-samashti",
+     "learning_objective": "घटना F के घटित होने की सूचना से प्रतिदर्श समष्टि के F तक सीमित हो जाने को समझकर प्रायिकता ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH07-T2",
+   "topic_number": 2,
+   "title": "सप्रतिबंध प्रायिकता के गुणधर्म",
+   "ncert_sections": "13.2.1",
+   "concepts": [
+    {
+     "concept_tag": "poorak-aur-nishchit-ghatna-gundharm",
+     "learning_objective": "P(S|F) = P(F|F) = 1 तथा P(E′|F) = 1 − P(E|F) का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "sangh-ka-pratibandh-niyam",
+     "learning_objective": "P((A ∪ B)|F) = P(A|F) + P(B|F) − P((A ∩ B)|F) का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH07-T3",
+   "topic_number": 3,
+   "title": "प्रायिकता का गुणन नियम",
+   "ncert_sections": "13.3",
+   "concepts": [
+    {
+     "concept_tag": "gunan-niyam-do-ghatnayen",
+     "learning_objective": "P(E ∩ F) = P(E) P(F|E) द्वारा दो घटनाओं के एक साथ घटित होने की प्रायिकता ज्ञात करना।"
+    },
+    {
+     "concept_tag": "gunan-niyam-teen-ghatnayen",
+     "learning_objective": "बिना प्रतिस्थापन क्रमिक चयन में तीन या अधिक घटनाओं के लिए गुणन नियम लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH07-T4",
+   "topic_number": 4,
+   "title": "स्वतंत्र घटनाएँ",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "swatantra-ghatna-paribhasha",
+     "learning_objective": "शर्त P(E ∩ F) = P(E) P(F) द्वारा स्वतंत्र घटनाओं को पहचानना और प्रायिकता ज्ञात करना।"
+    },
+    {
+     "concept_tag": "swatantra-banam-paraspar-apavarjee",
+     "learning_objective": "स्वतंत्र घटनाओं और परस्पर अपवर्जी घटनाओं में अंतर करना।"
+    },
+    {
+     "concept_tag": "swatantra-ghatnaon-ke-poorak",
+     "learning_objective": "स्वतंत्र घटनाओं के पूरकों की स्वतंत्रता से 'कम से कम एक' जैसी प्रायिकताएँ ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH07-T5",
+   "topic_number": 5,
+   "title": "प्रतिदर्श समष्टि का विभाजन और संपूर्ण प्रायिकता प्रमेय",
+   "ncert_sections": "13.5.1, 13.5.2",
+   "concepts": [
+    {
+     "concept_tag": "pratidarsh-samashti-vibhajan",
+     "learning_objective": "युग्मतः असंयुक्त, निःशेष और शून्येतर प्रायिकता वाली घटनाओं के समुच्चय को विभाजन के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "sampoorn-prayikta-pramey",
+     "learning_objective": "संपूर्ण प्रायिकता प्रमेय द्वारा बहु-चरणीय प्रयोगों में किसी घटना की प्रायिकता ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH07-T6",
+   "topic_number": 6,
+   "title": "बेज़-प्रमेय",
+   "ncert_sections": "13.5",
+   "concepts": [
+    {
+     "concept_tag": "bayes-pramey-kathan",
+     "learning_objective": "बेज़-प्रमेय का कथन देना और समझाना कि यह किसी कारण की विपरीत प्रायिकता देता है।"
+    },
+    {
+     "concept_tag": "bayes-pramey-anuprayog",
+     "learning_objective": "थैलों, मशीनों और चिकित्सा परीक्षण जैसी स्थितियों में बेज़-प्रमेय लागू करना।"
+    }
+   ]
+  }
+ ]
+}

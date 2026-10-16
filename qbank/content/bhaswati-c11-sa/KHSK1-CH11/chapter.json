@@ -1,0 +1,104 @@
+{
+ "chapter_id": "KHSK1-CH11",
+ "title": "अथ शिक्षां प्रवक्ष्यामि",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHSK1-CH11-T1",
+   "topic_number": 1,
+   "title": "वेदाङ्गानि शिक्षायाः परिचयः च",
+   "ncert_sections": "पाठपरिचयः, श्लोकौ 18-19 (वेदपुरुषः), योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "vedanga-parichaya",
+     "learning_objective": "छात्रः षट् वेदाङ्गानि तेषु शिक्षायाः प्राथम्यं पाणिनीयशिक्षायाः परिचयं च जानाति।"
+    },
+    {
+     "concept_tag": "vedapurusha-angani",
+     "learning_objective": "छात्रः वेदपुरुषस्य अङ्गरूपेण वेदाङ्गानां (पादौ, हस्तौ, चक्षुः, श्रोत्रं, घ्राणं, मुखम्) सम्बन्धं निर्दिशति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH11-T2",
+   "topic_number": 2,
+   "title": "वर्णानां सङ्ख्या",
+   "ncert_sections": "श्लोकाः 1-3",
+   "concepts": [
+    {
+     "concept_tag": "varna-sankhya",
+     "learning_objective": "छात्रः शम्भुमते त्रिषष्टिः चतुःषष्टिः वा वर्णाः इति गणनां तस्याः विभागान् च अवगच्छति।"
+    },
+    {
+     "concept_tag": "parashrita-varnah",
+     "learning_objective": "छात्रः अनुस्वार-विसर्ग-जिह्वामूलीय-उपध्मानीयादीनां पराश्रितवर्णानां स्वरूपं जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH11-T3",
+   "topic_number": 3,
+   "title": "वर्णोत्पत्तिः वर्णविभागश्च",
+   "ncert_sections": "श्लोकाः 4-7",
+   "concepts": [
+    {
+     "concept_tag": "varnotpatti-prakriya",
+     "learning_objective": "छात्रः आत्म-बुद्धि-मनः-कायाग्नि-मारुतक्रमेण वर्णोत्पत्तेः प्रक्रियां व्याख्याति।"
+    },
+    {
+     "concept_tag": "varna-vibhaga-panchadha",
+     "learning_objective": "छात्रः स्वर-काल-स्थान-प्रयत्न-अनुप्रदानैः वर्णानां पञ्चधा विभागं स्वराणां कालनियमांश्च अवगच्छति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH11-T4",
+   "topic_number": 4,
+   "title": "वर्णानाम् उच्चारणस्थानानि",
+   "ncert_sections": "श्लोकाः 8-14, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "uchcharana-sthanani",
+     "learning_objective": "छात्रः वर्णानाम् अष्टौ स्थानानि प्रत्येकस्य वर्णस्य उच्चारणस्थानं च निर्धारयति।"
+    },
+    {
+     "concept_tag": "ushmanah-gatih-hakara",
+     "learning_objective": "छात्रः ऊष्मणः (विसर्गस्य) अष्टविधां गतिं हकारस्य उरस्य-कण्ठ्य-भेदं च विवेचयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH11-T5",
+   "topic_number": 5,
+   "title": "पाठकानां गुणाः दोषाः च",
+   "ncert_sections": "श्लोकाः 15-17",
+   "concepts": [
+    {
+     "concept_tag": "vyaghri-drishtanta",
+     "learning_objective": "छात्रः व्याघ्रीदृष्टान्तेन वर्णप्रयोगे सावधानतायाः आवश्यकतां व्याख्याति।"
+    },
+    {
+     "concept_tag": "pathaka-adhamah-gunah",
+     "learning_objective": "छात्रः षट् पाठकाधमान् षट् पाठकगुणान् च पृथक् करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH11-T6",
+   "topic_number": 6,
+   "title": "पाणिनये नमः",
+   "ncert_sections": "श्लोकाः 20-22",
+   "concepts": [
+    {
+     "concept_tag": "panini-vandana",
+     "learning_objective": "छात्रः पाणिनेः योगदानं (अक्षरसमाम्नायः, कृत्स्नं व्याकरणम्) श्लोकार्थं च अवगच्छति।"
+    },
+    {
+     "concept_tag": "shabdartha-vyakarana",
+     "learning_objective": "छात्रः पाठगतानां पदानाम् अर्थं विग्रहं उपसर्गं च अभिजानाति।"
+    }
+   ]
+  }
+ ]
+}

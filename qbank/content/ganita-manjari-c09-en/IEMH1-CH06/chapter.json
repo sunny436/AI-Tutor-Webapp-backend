@@ -1,0 +1,140 @@
+{
+ "chapter_id": "IEMH1-CH06",
+ "title": "Measuring Space: Perimeter and Area",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IEMH1-CH06-T1",
+   "topic_number": 1,
+   "title": "Perimeter of shapes and the C/D ratio",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "perimeter-of-polygons",
+     "learning_objective": "Find the perimeter of squares, rectangles and equilateral triangles and see that perimeter-to-side ratios are fixed."
+    },
+    {
+     "concept_tag": "cd-ratio-pi",
+     "learning_objective": "Explain that the ratio of circumference to diameter is the same for all circles and estimate it by measurement."
+    },
+    {
+     "concept_tag": "history-of-pi",
+     "learning_objective": "Describe how approximations of pi developed from ancient civilisations to Madhava's exact series."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH06-T2",
+   "topic_number": 2,
+   "title": "Pi is irrational",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "irrational-numbers",
+     "learning_objective": "Recognise that pi, like root 2, cannot be written as a ratio of two integers."
+    },
+    {
+     "concept_tag": "approximation-vs-equality",
+     "learning_objective": "Distinguish between a close rational approximation of pi and its exact value."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH06-T3",
+   "topic_number": 3,
+   "title": "Arc length and perimeter problems",
+   "ncert_sections": "6.4, 6.5",
+   "concepts": [
+    {
+     "concept_tag": "circumference-formula",
+     "learning_objective": "Use C = 2πr to find circumferences, including on an athletics track."
+    },
+    {
+     "concept_tag": "arc-length",
+     "learning_objective": "Find the length of an arc subtending θ° at the centre using 2πr × θ/360."
+    },
+    {
+     "concept_tag": "perimeter-puzzles",
+     "learning_objective": "Solve perimeter problems built from circular arcs and semicircles."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH06-T4",
+   "topic_number": 4,
+   "title": "Area of rectangle, parallelogram and triangle",
+   "ncert_sections": "6.6, 6.7, 6.8",
+   "concepts": [
+    {
+     "concept_tag": "area-parallelogram",
+     "learning_objective": "Find the area of a parallelogram as base × height."
+    },
+    {
+     "concept_tag": "area-triangle",
+     "learning_objective": "Find and apply the area of a triangle as half base × height."
+    },
+    {
+     "concept_tag": "median-equal-areas",
+     "learning_objective": "Use the theorem that a median divides a triangle into two triangles of equal area."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH06-T5",
+   "topic_number": 5,
+   "title": "Heron's formula",
+   "ncert_sections": "6.8.1",
+   "concepts": [
+    {
+     "concept_tag": "herons-formula",
+     "learning_objective": "Find the area of a triangle from its three sides using Heron's formula."
+    },
+    {
+     "concept_tag": "circumcircle-incircle-area",
+     "learning_objective": "Relate the area of a triangle to the radii of its incircle and circumcircle."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH06-T6",
+   "topic_number": 6,
+   "title": "Brahmagupta's formula and squaring a rectangle",
+   "ncert_sections": "6.8.1, 6.9",
+   "concepts": [
+    {
+     "concept_tag": "brahmaguptas-formula",
+     "learning_objective": "Find the area of a cyclic 4-gon from its sides using Brahmagupta's formula."
+    },
+    {
+     "concept_tag": "special-case-generalisation",
+     "learning_objective": "Explain how Heron's formula is a special case of Brahmagupta's formula."
+    },
+    {
+     "concept_tag": "squaring-a-rectangle",
+     "learning_objective": "Explain Baudhayana's construction of a square equal in area to a rectangle."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH06-T7",
+   "topic_number": 7,
+   "title": "Area of a circle and of a sector",
+   "ncert_sections": "6.10, 6.10.1",
+   "concepts": [
+    {
+     "concept_tag": "circle-area",
+     "learning_objective": "Find the area of a circle using A = πr² and explain why the formula holds."
+    },
+    {
+     "concept_tag": "sector-area",
+     "learning_objective": "Find the area of a sector as πr² × θ/360."
+    },
+    {
+     "concept_tag": "p2-to-area-ratio",
+     "learning_objective": "Explain that the ratio of perimeter squared to area depends only on shape, not size."
+    }
+   ]
+  }
+ ]
+}

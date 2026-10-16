@@ -1,0 +1,148 @@
+{
+ "chapter_id": "LHBO1-CH05",
+ "title": "वंशागति के आणविक आधार",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHBO1-CH05-T1",
+   "topic_number": 1,
+   "title": "डीएनए की संरचना तथा पैकेजिंग",
+   "ncert_sections": "5.1, 5.1.1, 5.1.2",
+   "concepts": [
+    {
+     "concept_tag": "dna-dvikundali-sanrachna",
+     "learning_objective": "डीएनए की द्विकुंडलीय संरचना और क्षारक युग्मन के नियम समझाना।"
+    },
+    {
+     "concept_tag": "dna-packaging-nucleosome",
+     "learning_objective": "न्यूक्लियोसोम द्वारा डीएनए के संवेष्टन की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH05-T2",
+   "topic_number": 2,
+   "title": "आनुवंशिक पदार्थ की खोज तथा आरएनए संसार",
+   "ncert_sections": "5.2, 5.3",
+   "concepts": [
+    {
+     "concept_tag": "rupantaran-griffith-avery",
+     "learning_objective": "ग्रिफिथ तथा एवरी के प्रयोगों से रूपांतरण के सिद्धांत को समझना।"
+    },
+    {
+     "concept_tag": "hershey-chase-prayog",
+     "learning_objective": "हर्षे-चेज प्रयोग से डीएनए के आनुवंशिक पदार्थ होने का निष्कर्ष निकालना।"
+    },
+    {
+     "concept_tag": "dna-rna-sthayitva",
+     "learning_objective": "आनुवंशिक पदार्थ के गुणों के आधार पर डीएनए और आरएनए की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH05-T3",
+   "topic_number": 3,
+   "title": "डीएनए प्रतिकृतियन",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "ardhsanrakshi-pratikritiyan",
+     "learning_objective": "मेसेल्सन-स्टाल प्रयोग से अर्धसंरक्षी प्रतिकृतियन को सिद्ध करना।"
+    },
+    {
+     "concept_tag": "pratikritiyan-enzyme",
+     "learning_objective": "प्रतिकृतियन में डीएनए पॉलीमरेज, लाइगेज और ओकाजाकी खंडों की भूमिका बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH05-T4",
+   "topic_number": 4,
+   "title": "अनुलेखन",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "anulekhan-ikai",
+     "learning_objective": "अनुलेखन इकाई के प्रोमोटर, संरचनात्मक जीन और समापक को पहचानना।"
+    },
+    {
+     "concept_tag": "rna-polymerase-prakar",
+     "learning_objective": "जीवाणु और यूकैरियोट में आरएनए पॉलीमरेज की भूमिकाओं की तुलना करना।"
+    },
+    {
+     "concept_tag": "splicing-capping-tailing",
+     "learning_objective": "यूकैरियोटिक प्रसंस्करण में समबंधन, कैपिंग और पुच्छन को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH05-T5",
+   "topic_number": 5,
+   "title": "आनुवंशिक कूट, उत्परिवर्तन तथा टीआरएनए",
+   "ncert_sections": "5.6, 5.6.1, 5.6.2",
+   "concepts": [
+    {
+     "concept_tag": "anuvanshik-koot-gun",
+     "learning_objective": "आनुवंशिक कूट की विशेषताएँ बताना।"
+    },
+    {
+     "concept_tag": "utparivartan-koot",
+     "learning_objective": "क्षारकों के निवेशन या विलोपन से पठन ढाँचे पर प्रभाव की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "trna-adapter",
+     "learning_objective": "टीआरएनए की अनुकूलक अणु के रूप में भूमिका समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH05-T6",
+   "topic_number": 6,
+   "title": "स्थानांतरण",
+   "ncert_sections": "5.7",
+   "concepts": [
+    {
+     "concept_tag": "aminoacylation",
+     "learning_objective": "अमीनो अम्लों के सक्रियण और टीआरएनए आवेशन को समझाना।"
+    },
+    {
+     "concept_tag": "ribosome-sthanantaran",
+     "learning_objective": "राइबोसोम पर स्थानांतरण के प्रारंभ, दीर्घीकरण और समापन की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH05-T7",
+   "topic_number": 7,
+   "title": "जीन अभिव्यक्ति का नियमन: लैक ओपेरॉन",
+   "ncert_sections": "5.8, 5.8.1",
+   "concepts": [
+    {
+     "concept_tag": "jeen-niyaman-star",
+     "learning_objective": "जीन अभिव्यक्ति के नियमन के विभिन्न स्तर पहचानना।"
+    },
+    {
+     "concept_tag": "lac-operon",
+     "learning_objective": "लैक ओपेरॉन के घटकों और प्रेरक की भूमिका का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH05-T8",
+   "topic_number": 8,
+   "title": "मानव जीनोम परियोजना तथा डीएनए अंगुलिछापन",
+   "ncert_sections": "5.9, 5.10",
+   "concepts": [
+    {
+     "concept_tag": "manav-genome-pariyojana",
+     "learning_objective": "मानव जीनोम परियोजना के लक्ष्य, विधियाँ और मुख्य निष्कर्ष बताना।"
+    },
+    {
+     "concept_tag": "dna-anguli-chhapan",
+     "learning_objective": "वीएनटीआर और बहुरूपता के आधार पर डीएनए अंगुलिछापन की विधि समझाना।"
+    }
+   ]
+  }
+ ]
+}

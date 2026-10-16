@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LHEC1-CH02",
+ "title": "राष्ट्रीय आय का लेखांकन",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHEC1-CH02-T1",
+   "topic_number": 1,
+   "title": "समष्टि अर्थशास्त्र की कुछ मूलभूत संकल्पनाएँ",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "antim-aur-madhyavarti-vastuen",
+     "learning_objective": "अंतिम वस्तुओं और मध्यवर्ती वस्तुओं में उनके आर्थिक उपयोग के आधार पर अंतर करना।"
+    },
+    {
+     "concept_tag": "stock-aur-pravah",
+     "learning_objective": "स्टॉक और प्रवाह चरों में अंतर पहचानना।"
+    },
+    {
+     "concept_tag": "nivesh-aur-mulyahras",
+     "learning_objective": "सकल निवेश, निवल निवेश और मूल्यह्रास के संबंध को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH02-T2",
+   "topic_number": 2,
+   "title": "आय का वर्तुल प्रवाह",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "vartul-pravah",
+     "learning_objective": "दो-क्षेत्रकीय सरल अर्थव्यवस्था में परिवारों और फर्मों के बीच आय और व्यय के वर्तुल प्रवाह को समझना।"
+    },
+    {
+     "concept_tag": "teen-vidhiyon-ki-samanta",
+     "learning_objective": "यह समझना कि उत्पाद, व्यय और आय विधियों से राष्ट्रीय आय का मान समान आता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH02-T3",
+   "topic_number": 3,
+   "title": "उत्पाद या मूल्यवर्धित विधि",
+   "ncert_sections": "2.2.1",
+   "concepts": [
+    {
+     "concept_tag": "mulya-vardhan",
+     "learning_objective": "सकल और निवल मूल्यवर्धन की गणना करना।"
+    },
+    {
+     "concept_tag": "dohri-ganana",
+     "learning_objective": "दोहरी गणना की समस्या और उससे बचने के उपाय को समझना।"
+    },
+    {
+     "concept_tag": "mal-suchi",
+     "learning_objective": "माल-सूची में परिवर्तन को उत्पादन और निवेश के भाग के रूप में समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH02-T4",
+   "topic_number": 4,
+   "title": "व्यय विधि और आय विधि",
+   "ncert_sections": "2.2.2, 2.2.3",
+   "concepts": [
+    {
+     "concept_tag": "vyay-vidhi",
+     "learning_objective": "अंतिम उपभोग, निवेश, सरकारी व्यय और निवल निर्यात से सकल घरेलू उत्पाद ज्ञात करना।"
+    },
+    {
+     "concept_tag": "aay-vidhi",
+     "learning_objective": "मजदूरी, लाभ, ब्याज और किराए के योग से सकल घरेलू उत्पाद ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH02-T5",
+   "topic_number": 5,
+   "title": "कारक लागत, आधार कीमतें, बाज़ार कीमतें और समष्टि आर्थिक समानताएँ",
+   "ncert_sections": "2.2.4, 2.3",
+   "concepts": [
+    {
+     "concept_tag": "karak-lagat-bazar-keemat",
+     "learning_objective": "कारक लागत, आधार कीमत और बाज़ार कीमत में निवल उत्पादन करों और निवल उत्पाद करों के आधार पर अंतर करना।"
+    },
+    {
+     "concept_tag": "rashtriya-aay-samuchchay",
+     "learning_objective": "विदेशों से निवल कारक आय, मूल्यह्रास और निवल अप्रत्यक्ष करों की सहायता से राष्ट्रीय आय के समुच्चय ज्ञात करना।"
+    },
+    {
+     "concept_tag": "vaiyaktik-aay",
+     "learning_objective": "वैयक्तिक आय और वैयक्तिक प्रयोज्य आय की संकल्पना समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH02-T6",
+   "topic_number": 6,
+   "title": "मौद्रिक और वास्तविक सकल घरेलू उत्पाद",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "maudrik-vastavik-gdp",
+     "learning_objective": "चालू कीमतों और स्थिर कीमतों पर मापे गए सकल घरेलू उत्पाद में अंतर करना।"
+    },
+    {
+     "concept_tag": "gdp-apasfitik",
+     "learning_objective": "सकल घरेलू उत्पाद अपस्फीतिक की गणना और व्याख्या करना।"
+    },
+    {
+     "concept_tag": "upbhokta-keemat-suchkank",
+     "learning_objective": "उपभोक्ता कीमत सूचकांक की गणना करना और उसे अपस्फीतिक से अलग पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH02-T7",
+   "topic_number": 7,
+   "title": "सकल घरेलू उत्पाद और कल्याण",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "gdp-kalyan-seemayen",
+     "learning_objective": "सकल घरेलू उत्पाद को कल्याण का सूचक मानने की सीमाओं का विश्लेषण करना।"
+    }
+   ]
+  }
+ ]
+}

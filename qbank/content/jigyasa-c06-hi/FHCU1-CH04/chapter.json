@@ -1,0 +1,108 @@
+{
+ "chapter_id": "FHCU1-CH04",
+ "title": "चुंबकों को जानें",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHCU1-CH04-T1",
+   "topic_number": 1,
+   "title": "चुंबकीय और अचुंबकीय पदार्थ",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "prakritik-aur-kritrim-chumbak",
+     "learning_objective": "प्राकृतिक चुंबक (चुंबक पत्थर) और दैनिक वस्तुओं में लगे कृत्रिम चुंबकों में अंतर पहचानना।"
+    },
+    {
+     "concept_tag": "chumbakiya-aur-achumbakiya-padarth",
+     "learning_objective": "पदार्थों को चुंबकीय और अचुंबकीय में वर्गीकृत करना तथा लोहा, निकेल और कोबाल्ट को चुंबकीय धातुओं के रूप में पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH04-T2",
+   "topic_number": 2,
+   "title": "चुंबक के ध्रुव",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "chumbak-ke-dhruv",
+     "learning_objective": "चुंबक के उन भागों को ध्रुव के रूप में पहचानना जहाँ उसका आकर्षण सबसे अधिक होता है।"
+    },
+    {
+     "concept_tag": "dhruv-jode-mein",
+     "learning_objective": "समझाना कि चुंबक का आकार या आमाप कुछ भी हो, उत्तरी और दक्षिणी ध्रुव सदैव जोड़े में होते हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH04-T3",
+   "topic_number": 3,
+   "title": "दिशाएँ ज्ञात करना",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "swatantra-latka-chumbak",
+     "learning_objective": "समझाना कि स्वतंत्र रूप से लटका चुंबक उत्तर-दक्षिण दिशा में ठहरता है और इस गुण से चुंबक को लोहे की छड़ से अलग पहचानना।"
+    },
+    {
+     "concept_tag": "chumbakiya-dikasuchak",
+     "learning_objective": "चुंबकीय दिक्सूचक की बनावट और उससे दिशाएँ ज्ञात करने की विधि का वर्णन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH04-T4",
+   "topic_number": 4,
+   "title": "अपना दिक्सूचक बनाना",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "sui-ko-chumbak-banana",
+     "learning_objective": "लोहे की सुई को चुंबक के एक ध्रुव से रगड़कर चुंबक बनाने और उसकी जाँच करने की विधि बताना।"
+    },
+    {
+     "concept_tag": "tairta-dikasuchak-matsya-yantra",
+     "learning_objective": "पानी पर तैरते कॉर्क वाली सुई और प्राचीन मत्स्य-यंत्र के दिक्सूचक की तरह काम करने को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH04-T5",
+   "topic_number": 5,
+   "title": "चुंबकों के बीच आकर्षण और प्रतिकर्षण",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "saman-aur-asaman-dhruv",
+     "learning_objective": "बताना कि असमान ध्रुव आकर्षित और समान ध्रुव प्रतिकर्षित करते हैं तथा इसे चुंबकों और दिक्सूचक सुई पर लागू करना।"
+    },
+    {
+     "concept_tag": "pratikarshan-se-chumbak-ki-pehchan",
+     "learning_objective": "प्रतिकर्षण के गुण से किसी चुंबक को लोहे के टुकड़े से अलग पहचानना।"
+    },
+    {
+     "concept_tag": "achumbakiya-padarthon-ke-paar-prabhav",
+     "learning_objective": "पहचानना कि चुंबकीय प्रभाव लकड़ी, कार्डबोर्ड, प्लास्टिक और काँच जैसे अचुंबकीय पदार्थों के पार जा सकता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH04-T6",
+   "topic_number": 6,
+   "title": "चुंबकों के साथ मनोरंजन और उनकी देखभाल",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "chumbakon-ke-upyog",
+     "learning_objective": "चुंबकों के गुणों का उपयोग करके दैनिक समस्याएँ हल करना और चुंबक वाले खिलौनों को समझाना।"
+    },
+    {
+     "concept_tag": "chumbakon-ki-dekhbhal",
+     "learning_objective": "बताना कि चुंबकों को किस प्रकार रखा और सँभाला जाए ताकि उनका चुंबकत्व बना रहे।"
+    }
+   ]
+  }
+ ]
+}

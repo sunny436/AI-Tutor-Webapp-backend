@@ -1,0 +1,120 @@
+{
+ "chapter_id": "HEGP2-CH04",
+ "title": "Exploring Some Geometric Themes",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP2-CH04-T1",
+   "topic_number": 1,
+   "title": "Fractals in nature, the Sierpinski Carpet and fractals in art",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "self-similarity-fractals",
+     "learning_objective": "Explain that a fractal is a self-similar shape showing the same pattern at smaller and smaller scales, in nature and in art."
+    },
+    {
+     "concept_tag": "sierpinski-carpet-counting",
+     "learning_objective": "Find the number of remaining squares, holes and the remaining area at any step of the Sierpinski Carpet."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH04-T2",
+   "topic_number": 2,
+   "title": "Sierpinski Gasket and Koch Snowflake",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "sierpinski-gasket",
+     "learning_objective": "Describe the construction of the Sierpinski Triangle and count its triangles, holes and remaining area."
+    },
+    {
+     "concept_tag": "koch-snowflake",
+     "learning_objective": "Find the number of sides and the perimeter at the nth step of the Koch Snowflake."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH04-T3",
+   "topic_number": 3,
+   "title": "Visualising solids and their profiles",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "visualisation-imagination",
+     "learning_objective": "Mentally cut and rearrange simple plane shapes without drawing them."
+    },
+    {
+     "concept_tag": "profiles-of-solids",
+     "learning_objective": "Identify solids that have given profiles from different viewpoints."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH04-T4",
+   "topic_number": 4,
+   "title": "Faces, edges and vertices; prisms, pyramids and nets",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "faces-edges-vertices",
+     "learning_objective": "Count the faces, edges and vertices of prisms and pyramids, including n-sided ones."
+    },
+    {
+     "concept_tag": "nets-of-solids",
+     "learning_objective": "Recognise and reason about nets of cubes, tetrahedrons, cylinders, cones and other solids."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH04-T5",
+   "topic_number": 5,
+   "title": "Shortest paths on a cuboid",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "shortest-path-using-nets",
+     "learning_objective": "Find the shortest path between two points on the surface of a cuboid by drawing a suitable net and using the Baudhayana Theorem."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH04-T6",
+   "topic_number": 6,
+   "title": "Projections, views and shadows",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "projection-of-point-and-line",
+     "learning_objective": "Define the projection of a point on a plane and compare the length of a line with its projection."
+    },
+    {
+     "concept_tag": "front-top-side-views",
+     "learning_objective": "Identify the front, top and side views of a solid as projections on the vertical, horizontal and side planes."
+    },
+    {
+     "concept_tag": "shadows-and-parallel-lines",
+     "learning_objective": "Relate shadows in sunlight to projections and use the fact that parallel lines project to parallel lines."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH04-T7",
+   "topic_number": 7,
+   "title": "Isometric projections and drawing on isometric grids",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "isometric-projection-of-cube",
+     "learning_objective": "Describe the isometric projection of a cube and why its edges project to equal lengths."
+    },
+    {
+     "concept_tag": "isometric-grid-drawing",
+     "learning_objective": "Draw solids made of cubes on an isometric grid using the length, depth and height axes."
+    }
+   ]
+  }
+ ]
+}

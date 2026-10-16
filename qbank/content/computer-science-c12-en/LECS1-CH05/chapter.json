@@ -1,0 +1,92 @@
+{
+ "chapter_id": "LECS1-CH05",
+ "title": "Sorting",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECS1-CH05-T1",
+   "topic_number": 1,
+   "title": "Introduction to sorting",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "sorting-definition",
+     "learning_objective": "Define sorting and identify the different orders in which numbers and strings can be arranged."
+    },
+    {
+     "concept_tag": "need-for-sorting",
+     "learning_objective": "Explain why the overhead of sorting is worthwhile for searching data efficiently."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH05-T2",
+   "topic_number": 2,
+   "title": "Bubble sort",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "bubble-sort-mechanism",
+     "learning_objective": "Describe how bubble sort compares and swaps adjacent elements over n-1 passes."
+    },
+    {
+     "concept_tag": "bubble-sort-trace",
+     "learning_objective": "Trace the state of a list after given passes of bubble sort, including an early-stopping version."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH05-T3",
+   "topic_number": 3,
+   "title": "Selection sort",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "selection-sort-mechanism",
+     "learning_objective": "Describe how selection sort selects the smallest unsorted element and swaps it into the sorted part."
+    },
+    {
+     "concept_tag": "selection-sort-trace",
+     "learning_objective": "Trace the partially sorted list produced by selection sort after given passes."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH05-T4",
+   "topic_number": 4,
+   "title": "Insertion sort",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "insertion-sort-mechanism",
+     "learning_objective": "Describe how insertion sort inserts each unsorted element into its position in the sorted part."
+    },
+    {
+     "concept_tag": "insertion-sort-trace",
+     "learning_objective": "Trace passes, shifts and comparisons of insertion sort on a given list."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH05-T5",
+   "topic_number": 5,
+   "title": "Time complexity of algorithms",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "time-complexity-meaning",
+     "learning_objective": "Explain time complexity and how running time grows as the input size increases."
+    },
+    {
+     "concept_tag": "complexity-estimation-rules",
+     "learning_objective": "Estimate constant, linear or quadratic time complexity from the loop structure of an algorithm."
+    },
+    {
+     "concept_tag": "sorting-algorithms-complexity",
+     "learning_objective": "State and justify the quadratic time complexity of bubble, selection and insertion sort."
+    }
+   ]
+  }
+ ]
+}

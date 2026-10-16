@@ -1,0 +1,108 @@
+{
+ "chapter_id": "IHMH1-CH02",
+ "title": "रैखिक बहुपदों का परिचय",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHMH1-CH02-T1",
+   "topic_number": 1,
+   "title": "बीजीय व्यंजक और एक चर वाले बहुपद",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "pad-char-gunank",
+     "learning_objective": "किसी बीजीय व्यंजक के पद, चर, गुणांक और अचर पद की पहचान करना।"
+    },
+    {
+     "concept_tag": "bahupad-ki-ghaat",
+     "learning_objective": "एक चर वाले बहुपद की घात ज्ञात करके उसे अचर, रैखिक, द्विघाती या त्रिघाती के रूप में वर्गीकृत करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH02-T2",
+   "topic_number": 2,
+   "title": "रैखिक बहुपद, रैखिक समीकरण और आगत-निर्गत विधि",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "bahupad-ka-maan",
+     "learning_objective": "चर का मान प्रतिस्थापित करके बहुपद का मान ज्ञात करना और इसे आगत-निर्गत विधि के रूप में समझना।"
+    },
+    {
+     "concept_tag": "rekhik-samikaran-shabd-samasya",
+     "learning_objective": "शाब्दिक समस्या में रैखिक बहुपद को अचर के समीकृत करके रैखिक समीकरण बनाना और हल करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH02-T3",
+   "topic_number": 3,
+   "title": "रैखिक प्रतिरूपों का अन्वेषण",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "rekhik-pratirup-achar-antar",
+     "learning_objective": "पहचानना कि रैखिक प्रतिरूप में क्रमागत पदों का अंतर अचर होता है।"
+    },
+    {
+     "concept_tag": "nvan-pad-rekhik-pratirup",
+     "learning_objective": "बढ़ते प्रतिरूप के nवें पद के लिए n में रैखिक व्यंजक ज्ञात करना और उसका उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH02-T4",
+   "topic_number": 4,
+   "title": "रैखिक वृद्धि और रैखिक ह्रास",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "rekhik-vriddhi",
+     "learning_objective": "समान अंतरालों में निश्चित मात्रा से बढ़ने वाली राशि को रैखिक फलन द्वारा निरूपित करना।"
+    },
+    {
+     "concept_tag": "rekhik-hras",
+     "learning_objective": "समान अंतरालों में निश्चित मात्रा से घटने वाली राशि को रैखिक फलन द्वारा निरूपित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH02-T5",
+   "topic_number": 5,
+   "title": "रैखिक संबंध y = ax + b",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "a-aur-b-gyat-karna",
+     "learning_objective": "x और y के मानों के दो युग्मों से y = ax + b में a और b ज्ञात करना।"
+    },
+    {
+     "concept_tag": "a-aur-b-ki-vyakhya",
+     "learning_objective": "वास्तविक जीवन के रैखिक संबंध में a को परिवर्तन की दर और b को प्रारंभिक नियत मान के रूप में समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH02-T6",
+   "topic_number": 6,
+   "title": "रैखिक संबंधों का दृश्यांकन: ढलान और y-अंतःखंड",
+   "ncert_sections": "2.6",
+   "concepts": [
+    {
+     "concept_tag": "rekhik-samikaran-alekhan",
+     "learning_objective": "दो बिंदुओं की सहायता से y = ax + b का आलेख खींचना और जाँचना कि कोई बिंदु रेखा पर है या नहीं।"
+    },
+    {
+     "concept_tag": "dhalan-aur-antahkhand",
+     "learning_objective": "y = ax + b में ढलान a और y-अंतःखंड b की पहचान करना तथा रेखा पर उनके प्रभाव का वर्णन करना।"
+    },
+    {
+     "concept_tag": "samantar-rekhayen",
+     "learning_objective": "पहचानना कि समान ढलान और भिन्न y-अंतःखंड वाली रेखाएँ समांतर होती हैं।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "chapter_id": "GHGP1-CH08",
+ "title": "भिन्नों के साथ कार्य करना",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHGP1-CH08-T1",
+   "topic_number": 1,
+   "title": "भिन्न और पूर्ण संख्या का गुणन",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "purn-sankhya-aur-bhinn-ka-gunan",
+     "learning_objective": "पूर्ण संख्या और भिन्न का गुणन बार-बार जोड़ने और बराबर भागों में बाँटने के रूप में समझकर करना।"
+    },
+    {
+     "concept_tag": "gunanfal-ko-mishrit-bhinn-mein-badalna",
+     "learning_objective": "गुणनफल को विषम भिन्न से मिश्रित भिन्न के रूप में बदलना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH08-T2",
+   "topic_number": 2,
+   "title": "दो भिन्नों का गुणन और आयत का क्षेत्रफल",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "ikai-varg-se-bhinnon-ka-gunan",
+     "learning_objective": "इकाई वर्ग को पंक्तियों और स्तंभों में बाँटकर दो भिन्नों का गुणनफल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "aayat-ka-kshetrafal-aur-bhinn-gunan",
+     "learning_objective": "भिन्नात्मक भुजाओं वाले आयत के क्षेत्रफल को भुजाओं के गुणनफल से जोड़ना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH08-T3",
+   "topic_number": 3,
+   "title": "ब्रह्मगुप्त का गुणन सूत्र और सरलतम रूप",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "brahmagupt-ka-gunan-sutra",
+     "learning_objective": "अंशों के गुणनफल को हरों के गुणनफल से भाग देकर भिन्नों का गुणन करना।"
+    },
+    {
+     "concept_tag": "ubhayanishth-gunankhand-kaatna",
+     "learning_objective": "गुणा से पहले उभयनिष्ठ गुणनखंड काटकर गुणनफल को सरलतम रूप में लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH08-T4",
+   "topic_number": 4,
+   "title": "गुणनफल की तुलना और गुणन का क्रम",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "gunanfal-ki-tulna",
+     "learning_objective": "संख्याओं के 0 और 1 के बीच या 1 से बड़ी होने के आधार पर गुणनफल की तुलना करना।"
+    },
+    {
+     "concept_tag": "gunan-ka-kram",
+     "learning_objective": "समझना कि भिन्नों के गुणन में क्रम बदलने से गुणनफल नहीं बदलता।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH08-T5",
+   "topic_number": 5,
+   "title": "भिन्नों का विभाजन और व्युत्क्रम",
+   "ncert_sections": "8.2",
+   "concepts": [
+    {
+     "concept_tag": "vyutkram",
+     "learning_objective": "किसी भिन्न का व्युत्क्रम ज्ञात करना और भिन्न व व्युत्क्रम के गुणनफल को पहचानना।"
+    },
+    {
+     "concept_tag": "bhinnon-ka-vibhajan-sutra",
+     "learning_objective": "भाजक के व्युत्क्रम से भाज्य को गुणा करके भिन्नों का भाग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH08-T6",
+   "topic_number": 6,
+   "title": "भाज्य, भाजक और भागफल",
+   "ncert_sections": "8.2",
+   "concepts": [
+    {
+     "concept_tag": "vibhajan-ko-gunan-roop-mein-likhna",
+     "learning_objective": "भाग की समस्या को गुणन की समस्या के रूप में फिर से लिखना।"
+    },
+    {
+     "concept_tag": "bhagfal-aur-bhajya-ki-tulna",
+     "learning_objective": "भाजक के 1 से छोटा या बड़ा होने के आधार पर भागफल की भाज्य से तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH08-T7",
+   "topic_number": 7,
+   "title": "भिन्नों से संबंधित कुछ समस्याएँ",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "bhinnon-ki-shabd-samasyaen",
+     "learning_objective": "दैनिक जीवन की समस्याओं के लिए सही भिन्न-व्यंजक चुनकर हल करना।"
+    },
+    {
+     "concept_tag": "prachin-bharatiya-bhinn-samasyaen",
+     "learning_objective": "शुल्बसूत्र, ब्राह्मस्फुटसिद्धांत और लीलावती की भिन्न समस्याओं को हल करना।"
+    }
+   ]
+  }
+ ]
+}

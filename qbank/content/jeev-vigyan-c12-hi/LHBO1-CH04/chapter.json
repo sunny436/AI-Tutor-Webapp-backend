@@ -1,0 +1,148 @@
+{
+ "chapter_id": "LHBO1-CH04",
+ "title": "वंशागति तथा विविधता के सिद्धांत",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHBO1-CH04-T1",
+   "topic_number": 1,
+   "title": "मेंडल के वंशागति के नियम तथा एक जीन की वंशागति",
+   "ncert_sections": "4.1, 4.2, 4.2.1, 4.2.2",
+   "concepts": [
+    {
+     "concept_tag": "mendel-ke-prayog",
+     "learning_objective": "मटर पर मेंडल के संकरण प्रयोगों की विधि और विशेषताएँ बताना।"
+    },
+    {
+     "concept_tag": "ekasankar-cross",
+     "learning_objective": "एकसंकर क्रॉस तथा परीक्षार्थ संकरण के परिणामों की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "prabhavita-prithakkaran-niyam",
+     "learning_objective": "प्रभाविता और पृथक्करण के नियमों को समझकर लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH04-T2",
+   "topic_number": 2,
+   "title": "अपूर्ण प्रभाविता तथा सहप्रभाविता",
+   "ncert_sections": "4.2.2.1, 4.2.2.2",
+   "concepts": [
+    {
+     "concept_tag": "apurn-prabhavita",
+     "learning_objective": "श्वानपुष्प के उदाहरण से अपूर्ण प्रभाविता के अनुपात समझाना।"
+    },
+    {
+     "concept_tag": "sahprabhavita-abo",
+     "learning_objective": "ABO रक्त समूह के आधार पर सहप्रभाविता और बहुविकल्पी युग्मविकल्पियों को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH04-T3",
+   "topic_number": 3,
+   "title": "दो जीनों की वंशागति तथा वंशागति का गुणसूत्रीय सिद्धांत",
+   "ncert_sections": "4.3, 4.3.1, 4.3.2",
+   "concepts": [
+    {
+     "concept_tag": "dvisankar-cross",
+     "learning_objective": "द्विसंकर क्रॉस के F2 अनुपात से संततियों की संख्या ज्ञात करना।"
+    },
+    {
+     "concept_tag": "svatantra-apvyuhan",
+     "learning_objective": "स्वतंत्र अपव्यूहन के नियम के अनुसार युग्मकों के प्रकार बताना।"
+    },
+    {
+     "concept_tag": "gunsutriya-siddhant",
+     "learning_objective": "गुणसूत्रों के व्यवहार और जीनों के व्यवहार की समानता को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH04-T4",
+   "topic_number": 4,
+   "title": "सहलग्नता तथा पुनर्योजन",
+   "ncert_sections": "4.3.3",
+   "concepts": [
+    {
+     "concept_tag": "sahlagnata",
+     "learning_objective": "मॉर्गन के प्रयोगों से सहलग्नता की अवधारणा समझाना।"
+    },
+    {
+     "concept_tag": "punaryojan",
+     "learning_objective": "पुनर्योजन की आवृत्ति को जीनों के बीच की दूरी से जोड़ना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH04-T5",
+   "topic_number": 5,
+   "title": "बहुजीनी वंशागति तथा बहुप्रभाविता",
+   "ncert_sections": "4.4, 4.5",
+   "concepts": [
+    {
+     "concept_tag": "bahujeeni-vanshagati",
+     "learning_objective": "बहुजीनी लक्षणों में युग्मविकल्पियों के योगात्मक प्रभाव की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "bahuprabhavita",
+     "learning_objective": "एक जीन के अनेक लक्षणप्ररूपी प्रभावों को उदाहरण सहित पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH04-T6",
+   "topic_number": 6,
+   "title": "लिंग निर्धारण",
+   "ncert_sections": "4.6, 4.6.1, 4.6.2",
+   "concepts": [
+    {
+     "concept_tag": "xo-xy-zw-tantra",
+     "learning_objective": "कीटों, मनुष्य और पक्षियों में लिंग निर्धारण की क्रियाविधियों की तुलना करना।"
+    },
+    {
+     "concept_tag": "manav-ling-nirdharan",
+     "learning_objective": "मानव में संतान के लिंग निर्धारण का आधार समझाना।"
+    },
+    {
+     "concept_tag": "madhumakkhi-ling-nirdharan",
+     "learning_objective": "मधुमक्खी में अगुणित-द्विगुणित लिंग निर्धारण की विशेषताएँ बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH04-T7",
+   "topic_number": 7,
+   "title": "उत्परिवर्तन तथा वंशावली विश्लेषण",
+   "ncert_sections": "4.7, 4.8.1",
+   "concepts": [
+    {
+     "concept_tag": "utparivartan",
+     "learning_objective": "उत्परिवर्तन के प्रकारों और उत्परिवर्तजनों को पहचानना।"
+    },
+    {
+     "concept_tag": "vanshavali-vishleshan",
+     "learning_objective": "वंशावली के आधार पर किसी विशेषक की वंशागति का प्रकार निर्धारित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH04-T8",
+   "topic_number": 8,
+   "title": "मेंडलीय तथा गुणसूत्रीय विकार",
+   "ncert_sections": "4.8.2, 4.8.3",
+   "concepts": [
+    {
+     "concept_tag": "mendeliya-vikar",
+     "learning_objective": "प्रमुख मेंडलीय विकारों के कारण और वंशागति के प्रतिरूप समझाना।"
+    },
+    {
+     "concept_tag": "gunsutriya-vikar",
+     "learning_objective": "गुणसूत्रीय विकारों के कारण और लक्षण पहचानना।"
+    }
+   ]
+  }
+ ]
+}

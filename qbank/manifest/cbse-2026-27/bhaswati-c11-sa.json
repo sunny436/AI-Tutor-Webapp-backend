@@ -1,0 +1,1336 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "bhaswati-c11-sa",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "sanskrit",
+  "language": "sanskrit",
+  "title": "Bhaswati",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khsk1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHSK1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "कुशलप्रशासनम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khsk101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHSK1-CH01-T1",
+     "topic_number": 1,
+     "title": "रामभरतयोः मिलनम्",
+     "ncert_sections": "श्लोकाः १-३",
+     "concepts": [
+      {
+       "concept_tag": "bharata-darshanam",
+       "learning_objective": "छात्रः चित्रकूटे रामेण दृष्टस्य भरतस्य दशां वर्णयति।"
+      },
+      {
+       "concept_tag": "rama-vatsalyam",
+       "learning_objective": "छात्रः भरतं प्रति रामस्य स्नेहपूर्णं व्यवहारं व्याख्याति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH01-T2",
+     "topic_number": 2,
+     "title": "मन्त्रिणां गुणाः मन्त्रस्य महत्त्वं च",
+     "ncert_sections": "श्लोकाः ४-५",
+     "concepts": [
+      {
+       "concept_tag": "mantri-gunah",
+       "learning_objective": "छात्रः रामेण उक्तान् मन्त्रिणां गुणान् परिचिनोति।"
+      },
+      {
+       "concept_tag": "mantra-vijayamulam",
+       "learning_objective": "छात्रः 'मन्त्रो विजयमूलं हि राज्ञाम्' इति सूक्तेः आशयं बोधति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH01-T3",
+     "topic_number": 3,
+     "title": "राज्ञः जागरूकता मन्त्रणाविधिः कार्यारम्भश्च",
+     "ncert_sections": "श्लोकाः ६-८",
+     "concepts": [
+      {
+       "concept_tag": "rajno-jagarukata",
+       "learning_objective": "छात्रः राज्ञः निद्रा-जागरण-चिन्तन-विषयकं निर्देशं जानाति।"
+      },
+      {
+       "concept_tag": "mantrana-vidhih",
+       "learning_objective": "छात्रः मन्त्रणायाः गोपनीयतायाः विधिं व्याख्याति।"
+      },
+      {
+       "concept_tag": "kshipra-karyarambhah",
+       "learning_objective": "छात्रः 'लघुमूलं महोदयम्' कार्यं शीघ्रम् आरब्धव्यम् इति नीतिं प्रयुङ्क्ते।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH01-T4",
+     "topic_number": 4,
+     "title": "पण्डितामात्यस्य महत्त्वं भृत्यानां नियोजनं च",
+     "ncert_sections": "श्लोकाः ९-१२",
+     "concepts": [
+      {
+       "concept_tag": "pandita-mahattvam",
+       "learning_objective": "छात्रः सहस्रमूर्खेभ्यः एकस्य पण्डितस्य श्रेष्ठत्वं विवेचयति।"
+      },
+      {
+       "concept_tag": "bhritya-niyojanam",
+       "learning_objective": "छात्रः योग्यतानुसारं भृत्यानाम् अमात्यानां च नियोजनस्य नियमं जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH01-T5",
+     "topic_number": 5,
+     "title": "सेनापतिः भक्तवेतनं च",
+     "ncert_sections": "श्लोकाः १३-१५",
+     "concepts": [
+      {
+       "concept_tag": "senapati-gunah",
+       "learning_objective": "छात्रः सेनापतेः अपेक्षितान् गुणान् परिचिनोति।"
+      },
+      {
+       "concept_tag": "vetana-kalah",
+       "learning_objective": "छात्रः यथाकालं भक्तवेतनदानस्य महत्त्वं विलम्बस्य दुष्परिणामं च विश्लेषयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH01-T6",
+     "topic_number": 6,
+     "title": "शब्दार्थाः सन्धिः प्रकृतिप्रत्ययौ च",
+     "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, सन्धिविच्छेदः, अभ्यासः",
+     "concepts": [
+      {
+       "concept_tag": "shabdarthah",
+       "learning_objective": "छात्रः पाठस्य कठिनपदानाम् अर्थान् जानाति।"
+      },
+      {
+       "concept_tag": "sandhi-vichchhedah",
+       "learning_objective": "छात्रः पाठगतपदानां सन्धिविच्छेदं करोति।"
+      },
+      {
+       "concept_tag": "prakriti-pratyayah",
+       "learning_objective": "छात्रः पाठगतपदेषु प्रकृतिं प्रत्ययं च पृथक् करोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH01-T7",
+     "topic_number": 7,
+     "title": "रामायणपरिचयः भावविस्तारश्च",
+     "ncert_sections": "योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "ramayana-parichayah",
+       "learning_objective": "छात्रः रामायणस्य काण्डानि पाठस्य स्रोतं च जानाति।"
+      },
+      {
+       "concept_tag": "rajaniti-bhavavistarah",
+       "learning_objective": "छात्रः मनुस्मृतेः शुक्रनीतेः च प्रशासनविषयकान् विचारान् पाठेन सह योजयति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHSK1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "सूक्तिसुधा",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khsk102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHSK1-CH02-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः, वासयोग्यः देशः, सच्चः बान्धवः च",
+     "ncert_sections": "पाठपरिचयः, श्लोकौ 1-2",
+     "concepts": [
+      {
+       "concept_tag": "path-parichaya-srota",
+       "learning_objective": "छात्रः जानाति यत् पाठः चाणक्यनीतेः हितोपदेशात् च सङ्कलितः।"
+      },
+      {
+       "concept_tag": "vasa-yogya-desha",
+       "learning_objective": "छात्रः कस्मिन् देशे वासः न कर्तव्यः इति श्लोकानुसारं निर्दिशति।"
+      },
+      {
+       "concept_tag": "satya-bandhava",
+       "learning_objective": "छात्रः आपत्सु यः तिष्ठति स एव बान्धवः इति लक्षणं व्याख्याति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH02-T2",
+     "topic_number": 2,
+     "title": "समर्थादीनां स्वभावः सत्सङ्गतिः च",
+     "ncert_sections": "श्लोकौ 3-4",
+     "concepts": [
+      {
+       "concept_tag": "samartha-vyavasayi-svabhava",
+       "learning_objective": "छात्रः समर्थानां व्यवसायिनां सविद्यानां प्रियवादिनां च विशेषतां व्याख्याति।"
+      },
+      {
+       "concept_tag": "satsangati-prabhava",
+       "learning_objective": "छात्रः काचकाञ्चनदृष्टान्तेन सत्सङ्गतेः प्रभावं विवेचयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH02-T3",
+     "topic_number": 3,
+     "title": "मनस्विनः वृत्तिः परार्थे त्यागः च",
+     "ncert_sections": "श्लोकौ 5-6",
+     "concepts": [
+      {
+       "concept_tag": "manasvi-dvayi-vritti",
+       "learning_objective": "छात्रः कुसुमस्तबकोपमया मनस्विनः द्विविधां वृत्तिं व्याख्याति।"
+      },
+      {
+       "concept_tag": "parartha-tyaga",
+       "learning_objective": "छात्रः प्राज्ञः परार्थे धनं जीवितं च त्यजेत् इति उपदेशं विवेचयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH02-T4",
+     "topic_number": 4,
+     "title": "षड् दोषाः षड् जीवलोकसुखानि च",
+     "ncert_sections": "श्लोकौ 7-8",
+     "concepts": [
+      {
+       "concept_tag": "shad-dosha",
+       "learning_objective": "छात्रः भूतिम् इच्छता पुरुषेण त्याज्यान् षड् दोषान् अभिजानाति।"
+      },
+      {
+       "concept_tag": "shad-sukhani",
+       "learning_objective": "छात्रः जीवलोकस्य षट् सुखानि श्लोकानुसारं निर्दिशति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH02-T5",
+     "topic_number": 5,
+     "title": "शब्दार्थाः व्याकरणं च",
+     "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः",
+     "concepts": [
+      {
+       "concept_tag": "samasa-vigraha",
+       "learning_objective": "छात्रः पाठगतानां समस्तपदानां विग्रहं समासनाम च निर्धारयति।"
+      },
+      {
+       "concept_tag": "prakriti-pratyaya",
+       "learning_objective": "छात्रः पाठगतपदानां प्रकृतिप्रत्ययविभागं करोति।"
+      },
+      {
+       "concept_tag": "shabdartha-paryaya",
+       "learning_objective": "छात्रः पाठगतपदानां पर्यायान् अर्थान् च अभिजानाति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHSK1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "ऋतुचर्या",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khsk103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHSK1-CH03-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः – चरकसंहिता ऋतुचर्या च",
+     "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "charaka-samhita-parichaya",
+       "learning_objective": "छात्रः पाठस्य स्रोतं चरकसंहितां, तस्याः मूलरचयितारम् अग्निवेशं प्रतिसंस्कर्तारं चरकं च अभिजानाति।"
+      },
+      {
+       "concept_tag": "ritucharya-prayojana",
+       "learning_objective": "छात्रः षण्णाम् ऋतूनां नामानि ऋतुचर्यायाः प्रयोजनं च अवगच्छति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH03-T2",
+     "topic_number": 2,
+     "title": "हेमन्तः शिशिरश्च",
+     "ncert_sections": "श्लोकाः 1-5",
+     "concepts": [
+      {
+       "concept_tag": "hemanta-sevya-varjya",
+       "learning_objective": "छात्रः हेमन्ते सेवनीयानि वर्जनीयानि च अन्नपानानि निर्दिशति।"
+      },
+      {
+       "concept_tag": "shishira-charya",
+       "learning_objective": "छात्रः हेमन्तशिशिरयोः साम्यं शिशिरे विशेषचर्यां च व्याख्याति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH03-T3",
+     "topic_number": 3,
+     "title": "वसन्तः",
+     "ncert_sections": "श्लोकौ 6-7",
+     "concepts": [
+      {
+       "concept_tag": "vasanta-shleshma-prakopa",
+       "learning_objective": "छात्रः वसन्ते सञ्चितस्य श्लेष्मणः प्रकोपं तस्य परिणामं च वर्णयति।"
+      },
+      {
+       "concept_tag": "vasanta-vamana-varjana",
+       "learning_objective": "छात्रः वसन्ते करणीयानि वमनादिकर्माणि वर्जनीयम् आहारं च निर्दिशति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH03-T4",
+     "topic_number": 4,
+     "title": "ग्रीष्मः",
+     "ncert_sections": "श्लोकौ 8-9",
+     "concepts": [
+      {
+       "concept_tag": "grishma-surya-sneha",
+       "learning_objective": "छात्रः ग्रीष्मे सूर्यः जगतः स्नेहं पिबति इति वर्णनस्य अभिप्रायं अवगच्छति।"
+      },
+      {
+       "concept_tag": "grishma-ahara",
+       "learning_objective": "छात्रः ग्रीष्मे हितम् अन्नपानं वर्जनीयानि च विषयान् निर्दिशति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH03-T5",
+     "topic_number": 5,
+     "title": "वर्षा शरद् च",
+     "ncert_sections": "श्लोकाः 10-14",
+     "concepts": [
+      {
+       "concept_tag": "varsha-pavana-prakopa",
+       "learning_objective": "छात्रः वर्षासु अग्निबलक्षयस्य वातादिप्रकोपस्य च कारणानि भोजननियमं च व्याख्याति।"
+      },
+      {
+       "concept_tag": "sharad-pitta-shamana",
+       "learning_objective": "छात्रः शरदि पित्तप्रकोपस्य कारणं तस्य शमनोपायान् च वर्णयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH03-T6",
+     "topic_number": 6,
+     "title": "व्याकरणम् – सन्धिः समासः प्रकृतिप्रत्ययौ च",
+     "ncert_sections": "अभ्यासः",
+     "concepts": [
+      {
+       "concept_tag": "sandhi-viccheda",
+       "learning_objective": "छात्रः पाठगतानां पदानां सन्धिविच्छेदं करोति।"
+      },
+      {
+       "concept_tag": "samasa-vigraha",
+       "learning_objective": "छात्रः पाठगतानां समस्तपदानां विग्रहं समासनाम च निर्धारयति।"
+      },
+      {
+       "concept_tag": "prakriti-pratyaya",
+       "learning_objective": "छात्रः पाठगतेषु पदेषु प्रकृतिं प्रत्ययं च अभिजानाति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHSK1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "वीरः सर्वदमनः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khsk104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHSK1-CH04-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः कथायाः पृष्ठभूमिः च",
+     "ncert_sections": "पाठपरिचयः",
+     "concepts": [
+      {
+       "concept_tag": "path-srota-kalidasa",
+       "learning_objective": "छात्रः पाठस्य स्रोतं कालिदासस्य अभिज्ञानशाकुन्तलस्य सप्तमम् अङ्कं तस्य मूलकथां च अभिजानाति।"
+      },
+      {
+       "concept_tag": "kathavastu-prishthabhumi",
+       "learning_objective": "छात्रः दुष्यन्तस्य मारीचाश्रमागमनस्य शकुन्तलायाः तत्र निवासस्य च पृष्ठभूमिं व्याख्याति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH04-T2",
+     "topic_number": 2,
+     "title": "शकुनं नेपथ्यवचनं च",
+     "ncert_sections": "श्लोकः 1, नेपथ्यवचनम्",
+     "concepts": [
+      {
+       "concept_tag": "bahu-spandana-shakuna",
+       "learning_objective": "छात्रः दुष्यन्तस्य बाहुस्पन्दनविषयकस्य प्रथमश्लोकस्य भावं विश्लेषयति।"
+      },
+      {
+       "concept_tag": "nepathya-vachana-abhumi",
+       "learning_objective": "छात्रः नेपथ्यवचनस्य 'अभूमिरियमविनयस्य' इति दुष्यन्तोक्तेः च सन्दर्भम् अवगच्छति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH04-T3",
+     "topic_number": 3,
+     "title": "सिंहशिशुना सह बालस्य क्रीडा",
+     "ncert_sections": "श्लोकः 2, तापसीनां वचनानि",
+     "concepts": [
+      {
+       "concept_tag": "simhashishu-karshana",
+       "learning_objective": "छात्रः सिंहशिशुं बलात् कर्षतः बालस्य वर्णनं श्लोकार्थं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "balasya-sahasa-namakarana",
+       "learning_objective": "छात्रः बालस्य शौर्यं 'सर्वदमनः' इति नाम्नः औचित्यं च विवेचयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH04-T4",
+     "topic_number": 4,
+     "title": "क्रीडनकं दुष्यन्तस्य वात्सल्यं च",
+     "ncert_sections": "श्लोकः 3, क्रीडनकप्रसङ्गः",
+     "concepts": [
+      {
+       "concept_tag": "mrittika-mayura-kridanaka",
+       "learning_objective": "छात्रः बालं सिंहशिशोः विरमयितुं तापसीनाम् उपायं मृत्तिकामयूरं च वर्णयति।"
+      },
+      {
+       "concept_tag": "dushyanta-vatsalya",
+       "learning_objective": "छात्रः बालं प्रति दुष्यन्तस्य स्नेहस्य तृतीयश्लोकस्य च भावं विश्लेषयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH04-T5",
+     "topic_number": 5,
+     "title": "वंशपरिचयः मातुः नामसङ्केतः च",
+     "ncert_sections": "पाठस्य अन्तिमः अंशः",
+     "concepts": [
+      {
+       "concept_tag": "puruvamsha-ekanvaya",
+       "learning_objective": "छात्रः बालस्य पुरुवंशपरिचयं दुष्यन्तस्य 'एकान्वयः' इति चिन्तनं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "shakuntalavanya-shlesha",
+       "learning_objective": "छात्रः 'शकुन्तलावण्यम्' इति पदस्य अर्थं तेन जातं मातुः नामसङ्केतं च विश्लेषयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH04-T6",
+     "topic_number": 6,
+     "title": "व्याकरणम् – सन्धिः समासः प्रकृतिप्रत्ययौ च",
+     "ncert_sections": "अभ्यासः, शब्दार्थाः टिप्पण्यः च",
+     "concepts": [
+      {
+       "concept_tag": "sandhi-viccheda",
+       "learning_objective": "छात्रः पाठगतानां पदानां सन्धिविच्छेदं करोति।"
+      },
+      {
+       "concept_tag": "samasa-vigraha",
+       "learning_objective": "छात्रः पाठगतानां समस्तपदानां विग्रहं समासनाम च निर्धारयति।"
+      },
+      {
+       "concept_tag": "prakriti-pratyaya",
+       "learning_objective": "छात्रः पाठगतानां पदानां प्रकृतिप्रत्ययौ धातुरूपविवरणं च निर्दिशति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH04-T7",
+     "topic_number": 7,
+     "title": "नाट्यपारिभाषिकशब्दाः",
+     "ncert_sections": "योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "anka-paribhasha",
+       "learning_objective": "छात्रः नाटके अङ्कस्य स्वरूपं सङ्ख्यां च जानाति।"
+      },
+      {
+       "concept_tag": "nepathya-paribhasha",
+       "learning_objective": "छात्रः नेपथ्यस्य अर्थं नाटके तस्य प्रयोगं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "atmagata-paribhasha",
+       "learning_objective": "छात्रः 'आत्मगतम्' 'प्रकाशम्' इति निर्देशयोः भेदं पाठे प्रयुङ्क्ते।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHSK1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "शुकशावकोदन्तः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khsk105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHSK1-CH05-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः - बाणभट्टः कादम्बरी च",
+     "ncert_sections": "पाठपरिचयः",
+     "concepts": [
+      {
+       "concept_tag": "kadambari-srotah",
+       "learning_objective": "छात्रः पाठस्य स्रोतं (बाणभट्टस्य कादम्बर्याः कथामुखम्) कथाप्रसङ्गं च ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "banabhatta-gadyashaili",
+       "learning_objective": "छात्रः बाणभट्टस्य गद्यशैल्याः वैशिष्ट्यानि अभिज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH05-T2",
+     "topic_number": 2,
+     "title": "विन्ध्याटवी, शुकस्य जन्म पितुः वात्सल्यं च",
+     "ncert_sections": "गद्यांशः 1, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "vindhyatavi-pampa",
+       "learning_objective": "छात्रः विन्ध्याटव्याः पम्पासरसः शाल्मलीवृक्षस्य च वर्णनं ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "pitu-vatsalyam",
+       "learning_objective": "छात्रः मातृहीनस्य शुकस्य संवर्धने पितुः वात्सल्यं विश्लेषयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH05-T3",
+     "topic_number": 3,
+     "title": "मृगयाकोलाहलः शबरजीवनं च",
+     "ncert_sections": "गद्यांशः 2-3",
+     "concepts": [
+      {
+       "concept_tag": "mrigaya-kolahalah",
+       "learning_objective": "छात्रः मृगयाकोलाहलस्य शुकस्य च भयस्य प्रसङ्गं वर्णयिष्यति।"
+      },
+      {
+       "concept_tag": "shabara-jivanam",
+       "learning_objective": "छात्रः शुकदृष्ट्या वर्णितं शबराणां जीवनं तस्य मूल्याङ्कनं च अवगमिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH05-T4",
+     "topic_number": 4,
+     "title": "जरच्छबरस्य क्रौर्यं पितुः मरणं च",
+     "ncert_sections": "गद्यांशः 4-5",
+     "concepts": [
+      {
+       "concept_tag": "jaracchabara-krauryam",
+       "learning_objective": "छात्रः जरच्छबरस्य निर्दयकर्म 'किमिव हि दुष्करमकरुणानाम्' इति सूक्तिं च व्याख्यास्यति।"
+      },
+      {
+       "concept_tag": "pitu-balidanam",
+       "learning_objective": "छात्रः पुत्ररक्षणाय पितुः प्रयत्नं शुकस्य पलायनं च विश्लेषयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH05-T5",
+     "topic_number": 5,
+     "title": "शुकस्य दुर्दशा जीविताशा च",
+     "ncert_sections": "गद्यांशः 6",
+     "concepts": [
+      {
+       "concept_tag": "jivitasha",
+       "learning_objective": "छात्रः 'नास्ति जीवितादन्यदभिमततरम्' इत्यादीनां सूक्तीनां भावम् अवगमिष्यति।"
+      },
+      {
+       "concept_tag": "shukasya-durdasha",
+       "learning_objective": "छात्रः तापपिपासादिभिः पीडितस्य शुकस्य दशां वर्णयितुं शक्ष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH05-T6",
+     "topic_number": 6,
+     "title": "हारीतस्य करुणा",
+     "ncert_sections": "गद्यांशः 7",
+     "concepts": [
+      {
+       "concept_tag": "harita-karuna",
+       "learning_objective": "छात्रः हारीतेन कृतं शुकस्य रक्षणं क्रमशः वर्णयिष्यति।"
+      },
+      {
+       "concept_tag": "satam-chetamsi",
+       "learning_objective": "छात्रः 'प्रायेणाकारणमित्राणि... सतां चेतांसि' इति सूक्तेः भावं पात्रतुलनां च करिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH05-T7",
+     "topic_number": 7,
+     "title": "व्याकरणम् - सन्धिः, प्रकृतिप्रत्ययः, समासः",
+     "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः 6, 8",
+     "concepts": [
+      {
+       "concept_tag": "sandhi-vichchhedah",
+       "learning_objective": "छात्रः पाठगतपदानां सन्धिविच्छेदं सन्धिनाम च ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "prakriti-pratyayah",
+       "learning_objective": "छात्रः पाठगतपदानां प्रकृतिप्रत्ययविभागं करिष्यति।"
+      },
+      {
+       "concept_tag": "samasah",
+       "learning_objective": "छात्रः पाठगतसमस्तपदानां समासं निर्धारयिष्यति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHSK1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "भव्यः सत्याग्रहाश्रमः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khsk106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHSK1-CH06-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः आश्रमस्य स्थापना च",
+     "ncert_sections": "श्लोकाः 1-2",
+     "concepts": [
+      {
+       "concept_tag": "path-parichayah",
+       "learning_objective": "पाठस्य स्रोतग्रन्थं रचयित्रीं च ज्ञात्वा पाठस्य पृष्ठभूमिं वर्णयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "ashrama-sthapana",
+       "learning_objective": "साबरमतीतीरे महात्मना सानुयात्रिकेण आश्रमस्य स्थापनां वर्णयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "satyam-pramanam",
+       "learning_objective": "मनोवाक्कायकर्मभिः सत्यस्य प्रामाण्यात् आश्रमनाम्नः यथार्थतां विवेचयितुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH06-T2",
+     "topic_number": 2,
+     "title": "आश्रमस्य नव व्रतानि",
+     "ncert_sections": "श्लोकौ 3-4",
+     "concepts": [
+      {
+       "concept_tag": "nava-vratani",
+       "learning_objective": "सत्याग्रहाश्रमस्य नव व्रतानि तेषां प्रयोजनं च अभिज्ञातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "vrata-shabdarthah",
+       "learning_objective": "अस्तेयम्, अपरिग्रहः, अन्त्यजसमुद्धारः इत्यादीनां व्रतपदानाम् अर्थं स्पष्टीकर्तुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH06-T3",
+     "topic_number": 3,
+     "title": "महात्मनः स्वभावः",
+     "ncert_sections": "श्लोकाः 5-7",
+     "concepts": [
+      {
+       "concept_tag": "mahatmanah-gunah",
+       "learning_objective": "निर्ममः, मिताशी, सुस्मिताननः इत्यादिभिः विशेषणैः महात्मनः गुणान् वर्णयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "buddha-upama",
+       "learning_objective": "बुद्धेन सत्यप्रदीपेन च कृतां महात्मनः तुलनां विश्लेषयितुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH06-T4",
+     "topic_number": 4,
+     "title": "सत्यस्य बलं महात्मनः उपदेशः च",
+     "ncert_sections": "श्लोकाः 8-15",
+     "concepts": [
+      {
+       "concept_tag": "satyasya-balam",
+       "learning_objective": "सर्वबलेभ्यः सत्यबलस्य श्रेष्ठतां व्याख्यातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "bhiruta-ninda",
+       "learning_objective": "अधर्मम् अप्रतिरुन्धतः भीरोः पलायनस्य च निन्दां विवेचयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "ashrama-namakaranam",
+       "learning_objective": "आश्रमस्य 'सत्याग्रहाश्रमः' इति नामकरणस्य कारणं स्पष्टीकर्तुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH06-T5",
+     "topic_number": 5,
+     "title": "महात्मनः आचरणं तस्य प्रभावः च",
+     "ncert_sections": "श्लोकाः 16-20",
+     "concepts": [
+      {
+       "concept_tag": "upavasa-prayashchittam",
+       "learning_objective": "अन्यैः कृतस्य अपराधस्य दोषं स्वीकृत्य महात्मनः उपवासतपः वर्णयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "atmavat-sarvabhutani",
+       "learning_objective": "आत्मवत् सर्वभूतदर्शनस्य जनानां सङ्कल्पस्य च प्रभावं विश्लेषयितुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH06-T6",
+     "topic_number": 6,
+     "title": "पाठाधारितं व्याकरणम्",
+     "ncert_sections": "अभ्यासः 3, 4, 6",
+     "concepts": [
+      {
+       "concept_tag": "sandhi-viccheda",
+       "learning_objective": "पाठगतपदानां सन्धिविच्छेदं कर्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "samasa-vigraha",
+       "learning_objective": "पाठगतसमस्तपदानां विग्रहं समासनाम च निर्दिष्टुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "pratyaya-parichaya",
+       "learning_objective": "पाठगतपदेषु प्रकृतिप्रत्ययविभागं कर्तुं शक्नुयात्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHSK1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "सङ्गीतानुरागी सुब्बण्णः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khsk107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHSK1-CH07-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः - सुब्बण्ण-उपन्यासः तस्य नायकः च",
+     "ncert_sections": "पाठपरिचयः",
+     "concepts": [
+      {
+       "concept_tag": "subbanna-upanyasa-srotah",
+       "learning_objective": "छात्रः पाठस्य स्रोतं (कन्नडोपन्यासः), मूललेखकं संस्कृतानुवादकं च ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "subbanna-parichayah",
+       "learning_objective": "छात्रः कथानायकस्य सुब्बण्णस्य परिचयं पाठांशस्य विषयं च अवगमिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH07-T2",
+     "topic_number": 2,
+     "title": "सुब्बण्णस्य सङ्गीताभिलाषः राजभवने पुराणप्रवचनं च",
+     "ncert_sections": "गद्यांशः 1",
+     "concepts": [
+      {
+       "concept_tag": "sangita-abhilashah",
+       "learning_objective": "छात्रः सुब्बण्णस्य सहजस्य सङ्गीताभिलाषस्य दृढीभवनस्य च कारणं ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "rajabhavane-pravachanam",
+       "learning_objective": "छात्रः राजभवने अन्तःपुरस्त्रीजनसमक्षं शास्त्रिणः प्रवचनस्य बालस्य गानस्य च प्रसङ्गं वर्णयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH07-T3",
+     "topic_number": 3,
+     "title": "महाराजस्य आगमनं वर्णनं च",
+     "ncert_sections": "गद्यांशः 1-2",
+     "concepts": [
+      {
+       "concept_tag": "maharaja-varnanam",
+       "learning_objective": "छात्रः बालदृष्ट्या कृतं महाराजस्य मुखस्य तिलकस्य श्मश्रुकूर्चस्य च वर्णनं ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "bala-raja-avalokanam",
+       "learning_objective": "छात्रः बालस्य विस्मयं राज्ञः बालविषयकं मतं च विश्लेषयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH07-T4",
+     "topic_number": 4,
+     "title": "राज्ञः बालस्य च संवादः गानं च",
+     "ncert_sections": "गद्यांशः 2",
+     "concepts": [
+      {
+       "concept_tag": "raja-bala-samvadah",
+       "learning_objective": "छात्रः राज्ञः प्रश्नान् बालस्य उत्तराणि तेषाम् आशयं च अवगमिष्यति।"
+      },
+      {
+       "concept_tag": "shloka-gayanam",
+       "learning_objective": "छात्रः सुब्बण्णेन गीतस्य कण्ठस्थस्य च श्लोकस्य परिचयं ज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH07-T5",
+     "topic_number": 5,
+     "title": "पारितोषिकं राज्ञः प्रोत्साहनं च",
+     "ncert_sections": "गद्यांशः 3, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "paritoshikam",
+       "learning_objective": "छात्रः परितुष्टेन राज्ञा दत्तस्य पारितोषिकस्य वचनस्य च ज्ञानं प्राप्स्यति।"
+      },
+      {
+       "concept_tag": "raja-protsahanam",
+       "learning_objective": "छात्रः कलागुणग्राहिणः राज्ञः चरित्रं प्रोत्साहनस्य महत्त्वं च मूल्याङ्कयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH07-T6",
+     "topic_number": 6,
+     "title": "व्याकरणम् - प्रकृतिप्रत्ययः, समासः, लकारः",
+     "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः",
+     "concepts": [
+      {
+       "concept_tag": "prakriti-pratyayah",
+       "learning_objective": "छात्रः पाठगतपदानां प्रकृतिप्रत्ययविभागं करिष्यति।"
+      },
+      {
+       "concept_tag": "samasah",
+       "learning_objective": "छात्रः पाठगतसमस्तपदानां विग्रहं समासनाम च निर्धारयिष्यति।"
+      },
+      {
+       "concept_tag": "lakara-prayogah",
+       "learning_objective": "छात्रः पाठगतक्रियापदानां लकारं वचनं कालबोधं च ज्ञास्यति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHSK1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "वस्त्रविक्रयः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khsk108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHSK1-CH08-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः – स्रोतः, लेखकः, ऐतिहासिकः सन्दर्भः च",
+     "ncert_sections": "प्रस्तावना, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "srotah-lekhakah",
+       "learning_objective": "पाठः कस्मात् नाटकात् सङ्कलितः, तस्य प्रणेता कः इति जानीयात्।"
+      },
+      {
+       "concept_tag": "rajamudrankita-pramanapatram",
+       "learning_objective": "वैदेशिकः राजमुद्राङ्कितं प्रमाणपत्रं कथं किमर्थं च प्राप्तवान् इति वदेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH08-T2",
+     "topic_number": 2,
+     "title": "प्रथमतन्तुवायस्य पटविक्रयः",
+     "ncert_sections": "मूलपाठः (आरम्भः – 'त्वं जानीहि व्रजाधुना')",
+     "concepts": [
+      {
+       "concept_tag": "mulya-varta",
+       "learning_objective": "तन्तुवायस्य श्रेष्ठिनः गौराङ्गस्य च मूल्यवार्तां जानीयात्।"
+      },
+      {
+       "concept_tag": "tantuvayasya-parishramah",
+       "learning_objective": "तन्तुवायस्य परिश्रमं कुटुम्बचिन्तां च अवगच्छेत्।"
+      },
+      {
+       "concept_tag": "gaurangasya-balat-krayah",
+       "learning_objective": "गौराङ्गः प्रमाणपत्रबलेन अल्पमूल्येन पटं कथं गृह्णाति इति वदेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH08-T3",
+     "topic_number": 3,
+     "title": "द्वितीयतन्तुवायस्य प्रसङ्गः – न्यायान्यायविचारः",
+     "ncert_sections": "मूलपाठः ('श्रेष्ठिन्! गृहाण पटम्' – 'नातः परं पटं निर्मास्यावः')",
+     "concepts": [
+      {
+       "concept_tag": "shreshthinah-asamarthata",
+       "learning_objective": "श्रेष्ठी पटं क्रेतुं किमर्थम् असमर्थः इति जानीयात्।"
+      },
+      {
+       "concept_tag": "gauranga-anyayah",
+       "learning_objective": "गौराङ्गस्य स्वेच्छया मूल्यनिर्धारणम् अन्यायरूपेण विश्लेषयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH08-T4",
+     "topic_number": 4,
+     "title": "गौराङ्गस्य चिन्तनम् – सूक्ष्मपटसौन्दर्यं वाणिज्यचिन्ता च",
+     "ncert_sections": "मूलपाठः ('अनिर्वचनीयम् एतत्पटयोः सौन्दर्यम्' – श्लोकः)",
+     "concepts": [
+      {
+       "concept_tag": "sukshmapata-saundaryam",
+       "learning_objective": "भारतीयसूक्ष्मपटस्य सौन्दर्यवर्णनं जानीयात्।"
+      },
+      {
+       "concept_tag": "vanijya-chinta-shlokah",
+       "learning_objective": "श्लोके प्रकटितां गौराङ्गस्य वाणिज्यचिन्तां दुरभिसन्धिं च विश्लेषयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH08-T5",
+     "topic_number": 5,
+     "title": "तन्तुवायानाम् उत्पीडनं प्रतिरोधः च",
+     "ncert_sections": "मूलपाठः (दौवारिकप्रवेशः – अन्तः)",
+     "concepts": [
+      {
+       "concept_tag": "utpidanam-kasha",
+       "learning_objective": "गौराङ्गः तन्तुवायान् कथम् उत्पीडयति इति वदेत्।"
+      },
+      {
+       "concept_tag": "tantuvayanam-pratirodhah",
+       "learning_objective": "तन्तुवायानाम् अनुचितमूल्ये पटनिर्माणस्य निषेधम् अवगच्छेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH08-T6",
+     "topic_number": 6,
+     "title": "शब्दार्थाः व्याकरणं च",
+     "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः ४, ६",
+     "concepts": [
+      {
+       "concept_tag": "shabdarthah",
+       "learning_objective": "पाठस्य कठिनपदानाम् अर्थं जानीयात्।"
+      },
+      {
+       "concept_tag": "sandhi-vichchhedah",
+       "learning_objective": "पाठस्थपदानां सन्धिविच्छेदं सन्धिनाम च कुर्यात्।"
+      },
+      {
+       "concept_tag": "dhatu-pratyaya-rupani",
+       "learning_objective": "पाठस्थपदेषु धातुं प्रत्ययं लकारादिकं च पृथक् कुर्यात्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHSK1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "यद्भूतहितं तत्सत्यम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khsk109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHSK1-CH09-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः पुष्करिणीवर्णनं च",
+     "ncert_sections": "पाठपरिचयः, प्रथमः अनुच्छेदः",
+     "concepts": [
+      {
+       "concept_tag": "lekhaka-parichaya",
+       "learning_objective": "छात्रः कथायाः स्रोतं कथाकारम् आचार्यकेशवचन्द्रदाशं च अभिजानाति।"
+      },
+      {
+       "concept_tag": "pushkarini-varnana",
+       "learning_objective": "छात्रः ग्रामस्य पद्मिनीनाम्न्याः पुष्करिण्याः उपयोगं मुनेः आश्रमं च वर्णयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH09-T2",
+     "topic_number": 2,
+     "title": "मुनेः चिन्ता मिथ्यावादी बालकश्च",
+     "ncert_sections": "द्वितीयः तृतीयः च अनुच्छेदौ",
+     "concepts": [
+      {
+       "concept_tag": "muni-chinta",
+       "learning_objective": "छात्रः प्रदूषितजलात् जनानां रोगस्य कारणं मुनेः चिन्तां च व्याख्याति।"
+      },
+      {
+       "concept_tag": "mithyavadi-balaka",
+       "learning_objective": "छात्रः मिथ्यावादिनः कृष्णस्य घटनां मुनेः व्यवहारं च विश्लेषयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH09-T3",
+     "topic_number": 3,
+     "title": "महामत्स्यस्य वार्ता अन्वेषणं च",
+     "ncert_sections": "चतुर्थः पञ्चमः च अनुच्छेदौ",
+     "concepts": [
+      {
+       "concept_tag": "mahamatsya-varta",
+       "learning_objective": "छात्रः कृष्णेन प्रसारितां महामत्स्यवार्तां मुनेः साक्षित्वं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "matsya-anveshana",
+       "learning_objective": "छात्रः ग्रामजनानां मत्स्यान्वेषणं तस्य परिणामं च वर्णयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH09-T4",
+     "topic_number": 4,
+     "title": "पुष्करिण्याः शोधनम्",
+     "ncert_sections": "षष्ठः सप्तमः च अनुच्छेदौ",
+     "concepts": [
+      {
+       "concept_tag": "bandhachheda-pankoddhara",
+       "learning_objective": "छात्रः बन्धच्छेद-पङ्कोद्धारादीनां कार्याणां क्रमं मुनेः परोक्षयोजनां च व्याख्याति।"
+      },
+      {
+       "concept_tag": "nirmala-jala-niyama",
+       "learning_objective": "छात्रः शोधनस्य परिणामं जलरक्षणाय कृतं नियमं च अभिजानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH09-T5",
+     "topic_number": 5,
+     "title": "सत्यस्य स्वरूपम् – यद्भूतहितं तत्सत्यम्",
+     "ncert_sections": "अन्तिमः अनुच्छेदः, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "bhutahita-satya",
+       "learning_objective": "छात्रः 'यत् भूतहितं तत् सत्यम्' इति मुनेः उपदेशस्य शीर्षकस्य च सार्थकतां मूल्याङ्कयति।"
+      },
+      {
+       "concept_tag": "samanantara-suktayah",
+       "learning_objective": "छात्रः सत्यविषयिणीः समानान्तरसूक्तीः तासां स्रोतांसि च अभिजानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH09-T6",
+     "topic_number": 6,
+     "title": "व्याकरणम् – सन्धिः समासः प्रकृतिप्रत्ययौ च",
+     "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः",
+     "concepts": [
+      {
+       "concept_tag": "sandhi-viccheda",
+       "learning_objective": "छात्रः पाठगतानां पदानां सन्धिविच्छेदं करोति।"
+      },
+      {
+       "concept_tag": "samasa-vigraha",
+       "learning_objective": "छात्रः पाठगतानां समस्तपदानां विग्रहं समासनाम च निर्धारयति।"
+      },
+      {
+       "concept_tag": "prakriti-pratyaya",
+       "learning_objective": "छात्रः पाठगतेषु पदेषु प्रकृतिं प्रत्ययं च अभिजानाति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHSK1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "स मे प्रियः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khsk110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHSK1-CH10-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः इन्द्रियसंयमः अव्यक्तोपासना च",
+     "ncert_sections": "पाठपरिचयः, पद्ये 1-2",
+     "concepts": [
+      {
+       "concept_tag": "gita-bhaktiyoga-parichaya",
+       "learning_objective": "छात्रः पाठस्य स्रोतं श्रीमद्भगवद्गीतायाः द्वादशम् अध्यायं भक्तियोगं च अभिजानाति।"
+      },
+      {
+       "concept_tag": "indriya-samyama-samabuddhi",
+       "learning_objective": "छात्रः इन्द्रियसंयमस्य समबुद्धेः सर्वभूतहितरतेः च फलं वर्णयति।"
+      },
+      {
+       "concept_tag": "avyakta-upasana-klesha",
+       "learning_objective": "छात्रः अव्यक्तोपासकानां क्लेशस्य कारणं व्याख्याति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH10-T2",
+     "topic_number": 2,
+     "title": "अनन्यभक्तिः भगवतः उद्धारकत्वं च",
+     "ncert_sections": "पद्यानि 3-5",
+     "concepts": [
+      {
+       "concept_tag": "ananya-bhakti-sannyasa",
+       "learning_objective": "छात्रः सर्वकर्मसमर्पणस्य अनन्ययोगेन ध्यानस्य च स्वरूपं वर्णयति।"
+      },
+      {
+       "concept_tag": "samuddharta-mrityu-samsara",
+       "learning_objective": "छात्रः भगवान् कथं मृत्युसंसारसागरात् भक्तानाम् उद्धारं करोति इति व्याख्याति।"
+      },
+      {
+       "concept_tag": "mana-buddhi-niveshana",
+       "learning_objective": "छात्रः परमेश्वरे मनोबुद्ध्योः निवेशस्य उपदेशं तस्य फलं च अवगच्छति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH10-T3",
+     "topic_number": 3,
+     "title": "साधनक्रमः – अभ्यासः मत्कर्म कर्मफलत्यागश्च",
+     "ncert_sections": "पद्यानि 6-9",
+     "concepts": [
+      {
+       "concept_tag": "abhyasa-yoga",
+       "learning_objective": "छात्रः चित्तस्य अस्थिरतायाम् अभ्यासयोगस्य उपदेशं वर्णयति।"
+      },
+      {
+       "concept_tag": "matkarma-phalatyaga",
+       "learning_objective": "छात्रः मत्कर्मपरत्वस्य सर्वकर्मफलत्यागस्य च विकल्पान् क्रमेण व्याख्याति।"
+      },
+      {
+       "concept_tag": "shreyas-krama",
+       "learning_objective": "छात्रः अभ्यास-ज्ञान-ध्यान-कर्मफलत्यागानां श्रेष्ठताक्रमं विश्लेषयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH10-T4",
+     "topic_number": 4,
+     "title": "प्रियभक्तस्य लक्षणानि",
+     "ncert_sections": "पद्यानि 10-13",
+     "concepts": [
+      {
+       "concept_tag": "adveshta-maitri-karuna",
+       "learning_objective": "छात्रः अद्वेष्टृत्वं मैत्रीं करुणां निर्ममत्वं निरहङ्कारत्वं च प्रियभक्तस्य गुणरूपेण अभिजानाति।"
+      },
+      {
+       "concept_tag": "lokodvega-rahita",
+       "learning_objective": "छात्रः लोकात् उद्वेगरहितस्य लोकाय च अनुद्वेगकरस्य भक्तस्य स्वरूपं व्याख्याति।"
+      },
+      {
+       "concept_tag": "anapeksha-shuchi-daksha",
+       "learning_objective": "छात्रः अनपेक्षः शुचिः दक्षः उदासीनः गतव्यथः इत्यादीनां पदानाम् अर्थं वर्णयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH10-T5",
+     "topic_number": 5,
+     "title": "समत्वं स्थिरमतित्वं च",
+     "ncert_sections": "पद्यानि 14-16",
+     "concepts": [
+      {
+       "concept_tag": "harsha-shoka-samatva",
+       "learning_objective": "छात्रः हर्षद्वेषशोककाङ्क्षारहितस्य शुभाशुभपरित्यागिनः भक्तस्य स्वरूपं वर्णयति।"
+      },
+      {
+       "concept_tag": "shatru-mitra-samatva",
+       "learning_objective": "छात्रः शत्रुमित्रयोः मानापमानयोः निन्दास्तुत्योः च समत्वम् अवगच्छति।"
+      },
+      {
+       "concept_tag": "aniketa-sthiramati",
+       "learning_objective": "छात्रः अनिकेतः स्थिरमतिः मौनी सन्तुष्टः इति गुणान् व्याख्याति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH10-T6",
+     "topic_number": 6,
+     "title": "व्याकरणम् – सन्धिः समासः प्रकृतिप्रत्ययश्च",
+     "ncert_sections": "शब्दार्थाः, सन्धिविच्छेदः, अभ्यासः",
+     "concepts": [
+      {
+       "concept_tag": "sandhi-viccheda",
+       "learning_objective": "छात्रः पाठगतानां पदानां सन्धिविच्छेदं करोति।"
+      },
+      {
+       "concept_tag": "samasa-vigraha",
+       "learning_objective": "छात्रः पाठगतानां समस्तपदानां विग्रहं समासनाम च निर्धारयति।"
+      },
+      {
+       "concept_tag": "prakriti-pratyaya",
+       "learning_objective": "छात्रः पाठगतपदेषु प्रकृतिं प्रत्ययं च पृथक् करोति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHSK1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "अथ शिक्षां प्रवक्ष्यामि",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khsk111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHSK1-CH11-T1",
+     "topic_number": 1,
+     "title": "वेदाङ्गानि शिक्षायाः परिचयः च",
+     "ncert_sections": "पाठपरिचयः, श्लोकौ 18-19 (वेदपुरुषः), योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "vedanga-parichaya",
+       "learning_objective": "छात्रः षट् वेदाङ्गानि तेषु शिक्षायाः प्राथम्यं पाणिनीयशिक्षायाः परिचयं च जानाति।"
+      },
+      {
+       "concept_tag": "vedapurusha-angani",
+       "learning_objective": "छात्रः वेदपुरुषस्य अङ्गरूपेण वेदाङ्गानां (पादौ, हस्तौ, चक्षुः, श्रोत्रं, घ्राणं, मुखम्) सम्बन्धं निर्दिशति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH11-T2",
+     "topic_number": 2,
+     "title": "वर्णानां सङ्ख्या",
+     "ncert_sections": "श्लोकाः 1-3",
+     "concepts": [
+      {
+       "concept_tag": "varna-sankhya",
+       "learning_objective": "छात्रः शम्भुमते त्रिषष्टिः चतुःषष्टिः वा वर्णाः इति गणनां तस्याः विभागान् च अवगच्छति।"
+      },
+      {
+       "concept_tag": "parashrita-varnah",
+       "learning_objective": "छात्रः अनुस्वार-विसर्ग-जिह्वामूलीय-उपध्मानीयादीनां पराश्रितवर्णानां स्वरूपं जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH11-T3",
+     "topic_number": 3,
+     "title": "वर्णोत्पत्तिः वर्णविभागश्च",
+     "ncert_sections": "श्लोकाः 4-7",
+     "concepts": [
+      {
+       "concept_tag": "varnotpatti-prakriya",
+       "learning_objective": "छात्रः आत्म-बुद्धि-मनः-कायाग्नि-मारुतक्रमेण वर्णोत्पत्तेः प्रक्रियां व्याख्याति।"
+      },
+      {
+       "concept_tag": "varna-vibhaga-panchadha",
+       "learning_objective": "छात्रः स्वर-काल-स्थान-प्रयत्न-अनुप्रदानैः वर्णानां पञ्चधा विभागं स्वराणां कालनियमांश्च अवगच्छति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH11-T4",
+     "topic_number": 4,
+     "title": "वर्णानाम् उच्चारणस्थानानि",
+     "ncert_sections": "श्लोकाः 8-14, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "uchcharana-sthanani",
+       "learning_objective": "छात्रः वर्णानाम् अष्टौ स्थानानि प्रत्येकस्य वर्णस्य उच्चारणस्थानं च निर्धारयति।"
+      },
+      {
+       "concept_tag": "ushmanah-gatih-hakara",
+       "learning_objective": "छात्रः ऊष्मणः (विसर्गस्य) अष्टविधां गतिं हकारस्य उरस्य-कण्ठ्य-भेदं च विवेचयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH11-T5",
+     "topic_number": 5,
+     "title": "पाठकानां गुणाः दोषाः च",
+     "ncert_sections": "श्लोकाः 15-17",
+     "concepts": [
+      {
+       "concept_tag": "vyaghri-drishtanta",
+       "learning_objective": "छात्रः व्याघ्रीदृष्टान्तेन वर्णप्रयोगे सावधानतायाः आवश्यकतां व्याख्याति।"
+      },
+      {
+       "concept_tag": "pathaka-adhamah-gunah",
+       "learning_objective": "छात्रः षट् पाठकाधमान् षट् पाठकगुणान् च पृथक् करोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHSK1-CH11-T6",
+     "topic_number": 6,
+     "title": "पाणिनये नमः",
+     "ncert_sections": "श्लोकाः 20-22",
+     "concepts": [
+      {
+       "concept_tag": "panini-vandana",
+       "learning_objective": "छात्रः पाणिनेः योगदानं (अक्षरसमाम्नायः, कृत्स्नं व्याकरणम्) श्लोकार्थं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "shabdartha-vyakarana",
+       "learning_objective": "छात्रः पाठगतानां पदानाम् अर्थं विग्रहं उपसर्गं च अभिजानाति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

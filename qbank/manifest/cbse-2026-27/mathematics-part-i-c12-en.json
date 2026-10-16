@@ -1,0 +1,679 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "mathematics-part-i-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "mathematics",
+  "language": "english",
+  "title": "Mathematics Part-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lemh1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEMH1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Relations and Functions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH1-CH01-T1",
+     "topic_number": 1,
+     "title": "Relations as subsets; empty and universal relations",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "relation-as-subset",
+       "learning_objective": "Describe a relation in a set A as a subset of A x A and count the relations on a finite set."
+      },
+      {
+       "concept_tag": "empty-universal-relation",
+       "learning_objective": "Identify empty and universal (trivial) relations in a given set."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH01-T2",
+     "topic_number": 2,
+     "title": "Reflexive, symmetric and transitive relations",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "reflexive-relation",
+       "learning_objective": "Test whether a given relation is reflexive."
+      },
+      {
+       "concept_tag": "symmetric-relation",
+       "learning_objective": "Test whether a given relation is symmetric."
+      },
+      {
+       "concept_tag": "transitive-relation",
+       "learning_objective": "Test whether a given relation is transitive and find pairs needed for transitivity."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH01-T3",
+     "topic_number": 3,
+     "title": "Equivalence relations and equivalence classes",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "equivalence-relation",
+       "learning_objective": "Decide whether a relation is an equivalence relation by checking all three properties."
+      },
+      {
+       "concept_tag": "equivalence-class",
+       "learning_objective": "Find the equivalence class of an element under a given equivalence relation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH01-T4",
+     "topic_number": 4,
+     "title": "One-one and onto functions",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "one-one-function",
+       "learning_objective": "Determine whether a function is one-one (injective) or many-one."
+      },
+      {
+       "concept_tag": "onto-function",
+       "learning_objective": "Determine whether a function is onto (surjective) for a given co-domain."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH01-T5",
+     "topic_number": 5,
+     "title": "Bijective functions and functions on finite sets",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "bijective-function",
+       "learning_objective": "Prove that a function is bijective and count bijections between finite sets."
+      },
+      {
+       "concept_tag": "finite-set-property",
+       "learning_objective": "Use the fact that for a finite set X, f : X -> X is one-one if and only if it is onto."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEMH1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Inverse Trigonometric Functions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH1-CH02-T1",
+     "topic_number": 1,
+     "title": "Restricting domains: principal branches of sin⁻¹ and cos⁻¹",
+     "ncert_sections": "2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "restriction-for-invertibility",
+       "learning_objective": "Explain why a trigonometric function must be restricted to an interval on which it is one-one and onto before it can be inverted."
+      },
+      {
+       "concept_tag": "sine-inverse-principal-branch",
+       "learning_objective": "State the domain and principal value range of sin⁻¹."
+      },
+      {
+       "concept_tag": "cosine-inverse-principal-branch",
+       "learning_objective": "State the domain and principal value range of cos⁻¹ and identify valid branches."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH02-T2",
+     "topic_number": 2,
+     "title": "Principal branches of cosec⁻¹, sec⁻¹, tan⁻¹ and cot⁻¹",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "cosec-sec-inverse-branches",
+       "learning_objective": "State the domains and principal value ranges of cosec⁻¹ and sec⁻¹ and explain the excluded values."
+      },
+      {
+       "concept_tag": "tan-cot-inverse-branches",
+       "learning_objective": "State the domains and principal value ranges of tan⁻¹ and cot⁻¹."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH02-T3",
+     "topic_number": 3,
+     "title": "Principal values, notation and graphs",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "computing-principal-values",
+       "learning_objective": "Find principal values of inverse trigonometric functions and evaluate expressions built from them."
+      },
+      {
+       "concept_tag": "notation-and-graphs",
+       "learning_objective": "Distinguish sin⁻¹ x from (sin x)⁻¹ and obtain the graph of an inverse function by reflection in the line y = x."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH02-T4",
+     "topic_number": 4,
+     "title": "Composition properties of inverse trigonometric functions",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "inverse-composition-identities",
+       "learning_objective": "Use sin(sin⁻¹ x) = x and sin⁻¹(sin x) = x with their conditions on x."
+      },
+      {
+       "concept_tag": "reducing-to-principal-branch",
+       "learning_objective": "Evaluate expressions such as sin⁻¹(sin θ) when θ lies outside the principal branch."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH02-T5",
+     "topic_number": 5,
+     "title": "Writing inverse trigonometric expressions in the simplest form",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "trigonometric-substitution",
+       "learning_objective": "Choose a suitable substitution such as x = sin θ, x = a sin θ or x = sec θ to simplify an inverse trigonometric expression."
+      },
+      {
+       "concept_tag": "half-angle-simplification",
+       "learning_objective": "Simplify expressions in cos x and sin x using half-angle identities to reach tan⁻¹(tan θ)."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEMH1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Matrices",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH1-CH03-T1",
+     "topic_number": 1,
+     "title": "Matrix and its order",
+     "ncert_sections": "3.1, 3.2, 3.2.1",
+     "concepts": [
+      {
+       "concept_tag": "matrix-order-and-elements",
+       "learning_objective": "Identify the order of a matrix and locate its element a_ij by row and column."
+      },
+      {
+       "concept_tag": "constructing-matrix-from-rule",
+       "learning_objective": "Construct a matrix whose elements are given by a rule in i and j, and list the possible orders for a given number of elements."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH03-T2",
+     "topic_number": 2,
+     "title": "Types of matrices and equality",
+     "ncert_sections": "3.3, 3.3.1",
+     "concepts": [
+      {
+       "concept_tag": "types-of-matrices",
+       "learning_objective": "Classify matrices as row, column, square, diagonal, scalar, identity or zero matrices."
+      },
+      {
+       "concept_tag": "equality-of-matrices",
+       "learning_objective": "Use the conditions for equality of matrices to find unknown elements."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH03-T3",
+     "topic_number": 3,
+     "title": "Addition and scalar multiplication",
+     "ncert_sections": "3.4.1, 3.4.2, 3.4.3, 3.4.4",
+     "concepts": [
+      {
+       "concept_tag": "matrix-addition",
+       "learning_objective": "Add and subtract matrices of the same order and apply the properties of matrix addition."
+      },
+      {
+       "concept_tag": "scalar-multiplication",
+       "learning_objective": "Multiply a matrix by a scalar and solve simple matrix equations using these operations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH03-T4",
+     "topic_number": 4,
+     "title": "Multiplication of matrices",
+     "ncert_sections": "3.4.5, 3.4.6",
+     "concepts": [
+      {
+       "concept_tag": "matrix-product",
+       "learning_objective": "Decide when a product of matrices is defined, find its order and compute it."
+      },
+      {
+       "concept_tag": "properties-of-multiplication",
+       "learning_objective": "Apply the properties of matrix multiplication, including non-commutativity and zero products of non-zero matrices."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH03-T5",
+     "topic_number": 5,
+     "title": "Transpose, symmetric and skew symmetric matrices",
+     "ncert_sections": "3.5, 3.5.1, 3.6",
+     "concepts": [
+      {
+       "concept_tag": "transpose-properties",
+       "learning_objective": "Find the transpose of a matrix and apply the properties of transpose, including (AB)' = B'A'."
+      },
+      {
+       "concept_tag": "symmetric-skew-symmetric",
+       "learning_objective": "Identify symmetric and skew symmetric matrices and express a square matrix as their sum."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH03-T6",
+     "topic_number": 6,
+     "title": "Invertible matrices",
+     "ncert_sections": "3.7",
+     "concepts": [
+      {
+       "concept_tag": "inverse-of-matrix",
+       "learning_objective": "Use the definition AB = BA = I to recognise and verify the inverse of a square matrix."
+      },
+      {
+       "concept_tag": "inverse-properties",
+       "learning_objective": "Apply the uniqueness of the inverse and the result (AB)^(-1) = B^(-1)A^(-1)."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEMH1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Determinants",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH1-CH04-T1",
+     "topic_number": 1,
+     "title": "Determinant of a square matrix",
+     "ncert_sections": "4.2, 4.2.1, 4.2.2, 4.2.3",
+     "concepts": [
+      {
+       "concept_tag": "evaluating-determinants",
+       "learning_objective": "Evaluate determinants of order 1, 2 and 3 by expanding along a row or a column."
+      },
+      {
+       "concept_tag": "determinant-of-scalar-multiple",
+       "learning_objective": "Use |kA| = k^n |A| for a square matrix A of order n."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH04-T2",
+     "topic_number": 2,
+     "title": "Area of a triangle",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "area-of-triangle-by-determinant",
+       "learning_objective": "Find the area of a triangle, or an unknown vertex coordinate, using a determinant."
+      },
+      {
+       "concept_tag": "collinearity-and-equation-of-line",
+       "learning_objective": "Use a zero determinant to test collinearity and find the equation of a line through two points."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH04-T3",
+     "topic_number": 3,
+     "title": "Minors and cofactors",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "minors-and-cofactors",
+       "learning_objective": "Find the minor Mij and the cofactor Aij = (-1)^(i+j) Mij of an element."
+      },
+      {
+       "concept_tag": "expansion-using-cofactors",
+       "learning_objective": "Express a determinant as the sum of products of a row's elements with their cofactors."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH04-T4",
+     "topic_number": 4,
+     "title": "Adjoint and inverse of a matrix",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "adjoint-of-a-matrix",
+       "learning_objective": "Find the adjoint of a square matrix and use A(adj A) = (adj A)A = |A| I."
+      },
+      {
+       "concept_tag": "singular-and-nonsingular-matrices",
+       "learning_objective": "Classify a matrix as singular or non-singular and relate this to invertibility."
+      },
+      {
+       "concept_tag": "inverse-using-adjoint",
+       "learning_objective": "Find the inverse of a non-singular matrix using A^(-1) = (1/|A|) adj A."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH04-T5",
+     "topic_number": 5,
+     "title": "Applications of determinants and matrices",
+     "ncert_sections": "4.6, 4.6.1",
+     "concepts": [
+      {
+       "concept_tag": "consistency-of-linear-systems",
+       "learning_objective": "Decide whether a system AX = B is consistent using |A| and (adj A)B."
+      },
+      {
+       "concept_tag": "solving-equations-by-matrix-method",
+       "learning_objective": "Solve a system of linear equations in two or three variables using X = A^(-1) B."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEMH1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Continuity and Differentiability",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH1-CH05-T1",
+     "topic_number": 1,
+     "title": "Continuity of a function at a point and on its domain",
+     "ncert_sections": "5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "continuity-at-a-point",
+       "learning_objective": "Use the condition lim f(x) as x tends to c equals f(c) to decide whether a function is continuous at c."
+      },
+      {
+       "concept_tag": "continuity-of-piecewise-functions",
+       "learning_objective": "Find unknown constants and points of discontinuity of piecewise-defined functions using one-sided limits."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH05-T2",
+     "topic_number": 2,
+     "title": "Algebra of continuous functions",
+     "ncert_sections": "5.2.1",
+     "concepts": [
+      {
+       "concept_tag": "algebra-of-continuous-functions",
+       "learning_objective": "Apply the sum, difference, product and quotient results for continuous functions, including polynomial and rational functions."
+      },
+      {
+       "concept_tag": "continuity-of-composite-functions",
+       "learning_objective": "Use the theorem that a composite of continuous functions is continuous."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH05-T3",
+     "topic_number": 3,
+     "title": "Differentiability and its relation with continuity",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "differentiability-and-continuity",
+       "learning_objective": "Explain that every differentiable function is continuous but a continuous function need not be differentiable."
+      },
+      {
+       "concept_tag": "one-sided-derivatives",
+       "learning_objective": "Compute left-hand and right-hand derivatives to test differentiability at a point."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH05-T4",
+     "topic_number": 4,
+     "title": "Derivatives of composite and implicit functions",
+     "ncert_sections": "5.3.1, 5.3.2",
+     "concepts": [
+      {
+       "concept_tag": "chain-rule",
+       "learning_objective": "Differentiate composite functions using the chain rule."
+      },
+      {
+       "concept_tag": "implicit-differentiation",
+       "learning_objective": "Find dy/dx when x and y are related implicitly by an equation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH05-T5",
+     "topic_number": 5,
+     "title": "Derivatives of inverse trigonometric functions",
+     "ncert_sections": "5.3.3",
+     "concepts": [
+      {
+       "concept_tag": "inverse-trigonometric-derivatives",
+       "learning_objective": "Recall and apply the derivatives of inverse trigonometric functions in their domains."
+      },
+      {
+       "concept_tag": "inverse-trigonometric-simplification",
+       "learning_objective": "Simplify inverse trigonometric expressions by a suitable substitution before differentiating."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH05-T6",
+     "topic_number": 6,
+     "title": "Exponential and logarithmic functions",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "exponential-function-derivative",
+       "learning_objective": "Differentiate functions involving e^x using the chain rule."
+      },
+      {
+       "concept_tag": "logarithmic-function-derivative",
+       "learning_objective": "State the domain of log x and differentiate functions involving the natural logarithm."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH05-T7",
+     "topic_number": 7,
+     "title": "Logarithmic differentiation",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "logarithmic-differentiation-powers",
+       "learning_objective": "Differentiate functions of the form [u(x)]^v(x) by taking logarithms."
+      },
+      {
+       "concept_tag": "logarithmic-differentiation-products",
+       "learning_objective": "Use logarithms to differentiate products and quotients of several factors."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH05-T8",
+     "topic_number": 8,
+     "title": "Parametric forms and second order derivatives",
+     "ncert_sections": "5.6, 5.7",
+     "concepts": [
+      {
+       "concept_tag": "parametric-differentiation",
+       "learning_objective": "Find dy/dx when x and y are given in terms of a parameter."
+      },
+      {
+       "concept_tag": "second-order-derivative",
+       "learning_objective": "Find second order derivatives and verify relations involving them."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEMH1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Application of Derivatives",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH1-CH06-T1",
+     "topic_number": 1,
+     "title": "Rate of change of quantities",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "rate-of-change-as-derivative",
+       "learning_objective": "Interpret dy/dx as the rate of change of y with respect to x and evaluate it at a given point."
+      },
+      {
+       "concept_tag": "related-rates",
+       "learning_objective": "Use the chain rule to relate rates of change of quantities that vary with time."
+      },
+      {
+       "concept_tag": "marginal-cost-and-revenue",
+       "learning_objective": "Find marginal cost and marginal revenue as derivatives of total cost and total revenue."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH06-T2",
+     "topic_number": 2,
+     "title": "Increasing and decreasing functions",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "monotonicity-definitions",
+       "learning_objective": "State the definitions of increasing, decreasing, strictly increasing and strictly decreasing functions on an interval."
+      },
+      {
+       "concept_tag": "derivative-sign-test",
+       "learning_objective": "Use the sign of f′(x) on an interval to decide whether f is strictly increasing, strictly decreasing or constant."
+      },
+      {
+       "concept_tag": "intervals-of-monotonicity",
+       "learning_objective": "Find the intervals in which a function is strictly increasing or strictly decreasing using its critical points."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH06-T3",
+     "topic_number": 3,
+     "title": "Maximum and minimum values and critical points",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "maximum-minimum-value",
+       "learning_objective": "Identify the maximum, minimum and extreme values of a function on an interval."
+      },
+      {
+       "concept_tag": "critical-points",
+       "learning_objective": "Find the critical points of a function and recognise that f′(c) = 0 is necessary but not sufficient for a local extremum."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH06-T4",
+     "topic_number": 4,
+     "title": "First and second derivative tests",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "first-derivative-test",
+       "learning_objective": "Classify a critical point using the change in sign of f′(x) as x increases through it."
+      },
+      {
+       "concept_tag": "second-derivative-test",
+       "learning_objective": "Classify a critical point using the sign of f″(c) and recognise when the test fails."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH06-T5",
+     "topic_number": 5,
+     "title": "Absolute maximum and minimum on a closed interval",
+     "ncert_sections": "6.4.1",
+     "concepts": [
+      {
+       "concept_tag": "extreme-values-closed-interval",
+       "learning_objective": "State that a continuous function on a closed interval attains an absolute maximum and an absolute minimum."
+      },
+      {
+       "concept_tag": "absolute-extrema-working-rule",
+       "learning_objective": "Find absolute maximum and minimum values by comparing f at the critical points and the end points."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH1-CH06-T6",
+     "topic_number": 6,
+     "title": "Applied problems on maxima and minima",
+     "ncert_sections": "6.4, 6.4.1",
+     "concepts": [
+      {
+       "concept_tag": "optimisation-numbers-geometry",
+       "learning_objective": "Model number and mensuration situations as functions and find their maximum or minimum values."
+      },
+      {
+       "concept_tag": "optimisation-real-contexts",
+       "learning_objective": "Solve real-life optimisation problems such as maximum volume and maximum revenue."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

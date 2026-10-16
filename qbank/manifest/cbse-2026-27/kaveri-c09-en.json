@@ -1,0 +1,1021 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "kaveri-c09-en",
+  "curriculum": "cbse",
+  "class_level": 9,
+  "subject_code": "english",
+  "language": "english",
+  "title": "Kaveri",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "iebe1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "IEBE1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "How I Taught My Grandmother to Read",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iebe101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEBE1-CH01-T1",
+     "topic_number": 1,
+     "title": "Village life, Triveni and the serial Kashi Yatre",
+     "ncert_sections": "Reading for Meaning, Part I",
+     "concepts": [
+      {
+       "concept_tag": "story-setting",
+       "learning_objective": "Students will describe the north Karnataka village setting and why news and magazines arrived late."
+      },
+      {
+       "concept_tag": "kashi-yatre-plot",
+       "learning_objective": "Students will explain the plot of Triveni's Kashi Yatre and why the grandmother identified with its protagonist."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH01-T2",
+     "topic_number": 2,
+     "title": "The narrator's absence and the grandmother's past",
+     "ncert_sections": "Reading for Meaning, Part I",
+     "concepts": [
+      {
+       "concept_tag": "grandmother-in-tears",
+       "learning_objective": "Students will explain why the grandmother's tears surprised and worried the narrator."
+      },
+      {
+       "concept_tag": "grandmother-early-life",
+       "learning_objective": "Students will relate the grandmother's childhood and lack of schooling to her regret."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH01-T3",
+     "topic_number": 3,
+     "title": "The resolve to learn and the tuition",
+     "ncert_sections": "Reading for Meaning, Part II",
+     "concepts": [
+      {
+       "concept_tag": "dependence-and-independence",
+       "learning_objective": "Students will interpret the grandmother's feeling of dependence and her wish to be independent."
+      },
+      {
+       "concept_tag": "determination-no-age-bar",
+       "learning_objective": "Students will evaluate the grandmother's belief that there is no age bar for learning."
+      },
+      {
+       "concept_tag": "grandmother-as-student",
+       "learning_objective": "Students will describe how the grandmother worked as a learner."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH01-T4",
+     "topic_number": 4,
+     "title": "Dassara, the gift and respect for a teacher",
+     "ncert_sections": "Reading for Meaning, Part II",
+     "concepts": [
+      {
+       "concept_tag": "respect-for-teacher",
+       "learning_objective": "Students will explain why the grandmother touched the narrator's feet on Saraswati Puja day."
+      },
+      {
+       "concept_tag": "theme-education-independence",
+       "learning_objective": "Students will identify the story's message about education, independence and lifelong learning."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH01-T5",
+     "topic_number": 5,
+     "title": "Binomials, prefixes and idioms of learning",
+     "ncert_sections": "Vocabulary and Structures in Context I-IV",
+     "concepts": [
+      {
+       "concept_tag": "binomials",
+       "learning_objective": "Students will identify binomials and use them correctly in context."
+      },
+      {
+       "concept_tag": "negative-prefixes",
+       "learning_objective": "Students will form opposite words with the prefixes un-, in-, im-, dis- and mis-."
+      },
+      {
+       "concept_tag": "learning-idioms",
+       "learning_objective": "Students will match idioms related to learning with their meanings."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH01-T6",
+     "topic_number": 6,
+     "title": "Simple past and past perfect tense",
+     "ncert_sections": "Vocabulary and Structures in Context V",
+     "concepts": [
+      {
+       "concept_tag": "past-perfect-form",
+       "learning_objective": "Students will recognise the form of the past perfect tense (had + past participle)."
+      },
+      {
+       "concept_tag": "sequence-of-past-actions",
+       "learning_objective": "Students will use the past perfect for the earlier of two completed past actions."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH01-T7",
+     "topic_number": 7,
+     "title": "The poem Bharat Our Land",
+     "ncert_sections": "Bharat Our Land (poem in Unit 1)",
+     "concepts": [
+      {
+       "concept_tag": "poem-imagery-symbolism",
+       "learning_objective": "Students will interpret the images and symbols the poet uses to praise India."
+      },
+      {
+       "concept_tag": "poetic-devices",
+       "learning_objective": "Students will identify the refrain, hyperbole, allusion and ode form in the poem."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEBE1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "The Pot Maker",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iebe102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEBE1-CH02-T1",
+     "topic_number": 1,
+     "title": "Sentila's dream and Arenla's objection",
+     "ncert_sections": "Part I (opening)",
+     "concepts": [
+      {
+       "concept_tag": "sentila-dream-of-pot-making",
+       "learning_objective": "Explain why Sentila secretly pursued her dream of becoming a pot maker."
+      },
+      {
+       "concept_tag": "arenla-objection-to-pot-making",
+       "learning_objective": "Identify the hardships and poor returns that made Arenla prefer weaving for her daughter."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH02-T2",
+     "topic_number": 2,
+     "title": "Watching the potters and the village council",
+     "ncert_sections": "Part I (continued)",
+     "concepts": [
+      {
+       "concept_tag": "traditional-pot-making-process",
+       "learning_objective": "Describe the stages of pot making that Sentila watched, from pounding the clay to firing the kiln."
+      },
+      {
+       "concept_tag": "village-council-and-tradition",
+       "learning_objective": "Interpret the council's view that traditional skills belong to the community and must be passed on."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH02-T3",
+     "topic_number": 3,
+     "title": "Learning from Arenla and Onula",
+     "ncert_sections": "Part II (first half)",
+     "concepts": [
+      {
+       "concept_tag": "struggle-to-learn-from-mother",
+       "learning_objective": "Recall how Sentila's year of training with her mother left her frustrated."
+      },
+      {
+       "concept_tag": "onula-guidance",
+       "learning_objective": "Analyse how Onula's calm guidance and advice to observe helped Sentila gain confidence."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH02-T4",
+     "topic_number": 4,
+     "title": "A new pot maker is born",
+     "ncert_sections": "Part II (conclusion)",
+     "concepts": [
+      {
+       "concept_tag": "sentila-mastery",
+       "learning_objective": "Explain how Sentila suddenly matched her mother's speed and skill on the last day."
+      },
+      {
+       "concept_tag": "significance-of-the-ending",
+       "learning_objective": "Evaluate the meaning of the two identical rows of pots and the line 'A new pot maker was born'."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH02-T5",
+     "topic_number": 5,
+     "title": "Vocabulary and structures in context",
+     "ncert_sections": "Vocabulary and Structures in Context",
+     "concepts": [
+      {
+       "concept_tag": "story-vocabulary",
+       "learning_objective": "Use the meanings of words from the story and classify pot making words as tools, materials and processes."
+      },
+      {
+       "concept_tag": "noun-and-relative-clauses",
+       "learning_objective": "Identify noun clauses and relative (adjectival) clauses in sentences from the story."
+      },
+      {
+       "concept_tag": "determiners",
+       "learning_objective": "Identify determiners and the information they give about a noun."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH02-T6",
+     "topic_number": 6,
+     "title": "Gifts of Grace: Honouring Our Vocations",
+     "ncert_sections": "Reading for Appreciation (poem)",
+     "concepts": [
+      {
+       "concept_tag": "poem-theme-of-vocations",
+       "learning_objective": "Explain how the poem celebrates the varied vocations of Bharat and the identity they give to workers."
+      },
+      {
+       "concept_tag": "poem-form-and-devices",
+       "learning_objective": "Identify the form, tone and poetic devices used in the poem."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEBE1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Winds of Change",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iebe103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEBE1-CH03-T1",
+     "topic_number": 1,
+     "title": "Origin and early history of the pankha",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pankha-origin-meaning",
+       "learning_objective": "Explain the origin of the words pankha and pankhi and the early evidence of their use."
+      },
+      {
+       "concept_tag": "pankha-ancient-use",
+       "learning_objective": "Describe how pankhas were used and valued in ancient India."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH03-T2",
+     "topic_number": 2,
+     "title": "Pankhas of Rajasthan and Gujarat",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rajasthan-hand-fans",
+       "learning_objective": "Identify the applique, zardozi, temple and painted hand fans of Rajasthan."
+      },
+      {
+       "concept_tag": "gujarat-hand-fans",
+       "learning_objective": "Identify the mirror-work, bead and Kutch leather hand fans of Gujarat."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH03-T3",
+     "topic_number": 3,
+     "title": "Pankhas of Bengal, Uttar Pradesh, Odisha, Bihar and the tribes",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "eastern-northern-fans",
+       "learning_objective": "Identify the sola, palm leaf, Phadh and bamboo fans of other states."
+      },
+      {
+       "concept_tag": "tribal-hand-fans",
+       "learning_objective": "Describe the materials and designs of tribal hand fans."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH03-T4",
+     "topic_number": 4,
+     "title": "Changing role and preservation of the pankha",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "decline-and-commercialisation",
+       "learning_objective": "Explain how technology and commerce have changed the role of the pankha."
+      },
+      {
+       "concept_tag": "preserving-the-craft",
+       "learning_objective": "Evaluate the ways suggested for preserving the pankha craft."
+      },
+      {
+       "concept_tag": "title-significance",
+       "learning_objective": "Interpret the significance of the title 'Winds of Change'."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH03-T5",
+     "topic_number": 5,
+     "title": "Vocabulary and structures: word pairs, collocations and the present perfect",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "word-pairs-fixed-expressions",
+       "learning_objective": "Classify word pairs and use fixed expressions with 'and' correctly."
+      },
+      {
+       "concept_tag": "collocations",
+       "learning_objective": "Choose conventional word combinations (collocations) in context."
+      },
+      {
+       "concept_tag": "present-perfect-tense",
+       "learning_objective": "Use the present perfect tense for past actions relevant to the present."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH03-T6",
+     "topic_number": 6,
+     "title": "The Last Leaf (O. Henry)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "johnsy-illness-despair",
+       "learning_objective": "Explain Johnsy's illness, her despair and her recovery."
+      },
+      {
+       "concept_tag": "behrman-masterpiece",
+       "learning_objective": "Interpret Behrman's sacrifice and the meaning of his masterpiece."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH03-T7",
+     "topic_number": 7,
+     "title": "Canvas of Soil: the garden as a painting",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "garden-as-painting",
+       "learning_objective": "Explain the poet's comparison of a garden with a painting."
+      },
+      {
+       "concept_tag": "metaphor-imagery",
+       "learning_objective": "Identify and interpret metaphor and imagery in the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH03-T8",
+     "topic_number": 8,
+     "title": "Canvas of Soil: poetic devices and allegory",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rhyme-alliteration-tone",
+       "learning_objective": "Identify the rhyme scheme, alliteration and tone of the poem."
+      },
+      {
+       "concept_tag": "allegory",
+       "learning_objective": "Interpret the poem as an allegory with surface and deeper meanings."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEBE1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Vitamin-M",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iebe104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEBE1-CH04-T1",
+     "topic_number": 1,
+     "title": "Reading for Meaning I: Grandpa comes to live in the city",
+     "ncert_sections": "Part I",
+     "concepts": [
+      {
+       "concept_tag": "grandpa-background",
+       "learning_objective": "The learner recalls why Grandpa moved to the city, his past life and his feelings about it."
+      },
+      {
+       "concept_tag": "ravi-and-his-mother",
+       "learning_objective": "The learner explains Ravi's reactions to his mother's instructions and the dilemma they create."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH04-T2",
+     "topic_number": 2,
+     "title": "Reading for Meaning II: Grandpa's day out",
+     "ncert_sections": "Part II",
+     "concepts": [
+      {
+       "concept_tag": "grandpa-day-out-sequence",
+       "learning_objective": "The learner sequences and interprets the stops Grandpa makes on his day out."
+      },
+      {
+       "concept_tag": "ravi-as-detective",
+       "learning_objective": "The learner evaluates how successfully Ravi trails Grandpa and how he is fooled."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH04-T3",
+     "topic_number": 3,
+     "title": "Reading for Meaning III: The birthday surprise",
+     "ncert_sections": "Part III",
+     "concepts": [
+      {
+       "concept_tag": "birthday-surprise",
+       "learning_objective": "The learner explains Grandpa's birthday tradition and the reactions it produces."
+      },
+      {
+       "concept_tag": "grandpa-outwits-ravi",
+       "learning_objective": "The learner infers that Grandpa knew Ravi had been following him."
+      },
+      {
+       "concept_tag": "who-needs-vitamin-m",
+       "learning_objective": "The learner evaluates the irony of the title by judging whose memory actually fails."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH04-T4",
+     "topic_number": 4,
+     "title": "Vocabulary and Structures in Context",
+     "ncert_sections": "Vocabulary and Structures in Context",
+     "concepts": [
+      {
+       "concept_tag": "story-vocabulary",
+       "learning_objective": "The learner identifies meanings of words from the story and classifies movement and sound words."
+      },
+      {
+       "concept_tag": "prepositions",
+       "learning_objective": "The learner uses prepositions of place and direction correctly."
+      },
+      {
+       "concept_tag": "reported-speech-interrogatives",
+       "learning_objective": "The learner converts Wh- and Yes/No questions into reported speech."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH04-T5",
+     "topic_number": 5,
+     "title": "Poem: I Cannot Remember My Mother",
+     "ncert_sections": "Reading for Appreciation",
+     "concepts": [
+      {
+       "concept_tag": "poem-memory-and-senses",
+       "learning_objective": "The learner interprets how sounds, scents and sights bring back the poet's memory of his mother."
+      },
+      {
+       "concept_tag": "poem-structure-and-poet",
+       "learning_objective": "The learner identifies the poet and the purpose of the refrain."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH04-T6",
+     "topic_number": 6,
+     "title": "Speaking and sensory words: intonation and senses",
+     "ncert_sections": "Speaking Activity; Vocabulary in Context",
+     "concepts": [
+      {
+       "concept_tag": "question-intonation",
+       "learning_objective": "The learner chooses the intonation that suits Wh-, Yes/No and choice questions."
+      },
+      {
+       "concept_tag": "sensory-words",
+       "learning_objective": "The learner classifies words as visual, auditory, olfactory or tactile."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEBE1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "The World of Limitless Possibilities",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iebe105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEBE1-CH05-T1",
+     "topic_number": 1,
+     "title": "Paralympics and Dr Deepa Malik's turning point",
+     "ncert_sections": "Paralympics: Reading for Meaning (introduction, start of the interview)",
+     "concepts": [
+      {
+       "concept_tag": "paralympics-introduction",
+       "learning_objective": "The learner identifies what the Paralympic Games celebrate and India's early Paralympic history."
+      },
+      {
+       "concept_tag": "deepa-malik-turning-point",
+       "learning_objective": "The learner explains how Dr Deepa Malik turned a life-changing illness into a new beginning in para-athletics."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH05-T2",
+     "topic_number": 2,
+     "title": "Achievements, challenges and advocacy",
+     "ncert_sections": "Paralympics: Reading for Meaning (rest of the interview)",
+     "concepts": [
+      {
+       "concept_tag": "firsts-and-accolades",
+       "learning_objective": "The learner recalls Dr Malik's 'firsts' and interprets her belief in 'ability beyond disability'."
+      },
+      {
+       "concept_tag": "overcoming-societal-perceptions",
+       "learning_objective": "The learner explains how Dr Malik and the Paralympics challenge stereotypes about disability."
+      },
+      {
+       "concept_tag": "advocacy-and-inclusivity",
+       "learning_objective": "The learner describes Dr Malik's advocacy work and her vision of an inclusive society."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH05-T3",
+     "topic_number": 3,
+     "title": "Fact and opinion, cause and effect, and phrases in context",
+     "ncert_sections": "Paralympics: Check Your Understanding; Vocabulary I",
+     "concepts": [
+      {
+       "concept_tag": "fact-and-opinion",
+       "learning_objective": "The learner distinguishes verifiable facts from personal opinions in the interview."
+      },
+      {
+       "concept_tag": "cause-and-effect",
+       "learning_objective": "The learner identifies cause-effect relationships between events in the text."
+      },
+      {
+       "concept_tag": "phrases-in-context",
+       "learning_objective": "The learner interprets phrases such as 'in hindsight' and 'defy the odds' in context."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH05-T4",
+     "topic_number": 4,
+     "title": "Modal auxiliaries and reported speech",
+     "ncert_sections": "Paralympics: Vocabulary and Structures in Context III-VI",
+     "concepts": [
+      {
+       "concept_tag": "modal-auxiliaries",
+       "learning_objective": "The learner identifies the function of modal verbs such as could, should and would in sentences."
+      },
+      {
+       "concept_tag": "reported-speech",
+       "learning_objective": "The learner converts direct speech into reported speech, making the required changes."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH05-T5",
+     "topic_number": 5,
+     "title": "Nine Gold Medals: the story and its message",
+     "ncert_sections": "Nine Gold Medals: poem, Check Your Understanding, Critical Reflection",
+     "concepts": [
+      {
+       "concept_tag": "poem-narrative",
+       "learning_objective": "The learner recalls and interprets the sequence of events in the race described in the poem."
+      },
+      {
+       "concept_tag": "poem-theme-empathy",
+       "learning_objective": "The learner analyses the poem's message of empathy, togetherness and inclusion."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH05-T6",
+     "topic_number": 6,
+     "title": "Poetic devices, collocations and the Olympic movements",
+     "ncert_sections": "Nine Gold Medals: appreciation, Vocabulary in Context; Learning Beyond the Text",
+     "concepts": [
+      {
+       "concept_tag": "poetic-devices",
+       "learning_objective": "The learner identifies alliteration and imagery in the poem and knows its poet."
+      },
+      {
+       "concept_tag": "collocations",
+       "learning_objective": "The learner recognises natural adjective-noun collocations."
+      },
+      {
+       "concept_tag": "olympics-paralympics-special-olympics",
+       "learning_objective": "The learner distinguishes the Olympics, Paralympics and Special Olympics from the information given."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEBE1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Twin Melodies",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iebe106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEBE1-CH06-T1",
+     "topic_number": 1,
+     "title": "Act I: The rehearsal and Shruti's dilemma",
+     "ncert_sections": "Twin Melodies, Act I",
+     "concepts": [
+      {
+       "concept_tag": "act-one-setting-characters",
+       "learning_objective": "Identify the setting of Act I and the members of the fusion group with their instruments."
+      },
+      {
+       "concept_tag": "shruti-dilemma",
+       "learning_objective": "Explain why Shruti hesitates to tell her father about the fusion concert and how her friends encourage her."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH06-T2",
+     "topic_number": 2,
+     "title": "Act II: The conversation at dinner",
+     "ncert_sections": "Twin Melodies, Act II",
+     "concepts": [
+      {
+       "concept_tag": "nabin-refusal",
+       "learning_objective": "Explain Nabin's reasons for refusing Shruti permission to join the fusion concert."
+      },
+      {
+       "concept_tag": "leela-response",
+       "learning_objective": "Interpret Leela's reaction to Shruti's secret rehearsals."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH06-T3",
+     "topic_number": 3,
+     "title": "Act III: The rehearsal, Nabin's past and reconciliation",
+     "ncert_sections": "Twin Melodies, Act III",
+     "concepts": [
+      {
+       "concept_tag": "change-of-heart",
+       "learning_objective": "Describe how Shruti's parents respond to the group's rehearsal."
+      },
+      {
+       "concept_tag": "nabin-past",
+       "learning_objective": "Explain how Leela's account of Nabin's own past changes his attitude."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH06-T4",
+     "topic_number": 4,
+     "title": "Themes, title and characters of the play",
+     "ncert_sections": "Twin Melodies; Critical Reflection",
+     "concepts": [
+      {
+       "concept_tag": "tradition-modernity",
+       "learning_objective": "Analyse how the play explores the meeting of tradition and modernity and justify its title."
+      },
+      {
+       "concept_tag": "character-development",
+       "learning_objective": "Evaluate how Nabin's attitude towards music evolves through the play."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH06-T5",
+     "topic_number": 5,
+     "title": "Writing a play script: aside, stage directions and fillers",
+     "ncert_sections": "Vocabulary and Structures in Context I-II; Writing Task; Learning Beyond the Text I",
+     "concepts": [
+      {
+       "concept_tag": "aside-stage-directions",
+       "learning_objective": "Identify the use of an aside, brackets, colons and ellipsis in a play script."
+      },
+      {
+       "concept_tag": "non-lexical-fillers",
+       "learning_objective": "Recognise non-lexical fillers and the purpose they serve in speech."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH06-T6",
+     "topic_number": 6,
+     "title": "Vocabulary and reported speech",
+     "ncert_sections": "Vocabulary and Structures in Context III-VII",
+     "concepts": [
+      {
+       "concept_tag": "idioms-music-vocabulary",
+       "learning_objective": "Use the idioms and music-related words of the play in context."
+      },
+      {
+       "concept_tag": "exclamatory-reported-speech",
+       "learning_objective": "Convert exclamatory sentences into declarative sentences in reported speech."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH06-T7",
+     "topic_number": 7,
+     "title": "Poem: A Friend Found in Music",
+     "ncert_sections": "A Friend Found in Music; Vocabulary in Context",
+     "concepts": [
+      {
+       "concept_tag": "poem-metaphors-mood",
+       "learning_objective": "Interpret the metaphors, mood and message of the poem."
+      },
+      {
+       "concept_tag": "phrasal-verbs",
+       "learning_objective": "Explain the meaning of phrasal verbs such as 'pull through' and 'move on'."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEBE1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Carrier of Words",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iebe107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEBE1-CH07-T1",
+     "topic_number": 1,
+     "title": "Khetaram, the Gramin Dak Sewak of the Thar",
+     "ncert_sections": "Carrier of Words, Part I (Khetaram's daily work in the desert)",
+     "concepts": [
+      {
+       "concept_tag": "khetaram-and-his-route",
+       "learning_objective": "Recall who Khetaram is and describe the remote area he serves near the Indo-Pakistan border."
+      },
+      {
+       "concept_tag": "hardships-of-desert-delivery",
+       "learning_objective": "Explain the physical hardships Khetaram faces while delivering mail in the Thar desert."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH07-T2",
+     "topic_number": 2,
+     "title": "Gramin Dak Sewaks and the mission of India Post",
+     "ncert_sections": "Carrier of Words, Part I (GDS across India; India Post after independence)",
+     "concepts": [
+      {
+       "concept_tag": "gds-workforce-and-territories",
+       "learning_objective": "Describe who Gramin Dak Sewaks are and why their role in remote areas is invaluable."
+      },
+      {
+       "concept_tag": "india-post-mandate",
+       "learning_objective": "Distinguish the purpose of India Post after independence from that of the British postal system."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH07-T3",
+     "topic_number": 3,
+     "title": "Livelihood, trust and the money order",
+     "ncert_sections": "Carrier of Words, Part II (GDS service conditions; money orders; trust of villagers)",
+     "concepts": [
+      {
+       "concept_tag": "gds-service-conditions",
+       "learning_objective": "Explain the conditions of GDS service and why they help retain a large rural workforce."
+      },
+      {
+       "concept_tag": "trust-in-the-post-office",
+       "learning_objective": "Interpret instances from the text that show villagers' trust in the post office and the GDS."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH07-T4",
+     "topic_number": 4,
+     "title": "Khetaram's character and the bearer of news",
+     "ncert_sections": "Carrier of Words, Part II (letters of joy and grief; waiting for phone lines)",
+     "concepts": [
+      {
+       "concept_tag": "khetaram-temperament",
+       "learning_objective": "Infer Khetaram's beliefs and temperament from his handling of good and bad news and his hopes for the future."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH07-T5",
+     "topic_number": 5,
+     "title": "Language in context: vocabulary and structures",
+     "ncert_sections": "Vocabulary and Structures in Context (phrases, alliteration and metaphor, present perfect tense, active and passive voice)",
+     "concepts": [
+      {
+       "concept_tag": "phrases-and-figurative-language",
+       "learning_objective": "Interpret phrases and identify alliteration and metaphor used in the chapter."
+      },
+      {
+       "concept_tag": "present-perfect-tense",
+       "learning_objective": "Use the present perfect tense (has/have + past participle) correctly in context."
+      },
+      {
+       "concept_tag": "active-passive-voice",
+       "learning_objective": "Change sentences from active to passive voice based on the chapter's examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH07-T6",
+     "topic_number": 6,
+     "title": "Words by Charles Swain: meaning and theme",
+     "ncert_sections": "Reading for Appreciation: 'Words' (poem)",
+     "concepts": [
+      {
+       "concept_tag": "poem-central-idea",
+       "learning_objective": "Explain the poet's view that a few sincere words are worth more than many empty ones."
+      },
+      {
+       "concept_tag": "poem-stanza-meaning",
+       "learning_objective": "Interpret the meaning of individual stanzas and images in the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH07-T7",
+     "topic_number": 7,
+     "title": "Words: poetic devices and form",
+     "ncert_sections": "Let us appreciate the poem (rhyme scheme, simile, metaphor, hyperbole, repetition)",
+     "concepts": [
+      {
+       "concept_tag": "poetic-devices",
+       "learning_objective": "Identify simile, metaphor and hyperbole in the poem and explain their effect."
+      },
+      {
+       "concept_tag": "rhyme-scheme-and-rhythm",
+       "learning_objective": "Identify the rhyme scheme and rhythm of the poem."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEBE1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Follow That Dream",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iebe108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEBE1-CH08-T1",
+     "topic_number": 1,
+     "title": "The letter: passion, effort and sacrifice",
+     "ncert_sections": "Reading for Meaning (letter, paragraphs 1-2)",
+     "concepts": [
+      {
+       "concept_tag": "passion-and-conviction",
+       "learning_objective": "Explain the stages the mother describes, from passion and conviction to plunging into a dream."
+      },
+      {
+       "concept_tag": "cost-of-pursuing-a-dream",
+       "learning_objective": "Explain why the mother asks Ming to count the cost of a dream in effort, money and sacrifice."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH08-T2",
+     "topic_number": 2,
+     "title": "Support, obstacles and changing dreams",
+     "ncert_sections": "Reading for Meaning (letter, paragraphs 3-6)",
+     "concepts": [
+      {
+       "concept_tag": "support-network",
+       "learning_objective": "Identify how the Academy Awards example shows the role of a support network."
+      },
+      {
+       "concept_tag": "why-dreams-remain-dreams",
+       "learning_objective": "Identify the reasons the mother gives for dreams remaining unfulfilled."
+      },
+      {
+       "concept_tag": "changing-dreams",
+       "learning_objective": "Interpret the mother's view that life may change a person's dreams."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH08-T3",
+     "topic_number": 3,
+     "title": "Vocabulary in context: -scape words and idioms",
+     "ncert_sections": "Vocabulary and Structures in Context I-II",
+     "concepts": [
+      {
+       "concept_tag": "scape-compound-words",
+       "learning_objective": "Use compound words ending in '-scape' correctly in context."
+      },
+      {
+       "concept_tag": "idiomatic-expressions",
+       "learning_objective": "Interpret idiomatic expressions from the letter such as 'wet blanket' and 'buoyed up'."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH08-T4",
+     "topic_number": 4,
+     "title": "Grammar: conditionals with imperatives and uses of 'could'",
+     "ncert_sections": "Vocabulary and Structures in Context III-V",
+     "concepts": [
+      {
+       "concept_tag": "first-conditional-imperative",
+       "learning_objective": "Form first conditional sentences with an imperative in the main clause."
+      },
+      {
+       "concept_tag": "modal-could-functions",
+       "learning_objective": "Distinguish the functions of 'could' such as possibility, past ability, purpose and hypothesis."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH08-T5",
+     "topic_number": 5,
+     "title": "The poem 'Step up to the challenge': theme, tone and form",
+     "ncert_sections": "Believe in Yourself: Reading for Appreciation; Check your Understanding",
+     "concepts": [
+      {
+       "concept_tag": "poem-central-idea",
+       "learning_objective": "Identify the central idea of each stanza of the poem."
+      },
+      {
+       "concept_tag": "rhyme-scheme-and-tone",
+       "learning_objective": "Identify the rhyme scheme, tone and poet of the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEBE1-CH08-T6",
+     "topic_number": 6,
+     "title": "Poetic devices and Latin expressions",
+     "ncert_sections": "Believe in Yourself: Check your Understanding VI-VIII; Vocabulary in Context",
+     "concepts": [
+      {
+       "concept_tag": "antithesis-and-metaphor",
+       "learning_objective": "Analyse the metaphor and antithesis used in the poem."
+      },
+      {
+       "concept_tag": "rhetorical-question",
+       "learning_objective": "Explain the purpose of a rhetorical question in the poem."
+      },
+      {
+       "concept_tag": "latin-expressions",
+       "learning_objective": "Use Latin expressions such as 'status quo' and 'ad hoc' correctly."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

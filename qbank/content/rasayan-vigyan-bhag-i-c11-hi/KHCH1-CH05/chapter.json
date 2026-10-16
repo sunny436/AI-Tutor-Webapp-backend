@@ -1,0 +1,140 @@
+{
+ "chapter_id": "KHCH1-CH05",
+ "title": "ऊष्मागतिकी",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHCH1-CH05-T1",
+   "topic_number": 1,
+   "title": "ऊष्मागतिकी पद: निकाय, परिवेश और अवस्था",
+   "ncert_sections": "5.1.1, 5.1.2, 5.1.3",
+   "concepts": [
+    {
+     "concept_tag": "nikay-prakar",
+     "learning_objective": "विवृत, संवृत और विलगित निकायों को पहचानना और उनमें अंतर करना।"
+    },
+    {
+     "concept_tag": "avastha-phalan",
+     "learning_objective": "अवस्था फलनों और पथ पर निर्भर राशियों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH05-T2",
+   "topic_number": 2,
+   "title": "आंतरिक ऊर्जा और ऊष्मागतिकी का प्रथम नियम",
+   "ncert_sections": "5.1.4",
+   "concepts": [
+    {
+     "concept_tag": "antarik-urja",
+     "learning_objective": "ऊष्मा और कार्य द्वारा आंतरिक ऊर्जा में परिवर्तन तथा चिह्न परिपाटी समझना।"
+    },
+    {
+     "concept_tag": "pratham-niyam",
+     "learning_objective": "प्रथम नियम ∆U = q + w का प्रयोग करके ऊर्जा परिवर्तन की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH05-T3",
+   "topic_number": 3,
+   "title": "कार्य, एन्थैल्पी और ऊष्माधारिता",
+   "ncert_sections": "5.2.1, 5.2.2",
+   "concepts": [
+    {
+     "concept_tag": "prasaran-karya",
+     "learning_objective": "नियत बाह्य दाब के विरुद्ध प्रसार में किए गए कार्य की गणना करना।"
+    },
+    {
+     "concept_tag": "enthalpy-sambandh",
+     "learning_objective": "∆H और ∆U के संबंध का गैसीय अभिक्रियाओं पर प्रयोग करना।"
+    },
+    {
+     "concept_tag": "ushmadharita-gun",
+     "learning_objective": "ऊष्माधारिता, विस्तीर्ण तथा गहन गुणों और Cp − Cv = R को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH05-T4",
+   "topic_number": 4,
+   "title": "∆U और ∆H का मापन: कैलोरीमिति",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "calorimetry",
+     "learning_objective": "बम कैलोरीमीटर और नियत दाब पर कैलोरीमिति द्वारा ∆U तथा ∆H के मापन को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH05-T5",
+   "topic_number": 5,
+   "title": "अभिक्रिया एन्थैल्पी और हेस का नियम",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "manak-sambhavan-enthalpy",
+     "learning_objective": "मानक संभवन एन्थैल्पी से अभिक्रिया एन्थैल्पी की गणना करना।"
+    },
+    {
+     "concept_tag": "hess-niyam",
+     "learning_objective": "हेस के स्थिर ऊष्मा-संकलन नियम का प्रयोग करके अज्ञात एन्थैल्पी ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH05-T6",
+   "topic_number": 6,
+   "title": "विभिन्न प्रकार की अभिक्रियाओं की एन्थैल्पी",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "dahan-enthalpy",
+     "learning_objective": "मानक दहन एन्थैल्पी से मुक्त ऊष्मा की गणना करना।"
+    },
+    {
+     "concept_tag": "bandh-enthalpy",
+     "learning_objective": "आबंध एन्थैल्पी और कणन एन्थैल्पी से अभिक्रिया एन्थैल्पी का आकलन करना।"
+    },
+    {
+     "concept_tag": "jalak-vilayan-enthalpy",
+     "learning_objective": "जालक एन्थैल्पी, विलयन एन्थैल्पी और बॉर्न-हाबर चक्र को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH05-T7",
+   "topic_number": 7,
+   "title": "स्वतःप्रवर्तिता, एन्ट्रॉपी और गिब्ज़ ऊर्जा",
+   "ncert_sections": "5.6",
+   "concepts": [
+    {
+     "concept_tag": "entropy-swatahpravartita",
+     "learning_objective": "एन्ट्रॉपी परिवर्तन को अव्यवस्था और स्वतःप्रवर्तिता से जोड़ना।"
+    },
+    {
+     "concept_tag": "gibbs-urja",
+     "learning_objective": "∆G = ∆H − T∆S द्वारा प्रक्रम की स्वतःप्रवर्तिता का निर्णय करना।"
+    },
+    {
+     "concept_tag": "tritiya-niyam",
+     "learning_objective": "ऊष्मागतिकी के द्वितीय और तृतीय नियम के कथन समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH05-T8",
+   "topic_number": 8,
+   "title": "गिब्ज़ ऊर्जा परिवर्तन और साम्य",
+   "ncert_sections": "5.7",
+   "concepts": [
+    {
+     "concept_tag": "gibbs-samya",
+     "learning_objective": "∆G° = −RT ln K संबंध से साम्य स्थिरांक और गिब्ज़ ऊर्जा को जोड़ना।"
+    }
+   ]
+  }
+ ]
+}

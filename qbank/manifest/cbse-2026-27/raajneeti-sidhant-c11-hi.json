@@ -1,0 +1,861 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "raajneeti-sidhant-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "political_science",
+  "language": "hindi",
+  "title": "Raajneeti Sidhant",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khps1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHPS1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "राजनीतिक सिद्धांत : एक परिचय",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS1-CH01-T1",
+     "topic_number": 1,
+     "title": "राजनीति क्या है?",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "rajneeti-ki-dharnayen",
+       "learning_objective": "राजनीति के बारे में प्रचलित विरोधी धारणाओं को पहचानना और उनका मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "rajneeti-samuhik-nirnay",
+       "learning_objective": "राजनीति को सामूहिक निर्णय, मोल-भाव और सरकार व जनता के संबंध के रूप में समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH01-T2",
+     "topic_number": 2,
+     "title": "राजनीतिक सिद्धांत में हम क्या पढ़ते हैं?",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "chintak-aur-samvidhan",
+       "learning_objective": "प्रमुख चिंतकों के विचारों और भारतीय संविधान में उनके स्थान को पहचानना।"
+      },
+      {
+       "concept_tag": "adhikaron-ki-nayi-vyakhya",
+       "learning_objective": "स्वतंत्रता और समानता से जुड़े प्रश्नों के बार-बार उठने तथा अधिकारों की नई व्याख्याओं के कारण समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH01-T3",
+     "topic_number": 3,
+     "title": "राजनीतिक सिद्धांतों को व्यवहार में उतारना",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "sukrat-aur-tark",
+       "learning_objective": "सुकरात द्वारा तर्क से प्रचलित मतों की सीमाएँ उजागर करने की पद्धति समझना।"
+      },
+      {
+       "concept_tag": "samanta-ke-arth",
+       "learning_objective": "दैनिक अनुभवों से समानता के अनेक संदर्भ-निर्भर अर्थों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH01-T4",
+     "topic_number": 4,
+     "title": "हमें राजनीतिक सिद्धांत क्यों पढ़ना चाहिए?",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "nagrik-aur-siddhant",
+       "learning_objective": "जागरूक नागरिकता के लिए राजनीतिक सिद्धांत के अध्ययन की उपयोगिता समझाना।"
+      },
+      {
+       "concept_tag": "tarkpurna-vichar",
+       "learning_objective": "अपने पूर्वाग्रहों की जाँच और तर्कसंगत बहस में राजनीतिक सिद्धांत की भूमिका का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHPS1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "स्वतंत्रता",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS1-CH02-T1",
+     "topic_number": 1,
+     "title": "स्वतंत्रता का आदर्श",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "mandela-suu-kyi-sangharsh",
+       "learning_objective": "नेल्सन मंडेला और आंग सान सू की के संघर्षों के माध्यम से स्वतंत्रता के आदर्श को समझना।"
+      },
+      {
+       "concept_tag": "bhay-se-mukti",
+       "learning_objective": "सू की के 'भय से मुक्ति' के विचार और गरिमापूर्ण जीवन से उसके संबंध की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH02-T2",
+     "topic_number": 2,
+     "title": "स्वतंत्रता क्या है?",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "swatantrata-ke-do-aayam",
+       "learning_objective": "बाहरी प्रतिबंधों के अभाव और क्षमताओं के विकास की परिस्थितियों के रूप में स्वतंत्रता के दो आयामों को पहचानना।"
+      },
+      {
+       "concept_tag": "swaraj",
+       "learning_objective": "भारतीय राजनीतिक चिंतन में स्वराज की अवधारणा और गांधीजी के विचार को समझाना।"
+      },
+      {
+       "concept_tag": "pratibandhon-ke-srot",
+       "learning_objective": "स्वतंत्रता पर प्रतिबंधों के राजनीतिक, सामाजिक और आर्थिक स्रोतों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH02-T3",
+     "topic_number": 3,
+     "title": "हमें प्रतिबंधों की आवश्यकता क्यों है?",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "pratibandhon-ki-avashyakta",
+       "learning_objective": "समाज में विवाद नियंत्रित करने के लिए कुछ प्रतिबंधों की आवश्यकता को समझाना।"
+      },
+      {
+       "concept_tag": "udarvad",
+       "learning_objective": "उदारवाद की प्रमुख विशेषताओं और व्यक्ति पर उसके बल को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH02-T4",
+     "topic_number": 4,
+     "title": "हानि सिद्धांत",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "swasambaddh-parsambaddh-karya",
+       "learning_objective": "मिल के स्वसंबद्ध और परसंबद्ध कार्यों के भेद को लागू करना।"
+      },
+      {
+       "concept_tag": "yuktiyukt-pratibandh",
+       "learning_objective": "गंभीर और मामूली हानि के आधार पर युक्तियुक्त प्रतिबंधों का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH02-T5",
+     "topic_number": 5,
+     "title": "नकारात्मक और सकारात्मक स्वतंत्रता",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "nakaratmak-swatantrata",
+       "learning_objective": "नकारात्मक स्वतंत्रता को अहस्तक्षेप के न्यूनतम क्षेत्र के रूप में समझाना।"
+      },
+      {
+       "concept_tag": "sakaratmak-swatantrata",
+       "learning_objective": "सकारात्मक स्वतंत्रता को व्यक्ति के विकास की सक्षमकारी परिस्थितियों से जोड़ना।"
+      },
+      {
+       "concept_tag": "abhivyakti-ki-swatantrata",
+       "learning_objective": "अभिव्यक्ति की स्वतंत्रता के पक्ष में मिल के तर्कों और प्रतिबंध के प्रश्न का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "समानता",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS1-CH03-T1",
+     "topic_number": 1,
+     "title": "समानता का महत्त्व",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "samanta-ka-mahatva",
+       "learning_objective": "समानता को एक नैतिक और राजनीतिक आदर्श के रूप में तथा उसके ऐतिहासिक संघर्षों को समझना।"
+      },
+      {
+       "concept_tag": "vaishvik-asamanta",
+       "learning_objective": "वैश्विक और राष्ट्रीय असमानता के आँकड़ों से आदर्श और यथार्थ के विरोधाभास की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH03-T2",
+     "topic_number": 2,
+     "title": "समानता क्या है और अवसरों की समानता",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "samanta-ka-arth",
+       "learning_objective": "स्वीकार्य और अस्वीकार्य अंतरों में भेद करते हुए समानता का अर्थ समझना।"
+      },
+      {
+       "concept_tag": "avsaron-ki-samanta",
+       "learning_objective": "शिक्षा, स्वास्थ्य और आवास जैसी मूल सुविधाओं तक समान पहुँच के रूप में अवसरों की समानता को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH03-T3",
+     "topic_number": 3,
+     "title": "प्राकृतिक और सामाजिक असमानताएँ",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "prakritik-asamanta",
+       "learning_objective": "प्राकृतिक असमानताओं का अर्थ और उन्हें अपरिवर्तनीय मानने की सीमाएँ पहचानना।"
+      },
+      {
+       "concept_tag": "samajik-asamanta",
+       "learning_objective": "समाज द्वारा उत्पन्न असमानताओं और उन्हें प्राकृतिक बताकर उचित ठहराने की प्रवृत्ति का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH03-T4",
+     "topic_number": 4,
+     "title": "समानता के तीन आयाम",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "rajnitik-samanta",
+       "learning_objective": "समान नागरिकता और कानूनी अधिकारों के रूप में राजनीतिक समानता को समझना।"
+      },
+      {
+       "concept_tag": "samajik-samanta",
+       "learning_objective": "न्यूनतम जीवन-स्थितियों और समान अवसरों के रूप में सामाजिक समानता को समझाना।"
+      },
+      {
+       "concept_tag": "arthik-samanta",
+       "learning_objective": "आर्थिक असमानता के माप और बद्धमूल असमानता के खतरों का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH03-T5",
+     "topic_number": 5,
+     "title": "नारीवाद, मार्क्सवाद, उदारवाद और समाजवाद",
+     "ncert_sections": "3.3, 3.4",
+     "concepts": [
+      {
+       "concept_tag": "narivad",
+       "learning_objective": "पितृसत्ता, लिंग और दोहरे बोझ से जुड़े नारीवादी विचारों को समझना।"
+      },
+      {
+       "concept_tag": "marxvad-udarvad",
+       "learning_objective": "असमानता पर मार्क्सवादी और उदारवादी दृष्टिकोणों की तुलना करना।"
+      },
+      {
+       "concept_tag": "samajvad-lohia",
+       "learning_objective": "समाजवाद तथा राममनोहर लोहिया की सप्त क्रांति की धारणा को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH03-T6",
+     "topic_number": 6,
+     "title": "समानता को कैसे बढ़ावा दें",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "aupcharik-samanta",
+       "learning_objective": "औपचारिक समानता की स्थापना और संविधान की भूमिका को समझना।"
+      },
+      {
+       "concept_tag": "vibhedak-bartav",
+       "learning_objective": "समान अधिकारों के लिए विभेदक बरताव के औचित्य का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "sakaratmak-karyavahi",
+       "learning_objective": "सकारात्मक कार्रवाई, आरक्षण और उनसे जुड़ी बहस का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "सामाजिक न्याय",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS1-CH04-T1",
+     "topic_number": 1,
+     "title": "न्याय क्या है?",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "nyay-ki-avdharna",
+       "learning_objective": "विभिन्न संस्कृतियों और प्लेटो-सुकरात के संवाद में न्याय की अवधारणा को समझना।"
+      },
+      {
+       "concept_tag": "kant-manav-garima",
+       "learning_objective": "कांट के मानव गरिमा के विचार और 'प्रत्येक को उसका प्राप्य देने' के आधुनिक अर्थ को स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH04-T2",
+     "topic_number": 2,
+     "title": "न्याय के तीन सिद्धांत",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "samaan-ke-saath-samaan-vyavhar",
+       "learning_objective": "समकक्षों के साथ समान व्यवहार के सिद्धांत को पहचानना।"
+      },
+      {
+       "concept_tag": "aanupatik-nyay",
+       "learning_objective": "प्रयास और कौशल के अनुपात में पुरस्कार के सिद्धांत को समझाना।"
+      },
+      {
+       "concept_tag": "vishesh-zarooraton-ki-pahchaan",
+       "learning_objective": "विशेष ज़रूरतों की पहचान के सिद्धांत और तीनों सिद्धांतों में संतुलन का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH04-T3",
+     "topic_number": 3,
+     "title": "न्यायपूर्ण बँटवारा",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "nyaypurn-bantwara",
+       "learning_objective": "समाज में संसाधनों के न्यायपूर्ण पुनर्वितरण की आवश्यकता और उपायों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH04-T4",
+     "topic_number": 4,
+     "title": "जॉन रॉल्स का न्याय सिद्धांत",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "agyanta-ka-avaran",
+       "learning_objective": "रॉल्स के 'अज्ञानता के आवरण' की अवधारणा को स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "tarksangat-nishpakshata",
+       "learning_objective": "यह विश्लेषण करना कि रॉल्स के अनुसार निष्पक्षता नैतिकता से नहीं, तर्कसंगत चिंतन से उपजती है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH04-T5",
+     "topic_number": 5,
+     "title": "सामाजिक न्याय का अनुसरण",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "nyuntam-buniyadi-zaroorten",
+       "learning_objective": "न्यायपूर्ण समाज के लिए न्यूनतम बुनियादी जीवन-स्थितियों को पहचानना।"
+      },
+      {
+       "concept_tag": "mukt-bazar-banam-rajya-hastakshep",
+       "learning_objective": "मुक्त बाज़ार और राज्य हस्तक्षेप के पक्ष-विपक्ष के तर्कों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "अधिकार",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS1-CH05-T1",
+     "topic_number": 1,
+     "title": "अधिकार क्या हैं?",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "adhikar-ka-arth",
+       "learning_objective": "अधिकार को एक न्यायसंगत दावे के रूप में समझना और इच्छा तथा अधिकार में अंतर करना।"
+      },
+      {
+       "concept_tag": "garima-aur-kalyan-adhar",
+       "learning_objective": "अधिकारों के दावे के आधार के रूप में गरिमा, आत्मसम्मान और कल्याण को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH05-T2",
+     "topic_number": 2,
+     "title": "अधिकार कहाँ से आते हैं?",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "prakritik-adhikar",
+       "learning_objective": "प्राकृतिक अधिकारों की अवधारणा और जीवन, स्वतंत्रता व संपत्ति के अधिकारों को समझना।"
+      },
+      {
+       "concept_tag": "manav-adhikar",
+       "learning_objective": "मानवाधिकारों की धारणा और उसके विस्तार को समझना।"
+      },
+      {
+       "concept_tag": "kant-naitik-avdharana",
+       "learning_objective": "कांट की मानवीय गरिमा संबंधी नैतिक अवधारणा को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH05-T3",
+     "topic_number": 3,
+     "title": "कानूनी अधिकार और राज्य",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "sanvaidhanik-manyata",
+       "learning_objective": "अधिकारों की संवैधानिक व कानूनी मान्यता का महत्व समझना।"
+      },
+      {
+       "concept_tag": "rajya-par-dayitva-aur-pratibandh",
+       "learning_objective": "अधिकार राज्य पर कर्तव्य और अंकुश दोनों कैसे लगाते हैं, यह समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH05-T4",
+     "topic_number": 4,
+     "title": "अधिकारों के प्रकार",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "rajnitik-adhikar-nagrik-swatantrata",
+       "learning_objective": "राजनीतिक अधिकारों और नागरिक स्वतंत्रताओं में अंतर करना।"
+      },
+      {
+       "concept_tag": "arthik-sanskritik-adhikar",
+       "learning_objective": "आर्थिक और सांस्कृतिक अधिकारों के उदाहरण पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH05-T5",
+     "topic_number": 5,
+     "title": "अधिकार और जिम्मेदारियाँ",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "sarvajanik-hit-aur-saman-adhikar",
+       "learning_objective": "सार्वजनिक हित की रक्षा और दूसरों के समान अधिकारों का सम्मान समझना।"
+      },
+      {
+       "concept_tag": "adhikaron-me-santulan-aur-satarkata",
+       "learning_objective": "परस्पर टकराते अधिकारों में संतुलन और प्रतिबंधों के प्रति सतर्कता का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "नागरिकता",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS1-CH06-T1",
+     "topic_number": 1,
+     "title": "नागरिकता का अर्थ और परिचय",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "nagrikta-ka-arth",
+       "learning_objective": "नागरिकता को राजनीतिक समुदाय की पूर्ण और समान सदस्यता के रूप में समझना।"
+      },
+      {
+       "concept_tag": "adhikaron-ke-liye-sangharsh",
+       "learning_objective": "यह पहचानना कि नागरिकों के अधिकार संघर्षों से प्राप्त हुए हैं।"
+      },
+      {
+       "concept_tag": "nagrik-dayitva",
+       "learning_objective": "नागरिकों के एक-दूसरे और समाज के प्रति दायित्वों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH06-T2",
+     "topic_number": 2,
+     "title": "पूर्ण और समान सदस्यता",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "aavajahi-ki-swatantrata",
+       "learning_objective": "देश में कहीं भी रहने और काम करने के अधिकार से जुड़ी बहसों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "vivad-samadhan",
+       "learning_objective": "लोकतंत्र में विवादों को वार्ता, विरोध और न्यायालय से सुलझाने की प्रक्रिया समझना।"
+      },
+      {
+       "concept_tag": "prithakkaran-virodh",
+       "learning_objective": "मार्टिन लूथर किंग के पृथक्करण-विरोधी तर्कों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH06-T3",
+     "topic_number": 3,
+     "title": "समान अधिकार",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "shahari-garib",
+       "learning_objective": "शहरी गरीबों और झुग्गीवासियों के अधिकारों की समस्याओं को समझना।"
+      },
+      {
+       "concept_tag": "marshall-ka-siddhant",
+       "learning_objective": "टी. एच. मार्शल द्वारा बताए गए नागरिक, राजनीतिक और सामाजिक अधिकारों को पहचानना।"
+      },
+      {
+       "concept_tag": "adivasi-vanvasi",
+       "learning_objective": "आदिवासियों और वनवासियों के अधिकारों तथा भिन्न आवश्यकताओं वाली नीतियों का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH06-T4",
+     "topic_number": 4,
+     "title": "नागरिक और राष्ट्र",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "rashtra-rajya-pahchan",
+       "learning_objective": "राष्ट्र-राज्य की राष्ट्रीय पहचान और समावेशन की चुनौतियों को समझना।"
+      },
+      {
+       "concept_tag": "nagrikta-ki-kasautiyan",
+       "learning_objective": "विभिन्न देशों में नागरिकता प्रदान करने की कसौटियों की तुलना करना।"
+      },
+      {
+       "concept_tag": "bharatiya-nagrikta",
+       "learning_objective": "भारतीय संविधान में नागरिकता के लोकतांत्रिक और समावेशी स्वरूप को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH06-T5",
+     "topic_number": 5,
+     "title": "सार्वभौमिक नागरिकता",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "rajyaviheen-sharanarthi",
+       "learning_objective": "राज्यविहीन लोगों और शरणार्थियों की समस्याओं का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "sarvabhaumik-nagrikta",
+       "learning_objective": "सार्वभौमिक नागरिकता के वादे और राज्यों की प्रतिबंधात्मक कसौटियों के तनाव को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH06-T6",
+     "topic_number": 6,
+     "title": "विश्व नागरिकता",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "vishva-nagrikta",
+       "learning_objective": "विश्व नागरिकता की अवधारणा, उसके पक्ष के तर्कों और राष्ट्रीय नागरिकता से उसके संबंध का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "राष्ट्रवाद",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS1-CH07-T1",
+     "topic_number": 1,
+     "title": "राष्ट्रवाद का परिचय",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "rashtravad-ki-bhumika",
+       "learning_objective": "विश्व राजनीति में राष्ट्रवाद की एकजुट करने वाली और विभाजित करने वाली दोनों भूमिकाओं को समझना।"
+      },
+      {
+       "concept_tag": "ekikaran-aur-vighatan",
+       "learning_objective": "राष्ट्रवाद द्वारा राज्यों के एकीकरण और साम्राज्यों के विघटन के उदाहरण पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH07-T2",
+     "topic_number": 2,
+     "title": "राष्ट्र: एक कल्पित समुदाय, साझे विश्वास और इतिहास",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "kalpit-samuday",
+       "learning_objective": "राष्ट्र को परिवार, जनजाति और नातेदारी समूहों से अलग एक कल्पित समुदाय के रूप में समझाना।"
+      },
+      {
+       "concept_tag": "sajhe-vishvas-aur-itihas",
+       "learning_objective": "राष्ट्र के निर्माण में साझे विश्वास और निरंतर ऐतिहासिक पहचान की भूमिका बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH07-T3",
+     "topic_number": 3,
+     "title": "भू-क्षेत्र, साझे राजनीतिक आदर्श और साझी राजनीतिक पहचान",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "bhu-kshetra-matribhumi",
+       "learning_objective": "राष्ट्र के लिए मातृभूमि या भू-क्षेत्र के महत्त्व और उससे उपजे संघर्षों को समझना।"
+      },
+      {
+       "concept_tag": "rajnitik-adarsh",
+       "learning_objective": "लोकतंत्र में राष्ट्र के आधार के रूप में साझे राजनीतिक आदर्शों और दायित्वों का महत्त्व बताना।"
+      },
+      {
+       "concept_tag": "rajnitik-banam-sanskritik-pahchan",
+       "learning_objective": "राष्ट्र की सांस्कृतिक के बजाय राजनीतिक परिकल्पना के पक्ष में दिए गए तर्कों का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH07-T4",
+     "topic_number": 4,
+     "title": "राष्ट्रीय आत्मनिर्णय",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "atmanirnay-ka-adhikar",
+       "learning_objective": "राष्ट्रीय आत्मनिर्णय के अधिकार का अर्थ और उसके दावों का आधार बताना।"
+      },
+      {
+       "concept_tag": "ek-sanskriti-ek-rajya",
+       "learning_objective": "एक संस्कृति-एक राज्य के विचार के परिणामों और सीमाओं का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "bask-andolan",
+       "learning_objective": "बास्क क्षेत्र के उदाहरण से आत्मनिर्णय की माँगों के कारणों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH07-T5",
+     "topic_number": 5,
+     "title": "राष्ट्रवाद और बहुलवाद",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "alpsankhyak-samuh-adhikar",
+       "learning_objective": "सांस्कृतिक अल्पसंख्यकों के समूह अधिकारों और समावेशी राष्ट्रीय पहचान का महत्त्व समझाना।"
+      },
+      {
+       "concept_tag": "tagore-ki-alochana",
+       "learning_objective": "रवींद्रनाथ टैगोर द्वारा संकीर्ण राष्ट्रवाद की आलोचना को समझना।"
+      },
+      {
+       "concept_tag": "bahu-pahchan",
+       "learning_objective": "व्यक्ति की अनेक पहचानों और लोकतांत्रिक नागरिकता के संबंध का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "धर्मनिरपेक्षता",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS1-CH08-T1",
+     "topic_number": 1,
+     "title": "धर्मनिरपेक्षता क्या है?",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "antar-dharmik-varchasv",
+       "learning_objective": "अंतर-धार्मिक वर्चस्व के उदाहरणों को पहचानकर धर्मनिरपेक्षता को उसके विरोधी सिद्धांत के रूप में समझना।"
+      },
+      {
+       "concept_tag": "antah-dharmik-varchasv",
+       "learning_objective": "अंतःधार्मिक वर्चस्व की अवधारणा और धर्मनिरपेक्षता के धर्म-विरोधी न होने के कारण की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH08-T2",
+     "topic_number": 2,
+     "title": "धर्मनिरपेक्ष राज्य",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "dharmtantrik-rajya",
+       "learning_objective": "धर्मतांत्रिक राज्य और धर्म-विशेष से औपचारिक गठजोड़ वाले राज्य की पहचान करना।"
+      },
+      {
+       "concept_tag": "dharmnirpeksh-rajya-ke-lakshya",
+       "learning_objective": "धर्म और राज्य के अलगाव को आवश्यक पर अपर्याप्त शर्त मानते हुए धर्मनिरपेक्ष राज्य के लक्ष्यों को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH08-T3",
+     "topic_number": 3,
+     "title": "धर्मनिरपेक्षता का पश्चिमी मॉडल",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "paraspar-nishedh",
+       "learning_objective": "पश्चिमी मॉडल में धर्म और राज्य के पारस्परिक निषेध के अर्थ को स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "vyaktivadi-drishtikon",
+       "learning_objective": "पश्चिमी मॉडल में स्वतंत्रता और समानता की व्यक्तिवादी व्याख्या का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "ataturk-dharmnirpekshta",
+       "learning_objective": "तुर्की में अतातुर्क की धर्मनिरपेक्षता की तुलना भारतीय धर्मनिरपेक्षता से करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH08-T4",
+     "topic_number": 4,
+     "title": "धर्मनिरपेक्षता का भारतीय मॉडल",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "bhartiya-model-ki-visheshtayen",
+       "learning_objective": "भारतीय धर्मनिरपेक्षता को पश्चिमी मॉडल से अलग करने वाली विशेषताओं को पहचानना।"
+      },
+      {
+       "concept_tag": "siddhantik-doori",
+       "learning_objective": "सैद्धांतिक दूरी तथा राज्य-समर्थित धार्मिक सुधार की अवधारणा को लागू करना।"
+      },
+      {
+       "concept_tag": "nehru-ke-vichar",
+       "learning_objective": "धर्मनिरपेक्षता पर नेहरू के विचारों को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH08-T5",
+     "topic_number": 5,
+     "title": "भारतीय धर्मनिरपेक्षता की आलोचनाएँ: धर्म-विरोधी, पश्चिमी आयात और अल्पसंख्यकवाद",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "dharm-virodhi-aalochna",
+       "learning_objective": "धर्मनिरपेक्षता के धर्म-विरोधी होने के आरोप का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "pashchimi-aayat",
+       "learning_objective": "धर्मनिरपेक्षता को पश्चिमी आयात कहने वाली आलोचना का उत्तर समझाना।"
+      },
+      {
+       "concept_tag": "alpsankhyakvad",
+       "learning_objective": "अल्पसंख्यक अधिकारों को विशेषाधिकार नहीं बल्कि मूलभूत हितों की रक्षा के रूप में समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS1-CH08-T6",
+     "topic_number": 6,
+     "title": "भारतीय धर्मनिरपेक्षता की आलोचनाएँ: हस्तक्षेपकारी, वोट बैंक और असंभव परियोजना",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "hastakshepkari-aalochna",
+       "learning_objective": "हस्तक्षेपकारी होने के आरोप और व्यक्तिगत कानूनों की दुविधा का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "vote-bank-rajniti",
+       "learning_objective": "वोट बैंक की राजनीति के तर्क और उसके दुष्परिणामों का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "asambhav-pariyojana",
+       "learning_objective": "धर्मनिरपेक्षता को असंभव परियोजना कहने वाली आलोचना का उत्तर समझाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KEBO1-CH18",
+ "title": "Neural Control and Coordination",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH18-T1",
+   "topic_number": 1,
+   "title": "Neural system and the human neural system",
+   "ncert_sections": "18.1, 18.2",
+   "concepts": [
+    {
+     "concept_tag": "neural-organisation-in-animals",
+     "learning_objective": "Describe how the organisation of the neural system differs among Hydra, insects and vertebrates."
+    },
+    {
+     "concept_tag": "cns-and-pns",
+     "learning_objective": "Distinguish the central and peripheral neural systems and afferent and efferent nerve fibres."
+    },
+    {
+     "concept_tag": "somatic-and-autonomic-divisions",
+     "learning_objective": "Distinguish the somatic and autonomic divisions of the peripheral neural system by the organs they serve."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH18-T2",
+   "topic_number": 2,
+   "title": "Neuron: structure and types",
+   "ncert_sections": "18.3",
+   "concepts": [
+    {
+     "concept_tag": "neuron-structure",
+     "learning_objective": "Identify the cell body, dendrites, axon and synaptic knobs of a neuron and their roles."
+    },
+    {
+     "concept_tag": "neuron-types",
+     "learning_objective": "Classify neurons as multipolar, bipolar or unipolar and state where each is found."
+    },
+    {
+     "concept_tag": "myelinated-and-unmyelinated-fibres",
+     "learning_objective": "Distinguish myelinated and non-myelinated nerve fibres and state where each occurs."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH18-T3",
+   "topic_number": 3,
+   "title": "Generation and conduction of nerve impulse",
+   "ncert_sections": "18.3.1",
+   "concepts": [
+    {
+     "concept_tag": "resting-potential",
+     "learning_objective": "Explain how ion permeability and the sodium-potassium pump polarise the resting axonal membrane."
+    },
+    {
+     "concept_tag": "action-potential",
+     "learning_objective": "Explain depolarisation by Na+ influx and repolarisation by K+ efflux during an action potential."
+    },
+    {
+     "concept_tag": "impulse-conduction-along-axon",
+     "learning_objective": "Explain how local current flow conducts an action potential along an axon."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH18-T4",
+   "topic_number": 4,
+   "title": "Transmission of impulses across synapses",
+   "ncert_sections": "18.3.2",
+   "concepts": [
+    {
+     "concept_tag": "electrical-synapse",
+     "learning_objective": "Describe the structure and speed of impulse transmission at electrical synapses."
+    },
+    {
+     "concept_tag": "chemical-synapse",
+     "learning_objective": "Explain the sequence of events in impulse transmission across a chemical synapse."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH18-T5",
+   "topic_number": 5,
+   "title": "Central neural system: brain protection and forebrain",
+   "ncert_sections": "18.4, 18.4.1",
+   "concepts": [
+    {
+     "concept_tag": "brain-functions-and-meninges",
+     "learning_objective": "State the functions of the brain and name the cranial meninges in order."
+    },
+    {
+     "concept_tag": "cerebrum",
+     "learning_objective": "Describe the cerebral hemispheres, corpus callosum, cerebral cortex and white matter."
+    },
+    {
+     "concept_tag": "thalamus-hypothalamus-limbic-system",
+     "learning_objective": "State the functions of the thalamus, hypothalamus and limbic system."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH18-T6",
+   "topic_number": 6,
+   "title": "Midbrain and hindbrain",
+   "ncert_sections": "18.4.2, 18.4.3",
+   "concepts": [
+    {
+     "concept_tag": "midbrain",
+     "learning_objective": "Describe the location of the midbrain, the cerebral aqueduct and the corpora quadrigemina."
+    },
+    {
+     "concept_tag": "hindbrain",
+     "learning_objective": "State the structure and functions of the pons, cerebellum and medulla oblongata."
+    },
+    {
+     "concept_tag": "brain-stem",
+     "learning_objective": "Identify the parts of the brain stem and predict the effects of damage to it."
+    }
+   ]
+  }
+ ]
+}

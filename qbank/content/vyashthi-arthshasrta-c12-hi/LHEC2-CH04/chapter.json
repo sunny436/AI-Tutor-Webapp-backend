@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LHEC2-CH04",
+ "title": "पूर्ण प्रतिस्पर्धा की स्थिति में फर्म का सिद्धांत",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHEC2-CH04-T1",
+   "topic_number": 1,
+   "title": "पूर्ण प्रतिस्पर्धा की विशेषताएँ",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "purn-pratispardha-visheshtayen",
+     "learning_objective": "पूर्ण प्रतिस्पर्धी बाज़ार की प्रमुख विशेषताओं (अनेक क्रेता-विक्रेता, समरूप वस्तु, मुक्त प्रवेश-निकास, पूर्ण जानकारी) को पहचानना।"
+    },
+    {
+     "concept_tag": "kimat-swikarta",
+     "learning_objective": "यह समझाना कि पूर्ण प्रतिस्पर्धा में फर्म कीमत स्वीकारक क्यों होती है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH04-T2",
+   "topic_number": 2,
+   "title": "संप्राप्ति: कुल, औसत और सीमांत संप्राप्ति",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "kul-sampraapti",
+     "learning_objective": "कुल संप्राप्ति की गणना करना और उसके वक्र का स्वरूप समझना।"
+    },
+    {
+     "concept_tag": "ausat-seemant-sampraapti",
+     "learning_objective": "पूर्ण प्रतिस्पर्धा में औसत संप्राप्ति, सीमांत संप्राप्ति और कीमत रेखा के संबंध की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH04-T3",
+   "topic_number": 3,
+   "title": "लाभ अधिकतमीकरण",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "labh-adhiktam-shartein",
+     "learning_objective": "लाभ अधिकतमीकरण की तीनों शर्तों को पहचानना और लागू करना।"
+    },
+    {
+     "concept_tag": "labh-ganana",
+     "learning_objective": "कुल संप्राप्ति और कुल लागत से लाभ या हानि की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH04-T4",
+   "topic_number": 4,
+   "title": "फर्म का पूर्ति वक्र, उत्पादन बंद बिंदु और लाभ-अलाभ बिंदु",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "alpkalin-poorti-vakra",
+     "learning_objective": "अल्पकालीन और दीर्घकालीन पूर्ति वक्र की व्युत्पत्ति समझना।"
+    },
+    {
+     "concept_tag": "utpadan-band-bindu",
+     "learning_objective": "उत्पादन बंद बिंदु, सामान्य लाभ और लाभ-अलाभ बिंदु में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH04-T5",
+   "topic_number": 5,
+   "title": "पूर्ति वक्र के निर्धारक और बाज़ार पूर्ति वक्र",
+   "ncert_sections": "4.5, 4.6",
+   "concepts": [
+    {
+     "concept_tag": "poorti-nirdharak",
+     "learning_objective": "तकनीकी प्रगति, आगत कीमतों और इकाई कर का पूर्ति वक्र पर प्रभाव समझाना।"
+    },
+    {
+     "concept_tag": "bazar-poorti-vakra",
+     "learning_objective": "व्यक्तिगत फर्मों के पूर्ति वक्रों के क्षैतिज योग से बाज़ार पूर्ति वक्र प्राप्त करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH04-T6",
+   "topic_number": 6,
+   "title": "पूर्ति की कीमत लोच",
+   "ncert_sections": "4.7",
+   "concepts": [
+    {
+     "concept_tag": "poorti-loch-ganana",
+     "learning_objective": "प्रतिशत विधि से पूर्ति की कीमत लोच की गणना करना।"
+    },
+    {
+     "concept_tag": "poorti-loch-jyamitiya",
+     "learning_objective": "ज्यामितीय विधि से सीधी रेखा वाले पूर्ति वक्र की लोच का आकलन करना।"
+    }
+   ]
+  }
+ ]
+}

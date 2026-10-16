@@ -1,0 +1,687 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "bhugol-main-prayogatmak-karya-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "geography",
+  "language": "hindi",
+  "title": "Bhugol Main Prayogatmak Karya",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khgy3"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHGY3-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "मानचित्र का परिचय",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khgy301.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHGY3-CH01-T1",
+     "topic_number": 1,
+     "title": "मानचित्र का अर्थ और रेखाचित्र से अंतर",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "manchitra-ki-paribhasha",
+       "learning_objective": "मानचित्र को पृथ्वी के किसी भाग के चयनात्मक, प्रतीकात्मक और सामान्यीकृत लघुकृत निरूपण के रूप में परिभाषित करना।"
+      },
+      {
+       "concept_tag": "rekhachitra-se-antar",
+       "learning_objective": "मापनी के आधार पर मानचित्र और रेखाचित्र में अंतर स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH01-T2",
+     "topic_number": 2,
+     "title": "मानचित्र निर्माण के आवश्यक तत्व",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mapni-aur-prakshep",
+       "learning_objective": "मानचित्र निर्माण में मापनी और प्रक्षेप की भूमिका समझना।"
+      },
+      {
+       "concept_tag": "samanyikaran-aur-abhikalpana",
+       "learning_objective": "सामान्यीकरण, अभिकल्पना तथा निर्माण एवं उत्पादन की प्रक्रियाओं को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH01-T3",
+     "topic_number": 3,
+     "title": "मानचित्र निर्माण का इतिहास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vishva-manchitran-itihas",
+       "learning_objective": "मेसोपोटामिया से आधुनिक काल तक मानचित्र निर्माण के विकास को समझना।"
+      },
+      {
+       "concept_tag": "bharat-manchitran-itihas",
+       "learning_objective": "वैदिक काल से भारतीय सर्वेक्षण विभाग तक भारत में मानचित्र निर्माण के विकास को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH01-T4",
+     "topic_number": 4,
+     "title": "मापनी के आधार पर मानचित्रों के प्रकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vrihat-mapni-manchitra",
+       "learning_objective": "भूसंपत्ति और स्थलाकृतिक मानचित्रों की मापनी और उद्देश्य पहचानना।"
+      },
+      {
+       "concept_tag": "laghu-mapni-manchitra",
+       "learning_objective": "भित्ति और एटलस मानचित्रों की विशेषताएँ समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH01-T5",
+     "topic_number": 5,
+     "title": "कार्य के आधार पर मानचित्रों के प्रकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhautik-manchitra",
+       "learning_objective": "उच्चावच, भूगर्भिक, जलवायु और मृदा मानचित्रों जैसे भौतिक मानचित्रों को पहचानना।"
+      },
+      {
+       "concept_tag": "sanskritik-manchitra",
+       "learning_objective": "राजनीतिक, जनसंख्या, आर्थिक और परिवहन मानचित्रों जैसे सांस्कृतिक मानचित्रों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH01-T6",
+     "topic_number": 6,
+     "title": "मानचित्रों के उपयोग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "doori-mapan",
+       "learning_objective": "सीधी और टेढ़ी-मेढ़ी रेखाओं की दूरी मापने की विधियाँ लागू करना।"
+      },
+      {
+       "concept_tag": "disha-mapan",
+       "learning_objective": "उत्तर दिशा को आधार मानकर प्रधान और मध्यवर्ती दिशाएँ समझना।"
+      },
+      {
+       "concept_tag": "kshetraphal-mapan",
+       "learning_objective": "वर्ग विधि और ध्रुवीय प्लैनीमीटर से क्षेत्रफल मापना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHGY3-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "मानचित्र मापनी",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khgy302.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHGY3-CH02-T1",
+     "topic_number": 1,
+     "title": "मापनी का अर्थ और मापन की पद्धतियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mapni-ka-arth",
+       "learning_objective": "मानचित्र मापनी को मानचित्र दूरी और धरातलीय दूरी के अनुपात के रूप में समझना।"
+      },
+      {
+       "concept_tag": "mapan-paddhatiyan",
+       "learning_objective": "मापन की मीट्रिक और अंग्रेज़ी पद्धतियों की इकाइयों और उनके संबंधों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH02-T2",
+     "topic_number": 2,
+     "title": "मापनी का कथन और आलेखी मापनी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mapni-ka-kathan",
+       "learning_objective": "मापनी के कथन की विधि, उसकी सरलता और सीमाओं को समझना।"
+      },
+      {
+       "concept_tag": "aalekhi-mapni",
+       "learning_objective": "आलेखी या दंड मापनी की विशेषता और मानचित्र छोटा-बड़ा होने पर उसकी वैधता को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH02-T3",
+     "topic_number": 3,
+     "title": "निरूपक भिन्न",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nirupak-bhinn",
+       "learning_objective": "निरूपक भिन्न का अर्थ और उसके सार्वभौमिक होने का कारण समझना।"
+      },
+      {
+       "concept_tag": "ansh-aur-har",
+       "learning_objective": "निरूपक भिन्न में अंश और हर द्वारा दर्शाई गई दूरियों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH02-T4",
+     "topic_number": 4,
+     "title": "मापनी का रूपांतरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kathan-se-nirupak-bhinn",
+       "learning_objective": "मापनी के कथन को निरूपक भिन्न में बदलना।"
+      },
+      {
+       "concept_tag": "nirupak-bhinn-se-kathan",
+       "learning_objective": "निरूपक भिन्न को मीट्रिक या अंग्रेज़ी पद्धति के कथन में बदलना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH02-T5",
+     "topic_number": 5,
+     "title": "आलेखी मापनी की रचना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "aalekhi-rachna-ganana",
+       "learning_objective": "दिए गए निरूपक भिन्न या कथन से आलेखी मापनी की रेखा की लंबाई की गणना करना।"
+      },
+      {
+       "concept_tag": "prathmik-dwitiyak-bhag",
+       "learning_objective": "आलेखी मापनी के प्राथमिक और द्वितीयक भागों तथा असमान रेखा को बराबर भागों में बाँटने की विधि लागू करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHGY3-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "अक्षांश, देशांतर और समय",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khgy303.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHGY3-CH03-T1",
+     "topic_number": 1,
+     "title": "पृथ्वी की आकृति और भौगोलिक ग्रिड",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prithvi-ki-akriti",
+       "learning_objective": "पृथ्वी की लध्वक्ष गोलाभ आकृति और संदर्भ बिंदुओं की आवश्यकता को समझना।"
+      },
+      {
+       "concept_tag": "bhaugolik-grid-nirdeshank",
+       "learning_objective": "अक्षांश और देशांतर को भौगोलिक निर्देशांक के रूप में पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH03-T2",
+     "topic_number": 2,
+     "title": "अक्षांश के समांतर",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "akshansh-samantar",
+       "learning_objective": "अक्षांश की परिभाषा, मान और समांतरों की विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "akshansh-rekhan",
+       "learning_objective": "चाँदे की सहायता से अक्षांश के समांतर खींचने की विधि समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH03-T3",
+     "topic_number": 3,
+     "title": "देशांतर के याम्योत्तर",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "deshantar-yamyottar",
+       "learning_objective": "देशांतर, प्रधान याम्योत्तर और याम्योत्तरों की विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "deshantar-tulna",
+       "learning_objective": "अक्षांश और देशांतर की विशेषताओं की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH03-T4",
+     "topic_number": 4,
+     "title": "देशांतर और समय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sthaniya-samay-ganana",
+       "learning_objective": "देशांतर के अंतर से स्थानीय समय की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH03-T5",
+     "topic_number": 5,
+     "title": "मानक समय और अंतर्राष्ट्रीय तिथि रेखा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "manak-samay",
+       "learning_objective": "मानक याम्योत्तर, भारतीय मानक समय और समय कटिबंधों को समझना।"
+      },
+      {
+       "concept_tag": "antarrashtriya-tithi-rekha",
+       "learning_objective": "अंतर्राष्ट्रीय तिथि रेखा पार करने पर दिन में होने वाले परिवर्तन को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHGY3-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "मानचित्र प्रक्षेप",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khgy304.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHGY3-CH04-T1",
+     "topic_number": 1,
+     "title": "मानचित्र प्रक्षेप का अर्थ और आवश्यकता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "graticule-aur-prakshep",
+       "learning_objective": "अक्षांश-देशांतर जाल (ग्रेटिक्यूल) और मानचित्र प्रक्षेप का अर्थ समझना।"
+      },
+      {
+       "concept_tag": "prakshep-ki-avashyakta",
+       "learning_objective": "ग्लोब की सीमाओं के आधार पर मानचित्र प्रक्षेप की आवश्यकता स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH04-T2",
+     "topic_number": 2,
+     "title": "मानचित्र प्रक्षेप के तत्व",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "laghukrit-prithvi",
+       "learning_objective": "लघुकृत पृथ्वी तथा अक्षांश और देशांतर रेखाओं की विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "bhumandaliya-gun",
+       "learning_objective": "मानचित्र में सुरक्षित रखे जाने वाले चार भूमंडलीय गुणों की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH04-T3",
+     "topic_number": 3,
+     "title": "रचना विधि और विकासनीय पृष्ठ के आधार पर वर्गीकरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vikasniya-prishth",
+       "learning_objective": "विकासनीय और अविकासनीय पृष्ठ में अंतर कर बेलनाकार, शंक्वाकार और खमध्य प्रक्षेप पहचानना।"
+      },
+      {
+       "concept_tag": "rachna-vidhi",
+       "learning_objective": "संदर्श, असंदर्श और गणितीय प्रक्षेपों तथा सामान्य, तिर्यक और ध्रुवीय स्थितियों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH04-T4",
+     "topic_number": 4,
+     "title": "भूमंडलीय गुण और प्रकाश स्रोत के आधार पर वर्गीकरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gun-adharit-vargikaran",
+       "learning_objective": "समक्षेत्र, शुद्ध आकृतिक, दिगंशीय और समदूरस्थ प्रक्षेपों की विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "prakash-srot",
+       "learning_objective": "प्रकाश स्रोत की स्थिति के आधार पर नोमोनिक, त्रिविम और लंबकोणीय प्रक्षेप पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH04-T5",
+     "topic_number": 5,
+     "title": "एक मानक अक्षांश वाला शंक्वाकार प्रक्षेप",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shankvakar-prakshep-rachna",
+       "learning_objective": "एक मानक अक्षांश वाले शंक्वाकार प्रक्षेप की गणना और रचना करना।"
+      },
+      {
+       "concept_tag": "shankvakar-gun-upyog",
+       "learning_objective": "शंक्वाकार प्रक्षेप के गुण, सीमाएँ और उपयोग समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH04-T6",
+     "topic_number": 6,
+     "title": "बेलनाकार समक्षेत्र प्रक्षेप",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "belnakar-samkshetra-ganana",
+       "learning_objective": "बेलनाकार समक्षेत्र प्रक्षेप के लिए लघुकृत पृथ्वी की त्रिज्या, विषुवत रेखा की लंबाई और अंतराल की गणना करना।"
+      },
+      {
+       "concept_tag": "belnakar-samkshetra-gun",
+       "learning_objective": "बेलनाकार समक्षेत्र प्रक्षेप के गुण, सीमाएँ और उपयोग बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH04-T7",
+     "topic_number": 7,
+     "title": "मर्केटर प्रक्षेप",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "merketar-gun",
+       "learning_objective": "मर्केटर प्रक्षेप के गुण और सीमाएँ समझाना।"
+      },
+      {
+       "concept_tag": "merketar-upyog-ganana",
+       "learning_objective": "मर्केटर प्रक्षेप की गणना और नौसंचालन में इसके उपयोग को स्पष्ट करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHGY3-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "स्थलाकृतिक मानचित्र",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khgy305.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHGY3-CH05-T1",
+     "topic_number": 1,
+     "title": "स्थलाकृतिक मानचित्र: अर्थ, शृंखलाएँ और मापनियाँ",
+     "ncert_sections": "परिचय, भारत एवं पड़ोसी देशों की शृंखला, विश्व की अंतर्राष्ट्रीय मानचित्र शृंखला",
+     "concepts": [
+      {
+       "concept_tag": "sthalakritik-manchitra-arth",
+       "learning_objective": "स्थलाकृतिक मानचित्रों का अर्थ, विशेषताएँ तथा उन्हें बनाने वाली संस्था बता सकेंगे।"
+      },
+      {
+       "concept_tag": "manchitra-shrinkhla-maapni",
+       "learning_objective": "भारत में स्थलाकृतिक मानचित्रों की शृंखलाओं, मापनियों और उनके अक्षांशीय-देशांतरीय विस्तार को समझ सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH05-T2",
+     "topic_number": 2,
+     "title": "उच्चावच निरूपण की विधियाँ और समोच्च रेखाएँ",
+     "ncert_sections": "उच्चावच निरूपण की विधियाँ, समोच्च रेखाएँ",
+     "concepts": [
+      {
+       "concept_tag": "uchchavach-nirupan-vidhiyan",
+       "learning_objective": "मानचित्र पर उच्चावच दिखाने की विभिन्न विधियों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "samochch-rekha-visheshtayen",
+       "learning_objective": "समोच्च रेखाओं, ऊर्ध्वाधर अंतराल और क्षैतिज तुल्यमान की विशेषताएँ समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH05-T3",
+     "topic_number": 3,
+     "title": "ढाल के प्रकार",
+     "ncert_sections": "ढाल के प्रकार: मंद, तीव्र, अवतल, उत्तल",
+     "concepts": [
+      {
+       "concept_tag": "dhal-ke-prakar",
+       "learning_objective": "समोच्च रेखाओं के अंतराल से मंद, तीव्र, अवतल और उत्तल ढाल की पहचान कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH05-T4",
+     "topic_number": 4,
+     "title": "समोच्च रेखाओं द्वारा स्थलरूपों का निरूपण",
+     "ncert_sections": "स्थलरूपों के प्रकार, घाटी, गॉर्ज, स्पर, भृगु, जलप्रपात एवं क्षिप्रिकाएँ",
+     "concepts": [
+      {
+       "concept_tag": "sthalroop-pahadi-pathar",
+       "learning_objective": "शंक्वाकार पहाड़ी और पठार के समोच्च प्रतिरूप पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "ghati-gorge-spur",
+       "learning_objective": "घाटियों, गॉर्ज, स्पर, भृगु और जलप्रपात के समोच्च प्रतिरूपों में अंतर कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH05-T5",
+     "topic_number": 5,
+     "title": "अनुप्रस्थ परिच्छेद बनाना",
+     "ncert_sections": "अनुप्रस्थ परिच्छेद बनाने के चरण",
+     "concepts": [
+      {
+       "concept_tag": "anuprasth-parichchhed-charan",
+       "learning_objective": "समोच्च रेखाओं से अनुप्रस्थ परिच्छेद बनाने के चरण क्रम से लागू कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH05-T6",
+     "topic_number": 6,
+     "title": "सांस्कृतिक लक्षणों की पहचान",
+     "ncert_sections": "बस्तियों का वितरण, परिवहन एवं संचार प्रतिरूप",
+     "concepts": [
+      {
+       "concept_tag": "basti-pratiroop",
+       "learning_objective": "ग्रामीण और नगरीय बस्तियों के प्रकार तथा उनके स्थल को प्रभावित करने वाले कारक समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "parivahan-sanchar",
+       "learning_objective": "परिवहन एवं संचार प्रतिरूप पर उच्चावच और जनसंख्या के प्रभाव को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH05-T7",
+     "topic_number": 7,
+     "title": "स्थलाकृतिक मानचित्रों की व्याख्या",
+     "ncert_sections": "स्थलाकृतिक मानचित्रों की व्याख्या, मानचित्र व्याख्या की प्रक्रिया",
+     "concepts": [
+      {
+       "concept_tag": "seemant-suchna-shirshak",
+       "learning_objective": "स्थलाकृतिक पत्रक की व्याख्या के शीर्षकों और सीमांत सूचना को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "vyakhya-prakriya",
+       "learning_objective": "मानचित्रों के अध्यारोपण द्वारा लक्षणों के बीच कार्य-कारण संबंध का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHGY3-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "सुदूर संवेदन का परिचय",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khgy306.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHGY3-CH06-T1",
+     "topic_number": 1,
+     "title": "सुदूर संवेदन: अवधारणा और पारिभाषिक शब्दावली",
+     "ncert_sections": "परिचय, शब्दावली",
+     "concepts": [
+      {
+       "concept_tag": "sudur-sanvedan-paribhasha",
+       "learning_objective": "सुदूर संवेदन की परिभाषा और उसके मूल घटकों को समझना।"
+      },
+      {
+       "concept_tag": "paribhashik-shabdavali",
+       "learning_objective": "परावर्तकता, बैंड तथा मिथ्या वर्ण संयोजन जैसे पारिभाषिक शब्दों का अर्थ बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH06-T2",
+     "topic_number": 2,
+     "title": "सुदूर संवेदन की अवस्थाएँ: ऊर्जा स्रोत से वायुमंडल तक",
+     "ncert_sections": "अवस्थाएँ (क)-(घ)",
+     "concepts": [
+      {
+       "concept_tag": "urja-srot-vidyut-chumbakiya-spectrum",
+       "learning_objective": "ऊर्जा स्रोत, विद्युत चुंबकीय विकिरण और स्पेक्ट्रम के प्रयुक्त भागों को पहचानना।"
+      },
+      {
+       "concept_tag": "urja-antarkriya-vayumandal",
+       "learning_objective": "पृथ्वी की सतह और वायुमंडल के साथ ऊर्जा की अंतर्क्रिया की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH06-T3",
+     "topic_number": 3,
+     "title": "संवेदक द्वारा संसूचन, उपग्रह कक्षाएँ और आँकड़ों का रूपांतरण",
+     "ncert_sections": "अवस्थाएँ (ङ)-(ज), बॉक्स 6.1",
+     "concepts": [
+      {
+       "concept_tag": "surya-taulyakalik-bhusthir-upagrah",
+       "learning_objective": "सूर्य-तुल्यकालिक और भूस्थिर उपग्रहों की तुलना करना।"
+      },
+      {
+       "concept_tag": "aankda-prapti-rupantaran",
+       "learning_objective": "भू-अभिग्राही केंद्र से मानचित्र तक आँकड़ों के प्रसंस्करण के क्रम को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH06-T4",
+     "topic_number": 4,
+     "title": "संवेदक और बहुस्पेक्ट्रमी क्रमवीक्षक",
+     "ncert_sections": "संवेदक",
+     "concepts": [
+      {
+       "concept_tag": "sanvedak-prakar",
+       "learning_objective": "आँकड़ा निर्गत के आधार पर संवेदकों के प्रकार बताना।"
+      },
+      {
+       "concept_tag": "whiskbroom-pushbroom-kramvikshak",
+       "learning_objective": "व्हिस्कब्रूम और पुशब्रूम क्रमवीक्षकों की कार्यविधि में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH06-T5",
+     "topic_number": 5,
+     "title": "उपग्रहों की विभेदन क्षमता और संवेदक विभेदन",
+     "ncert_sections": "विभेदन क्षमता, संवेदक विभेदन, सारणी 6.1",
+     "concepts": [
+      {
+       "concept_tag": "kalik-vibhedan",
+       "learning_objective": "कालिक विभेदन (पुनरागमन समय) और परिवर्तन अध्ययन में उसके उपयोग को समझना।"
+      },
+      {
+       "concept_tag": "sthanik-spectrumi-radiomitiya-vibhedan",
+       "learning_objective": "स्थानिक, स्पेक्ट्रमी और रेडियोमितीय विभेदन में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH06-T6",
+     "topic_number": 6,
+     "title": "आँकड़ा उत्पाद: फोटोग्राफिक और अंकीय बिंब",
+     "ncert_sections": "आँकड़ा उत्पाद",
+     "concepts": [
+      {
+       "concept_tag": "bimb-aur-photograph",
+       "learning_objective": "बिंब और फोटोग्राफ में अंतर स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "ankiya-bimb-pixel",
+       "learning_objective": "अंकीय बिंब, पिक्सेल और अंकीय संख्या की अवधारणा समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY3-CH06-T7",
+     "topic_number": 7,
+     "title": "उपग्रह बिंबों का निर्वचन",
+     "ncert_sections": "दृश्य निर्वचन के तत्व, सारणी 6.2",
+     "concepts": [
+      {
+       "concept_tag": "drishya-nirvachan-tatva",
+       "learning_objective": "दृश्य निर्वचन के बिंब और भूभाग अभिलक्षणों को पहचानना।"
+      },
+      {
+       "concept_tag": "mithya-varn-sanyojan-rang",
+       "learning_objective": "मानक मिथ्या वर्ण संयोजन में विभिन्न सतही लक्षणों के रंग पहचानना।"
+      },
+      {
+       "concept_tag": "gathan-aakriti-chhaya",
+       "learning_objective": "गठन, आकृति और छाया के आधार पर वस्तुओं की पहचान करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "chapter_id": "LEBO1-CH04",
+ "title": "Principles of Inheritance and Variation",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBO1-CH04-T1",
+   "topic_number": 1,
+   "title": "Mendel's experiments and inheritance of one gene",
+   "ncert_sections": "4.1, 4.2, 4.2.1, 4.2.2",
+   "concepts": [
+    {
+     "concept_tag": "mendel-pea-experiments",
+     "learning_objective": "Describe how Mendel used true-breeding pea lines with seven pairs of contrasting traits to study inheritance."
+    },
+    {
+     "concept_tag": "monohybrid-cross-ratios",
+     "learning_objective": "Work out the phenotypic and genotypic ratios of a monohybrid cross using the laws of dominance and segregation."
+    },
+    {
+     "concept_tag": "test-cross",
+     "learning_objective": "Use a test cross with the recessive parent to find the genotype of a plant showing the dominant phenotype."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH04-T2",
+   "topic_number": 2,
+   "title": "Incomplete dominance, co-dominance and multiple alleles",
+   "ncert_sections": "4.2.2.1, 4.2.2.2",
+   "concepts": [
+    {
+     "concept_tag": "incomplete-dominance",
+     "learning_objective": "Explain incomplete dominance with the snapdragon flower colour example and its 1:2:1 F2 ratio."
+    },
+    {
+     "concept_tag": "codominance-abo-blood-groups",
+     "learning_objective": "Explain co-dominance using the ABO blood group alleles and work out possible blood groups of offspring."
+    },
+    {
+     "concept_tag": "multiple-alleles",
+     "learning_objective": "Explain why multiple alleles of a gene can be recognised only through population studies."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH04-T3",
+   "topic_number": 3,
+   "title": "Inheritance of two genes and the chromosomal theory",
+   "ncert_sections": "4.3, 4.3.1, 4.3.2",
+   "concepts": [
+    {
+     "concept_tag": "dihybrid-cross-independent-assortment",
+     "learning_objective": "Derive the 9:3:3:1 dihybrid ratio and apply the law of independent assortment to gamete and offspring calculations."
+    },
+    {
+     "concept_tag": "chromosomal-theory-of-inheritance",
+     "learning_objective": "Relate the behaviour of chromosomes in meiosis to Mendel's laws as proposed by Sutton and Boveri."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH04-T4",
+   "topic_number": 4,
+   "title": "Linkage and recombination",
+   "ncert_sections": "4.3.3",
+   "concepts": [
+    {
+     "concept_tag": "linkage-and-recombination",
+     "learning_objective": "Explain how linkage of genes on the same chromosome changes dihybrid ratios and how recombination arises."
+    },
+    {
+     "concept_tag": "genetic-mapping",
+     "learning_objective": "Use recombination frequency as a measure of the distance between genes on a chromosome."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH04-T5",
+   "topic_number": 5,
+   "title": "Polygenic inheritance and pleiotropy",
+   "ncert_sections": "4.4, 4.5",
+   "concepts": [
+    {
+     "concept_tag": "polygenic-inheritance",
+     "learning_objective": "Explain the additive effect of alleles in polygenic traits such as human skin colour."
+    },
+    {
+     "concept_tag": "pleiotropy",
+     "learning_objective": "Explain how a single gene such as the one mutated in phenylketonuria can show multiple phenotypic effects."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH04-T6",
+   "topic_number": 6,
+   "title": "Sex determination",
+   "ncert_sections": "4.6, 4.6.1, 4.6.2",
+   "concepts": [
+    {
+     "concept_tag": "sex-determination-mechanisms",
+     "learning_objective": "Compare XO, XY and ZW mechanisms of sex determination and the ideas of male and female heterogamety."
+    },
+    {
+     "concept_tag": "sex-determination-humans",
+     "learning_objective": "Explain why the sperm decides the sex of a human child and why each birth has a 50 per cent chance of either sex."
+    },
+    {
+     "concept_tag": "haplodiploidy-honey-bee",
+     "learning_objective": "Describe the haplodiploid sex-determination system of the honey bee and its consequences."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH04-T7",
+   "topic_number": 7,
+   "title": "Mutation and pedigree analysis",
+   "ncert_sections": "4.7, 4.8.1",
+   "concepts": [
+    {
+     "concept_tag": "mutation-types",
+     "learning_objective": "Distinguish point mutations, frame-shift mutations and chromosomal aberrations and identify mutagens."
+    },
+    {
+     "concept_tag": "pedigree-analysis",
+     "learning_objective": "Use pedigree analysis to infer whether a human trait is dominant or recessive, autosomal or sex-linked."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH04-T8",
+   "topic_number": 8,
+   "title": "Mendelian and chromosomal disorders",
+   "ncert_sections": "4.8.2, 4.8.3",
+   "concepts": [
+    {
+     "concept_tag": "sex-linked-recessive-disorders",
+     "learning_objective": "Predict the inheritance of X-linked recessive disorders such as colour blindness and haemophilia."
+    },
+    {
+     "concept_tag": "autosomal-recessive-disorders",
+     "learning_objective": "Explain the genetic basis of sickle-cell anaemia, phenylketonuria and thalassemia."
+    },
+    {
+     "concept_tag": "chromosomal-disorders",
+     "learning_objective": "Relate Down's, Klinefelter's and Turner's syndromes to aneuploidy and their karyotypes."
+    }
+   ]
+  }
+ ]
+}

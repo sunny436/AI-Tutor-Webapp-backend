@@ -1,0 +1,120 @@
+{
+ "chapter_id": "FEGP1-CH05",
+ "title": "Prime Time",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FEGP1-CH05-T1",
+   "topic_number": 1,
+   "title": "Common multiples and common factors",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "common-multiples",
+     "learning_objective": "Find common multiples of two numbers using the idli-vada game and the smallest number divisible by several numbers."
+    },
+    {
+     "concept_tag": "common-factors",
+     "learning_objective": "Find common factors of two or more numbers and relate them to jump sizes that reach every treasure."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH05-T2",
+   "topic_number": 2,
+   "title": "Prime and composite numbers",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "prime-and-composite-numbers",
+     "learning_objective": "Classify numbers as prime, composite or neither by counting their factors."
+    },
+    {
+     "concept_tag": "sieve-of-eratosthenes",
+     "learning_objective": "Use the Sieve of Eratosthenes to list the prime numbers up to 100 and explain why it works."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH05-T3",
+   "topic_number": 3,
+   "title": "Co-prime numbers",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "co-prime-numbers",
+     "learning_objective": "Identify co-prime pairs as numbers with no common factor other than 1, using the safe-treasure game."
+    },
+    {
+     "concept_tag": "co-prime-first-common-multiple",
+     "learning_objective": "Relate the first common multiple of two numbers to their product when the numbers are co-prime."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH05-T4",
+   "topic_number": 4,
+   "title": "Prime factorisation",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "prime-factorisation",
+     "learning_objective": "Write a number greater than 1 as a product of primes and recognise that this factorisation is unique apart from order."
+    },
+    {
+     "concept_tag": "prime-factorisation-of-product",
+     "learning_objective": "Find the prime factorisation of a product by combining the prime factorisations of its factors."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH05-T5",
+   "topic_number": 5,
+   "title": "Using prime factorisation for co-primes and divisibility",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "co-prime-check-by-factorisation",
+     "learning_objective": "Decide whether two numbers are co-prime by looking for a common prime factor in their prime factorisations."
+    },
+    {
+     "concept_tag": "divisibility-by-factorisation",
+     "learning_objective": "Decide whether one number divides another by checking if its prime factorisation is included in the other's."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH05-T6",
+   "topic_number": 6,
+   "title": "Divisibility tests",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "divisibility-by-2-5-10",
+     "learning_objective": "Use the last digit of a number to test divisibility by 2, 5 and 10 and to find remainders."
+    },
+    {
+     "concept_tag": "divisibility-by-4-and-8",
+     "learning_objective": "Use the number formed by the last two or three digits to test divisibility by 4 and by 8."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH05-T7",
+   "topic_number": 7,
+   "title": "Fun with numbers: special numbers and prime puzzles",
+   "ncert_sections": "5.6",
+   "concepts": [
+    {
+     "concept_tag": "special-numbers",
+     "learning_objective": "Give reasons why a number in a group is special, using properties such as prime, composite, even, odd and square."
+    },
+    {
+     "concept_tag": "prime-puzzle",
+     "learning_objective": "Solve grid puzzles in which prime numbers must give the stated row and column products."
+    }
+   ]
+  }
+ ]
+}

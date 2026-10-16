@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KHGY2-CH08",
+ "title": "सौर विकिरण, ऊष्मा संतुलन एवं तापमान",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHGY2-CH08-T1",
+   "topic_number": 1,
+   "title": "सौर विकिरण और सूर्यातप",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "suryatap",
+     "learning_objective": "सूर्यातप का अर्थ और पृथ्वी को प्राप्त ऊर्जा की मात्रा बताना।"
+    },
+    {
+     "concept_tag": "upsaur-apsaur",
+     "learning_objective": "उपसौर और अपसौर की स्थिति तथा उनका सूर्यातप पर प्रभाव समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH08-T2",
+   "topic_number": 2,
+   "title": "पृथ्वी की सतह पर सूर्यातप की परिवर्तिता",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "suryatap-niyantrak-karak",
+     "learning_objective": "सूर्यातप की मात्रा को प्रभावित करने वाले कारकों, विशेषकर किरणों के आपतन कोण, की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "suryatap-sthanik-vitaran",
+     "learning_objective": "सूर्यातप के स्थानिक वितरण और वायुमंडल में प्रकीर्णन को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH08-T3",
+   "topic_number": 3,
+   "title": "वायुमंडल का तापन और शीतलन",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "chalan-sanvahan-abhivahan",
+     "learning_objective": "चालन, संवहन और अभिवहन द्वारा ऊष्मा स्थानांतरण में अंतर करना।"
+    },
+    {
+     "concept_tag": "parthiv-vikiran",
+     "learning_objective": "पार्थिव विकिरण द्वारा वायुमंडल के अप्रत्यक्ष तापन की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH08-T4",
+   "topic_number": 4,
+   "title": "पृथ्वी का ऊष्मा बजट",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "ushma-bajat",
+     "learning_objective": "ऊष्मा बजट में प्राप्त और लौटाई गई ऊर्जा की इकाइयों की गणना करना।"
+    },
+    {
+     "concept_tag": "ushma-adhishesh-ghata",
+     "learning_objective": "शुद्ध विकिरण संतुलन के अक्षांशीय अधिशेष और घाटे की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH08-T5",
+   "topic_number": 5,
+   "title": "तापमान और उसके नियंत्रक कारक",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "ushma-tapman-antar",
+     "learning_objective": "ऊष्मा और तापमान में अंतर स्पष्ट करना।"
+    },
+    {
+     "concept_tag": "tapman-niyantrak-karak",
+     "learning_objective": "अक्षांश, ऊँचाई, समुद्र से दूरी, वायुराशियों और धाराओं के तापमान पर प्रभाव का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "samanya-hras-dar",
+     "learning_objective": "सामान्य ह्रास दर का प्रयोग करके ऊँचाई पर तापमान की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH08-T6",
+   "topic_number": 6,
+   "title": "तापमान का वितरण",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "samtap-rekha",
+     "learning_objective": "समताप रेखाओं के अर्थ और जनवरी-जुलाई में उनके मोड़ की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "tapantar-mahadvipiyata",
+     "learning_objective": "वार्षिक तापांतर और महाद्वीपीयता के संबंध का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH08-T7",
+   "topic_number": 7,
+   "title": "तापमान का व्युत्क्रमण",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "tapman-vyutkraman",
+     "learning_objective": "तापमान व्युत्क्रमण की दशाओं और उसके प्रभावों की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "vayu-apvah",
+     "learning_objective": "पर्वतीय क्षेत्रों में वायु अपवाह की प्रक्रिया और उसके महत्त्व को समझना।"
+    }
+   ]
+  }
+ ]
+}

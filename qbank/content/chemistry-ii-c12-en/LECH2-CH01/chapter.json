@@ -1,0 +1,164 @@
+{
+ "chapter_id": "LECH2-CH01",
+ "title": "Haloalkanes and Haloarenes",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECH2-CH01-T1",
+   "topic_number": 1,
+   "title": "Classification and nomenclature",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "classification-of-halides",
+     "learning_objective": "Classify halogen compounds by the number of halogen atoms and the hybridisation of the carbon bearing the halogen."
+    },
+    {
+     "concept_tag": "iupac-naming-of-halides",
+     "learning_objective": "Name haloalkanes and haloarenes by the IUPAC system and identify them as primary, secondary or tertiary."
+    },
+    {
+     "concept_tag": "gem-and-vic-dihalides",
+     "learning_objective": "Distinguish geminal and vicinal dihalides and relate their common and IUPAC names."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH01-T2",
+   "topic_number": 2,
+   "title": "Nature of the C-X bond and methods of preparation",
+   "ncert_sections": "6.3, 6.4, 6.5",
+   "concepts": [
+    {
+     "concept_tag": "c-x-bond-nature",
+     "learning_objective": "Relate the polarity, length and enthalpy of the carbon-halogen bond to the size of the halogen."
+    },
+    {
+     "concept_tag": "preparation-of-haloalkanes",
+     "learning_objective": "Describe the preparation of haloalkanes from alcohols, hydrocarbons and by halogen exchange."
+    },
+    {
+     "concept_tag": "preparation-of-haloarenes",
+     "learning_objective": "Describe the preparation of haloarenes by electrophilic substitution and from diazonium salts."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH01-T3",
+   "topic_number": 3,
+   "title": "Physical properties",
+   "ncert_sections": "6.6",
+   "concepts": [
+    {
+     "concept_tag": "boiling-point-trends",
+     "learning_objective": "Explain the trends in boiling points of haloalkanes with halogen size and branching."
+    },
+    {
+     "concept_tag": "solubility-and-density",
+     "learning_objective": "Explain the low water solubility and the density trends of haloalkanes."
+    },
+    {
+     "concept_tag": "melting-point-and-symmetry",
+     "learning_objective": "Relate the high melting point of para-dihalobenzenes to molecular symmetry."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH01-T4",
+   "topic_number": 4,
+   "title": "Nucleophilic substitution: SN1 and SN2",
+   "ncert_sections": "6.7.1",
+   "concepts": [
+    {
+     "concept_tag": "ambident-nucleophiles",
+     "learning_objective": "Predict the products of haloalkanes with ambident nucleophiles such as cyanide and nitrite."
+    },
+    {
+     "concept_tag": "sn2-mechanism",
+     "learning_objective": "Describe the SN2 mechanism, its kinetics and the effect of steric hindrance on its rate."
+    },
+    {
+     "concept_tag": "sn1-mechanism",
+     "learning_objective": "Describe the SN1 mechanism and relate its rate to carbocation stability."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH01-T5",
+   "topic_number": 5,
+   "title": "Stereochemical aspects of nucleophilic substitution",
+   "ncert_sections": "6.7.1",
+   "concepts": [
+    {
+     "concept_tag": "chirality-and-enantiomers",
+     "learning_objective": "Identify chiral molecules and state how enantiomers differ in their properties."
+    },
+    {
+     "concept_tag": "retention-inversion-racemisation",
+     "learning_objective": "Predict retention, inversion or racemisation at an asymmetric carbon in substitution reactions."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH01-T6",
+   "topic_number": 6,
+   "title": "Elimination reactions and reactions with metals",
+   "ncert_sections": "6.7.1",
+   "concepts": [
+    {
+     "concept_tag": "beta-elimination-zaitsev",
+     "learning_objective": "Predict the major alkene in dehydrohalogenation using Zaitsev's rule."
+    },
+    {
+     "concept_tag": "substitution-versus-elimination",
+     "learning_objective": "Decide whether substitution or elimination is favoured from the halide and the base."
+    },
+    {
+     "concept_tag": "grignard-and-wurtz",
+     "learning_objective": "Describe the formation of Grignard reagents and the Wurtz reaction of alkyl halides."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH01-T7",
+   "topic_number": 7,
+   "title": "Reactions of haloarenes",
+   "ncert_sections": "6.7.2",
+   "concepts": [
+    {
+     "concept_tag": "haloarene-nucleophilic-substitution",
+     "learning_objective": "Explain the low reactivity of haloarenes towards nucleophilic substitution and the effect of nitro groups."
+    },
+    {
+     "concept_tag": "haloarene-electrophilic-substitution",
+     "learning_objective": "Explain why halogens are deactivating yet ortho, para-directing in electrophilic substitution."
+    },
+    {
+     "concept_tag": "wurtz-fittig-and-fittig",
+     "learning_objective": "Identify the Wurtz-Fittig and Fittig reactions of aryl halides with sodium."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH01-T8",
+   "topic_number": 8,
+   "title": "Polyhalogen compounds",
+   "ncert_sections": "6.8",
+   "concepts": [
+    {
+     "concept_tag": "uses-and-hazards-of-halomethanes",
+     "learning_objective": "State the uses and hazards of dichloromethane, chloroform, iodoform and carbon tetrachloride."
+    },
+    {
+     "concept_tag": "freons-and-ozone",
+     "learning_objective": "Describe freons and explain how they affect the ozone layer."
+    },
+    {
+     "concept_tag": "ddt-in-the-environment",
+     "learning_objective": "Explain why DDT persists and accumulates in living organisms."
+    }
+   ]
+  }
+ ]
+}

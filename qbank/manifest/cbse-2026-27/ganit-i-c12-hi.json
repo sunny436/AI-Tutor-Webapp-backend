@@ -1,0 +1,647 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "ganit-i-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "mathematics",
+  "language": "hindi",
+  "title": "Ganit-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhmh1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHMH1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "संबंध एवं फलन",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhmh101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHMH1-CH01-T1",
+     "topic_number": 1,
+     "title": "संबंध और संबंधों के प्रकार",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "sambandh-ki-paribhasha",
+       "learning_objective": "संबंध को कार्तीय गुणन के उपसमुच्चय के रूप में तथा रिक्त और सार्वत्रिक संबंध को पहचानना।"
+      },
+      {
+       "concept_tag": "svatulya-sammit-sankramak",
+       "learning_objective": "किसी संबंध के स्वतुल्य, सममित और संक्रामक होने की जाँच करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH01-T2",
+     "topic_number": 2,
+     "title": "तुल्यता संबंध और तुल्यता वर्ग",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "tulyata-sambandh",
+       "learning_objective": "तुल्यता संबंध की परिभाषा समझना और दिए गए संबंध की जाँच करना।"
+      },
+      {
+       "concept_tag": "tulyata-varg",
+       "learning_objective": "तुल्यता वर्ग ज्ञात करना और उनके असंयुक्त विभाजन वाले गुण को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH01-T3",
+     "topic_number": 3,
+     "title": "फलनों के प्रकार",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "ekaiki-phalan",
+       "learning_objective": "एकैकी फलन की परिभाषा बताना और दिए गए फलन की जाँच करना।"
+      },
+      {
+       "concept_tag": "achchhadak-phalan",
+       "learning_objective": "आच्छादक फलन की पहचान परिसर और सहप्रांत की तुलना से करना।"
+      },
+      {
+       "concept_tag": "ekaiki-tatha-achchhadak",
+       "learning_objective": "एकैकी तथा आच्छादक फलनों को पहचानना और परिमित तथा अपरिमित समुच्चयों में अंतर समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH01-T4",
+     "topic_number": 4,
+     "title": "फलनों का संयोजन",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "phalanon-ka-sanyojan",
+       "learning_objective": "दो फलनों का संयोजन ज्ञात करना और उसका मान निकालना।"
+      },
+      {
+       "concept_tag": "sanyojan-ke-gun",
+       "learning_objective": "संयुक्त फलन के एकैकी या आच्छादक होने से घटक फलनों के गुणों का निष्कर्ष निकालना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH01-T5",
+     "topic_number": 5,
+     "title": "व्युत्क्रमणीय फलन",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "vyutkramaniya-phalan",
+       "learning_objective": "फलन के व्युत्क्रमणीय होने की आवश्यक और पर्याप्त शर्त समझना।"
+      },
+      {
+       "concept_tag": "vyutkram-gyat-karna",
+       "learning_objective": "दिए गए व्युत्क्रमणीय फलन का व्युत्क्रम ज्ञात करना और उसका मान निकालना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHMH1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "प्रतिलोम त्रिकोणमितीय फलन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhmh102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHMH1-CH02-T1",
+     "topic_number": 1,
+     "title": "प्रांत का प्रतिबंधन: sin⁻¹ और cos⁻¹ की मुख्य शाखाएँ",
+     "ncert_sections": "2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "pratibandhan-aur-vyutkramaniyata",
+       "learning_objective": "समझाना कि किसी त्रिकोणमितीय फलन का प्रतिलोम ज्ञात करने से पहले उसे ऐसे अंतराल पर सीमित करना क्यों आवश्यक है जहाँ वह एकैकी तथा आच्छादक हो।"
+      },
+      {
+       "concept_tag": "sin-pratilom-mukhya-shakha",
+       "learning_objective": "sin⁻¹ का प्रांत तथा मुख्य मान शाखा का परिसर बताना।"
+      },
+      {
+       "concept_tag": "cos-pratilom-mukhya-shakha",
+       "learning_objective": "cos⁻¹ का प्रांत तथा मुख्य मान शाखा का परिसर बताना और मान्य शाखाओं को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH02-T2",
+     "topic_number": 2,
+     "title": "cosec⁻¹, sec⁻¹, tan⁻¹ और cot⁻¹ की मुख्य शाखाएँ",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "cosec-sec-pratilom-shakhayen",
+       "learning_objective": "cosec⁻¹ और sec⁻¹ के प्रांत एवं मुख्य मान परिसर बताना तथा छोड़े गए मानों का कारण समझाना।"
+      },
+      {
+       "concept_tag": "tan-cot-pratilom-shakhayen",
+       "learning_objective": "tan⁻¹ और cot⁻¹ के प्रांत एवं मुख्य मान परिसर बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH02-T3",
+     "topic_number": 3,
+     "title": "मुख्य मान, संकेतन और आलेख",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "mukhya-maan-gyat-karna",
+       "learning_objective": "प्रतिलोम त्रिकोणमितीय फलनों के मुख्य मान ज्ञात करना और उनसे बने व्यंजकों का मान निकालना।"
+      },
+      {
+       "concept_tag": "sanketan-aur-alekh",
+       "learning_objective": "sin⁻¹ x और (sin x)⁻¹ में अंतर करना तथा रेखा y = x में दर्पण प्रतिबिंब द्वारा प्रतिलोम फलन का आलेख प्राप्त करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH02-T4",
+     "topic_number": 4,
+     "title": "प्रतिलोम त्रिकोणमितीय फलनों के संयोजन संबंधी गुणधर्म",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "sanyojan-sarvasamikayen",
+       "learning_objective": "sin(sin⁻¹ x) = x तथा sin⁻¹(sin x) = x का उनकी शर्तों सहित प्रयोग करना।"
+      },
+      {
+       "concept_tag": "mukhya-shakha-mein-lana",
+       "learning_objective": "जब θ मुख्य शाखा से बाहर हो तब sin⁻¹(sin θ) जैसे व्यंजकों का मान ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH02-T5",
+     "topic_number": 5,
+     "title": "प्रतिलोम त्रिकोणमितीय व्यंजकों को सरलतम रूप में लिखना",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "trikonmitiya-pratisthapan",
+       "learning_objective": "किसी व्यंजक को सरल करने के लिए x = sin θ, x = a sin θ या x = sec θ जैसा उपयुक्त प्रतिस्थापन चुनना।"
+      },
+      {
+       "concept_tag": "ardh-kon-saralikaran",
+       "learning_objective": "अर्ध-कोण सर्वसमिकाओं द्वारा cos x और sin x वाले व्यंजकों को tan⁻¹(tan θ) के रूप में लाकर सरल करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHMH1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "आव्यूह",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhmh103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHMH1-CH03-T1",
+     "topic_number": 1,
+     "title": "आव्यूह और उसकी कोटि",
+     "ncert_sections": "3.1, 3.2, 3.2.1",
+     "concepts": [
+      {
+       "concept_tag": "avyuh-ki-koti",
+       "learning_objective": "किसी आव्यूह की पंक्तियाँ, स्तंभ और कोटि पहचानना तथा अवयवों की संख्या से संभावित कोटियाँ ज्ञात करना।"
+      },
+      {
+       "concept_tag": "avyuh-ki-rachna",
+       "learning_objective": "दिए गए नियम से आव्यूह के अवयव aᵢⱼ की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH03-T2",
+     "topic_number": 2,
+     "title": "आव्यूहों के प्रकार और आव्यूहों की समानता",
+     "ncert_sections": "3.3, 3.3.1",
+     "concepts": [
+      {
+       "concept_tag": "avyuh-ke-prakar",
+       "learning_objective": "पंक्ति, स्तंभ, वर्ग, विकर्ण, अदिश, तत्समक और शून्य आव्यूहों को पहचानना।"
+      },
+      {
+       "concept_tag": "avyuhon-ki-samanta",
+       "learning_objective": "समान आव्यूहों के संगत अवयवों की तुलना करके अज्ञात मान ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH03-T3",
+     "topic_number": 3,
+     "title": "आव्यूहों का योग और अदिश गुणन",
+     "ncert_sections": "3.4.1, 3.4.2, 3.4.3, 3.4.4",
+     "concepts": [
+      {
+       "concept_tag": "avyuhon-ka-yog",
+       "learning_objective": "समान कोटि के आव्यूहों का योग, अंतर और उनके गुणधर्म लागू करना।"
+      },
+      {
+       "concept_tag": "adish-gunan",
+       "learning_objective": "किसी आव्यूह का अदिश से गुणन करना और आव्यूह समीकरण हल करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH03-T4",
+     "topic_number": 4,
+     "title": "आव्यूहों का गुणन",
+     "ncert_sections": "3.4.5, 3.4.6",
+     "concepts": [
+      {
+       "concept_tag": "gunan-ki-shart",
+       "learning_objective": "आव्यूह गुणन के परिभाषित होने की शर्त और गुणनफल की कोटि बताना।"
+      },
+      {
+       "concept_tag": "gunanfal-ki-ganana",
+       "learning_objective": "दो आव्यूहों का गुणनफल परिकलित करना और उसके गुणधर्मों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH03-T5",
+     "topic_number": 5,
+     "title": "आव्यूह का परिवर्त",
+     "ncert_sections": "3.5, 3.5.1",
+     "concepts": [
+      {
+       "concept_tag": "parivart-ke-gundharm",
+       "learning_objective": "आव्यूह का परिवर्त ज्ञात करना और परिवर्त के गुणधर्म लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH03-T6",
+     "topic_number": 6,
+     "title": "सममित तथा विषम सममित आव्यूह",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "sammit-avyuh",
+       "learning_objective": "सममित और विषम सममित आव्यूहों की पहचान करना और उनके गुणधर्म परखना।"
+      },
+      {
+       "concept_tag": "sammit-vishamsammit-yog",
+       "learning_objective": "किसी वर्ग आव्यूह को सममित और विषम सममित आव्यूहों के योग के रूप में व्यक्त करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH03-T7",
+     "topic_number": 7,
+     "title": "व्युत्क्रमणीय आव्यूह",
+     "ncert_sections": "3.7",
+     "concepts": [
+      {
+       "concept_tag": "vyutkramniya-avyuh",
+       "learning_objective": "व्युत्क्रम आव्यूह की परिभाषा, अद्वितीयता और गुणधर्म समझना तथा लागू करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHMH1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "सारणिक",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhmh104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHMH1-CH04-T1",
+     "topic_number": 1,
+     "title": "सारणिक और उसका मान",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "sarnik-ka-maan",
+       "learning_objective": "कोटि 1, 2 और 3 के वर्ग आव्यूह के सारणिक का मान ज्ञात करना।"
+      },
+      {
+       "concept_tag": "sarnik-samikaran",
+       "learning_objective": "सारणिकों की समानता से अज्ञात राशि ज्ञात करना और |kA| = kⁿ|A| का प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH04-T2",
+     "topic_number": 2,
+     "title": "त्रिभुज का क्षेत्रफल",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "tribhuj-kshetrafal",
+       "learning_objective": "शीर्षों के निर्देशांकों से सारणिक द्वारा त्रिभुज का क्षेत्रफल ज्ञात करना।"
+      },
+      {
+       "concept_tag": "sanrekhata",
+       "learning_objective": "सारणिक के शून्य होने से बिंदुओं की संरेखता और रेखा का समीकरण ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH04-T3",
+     "topic_number": 3,
+     "title": "उपसारणिक और सहखंड",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "upsarnik-sahkhand",
+       "learning_objective": "किसी अवयव का उपसारणिक और सहखंड ज्ञात करना।"
+      },
+      {
+       "concept_tag": "sahkhand-prasar",
+       "learning_objective": "सहखंडों की सहायता से सारणिक का प्रसार और उसके परिणाम समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH04-T4",
+     "topic_number": 4,
+     "title": "सहखंडज और व्युत्क्रम",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "sahkhandaj",
+       "learning_objective": "वर्ग आव्यूह का सहखंडज ज्ञात करना।"
+      },
+      {
+       "concept_tag": "vyutkramaniya-avyuh",
+       "learning_objective": "अव्युत्क्रमणीय और व्युत्क्रमणीय आव्यूह पहचानकर व्युत्क्रम ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH04-T5",
+     "topic_number": 5,
+     "title": "सारणिकों और आव्यूहों के अनुप्रयोग",
+     "ncert_sections": "4.6",
+     "concepts": [
+      {
+       "concept_tag": "sangatata",
+       "learning_objective": "रैखिक समीकरण निकाय की संगतता और असंगतता की जाँच करना।"
+      },
+      {
+       "concept_tag": "avyuh-vidhi-hal",
+       "learning_objective": "आव्यूह विधि X = A⁻¹B से रैखिक समीकरण निकाय हल करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHMH1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "सांतत्य तथा अवकलनीयता",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhmh105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHMH1-CH05-T1",
+     "topic_number": 1,
+     "title": "किसी बिंदु पर सांतत्य",
+     "ncert_sections": "5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "bindu-par-santatya",
+       "learning_objective": "किसी बिंदु पर फलन के सांतत्य की शर्त बताना और उसे जाँचना।"
+      },
+      {
+       "concept_tag": "khandashah-phalan-santatya",
+       "learning_objective": "खंडशः परिभाषित फलनों में असांतत्य के बिंदु ज्ञात करना और अज्ञात अचर निकालना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH05-T2",
+     "topic_number": 2,
+     "title": "संतत फलनों का बीजगणित",
+     "ncert_sections": "5.2.1",
+     "concepts": [
+      {
+       "concept_tag": "santat-phalanon-ka-beejganit",
+       "learning_objective": "संतत फलनों के योग, अंतर, गुणनफल और भागफल के सांतत्य को समझना।"
+      },
+      {
+       "concept_tag": "sanyukt-phalan-santatya",
+       "learning_objective": "संतत फलनों के संयोजन से बने फलन का सांतत्य पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH05-T3",
+     "topic_number": 3,
+     "title": "अवकलनीयता और संयुक्त फलनों के अवकलज",
+     "ncert_sections": "5.3, 5.3.1",
+     "concepts": [
+      {
+       "concept_tag": "avakalaniyata-aur-santatya",
+       "learning_objective": "अवकलनीयता और सांतत्य के संबंध को समझना तथा किसी बिंदु पर अवकलनीयता जाँचना।"
+      },
+      {
+       "concept_tag": "shrinkhala-niyam",
+       "learning_objective": "शृंखला नियम से संयुक्त फलनों का अवकलज ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH05-T4",
+     "topic_number": 4,
+     "title": "अस्पष्ट फलनों और प्रतिलोम त्रिकोणमितीय फलनों के अवकलज",
+     "ncert_sections": "5.3.2, 5.3.3",
+     "concepts": [
+      {
+       "concept_tag": "aspasht-avakalan",
+       "learning_objective": "अस्पष्ट रूप में दिए संबंध से dy/dx ज्ञात करना।"
+      },
+      {
+       "concept_tag": "pratilom-trikonmitiya-avakalaj",
+       "learning_objective": "प्रतिलोम त्रिकोणमितीय फलनों के अवकलज ज्ञात करना और प्रतिस्थापन से सरल करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH05-T5",
+     "topic_number": 5,
+     "title": "चरघातांकी और लघुगणकीय फलन तथा लघुगणकीय अवकलन",
+     "ncert_sections": "5.4, 5.5",
+     "concepts": [
+      {
+       "concept_tag": "charghatanki-laghuganakiy-avakalaj",
+       "learning_objective": "चरघातांकी और लघुगणकीय फलनों के अवकलज ज्ञात करना।"
+      },
+      {
+       "concept_tag": "laghuganakiy-avakalan",
+       "learning_objective": "चर घातांक वाले फलनों का अवकलज लघुगणकीय अवकलन से ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH05-T6",
+     "topic_number": 6,
+     "title": "प्राचलिक रूपों में फलनों के अवकलज",
+     "ncert_sections": "5.6",
+     "concepts": [
+      {
+       "concept_tag": "prachalik-avakalan",
+       "learning_objective": "प्राचलिक रूप में दिए फलनों के लिए dy/dx ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH05-T7",
+     "topic_number": 7,
+     "title": "द्वितीय कोटि का अवकलज",
+     "ncert_sections": "5.7",
+     "concepts": [
+      {
+       "concept_tag": "dvitiya-koti-avakalaj",
+       "learning_objective": "द्वितीय कोटि का अवकलज ज्ञात करना और उससे संबंधों को सिद्ध करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHMH1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "अवकलज के अनुप्रयोग",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhmh106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHMH1-CH06-T1",
+     "topic_number": 1,
+     "title": "राशियों के परिवर्तन की दर",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "parivartan-ki-dar",
+       "learning_objective": "किसी राशि के दूसरी राशि के सापेक्ष परिवर्तन की दर को अवकलज के रूप में ज्ञात करना।"
+      },
+      {
+       "concept_tag": "sambaddh-dar",
+       "learning_objective": "शृंखला नियम से समय के सापेक्ष संबद्ध दरें ज्ञात करना।"
+      },
+      {
+       "concept_tag": "seemant-lagat-aay",
+       "learning_objective": "सीमांत लागत और सीमांत आय को कुल लागत और कुल आय के अवकलज के रूप में समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH06-T2",
+     "topic_number": 2,
+     "title": "वर्धमान और ह्रासमान फलन: परिभाषा और अवकलज परीक्षण",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "vardhaman-hrasaman-paribhasha",
+       "learning_objective": "निरंतर वर्धमान और निरंतर ह्रासमान फलनों की परिभाषा बताना।"
+      },
+      {
+       "concept_tag": "avakalaj-pariksha",
+       "learning_objective": "प्रथम अवकलज के चिह्न से फलन के वर्धमान या ह्रासमान होने का निर्णय करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH06-T3",
+     "topic_number": 3,
+     "title": "वर्धमान और ह्रासमान होने के अंतराल ज्ञात करना",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "antaral-gyat-karna",
+       "learning_objective": "f′(x) = 0 के बिंदुओं से वास्तविक रेखा को विभाजित कर वर्धमान और ह्रासमान अंतराल ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH06-T4",
+     "topic_number": 4,
+     "title": "स्थानीय उच्चिष्ठ, निम्निष्ठ और प्रथम अवकलज परीक्षण",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "krantik-bindu",
+       "learning_objective": "क्रांतिक बिंदु की परिभाषा और स्थानीय चरम बिंदुओं से उसका संबंध समझना।"
+      },
+      {
+       "concept_tag": "pratham-avakalaj-pariksha",
+       "learning_objective": "प्रथम अवकलज परीक्षण से स्थानीय उच्चिष्ठ और निम्निष्ठ बिंदु पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH06-T5",
+     "topic_number": 5,
+     "title": "द्वितीय अवकलज परीक्षण और अनुप्रयुक्त समस्याएँ",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "dvitiya-avakalaj-pariksha",
+       "learning_objective": "द्वितीय अवकलज परीक्षण से स्थानीय उच्चिष्ठ और निम्निष्ठ ज्ञात करना।"
+      },
+      {
+       "concept_tag": "anuprayukt-samasya",
+       "learning_objective": "दैनिक जीवन की उच्चिष्ठ और निम्निष्ठ समस्याओं को अवकलज से हल करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHMH1-CH06-T6",
+     "topic_number": 6,
+     "title": "संवृत अंतराल में निरपेक्ष उच्चतम और निम्नतम मान",
+     "ncert_sections": "6.4.1",
+     "concepts": [
+      {
+       "concept_tag": "nirpeksh-charam-maan",
+       "learning_objective": "संवृत अंतराल में क्रांतिक बिंदुओं और अंत्य बिंदुओं पर मान लेकर निरपेक्ष उच्चतम और निम्नतम मान ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

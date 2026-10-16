@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KEMH1-CH14",
+ "title": "Probability",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH14-T1",
+   "topic_number": 1,
+   "title": "Events and their occurrence",
+   "ncert_sections": "14.1, 14.1.1",
+   "concepts": [
+    {
+     "concept_tag": "event-as-subset",
+     "learning_objective": "Identify an event as a subset of the sample space of a random experiment."
+    },
+    {
+     "concept_tag": "occurrence-of-event",
+     "learning_objective": "Decide whether an event has occurred from the outcome of an experiment."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH14-T2",
+   "topic_number": 2,
+   "title": "Types of events",
+   "ncert_sections": "14.1.2",
+   "concepts": [
+    {
+     "concept_tag": "impossible-and-sure-events",
+     "learning_objective": "Recognise the impossible event and the sure event of an experiment."
+    },
+    {
+     "concept_tag": "simple-and-compound-events",
+     "learning_objective": "Distinguish simple events from compound events."
+    },
+    {
+     "concept_tag": "complementary-event",
+     "learning_objective": "Write the complement of an event as a subset of the sample space."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH14-T3",
+   "topic_number": 3,
+   "title": "Algebra of events",
+   "ncert_sections": "14.1.3",
+   "concepts": [
+    {
+     "concept_tag": "union-intersection-of-events",
+     "learning_objective": "Express the events 'A or B' and 'A and B' as union and intersection of sets."
+    },
+    {
+     "concept_tag": "difference-of-events",
+     "learning_objective": "Express 'A but not B' and 'neither A nor B' using set operations."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH14-T4",
+   "topic_number": 4,
+   "title": "Mutually exclusive and exhaustive events",
+   "ncert_sections": "14.1.4, 14.1.5",
+   "concepts": [
+    {
+     "concept_tag": "mutually-exclusive-events",
+     "learning_objective": "Test whether two or more events are mutually exclusive."
+    },
+    {
+     "concept_tag": "exhaustive-events",
+     "learning_objective": "Test whether a collection of events is exhaustive."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH14-T5",
+   "topic_number": 5,
+   "title": "Axiomatic approach and probability of an event",
+   "ncert_sections": "14.2, 14.2.1, 14.2.2",
+   "concepts": [
+    {
+     "concept_tag": "axioms-of-probability",
+     "learning_objective": "State the axioms of probability and their consequences such as P(empty set) = 0."
+    },
+    {
+     "concept_tag": "probability-of-event-sum-of-outcomes",
+     "learning_objective": "Find the probability of an event as the sum of the probabilities of its sample points."
+    },
+    {
+     "concept_tag": "equally-likely-outcomes",
+     "learning_objective": "Use equally likely outcomes to compute probabilities."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH14-T6",
+   "topic_number": 6,
+   "title": "Probability of 'A or B' and 'not A'",
+   "ncert_sections": "14.2.3, 14.2.4",
+   "concepts": [
+    {
+     "concept_tag": "addition-rule",
+     "learning_objective": "Apply P(A or B) = P(A) + P(B) - P(A and B)."
+    },
+    {
+     "concept_tag": "complement-rule",
+     "learning_objective": "Apply P(not A) = 1 - P(A)."
+    }
+   ]
+  }
+ ]
+}

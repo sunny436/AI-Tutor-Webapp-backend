@@ -1,0 +1,104 @@
+{
+ "chapter_id": "GHCU1-CH10",
+ "title": "पादपों में जैव प्रक्रम",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHCU1-CH10-T1",
+   "topic_number": 1,
+   "title": "पादपों में वृद्धि: जल और सूर्य के प्रकाश की भूमिका",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "vriddhi-ke-sanket",
+     "learning_objective": "विद्यार्थी पौधे में वृद्धि होने पर दिखने वाले परिवर्तनों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "jal-aur-prakash-ki-avashyakta",
+     "learning_objective": "विद्यार्थी क्रियाकलाप के आधार पर समझा सकेंगे कि पौधों की वृद्धि के लिए जल और सूर्य का प्रकाश दोनों आवश्यक हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH10-T2",
+   "topic_number": 2,
+   "title": "पत्तियाँ: पौधों की भोजन निर्माणशाला",
+   "ncert_sections": "10.2, 10.2.1",
+   "concepts": [
+    {
+     "concept_tag": "mand-ka-iodine-parikshan",
+     "learning_objective": "विद्यार्थी आयोडीन परीक्षण द्वारा पत्ती में मंड की उपस्थिति की जाँच की विधि समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "parnaharit-aur-prakash",
+     "learning_objective": "विद्यार्थी मंड बनने में पर्णहरित और सूर्य के प्रकाश की भूमिका का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH10-T3",
+   "topic_number": 3,
+   "title": "भोजन निर्माण में वायु की भूमिका और ऑक्सीजन की निर्मुक्ति",
+   "ncert_sections": "10.2.2",
+   "concepts": [
+    {
+     "concept_tag": "carbon-dioxide-ki-bhumika",
+     "learning_objective": "विद्यार्थी प्रयोग के आधार पर बता सकेंगे कि मंड बनाने के लिए वायु की कार्बन डाइऑक्साइड आवश्यक है।"
+    },
+    {
+     "concept_tag": "oxygen-ki-nirmukti",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि प्रकाश संश्लेषण के दौरान ऑक्सीजन निर्मुक्त होती है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH10-T4",
+   "topic_number": 4,
+   "title": "प्रकाश संश्लेषण संक्षेप में और रंध्रों द्वारा गैसों का विनिमय",
+   "ncert_sections": "10.2.3, 10.2.4",
+   "concepts": [
+    {
+     "concept_tag": "prakash-sanshleshan-ka-samikaran",
+     "learning_objective": "विद्यार्थी प्रकाश संश्लेषण के कच्चे पदार्थ, उत्पाद और शब्द समीकरण लिख सकेंगे।"
+    },
+    {
+     "concept_tag": "randhra-aur-gas-vinimay",
+     "learning_objective": "विद्यार्थी पत्ती के रंध्रों की पहचान कर गैसों के विनिमय में उनकी भूमिका बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH10-T5",
+   "topic_number": 5,
+   "title": "पादपों में जल, खनिज और भोजन का परिवहन",
+   "ncert_sections": "10.3, 10.3.1, 10.3.2",
+   "concepts": [
+    {
+     "concept_tag": "daru-dvara-jal-parivahan",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि दारु जड़ों से जल और खनिजों को ऊपरी भागों तक ले जाता है।"
+    },
+    {
+     "concept_tag": "poshvah-dvara-bhojan-parivahan",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि पोषवाह पत्तियों में बने भोजन को पौधे के सभी भागों तक पहुँचाता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH10-T6",
+   "topic_number": 6,
+   "title": "क्या पौधे श्वसन करते हैं?",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "ankurit-beejon-mein-shvasan",
+     "learning_objective": "विद्यार्थी अंकुरित बीजों के प्रयोग से पौधों में श्वसन का प्रमाण समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "shvasan-ka-samikaran",
+     "learning_objective": "विद्यार्थी श्वसन का शब्द समीकरण लिखकर इसकी प्रकाश संश्लेषण से तुलना कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "chapter_id": "IHMH1-CH01",
+ "title": "स्वयं को प्रवृत्त करना — निर्देशांकों का उपयोग",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHMH1-CH01-T1",
+   "topic_number": 1,
+   "title": "निर्देशांक पद्धति का इतिहास",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "nirdeshank-itihas-bharat",
+     "learning_objective": "सिंधु-सरस्वती नगरों, उज्जयिनी मध्याह्न रेखा और आर्यभट्ट के कार्यों में निर्देशांक संबंधी भारतीय योगदान को पहचानना।"
+    },
+    {
+     "concept_tag": "nirdeshank-vishv-yogdan",
+     "learning_objective": "ब्रह्मगुप्त, अल-बिरुनी और देकार्त के योगदान से आधुनिक निर्देशांक ज्यामिति के विकास को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH01-T2",
+   "topic_number": 2,
+   "title": "अक्ष, मूलबिंदु और अक्षों पर बिंदु",
+   "ncert_sections": "1.2, 1.3",
+   "concepts": [
+    {
+     "concept_tag": "aksh-aur-mool-bindu",
+     "learning_objective": "x-अक्ष, y-अक्ष, मूलबिंदु और पैमाने की भूमिका को समझना।"
+    },
+    {
+     "concept_tag": "akshon-par-bindu",
+     "learning_objective": "अक्षों पर स्थित बिंदुओं के निर्देशांक पहचानना और उनसे दूरियाँ ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH01-T3",
+   "topic_number": 3,
+   "title": "चतुर्थांश और बिंदु के निर्देशांक",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "chaturthansh",
+     "learning_objective": "चारों चतुर्थांशों में निर्देशांकों के चिह्न पहचानना और बिंदु का चतुर्थांश ज्ञात करना।"
+    },
+    {
+     "concept_tag": "kramit-yugm",
+     "learning_objective": "(x, y) में x और y का अर्थ तथा (x, y) और (y, x) के अंतर को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH01-T4",
+   "topic_number": 4,
+   "title": "दो बिंदुओं के मध्य दूरी",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "aksh-samantar-doori",
+     "learning_objective": "अक्षों के समांतर रेखाखंडों की लंबाई निर्देशांकों के अंतर से ज्ञात करना।"
+    },
+    {
+     "concept_tag": "doori-sutra",
+     "learning_objective": "बौधायन-पाइथागोरस प्रमेय पर आधारित दूरी सूत्र का उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH01-T5",
+   "topic_number": 5,
+   "title": "अक्षों में परावर्तन",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "paravartan-nirdeshank",
+     "learning_objective": "x-अक्ष और y-अक्ष में परावर्तन से प्रतिबिंब के निर्देशांक ज्ञात करना।"
+    },
+    {
+     "concept_tag": "paravartan-doori-sanrakshan",
+     "learning_objective": "परावर्तन में भुजाओं की लंबाइयों के संरक्षित रहने का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH01-T6",
+   "topic_number": 6,
+   "title": "निर्देशांकों के अनुप्रयोग",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "madhyabindu",
+     "learning_objective": "रेखाखंड के मध्यबिंदु और उसके सिरों के निर्देशांकों का संबंध लागू करना।"
+    },
+    {
+     "concept_tag": "sanrekhata",
+     "learning_objective": "दूरियों की तुलना से तीन बिंदुओं के एक सरल रेखा पर होने की जाँच करना।"
+    },
+    {
+     "concept_tag": "doori-anuprayog",
+     "learning_objective": "दूरी सूत्र से वृत्त और वर्ग से जुड़ी समस्याएँ हल करना।"
+    }
+   ]
+  }
+ ]
+}

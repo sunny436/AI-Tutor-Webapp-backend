@@ -1,0 +1,116 @@
+{
+ "chapter_id": "LEPH2-CH06",
+ "title": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH2-CH06-T1",
+   "topic_number": 1,
+   "title": "Classification of metals, insulators and semiconductors",
+   "ncert_sections": "14.1, 14.2",
+   "concepts": [
+    {
+     "concept_tag": "conductivity-classification",
+     "learning_objective": "Classify solids as metals, semiconductors or insulators from their resistivity and conductivity."
+    },
+    {
+     "concept_tag": "energy-band-gap",
+     "learning_objective": "Use the energy band gap between valence and conduction bands to explain conduction in metals, insulators and semiconductors."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH06-T2",
+   "topic_number": 2,
+   "title": "Intrinsic semiconductors",
+   "ncert_sections": "14.3",
+   "concepts": [
+    {
+     "concept_tag": "intrinsic-carriers",
+     "learning_objective": "Explain the thermal generation of electron-hole pairs in pure Si and Ge and the relation ne = nh = ni."
+    },
+    {
+     "concept_tag": "hole-motion-current",
+     "learning_objective": "Describe the apparent motion of holes and the total current as the sum of electron and hole currents."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH06-T3",
+   "topic_number": 3,
+   "title": "Extrinsic semiconductors: n-type and p-type",
+   "ncert_sections": "14.4",
+   "concepts": [
+    {
+     "concept_tag": "n-type-p-type-doping",
+     "learning_objective": "Identify donor and acceptor dopants and the majority and minority carriers in n-type and p-type semiconductors."
+    },
+    {
+     "concept_tag": "mass-action-law",
+     "learning_objective": "Apply ne nh = ni^2 to find carrier concentrations in a doped semiconductor."
+    },
+    {
+     "concept_tag": "donor-acceptor-levels",
+     "learning_objective": "Locate donor and acceptor energy levels in the energy band diagram of doped semiconductors."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH06-T4",
+   "topic_number": 4,
+   "title": "Formation of a p-n junction",
+   "ncert_sections": "14.5, 14.5.1",
+   "concepts": [
+    {
+     "concept_tag": "junction-formation",
+     "learning_objective": "Explain the roles of diffusion and drift in forming a p-n junction and reaching equilibrium."
+    },
+    {
+     "concept_tag": "depletion-region-barrier",
+     "learning_objective": "Describe the depletion region, its immobile charges, its electric field and the barrier potential."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH06-T5",
+   "topic_number": 5,
+   "title": "Semiconductor diode under bias and its V-I characteristics",
+   "ncert_sections": "14.6, 14.6.1, 14.6.2",
+   "concepts": [
+    {
+     "concept_tag": "forward-bias",
+     "learning_objective": "Explain how forward bias lowers the barrier and causes minority carrier injection and a large current."
+    },
+    {
+     "concept_tag": "reverse-bias",
+     "learning_objective": "Explain how reverse bias raises the barrier, widens the depletion region and gives a small saturation current."
+    },
+    {
+     "concept_tag": "vi-characteristics",
+     "learning_objective": "Interpret the V-I characteristic of a diode, including cut-in voltage and dynamic resistance."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH06-T6",
+   "topic_number": 6,
+   "title": "Junction diode as a rectifier",
+   "ncert_sections": "14.7",
+   "concepts": [
+    {
+     "concept_tag": "half-wave-rectifier",
+     "learning_objective": "Explain the working and output of a half-wave rectifier."
+    },
+    {
+     "concept_tag": "full-wave-rectifier",
+     "learning_objective": "Explain how a centre-tap full-wave rectifier uses two diodes to rectify both half cycles."
+    },
+    {
+     "concept_tag": "capacitor-filter",
+     "learning_objective": "Explain how a capacitor input filter smooths the pulsating output of a rectifier."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "chapter_id": "KECS1-CH01",
+ "title": "Computer System",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECS1-CH01-T1",
+   "topic_number": 1,
+   "title": "Introduction to computer system: CPU, input and output devices",
+   "ncert_sections": "1.1, 1.1.1, 1.1.2, 1.1.3",
+   "concepts": [
+    {
+     "concept_tag": "cpu-alu-control-unit",
+     "learning_objective": "Describe the role of the CPU, its registers, ALU and control unit."
+    },
+    {
+     "concept_tag": "input-output-devices",
+     "learning_objective": "Identify input and output devices and how data entered is stored."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH01-T2",
+   "topic_number": 2,
+   "title": "Evolution of computer",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "early-computing-devices",
+     "learning_objective": "Recall key inventions from the abacus to the tabulating machine."
+    },
+    {
+     "concept_tag": "von-neumann-stored-program",
+     "learning_objective": "Explain the stored program concept and Von Neumann architecture."
+    },
+    {
+     "concept_tag": "integration-and-moores-law",
+     "learning_objective": "Relate LSI, VLSI, SLSI and Moore's Law to the growth of computing power."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH01-T3",
+   "topic_number": 3,
+   "title": "Computer memory: units and types",
+   "ncert_sections": "1.3, 1.3.1, 1.3.2",
+   "concepts": [
+    {
+     "concept_tag": "units-of-memory",
+     "learning_objective": "Convert between bits, nibbles, bytes and larger memory units."
+    },
+    {
+     "concept_tag": "primary-memory-ram-rom",
+     "learning_objective": "Distinguish RAM and ROM by volatility and use."
+    },
+    {
+     "concept_tag": "cache-and-secondary-memory",
+     "learning_objective": "Explain the role of cache memory and compare secondary memory with primary memory."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH01-T4",
+   "topic_number": 4,
+   "title": "Data transfer between memory and CPU",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "system-bus-types",
+     "learning_objective": "Identify the data, address and control buses and their direction of transfer."
+    },
+    {
+     "concept_tag": "memory-read-write",
+     "learning_objective": "Describe how the CPU reads from and writes to main memory over the system bus."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH01-T5",
+   "topic_number": 5,
+   "title": "Microprocessors and microcontrollers",
+   "ncert_sections": "1.5, 1.5.1, 1.5.2",
+   "concepts": [
+    {
+     "concept_tag": "microprocessor-generations",
+     "learning_objective": "Interpret the generations of microprocessors and their memory sizes."
+    },
+    {
+     "concept_tag": "microprocessor-specifications",
+     "learning_objective": "Explain word size, clock speed and cores of a microprocessor."
+    },
+    {
+     "concept_tag": "microcontrollers",
+     "learning_objective": "Distinguish a microcontroller from a microprocessor and give its uses."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH01-T6",
+   "topic_number": 6,
+   "title": "Data and information",
+   "ncert_sections": "1.6, 1.6.1, 1.6.2, 1.6.3",
+   "concepts": [
+    {
+     "concept_tag": "types-of-data",
+     "learning_objective": "Classify data as structured, unstructured or semi-structured."
+    },
+    {
+     "concept_tag": "data-capture-storage-retrieval",
+     "learning_objective": "Describe data capturing, storage and retrieval."
+    },
+    {
+     "concept_tag": "data-deletion-recovery",
+     "learning_objective": "Explain how deleted data can be recovered and how to protect it."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH01-T7",
+   "topic_number": 7,
+   "title": "Software: system software, programming tools and application software",
+   "ncert_sections": "1.7, 1.7.1, 1.7.2, 1.7.3, 1.7.4, 1.7.5",
+   "concepts": [
+    {
+     "concept_tag": "system-software",
+     "learning_objective": "Identify operating systems, system utilities and device drivers as system software."
+    },
+    {
+     "concept_tag": "programming-languages-translators",
+     "learning_objective": "Distinguish low-level and high-level languages and the role of assembler, compiler and interpreter."
+    },
+    {
+     "concept_tag": "application-software-licensing",
+     "learning_objective": "Classify application software and distinguish FOSS, freeware and proprietary software."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH01-T8",
+   "topic_number": 8,
+   "title": "Operating system",
+   "ncert_sections": "1.8, 1.8.1, 1.8.2",
+   "concepts": [
+    {
+     "concept_tag": "os-objectives-interfaces",
+     "learning_objective": "Describe the objectives of an operating system and its types of user interface."
+    },
+    {
+     "concept_tag": "os-functions",
+     "learning_objective": "Explain process, memory, file and device management by the operating system."
+    }
+   ]
+  }
+ ]
+}

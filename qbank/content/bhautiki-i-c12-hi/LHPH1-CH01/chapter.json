@@ -1,0 +1,116 @@
+{
+ "chapter_id": "LHPH1-CH01",
+ "title": "वैद्युत आवेश तथा क्षेत्र",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHPH1-CH01-T1",
+   "topic_number": 1,
+   "title": "वैद्युत आवेश, चालक तथा विद्युतरोधी",
+   "ncert_sections": "1.2, 1.3",
+   "concepts": [
+    {
+     "concept_tag": "gharshan-dwara-aaveshan",
+     "learning_objective": "घर्षण द्वारा वस्तुओं के आवेशित होने तथा दो प्रकार के आवेशों की पहचान करना।"
+    },
+    {
+     "concept_tag": "chalak-aur-vidyutrodhi",
+     "learning_objective": "चालकों, विद्युतरोधियों और भूसंपर्कण में आवेश के व्यवहार की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH01-T2",
+   "topic_number": 2,
+   "title": "वैद्युत आवेश के मूल गुण",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "aavesh-ki-yogatmakta",
+     "learning_objective": "किसी निकाय के कुल आवेश को सभी आवेशों के बीजगणितीय योग के रूप में ज्ञात करना।"
+    },
+    {
+     "concept_tag": "aavesh-sanrakshan",
+     "learning_objective": "आवेश संरक्षण के नियम को घर्षण जैसी प्रक्रियाओं पर लागू करना।"
+    },
+    {
+     "concept_tag": "aavesh-ka-kvantmikaran",
+     "learning_objective": "आवेश के क्वांटमीकरण q = ne को समझना और उसकी सीमाएँ बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH01-T3",
+   "topic_number": 3,
+   "title": "कूलॉम नियम तथा अनेक आवेशों के बीच बल",
+   "ncert_sections": "1.5, 1.6",
+   "concepts": [
+    {
+     "concept_tag": "coulomb-niyam",
+     "learning_objective": "कूलॉम नियम से दो बिंदु आवेशों के बीच बल की गणना करना।"
+    },
+    {
+     "concept_tag": "adhyaropan-siddhant",
+     "learning_objective": "अध्यारोपण सिद्धांत से अनेक आवेशों के कारण किसी आवेश पर नेट बल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH01-T4",
+   "topic_number": 4,
+   "title": "वैद्युत क्षेत्र तथा वैद्युत क्षेत्र रेखाएँ",
+   "ncert_sections": "1.7, 1.8",
+   "concepts": [
+    {
+     "concept_tag": "vidyut-kshetra",
+     "learning_objective": "बिंदु आवेशों के कारण किसी बिंदु पर वैद्युत क्षेत्र का परिमाण और दिशा ज्ञात करना।"
+    },
+    {
+     "concept_tag": "kshetra-rekhaen",
+     "learning_objective": "वैद्युत क्षेत्र रेखाओं के गुणों को समझना और उनकी व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH01-T5",
+   "topic_number": 5,
+   "title": "वैद्युत फ्लक्स तथा वैद्युत द्विध्रुव",
+   "ncert_sections": "1.9, 1.10, 1.11",
+   "concepts": [
+    {
+     "concept_tag": "vidyut-flux",
+     "learning_objective": "किसी क्षेत्रफल अवयव से गुजरने वाले वैद्युत फ्लक्स की गणना करना।"
+    },
+    {
+     "concept_tag": "vidyut-dwidhruv",
+     "learning_objective": "वैद्युत द्विध्रुव और द्विध्रुव आघूर्ण की परिभाषा तथा दिशा बताना।"
+    },
+    {
+     "concept_tag": "dwidhruv-par-bal-aaghurn",
+     "learning_objective": "एकसमान बाह्य क्षेत्र में द्विध्रुव पर बल और बल-आघूर्ण का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH01-T6",
+   "topic_number": 6,
+   "title": "सतत आवेश वितरण तथा गाउस नियम",
+   "ncert_sections": "1.12, 1.13, 1.14",
+   "concepts": [
+    {
+     "concept_tag": "aavesh-ghanatva",
+     "learning_objective": "रैखिक, पृष्ठ और आयतन आवेश घनत्व तथा उनके मात्रक बताना।"
+    },
+    {
+     "concept_tag": "gauss-niyam",
+     "learning_objective": "गाउस नियम के अनुसार बंद पृष्ठ से निर्गत कुल फ्लक्स ज्ञात करना।"
+    },
+    {
+     "concept_tag": "gauss-niyam-anuprayog",
+     "learning_objective": "गाउस नियम से रैखिक आवेश, समतल चादर और गोलीय कोश के क्षेत्र ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

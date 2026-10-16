@@ -1,0 +1,160 @@
+{
+ "chapter_id": "LEGY1-CH06",
+ "title": "Tertiary and Quaternary Activities",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEGY1-CH06-T1",
+   "topic_number": 1,
+   "title": "Nature of tertiary activities",
+   "ncert_sections": "Introduction",
+   "concepts": [
+    {
+     "concept_tag": "tertiary-activity-nature",
+     "learning_objective": "Explain that tertiary activities provide services for payment rather than producing tangible goods."
+    },
+    {
+     "concept_tag": "tertiary-vs-secondary",
+     "learning_objective": "Distinguish tertiary activities from secondary activities on the basis of skills versus machinery."
+    },
+    {
+     "concept_tag": "sectoral-shift-development",
+     "learning_objective": "Relate the share of workers in each sector to the stage of economic development."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH06-T2",
+   "topic_number": 2,
+   "title": "Trade and commerce",
+   "ncert_sections": "Trade and commerce; Retail Trading; Wholesale Trading",
+   "concepts": [
+    {
+     "concept_tag": "trading-centres",
+     "learning_objective": "Describe rural and urban marketing centres and the services they offer."
+    },
+    {
+     "concept_tag": "periodic-markets",
+     "learning_objective": "Explain how periodic markets serve areas without regular markets."
+    },
+    {
+     "concept_tag": "retail-wholesale-trade",
+     "learning_objective": "Distinguish retail trading, non-store retailing and wholesale trading."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH06-T3",
+   "topic_number": 3,
+   "title": "Transport",
+   "ncert_sections": "Transport; Network and Accessibility; Factors Affecting Transport",
+   "concepts": [
+    {
+     "concept_tag": "transport-distance",
+     "learning_objective": "Explain km distance, time distance and cost distance, and the use of isochrones."
+    },
+    {
+     "concept_tag": "transport-networks",
+     "learning_objective": "Describe nodes, links and how the number of links shows accessibility."
+    },
+    {
+     "concept_tag": "factors-affecting-transport",
+     "learning_objective": "Identify the factors that influence transport demand and route choice."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH06-T4",
+   "topic_number": 4,
+   "title": "Communication",
+   "ncert_sections": "Communication; Telecommunications",
+   "concepts": [
+    {
+     "concept_tag": "communication-and-transport",
+     "learning_objective": "Explain the link between transport and communication and how it has changed."
+    },
+    {
+     "concept_tag": "telecommunications-mass-media",
+     "learning_objective": "Describe the role of telecommunications, mass media, satellites and the internet."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH06-T5",
+   "topic_number": 5,
+   "title": "Services and people engaged in tertiary activities",
+   "ncert_sections": "Services; People Engaged in Tertiary Activities",
+   "concepts": [
+    {
+     "concept_tag": "service-levels",
+     "learning_objective": "Distinguish low-order and high-order services and physical and mental labour."
+    },
+    {
+     "concept_tag": "service-types-location",
+     "learning_objective": "Describe regulated, professional, recreational and personal services and their location."
+    },
+    {
+     "concept_tag": "service-employment-trends",
+     "learning_objective": "Interpret the share of service workers in developed and less developed countries."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH06-T6",
+   "topic_number": 6,
+   "title": "Tourism and medical tourism",
+   "ncert_sections": "Tourism; Tourist Regions; Tourist Attractions; Medical Services for Overseas Patients in India",
+   "concepts": [
+    {
+     "concept_tag": "tourism-significance",
+     "learning_objective": "Explain the meaning of tourism and its importance for jobs and other industries."
+    },
+    {
+     "concept_tag": "tourist-attractions",
+     "learning_objective": "Identify climate, landscape, history and art, and culture and economy as tourist attractions."
+    },
+    {
+     "concept_tag": "medical-tourism",
+     "learning_objective": "Explain medical tourism and the outsourcing of medical tests and data interpretation."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH06-T7",
+   "topic_number": 7,
+   "title": "Quaternary and quinary activities",
+   "ncert_sections": "Quaternary Activities; The Quaternary Sector; Quinary Activities",
+   "concepts": [
+    {
+     "concept_tag": "quaternary-activities",
+     "learning_objective": "Describe quaternary activities as knowledge-based services of information, research and development."
+    },
+    {
+     "concept_tag": "quinary-activities",
+     "learning_objective": "Explain quinary activities as the highly paid 'gold collar' work of top decision makers."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH06-T8",
+   "topic_number": 8,
+   "title": "Outsourcing, KPO and the digital divide",
+   "ncert_sections": "Outsourcing; The Digital Divide",
+   "concepts": [
+    {
+     "concept_tag": "outsourcing-offshoring",
+     "learning_objective": "Explain outsourcing and off-shoring and why work moves to countries such as India."
+    },
+    {
+     "concept_tag": "kpo-bpo",
+     "learning_objective": "Distinguish knowledge processing outsourcing (KPO) from business process outsourcing (BPO)."
+    },
+    {
+     "concept_tag": "digital-divide",
+     "learning_objective": "Explain the digital divide between and within countries."
+    }
+   ]
+  }
+ ]
+}

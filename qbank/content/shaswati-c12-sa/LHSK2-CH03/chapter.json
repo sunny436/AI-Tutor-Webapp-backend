@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LHSK2-CH03",
+ "title": "बालकौतुकम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHSK2-CH03-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः – भवभूतिः उत्तररामचरितं च",
+   "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "bhavabhuti-parichaya",
+     "learning_objective": "भवभूतेः कालं, आश्रयदातारं, रसविशेषं च अभिजानीयात्।"
+    },
+    {
+     "concept_tag": "uttararamacharita-parichaya",
+     "learning_objective": "पाठस्य स्रोतं, नाटकस्य नामसार्थक्यं, प्रस्तुतांशस्य भावं च विवेचयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH03-T2",
+   "topic_number": 2,
+   "title": "बटूनां कोलाहलः लवस्य दर्शनं च",
+   "ncert_sections": "आरम्भः – श्लोकौ 1, 2",
+   "concepts": [
+    {
+     "concept_tag": "batu-kolahala",
+     "learning_objective": "आश्रमबालकानां क्रीडायाः बाल्यस्य सुखस्य च वर्णनं बोधेत्।"
+    },
+    {
+     "concept_tag": "lava-varnana",
+     "learning_objective": "अरुन्धत्याः श्लोके लवस्य रूपवर्णनस्य शब्दार्थान् जानीयात्।"
+    },
+    {
+     "concept_tag": "lava-rama-sadrishya",
+     "learning_objective": "लवे रामस्य सादृश्यं दृष्ट्वा जनकादीनां भावं विश्लेषयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH03-T3",
+   "topic_number": 3,
+   "title": "लवस्य अभिवादनं वात्सल्यभावः च",
+   "ncert_sections": "लवप्रवेशः – श्लोकः 3",
+   "concepts": [
+    {
+     "concept_tag": "lava-abhivadana",
+     "learning_objective": "लवस्य विनयपूर्णम् अभिवादनं गुरुजनानाम् आशीर्वचनानि च जानीयात्।"
+    },
+    {
+     "concept_tag": "vatsalya-bhava",
+     "learning_objective": "कौसल्याजनकयोः वात्सल्यं सीतारामयोः स्मृतिं च विवेचयेत्।"
+    },
+    {
+     "concept_tag": "lava-parichaya",
+     "learning_objective": "कौसल्यायाः प्रश्नान् लवस्य उत्तराणि च बोधेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH03-T4",
+   "topic_number": 4,
+   "title": "बटूनाम् अश्ववर्णनम् आश्वमेधिकाश्वस्य अभिज्ञानं च",
+   "ncert_sections": "बटुप्रवेशः – श्लोकः 4",
+   "concepts": [
+    {
+     "concept_tag": "ashva-varnana-hasya",
+     "learning_objective": "बटूनां सरलेन अश्ववर्णनेन उत्पन्नं हास्यं बोधेत्।"
+    },
+    {
+     "concept_tag": "ashvamedhika-ashva",
+     "learning_objective": "लवः आश्वमेधिकम् अश्वं कथम् अभिजानाति इति व्याख्यायेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH03-T5",
+   "topic_number": 5,
+   "title": "अश्वमेधघोषणा लवस्य वीरता च",
+   "ncert_sections": "घोषणा – श्लोकौ 5, 6, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "ashvamedha-yajna",
+     "learning_objective": "अश्वमेधयज्ञस्य स्वरूपं प्रयोजनं च जानीयात्।"
+    },
+    {
+     "concept_tag": "ashvamedha-ghoshana",
+     "learning_objective": "रक्षकाणां घोषणायाः अर्थं तया लवस्य प्रतिक्रियां च विश्लेषयेत्।"
+    },
+    {
+     "concept_tag": "lava-virata",
+     "learning_objective": "लवस्य क्षात्रतेजः निर्भयतां च मूल्याङ्कयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH03-T6",
+   "topic_number": 6,
+   "title": "व्याकरणम् – समासाः, प्रत्ययाः, छन्दः, अलङ्कारः च",
+   "ncert_sections": "अभ्यासः",
+   "concepts": [
+    {
+     "concept_tag": "samasa",
+     "learning_objective": "पाठगतानां समस्तपदानां विग्रहं समासनाम च जानीयात्।"
+    },
+    {
+     "concept_tag": "pratyaya",
+     "learning_objective": "पाठगतेषु पदेषु प्रकृतिप्रत्ययविभागं कुर्यात्।"
+    },
+    {
+     "concept_tag": "chhanda-alankara",
+     "learning_objective": "पाठगतश्लोकानां छन्दः अलङ्कारं च अभिजानीयात्।"
+    }
+   ]
+  }
+ ]
+}

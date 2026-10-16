@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KEBO1-CH19",
+ "title": "Chemical Coordination and Integration",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH19-T1",
+   "topic_number": 1,
+   "title": "Endocrine glands, hormones and the hypothalamus",
+   "ncert_sections": "19.1, 19.2.1",
+   "concepts": [
+    {
+     "concept_tag": "hormone-definition",
+     "learning_objective": "Define endocrine glands and hormones using the current scientific definition of a hormone."
+    },
+    {
+     "concept_tag": "hypothalamic-regulation",
+     "learning_objective": "Explain how hypothalamic releasing and inhibiting hormones control the pituitary gland."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH19-T2",
+   "topic_number": 2,
+   "title": "The pituitary and pineal glands",
+   "ncert_sections": "19.2.2, 19.2.3",
+   "concepts": [
+    {
+     "concept_tag": "pituitary-hormones",
+     "learning_objective": "Identify the hormones of the pars distalis, pars intermedia and pars nervosa and their actions."
+    },
+    {
+     "concept_tag": "pituitary-disorders",
+     "learning_objective": "Relate gigantism, dwarfism, acromegaly and diabetes insipidus to faulty pituitary hormone secretion."
+    },
+    {
+     "concept_tag": "melatonin-diurnal-rhythm",
+     "learning_objective": "State the role of pineal melatonin in regulating 24-hour body rhythms."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH19-T3",
+   "topic_number": 3,
+   "title": "Thyroid, parathyroid and thymus",
+   "ncert_sections": "19.2.4, 19.2.5, 19.2.6",
+   "concepts": [
+    {
+     "concept_tag": "thyroid-hormones-disorders",
+     "learning_objective": "Describe the functions of thyroid hormones and the disorders caused by their under- or over-secretion."
+    },
+    {
+     "concept_tag": "calcium-homeostasis",
+     "learning_objective": "Explain how PTH and thyrocalcitonin together regulate blood calcium levels."
+    },
+    {
+     "concept_tag": "thymosins-immunity",
+     "learning_objective": "State the role of thymosins in cell-mediated and humoral immunity."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH19-T4",
+   "topic_number": 4,
+   "title": "Adrenal gland and pancreas",
+   "ncert_sections": "19.2.7, 19.2.8",
+   "concepts": [
+    {
+     "concept_tag": "adrenal-medulla-catecholamines",
+     "learning_objective": "Describe the emergency actions of adrenaline and noradrenaline."
+    },
+    {
+     "concept_tag": "adrenal-cortex-corticoids",
+     "learning_objective": "Distinguish glucocorticoids and mineralocorticoids by their main examples and actions."
+    },
+    {
+     "concept_tag": "glucose-homeostasis",
+     "learning_objective": "Explain how insulin and glucagon jointly maintain blood glucose and what goes wrong in diabetes mellitus."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH19-T5",
+   "topic_number": 5,
+   "title": "Testis and ovary",
+   "ncert_sections": "19.2.9, 19.2.10",
+   "concepts": [
+    {
+     "concept_tag": "testis-androgens",
+     "learning_objective": "Describe the source and functions of androgens secreted by the testis."
+    },
+    {
+     "concept_tag": "ovarian-hormones",
+     "learning_objective": "Describe the sources and functions of estrogen and progesterone."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH19-T6",
+   "topic_number": 6,
+   "title": "Hormones of heart, kidney and gastrointestinal tract",
+   "ncert_sections": "19.3",
+   "concepts": [
+    {
+     "concept_tag": "heart-kidney-hormones",
+     "learning_objective": "State the source and action of atrial natriuretic factor and erythropoietin."
+    },
+    {
+     "concept_tag": "gastrointestinal-hormones",
+     "learning_objective": "Match gastrin, secretin, CCK and GIP with their targets and actions."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH19-T7",
+   "topic_number": 7,
+   "title": "Mechanism of hormone action",
+   "ncert_sections": "19.4",
+   "concepts": [
+    {
+     "concept_tag": "hormone-receptors",
+     "learning_objective": "Explain the specificity of hormone receptors and the difference between membrane-bound and intracellular receptors."
+    },
+    {
+     "concept_tag": "hormone-chemical-nature",
+     "learning_objective": "Classify hormones by chemical nature and relate each class to its mode of action."
+    }
+   ]
+  }
+ ]
+}

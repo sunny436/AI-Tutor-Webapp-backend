@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KEGY3-CH06",
+ "title": "Introduction To Remote Sensing",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY3-CH06-T1",
+   "topic_number": 1,
+   "title": "Meaning and stages of remote sensing",
+   "ncert_sections": "Introduction; Stages in Remote Sensing",
+   "concepts": [
+    {
+     "concept_tag": "remote-sensing-definition",
+     "learning_objective": "Define remote sensing and identify its three basic components."
+    },
+    {
+     "concept_tag": "stages-of-remote-sensing",
+     "learning_objective": "Sequence the stages of remote sensing data acquisition from energy source to map."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH06-T2",
+   "topic_number": 2,
+   "title": "Electromagnetic radiation and its interactions",
+   "ncert_sections": "Stages b, c and d",
+   "concepts": [
+    {
+     "concept_tag": "electromagnetic-spectrum",
+     "learning_objective": "Identify the regions of the electromagnetic spectrum used in remote sensing."
+    },
+    {
+     "concept_tag": "spectral-response-of-objects",
+     "learning_objective": "Explain why different objects respond differently in different spectral regions."
+    },
+    {
+     "concept_tag": "atmospheric-effects",
+     "learning_objective": "Describe how atmospheric constituents absorb and scatter reflected energy."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH06-T3",
+   "topic_number": 3,
+   "title": "Remote sensing satellites and data reception",
+   "ncert_sections": "Stages e to h; Box 6.1",
+   "concepts": [
+    {
+     "concept_tag": "sun-synchronous-geostationary-orbits",
+     "learning_objective": "Compare sun-synchronous and geostationary satellites by altitude, coverage, resolution and use."
+    },
+    {
+     "concept_tag": "data-reception-processing",
+     "learning_objective": "Describe how image data is received, corrected and converted into maps."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH06-T4",
+   "topic_number": 4,
+   "title": "Sensors and multispectral scanners",
+   "ncert_sections": "Sensors; Multispectral Scanners",
+   "concepts": [
+    {
+     "concept_tag": "sensor-types",
+     "learning_objective": "Distinguish photographic and non-photographic sensors."
+    },
+    {
+     "concept_tag": "whiskbroom-scanner",
+     "learning_objective": "Describe the working of a whiskbroom scanner."
+    },
+    {
+     "concept_tag": "pushbroom-scanner",
+     "learning_objective": "Explain and calculate the detector array of a pushbroom scanner."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH06-T5",
+   "topic_number": 5,
+   "title": "Resolving powers and sensor resolutions",
+   "ncert_sections": "Resolving Powers of the Satellites; Sensor Resolutions; Table 6.1",
+   "concepts": [
+    {
+     "concept_tag": "temporal-resolution",
+     "learning_objective": "Explain temporal resolution and its use in change detection."
+    },
+    {
+     "concept_tag": "spatial-spectral-radiometric-resolution",
+     "learning_objective": "Distinguish spatial, spectral and radiometric resolution using Table 6.1."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH06-T6",
+   "topic_number": 6,
+   "title": "Data products",
+   "ncert_sections": "Data Products",
+   "concepts": [
+    {
+     "concept_tag": "images-vs-photographs",
+     "learning_objective": "Distinguish images from photographs and describe photographic images."
+    },
+    {
+     "concept_tag": "digital-image-pixels",
+     "learning_objective": "Explain pixels and digital numbers in a digital image."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH06-T7",
+   "topic_number": 7,
+   "title": "Elements of visual interpretation",
+   "ncert_sections": "Interpretation of Satellite Imageries; Table 6.2",
+   "concepts": [
+    {
+     "concept_tag": "image-terrain-characteristics",
+     "learning_objective": "Classify elements of visual interpretation into image and terrain characteristics."
+    },
+    {
+     "concept_tag": "tone-fcc-colours",
+     "learning_objective": "Interpret tones and colours of features on a standard false colour composite."
+    },
+    {
+     "concept_tag": "texture-shape-shadow-pattern",
+     "learning_objective": "Apply texture, size, shape, shadow and pattern to identify features."
+    }
+   ]
+  }
+ ]
+}

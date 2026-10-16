@@ -1,0 +1,136 @@
+{
+ "chapter_id": "HECU1-CH08",
+ "title": "Nature of Matter: Elements, Compounds, and Mixtures",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HECU1-CH08-T1",
+   "topic_number": 1,
+   "title": "What Are Mixtures?",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "mixture-and-components",
+     "learning_objective": "Define a mixture and its components, and state that components keep their properties and do not react chemically."
+    },
+    {
+     "concept_tag": "uniform-and-non-uniform-mixtures",
+     "learning_objective": "Distinguish uniform mixtures from non-uniform mixtures using everyday examples."
+    },
+    {
+     "concept_tag": "alloys",
+     "learning_objective": "Recognise alloys such as stainless steel, brass and bronze as uniform mixtures of metals."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH08-T2",
+   "topic_number": 2,
+   "title": "Is Air a Mixture?",
+   "ncert_sections": "8.1.1",
+   "concepts": [
+    {
+     "concept_tag": "composition-of-air",
+     "learning_objective": "Describe air as a uniform mixture of nitrogen, oxygen, argon, carbon dioxide and water vapour."
+    },
+    {
+     "concept_tag": "lime-water-test",
+     "learning_objective": "Explain how lime water turning milky shows the presence of carbon dioxide in air."
+    },
+    {
+     "concept_tag": "dust-particles-in-air",
+     "learning_objective": "Explain that dust particles are suspended in air as pollutants and are not an integral part of it."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH08-T3",
+   "topic_number": 3,
+   "title": "Types of Mixtures and Pure Substances",
+   "ncert_sections": "8.1.2, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "types-of-mixtures-by-state",
+     "learning_objective": "Classify mixtures by the physical states of their components and as uniform or non-uniform."
+    },
+    {
+     "concept_tag": "scientific-meaning-of-pure",
+     "learning_objective": "Contrast the everyday meaning of 'pure' with the scientific meaning of a pure substance."
+    },
+    {
+     "concept_tag": "adulteration",
+     "learning_objective": "Explain what adulteration is, why it is done and how it harms consumers."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH08-T4",
+   "topic_number": 4,
+   "title": "Elements",
+   "ncert_sections": "8.3, 8.3.1",
+   "concepts": [
+    {
+     "concept_tag": "electrolysis-of-water",
+     "learning_objective": "Interpret the electrolysis of water and the tests that identify hydrogen and oxygen."
+    },
+    {
+     "concept_tag": "elements-atoms-molecules",
+     "learning_objective": "Describe elements as made of identical atoms that often combine to form molecules."
+    },
+    {
+     "concept_tag": "states-of-elements",
+     "learning_objective": "Recall facts about the number of elements, their states at room temperature and their classification."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH08-T5",
+   "topic_number": 5,
+   "title": "Compounds",
+   "ncert_sections": "8.3.2",
+   "concepts": [
+    {
+     "concept_tag": "compound-fixed-ratio",
+     "learning_objective": "Explain that a compound is formed when elements combine in a fixed ratio and has new properties."
+    },
+    {
+     "concept_tag": "decomposition-of-sugar",
+     "learning_objective": "Infer from the heating of sugar that it is a compound of carbon, hydrogen and oxygen."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH08-T6",
+   "topic_number": 6,
+   "title": "Mixture and Compound of Iron and Sulfur",
+   "ncert_sections": "8.3.2 (Activity 8.5)",
+   "concepts": [
+    {
+     "concept_tag": "iron-sulfur-mixture-vs-compound",
+     "learning_objective": "Compare a mixture of iron and sulfur with the compound iron sulfide formed on heating."
+    },
+    {
+     "concept_tag": "gas-tests-with-acid",
+     "learning_objective": "Identify the gases given off when the mixture and the compound react with dilute hydrochloric acid."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH08-T7",
+   "topic_number": 7,
+   "title": "Uses of Elements, Compounds and Mixtures; Minerals",
+   "ncert_sections": "8.4, 8.5",
+   "concepts": [
+    {
+     "concept_tag": "uses-of-materials",
+     "learning_objective": "Relate the properties of elements, compounds and mixtures to their uses in daily life and technology."
+    },
+    {
+     "concept_tag": "minerals-and-native-minerals",
+     "learning_objective": "Describe minerals, including native minerals that are pure elements, and their uses."
+    }
+   ]
+  }
+ ]
+}

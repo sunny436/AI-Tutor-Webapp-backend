@@ -1,0 +1,96 @@
+{
+ "chapter_id": "KEMH1-CH07",
+ "title": "Binomial Theorem",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH07-T1",
+   "topic_number": 1,
+   "title": "Pascal's triangle and patterns in binomial expansions",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "pascals-triangle",
+     "learning_objective": "Construct rows of Pascal's triangle and use them as coefficients of a binomial expansion."
+    },
+    {
+     "concept_tag": "expansion-patterns",
+     "learning_objective": "Describe the patterns in the number of terms and the powers of a and b in the expansion of (a + b)^n."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH07-T2",
+   "topic_number": 2,
+   "title": "Binomial theorem for any positive integer n",
+   "ncert_sections": "7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "binomial-theorem-statement",
+     "learning_objective": "State the binomial theorem and use it to find a specified term or coefficient of an expansion."
+    },
+    {
+     "concept_tag": "binomial-coefficients",
+     "learning_objective": "Identify binomial coefficients and the number of terms in the expansion of (a + b)^n."
+    },
+    {
+     "concept_tag": "proof-by-induction",
+     "learning_objective": "Explain the steps of the proof of the binomial theorem by mathematical induction."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH07-T3",
+   "topic_number": 3,
+   "title": "Special cases of the binomial theorem",
+   "ncert_sections": "7.2.2",
+   "concepts": [
+    {
+     "concept_tag": "expansion-of-difference",
+     "learning_objective": "Expand (x - y)^n and determine the signs of its terms."
+    },
+    {
+     "concept_tag": "sum-of-binomial-coefficients",
+     "learning_objective": "Use the expansion of (1 + x)^n with suitable values of x to evaluate sums of binomial coefficients."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH07-T4",
+   "topic_number": 4,
+   "title": "Evaluating powers, comparison and approximation",
+   "ncert_sections": "7.2 (Examples 2, 3)",
+   "concepts": [
+    {
+     "concept_tag": "evaluating-powers",
+     "learning_objective": "Evaluate powers of numbers like 98 or 102 by writing them as a sum or difference of convenient numbers."
+    },
+    {
+     "concept_tag": "comparing-numbers",
+     "learning_objective": "Compare large powers with given numbers using the first few terms of a binomial expansion."
+    },
+    {
+     "concept_tag": "approximation",
+     "learning_objective": "Approximate powers such as (0.99)^5 using the first few terms of an expansion."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH07-T5",
+   "topic_number": 5,
+   "title": "Divisibility and identities using the binomial theorem",
+   "ncert_sections": "7.2 (Example 4), Exercise 7.1",
+   "concepts": [
+    {
+     "concept_tag": "divisibility",
+     "learning_objective": "Prove divisibility and remainder results by expanding a suitable binomial."
+    },
+    {
+     "concept_tag": "sum-difference-of-expansions",
+     "learning_objective": "Simplify sums and differences such as (a + b)^n + (a - b)^n and evaluate surd expressions with them."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,641 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "themes-in-indian-history-i-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "history",
+  "language": "english",
+  "title": "Themes in Indian History-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lehs1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEHS1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Bricks, Beads and Bones: The Harappan Civilisation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lehs101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEHS1-CH01-T1",
+     "topic_number": 1,
+     "title": "Beginnings and subsistence strategies",
+     "ncert_sections": "1, 2, 2.1",
+     "concepts": [
+      {
+       "concept_tag": "harappan-phases",
+       "learning_objective": "Students will identify the Early, Mature and Late Harappan phases and their approximate dates."
+      },
+      {
+       "concept_tag": "diet-and-its-evidence",
+       "learning_objective": "Students will explain how archaeologists reconstruct Harappan diet from plant and animal remains."
+      },
+      {
+       "concept_tag": "agricultural-technologies",
+       "learning_objective": "Students will interpret the evidence for ploughing, cropping and irrigation in Harappan agriculture."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH01-T2",
+     "topic_number": 2,
+     "title": "Mohenjodaro: a planned urban centre",
+     "ncert_sections": "3, 3.1, 3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "city-layout-and-bricks",
+       "learning_objective": "Students will describe the Citadel, the Lower Town and the standardised bricks as signs of planning."
+      },
+      {
+       "concept_tag": "drainage-system",
+       "learning_objective": "Students will explain how the drainage system reflects town planning."
+      },
+      {
+       "concept_tag": "houses-and-great-bath",
+       "learning_objective": "Students will describe domestic architecture and the structures on the Citadel, including the Great Bath."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH01-T3",
+     "topic_number": 3,
+     "title": "Tracking social differences",
+     "ncert_sections": "4, 4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "burials-as-evidence",
+       "learning_objective": "Students will evaluate what Harappan burials reveal, and do not reveal, about social differences."
+      },
+      {
+       "concept_tag": "utilitarian-and-luxury-artefacts",
+       "learning_objective": "Students will distinguish utilitarian objects from luxuries and interpret their distribution."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH01-T4",
+     "topic_number": 4,
+     "title": "Finding out about craft production",
+     "ncert_sections": "5, 5.1",
+     "concepts": [
+      {
+       "concept_tag": "bead-making",
+       "learning_objective": "Students will describe the materials and techniques used to make Harappan beads."
+      },
+      {
+       "concept_tag": "identifying-craft-centres",
+       "learning_objective": "Students will identify the evidence archaeologists use to locate centres of craft production."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH01-T5",
+     "topic_number": 5,
+     "title": "Strategies for procuring materials",
+     "ncert_sections": "6, 6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "procurement-within-subcontinent",
+       "learning_objective": "Students will explain how the Harappans obtained raw materials from within the subcontinent."
+      },
+      {
+       "concept_tag": "contact-with-distant-lands",
+       "learning_objective": "Students will analyse the evidence for Harappan contact with Oman, Dilmun and Mesopotamia."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH01-T6",
+     "topic_number": 6,
+     "title": "Seals, script and weights",
+     "ncert_sections": "7, 7.1, 7.2, 7.3",
+     "concepts": [
+      {
+       "concept_tag": "seals-and-sealings",
+       "learning_objective": "Students will explain how seals and sealings were used in long-distance communication."
+      },
+      {
+       "concept_tag": "harappan-script",
+       "learning_objective": "Students will state the known features of the undeciphered Harappan script."
+      },
+      {
+       "concept_tag": "weights-system",
+       "learning_objective": "Students will apply the binary and decimal pattern of Harappan weights."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH01-T7",
+     "topic_number": 7,
+     "title": "Ancient authority and the end of the civilisation",
+     "ncert_sections": "8, 8.1, 9",
+     "concepts": [
+      {
+       "concept_tag": "evidence-of-authority",
+       "learning_objective": "Students will analyse the evidence for authority and the debate on rulers in Harappan society."
+      },
+      {
+       "concept_tag": "decline-and-end",
+       "learning_objective": "Students will explain the changes after c. 1900 BCE and the explanations offered for the decline."
+      },
+      {
+       "concept_tag": "invasion-theory-debate",
+       "learning_objective": "Students will evaluate how re-examination of evidence changed the interpretation of an 'invasion'."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH01-T8",
+     "topic_number": 8,
+     "title": "Discovering the civilisation and problems of interpretation",
+     "ncert_sections": "10, 10.1, 10.2, 10.3, 11",
+     "concepts": [
+      {
+       "concept_tag": "discovery-of-harappa",
+       "learning_objective": "Students will trace the roles of Cunningham, Sahni, Banerji and Marshall in discovering the civilisation."
+      },
+      {
+       "concept_tag": "stratigraphy-and-excavation",
+       "learning_objective": "Students will explain stratigraphy and how excavation methods affect the recovery of context."
+      },
+      {
+       "concept_tag": "problems-of-interpretation",
+       "learning_objective": "Students will evaluate the difficulties of reconstructing Harappan religious practices."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEHS1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Kings, Farmers and Towns: Early States and Economies (c. 600 BCE-600 CE)",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lehs102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEHS1-CH02-T1",
+     "topic_number": 1,
+     "title": "Prinsep and Piyadassi: inscriptions as sources",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "prinsep-decipherment",
+       "learning_objective": "Recall how James Prinsep's decipherment of Brahmi and Kharosthi in the 1830s changed the study of early Indian political history."
+      },
+      {
+       "concept_tag": "inscriptions-as-sources",
+       "learning_objective": "Explain what inscriptions are, the languages they used and how undated inscriptions are dated."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH02-T2",
+     "topic_number": 2,
+     "title": "The earliest states: mahajanapadas and Magadha",
+     "ncert_sections": "2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "mahajanapadas",
+       "learning_objective": "Describe the main features of the sixteen mahajanapadas, including monarchies, ganas or sanghas and fortified capitals."
+      },
+      {
+       "concept_tag": "rise-of-magadha",
+       "learning_objective": "Compare the explanations of modern historians and early Buddhist and Jaina writers for the rise of Magadha."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH02-T3",
+     "topic_number": 3,
+     "title": "An early empire: the Mauryas",
+     "ncert_sections": "3, 3.1, 3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "sources-on-the-mauryas",
+       "learning_objective": "Identify the sources used to reconstruct Mauryan history and what Asoka meant by dhamma."
+      },
+      {
+       "concept_tag": "mauryan-administration",
+       "learning_objective": "Explain how the Mauryan Empire was administered through political centres, routes, the army and dhamma mahamattas."
+      },
+      {
+       "concept_tag": "significance-of-the-mauryan-empire",
+       "learning_objective": "Evaluate how important the Mauryan Empire was and why historians in colonial India valued it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH02-T4",
+     "topic_number": 4,
+     "title": "New notions of kingship",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "chiefdoms-in-the-south",
+       "learning_objective": "Distinguish chiefs from kings and describe the chiefdoms of the Cholas, Cheras and Pandyas in Tamilakam."
+      },
+      {
+       "concept_tag": "divine-kingship",
+       "learning_objective": "Explain how the Kushanas used titles, statues and coins to project divine kingship."
+      },
+      {
+       "concept_tag": "samantas-and-prashastis",
+       "learning_objective": "Explain the role of samantas and assess prashastis such as the Prayaga Prashasti as historical sources."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH02-T5",
+     "topic_number": 5,
+     "title": "A changing countryside: subjects and agricultural production",
+     "ncert_sections": "5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "popular-perceptions-of-kings",
+       "learning_objective": "Explain how historians use stories such as the Jatakas to understand what subjects thought of their rulers."
+      },
+      {
+       "concept_tag": "increasing-agricultural-production",
+       "learning_objective": "Describe plough agriculture, transplantation and irrigation as strategies for raising production, and their limits."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH02-T6",
+     "topic_number": 6,
+     "title": "Differences in rural society and land grants",
+     "ncert_sections": "5.3, 5.4",
+     "concepts": [
+      {
+       "concept_tag": "rural-differentiation",
+       "learning_objective": "Identify the categories of rural people named in Pali and Sangam texts, including the gahapati."
+      },
+      {
+       "concept_tag": "land-grants-and-agraharas",
+       "learning_objective": "Analyse land grants, agraharas and the historians' debate on their impact."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH02-T7",
+     "topic_number": 7,
+     "title": "Towns and trade",
+     "ncert_sections": "6.1, 6.2, 6.3, 6.4",
+     "concepts": [
+      {
+       "concept_tag": "urban-centres-and-crafts",
+       "learning_objective": "Describe the location of early historic towns and the evidence of their elites, craftspersons and guilds."
+      },
+      {
+       "concept_tag": "trade-networks",
+       "learning_objective": "Explain the land, river and sea routes of trade within the subcontinent and beyond."
+      },
+      {
+       "concept_tag": "coins-and-kings",
+       "learning_objective": "Analyse what punch-marked, Indo-Greek, Kushana, Yaudheya and Gupta coins reveal about exchange."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH02-T8",
+     "topic_number": 8,
+     "title": "Deciphering inscriptions and their limitations",
+     "ncert_sections": "7, 8",
+     "concepts": [
+      {
+       "concept_tag": "decipherment-of-scripts",
+       "learning_objective": "Explain how Brahmi and Kharosthi were deciphered and how epigraphists identify the issuer of an inscription."
+      },
+      {
+       "concept_tag": "limitations-of-inscriptions",
+       "learning_objective": "Evaluate the technical and fundamental limitations of inscriptional evidence."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEHS1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Kinship, Caste and Class: Early Societies (c. 600 BCE-600 CE)",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lehs103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEHS1-CH03-T1",
+     "topic_number": 1,
+     "title": "The Critical Edition of the Mahabharata",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "critical-edition-project",
+       "learning_objective": "Describe how the Critical Edition of the Mahabharata was prepared between 1919 and 1966."
+      },
+      {
+       "concept_tag": "regional-variations-and-dialogue",
+       "learning_objective": "Explain what the regional variations in Mahabharata manuscripts reveal about social history."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH03-T2",
+     "topic_number": 2,
+     "title": "Kinship and Marriage: Many Rules and Varied Practices",
+     "ncert_sections": "2.1, 2.2, 2.3, 2.4, 2.5",
+     "concepts": [
+      {
+       "concept_tag": "patriliny-and-succession",
+       "learning_objective": "Explain the ideal of patriliny and its importance for succession in ruling families."
+      },
+      {
+       "concept_tag": "rules-of-marriage",
+       "learning_objective": "Distinguish between exogamy, endogamy, polygyny and polyandry and the Brahmanical forms of marriage."
+      },
+      {
+       "concept_tag": "gotra-and-satavahana-practice",
+       "learning_objective": "Analyse how Satavahana inscriptions show departures from Brahmanical gotra rules."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH03-T3",
+     "topic_number": 3,
+     "title": "Social Differences: Within and Beyond the Framework of Caste",
+     "ncert_sections": "3.1, 3.2, 3.3, 3.4, 3.5",
+     "concepts": [
+      {
+       "concept_tag": "varna-norms-and-occupations",
+       "learning_objective": "Describe the occupations prescribed for the four varnas and stories that upheld them."
+      },
+      {
+       "concept_tag": "rulers-beyond-kshatriya-norm",
+       "learning_objective": "Evaluate the evidence that political power did not depend on Kshatriya birth."
+      },
+      {
+       "concept_tag": "jatis-guilds-and-chandalas",
+       "learning_objective": "Explain the nature of jatis, guilds and the treatment of groups placed outside the varna order."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH03-T4",
+     "topic_number": 4,
+     "title": "Beyond Birth: Resources and Status",
+     "ncert_sections": "4.1, 4.2, 4.3",
+     "concepts": [
+      {
+       "concept_tag": "gendered-access-to-property",
+       "learning_objective": "Explain how access to property differed between men and women."
+      },
+      {
+       "concept_tag": "varna-and-wealth",
+       "learning_objective": "Analyse how the Buddhist tradition questioned status based on varna by pointing to wealth."
+      },
+      {
+       "concept_tag": "sharing-wealth-in-tamilakam",
+       "learning_objective": "Interpret Sangam poems that show chiefs were expected to share their resources."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH03-T5",
+     "topic_number": 5,
+     "title": "Explaining Social Differences: A Social Contract",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "mahasammata-myth",
+       "learning_objective": "Describe the Buddhist myth of the mahasammata in the Sutta Pitaka."
+      },
+      {
+       "concept_tag": "human-agency-in-institutions",
+       "learning_objective": "Evaluate the implications of the idea that kingship rested on human choice."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH03-T6",
+     "topic_number": 6,
+     "title": "Handling Texts: Historians and the Mahabharata",
+     "ncert_sections": "6.1, 6.2, 6.3",
+     "concepts": [
+      {
+       "concept_tag": "language-and-content",
+       "learning_objective": "Distinguish the narrative and didactic sections of the Mahabharata and the meaning of itihasa."
+      },
+      {
+       "concept_tag": "authors-and-dates",
+       "learning_objective": "Identify the authors and phases of composition of the Mahabharata."
+      },
+      {
+       "concept_tag": "search-for-convergence",
+       "learning_objective": "Evaluate how historians compare the epic with archaeological and social evidence."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH03-T7",
+     "topic_number": 7,
+     "title": "A Dynamic Text",
+     "ncert_sections": "7",
+     "concepts": [
+      {
+       "concept_tag": "retellings-across-languages",
+       "learning_objective": "Explain how the Mahabharata grew through versions, retellings and performances."
+      },
+      {
+       "concept_tag": "mahashweta-devi-retelling",
+       "learning_objective": "Analyse how Mahashweta Devi's retelling raises questions the Sanskrit text is silent on."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEHS1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Thinkers, Beliefs and Buildings: Cultural Developments (c. 600 BCE - 600 CE)",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lehs104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEHS1-CH04-T1",
+     "topic_number": 1,
+     "title": "A glimpse of Sanchi and the sources",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "sanchi-preservation-bhopal",
+       "learning_objective": "Explain how the rulers of Bhopal and later decisions helped preserve the stupa complex at Sanchi."
+      },
+      {
+       "concept_tag": "sources-for-history-of-ideas",
+       "learning_objective": "Identify the textual and material sources historians use to reconstruct religious ideas of c. 600 BCE - 600 CE."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH04-T2",
+     "topic_number": 2,
+     "title": "The background: sacrifices and debates",
+     "ncert_sections": "2, 2.1, 2.2, 2.3",
+     "concepts": [
+      {
+       "concept_tag": "vedic-sacrificial-tradition",
+       "learning_objective": "Describe the early Vedic sacrificial tradition and how sacrifices changed over time."
+      },
+      {
+       "concept_tag": "upanishadic-inquiry",
+       "learning_objective": "Explain the new questions about life, rebirth and ultimate reality raised in the Upanishads."
+      },
+      {
+       "concept_tag": "fatalists-and-materialists",
+       "learning_objective": "Distinguish the Ajivika and Lokayata positions and explain how historians know about them."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH04-T3",
+     "topic_number": 3,
+     "title": "The message of Mahavira and the spread of Jainism",
+     "ncert_sections": "3, 3.1",
+     "concepts": [
+      {
+       "concept_tag": "jaina-core-teachings",
+       "learning_objective": "State the central teachings of Jainism, including ahimsa, karma and the five vows."
+      },
+      {
+       "concept_tag": "spread-of-jainism",
+       "learning_objective": "Describe how Jaina literature and sculpture spread and were preserved."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH04-T4",
+     "topic_number": 4,
+     "title": "The Buddha, his teachings and Buddhist texts",
+     "ncert_sections": "4, 5",
+     "concepts": [
+      {
+       "concept_tag": "buddha-life-hagiography",
+       "learning_objective": "Explain how historians reconstruct the Buddha's life from hagiographies and assess their value."
+      },
+      {
+       "concept_tag": "buddhist-philosophy",
+       "learning_objective": "Explain the Buddhist ideas of anicca, anatta, dukkha, the middle path and nibbana."
+      },
+      {
+       "concept_tag": "tipitaka-texts",
+       "learning_objective": "Identify the three pitakas and how Buddhist texts were compiled, transmitted and preserved."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH04-T5",
+     "topic_number": 5,
+     "title": "Followers of the Buddha and the sangha",
+     "ncert_sections": "6",
+     "concepts": [
+      {
+       "concept_tag": "sangha-organisation",
+       "learning_objective": "Describe the organisation, membership and functioning of the Buddhist sangha."
+      },
+      {
+       "concept_tag": "women-in-sangha-therigatha",
+       "learning_objective": "Explain the entry of women into the sangha and interpret verses of the Therigatha."
+      },
+      {
+       "concept_tag": "appeal-of-buddhism",
+       "learning_objective": "Analyse why Buddhism appealed to many people in a time of social change."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH04-T6",
+     "topic_number": 6,
+     "title": "Stupas: why and how they were built",
+     "ncert_sections": "7, 7.1, 7.2, 7.3",
+     "concepts": [
+      {
+       "concept_tag": "sacred-places-chaityas",
+       "learning_objective": "Identify chaityas and the places associated with the Buddha's life that came to be regarded as sacred."
+      },
+      {
+       "concept_tag": "why-stupas-built",
+       "learning_objective": "Explain why stupas were built and why they were venerated."
+      },
+      {
+       "concept_tag": "stupa-patronage-structure",
+       "learning_objective": "Describe the structure of a stupa and the patrons who financed its building."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH04-T7",
+     "topic_number": 7,
+     "title": "Discovering stupas and reading their sculpture",
+     "ncert_sections": "8, 9, 9.1, 9.2, 9.3",
+     "concepts": [
+      {
+       "concept_tag": "fate-of-amaravati-and-sanchi",
+       "learning_objective": "Compare the fate of the stupas at Amaravati and Sanchi after their discovery."
+      },
+      {
+       "concept_tag": "symbols-in-buddhist-sculpture",
+       "learning_objective": "Interpret symbols used in early Buddhist sculpture by relating them to textual traditions."
+      },
+      {
+       "concept_tag": "popular-traditions-in-sculpture",
+       "learning_objective": "Analyse how popular and pre-Buddhist traditions shaped the sculpture at Sanchi."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS1-CH04-T8",
+     "topic_number": 8,
+     "title": "New religious traditions and the limits of what we can see",
+     "ncert_sections": "10, 10.1, 10.2, 10.3, 11",
+     "concepts": [
+      {
+       "concept_tag": "mahayana-buddhism",
+       "learning_objective": "Explain the changes in Buddhist ideas and practices that led to Mahayana Buddhism."
+      },
+      {
+       "concept_tag": "puranic-hinduism-and-temples",
+       "learning_objective": "Describe the growth of Vaishnavism, Shaivism, the Puranas and early temple architecture."
+      },
+      {
+       "concept_tag": "interpreting-images",
+       "learning_objective": "Evaluate the problems historians face in interpreting unfamiliar images and images that texts do not explain."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

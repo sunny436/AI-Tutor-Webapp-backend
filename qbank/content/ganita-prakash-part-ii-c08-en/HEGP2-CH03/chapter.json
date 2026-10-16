@@ -1,0 +1,120 @@
+{
+ "chapter_id": "HEGP2-CH03",
+ "title": "Proportional Reasoning-2",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP2-CH03-T1",
+   "topic_number": 1,
+   "title": "Proportionality: a quick recap",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "cross-multiplication-test",
+     "learning_objective": "Check whether two ratios are proportional using cross-multiplication."
+    },
+    {
+     "concept_tag": "equivalent-ratio-scaling",
+     "learning_objective": "Find a missing term so that two ratios are proportional."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH03-T2",
+   "topic_number": 2,
+   "title": "Ratios in maps",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "representative-fraction-meaning",
+     "learning_objective": "Explain what the representative fraction (RF) on a map shows."
+    },
+    {
+     "concept_tag": "map-distance-conversion",
+     "learning_objective": "Convert between map distance and geographical distance using a map ratio."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH03-T3",
+   "topic_number": 3,
+   "title": "Ratios with more than two terms",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "multi-term-ratio-meaning",
+     "learning_objective": "Interpret a ratio with more than two terms and state when two such ratios are proportional."
+    },
+    {
+     "concept_tag": "scaling-multi-term-ratios",
+     "learning_objective": "Scale every term of a multi-term ratio by the same factor to keep a mixture the same."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH03-T4",
+   "topic_number": 4,
+   "title": "Dividing a whole in a given ratio",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "dividing-in-multi-term-ratio",
+     "learning_objective": "Divide a quantity in a ratio with two or more terms using x × a / (a + b + c + ...)."
+    },
+    {
+     "concept_tag": "triangle-angles-and-sides-in-ratio",
+     "learning_objective": "Find triangle angles from a ratio and decide whether sides in a ratio can form a triangle."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH03-T5",
+   "topic_number": 5,
+   "title": "A slice of the pie: pie charts",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "pie-chart-sector-angles",
+     "learning_objective": "Calculate the central angle of each sector of a pie chart by dividing 360° in the data's ratio."
+    },
+    {
+     "concept_tag": "interpreting-pie-charts",
+     "learning_objective": "Read quantities from the sector angles of a pie chart."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH03-T6",
+   "topic_number": 6,
+   "title": "Direct and inverse proportion",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "identifying-inverse-proportion",
+     "learning_objective": "Distinguish pairs of quantities in inverse proportion from those in direct proportion."
+    },
+    {
+     "concept_tag": "constant-product-relation",
+     "learning_objective": "Use the relation xy = k for quantities in inverse proportion."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH03-T7",
+   "topic_number": 7,
+   "title": "Solving inverse proportion and work problems",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "inverse-proportion-word-problems",
+     "learning_objective": "Solve word problems on workers, provisions and arrangements using inverse proportion."
+    },
+    {
+     "concept_tag": "working-together-rates",
+     "learning_objective": "Find the time taken when two agents work together by adding their work per hour."
+    }
+   ]
+  }
+ ]
+}

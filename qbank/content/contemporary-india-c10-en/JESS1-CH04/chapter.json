@@ -1,0 +1,128 @@
+{
+ "chapter_id": "JESS1-CH04",
+ "title": "Agriculture",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESS1-CH04-T1",
+   "topic_number": 1,
+   "title": "Types of farming",
+   "ncert_sections": "Types of Farming",
+   "concepts": [
+    {
+     "concept_tag": "primitive-subsistence-farming",
+     "learning_objective": "Describe primitive subsistence (slash and burn) farming and its regional names in India."
+    },
+    {
+     "concept_tag": "intensive-subsistence-farming",
+     "learning_objective": "Explain where and why intensive subsistence farming is practised."
+    },
+    {
+     "concept_tag": "commercial-and-plantation-farming",
+     "learning_objective": "Explain the features of commercial and plantation farming and why plantations need transport networks."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH04-T2",
+   "topic_number": 2,
+   "title": "Cropping seasons",
+   "ncert_sections": "Cropping Pattern",
+   "concepts": [
+    {
+     "concept_tag": "rabi-crops",
+     "learning_objective": "State the sowing and harvesting periods of rabi crops and the factors that help them succeed."
+    },
+    {
+     "concept_tag": "kharif-crops",
+     "learning_objective": "Identify kharif crops and the regions where paddy is grown in more than one season."
+    },
+    {
+     "concept_tag": "zaid-season",
+     "learning_objective": "Identify the zaid season and the crops grown in it."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH04-T3",
+   "topic_number": 3,
+   "title": "Major food grains: rice, wheat, millets, maize and pulses",
+   "ncert_sections": "Major Crops: Rice, Wheat, Millets, Maize, Pulses",
+   "concepts": [
+    {
+     "concept_tag": "rice-and-wheat",
+     "learning_objective": "Describe the geographical conditions and main growing areas of rice and wheat."
+    },
+    {
+     "concept_tag": "millets-and-maize",
+     "learning_objective": "Describe the conditions, nutritional value and producing states of jowar, bajra, ragi and maize."
+    },
+    {
+     "concept_tag": "pulses",
+     "learning_objective": "Explain the importance of pulses and their role in restoring soil fertility."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH04-T4",
+   "topic_number": 4,
+   "title": "Food crops other than grains",
+   "ncert_sections": "Food Crops other than Grains: Sugarcane, Oil Seeds, Tea, Coffee, Horticulture Crops",
+   "concepts": [
+    {
+     "concept_tag": "sugarcane-and-oilseeds",
+     "learning_objective": "Describe the conditions for sugarcane and the seasons and uses of the main oilseeds."
+    },
+    {
+     "concept_tag": "tea-and-coffee",
+     "learning_objective": "Describe the conditions needed for tea and the origin and areas of Indian coffee."
+    },
+    {
+     "concept_tag": "horticulture-crops",
+     "learning_objective": "Relate India's tropical and temperate fruits and vegetables to the regions that produce them."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH04-T5",
+   "topic_number": 5,
+   "title": "Non-food crops: rubber and fibre crops",
+   "ncert_sections": "Non-Food Crops: Rubber, Fibre Crops, Cotton, Jute",
+   "concepts": [
+    {
+     "concept_tag": "rubber",
+     "learning_objective": "State the climatic conditions and main growing areas of rubber."
+    },
+    {
+     "concept_tag": "cotton-and-jute",
+     "learning_objective": "Compare the geographical conditions required for cotton and jute."
+    },
+    {
+     "concept_tag": "sericulture",
+     "learning_objective": "Define sericulture and identify the four major fibre crops of India."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH04-T6",
+   "topic_number": 6,
+   "title": "Technological and institutional reforms",
+   "ncert_sections": "Technological and Institutional Reforms; Bhoodan - Gramdan",
+   "concepts": [
+    {
+     "concept_tag": "land-reforms-and-revolutions",
+     "learning_objective": "Explain the land reforms after Independence and the outcomes of the Green and White Revolutions."
+    },
+    {
+     "concept_tag": "farmer-support-schemes",
+     "learning_objective": "Explain how schemes such as crop insurance, KCC and minimum support prices help farmers."
+    },
+    {
+     "concept_tag": "bhoodan-gramdan",
+     "learning_objective": "Describe the Bhoodan-Gramdan movement started by Vinoba Bhave."
+    }
+   ]
+  }
+ ]
+}

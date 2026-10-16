@@ -1,0 +1,128 @@
+{
+ "chapter_id": "LEPH2-CH02",
+ "title": "Wave Optics",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH2-CH02-T1",
+   "topic_number": 1,
+   "title": "Introduction: corpuscular and wave models of light",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "corpuscular-vs-wave-model",
+     "learning_objective": "Compare the predictions of the corpuscular and wave models of light for refraction and identify which experiment settled the question."
+    },
+    {
+     "concept_tag": "light-as-electromagnetic-wave",
+     "learning_objective": "Explain how Maxwell's electromagnetic theory resolved the difficulty of light travelling through vacuum."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH02-T2",
+   "topic_number": 2,
+   "title": "Huygens principle and wavefronts",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "wavefront-definition",
+     "learning_objective": "Define a wavefront and identify spherical and plane wavefronts and their relation to rays."
+    },
+    {
+     "concept_tag": "huygens-secondary-wavelets",
+     "learning_objective": "Use Huygens' construction of secondary wavelets to find the position of a wavefront at a later time."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH02-T3",
+   "topic_number": 3,
+   "title": "Refraction and reflection of plane waves using Huygens principle",
+   "ncert_sections": "10.3, 10.3.1, 10.3.2, 10.3.3",
+   "concepts": [
+    {
+     "concept_tag": "snells-law-from-huygens",
+     "learning_objective": "Derive Snell's law and the law of reflection using Huygens' construction."
+    },
+    {
+     "concept_tag": "frequency-wavelength-in-media",
+     "learning_objective": "Explain why frequency stays constant while speed and wavelength change on refraction."
+    },
+    {
+     "concept_tag": "wavefronts-through-optical-devices",
+     "learning_objective": "Describe how wavefronts change on passing through prisms and lenses and on reflection from mirrors."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH02-T4",
+   "topic_number": 4,
+   "title": "Coherent and incoherent addition of waves",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "coherent-sources",
+     "learning_objective": "Distinguish coherent and incoherent sources and the resulting intensity patterns."
+    },
+    {
+     "concept_tag": "interference-conditions",
+     "learning_objective": "State the path and phase difference conditions for constructive and destructive interference."
+    },
+    {
+     "concept_tag": "resultant-intensity",
+     "learning_objective": "Apply I = 4 I0 cos^2(phi/2) to find the intensity at a point in an interference pattern."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH02-T5",
+   "topic_number": 5,
+   "title": "Interference of light waves and Young's experiment",
+   "ncert_sections": "10.5",
+   "concepts": [
+    {
+     "concept_tag": "youngs-coherent-sources",
+     "learning_objective": "Explain how Young's arrangement produces two coherent sources from a single source."
+    },
+    {
+     "concept_tag": "fringe-position-and-width",
+     "learning_objective": "Calculate positions of bright and dark fringes and the fringe width in Young's double-slit experiment."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH02-T6",
+   "topic_number": 6,
+   "title": "Diffraction at a single slit",
+   "ncert_sections": "10.6, 10.6.1, 10.6.2",
+   "concepts": [
+    {
+     "concept_tag": "single-slit-diffraction-pattern",
+     "learning_objective": "Describe the single-slit diffraction pattern and locate its minima at angles n(lambda)/a."
+    },
+    {
+     "concept_tag": "interference-vs-diffraction",
+     "learning_objective": "Compare interference and diffraction and relate the double-slit pattern to both."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH02-T7",
+   "topic_number": 7,
+   "title": "Polarisation",
+   "ncert_sections": "10.7",
+   "concepts": [
+    {
+     "concept_tag": "transverse-waves-polarisation",
+     "learning_objective": "Explain polarisation as a property of transverse waves and describe linearly polarised and unpolarised light."
+    },
+    {
+     "concept_tag": "polaroids-malus-law",
+     "learning_objective": "Apply Malus' law to find the intensity of light transmitted through combinations of polaroids."
+    }
+   ]
+  }
+ ]
+}

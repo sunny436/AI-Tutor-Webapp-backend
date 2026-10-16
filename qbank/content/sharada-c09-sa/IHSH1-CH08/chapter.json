@@ -1,0 +1,116 @@
+{
+ "chapter_id": "IHSH1-CH08",
+ "title": "अन्नाद् आनन्दं प्रति",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSH1-CH08-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः भृगोः जिज्ञासा च",
+   "ncert_sections": "प्रस्तावना, संवादारम्भः",
+   "concepts": [
+    {
+     "concept_tag": "upanishad-samvada",
+     "learning_objective": "छात्रः पाठस्य तैत्तिरीयोपनिषदि आधारं पितापुत्रयोः भृगुवरुणयोः संवादरूपं च अभिजानाति।"
+    },
+    {
+     "concept_tag": "tapasa-jnana",
+     "learning_objective": "छात्रः वरुणस्य 'तपसैव ज्ञायते' इति उपदेशस्य स्वयम् अन्वेषणस्य च आशयं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH08-T2",
+   "topic_number": 2,
+   "title": "अन्नं ब्रह्म",
+   "ncert_sections": "अन्नप्रसङ्गः, आहारात् सर्वभूतानि इति श्लोकः",
+   "concepts": [
+    {
+     "concept_tag": "anna-brahma",
+     "learning_objective": "छात्रः अन्नं ब्रह्म इति कथं ज्ञातम् अन्नस्य च महत्त्वं वर्णयति।"
+    },
+    {
+     "concept_tag": "anna-niyama",
+     "learning_objective": "छात्रः अन्नं न निन्द्यात्, बहु कुर्वीत, सर्वौषधम् इत्यादीन् अन्नविषयकनियमान् अवगच्छति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH08-T3",
+   "topic_number": 3,
+   "title": "प्राणो ब्रह्म",
+   "ncert_sections": "प्राणप्रसङ्गः, यावद् वायुः स्थितो देहे इति श्लोकः",
+   "concepts": [
+    {
+     "concept_tag": "prana-brahma",
+     "learning_objective": "छात्रः प्राणस्य शरीरजीवनक्रियासु महत्त्वं प्राणो ब्रह्म इति कथनं च व्याख्याति।"
+    },
+    {
+     "concept_tag": "pranayama",
+     "learning_objective": "छात्रः प्राणरक्षणाय प्राणायामस्य आवश्यकतां श्लोकस्य भावं च अवगच्छति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH08-T4",
+   "topic_number": 4,
+   "title": "मनो ब्रह्म",
+   "ncert_sections": "मनःप्रसङ्गः, मनसः विषयाः, मन एव मनुष्याणाम् इति श्लोकः",
+   "concepts": [
+    {
+     "concept_tag": "mano-brahma",
+     "learning_objective": "छात्रः मनः सर्वकर्मणः प्रवर्तकम् इन्द्रियसञ्चालकं च इति व्याख्याति।"
+    },
+    {
+     "concept_tag": "manasa-vishaya",
+     "learning_objective": "छात्रः कामसङ्कल्पादीन् मनसः विषयान् तेषाम् अर्थान् च अभिजानाति।"
+    },
+    {
+     "concept_tag": "bandha-moksha",
+     "learning_objective": "छात्रः मनसः बन्धमोक्षकारणत्वं शुद्धाशुद्धमनसोः भेदं च विवेचयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH08-T5",
+   "topic_number": 5,
+   "title": "विज्ञानम् आनन्दः पञ्चकोषाश्च",
+   "ncert_sections": "विज्ञानप्रसङ्गः, आनन्दप्रसङ्गः, अत्र इदम् अवधेयम्",
+   "concepts": [
+    {
+     "concept_tag": "vijnana-buddhi",
+     "learning_objective": "छात्रः विज्ञानं बुद्धितत्त्वम् इति तस्य बोधतर्कविवेकादिशक्तिषु महत्त्वं च व्याख्याति।"
+    },
+    {
+     "concept_tag": "ananda-brahma",
+     "learning_objective": "छात्रः आनन्दः सर्वकर्मणां लक्ष्यम् इति तत्प्राप्त्युपायान् च वर्णयति।"
+    },
+    {
+     "concept_tag": "panchakosha-krama",
+     "learning_objective": "छात्रः पञ्चकोषाणां क्रमं परस्परसम्बन्धं क्रमिकविकासं च विश्लेषयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH08-T6",
+   "topic_number": 6,
+   "title": "व्याकरणम्: वाच्यम् प्रत्ययाः आत्मनेपदं च",
+   "ncert_sections": "कर्तृकर्मवाच्यनियमः, तव्यत्-अनीयर्, लट्-लोट् आत्मनेपदम्",
+   "concepts": [
+    {
+     "concept_tag": "karma-vachya",
+     "learning_objective": "छात्रः कर्तृवाच्यात् कर्मवाच्ये परिवर्तनस्य नियमान् प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "tavyat-aniyar",
+     "learning_objective": "छात्रः तव्यत्-अनीयर्-प्रत्ययान्तपदानां लिङ्गवचनानुसारं प्रयोगं करोति।"
+    },
+    {
+     "concept_tag": "atmanepada-lot",
+     "learning_objective": "छात्रः आत्मनेपदिधातूनां लट्-लोट्-लकारयोः रूपाणि अभिजानाति।"
+    }
+   ]
+  }
+ ]
+}

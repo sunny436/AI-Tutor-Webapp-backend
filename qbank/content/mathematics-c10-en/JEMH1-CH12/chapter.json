@@ -1,0 +1,88 @@
+{
+ "chapter_id": "JEMH1-CH12",
+ "title": "Surface Areas and Volumes",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH12-T1",
+   "topic_number": 1,
+   "title": "Surface Area of a Combined Solid: The Principle",
+   "ncert_sections": "12.1, 12.2",
+   "concepts": [
+    {
+     "concept_tag": "identifying-component-solids",
+     "learning_objective": "Identify the basic solids (cuboid, cube, cylinder, cone, sphere, hemisphere) that make up an everyday object and which of their faces stay exposed."
+    },
+    {
+     "concept_tag": "surface-area-of-combined-solid",
+     "learning_objective": "Explain why the total surface area of a combined solid is the sum of the exposed surfaces of its parts and not the sum of their total surface areas."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH12-T2",
+   "topic_number": 2,
+   "title": "Surface Area of Solids Joined Together",
+   "ncert_sections": "12.2",
+   "concepts": [
+    {
+     "concept_tag": "tsa-joined-solids",
+     "learning_objective": "Calculate the total surface area of solids such as toys and capsules formed by joining a cone, cylinder or hemisphere of equal radius."
+    },
+    {
+     "concept_tag": "tsa-exposed-faces",
+     "learning_objective": "Account for flat faces that remain partly exposed, such as a cube carrying a hemisphere or a cone resting on a narrower cylinder."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH12-T3",
+   "topic_number": 3,
+   "title": "Surface Area of Solids with Depressions and Cavities",
+   "ncert_sections": "12.2",
+   "concepts": [
+    {
+     "concept_tag": "tsa-hemispherical-depression",
+     "learning_objective": "Find the surface area of a solid from which a hemisphere has been scooped out, adding the inner curved surface and removing the hidden flat face."
+    },
+    {
+     "concept_tag": "tsa-conical-cavity",
+     "learning_objective": "Find the surface area of a cylinder from which a conical cavity has been hollowed out and compare it with that of the original solid."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH12-T4",
+   "topic_number": 4,
+   "title": "Volume of a Combination of Solids",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "volume-additivity",
+     "learning_objective": "Explain that the volume of a solid formed by joining two basic solids is the sum of their volumes."
+    },
+    {
+     "concept_tag": "volume-joined-solids",
+     "learning_objective": "Calculate the volume of objects such as toys, sheds and capsules formed by combining a cuboid, cylinder, cone or hemisphere."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH12-T5",
+   "topic_number": 5,
+   "title": "Volume of Solids with Parts Removed, Capacity and Displacement",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "volume-removed-parts",
+     "learning_objective": "Calculate the volume or actual capacity of a solid from which another solid has been removed, such as a glass with a raised base or a pen stand with depressions."
+    },
+    {
+     "concept_tag": "capacity-displacement",
+     "learning_objective": "Relate the volume of solids dropped into a full vessel to the volume of liquid that overflows, and count the number of objects needed."
+    }
+   ]
+  }
+ ]
+}

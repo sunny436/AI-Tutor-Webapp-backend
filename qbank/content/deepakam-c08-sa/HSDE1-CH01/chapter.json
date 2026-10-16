@@ -1,0 +1,120 @@
+{
+ "chapter_id": "HSDE1-CH01",
+ "title": "संगच्छध्वं संवदध्वम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HSDE1-CH01-T1",
+   "topic_number": 1,
+   "title": "संवादः वेदपरिचयः च",
+   "ncert_sections": "प्रारम्भिकः संवादः",
+   "concepts": [
+    {
+     "concept_tag": "vedaparichayah",
+     "learning_objective": "वेदानां चतस्रः संहिताः तासां महत्त्वं च ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "sanjnana-suktam",
+     "learning_objective": "संज्ञानसूक्तस्य स्रोतं सन्देशं च ज्ञास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH01-T2",
+   "topic_number": 2,
+   "title": "प्रथमः मन्त्रः",
+   "ncert_sections": "मन्त्रः १",
+   "concepts": [
+    {
+     "concept_tag": "pratham-mantra-artha",
+     "learning_objective": "प्रथममन्त्रस्य पदानाम् अर्थं भावार्थं च ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "deva-udaharanam",
+     "learning_objective": "देवानाम् उदाहरणेन कर्तव्यनिर्वाहस्य सन्देशं विश्लेषयिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH01-T3",
+   "topic_number": 3,
+   "title": "द्वितीयः मन्त्रः",
+   "ncert_sections": "मन्त्रः २",
+   "concepts": [
+    {
+     "concept_tag": "dvitiya-mantra-artha",
+     "learning_objective": "द्वितीयमन्त्रस्य पदानां भावार्थं च ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "samanata-sandeshah",
+     "learning_objective": "समानचिन्तनस्य समानलक्ष्यस्य च महत्त्वं विश्लेषयिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH01-T4",
+   "topic_number": 4,
+   "title": "तृतीयः मन्त्रः",
+   "ncert_sections": "मन्त्रः ३",
+   "concepts": [
+    {
+     "concept_tag": "tritiya-mantra-artha",
+     "learning_objective": "तृतीयमन्त्रस्य पदानां भावार्थं च ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "sanghatana-phalam",
+     "learning_objective": "संघटितजीवनस्य फलानि विश्लेषयिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH01-T5",
+   "topic_number": 5,
+   "title": "सम्पूर्वकः गम्-धातुः लोट्-लकारः च",
+   "ncert_sections": "अत्र इदम् अवधेयम् १, २",
+   "concepts": [
+    {
+     "concept_tag": "sam-gam-atmanepadam",
+     "learning_objective": "सम्-उपसर्गयुक्तस्य गम्-धातोः आत्मनेपदरूपाणि ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "lot-lakarah",
+     "learning_objective": "लोट्-लकारस्य रूपाणि प्रयोगान् च प्रयोक्ष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH01-T6",
+   "topic_number": 6,
+   "title": "अस्मद्-युष्मद्-शब्दयोः वैकल्पिकरूपाणि",
+   "ncert_sections": "अत्र इदम् अवधेयम् ३",
+   "concepts": [
+    {
+     "concept_tag": "asmad-vaikalpika",
+     "learning_objective": "अस्मद्-शब्दस्य वैकल्पिकरूपाणि अभिज्ञास्यति।"
+    },
+    {
+     "concept_tag": "yushmad-vaikalpika",
+     "learning_objective": "युष्मद्-शब्दस्य वैकल्पिकरूपाणि प्रयोक्ष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH01-T7",
+   "topic_number": 7,
+   "title": "योग्यताविस्तरः — वैदिकवाङ्मयम्",
+   "ncert_sections": "योग्यताविस्तरः",
+   "concepts": [
+    {
+     "concept_tag": "vaidika-vangmayam",
+     "learning_objective": "उपवेदान् वेदाङ्गानि उपनिषदः च अभिज्ञास्यति।"
+    },
+    {
+     "concept_tag": "rigveda-sanrachana",
+     "learning_objective": "ऋग्वेदस्य संरचनां संज्ञानसूक्तस्य स्थानं च ज्ञास्यति।"
+    }
+   ]
+  }
+ ]
+}

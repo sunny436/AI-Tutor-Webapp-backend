@@ -1,0 +1,108 @@
+{
+ "chapter_id": "JESC1-CH12",
+ "title": "Magnetic Effects of Electric Current",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESC1-CH12-T1",
+   "topic_number": 1,
+   "title": "Magnetic field and field lines",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "magnetic-field-and-direction",
+     "learning_objective": "Describe a magnetic field and how its direction at a point is fixed using a compass needle."
+    },
+    {
+     "concept_tag": "field-line-properties",
+     "learning_objective": "State and apply the properties of magnetic field lines of a bar magnet."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH12-T2",
+   "topic_number": 2,
+   "title": "Magnetic field due to a current through a straight conductor",
+   "ncert_sections": "12.2, 12.2.1",
+   "concepts": [
+    {
+     "concept_tag": "field-around-straight-wire",
+     "learning_objective": "Recognise that a current-carrying straight wire produces a magnetic field of concentric circles around it."
+    },
+    {
+     "concept_tag": "factors-affecting-field-strength",
+     "learning_objective": "Explain how the field of a straight wire depends on the current and on the distance from the wire."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH12-T3",
+   "topic_number": 3,
+   "title": "Right-hand thumb rule",
+   "ncert_sections": "12.2.2",
+   "concepts": [
+    {
+     "concept_tag": "right-hand-thumb-rule",
+     "learning_objective": "Use the right-hand thumb rule to find the direction of the magnetic field around a current-carrying conductor."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH12-T4",
+   "topic_number": 4,
+   "title": "Magnetic field of a circular loop and a solenoid",
+   "ncert_sections": "12.2.3, 12.2.4",
+   "concepts": [
+    {
+     "concept_tag": "field-of-circular-loop",
+     "learning_objective": "Describe the magnetic field of a current-carrying circular loop and coil."
+    },
+    {
+     "concept_tag": "solenoid-field",
+     "learning_objective": "Describe the magnetic field inside and around a current-carrying solenoid."
+    },
+    {
+     "concept_tag": "electromagnet",
+     "learning_objective": "Explain how a solenoid is used to make an electromagnet."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH12-T5",
+   "topic_number": 5,
+   "title": "Force on a current-carrying conductor in a magnetic field",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "force-on-current-carrying-conductor",
+     "learning_objective": "Explain the factors that decide the direction and size of the force on a current-carrying conductor in a magnetic field."
+    },
+    {
+     "concept_tag": "flemings-left-hand-rule",
+     "learning_objective": "Apply Fleming's left-hand rule to find the direction of force on a conductor or moving charge."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH12-T6",
+   "topic_number": 6,
+   "title": "Domestic electric circuits",
+   "ncert_sections": "12.4",
+   "concepts": [
+    {
+     "concept_tag": "domestic-wiring",
+     "learning_objective": "Describe the wires, supply values and parallel connection used in domestic circuits."
+    },
+    {
+     "concept_tag": "earthing",
+     "learning_objective": "Explain the role of the earth wire as a safety measure."
+    },
+    {
+     "concept_tag": "fuse-short-circuit-overloading",
+     "learning_objective": "Explain short-circuiting and overloading and how a fuse protects a circuit."
+    }
+   ]
+  }
+ ]
+}

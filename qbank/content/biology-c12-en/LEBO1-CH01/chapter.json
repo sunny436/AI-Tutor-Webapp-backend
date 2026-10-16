@@ -1,0 +1,156 @@
+{
+ "chapter_id": "LEBO1-CH01",
+ "title": "Sexual Reproduction in Flowering Plants",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBO1-CH01-T1",
+   "topic_number": 1,
+   "title": "Stamen, microsporangium and pollen grain",
+   "ncert_sections": "1.1, 1.2.1",
+   "concepts": [
+    {
+     "concept_tag": "anther-and-microsporangium",
+     "learning_objective": "Describe the structure of a typical anther and the wall layers of a microsporangium with their functions."
+    },
+    {
+     "concept_tag": "microsporogenesis",
+     "learning_objective": "Explain how pollen mother cells form microspore tetrads by meiosis and work out the ploidy of the products."
+    },
+    {
+     "concept_tag": "pollen-grain-structure",
+     "learning_objective": "Describe the two-layered wall and the two- or three-celled contents of a mature pollen grain."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH01-T2",
+   "topic_number": 2,
+   "title": "The pistil, ovule and embryo sac",
+   "ncert_sections": "1.2.2",
+   "concepts": [
+    {
+     "concept_tag": "ovule-structure",
+     "learning_objective": "Identify the parts of a typical angiosperm ovule such as funicle, hilum, integuments, micropyle, chalaza and nucellus."
+    },
+    {
+     "concept_tag": "megasporogenesis",
+     "learning_objective": "Explain megasporogenesis and monosporic development of the embryo sac, including the ploidy of the cells involved."
+    },
+    {
+     "concept_tag": "embryo-sac-organisation",
+     "learning_objective": "Describe the 7-celled, 8-nucleate organisation of the mature embryo sac formed by free-nuclear mitosis."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH01-T3",
+   "topic_number": 3,
+   "title": "Pollination: kinds and agents",
+   "ncert_sections": "1.2.3",
+   "concepts": [
+    {
+     "concept_tag": "kinds-of-pollination",
+     "learning_objective": "Distinguish autogamy, geitonogamy and xenogamy, and chasmogamous from cleistogamous flowers."
+    },
+    {
+     "concept_tag": "abiotic-pollination",
+     "learning_objective": "Relate the features of wind- and water-pollinated flowers to the way their pollen is carried."
+    },
+    {
+     "concept_tag": "biotic-pollination",
+     "learning_objective": "Explain how animal-pollinated flowers attract and reward pollinators, including plant-pollinator mutualism."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH01-T4",
+   "topic_number": 4,
+   "title": "Outbreeding devices, pollen-pistil interaction and artificial hybridisation",
+   "ncert_sections": "1.2.3",
+   "concepts": [
+    {
+     "concept_tag": "outbreeding-devices",
+     "learning_objective": "Explain the devices that discourage self-pollination, including self-incompatibility, monoecy and dioecy."
+    },
+    {
+     "concept_tag": "pollen-pistil-interaction",
+     "learning_objective": "Describe pollen recognition by the pistil and the path of the pollen tube to the synergid."
+    },
+    {
+     "concept_tag": "artificial-hybridisation",
+     "learning_objective": "Explain emasculation and bagging and their order in a crop-improvement cross."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH01-T5",
+   "topic_number": 5,
+   "title": "Double fertilisation",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "syngamy-and-triple-fusion",
+     "learning_objective": "Identify the nuclei that take part in syngamy and in triple fusion inside the embryo sac."
+    },
+    {
+     "concept_tag": "double-fertilisation",
+     "learning_objective": "Explain why fertilisation in angiosperms is called double fertilisation and work out the ploidy of its products."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH01-T6",
+   "topic_number": 6,
+   "title": "Post-fertilisation: endosperm and embryo",
+   "ncert_sections": "1.4, 1.4.1, 1.4.2",
+   "concepts": [
+    {
+     "concept_tag": "endosperm-development",
+     "learning_objective": "Explain free-nuclear and cellular endosperm development and why endosperm forms before the embryo."
+    },
+    {
+     "concept_tag": "embryo-structure",
+     "learning_objective": "Compare the parts of dicotyledonous and monocotyledonous (grass) embryos."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH01-T7",
+   "topic_number": 7,
+   "title": "Seed and fruit",
+   "ncert_sections": "1.4.3",
+   "concepts": [
+    {
+     "concept_tag": "seed-structure-and-types",
+     "learning_objective": "Distinguish albuminous from non-albuminous seeds and identify perisperm and seed coats."
+    },
+    {
+     "concept_tag": "fruit-formation",
+     "learning_objective": "Explain the development of true, false and parthenocarpic fruits from floral parts."
+    },
+    {
+     "concept_tag": "seed-viability-and-advantages",
+     "learning_objective": "Evaluate the role of dehydration, dormancy and viability of seeds in survival and agriculture."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH01-T8",
+   "topic_number": 8,
+   "title": "Apomixis and polyembryony",
+   "ncert_sections": "1.5",
+   "concepts": [
+    {
+     "concept_tag": "apomixis",
+     "learning_objective": "Explain apomixis as asexual seed formation and its importance for hybrid seed production."
+    },
+    {
+     "concept_tag": "polyembryony",
+     "learning_objective": "Explain how nucellar cells give rise to multiple embryos in a seed and the genetic nature of such embryos."
+    }
+   ]
+  }
+ ]
+}

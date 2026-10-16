@@ -1,0 +1,92 @@
+{
+ "chapter_id": "LHSK1-CH08",
+ "title": "मदालसा",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHSK1-CH08-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः – पुरन्ध्रीपञ्चकम्, उद्याने ऋतध्वजः च",
+   "ncert_sections": "पाठपरिचयः, मूलपाठः (आरम्भः), योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "purandhri-panchakam",
+     "learning_objective": "पाठस्य स्रोतं (पुरन्ध्रीपञ्चकम्) रचयित्रीं (वेदकुमारी घई) च जानीयात्।"
+    },
+    {
+     "concept_tag": "rajodyana-varnanam",
+     "learning_objective": "गन्धर्वराजविश्वावसोः उद्यानस्य शोभां ऋतध्वजस्य परिचयं च वर्णयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH08-T2",
+   "topic_number": 2,
+   "title": "मदालसायाः विद्यानुरागः ब्रह्मवादिनीत्वसङ्कल्पः च",
+   "ncert_sections": "मूलपाठः (कुण्डला-मदालसा-संवादः, प्रथमः भागः)",
+   "concepts": [
+    {
+     "concept_tag": "jnanodadhi-vinayah",
+     "learning_objective": "ज्ञानोदधिः अनन्तपारः इति मदालसायाः विनयम् अवगच्छेत्।"
+    },
+    {
+     "concept_tag": "brahmavadini-sankalpah",
+     "learning_objective": "विवाहं तिरस्कृत्य ब्रह्मवादिनी आचार्या भवितुं मदालसायाः सङ्कल्पं व्याख्यायेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH08-T3",
+   "topic_number": 3,
+   "title": "पत्नीपदविषये मदालसायाः आपत्तिः",
+   "ncert_sections": "मूलपाठः (युधिष्ठिर-हरिश्चन्द्र-प्रसङ्गः, गृहस्थप्रयोगशाला)",
+   "concepts": [
+    {
+     "concept_tag": "purusha-adhipatyam",
+     "learning_objective": "युधिष्ठिरहरिश्चन्द्रयोः उदाहरणाभ्यां मदालसायाः तर्कं विश्लेषयेत्।"
+    },
+    {
+     "concept_tag": "grihastha-prayogashala",
+     "learning_objective": "गृहस्थाश्रमः प्रयोगशाला इति कुण्डलायाः मतं मूल्याङ्कयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH08-T4",
+   "topic_number": 4,
+   "title": "ऋतध्वजस्य नारीविषयिणी धारणा गान्धर्वविवाहः च",
+   "ncert_sections": "मूलपाठः (ऋतध्वजस्य प्रवेशः, अन्तिमः भागः)",
+   "concepts": [
+    {
+     "concept_tag": "ritadhvaja-dharana",
+     "learning_objective": "नारीं प्रति ऋतध्वजस्य धारणां तस्य तर्कं च व्याख्यायेत्।"
+    },
+    {
+     "concept_tag": "kundala-upadeshah",
+     "learning_objective": "पतिपत्न्योः परस्परसहयोगविषये कुण्डलायाः उपदेशं लक्ष्मीप्रसङ्गं च अवगच्छेत्।"
+    },
+    {
+     "concept_tag": "vakta-shrota",
+     "learning_objective": "पाठस्य वाक्यानि कः कं प्रति कथयति इति निर्धारयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH08-T5",
+   "topic_number": 5,
+   "title": "व्याकरणम् – समासः प्रकृतिप्रत्ययौ च",
+   "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः (प्रश्नाः ४, ५)",
+   "concepts": [
+    {
+     "concept_tag": "samasah",
+     "learning_objective": "पाठगतपदेषु समासविग्रहं समासनाम च निर्धारयेत्।"
+    },
+    {
+     "concept_tag": "prakriti-pratyayah",
+     "learning_objective": "पाठगतपदेषु प्रकृतिं प्रत्ययं च पृथक् कुर्यात्।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,928 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "ganita-prakash-part-ii-c08-en",
+  "curriculum": "cbse",
+  "class_level": 8,
+  "subject_code": "mathematics",
+  "language": "english",
+  "title": "Ganita Prakash Part-II",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "hegp2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "HEGP2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Fractions in Disguise",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP2-CH01-T1",
+     "topic_number": 1,
+     "title": "Fractions as Percentages",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "fraction-to-percentage",
+       "learning_objective": "Express a fraction or decimal as a percentage by finding an equivalent fraction with denominator 100 or multiplying by 100."
+      },
+      {
+       "concept_tag": "percentage-to-fraction",
+       "learning_objective": "Express a percentage z% as the fraction z/100 and its equivalent forms."
+      },
+      {
+       "concept_tag": "why-hundred-as-base",
+       "learning_objective": "Explain why expressing quantities as parts per hundred makes comparison of proportions easier."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH01-T2",
+     "topic_number": 2,
+     "title": "Percentage of Some Quantity",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "percentage-of-quantity",
+       "learning_objective": "Find a given percentage of a quantity using fraction, decimal or proportional reasoning."
+      },
+      {
+       "concept_tag": "mental-percentage-computation",
+       "learning_objective": "Compute percentages mentally by combining easy percentages such as 10%, 5% and 20%."
+      },
+      {
+       "concept_tag": "ratio-to-percentage",
+       "learning_objective": "Convert a ratio of parts into a fraction of the whole and then into a percentage."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH01-T3",
+     "topic_number": 3,
+     "title": "Finding the Whole and Percentages Greater than 100",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "finding-the-whole",
+       "learning_objective": "Find the whole quantity or the remaining part when a percentage of it is known."
+      },
+      {
+       "concept_tag": "percentage-greater-than-hundred",
+       "learning_objective": "Interpret percentages greater than 100 as more than the whole and relate them to decimals and multiples."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH01-T4",
+     "topic_number": 4,
+     "title": "Comparing Proportions and Percentage Change",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "comparing-proportions",
+       "learning_objective": "Use percentages to compare proportions when the wholes are different."
+      },
+      {
+       "concept_tag": "percentage-increase-decrease",
+       "learning_objective": "Calculate percentage increase or decrease with respect to the original amount."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH01-T5",
+     "topic_number": 5,
+     "title": "Profit, Loss, Discount and Taxes",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "profit-loss-percentage",
+       "learning_objective": "Calculate profit or loss percentage with respect to the cost price, and find cost or selling price from it."
+      },
+      {
+       "concept_tag": "discount-and-selling-price",
+       "learning_objective": "Find the selling price after a percentage discount on the marked price."
+      },
+      {
+       "concept_tag": "gst-tax",
+       "learning_objective": "Find the final price of an item when a tax such as GST is added as a percentage."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH01-T6",
+     "topic_number": 6,
+     "title": "Growth, Compounding and Decline",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "growth-without-compounding",
+       "learning_objective": "Find the amount after t years without compounding using p(1 + rt)."
+      },
+      {
+       "concept_tag": "compound-growth",
+       "learning_objective": "Find the amount after t years with compounding using p(1 + r)^t."
+      },
+      {
+       "concept_tag": "depreciation-and-decline",
+       "learning_objective": "Find the value of a quantity that decreases by a fixed percentage over one or more periods."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH01-T7",
+     "topic_number": 7,
+     "title": "Tricky Percentages",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "successive-percentage-changes",
+       "learning_objective": "Recognise that successive percentage changes compound and do not simply add."
+      },
+      {
+       "concept_tag": "percentage-versus-absolute-value",
+       "learning_objective": "Distinguish between comparing percentages and comparing absolute amounts."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEGP2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "The Baudhāyana-Pythagoras Theorem",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP2-CH02-T1",
+     "topic_number": 1,
+     "title": "Doubling and halving a square",
+     "ncert_sections": "2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "doubling-a-square",
+       "learning_objective": "Explain why the square drawn on the diagonal of a given square has double its area."
+      },
+      {
+       "concept_tag": "halving-a-square",
+       "learning_objective": "Construct a square of half the area of a given square and explain why halving the side does not halve the area."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH02-T2",
+     "topic_number": 2,
+     "title": "Hypotenuse of an isosceles right triangle",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "isosceles-right-triangle-relation",
+       "learning_objective": "Use the relation c^2 = 2a^2 to find the hypotenuse of an isosceles right triangle."
+      },
+      {
+       "concept_tag": "equal-sides-from-hypotenuse",
+       "learning_objective": "Find the equal sides of an isosceles right triangle when its hypotenuse is known."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH02-T3",
+     "topic_number": 3,
+     "title": "The number root 2: bounds and decimal nature",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "root-two-bounds",
+       "learning_objective": "Find successively closer decimal bounds for root 2 by squaring trial values."
+      },
+      {
+       "concept_tag": "root-two-not-a-fraction",
+       "learning_objective": "Explain why root 2 is neither a terminating decimal nor a fraction m/n."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH02-T4",
+     "topic_number": 4,
+     "title": "Combining two squares: Baudhayana's theorem",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "combining-two-squares",
+       "learning_objective": "Describe Baudhayana's method of combining two different squares into one square."
+      },
+      {
+       "concept_tag": "baudhayana-theorem-statement",
+       "learning_objective": "State the Baudhayana-Pythagoras theorem a^2 + b^2 = c^2 for a right triangle."
+      },
+      {
+       "concept_tag": "finding-missing-side",
+       "learning_objective": "Use the theorem to find a missing side of a right triangle."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH02-T5",
+     "topic_number": 5,
+     "title": "Right triangles with integer sidelengths",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "identifying-baudhayana-triples",
+       "learning_objective": "Check whether a triple of positive integers is a Baudhayana triple."
+      },
+      {
+       "concept_tag": "primitive-and-scaled-triples",
+       "learning_objective": "Distinguish primitive Baudhayana triples from their scaled versions."
+      },
+      {
+       "concept_tag": "generating-triples-from-odd-squares",
+       "learning_objective": "Generate Baudhayana triples using (n - 1)^2 + (2n - 1) = n^2 when 2n - 1 is a square."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH02-T6",
+     "topic_number": 6,
+     "title": "A long-standing open problem: Fermat's Last Theorem",
+     "ncert_sections": "2.6",
+     "concepts": [
+      {
+       "concept_tag": "fermats-last-theorem",
+       "learning_objective": "State Fermat's Last Theorem and recognise which equations it rules out."
+      },
+      {
+       "concept_tag": "history-of-fermats-last-theorem",
+       "learning_objective": "Recall the history of Fermat's Last Theorem and its proof by Andrew Wiles."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH02-T7",
+     "topic_number": 7,
+     "title": "Further applications of the theorem",
+     "ncert_sections": "2.7",
+     "concepts": [
+      {
+       "concept_tag": "lotus-problem",
+       "learning_objective": "Form and solve an equation from a word problem such as the lotus problem of the Lilavati."
+      },
+      {
+       "concept_tag": "diagonals-of-squares-and-rectangles",
+       "learning_objective": "Find the diagonal of a square or a rectangle using the theorem."
+      },
+      {
+       "concept_tag": "rhombus-and-equilateral-triangle",
+       "learning_objective": "Apply the theorem to find the side of a rhombus or the height and area of an equilateral triangle."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEGP2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Proportional Reasoning-2",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP2-CH03-T1",
+     "topic_number": 1,
+     "title": "Proportionality: a quick recap",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "cross-multiplication-test",
+       "learning_objective": "Check whether two ratios are proportional using cross-multiplication."
+      },
+      {
+       "concept_tag": "equivalent-ratio-scaling",
+       "learning_objective": "Find a missing term so that two ratios are proportional."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH03-T2",
+     "topic_number": 2,
+     "title": "Ratios in maps",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "representative-fraction-meaning",
+       "learning_objective": "Explain what the representative fraction (RF) on a map shows."
+      },
+      {
+       "concept_tag": "map-distance-conversion",
+       "learning_objective": "Convert between map distance and geographical distance using a map ratio."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH03-T3",
+     "topic_number": 3,
+     "title": "Ratios with more than two terms",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "multi-term-ratio-meaning",
+       "learning_objective": "Interpret a ratio with more than two terms and state when two such ratios are proportional."
+      },
+      {
+       "concept_tag": "scaling-multi-term-ratios",
+       "learning_objective": "Scale every term of a multi-term ratio by the same factor to keep a mixture the same."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH03-T4",
+     "topic_number": 4,
+     "title": "Dividing a whole in a given ratio",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "dividing-in-multi-term-ratio",
+       "learning_objective": "Divide a quantity in a ratio with two or more terms using x × a / (a + b + c + ...)."
+      },
+      {
+       "concept_tag": "triangle-angles-and-sides-in-ratio",
+       "learning_objective": "Find triangle angles from a ratio and decide whether sides in a ratio can form a triangle."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH03-T5",
+     "topic_number": 5,
+     "title": "A slice of the pie: pie charts",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "pie-chart-sector-angles",
+       "learning_objective": "Calculate the central angle of each sector of a pie chart by dividing 360° in the data's ratio."
+      },
+      {
+       "concept_tag": "interpreting-pie-charts",
+       "learning_objective": "Read quantities from the sector angles of a pie chart."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH03-T6",
+     "topic_number": 6,
+     "title": "Direct and inverse proportion",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "identifying-inverse-proportion",
+       "learning_objective": "Distinguish pairs of quantities in inverse proportion from those in direct proportion."
+      },
+      {
+       "concept_tag": "constant-product-relation",
+       "learning_objective": "Use the relation xy = k for quantities in inverse proportion."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH03-T7",
+     "topic_number": 7,
+     "title": "Solving inverse proportion and work problems",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "inverse-proportion-word-problems",
+       "learning_objective": "Solve word problems on workers, provisions and arrangements using inverse proportion."
+      },
+      {
+       "concept_tag": "working-together-rates",
+       "learning_objective": "Find the time taken when two agents work together by adding their work per hour."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEGP2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Exploring Some Geometric Themes",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP2-CH04-T1",
+     "topic_number": 1,
+     "title": "Fractals in nature, the Sierpinski Carpet and fractals in art",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "self-similarity-fractals",
+       "learning_objective": "Explain that a fractal is a self-similar shape showing the same pattern at smaller and smaller scales, in nature and in art."
+      },
+      {
+       "concept_tag": "sierpinski-carpet-counting",
+       "learning_objective": "Find the number of remaining squares, holes and the remaining area at any step of the Sierpinski Carpet."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH04-T2",
+     "topic_number": 2,
+     "title": "Sierpinski Gasket and Koch Snowflake",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "sierpinski-gasket",
+       "learning_objective": "Describe the construction of the Sierpinski Triangle and count its triangles, holes and remaining area."
+      },
+      {
+       "concept_tag": "koch-snowflake",
+       "learning_objective": "Find the number of sides and the perimeter at the nth step of the Koch Snowflake."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH04-T3",
+     "topic_number": 3,
+     "title": "Visualising solids and their profiles",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "visualisation-imagination",
+       "learning_objective": "Mentally cut and rearrange simple plane shapes without drawing them."
+      },
+      {
+       "concept_tag": "profiles-of-solids",
+       "learning_objective": "Identify solids that have given profiles from different viewpoints."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH04-T4",
+     "topic_number": 4,
+     "title": "Faces, edges and vertices; prisms, pyramids and nets",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "faces-edges-vertices",
+       "learning_objective": "Count the faces, edges and vertices of prisms and pyramids, including n-sided ones."
+      },
+      {
+       "concept_tag": "nets-of-solids",
+       "learning_objective": "Recognise and reason about nets of cubes, tetrahedrons, cylinders, cones and other solids."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH04-T5",
+     "topic_number": 5,
+     "title": "Shortest paths on a cuboid",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "shortest-path-using-nets",
+       "learning_objective": "Find the shortest path between two points on the surface of a cuboid by drawing a suitable net and using the Baudhayana Theorem."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH04-T6",
+     "topic_number": 6,
+     "title": "Projections, views and shadows",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "projection-of-point-and-line",
+       "learning_objective": "Define the projection of a point on a plane and compare the length of a line with its projection."
+      },
+      {
+       "concept_tag": "front-top-side-views",
+       "learning_objective": "Identify the front, top and side views of a solid as projections on the vertical, horizontal and side planes."
+      },
+      {
+       "concept_tag": "shadows-and-parallel-lines",
+       "learning_objective": "Relate shadows in sunlight to projections and use the fact that parallel lines project to parallel lines."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH04-T7",
+     "topic_number": 7,
+     "title": "Isometric projections and drawing on isometric grids",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "isometric-projection-of-cube",
+       "learning_objective": "Describe the isometric projection of a cube and why its edges project to equal lengths."
+      },
+      {
+       "concept_tag": "isometric-grid-drawing",
+       "learning_objective": "Draw solids made of cubes on an isometric grid using the length, depth and height axes."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEGP2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Tales by Dots and Lines",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP2-CH05-T1",
+     "topic_number": 1,
+     "title": "The Balancing Act: Mean as the Centre",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "mean-as-balance-point",
+       "learning_objective": "Show that the mean is the value where the total distance to the lower values equals the total distance to the higher values."
+      },
+      {
+       "concept_tag": "mean-change-on-include-remove",
+       "learning_objective": "Predict whether including or removing values raises, lowers or keeps the mean."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH05-T2",
+     "topic_number": 2,
+     "title": "Relatively Unchanged: Adding to or Multiplying Every Value",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "mean-shift-by-constant",
+       "learning_objective": "Explain why adding or subtracting a fixed number from every value shifts the mean by the same number."
+      },
+      {
+       "concept_tag": "mean-scale-by-constant",
+       "learning_objective": "Explain why multiplying every value by a fixed number multiplies the mean by that number."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH05-T3",
+     "topic_number": 3,
+     "title": "Tinkering with the Median",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "median-of-sorted-data",
+       "learning_objective": "Find the median as the middle value of sorted data, or the average of the two middle values."
+      },
+      {
+       "concept_tag": "median-change-on-include-remove",
+       "learning_objective": "Reason about how including or removing values changes the median."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH05-T4",
+     "topic_number": 4,
+     "title": "Finding the Unknown and Mean and Median with Frequencies",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "missing-value-from-mean",
+       "learning_objective": "Use mean = sum / number of values to find a total or a missing value."
+      },
+      {
+       "concept_tag": "correcting-a-wrong-mean",
+       "learning_objective": "Correct a mean when one recorded value was wrong, without the full data."
+      },
+      {
+       "concept_tag": "mean-median-from-frequency-table",
+       "learning_objective": "Find the mean and median of data given as values with frequencies."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH05-T5",
+     "topic_number": 5,
+     "title": "Spreadsheets",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "spreadsheet-cell-reference",
+       "learning_objective": "Name cells and ranges of a spreadsheet using column letters and row numbers."
+      },
+      {
+       "concept_tag": "spreadsheet-formulae",
+       "learning_objective": "Write SUM and AVERAGE formulae over a row or column range."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH05-T6",
+     "topic_number": 6,
+     "title": "Line Graphs",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "line-graph-reading",
+       "learning_objective": "Read values, trends and changes from a line graph."
+      },
+      {
+       "concept_tag": "choosing-a-line-graph",
+       "learning_objective": "Explain when a line graph is a better choice than a column graph."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH05-T7",
+     "topic_number": 7,
+     "title": "Infographics, Activity Strips and Data Stories",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "reading-an-infographic",
+       "learning_objective": "Interpret an infographic that uses a colour scale to compare states."
+      },
+      {
+       "concept_tag": "activity-strip",
+       "learning_objective": "Read and make a time strip of 48 half-hour boxes for a day's activities."
+      },
+      {
+       "concept_tag": "data-story-sleep",
+       "learning_objective": "Interpret the trend of typical sleep duration across ages from a line graph."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEGP2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Algebra Play",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP2-CH06-T1",
+     "topic_number": 1,
+     "title": "Thinking about 'Think of a Number' tricks",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "think-of-a-number-tricks",
+       "learning_objective": "Use letter-numbers to explain why a 'Think of a Number' trick always gives the same result."
+      },
+      {
+       "concept_tag": "date-decoding-trick",
+       "learning_objective": "Decode a chosen date from the final answer of a multi-step trick using an algebraic expression."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH06-T2",
+     "topic_number": 2,
+     "title": "Number pyramids",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "number-pyramid-rule",
+       "learning_objective": "Fill missing entries of a number pyramid by forming and solving equations."
+      },
+      {
+       "concept_tag": "pyramid-top-expression",
+       "learning_objective": "Express the top of a number pyramid in terms of its bottom row."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH06-T3",
+     "topic_number": 3,
+     "title": "Fun with grids",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "calendar-grid-sums",
+       "learning_objective": "Use algebra to find the numbers in a calendar grid from their sum."
+      },
+      {
+       "concept_tag": "algebra-grids-shapes",
+       "learning_objective": "Find the values of shapes in an algebra grid from row sums."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH06-T4",
+     "topic_number": 4,
+     "title": "The largest product",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "largest-product-arrangement",
+       "learning_objective": "Arrange three digits as a 2-digit by 1-digit product to make it as large as possible."
+      },
+      {
+       "concept_tag": "comparing-products-algebraically",
+       "learning_objective": "Justify the largest-product rule by expanding products in place-value form."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH06-T5",
+     "topic_number": 5,
+     "title": "Decoding divisibility tricks",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "reversed-digits-divisibility",
+       "learning_objective": "Explain using algebra why sums and differences of reversed 2-digit numbers have fixed divisors."
+      },
+      {
+       "concept_tag": "cyclic-and-repeated-digit-numbers",
+       "learning_objective": "Justify divisibility patterns of 3-digit numbers formed by cycling or repeating digits."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH06-T6",
+     "topic_number": 6,
+     "title": "Solving puzzles and word problems with algebra",
+     "ncert_sections": "6.6 (Figure it Out)",
+     "concepts": [
+      {
+       "concept_tag": "modelling-word-problems",
+       "learning_objective": "Model age, animal and cost problems with equations and solve them."
+      },
+      {
+       "concept_tag": "working-backwards-puzzles",
+       "learning_objective": "Solve doubling-and-giving puzzles by forming an equation or working backwards."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEGP2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Area",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP2-CH07-T1",
+     "topic_number": 1,
+     "title": "Rectangles, squares and why perimeter is not area",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "area-of-rectangle",
+       "learning_objective": "Find the area of a rectangle and of the triangles cut off by its diagonal using length x width."
+      },
+      {
+       "concept_tag": "perimeter-vs-area",
+       "learning_objective": "Explain with examples why perimeter cannot be used as a measure of area."
+      },
+      {
+       "concept_tag": "area-of-path",
+       "learning_objective": "Find the area of a path around or across a rectangular plot by subtracting or adding rectangles."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH07-T2",
+     "topic_number": 2,
+     "title": "Area of a triangle",
+     "ncert_sections": "Triangles; Some Applications of the Area Formula",
+     "concepts": [
+      {
+       "concept_tag": "triangle-area-formula",
+       "learning_objective": "Use area of a triangle = 1/2 x base x height for any triangle."
+      },
+      {
+       "concept_tag": "altitude-from-area",
+       "learning_objective": "Find an unknown altitude by writing the area of a triangle with two different base-height pairs."
+      },
+      {
+       "concept_tag": "median-equal-areas",
+       "learning_objective": "Use the fact that a line from a vertex to the midpoint of the opposite side halves the area of a triangle."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH07-T3",
+     "topic_number": 3,
+     "title": "Triangles between parallel lines with a common base",
+     "ncert_sections": "Triangles between Parallel Lines with a Common Base",
+     "concepts": [
+      {
+       "concept_tag": "equal-area-common-base",
+       "learning_objective": "Recognise that triangles on the same base between the same parallels have equal areas."
+      },
+      {
+       "concept_tag": "minimum-perimeter-reflection",
+       "learning_objective": "Use reflection in a line to find the triangle of least perimeter on a given base."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH07-T4",
+     "topic_number": 4,
+     "title": "Area of any polygon",
+     "ncert_sections": "Area of any Polygon",
+     "concepts": [
+      {
+       "concept_tag": "polygon-triangulation",
+       "learning_objective": "Find the area of a polygon by dividing it into triangles."
+      },
+      {
+       "concept_tag": "quadrilateral-diagonal-heights",
+       "learning_objective": "Find the area of a quadrilateral from a diagonal and the perpendiculars dropped on it."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH07-T5",
+     "topic_number": 5,
+     "title": "Parallelogram and rhombus",
+     "ncert_sections": "Parallelogram; Rhombus",
+     "concepts": [
+      {
+       "concept_tag": "parallelogram-area",
+       "learning_objective": "Use area of a parallelogram = base x corresponding height."
+      },
+      {
+       "concept_tag": "dissection",
+       "learning_objective": "Explain how a parallelogram is dissected into a rectangle of equal area."
+      },
+      {
+       "concept_tag": "rhombus-diagonals-area",
+       "learning_objective": "Use area of a rhombus = 1/2 x product of its diagonals."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH07-T6",
+     "topic_number": 6,
+     "title": "Trapezium",
+     "ncert_sections": "Trapezium; Finding the Area Using Two Copies of the Trapezium",
+     "concepts": [
+      {
+       "concept_tag": "trapezium-area-formula",
+       "learning_objective": "Use area of a trapezium = 1/2 x height x sum of the parallel sides."
+      },
+      {
+       "concept_tag": "trapezium-two-copies",
+       "learning_objective": "Explain how two copies of a trapezium form a parallelogram and give the area formula."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP2-CH07-T7",
+     "topic_number": 7,
+     "title": "Areas in real life",
+     "ncert_sections": "Areas in Real Life",
+     "concepts": [
+      {
+       "concept_tag": "area-unit-conversion",
+       "learning_objective": "Convert between units of length and area such as in, cm, ft, in2 and cm2."
+      },
+      {
+       "concept_tag": "real-life-area",
+       "learning_objective": "Compute and estimate areas of everyday objects such as an A4 sheet."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

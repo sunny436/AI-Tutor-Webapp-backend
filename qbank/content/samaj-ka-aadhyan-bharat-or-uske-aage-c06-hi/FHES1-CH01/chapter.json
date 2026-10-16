@@ -1,0 +1,112 @@
+{
+ "chapter_id": "FHES1-CH01",
+ "title": "पृथ्वी पर स्थानों की स्थिति",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHES1-CH01-T1",
+   "topic_number": 1,
+   "title": "मानचित्र और उसके प्रकार",
+   "ncert_sections": "मानचित्र और उसके घटक",
+   "concepts": [
+    {
+     "concept_tag": "manchitra-ki-paribhasha",
+     "learning_objective": "विद्यार्थी मानचित्र और मानचित्रावली (एटलस) का अर्थ बता सकेंगे।"
+    },
+    {
+     "concept_tag": "manchitra-ke-prakar",
+     "learning_objective": "विद्यार्थी भौतिक, राजनैतिक और थिमैटिक मानचित्रों में अंतर पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH01-T2",
+   "topic_number": 2,
+   "title": "मानचित्र के घटक: दूरी, दिशा और प्रतीक चिह्न",
+   "ncert_sections": "मानचित्र और उसके घटक",
+   "concepts": [
+    {
+     "concept_tag": "scale-aur-doori",
+     "learning_objective": "विद्यार्थी मानचित्र के स्केल की सहायता से वास्तविक दूरी की गणना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "chaturdish-aur-disha",
+     "learning_objective": "विद्यार्थी चतुर्दिश और मध्यवर्ती दिशाओं को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "pratik-chinh",
+     "learning_objective": "विद्यार्थी मानचित्र में प्रतीक चिह्नों के उपयोग का कारण समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH01-T3",
+   "topic_number": 3,
+   "title": "पृथ्वी का मानचित्रण और निर्देशांक",
+   "ncert_sections": "पृथ्वी का मानचित्रण; (क) निर्देशांक को समझना",
+   "concepts": [
+    {
+     "concept_tag": "globe-aur-prithvi-ka-aakar",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि ग्लोब पृथ्वी का बेहतर प्रतिनिधित्व क्यों करता है।"
+    },
+    {
+     "concept_tag": "nirdeshank-pranali",
+     "learning_objective": "विद्यार्थी दो निर्देशांकों से किसी स्थिति के निर्धारण की विधि समझ सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH01-T4",
+   "topic_number": 4,
+   "title": "अक्षांश",
+   "ncert_sections": "(ख) अक्षांश",
+   "concepts": [
+    {
+     "concept_tag": "akshansh-ki-paribhasha",
+     "learning_objective": "विद्यार्थी अक्षांश को भूमध्य रेखा से दूरी के माप के रूप में परिभाषित कर सकेंगे।"
+    },
+    {
+     "concept_tag": "akshansh-aur-jalvayu",
+     "learning_objective": "विद्यार्थी अक्षांश और जलवायु के बीच संबंध बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH01-T5",
+   "topic_number": 5,
+   "title": "देशांतर और प्रमुख याम्योत्तर",
+   "ncert_sections": "(ग) देशांतर",
+   "concepts": [
+    {
+     "concept_tag": "deshantar-aur-yamyottar",
+     "learning_objective": "विद्यार्थी देशांतर और याम्योत्तर की विशेषताएँ बता सकेंगे।"
+    },
+    {
+     "concept_tag": "pramukh-yamyottar",
+     "learning_objective": "विद्यार्थी ग्रिनिच और उज्जयिनी की प्रमुख याम्योत्तर का महत्त्व समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH01-T6",
+   "topic_number": 6,
+   "title": "समय क्षेत्र, मानक समय और अंतर्राष्ट्रीय तिथि रेखा",
+   "ncert_sections": "समय क्षेत्र (टाइम जोन) को समझना",
+   "concepts": [
+    {
+     "concept_tag": "sthaniya-samay",
+     "learning_objective": "विद्यार्थी देशांतर के अंतर से स्थानीय समय के अंतर की गणना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "manak-samay",
+     "learning_objective": "विद्यार्थी मानक समय और भारतीय मानक समय की आवश्यकता समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "antarrashtriya-tithi-rekha",
+     "learning_objective": "विद्यार्थी अंतर्राष्ट्रीय तिथि रेखा की स्थिति और महत्त्व बता सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "chapter_id": "LEEC2-CH04",
+ "title": "The Theory of the Firm under Perfect Competition",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEEC2-CH04-T1",
+   "topic_number": 1,
+   "title": "Perfect competition: defining features and price-taking",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "features-of-perfect-competition",
+     "learning_objective": "State the four defining features of a perfectly competitive market and why each matters."
+    },
+    {
+     "concept_tag": "price-taking-behaviour",
+     "learning_objective": "Explain why firms and buyers in a perfectly competitive market behave as price-takers."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH04-T2",
+   "topic_number": 2,
+   "title": "Revenue: total, average and marginal revenue",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "total-average-marginal-revenue",
+     "learning_objective": "Compute TR, AR and MR for a price-taking firm and show that MR = AR = p."
+    },
+    {
+     "concept_tag": "price-line-demand-curve",
+     "learning_objective": "Interpret the TR curve and the price line as the perfectly elastic demand curve facing a firm."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH04-T3",
+   "topic_number": 3,
+   "title": "Conditions for profit maximisation",
+   "ncert_sections": "4.3, 4.3.1, 4.3.2, 4.3.3, 4.3.4",
+   "concepts": [
+    {
+     "concept_tag": "price-equals-marginal-cost",
+     "learning_objective": "Explain why profit is maximised where price equals marginal cost."
+    },
+    {
+     "concept_tag": "rising-marginal-cost-condition",
+     "learning_objective": "Explain why marginal cost must be non-decreasing at the profit-maximising output."
+    },
+    {
+     "concept_tag": "price-and-avc-ac-condition",
+     "learning_objective": "Apply the conditions p >= AVC in the short run and p >= AC in the long run to the decision to produce."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH04-T4",
+   "topic_number": 4,
+   "title": "Short run and long run supply curve of a firm",
+   "ncert_sections": "4.4, 4.4.1, 4.4.2",
+   "concepts": [
+    {
+     "concept_tag": "short-run-supply-curve",
+     "learning_objective": "Derive the short run supply curve of a firm from its SMC and AVC curves."
+    },
+    {
+     "concept_tag": "long-run-supply-curve",
+     "learning_objective": "Derive the long run supply curve of a firm from its LRMC and LRAC curves."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH04-T5",
+   "topic_number": 5,
+   "title": "Shut down point, normal profit and break-even point",
+   "ncert_sections": "4.4.3, 4.4.4",
+   "concepts": [
+    {
+     "concept_tag": "shut-down-point",
+     "learning_objective": "Identify the short run and long run shut down points of a firm."
+    },
+    {
+     "concept_tag": "normal-profit-break-even",
+     "learning_objective": "Distinguish normal profit, super-normal profit and the break-even point."
+    },
+    {
+     "concept_tag": "opportunity-cost",
+     "learning_objective": "Calculate the opportunity cost of an activity as the gain foregone from the next best alternative."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH04-T6",
+   "topic_number": 6,
+   "title": "Determinants of a firm's supply curve",
+   "ncert_sections": "4.5, 4.5.1, 4.5.2",
+   "concepts": [
+    {
+     "concept_tag": "technological-progress",
+     "learning_objective": "Explain how technological progress shifts a firm's supply curve."
+    },
+    {
+     "concept_tag": "input-prices",
+     "learning_objective": "Explain how a change in input prices shifts a firm's supply curve."
+    },
+    {
+     "concept_tag": "unit-tax",
+     "learning_objective": "Analyse how a unit tax changes a firm's cost curves and long run supply curve."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH04-T7",
+   "topic_number": 7,
+   "title": "Market supply curve",
+   "ncert_sections": "4.6",
+   "concepts": [
+    {
+     "concept_tag": "horizontal-summation",
+     "learning_objective": "Derive the market supply curve by horizontally summing the supply curves of individual firms."
+    },
+    {
+     "concept_tag": "number-of-firms",
+     "learning_objective": "Explain how a change in the number of firms shifts the market supply curve."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH04-T8",
+   "topic_number": 8,
+   "title": "Price elasticity of supply",
+   "ncert_sections": "4.7",
+   "concepts": [
+    {
+     "concept_tag": "elasticity-of-supply-measure",
+     "learning_objective": "Define and calculate the price elasticity of supply by the percentage method."
+    },
+    {
+     "concept_tag": "geometric-method",
+     "learning_objective": "Use the geometric method to judge the elasticity of straight line supply curves."
+    }
+   ]
+  }
+ ]
+}

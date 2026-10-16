@@ -1,0 +1,132 @@
+{
+ "chapter_id": "FHCU1-CH05",
+ "title": "लंबाई एवं गति का मापन",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHCU1-CH05-T1",
+   "topic_number": 1,
+   "title": "हम कैसे मापते हैं?",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "sharir-ke-angon-se-mapan",
+     "learning_objective": "शरीर के अंगों (बालिश्त, कदम, अँगुल) पर आधारित मापन की सीमाएँ समझाना।"
+    },
+    {
+     "concept_tag": "sankhya-aur-matrak",
+     "learning_objective": "यह पहचानना कि लंबाई का माप संख्या और मात्रक, इन दो भागों में व्यक्त किया जाता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH05-T2",
+   "topic_number": 2,
+   "title": "मानक मात्रक",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "si-matrak-meter",
+     "learning_objective": "लंबाई के SI मात्रक मीटर, उसके प्रतीक और मानक मात्रकों की आवश्यकता को पहचानना।"
+    },
+    {
+     "concept_tag": "matrak-roopantaran",
+     "learning_objective": "किलोमीटर, मीटर, सेंटीमीटर और मिलीमीटर के बीच रूपांतरण करना।"
+    },
+    {
+     "concept_tag": "matrakon-ke-sanket",
+     "learning_objective": "मात्रकों के संकेत लिखने के नियमों का सही उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH05-T3",
+   "topic_number": 3,
+   "title": "लंबाई मापने की सही विधि",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "upayukt-paimana-chunna",
+     "learning_objective": "मापी जाने वाली वस्तु के अनुसार उपयुक्त पैमाना या मापन-फीता चुनना।"
+    },
+    {
+     "concept_tag": "paimana-aur-aankh-ki-sthiti",
+     "learning_objective": "पैमाना रखने की सही विधि और पाठ्यांक पढ़ते समय आँख की सही स्थिति बताना।"
+    },
+    {
+     "concept_tag": "tute-paimane-se-mapan",
+     "learning_objective": "टूटे सिरे वाले पैमाने में किसी पूर्णांक चिह्न का उपयोग कर लंबाई ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH05-T4",
+   "topic_number": 4,
+   "title": "किसी वक्र रेखा की लंबाई मापना",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "vakra-rekha-ki-lambai",
+     "learning_objective": "धागे या लचीले फीते की सहायता से वक्र रेखा की लंबाई मापने की विधि बताना।"
+    },
+    {
+     "concept_tag": "lachile-upkaran",
+     "learning_objective": "लचीले मापक उपकरणों का उपयोग और मापक सामग्री की उपयुक्तता समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH05-T5",
+   "topic_number": 5,
+   "title": "स्थिति का निर्धारण",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "sandarbh-bindu",
+     "learning_objective": "संदर्भ बिंदु का अर्थ और स्थिति बताने में उसका महत्व समझाना।"
+    },
+    {
+     "concept_tag": "km-suchak-patthar",
+     "learning_objective": "किलोमीटर सूचक पत्थरों की सहायता से स्थिति और तय की गई दूरी की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH05-T6",
+   "topic_number": 6,
+   "title": "गतिशील वस्तुएँ",
+   "ncert_sections": "5.6",
+   "concepts": [
+    {
+     "concept_tag": "gati-aur-sthirta",
+     "learning_objective": "संदर्भ बिंदु के सापेक्ष स्थिति-परिवर्तन के आधार पर गतिशील और स्थिर वस्तुओं की पहचान करना।"
+    },
+    {
+     "concept_tag": "sapeksh-gati",
+     "learning_objective": "यह समझाना कि कोई वस्तु गतिशील है या स्थिर, यह चुने गए संदर्भ बिंदु पर निर्भर करता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH05-T7",
+   "topic_number": 7,
+   "title": "गति के प्रकार",
+   "ncert_sections": "5.7",
+   "concepts": [
+    {
+     "concept_tag": "saral-rekhiya-gati",
+     "learning_objective": "सरल रेखा के अनुदिश होने वाली गति को सरल रेखीय गति के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "vrittiya-gati",
+     "learning_objective": "वृत्तीय पथ के अनुदिश होने वाली गति को वृत्तीय गति के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "dolan-aur-aavarti-gati",
+     "learning_objective": "दोलन-गति को पहचानना और वृत्तीय तथा दोलन-गति को आवर्ती गति के रूप में वर्गीकृत करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "chapter_id": "HHGP2-CH07",
+ "title": "क्षेत्रफल",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP2-CH07-T1",
+   "topic_number": 1,
+   "title": "आयत और वर्ग: क्षेत्रफल और परिमाप",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "aayat-kshetrafal",
+     "learning_objective": "इकाई वर्गों की गिनती से आयत का क्षेत्रफल लंबाई × चौड़ाई के रूप में ज्ञात करना।"
+    },
+    {
+     "concept_tag": "parimap-banam-kshetrafal",
+     "learning_objective": "समझना कि परिमाप किसी क्षेत्र के क्षेत्रफल का सूचक नहीं होता।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH07-T2",
+   "topic_number": 2,
+   "title": "त्रिभुज का क्षेत्रफल",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "tribhuj-kshetrafal",
+     "learning_objective": "आधार और संगत ऊँचाई से त्रिभुज का क्षेत्रफल 1/2 × आधार × ऊँचाई द्वारा ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH07-T3",
+   "topic_number": 3,
+   "title": "क्षेत्रफल सूत्र के अनुप्रयोग और बहुभुज का क्षेत्रफल",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "saman-aadhar-samantar-rekhayen",
+     "learning_objective": "समान आधार और समान समांतर रेखाओं के बीच बने त्रिभुजों के क्षेत्रफल की समानता को पहचानना।"
+    },
+    {
+     "concept_tag": "bahubhuj-tribhujikaran",
+     "learning_objective": "किसी बहुभुज को त्रिभुजों में बाँटकर उसका क्षेत्रफल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH07-T4",
+   "topic_number": 4,
+   "title": "समांतर चतुर्भुज का क्षेत्रफल",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "samantar-chaturbhuj",
+     "learning_objective": "समांतर चतुर्भुज को आयत में बदलकर क्षेत्रफल = आधार × ऊँचाई प्राप्त करना और प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH07-T5",
+   "topic_number": 5,
+   "title": "समचतुर्भुज का क्षेत्रफल",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "samchaturbhuj-vikarn",
+     "learning_objective": "समचतुर्भुज का क्षेत्रफल उसके विकर्णों के गुणनफल के आधे के रूप में ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH07-T6",
+   "topic_number": 6,
+   "title": "समलंब चतुर्भुज का क्षेत्रफल",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "samlamb-kshetrafal",
+     "learning_objective": "समलंब चतुर्भुज का क्षेत्रफल 1/2 × ऊँचाई × समांतर भुजाओं का योग द्वारा ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH07-T7",
+   "topic_number": 7,
+   "title": "वास्तविक जीवन में क्षेत्रफल",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "kshetrafal-ikaiyan",
+     "learning_objective": "क्षेत्रफल की विभिन्न इकाइयों (cm², in², ft², m², एकड़, km²) के बीच रूपांतरण करना।"
+    }
+   ]
+  }
+ ]
+}

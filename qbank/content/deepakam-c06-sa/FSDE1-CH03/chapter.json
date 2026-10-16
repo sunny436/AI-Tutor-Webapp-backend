@@ -1,0 +1,100 @@
+{
+ "chapter_id": "FSDE1-CH03",
+ "title": "एषः कः? एषा का? एतत् किम्?",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FSDE1-CH03-T1",
+   "topic_number": 1,
+   "title": "लिङ्गानि वचनानि च",
+   "ncert_sections": "पृष्ठ ३१-३२",
+   "concepts": [
+    {
+     "concept_tag": "linga-bhedah",
+     "learning_objective": "छात्रः पुंलिङ्ग-स्त्रीलिङ्ग-नपुंसकलिङ्ग-शब्दान् परिचिनोति।"
+    },
+    {
+     "concept_tag": "vachana-roopani",
+     "learning_objective": "छात्रः शब्दानाम् एकवचन-द्विवचन-बहुवचन-रूपाणि वदति लिखति च।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH03-T2",
+   "topic_number": 2,
+   "title": "क्रियापदानि",
+   "ncert_sections": "पृष्ठ ३३",
+   "concepts": [
+    {
+     "concept_tag": "kriyapada-vachanam",
+     "learning_objective": "छात्रः क्रियापदानाम् एकवचन-द्विवचन-बहुवचन-रूपाणि जानाति।"
+    },
+    {
+     "concept_tag": "kartri-kriya-anvayah",
+     "learning_objective": "छात्रः कर्तुः वचनानुसारं क्रियापदस्य प्रयोगं करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH03-T3",
+   "topic_number": 3,
+   "title": "सर्वनाम-प्रयोगः (तद्, एतद्)",
+   "ncert_sections": "पृष्ठ ३४-४०",
+   "concepts": [
+    {
+     "concept_tag": "tad-shabda-roopani",
+     "learning_objective": "छात्रः त्रिषु लिङ्गेषु 'तद्' शब्दस्य रूपाणि प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "etad-shabda-roopani",
+     "learning_objective": "छात्रः त्रिषु लिङ्गेषु 'एतद्' शब्दस्य रूपाणि प्रयुङ्क्ते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH03-T4",
+   "topic_number": 4,
+   "title": "प्रश्नवाचकं 'किम्' प्रश्नोत्तराणि च",
+   "ncert_sections": "पृष्ठ ३५-४०",
+   "concepts": [
+    {
+     "concept_tag": "kim-shabda-roopani",
+     "learning_objective": "छात्रः लिङ्ग-वचनानुसारं 'किम्' शब्दस्य रूपाणि जानाति।"
+    },
+    {
+     "concept_tag": "prashna-uttara-rachana",
+     "learning_objective": "छात्रः उत्तरं दृष्ट्वा प्रश्नं रचयति, 'न', 'आम्', 'तु' प्रयुज्य उत्तरं च ददाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH03-T5",
+   "topic_number": 5,
+   "title": "शब्दार्थाः",
+   "ncert_sections": "वयं शब्दार्थान् जानीमः",
+   "concepts": [
+    {
+     "concept_tag": "shabdarthah-paryayah",
+     "learning_objective": "छात्रः पाठस्य शब्दानां पर्यायशब्दान् अर्थान् च जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH03-T6",
+   "topic_number": 6,
+   "title": "योग्यताविस्तरः — अकारान्त-आकारान्त-ईकारान्त-शब्दाः",
+   "ncert_sections": "योग्यताविस्तरः, परियोजनाकार्यम्",
+   "concepts": [
+    {
+     "concept_tag": "antya-varna-vibhagah",
+     "learning_objective": "छात्रः शब्दस्य अन्तिमवर्णं दृष्ट्वा तस्य लिङ्गं निर्धारयति।"
+    },
+    {
+     "concept_tag": "mula-shabda-prathama-roopam",
+     "learning_objective": "छात्रः 'तद्', 'एतद्', 'किम्' शब्दानां प्रथमा-एकवचन-रूपाणि जानाति।"
+    }
+   ]
+  }
+ ]
+}

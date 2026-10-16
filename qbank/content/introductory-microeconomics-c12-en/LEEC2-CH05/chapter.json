@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LEEC2-CH05",
+ "title": "Market Equilibrium",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEEC2-CH05-T1",
+   "topic_number": 1,
+   "title": "Equilibrium, excess demand and excess supply",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "market-equilibrium-definition",
+     "learning_objective": "Define market equilibrium, equilibrium price and equilibrium quantity in a perfectly competitive market."
+    },
+    {
+     "concept_tag": "excess-demand-excess-supply",
+     "learning_objective": "Identify excess demand and excess supply at a price and describe equilibrium as zero excess demand and zero excess supply."
+    },
+    {
+     "concept_tag": "invisible-hand-adjustment",
+     "learning_objective": "Explain how the 'Invisible Hand' moves price towards equilibrium when the market is out of equilibrium."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH05-T2",
+   "topic_number": 2,
+   "title": "Equilibrium with a fixed number of firms",
+   "ncert_sections": "5.1.1",
+   "concepts": [
+    {
+     "concept_tag": "equilibrium-with-fixed-firms",
+     "learning_objective": "Show that with a fixed number of firms, equilibrium lies at the intersection of the market demand and market supply curves."
+    },
+    {
+     "concept_tag": "equilibrium-calculation",
+     "learning_objective": "Calculate equilibrium price, equilibrium quantity and excess demand or supply from linear demand and supply equations."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH05-T3",
+   "topic_number": 3,
+   "title": "Wage determination in the labour market",
+   "ncert_sections": "5.1.1 (Wage Determination in Labour Market)",
+   "concepts": [
+    {
+     "concept_tag": "labour-demand-mrp",
+     "learning_objective": "Explain why a profit-maximising firm hires labour until the wage equals the marginal revenue product of labour and why labour demand slopes downward."
+    },
+    {
+     "concept_tag": "labour-supply-backward-bending",
+     "learning_objective": "Explain the backward-bending individual labour supply curve and the upward-sloping market supply of labour."
+    },
+    {
+     "concept_tag": "wage-determination",
+     "learning_objective": "Describe how the wage rate is determined where labour demand by firms equals labour supply by households."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH05-T4",
+   "topic_number": 4,
+   "title": "Shifts in demand and supply",
+   "ncert_sections": "5.1.1 (Shifts in Demand and Supply)",
+   "concepts": [
+    {
+     "concept_tag": "demand-shift-effects",
+     "learning_objective": "Analyse how a shift in the demand curve changes equilibrium price and quantity with a fixed number of firms."
+    },
+    {
+     "concept_tag": "supply-shift-effects",
+     "learning_objective": "Analyse how a shift in the supply curve changes equilibrium price and quantity with a fixed number of firms."
+    },
+    {
+     "concept_tag": "simultaneous-shifts",
+     "learning_objective": "Predict which effects of simultaneous shifts in demand and supply are certain and which depend on the size of the shifts."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH05-T5",
+   "topic_number": 5,
+   "title": "Market equilibrium with free entry and exit",
+   "ncert_sections": "5.1.2",
+   "concepts": [
+    {
+     "concept_tag": "price-equals-min-ac",
+     "learning_objective": "Explain why free entry and exit make the equilibrium price equal to the minimum average cost of firms."
+    },
+    {
+     "concept_tag": "equilibrium-number-of-firms",
+     "learning_objective": "Calculate the equilibrium quantity and the equilibrium number of firms under free entry and exit."
+    },
+    {
+     "concept_tag": "demand-shift-free-entry",
+     "learning_objective": "Compare the effect of a demand shift under free entry and exit with that under a fixed number of firms."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH05-T6",
+   "topic_number": 6,
+   "title": "Applications: price ceiling and price floor",
+   "ncert_sections": "5.2, 5.2.1, 5.2.2",
+   "concepts": [
+    {
+     "concept_tag": "price-ceiling",
+     "learning_objective": "Explain the effects of a price ceiling below the equilibrium price, including shortage, rationing and black markets."
+    },
+    {
+     "concept_tag": "price-floor",
+     "learning_objective": "Explain the effects of a price floor above the equilibrium price, including excess supply and government purchase of the surplus."
+    }
+   ]
+  }
+ ]
+}

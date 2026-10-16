@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KEPY1-CH06",
+ "title": "Human Memory",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPY1-CH06-T1",
+   "topic_number": 1,
+   "title": "Nature of memory: encoding, storage and retrieval",
+   "ncert_sections": "Introduction; Nature of Memory",
+   "concepts": [
+    {
+     "concept_tag": "encoding-storage-retrieval",
+     "learning_objective": "Describe memory as the three interrelated stages of encoding, storage and retrieval."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH06-T2",
+   "topic_number": 2,
+   "title": "The stage model: sensory, short-term and long-term memory",
+   "ncert_sections": "Information Processing Approach: The Stage Model; Memory Systems",
+   "concepts": [
+    {
+     "concept_tag": "stage-model-memory-systems",
+     "learning_objective": "Compare the capacity, duration and encoding of sensory, short-term and long-term memory in the Atkinson-Shiffrin model."
+    },
+    {
+     "concept_tag": "control-processes",
+     "learning_objective": "Explain how attention, maintenance rehearsal, chunking and elaborative rehearsal move information between stores."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH06-T3",
+   "topic_number": 3,
+   "title": "Working memory and evaluation of the stage model",
+   "ncert_sections": "Box 6.1 Working Memory; Memory Systems (evaluation)",
+   "concepts": [
+    {
+     "concept_tag": "working-memory-components",
+     "learning_objective": "Identify the phonological loop, visuospatial sketchpad and central executive in Baddeley's working memory."
+    },
+    {
+     "concept_tag": "critique-of-stage-model",
+     "learning_objective": "Evaluate evidence such as the case of KF that questions separate STM and LTM stores."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH06-T4",
+   "topic_number": 4,
+   "title": "Levels of processing",
+   "ncert_sections": "Levels of Processing",
+   "concepts": [
+    {
+     "concept_tag": "levels-of-processing",
+     "learning_objective": "Explain Craik and Lockhart's structural, phonetic and semantic levels of processing and their effect on retention."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH06-T5",
+   "topic_number": 5,
+   "title": "Types of long-term memory",
+   "ncert_sections": "Types of Long-term Memory; Box 6.2; Box 6.3",
+   "concepts": [
+    {
+     "concept_tag": "declarative-procedural-memory",
+     "learning_objective": "Distinguish declarative from procedural memory with examples."
+    },
+    {
+     "concept_tag": "episodic-semantic-memory",
+     "learning_objective": "Distinguish Tulving's episodic and semantic memory."
+    },
+    {
+     "concept_tag": "ltm-phenomena-and-measurement",
+     "learning_objective": "Describe flashbulb, autobiographical and implicit memory and methods such as recall, recognition and priming."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH06-T6",
+   "topic_number": 6,
+   "title": "Nature and causes of forgetting",
+   "ncert_sections": "Nature and Causes of Forgetting; Box 6.4",
+   "concepts": [
+    {
+     "concept_tag": "forgetting-curve-trace-decay",
+     "learning_objective": "Interpret Ebbinghaus's curve of forgetting and evaluate trace decay theory."
+    },
+    {
+     "concept_tag": "interference-theory",
+     "learning_objective": "Distinguish proactive from retroactive interference."
+    },
+    {
+     "concept_tag": "retrieval-failure",
+     "learning_objective": "Explain forgetting due to absent or inappropriate retrieval cues."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH06-T7",
+   "topic_number": 7,
+   "title": "Enhancing memory",
+   "ncert_sections": "Enhancing Memory; Mnemonics using Images and Organisation",
+   "concepts": [
+    {
+     "concept_tag": "mnemonics-using-images",
+     "learning_objective": "Apply the keyword method and the method of loci."
+    },
+    {
+     "concept_tag": "mnemonics-using-organisation",
+     "learning_objective": "Apply chunking and the first letter technique to organise material."
+    },
+    {
+     "concept_tag": "memory-improvement-strategies",
+     "learning_objective": "Explain deep processing, minimising interference, retrieval cues and the PQRST method."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "chapter_id": "LEPH2-CH04",
+ "title": "Atoms",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH2-CH04-T1",
+   "topic_number": 1,
+   "title": "Early ideas: Thomson's model and line spectra",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "thomson-plum-pudding-model",
+     "learning_objective": "Describe Thomson's plum pudding model and compare it with Rutherford's nuclear model."
+    },
+    {
+     "concept_tag": "continuous-and-line-spectra",
+     "learning_objective": "Distinguish the continuous spectrum of dense matter from the line spectrum of a rarefied gas."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH04-T2",
+   "topic_number": 2,
+   "title": "Alpha-particle scattering and Rutherford's nuclear model",
+   "ncert_sections": "12.2, 12.2.1",
+   "concepts": [
+    {
+     "concept_tag": "geiger-marsden-observations",
+     "learning_objective": "Interpret the observations of the Geiger-Marsden experiment and the assumptions used to analyse them."
+    },
+    {
+     "concept_tag": "impact-parameter",
+     "learning_objective": "Relate the impact parameter of an alpha particle to its angle of scattering."
+    },
+    {
+     "concept_tag": "distance-of-closest-approach",
+     "learning_objective": "Calculate the distance of closest approach of an alpha particle using energy conservation."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH04-T3",
+   "topic_number": 3,
+   "title": "Electron orbits in Rutherford's model",
+   "ncert_sections": "12.2.2",
+   "concepts": [
+    {
+     "concept_tag": "electrostatic-centripetal-force",
+     "learning_objective": "Use the balance of electrostatic and centripetal force to relate orbit radius and electron speed."
+    },
+    {
+     "concept_tag": "negative-total-energy",
+     "learning_objective": "Relate the kinetic, potential and total energy of an orbiting electron and interpret the negative total energy."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH04-T4",
+   "topic_number": 4,
+   "title": "Atomic spectra",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "emission-line-spectrum",
+     "learning_objective": "Explain why an emission line spectrum acts as a fingerprint of an element."
+    },
+    {
+     "concept_tag": "absorption-spectrum",
+     "learning_objective": "Explain how an absorption spectrum forms and how it relates to the emission spectrum of the same gas."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH04-T5",
+   "topic_number": 5,
+   "title": "Bohr model of the hydrogen atom and energy levels",
+   "ncert_sections": "12.4, 12.4.1",
+   "concepts": [
+    {
+     "concept_tag": "classical-instability",
+     "learning_objective": "Explain why classical electromagnetic theory predicts that Rutherford's atom is unstable."
+    },
+    {
+     "concept_tag": "bohr-postulates",
+     "learning_objective": "State Bohr's three postulates, including the quantisation of angular momentum."
+    },
+    {
+     "concept_tag": "hydrogen-energy-levels",
+     "learning_objective": "Use E = -13.6/n^2 eV to find excitation and ionisation energies of hydrogen."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH04-T6",
+   "topic_number": 6,
+   "title": "The line spectra of the hydrogen atom",
+   "ncert_sections": "12.5",
+   "concepts": [
+    {
+     "concept_tag": "photon-emission-transition",
+     "learning_objective": "Calculate the frequency or wavelength of the photon emitted in a transition between two levels."
+    },
+    {
+     "concept_tag": "photon-absorption-transition",
+     "learning_objective": "Decide which photons a hydrogen atom can absorb from the energy gaps between its levels."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH04-T7",
+   "topic_number": 7,
+   "title": "de Broglie's explanation of Bohr's second postulate and limitations of the model",
+   "ncert_sections": "12.6",
+   "concepts": [
+    {
+     "concept_tag": "de-broglie-standing-waves",
+     "learning_objective": "Explain quantised orbits as circular standing de Broglie waves with 2 pi r = n lambda."
+    },
+    {
+     "concept_tag": "limitations-of-bohr-model",
+     "learning_objective": "State the limitations of Bohr's model for multi-electron atoms and line intensities."
+    }
+   ]
+  }
+ ]
+}

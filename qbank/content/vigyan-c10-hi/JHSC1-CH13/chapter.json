@@ -1,0 +1,100 @@
+{
+ "chapter_id": "JHSC1-CH13",
+ "title": "हमारा पर्यावरण",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSC1-CH13-T1",
+   "topic_number": 1,
+   "title": "पारितंत्र और उसके घटक",
+   "ncert_sections": "13.1",
+   "concepts": [
+    {
+     "concept_tag": "paaritantra-ghatak",
+     "learning_objective": "पारितंत्र के जैव एवं अजैव घटकों तथा प्राकृतिक और मानव-निर्मित पारितंत्रों को पहचानना।"
+    },
+    {
+     "concept_tag": "utpadak-upbhokta-apmarjak",
+     "learning_objective": "पारितंत्र में उत्पादकों, उपभोक्ताओं तथा अपमार्जकों की भूमिका समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH13-T2",
+   "topic_number": 2,
+   "title": "आहार शृंखला, पोषी स्तर एवं आहार जाल",
+   "ncert_sections": "13.1.1",
+   "concepts": [
+    {
+     "concept_tag": "aahar-shrinkhla-poshi-star",
+     "learning_objective": "किसी आहार शृंखला में जीवों के पोषी स्तर पहचानना।"
+    },
+    {
+     "concept_tag": "aahar-jaal",
+     "learning_objective": "आहार जाल की रचना तथा एक जीव की संख्या में परिवर्तन का दूसरे जीवों पर प्रभाव समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH13-T3",
+   "topic_number": 3,
+   "title": "पारितंत्र में ऊर्जा प्रवाह",
+   "ncert_sections": "13.1.1",
+   "concepts": [
+    {
+     "concept_tag": "urja-pravah-ekdishik",
+     "learning_objective": "ऊर्जा प्रवाह के एकदिशिक होने तथा प्रत्येक स्तर पर ऊर्जा के ह्रास को समझाना।"
+    },
+    {
+     "concept_tag": "das-pratishat-niyam",
+     "learning_objective": "दस प्रतिशत नियम के आधार पर विभिन्न पोषी स्तरों पर उपलब्ध ऊर्जा की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH13-T4",
+   "topic_number": 4,
+   "title": "हानिकारक रसायन और जैव-आवर्धन",
+   "ncert_sections": "13.1.1",
+   "concepts": [
+    {
+     "concept_tag": "jaiv-aavardhan",
+     "learning_objective": "पीड़कनाशी रसायनों के आहार शृंखला में प्रवेश और प्रत्येक पोषी स्तर पर उनके संग्रहण को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH13-T5",
+   "topic_number": 5,
+   "title": "ओज़ोन परत और उसका अपक्षय",
+   "ncert_sections": "13.2, 13.2.1",
+   "concepts": [
+    {
+     "concept_tag": "ozone-nirmaan-karya",
+     "learning_objective": "ओज़ोन की संरचना, उसके बनने की विधि तथा ऊपरी वायुमंडल में उसके कार्य को समझना।"
+    },
+    {
+     "concept_tag": "ozone-apakshay-cfc",
+     "learning_objective": "ओज़ोन परत के अपक्षय में क्लोरोफ्लुओरो कार्बन की भूमिका तथा उसे रोकने के उपाय जानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH13-T6",
+   "topic_number": 6,
+   "title": "कचरा प्रबंधन",
+   "ncert_sections": "13.2.2",
+   "concepts": [
+    {
+     "concept_tag": "jaiv-nimnikaraniya-padarth",
+     "learning_objective": "जैव निम्नीकरणीय तथा अजैव निम्नीकरणीय पदार्थों में अंतर करना।"
+    },
+    {
+     "concept_tag": "kachra-prabandhan",
+     "learning_objective": "कचरा कम करने तथा उसके निपटान के उपायों का पर्यावरण पर प्रभाव के आधार पर मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KHBO1-CH10",
+ "title": "कोशिका चक्र और कोशिका विभाजन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHBO1-CH10-T1",
+   "topic_number": 1,
+   "title": "कोशिका चक्र और उसकी प्रावस्थाएँ",
+   "ncert_sections": "10.1, 10.1.1",
+   "concepts": [
+    {
+     "concept_tag": "antravastha",
+     "learning_objective": "अंतरावस्था की G1, S और G2 प्रावस्थाओं में होने वाली घटनाओं को समझना।"
+    },
+    {
+     "concept_tag": "dna-matra-gunsutra-sankhya",
+     "learning_objective": "कोशिका चक्र की विभिन्न प्रावस्थाओं में डीएनए की मात्रा और गुणसूत्र संख्या की गणना करना।"
+    },
+    {
+     "concept_tag": "shant-avastha-g0",
+     "learning_objective": "शांत अवस्था (G0) में प्रवेश करने वाली कोशिकाओं के लक्षण पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH10-T2",
+   "topic_number": 2,
+   "title": "एम प्रावस्था: पूर्वावस्था और मध्यावस्था",
+   "ncert_sections": "10.2, 10.2.1, 10.2.2",
+   "concepts": [
+    {
+     "concept_tag": "poorvavastha",
+     "learning_objective": "पूर्वावस्था में गुणसूत्रों के संघनन और तारक केंद्र की गति को समझना।"
+    },
+    {
+     "concept_tag": "madhyavastha",
+     "learning_objective": "मध्यावस्था में गुणसूत्रों के मध्यावस्था पट्टिका पर संरेखण और काइनेटोकोर की भूमिका समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH10-T3",
+   "topic_number": 3,
+   "title": "पश्चावस्था, अंत्यावस्था और कोशिकाद्रव्य विभाजन",
+   "ncert_sections": "10.2.3, 10.2.4, 10.2.5",
+   "concepts": [
+    {
+     "concept_tag": "pashchavastha-antyavastha",
+     "learning_objective": "पश्चावस्था और अंत्यावस्था की प्रमुख घटनाओं में भेद करना।"
+    },
+    {
+     "concept_tag": "koshikadravya-vibhajan",
+     "learning_objective": "जंतु और पादप कोशिकाओं में कोशिकाद्रव्य विभाजन की विधियों तथा बहुकेंद्रकी अवस्था को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH10-T4",
+   "topic_number": 4,
+   "title": "सूत्री विभाजन का महत्त्व",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "sutri-vibhajan-mahatva",
+     "learning_objective": "वृद्धि, मरम्मत और केंद्रक-कोशिकाद्रव्य अनुपात की पुनःस्थापना में सूत्री विभाजन का महत्त्व समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH10-T5",
+   "topic_number": 5,
+   "title": "अर्धसूत्री विभाजन I",
+   "ncert_sections": "10.4, 10.4.1",
+   "concepts": [
+    {
+     "concept_tag": "poorvavastha-ek-upavasthaen",
+     "learning_objective": "पूर्वावस्था I की पाँच उप-अवस्थाओं की घटनाओं को क्रम से पहचानना।"
+    },
+    {
+     "concept_tag": "vinimay-kaijmeta",
+     "learning_objective": "विनिमय, पुनर्योजन ग्रंथिका और काइएज्मेटा के संबंध का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "ardhsutri-ek-shesh",
+     "learning_objective": "मध्यावस्था I, पश्चावस्था I और अंत्यावस्था I की घटनाओं को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH10-T6",
+   "topic_number": 6,
+   "title": "अर्धसूत्री विभाजन II और अर्धसूत्री विभाजन का महत्त्व",
+   "ncert_sections": "10.4.2, 10.5",
+   "concepts": [
+    {
+     "concept_tag": "ardhsutri-do",
+     "learning_objective": "अर्धसूत्री विभाजन II की घटनाओं की सूत्री विभाजन से तुलना करना।"
+    },
+    {
+     "concept_tag": "ardhsutri-mahatva",
+     "learning_objective": "गुणसूत्र संख्या की स्थिरता और आनुवंशिक विविधता में अर्धसूत्री विभाजन के महत्त्व का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

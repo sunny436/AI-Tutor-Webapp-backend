@@ -1,0 +1,160 @@
+{
+ "chapter_id": "LEEC1-CH02",
+ "title": "National Income Accounting",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEEC1-CH02-T1",
+   "topic_number": 1,
+   "title": "Some basic concepts of macroeconomics",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "final-and-intermediate-goods",
+     "learning_objective": "Distinguish final goods (consumption and capital goods, consumer durables) from intermediate goods by their economic use."
+    },
+    {
+     "concept_tag": "stocks-and-flows",
+     "learning_objective": "Distinguish stock variables, defined at a point of time, from flow variables, defined over a period of time."
+    },
+    {
+     "concept_tag": "gross-net-investment-depreciation",
+     "learning_objective": "Relate gross investment, depreciation and net investment, and explain the time trade-off between capital and consumer goods."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH02-T2",
+   "topic_number": 2,
+   "title": "Circular flow of income",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "factor-payments",
+     "learning_objective": "Identify the four factors of production and their remunerations: wage, interest, profit and rent."
+    },
+    {
+     "concept_tag": "circular-flow-of-income",
+     "learning_objective": "Explain the circular flow of income and goods between households and firms in a simple economy."
+    },
+    {
+     "concept_tag": "three-methods-equivalence",
+     "learning_objective": "Explain why the product, expenditure and income methods measure the same aggregate at different points of the circular flow."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH02-T3",
+   "topic_number": 3,
+   "title": "The product or value added method",
+   "ncert_sections": "2.2.1",
+   "concepts": [
+    {
+     "concept_tag": "value-added-double-counting",
+     "learning_objective": "Calculate value added and explain how deducting intermediate goods avoids double counting."
+    },
+    {
+     "concept_tag": "gross-and-net-value-added",
+     "learning_objective": "Calculate gross and net value added, using change in inventories and depreciation."
+    },
+    {
+     "concept_tag": "inventories",
+     "learning_objective": "Distinguish inventory (a stock) from change in inventories (a flow), and planned from unplanned changes."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH02-T4",
+   "topic_number": 4,
+   "title": "Expenditure method and income method",
+   "ncert_sections": "2.2.2, 2.2.3",
+   "concepts": [
+    {
+     "concept_tag": "expenditure-method",
+     "learning_objective": "Compute GDP as C + I + G + X - M and explain the treatment of intermediate goods and imports."
+    },
+    {
+     "concept_tag": "income-method",
+     "learning_objective": "Compute GDP as the sum of wages, profits, interest and rent, and verify it against value added."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH02-T5",
+   "topic_number": 5,
+   "title": "Factor cost, basic prices and market prices",
+   "ncert_sections": "2.2.4",
+   "concepts": [
+    {
+     "concept_tag": "production-and-product-taxes",
+     "learning_objective": "Distinguish production taxes and subsidies from product taxes and subsidies with examples."
+    },
+    {
+     "concept_tag": "price-bases-conversion",
+     "learning_objective": "Convert GVA between factor cost, basic prices and market prices using net production and net product taxes."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH02-T6",
+   "topic_number": 6,
+   "title": "Some macroeconomic identities",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "gnp-nnp-national-income",
+     "learning_objective": "Derive GNP, NNP at market prices and National Income (NNP at factor cost) from GDP."
+    },
+    {
+     "concept_tag": "personal-and-disposable-income",
+     "learning_objective": "Derive Personal Income and Personal Disposable Income from National Income."
+    },
+    {
+     "concept_tag": "national-disposable-and-private-income",
+     "learning_objective": "Calculate National Disposable Income and identify the components of Private Income."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH02-T7",
+   "topic_number": 7,
+   "title": "Nominal and real GDP and price indices",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "nominal-and-real-gdp",
+     "learning_objective": "Distinguish nominal GDP at current prices from real GDP at constant base-year prices."
+    },
+    {
+     "concept_tag": "gdp-deflator",
+     "learning_objective": "Calculate the GDP (or GNP) deflator and interpret what it says about the price level."
+    },
+    {
+     "concept_tag": "cpi-and-wpi",
+     "learning_objective": "Calculate a Consumer Price Index and explain how CPI and WPI differ from the GDP deflator."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH02-T8",
+   "topic_number": 8,
+   "title": "GDP and welfare",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "gdp-distribution-and-welfare",
+     "learning_objective": "Evaluate why a rise in GDP may not raise welfare when its distribution is unequal."
+    },
+    {
+     "concept_tag": "non-monetary-exchanges",
+     "learning_objective": "Explain how non-monetary exchanges lead to underestimation of GDP."
+    },
+    {
+     "concept_tag": "externalities",
+     "learning_objective": "Explain how negative and positive externalities make GDP misstate welfare."
+    }
+   ]
+  }
+ ]
+}

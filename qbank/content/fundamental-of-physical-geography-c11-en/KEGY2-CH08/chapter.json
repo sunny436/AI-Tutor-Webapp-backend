@@ -1,0 +1,140 @@
+{
+ "chapter_id": "KEGY2-CH08",
+ "title": "Solar Radiation, Heat Balance and Temperature",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH08-T1",
+   "topic_number": 1,
+   "title": "Solar radiation and insolation",
+   "ncert_sections": "Solar Radiation",
+   "concepts": [
+    {
+     "concept_tag": "insolation-definition",
+     "learning_objective": "Define insolation and state the average energy received at the top of the atmosphere."
+    },
+    {
+     "concept_tag": "aphelion-perihelion",
+     "learning_objective": "Explain how the changing earth-sun distance at aphelion and perihelion affects insolation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH08-T2",
+   "topic_number": 2,
+   "title": "Variability, passage and spatial distribution of insolation",
+   "ncert_sections": "Variability of Insolation; Passage of Solar Radiation; Spatial Distribution of Insolation",
+   "concepts": [
+    {
+     "concept_tag": "factors-of-insolation",
+     "learning_objective": "Identify the factors that cause variation in the amount and intensity of insolation."
+    },
+    {
+     "concept_tag": "scattering-and-absorption",
+     "learning_objective": "Describe what happens to solar radiation as it passes through the atmosphere."
+    },
+    {
+     "concept_tag": "spatial-distribution-insolation",
+     "learning_objective": "Explain the pattern of insolation received at the earth's surface across latitudes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH08-T3",
+   "topic_number": 3,
+   "title": "Heating and cooling of the atmosphere",
+   "ncert_sections": "Heating and Cooling of Atmosphere; Terrestrial Radiation",
+   "concepts": [
+    {
+     "concept_tag": "conduction",
+     "learning_objective": "Explain how conduction heats the lower layers of the atmosphere."
+    },
+    {
+     "concept_tag": "convection-advection",
+     "learning_objective": "Distinguish between vertical (convection) and horizontal (advection) transfer of heat."
+    },
+    {
+     "concept_tag": "terrestrial-radiation",
+     "learning_objective": "Explain why the atmosphere is heated indirectly by long wave terrestrial radiation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH08-T4",
+   "topic_number": 4,
+   "title": "Heat budget of the planet earth",
+   "ncert_sections": "Heat Budget of the Planet Earth; Variation in the Net Heat Budget",
+   "concepts": [
+    {
+     "concept_tag": "albedo",
+     "learning_objective": "State the share of insolation reflected back to space as the earth's albedo."
+    },
+    {
+     "concept_tag": "heat-budget-units",
+     "learning_objective": "Account for the units of energy absorbed and radiated in the earth's heat budget."
+    },
+    {
+     "concept_tag": "net-radiation-balance",
+     "learning_objective": "Explain the latitudinal surplus and deficit in net radiation and its redistribution."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH08-T5",
+   "topic_number": 5,
+   "title": "Temperature and factors controlling its distribution",
+   "ncert_sections": "Temperature; Factors Controlling Temperature Distribution",
+   "concepts": [
+    {
+     "concept_tag": "heat-vs-temperature",
+     "learning_objective": "Distinguish between heat and temperature."
+    },
+    {
+     "concept_tag": "normal-lapse-rate",
+     "learning_objective": "Apply the normal lapse rate to estimate temperature change with altitude."
+    },
+    {
+     "concept_tag": "continentality-ocean-currents",
+     "learning_objective": "Explain how distance from the sea, air masses and ocean currents affect temperature."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH08-T6",
+   "topic_number": 6,
+   "title": "Distribution of temperature",
+   "ncert_sections": "Distribution of Temperature",
+   "concepts": [
+    {
+     "concept_tag": "isotherms",
+     "learning_objective": "Define isotherms and relate their general trend to latitude."
+    },
+    {
+     "concept_tag": "january-july-distribution",
+     "learning_objective": "Compare the distribution of temperature in January and July in the two hemispheres."
+    },
+    {
+     "concept_tag": "annual-range-temperature",
+     "learning_objective": "Calculate and interpret the annual range of temperature."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH08-T7",
+   "topic_number": 7,
+   "title": "Inversion of temperature",
+   "ncert_sections": "Inversion of Temperature",
+   "concepts": [
+    {
+     "concept_tag": "temperature-inversion",
+     "learning_objective": "Explain the conditions and effects of temperature inversion."
+    },
+    {
+     "concept_tag": "air-drainage",
+     "learning_objective": "Explain air drainage and its effect in hills and valleys."
+    }
+   ]
+  }
+ ]
+}

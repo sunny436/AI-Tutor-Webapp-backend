@@ -1,0 +1,88 @@
+{
+ "chapter_id": "JEMH1-CH09",
+ "title": "Some Applications of Trigonometry",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH09-T1",
+   "topic_number": 1,
+   "title": "Line of sight, angle of elevation and angle of depression",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "line-of-sight",
+     "learning_objective": "Identify the line of sight as the line from the observer's eye to the point viewed and use it to set up a right triangle."
+    },
+    {
+     "concept_tag": "angle-of-elevation",
+     "learning_objective": "Recognise the angle of elevation as the angle the line of sight makes with the horizontal when the object is above eye level."
+    },
+    {
+     "concept_tag": "angle-of-depression",
+     "learning_objective": "Recognise the angle of depression as the angle the line of sight makes with the horizontal when the object is below eye level."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH09-T2",
+   "topic_number": 2,
+   "title": "Heights and distances using one right triangle",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "height-using-tangent",
+     "learning_objective": "Find an unknown height or horizontal distance using tan or cot of a single angle of elevation."
+    },
+    {
+     "concept_tag": "inclined-length-using-sine-cosine",
+     "learning_objective": "Find the length of an inclined object such as a ladder, rope or kite string using sin or cos."
+    },
+    {
+     "concept_tag": "observer-eye-height",
+     "learning_objective": "Account for the height of the observer's eye when finding the height of an object."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH09-T3",
+   "topic_number": 3,
+   "title": "Problems with two angles of elevation",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "flagstaff-on-building",
+     "learning_objective": "Find the height of an object standing on another object using two angles of elevation from the same point."
+    },
+    {
+     "concept_tag": "shadow-and-sun-altitude",
+     "learning_objective": "Relate the length of a shadow to the Sun's altitude and solve problems on change in shadow length."
+    },
+    {
+     "concept_tag": "moving-observer",
+     "learning_objective": "Find the distance moved by an observer when the angle of elevation of a fixed object changes."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH09-T4",
+   "topic_number": 4,
+   "title": "Problems with angles of depression",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "depression-equals-elevation",
+     "learning_objective": "Use alternate angles to show that an angle of depression equals the corresponding angle of elevation."
+    },
+    {
+     "concept_tag": "objects-seen-from-a-height",
+     "learning_objective": "Find distances such as the width of a river or the gap between two ships observed from a height."
+    },
+    {
+     "concept_tag": "building-observed-from-building",
+     "learning_objective": "Combine an angle of elevation and an angle of depression observed from one point to find the height of another structure."
+    }
+   ]
+  }
+ ]
+}

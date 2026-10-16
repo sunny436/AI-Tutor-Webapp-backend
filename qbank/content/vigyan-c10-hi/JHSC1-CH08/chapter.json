@@ -1,0 +1,104 @@
+{
+ "chapter_id": "JHSC1-CH08",
+ "title": "आनुवंशिकता",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSC1-CH08-T1",
+   "topic_number": 1,
+   "title": "जनन के दौरान विभिन्नताओं का संचयन",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "vibhinnata-sanchayan",
+     "learning_objective": "अलैंगिक तथा लैंगिक जनन में पीढ़ी-दर-पीढ़ी विभिन्नताओं के संचयन की तुलना करना।"
+    },
+    {
+     "concept_tag": "vibhinnata-aur-uttarjivita",
+     "learning_objective": "समझाना कि विभिन्नताएँ किसी स्पीशीज की उत्तरजीविता को किस प्रकार बढ़ाती हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH08-T2",
+   "topic_number": 2,
+   "title": "आनुवंशिकता एवं वंशागत लक्षण",
+   "ncert_sections": "8.2, 8.2.1",
+   "concepts": [
+    {
+     "concept_tag": "vanshagat-lakshan",
+     "learning_objective": "संतति में जनकों से प्राप्त आधारभूत अभिकल्पना तथा विभिन्नताओं को पहचानना।"
+    },
+    {
+     "concept_tag": "karnapali-parivart",
+     "learning_objective": "स्वतंत्र तथा जुड़ी कर्णपालि को मानव समष्टि में एक लक्षण के दो परिवर्तों के रूप में समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH08-T3",
+   "topic_number": 3,
+   "title": "मेंडल का योगदान: एक लक्षण की वंशागति",
+   "ncert_sections": "8.2.2",
+   "concepts": [
+    {
+     "concept_tag": "prabhavi-aprabhavi-lakshan",
+     "learning_objective": "प्रभावी तथा अप्रभावी लक्षणों में अंतर करना और उन्हें पहचानना।"
+    },
+    {
+     "concept_tag": "ekasankar-anupat",
+     "learning_objective": "एक लक्षण के संकरण में F1 तथा F2 पीढ़ी के लक्षणों और अनुपातों की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH08-T4",
+   "topic_number": 4,
+   "title": "दो लक्षणों की स्वतंत्र वंशागति",
+   "ncert_sections": "8.2.2",
+   "concepts": [
+    {
+     "concept_tag": "dvisankar-sankaran",
+     "learning_objective": "दो विकल्पी जोड़ों वाले संकरण के परिणामों की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "swatantra-vanshagati",
+     "learning_objective": "समझाना कि भिन्न लक्षण स्वतंत्र रूप से वंशागत होकर नए संयोजन बनाते हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH08-T5",
+   "topic_number": 5,
+   "title": "लक्षणों की अभिव्यक्ति",
+   "ncert_sections": "8.2.3",
+   "concepts": [
+    {
+     "concept_tag": "jeen-protein-lakshan",
+     "learning_objective": "समझाना कि जीन प्रोटीन के माध्यम से लक्षणों की अभिव्यक्ति को कैसे नियंत्रित करते हैं।"
+    },
+    {
+     "concept_tag": "gunasutra-aur-yugmak",
+     "learning_objective": "युग्मकों में गुणसूत्रों के एक सेट की भूमिका तथा गुणसूत्र संख्या के स्थायित्व को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH08-T6",
+   "topic_number": 6,
+   "title": "लिंग निर्धारण",
+   "ncert_sections": "8.2.4",
+   "concepts": [
+    {
+     "concept_tag": "paryavaran-ling-nirdharan",
+     "learning_objective": "कुछ प्राणियों में पर्यावरण पर आधारित लिंग निर्धारण को पहचानना।"
+    },
+    {
+     "concept_tag": "manav-ling-nirdharan",
+     "learning_objective": "मानव में X तथा Y गुणसूत्रों द्वारा संतान के लिंग निर्धारण की व्याख्या करना।"
+    }
+   ]
+  }
+ ]
+}

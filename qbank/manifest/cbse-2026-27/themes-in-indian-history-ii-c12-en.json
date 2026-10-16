@@ -1,0 +1,613 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "themes-in-indian-history-ii-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "history",
+  "language": "english",
+  "title": "Themes in Indian History-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lehs2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEHS2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Through the Eyes of Travellers: Perceptions of Society (c. tenth to seventeenth century)",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lehs201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEHS2-CH01-T1",
+     "topic_number": 1,
+     "title": "Al-Biruni and the Kitab-ul-Hind",
+     "ncert_sections": "1, 1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "al-biruni-background",
+       "learning_objective": "Describe Al-Biruni's education, languages and how he came to Ghazni and to study India."
+      },
+      {
+       "concept_tag": "kitab-ul-hind-structure",
+       "learning_objective": "Explain the scope, language and distinctive chapter structure of the Kitab-ul-Hind."
+      },
+      {
+       "concept_tag": "origin-of-term-hindu",
+       "learning_objective": "Trace how the term 'Hindu' developed from a geographical to a religious meaning."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH01-T2",
+     "topic_number": 2,
+     "title": "Ibn Battuta's Rihla",
+     "ncert_sections": "2, 2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "ibn-battuta-travels",
+       "learning_objective": "Outline Ibn Battuta's background, his career in Delhi and the route of his travels."
+      },
+      {
+       "concept_tag": "rihla-composition",
+       "learning_objective": "Explain how the Rihla was recorded and what it aimed to offer its readers."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH01-T3",
+     "topic_number": 3,
+     "title": "Francois Bernier: A Doctor with a Difference",
+     "ncert_sections": "3, 3.1",
+     "concepts": [
+      {
+       "concept_tag": "european-travellers-in-india",
+       "learning_objective": "Identify the Portuguese, French and other European travellers who wrote about India."
+      },
+      {
+       "concept_tag": "bernier-east-west-comparison",
+       "learning_objective": "Evaluate Bernier's habit of comparing India with Europe and the spread of his writings."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH01-T4",
+     "topic_number": 4,
+     "title": "Al-Biruni and the Sanskritic Tradition",
+     "ncert_sections": "4, 4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "barriers-to-understanding",
+       "learning_objective": "Identify the barriers to understanding listed by Al-Biruni and the sources he relied on."
+      },
+      {
+       "concept_tag": "al-biruni-caste-system",
+       "learning_objective": "Analyse Al-Biruni's description of the varna system against social reality."
+      },
+      {
+       "concept_tag": "notion-of-pollution",
+       "learning_objective": "Explain why Al-Biruni rejected the notion of social pollution."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH01-T5",
+     "topic_number": 5,
+     "title": "Ibn Battuta and the Excitement of the Unfamiliar",
+     "ncert_sections": "5, 5.1, 5.2, 5.3",
+     "concepts": [
+      {
+       "concept_tag": "coconut-and-paan",
+       "learning_objective": "Explain how Ibn Battuta described unfamiliar things such as the coconut and the paan."
+      },
+      {
+       "concept_tag": "indian-cities-and-trade",
+       "learning_objective": "Interpret Ibn Battuta's picture of Indian cities, bazaars, agriculture and trade."
+      },
+      {
+       "concept_tag": "postal-system",
+       "learning_objective": "Describe the horse-post and foot-post and assess their efficiency."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH01-T6",
+     "topic_number": 6,
+     "title": "Bernier and the 'Degenerate' East",
+     "ncert_sections": "6, 6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "crown-ownership-of-land",
+       "learning_objective": "Examine Bernier's argument about crown ownership of land and its supposed effects."
+      },
+      {
+       "concept_tag": "oriental-despotism",
+       "learning_objective": "Trace how Bernier's ideas influenced Western theories of oriental despotism."
+      },
+      {
+       "concept_tag": "complex-social-reality",
+       "learning_objective": "Evaluate the evidence that Mughal society and towns were more complex than Bernier claimed."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH01-T7",
+     "topic_number": 7,
+     "title": "Women: Slaves, Sati and Labourers",
+     "ncert_sections": "7",
+     "concepts": [
+      {
+       "concept_tag": "slavery-in-travellers-accounts",
+       "learning_objective": "Analyse the evidence on slavery provided by Ibn Battuta."
+      },
+      {
+       "concept_tag": "sati-and-womens-work",
+       "learning_objective": "Assess Bernier's account of sati and the wider evidence on women's work."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEHS2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Bhakti-Sufi Traditions: Changes in Religious Beliefs and Devotional Texts (c. eighth to eighteenth century)",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lehs202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEHS2-CH02-T1",
+     "topic_number": 1,
+     "title": "A Mosaic of Religious Beliefs and Practices",
+     "ncert_sections": "1, 1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "integration-of-cults",
+       "learning_objective": "Explain how local deities and goddess cults were integrated into the Puranic framework."
+      },
+      {
+       "concept_tag": "great-and-little-traditions",
+       "learning_objective": "Describe the meaning of 'great' and 'little' traditions as used by Robert Redfield."
+      },
+      {
+       "concept_tag": "tantric-and-vedic-traditions",
+       "learning_objective": "Distinguish Tantric, Vedic and Puranic practices and the tensions between them."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH02-T2",
+     "topic_number": 2,
+     "title": "Poems of Prayer: the Alvars and Nayanars of Tamil Nadu",
+     "ncert_sections": "2, 2.1, 2.2, 2.3, 2.4",
+     "concepts": [
+      {
+       "concept_tag": "alvars-and-nayanars",
+       "learning_objective": "Identify the Alvars and Nayanars and the compilations of their compositions."
+      },
+      {
+       "concept_tag": "caste-and-women-bhaktas",
+       "learning_objective": "Analyse the attitudes of Tamil bhaktas towards caste and the place of women devotees."
+      },
+      {
+       "concept_tag": "chola-patronage",
+       "learning_objective": "Explain why the Chola rulers patronised the Nayanar and Alvar traditions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH02-T3",
+     "topic_number": 3,
+     "title": "The Virashaiva Tradition and Religious Ferment in North India",
+     "ncert_sections": "3, 4",
+     "concepts": [
+      {
+       "concept_tag": "virashaiva-lingayat-practices",
+       "learning_objective": "Describe the beliefs and practices of the Virashaivas or Lingayats led by Basavanna."
+      },
+      {
+       "concept_tag": "north-india-naths-jogis-siddhas",
+       "learning_objective": "Explain the religious situation of north India, including the Naths, Jogis and Siddhas."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH02-T4",
+     "topic_number": 4,
+     "title": "New Strands in the Fabric: Islamic Traditions",
+     "ncert_sections": "5, 5.1, 5.2, 5.3",
+     "concepts": [
+      {
+       "concept_tag": "zimmi-and-flexible-rule",
+       "learning_objective": "Explain the category of zimmi and the flexible policies of rulers towards their subjects."
+      },
+      {
+       "concept_tag": "popular-practice-of-islam",
+       "learning_objective": "Describe how the universal features of Islam blended with local traditions."
+      },
+      {
+       "concept_tag": "names-for-communities",
+       "learning_objective": "Interpret the terms used in Sanskrit texts for migrant communities."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH02-T5",
+     "topic_number": 5,
+     "title": "The Growth of Sufism and the Chishtis in the Subcontinent",
+     "ncert_sections": "6, 6.1, 6.2, 7, 7.1-7.4",
+     "concepts": [
+      {
+       "concept_tag": "khanqah-and-silsila",
+       "learning_objective": "Describe the khanqah, silsila and the difference between ba-shari'a and be-shari'a sufis."
+      },
+      {
+       "concept_tag": "chishti-devotionalism",
+       "learning_objective": "Explain Chishti practices such as ziyarat, sama' and the use of local languages."
+      },
+      {
+       "concept_tag": "sufis-and-the-state",
+       "learning_objective": "Analyse the relationship between the Chishti sufis and the state."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH02-T6",
+     "topic_number": 6,
+     "title": "New Devotional Paths: Kabir, Baba Guru Nanak and Mirabai",
+     "ncert_sections": "8, 8.1, 8.2, 8.3",
+     "concepts": [
+      {
+       "concept_tag": "kabir",
+       "learning_objective": "Describe Kabir's ideas, the compilations of his verses and debates about his life."
+      },
+      {
+       "concept_tag": "baba-guru-nanak",
+       "learning_objective": "Explain the teachings of Baba Guru Nanak and how his message was preserved."
+      },
+      {
+       "concept_tag": "mirabai",
+       "learning_objective": "Describe Mirabai's life and legacy as reconstructed from her bhajans."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH02-T7",
+     "topic_number": 7,
+     "title": "Reconstructing Histories of Religious Traditions",
+     "ncert_sections": "9",
+     "concepts": [
+      {
+       "concept_tag": "sufi-textual-sources",
+       "learning_objective": "Distinguish the genres of sufi texts such as malfuzat, maktubat and tazkiras."
+      },
+      {
+       "concept_tag": "challenges-of-religious-sources",
+       "learning_objective": "Evaluate the challenges historians face in using sources on religious traditions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEHS2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "An Imperial Capital: Vijayanagara",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lehs203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEHS2-CH03-T1",
+     "topic_number": 1,
+     "title": "The Discovery of Hampi",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "colin-mackenzie-survey",
+       "learning_objective": "Identify Colin Mackenzie's role in bringing the ruins of Hampi to light and his reasons for surveying the site."
+      },
+      {
+       "concept_tag": "sources-for-vijayanagara",
+       "learning_objective": "Explain how oral traditions, inscriptions, photographs, travellers' accounts and literature were combined to rediscover Vijayanagara."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH03-T2",
+     "topic_number": 2,
+     "title": "Rayas, Nayakas and Sultans: Kings, Traders and the Course of the Empire",
+     "ncert_sections": "2, 2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "horse-trade-and-commerce",
+       "learning_objective": "Explain why the import of horses and overseas trade mattered to the rulers of Vijayanagara."
+      },
+      {
+       "concept_tag": "dynasties-and-krishnadeva-raya",
+       "learning_objective": "Describe the succession of ruling dynasties and the expansion of the empire under Krishnadeva Raya."
+      },
+      {
+       "concept_tag": "relations-with-sultanates",
+       "learning_objective": "Analyse the relations between the rayas and the Deccan Sultans and the causes of the defeat of 1565."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH03-T3",
+     "topic_number": 3,
+     "title": "The Rayas and the Nayakas",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "nayakas-military-chiefs",
+       "learning_objective": "Describe who the nayakas were and how they related to the kings of Vijayanagara."
+      },
+      {
+       "concept_tag": "amara-nayaka-system",
+       "learning_objective": "Explain the working of the amara-nayaka system and its role in the collapse of the imperial structure."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH03-T4",
+     "topic_number": 4,
+     "title": "The Capital and its Environs",
+     "ncert_sections": "3, 3.1, 3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "water-resources",
+       "learning_objective": "Explain how the water requirements of Vijayanagara were met through tanks, canals and reservoirs."
+      },
+      {
+       "concept_tag": "fortifications-and-roads",
+       "learning_objective": "Describe the fortifications and roads of the city and explain why agricultural tracts were enclosed."
+      },
+      {
+       "concept_tag": "urban-core",
+       "learning_objective": "Interpret archaeological and textual evidence about the urban core and the lives of its residents."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH03-T5",
+     "topic_number": 5,
+     "title": "The Royal Centre",
+     "ncert_sections": "4, 4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "royal-centre-layout",
+       "learning_objective": "Describe the temples and palace complexes of the royal centre and the materials used to build them."
+      },
+      {
+       "concept_tag": "mahanavami-dibba",
+       "learning_objective": "Explain the rituals associated with the mahanavami dibba and evaluate the evidence about its use."
+      },
+      {
+       "concept_tag": "lotus-mahal-and-hazara-rama",
+       "learning_objective": "Identify the Lotus Mahal and the Hazara Rama temple and what is known about their use."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH03-T6",
+     "topic_number": 6,
+     "title": "The Sacred Centre",
+     "ncert_sections": "5, 5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "choosing-the-capital",
+       "learning_objective": "Explain how sacred traditions and temple patronage shaped the choice of the capital and royal claims to authority."
+      },
+      {
+       "concept_tag": "gopurams-and-mandapas",
+       "learning_objective": "Describe the gopurams, mandapas and other features of the Virupaksha and Vitthala temples."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH03-T7",
+     "topic_number": 7,
+     "title": "Plotting Palaces, Temples and Bazaars; Questions in Search of Answers",
+     "ncert_sections": "6, 7",
+     "concepts": [
+      {
+       "concept_tag": "documenting-the-site",
+       "learning_objective": "Describe how Hampi was preserved, surveyed and mapped in the twentieth century."
+      },
+      {
+       "concept_tag": "limits-of-architectural-evidence",
+       "learning_objective": "Evaluate what surviving buildings can and cannot tell historians about Vijayanagara."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEHS2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Peasants, Zamindars and the State: Agrarian Society and the Mughal Empire",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lehs204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEHS2-CH04-T1",
+     "topic_number": 1,
+     "title": "Sources, peasants and their lands",
+     "ncert_sections": "1, 1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "sources-of-agrarian-history",
+       "learning_objective": "Identify the main sources for Mughal agrarian history and explain why the Ain gives a view from the top."
+      },
+      {
+       "concept_tag": "khud-kashta-and-pahi-kashta",
+       "learning_objective": "Distinguish between khud-kashta and pahi-kashta peasants and the reasons people became pahi-kashta."
+      },
+      {
+       "concept_tag": "peasant-landholding",
+       "learning_objective": "Explain the size of peasant holdings and the principle of individual ownership of land."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH04-T2",
+     "topic_number": 2,
+     "title": "Irrigation, technology and an abundance of crops",
+     "ncert_sections": "1.3, 1.4",
+     "concepts": [
+      {
+       "concept_tag": "seasons-and-staple-crops",
+       "learning_objective": "Relate rainfall and the kharif and rabi cycles to the staple crops grown in Mughal India."
+      },
+      {
+       "concept_tag": "irrigation-and-technology",
+       "learning_objective": "Describe the irrigation devices and agricultural tools used by peasants."
+      },
+      {
+       "concept_tag": "cash-crops-and-new-crops",
+       "learning_objective": "Explain jins-i kamil and the spread of new crops such as tobacco and maize."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH04-T3",
+     "topic_number": 3,
+     "title": "The village community",
+     "ncert_sections": "2, 2.1, 2.2, 2.3, 2.4",
+     "concepts": [
+      {
+       "concept_tag": "caste-and-rural-milieu",
+       "learning_objective": "Explain how caste shaped the position of different groups in rural society."
+      },
+      {
+       "concept_tag": "panchayats-and-headmen",
+       "learning_objective": "Describe the functions of village panchayats, jati panchayats and headmen, and peasant resistance."
+      },
+      {
+       "concept_tag": "village-artisans-and-little-republic",
+       "learning_objective": "Explain how village artisans were paid and evaluate the idea of the village as a little republic."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH04-T4",
+     "topic_number": 4,
+     "title": "Women in agrarian society",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "women-in-production",
+       "learning_objective": "Describe the roles of women in agricultural and artisanal production."
+      },
+      {
+       "concept_tag": "women-social-customs",
+       "learning_objective": "Explain social customs such as bride-price and remarriage in peasant communities."
+      },
+      {
+       "concept_tag": "women-property-and-petitions",
+       "learning_objective": "Evaluate the property rights of women and their petitions to the panchayat."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH04-T5",
+     "topic_number": 5,
+     "title": "Forests and tribes",
+     "ncert_sections": "4, 4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "forests-and-forest-dwellers",
+       "learning_objective": "Describe the extent of forests and the livelihood of forest dwellers termed jangli."
+      },
+      {
+       "concept_tag": "inroads-into-forests",
+       "learning_objective": "Analyse how the state, commerce and culture made inroads into forest areas."
+      },
+      {
+       "concept_tag": "tribal-chiefs-and-states",
+       "learning_objective": "Explain how tribal chiefs became zamindars or kings and built armies."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH04-T6",
+     "topic_number": 6,
+     "title": "The zamindars",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "zamindar-power",
+       "learning_objective": "Identify the sources of the zamindars' power, including milkiyat lands and military resources."
+      },
+      {
+       "concept_tag": "consolidation-and-colonisation",
+       "learning_objective": "Explain how zamindaris originated and were consolidated, and their role in colonising land."
+      },
+      {
+       "concept_tag": "zamindar-peasant-relations",
+       "learning_objective": "Evaluate the element of reciprocity and patronage in zamindar-peasant relations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH04-T7",
+     "topic_number": 7,
+     "title": "Land revenue system and the flow of silver",
+     "ncert_sections": "6, 7",
+     "concepts": [
+      {
+       "concept_tag": "revenue-assessment-and-collection",
+       "learning_objective": "Explain the stages of assessment (jama) and collection (hasil) and the methods of collection in kind."
+      },
+      {
+       "concept_tag": "land-classification",
+       "learning_objective": "Classify lands under Akbar and calculate the revenue demand from the medium produce."
+      },
+      {
+       "concept_tag": "flow-of-silver",
+       "learning_objective": "Explain how the flow of silver into India affected currency and revenue collection."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS2-CH04-T8",
+     "topic_number": 8,
+     "title": "The Ain-i Akbari of Abu'l Fazl Allami",
+     "ncert_sections": "8",
+     "concepts": [
+      {
+       "concept_tag": "structure-of-the-ain",
+       "learning_objective": "Describe the purpose and the organisation of the Ain into its five daftars."
+      },
+      {
+       "concept_tag": "ain-reliability-and-limits",
+       "learning_objective": "Evaluate the strengths and limitations of the Ain as a historical source."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

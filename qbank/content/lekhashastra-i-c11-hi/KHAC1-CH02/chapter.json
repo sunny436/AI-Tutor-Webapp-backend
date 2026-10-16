@@ -1,0 +1,152 @@
+{
+ "chapter_id": "KHAC1-CH02",
+ "title": "लेखांकन के सैद्धांतिक आधार",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHAC1-CH02-T1",
+   "topic_number": 1,
+   "title": "सैद्धांतिक आधार की आवश्यकता तथा सामान्यतः स्वीकृत लेखांकन सिद्धांत",
+   "ncert_sections": "प्रस्तावना, 2.1",
+   "concepts": [
+    {
+     "concept_tag": "saiddhantik-aadhar-avashyakta",
+     "learning_objective": "समझाना कि लेखांकन सूचना को विश्वसनीय और तुलनीय बनाने के लिए सैद्धांतिक आधार क्यों आवश्यक है।"
+    },
+    {
+     "concept_tag": "gaap-arth-prakriti",
+     "learning_objective": "सामान्यतः स्वीकृत लेखांकन सिद्धांतों का अर्थ, विकास और परिवर्तनशील प्रकृति बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH02-T2",
+   "topic_number": 2,
+   "title": "व्यावसायिक इकाई, मुद्रा मापन और चालू व्यापार",
+   "ncert_sections": "2.2.1, 2.2.2, 2.2.3",
+   "concepts": [
+    {
+     "concept_tag": "vyavsayik-ikai",
+     "learning_objective": "स्वामी की पूँजी, आहरण और निजी लेन-देनों पर व्यावसायिक इकाई अवधारणा लागू करना।"
+    },
+    {
+     "concept_tag": "mudra-mapan",
+     "learning_objective": "पहचानना कि मुद्रा मापन अवधारणा के अंतर्गत क्या दर्ज होता है और इसकी सीमा बताना।"
+    },
+    {
+     "concept_tag": "chalu-vyapar",
+     "learning_objective": "समझाना कि चालू व्यापार अवधारणा परिसंपत्ति की लागत को उसके जीवनकाल में बाँटने की अनुमति कैसे देती है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH02-T3",
+   "topic_number": 3,
+   "title": "लेखांकन अवधि, लागत और द्विपक्षीय अवधारणा",
+   "ncert_sections": "2.2.4, 2.2.5, 2.2.6",
+   "concepts": [
+    {
+     "concept_tag": "lekhankan-avadhi",
+     "learning_objective": "लेखांकन अवधि का अर्थ और वित्तीय विवरण तैयार करने की अवधि बताना।"
+    },
+    {
+     "concept_tag": "lagat-avdharana",
+     "learning_objective": "परिसंपत्ति की अभिलेखित लागत की गणना करना और ऐतिहासिक लागत आधार का मूल्यांकन करना।"
+    },
+    {
+     "concept_tag": "dvipakshiya-avdharana",
+     "learning_objective": "लेखांकन समीकरण की सहायता से लेन-देनों के दोहरे प्रभाव का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH02-T4",
+   "topic_number": 4,
+   "title": "आगम मान्यता, मिलान और पूर्ण प्रकटीकरण",
+   "ncert_sections": "2.2.7, 2.2.8, 2.2.9",
+   "concepts": [
+    {
+     "concept_tag": "aagam-manyata",
+     "learning_objective": "निर्धारित करना कि आगम कब प्राप्त माना जाता है, समय-आधारित आय सहित।"
+    },
+    {
+     "concept_tag": "milan-avdharana",
+     "learning_objective": "व्ययों और बेचे गए माल की लागत पर मिलान अवधारणा लागू करना।"
+    },
+    {
+     "concept_tag": "purn-prakatikaran",
+     "learning_objective": "बताना कि पूर्ण प्रकटीकरण अवधारणा वित्तीय विवरणों से क्या अपेक्षा करती है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH02-T5",
+   "topic_number": 5,
+   "title": "समनुरूपता, रूढ़िवादिता, सारता और वस्तुनिष्ठता",
+   "ncert_sections": "2.2.10, 2.2.11, 2.2.12, 2.2.13",
+   "concepts": [
+    {
+     "concept_tag": "samanurupata",
+     "learning_objective": "तुलना के लिए लेखांकन नीतियों में समनुरूपता की आवश्यकता समझाना।"
+    },
+    {
+     "concept_tag": "rudhivadita",
+     "learning_objective": "सभी संभावित हानियों के लिए प्रावधान करने और लाभों का पूर्वानुमान न करने का नियम लागू करना।"
+    },
+    {
+     "concept_tag": "sarata-vastunishthata",
+     "learning_objective": "सारपूर्ण और महत्वहीन मदों में अंतर करना तथा प्रमाण-योग्य साक्ष्य की आवश्यकता समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH02-T6",
+   "topic_number": 6,
+   "title": "लेखांकन की पद्धतियाँ और आधार",
+   "ncert_sections": "2.3, 2.4",
+   "concepts": [
+    {
+     "concept_tag": "lekhankan-paddhatiyan",
+     "learning_objective": "दोहरा लेखा पद्धति और एकल लेखा पद्धति में अंतर करना।"
+    },
+    {
+     "concept_tag": "nakad-upachay-aadhar",
+     "learning_objective": "नकद आधार और उपार्जन आधार की तुलना करना तथा दोनों के अंतर्गत लाभ की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH02-T7",
+   "topic_number": 7,
+   "title": "लेखांकन मानक",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "lekhankan-manak-arth",
+     "learning_objective": "लेखांकन मानकों का अर्थ, जारी करने वाली संस्था और उद्देश्य बताना।"
+    },
+    {
+     "concept_tag": "manak-labh-seemaen",
+     "learning_objective": "लेखांकन मानकों के लाभों और सीमाओं का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH02-T8",
+   "topic_number": 8,
+   "title": "वस्तु एवं सेवा कर",
+   "ncert_sections": "वस्तु एवं सेवा कर (एक देश एक कर)",
+   "concepts": [
+    {
+     "concept_tag": "gst-arth-visheshtaen",
+     "learning_objective": "वस्तु एवं सेवा कर को गंतव्य-आधारित कर के रूप में समझाना और इसकी विशेषताएँ बताना।"
+    },
+    {
+     "concept_tag": "cgst-sgst-igst",
+     "learning_objective": "राज्य के भीतर और अंतर्राज्यीय आपूर्ति पर केंद्रीय, राज्य और एकीकृत कर लागू करना।"
+    }
+   ]
+  }
+ ]
+}

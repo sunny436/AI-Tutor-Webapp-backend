@@ -1,0 +1,108 @@
+{
+ "chapter_id": "JHSK1-CH07",
+ "title": "विचित्रः साक्षी",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSK1-CH07-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः निर्धनस्य पितुः यात्रा च",
+   "ncert_sections": "पाठपरिचयः, अनुच्छेदः 1",
+   "concepts": [
+    {
+     "concept_tag": "path-parichaya",
+     "learning_objective": "पाठस्य मूलकथायाः लेखकं, बङ्किमचन्द्रस्य न्यायनिर्णयेन सम्बन्धं च ज्ञास्यन्ति।"
+    },
+    {
+     "concept_tag": "nirdhana-pituh-yatra",
+     "learning_objective": "निर्धनः पिता किमर्थं कथं च पुत्रं द्रष्टुं प्रस्थितः इति वर्णयिष्यन्ति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH07-T2",
+   "topic_number": 2,
+   "title": "रात्रिनिवासः चौर्यघटना च",
+   "ncert_sections": "अनुच्छेदौ 2-3",
+   "concepts": [
+    {
+     "concept_tag": "ratrinivasa-ashraya",
+     "learning_objective": "अतिथिः ग्रामे रात्रिनिवासं किमर्थं कुत्र च अकरोत् इति ज्ञास्यन्ति।"
+    },
+    {
+     "concept_tag": "chaura-chhala",
+     "learning_objective": "आरक्षिणः छलेन निर्दोषः अतिथिः चौररूपेण कथं गृहीतः इति विश्लेषयिष्यन्ति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH07-T3",
+   "topic_number": 3,
+   "title": "न्यायालये अभियोगः शववहनं च",
+   "ncert_sections": "अनुच्छेदौ 4-5",
+   "concepts": [
+    {
+     "concept_tag": "pramanabhava",
+     "learning_objective": "प्रमाणाभावात् न्यायाधीशः सद्यः निर्णयं कर्तुं न अशक्नोत् इति अवगमिष्यन्ति।"
+    },
+    {
+     "concept_tag": "shava-vahana",
+     "learning_objective": "शववहनसमये आरक्षिणः वचनैः तस्य दोषः कथं प्रकटितः इति विश्लेषयिष्यन्ति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH07-T4",
+   "topic_number": 4,
+   "title": "विचित्रः साक्षी न्यायनिर्णयः च",
+   "ncert_sections": "अनुच्छेदौ 6-7, अन्तिमश्लोकः",
+   "concepts": [
+    {
+     "concept_tag": "vichitra-sakshi",
+     "learning_objective": "शवरूपेण स्थितः जनः साक्षी भूत्वा न्यायं कथं साधितवान् इति मूल्याङ्कयिष्यन्ति।"
+    },
+    {
+     "concept_tag": "mativaibhava-shloka",
+     "learning_objective": "मतिवैभवशालिनः नीतिं युक्तिं च आलम्ब्य दुष्करं कार्यं साधयन्ति इति श्लोकार्थं ज्ञास्यन्ति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH07-T5",
+   "topic_number": 5,
+   "title": "सन्धिः प्रत्ययाः च",
+   "ncert_sections": "अभ्यासः 5-6, भाषिकविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "sandhi-viccheda",
+     "learning_objective": "पाठगतानां पदानां सन्धिविच्छेदं सन्धिनाम च करिष्यन्ति।"
+    },
+    {
+     "concept_tag": "pratyaya-vibhaga",
+     "learning_objective": "ल्यप्, क्त, क्तवतु, तुमुन् प्रत्ययान्तानि पदानि अभिज्ञास्यन्ति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH07-T6",
+   "topic_number": 6,
+   "title": "शब्दरूपाणि विभक्तयः पर्यायाः च",
+   "ncert_sections": "अभ्यासः 4, 7, भाषिकविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "paryaya-shabdartha",
+     "learning_objective": "पाठगतानां कठिनपदानां पर्यायान् अर्थान् च ज्ञास्यन्ति।"
+    },
+    {
+     "concept_tag": "vibhakti-prayoga",
+     "learning_objective": "निर्दिष्टविभक्तेः उपपदविभक्तेः च प्रयोगं करिष्यन्ति।"
+    },
+    {
+     "concept_tag": "shabdarupa-adas-adhvan",
+     "learning_objective": "अदस्-अध्वन्-शब्दयोः रूपाणि अभिज्ञास्यन्ति।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KEMH1-CH09",
+ "title": "Straight Lines",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH09-T1",
+   "topic_number": 1,
+   "title": "Recall: distance, section formula and area of a triangle",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "distance-section-formula",
+     "learning_objective": "Apply the distance, section and mid-point formulae to points in the coordinate plane."
+    },
+    {
+     "concept_tag": "area-of-triangle-collinearity",
+     "learning_objective": "Use the area of a triangle in coordinates to find areas and test collinearity."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH09-T2",
+   "topic_number": 2,
+   "title": "Slope of a line",
+   "ncert_sections": "9.2, 9.2.1",
+   "concepts": [
+    {
+     "concept_tag": "slope-inclination",
+     "learning_objective": "Relate the inclination of a line to its slope m = tan(theta)."
+    },
+    {
+     "concept_tag": "slope-from-two-points",
+     "learning_objective": "Find the slope of a line through two given points."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH09-T3",
+   "topic_number": 3,
+   "title": "Parallel and perpendicular lines; collinearity",
+   "ncert_sections": "9.2.2",
+   "concepts": [
+    {
+     "concept_tag": "parallel-perpendicular-slopes",
+     "learning_objective": "Use slopes to decide whether two lines are parallel or perpendicular."
+    },
+    {
+     "concept_tag": "collinearity-by-slopes",
+     "learning_objective": "Test three points for collinearity using slopes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH09-T4",
+   "topic_number": 4,
+   "title": "Angle between two lines",
+   "ncert_sections": "9.2.3",
+   "concepts": [
+    {
+     "concept_tag": "angle-between-two-lines",
+     "learning_objective": "Find the angle between two lines from their slopes using tan(theta) = |(m2 - m1)/(1 + m1m2)|."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH09-T5",
+   "topic_number": 5,
+   "title": "Horizontal, vertical, point-slope and two-point forms",
+   "ncert_sections": "9.3.1, 9.3.2, 9.3.3",
+   "concepts": [
+    {
+     "concept_tag": "horizontal-vertical-lines",
+     "learning_objective": "Write equations of lines parallel to the coordinate axes."
+    },
+    {
+     "concept_tag": "point-slope-form",
+     "learning_objective": "Write the equation of a line through a point with a given slope."
+    },
+    {
+     "concept_tag": "two-point-form",
+     "learning_objective": "Write the equation of a line through two given points."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH09-T6",
+   "topic_number": 6,
+   "title": "Slope-intercept, intercept and general forms",
+   "ncert_sections": "9.3.4, 9.3.5",
+   "concepts": [
+    {
+     "concept_tag": "slope-intercept-form",
+     "learning_objective": "Express a line as y = mx + c and read its slope and y-intercept."
+    },
+    {
+     "concept_tag": "intercept-form",
+     "learning_objective": "Use x/a + y/b = 1 to write and interpret lines from their intercepts."
+    },
+    {
+     "concept_tag": "general-equation-of-line",
+     "learning_objective": "Convert the general equation Ax + By + C = 0 into other forms."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH09-T7",
+   "topic_number": 7,
+   "title": "Distance of a point from a line and between parallel lines",
+   "ncert_sections": "9.4, 9.4.1",
+   "concepts": [
+    {
+     "concept_tag": "point-line-distance",
+     "learning_objective": "Find the perpendicular distance of a point from a line."
+    },
+    {
+     "concept_tag": "parallel-lines-distance",
+     "learning_objective": "Find the distance between two parallel lines."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LHCH2-CH02",
+ "title": "ऐल्कोहॉल, फ़ीनॉल एवं ईथर",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHCH2-CH02-T1",
+   "topic_number": 1,
+   "title": "ऐल्कोहॉल, फ़ीनॉल और ईथर का वर्गीकरण",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "hydroxy-samuhon-ki-sankhya",
+     "learning_objective": "विद्यार्थी हाइड्रॉक्सिल समूहों की संख्या के आधार पर मोनो-, डाइ- और ट्राइहाइड्रिक यौगिक पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "alcohol-vargikaran",
+     "learning_objective": "विद्यार्थी कार्बन के संकरण के आधार पर ऐल्कोहॉल को प्राथमिक, द्वितीयक, तृतीयक, ऐलिलिक, बेन्ज़िलिक और वाइनिलिक में वर्गीकृत कर सकेंगे।"
+    },
+    {
+     "concept_tag": "ether-vargikaran",
+     "learning_objective": "विद्यार्थी सरल (सममित) और मिश्रित (असममित) ईथर में अंतर कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH02-T2",
+   "topic_number": 2,
+   "title": "नामपद्धति और प्रकार्यात्मक समूहों की संरचना",
+   "ncert_sections": "7.2, 7.3",
+   "concepts": [
+    {
+     "concept_tag": "iupac-namkaran",
+     "learning_objective": "विद्यार्थी ऐल्कोहॉल, फ़ीनॉल और ईथर के आईयूपीएसी नाम लिख सकेंगे।"
+    },
+    {
+     "concept_tag": "bandh-kon-aur-bandh-lambai",
+     "learning_objective": "विद्यार्थी मेथेनॉल, फ़ीनॉल और मेथॉक्सीमेथेन में आबंध कोण तथा आबंध लंबाई के अंतर को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH02-T3",
+   "topic_number": 3,
+   "title": "ऐल्कोहॉल और फ़ीनॉल का विरचन",
+   "ncert_sections": "7.4.1, 7.4.2",
+   "concepts": [
+    {
+     "concept_tag": "alcohol-virachan",
+     "learning_objective": "विद्यार्थी ऐल्कीनों, कार्बोनिल यौगिकों और ग्रीन्यार अभिकर्मकों से ऐल्कोहॉल बनाने की अभिक्रियाएँ समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "phenol-virachan",
+     "learning_objective": "विद्यार्थी हैलोऐरीन, बेन्ज़ीनसल्फ़ोनिक अम्ल, डाइऐज़ोनियम लवण और क्यूमीन से फ़ीनॉल बनाने की विधियाँ बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH02-T4",
+   "topic_number": 4,
+   "title": "ऐल्कोहॉल और फ़ीनॉल के भौतिक गुणधर्म",
+   "ncert_sections": "7.4.3",
+   "concepts": [
+    {
+     "concept_tag": "kvathanank-hydrogen-abandhan",
+     "learning_objective": "विद्यार्थी हाइड्रोजन आबंधन और शाखन के आधार पर क्वथनांकों की तुलना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "jal-mein-vileyta",
+     "learning_objective": "विद्यार्थी जल में ऐल्कोहॉल और फ़ीनॉल की विलेयता का कारण समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH02-T5",
+   "topic_number": 5,
+   "title": "अम्लता तथा ऐल्कोहॉल की रासायनिक अभिक्रियाएँ",
+   "ncert_sections": "7.4.4",
+   "concepts": [
+    {
+     "concept_tag": "amlata",
+     "learning_objective": "विद्यार्थी ऐल्कोहॉल और प्रतिस्थापित फ़ीनॉलों की अम्लता की तुलना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "lucas-pareekshan",
+     "learning_objective": "विद्यार्थी लूकास परीक्षण द्वारा प्राथमिक, द्वितीयक और तृतीयक ऐल्कोहॉलों में विभेद कर सकेंगे।"
+    },
+    {
+     "concept_tag": "oxikaran-nirjalan",
+     "learning_objective": "विद्यार्थी ऐल्कोहॉलों के ऑक्सीकरण, निर्जलन और विहाइड्रोजनन के उत्पाद बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH02-T6",
+   "topic_number": 6,
+   "title": "फ़ीनॉल की अभिक्रियाएँ और व्यापारिक रूप से महत्वपूर्ण ऐल्कोहॉल",
+   "ncert_sections": "7.4.4, 7.5",
+   "concepts": [
+    {
+     "concept_tag": "electrophilic-pratisthapan",
+     "learning_objective": "विद्यार्थी फ़ीनॉल के नाइट्रोकरण और हैलोजनन में –OH समूह की भूमिका समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "kolbe-reimer-tiemann",
+     "learning_objective": "विद्यार्थी कोल्बे और राइमर-टीमन अभिक्रियाओं के उत्पाद पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "methanol-ethanol",
+     "learning_objective": "विद्यार्थी मेथेनॉल और एथेनॉल के निर्माण, उपयोग और विषाक्तता को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH02-T7",
+   "topic_number": 7,
+   "title": "ईथर: विरचन और अभिक्रियाएँ",
+   "ncert_sections": "7.6",
+   "concepts": [
+    {
+     "concept_tag": "williamson-sanshleshan",
+     "learning_objective": "विद्यार्थी ऐल्कोहॉलों के निर्जलन और विलियम्सन संश्लेषण द्वारा ईथर बनाने की विधि तथा उसकी सीमाएँ समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "ether-vidalan",
+     "learning_objective": "विद्यार्थी हाइड्रोजन हैलाइडों द्वारा ईथरों के विदलन के उत्पादों का पूर्वानुमान लगा सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

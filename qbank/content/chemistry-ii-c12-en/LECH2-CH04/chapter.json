@@ -1,0 +1,160 @@
+{
+ "chapter_id": "LECH2-CH04",
+ "title": "Amines",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECH2-CH04-T1",
+   "topic_number": 1,
+   "title": "Structure, classification and nomenclature of amines",
+   "ncert_sections": "9.1, 9.2, 9.3",
+   "concepts": [
+    {
+     "concept_tag": "amine-pyramidal-structure",
+     "learning_objective": "Describe the sp3 hybridisation of nitrogen and the pyramidal shape of amines."
+    },
+    {
+     "concept_tag": "amine-classification",
+     "learning_objective": "Classify amines as primary, secondary or tertiary from the number of groups on nitrogen."
+    },
+    {
+     "concept_tag": "amine-iupac-nomenclature",
+     "learning_objective": "Name alkylamines and arylamines by common and IUPAC systems."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH04-T2",
+   "topic_number": 2,
+   "title": "Preparation of amines",
+   "ncert_sections": "9.4",
+   "concepts": [
+    {
+     "concept_tag": "nitro-reduction",
+     "learning_objective": "Explain the reduction of nitro compounds to amines and the advantage of iron scrap and HCl."
+    },
+    {
+     "concept_tag": "ammonolysis-of-alkyl-halides",
+     "learning_objective": "Explain ammonolysis of alkyl halides and why it gives a mixture of amines."
+    },
+    {
+     "concept_tag": "gabriel-and-hoffmann-methods",
+     "learning_objective": "Apply Gabriel phthalimide synthesis and Hoffmann bromamide degradation to prepare primary amines."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH04-T3",
+   "topic_number": 3,
+   "title": "Physical properties of amines",
+   "ncert_sections": "9.5",
+   "concepts": [
+    {
+     "concept_tag": "amine-hydrogen-bonding-boiling-point",
+     "learning_objective": "Relate the boiling points of amines to intermolecular hydrogen bonding."
+    },
+    {
+     "concept_tag": "amine-solubility",
+     "learning_objective": "Explain the solubility of amines in water in terms of hydrogen bonding and the alkyl part."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH04-T4",
+   "topic_number": 4,
+   "title": "Basic character of amines",
+   "ncert_sections": "9.6",
+   "concepts": [
+    {
+     "concept_tag": "kb-pkb-basicity",
+     "learning_objective": "Interpret Kb and pKb values to compare the basic strength of amines."
+    },
+    {
+     "concept_tag": "alkylamine-basicity-in-water",
+     "learning_objective": "Explain the order of basicity of alkylamines from inductive, solvation and steric effects."
+    },
+    {
+     "concept_tag": "arylamine-basicity",
+     "learning_objective": "Explain why arylamines are weaker bases than ammonia and how substituents change this."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH04-T5",
+   "topic_number": 5,
+   "title": "Alkylation, acylation and tests for amines",
+   "ncert_sections": "9.6",
+   "concepts": [
+    {
+     "concept_tag": "amine-acylation",
+     "learning_objective": "Describe acylation and benzoylation of primary and secondary amines."
+    },
+    {
+     "concept_tag": "primary-amine-tests",
+     "learning_objective": "Use the carbylamine reaction and the reaction with nitrous acid to identify primary amines."
+    },
+    {
+     "concept_tag": "hinsberg-test",
+     "learning_objective": "Distinguish primary, secondary and tertiary amines with benzenesulphonyl chloride."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH04-T6",
+   "topic_number": 6,
+   "title": "Electrophilic substitution in aromatic amines",
+   "ncert_sections": "9.6",
+   "concepts": [
+    {
+     "concept_tag": "amino-group-activating-effect",
+     "learning_objective": "Explain the ortho/para directing and activating effect of the amino group."
+    },
+    {
+     "concept_tag": "acetylation-protecting-group",
+     "learning_objective": "Explain how acetylation controls the reactivity of aniline in substitution."
+    },
+    {
+     "concept_tag": "anilinium-ion-effects",
+     "learning_objective": "Explain meta product in nitration, sulphonation and failure of Friedel-Crafts reaction of aniline."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH04-T7",
+   "topic_number": 7,
+   "title": "Diazonium salts: preparation and properties",
+   "ncert_sections": "9.7, 9.8",
+   "concepts": [
+    {
+     "concept_tag": "diazotisation",
+     "learning_objective": "Describe the preparation of benzenediazonium chloride by diazotisation."
+    },
+    {
+     "concept_tag": "diazonium-salt-stability",
+     "learning_objective": "Explain the stability of arenediazonium salts compared with alkyldiazonium salts."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH04-T8",
+   "topic_number": 8,
+   "title": "Reactions of diazonium salts and their importance in synthesis",
+   "ncert_sections": "9.9, 9.10",
+   "concepts": [
+    {
+     "concept_tag": "nitrogen-displacement-reactions",
+     "learning_objective": "Describe replacement of the diazonium group by halide, cyanide, hydroxyl, hydrogen and nitro groups."
+    },
+    {
+     "concept_tag": "azo-coupling",
+     "learning_objective": "Describe coupling reactions of diazonium salts with phenol and aniline to form azo compounds."
+    },
+    {
+     "concept_tag": "diazonium-synthetic-utility",
+     "learning_objective": "Plan syntheses of aromatic compounds that cannot be made by direct substitution."
+    }
+   ]
+  }
+ ]
+}

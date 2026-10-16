@@ -1,0 +1,88 @@
+{
+ "chapter_id": "KHMH1-CH07",
+ "title": "द्विपद प्रमेय",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH07-T1",
+   "topic_number": 1,
+   "title": "द्विपद प्रसार के मूल प्रेक्षण",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "padon-ki-sankhya",
+     "learning_objective": "द्विपद (a + b)ⁿ के प्रसार में पदों की संख्या घातांक से एक अधिक होती है, यह पहचानना।"
+    },
+    {
+     "concept_tag": "ghatank-pratirup",
+     "learning_objective": "प्रसार के क्रमागत पदों में a के घटते और b के बढ़ते घातांकों तथा उनके योग के प्रतिरूप को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH07-T2",
+   "topic_number": 2,
+   "title": "पास्कल त्रिभुज (मेरु प्रस्तार)",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "paskal-tribhuj-rachna",
+     "learning_objective": "पास्कल त्रिभुज की पंक्तियाँ बनाना और उनसे द्विपद प्रसार के गुणांक लिखना।"
+    },
+    {
+     "concept_tag": "meru-prastar",
+     "learning_objective": "पास्कल त्रिभुज के भारतीय नाम मेरु प्रस्तार और पिंगल के योगदान को जानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH07-T3",
+   "topic_number": 3,
+   "title": "धन पूर्णांक घातांक के लिए द्विपद प्रमेय",
+   "ncert_sections": "7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "sanchay-gunank",
+     "learning_objective": "प्रसार के गुणांकों को संचय ⁿCᵣ के रूप में पहचानना और उनके मान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "dvipad-prasar",
+     "learning_objective": "द्विपद प्रमेय से किसी द्विपद का प्रसार करके किसी विशेष घात का गुणांक ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH07-T4",
+   "topic_number": 4,
+   "title": "कुछ विशेष स्थितियाँ",
+   "ncert_sections": "7.2.2",
+   "concepts": [
+    {
+     "concept_tag": "rinatmak-pad-prasar",
+     "learning_objective": "(x − y)ⁿ के प्रसार में एकांतर चिह्नों को समझना और गुणांक ज्ञात करना।"
+    },
+    {
+     "concept_tag": "gunankon-ka-yog",
+     "learning_objective": "(1 + x)ⁿ में x = 1 तथा x = −1 रखकर संचयों के योग से संबंधित परिणाम प्राप्त करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH07-T5",
+   "topic_number": 5,
+   "title": "द्विपद प्रमेय के अनुप्रयोग",
+   "ncert_sections": "7.2.2",
+   "concepts": [
+    {
+     "concept_tag": "sankhyatmak-man",
+     "learning_objective": "द्विपद प्रमेय से बड़ी घातों के संख्यात्मक मान और सन्निकट मान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "vibhajyata-aur-tulna",
+     "learning_objective": "द्विपद प्रमेय से विभाज्यता सिद्ध करना, शेषफल ज्ञात करना और संख्याओं की तुलना करना।"
+    }
+   ]
+  }
+ ]
+}

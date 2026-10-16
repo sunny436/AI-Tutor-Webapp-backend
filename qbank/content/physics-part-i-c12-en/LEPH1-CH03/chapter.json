@@ -1,0 +1,124 @@
+{
+ "chapter_id": "LEPH1-CH03",
+ "title": "Current Electricity",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH1-CH03-T1",
+   "topic_number": 1,
+   "title": "Electric current and currents in conductors",
+   "ncert_sections": "3.1, 3.2, 3.3",
+   "concepts": [
+    {
+     "concept_tag": "electric-current-definition",
+     "learning_objective": "Define electric current as the rate of net charge flow across an area and use its SI unit."
+    },
+    {
+     "concept_tag": "current-in-conductors",
+     "learning_objective": "Explain how an applied electric field turns the random motion of free charges into a steady current."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH03-T2",
+   "topic_number": 2,
+   "title": "Ohm's law, resistance and resistivity",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "ohms-law-resistance",
+     "learning_objective": "Relate resistance to the length and cross-sectional area of a conductor through R = rho l / A."
+    },
+    {
+     "concept_tag": "resistivity-current-density",
+     "learning_objective": "Use resistivity, conductivity and current density in the form j = sigma E."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH03-T3",
+   "topic_number": 3,
+   "title": "Drift of electrons and the origin of resistivity",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "drift-velocity-relaxation-time",
+     "learning_objective": "Derive and apply v_d = eE tau / m and I = n e A v_d for electrons in a metal."
+    },
+    {
+     "concept_tag": "mobility",
+     "learning_objective": "Define mobility as drift speed per unit field and state its SI unit."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH03-T4",
+   "topic_number": 4,
+   "title": "Limitations of Ohm's law and resistivity of materials",
+   "ncert_sections": "3.6, 3.7, 3.8",
+   "concepts": [
+    {
+     "concept_tag": "non-ohmic-behaviour",
+     "learning_objective": "Identify the ways in which devices such as diodes and GaAs deviate from Ohm's law."
+    },
+    {
+     "concept_tag": "classification-by-resistivity",
+     "learning_objective": "Classify conductors, semiconductors and insulators by resistivity and its behaviour with temperature."
+    },
+    {
+     "concept_tag": "temperature-coefficient-resistivity",
+     "learning_objective": "Apply rho_T = rho_0 [1 + alpha (T - T_0)] to find resistance at another temperature."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH03-T5",
+   "topic_number": 5,
+   "title": "Electrical energy and power",
+   "ncert_sections": "3.9",
+   "concepts": [
+    {
+     "concept_tag": "electrical-power-dissipation",
+     "learning_objective": "Calculate power dissipated in a resistor using P = VI = I^2 R = V^2 / R."
+    },
+    {
+     "concept_tag": "power-transmission-loss",
+     "learning_objective": "Explain why electrical power is transmitted at high voltage to reduce ohmic loss."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH03-T6",
+   "topic_number": 6,
+   "title": "Cells, emf, internal resistance and combinations of cells",
+   "ncert_sections": "3.10, 3.11",
+   "concepts": [
+    {
+     "concept_tag": "emf-internal-resistance",
+     "learning_objective": "Relate emf, terminal voltage and internal resistance through V = epsilon - I r."
+    },
+    {
+     "concept_tag": "combination-of-cells",
+     "learning_objective": "Find the equivalent emf and internal resistance of cells in series and in parallel."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH03-T7",
+   "topic_number": 7,
+   "title": "Kirchhoff's rules and the Wheatstone bridge",
+   "ncert_sections": "3.12, 3.13",
+   "concepts": [
+    {
+     "concept_tag": "kirchhoff-rules",
+     "learning_objective": "Apply Kirchhoff's junction and loop rules and state the conservation laws behind them."
+    },
+    {
+     "concept_tag": "wheatstone-bridge-balance",
+     "learning_objective": "Use the balance condition of a Wheatstone bridge to find an unknown resistance."
+    }
+   ]
+  }
+ ]
+}

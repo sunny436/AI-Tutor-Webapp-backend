@@ -1,0 +1,2038 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "woven-words-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "english",
+  "language": "english",
+  "title": "Woven Words",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "keww1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEWW1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "The Lament",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH01-T1",
+     "topic_number": 1,
+     "title": "Introduction: the short story as a form",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "short-story-elements",
+       "learning_objective": "Identify the basic elements of a short story: plot, point of view and mode."
+      },
+      {
+       "concept_tag": "kinds-of-short-story",
+       "learning_objective": "Distinguish the story of incident, the story of character and a story that works through form."
+      },
+      {
+       "concept_tag": "short-story-and-novel",
+       "learning_objective": "Explain how the short story differs from the novel in magnitude and economy."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH01-T2",
+     "topic_number": 2,
+     "title": "The opening: Iona and his horse in the twilight snow",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "twilight-snow-setting",
+       "learning_objective": "Interpret how the snowy twilight setting prepares the reader for Iona's grief."
+      },
+      {
+       "concept_tag": "iona-and-horse-imagery",
+       "learning_objective": "Explain the images used to describe the motionless Iona and his little horse."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH01-T3",
+     "topic_number": 3,
+     "title": "Iona's fares: the officer and the three young men",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "indifference-of-passengers",
+       "learning_objective": "Analyse how the officer and the three young men respond to Iona's grief."
+      },
+      {
+       "concept_tag": "iona-attempts-to-share-grief",
+       "learning_objective": "Describe Iona's repeated attempts to tell his passengers about his son's death."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH01-T4",
+     "topic_number": 4,
+     "title": "Alone with grief: the street, the stable and the horse",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "unshared-grief",
+       "learning_objective": "Explain the narrator's description of Iona's immense grief that no one notices."
+      },
+      {
+       "concept_tag": "horse-as-listener",
+       "learning_objective": "Evaluate the significance of Iona finally telling his story to his horse."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH01-T5",
+     "topic_number": 5,
+     "title": "Chekhov, theme and language of the story",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "chekhov-and-theme-of-pathos",
+       "learning_objective": "State facts about Chekhov and the theme of failed human communication in his stories."
+      },
+      {
+       "concept_tag": "vocabulary-and-expressions",
+       "learning_objective": "Interpret words and expressions from the story, such as 'as if he were on needles' and 'snuffle'."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "A Pair of Mustachios",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH02-T1",
+     "topic_number": 1,
+     "title": "Mustachios as markers of class",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "moustache-class-symbolism",
+       "learning_objective": "Identify the moustache styles the narrator links to different social classes."
+      },
+      {
+       "concept_tag": "satire-of-social-hierarchy",
+       "learning_objective": "Explain how the opening ridicules class pride and rigid social conventions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH02-T2",
+     "topic_number": 2,
+     "title": "Seth Ramanand and Khan Azam Khan",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ramanand-character",
+       "learning_objective": "Describe the moneylender Ramanand's nature as revealed by his words and actions."
+      },
+      {
+       "concept_tag": "azam-khan-character",
+       "learning_objective": "Describe Khan Azam Khan's pride, poverty and headstrong nature."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH02-T3",
+     "topic_number": 3,
+     "title": "The quarrel over the moustache tips",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "business-acumen",
+       "learning_objective": "Identify instances that show Ramanand's shrewd business sense."
+      },
+      {
+       "concept_tag": "escalating-bargains",
+       "learning_objective": "Trace how each bargain costs Azam Khan more of his possessions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH02-T4",
+     "topic_number": 4,
+     "title": "The ending: irony and message",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "irony-of-ending",
+       "learning_objective": "Interpret the irony of the story's ending."
+      },
+      {
+       "concept_tag": "theme-false-pride",
+       "learning_objective": "Evaluate the author's message about false pride and social snobbery."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH02-T5",
+     "topic_number": 5,
+     "title": "Author, vocabulary and language",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mulk-raj-anand",
+       "learning_objective": "Recall key facts about Mulk Raj Anand and his writing."
+      },
+      {
+       "concept_tag": "vocabulary-expressions",
+       "learning_objective": "Infer the meaning of expressions such as nouveau riche and goods and chattels from context."
+      },
+      {
+       "concept_tag": "collocations-phrases",
+       "learning_objective": "Use phrases such as draw up a deed and keep one's word correctly."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "The Rocking-horse Winner",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH03-T1",
+     "topic_number": 1,
+     "title": "The whispering house",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mother-and-the-loveless-heart",
+       "learning_objective": "Describe the mother's inability to love and the family's social pretensions."
+      },
+      {
+       "concept_tag": "house-whispers-more-money",
+       "learning_objective": "Explain how the unspoken demand for money haunts the house and the children."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH03-T2",
+     "topic_number": 2,
+     "title": "Luck and lucre",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "luck-versus-lucre",
+       "learning_objective": "Explain the mother's idea of luck and how it differs from money."
+      },
+      {
+       "concept_tag": "paul-seeks-luck",
+       "learning_objective": "Analyse why Paul sets out to prove that he is lucky."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH03-T3",
+     "topic_number": 3,
+     "title": "The rocking-horse and Bassett",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rocking-horse-frenzy",
+       "learning_objective": "Describe Paul's frenzied rides on the rocking-horse in search of luck."
+      },
+      {
+       "concept_tag": "partnership-with-bassett",
+       "learning_objective": "Explain the secret betting partnership between Paul and Bassett."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH03-T4",
+     "topic_number": 4,
+     "title": "Winning at the Lincoln and the Leger",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "daffodil-at-the-lincoln",
+       "learning_objective": "Recall how Paul's tip on Daffodil convinces Uncle Oscar."
+      },
+      {
+       "concept_tag": "betting-odds-and-winnings",
+       "learning_objective": "Calculate winnings from the odds and stakes mentioned in the story."
+      },
+      {
+       "concept_tag": "certainty-of-knowing",
+       "learning_objective": "Interpret Paul's claim that he wins only when he is 'sure'."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH03-T5",
+     "topic_number": 5,
+     "title": "The birthday gift and the louder voices",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "secret-birthday-gift",
+       "learning_objective": "Explain the plan to give the mother money secretly and her response to it."
+      },
+      {
+       "concept_tag": "voices-grow-louder",
+       "learning_objective": "Analyse why the voices in the house grow louder after the money arrives."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH03-T6",
+     "topic_number": 6,
+     "title": "The Derby, Malabar and Paul's death",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "malabar-and-the-derby",
+       "learning_objective": "Recall the events leading to Paul's collapse and the Derby win."
+      },
+      {
+       "concept_tag": "irony-and-symbolism",
+       "learning_objective": "Evaluate the irony of the ending and the symbolism of the rocking-horse."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH03-T7",
+     "topic_number": 7,
+     "title": "Language work: phrases and vocabulary",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "idioms-and-phrases",
+       "learning_objective": "Explain idioms and phrases such as 'sure as eggs', 'spinning yarns' and 'turned to dust'."
+      },
+      {
+       "concept_tag": "expressions-and-word-meaning",
+       "learning_objective": "Identify the meanings of words for facial expressions and other words from the story."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "The Adventure of the Three Garridebs",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH04-T1",
+     "topic_number": 1,
+     "title": "The narrator, the date and John Garrideb's arrival",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "narrative-frame-and-opening",
+       "learning_objective": "Identify the narrator and explain how the opening frames the story and fixes its date."
+      },
+      {
+       "concept_tag": "holmes-observation-of-visitor",
+       "learning_objective": "Explain how Holmes reads the visitor's English outfit and Watson's directory search."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH04-T2",
+     "topic_number": 2,
+     "title": "John Garrideb's tale of the strange will",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "legacy-of-three-garridebs",
+       "learning_objective": "Recall the terms of Alexander Hamilton Garrideb's will as told by John Garrideb."
+      },
+      {
+       "concept_tag": "holmes-tests-the-visitor",
+       "learning_objective": "Analyse how Holmes tests and exposes the falsehoods in the visitor's story."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH04-T3",
+     "topic_number": 3,
+     "title": "Nathan Garrideb's museum and the Birmingham advertisement",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nathan-garrideb-collector",
+       "learning_objective": "Describe Nathan Garrideb's appearance, collection and dreams."
+      },
+      {
+       "concept_tag": "advertisement-clues",
+       "learning_objective": "Interpret the American clues in the Howard Garrideb advertisement and the plan behind it."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH04-T4",
+     "topic_number": 4,
+     "title": "Holmes identifies Killer Evans and the Presbury link",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "killer-evans-identity",
+       "learning_objective": "Recall what Holmes learns about Killer Evans from the Scotland Yard records."
+      },
+      {
+       "concept_tag": "presbury-link",
+       "learning_objective": "Explain how Holmes connects Rodger Presbury with Nathan Garrideb's room."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH04-T5",
+     "topic_number": 5,
+     "title": "The trap, the wound and the resolution",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "climax-and-counterfeiting-secret",
+       "learning_objective": "Describe the climax in the room and the secret hidden beneath the floor."
+      },
+      {
+       "concept_tag": "holmes-watson-bond",
+       "learning_objective": "Evaluate what Watson's wound reveals about the friendship between Holmes and Watson."
+      },
+      {
+       "concept_tag": "ironic-resolution",
+       "learning_objective": "Interpret the irony and subtle humour in the story's ending."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH04-T6",
+     "topic_number": 6,
+     "title": "Language: vocabulary and figurative expressions",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vocabulary-in-context",
+       "learning_objective": "Infer the meaning of difficult words and phrases from their context in the story."
+      },
+      {
+       "concept_tag": "figurative-expressions",
+       "learning_objective": "Explain the figurative meaning of idiomatic expressions used in the story."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Pappachi's Moth",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH05-T1",
+     "topic_number": 1,
+     "title": "Mammachi's pickle business and Pappachi's retirement",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mammachi-pickle-business",
+       "learning_objective": "Recall how Mammachi's pickle and jam business began and grew."
+      },
+      {
+       "concept_tag": "ignominy-of-retirement",
+       "learning_objective": "Explain why Pappachi felt retirement as a humiliation and resented his wife's success."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH05-T2",
+     "topic_number": 2,
+     "title": "Cruelty at home, Chacko's intervention and the Plymouth",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "domestic-violence-chacko",
+       "learning_objective": "Describe Pappachi's violence and how Chacko put an end to it."
+      },
+      {
+       "concept_tag": "public-image-and-revenge",
+       "learning_objective": "Interpret how Pappachi used his public image and the Plymouth to punish his family."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH05-T3",
+     "topic_number": 3,
+     "title": "The moth that was not named after him",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "moth-discovery",
+       "learning_objective": "Recall how Pappachi found the moth and what was first decided about it."
+      },
+      {
+       "concept_tag": "taxonomic-reshuffle-loss",
+       "learning_objective": "Analyse why the later reclassification became his life's greatest setback."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH05-T4",
+     "topic_number": 4,
+     "title": "Vienna, the violin and Pappachi's death",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vienna-violin-jealousy",
+       "learning_objective": "Explain why Mammachi's violin lessons in Vienna were abruptly stopped."
+      },
+      {
+       "concept_tag": "death-habit-irony",
+       "learning_objective": "Interpret Ammu's comment on habit and the irony in the account of Pappachi's death."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH05-T5",
+     "topic_number": 5,
+     "title": "About the author and language work",
+     "ncert_sections": "About the Author; Language Work; Reading for the Blind",
+     "concepts": [
+      {
+       "concept_tag": "author-and-novel",
+       "learning_objective": "Identify Arundhati Roy and the novel from which the extract is taken."
+      },
+      {
+       "concept_tag": "scientist-and-word-vocabulary",
+       "learning_objective": "Match kinds of scientists and kinds of writing with their meanings."
+      },
+      {
+       "concept_tag": "braille-reading-passage",
+       "learning_objective": "Interpret the account of how the Braille system developed from night writing."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "The Third and Final Continent",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH06-T1",
+     "topic_number": 1,
+     "title": "London years and the journey to America",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "life-in-london",
+       "learning_objective": "Describe the narrator's frugal life among Bengali bachelors in London."
+      },
+      {
+       "concept_tag": "journey-to-america",
+       "learning_objective": "Explain why and how the narrator moved to America and what he learnt on the way."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH06-T2",
+     "topic_number": 2,
+     "title": "First weeks at the YMCA in Cambridge",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ymca-adjustment",
+       "learning_objective": "Describe how the narrator adjusted to food, noise and routine at the YMCA."
+      },
+      {
+       "concept_tag": "british-american-differences",
+       "learning_objective": "Identify the differences between British and American usage and life that the narrator notices."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH06-T3",
+     "topic_number": 3,
+     "title": "Meeting Mrs Croft",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "first-interview",
+       "learning_objective": "Recall the narrator's first visit to Mrs Croft's house and the terms of his stay."
+      },
+      {
+       "concept_tag": "portrait-of-mrs-croft",
+       "learning_objective": "Interpret the details that build up the character of Mrs Croft."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH06-T4",
+     "topic_number": 4,
+     "title": "Mala and the narrator's family past",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "arranged-marriage",
+       "learning_objective": "Describe the narrator's arranged marriage to Mala and his early indifference to her."
+      },
+      {
+       "concept_tag": "narrators-mother",
+       "learning_objective": "Explain how the memory of the narrator's mother shapes his response to Mrs Croft."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH06-T5",
+     "topic_number": 5,
+     "title": "Life in Mrs Croft's house and Helen's visits",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nightly-routine",
+       "learning_objective": "Explain how the evening ritual of the flag on the moon builds a bond between the narrator and Mrs Croft."
+      },
+      {
+       "concept_tag": "helen-and-mrs-croft",
+       "learning_objective": "Analyse Helen's relationship with her mother and what it reveals about Mrs Croft."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH06-T6",
+     "topic_number": 6,
+     "title": "Mala's arrival and the narrator's reflection",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mala-arrival-adjustment",
+       "learning_objective": "Describe how Mala and the narrator begin their life together in America."
+      },
+      {
+       "concept_tag": "perfect-lady-turning-point",
+       "learning_objective": "Explain why the visit to Mrs Croft becomes a turning point in the marriage."
+      },
+      {
+       "concept_tag": "narrators-reflection",
+       "learning_objective": "Evaluate the narrator's closing reflection on his ordinary yet remarkable life on three continents."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Glory at Twilight",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH07-T1",
+     "topic_number": 1,
+     "title": "The train journey and Satyajit's ruin",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "satyajit-financial-collapse",
+       "learning_objective": "Recall how the collapse of Satyajit's bank stripped him of his wealth and changed his outlook."
+      },
+      {
+       "concept_tag": "what-now-obsession",
+       "learning_objective": "Interpret the recurring question 'What now?' as a sign of Satyajit's anxiety about the future."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH07-T2",
+     "topic_number": 2,
+     "title": "The forgerer and Satyajit's rise",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "forgery-episode",
+       "learning_objective": "Recall how Satyajit's detection of a forged cheque began his rise from clerk to accountant."
+      },
+      {
+       "concept_tag": "crime-and-punishment",
+       "learning_objective": "Evaluate the author's comment on crime, punishment and Satyajit's later change of feeling about the forgerer."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH07-T3",
+     "topic_number": 3,
+     "title": "Uncle Srinath's letter and the journey to Shantipur",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "benediction-and-daughter-crisis",
+       "learning_objective": "Explain what Srinath means by 'benediction' and 'daughter crisis' in his letter."
+      },
+      {
+       "concept_tag": "reasons-for-the-visit",
+       "learning_objective": "Identify why Satyajit decides to attend the wedding at Shantipur."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH07-T4",
+     "topic_number": 4,
+     "title": "The welcome and the homage of the village",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "village-homage",
+       "learning_objective": "Describe how Srinath, his family and the villagers honour Satyajit on his arrival."
+      },
+      {
+       "concept_tag": "impostor-and-twilight-glory",
+       "learning_objective": "Analyse why Satyajit feels like an impostor while enjoying the 'twilight splendour of departed glory'."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH07-T5",
+     "topic_number": 5,
+     "title": "The dowry demand and the loss of house and pond",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dowry-demand-irony",
+       "learning_objective": "Analyse the irony of the cash dowry demand made of a man who has lost his fortune."
+      },
+      {
+       "concept_tag": "loss-of-house-and-pond",
+       "learning_objective": "Interpret Satyajit's mortgaging of his house and pond and the story's closing image."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH07-T6",
+     "topic_number": 6,
+     "title": "Author, narration and language",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "author-and-narrative-perspective",
+       "learning_objective": "Identify the author and explain how the story is narrated from Satyajit's perspective."
+      },
+      {
+       "concept_tag": "vocabulary-and-style",
+       "learning_objective": "Interpret key expressions, sentence fragments and Indian idiom used in the story."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "The Luncheon",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH08-T1",
+     "topic_number": 1,
+     "title": "The chance meeting and the invitation to Foyot's",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "flashback-frame",
+       "learning_objective": "Explain how the story is framed as a flashback triggered by a meeting at the play twenty years later."
+      },
+      {
+       "concept_tag": "narrator-poverty-and-vanity",
+       "learning_objective": "Describe the young narrator's poor circumstances and why flattery made him accept the luncheon."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH08-T2",
+     "topic_number": 2,
+     "title": "At the restaurant: salmon, caviare and Champagne",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "guest-contradictions",
+       "learning_objective": "Identify the gap between the guest's claims about eating little and what she actually orders."
+      },
+      {
+       "concept_tag": "narrator-polite-pretence",
+       "learning_objective": "Explain how the narrator hides his alarm about money behind polite hospitality."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH08-T3",
+     "topic_number": 3,
+     "title": "The giant asparagus and the narrator's panic",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "asparagus-and-panic",
+       "learning_objective": "Interpret the narrator's growing panic as the guest orders the expensive asparagus."
+      },
+      {
+       "concept_tag": "comic-imagery",
+       "learning_objective": "Analyse the comic exaggeration and imagery used to describe the guest eating."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH08-T4",
+     "topic_number": 4,
+     "title": "Ice-cream, peaches and the bill",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "peaches-and-bill",
+       "learning_objective": "Recall how the peaches and the bill leave the narrator penniless for the month."
+      },
+      {
+       "concept_tag": "parting-retort",
+       "learning_objective": "Interpret the narrator's parting retort and the guest's reply calling him a humorist."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH08-T5",
+     "topic_number": 5,
+     "title": "The ending: revenge, irony and humour",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ironic-revenge",
+       "learning_objective": "Explain the ironic 'revenge' in the final line, when the guest weighs twenty-one stone."
+      },
+      {
+       "concept_tag": "irony-and-humour",
+       "learning_objective": "Identify instances of irony and self-mocking humour in the story."
+      },
+      {
+       "concept_tag": "first-person-narrative",
+       "learning_objective": "Evaluate how the first-person narrative heightens the story's effects."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH08-T6",
+     "topic_number": 6,
+     "title": "The author and the language of the story",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "maugham-life-and-works",
+       "learning_objective": "Recall key facts about William Somerset Maugham's life, works and style."
+      },
+      {
+       "concept_tag": "vocabulary-in-context",
+       "learning_objective": "Infer the meanings of words such as mortifying, vindictive, complacency and ingratiating from context."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Chapter 9 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww109.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "KEWW1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Chapter 10 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww110.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "KEWW1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "The Peacock",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH11-T1",
+     "topic_number": 1,
+     "title": "Introduction: what poetry is",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-poetry",
+       "learning_objective": "State the origin of the word 'poetry' and what it says about the poet and the poem."
+      },
+      {
+       "concept_tag": "features-of-poetry",
+       "learning_objective": "Identify the characteristic features of poetry such as rhythm, metre and figures of speech."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH11-T2",
+     "topic_number": 2,
+     "title": "The peacock's sudden appearance and colours",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "peacock-colour-imagery",
+       "learning_objective": "Interpret the colour images used to describe the peacock's neck and tail."
+      },
+      {
+       "concept_tag": "elusive-peacock",
+       "learning_objective": "Explain how the poem shows the peacock as a bird glimpsed only briefly."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH11-T3",
+     "topic_number": 3,
+     "title": "Reading in the veranda: signs of the peacock",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "cues-of-presence",
+       "learning_objective": "Identify the changes in the surroundings that signal the peacock is near."
+      },
+      {
+       "concept_tag": "concentration-and-attention",
+       "learning_objective": "Analyse the link the poem makes between deep absorption in a book and seeing the peacock."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH11-T4",
+     "topic_number": 4,
+     "title": "The tail that blinks: closing image, poet and vocabulary",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tail-and-eyes-image",
+       "learning_objective": "Evaluate the closing image of the tail that blinks for eyes that are always open."
+      },
+      {
+       "concept_tag": "sujata-bhatt-and-vocabulary",
+       "learning_objective": "State facts about Sujata Bhatt and infer word meanings such as 'turquoise' and 'darts'."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Let Me Not to the Marriage of True Minds",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH12-T1",
+     "topic_number": 1,
+     "title": "Love that does not alter (lines 1-4)",
+     "ncert_sections": "Lines 1-4",
+     "concepts": [
+      {
+       "concept_tag": "true-minds-no-impediments",
+       "learning_objective": "Explain what the speaker means by refusing to admit impediments to the marriage of true minds."
+      },
+      {
+       "concept_tag": "love-does-not-alter",
+       "learning_objective": "Interpret the claim that love which changes when circumstances change is not true love."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH12-T2",
+     "topic_number": 2,
+     "title": "The ever-fixed mark and the guiding star (lines 5-8)",
+     "ncert_sections": "Lines 5-8",
+     "concepts": [
+      {
+       "concept_tag": "ever-fixed-mark-image",
+       "learning_objective": "Interpret the image of love as an ever-fixed mark that looks on tempests unshaken."
+      },
+      {
+       "concept_tag": "star-to-wandering-bark",
+       "learning_objective": "Explain the metaphor of love as the star that guides every wandering ship (bark)."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH12-T3",
+     "topic_number": 3,
+     "title": "Love and Time (lines 9-12)",
+     "ncert_sections": "Lines 9-12",
+     "concepts": [
+      {
+       "concept_tag": "loves-not-times-fool",
+       "learning_objective": "Explain how the poem shows love as independent of Time and physical beauty."
+      },
+      {
+       "concept_tag": "bending-sickle-compass",
+       "learning_objective": "Interpret the image of Time's bending sickle and the special meaning of 'compass'."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH12-T4",
+     "topic_number": 4,
+     "title": "The closing couplet, the sonnet form and the poet",
+     "ncert_sections": "Lines 13-14; About the Poet; Try This Out",
+     "concepts": [
+      {
+       "concept_tag": "closing-couplet-certainty",
+       "learning_objective": "Interpret how the closing couplet stakes the poet's writing on the truth of his claim."
+      },
+      {
+       "concept_tag": "shakespearean-sonnet-form",
+       "learning_objective": "Identify the features of the Shakespearean sonnet and the poem's use of negatives."
+      },
+      {
+       "concept_tag": "about-shakespeare",
+       "learning_objective": "Recall key facts about William Shakespeare and Sonnet 116."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "Coming",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH13-T1",
+     "topic_number": 1,
+     "title": "The evening light on the houses",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "evening-light-imagery",
+       "learning_objective": "Interpret the image of 'light, chill and yellow' bathing the 'serene foreheads of houses'."
+      },
+      {
+       "concept_tag": "personification-of-houses",
+       "learning_objective": "Identify personification in the opening lines and explain its effect."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH13-T2",
+     "topic_number": 2,
+     "title": "The thrush's song and the coming of spring",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "thrush-announces-spring",
+       "learning_objective": "Explain how the thrush's song announces spring and relates to the title 'Coming'."
+      },
+      {
+       "concept_tag": "fresh-peeled-voice",
+       "learning_objective": "Analyse the phrase 'fresh-peeled voice' and the idea of the song 'astonishing the brickwork'."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH13-T3",
+     "topic_number": 3,
+     "title": "The speaker's childhood and the child at adult reconciling",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "forgotten-boredom",
+       "learning_objective": "Explain why the speaker calls his childhood 'a forgotten boredom'."
+      },
+      {
+       "concept_tag": "child-and-reconciliation-comparison",
+       "learning_objective": "Analyse the comparison between the speaker's joy at spring and a child who sees adults reconciling."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH13-T4",
+     "topic_number": 4,
+     "title": "The poet and the poem",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "larkin-and-the-movement",
+       "learning_objective": "Recall facts about Philip Larkin, the Movement and the volume from which the poem is taken."
+      },
+      {
+       "concept_tag": "tone-and-form",
+       "learning_objective": "Evaluate the poem's quiet, hopeful tone and its short free-verse lines."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH13-T5",
+     "topic_number": 5,
+     "title": "Haiku",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "haiku-form",
+       "learning_objective": "State the main features of the haiku as a Japanese three-line poem."
+      },
+      {
+       "concept_tag": "haiku-interpretation",
+       "learning_objective": "Interpret the images and ideas in the haiku 'Cobra', 'Night' and 'Alone'."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "Telephone Conversation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww114.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH14-T1",
+     "topic_number": 1,
+     "title": "The speaker's situation and 'self-confession'",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rental-enquiry-situation",
+       "learning_objective": "Describe the situation in which the speaker telephones a landlady about renting accommodation."
+      },
+      {
+       "concept_tag": "ironic-self-confession",
+       "learning_objective": "Explain the irony of the speaker having to 'confess' that he is African."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH14-T2",
+     "topic_number": 2,
+     "title": "The landlady's response and racial prejudice",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "landlady-good-breeding",
+       "learning_objective": "Interpret the images that reveal the landlady's refined manner and her silences."
+      },
+      {
+       "concept_tag": "colour-prejudice",
+       "learning_objective": "Analyse how the landlady's questions about skin colour expose racial prejudice."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH14-T3",
+     "topic_number": 3,
+     "title": "The speaker's wit and the ending",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sepia-brunette-humour",
+       "learning_objective": "Explain how the speaker uses words such as 'sepia', 'brunette' and 'peroxide blonde' humorously."
+      },
+      {
+       "concept_tag": "satirical-ending",
+       "learning_objective": "Evaluate the satirical effect of the speaker's closing question."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH14-T4",
+     "topic_number": 4,
+     "title": "Language, imagery and vocabulary",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "colour-imagery",
+       "learning_objective": "Identify the colour images in the poem and explain their effect."
+      },
+      {
+       "concept_tag": "wordplay-and-capitals",
+       "learning_objective": "Interpret wordplay such as 'hide-and-speak' and the use of capital letters."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH14-T5",
+     "topic_number": 5,
+     "title": "About the poet and the title",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "soyinka-life-works",
+       "learning_objective": "Recall key facts about Wole Soyinka's life, education and achievements."
+      },
+      {
+       "concept_tag": "title-significance",
+       "learning_objective": "Evaluate the significance of the title 'Telephone Conversation' and the poet's satirical style."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH15",
+   "chapter_number": 15,
+   "old_chapter_number": null,
+   "title": "The World is too Much With Us",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww115.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH15-T1",
+     "topic_number": 1,
+     "title": "Materialism and the waste of human powers",
+     "ncert_sections": "Lines 1-4",
+     "concepts": [
+      {
+       "concept_tag": "materialism-critique",
+       "learning_objective": "Explain how the poet criticises worldly preoccupation with getting and spending."
+      },
+      {
+       "concept_tag": "sordid-boon",
+       "learning_objective": "Interpret the oxymoron 'a sordid boon' and the loss it describes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH15-T2",
+     "topic_number": 2,
+     "title": "Nature's beauty and humanity out of tune",
+     "ncert_sections": "Lines 5-9",
+     "concepts": [
+      {
+       "concept_tag": "nature-imagery",
+       "learning_objective": "Identify the personified images of the sea and the winds."
+      },
+      {
+       "concept_tag": "out-of-tune",
+       "learning_objective": "Explain what human beings are out of tune with and why it matters."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH15-T3",
+     "topic_number": 3,
+     "title": "The wish to be a Pagan",
+     "ncert_sections": "Lines 9-14",
+     "concepts": [
+      {
+       "concept_tag": "pagan-wish",
+       "learning_objective": "Explain why the poet would rather be a Pagan suckled in a creed outworn."
+      },
+      {
+       "concept_tag": "greek-mythology",
+       "learning_objective": "Recognise the allusions to Proteus and Triton and their purpose."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH15-T4",
+     "topic_number": 4,
+     "title": "The poet and the sonnet form",
+     "ncert_sections": "About the Poet; Try This Out",
+     "concepts": [
+      {
+       "concept_tag": "petrarchan-sonnet",
+       "learning_objective": "Analyse the structure, rhyme scheme and turn of this Petrarchan sonnet."
+      },
+      {
+       "concept_tag": "wordsworth-romanticism",
+       "learning_objective": "Recall Wordsworth's life, views on poetic language and role in Romanticism."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH16",
+   "chapter_number": 16,
+   "old_chapter_number": null,
+   "title": "Mother Tongue",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww116.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH16-T1",
+     "topic_number": 1,
+     "title": "The poet's request for a quill",
+     "ncert_sections": "Poem, lines 1-14",
+     "concepts": [
+      {
+       "concept_tag": "quill-request",
+       "learning_objective": "Recall how the poet asks the reed for a quill and what the quill stands for."
+      },
+      {
+       "concept_tag": "reed-irritation",
+       "learning_objective": "Interpret the reed's irritated questions and its comparison of the poet to an accountant."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH16-T2",
+     "topic_number": 2,
+     "title": "Serving the Shahni: the mother tongue Dogri",
+     "ncert_sections": "Poem, lines 15-29",
+     "concepts": [
+      {
+       "concept_tag": "shahni-mother-tongue",
+       "learning_objective": "Explain how the poet presents her mother tongue Dogri as a kind and wealthy Shahni with many servants."
+      },
+      {
+       "concept_tag": "reed-sacrifice",
+       "learning_objective": "Interpret the reed's act of cutting off its hand as a sign of shared devotion to the language."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH16-T3",
+     "topic_number": 3,
+     "title": "Poetic devices, tone and theme",
+     "ncert_sections": "Understanding the Poem",
+     "concepts": [
+      {
+       "concept_tag": "personification",
+       "learning_objective": "Identify personification and other devices used to give the reed and the language human qualities."
+      },
+      {
+       "concept_tag": "urgency-and-attachment",
+       "learning_objective": "Analyse the sense of urgency and emotional attachment the poet shows towards her mother tongue."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH16-T4",
+     "topic_number": 4,
+     "title": "About the poet and the Dogri script",
+     "ncert_sections": "About the Poet; Try This Out",
+     "concepts": [
+      {
+       "concept_tag": "padma-sachdev",
+       "learning_objective": "Recall key facts about Padma Sachdev and her writing in Dogri and Hindi."
+      },
+      {
+       "concept_tag": "dogri-script-loss",
+       "learning_objective": "Explain how Dogri lost its native script Sharade and which scripts are now used to write it."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH17",
+   "chapter_number": 17,
+   "old_chapter_number": null,
+   "title": "Hawk Roosting",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww117.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH17-T1",
+     "topic_number": 1,
+     "title": "The hawk at rest: the top of the wood",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "roosting-setting",
+       "learning_objective": "Describe the hawk's position and stillness as it sits with closed eyes at the top of the wood."
+      },
+      {
+       "concept_tag": "nature-serves-hawk",
+       "learning_objective": "Explain how the hawk sees the trees, the air, the sun and the earth as existing for its advantage."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH17-T2",
+     "topic_number": 2,
+     "title": "Physical prowess and 'Creation in my foot'",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "physical-features",
+       "learning_objective": "Identify the hawk's physical features (hooked head, hooked feet, locked feet, feathers) and their significance."
+      },
+      {
+       "concept_tag": "creation-in-my-foot",
+       "learning_objective": "Interpret the claim that Creation produced the hawk and that it now holds Creation in its foot."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH17-T3",
+     "topic_number": 3,
+     "title": "Violence, frankness and the allotment of death",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "violence-and-power",
+       "learning_objective": "Analyse the images of killing that present the hawk's absolute, unquestioned power."
+      },
+      {
+       "concept_tag": "no-sophistry",
+       "learning_objective": "Explain what the hawk means by 'no sophistry in my body' and 'No arguments assert my right'."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH17-T4",
+     "topic_number": 4,
+     "title": "Changelessness and the human parallel",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "resisting-change",
+       "learning_objective": "Interpret the hawk's claim that nothing has changed and that it will keep things like this."
+      },
+      {
+       "concept_tag": "human-parallel",
+       "learning_objective": "Evaluate the parallel the poem suggests between the hawk's predatory arrogance and human tyranny."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH17-T5",
+     "topic_number": 5,
+     "title": "The poet, the monologue form and the language",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ted-hughes-poet",
+       "learning_objective": "Recall key facts about Ted Hughes and the qualities of his animal poems."
+      },
+      {
+       "concept_tag": "monologue-form",
+       "learning_objective": "Identify the poem as a monologue spoken by the hawk and explain the effect of this form and the title."
+      },
+      {
+       "concept_tag": "vocabulary-in-context",
+       "learning_objective": "Infer the meanings of words such as 'buoyancy' and 'roosting' in the context of the poem."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH18",
+   "chapter_number": 18,
+   "old_chapter_number": null,
+   "title": "For Elkana",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww118.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH18-T1",
+     "topic_number": 1,
+     "title": "The April evening and the wife's comments",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "evening-setting",
+       "learning_objective": "Describe the relaxed April-evening setting with which the poem opens."
+      },
+      {
+       "concept_tag": "wife-comments-husband-response",
+       "learning_objective": "Interpret the wife's comments and the husband's ironic withdrawal from them."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH18-T2",
+     "topic_number": 2,
+     "title": "The son's demand and the parents' rapport",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "childs-demand",
+       "learning_objective": "Explain how the seven-year-old son presents his demand for dinner."
+      },
+      {
+       "concept_tag": "parental-rapport",
+       "learning_objective": "Interpret the parents' unspoken agreement that children must be disciplined."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH18-T3",
+     "topic_number": 3,
+     "title": "The child's logic and the resolution",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "childs-logic",
+       "learning_objective": "Analyse why the child's argument about hunger seems logical to the father."
+      },
+      {
+       "concept_tag": "laughter-resolution",
+       "learning_objective": "Explain how the wife's laughter resolves the scene and unites the family."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH18-T4",
+     "topic_number": 4,
+     "title": "Poetic craft and the poet",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "understatement-and-asides",
+       "learning_objective": "Identify the use of understatement, irony and asides in the poem."
+      },
+      {
+       "concept_tag": "idyllic-and-pedestrian",
+       "learning_objective": "Explain how the idyllic setting is juxtaposed with ordinary domestic matters."
+      },
+      {
+       "concept_tag": "about-nissim-ezekiel",
+       "learning_objective": "Recall key facts about the poet Nissim Ezekiel."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH18-T5",
+     "topic_number": 5,
+     "title": "The Limerick",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "limerick-form",
+       "learning_objective": "State the form and rhyme scheme of a limerick."
+      },
+      {
+       "concept_tag": "limerick-humour",
+       "learning_objective": "Interpret the punch line in the limericks given with the chapter."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH19",
+   "chapter_number": 19,
+   "old_chapter_number": null,
+   "title": "Refugee Blues",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww119.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH19-T1",
+     "topic_number": 1,
+     "title": "Homelessness and the lost homeland",
+     "ncert_sections": "Stanzas 1-3",
+     "concepts": [
+      {
+       "concept_tag": "no-place-in-the-city",
+       "learning_objective": "Explain how the opening stanza contrasts a crowded city with the refugees' lack of any place."
+      },
+      {
+       "concept_tag": "lost-homeland-and-yew",
+       "learning_objective": "Interpret the images of the atlas and the yew tree that renews itself while old passports cannot."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH19-T2",
+     "topic_number": 2,
+     "title": "Bureaucracy and public hostility",
+     "ncert_sections": "Stanzas 4-6",
+     "concepts": [
+      {
+       "concept_tag": "consul-and-committee",
+       "learning_objective": "Analyse how the consul and the committee show the cold indifference of official systems."
+      },
+      {
+       "concept_tag": "public-meeting-prejudice",
+       "learning_objective": "Interpret the speaker's claim that refugees 'will steal our daily bread' as prejudice against outsiders."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH19-T3",
+     "topic_number": 3,
+     "title": "Persecution and the contrast with animals and nature",
+     "ncert_sections": "Stanzas 7-10",
+     "concepts": [
+      {
+       "concept_tag": "hitler-threat",
+       "learning_objective": "Identify the historical context of Nazi persecution of German Jews in the poem."
+      },
+      {
+       "concept_tag": "animals-freer-than-refugees",
+       "learning_objective": "Evaluate how the poodle, cat, fish and birds highlight the refugees' loss of freedom and dignity."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH19-T4",
+     "topic_number": 4,
+     "title": "Dreams denied and the final threat",
+     "ncert_sections": "Stanzas 11-13",
+     "concepts": [
+      {
+       "concept_tag": "thousand-doors-dream",
+       "learning_objective": "Interpret the dream of a building with a thousand doors, none of them the refugees'."
+      },
+      {
+       "concept_tag": "tickets-to-happiness",
+       "learning_objective": "Explain how 'two tickets to Happiness' and the full coaches capture the essence of the poem."
+      },
+      {
+       "concept_tag": "soldiers-in-the-snow",
+       "learning_objective": "Analyse the menace of the final stanza with ten thousand soldiers searching for the couple."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH19-T5",
+     "topic_number": 5,
+     "title": "Form, poetic devices and the poet",
+     "ncert_sections": "About the poet; Try this out",
+     "concepts": [
+      {
+       "concept_tag": "refrain-and-ballad-form",
+       "learning_objective": "Identify the ballad and blues form and the role of the refrain in the poem."
+      },
+      {
+       "concept_tag": "irony-pathos-sarcasm",
+       "learning_objective": "Distinguish irony, pathos and sarcasm as used in the poem."
+      },
+      {
+       "concept_tag": "auden-and-title",
+       "learning_objective": "Recall facts about W.H. Auden and explain how the title captures the theme."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH20",
+   "chapter_number": 20,
+   "old_chapter_number": null,
+   "title": "Felling of the Banyan Tree",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww120.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH20-T1",
+     "topic_number": 1,
+     "title": "The father clears the hill",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "father-demolishes-surroundings",
+       "learning_objective": "Recall how the father removed the tenants, the houses and the trees around the family home."
+      },
+      {
+       "concept_tag": "grandmother-trees-sacred",
+       "learning_objective": "Explain the contrast between the grandmother's belief that trees are sacred and the father's actions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH20-T2",
+     "topic_number": 2,
+     "title": "The banyan tree and its felling",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "banyan-tree-description",
+       "learning_objective": "Identify the details the poet gives of the banyan tree's size, roots and age."
+      },
+      {
+       "concept_tag": "felling-process-imagery",
+       "learning_objective": "Interpret the imagery of slaughter used to describe how the tree was cut down."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH20-T3",
+     "topic_number": 3,
+     "title": "The tree that grows in dreams",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "move-to-bombay",
+       "learning_objective": "Explain the significance of the family's move from Baroda to treeless Bombay."
+      },
+      {
+       "concept_tag": "dream-tree-symbolism",
+       "learning_objective": "Analyse what the banyan tree that 'grows and seethes' in dreams symbolises."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH20-T4",
+     "topic_number": 4,
+     "title": "Poet, tone and language",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "poet-dilip-chitre",
+       "learning_objective": "Recall key facts about Dilip Chitre and the collection the poem comes from."
+      },
+      {
+       "concept_tag": "critical-tone-vocabulary",
+       "learning_objective": "Identify the critical tone and the meaning of words such as 'scraggy', 'massacred' and 'raw mythology'."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH21",
+   "chapter_number": 21,
+   "old_chapter_number": null,
+   "title": "Ode to a Nightingale",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww121.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH21-T1",
+     "topic_number": 1,
+     "title": "Stanza 1: Drowsy numbness and the happy Dryad",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "poet-drowsy-ecstasy",
+       "learning_objective": "Explain how the nightingale's song leaves the poet in a state of painful, drowsy numbness."
+      },
+      {
+       "concept_tag": "opening-allusions-hemlock-lethe",
+       "learning_objective": "Interpret the allusions to hemlock, Lethe and the Dryad in the opening stanza."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH21-T2",
+     "topic_number": 2,
+     "title": "Stanza 2: The longing for wine",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "wine-imagery-escape",
+       "learning_objective": "Analyse why the poet longs for wine as a means of escaping the world."
+      },
+      {
+       "concept_tag": "hippocrene-provencal-flora",
+       "learning_objective": "Identify the meaning of Flora, Provencal and Hippocrene in the stanza."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH21-T3",
+     "topic_number": 3,
+     "title": "Stanza 3: The weariness, the fever and the fret",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "human-suffering",
+       "learning_objective": "Identify the unpleasant aspects of the human condition the poet wishes to escape."
+      },
+      {
+       "concept_tag": "transience-beauty-love",
+       "learning_objective": "Explain how the poem shows that beauty and love do not last."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH21-T4",
+     "topic_number": 4,
+     "title": "Stanza 7: The immortal bird",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "immortality-of-song",
+       "learning_objective": "Explain how the poet brings out the immortality of the nightingale's song."
+      },
+      {
+       "concept_tag": "allusion-ruth-casements",
+       "learning_objective": "Interpret the allusion to Ruth and the image of magic casements."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH21-T5",
+     "topic_number": 5,
+     "title": "Stanza 8: Forlorn, the return to the self",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "return-to-reality",
+       "learning_objective": "Explain how the word 'forlorn' tosses the poet back from ecstasy to his sole self."
+      },
+      {
+       "concept_tag": "elusive-happiness",
+       "learning_objective": "Evaluate how the closing lines bring out the elusive nature of happiness."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH21-T6",
+     "topic_number": 6,
+     "title": "The poet, form and poetic devices",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ode-apostrophe-oxymoron",
+       "learning_objective": "Identify the ode form, apostrophe and oxymoron as used in the poem."
+      },
+      {
+       "concept_tag": "keats-sensuous-imagery",
+       "learning_objective": "Recall facts about John Keats and recognise sensuous imagery of sound, sight and taste."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH22",
+   "chapter_number": 22,
+   "old_chapter_number": null,
+   "title": "Ajamil and the Tigers",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww122.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEWW1-CH22-T1",
+     "topic_number": 1,
+     "title": "The tigers' complaint and the king's first raid",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tigers-complaint",
+       "learning_objective": "Recall why the starving tigers appealed to their king and what they reported about Ajamil's sheep dog."
+      },
+      {
+       "concept_tag": "tiger-king-bravado",
+       "learning_objective": "Interpret the irony in the tiger king's boastful solo raid and its humiliating result."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH22-T2",
+     "topic_number": 2,
+     "title": "The planned attack and the sheep dog's victory",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "collective-attack-plan",
+       "learning_objective": "Explain the tiger king's second plan of a mass attack led by himself."
+      },
+      {
+       "concept_tag": "sheep-dog-vigilance",
+       "learning_objective": "Analyse how the poet uses hyperbole to show the sheep dog's speed and alertness."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH22-T3",
+     "topic_number": 3,
+     "title": "The tiger king's lies and Ajamil's pretence",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tiger-king-hypocrisy",
+       "learning_objective": "Identify the hypocrisy in the tiger king's claim that the tigers came as friends."
+      },
+      {
+       "concept_tag": "ajamil-pretence",
+       "learning_objective": "Interpret why Ajamil pretended to believe the lies and avoided the sheep dog's eyes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH22-T4",
+     "topic_number": 4,
+     "title": "The friendship treaty and the good shepherd",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "friendship-treaty",
+       "learning_objective": "Recall the dinner, the long-term friendship treaty and the gifts Ajamil gave the tigers."
+      },
+      {
+       "concept_tag": "good-shepherd-wisdom",
+       "learning_objective": "Evaluate the political wisdom behind Ajamil's decision that even tigers must eat."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEWW1-CH22-T5",
+     "topic_number": 5,
+     "title": "The poet, the form and the satire",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "arun-kolatkar",
+       "learning_objective": "State key facts about the poet Arun Kolatkar given in the chapter."
+      },
+      {
+       "concept_tag": "satire-fable-allegory",
+       "learning_objective": "Distinguish the poem's literal and figurative levels as fable, allegory and satire."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEWW1-CH23",
+   "chapter_number": 23,
+   "old_chapter_number": null,
+   "title": "Chapter 23 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww123.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "KEWW1-CH24",
+   "chapter_number": 24,
+   "old_chapter_number": null,
+   "title": "Chapter 24 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww124.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "KEWW1-CH25",
+   "chapter_number": 25,
+   "old_chapter_number": null,
+   "title": "Chapter 25 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww125.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "KEWW1-CH26",
+   "chapter_number": 26,
+   "old_chapter_number": null,
+   "title": "Chapter 26 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww126.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "KEWW1-CH27",
+   "chapter_number": 27,
+   "old_chapter_number": null,
+   "title": "Chapter 27 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keww127.pdf",
+   "max_questions": 1000,
+   "topics": []
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+  "chapter_id": "KHVT1-CH04",
+  "title": "भारतीय कलाएँ",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "KHVT1-CH04-T1",
+      "topic_number": 1,
+      "title": "कलाएँ: अभिव्यक्ति, उत्सव और परंपरा",
+      "ncert_sections": null,
+      "concepts": [
+        {
+          "concept_tag": "kala-abhivyakti-madhyam",
+          "learning_objective": "विद्यार्थी समझ सकेंगे कि चित्र, संगीत और नृत्य भी भाषा की तरह मनुष्य की अभिव्यक्ति के माध्यम हैं।"
+        },
+        {
+          "concept_tag": "kala-aur-utsav-jeevan",
+          "learning_objective": "विद्यार्थी बता सकेंगे कि पर्व-त्योहारों, फसलों और जीवन-संस्कारों से जुड़ाव भारतीय कलाओं को कैसे जीवंत रखता है।"
+        },
+        {
+          "concept_tag": "lok-se-shastriya-vikas",
+          "learning_objective": "विद्यार्थी लोक और जनजातीय कलाओं से शास्त्रीय कलाओं के विकास का क्रम समझा सकेंगे।"
+        }
+      ]
+    },
+    {
+      "topic_id": "KHVT1-CH04-T2",
+      "topic_number": 2,
+      "title": "चित्रकला: शैल चित्र और गुफा कला",
+      "ncert_sections": null,
+      "concepts": [
+        {
+          "concept_tag": "shail-chitra",
+          "learning_objective": "विद्यार्थी शैल चित्रों और भीमबेटका की गुफाओं की विशेषताएँ पहचान सकेंगे।"
+        },
+        {
+          "concept_tag": "ajanta-ellora-gufa-kala",
+          "learning_objective": "विद्यार्थी अजंता, एलोरा और गुप्त काल की कला-उपलब्धियों का वर्णन कर सकेंगे।"
+        }
+      ]
+    },
+    {
+      "topic_id": "KHVT1-CH04-T3",
+      "topic_number": 3,
+      "title": "लघुचित्र, लोक चित्र-शैलियाँ और कला का विस्तार",
+      "ncert_sections": null,
+      "concepts": [
+        {
+          "concept_tag": "laghu-chitra-shailiyan",
+          "learning_objective": "विद्यार्थी किवाड़ चित्रकारी, पटचित्र, मधुबनी आदि शैलियों को उनके क्षेत्र से जोड़ सकेंगे।"
+        },
+        {
+          "concept_tag": "asthayi-lok-kala",
+          "learning_objective": "विद्यार्थी ऐपण, रंगोली, कोलम जैसी अस्थायी कलाओं के क्षेत्रीय नामों को पहचान सकेंगे।"
+        },
+        {
+          "concept_tag": "bharatiya-kala-ka-vistar",
+          "learning_objective": "विद्यार्थी विश्लेषण कर सकेंगे कि भारतीय कला को पूरी तरह समझने के लिए उसके विदेशों में हुए विस्तार को देखना क्यों आवश्यक है।"
+        }
+      ]
+    },
+    {
+      "topic_id": "KHVT1-CH04-T4",
+      "topic_number": 4,
+      "title": "संगीत कला",
+      "ncert_sections": null,
+      "concepts": [
+        {
+          "concept_tag": "margi-desi-sangeet",
+          "learning_objective": "विद्यार्थी वैदिक काल के मार्गी और देसी संगीत का अंतर बता सकेंगे।"
+        },
+        {
+          "concept_tag": "raag-aur-samay",
+          "learning_objective": "विद्यार्थी रागों और दिन के समय के संबंध को उदाहरण सहित समझा सकेंगे।"
+        },
+        {
+          "concept_tag": "lok-sangeet-aur-vadya",
+          "learning_objective": "विद्यार्थी पारंपरिक वाद्यों और गायन-परंपरा में भारतीय संगीत की सहजता और प्रकृति से जुड़ाव पहचान सकेंगे।"
+        }
+      ]
+    },
+    {
+      "topic_id": "KHVT1-CH04-T5",
+      "topic_number": 5,
+      "title": "नृत्य कला: अभिनय और लोक नृत्य",
+      "ncert_sections": null,
+      "concepts": [
+        {
+          "concept_tag": "nritya-aur-abhinay",
+          "learning_objective": "विद्यार्थी नाट्यशास्त्र के आधार पर नृत्य में अभिनय के महत्त्व को समझा सकेंगे।"
+        },
+        {
+          "concept_tag": "lok-nritya-vividhata",
+          "learning_objective": "विद्यार्थी विभिन्न राज्यों के लोक नृत्यों और उनकी समानताओं को पहचान सकेंगे।"
+        }
+      ]
+    },
+    {
+      "topic_id": "KHVT1-CH04-T6",
+      "topic_number": 6,
+      "title": "शास्त्रीय नृत्य और कलाओं का अंतर्संबंध",
+      "ncert_sections": null,
+      "concepts": [
+        {
+          "concept_tag": "shastriya-nritya-roop",
+          "learning_objective": "विद्यार्थी प्रमुख शास्त्रीय नृत्यों, उनके राज्यों और हस्त-मुद्राओं के महत्त्व को पहचान सकेंगे।"
+        },
+        {
+          "concept_tag": "kalaon-ka-antarsambandh",
+          "learning_objective": "विद्यार्थी लोक और शास्त्रीय कलाओं के बीच निरंतर संवाद का मूल्यांकन कर सकेंगे।"
+        },
+        {
+          "concept_tag": "kala-aur-manushyata",
+          "learning_objective": "विद्यार्थी भर्तृहरि के कथन के आधार पर मनुष्य के जीवन में कला के महत्त्व की व्याख्या कर सकेंगे।"
+        }
+      ]
+    }
+  ]
+}

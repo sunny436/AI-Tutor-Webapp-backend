@@ -1,0 +1,96 @@
+{
+ "chapter_id": "KEGY2-CH14",
+ "title": "Biodiversity and Conservation",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH14-T1",
+   "topic_number": 1,
+   "title": "Meaning and distribution of biodiversity",
+   "ncert_sections": "Introduction",
+   "concepts": [
+    {
+     "concept_tag": "biodiversity-meaning",
+     "learning_objective": "Define biodiversity as the number and variety of organisms, their genes and ecosystems in a region."
+    },
+    {
+     "concept_tag": "biodiversity-distribution",
+     "learning_objective": "Explain why biodiversity is uneven on the earth and richest in the tropics."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH14-T2",
+   "topic_number": 2,
+   "title": "Levels of biodiversity",
+   "ncert_sections": "Genetic, Species and Ecosystem Diversity",
+   "concepts": [
+    {
+     "concept_tag": "genetic-diversity",
+     "learning_objective": "Describe genetic diversity as variation of genes within a species."
+    },
+    {
+     "concept_tag": "species-diversity",
+     "learning_objective": "Explain species diversity and how it is measured."
+    },
+    {
+     "concept_tag": "ecosystem-diversity",
+     "learning_objective": "Explain ecosystem diversity and why ecosystem boundaries are hard to demarcate."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH14-T3",
+   "topic_number": 3,
+   "title": "Importance of biodiversity",
+   "ncert_sections": "Ecological, Economic and Scientific Role",
+   "concepts": [
+    {
+     "concept_tag": "ecological-role",
+     "learning_objective": "Explain how species diversity makes ecosystems stable and productive."
+    },
+    {
+     "concept_tag": "economic-role",
+     "learning_objective": "Identify the economic commodities and agro-biodiversity that biodiversity supplies."
+    },
+    {
+     "concept_tag": "scientific-ethical-role",
+     "learning_objective": "Explain the scientific and ethical value of every species."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH14-T4",
+   "topic_number": 4,
+   "title": "Loss of biodiversity",
+   "ncert_sections": "Loss of Biodiversity",
+   "concepts": [
+    {
+     "concept_tag": "causes-of-loss",
+     "learning_objective": "Analyse the human and natural causes of biodiversity loss, including exotic species."
+    },
+    {
+     "concept_tag": "iucn-threat-categories",
+     "learning_objective": "Distinguish between endangered, vulnerable and rare species as classified by IUCN."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH14-T5",
+   "topic_number": 5,
+   "title": "Conservation of biodiversity",
+   "ncert_sections": "Conservation of Biodiversity",
+   "concepts": [
+    {
+     "concept_tag": "conservation-strategy",
+     "learning_objective": "Describe the Earth Summit, the world conservation strategy and India's Wild Life (Protection) Act, 1972."
+    },
+    {
+     "concept_tag": "megadiversity-hotspots",
+     "learning_objective": "Explain mega diversity centres and biodiversity hotspots."
+    }
+   ]
+  }
+ ]
+}

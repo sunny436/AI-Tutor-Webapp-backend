@@ -1,0 +1,140 @@
+{
+ "chapter_id": "LEAC2-CH05",
+ "title": "Accounting Ratios",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEAC2-CH05-T1",
+   "topic_number": 1,
+   "title": "Meaning, objectives and advantages of ratio analysis",
+   "ncert_sections": "5.1, 5.2, 5.3",
+   "concepts": [
+    {
+     "concept_tag": "meaning-of-accounting-ratio",
+     "learning_objective": "Explain what an accounting ratio is and why it must relate meaningfully connected figures."
+    },
+    {
+     "concept_tag": "objectives-of-ratio-analysis",
+     "learning_objective": "State the objectives for which ratio analysis is carried out."
+    },
+    {
+     "concept_tag": "advantages-of-ratio-analysis",
+     "learning_objective": "Identify the advantages of ratio analysis and its indicative, whistle-blowing role."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH05-T2",
+   "topic_number": 2,
+   "title": "Limitations of ratio analysis",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "limitations-of-accounting-data",
+     "learning_objective": "Explain how limitations of financial statements, such as ignored price-level changes and varied practices, limit ratio analysis."
+    },
+    {
+     "concept_tag": "limitations-of-ratios",
+     "learning_objective": "Identify the limitations of ratios themselves, such as lack of standard definitions and standard levels."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH05-T3",
+   "topic_number": 3,
+   "title": "Types of ratios",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "traditional-classification",
+     "learning_objective": "Classify ratios as statement of profit and loss, balance sheet or composite ratios."
+    },
+    {
+     "concept_tag": "functional-classification",
+     "learning_objective": "Classify ratios as liquidity, solvency, activity or profitability ratios by their purpose."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH05-T4",
+   "topic_number": 4,
+   "title": "Liquidity ratios",
+   "ncert_sections": "5.6, 5.6.1, 5.6.2",
+   "concepts": [
+    {
+     "concept_tag": "current-ratio",
+     "learning_objective": "Calculate and interpret the current ratio."
+    },
+    {
+     "concept_tag": "quick-ratio",
+     "learning_objective": "Calculate and interpret the quick (liquid or acid-test) ratio."
+    },
+    {
+     "concept_tag": "effect-of-transactions-on-liquidity",
+     "learning_objective": "Analyse how a transaction changes the current ratio."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH05-T5",
+   "topic_number": 5,
+   "title": "Solvency ratios",
+   "ncert_sections": "5.7, 5.7.1-5.7.5",
+   "concepts": [
+    {
+     "concept_tag": "debt-equity-ratio",
+     "learning_objective": "Calculate and interpret the debt-equity ratio."
+    },
+    {
+     "concept_tag": "proprietary-and-capital-employed-ratios",
+     "learning_objective": "Calculate the proprietary, debt to capital employed and total assets to debt ratios."
+    },
+    {
+     "concept_tag": "interest-coverage-ratio",
+     "learning_objective": "Calculate and interpret the interest coverage ratio."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH05-T6",
+   "topic_number": 6,
+   "title": "Activity (turnover) ratios",
+   "ncert_sections": "5.8, 5.8.1-5.8.4",
+   "concepts": [
+    {
+     "concept_tag": "inventory-turnover-ratio",
+     "learning_objective": "Calculate and interpret the inventory turnover ratio."
+    },
+    {
+     "concept_tag": "receivables-and-payables-turnover",
+     "learning_objective": "Calculate trade receivables and payables turnover ratios with collection and payment periods."
+    },
+    {
+     "concept_tag": "capital-employed-turnover",
+     "learning_objective": "Interpret net assets, fixed assets and working capital turnover ratios."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH05-T7",
+   "topic_number": 7,
+   "title": "Profitability ratios",
+   "ncert_sections": "5.9, 5.9.1-5.9.10",
+   "concepts": [
+    {
+     "concept_tag": "gross-and-operating-profit-ratios",
+     "learning_objective": "Calculate gross profit, operating and net profit ratios."
+    },
+    {
+     "concept_tag": "return-on-investment",
+     "learning_objective": "Calculate and interpret return on investment and return on shareholders' funds."
+    },
+    {
+     "concept_tag": "earnings-per-share-and-market-ratios",
+     "learning_objective": "Calculate earnings per share, book value per share, dividend payout and P/E ratios."
+    }
+   ]
+  }
+ ]
+}

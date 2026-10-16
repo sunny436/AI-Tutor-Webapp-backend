@@ -1,0 +1,116 @@
+{
+ "chapter_id": "LHEC1-CH03",
+ "title": "मुद्रा और बैंकिंग",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHEC1-CH03-T1",
+   "topic_number": 1,
+   "title": "वस्तु विनिमय और मुद्रा के कार्य",
+   "ncert_sections": "परिचय, 3.1",
+   "concepts": [
+    {
+     "concept_tag": "vastu-vinimay-dohra-sanyog",
+     "learning_objective": "वस्तु विनिमय प्रणाली और आवश्यकताओं के दोहरे संयोग की कठिनाई को समझाना।"
+    },
+    {
+     "concept_tag": "mudra-ke-karya",
+     "learning_objective": "मुद्रा के विनिमय माध्यम, लेखा इकाई और मूल्य संचय के कार्यों की पहचान करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH03-T2",
+   "topic_number": 2,
+   "title": "मुद्रा की माँग: लेन-देन और सट्टा उद्देश्य",
+   "ncert_sections": "3.2.1, बॉक्स 3.1",
+   "concepts": [
+    {
+     "concept_tag": "mudra-ki-mang-nirdharak",
+     "learning_objective": "मुद्रा की माँग पर आय और ब्याज दर के प्रभाव को बताना।"
+    },
+    {
+     "concept_tag": "len-den-uddeshya",
+     "learning_objective": "लेन-देन हेतु मुद्रा की माँग और मुद्रा के संचलन वेग की गणना करना।"
+    },
+    {
+     "concept_tag": "satta-uddeshya-taralta-jal",
+     "learning_objective": "बॉण्ड कीमत, ब्याज दर और सट्टा माँग के संबंध का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH03-T3",
+   "topic_number": 3,
+   "title": "केंद्रीय बैंक और वाणिज्यिक बैंक",
+   "ncert_sections": "3.2.2",
+   "concepts": [
+    {
+     "concept_tag": "kendriya-bank-karya",
+     "learning_objective": "केंद्रीय बैंक के कार्यों और उच्च शक्तिशाली मुद्रा का अर्थ पहचानना।"
+    },
+    {
+     "concept_tag": "vanijyik-bank-madhyasthata",
+     "learning_objective": "वाणिज्यिक बैंकों द्वारा जमा स्वीकारने, ऋण देने और ब्याज-अंतर से लाभ कमाने को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH03-T4",
+   "topic_number": 4,
+   "title": "बैंकिंग प्रणाली द्वारा मुद्रा सृजन",
+   "ncert_sections": "3.3, 3.3.1, 3.3.2",
+   "concepts": [
+    {
+     "concept_tag": "bank-tulan-patra",
+     "learning_objective": "बैंक के तुलन-पत्र में परिसंपत्तियों, देयताओं और निवल मूल्य की पहचान करना।"
+    },
+    {
+     "concept_tag": "mudra-gunak",
+     "learning_objective": "नकद आरक्षित अनुपात से मुद्रा गुणक तथा सृजित जमा और ऋण की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH03-T5",
+   "topic_number": 5,
+   "title": "मुद्रा पूर्ति नियंत्रण के नीतिगत उपकरण",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "antim-rindata",
+     "learning_objective": "केंद्रीय बैंक को अंतिम ऋणदाता कहे जाने का कारण समझाना।"
+    },
+    {
+     "concept_tag": "parimanatmak-gunatmak-upkaran",
+     "learning_objective": "परिमाणात्मक और गुणात्मक उपकरणों में अंतर करना तथा बैंक दर के प्रभाव को बताना।"
+    },
+    {
+     "concept_tag": "khule-bazar-ki-kriyayen",
+     "learning_objective": "खुले बाज़ार की क्रियाओं, रेपो और रिवर्स रेपो का मुद्रा पूर्ति पर प्रभाव समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH03-T6",
+   "topic_number": 6,
+   "title": "मुद्रा पूर्ति के माप और विमुद्रीकरण",
+   "ncert_sections": "मुद्रा पूर्ति के विभिन्न माप, बॉक्स 3.2",
+   "concepts": [
+    {
+     "concept_tag": "adesh-mudra-vaidh-mudra",
+     "learning_objective": "आदेश मुद्रा और वैध मुद्रा का अर्थ बताना।"
+    },
+    {
+     "concept_tag": "mudra-purti-ke-map",
+     "learning_objective": "M1, M2, M3 और M4 की परिभाषा देना और उनकी गणना करना।"
+    },
+    {
+     "concept_tag": "vimudrikaran",
+     "learning_objective": "2016 के विमुद्रीकरण के प्रभावों का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

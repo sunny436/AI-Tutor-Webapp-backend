@@ -1,0 +1,734 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "poorvi-c07-en",
+  "curriculum": "cbse",
+  "class_level": 7,
+  "subject_code": "english",
+  "language": "english",
+  "title": "Poorvi",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "gepr1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "GEPR1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Learning Together",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gepr101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEPR1-CH01-T1",
+     "topic_number": 1,
+     "title": "The Day the River Spoke: Jahnavi's dream and the River's advice",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jahnavi-dream",
+       "learning_objective": "Students will recall Jahnavi's wish to go to school and the reasons she was kept at home."
+      },
+      {
+       "concept_tag": "river-advice",
+       "learning_objective": "Students will explain how the River encouraged Jahnavi to find the courage to go to school."
+      },
+      {
+       "concept_tag": "girls-education-message",
+       "learning_objective": "Students will interpret the story's message that girls deserve the same chance to learn as boys."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH01-T2",
+     "topic_number": 2,
+     "title": "The Day the River Spoke: personification, sound words and prepositions",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "personification",
+       "learning_objective": "Students will explain why the River is written with a capital letter and given human qualities."
+      },
+      {
+       "concept_tag": "sound-words",
+       "learning_objective": "Students will identify and use the sound words from the story, such as shrieked, rustle and splashed."
+      },
+      {
+       "concept_tag": "prepositions-and-adverbs",
+       "learning_objective": "Students will distinguish words like up and down used as prepositions from the same words used as adverbs."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH01-T3",
+     "topic_number": 3,
+     "title": "Try Again: King Bruce and the spider",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "king-bruce-despair",
+       "learning_objective": "Students will describe King Bruce's despair after repeated failure."
+      },
+      {
+       "concept_tag": "spider-perseverance",
+       "learning_objective": "Students will recall how the spider kept climbing after every fall until it succeeded."
+      },
+      {
+       "concept_tag": "poem-central-idea",
+       "learning_objective": "Students will analyse how the spider's success changes King Bruce's attitude and conveys the poem's message."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH01-T4",
+     "topic_number": 4,
+     "title": "Try Again: poetic devices and vocabulary",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sound-devices",
+       "learning_objective": "Students will identify the rhyme scheme, alliteration and repetition used in the poem."
+      },
+      {
+       "concept_tag": "simile-and-metaphor",
+       "learning_objective": "Students will distinguish a metaphor from a simile."
+      },
+      {
+       "concept_tag": "poem-vocabulary",
+       "learning_objective": "Students will give the meanings of words from the poem such as pondered, toil and strive."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH01-T5",
+     "topic_number": 5,
+     "title": "Three Days to See: Helen Keller's three days",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "three-days-plan",
+       "learning_objective": "Students will recall what Helen Keller wished to see on each of her three imagined days of sight."
+      },
+      {
+       "concept_tag": "touch-experience",
+       "learning_objective": "Students will explain how Helen Keller experiences nature and people through touch."
+      },
+      {
+       "concept_tag": "keller-message",
+       "learning_objective": "Students will evaluate Helen Keller's advice to make the most of every sense."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH01-T6",
+     "topic_number": 6,
+     "title": "Three Days to See: sensory words and modal verbs",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sensory-words",
+       "learning_objective": "Students will classify words from the text by the sense they describe."
+      },
+      {
+       "concept_tag": "modal-verbs",
+       "learning_objective": "Students will identify modal verbs and the functions they express, such as possibility, obligation and request."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEPR1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Wit and Humour",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gepr102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEPR1-CH02-T1",
+     "topic_number": 1,
+     "title": "Animals, Birds, and Dr. Dolittle: Polynesia and the language of animals",
+     "ncert_sections": "Animals, Birds, and Dr. Dolittle, Part I",
+     "concepts": [
+      {
+       "concept_tag": "cats-food-man-advice",
+       "learning_objective": "Explain why the Cat's-food-Man and Polynesia advise Doctor Dolittle to become an animal doctor."
+      },
+      {
+       "concept_tag": "animal-language",
+       "learning_objective": "Describe how, according to Polynesia, animals and birds communicate with one another."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH02-T2",
+     "topic_number": 2,
+     "title": "Animals, Birds, and Dr. Dolittle: the plough horse and the Doctor's fame",
+     "ncert_sections": "Animals, Birds, and Dr. Dolittle, Part II",
+     "concepts": [
+      {
+       "concept_tag": "plough-horse-spectacles",
+       "learning_objective": "Recount the plough horse's problem and explain how speaking its language helped the Doctor cure it."
+      },
+      {
+       "concept_tag": "dolittle-fame",
+       "learning_objective": "Explain how Doctor Dolittle cared for many kinds of animals and how his fame spread across the world."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH02-T3",
+     "topic_number": 3,
+     "title": "Dr. Dolittle: compound words, palindromes and the present perfect tense",
+     "ncert_sections": "Animals, Birds, and Dr. Dolittle, Let us learn",
+     "concepts": [
+      {
+       "concept_tag": "compound-words",
+       "learning_objective": "Classify compound words from the story as hyphenated, open or closed compounds."
+      },
+      {
+       "concept_tag": "palindromes",
+       "learning_objective": "Identify words and sentences that read the same backwards as forwards."
+      },
+      {
+       "concept_tag": "present-perfect-tense",
+       "learning_objective": "Use the present perfect tense (has/have + past participle) for actions relevant at the time of speaking."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH02-T4",
+     "topic_number": 4,
+     "title": "A Funny Man: the poem and its humour",
+     "ncert_sections": "A Funny Man (poem)",
+     "concepts": [
+      {
+       "concept_tag": "funny-man-actions",
+       "learning_objective": "Recall the odd actions of the funny man and the poet's reactions to them."
+      },
+      {
+       "concept_tag": "poetic-devices-humour",
+       "learning_objective": "Identify devices such as alliteration, rhyme and mixed-up sense images that create humour in the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH02-T5",
+     "topic_number": 5,
+     "title": "A Funny Man: phrasal verbs and limericks",
+     "ncert_sections": "A Funny Man, Let us learn and Let us write",
+     "concepts": [
+      {
+       "concept_tag": "phrasal-verbs",
+       "learning_objective": "Use phrasal verbs such as take up, take after, take in, take over and take off with their correct meanings."
+      },
+      {
+       "concept_tag": "limerick-structure",
+       "learning_objective": "Recognise the five-line form and AABBA rhyme scheme of a limerick."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH02-T6",
+     "topic_number": 6,
+     "title": "Say the Right Thing: Mrs. Shaw's advice (Scene I)",
+     "ncert_sections": "Say the Right Thing, Scene I",
+     "concepts": [
+      {
+       "concept_tag": "mrs-shaw-advice",
+       "learning_objective": "Recall the advice Mrs. Shaw gives Mary about polite conversation with guests."
+      },
+      {
+       "concept_tag": "mary-overconfidence",
+       "learning_objective": "Infer Mary's character from her confident replies to her mother in Scene I."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH02-T7",
+     "topic_number": 7,
+     "title": "Say the Right Thing: Mary's blunders (Scene II)",
+     "ncert_sections": "Say the Right Thing, Scene II",
+     "concepts": [
+      {
+       "concept_tag": "marys-blunders",
+       "learning_objective": "Identify how each of Mary's remarks unknowingly offends Mrs. Harding or Mrs. Lee."
+      },
+      {
+       "concept_tag": "humour-in-the-play",
+       "learning_objective": "Explain how stage directions and the final line create humour in the play."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH02-T8",
+     "topic_number": 8,
+     "title": "Say the Right Thing: suffixes, tenses and kinds of sentences",
+     "ncert_sections": "Say the Right Thing, Let us learn",
+     "concepts": [
+      {
+       "concept_tag": "suffixes",
+       "learning_objective": "Form and analyse words using suffixes such as -ous, -ly, -ful, -ance and -est."
+      },
+      {
+       "concept_tag": "present-perfect-continuous",
+       "learning_objective": "Use the present perfect continuous tense (has/have + been + verb-ing) for actions continuing up to now."
+      },
+      {
+       "concept_tag": "kinds-of-sentences",
+       "learning_objective": "Identify declarative, interrogative, exclamatory and imperative sentences and punctuate them correctly."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEPR1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Dreams and Discoveries",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gepr103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEPR1-CH03-T1",
+     "topic_number": 1,
+     "title": "My Brother's Great Invention: the burglar alarm and the time machine",
+     "ncert_sections": "My Brother's Great Invention, Part I",
+     "concepts": [
+      {
+       "concept_tag": "story-events-part-one",
+       "learning_objective": "Recall and explain the main events of Part I, from the burglar alarm to the time machine."
+      },
+      {
+       "concept_tag": "story-vocabulary",
+       "learning_objective": "Understand the meaning of key words such as 'tinkering' as used in the story."
+      },
+      {
+       "concept_tag": "character-traits",
+       "learning_objective": "Compare how Anita sees Anand with how Anand sees himself, using evidence from the text."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH03-T2",
+     "topic_number": 2,
+     "title": "My Brother's Great Invention: the night of the intruder",
+     "ncert_sections": "My Brother's Great Invention, Part II",
+     "concepts": [
+      {
+       "concept_tag": "plot-sequence-intruder",
+       "learning_objective": "Recall and sequence the events of the night Boppa entered the house."
+      },
+      {
+       "concept_tag": "inference-and-interpretation",
+       "learning_objective": "Infer characters' motives and the meaning of the story's open ending."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH03-T3",
+     "topic_number": 3,
+     "title": "Words in the story: onomatopoeia, binomials, idioms and phrasal verbs",
+     "ncert_sections": "Let us learn I-III (My Brother's Great Invention)",
+     "concepts": [
+      {
+       "concept_tag": "onomatopoeia",
+       "learning_objective": "Identify onomatopoeic sound words used in the story."
+      },
+      {
+       "concept_tag": "binomials",
+       "learning_objective": "Recognise binomials and use them in their fixed order and meaning."
+      },
+      {
+       "concept_tag": "idioms-and-phrasal-verbs",
+       "learning_objective": "Use idioms and phrasal verbs from the story correctly in new contexts."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH03-T4",
+     "topic_number": 4,
+     "title": "Simple past and past perfect; words ending in -ough",
+     "ncert_sections": "Let us learn IV and Let us speak (My Brother's Great Invention)",
+     "concepts": [
+      {
+       "concept_tag": "past-perfect-tense",
+       "learning_objective": "Use the past perfect for the earlier of two past actions and the simple past for the later one."
+      },
+      {
+       "concept_tag": "ough-pronunciation",
+       "learning_objective": "Distinguish the different pronunciations of words ending in -ough."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH03-T5",
+     "topic_number": 5,
+     "title": "Paper Boats: meaning and theme of the poem",
+     "ncert_sections": "Paper Boats (Rabindranath Tagore)",
+     "concepts": [
+      {
+       "concept_tag": "poem-comprehension",
+       "learning_objective": "Recall what the speaker does with his paper boats and what he imagines."
+      },
+      {
+       "concept_tag": "theme-and-interpretation",
+       "learning_objective": "Interpret the theme and images of the poem, such as the fairies of sleep."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH03-T6",
+     "topic_number": 6,
+     "title": "Paper Boats: poetic devices and vocabulary",
+     "ncert_sections": "Paper Boats: Let us discuss and Let us learn",
+     "concepts": [
+      {
+       "concept_tag": "poetic-devices",
+       "learning_objective": "Identify alliteration, imagery and symbols in the poem."
+      },
+      {
+       "concept_tag": "opposites-and-time-words",
+       "learning_objective": "Match words from the poem with their opposites and group words for parts of the day."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH03-T7",
+     "topic_number": 7,
+     "title": "North, South, East, West: Shaana's postcards",
+     "ncert_sections": "North, South, East, West (C.G. Salamander)",
+     "concepts": [
+      {
+       "concept_tag": "postcard-comprehension",
+       "learning_objective": "Recall the places Shaana visits and how her feelings change during the journey."
+      },
+      {
+       "concept_tag": "environment-and-diversity",
+       "learning_objective": "Interpret Shaana's observations about India's landscapes and environmental change."
+      },
+      {
+       "concept_tag": "text-form-purpose",
+       "learning_objective": "Evaluate why the author tells the journey through postcards."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH03-T8",
+     "topic_number": 8,
+     "title": "Subject-verb agreement",
+     "ncert_sections": "Let us learn IV-V (North, South, East, West)",
+     "concepts": [
+      {
+       "concept_tag": "sva-special-subjects",
+       "learning_objective": "Choose the verb for subjects such as 'a pair of', subjects ending in -s and indefinite pronouns."
+      },
+      {
+       "concept_tag": "sva-or-nor",
+       "learning_objective": "Make the verb agree with the nearer subject when subjects are joined by 'or' or 'nor'."
+      },
+      {
+       "concept_tag": "sva-intervening-phrases",
+       "learning_objective": "Keep subject and verb in agreement when other words come between them."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEPR1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Travel and Adventure",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gepr104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEPR1-CH04-T1",
+     "topic_number": 1,
+     "title": "The Tunnel (Part I): Suraj and the steam engine",
+     "ncert_sections": "The Tunnel, Part I: Let us read",
+     "concepts": [
+      {
+       "concept_tag": "train-imagery",
+       "learning_objective": "Interpret the imagery and figures of speech Ruskin Bond uses to describe the train, the tunnel and the jungle."
+      },
+      {
+       "concept_tag": "suraj-curiosity",
+       "learning_objective": "Explain what Suraj does at the tunnel and what it shows about his curious, adventurous nature."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH04-T2",
+     "topic_number": 2,
+     "title": "The Tunnel (Part I): Sunder Singh, the watchman",
+     "ncert_sections": "The Tunnel, Part I: Let us read, Let us discuss",
+     "concepts": [
+      {
+       "concept_tag": "watchman-duty-system",
+       "learning_objective": "Describe the watchman's day and night system for inspecting the tunnel and warning the engine driver."
+      },
+      {
+       "concept_tag": "sunder-singh-character",
+       "learning_objective": "Infer Sunder Singh's character from what he says about his tunnel, the jungle and the town."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH04-T3",
+     "topic_number": 3,
+     "title": "The Tunnel (Part II): The leopard and the night mail",
+     "ncert_sections": "The Tunnel, Part II: Let us read, Let us think and reflect",
+     "concepts": [
+      {
+       "concept_tag": "leopard-in-tunnel",
+       "learning_objective": "Recall and explain how Sunder Singh and Suraj drive the leopard out of the tunnel before the night mail."
+      },
+      {
+       "concept_tag": "firefly-symbol",
+       "learning_objective": "Interpret the ending of the story and why Sunder Singh is called a 'firefly'."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH04-T4",
+     "topic_number": 4,
+     "title": "The Tunnel: sound words, 'would' and 'used to', colon and semicolon",
+     "ncert_sections": "The Tunnel: Let us learn I-IV",
+     "concepts": [
+      {
+       "concept_tag": "sound-words",
+       "learning_objective": "Match sound words from the story with their meanings and use them in sentences."
+      },
+      {
+       "concept_tag": "would-used-to",
+       "learning_objective": "Use 'would' and 'used to' correctly to describe habits and states in the past."
+      },
+      {
+       "concept_tag": "colon-semicolon",
+       "learning_objective": "Use the colon and the semicolon correctly in sentences."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH04-T5",
+     "topic_number": 5,
+     "title": "Travel (poem by Edna St. Vincent Millay)",
+     "ncert_sections": "Travel: Let us read, Let us discuss, Let us think and reflect",
+     "concepts": [
+      {
+       "concept_tag": "travel-poem-meaning",
+       "learning_objective": "Explain the speaker's longing for travel and the meaning of key lines of the poem."
+      },
+      {
+       "concept_tag": "travel-poetic-devices",
+       "learning_objective": "Identify the rhyme scheme, personification and imagery used in the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH04-T6",
+     "topic_number": 6,
+     "title": "Travel: words for sounds and the soft and hard 'c'",
+     "ncert_sections": "Travel: Let us learn II, Let us speak",
+     "concepts": [
+      {
+       "concept_tag": "sound-verbs",
+       "learning_objective": "Distinguish words for related sounds such as wailing, bawling, whimpering and hollering."
+      },
+      {
+       "concept_tag": "soft-hard-c",
+       "learning_objective": "Apply the rule for pronouncing the letter 'c' as a soft /s/ or a hard /k/ sound."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH04-T7",
+     "topic_number": 7,
+     "title": "Conquering the Summit: Arunima Sinha's journey",
+     "ncert_sections": "Conquering the Summit: Let us read, Let us discuss",
+     "concepts": [
+      {
+       "concept_tag": "arunima-journey",
+       "learning_objective": "Recall the main events of Arunima Sinha's journey from her accident to the Seven Summits."
+      },
+      {
+       "concept_tag": "resilience-message",
+       "learning_objective": "Evaluate Arunima Sinha's message about goals, failure and resilience."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH04-T8",
+     "topic_number": 8,
+     "title": "Conquering the Summit: phrases, word forms and articles",
+     "ncert_sections": "Conquering the Summit: Let us learn I-III",
+     "concepts": [
+      {
+       "concept_tag": "phrase-meanings",
+       "learning_objective": "Explain the meanings of phrases such as 'beacon of hope' and 'mental fortitude' in context."
+      },
+      {
+       "concept_tag": "word-forms",
+       "learning_objective": "Identify the noun, adjective, verb and adverb forms of words from the text."
+      },
+      {
+       "concept_tag": "articles",
+       "learning_objective": "Use the articles 'a', 'an' and 'the' correctly, and recognise where no article is needed."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEPR1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Bravehearts",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gepr105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEPR1-CH05-T1",
+     "topic_number": 1,
+     "title": "A Homage to Our Brave Soldiers: Soumya's visit to the National War Memorial",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "war-memorial-facts",
+       "learning_objective": "Recall key facts about the National War Memorial and explain why such memorials matter."
+      },
+      {
+       "concept_tag": "gallantry-awards",
+       "learning_objective": "Identify India's gallantry awards and interpret the citations of the heroes named in the letter."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH05-T2",
+     "topic_number": 2,
+     "title": "The four Chakras and the Amar Jawan Jyoti",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "four-chakras",
+       "learning_objective": "Describe the four concentric circles of the memorial and what each symbolises."
+      },
+      {
+       "concept_tag": "amar-jawan-jyoti",
+       "learning_objective": "Explain the meaning of the Amar Jawan Jyoti and the obelisk with the eternal flame."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH05-T3",
+     "topic_number": 3,
+     "title": "Ananda's reply: gratitude and inspiration",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gratitude-to-soldiers",
+       "learning_objective": "Interpret Ananda's views on war memorials and our duty to honour soldiers."
+      },
+      {
+       "concept_tag": "ananda-letter-details",
+       "learning_objective": "Recall details of Ananda's letter such as the Chandigarh memorial and her hobby of philately."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH05-T4",
+     "topic_number": 4,
+     "title": "Let us learn: prefixes and subordinate clauses",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prefixes",
+       "learning_objective": "Form and understand words made with prefixes such as dis-, in-, im-, un-, re- and de-."
+      },
+      {
+       "concept_tag": "main-and-subordinate-clauses",
+       "learning_objective": "Identify main and subordinate clauses and use subordinating conjunctions correctly."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH05-T5",
+     "topic_number": 5,
+     "title": "My Dear Soldiers (poem by A.P.J. Abdul Kalam)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "poem-theme-and-tone",
+       "learning_objective": "Identify the poet, theme and tone of the poem 'My Dear Soldiers'."
+      },
+      {
+       "concept_tag": "poetic-devices",
+       "learning_objective": "Recognise and interpret poetic devices such as simile and metaphor in the poem."
+      },
+      {
+       "concept_tag": "collocations",
+       "learning_objective": "Choose words that collocate naturally, as practised with the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH05-T6",
+     "topic_number": 6,
+     "title": "Rani Abbakka: the queen of Ullal",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rani-abbakka-defiance",
+       "learning_objective": "Explain how and why Rani Abbakka defied the Portuguese."
+      },
+      {
+       "concept_tag": "story-vocabulary",
+       "learning_objective": "Understand the meanings of words from the story such as vassal and defied."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEPR1-CH05-T7",
+     "topic_number": 7,
+     "title": "Spelling, silent letters and reported speech",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ie-ei-and-silent-letters",
+       "learning_objective": "Apply the 'ie/ei' spelling rule and recognise silent letters."
+      },
+      {
+       "concept_tag": "reported-speech",
+       "learning_objective": "Change direct speech into indirect speech with the correct changes of tense, person, time and place."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

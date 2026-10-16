@@ -1,0 +1,80 @@
+{
+ "chapter_id": "JHMH1-CH02",
+ "title": "बहुपद",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH02-T1",
+   "topic_number": 1,
+   "title": "बहुपद, उनकी घात और शून्यक",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "bahupad-ghat-aur-prakar",
+     "learning_objective": "घात के आधार पर बहुपदों को रैखिक, द्विघात और त्रिघात बहुपदों में पहचानना।"
+    },
+    {
+     "concept_tag": "bahupad-ka-maan-aur-shunyak",
+     "learning_objective": "किसी बहुपद का x = k पर मान ज्ञात करना और जाँचना कि k उसका शून्यक है या नहीं।"
+    },
+    {
+     "concept_tag": "rekhiya-bahupad-ka-shunyak",
+     "learning_objective": "रैखिक बहुपद ax + b का शून्यक –b/a के रूप में ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH02-T2",
+   "topic_number": 2,
+   "title": "बहुपद के शून्यकों का ज्यामितीय अर्थ",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "shunyak-ka-jyamitiya-arth",
+     "learning_objective": "समझना कि शून्यक y = p(x) के आलेख और x-अक्ष के प्रतिच्छेद बिंदुओं के x-निर्देशांक होते हैं।"
+    },
+    {
+     "concept_tag": "parvalay-ki-teen-sthitiyan",
+     "learning_objective": "परवलय की स्थिति से द्विघात बहुपद के दो, एक या शून्य शून्यकों की पहचान करना।"
+    },
+    {
+     "concept_tag": "shunyakon-ki-adhiktam-sankhya",
+     "learning_objective": "जानना कि घात n वाले बहुपद के अधिक से अधिक n शून्यक होते हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH02-T3",
+   "topic_number": 3,
+   "title": "द्विघात बहुपद के शून्यकों और गुणांकों में संबंध",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "shunyakon-ka-yog-aur-gunanfal",
+     "learning_objective": "द्विघात बहुपद के शून्यकों का योग –b/a और गुणनफल c/a के रूप में ज्ञात करना।"
+    },
+    {
+     "concept_tag": "shunyak-gyat-kar-sambandh-satyapan",
+     "learning_objective": "मध्य पद विभाजन से शून्यक ज्ञात कर शून्यकों और गुणांकों के संबंध का सत्यापन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH02-T4",
+   "topic_number": 4,
+   "title": "दिए गए शून्यकों से द्विघात बहुपद बनाना और संबंधित व्यंजक",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "dvighat-bahupad-nirman",
+     "learning_objective": "शून्यकों का योग और गुणनफल दिए होने पर द्विघात बहुपद k[x² – (योग)x + गुणनफल] बनाना।"
+    },
+    {
+     "concept_tag": "shunyakon-ke-vyanjakon-ka-maan",
+     "learning_objective": "योग और गुणनफल की सहायता से α² + β² तथा 1/α + 1/β जैसे व्यंजकों का मान ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

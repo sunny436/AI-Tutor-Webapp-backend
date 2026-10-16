@@ -1,0 +1,132 @@
+{
+ "chapter_id": "IHSC1-CH02",
+ "title": "कोशिका— जीवन की निर्माण इकाई",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSC1-CH02-T1",
+   "topic_number": 1,
+   "title": "कोशिकाओं का अध्ययन कैसे करें?",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "vibhedan-seema",
+     "learning_objective": "मानव नेत्र की विभेदन सीमा (0.1 mm) और कोशिका देखने के लिए सूक्ष्मदर्शी की आवश्यकता समझना।"
+    },
+    {
+     "concept_tag": "sukshmdarshi-aavardhan",
+     "learning_objective": "सूक्ष्मदर्शी का कुल आवर्धन तथा दृश्य क्षेत्र से कोशिका के आकार का अनुमान लगाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH02-T2",
+   "topic_number": 2,
+   "title": "कोशिका झिल्ली और कोशिका भित्ति",
+   "ncert_sections": "2.2, 2.2.1, 2.2.2",
+   "concepts": [
+    {
+     "concept_tag": "parasaran",
+     "learning_objective": "चयनात्मक पारगम्य झिल्ली से जल की गति (परासरण) तथा विलयनों के प्रभाव की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "taral-mosaic-model",
+     "learning_objective": "तरल-मोज़ेक मॉडल के अनुसार कोशिका झिल्ली की संरचना पहचानना।"
+    },
+    {
+     "concept_tag": "koshika-bhitti",
+     "learning_objective": "कोशिका भित्ति की संरचना, पारगम्यता और पादप कोशिकाओं के लिए उसका महत्त्व समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH02-T3",
+   "topic_number": 3,
+   "title": "कोशिका का आंतरिक भाग: पूर्वकेंद्रकी और सुकेंद्रकी कोशिकाएँ",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "purvakendraki-sukendraki",
+     "learning_objective": "पूर्वकेंद्रकी और सुकेंद्रकी कोशिकाओं के लक्षणों की तुलना करना।"
+    },
+    {
+     "concept_tag": "koshika-panjar",
+     "learning_objective": "कोशिका पंजर और कोशिका अंतरंगक के कार्य पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH02-T4",
+   "topic_number": 4,
+   "title": "केंद्रक, राइबोसोम, अंतर्द्रव्यी जालिका, गॉल्जी उपकरण और लाइसोसोम",
+   "ncert_sections": "2.3.1",
+   "concepts": [
+    {
+     "concept_tag": "kendrak",
+     "learning_objective": "केंद्रक, केंद्रिका, क्रोमैटिन और गुणसूत्रों की संरचना व कार्य समझना।"
+    },
+    {
+     "concept_tag": "antardravyi-jalika-golgi",
+     "learning_objective": "राइबोसोम, अंतर्द्रव्यी जालिका और गॉल्जी उपकरण की प्रोटीन निर्माण व स्रवण में भूमिका समझाना।"
+    },
+    {
+     "concept_tag": "lysosome",
+     "learning_objective": "लाइसोसोम को कोशिका की निर्मलन प्रणाली के रूप में पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH02-T5",
+   "topic_number": 5,
+   "title": "माइटोकॉन्ड्रिया, लवक और रसधानी",
+   "ncert_sections": "2.3.1",
+   "concepts": [
+    {
+     "concept_tag": "mitochondria",
+     "learning_objective": "माइटोकॉन्ड्रिया की संरचना और ऊर्जा उत्पादन में उसकी भूमिका समझना।"
+    },
+    {
+     "concept_tag": "lavak",
+     "learning_objective": "हरितलवक, वर्णीलवक और अवर्णी लवक के कार्यों में अंतर करना।"
+    },
+    {
+     "concept_tag": "rasdhani",
+     "learning_objective": "रसधानी द्वारा भंडारण और पादप कोशिका की दृढ़ता बनाए रखने को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH02-T6",
+   "topic_number": 6,
+   "title": "कोशिका वृद्धि और विभाजन",
+   "ncert_sections": "2.4, 2.4.1",
+   "concepts": [
+    {
+     "concept_tag": "samsutri-vibhajan",
+     "learning_objective": "समसूत्री विभाजन के परिणाम और वृद्धि व मरम्मत में उसका महत्त्व समझना।"
+    },
+    {
+     "concept_tag": "ardhsutri-vibhajan",
+     "learning_objective": "अर्धसूत्री विभाजन द्वारा युग्मक बनने और गुणसूत्र संख्या आधी होने की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH02-T7",
+   "topic_number": 7,
+   "title": "कोशिका सिद्धांत और कोशिका का जीवनकाल",
+   "ncert_sections": "2.5, 2.5.1",
+   "concepts": [
+    {
+     "concept_tag": "koshika-siddhant",
+     "learning_objective": "कोशिका सिद्धांत के बिंदु और उसमें योगदान देने वाले वैज्ञानिकों को पहचानना।"
+    },
+    {
+     "concept_tag": "samparka-avrodh",
+     "learning_objective": "संपर्क अवरोध, कैंसर कोशिकाओं और कोशिका की निश्चित जीवन अवधि का विश्लेषण करना।"
+    }
+   ]
+  }
+ ]
+}

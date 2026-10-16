@@ -1,0 +1,156 @@
+{
+ "chapter_id": "FHES1-CH07",
+ "title": "भारत की सांस्कृतिक जड़ें",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHES1-CH07-T1",
+   "topic_number": 1,
+   "title": "वेद क्या हैं?",
+   "ncert_sections": "(क) वेद क्या हैं?",
+   "concepts": [
+    {
+     "concept_tag": "ved-aur-maukhik-parampara",
+     "learning_objective": "विद्यार्थी बता सकेंगे कि वेद क्या हैं और उनकी ऋचाएँ अनेक पीढ़ियों तक मौखिक रूप से कैसे सुरक्षित रहीं।"
+    },
+    {
+     "concept_tag": "vaidik-vaishvik-darshan",
+     "learning_objective": "विद्यार्थी ऋत, एक परम सत्य के अनेक नाम और लोगों में एकता के वैदिक विचार समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH07-T2",
+   "topic_number": 2,
+   "title": "वैदिक समाज",
+   "ncert_sections": "(ख) वैदिक समाज",
+   "concepts": [
+    {
+     "concept_tag": "jan-sabha-samiti",
+     "learning_objective": "विद्यार्थी वैदिक जनों और उनके शासन से जुड़े राजा, सभा और समिति जैसे संकेतों की पहचान कर सकेंगे।"
+    },
+    {
+     "concept_tag": "vaidik-vyavsay",
+     "learning_objective": "विद्यार्थी वैदिक ग्रंथों में वर्णित विभिन्न व्यवसायों को पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH07-T3",
+   "topic_number": 3,
+   "title": "वैदिक दर्शन: अनुष्ठान, वेदांत और योग",
+   "ncert_sections": "(ग) वैदिक दर्शन",
+   "concepts": [
+    {
+     "concept_tag": "yagya-anushthan",
+     "learning_objective": "विद्यार्थी वैदिक अनुष्ठानों (यज्ञ) के स्वरूप का वर्णन कर सकेंगे।"
+    },
+    {
+     "concept_tag": "brahm-aur-atman",
+     "learning_objective": "विद्यार्थी उपनिषदों और वेदांत के ब्रह्म तथा आत्मन् के विचार और सबके परस्पर जुड़े होने की भावना समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "yog-darshan",
+     "learning_objective": "विद्यार्थी वेदों से विकसित योग दर्शन के उद्देश्य की पहचान कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH07-T4",
+   "topic_number": 4,
+   "title": "उपनिषदों की कथाएँ",
+   "ncert_sections": "श्वेतकेतु, नचिकेता, गार्गी और याज्ञवल्क्य की कथाएँ",
+   "concepts": [
+    {
+     "concept_tag": "shvetaketu-katha",
+     "learning_objective": "विद्यार्थी श्वेतकेतु की कथा में उद्दालक द्वारा दिए गए उदाहरणों का अर्थ समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "nachiketa-katha",
+     "learning_objective": "विद्यार्थी नचिकेता की ज्ञान पिपासा और यम से मिले आत्मा के ज्ञान का वर्णन कर सकेंगे।"
+    },
+    {
+     "concept_tag": "gargi-yajnavalkya-shastrarth",
+     "learning_objective": "विद्यार्थी गार्गी और याज्ञवल्क्य के शास्त्रार्थ से प्रश्न पूछने के महत्त्व का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH07-T5",
+   "topic_number": 5,
+   "title": "बौद्ध मत",
+   "ncert_sections": "बौद्ध मत",
+   "concepts": [
+    {
+     "concept_tag": "buddh-ka-jivan",
+     "learning_objective": "विद्यार्थी सिद्धार्थ गौतम के जीवन की उन घटनाओं का वर्णन कर सकेंगे जो उनके ज्ञान प्राप्ति तक ले गईं।"
+    },
+    {
+     "concept_tag": "buddh-ke-updesh",
+     "learning_objective": "विद्यार्थी अविद्या, मोह, अहिंसा और आंतरिक अनुशासन संबंधी बुद्ध के उपदेश समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "sangh-aur-jatak-katha",
+     "learning_objective": "विद्यार्थी संघ और जातक कथाओं में व्यक्त मूल्यों का वर्णन कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH07-T6",
+   "topic_number": 6,
+   "title": "जैन मत",
+   "ncert_sections": "जैन मत",
+   "concepts": [
+    {
+     "concept_tag": "mahavir-aur-jain-katha",
+     "learning_objective": "विद्यार्थी महावीर के जीवन और रोहिनेय जैसी जैन कथाओं की सीख का वर्णन कर सकेंगे।"
+    },
+    {
+     "concept_tag": "jain-siddhant",
+     "learning_objective": "विद्यार्थी अहिंसा, अनेकांतवाद और अपरिग्रह के जैन सिद्धांत समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH07-T7",
+   "topic_number": 7,
+   "title": "अनेक मत, एक तना",
+   "ncert_sections": "उपदेशों का प्रसार, चार्वाक दर्शन और समान संकल्पनाएँ",
+   "concepts": [
+    {
+     "concept_tag": "bhikshu-vihar-aur-gufaen",
+     "learning_objective": "विद्यार्थी भिक्षुओं द्वारा उपदेशों के प्रसार तथा विहारों और गुफाओं से मिले प्रमाणों का वर्णन कर सकेंगे।"
+    },
+    {
+     "concept_tag": "charvak-aur-vividhta",
+     "learning_objective": "विद्यार्थी चार्वाक दर्शन सहित विचारों की विविधता और 'दर्शन' या 'मत' शब्दों के प्रयोग का कारण समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "saman-sankalpanaen",
+     "learning_objective": "विद्यार्थी वैदिक, बौद्ध और जैन दर्शनों में समान संकल्पनाओं की पहचान कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH07-T8",
+   "topic_number": 8,
+   "title": "लोक और जनजातीय जड़ें",
+   "ncert_sections": "लोक और जनजातीय जड़ें; जनजाति क्या है?",
+   "concepts": [
+    {
+     "concept_tag": "janjati-aur-maukhik-parampara",
+     "learning_objective": "विद्यार्थी जनजाति की परिभाषा दे सकेंगे और लोक तथा जनजातीय परंपराओं को मौखिक परंपराओं के रूप में समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "prakriti-pavitra-aur-parmatma",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि जनजातीय विश्वास प्रकृति को पवित्र मानते हुए उच्चतर देवत्व की संकल्पना भी रखते हैं।"
+    },
+    {
+     "concept_tag": "janjati-hindu-adan-pradan",
+     "learning_objective": "विद्यार्थी जनजातीय परंपराओं और हिंदू दर्शन के बीच दोतरफा आदान-प्रदान का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

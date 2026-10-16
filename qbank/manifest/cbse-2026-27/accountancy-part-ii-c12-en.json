@@ -1,0 +1,827 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "accountancy-part-ii-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "accountancy",
+  "language": "english",
+  "title": "Accountancy Part-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "leac2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEAC2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Accounting for Share Capital",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leac201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEAC2-CH01-T1",
+     "topic_number": 1,
+     "title": "Features and Kinds of Companies",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "company-features",
+       "learning_objective": "Explain the special features of a company such as separate legal entity, limited liability and perpetual succession."
+      },
+      {
+       "concept_tag": "kinds-of-companies",
+       "learning_objective": "Distinguish companies by the liability of members and by the number of members, including the One Person Company."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH01-T2",
+     "topic_number": 2,
+     "title": "Share Capital and its Categories",
+     "ncert_sections": "1.3, 1.3.1",
+     "concepts": [
+      {
+       "concept_tag": "categories-of-share-capital",
+       "learning_objective": "Distinguish authorised, issued, subscribed, called-up, paid-up, uncalled and reserve capital."
+      },
+      {
+       "concept_tag": "share-capital-disclosure",
+       "learning_objective": "Show share capital correctly in the Notes to Accounts of a company's balance sheet."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH01-T3",
+     "topic_number": 3,
+     "title": "Nature and Classes of Shares",
+     "ncert_sections": "1.4, 1.4.1, 1.4.2",
+     "concepts": [
+      {
+       "concept_tag": "preference-shares",
+       "learning_objective": "State the preferential rights that define a preference share under Section 43 of the Companies Act, 2013."
+      },
+      {
+       "concept_tag": "equity-shares",
+       "learning_objective": "Explain the rights of equity shareholders in dividend and in repayment of capital."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH01-T4",
+     "topic_number": 4,
+     "title": "Issue of Shares",
+     "ncert_sections": "1.5, 1.6",
+     "concepts": [
+      {
+       "concept_tag": "share-issue-procedure",
+       "learning_objective": "Describe the steps of a share issue: prospectus, receipt of applications and allotment."
+      },
+      {
+       "concept_tag": "minimum-subscription",
+       "learning_objective": "Apply the minimum subscription rule to decide whether a company may allot shares."
+      },
+      {
+       "concept_tag": "asba",
+       "learning_objective": "Explain how Applications Supported by Blocked Amount (ASBA) work for application money."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH01-T5",
+     "topic_number": 5,
+     "title": "Journal Entries for Application, Allotment and Calls",
+     "ncert_sections": "1.6, 1.6.1, 1.6.2",
+     "concepts": [
+      {
+       "concept_tag": "share-issue-journal-entries",
+       "learning_objective": "Record journal entries for application, allotment and calls on shares issued at par."
+      },
+      {
+       "concept_tag": "rules-for-calls",
+       "learning_objective": "Apply Table F rules on the amount, interval and notice of calls."
+      },
+      {
+       "concept_tag": "calls-in-arrears-and-advance",
+       "learning_objective": "Account for calls in arrears and calls in advance, including interest on them."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH01-T6",
+     "topic_number": 6,
+     "title": "Over Subscription, Premium and Shares for Consideration other than Cash",
+     "ncert_sections": "1.6.3, 1.6.4, 1.6.5, 1.6.6, 1.6.7",
+     "concepts": [
+      {
+       "concept_tag": "over-and-under-subscription",
+       "learning_objective": "Account for over subscription by rejection, pro-rata allotment or both, and for under subscription."
+      },
+      {
+       "concept_tag": "securities-premium-and-discount",
+       "learning_objective": "Record shares issued at a premium and state the uses of Securities Premium and the limits on issue at a discount."
+      },
+      {
+       "concept_tag": "shares-to-vendors",
+       "learning_objective": "Calculate and record shares issued to vendors for consideration other than cash."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH01-T7",
+     "topic_number": 7,
+     "title": "Forfeiture and Reissue of Shares",
+     "ncert_sections": "1.7, 1.7.1",
+     "concepts": [
+      {
+       "concept_tag": "forfeiture-of-shares",
+       "learning_objective": "Record the forfeiture of shares issued at par or at a premium."
+      },
+      {
+       "concept_tag": "reissue-of-forfeited-shares",
+       "learning_objective": "Record the reissue of forfeited shares and work out the amount transferred to capital reserve."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEAC2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Issue and Redemption of Debentures",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leac202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEAC2-CH02-T1",
+     "topic_number": 1,
+     "title": "Meaning of debentures and distinction from shares",
+     "ncert_sections": "2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-debenture",
+       "learning_objective": "State the meaning of a debenture as a written acknowledgement of debt and part of borrowed capital."
+      },
+      {
+       "concept_tag": "shares-vs-debentures",
+       "learning_objective": "Distinguish between shares and debentures on ownership, return, repayment, voting rights, security and convertibility."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH02-T2",
+     "topic_number": 2,
+     "title": "Types of debentures",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "debentures-by-security-and-tenure",
+       "learning_objective": "Classify debentures as secured or unsecured and as redeemable or irredeemable."
+      },
+      {
+       "concept_tag": "debentures-by-convertibility-coupon-registration",
+       "learning_objective": "Classify debentures by convertibility, coupon rate and registration."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH02-T3",
+     "topic_number": 3,
+     "title": "Issue of debentures for cash and over subscription",
+     "ncert_sections": "2.4, 2.5",
+     "concepts": [
+      {
+       "concept_tag": "issue-at-par-discount-premium",
+       "learning_objective": "Record the issue of debentures for cash at par, at a discount and at a premium."
+      },
+      {
+       "concept_tag": "over-subscription-of-debentures",
+       "learning_objective": "Account for excess application money adjusted towards allotment and refunds on rejected applications."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH02-T4",
+     "topic_number": 4,
+     "title": "Issue of debentures for consideration other than cash",
+     "ncert_sections": "2.6",
+     "concepts": [
+      {
+       "concept_tag": "debentures-issued-to-vendors",
+       "learning_objective": "Record debentures issued to vendors at par, premium or discount and compute the number of debentures issued."
+      },
+      {
+       "concept_tag": "goodwill-or-capital-reserve-on-purchase",
+       "learning_objective": "Determine goodwill or capital reserve when purchase consideration differs from net assets taken over."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH02-T5",
+     "topic_number": 5,
+     "title": "Issue of debentures as collateral security",
+     "ncert_sections": "2.7",
+     "concepts": [
+      {
+       "concept_tag": "collateral-security-meaning",
+       "learning_objective": "Explain the meaning of collateral security and the lender's rights over debentures so issued."
+      },
+      {
+       "concept_tag": "collateral-security-accounting",
+       "learning_objective": "Show debentures issued as collateral security under the note method and the Debenture Suspense method."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH02-T6",
+     "topic_number": 6,
+     "title": "Terms of issue and redemption of debentures",
+     "ncert_sections": "2.8",
+     "concepts": [
+      {
+       "concept_tag": "loss-on-issue-of-debentures",
+       "learning_objective": "Compute the loss on issue of debentures under different combinations of issue and redemption terms."
+      },
+      {
+       "concept_tag": "premium-on-redemption-liability",
+       "learning_objective": "Explain the treatment of premium on redemption of debentures as a liability."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH02-T7",
+     "topic_number": 7,
+     "title": "Interest on debentures",
+     "ncert_sections": "2.9, 2.9.1",
+     "concepts": [
+      {
+       "concept_tag": "debenture-interest-calculation",
+       "learning_objective": "Calculate interest on debentures on their nominal value and record its transfer to the Statement of Profit and Loss."
+      },
+      {
+       "concept_tag": "tds-on-debenture-interest",
+       "learning_objective": "Record tax deducted at source on debenture interest and its payment to the government."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH02-T8",
+     "topic_number": 8,
+     "title": "Writing off discount or loss on issue of debentures",
+     "ncert_sections": "2.10",
+     "concepts": [
+      {
+       "concept_tag": "writing-off-discount-loss",
+       "learning_objective": "Write off discount or loss on issue of debentures first from Securities Premium Reserve and then from the Statement of Profit and Loss."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEAC2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Financial Statements of a Company",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leac203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEAC2-CH03-T1",
+     "topic_number": 1,
+     "title": "Meaning and nature of financial statements",
+     "ncert_sections": "3.1, 3.2",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-financial-statements",
+       "learning_objective": "State what financial statements are and which statements they include."
+      },
+      {
+       "concept_tag": "nature-of-financial-statements",
+       "learning_objective": "Explain how recorded facts, conventions, postulates and personal judgements shape financial statements."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH03-T2",
+     "topic_number": 2,
+     "title": "Objectives of financial statements",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "primary-objective-decision-making",
+       "learning_objective": "Explain that the primary objective of financial statements is to assist users in decision-making."
+      },
+      {
+       "concept_tag": "specific-objectives",
+       "learning_objective": "Identify the specific objectives of financial statements and match them to users' needs."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH03-T3",
+     "topic_number": 3,
+     "title": "Form of balance sheet and shareholders' funds under Schedule III",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "schedule-iii-balance-sheet-format",
+       "learning_objective": "Describe the heads, sub-heads and presentation features of the balance sheet under Schedule III."
+      },
+      {
+       "concept_tag": "share-capital-disclosure",
+       "learning_objective": "Show share capital, calls-in-arrears and forfeited shares in the balance sheet and notes to accounts."
+      },
+      {
+       "concept_tag": "reserves-and-surplus",
+       "learning_objective": "Compute and present reserves and surplus, including a debit balance of the statement of profit and loss."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH03-T4",
+     "topic_number": 4,
+     "title": "Current and non-current classification of balance sheet items",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "current-non-current-criteria",
+       "learning_objective": "State the criteria for classifying an item as current or non-current."
+      },
+      {
+       "concept_tag": "classification-of-liabilities",
+       "learning_objective": "Classify borrowings, trade payables, provisions and deferred tax under the correct heads."
+      },
+      {
+       "concept_tag": "classification-of-assets",
+       "learning_objective": "Classify fixed assets, investments, inventories and trade receivables under the correct heads."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH03-T5",
+     "topic_number": 5,
+     "title": "Form and content of the statement of profit and loss",
+     "ncert_sections": "3.4.2",
+     "concepts": [
+      {
+       "concept_tag": "revenue-and-other-income",
+       "learning_objective": "Distinguish revenue from operations from other income."
+      },
+      {
+       "concept_tag": "expense-heads",
+       "learning_objective": "Place expenses under the correct heads of the statement of profit and loss."
+      },
+      {
+       "concept_tag": "profit-before-tax-computation",
+       "learning_objective": "Compute profit before tax in the Schedule III format."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH03-T6",
+     "topic_number": 6,
+     "title": "Uses and importance of financial statements",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "uses-of-financial-statements",
+       "learning_objective": "Explain how different users rely on financial statements for their decisions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH03-T7",
+     "topic_number": 7,
+     "title": "Limitations of financial statements",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "historical-cost-limitations",
+       "learning_objective": "Explain limitations arising from historical cost and the realisable value of assets."
+      },
+      {
+       "concept_tag": "information-gaps-and-bias",
+       "learning_objective": "Explain limitations of bias, aggregation, missing and qualitative information, and interim reporting."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEAC2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Analysis of Financial Statements",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leac204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEAC2-CH04-T1",
+     "topic_number": 1,
+     "title": "Meaning of analysis of financial statements",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "analysis-and-interpretation",
+       "learning_objective": "Explain that financial analysis combines analysis (simplifying and classifying data) with interpretation (explaining its meaning and significance)."
+      },
+      {
+       "concept_tag": "cross-sectional-and-time-series-analysis",
+       "learning_objective": "Distinguish comparison with other firms (cross-sectional analysis) from comparison with the firm's own past performance (time series analysis)."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH04-T2",
+     "topic_number": 2,
+     "title": "Significance of financial analysis to its users",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "internal-users-of-financial-analysis",
+       "learning_objective": "Describe how the finance manager and top management use financial analysis for decisions and control."
+      },
+      {
+       "concept_tag": "external-users-of-financial-analysis",
+       "learning_objective": "Identify what trade payables, lenders, investors, labour unions and others look for when they analyse financial statements."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH04-T3",
+     "topic_number": 3,
+     "title": "Objectives of analysis of financial statements",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "objectives-of-financial-analysis",
+       "learning_objective": "State the objectives of financial analysis such as judging profitability, relative importance of components, reasons for change and debt-repaying ability."
+      },
+      {
+       "concept_tag": "uses-for-economists-and-government",
+       "learning_objective": "Explain how economists and government use the analysis of corporate financial statements."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH04-T4",
+     "topic_number": 4,
+     "title": "Tools of analysis of financial statements",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "horizontal-and-vertical-analysis",
+       "learning_objective": "Distinguish comparative statements (horizontal analysis) from common size statements (vertical analysis)."
+      },
+      {
+       "concept_tag": "trend-analysis",
+       "learning_objective": "Calculate and interpret trend percentages with reference to a base year."
+      },
+      {
+       "concept_tag": "ratio-and-cash-flow-analysis",
+       "learning_objective": "Describe the purpose of ratio analysis and cash flow analysis as tools of financial analysis."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH04-T5",
+     "topic_number": 5,
+     "title": "Comparative statements",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "comparative-statement-preparation",
+       "learning_objective": "Prepare and interpret comparative statements of profit and loss and comparative balance sheets."
+      },
+      {
+       "concept_tag": "percentage-change-calculation",
+       "learning_objective": "Calculate absolute and percentage changes between two years in a comparative statement."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH04-T6",
+     "topic_number": 6,
+     "title": "Common size statements",
+     "ncert_sections": "4.6",
+     "concepts": [
+      {
+       "concept_tag": "common-size-base",
+       "learning_objective": "Identify the common base used in common size statements of profit and loss and balance sheets."
+      },
+      {
+       "concept_tag": "common-size-calculation-and-comparison",
+       "learning_objective": "Calculate common size percentages and use them for intra-firm and inter-firm comparison."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH04-T7",
+     "topic_number": 7,
+     "title": "Limitations of financial analysis",
+     "ncert_sections": "4.7",
+     "concepts": [
+      {
+       "concept_tag": "price-level-and-non-monetary-limits",
+       "learning_objective": "Explain that financial analysis ignores price level changes and non-monetary aspects of a business."
+      },
+      {
+       "concept_tag": "accounting-policy-and-window-dressing",
+       "learning_objective": "Explain how changes in accounting policies and window dressing can make financial analysis misleading."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEAC2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Accounting Ratios",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leac205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEAC2-CH05-T1",
+     "topic_number": 1,
+     "title": "Meaning, objectives and advantages of ratio analysis",
+     "ncert_sections": "5.1, 5.2, 5.3",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-accounting-ratio",
+       "learning_objective": "Explain what an accounting ratio is and why it must relate meaningfully connected figures."
+      },
+      {
+       "concept_tag": "objectives-of-ratio-analysis",
+       "learning_objective": "State the objectives for which ratio analysis is carried out."
+      },
+      {
+       "concept_tag": "advantages-of-ratio-analysis",
+       "learning_objective": "Identify the advantages of ratio analysis and its indicative, whistle-blowing role."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH05-T2",
+     "topic_number": 2,
+     "title": "Limitations of ratio analysis",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "limitations-of-accounting-data",
+       "learning_objective": "Explain how limitations of financial statements, such as ignored price-level changes and varied practices, limit ratio analysis."
+      },
+      {
+       "concept_tag": "limitations-of-ratios",
+       "learning_objective": "Identify the limitations of ratios themselves, such as lack of standard definitions and standard levels."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH05-T3",
+     "topic_number": 3,
+     "title": "Types of ratios",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "traditional-classification",
+       "learning_objective": "Classify ratios as statement of profit and loss, balance sheet or composite ratios."
+      },
+      {
+       "concept_tag": "functional-classification",
+       "learning_objective": "Classify ratios as liquidity, solvency, activity or profitability ratios by their purpose."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH05-T4",
+     "topic_number": 4,
+     "title": "Liquidity ratios",
+     "ncert_sections": "5.6, 5.6.1, 5.6.2",
+     "concepts": [
+      {
+       "concept_tag": "current-ratio",
+       "learning_objective": "Calculate and interpret the current ratio."
+      },
+      {
+       "concept_tag": "quick-ratio",
+       "learning_objective": "Calculate and interpret the quick (liquid or acid-test) ratio."
+      },
+      {
+       "concept_tag": "effect-of-transactions-on-liquidity",
+       "learning_objective": "Analyse how a transaction changes the current ratio."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH05-T5",
+     "topic_number": 5,
+     "title": "Solvency ratios",
+     "ncert_sections": "5.7, 5.7.1-5.7.5",
+     "concepts": [
+      {
+       "concept_tag": "debt-equity-ratio",
+       "learning_objective": "Calculate and interpret the debt-equity ratio."
+      },
+      {
+       "concept_tag": "proprietary-and-capital-employed-ratios",
+       "learning_objective": "Calculate the proprietary, debt to capital employed and total assets to debt ratios."
+      },
+      {
+       "concept_tag": "interest-coverage-ratio",
+       "learning_objective": "Calculate and interpret the interest coverage ratio."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH05-T6",
+     "topic_number": 6,
+     "title": "Activity (turnover) ratios",
+     "ncert_sections": "5.8, 5.8.1-5.8.4",
+     "concepts": [
+      {
+       "concept_tag": "inventory-turnover-ratio",
+       "learning_objective": "Calculate and interpret the inventory turnover ratio."
+      },
+      {
+       "concept_tag": "receivables-and-payables-turnover",
+       "learning_objective": "Calculate trade receivables and payables turnover ratios with collection and payment periods."
+      },
+      {
+       "concept_tag": "capital-employed-turnover",
+       "learning_objective": "Interpret net assets, fixed assets and working capital turnover ratios."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH05-T7",
+     "topic_number": 7,
+     "title": "Profitability ratios",
+     "ncert_sections": "5.9, 5.9.1-5.9.10",
+     "concepts": [
+      {
+       "concept_tag": "gross-and-operating-profit-ratios",
+       "learning_objective": "Calculate gross profit, operating and net profit ratios."
+      },
+      {
+       "concept_tag": "return-on-investment",
+       "learning_objective": "Calculate and interpret return on investment and return on shareholders' funds."
+      },
+      {
+       "concept_tag": "earnings-per-share-and-market-ratios",
+       "learning_objective": "Calculate earnings per share, book value per share, dividend payout and P/E ratios."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEAC2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Cash Flow Statement",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leac206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEAC2-CH06-T1",
+     "topic_number": 1,
+     "title": "Objectives and benefits of the cash flow statement",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "cfs-objective",
+       "learning_objective": "State the objective of a cash flow statement prepared under AS-3 and its place among the financial statements."
+      },
+      {
+       "concept_tag": "cfs-benefits",
+       "learning_objective": "Explain how a cash flow statement helps users assess liquidity, solvency and comparability."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH06-T2",
+     "topic_number": 2,
+     "title": "Cash, cash equivalents and cash flows",
+     "ncert_sections": "6.3, 6.4",
+     "concepts": [
+      {
+       "concept_tag": "cash-equivalents",
+       "learning_objective": "Identify items that qualify as cash and cash equivalents as per AS-3."
+      },
+      {
+       "concept_tag": "cash-flow-meaning",
+       "learning_objective": "Distinguish transactions that are cash flows from movements within cash and cash equivalents."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH06-T3",
+     "topic_number": 3,
+     "title": "Classification into operating, investing and financing activities",
+     "ncert_sections": "6.5, 6.5.1, 6.5.2, 6.5.3",
+     "concepts": [
+      {
+       "concept_tag": "operating-activities",
+       "learning_objective": "Identify cash flows arising from the principal revenue-generating activities of an enterprise."
+      },
+      {
+       "concept_tag": "investing-activities",
+       "learning_objective": "Classify cash flows from acquisition and disposal of long-term assets and investments."
+      },
+      {
+       "concept_tag": "financing-activities",
+       "learning_objective": "Classify cash flows that change the size and composition of owners' capital and borrowings."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH06-T4",
+     "topic_number": 4,
+     "title": "Treatment of some peculiar items",
+     "ncert_sections": "6.5.4",
+     "concepts": [
+      {
+       "concept_tag": "interest-dividend-treatment",
+       "learning_objective": "Classify interest and dividend paid and received for financial and non-financial enterprises."
+      },
+      {
+       "concept_tag": "tax-and-extraordinary-items",
+       "learning_objective": "Classify income taxes and extraordinary items in a cash flow statement."
+      },
+      {
+       "concept_tag": "non-cash-transactions",
+       "learning_objective": "Recognise investing and financing transactions that are excluded because they involve no cash."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH06-T5",
+     "topic_number": 5,
+     "title": "Cash flow from operating activities: indirect method",
+     "ncert_sections": "6.6, 6.6.1",
+     "concepts": [
+      {
+       "concept_tag": "net-profit-before-tax",
+       "learning_objective": "Work out net profit before tax and extraordinary items from given balances."
+      },
+      {
+       "concept_tag": "non-cash-non-operating-adjustments",
+       "learning_objective": "Adjust net profit for non-cash and non-operating items to find operating profit before working capital changes."
+      },
+      {
+       "concept_tag": "working-capital-changes",
+       "learning_objective": "Adjust for changes in current assets and current liabilities to arrive at cash generated from operations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC2-CH06-T6",
+     "topic_number": 6,
+     "title": "Investing and financing cash flows and preparing the statement",
+     "ncert_sections": "6.7, 6.8",
+     "concepts": [
+      {
+       "concept_tag": "investing-cash-flow-computation",
+       "learning_objective": "Compute cash flows from investing activities using asset accounts and additional information."
+      },
+      {
+       "concept_tag": "financing-cash-flow-computation",
+       "learning_objective": "Compute cash flows from financing activities from changes in capital and borrowings."
+      },
+      {
+       "concept_tag": "cfs-format",
+       "learning_objective": "Prepare the cash flow statement format and reconcile opening and closing cash and cash equivalents."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

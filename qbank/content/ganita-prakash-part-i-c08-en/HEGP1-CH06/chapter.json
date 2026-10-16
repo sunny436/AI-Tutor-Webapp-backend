@@ -1,0 +1,108 @@
+{
+ "chapter_id": "HEGP1-CH06",
+ "title": "We Distribute, Yet Things Multiply",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP1-CH06-T1",
+   "topic_number": 1,
+   "title": "Distributivity and increments in products",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "distributive-property",
+     "learning_objective": "State and use the distributive property a(b + c) = ab + ac and its form (a + b)c = ac + bc."
+    },
+    {
+     "concept_tag": "change-in-product",
+     "learning_objective": "Work out how a product ab changes when one or both numbers are increased or decreased."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH06-T2",
+   "topic_number": 2,
+   "title": "Expanding products of expressions",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "product-of-two-binomials",
+     "learning_objective": "Expand (a + m)(b + n) and its sign variants by multiplying each term of one bracket with each term of the other."
+    },
+    {
+     "concept_tag": "combining-like-terms",
+     "learning_objective": "Identify like terms and add them to simplify an expanded product."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH06-T3",
+   "topic_number": 3,
+   "title": "Fast multiplication using the distributive property",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "multiply-by-eleven",
+     "learning_objective": "Multiply any number by 11 in one line by adding neighbouring digits with carries."
+    },
+    {
+     "concept_tag": "multiply-by-101-1001-and-99",
+     "learning_objective": "Use 101 = 100 + 1, 1001 = 1000 + 1 and 99 = 100 - 1 to multiply quickly."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH06-T4",
+   "topic_number": 4,
+   "title": "Square of the sum and difference of two numbers",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "square-of-sum",
+     "learning_objective": "Use Identity 1A, (a + b)² = a² + 2ab + b², to expand and to compute squares."
+    },
+    {
+     "concept_tag": "square-of-difference",
+     "learning_objective": "Use Identity 1B, (a - b)² = a² - 2ab + b², to expand and to compute squares."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH06-T5",
+   "topic_number": 5,
+   "title": "Difference of squares and investigating patterns",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "difference-of-squares",
+     "learning_objective": "Use Identity 1C, (a + b)(a - b) = a² - b², for quick products and to express numbers as differences of squares."
+    },
+    {
+     "concept_tag": "sum-of-squares-pattern",
+     "learning_objective": "Explain the pattern 2(a² + b²) = (a + b)² + (a - b)² using identities."
+    },
+    {
+     "concept_tag": "sridharacharya-squaring",
+     "learning_objective": "Compute squares quickly using a² = (a + b)(a - b) + b²."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH06-T6",
+   "topic_number": 6,
+   "title": "Mind the mistake and many ways to a pattern",
+   "ncert_sections": "6.3, 6.4",
+   "concepts": [
+    {
+     "concept_tag": "spotting-algebra-errors",
+     "learning_objective": "Find and correct mistakes in expanding and simplifying algebraic expressions."
+    },
+    {
+     "concept_tag": "equivalent-expressions-for-patterns",
+     "learning_objective": "Show that different expressions found for the same pattern or area simplify to the same expression."
+    }
+   ]
+  }
+ ]
+}

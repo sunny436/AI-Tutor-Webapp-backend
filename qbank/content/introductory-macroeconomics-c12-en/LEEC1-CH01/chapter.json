@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LEEC1-CH01",
+ "title": "Introduction",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEEC1-CH01-T1",
+   "topic_number": 1,
+   "title": "How macroeconomics differs from microeconomics",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "aggregate-variables-representative-good",
+     "learning_objective": "Explain why macroeconomics can study the whole economy through aggregate variables and a single representative good."
+    },
+    {
+     "concept_tag": "micro-vs-macro-distinction",
+     "learning_objective": "Distinguish microeconomic questions and agents from macroeconomic ones."
+    },
+    {
+     "concept_tag": "sectoral-disaggregation",
+     "learning_objective": "Explain why macroeconomics sometimes divides the economy into a few distinct goods or sectors."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH01-T2",
+   "topic_number": 2,
+   "title": "Economic agents and why macroeconomics is needed",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "economic-agents",
+     "learning_objective": "Define economic agents and identify consumers, producers and institutions as examples."
+    },
+    {
+     "concept_tag": "limits-of-self-interest-markets",
+     "learning_objective": "State the reasons economists had to look beyond Adam Smith's self-interest view of markets."
+    },
+    {
+     "concept_tag": "macroeconomic-decision-makers",
+     "learning_objective": "Identify macroeconomic decision-makers such as the State, RBI and SEBI and the public goals they pursue."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH01-T3",
+   "topic_number": 3,
+   "title": "Emergence of macroeconomics",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "classical-tradition",
+     "learning_objective": "Describe the classical view of full employment that dominated economics before Keynes."
+    },
+    {
+     "concept_tag": "great-depression",
+     "learning_objective": "Describe the Great Depression of 1929 and calculate the unemployment rate from its definition."
+    },
+    {
+     "concept_tag": "keynes-general-theory",
+     "learning_objective": "Explain how Keynes's General Theory (1936) gave rise to macroeconomics as a separate branch."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH01-T4",
+   "topic_number": 4,
+   "title": "The capitalist economy and its firms",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "features-of-capitalist-economy",
+     "learning_objective": "State the features of a capitalist economy and recognise economies to which they do not apply."
+    },
+    {
+     "concept_tag": "factors-and-factor-incomes",
+     "learning_objective": "Match the factors of production with rent, interest, wages and profit."
+    },
+    {
+     "concept_tag": "investment-expenditure",
+     "learning_objective": "Identify investment expenditure as spending that raises productive capacity."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH01-T5",
+   "topic_number": 5,
+   "title": "Four sectors of the economy",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "household-sector",
+     "learning_objective": "Define a household and explain how households earn incomes and support firms' markets."
+    },
+    {
+     "concept_tag": "government-sector",
+     "learning_objective": "Describe the economic functions of the government sector."
+    },
+    {
+     "concept_tag": "external-sector",
+     "learning_objective": "Explain exports, imports and capital flows as links with the external sector."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "chapter_id": "LEPH1-CH06",
+ "title": "Electromagnetic Induction",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH1-CH06-T1",
+   "topic_number": 1,
+   "title": "Experiments of Faraday and Henry",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "relative-motion-induction",
+     "learning_objective": "Explain from Faraday's experiments that relative motion between a magnet (or current-carrying coil) and a coil induces a current."
+    },
+    {
+     "concept_tag": "induction-without-relative-motion",
+     "learning_objective": "Explain how a changing current in a stationary coil induces a momentary current in a nearby stationary coil."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH06-T2",
+   "topic_number": 2,
+   "title": "Magnetic flux and Faraday's law of induction",
+   "ncert_sections": "6.3, 6.4",
+   "concepts": [
+    {
+     "concept_tag": "magnetic-flux",
+     "learning_objective": "Define magnetic flux as B.A = BA cos(theta) and state its SI unit."
+    },
+    {
+     "concept_tag": "faradays-law-emf",
+     "learning_objective": "Apply Faraday's law, emf = -N dPhi/dt, to calculate induced emf and current."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH06-T3",
+   "topic_number": 3,
+   "title": "Lenz's law and conservation of energy",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "lenz-law-direction",
+     "learning_objective": "Use Lenz's law to find the direction of an induced current or the polarity of an induced emf."
+    },
+    {
+     "concept_tag": "lenz-law-energy-conservation",
+     "learning_objective": "Explain Lenz's law as a consequence of the law of conservation of energy."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH06-T4",
+   "topic_number": 4,
+   "title": "Motional electromotive force",
+   "ncert_sections": "6.6",
+   "concepts": [
+    {
+     "concept_tag": "motional-emf-blv",
+     "learning_objective": "Derive and apply the motional emf Blv for a conductor moving in a uniform magnetic field."
+    },
+    {
+     "concept_tag": "lorentz-force-origin",
+     "learning_objective": "Explain motional emf through the Lorentz force on the free charges of a moving conductor."
+    },
+    {
+     "concept_tag": "rotating-rod-emf",
+     "learning_objective": "Calculate the emf (1/2)B omega R^2 across a rod rotating in a uniform magnetic field."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH06-T5",
+   "topic_number": 5,
+   "title": "Mutual inductance",
+   "ncert_sections": "6.7, 6.7.1",
+   "concepts": [
+    {
+     "concept_tag": "mutual-inductance-solenoids",
+     "learning_objective": "Obtain and use the mutual inductance of two long co-axial solenoids and the equality M12 = M21."
+    },
+    {
+     "concept_tag": "mutual-induced-emf",
+     "learning_objective": "Calculate the emf induced in one coil by a changing current in a neighbouring coil."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH06-T6",
+   "topic_number": 6,
+   "title": "Self-inductance and magnetic energy",
+   "ncert_sections": "6.7.2",
+   "concepts": [
+    {
+     "concept_tag": "self-inductance-solenoid",
+     "learning_objective": "Obtain and use the self-inductance of a long solenoid and the back emf -L dI/dt."
+    },
+    {
+     "concept_tag": "magnetic-energy-stored",
+     "learning_objective": "Calculate the energy (1/2)LI^2 stored in an inductor and relate it to the energy density B^2/2mu0."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH06-T7",
+   "topic_number": 7,
+   "title": "AC generator",
+   "ncert_sections": "6.8",
+   "concepts": [
+    {
+     "concept_tag": "ac-generator-principle",
+     "learning_objective": "Describe the construction and working principle of an ac generator."
+    },
+    {
+     "concept_tag": "ac-generator-emf",
+     "learning_objective": "Use emf = NBA omega sin(omega t) to find the peak and instantaneous emf of an ac generator."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KEPH2-CH05",
+ "title": "Kinetic Theory",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPH2-CH05-T1",
+   "topic_number": 1,
+   "title": "Molecular nature of matter",
+   "ncert_sections": "12.1, 12.2",
+   "concepts": [
+    {
+     "concept_tag": "atomic-hypothesis-and-gas-laws",
+     "learning_objective": "Relate Dalton's atomic theory, Gay Lussac's law and Avogadro's law to the molecular picture of matter."
+    },
+    {
+     "concept_tag": "interatomic-spacing-in-states",
+     "learning_objective": "Compare atomic size, interatomic spacing and mean free path in solids, liquids and gases."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH05-T2",
+   "topic_number": 2,
+   "title": "Behaviour of gases",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "ideal-gas-equation",
+     "learning_objective": "Use the ideal gas equation in its forms PV = muRT, P = n kB T and P = rho RT/M0."
+    },
+    {
+     "concept_tag": "gas-laws-partial-pressure",
+     "learning_objective": "Apply Boyle's law, Charles' law and Dalton's law of partial pressures to gas samples."
+    },
+    {
+     "concept_tag": "real-gas-deviation",
+     "learning_objective": "Explain when real gases approach ideal gas behaviour and interpret PV/T versus P plots."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH05-T3",
+   "topic_number": 3,
+   "title": "Kinetic theory of an ideal gas: pressure",
+   "ncert_sections": "12.4, 12.4.1",
+   "concepts": [
+    {
+     "concept_tag": "kinetic-theory-assumptions",
+     "learning_objective": "State the assumptions of the kinetic model of an ideal gas."
+    },
+    {
+     "concept_tag": "pressure-from-molecular-motion",
+     "learning_objective": "Derive and apply P = (1/3) n m <v^2> and PV = (2/3) E."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH05-T4",
+   "topic_number": 4,
+   "title": "Kinetic interpretation of temperature",
+   "ncert_sections": "12.4.2",
+   "concepts": [
+    {
+     "concept_tag": "average-kinetic-energy-temperature",
+     "learning_objective": "Relate the average translational kinetic energy of a molecule to absolute temperature."
+    },
+    {
+     "concept_tag": "rms-speed",
+     "learning_objective": "Calculate and compare root mean square speeds of gas molecules."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH05-T5",
+   "topic_number": 5,
+   "title": "Law of equipartition of energy",
+   "ncert_sections": "12.5",
+   "concepts": [
+    {
+     "concept_tag": "degrees-of-freedom",
+     "learning_objective": "Count translational, rotational and vibrational degrees of freedom of molecules."
+    },
+    {
+     "concept_tag": "equipartition-energy",
+     "learning_objective": "Apply the law of equipartition to find the average energy of molecules and gas samples."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH05-T6",
+   "topic_number": 6,
+   "title": "Specific heat capacity",
+   "ncert_sections": "12.6",
+   "concepts": [
+    {
+     "concept_tag": "specific-heat-gases",
+     "learning_objective": "Predict Cv, Cp and gamma for monatomic, diatomic and polyatomic gases using equipartition."
+    },
+    {
+     "concept_tag": "specific-heat-solids",
+     "learning_objective": "Explain why the molar specific heat of most solids is close to 3R."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH05-T7",
+   "topic_number": 7,
+   "title": "Mean free path",
+   "ncert_sections": "12.7",
+   "concepts": [
+    {
+     "concept_tag": "mean-free-path-formula",
+     "learning_objective": "State and apply the expression for mean free path l = 1/(sqrt2 n pi d^2)."
+    },
+    {
+     "concept_tag": "collision-frequency",
+     "learning_objective": "Relate mean free path, average speed and collision frequency, and explain slow diffusion of gases."
+    }
+   ]
+  }
+ ]
+}

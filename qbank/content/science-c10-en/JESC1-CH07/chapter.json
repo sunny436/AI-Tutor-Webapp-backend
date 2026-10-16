@@ -1,0 +1,160 @@
+{
+ "chapter_id": "JESC1-CH07",
+ "title": "How do Organisms Reproduce?",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESC1-CH07-T1",
+   "topic_number": 1,
+   "title": "DNA copying and the importance of variation",
+   "ncert_sections": "7.1, 7.1.1",
+   "concepts": [
+    {
+     "concept_tag": "dna-copying",
+     "learning_objective": "Explain why the creation of a DNA copy along with additional cellular apparatus is a basic event in reproduction."
+    },
+    {
+     "concept_tag": "variation-in-copying",
+     "learning_objective": "Explain why DNA copies are similar but not always identical to the original."
+    },
+    {
+     "concept_tag": "importance-of-variation",
+     "learning_objective": "Evaluate how variation helps a species survive when its niche changes."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH07-T2",
+   "topic_number": 2,
+   "title": "Fission, fragmentation and regeneration",
+   "ncert_sections": "7.2, 7.2.1, 7.2.2, 7.2.3",
+   "concepts": [
+    {
+     "concept_tag": "binary-and-multiple-fission",
+     "learning_objective": "Distinguish binary fission in Amoeba and Leishmania from multiple fission in Plasmodium."
+    },
+    {
+     "concept_tag": "fragmentation",
+     "learning_objective": "Explain fragmentation in Spirogyra and why complex organisms cannot reproduce cell by cell."
+    },
+    {
+     "concept_tag": "regeneration",
+     "learning_objective": "Describe regeneration in Hydra and Planaria and why it differs from reproduction."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH07-T3",
+   "topic_number": 3,
+   "title": "Budding, vegetative propagation and spore formation",
+   "ncert_sections": "7.2.4, 7.2.5, 7.2.6",
+   "concepts": [
+    {
+     "concept_tag": "budding",
+     "learning_objective": "Describe budding in Hydra and yeast."
+    },
+    {
+     "concept_tag": "vegetative-propagation",
+     "learning_objective": "Explain vegetative propagation and tissue culture and their advantages."
+    },
+    {
+     "concept_tag": "spore-formation",
+     "learning_objective": "Describe spore formation in Rhizopus and how spores survive."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH07-T4",
+   "topic_number": 4,
+   "title": "Why the sexual mode of reproduction?",
+   "ncert_sections": "7.3, 7.3.1",
+   "concepts": [
+    {
+     "concept_tag": "why-sexual-reproduction",
+     "learning_objective": "Explain how combining DNA from two individuals generates more variation."
+    },
+    {
+     "concept_tag": "meiosis-and-gametes",
+     "learning_objective": "Explain why germ-cells carry half the DNA and how male and female gametes differ."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH07-T5",
+   "topic_number": 5,
+   "title": "Sexual reproduction in flowering plants",
+   "ncert_sections": "7.3.2",
+   "concepts": [
+    {
+     "concept_tag": "flower-parts",
+     "learning_objective": "Identify the reproductive parts of a flower and distinguish unisexual from bisexual flowers."
+    },
+    {
+     "concept_tag": "pollination-and-fertilisation",
+     "learning_objective": "Distinguish self- and cross-pollination and describe how fertilisation occurs."
+    },
+    {
+     "concept_tag": "seed-and-fruit-formation",
+     "learning_objective": "Describe how the ovule and ovary develop after fertilisation and how a seed germinates."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH07-T6",
+   "topic_number": 6,
+   "title": "Puberty and the male reproductive system",
+   "ncert_sections": "7.3.3, 7.3.3 (a)",
+   "concepts": [
+    {
+     "concept_tag": "puberty-changes",
+     "learning_objective": "Describe the changes at puberty and explain why they occur when body growth slows."
+    },
+    {
+     "concept_tag": "male-reproductive-system",
+     "learning_objective": "State the functions of the testes, vas deferens, urethra and accessory glands."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH07-T7",
+   "topic_number": 7,
+   "title": "Female reproductive system and menstruation",
+   "ncert_sections": "7.3.3 (b), 7.3.3 (c)",
+   "concepts": [
+    {
+     "concept_tag": "female-reproductive-organs",
+     "learning_objective": "Identify the organs of the female reproductive system and the site of fertilisation."
+    },
+    {
+     "concept_tag": "embryo-nourishment",
+     "learning_objective": "Explain how the placenta nourishes the embryo and removes its wastes."
+    },
+    {
+     "concept_tag": "menstruation",
+     "learning_objective": "Explain why menstruation occurs when the egg is not fertilised."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH07-T8",
+   "topic_number": 8,
+   "title": "Reproductive health",
+   "ncert_sections": "7.3.3 (d)",
+   "concepts": [
+    {
+     "concept_tag": "sexually-transmitted-diseases",
+     "learning_objective": "Identify bacterial and viral sexually transmitted diseases and how their spread can be reduced."
+    },
+    {
+     "concept_tag": "contraception-methods",
+     "learning_objective": "Distinguish barrier, hormonal, intrauterine and surgical methods of contraception."
+    },
+    {
+     "concept_tag": "population-and-sex-ratio",
+     "learning_objective": "Evaluate the importance of a healthy sex ratio and the issue of female foeticide."
+    }
+   ]
+  }
+ ]
+}

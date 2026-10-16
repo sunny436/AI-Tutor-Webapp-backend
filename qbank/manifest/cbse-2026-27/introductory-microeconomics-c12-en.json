@@ -1,0 +1,714 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "introductory-microeconomics-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "economics",
+  "language": "english",
+  "title": "Introductory Microeconomics",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "leec2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEEC2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Introduction",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leec201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEEC2-CH01-T1",
+     "topic_number": 1,
+     "title": "A Simple Economy",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "goods-services-resources",
+       "learning_objective": "Distinguish goods, services and resources as used in the chapter."
+      },
+      {
+       "concept_tag": "scarcity-and-choice",
+       "learning_objective": "Explain why limited resources force individuals to make choices."
+      },
+      {
+       "concept_tag": "allocation-and-distribution",
+       "learning_objective": "Identify allocation of resources and distribution of output as basic economic problems."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH01-T2",
+     "topic_number": 2,
+     "title": "Central Problems of an Economy",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "scarcity-and-competing-uses",
+       "learning_objective": "Explain how scarcity of resources with competing uses gives rise to the problem of choice."
+      },
+      {
+       "concept_tag": "what-how-for-whom",
+       "learning_objective": "Classify economic decisions under what to produce, how to produce and for whom to produce."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH01-T3",
+     "topic_number": 3,
+     "title": "Production Possibility Frontier and Opportunity Cost",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "production-possibility-set",
+       "learning_objective": "Define the production possibility set of an economy."
+      },
+      {
+       "concept_tag": "production-possibility-frontier",
+       "learning_objective": "Interpret points on, inside and outside the production possibility frontier."
+      },
+      {
+       "concept_tag": "opportunity-cost",
+       "learning_objective": "Calculate the opportunity cost of an additional unit of a good from a production possibilities schedule."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH01-T4",
+     "topic_number": 4,
+     "title": "Organisation of Economic Activities",
+     "ncert_sections": "1.3, 1.3.1, 1.3.2",
+     "concepts": [
+      {
+       "concept_tag": "centrally-planned-economy",
+       "learning_objective": "Describe how a central authority solves the central problems in a centrally planned economy."
+      },
+      {
+       "concept_tag": "market-economy-price-signals",
+       "learning_objective": "Explain how price signals coordinate economic activities in a market economy."
+      },
+      {
+       "concept_tag": "mixed-economy",
+       "learning_objective": "Describe why real-world economies are mixed economies."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH01-T5",
+     "topic_number": 5,
+     "title": "Positive and Normative Economics",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "positive-economic-analysis",
+       "learning_objective": "Identify positive economic analysis as the study of how mechanisms function."
+      },
+      {
+       "concept_tag": "normative-economic-analysis",
+       "learning_objective": "Identify normative economic analysis as the evaluation of whether outcomes are desirable."
+      },
+      {
+       "concept_tag": "positive-normative-link",
+       "learning_objective": "Explain why the distinction between positive and normative analysis is not sharp."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH01-T6",
+     "topic_number": 6,
+     "title": "Microeconomics and Macroeconomics",
+     "ncert_sections": "1.5, 1.6",
+     "concepts": [
+      {
+       "concept_tag": "microeconomics-scope",
+       "learning_objective": "Describe the subject matter of microeconomics."
+      },
+      {
+       "concept_tag": "macroeconomics-scope",
+       "learning_objective": "Describe the aggregate questions studied in macroeconomics."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEEC2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Theory of Consumer Behaviour",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leec202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEEC2-CH02-T1",
+     "topic_number": 1,
+     "title": "Utility and Cardinal Utility Analysis",
+     "ncert_sections": "2.1, 2.1.1",
+     "concepts": [
+      {
+       "concept_tag": "total-and-marginal-utility",
+       "learning_objective": "Define total and marginal utility and compute one from the other."
+      },
+      {
+       "concept_tag": "law-of-diminishing-marginal-utility",
+       "learning_objective": "Explain the law of diminishing marginal utility and how it explains a downward sloping demand curve."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH02-T2",
+     "topic_number": 2,
+     "title": "Ordinal Utility Analysis and Indifference Curves",
+     "ncert_sections": "2.1.2",
+     "concepts": [
+      {
+       "concept_tag": "marginal-rate-of-substitution",
+       "learning_objective": "Define and calculate the marginal rate of substitution and state the law of diminishing MRS."
+      },
+      {
+       "concept_tag": "indifference-curve-features",
+       "learning_objective": "Explain the shape and features of indifference curves and the indifference map."
+      },
+      {
+       "concept_tag": "monotonic-preferences",
+       "learning_objective": "Apply the idea of monotonic preferences to rank consumption bundles."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH02-T3",
+     "topic_number": 3,
+     "title": "The Consumer's Budget",
+     "ncert_sections": "2.2, 2.2.1, 2.2.2",
+     "concepts": [
+      {
+       "concept_tag": "budget-set-and-budget-line",
+       "learning_objective": "Describe the budget set and budget line, their intercepts and slope."
+      },
+      {
+       "concept_tag": "changes-in-budget-line",
+       "learning_objective": "Analyse how changes in income and prices change the budget line."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH02-T4",
+     "topic_number": 4,
+     "title": "Optimal Choice of the Consumer",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "consumer-optimum",
+       "learning_objective": "Locate the consumer's optimum bundle as the tangency of the budget line with an indifference curve."
+      },
+      {
+       "concept_tag": "mrs-equals-price-ratio",
+       "learning_objective": "Explain why MRS must equal the price ratio at the optimum and how a consumer adjusts when it does not."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH02-T5",
+     "topic_number": 5,
+     "title": "Demand, Law of Demand and Types of Goods",
+     "ncert_sections": "2.4, 2.4.1, 2.4.2, 2.4.3, 2.4.4",
+     "concepts": [
+      {
+       "concept_tag": "law-of-demand",
+       "learning_objective": "State the law of demand and interpret the demand function and a linear demand curve."
+      },
+      {
+       "concept_tag": "normal-inferior-and-giffen-goods",
+       "learning_objective": "Distinguish normal, inferior and Giffen goods using income and substitution effects."
+      },
+      {
+       "concept_tag": "substitutes-and-complements",
+       "learning_objective": "Distinguish substitutes from complements by the effect of a related good's price."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH02-T6",
+     "topic_number": 6,
+     "title": "Shifts in Demand and Market Demand",
+     "ncert_sections": "2.4.5, 2.4.6, 2.5",
+     "concepts": [
+      {
+       "concept_tag": "shift-versus-movement",
+       "learning_objective": "Distinguish a movement along the demand curve from a shift of the demand curve."
+      },
+      {
+       "concept_tag": "market-demand",
+       "learning_objective": "Derive market demand by horizontal summation of individual demand curves."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH02-T7",
+     "topic_number": 7,
+     "title": "Price Elasticity of Demand and its Measurement",
+     "ncert_sections": "2.6, 2.6.1",
+     "concepts": [
+      {
+       "concept_tag": "price-elasticity-measurement",
+       "learning_objective": "Calculate price elasticity of demand by the percentage method and classify it."
+      },
+      {
+       "concept_tag": "elasticity-along-linear-demand-curve",
+       "learning_objective": "Analyse how elasticity varies along a linear demand curve and identify constant elasticity curves."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH02-T8",
+     "topic_number": 8,
+     "title": "Determinants of Elasticity, and Elasticity and Expenditure",
+     "ncert_sections": "2.6.2, 2.6.3",
+     "concepts": [
+      {
+       "concept_tag": "determinants-of-price-elasticity",
+       "learning_objective": "Identify how necessities, luxuries and close substitutes affect price elasticity."
+      },
+      {
+       "concept_tag": "elasticity-and-expenditure",
+       "learning_objective": "Predict the change in expenditure on a good from its price elasticity."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEEC2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Production and Costs",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leec203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEEC2-CH03-T1",
+     "topic_number": 1,
+     "title": "Production Function",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "production-function",
+       "learning_objective": "Define the production function as the maximum output obtainable from given inputs and use it to compute output."
+      },
+      {
+       "concept_tag": "technology-and-efficiency",
+       "learning_objective": "Explain that a production function assumes efficient use of inputs and is defined for a given technology."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH03-T2",
+     "topic_number": 2,
+     "title": "The Short Run, the Long Run and Isoquants",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "short-run-long-run",
+       "learning_objective": "Distinguish the short run from the long run by whether all inputs can be varied."
+      },
+      {
+       "concept_tag": "isoquant",
+       "learning_objective": "Explain an isoquant and why it slopes downward when marginal products are positive."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH03-T3",
+     "topic_number": 3,
+     "title": "Total Product, Average Product and Marginal Product",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "tp-ap-mp-definitions",
+       "learning_objective": "Define total, average and marginal product of a variable input."
+      },
+      {
+       "concept_tag": "product-schedule-calculation",
+       "learning_objective": "Calculate TP, AP and MP schedules from one another."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH03-T4",
+     "topic_number": 4,
+     "title": "Law of Variable Proportions and Shapes of Product Curves",
+     "ncert_sections": "3.4, 3.5",
+     "concepts": [
+      {
+       "concept_tag": "law-of-variable-proportions",
+       "learning_objective": "State and explain the law of variable proportions using changing factor proportions."
+      },
+      {
+       "concept_tag": "ap-mp-relationship",
+       "learning_objective": "Explain the shapes of the TP, AP and MP curves and the relationship between AP and MP."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH03-T5",
+     "topic_number": 5,
+     "title": "Returns to Scale",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "returns-to-scale",
+       "learning_objective": "Distinguish constant, increasing and decreasing returns to scale."
+      },
+      {
+       "concept_tag": "cobb-douglas-returns",
+       "learning_objective": "Identify returns to scale of a Cobb-Douglas production function from the sum of its exponents."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH03-T6",
+     "topic_number": 6,
+     "title": "Cost Function and Short Run Cost Concepts",
+     "ncert_sections": "3.7, 3.7.1",
+     "concepts": [
+      {
+       "concept_tag": "cost-function",
+       "learning_objective": "Explain the cost function as the least cost of producing each output level."
+      },
+      {
+       "concept_tag": "short-run-cost-concepts",
+       "learning_objective": "Calculate TFC, TVC, TC, AFC, AVC, SAC and SMC and relate them to one another."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH03-T7",
+     "topic_number": 7,
+     "title": "Shapes of the Short Run Cost Curves",
+     "ncert_sections": "3.7.1",
+     "concepts": [
+      {
+       "concept_tag": "afc-and-fixed-cost-curves",
+       "learning_objective": "Describe the shapes of the TFC and AFC curves and why AFC is a rectangular hyperbola."
+      },
+      {
+       "concept_tag": "u-shaped-cost-curves",
+       "learning_objective": "Explain why SMC, AVC and SAC are U-shaped and where SMC cuts AVC and SAC."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH03-T8",
+     "topic_number": 8,
+     "title": "Long Run Costs",
+     "ncert_sections": "3.7.2",
+     "concepts": [
+      {
+       "concept_tag": "long-run-cost-concepts",
+       "learning_objective": "Define long run average and marginal cost and explain why there is no fixed cost in the long run."
+      },
+      {
+       "concept_tag": "lrac-and-returns-to-scale",
+       "learning_objective": "Relate the U-shape of the LRAC curve to increasing, constant and decreasing returns to scale."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEEC2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "The Theory of the Firm under Perfect Competition",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leec204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEEC2-CH04-T1",
+     "topic_number": 1,
+     "title": "Perfect competition: defining features and price-taking",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "features-of-perfect-competition",
+       "learning_objective": "State the four defining features of a perfectly competitive market and why each matters."
+      },
+      {
+       "concept_tag": "price-taking-behaviour",
+       "learning_objective": "Explain why firms and buyers in a perfectly competitive market behave as price-takers."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH04-T2",
+     "topic_number": 2,
+     "title": "Revenue: total, average and marginal revenue",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "total-average-marginal-revenue",
+       "learning_objective": "Compute TR, AR and MR for a price-taking firm and show that MR = AR = p."
+      },
+      {
+       "concept_tag": "price-line-demand-curve",
+       "learning_objective": "Interpret the TR curve and the price line as the perfectly elastic demand curve facing a firm."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH04-T3",
+     "topic_number": 3,
+     "title": "Conditions for profit maximisation",
+     "ncert_sections": "4.3, 4.3.1, 4.3.2, 4.3.3, 4.3.4",
+     "concepts": [
+      {
+       "concept_tag": "price-equals-marginal-cost",
+       "learning_objective": "Explain why profit is maximised where price equals marginal cost."
+      },
+      {
+       "concept_tag": "rising-marginal-cost-condition",
+       "learning_objective": "Explain why marginal cost must be non-decreasing at the profit-maximising output."
+      },
+      {
+       "concept_tag": "price-and-avc-ac-condition",
+       "learning_objective": "Apply the conditions p >= AVC in the short run and p >= AC in the long run to the decision to produce."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH04-T4",
+     "topic_number": 4,
+     "title": "Short run and long run supply curve of a firm",
+     "ncert_sections": "4.4, 4.4.1, 4.4.2",
+     "concepts": [
+      {
+       "concept_tag": "short-run-supply-curve",
+       "learning_objective": "Derive the short run supply curve of a firm from its SMC and AVC curves."
+      },
+      {
+       "concept_tag": "long-run-supply-curve",
+       "learning_objective": "Derive the long run supply curve of a firm from its LRMC and LRAC curves."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH04-T5",
+     "topic_number": 5,
+     "title": "Shut down point, normal profit and break-even point",
+     "ncert_sections": "4.4.3, 4.4.4",
+     "concepts": [
+      {
+       "concept_tag": "shut-down-point",
+       "learning_objective": "Identify the short run and long run shut down points of a firm."
+      },
+      {
+       "concept_tag": "normal-profit-break-even",
+       "learning_objective": "Distinguish normal profit, super-normal profit and the break-even point."
+      },
+      {
+       "concept_tag": "opportunity-cost",
+       "learning_objective": "Calculate the opportunity cost of an activity as the gain foregone from the next best alternative."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH04-T6",
+     "topic_number": 6,
+     "title": "Determinants of a firm's supply curve",
+     "ncert_sections": "4.5, 4.5.1, 4.5.2",
+     "concepts": [
+      {
+       "concept_tag": "technological-progress",
+       "learning_objective": "Explain how technological progress shifts a firm's supply curve."
+      },
+      {
+       "concept_tag": "input-prices",
+       "learning_objective": "Explain how a change in input prices shifts a firm's supply curve."
+      },
+      {
+       "concept_tag": "unit-tax",
+       "learning_objective": "Analyse how a unit tax changes a firm's cost curves and long run supply curve."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH04-T7",
+     "topic_number": 7,
+     "title": "Market supply curve",
+     "ncert_sections": "4.6",
+     "concepts": [
+      {
+       "concept_tag": "horizontal-summation",
+       "learning_objective": "Derive the market supply curve by horizontally summing the supply curves of individual firms."
+      },
+      {
+       "concept_tag": "number-of-firms",
+       "learning_objective": "Explain how a change in the number of firms shifts the market supply curve."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH04-T8",
+     "topic_number": 8,
+     "title": "Price elasticity of supply",
+     "ncert_sections": "4.7",
+     "concepts": [
+      {
+       "concept_tag": "elasticity-of-supply-measure",
+       "learning_objective": "Define and calculate the price elasticity of supply by the percentage method."
+      },
+      {
+       "concept_tag": "geometric-method",
+       "learning_objective": "Use the geometric method to judge the elasticity of straight line supply curves."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEEC2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Market Equilibrium",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leec205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEEC2-CH05-T1",
+     "topic_number": 1,
+     "title": "Equilibrium, excess demand and excess supply",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "market-equilibrium-definition",
+       "learning_objective": "Define market equilibrium, equilibrium price and equilibrium quantity in a perfectly competitive market."
+      },
+      {
+       "concept_tag": "excess-demand-excess-supply",
+       "learning_objective": "Identify excess demand and excess supply at a price and describe equilibrium as zero excess demand and zero excess supply."
+      },
+      {
+       "concept_tag": "invisible-hand-adjustment",
+       "learning_objective": "Explain how the 'Invisible Hand' moves price towards equilibrium when the market is out of equilibrium."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH05-T2",
+     "topic_number": 2,
+     "title": "Equilibrium with a fixed number of firms",
+     "ncert_sections": "5.1.1",
+     "concepts": [
+      {
+       "concept_tag": "equilibrium-with-fixed-firms",
+       "learning_objective": "Show that with a fixed number of firms, equilibrium lies at the intersection of the market demand and market supply curves."
+      },
+      {
+       "concept_tag": "equilibrium-calculation",
+       "learning_objective": "Calculate equilibrium price, equilibrium quantity and excess demand or supply from linear demand and supply equations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH05-T3",
+     "topic_number": 3,
+     "title": "Wage determination in the labour market",
+     "ncert_sections": "5.1.1 (Wage Determination in Labour Market)",
+     "concepts": [
+      {
+       "concept_tag": "labour-demand-mrp",
+       "learning_objective": "Explain why a profit-maximising firm hires labour until the wage equals the marginal revenue product of labour and why labour demand slopes downward."
+      },
+      {
+       "concept_tag": "labour-supply-backward-bending",
+       "learning_objective": "Explain the backward-bending individual labour supply curve and the upward-sloping market supply of labour."
+      },
+      {
+       "concept_tag": "wage-determination",
+       "learning_objective": "Describe how the wage rate is determined where labour demand by firms equals labour supply by households."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH05-T4",
+     "topic_number": 4,
+     "title": "Shifts in demand and supply",
+     "ncert_sections": "5.1.1 (Shifts in Demand and Supply)",
+     "concepts": [
+      {
+       "concept_tag": "demand-shift-effects",
+       "learning_objective": "Analyse how a shift in the demand curve changes equilibrium price and quantity with a fixed number of firms."
+      },
+      {
+       "concept_tag": "supply-shift-effects",
+       "learning_objective": "Analyse how a shift in the supply curve changes equilibrium price and quantity with a fixed number of firms."
+      },
+      {
+       "concept_tag": "simultaneous-shifts",
+       "learning_objective": "Predict which effects of simultaneous shifts in demand and supply are certain and which depend on the size of the shifts."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH05-T5",
+     "topic_number": 5,
+     "title": "Market equilibrium with free entry and exit",
+     "ncert_sections": "5.1.2",
+     "concepts": [
+      {
+       "concept_tag": "price-equals-min-ac",
+       "learning_objective": "Explain why free entry and exit make the equilibrium price equal to the minimum average cost of firms."
+      },
+      {
+       "concept_tag": "equilibrium-number-of-firms",
+       "learning_objective": "Calculate the equilibrium quantity and the equilibrium number of firms under free entry and exit."
+      },
+      {
+       "concept_tag": "demand-shift-free-entry",
+       "learning_objective": "Compare the effect of a demand shift under free entry and exit with that under a fixed number of firms."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC2-CH05-T6",
+     "topic_number": 6,
+     "title": "Applications: price ceiling and price floor",
+     "ncert_sections": "5.2, 5.2.1, 5.2.2",
+     "concepts": [
+      {
+       "concept_tag": "price-ceiling",
+       "learning_objective": "Explain the effects of a price ceiling below the equilibrium price, including shortage, rationing and black markets."
+      },
+      {
+       "concept_tag": "price-floor",
+       "learning_objective": "Explain the effects of a price floor above the equilibrium price, including excess supply and government purchase of the surplus."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "chapter_id": "IHMH1-CH06",
+ "title": "समष्टि मापन — परिमाप और क्षेत्रफल",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHMH1-CH06-T1",
+   "topic_number": 1,
+   "title": "आकृति का परिमाप और परिधि-व्यास अनुपात",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "parimap-sutra",
+     "learning_objective": "वर्ग, समबाहु त्रिभुज और आयत के परिमाप के सूत्रों का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "paridhi-vyas-anupat",
+     "learning_objective": "समझना कि सभी वृत्तों के लिए परिधि और व्यास का अनुपात स्थिर रहता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH06-T2",
+   "topic_number": 2,
+   "title": "π की ऐतिहासिक यात्रा और उसकी अपरिमेयता",
+   "ncert_sections": "6.2, 6.3",
+   "concepts": [
+    {
+     "concept_tag": "pi-sannikatan-itihas",
+     "learning_objective": "विभिन्न गणितज्ञों द्वारा दिए गए π के सन्निकट मानों और माधव के यथार्थ सूत्र को पहचानना।"
+    },
+    {
+     "concept_tag": "pi-aparimeyata",
+     "learning_objective": "समझना कि π अपरिमेय है और π ≈ 22/7 होते हुए भी π ≠ 22/7 है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH06-T3",
+   "topic_number": 3,
+   "title": "वृत्त की चाप की लंबाई और परिमाप पर आधारित प्रश्न",
+   "ncert_sections": "6.4, 6.5",
+   "concepts": [
+    {
+     "concept_tag": "chap-lambai",
+     "learning_objective": "केंद्रीय कोण θ के लिए चाप की लंबाई 2πr × θ/360 ज्ञात करना।"
+    },
+    {
+     "concept_tag": "daud-path-santaran",
+     "learning_objective": "दौड़-पथ में सांतरण की आवश्यकता को चाप की लंबाई से समझाना।"
+    },
+    {
+     "concept_tag": "parimap-paheliyan",
+     "learning_objective": "वृत्तीय चापों से बनी आकृतियों के परिमाप वाली पहेलियाँ हल करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH06-T4",
+   "topic_number": 4,
+   "title": "आयत, समांतर चतुर्भुज और त्रिभुज का क्षेत्रफल",
+   "ncert_sections": "6.6, 6.7, 6.8",
+   "concepts": [
+    {
+     "concept_tag": "samantar-chaturbhuj-kshetrafal",
+     "learning_objective": "समांतर चतुर्भुज का क्षेत्रफल आधार × ऊँचाई से ज्ञात करना और उसकी सीमाएँ समझना।"
+    },
+    {
+     "concept_tag": "tribhuj-kshetrafal",
+     "learning_objective": "त्रिभुज के क्षेत्रफल 1/2 × आधार × ऊँचाई का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "madhyika-gun",
+     "learning_objective": "समझना कि माध्यिका त्रिभुज को समान क्षेत्रफल वाले दो त्रिभुजों में बाँटती है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH06-T5",
+   "topic_number": 5,
+   "title": "हीरोन का सूत्र और ब्रह्मगुप्त का सूत्र",
+   "ncert_sections": "6.8.1",
+   "concepts": [
+    {
+     "concept_tag": "heron-sutra",
+     "learning_objective": "तीनों भुजाएँ ज्ञात होने पर हीरोन के सूत्र से त्रिभुज का क्षेत्रफल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "brahmagupta-sutra",
+     "learning_objective": "चक्रीय चतुर्भुज के क्षेत्रफल के लिए ब्रह्मगुप्त का सूत्र पहचानना।"
+    },
+    {
+     "concept_tag": "vishisht-sthiti-vyapkikaran",
+     "learning_objective": "समझना कि हीरोन का सूत्र ब्रह्मगुप्त के सूत्र की एक विशिष्ट स्थिति है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH06-T6",
+   "topic_number": 6,
+   "title": "आयत को वर्ग बनाना",
+   "ncert_sections": "6.9",
+   "concepts": [
+    {
+     "concept_tag": "baudhayan-vargikaran",
+     "learning_objective": "शुल्बसूत्र में दी गई बौधायन की रचना से आयत के समान क्षेत्रफल का वर्ग बनाना समझना।"
+    },
+    {
+     "concept_tag": "varg-sarvasamika",
+     "learning_objective": "रचना के पीछे की सर्वसमिका ab = ((a+b)/2)² − ((a−b)/2)² का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH06-T7",
+   "topic_number": 7,
+   "title": "वृत्त और त्रिज्यखंड का क्षेत्रफल",
+   "ncert_sections": "6.10, 6.10.1",
+   "concepts": [
+    {
+     "concept_tag": "vritt-kshetrafal",
+     "learning_objective": "वृत्त के क्षेत्रफल πr² को समझना और उसका प्रयोग करना।"
+    },
+    {
+     "concept_tag": "trijyakhand-kshetrafal",
+     "learning_objective": "केंद्रीय कोण θ वाले त्रिज्यखंड का क्षेत्रफल πr² × θ/360 ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

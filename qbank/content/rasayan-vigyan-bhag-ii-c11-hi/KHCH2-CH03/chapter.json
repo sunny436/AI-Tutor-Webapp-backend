@@ -1,0 +1,148 @@
+{
+ "chapter_id": "KHCH2-CH03",
+ "title": "हाइड्रोकार्बन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHCH2-CH03-T1",
+   "topic_number": 1,
+   "title": "हाइड्रोकार्बनों का वर्गीकरण तथा ऐल्केनों की नामपद्धति एवं समावयवता",
+   "ncert_sections": "9.1, 9.2.1",
+   "concepts": [
+    {
+     "concept_tag": "hydrocarbon-vargikaran",
+     "learning_objective": "कार्बन-कार्बन आबंधों के आधार पर हाइड्रोकार्बनों का वर्गीकरण करना।"
+    },
+    {
+     "concept_tag": "alkane-namapaddhati",
+     "learning_objective": "ऐल्केनों को आई.यू.पी.ए.सी. पद्धति से नाम देना और कार्बन परमाणुओं को प्राथमिक, द्वितीयक आदि में पहचानना।"
+    },
+    {
+     "concept_tag": "shrinkhala-samavayavta",
+     "learning_objective": "ऐल्केनों में शृंखला समावयवों की संरचना और संख्या ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH03-T2",
+   "topic_number": 2,
+   "title": "ऐल्केन: विरचन, गुणधर्म एवं संरूपण",
+   "ncert_sections": "9.2.2, 9.2.3, 9.2.4",
+   "concepts": [
+    {
+     "concept_tag": "alkane-virachan",
+     "learning_objective": "वुर्ट्स अभिक्रिया तथा विकार्बोक्सिलन जैसी विधियों से ऐल्केन बनाने की विधियाँ समझना।"
+    },
+    {
+     "concept_tag": "alkane-gun",
+     "learning_objective": "ऐल्केनों के भौतिक गुणों पर शाखन के प्रभाव की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "sanrupan",
+     "learning_objective": "एथेन के ग्रसित तथा सांतरित संरूपणों के स्थायित्व की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH03-T3",
+   "topic_number": 3,
+   "title": "ऐल्कीन: द्विआबंध की संरचना, नामपद्धति एवं समावयवता",
+   "ncert_sections": "9.3.1, 9.3.2, 9.3.3",
+   "concepts": [
+    {
+     "concept_tag": "dvibandh-sanrachna",
+     "learning_objective": "कार्बन-कार्बन द्विआबंध में σ और π आबंधों की प्रकृति समझना।"
+    },
+    {
+     "concept_tag": "alkene-namapaddhati",
+     "learning_objective": "ऐल्कीनों को आई.यू.पी.ए.सी. पद्धति से नाम देना।"
+    },
+    {
+     "concept_tag": "jyamitiya-samavayavta",
+     "learning_objective": "ऐल्कीनों में समपक्ष-विपक्ष (ज्यामितीय) समावयवता को पहचानना और उनके गुणों की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH03-T4",
+   "topic_number": 4,
+   "title": "ऐल्कीन: विरचन एवं रासायनिक गुण",
+   "ncert_sections": "9.3.4, 9.3.5",
+   "concepts": [
+    {
+     "concept_tag": "alkene-virachan",
+     "learning_objective": "ऐल्कोहॉलों के अम्लीय निर्जलन जैसी विधियों से ऐल्कीन बनाने की विधियाँ जानना।"
+    },
+    {
+     "concept_tag": "markovnikov-niyam",
+     "learning_objective": "असममित ऐल्कीनों पर HBr के योग में मार्कोनीकॉफ नियम और परॉक्साइड प्रभाव लागू करना।"
+    },
+    {
+     "concept_tag": "ozoni-apghatan",
+     "learning_objective": "ओज़ोनी अपघटन के उत्पादों से ऐल्कीन की संरचना ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH03-T5",
+   "topic_number": 5,
+   "title": "ऐल्काइन",
+   "ncert_sections": "9.4",
+   "concepts": [
+    {
+     "concept_tag": "alkyne-sanrachna",
+     "learning_objective": "त्रिआबंध में कार्बन के संकरण और आबंधन को समझना।"
+    },
+    {
+     "concept_tag": "alkyne-virachan",
+     "learning_objective": "कैल्सियम कार्बाइड से एथाइन बनाने की विधि जानना।"
+    },
+    {
+     "concept_tag": "alkyne-gun",
+     "learning_objective": "ऐल्काइनों की अम्लीय प्रकृति और जल-योग अभिक्रिया की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH03-T6",
+   "topic_number": 6,
+   "title": "बेन्ज़ीन की संरचना, ऐरोमैटिकता एवं विरचन",
+   "ncert_sections": "9.5.1, 9.5.2, 9.5.3, 9.5.4",
+   "concepts": [
+    {
+     "concept_tag": "benzene-sanrachna",
+     "learning_objective": "बेन्ज़ीन की संरचना और उसके असाधारण स्थायित्व को समझना।"
+    },
+    {
+     "concept_tag": "aromaticta",
+     "learning_objective": "हकल नियम द्वारा किसी निकाय की ऐरोमैटिकता का निर्णय करना।"
+    },
+    {
+     "concept_tag": "benzene-virachan",
+     "learning_objective": "प्रयोगशाला में बेन्ज़ीन बनाने की विधियाँ जानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH03-T7",
+   "topic_number": 7,
+   "title": "बेन्ज़ीन के गुण, निर्देशी प्रभाव एवं कैंसरजन्यता",
+   "ncert_sections": "9.5.5, 9.5.6, 9.6",
+   "concepts": [
+    {
+     "concept_tag": "electronragi-pratisthapan",
+     "learning_objective": "बेन्ज़ीन की इलेक्ट्रॉनरागी प्रतिस्थापन अभिक्रियाओं और उनके अभिकर्मकों को पहचानना।"
+    },
+    {
+     "concept_tag": "nirdeshi-prabhav",
+     "learning_objective": "एकल प्रतिस्थापित बेन्ज़ीन में प्रतिस्थापियों के निर्देशी तथा सक्रियक प्रभाव का अनुमान लगाना।"
+    },
+    {
+     "concept_tag": "kainsarjanyata",
+     "learning_objective": "कुछ बहुनाभिकीय हाइड्रोकार्बनों की कैंसरजन्यता और विषाक्तता को समझना।"
+    }
+   ]
+  }
+ ]
+}

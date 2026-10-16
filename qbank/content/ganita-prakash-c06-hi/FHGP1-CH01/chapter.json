@@ -1,0 +1,112 @@
+{
+ "chapter_id": "FHGP1-CH01",
+ "title": "गणित में पैटर्न",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHGP1-CH01-T1",
+   "topic_number": 1,
+   "title": "गणित क्या है?",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "ganit-paitarn-aur-spashtikaran",
+     "learning_objective": "विद्यार्थी समझेंगे कि गणित पैटर्नों की खोज और उनके होने के कारणों का स्पष्टीकरण है।"
+    },
+    {
+     "concept_tag": "ganit-ke-dainik-upyog",
+     "learning_objective": "विद्यार्थी पहचानेंगे कि पैटर्नों की समझ ने विज्ञान, तकनीक और दैनिक जीवन में मानव की सहायता कैसे की है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH01-T2",
+   "topic_number": 2,
+   "title": "संख्याओं में पैटर्न",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "sankhya-siddhant",
+     "learning_objective": "विद्यार्थी जानेंगे कि पूर्ण संख्याओं के पैटर्नों का अध्ययन संख्या सिद्धांत कहलाता है।"
+    },
+    {
+     "concept_tag": "sankhya-anukram-niyam",
+     "learning_objective": "विद्यार्थी प्रमुख संख्या अनुक्रमों को पहचानकर उनके नियम से अगले पद ज्ञात करेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH01-T3",
+   "topic_number": 3,
+   "title": "संख्या अनुक्रमों का दृश्यांकन",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "chitriya-nirupan",
+     "learning_objective": "विद्यार्थी बिंदु-चित्रों से त्रिभुजाकार, वर्ग और घन संख्याओं के नामों का कारण समझेंगे।"
+    },
+    {
+     "concept_tag": "shadbhujakar-sankhyaen",
+     "learning_objective": "विद्यार्थी षड्भुजाकार संख्याओं का पैटर्न पहचानकर अगली संख्या ज्ञात करेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH01-T4",
+   "topic_number": 4,
+   "title": "संख्या अनुक्रमों के बीच संबंध",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "vishm-sankhyaon-ka-yog",
+     "learning_objective": "विद्यार्थी समझेंगे कि 1 से आरंभ होने वाली क्रमागत विषम संख्याओं का योग वर्ग संख्या होता है।"
+    },
+    {
+     "concept_tag": "upar-niche-jodna",
+     "learning_objective": "विद्यार्थी गणन संख्याओं को ऊपर और फिर नीचे जोड़कर वर्ग संख्याएँ प्राप्त करेंगे।"
+    },
+    {
+     "concept_tag": "anukramon-ke-sambandh",
+     "learning_objective": "विद्यार्थी त्रिभुजाकार संख्याओं और 2 की घातों से बनने वाले अन्य अनुक्रम पहचानेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH01-T5",
+   "topic_number": 5,
+   "title": "आकारों में पैटर्न",
+   "ncert_sections": "1.5",
+   "concepts": [
+    {
+     "concept_tag": "jyamiti-aakar-paitarn",
+     "learning_objective": "विद्यार्थी जानेंगे कि आकारों के पैटर्नों का अध्ययन ज्यामिति कहलाता है।"
+    },
+    {
+     "concept_tag": "aakar-anukram-pahchan",
+     "learning_objective": "विद्यार्थी सम बहुभुज, पूर्ण आलेख और कोच हिमकण जैसे आकार अनुक्रमों का नियम पहचानेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH01-T6",
+   "topic_number": 6,
+   "title": "संख्या अनुक्रमों से संबंध",
+   "ncert_sections": "1.6",
+   "concepts": [
+    {
+     "concept_tag": "sam-bahubhuj",
+     "learning_objective": "विद्यार्थी सम बहुभुज का अर्थ और उसकी भुजाओं से बनने वाला संख्या अनुक्रम समझेंगे।"
+    },
+    {
+     "concept_tag": "sampurn-aalekh-rekhaen",
+     "learning_objective": "विद्यार्थी पूर्ण आलेखों की रेखाओं की गिनती को त्रिभुजाकार संख्याओं से जोड़ेंगे।"
+    },
+    {
+     "concept_tag": "dherit-aakriti-koch",
+     "learning_objective": "विद्यार्थी ढेरित त्रिभुजों और कोच हिमकण से बनने वाले संख्या अनुक्रम ज्ञात करेंगे।"
+    }
+   ]
+  }
+ ]
+}

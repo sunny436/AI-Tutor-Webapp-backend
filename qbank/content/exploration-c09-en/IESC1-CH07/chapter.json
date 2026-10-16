@@ -1,0 +1,152 @@
+{
+ "chapter_id": "IESC1-CH07",
+ "title": "Work, Energy, and Simple Machines",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IESC1-CH07-T1",
+   "topic_number": 1,
+   "title": "Work done by a constant force",
+   "ncert_sections": "7.1, 7.1.1, 7.1.2",
+   "concepts": [
+    {
+     "concept_tag": "work-definition-and-unit",
+     "learning_objective": "Define work done by a constant force and express its SI unit, the joule."
+    },
+    {
+     "concept_tag": "zero-work",
+     "learning_objective": "Identify situations in which the work done by a force is zero."
+    },
+    {
+     "concept_tag": "positive-negative-work",
+     "learning_objective": "Distinguish between positive and negative work from the directions of force and displacement."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH07-T2",
+   "topic_number": 2,
+   "title": "Work-energy theorem and forms of energy",
+   "ncert_sections": "7.2, 7.3",
+   "concepts": [
+    {
+     "concept_tag": "work-energy-theorem",
+     "learning_objective": "State the work-energy theorem and relate work done on an object to its change in energy."
+    },
+    {
+     "concept_tag": "energy-transfer-modes",
+     "learning_objective": "Recognise that energy is transferred by mechanical work and also by heat, radiation, sound and electric circuits."
+    },
+    {
+     "concept_tag": "forms-of-energy",
+     "learning_objective": "Identify different forms of energy and their conversion from one form to another."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH07-T3",
+   "topic_number": 3,
+   "title": "Kinetic energy",
+   "ncert_sections": "7.4, 7.4.1",
+   "concepts": [
+    {
+     "concept_tag": "kinetic-energy-expression",
+     "learning_objective": "Derive and use the expression K = (1/2)mv^2 for kinetic energy."
+    },
+    {
+     "concept_tag": "kinetic-energy-velocity-dependence",
+     "learning_objective": "Analyse how kinetic energy depends on mass and velocity and apply it to stopping problems."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH07-T4",
+   "topic_number": 4,
+   "title": "Potential energy",
+   "ncert_sections": "7.4.2",
+   "concepts": [
+    {
+     "concept_tag": "potential-energy-meaning",
+     "learning_objective": "Explain potential energy as energy stored by deformation or by the relative positions of interacting objects."
+    },
+    {
+     "concept_tag": "gravitational-potential-energy",
+     "learning_objective": "Calculate gravitational potential energy using U = mgh near the Earth's surface."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH07-T5",
+   "topic_number": 5,
+   "title": "Conservation of mechanical energy",
+   "ncert_sections": "7.4.3",
+   "concepts": [
+    {
+     "concept_tag": "mechanical-energy-conservation",
+     "learning_objective": "State that the sum of kinetic and potential energy stays constant when only gravity does work."
+    },
+    {
+     "concept_tag": "energy-in-pendulum",
+     "learning_objective": "Describe the interchange of kinetic and potential energy in a swinging pendulum."
+    },
+    {
+     "concept_tag": "speed-from-energy",
+     "learning_objective": "Use energy conservation and the work-energy theorem to find speeds, heights and losses."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH07-T6",
+   "topic_number": 6,
+   "title": "Power",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "power-definition",
+     "learning_objective": "Define power as the rate of doing work and state its units."
+    },
+    {
+     "concept_tag": "power-calculation",
+     "learning_objective": "Calculate average power from work done or energy change and time taken."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH07-T7",
+   "topic_number": 7,
+   "title": "Simple machines: pulley and inclined plane",
+   "ncert_sections": "7.6, 7.6.1, 7.6.2",
+   "concepts": [
+    {
+     "concept_tag": "mechanical-advantage",
+     "learning_objective": "Define effort, load and mechanical advantage of a simple machine."
+    },
+    {
+     "concept_tag": "pulley",
+     "learning_objective": "Explain how a fixed pulley provides convenience by changing the direction of effort."
+    },
+    {
+     "concept_tag": "inclined-plane",
+     "learning_objective": "Calculate the mechanical advantage L/h of an inclined plane and the effort it requires."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH07-T8",
+   "topic_number": 8,
+   "title": "Lever",
+   "ncert_sections": "7.6.3",
+   "concepts": [
+    {
+     "concept_tag": "lever-principle",
+     "learning_objective": "Apply effort x effort arm = load x load arm to balance and mechanical advantage problems."
+    },
+    {
+     "concept_tag": "classes-of-levers",
+     "learning_objective": "Classify levers into three classes by the relative positions of fulcrum, load and effort."
+    }
+   ]
+  }
+ ]
+}

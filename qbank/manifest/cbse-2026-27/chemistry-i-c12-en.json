@@ -1,0 +1,750 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "chemistry-i-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "chemistry",
+  "language": "english",
+  "title": "Chemistry-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lech1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LECH1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Solutions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lech101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECH1-CH01-T1",
+     "topic_number": 1,
+     "title": "Types of solutions",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "types-of-solutions",
+       "learning_objective": "Classify solutions by the physical states of solute and solvent with examples."
+      },
+      {
+       "concept_tag": "solvent-decides-physical-state",
+       "learning_objective": "Identify the solvent of a solution and relate it to the physical state of the solution."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH01-T2",
+     "topic_number": 2,
+     "title": "Expressing concentration of solutions",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "mole-fraction-and-percentages",
+       "learning_objective": "Calculate mole fraction and mass percentage of components of a solution."
+      },
+      {
+       "concept_tag": "molarity-and-molality",
+       "learning_objective": "Calculate molarity and molality and explain their dependence on temperature."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH01-T3",
+     "topic_number": 3,
+     "title": "Solubility of solids and gases in liquids",
+     "ncert_sections": "1.3, 1.3.1, 1.3.2",
+     "concepts": [
+      {
+       "concept_tag": "solubility-of-solids-in-liquids",
+       "learning_objective": "Explain the solubility of solids in liquids using the like-dissolves-like principle."
+      },
+      {
+       "concept_tag": "henrys-law",
+       "learning_objective": "Apply Henry's law and the effect of temperature to the solubility of gases in liquids."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH01-T4",
+     "topic_number": 4,
+     "title": "Vapour pressure of liquid solutions",
+     "ncert_sections": "1.4, 1.4.1, 1.4.2, 1.4.3",
+     "concepts": [
+      {
+       "concept_tag": "raoults-law-volatile-liquids",
+       "learning_objective": "Apply Raoult's law to find the vapour pressure and vapour composition of a mixture of volatile liquids."
+      },
+      {
+       "concept_tag": "raoults-law-and-henrys-law",
+       "learning_objective": "Relate Raoult's law to Henry's law as a special case."
+      },
+      {
+       "concept_tag": "vapour-pressure-non-volatile-solute",
+       "learning_objective": "Explain why a non-volatile solute lowers the vapour pressure of a solvent."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH01-T5",
+     "topic_number": 5,
+     "title": "Ideal and non-ideal solutions",
+     "ncert_sections": "1.5, 1.5.1, 1.5.2",
+     "concepts": [
+      {
+       "concept_tag": "ideal-solutions",
+       "learning_objective": "State the characteristics of ideal solutions."
+      },
+      {
+       "concept_tag": "deviations-from-raoults-law",
+       "learning_objective": "Explain positive and negative deviations from Raoult's law in terms of intermolecular forces."
+      },
+      {
+       "concept_tag": "azeotropes",
+       "learning_objective": "Distinguish minimum and maximum boiling azeotropes and relate them to deviations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH01-T6",
+     "topic_number": 6,
+     "title": "Colligative properties and determination of molar mass",
+     "ncert_sections": "1.6, 1.6.1, 1.6.2, 1.6.3, 1.6.4, 1.6.5",
+     "concepts": [
+      {
+       "concept_tag": "colligative-properties-and-vapour-pressure-lowering",
+       "learning_objective": "Define colligative properties and calculate the relative lowering of vapour pressure."
+      },
+      {
+       "concept_tag": "boiling-and-freezing-point-changes",
+       "learning_objective": "Calculate elevation of boiling point and depression of freezing point."
+      },
+      {
+       "concept_tag": "osmotic-pressure",
+       "learning_objective": "Use osmotic pressure to find molar mass and explain reverse osmosis."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH01-T7",
+     "topic_number": 7,
+     "title": "Abnormal molar masses",
+     "ncert_sections": "1.7",
+     "concepts": [
+      {
+       "concept_tag": "vant-hoff-factor",
+       "learning_objective": "Use the van't Hoff factor to modify colligative property calculations."
+      },
+      {
+       "concept_tag": "association-and-dissociation",
+       "learning_objective": "Relate association and dissociation of solutes to abnormal molar masses and degree of dissociation."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECH1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Electrochemistry",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lech102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECH1-CH02-T1",
+     "topic_number": 1,
+     "title": "Electrochemical cells and galvanic cells",
+     "ncert_sections": "2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "galvanic-vs-electrolytic-cell",
+       "learning_objective": "Distinguish a galvanic cell from an electrolytic cell using the Daniell cell under an external opposing potential."
+      },
+      {
+       "concept_tag": "cell-representation-and-emf",
+       "learning_objective": "Represent a galvanic cell by the standard notation and relate electron flow, anode, cathode and emf."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH02-T2",
+     "topic_number": 2,
+     "title": "Measurement of electrode potential and the electrochemical series",
+     "ncert_sections": "2.2.1",
+     "concepts": [
+      {
+       "concept_tag": "standard-hydrogen-electrode",
+       "learning_objective": "Explain how the standard hydrogen electrode is used to measure standard electrode potentials."
+      },
+      {
+       "concept_tag": "electrochemical-series",
+       "learning_objective": "Use standard electrode potentials to compare oxidising and reducing power and predict feasibility of reactions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH02-T3",
+     "topic_number": 3,
+     "title": "Nernst equation",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "nernst-equation-form",
+       "learning_objective": "Write the Nernst equation for an electrode and for a cell, with the correct number of electrons and concentration terms."
+      },
+      {
+       "concept_tag": "nernst-calculations",
+       "learning_objective": "Calculate electrode and cell potentials at non-standard concentrations at 298 K."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH02-T4",
+     "topic_number": 4,
+     "title": "Equilibrium constant and Gibbs energy from cell potential",
+     "ncert_sections": "2.3.1, 2.3.2",
+     "concepts": [
+      {
+       "concept_tag": "gibbs-energy-and-emf",
+       "learning_objective": "Relate the standard Gibbs energy of a cell reaction to its standard cell potential using ΔrG° = –nFE°cell."
+      },
+      {
+       "concept_tag": "equilibrium-constant-from-emf",
+       "learning_objective": "Calculate the equilibrium constant of a cell reaction from its standard cell potential."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH02-T5",
+     "topic_number": 5,
+     "title": "Conductance of electrolytic solutions and its measurement",
+     "ncert_sections": "2.4, 2.4.1",
+     "concepts": [
+      {
+       "concept_tag": "resistivity-and-conductivity",
+       "learning_objective": "Define resistance, resistivity, conductance and conductivity and state their SI units and the factors affecting them."
+      },
+      {
+       "concept_tag": "conductivity-cell-measurement",
+       "learning_objective": "Determine the cell constant and conductivity of a solution using a conductivity cell and AC Wheatstone bridge."
+      },
+      {
+       "concept_tag": "molar-conductivity-definition",
+       "learning_objective": "Calculate molar conductivity from conductivity and concentration with correct units."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH02-T6",
+     "topic_number": 6,
+     "title": "Variation of conductivity with concentration and Kohlrausch's law",
+     "ncert_sections": "2.4.2",
+     "concepts": [
+      {
+       "concept_tag": "dilution-and-conductivity",
+       "learning_objective": "Explain why conductivity decreases and molar conductivity increases on dilution for strong and weak electrolytes."
+      },
+      {
+       "concept_tag": "kohlrausch-law",
+       "learning_objective": "Apply Kohlrausch's law of independent migration of ions to find limiting molar conductivities."
+      },
+      {
+       "concept_tag": "weak-electrolyte-dissociation",
+       "learning_objective": "Calculate the degree of dissociation and dissociation constant of a weak electrolyte from conductivity data."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH02-T7",
+     "topic_number": 7,
+     "title": "Electrolytic cells and electrolysis",
+     "ncert_sections": "2.5, 2.5.1",
+     "concepts": [
+      {
+       "concept_tag": "faradays-laws",
+       "learning_objective": "Apply Faraday's laws of electrolysis to relate charge passed to the amount of substance deposited or liberated."
+      },
+      {
+       "concept_tag": "products-of-electrolysis",
+       "learning_objective": "Predict the products of electrolysis using electrode potentials, the nature of electrodes and overpotential."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH02-T8",
+     "topic_number": 8,
+     "title": "Batteries, fuel cells and corrosion",
+     "ncert_sections": "2.6, 2.7, 2.8",
+     "concepts": [
+      {
+       "concept_tag": "primary-and-secondary-batteries",
+       "learning_objective": "Describe the construction and electrode reactions of the dry cell, mercury cell, lead storage battery and nickel-cadmium cell."
+      },
+      {
+       "concept_tag": "fuel-cells",
+       "learning_objective": "Explain the working of the hydrogen-oxygen fuel cell and its advantages."
+      },
+      {
+       "concept_tag": "corrosion-and-prevention",
+       "learning_objective": "Explain rusting of iron as an electrochemical process and evaluate methods of preventing corrosion."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECH1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Chemical Kinetics",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lech103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECH1-CH03-T1",
+     "topic_number": 1,
+     "title": "Rate of a chemical reaction",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "average-and-instantaneous-rate",
+       "learning_objective": "Distinguish average rate from instantaneous rate and obtain each from concentration-time data."
+      },
+      {
+       "concept_tag": "rate-and-stoichiometry",
+       "learning_objective": "Express the rate of a reaction in terms of any reactant or product using stoichiometric coefficients."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH03-T2",
+     "topic_number": 2,
+     "title": "Dependence of rate on concentration: rate expression and rate constant",
+     "ncert_sections": "3.2, 3.2.1, 3.2.2",
+     "concepts": [
+      {
+       "concept_tag": "rate-law",
+       "learning_objective": "Write and use a rate law, recognising that its exponents are found by experiment."
+      },
+      {
+       "concept_tag": "rate-constant",
+       "learning_objective": "Interpret the rate constant as the rate when every reactant concentration is unity."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH03-T3",
+     "topic_number": 3,
+     "title": "Order of a reaction",
+     "ncert_sections": "3.2.3",
+     "concepts": [
+      {
+       "concept_tag": "order-of-reaction",
+       "learning_objective": "Determine the order of a reaction from its rate law or from experimental rate data."
+      },
+      {
+       "concept_tag": "units-of-rate-constant",
+       "learning_objective": "Relate the units of the rate constant to the order of the reaction."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH03-T4",
+     "topic_number": 4,
+     "title": "Molecularity and mechanism of a reaction",
+     "ncert_sections": "3.2.4",
+     "concepts": [
+      {
+       "concept_tag": "molecularity",
+       "learning_objective": "Define molecularity and distinguish it from order for elementary and complex reactions."
+      },
+      {
+       "concept_tag": "rate-determining-step",
+       "learning_objective": "Deduce the rate law of a complex reaction from its slowest step and identify intermediates."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH03-T5",
+     "topic_number": 5,
+     "title": "Integrated rate equations for zero and first order reactions",
+     "ncert_sections": "3.3, 3.3.1, 3.3.2",
+     "concepts": [
+      {
+       "concept_tag": "zero-order-reactions",
+       "learning_objective": "Apply the integrated rate equation of a zero order reaction and explain why surface reactions can be zero order."
+      },
+      {
+       "concept_tag": "first-order-integrated-equation",
+       "learning_objective": "Use the integrated rate equation of a first order reaction to calculate k, time or concentration."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH03-T6",
+     "topic_number": 6,
+     "title": "Half-life and pseudo first order reactions",
+     "ncert_sections": "3.3.3",
+     "concepts": [
+      {
+       "concept_tag": "half-life",
+       "learning_objective": "Calculate and compare the half-lives of zero and first order reactions."
+      },
+      {
+       "concept_tag": "pseudo-first-order",
+       "learning_objective": "Explain why some higher order reactions behave as pseudo first order reactions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH03-T7",
+     "topic_number": 7,
+     "title": "Temperature dependence of rate and effect of catalyst",
+     "ncert_sections": "3.4, 3.4.1",
+     "concepts": [
+      {
+       "concept_tag": "arrhenius-equation",
+       "learning_objective": "Use the Arrhenius equation to relate rate constant, temperature and activation energy."
+      },
+      {
+       "concept_tag": "effect-of-catalyst",
+       "learning_objective": "Explain how a catalyst changes the rate of a reaction without changing its thermodynamics."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH03-T8",
+     "topic_number": 8,
+     "title": "Collision theory of chemical reactions",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "collision-frequency",
+       "learning_objective": "Relate collision frequency and activation energy to the rate of a bimolecular reaction."
+      },
+      {
+       "concept_tag": "effective-collisions",
+       "learning_objective": "Explain effective collisions in terms of threshold energy, orientation and the steric factor."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECH1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "The d-and f-Block Elements",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lech104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECH1-CH04-T1",
+     "topic_number": 1,
+     "title": "Position and electronic configurations of the d-block elements",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "d-block-position-and-definition",
+       "learning_objective": "Identify transition elements using the IUPAC definition based on an incomplete d subshell in the atom or its ions."
+      },
+      {
+       "concept_tag": "d-block-electronic-configuration",
+       "learning_objective": "Write and explain the (n-1)d ns configurations of d-block elements, including the exceptions Cr, Cu and Pd."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH04-T2",
+     "topic_number": 2,
+     "title": "Physical properties, atomic sizes and ionisation enthalpies",
+     "ncert_sections": "4.3.1, 4.3.2, 4.3.3",
+     "concepts": [
+      {
+       "concept_tag": "enthalpy-of-atomisation",
+       "learning_objective": "Relate high melting points and enthalpies of atomisation to the number of unpaired (n-1)d and ns electrons in metallic bonding."
+      },
+      {
+       "concept_tag": "atomic-ionic-radii-trends",
+       "learning_objective": "Explain the trends in atomic and ionic radii and density across a transition series and between series."
+      },
+      {
+       "concept_tag": "ionisation-enthalpy-trends",
+       "learning_objective": "Interpret irregularities in successive ionisation enthalpies of the 3d series using the stability of d5 and d10 configurations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH04-T3",
+     "topic_number": 3,
+     "title": "Oxidation states and electrode potentials",
+     "ncert_sections": "4.3.4, 4.3.5, 4.3.6, 4.3.7, 4.3.8",
+     "concepts": [
+      {
+       "concept_tag": "variable-oxidation-states",
+       "learning_objective": "Explain the variety of oxidation states of transition metals and their trends along a series and down a group."
+      },
+      {
+       "concept_tag": "standard-electrode-potentials",
+       "learning_objective": "Use E values of M2+/M and M3+/M2+ couples to judge reducing and oxidising behaviour of transition metal ions."
+      },
+      {
+       "concept_tag": "stability-of-higher-oxidation-states",
+       "learning_objective": "Explain why oxygen and fluorine stabilise the highest oxidation states of transition metals."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH04-T4",
+     "topic_number": 4,
+     "title": "Magnetic properties, colour, complexes, catalysis, interstitial compounds and alloys",
+     "ncert_sections": "4.3.9 to 4.3.14",
+     "concepts": [
+      {
+       "concept_tag": "spin-only-magnetic-moment",
+       "learning_objective": "Calculate the spin-only magnetic moment of a transition metal ion from its number of unpaired electrons."
+      },
+      {
+       "concept_tag": "coloured-ions",
+       "learning_objective": "Explain the colour of transition metal ions in terms of d-d transitions and identify colourless ions."
+      },
+      {
+       "concept_tag": "catalysis-interstitial-alloys",
+       "learning_objective": "Describe the catalytic behaviour, interstitial compounds and alloys of transition metals and the reasons for them."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH04-T5",
+     "topic_number": 5,
+     "title": "Some important compounds: oxides, potassium dichromate and potassium permanganate",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "oxides-and-oxoanions",
+       "learning_objective": "Relate the oxidation state of a transition metal in its oxide to the ionic, acidic or basic character of the oxide."
+      },
+      {
+       "concept_tag": "potassium-dichromate",
+       "learning_objective": "Describe the preparation, structure and oxidising reactions of potassium dichromate, including redox stoichiometry."
+      },
+      {
+       "concept_tag": "potassium-permanganate",
+       "learning_objective": "Describe the preparation, magnetic behaviour and oxidising reactions of potassium permanganate in different media."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH04-T6",
+     "topic_number": 6,
+     "title": "The lanthanoids",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "lanthanoid-configuration-oxidation-states",
+       "learning_objective": "Relate the oxidation states and magnetic behaviour of lanthanoids to the stability of 4f0, 4f7 and 4f14 configurations."
+      },
+      {
+       "concept_tag": "lanthanoid-contraction",
+       "learning_objective": "Explain the cause of lanthanoid contraction and its consequences for the third transition series."
+      },
+      {
+       "concept_tag": "lanthanoid-properties-uses",
+       "learning_objective": "Recall the general properties, reactions and uses of lanthanoids such as mischmetall."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH04-T7",
+     "topic_number": 7,
+     "title": "The actinoids and applications of d- and f-block elements",
+     "ncert_sections": "4.6, 4.7",
+     "concepts": [
+      {
+       "concept_tag": "actinoid-characteristics",
+       "learning_objective": "Describe the electronic configurations, oxidation states and radioactivity of the actinoids."
+      },
+      {
+       "concept_tag": "actinoid-lanthanoid-comparison",
+       "learning_objective": "Compare actinoids with lanthanoids in configuration, contraction, oxidation states and reactivity."
+      },
+      {
+       "concept_tag": "applications-of-d-and-f-block",
+       "learning_objective": "Recall industrial applications of d- and f-block elements and their compounds, especially as catalysts."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECH1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Coordination Compounds",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lech105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECH1-CH05-T1",
+     "topic_number": 1,
+     "title": "Werner's theory of coordination compounds",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "werner-postulates",
+       "learning_objective": "State the postulates of Werner's theory, including primary and secondary valences and coordination polyhedra."
+      },
+      {
+       "concept_tag": "primary-secondary-valence",
+       "learning_objective": "Deduce the formulation of a complex from the moles of AgCl it precipitates and its conductivity."
+      },
+      {
+       "concept_tag": "double-salt-vs-complex",
+       "learning_objective": "Distinguish a double salt from a complex by their behaviour in aqueous solution."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH05-T2",
+     "topic_number": 2,
+     "title": "Important terms: ligands, coordination number and coordination sphere",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "ligand-types",
+       "learning_objective": "Classify ligands as unidentate, didentate, polydentate, chelating or ambidentate."
+      },
+      {
+       "concept_tag": "coordination-number",
+       "learning_objective": "Determine the coordination number of the central atom/ion from the donor atoms bonded to it."
+      },
+      {
+       "concept_tag": "coordination-sphere-and-oxidation-number",
+       "learning_objective": "Identify the coordination sphere, counter ions, oxidation number and homoleptic or heteroleptic nature of a complex."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH05-T3",
+     "topic_number": 3,
+     "title": "Nomenclature of coordination compounds",
+     "ncert_sections": "5.3, 5.3.1, 5.3.2",
+     "concepts": [
+      {
+       "concept_tag": "writing-formulas",
+       "learning_objective": "Write formulas of mononuclear coordination entities using IUPAC rules."
+      },
+      {
+       "concept_tag": "naming-complexes",
+       "learning_objective": "Write IUPAC names of mononuclear coordination compounds, including complex anions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH05-T4",
+     "topic_number": 4,
+     "title": "Isomerism in coordination compounds",
+     "ncert_sections": "5.4, 5.4.1-5.4.6",
+     "concepts": [
+      {
+       "concept_tag": "geometrical-isomerism",
+       "learning_objective": "Explain cis-trans and fac-mer isomerism and predict when it is possible."
+      },
+      {
+       "concept_tag": "optical-isomerism",
+       "learning_objective": "Identify chiral coordination entities that show optical isomerism."
+      },
+      {
+       "concept_tag": "structural-isomerism",
+       "learning_objective": "Distinguish linkage, coordination, ionisation and solvate isomerism with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH05-T5",
+     "topic_number": 5,
+     "title": "Valence bond theory and magnetic properties",
+     "ncert_sections": "5.5.1, 5.5.2, 5.5.3",
+     "concepts": [
+      {
+       "concept_tag": "vbt-hybridisation",
+       "learning_objective": "Relate the hybridisation of the central ion to the geometry of a complex using valence bond theory."
+      },
+      {
+       "concept_tag": "magnetic-moment",
+       "learning_objective": "Use magnetic data and inner or outer orbital hybridisation to explain unpaired electrons and geometry."
+      },
+      {
+       "concept_tag": "vbt-limitations",
+       "learning_objective": "State the limitations of valence bond theory."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH05-T6",
+     "topic_number": 6,
+     "title": "Crystal field theory and colour in coordination compounds",
+     "ncert_sections": "5.5.4, 5.5.5, 5.5.6",
+     "concepts": [
+      {
+       "concept_tag": "crystal-field-splitting",
+       "learning_objective": "Describe the splitting of d orbitals in octahedral and tetrahedral crystal fields."
+      },
+      {
+       "concept_tag": "spectrochemical-series",
+       "learning_objective": "Use the spectrochemical series and the relation between crystal field splitting and pairing energy to predict high or low spin."
+      },
+      {
+       "concept_tag": "colour-of-complexes",
+       "learning_objective": "Explain the colour of complexes as d-d transitions and relate the wavelength absorbed to the splitting energy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH1-CH05-T7",
+     "topic_number": 7,
+     "title": "Metal carbonyls and applications of coordination compounds",
+     "ncert_sections": "5.6, 5.7",
+     "concepts": [
+      {
+       "concept_tag": "metal-carbonyl-bonding",
+       "learning_objective": "Describe the structures of homoleptic carbonyls and the synergic sigma and pi bonding in them."
+      },
+      {
+       "concept_tag": "applications-of-complexes",
+       "learning_objective": "Explain uses of complexes in analysis, metallurgy, industry, electroplating and photography."
+      },
+      {
+       "concept_tag": "biological-and-medicinal",
+       "learning_objective": "Identify biologically important complexes and the use of chelate therapy in medicine."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

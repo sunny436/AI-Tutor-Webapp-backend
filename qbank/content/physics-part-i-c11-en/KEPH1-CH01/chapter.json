@@ -1,0 +1,100 @@
+{
+ "chapter_id": "KEPH1-CH01",
+ "title": "Units and Measurement",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPH1-CH01-T1",
+   "topic_number": 1,
+   "title": "Units and the International System of Units",
+   "ncert_sections": "1.1, 1.2",
+   "concepts": [
+    {
+     "concept_tag": "base-and-derived-units",
+     "learning_objective": "Distinguish base units from derived units and express a derived unit in SI base units."
+    },
+    {
+     "concept_tag": "si-base-units",
+     "learning_objective": "Identify the seven SI base quantities and their units."
+    },
+    {
+     "concept_tag": "plane-and-solid-angle",
+     "learning_objective": "Define plane angle and solid angle and state their units, radian and steradian."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH01-T2",
+   "topic_number": 2,
+   "title": "Significant figures",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "significant-figure-rules",
+     "learning_objective": "Apply the rules to count the significant figures in a reported measurement."
+    },
+    {
+     "concept_tag": "scientific-notation-and-order-of-magnitude",
+     "learning_objective": "Write a measurement in scientific notation and find its order of magnitude."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH01-T3",
+   "topic_number": 3,
+   "title": "Arithmetic with significant figures, rounding off and uncertainty",
+   "ncert_sections": "1.3.1, 1.3.2, 1.3.3",
+   "concepts": [
+    {
+     "concept_tag": "significant-figures-in-arithmetic",
+     "learning_objective": "Report the result of addition, subtraction, multiplication or division with the correct precision."
+    },
+    {
+     "concept_tag": "rounding-off",
+     "learning_objective": "Round off uncertain digits using the conventions given in the chapter."
+    },
+    {
+     "concept_tag": "uncertainty-in-results",
+     "learning_objective": "Estimate the uncertainty of a result calculated from measured values."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH01-T4",
+   "topic_number": 4,
+   "title": "Dimensions, dimensional formulae and dimensional equations",
+   "ncert_sections": "1.4, 1.5",
+   "concepts": [
+    {
+     "concept_tag": "dimensions-of-physical-quantities",
+     "learning_objective": "State the dimensions of a physical quantity in terms of the base quantities."
+    },
+    {
+     "concept_tag": "dimensional-formula",
+     "learning_objective": "Write and interpret the dimensional formula and dimensional equation of a quantity."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH01-T5",
+   "topic_number": 5,
+   "title": "Dimensional analysis and its applications",
+   "ncert_sections": "1.6, 1.6.1, 1.6.2",
+   "concepts": [
+    {
+     "concept_tag": "principle-of-homogeneity",
+     "learning_objective": "Use the principle of homogeneity of dimensions to check the consistency of an equation."
+    },
+    {
+     "concept_tag": "deducing-relations",
+     "learning_objective": "Deduce the relation among physical quantities by dimensional analysis."
+    },
+    {
+     "concept_tag": "limitations-of-dimensional-analysis",
+     "learning_objective": "Explain why a dimensionally consistent equation need not be correct."
+    }
+   ]
+  }
+ ]
+}

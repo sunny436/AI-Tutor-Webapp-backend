@@ -1,0 +1,144 @@
+{
+ "chapter_id": "GEGP2-CH06",
+ "title": "Constructions and Tilings",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP2-CH06-T1",
+   "topic_number": 1,
+   "title": "The perpendicular bisector of a line segment",
+   "ncert_sections": "6.1 (Eyes; Construction of Perpendicular Bisector)",
+   "concepts": [
+    {
+     "concept_tag": "perpendicular-bisector-meaning",
+     "learning_objective": "Define bisection and the perpendicular bisector, and justify the eye construction using congruent triangles."
+    },
+    {
+     "concept_tag": "equidistant-point-property",
+     "learning_objective": "Use the fact that every point equidistant from X and Y lies on the perpendicular bisector of XY."
+    },
+    {
+     "concept_tag": "perpendicular-bisector-construction",
+     "learning_objective": "Construct the perpendicular bisector of a segment with an unmarked ruler and a compass and explain which conditions are necessary."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH06-T2",
+   "topic_number": 2,
+   "title": "A 90 degree angle at a point and rope methods of the Sulba-Sutras",
+   "ncert_sections": "6.1 (Construction of a 90 degree Angle at a Given Point; Construction Methods in Sulba-Sutras)",
+   "concepts": [
+    {
+     "concept_tag": "right-angle-at-point",
+     "learning_objective": "Construct a 90 degree angle at a point on a line, or a perpendicular from a point outside it, using the perpendicular bisector method."
+    },
+    {
+     "concept_tag": "sulba-sutra-rope-method",
+     "learning_objective": "Describe the Sulba-Sutra rope construction of a perpendicular bisector and justify why it works."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH06-T3",
+   "topic_number": 3,
+   "title": "Angle bisection",
+   "ncert_sections": "6.1 (Angle Bisection for a Design)",
+   "concepts": [
+    {
+     "concept_tag": "angle-bisection-steps",
+     "learning_objective": "Bisect any angle with a ruler and compass and justify the method by the SSS congruence condition."
+    },
+    {
+     "concept_tag": "angles-by-bisection",
+     "learning_objective": "Obtain angles such as 45, 22.5 and 75 degrees by combining constructed angles with bisection."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH06-T4",
+   "topic_number": 4,
+   "title": "Copying an angle and drawing parallel lines",
+   "ncert_sections": "6.1 (Repeating Units and Repeating Angles; Construction of a Line Parallel to the Given Line)",
+   "concepts": [
+    {
+     "concept_tag": "copy-angle",
+     "learning_objective": "Make an exact copy of a given angle with a ruler and compass and justify it by SSS congruence."
+    },
+    {
+     "concept_tag": "parallel-line-construction",
+     "learning_objective": "Construct a line parallel to a given line through a point by copying a corresponding angle."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH06-T5",
+   "topic_number": 5,
+   "title": "Arch designs",
+   "ncert_sections": "6.1 (Arch Designs: Trefoil Arch; A Pointed Arch)",
+   "concepts": [
+    {
+     "concept_tag": "arch-support-lines",
+     "learning_objective": "Construct symmetric support lines for trefoil and pointed arches using equal angles and equal lengths."
+    },
+    {
+     "concept_tag": "arch-symmetry",
+     "learning_objective": "Identify the line of symmetry of an arch design and predict the effect of unequal support lines."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH06-T6",
+   "topic_number": 6,
+   "title": "Regular hexagons, the 60 degree angle and related constructions",
+   "ncert_sections": "6.1 (Regular Hexagons; Construction of a 60 degree angle; Related Constructions)",
+   "concepts": [
+    {
+     "concept_tag": "hexagon-from-equilateral-triangles",
+     "learning_objective": "Explain why six congruent equilateral triangles fit around a point to form a regular hexagon."
+    },
+    {
+     "concept_tag": "sixty-degree-construction",
+     "learning_objective": "Construct a 60 degree angle through an equilateral triangle and use it to obtain 120, 30 and 15 degree angles."
+    },
+    {
+     "concept_tag": "six-pointed-star",
+     "learning_objective": "Reason with angles to show that the points of a six-pointed star built on a regular hexagon are equilateral triangles."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH06-T7",
+   "topic_number": 7,
+   "title": "Tangrams and tiling a region with 2 x 1 tiles",
+   "ncert_sections": "6.2 (Tiling)",
+   "concepts": [
+    {
+     "concept_tag": "tiling-definition",
+     "learning_objective": "State what tiling is and recall the tangram as a set of seven pieces cut from a square."
+    },
+    {
+     "concept_tag": "domino-tiling-parity",
+     "learning_objective": "Decide whether an m x n grid can be tiled with 2 x 1 tiles by counting unit squares."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH06-T8",
+   "topic_number": 8,
+   "title": "The black-and-white colouring argument and tiling the plane",
+   "ncert_sections": "6.2 (Tiling; Tiling the Entire Plane)",
+   "concepts": [
+    {
+     "concept_tag": "checkerboard-colouring",
+     "learning_objective": "Use black-and-white colouring to prove that a region cannot be tiled with 2 x 1 tiles."
+    },
+    {
+     "concept_tag": "plane-tiling-regular-polygons",
+     "learning_objective": "Identify regular polygons that tile the plane and explain this using the angles that meet at a point."
+    }
+   ]
+  }
+ ]
+}

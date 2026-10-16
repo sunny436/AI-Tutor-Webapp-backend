@@ -1,0 +1,120 @@
+{
+ "chapter_id": "FEGP1-CH09",
+ "title": "Symmetry",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FEGP1-CH09-T1",
+   "topic_number": 1,
+   "title": "Symmetry in the world around us",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "symmetry-as-repeated-pattern",
+     "learning_objective": "Describe symmetry as parts of a figure that repeat in a definite pattern."
+    },
+    {
+     "concept_tag": "symmetric-vs-asymmetric-figures",
+     "learning_objective": "Distinguish symmetrical figures such as a rangoli or butterfly from figures with no repeating pattern such as clouds."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH09-T2",
+   "topic_number": 2,
+   "title": "Line of symmetry and figures with more than one line of symmetry",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "line-of-symmetry-definition",
+     "learning_objective": "Define a line of symmetry as a line along which a figure folds into two exactly overlapping parts."
+    },
+    {
+     "concept_tag": "lines-of-symmetry-of-shapes",
+     "learning_objective": "Find the number of lines of symmetry of squares, rectangles and triangles of different kinds."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH09-T3",
+   "topic_number": 3,
+   "title": "Reflection",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "reflection-symmetry",
+     "learning_objective": "Explain that a figure with a line of symmetry has reflection symmetry, each side being reflected onto the other."
+    },
+    {
+     "concept_tag": "reflecting-labelled-points",
+     "learning_objective": "Track where the labelled corners of a square go when it is reflected in a line of symmetry."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH09-T4",
+   "topic_number": 4,
+   "title": "Generating shapes having lines of symmetry",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "fold-as-line-of-symmetry",
+     "learning_objective": "Recognise that the fold is the line of symmetry of ink blot, cut-out and punched designs."
+    },
+    {
+     "concept_tag": "punching-and-cutting-folded-paper",
+     "learning_objective": "Predict the holes and shapes obtained when folded paper is punched or cut and then unfolded."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH09-T5",
+   "topic_number": 5,
+   "title": "Rotational symmetry and angles of symmetry",
+   "ncert_sections": "9.2",
+   "concepts": [
+    {
+     "concept_tag": "centre-and-angle-of-rotation",
+     "learning_objective": "Define the centre of rotation, an angle of symmetry and when a figure has rotational symmetry."
+    },
+    {
+     "concept_tag": "angles-of-symmetry-of-figures",
+     "learning_objective": "List the angles of symmetry of figures such as a square and a paper windmill."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH09-T6",
+   "topic_number": 6,
+   "title": "Rotational symmetry of figures with radial arms",
+   "ncert_sections": "9.2",
+   "concepts": [
+    {
+     "concept_tag": "angle-between-radial-arms",
+     "learning_objective": "Find the angle between equally spaced radial arms as 360 degrees divided by the number of arms."
+    },
+    {
+     "concept_tag": "smallest-angle-and-multiples",
+     "learning_objective": "Use the facts that angles of symmetry are multiples of the smallest one and that a whole-number smallest angle is a factor of 360."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH09-T7",
+   "topic_number": 7,
+   "title": "Symmetries of a circle and figures with both kinds of symmetry",
+   "ncert_sections": "9.2",
+   "concepts": [
+    {
+     "concept_tag": "symmetries-of-circle",
+     "learning_objective": "State that every angle is an angle of symmetry of a circle and every diameter is a line of symmetry."
+    },
+    {
+     "concept_tag": "reflection-and-rotation-together",
+     "learning_objective": "Classify figures as having reflection symmetry, rotational symmetry, both or neither."
+    }
+   ]
+  }
+ ]
+}

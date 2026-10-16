@@ -1,0 +1,112 @@
+{
+ "chapter_id": "LHGY3-CH01",
+ "title": "आँकड़े : स्रोत और संकलन",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHGY3-CH01-T1",
+   "topic_number": 1,
+   "title": "आँकड़े : अर्थ, आवश्यकता और प्रस्तुतीकरण",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "aankde-ka-arth",
+     "learning_objective": "आँकड़े, आधार सामग्री और सूचना का अर्थ तथा अंतर समझना।"
+    },
+    {
+     "concept_tag": "aankdon-ki-avashyakta",
+     "learning_objective": "भौगोलिक विश्लेषण में आँकड़ों की आवश्यकता और सही प्रस्तुतीकरण का महत्त्व समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH01-T2",
+   "topic_number": 2,
+   "title": "आँकड़ों के प्राथमिक स्रोत",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "prathmik-srot-vidhiyan",
+     "learning_objective": "व्यक्तिगत प्रेक्षण, साक्षात्कार और अन्य विधियों से प्राथमिक आँकड़े एकत्र करने की प्रक्रिया बताना।"
+    },
+    {
+     "concept_tag": "prashnavali-anusuchi",
+     "learning_objective": "प्रश्नावली और अनुसूची में अंतर कर उनकी उपयोगिता का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH01-T3",
+   "topic_number": 3,
+   "title": "आँकड़ों के द्वितीयक स्रोत",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "prakashit-srot",
+     "learning_objective": "सरकारी, अर्ध-सरकारी, अंतर्राष्ट्रीय और निजी प्रकाशनों को द्वितीयक स्रोत के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "aprakashit-srot",
+     "learning_objective": "अप्रकाशित सरकारी, अर्ध-सरकारी और निजी अभिलेखों के उदाहरण पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH01-T4",
+   "topic_number": 4,
+   "title": "आँकड़ों का सारणीयन और संकलन",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "sankhyikiy-saarni",
+     "learning_objective": "सांख्यिकीय सारणी की संरचना और उद्देश्य समझना।"
+    },
+    {
+     "concept_tag": "nirpeksh-pratishat-aankde",
+     "learning_objective": "निरपेक्ष आँकड़ों और प्रतिशत या अनुपात रूप के आँकड़ों में अंतर करना।"
+    },
+    {
+     "concept_tag": "suchkank",
+     "learning_objective": "सरल योगात्मक विधि से सूचकांक की गणना और व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH01-T5",
+   "topic_number": 5,
+   "title": "आँकड़ों का प्रक्रमण और समूहन",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vargantar-milan-chinh",
+     "learning_objective": "वर्ग अंतराल चुनकर मिलान चिह्न विधि से अपरिष्कृत आँकड़ों का वर्गीकरण करना।"
+    },
+    {
+     "concept_tag": "saral-sanchayi-avriti",
+     "learning_objective": "सरल और संचयी आवृत्ति की गणना करना।"
+    },
+    {
+     "concept_tag": "apvarjee-samaveshi-vidhi",
+     "learning_objective": "अपवर्जी और समावेशी विधि से वर्ग बनाने में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH01-T6",
+   "topic_number": 6,
+   "title": "आवृत्ति बहुभुज और तोरण",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "avriti-bahubhuj",
+     "learning_objective": "आवृत्ति बहुभुज का अर्थ और उपयोग समझना।"
+    },
+    {
+     "concept_tag": "toran-vakra",
+     "learning_objective": "से कम और से अधिक विधि से तोरण वक्र की रचना और व्याख्या करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "chapter_id": "HECU1-CH01",
+ "title": "Exploring the Investigative World of Science",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HECU1-CH01-T1",
+   "topic_number": 1,
+   "title": "From wonder to investigation: the root and the kite",
+   "ncert_sections": "Pages 1-2",
+   "concepts": [
+    {
+     "concept_tag": "science-as-investigation",
+     "learning_objective": "Explain that Grade 8 science aims at learning how to find new facts through focused questions, simple experiments and observation."
+    },
+    {
+     "concept_tag": "root-and-kite-balance",
+     "learning_objective": "Interpret the root and kite symbols as the balance between careful observation and creative thinking."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH01-T2",
+   "topic_number": 2,
+   "title": "The journey ahead: microbes, health, electricity, force and pressure",
+   "ncert_sections": "Pages 3-4",
+   "concepts": [
+    {
+     "concept_tag": "microbes-and-health",
+     "learning_objective": "Recognise that microorganisms can be helpful or harmful and that food, exercise, medicines and vaccines keep us healthy."
+    },
+    {
+     "concept_tag": "electric-current-effects",
+     "learning_objective": "Identify the heating and magnetic effects of electric current and their everyday uses."
+    },
+    {
+     "concept_tag": "force-pressure-and-weather",
+     "learning_objective": "Relate force and pressure to how air moves, from gentle breezes to cyclones."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH01-T3",
+   "topic_number": 3,
+   "title": "Particles, materials and light",
+   "ncert_sections": "Page 4",
+   "concepts": [
+    {
+     "concept_tag": "particles-and-materials",
+     "learning_objective": "Describe how particles move in solids and gases and classify materials as elements, compounds and mixtures."
+    },
+    {
+     "concept_tag": "reflection-and-bending-of-light",
+     "learning_objective": "Recognise that light reflects from mirrors and rough surfaces and bends when it passes through lenses."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH01-T4",
+   "topic_number": 4,
+   "title": "Moon, calendars, ecosystems and a planet just right for life",
+   "ncert_sections": "Pages 4-5",
+   "concepts": [
+    {
+     "concept_tag": "moon-phases-and-calendars",
+     "learning_objective": "Explain that the Moon's phases depend on the positions of the Earth, Moon and Sun and helped humans make calendars."
+    },
+    {
+     "concept_tag": "ecosystems-and-earth-for-life",
+     "learning_objective": "Describe how living beings depend on their surroundings and why Earth is suited to life."
+    },
+    {
+     "concept_tag": "human-impact-on-climate",
+     "learning_objective": "Evaluate the role of human activities and science in changing and protecting Earth's climate."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH01-T5",
+   "topic_number": 5,
+   "title": "Investigating like a scientist: why does a puri puff up?",
+   "ncert_sections": "Pages 6-7",
+   "concepts": [
+    {
+     "concept_tag": "controllable-factors",
+     "learning_objective": "Identify the factors that can be changed or controlled in a simple kitchen experiment."
+    },
+    {
+     "concept_tag": "observing-and-measuring",
+     "learning_objective": "Distinguish yes/no observations from measured quantities and value careful record-keeping."
+    },
+    {
+     "concept_tag": "fair-test-one-change",
+     "learning_objective": "Apply the rule of changing only one factor at a time while keeping other conditions the same."
+    }
+   ]
+  }
+ ]
+}

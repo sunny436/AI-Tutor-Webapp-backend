@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KEST1-CH04",
+ "title": "Presentation of Data",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEST1-CH04-T1",
+   "topic_number": 1,
+   "title": "Forms of Presentation and Textual Presentation",
+   "ncert_sections": "1, 2",
+   "concepts": [
+    {
+     "concept_tag": "forms-of-presentation",
+     "learning_objective": "Name the three forms of presenting data: textual, tabular and diagrammatic."
+    },
+    {
+     "concept_tag": "textual-presentation",
+     "learning_objective": "Explain when textual presentation is suitable and state its main drawback."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH04-T2",
+   "topic_number": 2,
+   "title": "Tabular Presentation and Classification",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "tabular-presentation",
+     "learning_objective": "Describe how a table arranges data in rows, columns and cells."
+    },
+    {
+     "concept_tag": "kinds-of-classification",
+     "learning_objective": "Distinguish qualitative, quantitative, temporal and spatial classification of data."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH04-T3",
+   "topic_number": 3,
+   "title": "Parts of a Statistical Table",
+   "ncert_sections": "4",
+   "concepts": [
+    {
+     "concept_tag": "parts-of-table",
+     "learning_objective": "Identify the table number, title, captions, stubs, body, unit, source and note of a table."
+    },
+    {
+     "concept_tag": "reading-a-table",
+     "learning_objective": "Locate and interpret a figure in the body of a table from its row and column."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH04-T4",
+   "topic_number": 4,
+   "title": "Bar Diagrams",
+   "ncert_sections": "5 (Geometric diagram: bar diagram)",
+   "concepts": [
+    {
+     "concept_tag": "simple-bar-diagram",
+     "learning_objective": "Describe the construction and use of a simple bar diagram."
+    },
+    {
+     "concept_tag": "multiple-component-bar",
+     "learning_objective": "Choose between multiple and component bar diagrams for a given comparison."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH04-T5",
+   "topic_number": 5,
+   "title": "Pie Diagram",
+   "ncert_sections": "5 (Geometric diagram: pie diagram)",
+   "concepts": [
+    {
+     "concept_tag": "pie-diagram-angles",
+     "learning_objective": "Convert component percentages into angles at the centre by multiplying by 3.6 degrees."
+    },
+    {
+     "concept_tag": "pie-diagram-use",
+     "learning_objective": "Explain when a pie diagram is appropriate and how it relates to a component bar diagram."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH04-T6",
+   "topic_number": 6,
+   "title": "Histogram, Frequency Polygon and Frequency Curve",
+   "ncert_sections": "5 (Frequency diagram)",
+   "concepts": [
+    {
+     "concept_tag": "histogram",
+     "learning_objective": "Construct a histogram, using frequency density for unequal class intervals, and read the mode from it."
+    },
+    {
+     "concept_tag": "histogram-vs-bar",
+     "learning_objective": "Distinguish a histogram from a bar diagram."
+    },
+    {
+     "concept_tag": "frequency-polygon-curve",
+     "learning_objective": "Describe how a frequency polygon and a frequency curve are drawn and used."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH04-T7",
+   "topic_number": 7,
+   "title": "Ogives and Arithmetic Line Graph",
+   "ncert_sections": "5 (Ogive; Arithmetic line graph)",
+   "concepts": [
+    {
+     "concept_tag": "ogive",
+     "learning_objective": "Draw less than and more than ogives and locate the median at their intersection."
+    },
+    {
+     "concept_tag": "arithmetic-line-graph",
+     "learning_objective": "Use an arithmetic line graph to study trend in time series data."
+    }
+   ]
+  }
+ ]
+}

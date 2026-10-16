@@ -1,0 +1,144 @@
+{
+ "chapter_id": "LEBO1-CH11",
+ "title": "Organisms and Populations",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBO1-CH11-T1",
+   "topic_number": 1,
+   "title": "Population and its attributes",
+   "ncert_sections": "11.1, 11.1.1",
+   "concepts": [
+    {
+     "concept_tag": "population-attributes",
+     "learning_objective": "Define a population and identify the attributes a population has but an individual does not."
+    },
+    {
+     "concept_tag": "per-capita-rates",
+     "learning_objective": "Calculate per capita birth and death rates of a population."
+    },
+    {
+     "concept_tag": "age-pyramids",
+     "learning_objective": "Interpret the shape of an age pyramid as growing, stable or declining population."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH11-T2",
+   "topic_number": 2,
+   "title": "Population density and its measurement",
+   "ncert_sections": "11.1.1",
+   "concepts": [
+    {
+     "concept_tag": "population-density-measures",
+     "learning_objective": "Choose numbers, per cent cover or biomass as the meaningful measure of population density."
+    },
+    {
+     "concept_tag": "relative-density-estimation",
+     "learning_objective": "Explain how relative densities and indirect evidence are used to estimate population size."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH11-T3",
+   "topic_number": 3,
+   "title": "Natality, mortality, immigration and emigration",
+   "ncert_sections": "11.1.2",
+   "concepts": [
+    {
+     "concept_tag": "population-change-equation",
+     "learning_objective": "Apply Nt+1 = Nt + [(B + I) - (D + E)] to predict change in population density."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH11-T4",
+   "topic_number": 4,
+   "title": "Growth models: exponential and logistic",
+   "ncert_sections": "11.1.2",
+   "concepts": [
+    {
+     "concept_tag": "exponential-growth",
+     "learning_objective": "Describe exponential growth (dN/dt = rN) and its J-shaped curve and calculate r."
+    },
+    {
+     "concept_tag": "logistic-growth",
+     "learning_objective": "Explain logistic growth, its sigmoid curve and the role of carrying capacity K."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH11-T5",
+   "topic_number": 5,
+   "title": "Life history variation",
+   "ncert_sections": "11.1.3",
+   "concepts": [
+    {
+     "concept_tag": "life-history-strategies",
+     "learning_objective": "Compare breeding once versus many times and many small versus few large offspring."
+    },
+    {
+     "concept_tag": "reproductive-fitness",
+     "learning_objective": "State that populations evolve to maximise Darwinian fitness (high r) in their habitat."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH11-T6",
+   "topic_number": 6,
+   "title": "Population interactions and predation",
+   "ncert_sections": "11.1.4 (Table 11.1), 11.1.4 (i)",
+   "concepts": [
+    {
+     "concept_tag": "interaction-outcomes",
+     "learning_objective": "Classify interspecific interactions using +, - and 0 signs for the two species."
+    },
+    {
+     "concept_tag": "predation-roles",
+     "learning_objective": "Explain the roles of predators in energy transfer, prey control and species diversity."
+    },
+    {
+     "concept_tag": "anti-predator-defences",
+     "learning_objective": "Describe defences of prey animals and plants against predators and herbivores."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH11-T7",
+   "topic_number": 7,
+   "title": "Competition",
+   "ncert_sections": "11.1.4 (ii)",
+   "concepts": [
+    {
+     "concept_tag": "competitive-exclusion",
+     "learning_objective": "Explain competition, competitive release and Gause's Competitive Exclusion Principle."
+    },
+    {
+     "concept_tag": "resource-partitioning",
+     "learning_objective": "Explain how resource partitioning allows competing species to co-exist."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH11-T8",
+   "topic_number": 8,
+   "title": "Parasitism, commensalism and mutualism",
+   "ncert_sections": "11.1.4 (iii)-(v)",
+   "concepts": [
+    {
+     "concept_tag": "parasitism-adaptations",
+     "learning_objective": "Describe ectoparasites, endoparasites, brood parasitism and parasitic adaptations."
+    },
+    {
+     "concept_tag": "commensalism",
+     "learning_objective": "Identify commensal interactions such as orchid-mango and cattle egret-cattle."
+    },
+    {
+     "concept_tag": "mutualism-coevolution",
+     "learning_objective": "Explain mutualism and co-evolution using lichens, mycorrhizae, fig-wasp and Ophrys."
+    }
+   ]
+  }
+ ]
+}

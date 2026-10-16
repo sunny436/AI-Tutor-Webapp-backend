@@ -1,0 +1,1559 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "mathematics-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "mathematics",
+  "language": "english",
+  "title": "Mathematics",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kemh1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEMH1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Sets",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH01-T1",
+     "topic_number": 1,
+     "title": "Sets and their representations",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "well-defined-collection",
+       "learning_objective": "Identify whether a collection of objects is well defined and hence forms a set."
+      },
+      {
+       "concept_tag": "roster-and-set-builder-form",
+       "learning_objective": "Write a set in roster form and in set-builder form and convert between the two."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH01-T2",
+     "topic_number": 2,
+     "title": "Empty, finite, infinite and equal sets",
+     "ncert_sections": "1.3, 1.4, 1.5",
+     "concepts": [
+      {
+       "concept_tag": "empty-set",
+       "learning_objective": "Recognise the empty set and distinguish it from sets such as {0}."
+      },
+      {
+       "concept_tag": "finite-and-infinite-sets",
+       "learning_objective": "Classify a given set as finite or infinite."
+      },
+      {
+       "concept_tag": "equal-sets",
+       "learning_objective": "Decide whether two sets are equal by comparing their elements."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH01-T3",
+     "topic_number": 3,
+     "title": "Subsets and intervals",
+     "ncert_sections": "1.6",
+     "concepts": [
+      {
+       "concept_tag": "subsets",
+       "learning_objective": "Use the subset relation correctly and distinguish it from membership of an element."
+      },
+      {
+       "concept_tag": "intervals",
+       "learning_objective": "Express subsets of R as open, closed and half-open intervals and in set-builder form."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH01-T4",
+     "topic_number": 4,
+     "title": "Universal set and Venn diagrams",
+     "ncert_sections": "1.7, 1.8",
+     "concepts": [
+      {
+       "concept_tag": "universal-set",
+       "learning_objective": "Choose a suitable universal set for a given collection of sets."
+      },
+      {
+       "concept_tag": "venn-diagrams",
+       "learning_objective": "Represent the universal set and its subsets with Venn diagrams."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH01-T5",
+     "topic_number": 5,
+     "title": "Operations on sets",
+     "ncert_sections": "1.9",
+     "concepts": [
+      {
+       "concept_tag": "union-and-intersection",
+       "learning_objective": "Find the union and intersection of sets and use their basic properties."
+      },
+      {
+       "concept_tag": "difference-and-disjoint-sets",
+       "learning_objective": "Find the difference of two sets and identify disjoint sets."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH01-T6",
+     "topic_number": 6,
+     "title": "Complement of a set",
+     "ncert_sections": "1.10",
+     "concepts": [
+      {
+       "concept_tag": "complement",
+       "learning_objective": "Find the complement of a set with respect to a universal set and apply the complement laws."
+      },
+      {
+       "concept_tag": "de-morgans-laws",
+       "learning_objective": "Apply De Morgan's laws to complements of unions and intersections."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Relations and Functions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH02-T1",
+     "topic_number": 1,
+     "title": "Cartesian Products of Sets",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "ordered-pair-equality",
+       "learning_objective": "Use the equality of ordered pairs to find unknown values."
+      },
+      {
+       "concept_tag": "cartesian-product",
+       "learning_objective": "Form the cartesian product of two sets and recognise that A × B and B × A differ."
+      },
+      {
+       "concept_tag": "number-of-elements-in-product",
+       "learning_objective": "Find the number of elements in A × B using n(A × B) = n(A) n(B)."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH02-T2",
+     "topic_number": 2,
+     "title": "Relations",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "relation-definition",
+       "learning_objective": "Define a relation from A to B as a subset of A × B."
+      },
+      {
+       "concept_tag": "domain-codomain-range",
+       "learning_objective": "Find the domain, codomain and range of a relation."
+      },
+      {
+       "concept_tag": "number-of-relations",
+       "learning_objective": "Count the relations from A to B as 2 raised to n(A) n(B)."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH02-T3",
+     "topic_number": 3,
+     "title": "Functions",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "function-definition",
+       "learning_objective": "Decide whether a relation is a function using the one-and-only-one-image rule."
+      },
+      {
+       "concept_tag": "image-preimage",
+       "learning_objective": "Find the image of an element and the preimage of a value under a function."
+      },
+      {
+       "concept_tag": "linear-function",
+       "learning_objective": "Identify a linear function f(x) = mx + c from given ordered pairs."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH02-T4",
+     "topic_number": 4,
+     "title": "Some Functions and their Graphs",
+     "ncert_sections": "2.4.1",
+     "concepts": [
+      {
+       "concept_tag": "standard-functions",
+       "learning_objective": "Recognise identity, constant, polynomial and rational functions and their graphs."
+      },
+      {
+       "concept_tag": "modulus-signum-greatest-integer",
+       "learning_objective": "Evaluate and describe the modulus, signum and greatest integer functions."
+      },
+      {
+       "concept_tag": "domain-range-real-functions",
+       "learning_objective": "Find the domain and range of simple real functions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH02-T5",
+     "topic_number": 5,
+     "title": "Algebra of Real Functions",
+     "ncert_sections": "2.4.2",
+     "concepts": [
+      {
+       "concept_tag": "sum-difference-product",
+       "learning_objective": "Find the sum, difference and product of two real functions."
+      },
+      {
+       "concept_tag": "quotient-of-functions",
+       "learning_objective": "Find the quotient of two real functions and state where it is defined."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Trigonometric Functions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH03-T1",
+     "topic_number": 1,
+     "title": "Angles: degree and radian measure",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "degree-radian-conversion",
+       "learning_objective": "Convert angles between degree and radian measure using pi radians = 180 degrees."
+      },
+      {
+       "concept_tag": "arc-length-radian",
+       "learning_objective": "Use l = r theta to relate arc length, radius and the angle in radians."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH03-T2",
+     "topic_number": 2,
+     "title": "Trigonometric functions on the unit circle",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "unit-circle-definition",
+       "learning_objective": "Define sin x and cos x as coordinates of a point on the unit circle and find their zeros."
+      },
+      {
+       "concept_tag": "pythagorean-identities",
+       "learning_objective": "Use sin^2 x + cos^2 x = 1 and related identities to find the other functions from one value."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH03-T3",
+     "topic_number": 3,
+     "title": "Signs, domain, range and periodicity",
+     "ncert_sections": "3.3.1, 3.3.2",
+     "concepts": [
+      {
+       "concept_tag": "signs-in-quadrants",
+       "learning_objective": "Determine the sign of each trigonometric function in the four quadrants."
+      },
+      {
+       "concept_tag": "domain-range-periodicity",
+       "learning_objective": "State domains and ranges of trigonometric functions and use their periodicity to evaluate values."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH03-T4",
+     "topic_number": 4,
+     "title": "Sum and difference of two angles",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "compound-angle-formulas",
+       "learning_objective": "Apply the formulas for sin, cos and tan of (x + y) and (x - y)."
+      },
+      {
+       "concept_tag": "allied-angle-identities",
+       "learning_objective": "Simplify trigonometric functions of allied angles such as pi/2 + x and pi - x."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH03-T5",
+     "topic_number": 5,
+     "title": "Multiple angles and sum-product formulas",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "multiple-angle-formulas",
+       "learning_objective": "Use the double- and triple-angle formulas for sin, cos and tan."
+      },
+      {
+       "concept_tag": "sum-product-transformation",
+       "learning_objective": "Convert sums of sines and cosines into products and simplify expressions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Complex Numbers and Quadratic Equations",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH04-T1",
+     "topic_number": 1,
+     "title": "The need for complex numbers and their definition",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "iota-and-complex-number",
+       "learning_objective": "Explain why i = sqrt(-1) is introduced and identify the real and imaginary parts of a complex number."
+      },
+      {
+       "concept_tag": "equality-of-complex-numbers",
+       "learning_objective": "Use the equality of complex numbers to find unknown real values by equating real and imaginary parts."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH04-T2",
+     "topic_number": 2,
+     "title": "Addition, subtraction and multiplication of complex numbers",
+     "ncert_sections": "4.3.1, 4.3.2, 4.3.3",
+     "concepts": [
+      {
+       "concept_tag": "complex-addition-subtraction",
+       "learning_objective": "Add and subtract complex numbers and identify the additive identity and additive inverse."
+      },
+      {
+       "concept_tag": "complex-multiplication",
+       "learning_objective": "Multiply complex numbers using (a + ib)(c + id) = (ac − bd) + i(ad + bc) and its properties."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH04-T3",
+     "topic_number": 3,
+     "title": "Division of complex numbers and powers of i",
+     "ncert_sections": "4.3.4, 4.3.5",
+     "concepts": [
+      {
+       "concept_tag": "complex-division",
+       "learning_objective": "Divide one complex number by another by multiplying by the multiplicative inverse (or the conjugate of the denominator)."
+      },
+      {
+       "concept_tag": "powers-of-iota",
+       "learning_objective": "Evaluate integral powers of i using i^(4k) = 1, i^(4k+1) = i, i^(4k+2) = −1 and i^(4k+3) = −i."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH04-T4",
+     "topic_number": 4,
+     "title": "Square roots of negative real numbers and identities",
+     "ncert_sections": "4.3.6, 4.3.7",
+     "concepts": [
+      {
+       "concept_tag": "square-roots-of-negative-reals",
+       "learning_objective": "Find the square roots of a negative real number and recognise that sqrt(a) × sqrt(b) = sqrt(ab) fails when a and b are both negative."
+      },
+      {
+       "concept_tag": "complex-number-identities",
+       "learning_objective": "Apply algebraic identities such as (z₁ + z₂)³ and z₁² − z₂² = (z₁ + z₂)(z₁ − z₂) to complex numbers."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH04-T5",
+     "topic_number": 5,
+     "title": "Modulus and conjugate of a complex number",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "modulus-of-complex-number",
+       "learning_objective": "Find the modulus |z| = sqrt(a² + b²) and use |z₁z₂| = |z₁||z₂| and |z₁/z₂| = |z₁|/|z₂|."
+      },
+      {
+       "concept_tag": "conjugate-of-complex-number",
+       "learning_objective": "Find the conjugate of a complex number and use z·z̄ = |z|²."
+      },
+      {
+       "concept_tag": "multiplicative-inverse",
+       "learning_objective": "Find the multiplicative inverse of a non-zero complex number as z̄/|z|²."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH04-T6",
+     "topic_number": 6,
+     "title": "Argand plane and representation of complex numbers",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "argand-plane-representation",
+       "learning_objective": "Represent a complex number x + iy as the point (x, y) in the Argand plane and interpret its modulus as distance from the origin."
+      },
+      {
+       "concept_tag": "conjugate-as-reflection",
+       "learning_objective": "Interpret the conjugate of a complex number as the mirror image of its point in the real axis."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Linear Inequalities",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH05-T1",
+     "topic_number": 1,
+     "title": "Inequalities: meaning and types",
+     "ncert_sections": "5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "inequality-definition",
+       "learning_objective": "Recognise an inequality and model a simple situation by one."
+      },
+      {
+       "concept_tag": "strict-and-slack-inequalities",
+       "learning_objective": "Distinguish strict inequalities (<, >) from slack inequalities (<=, >=)."
+      },
+      {
+       "concept_tag": "linear-inequality-identification",
+       "learning_objective": "Identify linear inequalities in one and two variables and tell them apart from non-linear ones."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH05-T2",
+     "topic_number": 2,
+     "title": "Rules for solving linear inequalities",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "rules-of-inequality",
+       "learning_objective": "State the rules for adding, subtracting, multiplying and dividing both sides of an inequality."
+      },
+      {
+       "concept_tag": "sign-reversal-negative-multiplier",
+       "learning_objective": "Apply the reversal of the inequality sign when multiplying or dividing by a negative number."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH05-T3",
+     "topic_number": 3,
+     "title": "Solution sets in N, Z and R; interval notation",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "solution-set-number-system",
+       "learning_objective": "Find the solution set of a linear inequality when the variable is natural, integer or real."
+      },
+      {
+       "concept_tag": "interval-notation",
+       "learning_objective": "Write the real solutions of an inequality in interval notation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH05-T4",
+     "topic_number": 4,
+     "title": "Graphical representation on the number line",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "number-line-representation",
+       "learning_objective": "Represent x < a, x > a, x <= a and x >= a correctly on a number line."
+      },
+      {
+       "concept_tag": "solve-and-graph",
+       "learning_objective": "Solve a linear inequality and choose the correct number-line graph of its solutions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH05-T5",
+     "topic_number": 5,
+     "title": "Word problems on linear inequalities",
+     "ncert_sections": "5.3 (Examples 7, 8; Exercise 5.1)",
+     "concepts": [
+      {
+       "concept_tag": "average-marks-problems",
+       "learning_objective": "Form and solve inequalities for minimum marks needed to reach an average."
+      },
+      {
+       "concept_tag": "consecutive-integer-pairs",
+       "learning_objective": "Find pairs of consecutive odd or even integers satisfying given conditions."
+      },
+      {
+       "concept_tag": "length-and-perimeter-problems",
+       "learning_objective": "Form and solve inequalities for lengths and perimeters."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH05-T6",
+     "topic_number": 6,
+     "title": "Double inequalities and systems of inequalities",
+     "ncert_sections": "Miscellaneous Examples 9-11",
+     "concepts": [
+      {
+       "concept_tag": "double-inequalities",
+       "learning_objective": "Solve double inequalities by operating on all three parts together."
+      },
+      {
+       "concept_tag": "system-of-linear-inequalities",
+       "learning_objective": "Solve a system of linear inequalities in one variable as the common part of the solutions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH05-T7",
+     "topic_number": 7,
+     "title": "Applications: temperature, mixtures and formulas",
+     "ncert_sections": "Miscellaneous Examples 12, 13; Miscellaneous Exercise",
+     "concepts": [
+      {
+       "concept_tag": "temperature-range-conversion",
+       "learning_objective": "Convert a temperature range between Celsius and Fahrenheit using a double inequality."
+      },
+      {
+       "concept_tag": "mixture-concentration-problems",
+       "learning_objective": "Form and solve inequalities for the concentration of a mixture of solutions."
+      },
+      {
+       "concept_tag": "formula-based-range",
+       "learning_objective": "Find the range of a quantity from a formula and a given range of another quantity."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Permutations and Combinations",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH06-T1",
+     "topic_number": 1,
+     "title": "Fundamental Principle of Counting",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "multiplication-principle",
+       "learning_objective": "Apply the fundamental principle of counting to events occurring in succession."
+      },
+      {
+       "concept_tag": "counting-with-restrictions",
+       "learning_objective": "Count arrangements when repetition is or is not allowed and when positions carry conditions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH06-T2",
+     "topic_number": 2,
+     "title": "Permutations of Distinct Objects and Factorial Notation",
+     "ncert_sections": "6.3.1, 6.3.2",
+     "concepts": [
+      {
+       "concept_tag": "factorial-notation",
+       "learning_objective": "Evaluate and simplify expressions written in factorial notation."
+      },
+      {
+       "concept_tag": "arrangements-of-distinct-objects",
+       "learning_objective": "Count arrangements of distinct objects, including when some objects must stay together."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH06-T3",
+     "topic_number": 3,
+     "title": "Formula for nPr",
+     "ncert_sections": "6.3.3",
+     "concepts": [
+      {
+       "concept_tag": "npr-formula",
+       "learning_objective": "Use the formula nPr = n!/(n - r)! to evaluate permutations and solve equations in n."
+      },
+      {
+       "concept_tag": "permutations-with-repetition",
+       "learning_objective": "Distinguish counts with and without repetition of objects."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH06-T4",
+     "topic_number": 4,
+     "title": "Permutations when Objects are not Distinct",
+     "ncert_sections": "6.3.4",
+     "concepts": [
+      {
+       "concept_tag": "repeated-objects-formula",
+       "learning_objective": "State the number of permutations of n objects when some of them are alike."
+      },
+      {
+       "concept_tag": "word-arrangements",
+       "learning_objective": "Count arrangements of the letters of a word with repeated letters, with or without conditions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH06-T5",
+     "topic_number": 5,
+     "title": "Combinations",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "ncr-formula",
+       "learning_objective": "Relate nCr to nPr and evaluate combinations."
+      },
+      {
+       "concept_tag": "ncr-properties",
+       "learning_objective": "Use the property nCr = nC(n - r) to solve problems."
+      },
+      {
+       "concept_tag": "selection-problems",
+       "learning_objective": "Count selections of committees and groups under given conditions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Binomial Theorem",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH07-T1",
+     "topic_number": 1,
+     "title": "Pascal's triangle and patterns in binomial expansions",
+     "ncert_sections": "7.1, 7.2",
+     "concepts": [
+      {
+       "concept_tag": "pascals-triangle",
+       "learning_objective": "Construct rows of Pascal's triangle and use them as coefficients of a binomial expansion."
+      },
+      {
+       "concept_tag": "expansion-patterns",
+       "learning_objective": "Describe the patterns in the number of terms and the powers of a and b in the expansion of (a + b)^n."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH07-T2",
+     "topic_number": 2,
+     "title": "Binomial theorem for any positive integer n",
+     "ncert_sections": "7.2.1",
+     "concepts": [
+      {
+       "concept_tag": "binomial-theorem-statement",
+       "learning_objective": "State the binomial theorem and use it to find a specified term or coefficient of an expansion."
+      },
+      {
+       "concept_tag": "binomial-coefficients",
+       "learning_objective": "Identify binomial coefficients and the number of terms in the expansion of (a + b)^n."
+      },
+      {
+       "concept_tag": "proof-by-induction",
+       "learning_objective": "Explain the steps of the proof of the binomial theorem by mathematical induction."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH07-T3",
+     "topic_number": 3,
+     "title": "Special cases of the binomial theorem",
+     "ncert_sections": "7.2.2",
+     "concepts": [
+      {
+       "concept_tag": "expansion-of-difference",
+       "learning_objective": "Expand (x - y)^n and determine the signs of its terms."
+      },
+      {
+       "concept_tag": "sum-of-binomial-coefficients",
+       "learning_objective": "Use the expansion of (1 + x)^n with suitable values of x to evaluate sums of binomial coefficients."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH07-T4",
+     "topic_number": 4,
+     "title": "Evaluating powers, comparison and approximation",
+     "ncert_sections": "7.2 (Examples 2, 3)",
+     "concepts": [
+      {
+       "concept_tag": "evaluating-powers",
+       "learning_objective": "Evaluate powers of numbers like 98 or 102 by writing them as a sum or difference of convenient numbers."
+      },
+      {
+       "concept_tag": "comparing-numbers",
+       "learning_objective": "Compare large powers with given numbers using the first few terms of a binomial expansion."
+      },
+      {
+       "concept_tag": "approximation",
+       "learning_objective": "Approximate powers such as (0.99)^5 using the first few terms of an expansion."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH07-T5",
+     "topic_number": 5,
+     "title": "Divisibility and identities using the binomial theorem",
+     "ncert_sections": "7.2 (Example 4), Exercise 7.1",
+     "concepts": [
+      {
+       "concept_tag": "divisibility",
+       "learning_objective": "Prove divisibility and remainder results by expanding a suitable binomial."
+      },
+      {
+       "concept_tag": "sum-difference-of-expansions",
+       "learning_objective": "Simplify sums and differences such as (a + b)^n + (a - b)^n and evaluate surd expressions with them."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Sequences and Series",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH08-T1",
+     "topic_number": 1,
+     "title": "Sequences: terms, general term and recurrence",
+     "ncert_sections": "8.1, 8.2",
+     "concepts": [
+      {
+       "concept_tag": "finite-and-infinite-sequences",
+       "learning_objective": "Distinguish finite and infinite sequences and identify a sequence as a function on natural numbers."
+      },
+      {
+       "concept_tag": "general-term-of-a-sequence",
+       "learning_objective": "Find terms of a sequence from a formula for its nth term."
+      },
+      {
+       "concept_tag": "recurrence-relation",
+       "learning_objective": "Generate terms of a sequence such as the Fibonacci sequence from a recurrence relation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH08-T2",
+     "topic_number": 2,
+     "title": "Series and sigma notation",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "series-of-a-sequence",
+       "learning_objective": "Form the series associated with a sequence and find its sum."
+      },
+      {
+       "concept_tag": "sigma-notation",
+       "learning_objective": "Write and evaluate finite sums using sigma notation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH08-T3",
+     "topic_number": 3,
+     "title": "Geometric progression and its general term",
+     "ncert_sections": "8.4, 8.4.1",
+     "concepts": [
+      {
+       "concept_tag": "common-ratio-of-gp",
+       "learning_objective": "Recognise a G.P. and find its common ratio."
+      },
+      {
+       "concept_tag": "nth-term-of-gp",
+       "learning_objective": "Use a_n = ar^(n-1) to find a term, the position of a term, or the G.P. itself."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH08-T4",
+     "topic_number": 4,
+     "title": "Sum to n terms of a G.P.",
+     "ncert_sections": "8.4.2",
+     "concepts": [
+      {
+       "concept_tag": "sum-of-n-terms-of-gp",
+       "learning_objective": "Apply S_n = a(r^n - 1)/(r - 1) for r not equal to 1 and S_n = na for r = 1."
+      },
+      {
+       "concept_tag": "applications-of-gp-sum",
+       "learning_objective": "Solve real-life and special-series problems using the sum of a G.P."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH08-T5",
+     "topic_number": 5,
+     "title": "Geometric mean",
+     "ncert_sections": "8.4.3",
+     "concepts": [
+      {
+       "concept_tag": "geometric-mean-of-two-numbers",
+       "learning_objective": "Find the geometric mean of two positive numbers as the square root of their product."
+      },
+      {
+       "concept_tag": "inserting-geometric-means",
+       "learning_objective": "Insert a given number of geometric means between two positive numbers."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH08-T6",
+     "topic_number": 6,
+     "title": "Relationship between A.M. and G.M.",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "am-gm-inequality",
+       "learning_objective": "Prove and apply A >= G for two positive numbers."
+      },
+      {
+       "concept_tag": "numbers-from-am-and-gm",
+       "learning_objective": "Find two positive numbers when their A.M. and G.M. are given."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Straight Lines",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH09-T1",
+     "topic_number": 1,
+     "title": "Recall: distance, section formula and area of a triangle",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "distance-section-formula",
+       "learning_objective": "Apply the distance, section and mid-point formulae to points in the coordinate plane."
+      },
+      {
+       "concept_tag": "area-of-triangle-collinearity",
+       "learning_objective": "Use the area of a triangle in coordinates to find areas and test collinearity."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH09-T2",
+     "topic_number": 2,
+     "title": "Slope of a line",
+     "ncert_sections": "9.2, 9.2.1",
+     "concepts": [
+      {
+       "concept_tag": "slope-inclination",
+       "learning_objective": "Relate the inclination of a line to its slope m = tan(theta)."
+      },
+      {
+       "concept_tag": "slope-from-two-points",
+       "learning_objective": "Find the slope of a line through two given points."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH09-T3",
+     "topic_number": 3,
+     "title": "Parallel and perpendicular lines; collinearity",
+     "ncert_sections": "9.2.2",
+     "concepts": [
+      {
+       "concept_tag": "parallel-perpendicular-slopes",
+       "learning_objective": "Use slopes to decide whether two lines are parallel or perpendicular."
+      },
+      {
+       "concept_tag": "collinearity-by-slopes",
+       "learning_objective": "Test three points for collinearity using slopes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH09-T4",
+     "topic_number": 4,
+     "title": "Angle between two lines",
+     "ncert_sections": "9.2.3",
+     "concepts": [
+      {
+       "concept_tag": "angle-between-two-lines",
+       "learning_objective": "Find the angle between two lines from their slopes using tan(theta) = |(m2 - m1)/(1 + m1m2)|."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH09-T5",
+     "topic_number": 5,
+     "title": "Horizontal, vertical, point-slope and two-point forms",
+     "ncert_sections": "9.3.1, 9.3.2, 9.3.3",
+     "concepts": [
+      {
+       "concept_tag": "horizontal-vertical-lines",
+       "learning_objective": "Write equations of lines parallel to the coordinate axes."
+      },
+      {
+       "concept_tag": "point-slope-form",
+       "learning_objective": "Write the equation of a line through a point with a given slope."
+      },
+      {
+       "concept_tag": "two-point-form",
+       "learning_objective": "Write the equation of a line through two given points."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH09-T6",
+     "topic_number": 6,
+     "title": "Slope-intercept, intercept and general forms",
+     "ncert_sections": "9.3.4, 9.3.5",
+     "concepts": [
+      {
+       "concept_tag": "slope-intercept-form",
+       "learning_objective": "Express a line as y = mx + c and read its slope and y-intercept."
+      },
+      {
+       "concept_tag": "intercept-form",
+       "learning_objective": "Use x/a + y/b = 1 to write and interpret lines from their intercepts."
+      },
+      {
+       "concept_tag": "general-equation-of-line",
+       "learning_objective": "Convert the general equation Ax + By + C = 0 into other forms."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH09-T7",
+     "topic_number": 7,
+     "title": "Distance of a point from a line and between parallel lines",
+     "ncert_sections": "9.4, 9.4.1",
+     "concepts": [
+      {
+       "concept_tag": "point-line-distance",
+       "learning_objective": "Find the perpendicular distance of a point from a line."
+      },
+      {
+       "concept_tag": "parallel-lines-distance",
+       "learning_objective": "Find the distance between two parallel lines."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Conic Sections",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH10-T1",
+     "topic_number": 1,
+     "title": "Sections of a cone and degenerate conics",
+     "ncert_sections": "10.1, 10.2",
+     "concepts": [
+      {
+       "concept_tag": "conic-type-by-plane-angle",
+       "learning_objective": "Identify the conic section formed from the angle beta between the cutting plane and the axis of a cone of semi-vertical angle alpha."
+      },
+      {
+       "concept_tag": "degenerate-conics",
+       "learning_objective": "Identify the degenerate sections obtained when the plane passes through the vertex of the cone."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH10-T2",
+     "topic_number": 2,
+     "title": "Circle",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "circle-standard-equation",
+       "learning_objective": "Write the equation of a circle from its centre and radius, or from given conditions."
+      },
+      {
+       "concept_tag": "circle-general-equation",
+       "learning_objective": "Find the centre and radius of a circle from its general second-degree equation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH10-T3",
+     "topic_number": 3,
+     "title": "Parabola",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "parabola-standard-forms",
+       "learning_objective": "Find the focus, directrix and equation of a parabola in one of its four standard forms."
+      },
+      {
+       "concept_tag": "parabola-latus-rectum",
+       "learning_objective": "Find the length of the latus rectum of a parabola."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH10-T4",
+     "topic_number": 4,
+     "title": "Ellipse: definition and eccentricity",
+     "ncert_sections": "10.5, 10.5.1, 10.5.2",
+     "concepts": [
+      {
+       "concept_tag": "ellipse-definition-and-axes",
+       "learning_objective": "Define an ellipse and use the relation c^2 = a^2 - b^2 between its semi-axes and focal distance."
+      },
+      {
+       "concept_tag": "ellipse-eccentricity",
+       "learning_objective": "Compute and interpret the eccentricity e = c/a of an ellipse."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH10-T5",
+     "topic_number": 5,
+     "title": "Ellipse: standard equations and latus rectum",
+     "ncert_sections": "10.5.3, 10.5.4",
+     "concepts": [
+      {
+       "concept_tag": "ellipse-standard-equation",
+       "learning_objective": "Find foci, vertices and the standard equation of an ellipse from given data."
+      },
+      {
+       "concept_tag": "ellipse-latus-rectum",
+       "learning_objective": "Use the length 2b^2/a of the latus rectum of an ellipse."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH10-T6",
+     "topic_number": 6,
+     "title": "Hyperbola",
+     "ncert_sections": "10.6",
+     "concepts": [
+      {
+       "concept_tag": "hyperbola-definition-eccentricity",
+       "learning_objective": "Define a hyperbola and use c^2 = a^2 + b^2 and e = c/a."
+      },
+      {
+       "concept_tag": "hyperbola-standard-equation",
+       "learning_objective": "Find foci, latus rectum and the standard equation of a hyperbola from given data."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "Introduction to Three Dimensional Geometry",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH11-T1",
+     "topic_number": 1,
+     "title": "Coordinate axes, coordinate planes and octants",
+     "ncert_sections": "11.1, 11.2",
+     "concepts": [
+      {
+       "concept_tag": "coordinate-axes-and-planes",
+       "learning_objective": "Identify the three mutually perpendicular coordinate axes and the coordinate planes they determine."
+      },
+      {
+       "concept_tag": "octants",
+       "learning_objective": "Determine the octant of a point from the signs of its coordinates."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH11-T2",
+     "topic_number": 2,
+     "title": "Coordinates of a point in space",
+     "ncert_sections": "11.3",
+     "concepts": [
+      {
+       "concept_tag": "coordinates-as-distances-from-planes",
+       "learning_objective": "Interpret the coordinates of a point as its signed perpendicular distances from the YZ, ZX and XY-planes."
+      },
+      {
+       "concept_tag": "points-on-axes-and-planes",
+       "learning_objective": "State the form of the coordinates of points lying on the coordinate axes and coordinate planes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH11-T3",
+     "topic_number": 3,
+     "title": "Distance between two points",
+     "ncert_sections": "11.4",
+     "concepts": [
+      {
+       "concept_tag": "distance-formula",
+       "learning_objective": "Apply the distance formula to find the distance between two points in space."
+      },
+      {
+       "concept_tag": "distance-from-origin",
+       "learning_objective": "Find the distance of a point from the origin."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH11-T4",
+     "topic_number": 4,
+     "title": "Applications of the distance formula",
+     "ncert_sections": "11.4, Miscellaneous Examples",
+     "concepts": [
+      {
+       "concept_tag": "geometric-figure-tests",
+       "learning_objective": "Use distances to test collinearity and to classify triangles and quadrilaterals in space."
+      },
+      {
+       "concept_tag": "locus-equations",
+       "learning_objective": "Form the equation of a set of points satisfying a distance condition."
+      },
+      {
+       "concept_tag": "centroid-of-triangle",
+       "learning_objective": "Find the centroid of a triangle, or a missing vertex from the centroid."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Limits and Derivatives",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH12-T1",
+     "topic_number": 1,
+     "title": "Intuitive idea of derivatives",
+     "ncert_sections": "12.2",
+     "concepts": [
+      {
+       "concept_tag": "average-velocity",
+       "learning_objective": "Compute the average velocity of a moving body over a time interval from its distance-time relation."
+      },
+      {
+       "concept_tag": "instantaneous-velocity",
+       "learning_objective": "Explain instantaneous velocity as the limiting value of average velocities over shrinking intervals."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH12-T2",
+     "topic_number": 2,
+     "title": "Limits: left hand and right hand limits",
+     "ncert_sections": "12.3",
+     "concepts": [
+      {
+       "concept_tag": "one-sided-limits",
+       "learning_objective": "Find the left hand and right hand limits of a function at a point."
+      },
+      {
+       "concept_tag": "existence-of-limit",
+       "learning_objective": "Decide whether the limit of a function exists at a point by comparing one-sided limits."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH12-T3",
+     "topic_number": 3,
+     "title": "Algebra of limits; limits of polynomials and rational functions",
+     "ncert_sections": "12.3.1, 12.3.2",
+     "concepts": [
+      {
+       "concept_tag": "algebra-of-limits",
+       "learning_objective": "Apply the sum, product and quotient rules for limits with their conditions."
+      },
+      {
+       "concept_tag": "limits-of-rational-functions",
+       "learning_objective": "Evaluate limits of polynomial and rational functions, including 0/0 forms by factorisation."
+      },
+      {
+       "concept_tag": "standard-limit-xn-an",
+       "learning_objective": "Use the result that the limit of (x^n - a^n)/(x - a) as x tends to a is n a^(n-1)."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH12-T4",
+     "topic_number": 4,
+     "title": "Limits of trigonometric functions",
+     "ncert_sections": "12.4",
+     "concepts": [
+      {
+       "concept_tag": "sandwich-theorem",
+       "learning_objective": "State and apply the Sandwich Theorem for limits."
+      },
+      {
+       "concept_tag": "standard-trig-limits",
+       "learning_objective": "Evaluate limits using lim sin x/x = 1 and lim (1 - cos x)/x = 0 as x tends to 0."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH12-T5",
+     "topic_number": 5,
+     "title": "Derivatives and the first principle",
+     "ncert_sections": "12.5",
+     "concepts": [
+      {
+       "concept_tag": "derivative-definition",
+       "learning_objective": "Define the derivative at a point as a limit and interpret it as the slope of the tangent."
+      },
+      {
+       "concept_tag": "first-principle",
+       "learning_objective": "Find derivatives of simple functions from the first principle."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH12-T6",
+     "topic_number": 6,
+     "title": "Algebra of derivatives; derivatives of polynomials and trigonometric functions",
+     "ncert_sections": "12.5.1, 12.5.2",
+     "concepts": [
+      {
+       "concept_tag": "product-quotient-rules",
+       "learning_objective": "Apply the sum, product (Leibnitz) and quotient rules of differentiation."
+      },
+      {
+       "concept_tag": "derivatives-of-standard-functions",
+       "learning_objective": "Differentiate polynomials and sin x, cos x using standard results."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "Statistics",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH13-T1",
+     "topic_number": 1,
+     "title": "Measures of Dispersion and Range",
+     "ncert_sections": "13.1, 13.2, 13.3",
+     "concepts": [
+      {
+       "concept_tag": "measures-of-dispersion",
+       "learning_objective": "Identify the measures of dispersion and why central tendency alone does not describe data."
+      },
+      {
+       "concept_tag": "range",
+       "learning_objective": "Compute and interpret the range of a data set and state its limitation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH13-T2",
+     "topic_number": 2,
+     "title": "Mean Deviation for Ungrouped Data",
+     "ncert_sections": "13.4, 13.4.1",
+     "concepts": [
+      {
+       "concept_tag": "mean-deviation-definition",
+       "learning_objective": "Define mean deviation about a central value using absolute deviations."
+      },
+      {
+       "concept_tag": "md-ungrouped-calculation",
+       "learning_objective": "Calculate mean deviation about the mean and about the median for ungrouped data."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH13-T3",
+     "topic_number": 3,
+     "title": "Mean Deviation for Grouped Data and its Limitations",
+     "ncert_sections": "13.4.2, 13.4.3",
+     "concepts": [
+      {
+       "concept_tag": "md-grouped-calculation",
+       "learning_objective": "Calculate mean deviation about the mean or median for discrete and continuous frequency distributions."
+      },
+      {
+       "concept_tag": "limitations-of-mean-deviation",
+       "learning_objective": "State the limitations of mean deviation as a measure of dispersion."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH13-T4",
+     "topic_number": 4,
+     "title": "Variance and Standard Deviation of Ungrouped Data",
+     "ncert_sections": "13.5, 13.5.1",
+     "concepts": [
+      {
+       "concept_tag": "variance-definition",
+       "learning_objective": "Define variance and standard deviation and relate their units to the data."
+      },
+      {
+       "concept_tag": "variance-ungrouped-calculation",
+       "learning_objective": "Calculate variance and standard deviation of ungrouped data and use them to find unknown observations."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH13-T5",
+     "topic_number": 5,
+     "title": "Standard Deviation of Frequency Distributions",
+     "ncert_sections": "13.5.2, 13.5.3",
+     "concepts": [
+      {
+       "concept_tag": "sd-discrete-distribution",
+       "learning_objective": "Calculate the variance and standard deviation of a discrete frequency distribution."
+      },
+      {
+       "concept_tag": "sd-continuous-distribution",
+       "learning_objective": "Calculate the standard deviation of a continuous frequency distribution using class mid-points."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH13-T6",
+     "topic_number": 6,
+     "title": "Shortcut Method and Effect of Changes on Variance",
+     "ncert_sections": "13.5.4",
+     "concepts": [
+      {
+       "concept_tag": "step-deviation-method",
+       "learning_objective": "Use the step-deviation method to find mean, variance and standard deviation."
+      },
+      {
+       "concept_tag": "change-of-origin-and-scale",
+       "learning_objective": "Determine how adding a constant to or multiplying the observations changes the mean, variance and standard deviation."
+      },
+      {
+       "concept_tag": "corrected-statistics",
+       "learning_objective": "Recompute mean and standard deviation after correcting wrongly recorded observations."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEMH1-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "Probability",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kemh114.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEMH1-CH14-T1",
+     "topic_number": 1,
+     "title": "Events and their occurrence",
+     "ncert_sections": "14.1, 14.1.1",
+     "concepts": [
+      {
+       "concept_tag": "event-as-subset",
+       "learning_objective": "Identify an event as a subset of the sample space of a random experiment."
+      },
+      {
+       "concept_tag": "occurrence-of-event",
+       "learning_objective": "Decide whether an event has occurred from the outcome of an experiment."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH14-T2",
+     "topic_number": 2,
+     "title": "Types of events",
+     "ncert_sections": "14.1.2",
+     "concepts": [
+      {
+       "concept_tag": "impossible-and-sure-events",
+       "learning_objective": "Recognise the impossible event and the sure event of an experiment."
+      },
+      {
+       "concept_tag": "simple-and-compound-events",
+       "learning_objective": "Distinguish simple events from compound events."
+      },
+      {
+       "concept_tag": "complementary-event",
+       "learning_objective": "Write the complement of an event as a subset of the sample space."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH14-T3",
+     "topic_number": 3,
+     "title": "Algebra of events",
+     "ncert_sections": "14.1.3",
+     "concepts": [
+      {
+       "concept_tag": "union-intersection-of-events",
+       "learning_objective": "Express the events 'A or B' and 'A and B' as union and intersection of sets."
+      },
+      {
+       "concept_tag": "difference-of-events",
+       "learning_objective": "Express 'A but not B' and 'neither A nor B' using set operations."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH14-T4",
+     "topic_number": 4,
+     "title": "Mutually exclusive and exhaustive events",
+     "ncert_sections": "14.1.4, 14.1.5",
+     "concepts": [
+      {
+       "concept_tag": "mutually-exclusive-events",
+       "learning_objective": "Test whether two or more events are mutually exclusive."
+      },
+      {
+       "concept_tag": "exhaustive-events",
+       "learning_objective": "Test whether a collection of events is exhaustive."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH14-T5",
+     "topic_number": 5,
+     "title": "Axiomatic approach and probability of an event",
+     "ncert_sections": "14.2, 14.2.1, 14.2.2",
+     "concepts": [
+      {
+       "concept_tag": "axioms-of-probability",
+       "learning_objective": "State the axioms of probability and their consequences such as P(empty set) = 0."
+      },
+      {
+       "concept_tag": "probability-of-event-sum-of-outcomes",
+       "learning_objective": "Find the probability of an event as the sum of the probabilities of its sample points."
+      },
+      {
+       "concept_tag": "equally-likely-outcomes",
+       "learning_objective": "Use equally likely outcomes to compute probabilities."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEMH1-CH14-T6",
+     "topic_number": 6,
+     "title": "Probability of 'A or B' and 'not A'",
+     "ncert_sections": "14.2.3, 14.2.4",
+     "concepts": [
+      {
+       "concept_tag": "addition-rule",
+       "learning_objective": "Apply P(A or B) = P(A) + P(B) - P(A and B)."
+      },
+      {
+       "concept_tag": "complement-rule",
+       "learning_objective": "Apply P(not A) = 1 - P(A)."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "chapter_id": "KHSK1-CH01",
+ "title": "कुशलप्रशासनम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHSK1-CH01-T1",
+   "topic_number": 1,
+   "title": "रामभरतयोः मिलनम्",
+   "ncert_sections": "श्लोकाः १-३",
+   "concepts": [
+    {
+     "concept_tag": "bharata-darshanam",
+     "learning_objective": "छात्रः चित्रकूटे रामेण दृष्टस्य भरतस्य दशां वर्णयति।"
+    },
+    {
+     "concept_tag": "rama-vatsalyam",
+     "learning_objective": "छात्रः भरतं प्रति रामस्य स्नेहपूर्णं व्यवहारं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH01-T2",
+   "topic_number": 2,
+   "title": "मन्त्रिणां गुणाः मन्त्रस्य महत्त्वं च",
+   "ncert_sections": "श्लोकाः ४-५",
+   "concepts": [
+    {
+     "concept_tag": "mantri-gunah",
+     "learning_objective": "छात्रः रामेण उक्तान् मन्त्रिणां गुणान् परिचिनोति।"
+    },
+    {
+     "concept_tag": "mantra-vijayamulam",
+     "learning_objective": "छात्रः 'मन्त्रो विजयमूलं हि राज्ञाम्' इति सूक्तेः आशयं बोधति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH01-T3",
+   "topic_number": 3,
+   "title": "राज्ञः जागरूकता मन्त्रणाविधिः कार्यारम्भश्च",
+   "ncert_sections": "श्लोकाः ६-८",
+   "concepts": [
+    {
+     "concept_tag": "rajno-jagarukata",
+     "learning_objective": "छात्रः राज्ञः निद्रा-जागरण-चिन्तन-विषयकं निर्देशं जानाति।"
+    },
+    {
+     "concept_tag": "mantrana-vidhih",
+     "learning_objective": "छात्रः मन्त्रणायाः गोपनीयतायाः विधिं व्याख्याति।"
+    },
+    {
+     "concept_tag": "kshipra-karyarambhah",
+     "learning_objective": "छात्रः 'लघुमूलं महोदयम्' कार्यं शीघ्रम् आरब्धव्यम् इति नीतिं प्रयुङ्क्ते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH01-T4",
+   "topic_number": 4,
+   "title": "पण्डितामात्यस्य महत्त्वं भृत्यानां नियोजनं च",
+   "ncert_sections": "श्लोकाः ९-१२",
+   "concepts": [
+    {
+     "concept_tag": "pandita-mahattvam",
+     "learning_objective": "छात्रः सहस्रमूर्खेभ्यः एकस्य पण्डितस्य श्रेष्ठत्वं विवेचयति।"
+    },
+    {
+     "concept_tag": "bhritya-niyojanam",
+     "learning_objective": "छात्रः योग्यतानुसारं भृत्यानाम् अमात्यानां च नियोजनस्य नियमं जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH01-T5",
+   "topic_number": 5,
+   "title": "सेनापतिः भक्तवेतनं च",
+   "ncert_sections": "श्लोकाः १३-१५",
+   "concepts": [
+    {
+     "concept_tag": "senapati-gunah",
+     "learning_objective": "छात्रः सेनापतेः अपेक्षितान् गुणान् परिचिनोति।"
+    },
+    {
+     "concept_tag": "vetana-kalah",
+     "learning_objective": "छात्रः यथाकालं भक्तवेतनदानस्य महत्त्वं विलम्बस्य दुष्परिणामं च विश्लेषयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH01-T6",
+   "topic_number": 6,
+   "title": "शब्दार्थाः सन्धिः प्रकृतिप्रत्ययौ च",
+   "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, सन्धिविच्छेदः, अभ्यासः",
+   "concepts": [
+    {
+     "concept_tag": "shabdarthah",
+     "learning_objective": "छात्रः पाठस्य कठिनपदानाम् अर्थान् जानाति।"
+    },
+    {
+     "concept_tag": "sandhi-vichchhedah",
+     "learning_objective": "छात्रः पाठगतपदानां सन्धिविच्छेदं करोति।"
+    },
+    {
+     "concept_tag": "prakriti-pratyayah",
+     "learning_objective": "छात्रः पाठगतपदेषु प्रकृतिं प्रत्ययं च पृथक् करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH01-T7",
+   "topic_number": 7,
+   "title": "रामायणपरिचयः भावविस्तारश्च",
+   "ncert_sections": "योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "ramayana-parichayah",
+     "learning_objective": "छात्रः रामायणस्य काण्डानि पाठस्य स्रोतं च जानाति।"
+    },
+    {
+     "concept_tag": "rajaniti-bhavavistarah",
+     "learning_objective": "छात्रः मनुस्मृतेः शुक्रनीतेः च प्रशासनविषयकान् विचारान् पाठेन सह योजयति।"
+    }
+   ]
+  }
+ ]
+}

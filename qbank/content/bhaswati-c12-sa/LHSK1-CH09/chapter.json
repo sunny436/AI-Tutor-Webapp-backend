@@ -1,0 +1,92 @@
+{
+ "chapter_id": "LHSK1-CH09",
+ "title": "कार्याकार्यव्यवस्थितिः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHSK1-CH09-T1",
+   "topic_number": 1,
+   "title": "दैवी सम्पद् – श्लोकाः १-३",
+   "ncert_sections": "पाठपरिचयः, श्लोकाः १-३, शब्दार्थाः",
+   "concepts": [
+    {
+     "concept_tag": "daivi-sampad-gunah",
+     "learning_objective": "दैव्याः सम्पदः गुणान् श्लोकेभ्यः अभिज्ञातुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "daivi-shabdartha",
+     "learning_objective": "दमः, आर्जवम्, अपैशुनम्, ह्रीः इत्यादीनां पदानाम् अर्थं जानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH09-T2",
+   "topic_number": 2,
+   "title": "आसुरी सम्पद्, सम्पदोः फलं च – श्लोकाः ४-६",
+   "ncert_sections": "श्लोकाः ४-६",
+   "concepts": [
+    {
+     "concept_tag": "asuri-sampad-lakshanam",
+     "learning_objective": "आसुर्याः सम्पदः लक्षणानि (दम्भः, दर्पः इत्यादीनि) जानीयात्।"
+    },
+    {
+     "concept_tag": "vimoksha-nibandha",
+     "learning_objective": "दैवी सम्पद् विमोक्षाय आसुरी च निबन्धाय इति फलभेदं विवेचयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH09-T3",
+   "topic_number": 3,
+   "title": "अज्ञानविमोहितानां चिन्तनम् – श्लोकाः ७-१२",
+   "ncert_sections": "श्लोकाः ७-१२",
+   "concepts": [
+    {
+     "concept_tag": "asura-manorathah",
+     "learning_objective": "अज्ञानविमोहितानां जनानां मनोरथान् अहंकारं च व्याख्यातुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "ugrakarma-naraka-patanam",
+     "learning_objective": "उग्रकर्मणां जगतः क्षयाय प्रभवनं नरके पतनं च अवगच्छेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH09-T4",
+   "topic_number": 4,
+   "title": "आसुराणां गतिः नरकस्य त्रिविधं द्वारं च – श्लोकाः १३-१६",
+   "ncert_sections": "श्लोकाः १३-१६",
+   "concepts": [
+    {
+     "concept_tag": "asuri-yoni-adhama-gatih",
+     "learning_objective": "आसुरस्वभावानां जनानाम् आसुरीषु योनिषु पतनम् अधमां गतिं च जानीयात्।"
+    },
+    {
+     "concept_tag": "naraka-dvara-trayam",
+     "learning_objective": "कामः क्रोधः लोभः इति नरकस्य त्रिविधं द्वारं तस्य त्यागं च विवेचयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH09-T5",
+   "topic_number": 5,
+   "title": "व्याकरणम् – समासः, प्रकृतिप्रत्ययौ, वाच्यपरिवर्तनम्",
+   "ncert_sections": "अभ्यासः ७-९",
+   "concepts": [
+    {
+     "concept_tag": "samasa-vigraha",
+     "learning_objective": "पाठस्थानां समस्तपदानां विग्रहं समासनाम च जानीयात्।"
+    },
+    {
+     "concept_tag": "prakriti-pratyaya",
+     "learning_objective": "पाठस्थपदानां प्रकृतिप्रत्ययविभागं कुर्यात्।"
+    },
+    {
+     "concept_tag": "vachya-parivartanam",
+     "learning_objective": "पाठस्थवाक्यानां वाच्यपरिवर्तनं कर्तुं शक्नुयात्।"
+    }
+   ]
+  }
+ ]
+}

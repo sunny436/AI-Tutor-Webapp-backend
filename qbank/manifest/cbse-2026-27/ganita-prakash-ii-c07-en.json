@@ -1,0 +1,924 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "ganita-prakash-ii-c07-en",
+  "curriculum": "cbse",
+  "class_level": 7,
+  "subject_code": "mathematics",
+  "language": "english",
+  "title": "Ganita Prakash-II",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "gegp2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "GEGP2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Geometric Twins",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP2-CH01-T1",
+     "topic_number": 1,
+     "title": "Congruent figures: geometric twins",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "congruent-figures-superimposition",
+       "learning_objective": "Students will define congruent figures as figures of the same shape and size that can be superimposed exactly, allowing rotation or flipping."
+      },
+      {
+       "concept_tag": "measurements-to-replicate-figures",
+       "learning_objective": "Students will identify which measurements fix the shape and size of a figure such as a two-arm symbol, a circle or a rectangle."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH01-T2",
+     "topic_number": 2,
+     "title": "The SSS condition and the convention for writing congruence",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "sss-condition",
+       "learning_objective": "Students will use the SSS condition to decide whether two triangles are congruent."
+      },
+      {
+       "concept_tag": "congruence-notation-correspondence",
+       "learning_objective": "Students will write a congruence statement so that corresponding vertices, sides and angles appear in matching order."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH01-T3",
+     "topic_number": 3,
+     "title": "Equal angles, the SAS condition and the SSA case",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "equal-angles-not-sufficient",
+       "learning_objective": "Students will explain why triangles with the same three angles have the same shape but need not be congruent."
+      },
+      {
+       "concept_tag": "sas-condition",
+       "learning_objective": "Students will apply the SAS condition, including in figures with vertically opposite angles."
+      },
+      {
+       "concept_tag": "ssa-not-sufficient",
+       "learning_objective": "Students will show by construction that two sides and a non-included angle need not give congruent triangles."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH01-T4",
+     "topic_number": 4,
+     "title": "The ASA and AAS conditions",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "asa-condition",
+       "learning_objective": "Students will apply the ASA condition using given or alternate angles and an included side."
+      },
+      {
+       "concept_tag": "aas-condition",
+       "learning_objective": "Students will use the angle sum of a triangle to reduce the AAS case to ASA and conclude congruence."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH01-T5",
+     "topic_number": 5,
+     "title": "The RHS condition and choosing a congruence condition",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "rhs-condition",
+       "learning_objective": "Students will apply the RHS condition to right-angled triangles with equal hypotenuses and one other equal side."
+      },
+      {
+       "concept_tag": "choosing-congruence-condition",
+       "learning_objective": "Students will decide which sets of equal measurements (SSS, SAS, ASA, AAS, RHS) guarantee congruence and which do not."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH01-T6",
+     "topic_number": 6,
+     "title": "Angles of isosceles and equilateral triangles",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "isosceles-base-angles",
+       "learning_objective": "Students will use congruence to show that angles opposite equal sides are equal and find unknown angles of isosceles triangles."
+      },
+      {
+       "concept_tag": "equilateral-angles",
+       "learning_objective": "Students will deduce that every angle of an equilateral triangle measures 60 degrees."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Operations with Integers",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP2-CH02-T1",
+     "topic_number": 1,
+     "title": "A Quick Recap of Integers",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "sum-difference-puzzle",
+       "learning_objective": "Find two integers when their sum and difference are given."
+      },
+      {
+       "concept_tag": "number-line-movement",
+       "learning_objective": "Model movements on a number line as integers with magnitude and direction and add them to find a final position."
+      },
+      {
+       "concept_tag": "additive-inverse-subtraction",
+       "learning_objective": "Use tokens and zero pairs to show that subtracting an integer is the same as adding its additive inverse."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH02-T2",
+     "topic_number": 2,
+     "title": "Multiplication of Integers Using Tokens",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "positive-multiplier-placing-tokens",
+       "learning_objective": "Interpret a product with a positive multiplier as placing tokens into an empty bag repeatedly."
+      },
+      {
+       "concept_tag": "negative-multiplier-removing-tokens",
+       "learning_objective": "Interpret a product with a negative multiplier as removing tokens, using zero pairs when needed."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH02-T3",
+     "topic_number": 3,
+     "title": "Patterns, Sign Rules and Commutativity of Multiplication",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "sign-rules-multiplication",
+       "learning_objective": "State and apply the sign rules for the product of two integers, including Brahmagupta's rules."
+      },
+      {
+       "concept_tag": "product-with-minus-one",
+       "learning_objective": "Explain that 1 x a = a and (-1) x a = -a for every integer a."
+      },
+      {
+       "concept_tag": "commutativity-multiplication",
+       "learning_objective": "Justify that integer multiplication is commutative, a x b = b x a."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH02-T4",
+     "topic_number": 4,
+     "title": "Using Integer Multiplication in Real Situations",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "integer-contexts-marks-and-money",
+       "learning_objective": "Represent marks, profit and loss as integers and compute totals with multiplication and addition."
+      },
+      {
+       "concept_tag": "integer-contexts-motion-temperature",
+       "learning_objective": "Represent rising, falling and descending quantities as integers and find the resulting position or value."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH02-T5",
+     "topic_number": 5,
+     "title": "Division of Integers",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "division-as-inverse-multiplication",
+       "learning_objective": "Rewrite an integer division as a missing-factor multiplication and solve it."
+      },
+      {
+       "concept_tag": "sign-rules-division",
+       "learning_objective": "Apply the sign rules for the quotient of two integers."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH02-T6",
+     "topic_number": 6,
+     "title": "Expressions Using Integers",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "associative-property-multiplication",
+       "learning_objective": "Recognise that integer multiplication is associative and that three or more integers can be multiplied in any order."
+      },
+      {
+       "concept_tag": "sign-of-product-of-many-integers",
+       "learning_objective": "Find the sign of a product of many integers from the number of negative factors."
+      },
+      {
+       "concept_tag": "distributive-property-integers",
+       "learning_objective": "Apply the distributive property a x (b + c) = a x b + a x c to integers."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Finding Common Ground",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP2-CH03-T1",
+     "topic_number": 1,
+     "title": "The greatest of all: common factors and HCF",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "common-factors",
+       "learning_objective": "Find the common factors of two numbers by listing the factors of each."
+      },
+      {
+       "concept_tag": "hcf-meaning",
+       "learning_objective": "Explain the Highest Common Factor (GCD) and use it to solve tiling, packing and jump problems."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH03-T2",
+     "topic_number": 2,
+     "title": "Primes and prime factorisation",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "prime-factorisation",
+       "learning_objective": "Write a number as a product of primes and recognise that the prime factors are unique apart from order."
+      },
+      {
+       "concept_tag": "division-method",
+       "learning_objective": "Use the division method to find the prime factorisation of a number."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH03-T3",
+     "topic_number": 3,
+     "title": "Factors from prime factorisation; conjectures",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "factors-from-prime-factorisation",
+       "learning_objective": "Construct the factors of a number from subparts of its prime factorisation."
+      },
+      {
+       "concept_tag": "conjecture-and-counterexample",
+       "learning_objective": "Recognise a conjecture and disprove a false one with a counterexample."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH03-T4",
+     "topic_number": 4,
+     "title": "Finding the HCF using prime factorisation",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "common-subparts-hcf",
+       "learning_objective": "Find the common factors and HCF of numbers as common subparts of their prime factorisations."
+      },
+      {
+       "concept_tag": "minimum-occurrences-rule",
+       "learning_objective": "Find the HCF by taking each common prime the minimum number of times it occurs."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH03-T5",
+     "topic_number": 5,
+     "title": "Least, but not last: common multiples and LCM",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "common-multiples-lcm",
+       "learning_objective": "Find the LCM as the lowest common multiple and apply it to repeating-event problems."
+      },
+      {
+       "concept_tag": "lcm-by-prime-factorisation",
+       "learning_objective": "Find the LCM by taking each prime the maximum number of times it occurs in the factorisations."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH03-T6",
+     "topic_number": 6,
+     "title": "Patterns and properties of HCF and LCM",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "hcf-lcm-generalisations",
+       "learning_objective": "Make and justify general statements about the HCF and LCM of special pairs of numbers."
+      },
+      {
+       "concept_tag": "hcf-of-multiples",
+       "learning_objective": "Find the HCF when numbers are doubled or are multiples of the same number."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH03-T7",
+     "topic_number": 7,
+     "title": "Efficient procedures and the HCF-LCM product property",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "common-division-procedure",
+       "learning_objective": "Use the joint division procedure to find both the HCF and the LCM of two numbers."
+      },
+      {
+       "concept_tag": "hcf-lcm-product",
+       "learning_objective": "Use the relation HCF x LCM = product of the two numbers."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Another Peek Beyond the Point",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP2-CH04-T1",
+     "topic_number": 1,
+     "title": "A Quick Recap of Decimals",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "decimal-place-value",
+       "learning_objective": "Write decimal fractions with denominators 10, 100, 1000 and their sums as decimals using place value."
+      },
+      {
+       "concept_tag": "dividing-by-powers-of-ten",
+       "learning_objective": "Divide a whole number by 10, 100 or 1000 by moving the decimal point to the left."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH04-T2",
+     "topic_number": 2,
+     "title": "Decimal Multiplication",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "decimal-multiplication-rule",
+       "learning_objective": "Multiply decimals by multiplying the numbers without decimal points and placing the decimal point by counting decimal digits."
+      },
+      {
+       "concept_tag": "product-size-comparison",
+       "learning_objective": "Predict whether a product of decimals is greater or less than the numbers multiplied."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH04-T3",
+     "topic_number": 3,
+     "title": "Decimal Division by 10, 100, 1000 and Equivalent Fractions",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "decimal-division-by-powers-of-ten",
+       "learning_objective": "Divide a decimal by 10, 100 or 1000 by shifting the decimal point left."
+      },
+      {
+       "concept_tag": "fraction-to-decimal-equivalent",
+       "learning_objective": "Convert a fraction to a decimal by finding an equivalent fraction with denominator 10, 100, 1000 and so on."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH04-T4",
+     "topic_number": 4,
+     "title": "Long Division with Decimal Quotients, Dividends and Divisors",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "long-division-decimal-quotient",
+       "learning_objective": "Use division by place value, regrouping Ones into Tenths and beyond, to find decimal quotients."
+      },
+      {
+       "concept_tag": "decimal-divisor-conversion",
+       "learning_objective": "Divide by a decimal by multiplying the divisor and dividend by the same power of 10."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH04-T5",
+     "topic_number": 5,
+     "title": "Does This Ever End? Dividend, Divisor and Quotient",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "non-terminating-division",
+       "learning_objective": "Recognise divisions whose decimal quotient never ends because remainders repeat."
+      },
+      {
+       "concept_tag": "cyclic-number-142857",
+       "learning_objective": "Explore the repeating block 142857 of 1/7 and its cyclic multiples."
+      },
+      {
+       "concept_tag": "quotient-dividend-relationship",
+       "learning_objective": "Compare the quotient with the dividend when dividing by numbers greater or less than 1."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH04-T6",
+     "topic_number": 6,
+     "title": "Look Before You Leap!",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "leap-year-rule",
+       "learning_objective": "Apply the rules of divisibility by 4, 100 and 400 to decide leap years."
+      },
+      {
+       "concept_tag": "calendar-drift-calculation",
+       "learning_objective": "Use decimal multiplication to compare calendar days with the Earth's actual revolution time."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Connecting the Dots",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP2-CH05-T1",
+     "topic_number": 1,
+     "title": "Statistical questions and statements",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "statistical-question",
+       "learning_objective": "Identify a statistical question as one that is answered by collecting data that varies."
+      },
+      {
+       "concept_tag": "statistical-statement",
+       "learning_objective": "Recognise a statistical statement as a claim or summary expressed through numbers, proportions, probabilities or predictions."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH05-T2",
+     "topic_number": 2,
+     "title": "The arithmetic mean as a fair share",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "arithmetic-mean",
+       "learning_objective": "Calculate the arithmetic mean as the sum of the values divided by the number of values."
+      },
+      {
+       "concept_tag": "mean-as-fair-share",
+       "learning_objective": "Interpret the mean as the equal share each member would get if the total were shared equally."
+      },
+      {
+       "concept_tag": "zero-vs-no-value",
+       "learning_objective": "Distinguish a value of zero from a missing value when counting the number of values for a mean."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH05-T3",
+     "topic_number": 3,
+     "title": "Describing and comparing data with dot plots",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "describing-data",
+       "learning_objective": "Describe and compare data using its minimum, maximum, total, average and the difference between maximum and minimum."
+      },
+      {
+       "concept_tag": "dot-plot",
+       "learning_objective": "Read and interpret a dot plot to see how data is clustered or spread out."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH05-T4",
+     "topic_number": 4,
+     "title": "Outliers and the median",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "median",
+       "learning_objective": "Find the median of sorted data with an odd or an even number of values."
+      },
+      {
+       "concept_tag": "outliers",
+       "learning_objective": "Explain how an outlier affects the mean much more than the median."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH05-T5",
+     "topic_number": 5,
+     "title": "Of ends and the essence: centre and variability",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "central-tendency",
+       "learning_objective": "Use the mean and median as measures of central tendency to describe the centre of data."
+      },
+      {
+       "concept_tag": "variability",
+       "learning_objective": "Describe the variability of data using its extremes and the spread between them."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH05-T6",
+     "topic_number": 6,
+     "title": "Visualising data with clustered column graphs",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "clustered-column-graph",
+       "learning_objective": "Read and explain a clustered (double) column graph that compares categories side by side."
+      },
+      {
+       "concept_tag": "graph-scale",
+       "learning_objective": "Use the scale of a graph to convert bar lengths into values."
+      },
+      {
+       "concept_tag": "two-step-reading",
+       "learning_objective": "Make sense of a graph by first identifying what is given and then inferring from it."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH05-T7",
+     "topic_number": 7,
+     "title": "Data detective: stories in data",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "interpreting-data-tables",
+       "learning_objective": "Read a data table to compare values and spot trends across ages and years."
+      },
+      {
+       "concept_tag": "generalising-from-data",
+       "learning_objective": "Judge whether a conclusion can be justified or generalised from the data given."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Constructions and Tilings",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP2-CH06-T1",
+     "topic_number": 1,
+     "title": "The perpendicular bisector of a line segment",
+     "ncert_sections": "6.1 (Eyes; Construction of Perpendicular Bisector)",
+     "concepts": [
+      {
+       "concept_tag": "perpendicular-bisector-meaning",
+       "learning_objective": "Define bisection and the perpendicular bisector, and justify the eye construction using congruent triangles."
+      },
+      {
+       "concept_tag": "equidistant-point-property",
+       "learning_objective": "Use the fact that every point equidistant from X and Y lies on the perpendicular bisector of XY."
+      },
+      {
+       "concept_tag": "perpendicular-bisector-construction",
+       "learning_objective": "Construct the perpendicular bisector of a segment with an unmarked ruler and a compass and explain which conditions are necessary."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH06-T2",
+     "topic_number": 2,
+     "title": "A 90 degree angle at a point and rope methods of the Sulba-Sutras",
+     "ncert_sections": "6.1 (Construction of a 90 degree Angle at a Given Point; Construction Methods in Sulba-Sutras)",
+     "concepts": [
+      {
+       "concept_tag": "right-angle-at-point",
+       "learning_objective": "Construct a 90 degree angle at a point on a line, or a perpendicular from a point outside it, using the perpendicular bisector method."
+      },
+      {
+       "concept_tag": "sulba-sutra-rope-method",
+       "learning_objective": "Describe the Sulba-Sutra rope construction of a perpendicular bisector and justify why it works."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH06-T3",
+     "topic_number": 3,
+     "title": "Angle bisection",
+     "ncert_sections": "6.1 (Angle Bisection for a Design)",
+     "concepts": [
+      {
+       "concept_tag": "angle-bisection-steps",
+       "learning_objective": "Bisect any angle with a ruler and compass and justify the method by the SSS congruence condition."
+      },
+      {
+       "concept_tag": "angles-by-bisection",
+       "learning_objective": "Obtain angles such as 45, 22.5 and 75 degrees by combining constructed angles with bisection."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH06-T4",
+     "topic_number": 4,
+     "title": "Copying an angle and drawing parallel lines",
+     "ncert_sections": "6.1 (Repeating Units and Repeating Angles; Construction of a Line Parallel to the Given Line)",
+     "concepts": [
+      {
+       "concept_tag": "copy-angle",
+       "learning_objective": "Make an exact copy of a given angle with a ruler and compass and justify it by SSS congruence."
+      },
+      {
+       "concept_tag": "parallel-line-construction",
+       "learning_objective": "Construct a line parallel to a given line through a point by copying a corresponding angle."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH06-T5",
+     "topic_number": 5,
+     "title": "Arch designs",
+     "ncert_sections": "6.1 (Arch Designs: Trefoil Arch; A Pointed Arch)",
+     "concepts": [
+      {
+       "concept_tag": "arch-support-lines",
+       "learning_objective": "Construct symmetric support lines for trefoil and pointed arches using equal angles and equal lengths."
+      },
+      {
+       "concept_tag": "arch-symmetry",
+       "learning_objective": "Identify the line of symmetry of an arch design and predict the effect of unequal support lines."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH06-T6",
+     "topic_number": 6,
+     "title": "Regular hexagons, the 60 degree angle and related constructions",
+     "ncert_sections": "6.1 (Regular Hexagons; Construction of a 60 degree angle; Related Constructions)",
+     "concepts": [
+      {
+       "concept_tag": "hexagon-from-equilateral-triangles",
+       "learning_objective": "Explain why six congruent equilateral triangles fit around a point to form a regular hexagon."
+      },
+      {
+       "concept_tag": "sixty-degree-construction",
+       "learning_objective": "Construct a 60 degree angle through an equilateral triangle and use it to obtain 120, 30 and 15 degree angles."
+      },
+      {
+       "concept_tag": "six-pointed-star",
+       "learning_objective": "Reason with angles to show that the points of a six-pointed star built on a regular hexagon are equilateral triangles."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH06-T7",
+     "topic_number": 7,
+     "title": "Tangrams and tiling a region with 2 x 1 tiles",
+     "ncert_sections": "6.2 (Tiling)",
+     "concepts": [
+      {
+       "concept_tag": "tiling-definition",
+       "learning_objective": "State what tiling is and recall the tangram as a set of seven pieces cut from a square."
+      },
+      {
+       "concept_tag": "domino-tiling-parity",
+       "learning_objective": "Decide whether an m x n grid can be tiled with 2 x 1 tiles by counting unit squares."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH06-T8",
+     "topic_number": 8,
+     "title": "The black-and-white colouring argument and tiling the plane",
+     "ncert_sections": "6.2 (Tiling; Tiling the Entire Plane)",
+     "concepts": [
+      {
+       "concept_tag": "checkerboard-colouring",
+       "learning_objective": "Use black-and-white colouring to prove that a region cannot be tiled with 2 x 1 tiles."
+      },
+      {
+       "concept_tag": "plane-tiling-regular-polygons",
+       "learning_objective": "Identify regular polygons that tile the plane and explain this using the angles that meet at a point."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Finding the Unknown",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP2-CH07-T1",
+     "topic_number": 1,
+     "title": "Find the unknowns: balances and equations",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "balance-scale-reasoning",
+       "learning_objective": "Find an unknown weight on a balanced scale, including by removing equal weights from both plates."
+      },
+      {
+       "concept_tag": "framing-equations",
+       "learning_objective": "Frame an equation using a letter-number for an unknown quantity in a balance or pattern problem."
+      },
+      {
+       "concept_tag": "equation-lhs-rhs",
+       "learning_objective": "Identify an equation as a statement of equality between two expressions with an LHS and an RHS."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH07-T2",
+     "topic_number": 2,
+     "title": "Trial and error and the same-operation property",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "trial-and-error",
+       "learning_objective": "Solve a simple equation by substituting values until the LHS equals the RHS."
+      },
+      {
+       "concept_tag": "same-operation-both-sides",
+       "learning_objective": "Explain that performing the same operation on both sides keeps an equation true."
+      },
+      {
+       "concept_tag": "inverse-operations",
+       "learning_objective": "Use addition-subtraction and multiplication-division as inverse operations to evaluate expressions."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH07-T3",
+     "topic_number": 3,
+     "title": "Solving equations systematically",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "transposition-additive-inverse",
+       "learning_objective": "Move a term to the other side of an equation as its additive inverse."
+      },
+      {
+       "concept_tag": "removing-factor-divisor",
+       "learning_objective": "Remove a factor or divisor from one side by dividing or multiplying the other side."
+      },
+      {
+       "concept_tag": "unknowns-both-sides",
+       "learning_objective": "Solve equations with the unknown on both sides and recognise an equation with no solution."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH07-T4",
+     "topic_number": 4,
+     "title": "Solving problems with equations",
+     "ncert_sections": "7.2 (Solving Problems)",
+     "concepts": [
+      {
+       "concept_tag": "pattern-equations",
+       "learning_objective": "Use the rule of a pattern to form and solve an equation for a position number."
+      },
+      {
+       "concept_tag": "word-problem-modelling",
+       "learning_objective": "Model a real-life situation with an equation in one unknown and interpret the solution."
+      },
+      {
+       "concept_tag": "think-of-a-number",
+       "learning_objective": "Model a think-of-a-number trick algebraically to recover the starting number."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH07-T5",
+     "topic_number": 5,
+     "title": "Generating equations",
+     "ncert_sections": "7.2 (Generating Equations)",
+     "concepts": [
+      {
+       "concept_tag": "equations-with-given-solution",
+       "learning_objective": "Check whether a given value is the solution of an equation and write equations with a given solution."
+      },
+      {
+       "concept_tag": "equivalent-equation-chains",
+       "learning_objective": "Build chains of equations by the same operation on both sides, all sharing one solution."
+      },
+      {
+       "concept_tag": "real-life-situations",
+       "learning_objective": "Describe a real-life situation that an equation models."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH07-T6",
+     "topic_number": 6,
+     "title": "Mind the mistake, mend the mistake",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "identify-transposition-errors",
+       "learning_objective": "Find errors in signs when terms are moved across the equal sign."
+      },
+      {
+       "concept_tag": "correct-the-solution",
+       "learning_objective": "Correct a faulty solution step and find the right value of the unknown."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP2-CH07-T7",
+     "topic_number": 7,
+     "title": "A pinch of history",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "bijaganita-history",
+       "learning_objective": "Recall the origin of bijaganita and the word algebra, and the roles of Brahmagupta and Al-Khwarizmi."
+      },
+      {
+       "concept_tag": "ancient-notation",
+       "learning_objective": "Read an equation written in ancient Indian notation with ya and ru."
+      },
+      {
+       "concept_tag": "brahmagupta-formula",
+       "learning_objective": "Apply Brahmagupta's formula x = (D - B)/(A - C) and solve historical problems."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

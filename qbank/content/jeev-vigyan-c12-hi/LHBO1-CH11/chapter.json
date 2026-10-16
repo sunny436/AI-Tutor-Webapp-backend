@@ -1,0 +1,128 @@
+{
+ "chapter_id": "LHBO1-CH11",
+ "title": "जीव और समष्टियाँ",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHBO1-CH11-T1",
+   "topic_number": 1,
+   "title": "समष्टि के गुण: जन्मदर, मृत्युदर, लिंग अनुपात और आयु पिरैमिड",
+   "ncert_sections": "11.1.1",
+   "concepts": [
+    {
+     "concept_tag": "janmdar-mrityudar",
+     "learning_objective": "प्रति व्यक्ति जन्मदर और मृत्युदर की गणना करना तथा उन्हें समष्टि का गुण समझना।"
+    },
+    {
+     "concept_tag": "aayu-pyramid",
+     "learning_objective": "आयु पिरैमिड की आकृति से समष्टि की वृद्धि-स्थिति की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH11-T2",
+   "topic_number": 2,
+   "title": "समष्टि का आकार और घनत्व का मापन",
+   "ncert_sections": "11.1.1",
+   "concepts": [
+    {
+     "concept_tag": "samashti-ghanatva-mapan",
+     "learning_objective": "परिस्थिति के अनुसार संख्या, प्रतिशत आवरण, जैवभार या सापेक्ष घनत्व में से उपयुक्त माप चुनना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH11-T3",
+   "topic_number": 3,
+   "title": "समष्टि घनत्व को प्रभावित करने वाले कारक",
+   "ncert_sections": "11.1.2",
+   "concepts": [
+    {
+     "concept_tag": "natality-mortality-pravasan",
+     "learning_objective": "जन्मदर, मृत्युदर, आप्रवासन और उत्प्रवासन के आधार पर समष्टि घनत्व में परिवर्तन की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH11-T4",
+   "topic_number": 4,
+   "title": "वृद्धि मॉडल: चरघातांकी और संभार वृद्धि",
+   "ncert_sections": "11.1.2",
+   "concepts": [
+    {
+     "concept_tag": "charghatanki-vriddhi",
+     "learning_objective": "चरघातांकी वृद्धि के समीकरण और J-आकार वक्र की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "sambhar-vriddhi-poshan-kshamata",
+     "learning_objective": "पोषण क्षमता (K) सहित संभार वृद्धि और S-आकार वक्र को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH11-T5",
+   "topic_number": 5,
+   "title": "जीवन इतिहास विभिन्नता",
+   "ncert_sections": "11.1.3",
+   "concepts": [
+    {
+     "concept_tag": "jeevan-itihas-lakshan",
+     "learning_objective": "जनन रणनीतियों को डार्विनीय योग्यता बढ़ाने के अनुकूलन के रूप में समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH11-T6",
+   "topic_number": 6,
+   "title": "समष्टि पारस्परिक क्रियाएँ और परभक्षण",
+   "ncert_sections": "11.1.4",
+   "concepts": [
+    {
+     "concept_tag": "antarjatiya-kriya-prakar",
+     "learning_objective": "+, - और 0 चिह्नों के आधार पर अंतरजातीय क्रियाओं को वर्गीकृत करना।"
+    },
+    {
+     "concept_tag": "parbhakshan-bhumika",
+     "learning_objective": "पारितंत्र में परभक्षियों की भूमिका और शिकार की रक्षा-युक्तियों की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH11-T7",
+   "topic_number": 7,
+   "title": "स्पर्धा",
+   "ncert_sections": "11.1.4",
+   "concepts": [
+    {
+     "concept_tag": "spardha-paribhasha",
+     "learning_objective": "स्पर्धा की परिभाषा, स्पर्धी अपवर्जन और स्पर्धी मोचन को समझना।"
+    },
+    {
+     "concept_tag": "sansadhan-vibhajan",
+     "learning_objective": "संसाधन विभाजन द्वारा सहअस्तित्व का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH11-T8",
+   "topic_number": 8,
+   "title": "परजीविता, सहभोजिता और सहोपकारिता",
+   "ncert_sections": "11.1.4",
+   "concepts": [
+    {
+     "concept_tag": "parjeevita",
+     "learning_objective": "बाह्यपरजीवी, अंतःपरजीवी और अंडपरजीविता के लक्षण पहचानना।"
+    },
+    {
+     "concept_tag": "sahbhojita",
+     "learning_objective": "सहभोजिता के उदाहरणों में लाभ-हानि का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "sahopkarita-sahvikas",
+     "learning_objective": "सहोपकारिता और सहविकास के उदाहरणों की व्याख्या करना।"
+    }
+   ]
+  }
+ ]
+}

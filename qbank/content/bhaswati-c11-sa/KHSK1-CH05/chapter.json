@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KHSK1-CH05",
+ "title": "शुकशावकोदन्तः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHSK1-CH05-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः - बाणभट्टः कादम्बरी च",
+   "ncert_sections": "पाठपरिचयः",
+   "concepts": [
+    {
+     "concept_tag": "kadambari-srotah",
+     "learning_objective": "छात्रः पाठस्य स्रोतं (बाणभट्टस्य कादम्बर्याः कथामुखम्) कथाप्रसङ्गं च ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "banabhatta-gadyashaili",
+     "learning_objective": "छात्रः बाणभट्टस्य गद्यशैल्याः वैशिष्ट्यानि अभिज्ञास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH05-T2",
+   "topic_number": 2,
+   "title": "विन्ध्याटवी, शुकस्य जन्म पितुः वात्सल्यं च",
+   "ncert_sections": "गद्यांशः 1, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "vindhyatavi-pampa",
+     "learning_objective": "छात्रः विन्ध्याटव्याः पम्पासरसः शाल्मलीवृक्षस्य च वर्णनं ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "pitu-vatsalyam",
+     "learning_objective": "छात्रः मातृहीनस्य शुकस्य संवर्धने पितुः वात्सल्यं विश्लेषयिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH05-T3",
+   "topic_number": 3,
+   "title": "मृगयाकोलाहलः शबरजीवनं च",
+   "ncert_sections": "गद्यांशः 2-3",
+   "concepts": [
+    {
+     "concept_tag": "mrigaya-kolahalah",
+     "learning_objective": "छात्रः मृगयाकोलाहलस्य शुकस्य च भयस्य प्रसङ्गं वर्णयिष्यति।"
+    },
+    {
+     "concept_tag": "shabara-jivanam",
+     "learning_objective": "छात्रः शुकदृष्ट्या वर्णितं शबराणां जीवनं तस्य मूल्याङ्कनं च अवगमिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH05-T4",
+   "topic_number": 4,
+   "title": "जरच्छबरस्य क्रौर्यं पितुः मरणं च",
+   "ncert_sections": "गद्यांशः 4-5",
+   "concepts": [
+    {
+     "concept_tag": "jaracchabara-krauryam",
+     "learning_objective": "छात्रः जरच्छबरस्य निर्दयकर्म 'किमिव हि दुष्करमकरुणानाम्' इति सूक्तिं च व्याख्यास्यति।"
+    },
+    {
+     "concept_tag": "pitu-balidanam",
+     "learning_objective": "छात्रः पुत्ररक्षणाय पितुः प्रयत्नं शुकस्य पलायनं च विश्लेषयिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH05-T5",
+   "topic_number": 5,
+   "title": "शुकस्य दुर्दशा जीविताशा च",
+   "ncert_sections": "गद्यांशः 6",
+   "concepts": [
+    {
+     "concept_tag": "jivitasha",
+     "learning_objective": "छात्रः 'नास्ति जीवितादन्यदभिमततरम्' इत्यादीनां सूक्तीनां भावम् अवगमिष्यति।"
+    },
+    {
+     "concept_tag": "shukasya-durdasha",
+     "learning_objective": "छात्रः तापपिपासादिभिः पीडितस्य शुकस्य दशां वर्णयितुं शक्ष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH05-T6",
+   "topic_number": 6,
+   "title": "हारीतस्य करुणा",
+   "ncert_sections": "गद्यांशः 7",
+   "concepts": [
+    {
+     "concept_tag": "harita-karuna",
+     "learning_objective": "छात्रः हारीतेन कृतं शुकस्य रक्षणं क्रमशः वर्णयिष्यति।"
+    },
+    {
+     "concept_tag": "satam-chetamsi",
+     "learning_objective": "छात्रः 'प्रायेणाकारणमित्राणि... सतां चेतांसि' इति सूक्तेः भावं पात्रतुलनां च करिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH05-T7",
+   "topic_number": 7,
+   "title": "व्याकरणम् - सन्धिः, प्रकृतिप्रत्ययः, समासः",
+   "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः 6, 8",
+   "concepts": [
+    {
+     "concept_tag": "sandhi-vichchhedah",
+     "learning_objective": "छात्रः पाठगतपदानां सन्धिविच्छेदं सन्धिनाम च ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "prakriti-pratyayah",
+     "learning_objective": "छात्रः पाठगतपदानां प्रकृतिप्रत्ययविभागं करिष्यति।"
+    },
+    {
+     "concept_tag": "samasah",
+     "learning_objective": "छात्रः पाठगतसमस्तपदानां समासं निर्धारयिष्यति।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "chapter_id": "GHGP1-CH04",
+ "title": "अक्षर-संख्याओं के उपयोगी व्यंजक",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHGP1-CH04-T1",
+   "topic_number": 1,
+   "title": "अक्षर-संख्याओं की धारणा",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "akshar-sankhya",
+     "learning_objective": "अक्षर-संख्याओं का उपयोग करके दो राशियों के बीच का संबंध लिखना।"
+    },
+    {
+     "concept_tag": "vyanjak-likhna",
+     "learning_objective": "किसी स्थिति या शाब्दिक कथन को बीजगणितीय व्यंजक के रूप में लिखना और उसका मान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "sutra",
+     "learning_objective": "सम आकृतियों के परिमाप जैसे सूत्र अक्षर-संख्याओं की सहायता से लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH04-T2",
+   "topic_number": 2,
+   "title": "अंकगणितीय व्यंजकों का पुनरावलोकन",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "padon-ka-yog-aur-samuhan",
+     "learning_objective": "व्यंजक को पदों के योग के रूप में लिखकर अदला-बदली और समूहन से उसका मान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "koshthak-hatana",
+     "learning_objective": "बाहर ऋण चिह्न वाले कोष्ठक को सही ढंग से हटाकर व्यंजक का मान ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH04-T3",
+   "topic_number": 3,
+   "title": "बीजगणितीय व्यंजकों में गुणा का चिह्न हटाना",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "guna-chihn-lop",
+     "learning_objective": "4 × n को 4n के रूप में लिखने की परिपाटी समझना और श्रेणी का n-वाँ पद लिखना।"
+    },
+    {
+     "concept_tag": "vyanjak-ka-maan",
+     "learning_objective": "अक्षर-संख्याओं के स्थान पर संख्याएँ रखकर व्यंजक का सही मान ज्ञात करना और गलतियाँ पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH04-T4",
+   "topic_number": 4,
+   "title": "बीजगणितीय व्यंजकों का सरलीकरण",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "sajatiy-vijatiy-pad",
+     "learning_objective": "सजातीय और विजातीय पदों की पहचान करना।"
+    },
+    {
+     "concept_tag": "sarlikaran",
+     "learning_objective": "कोष्ठक हटाकर और सजातीय पदों को जोड़कर व्यंजक को सरलतम रूप में लाना।"
+    },
+    {
+     "concept_tag": "vyanjakon-ki-tulna",
+     "learning_objective": "अक्षर-संख्याओं के विभिन्न मान रखकर जाँचना कि दो व्यंजक बराबर हैं या नहीं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH04-T5",
+   "topic_number": 5,
+   "title": "प्रतिरूप (पैटर्न) चुनिए तथा संबंध बताइए",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "sthiti-pratirup",
+     "learning_objective": "दोहराए जाने वाले प्रतिरूप में स्थानों को व्यंजक से व्यक्त करना और शेषफल से डिज़ाइन पहचानना।"
+    },
+    {
+     "concept_tag": "calendar-pratirup",
+     "learning_objective": "कैलेंडर की संख्याओं के प्रतिरूप को व्यंजकों द्वारा सिद्ध करना।"
+    },
+    {
+     "concept_tag": "tiliyon-ka-pratirup",
+     "learning_objective": "तीलियों के प्रतिरूप में किसी भी चरण की तीलियों की संख्या का व्यंजक बनाना।"
+    }
+   ]
+  }
+ ]
+}

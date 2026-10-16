@@ -1,0 +1,124 @@
+{
+ "chapter_id": "LHEC1-CH04",
+ "title": "आय एवं रोज़गार का निर्धारण",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHEC1-CH04-T1",
+   "topic_number": 1,
+   "title": "समग्र माँग के घटक: उपभोग",
+   "ncert_sections": "4.1, 4.1.1",
+   "concepts": [
+    {
+     "concept_tag": "upbhog-falan",
+     "learning_objective": "उपभोग फलन के स्वायत्त और प्रेरित घटकों को पहचानना।"
+    },
+    {
+     "concept_tag": "simant-upbhog-pravritti",
+     "learning_objective": "सीमांत उपभोग प्रवृत्ति और सीमांत बचत प्रवृत्ति का संबंध तथा उनके मान समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH04-T2",
+   "topic_number": 2,
+   "title": "निवेश तथा प्रत्याशित और यथार्थ मान",
+   "ncert_sections": "4.1, 4.1.2",
+   "concepts": [
+    {
+     "concept_tag": "pratyashit-yatharth",
+     "learning_objective": "प्रत्याशित (नियोजित) और यथार्थ (वास्तविक) निवेश में अंतर करना।"
+    },
+    {
+     "concept_tag": "swayatt-nivesh",
+     "learning_objective": "निवेश को स्वायत्त मानने का अर्थ और उसे प्रभावित करने वाले कारक समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH04-T3",
+   "topic_number": 3,
+   "title": "द्वि-क्षेत्रक मॉडल में आय का निर्धारण",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "samagra-mang",
+     "learning_objective": "द्वि-क्षेत्रक अर्थव्यवस्था में समग्र माँग का समीकरण बनाना और प्रयोग करना।"
+    },
+    {
+     "concept_tag": "samagra-purti",
+     "learning_objective": "स्थिर कीमत पर समग्र पूर्ति और 45 अंश रेखा का अर्थ समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH04-T4",
+   "topic_number": 4,
+   "title": "स्थिर कीमत पर समष्टि संतुलन",
+   "ncert_sections": "4.3, 4.3.1",
+   "concepts": [
+    {
+     "concept_tag": "santulan-aay",
+     "learning_objective": "समग्र माँग और समग्र पूर्ति की समानता से संतुलन आय की गणना करना।"
+    },
+    {
+     "concept_tag": "aniyojit-maal-suchi",
+     "learning_objective": "असंतुलन में माल-सूची के अनियोजित परिवर्तन से उत्पादन के समायोजन को समझाना।"
+    },
+    {
+     "concept_tag": "prabhavi-mang",
+     "learning_objective": "प्रभावी माँग के सिद्धांत की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH04-T5",
+   "topic_number": 5,
+   "title": "समग्र माँग में स्वायत्त परिवर्तन",
+   "ncert_sections": "4.3.2",
+   "concepts": [
+    {
+     "concept_tag": "prachalik-vivartan",
+     "learning_objective": "रेखा के ढाल और अंतःखंड में परिवर्तन से प्राचलिक विवर्तन समझना।"
+    },
+    {
+     "concept_tag": "swayatt-parivartan",
+     "learning_objective": "स्वायत्त निवेश या उपभोग बढ़ने पर संतुलन आय में परिवर्तन ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH04-T6",
+   "topic_number": 6,
+   "title": "गुणक क्रियाविधि और मितव्ययिता का विरोधाभास",
+   "ncert_sections": "4.3.3",
+   "concepts": [
+    {
+     "concept_tag": "gunak",
+     "learning_objective": "स्वायत्त व्यय गुणक का सूत्र निकालना और उसका प्रयोग करना।"
+    },
+    {
+     "concept_tag": "mitavyayita-virodhabhas",
+     "learning_objective": "मितव्ययिता के विरोधाभास का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH04-T7",
+   "topic_number": 7,
+   "title": "पूर्ण रोज़गार, न्यून माँग और अधिमाँग",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "purn-rozgar",
+     "learning_objective": "पूर्ण रोज़गार आय और संतुलन आय में अंतर करना।"
+    },
+    {
+     "concept_tag": "nyun-adhi-mang",
+     "learning_objective": "न्यून माँग और अधिमाँग की स्थितियों तथा उनके कीमत-प्रभाव को समझना।"
+    }
+   ]
+  }
+ ]
+}

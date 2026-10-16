@@ -1,0 +1,156 @@
+{
+ "chapter_id": "LEGY2-CH03",
+ "title": "Land Resources and Agriculture",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEGY2-CH03-T1",
+   "topic_number": 1,
+   "title": "Land-use Categories",
+   "ncert_sections": "Land Use Categories",
+   "concepts": [
+    {
+     "concept_tag": "reporting-and-geographical-area",
+     "learning_objective": "Distinguish reporting area recorded by land revenue records from geographical area measured by the Survey of India."
+    },
+    {
+     "concept_tag": "land-use-categories",
+     "learning_objective": "Identify the nine land-use categories maintained in the land revenue records."
+    },
+    {
+     "concept_tag": "fallow-land-classification",
+     "learning_objective": "Classify uncultivated land as current fallow, fallow other than current fallow or culturable wasteland by duration."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH03-T2",
+   "topic_number": 2,
+   "title": "Land-use Changes in India",
+   "ncert_sections": "Land-use Changes in India",
+   "concepts": [
+    {
+     "concept_tag": "economic-change-and-land-use",
+     "learning_objective": "Explain how growth and changing composition of the economy affect land-use."
+    },
+    {
+     "concept_tag": "land-use-trends",
+     "learning_objective": "Interpret the increases and declines in land-use categories between 1950-51 and 2019-20."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH03-T3",
+   "topic_number": 3,
+   "title": "Common Property Resources",
+   "ncert_sections": "Common Property Resources",
+   "concepts": [
+    {
+     "concept_tag": "cpr-meaning",
+     "learning_objective": "Define common property resources and distinguish them from private land."
+    },
+    {
+     "concept_tag": "cpr-livelihood-role",
+     "learning_objective": "Explain the importance of CPRs for landless and marginal farmers and rural women."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH03-T4",
+   "topic_number": 4,
+   "title": "Agricultural Land Use and Cropping Intensity",
+   "ncert_sections": "Agricultural Land Use in India",
+   "concepts": [
+    {
+     "concept_tag": "land-and-rural-livelihood",
+     "learning_objective": "Explain why land is more crucial to livelihoods dependent on agriculture than to other sectors."
+    },
+    {
+     "concept_tag": "total-cultivable-land",
+     "learning_objective": "Compute and interpret the total stock of cultivable land using Table 3.1."
+    },
+    {
+     "concept_tag": "cropping-intensity",
+     "learning_objective": "Calculate cropping intensity and explain why a high cropping intensity suits India."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH03-T5",
+   "topic_number": 5,
+   "title": "Cropping Seasons and Types of Farming",
+   "ncert_sections": "Cropping Seasons in India; Types of Farming",
+   "concepts": [
+    {
+     "concept_tag": "cropping-seasons",
+     "learning_objective": "Describe the kharif, rabi and zaid seasons and why they are not distinct in southern India."
+    },
+    {
+     "concept_tag": "irrigated-farming",
+     "learning_objective": "Distinguish protective irrigation from productive irrigation."
+    },
+    {
+     "concept_tag": "rainfed-farming",
+     "learning_objective": "Differentiate dryland farming from wetland farming by rainfall and crops."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH03-T6",
+   "topic_number": 6,
+   "title": "Foodgrains: Cereals and Pulses",
+   "ncert_sections": "Foodgrains; Cereals; Pulses",
+   "concepts": [
+    {
+     "concept_tag": "cereals",
+     "learning_objective": "Describe the distribution, conditions and yield patterns of rice, wheat and coarse cereals."
+    },
+    {
+     "concept_tag": "pulses",
+     "learning_objective": "Explain the characteristics and distribution of pulses such as gram and tur."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH03-T7",
+   "topic_number": 7,
+   "title": "Oilseeds, Fibre Crops and Other Crops",
+   "ncert_sections": "Oilseeds; Fibre Crops; Other Crops",
+   "concepts": [
+    {
+     "concept_tag": "oilseeds",
+     "learning_objective": "Identify the main oilseed crops, their growing regions and leading states."
+    },
+    {
+     "concept_tag": "fibre-crops",
+     "learning_objective": "Describe the conditions and distribution of cotton and jute."
+    },
+    {
+     "concept_tag": "sugarcane-tea-coffee",
+     "learning_objective": "Explain the growing conditions and distribution of sugarcane, tea and coffee."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH03-T8",
+   "topic_number": 8,
+   "title": "Agricultural Development and Problems",
+   "ncert_sections": "Agricultural Development in India; Problems of Indian Agriculture",
+   "concepts": [
+    {
+     "concept_tag": "green-revolution-and-planning",
+     "learning_objective": "Explain the Green Revolution strategy and later agricultural planning in India."
+    },
+    {
+     "concept_tag": "problems-of-agriculture",
+     "learning_objective": "Analyse problems such as erratic monsoon, low productivity, indebtedness and underemployment."
+    },
+    {
+     "concept_tag": "land-degradation",
+     "learning_objective": "Explain how faulty irrigation and farming practices degrade cultivable land."
+    }
+   ]
+  }
+ ]
+}

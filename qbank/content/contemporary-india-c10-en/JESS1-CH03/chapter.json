@@ -1,0 +1,140 @@
+{
+ "chapter_id": "JESS1-CH03",
+ "title": "Water Resources",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESS1-CH03-T1",
+   "topic_number": 1,
+   "title": "Water as a renewable resource",
+   "ncert_sections": "Introduction",
+   "concepts": [
+    {
+     "concept_tag": "hydrological-cycle-renewability",
+     "learning_objective": "Explain how the hydrological cycle makes water a renewable resource."
+    },
+    {
+     "concept_tag": "usable-freshwater",
+     "learning_objective": "Identify the sources and limited share of usable freshwater on the earth."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH03-T2",
+   "topic_number": 2,
+   "title": "Water scarcity and its causes",
+   "ncert_sections": "Water Scarcity and the Need for Water Conservation and Management",
+   "concepts": [
+    {
+     "concept_tag": "population-and-irrigation-demand",
+     "learning_objective": "Explain how a large population and irrigated agriculture cause over-exploitation of water."
+    },
+    {
+     "concept_tag": "industrialisation-and-urbanisation",
+     "learning_objective": "Describe how industries and growing cities add pressure on freshwater resources."
+    },
+    {
+     "concept_tag": "poor-water-quality",
+     "learning_objective": "Explain how pollution can cause water scarcity even where water is ample."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH03-T3",
+   "topic_number": 3,
+   "title": "Need for water conservation and government initiatives",
+   "ncert_sections": "Water Scarcity and the Need for Water Conservation and Management",
+   "concepts": [
+    {
+     "concept_tag": "need-for-water-conservation",
+     "learning_objective": "State why conserving and managing water resources is the need of the hour."
+    },
+    {
+     "concept_tag": "jal-jeevan-mission",
+     "learning_objective": "Recall the goal of the Jal Jeevan Mission for rural households."
+    },
+    {
+     "concept_tag": "atal-bhujal-yojana",
+     "learning_objective": "Describe the coverage and key aim of the Atal Bhujal Yojana."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH03-T4",
+   "topic_number": 4,
+   "title": "Hydraulic structures and multi-purpose river projects",
+   "ncert_sections": "Multi-Purpose River Projects and Integrated Water Resources Management",
+   "concepts": [
+    {
+     "concept_tag": "ancient-hydraulic-structures",
+     "learning_objective": "Identify hydraulic structures built in ancient and medieval India."
+    },
+    {
+     "concept_tag": "dams-and-their-types",
+     "learning_objective": "Define a dam and classify dams by structure, materials and height."
+    },
+    {
+     "concept_tag": "multi-purpose-projects",
+     "learning_objective": "Explain why dams are called multi-purpose projects and why they were seen as vital for development."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH03-T5",
+   "topic_number": 5,
+   "title": "Opposition to multi-purpose projects",
+   "ncert_sections": "Multi-Purpose River Projects and Integrated Water Resources Management",
+   "concepts": [
+    {
+     "concept_tag": "ecological-effects-of-dams",
+     "learning_objective": "Analyse the ecological problems caused by damming and regulating rivers."
+    },
+    {
+     "concept_tag": "irrigation-and-cropping-change",
+     "learning_objective": "Explain how irrigation has changed cropping patterns and their consequences."
+    },
+    {
+     "concept_tag": "inter-state-water-disputes",
+     "learning_objective": "Describe how multi-purpose projects give rise to inter-state water disputes."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH03-T6",
+   "topic_number": 6,
+   "title": "Traditional rainwater harvesting",
+   "ncert_sections": "Rainwater Harvesting",
+   "concepts": [
+    {
+     "concept_tag": "regional-harvesting-methods",
+     "learning_objective": "Match traditional water harvesting methods with the regions where they were used."
+    },
+    {
+     "concept_tag": "tankas-rooftop-harvesting",
+     "learning_objective": "Describe how rooftop rainwater was stored in tankas in arid Rajasthan."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH03-T7",
+   "topic_number": 7,
+   "title": "Modern adaptations of rainwater harvesting",
+   "ncert_sections": "Rainwater Harvesting; Bamboo Drip Irrigation System",
+   "concepts": [
+    {
+     "concept_tag": "rooftop-harvesting-today",
+     "learning_objective": "Evaluate the present status of rooftop rainwater harvesting in different parts of India."
+    },
+    {
+     "concept_tag": "gendathur-village-model",
+     "learning_objective": "Interpret the rooftop rainwater harvesting model of Gendathur village."
+    },
+    {
+     "concept_tag": "bamboo-drip-irrigation",
+     "learning_objective": "Describe the bamboo drip irrigation system of Meghalaya."
+    }
+   ]
+  }
+ ]
+}

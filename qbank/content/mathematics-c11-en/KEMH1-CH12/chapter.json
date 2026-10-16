@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KEMH1-CH12",
+ "title": "Limits and Derivatives",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH12-T1",
+   "topic_number": 1,
+   "title": "Intuitive idea of derivatives",
+   "ncert_sections": "12.2",
+   "concepts": [
+    {
+     "concept_tag": "average-velocity",
+     "learning_objective": "Compute the average velocity of a moving body over a time interval from its distance-time relation."
+    },
+    {
+     "concept_tag": "instantaneous-velocity",
+     "learning_objective": "Explain instantaneous velocity as the limiting value of average velocities over shrinking intervals."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH12-T2",
+   "topic_number": 2,
+   "title": "Limits: left hand and right hand limits",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "one-sided-limits",
+     "learning_objective": "Find the left hand and right hand limits of a function at a point."
+    },
+    {
+     "concept_tag": "existence-of-limit",
+     "learning_objective": "Decide whether the limit of a function exists at a point by comparing one-sided limits."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH12-T3",
+   "topic_number": 3,
+   "title": "Algebra of limits; limits of polynomials and rational functions",
+   "ncert_sections": "12.3.1, 12.3.2",
+   "concepts": [
+    {
+     "concept_tag": "algebra-of-limits",
+     "learning_objective": "Apply the sum, product and quotient rules for limits with their conditions."
+    },
+    {
+     "concept_tag": "limits-of-rational-functions",
+     "learning_objective": "Evaluate limits of polynomial and rational functions, including 0/0 forms by factorisation."
+    },
+    {
+     "concept_tag": "standard-limit-xn-an",
+     "learning_objective": "Use the result that the limit of (x^n - a^n)/(x - a) as x tends to a is n a^(n-1)."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH12-T4",
+   "topic_number": 4,
+   "title": "Limits of trigonometric functions",
+   "ncert_sections": "12.4",
+   "concepts": [
+    {
+     "concept_tag": "sandwich-theorem",
+     "learning_objective": "State and apply the Sandwich Theorem for limits."
+    },
+    {
+     "concept_tag": "standard-trig-limits",
+     "learning_objective": "Evaluate limits using lim sin x/x = 1 and lim (1 - cos x)/x = 0 as x tends to 0."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH12-T5",
+   "topic_number": 5,
+   "title": "Derivatives and the first principle",
+   "ncert_sections": "12.5",
+   "concepts": [
+    {
+     "concept_tag": "derivative-definition",
+     "learning_objective": "Define the derivative at a point as a limit and interpret it as the slope of the tangent."
+    },
+    {
+     "concept_tag": "first-principle",
+     "learning_objective": "Find derivatives of simple functions from the first principle."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH12-T6",
+   "topic_number": 6,
+   "title": "Algebra of derivatives; derivatives of polynomials and trigonometric functions",
+   "ncert_sections": "12.5.1, 12.5.2",
+   "concepts": [
+    {
+     "concept_tag": "product-quotient-rules",
+     "learning_objective": "Apply the sum, product (Leibnitz) and quotient rules of differentiation."
+    },
+    {
+     "concept_tag": "derivatives-of-standard-functions",
+     "learning_objective": "Differentiate polynomials and sin x, cos x using standard results."
+    }
+   ]
+  }
+ ]
+}

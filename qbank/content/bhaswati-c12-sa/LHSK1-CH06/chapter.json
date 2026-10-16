@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LHSK1-CH06",
+ "title": "नैकेनापि समं गता वसुमती",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHSK1-CH06-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः – भोजप्रबन्धः कथायाः सन्देशः च",
+   "ncert_sections": "पाठपरिचयः",
+   "concepts": [
+    {
+     "concept_tag": "bhojaprabandha-parichayah",
+     "learning_objective": "पाठः बल्लालसेनरचितस्य भोजप्रबन्धस्य अंशः इति जानीयात्।"
+    },
+    {
+     "concept_tag": "lobhasya-parinamah",
+     "learning_objective": "लोभाविष्टः मनुष्यः निष्ठुरः भवति इति पाठस्य मूलसन्देशं व्याख्यातुं शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH06-T2",
+   "topic_number": 2,
+   "title": "सिन्धुलस्य विचारः – राज्यं मुञ्जाय",
+   "ncert_sections": "मूलपाठः (पुरा धराराज्ये ... भोजमात्मानं मुमोच)",
+   "concepts": [
+    {
+     "concept_tag": "sindhulasya-dvidha",
+     "learning_objective": "सिन्धुलस्य मनसि लोकापवादस्य पुत्रहानेः च द्विविधां चिन्तां वर्णयेत्।"
+    },
+    {
+     "concept_tag": "rajya-samarpanam",
+     "learning_objective": "सिन्धुलः राज्यं मुञ्जाय दत्त्वा भोजं तस्य उत्सङ्गे मुमोच इति घटनाक्रमं जानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH06-T3",
+   "topic_number": 3,
+   "title": "भविष्यवाणी मुञ्जस्य षड्यन्त्रं च",
+   "ncert_sections": "मूलपाठः (ततः क्रमाद् ... हिताय भवतीति)",
+   "concepts": [
+    {
+     "concept_tag": "jyotishi-bhavishyavani",
+     "learning_objective": "ब्राह्मणस्य भविष्यवाण्याः अर्थं मुञ्जे तस्याः प्रभावं च अवगच्छेत्।"
+    },
+    {
+     "concept_tag": "vadha-yojana",
+     "learning_objective": "मुञ्जः वत्सराजं भोजस्य वधाय आदिशति इति षड्यन्त्रं वर्णयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH06-T4",
+   "topic_number": 4,
+   "title": "वत्सराजस्य आचरणं भोजस्य सन्देशश्लोकः च",
+   "ncert_sections": "मूलपाठः (वत्सराजस्य इदं वचनम् ... त्वया यास्यति)",
+   "concepts": [
+    {
+     "concept_tag": "vatsarajasya-vivekah",
+     "learning_objective": "वत्सराजः भोजं न हत्वा गुप्तरूपेण ररक्ष इति तस्य विवेकं विश्लेषयेत्।"
+    },
+    {
+     "concept_tag": "vasumati-nashvarata",
+     "learning_objective": "'नैकेनापि समं गता वसुमती' इति श्लोकस्य संसारनश्वरताभावं व्याख्यायेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH06-T5",
+   "topic_number": 5,
+   "title": "मुञ्जस्य पश्चात्तापः भोजस्य पुनरागमनं च",
+   "ncert_sections": "मूलपाठः (श्लोकमिमम् अधीत्य ... चिरं प्रजाः पालितवान्)",
+   "concepts": [
+    {
+     "concept_tag": "munjasya-prayashchittam",
+     "learning_objective": "श्लोकं पठित्वा मुञ्जस्य शोकः प्रायश्चित्तनिश्चयः च इति परिवर्तनं वर्णयेत्।"
+    },
+    {
+     "concept_tag": "bhojasya-punaragamanam",
+     "learning_objective": "बुद्धिसागरस्य योजनया कापालिकद्वारा भोजस्य पुनरागमनं राज्याभिषेकं च जानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH06-T6",
+   "topic_number": 6,
+   "title": "व्याकरणम् – सन्धिः प्रकृतिप्रत्ययः शब्दार्थाः च",
+   "ncert_sections": "सन्धिविच्छेदः, शब्दार्थाः, अभ्यासः",
+   "concepts": [
+    {
+     "concept_tag": "sandhi-vichchhedah",
+     "learning_objective": "पाठगतानां पदानां सन्धिविच्छेदं कर्तुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "prakriti-pratyayah",
+     "learning_objective": "पाठगतानां कृदन्तपदानां प्रकृतिप्रत्ययविभागं कुर्यात्।"
+    },
+    {
+     "concept_tag": "shabdarthah",
+     "learning_objective": "पाठगतानां कठिनपदानाम् अर्थान् पर्यायान् च जानीयात्।"
+    }
+   ]
+  }
+ ]
+}

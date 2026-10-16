@@ -1,0 +1,136 @@
+{
+ "chapter_id": "KEAC1-CH07",
+ "title": "Depreciation, Provisions and Reserves",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEAC1-CH07-T1",
+   "topic_number": 1,
+   "title": "Meaning of depreciation, depletion and amortisation",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "meaning-of-depreciation",
+     "learning_objective": "Explain depreciation as the expired cost of a fixed asset allocated over its useful life, and state its features."
+    },
+    {
+     "concept_tag": "depletion-and-amortisation",
+     "learning_objective": "Distinguish depreciation from depletion of natural resources and amortisation of intangible assets."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH07-T2",
+   "topic_number": 2,
+   "title": "Causes of and need for depreciation",
+   "ncert_sections": "7.3, 7.4",
+   "concepts": [
+    {
+     "concept_tag": "causes-of-depreciation",
+     "learning_objective": "Identify wear and tear, expiry of legal rights, obsolescence and abnormal factors as causes of depreciation."
+    },
+    {
+     "concept_tag": "need-for-depreciation",
+     "learning_objective": "Explain why depreciation is charged: matching, tax, true and fair position and compliance with law."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH07-T3",
+   "topic_number": 3,
+   "title": "Factors affecting the amount of depreciation",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "cost-of-asset",
+     "learning_objective": "Determine the cost of a fixed asset including all expenses to put it in working condition."
+    },
+    {
+     "concept_tag": "residual-value-and-depreciable-cost",
+     "learning_objective": "Calculate net residual value and depreciable cost of an asset."
+    },
+    {
+     "concept_tag": "useful-life",
+     "learning_objective": "Explain the estimated useful life of an asset and how it differs from physical life."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH07-T4",
+   "topic_number": 4,
+   "title": "Straight line and written down value methods",
+   "ncert_sections": "7.6, 7.7",
+   "concepts": [
+    {
+     "concept_tag": "straight-line-method",
+     "learning_objective": "Compute annual depreciation and its rate under the straight line method."
+    },
+    {
+     "concept_tag": "written-down-value-method",
+     "learning_objective": "Compute depreciation and book value under the written down value method."
+    },
+    {
+     "concept_tag": "slm-vs-wdv",
+     "learning_objective": "Compare the straight line and written down value methods on basis, charge, tax recognition and suitability."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH07-T5",
+   "topic_number": 5,
+   "title": "Recording depreciation, disposal and additions to assets",
+   "ncert_sections": "7.8, 7.9, 7.10",
+   "concepts": [
+    {
+     "concept_tag": "recording-depreciation",
+     "learning_objective": "Record depreciation by charging it to the asset account or through a provision for depreciation account."
+    },
+    {
+     "concept_tag": "disposal-of-asset",
+     "learning_objective": "Record the sale of an asset and compute the profit or loss on its disposal."
+    },
+    {
+     "concept_tag": "additions-to-asset",
+     "learning_objective": "Apply AS-6 (Revised) to depreciation on additions and extensions to an existing asset."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH07-T6",
+   "topic_number": 6,
+   "title": "Provisions",
+   "ncert_sections": "7.11",
+   "concepts": [
+    {
+     "concept_tag": "meaning-of-provisions",
+     "learning_objective": "Explain provisions as charges against profit for known liabilities or losses of uncertain amount."
+    },
+    {
+     "concept_tag": "provision-for-doubtful-debts",
+     "learning_objective": "Calculate and record a provision for doubtful debts after writing off bad debts."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH07-T7",
+   "topic_number": 7,
+   "title": "Reserves and secret reserve",
+   "ncert_sections": "7.12, 7.13",
+   "concepts": [
+    {
+     "concept_tag": "reserve-vs-provision",
+     "learning_objective": "Distinguish a reserve, an appropriation of profit, from a provision, a charge against profit."
+    },
+    {
+     "concept_tag": "types-of-reserves",
+     "learning_objective": "Classify reserves as general or specific and as revenue or capital reserves."
+    },
+    {
+     "concept_tag": "secret-reserve",
+     "learning_objective": "Explain how a secret reserve is created and its effect on disclosed profits."
+    }
+   ]
+  }
+ ]
+}

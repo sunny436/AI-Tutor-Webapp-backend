@@ -1,0 +1,164 @@
+{
+ "chapter_id": "LEBS2-CH02",
+ "title": "Marketing",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBS2-CH02-T1",
+   "topic_number": 1,
+   "title": "Meaning and features of marketing",
+   "ncert_sections": "Marketing; Understanding Market; Features of Marketing; Marketing versus Selling",
+   "concepts": [
+    {
+     "concept_tag": "marketing-meaning-and-market",
+     "learning_objective": "Explain marketing as a social process and the modern meaning of market, including its relevance beyond business firms."
+    },
+    {
+     "concept_tag": "needs-wants-and-exchange",
+     "learning_objective": "Distinguish needs from wants and state the conditions necessary for an exchange to take place."
+    },
+    {
+     "concept_tag": "marketing-versus-selling",
+     "learning_objective": "Distinguish marketing, a wide set of activities before and after production, from selling."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH02-T2",
+   "topic_number": 2,
+   "title": "Marketing management and its philosophies",
+   "ncert_sections": "Marketing Management; Marketing Management Philosophies",
+   "concepts": [
+    {
+     "concept_tag": "marketing-management",
+     "learning_objective": "Explain marketing management as choosing target markets and getting, keeping and growing customers, including managing demand."
+    },
+    {
+     "concept_tag": "production-and-product-concepts",
+     "learning_objective": "Describe the focus and assumptions of the production and product concepts."
+    },
+    {
+     "concept_tag": "selling-marketing-societal-concepts",
+     "learning_objective": "Compare the selling, marketing and societal marketing concepts on their starting point, focus, means and ends."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH02-T3",
+   "topic_number": 3,
+   "title": "Functions of marketing",
+   "ncert_sections": "Functions of Marketing",
+   "concepts": [
+    {
+     "concept_tag": "market-information-and-planning",
+     "learning_objective": "Identify gathering and analysing market information and marketing planning as marketing functions."
+    },
+    {
+     "concept_tag": "standardisation-and-grading",
+     "learning_objective": "Distinguish standardisation from grading and explain when grading is needed."
+    },
+    {
+     "concept_tag": "product-and-distribution-functions",
+     "learning_objective": "Explain functions such as customer support, storage and transportation and the gaps they remove."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH02-T4",
+   "topic_number": 4,
+   "title": "Marketing mix and classification of products",
+   "ncert_sections": "Marketing Mix; Products; Classification of Products",
+   "concepts": [
+    {
+     "concept_tag": "marketing-mix-four-ps",
+     "learning_objective": "Identify the four Ps of the marketing mix and the view of a product as a bundle of utilities."
+    },
+    {
+     "concept_tag": "consumer-product-classification",
+     "learning_objective": "Classify consumer products by shopping effort and by durability, with their marketing implications."
+    },
+    {
+     "concept_tag": "industrial-product-classification",
+     "learning_objective": "Classify industrial products into materials and parts, capital items, and supplies and business services."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH02-T5",
+   "topic_number": 5,
+   "title": "Branding, packaging and labelling",
+   "ncert_sections": "Branding; Packaging; Labelling",
+   "concepts": [
+    {
+     "concept_tag": "branding-terms",
+     "learning_objective": "Distinguish brand, brand name, brand mark and trade mark."
+    },
+    {
+     "concept_tag": "packaging-levels-and-functions",
+     "learning_objective": "Identify the levels of packaging and the functions packaging performs."
+    },
+    {
+     "concept_tag": "labelling-functions",
+     "learning_objective": "Explain the functions performed by a label on a product package."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH02-T6",
+   "topic_number": 6,
+   "title": "Pricing and factors affecting price determination",
+   "ncert_sections": "Pricing; Factors affecting Price Determination",
+   "concepts": [
+    {
+     "concept_tag": "product-cost-types",
+     "learning_objective": "Distinguish fixed, variable and semi-variable costs and compute total cost."
+    },
+    {
+     "concept_tag": "price-determination-factors",
+     "learning_objective": "Explain how cost, utility and demand, competition, government regulation and marketing methods affect price."
+    },
+    {
+     "concept_tag": "pricing-objectives",
+     "learning_objective": "Relate pricing objectives such as market share, survival and quality leadership to the price set."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH02-T7",
+   "topic_number": 7,
+   "title": "Physical distribution",
+   "ncert_sections": "Physical Distribution; Components of Physical Distribution",
+   "concepts": [
+    {
+     "concept_tag": "physical-distribution-components",
+     "learning_objective": "Identify order processing, transportation, warehousing and inventory control as components of physical distribution."
+    },
+    {
+     "concept_tag": "warehousing-and-inventory-control",
+     "learning_objective": "Analyse the cost and service trade-offs in warehousing location and inventory levels."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH02-T8",
+   "topic_number": 8,
+   "title": "Promotion mix",
+   "ncert_sections": "Promotion; Promotion Mix; Advertising; Personal Selling; Sales Promotion; Public Relations",
+   "concepts": [
+    {
+     "concept_tag": "advertising-merits-and-objections",
+     "learning_objective": "Explain the features and merits of advertising and evaluate the objections raised against it."
+    },
+    {
+     "concept_tag": "personal-selling",
+     "learning_objective": "Explain the features of personal selling and when it is preferred over advertising."
+    },
+    {
+     "concept_tag": "sales-promotion-and-public-relations",
+     "learning_objective": "Identify sales promotion activities and the role of publicity and public relations."
+    }
+   ]
+  }
+ ]
+}

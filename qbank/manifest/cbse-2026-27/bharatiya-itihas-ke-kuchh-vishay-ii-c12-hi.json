@@ -1,0 +1,569 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "bharatiya-itihas-ke-kuchh-vishay-ii-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "history",
+  "language": "hindi",
+  "title": "Bharatiya Itihas ke kuchh Vishay-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhhs2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHHS2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "यात्रियों के नज़रिए: समाज के बारे में उनकी समझ (लगभग दसवीं से सत्रहवीं सदी तक)",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhhs201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHHS2-CH01-T1",
+     "topic_number": 1,
+     "title": "अल-बिरूनी और किताब-उल-हिंद",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "al-biruni-jivan",
+       "learning_objective": "अल-बिरूनी की पृष्ठभूमि, भाषा-ज्ञान और भारत में उसकी रुचि के कारण बता सकेंगे।"
+      },
+      {
+       "concept_tag": "kitab-ul-hind",
+       "learning_objective": "किताब-उल-हिंद की भाषा, विषयवस्तु और अध्यायों की विशिष्ट संरचना समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH01-T2",
+     "topic_number": 2,
+     "title": "इब्न बतूता का रिहला: एक आरंभिक विश्व-यात्री",
+     "ncert_sections": "2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "ibn-battuta-yatra",
+       "learning_objective": "इब्न बतूता की यात्राओं का क्रम, पद और यात्रा की कठिनाइयाँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "rihla-uddeshya",
+       "learning_objective": "रिहला के लेखन की परिस्थिति और उसके उद्देश्य पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH01-T3",
+     "topic_number": 3,
+     "title": "फ़्रांस्वा बर्नियर: एक विशिष्ट चिकित्सक",
+     "ncert_sections": "3, 3.1",
+     "concepts": [
+      {
+       "concept_tag": "bernier-parichay",
+       "learning_objective": "बर्नियर के भारत-प्रवास, मुगल दरबार से संबंध और अन्य यूरोपीय यात्रियों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "purv-paschim-tulna",
+       "learning_objective": "बर्नियर की पूर्व-पश्चिम तुलना और उसके लेखन के प्रसार का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH01-T4",
+     "topic_number": 4,
+     "title": "अल-बिरूनी और संस्कृत परंपरा: जाति व्यवस्था की समझ",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "samajh-ki-badhayen",
+       "learning_objective": "अल-बिरूनी द्वारा बताई गई समझ की बाधाएँ और उसके स्रोतों की सीमा पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "varna-vyavastha-varnan",
+       "learning_objective": "अल-बिरूनी के जाति व्यवस्था के वर्णन और अपवित्रता की धारणा पर उसकी आपत्ति का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH01-T5",
+     "topic_number": 5,
+     "title": "इब्न बतूता और अनजाने की उत्तेजना",
+     "ncert_sections": "5, 5.1, 5.2, 5.3",
+     "concepts": [
+      {
+       "concept_tag": "nariyal-aur-paan",
+       "learning_objective": "नारियल और पान के वर्णन में इब्न बतूता की प्रस्तुति की रणनीति समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "bhartiya-shahar",
+       "learning_objective": "इब्न बतूता के वर्णन से नगरों, बाज़ारों, कृषि और व्यापार की स्थिति का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "dak-vyavastha",
+       "learning_objective": "उलुक और दावा नामक डाक व्यवस्था की कार्यप्रणाली और महत्त्व बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH01-T6",
+     "topic_number": 6,
+     "title": "बर्नियर और 'अपभ्रष्ट' पूर्व",
+     "ncert_sections": "6, 6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "bhu-swamitva",
+       "learning_objective": "भूमि पर राजकीय स्वामित्व के बारे में बर्नियर की धारणा और उसकी सीमाएँ समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "prachya-nirankushvad",
+       "learning_objective": "बर्नियर के विचारों का मॉन्टेस्क्यू और मार्क्स के सिद्धांतों पर प्रभाव पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "jatil-samajik-yatharth",
+       "learning_objective": "शिविर नगर की धारणा की तुलना मुगलकालीन नगरों और व्यापारी समुदायों की वास्तविकता से कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH01-T7",
+     "topic_number": 7,
+     "title": "महिलाएँ: दासियाँ, सती तथा श्रमिक",
+     "ncert_sections": "7",
+     "concepts": [
+      {
+       "concept_tag": "das-pratha",
+       "learning_objective": "इब्न बतूता के विवरण से दासों की खरीद-बिक्री और उनमें भिन्नता का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sati-aur-shram",
+       "learning_objective": "सती प्रथा के बर्नियर के वर्णन और महिलाओं के श्रम की भूमिका का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHHS2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "भक्ति-सूफ़ी परंपराएँ: धार्मिक विश्वासों में बदलाव और श्रद्धा ग्रंथ (लगभग आठवीं से अठारहवीं सदी तक)",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhhs202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHHS2-CH02-T1",
+     "topic_number": 1,
+     "title": "धार्मिक विश्वासों और आचरणों की विविध बनावट",
+     "ncert_sections": "1, 1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "dharmik-sampradayon-ka-samanvay",
+       "learning_objective": "पौराणिक ग्रंथों के प्रसार और स्थानीय देवी-देवताओं के समावेश द्वारा संप्रदायों के समन्वय की प्रक्रिया समझना।"
+      },
+      {
+       "concept_tag": "mahan-aur-laghu-parampara",
+       "learning_objective": "महान और लघु परंपराओं की अवधारणा तथा उनके आपसी संवाद की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "vaidik-tantrik-bhed",
+       "learning_objective": "वैदिक, पौराणिक और तांत्रिक परंपराओं के बीच भेद और संघर्ष का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH02-T2",
+     "topic_number": 2,
+     "title": "उपासना की कविताएँ: आलवार और नयनार",
+     "ncert_sections": "2, 2.1, 2.2, 2.3, 2.4",
+     "concepts": [
+      {
+       "concept_tag": "alvar-nayanar",
+       "learning_objective": "आलवार और नयनार संतों, उनकी रचनाओं के संकलनों तथा जाति के प्रति उनके दृष्टिकोण को पहचानना।"
+      },
+      {
+       "concept_tag": "stri-bhakt",
+       "learning_objective": "अंडाल और करइक्काल अम्मइयार जैसी स्त्री भक्तों द्वारा पितृसत्तात्मक मानदंडों को दी गई चुनौती समझना।"
+      },
+      {
+       "concept_tag": "chol-rajya-aur-bhakti",
+       "learning_objective": "चोल शासकों और भक्ति परंपरा के बीच संबंधों के कारणों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH02-T3",
+     "topic_number": 3,
+     "title": "कर्नाटक की वीरशैव परंपरा और उत्तरी भारत में धार्मिक उफान",
+     "ncert_sections": "3, 4",
+     "concepts": [
+      {
+       "concept_tag": "virshaiv-lingayat",
+       "learning_objective": "बसवन्ना के नेतृत्व में वीरशैव (लिंगायत) परंपरा के विश्वासों और आचरणों को पहचानना।"
+      },
+      {
+       "concept_tag": "uttar-bharat-dharmik-ufan",
+       "learning_objective": "उत्तरी भारत में नाथ, जोगी और सिद्धों के उदय तथा दिल्ली सल्तनत के प्रभाव की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH02-T4",
+     "topic_number": 4,
+     "title": "इस्लामी परंपराएँ: नए ताने-बाने",
+     "ncert_sections": "5, 5.1, 5.2, 5.3",
+     "concepts": [
+      {
+       "concept_tag": "shasak-aur-praja",
+       "learning_objective": "शरिया, ज़िम्मी और जज़िया की अवधारणाओं तथा शासकों की लचीली धार्मिक नीति को समझना।"
+      },
+      {
+       "concept_tag": "islam-ka-lokpriya-aacharan",
+       "learning_objective": "इस्लाम के पाँच स्तंभों और स्थानीय परंपराओं के साथ उसके मेल को पहचानना।"
+      },
+      {
+       "concept_tag": "samudayon-ke-naam",
+       "learning_objective": "संस्कृत स्रोतों में प्रवासी समुदायों के लिए प्रयुक्त नामों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH02-T5",
+     "topic_number": 5,
+     "title": "सूफ़ीवाद का विकास और उपमहाद्वीप में चिश्ती",
+     "ncert_sections": "6, 6.1, 6.2, 7.1, 7.2, 7.3",
+     "concepts": [
+      {
+       "concept_tag": "sufivad-khanqah-silsila",
+       "learning_objective": "सूफ़ीवाद के उदय, खानकाह, सिलसिला, दरगाह और उर्स जैसी संस्थाओं को समझना।"
+      },
+      {
+       "concept_tag": "chishti-khanqah-ziyarat",
+       "learning_objective": "चिश्ती खानकाह के जीवन, ज़ियारत, समा और क़व्वाली तथा स्थानीय भाषाओं के प्रयोग की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH02-T6",
+     "topic_number": 6,
+     "title": "सूफ़ी और राज्य",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "sufi-aur-rajya",
+       "learning_objective": "सूफ़ियों और सुल्तानों के बीच सहयोग और तनाव के कारणों का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH02-T7",
+     "topic_number": 7,
+     "title": "नए भक्ति पंथ: कबीर, बाबा गुरु नानक और मीराबाई",
+     "ncert_sections": "8, 8.1, 8.2, 8.3",
+     "concepts": [
+      {
+       "concept_tag": "kabir",
+       "learning_objective": "कबीर की रचनाओं, परम सत्य के वर्णन और उनकी विरासत से जुड़ी बहसों को समझना।"
+      },
+      {
+       "concept_tag": "guru-nanak",
+       "learning_objective": "बाबा गुरु नानक के उपदेशों और सिख समुदाय के संगठन की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "mirabai",
+       "learning_objective": "मीराबाई के जीवन और भक्ति द्वारा सामाजिक मानदंडों की अवहेलना का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH02-T8",
+     "topic_number": 8,
+     "title": "धार्मिक परंपराओं के इतिहासों का पुनर्निर्माण",
+     "ncert_sections": "9",
+     "concepts": [
+      {
+       "concept_tag": "sufi-strot",
+       "learning_objective": "सूफ़ी परंपरा के स्रोतों (मलफ़ूज़ात, मक्तूबात, तज़किरा) की विशेषताएँ पहचानना।"
+      },
+      {
+       "concept_tag": "itihas-punarnirman-chunautiyan",
+       "learning_objective": "धार्मिक परंपराओं के इतिहास-लेखन में इतिहासकारों की चुनौतियों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHHS2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "एक साम्राज्य की राजधानी : विजयनगर",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhhs203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHHS2-CH03-T1",
+     "topic_number": 1,
+     "title": "हम्पी की खोज",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "hampi-ki-khoj",
+       "learning_objective": "हम्पी के भग्नावशेषों की खोज और हम्पी नाम की उत्पत्ति को जानना।"
+      },
+      {
+       "concept_tag": "itihas-ke-srot",
+       "learning_objective": "विजयनगर के इतिहास के पुनर्निर्माण में प्रयुक्त विविध स्रोतों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH03-T2",
+     "topic_number": 2,
+     "title": "राय, नायक तथा सुल्तान",
+     "ncert_sections": "2, 2.1, 2.2, 2.3",
+     "concepts": [
+      {
+       "concept_tag": "rajvansh-aur-patan",
+       "learning_objective": "विजयनगर के राजवंशों, कृष्णदेव राय के शासन और साम्राज्य के पतन का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "ashva-vyapar",
+       "learning_objective": "घोड़ों के व्यापार और व्यापार के प्रति शासकों की नीति को समझना।"
+      },
+      {
+       "concept_tag": "amar-nayak-pranali",
+       "learning_objective": "अमर-नायक प्रणाली की विशेषताओं और उसके प्रभाव को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH03-T3",
+     "topic_number": 3,
+     "title": "विजयनगर : राजधानी तथा उसके परिप्रदेश",
+     "ncert_sections": "3, 3.1, 3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "jal-sansadhan",
+       "learning_objective": "विजयनगर में जल-आपूर्ति की व्यवस्थाओं को समझना।"
+      },
+      {
+       "concept_tag": "kilebandi-aur-sadaken",
+       "learning_objective": "किलेबंदी की विशेषताओं और कृषि क्षेत्र को घेरने के कारणों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "shahari-kendra",
+       "learning_objective": "शहरी केंद्र के निवासियों और जीवन के साक्ष्यों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH03-T4",
+     "topic_number": 4,
+     "title": "राजकीय केंद्र",
+     "ncert_sections": "4, 4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "mahanavami-dibba",
+       "learning_objective": "महानवमी डिब्बा और उससे जुड़े अनुष्ठानों के महत्व को समझना।"
+      },
+      {
+       "concept_tag": "kamal-mahal-hazara-ram",
+       "learning_objective": "कमल महल, हज़ार राम मंदिर आदि भवनों की विशेषताओं को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH03-T5",
+     "topic_number": 5,
+     "title": "धार्मिक केंद्र",
+     "ncert_sections": "5, 5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "rajdhani-ka-chayan",
+       "learning_objective": "राजधानी के चयन और मंदिरों से शासकों के संबंध को समझना।"
+      },
+      {
+       "concept_tag": "gopuram-aur-mandap",
+       "learning_objective": "गोपुरम, मंडप तथा विरुपाक्ष और विट्ठल मंदिरों की विशेषताओं का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH03-T6",
+     "topic_number": 6,
+     "title": "महलों, मंदिरों तथा बाज़ारों का अंकन",
+     "ncert_sections": "6",
+     "concepts": [
+      {
+       "concept_tag": "manchitran-sarvekshan",
+       "learning_objective": "विजयनगर के विस्तृत सर्वेक्षण और मानचित्रण की विधि को समझना।"
+      },
+      {
+       "concept_tag": "bazar-ka-varnan",
+       "learning_objective": "यात्रियों के वृत्तांतों से बाज़ारों और लुप्त संरचनाओं का पुनर्निर्माण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHHS2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "किसान, ज़मींदार और राज्य",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhhs204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHHS2-CH04-T1",
+     "topic_number": 1,
+     "title": "किसान और कृषि उत्पादन",
+     "ncert_sections": "1, 1.1, 1.2, 1.3, 1.4",
+     "concepts": [
+      {
+       "concept_tag": "kisan-ke-prakar",
+       "learning_objective": "मुगलकालीन स्रोतों में किसानों के लिए प्रयुक्त शब्दों और खुद-काश्त तथा पाहि-काश्त किसानों का अंतर समझना।"
+      },
+      {
+       "concept_tag": "sinchai-aur-takneek",
+       "learning_objective": "सिंचाई के साधनों और लकड़ी के हल जैसी कृषि तकनीकों की विशेषताएँ समझना।"
+      },
+      {
+       "concept_tag": "fasalen-aur-jins-e-kamil",
+       "learning_objective": "खरीफ़-रबी चक्र, जिन्स-ए-कामिल और नई फ़सलों के आगमन को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH04-T2",
+     "topic_number": 2,
+     "title": "ग्राम समुदाय",
+     "ncert_sections": "2, 2.1, 2.2, 2.3, 2.4",
+     "concepts": [
+      {
+       "concept_tag": "jati-aur-gramin-samaj",
+       "learning_objective": "ग्रामीण समाज में जाति, गरीबी और सामाजिक स्थिति के संबंध का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "panchayat-aur-mukhiya",
+       "learning_objective": "ग्राम पंचायत, जाति पंचायत और मुक़द्दम या मंडल के कार्यों को समझना।"
+      },
+      {
+       "concept_tag": "gram-dastkar",
+       "learning_objective": "ग्राम दस्तकारों को दिए जाने वाले पारिश्रमिक के तरीकों और 'छोटे गणराज्य' की धारणा का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH04-T3",
+     "topic_number": 3,
+     "title": "कृषि समाज में महिलाएँ",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "mahilaon-ka-shram",
+       "learning_objective": "खेती और दस्तकारी में महिलाओं के श्रम की भूमिका पहचानना।"
+      },
+      {
+       "concept_tag": "mahilaon-ke-adhikar",
+       "learning_objective": "दुल्हन की कीमत, पुनर्विवाह, याचिकाओं और संपत्ति के उत्तराधिकार से जुड़े महिलाओं के अधिकार समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH04-T4",
+     "topic_number": 4,
+     "title": "जंगल और कबीले",
+     "ncert_sections": "4, 4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "jangli-jeevan",
+       "learning_objective": "जंगलवासियों की आजीविका और 'जंगली' शब्द के तत्कालीन अर्थ को समझना।"
+      },
+      {
+       "concept_tag": "jangalon-mein-baahari-prabhav",
+       "learning_objective": "राज्य, वाणिज्यिक खेती और सामाजिक बदलावों से जंगलवासियों के जीवन पर पड़े प्रभावों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH04-T5",
+     "topic_number": 5,
+     "title": "ज़मींदार",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "zamindar-ki-shakti",
+       "learning_objective": "ज़मींदारों की हैसियत, मिल्कियत ज़मीन और सैन्य शक्ति के स्रोत पहचानना।"
+      },
+      {
+       "concept_tag": "zamindari-ka-sudridhikaran",
+       "learning_objective": "ज़मींदारियों के बनने और मज़बूत होने की प्रक्रियाओं तथा किसानों से उनके संबंधों का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH04-T6",
+     "topic_number": 6,
+     "title": "भू-राजस्व प्रणाली",
+     "ncert_sections": "6",
+     "concepts": [
+      {
+       "concept_tag": "jama-aur-hasil",
+       "learning_objective": "जमा और हासिल का अंतर तथा राजस्व प्रशासन के अधिकारियों की भूमिका समझना।"
+      },
+      {
+       "concept_tag": "bhumi-vargikaran",
+       "learning_objective": "अकबर के समय ज़मीन के वर्गीकरण तथा राजस्व वसूली के तरीकों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH04-T7",
+     "topic_number": 7,
+     "title": "चाँदी का बहाव",
+     "ncert_sections": "7",
+     "concepts": [
+      {
+       "concept_tag": "chandi-ka-pravah",
+       "learning_objective": "वैश्विक व्यापार के कारण भारत में चाँदी के आगमन और उसके आर्थिक प्रभावों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS2-CH04-T8",
+     "topic_number": 8,
+     "title": "अबुल फ़ज़्ल की आइन-ए-अकबरी",
+     "ncert_sections": "8",
+     "concepts": [
+      {
+       "concept_tag": "aain-ki-sanrachna",
+       "learning_objective": "आइन-ए-अकबरी की रचना, उसके पाँच दफ़्तरों और मुल्क-आबादी की विषय-वस्तु को पहचानना।"
+      },
+      {
+       "concept_tag": "aain-ki-seemaen",
+       "learning_objective": "एक ऐतिहासिक स्रोत के रूप में आइन की विशेषताओं और सीमाओं का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

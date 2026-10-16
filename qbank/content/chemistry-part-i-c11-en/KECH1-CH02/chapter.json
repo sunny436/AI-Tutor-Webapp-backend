@@ -1,0 +1,136 @@
+{
+ "chapter_id": "KECH1-CH02",
+ "title": "Structure of Atom",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECH1-CH02-T1",
+   "topic_number": 1,
+   "title": "Discovery of Sub-atomic Particles",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "cathode-ray-electrons",
+     "learning_objective": "Describe the properties of cathode rays and how they established the electron."
+    },
+    {
+     "concept_tag": "charge-mass-of-electron",
+     "learning_objective": "Use Thomson's e/m ratio and Millikan's charge to obtain the mass of the electron."
+    },
+    {
+     "concept_tag": "protons-and-neutrons",
+     "learning_objective": "Recall how protons and neutrons were discovered and their properties."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH02-T2",
+   "topic_number": 2,
+   "title": "Atomic Models, Atomic Number and Isotopes",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "thomson-rutherford-models",
+     "learning_objective": "Compare the Thomson and Rutherford models and interpret the alpha-scattering results."
+    },
+    {
+     "concept_tag": "atomic-mass-number",
+     "learning_objective": "Calculate protons, neutrons and electrons from atomic number and mass number."
+    },
+    {
+     "concept_tag": "isotopes-isobars",
+     "learning_objective": "Distinguish isotopes from isobars."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH02-T3",
+   "topic_number": 3,
+   "title": "Wave and Particle Nature of Electromagnetic Radiation",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "em-wave-relations",
+     "learning_objective": "Relate frequency, wavelength and wavenumber of electromagnetic radiation."
+    },
+    {
+     "concept_tag": "photoelectric-effect",
+     "learning_objective": "Apply Planck's quantum theory to the photoelectric effect."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH02-T4",
+   "topic_number": 4,
+   "title": "Bohr's Model for Hydrogen Atom",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "bohr-postulates",
+     "learning_objective": "State Bohr's postulates, including quantised angular momentum and energy."
+    },
+    {
+     "concept_tag": "hydrogen-spectrum-calculations",
+     "learning_objective": "Calculate energies and wavelengths of transitions in the hydrogen atom."
+    },
+    {
+     "concept_tag": "bohr-limitations",
+     "learning_objective": "Identify the limitations of Bohr's model."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH02-T5",
+   "topic_number": 5,
+   "title": "Towards Quantum Mechanical Model: Dual Behaviour and Uncertainty",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "de-broglie-wavelength",
+     "learning_objective": "Apply the de Broglie relation to microscopic and macroscopic particles."
+    },
+    {
+     "concept_tag": "uncertainty-principle",
+     "learning_objective": "Explain Heisenberg's uncertainty principle and its consequences."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH02-T6",
+   "topic_number": 6,
+   "title": "Orbitals, Quantum Numbers and Shapes of Orbitals",
+   "ncert_sections": "2.6.1, 2.6.2",
+   "concepts": [
+    {
+     "concept_tag": "quantum-numbers",
+     "learning_objective": "Assign allowed values of n, l, ml and ms to electrons in orbitals."
+    },
+    {
+     "concept_tag": "orbital-shapes-nodes",
+     "learning_objective": "Determine the number of radial and angular nodes of orbitals."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH02-T7",
+   "topic_number": 7,
+   "title": "Energies of Orbitals and Electronic Configuration",
+   "ncert_sections": "2.6.3, 2.6.4, 2.6.5, 2.6.6",
+   "concepts": [
+    {
+     "concept_tag": "aufbau-n-plus-l",
+     "learning_objective": "Order orbital energies using the (n + l) rule and the aufbau principle."
+    },
+    {
+     "concept_tag": "pauli-hund-rules",
+     "learning_objective": "State and apply the Pauli exclusion principle and Hund's rule."
+    },
+    {
+     "concept_tag": "configuration-stability",
+     "learning_objective": "Explain the extra stability of half-filled and completely filled subshells."
+    }
+   ]
+  }
+ ]
+}

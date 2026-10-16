@@ -1,0 +1,144 @@
+{
+ "chapter_id": "LEPH2-CH01",
+ "title": "Ray Optics and Optical Instruments",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH2-CH01-T1",
+   "topic_number": 1,
+   "title": "Reflection of light by spherical mirrors",
+   "ncert_sections": "9.2, 9.2.1, 9.2.2, 9.2.3",
+   "concepts": [
+    {
+     "concept_tag": "cartesian-sign-convention",
+     "learning_objective": "Apply the Cartesian sign convention to distances and heights for mirrors and lenses."
+    },
+    {
+     "concept_tag": "mirror-focal-length",
+     "learning_objective": "Relate the focal length of a spherical mirror to its radius of curvature for paraxial rays."
+    },
+    {
+     "concept_tag": "mirror-equation",
+     "learning_objective": "Use the mirror equation and magnification to locate and describe images formed by spherical mirrors."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH01-T2",
+   "topic_number": 2,
+   "title": "Refraction of light",
+   "ncert_sections": "9.3",
+   "concepts": [
+    {
+     "concept_tag": "snells-law-refractive-index",
+     "learning_objective": "Apply Snell's law and the properties of relative refractive index to the bending of light."
+    },
+    {
+     "concept_tag": "slab-and-apparent-depth",
+     "learning_objective": "Explain lateral shift in a glass slab and calculate the apparent depth of an object under a liquid."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH01-T3",
+   "topic_number": 3,
+   "title": "Total internal reflection and its applications",
+   "ncert_sections": "9.4, 9.4.1",
+   "concepts": [
+    {
+     "concept_tag": "critical-angle",
+     "learning_objective": "State the conditions for total internal reflection and relate the critical angle to refractive index."
+    },
+    {
+     "concept_tag": "tir-applications",
+     "learning_objective": "Explain how totally reflecting prisms and optical fibres use total internal reflection."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH01-T4",
+   "topic_number": 4,
+   "title": "Refraction at spherical surfaces and by lenses",
+   "ncert_sections": "9.5, 9.5.1, 9.5.2",
+   "concepts": [
+    {
+     "concept_tag": "spherical-surface-refraction",
+     "learning_objective": "Use the relation for refraction at a single spherical surface between two media."
+    },
+    {
+     "concept_tag": "lens-maker-formula",
+     "learning_objective": "Use the lens maker's formula to relate focal length to radii of curvature and refractive index."
+    },
+    {
+     "concept_tag": "thin-lens-formula",
+     "learning_objective": "Apply the thin lens formula and magnification to locate and describe images formed by lenses."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH01-T5",
+   "topic_number": 5,
+   "title": "Power of a lens and combination of thin lenses",
+   "ncert_sections": "9.5.3, 9.5.4",
+   "concepts": [
+    {
+     "concept_tag": "lens-power",
+     "learning_objective": "Define the power of a lens in dioptres and relate its sign to the type of lens."
+    },
+    {
+     "concept_tag": "lens-combination",
+     "learning_objective": "Find the effective power, focal length and magnification of thin lenses in contact."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH01-T6",
+   "topic_number": 6,
+   "title": "Refraction through a prism",
+   "ncert_sections": "9.6",
+   "concepts": [
+    {
+     "concept_tag": "prism-deviation",
+     "learning_objective": "Relate the angle of deviation of a prism to the angles of incidence, emergence and the prism angle."
+    },
+    {
+     "concept_tag": "minimum-deviation",
+     "learning_objective": "Use the minimum deviation condition to find the refractive index of a prism, including a thin prism."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH01-T7",
+   "topic_number": 7,
+   "title": "Optical instruments: the microscope",
+   "ncert_sections": "9.7, 9.7.1",
+   "concepts": [
+    {
+     "concept_tag": "simple-microscope",
+     "learning_objective": "Explain how a simple microscope magnifies and calculate its magnifying power."
+    },
+    {
+     "concept_tag": "compound-microscope",
+     "learning_objective": "Describe image formation in a compound microscope and calculate its magnifying power."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH01-T8",
+   "topic_number": 8,
+   "title": "Optical instruments: the telescope",
+   "ncert_sections": "9.7.2",
+   "concepts": [
+    {
+     "concept_tag": "telescope-magnification",
+     "learning_objective": "Calculate the magnifying power and tube length of a refracting telescope in normal adjustment."
+    },
+    {
+     "concept_tag": "telescope-design",
+     "learning_objective": "Evaluate how objective size and mirror objectives improve light gathering, resolution and image quality."
+    }
+   ]
+  }
+ ]
+}

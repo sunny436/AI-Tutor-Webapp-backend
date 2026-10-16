@@ -1,0 +1,904 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "lekhashastra-i-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "accountancy",
+  "language": "hindi",
+  "title": "Lekhashastra-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khac1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHAC1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "लेखांकन – एक परिचय",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khac101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAC1-CH01-T1",
+     "topic_number": 1,
+     "title": "लेखांकन का अर्थ और प्रक्रिया",
+     "ncert_sections": "1.1, 1.1.1, 1.1.2, 1.1.3",
+     "concepts": [
+      {
+       "concept_tag": "lekhankan-paribhasha",
+       "learning_objective": "लेखांकन की परिभाषा और उसके ऐतिहासिक विकास को बताना।"
+      },
+      {
+       "concept_tag": "arthik-ghatnayen",
+       "learning_objective": "बाह्य और आंतरिक आर्थिक घटनाओं में अंतर पहचानना।"
+      },
+      {
+       "concept_tag": "pahchan-maapan-abhilekhan-sampreshan",
+       "learning_objective": "पहचान, मापन, अभिलेखन और संप्रेषण के चरणों को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH01-T2",
+     "topic_number": 2,
+     "title": "लेखांकन सूचना के उपयोगकर्ता और लेखांकन की शाखाएँ",
+     "ncert_sections": "1.1.4, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "antarik-bahya-upyogkarta",
+       "learning_objective": "लेखांकन सूचना के आंतरिक और बाह्य उपयोगकर्ताओं की पहचान करना।"
+      },
+      {
+       "concept_tag": "lekhankan-ki-shakhayen",
+       "learning_objective": "वित्तीय, लागत और प्रबंध लेखांकन के उद्देश्यों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH01-T3",
+     "topic_number": 3,
+     "title": "लेखांकन सूचना की गुणात्मक विशेषताएँ",
+     "ncert_sections": "1.2.1",
+     "concepts": [
+      {
+       "concept_tag": "vishvasniyata-prasangikta",
+       "learning_objective": "विश्वसनीयता और प्रासंगिकता की विशेषताओं को समझाना।"
+      },
+      {
+       "concept_tag": "bodhgamyata-tulniyata",
+       "learning_objective": "बोधगम्यता और तुलनीयता की विशेषताओं को पहचानना और लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH01-T4",
+     "topic_number": 4,
+     "title": "लेखांकन के उद्देश्य",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "abhilekh-aur-labh-hani",
+       "learning_objective": "व्यावसायिक लेन-देनों के अभिलेख रखने और लाभ-हानि ज्ञात करने के उद्देश्य को समझाना।"
+      },
+      {
+       "concept_tag": "vittiya-sthiti-aur-suchna",
+       "learning_objective": "वित्तीय स्थिति दर्शाने तथा विभिन्न उपयोगकर्ताओं को सूचना देने के उद्देश्य का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH01-T5",
+     "topic_number": 5,
+     "title": "लेखांकन की भूमिका",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "lekhankan-ki-bhumika",
+       "learning_objective": "व्यवसाय की भाषा और सूचना प्रणाली के रूप में लेखांकन की भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "lekhankan-ki-simayen",
+       "learning_objective": "लेखांकन सूचना की सीमाओं का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH01-T6",
+     "topic_number": 6,
+     "title": "आधारभूत शब्द: इकाई, लेन-देन, परिसंपत्ति, दायित्व और पूँजी",
+     "ncert_sections": "1.5.1 से 1.5.5",
+     "concepts": [
+      {
+       "concept_tag": "ikai-aur-len-den",
+       "learning_objective": "व्यावसायिक इकाई और लेन-देन का अर्थ बताना।"
+      },
+      {
+       "concept_tag": "parisampatti-dayitva-punji",
+       "learning_objective": "परिसंपत्तियों, दायित्वों और पूँजी को पहचानना और वर्गीकृत करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH01-T7",
+     "topic_number": 7,
+     "title": "आधारभूत शब्द: आगम, व्यय, लाभ, बट्टा, स्टॉक, देनदार और लेनदार",
+     "ncert_sections": "1.5.6 से 1.5.20",
+     "concepts": [
+      {
+       "concept_tag": "aagam-vyay-labh-hani",
+       "learning_objective": "आगम, व्यय, खर्च, लाभ, अभिलाभ और हानि में अंतर करना।"
+      },
+      {
+       "concept_tag": "batta-pramanak-aharan",
+       "learning_objective": "बट्टे, प्रमाणक, माल और आहरण की अवधारणाओं को लागू करना।"
+      },
+      {
+       "concept_tag": "stock-dendar-lendar",
+       "learning_objective": "स्टॉक, देनदार और लेनदार को पहचानना और तुलन-पत्र में उनकी स्थिति बताना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHAC1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "लेखांकन के सैद्धांतिक आधार",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khac102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAC1-CH02-T1",
+     "topic_number": 1,
+     "title": "सैद्धांतिक आधार की आवश्यकता तथा सामान्यतः स्वीकृत लेखांकन सिद्धांत",
+     "ncert_sections": "प्रस्तावना, 2.1",
+     "concepts": [
+      {
+       "concept_tag": "saiddhantik-aadhar-avashyakta",
+       "learning_objective": "समझाना कि लेखांकन सूचना को विश्वसनीय और तुलनीय बनाने के लिए सैद्धांतिक आधार क्यों आवश्यक है।"
+      },
+      {
+       "concept_tag": "gaap-arth-prakriti",
+       "learning_objective": "सामान्यतः स्वीकृत लेखांकन सिद्धांतों का अर्थ, विकास और परिवर्तनशील प्रकृति बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH02-T2",
+     "topic_number": 2,
+     "title": "व्यावसायिक इकाई, मुद्रा मापन और चालू व्यापार",
+     "ncert_sections": "2.2.1, 2.2.2, 2.2.3",
+     "concepts": [
+      {
+       "concept_tag": "vyavsayik-ikai",
+       "learning_objective": "स्वामी की पूँजी, आहरण और निजी लेन-देनों पर व्यावसायिक इकाई अवधारणा लागू करना।"
+      },
+      {
+       "concept_tag": "mudra-mapan",
+       "learning_objective": "पहचानना कि मुद्रा मापन अवधारणा के अंतर्गत क्या दर्ज होता है और इसकी सीमा बताना।"
+      },
+      {
+       "concept_tag": "chalu-vyapar",
+       "learning_objective": "समझाना कि चालू व्यापार अवधारणा परिसंपत्ति की लागत को उसके जीवनकाल में बाँटने की अनुमति कैसे देती है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH02-T3",
+     "topic_number": 3,
+     "title": "लेखांकन अवधि, लागत और द्विपक्षीय अवधारणा",
+     "ncert_sections": "2.2.4, 2.2.5, 2.2.6",
+     "concepts": [
+      {
+       "concept_tag": "lekhankan-avadhi",
+       "learning_objective": "लेखांकन अवधि का अर्थ और वित्तीय विवरण तैयार करने की अवधि बताना।"
+      },
+      {
+       "concept_tag": "lagat-avdharana",
+       "learning_objective": "परिसंपत्ति की अभिलेखित लागत की गणना करना और ऐतिहासिक लागत आधार का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "dvipakshiya-avdharana",
+       "learning_objective": "लेखांकन समीकरण की सहायता से लेन-देनों के दोहरे प्रभाव का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH02-T4",
+     "topic_number": 4,
+     "title": "आगम मान्यता, मिलान और पूर्ण प्रकटीकरण",
+     "ncert_sections": "2.2.7, 2.2.8, 2.2.9",
+     "concepts": [
+      {
+       "concept_tag": "aagam-manyata",
+       "learning_objective": "निर्धारित करना कि आगम कब प्राप्त माना जाता है, समय-आधारित आय सहित।"
+      },
+      {
+       "concept_tag": "milan-avdharana",
+       "learning_objective": "व्ययों और बेचे गए माल की लागत पर मिलान अवधारणा लागू करना।"
+      },
+      {
+       "concept_tag": "purn-prakatikaran",
+       "learning_objective": "बताना कि पूर्ण प्रकटीकरण अवधारणा वित्तीय विवरणों से क्या अपेक्षा करती है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH02-T5",
+     "topic_number": 5,
+     "title": "समनुरूपता, रूढ़िवादिता, सारता और वस्तुनिष्ठता",
+     "ncert_sections": "2.2.10, 2.2.11, 2.2.12, 2.2.13",
+     "concepts": [
+      {
+       "concept_tag": "samanurupata",
+       "learning_objective": "तुलना के लिए लेखांकन नीतियों में समनुरूपता की आवश्यकता समझाना।"
+      },
+      {
+       "concept_tag": "rudhivadita",
+       "learning_objective": "सभी संभावित हानियों के लिए प्रावधान करने और लाभों का पूर्वानुमान न करने का नियम लागू करना।"
+      },
+      {
+       "concept_tag": "sarata-vastunishthata",
+       "learning_objective": "सारपूर्ण और महत्वहीन मदों में अंतर करना तथा प्रमाण-योग्य साक्ष्य की आवश्यकता समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH02-T6",
+     "topic_number": 6,
+     "title": "लेखांकन की पद्धतियाँ और आधार",
+     "ncert_sections": "2.3, 2.4",
+     "concepts": [
+      {
+       "concept_tag": "lekhankan-paddhatiyan",
+       "learning_objective": "दोहरा लेखा पद्धति और एकल लेखा पद्धति में अंतर करना।"
+      },
+      {
+       "concept_tag": "nakad-upachay-aadhar",
+       "learning_objective": "नकद आधार और उपार्जन आधार की तुलना करना तथा दोनों के अंतर्गत लाभ की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH02-T7",
+     "topic_number": 7,
+     "title": "लेखांकन मानक",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "lekhankan-manak-arth",
+       "learning_objective": "लेखांकन मानकों का अर्थ, जारी करने वाली संस्था और उद्देश्य बताना।"
+      },
+      {
+       "concept_tag": "manak-labh-seemaen",
+       "learning_objective": "लेखांकन मानकों के लाभों और सीमाओं का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH02-T8",
+     "topic_number": 8,
+     "title": "वस्तु एवं सेवा कर",
+     "ncert_sections": "वस्तु एवं सेवा कर (एक देश एक कर)",
+     "concepts": [
+      {
+       "concept_tag": "gst-arth-visheshtaen",
+       "learning_objective": "वस्तु एवं सेवा कर को गंतव्य-आधारित कर के रूप में समझाना और इसकी विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "cgst-sgst-igst",
+       "learning_objective": "राज्य के भीतर और अंतर्राज्यीय आपूर्ति पर केंद्रीय, राज्य और एकीकृत कर लागू करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHAC1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "लेनदेनों का अभिलेखन – I",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khac103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAC1-CH03-T1",
+     "topic_number": 1,
+     "title": "व्यावसायिक लेनदेन और स्रोत प्रलेख",
+     "ncert_sections": "3.1, 3.1.1",
+     "concepts": [
+      {
+       "concept_tag": "srot-pralekh",
+       "learning_objective": "व्यावसायिक लेनदेन की प्रकृति और स्रोत प्रलेख के महत्त्व को समझना।"
+      },
+      {
+       "concept_tag": "lekhankan-pramanak",
+       "learning_objective": "सरल, नाम, जमा और जर्नल प्रमाणकों में अंतर करना तथा प्रमाणक के आवश्यक तत्त्व पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH03-T2",
+     "topic_number": 2,
+     "title": "लेखांकन समीकरण",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "lekhankan-samikaran",
+       "learning_objective": "लेखांकन समीकरण परिसंपत्तियाँ = देयताएँ + पूँजी का अर्थ बताना।"
+      },
+      {
+       "concept_tag": "lendenon-ka-prabhav",
+       "learning_objective": "विभिन्न लेनदेनों का लेखांकन समीकरण पर प्रभाव विश्लेषित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH03-T3",
+     "topic_number": 3,
+     "title": "नाम और जमा का प्रयोग",
+     "ncert_sections": "3.3, 3.3.1",
+     "concepts": [
+      {
+       "concept_tag": "t-khata",
+       "learning_objective": "टी-खाते के नाम और जमा पक्षों की पहचान करना।"
+      },
+      {
+       "concept_tag": "naam-jama-ke-niyam",
+       "learning_objective": "पाँच प्रकार के खातों पर नाम और जमा के नियम लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH03-T4",
+     "topic_number": 4,
+     "title": "प्रारंभिक प्रविष्टि की पुस्तकें और रोज़नामचा",
+     "ncert_sections": "3.4, 3.4.1",
+     "concepts": [
+      {
+       "concept_tag": "prarambhik-pravishti-pustak",
+       "learning_objective": "रोज़नामचे को प्रारंभिक प्रविष्टि की पुस्तक के रूप में समझना।"
+      },
+      {
+       "concept_tag": "rojnamcha-praroop",
+       "learning_objective": "रोज़नामचे के प्रारूप के स्तंभों और विवरण लिखने की विधि समझाना।"
+      },
+      {
+       "concept_tag": "saral-sanyukt-pravishti",
+       "learning_objective": "सरल और संयुक्त रोज़नामचा प्रविष्टियाँ अभिलिखित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH03-T5",
+     "topic_number": 5,
+     "title": "खाता बही",
+     "ncert_sections": "3.5, 3.5.1",
+     "concepts": [
+      {
+       "concept_tag": "khata-bahi-upyogita",
+       "learning_objective": "खाता बही की उपयोगिता और उसके प्रारूप को समझना।"
+      },
+      {
+       "concept_tag": "rojnamcha-khatabahi-antar",
+       "learning_objective": "रोज़नामचा और खाता बही में अंतर स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "sthayi-asthayi-khate",
+       "learning_objective": "खाता बही के खातों को स्थायी और अस्थायी खातों में वर्गीकृत करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH03-T6",
+     "topic_number": 6,
+     "title": "रोज़नामचे से खतौनी",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "khatauni-prakriya",
+       "learning_objective": "रोज़नामचा प्रविष्टियों की खाता बही में खतौनी की प्रक्रिया लागू करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHAC1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "लेन-देनों का अभिलेखन-II",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khac104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAC1-CH04-T1",
+     "topic_number": 1,
+     "title": "रोकड़ बही और एकल खाना रोकड़ बही",
+     "ncert_sections": "4.1, 4.1.1",
+     "concepts": [
+      {
+       "concept_tag": "rokad-bahi-swaroop",
+       "learning_objective": "रोकड़ बही को प्रारंभिक प्रविष्टि की पुस्तक तथा रोकड़ खाते दोनों के रूप में समझना।"
+      },
+      {
+       "concept_tag": "ekal-khana-rokad-bahi",
+       "learning_objective": "एकल खाना रोकड़ बही में नकद प्राप्तियाँ और भुगतान लिखकर उसका शेष निकालना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH04-T2",
+     "topic_number": 2,
+     "title": "दोहरा खाना रोकड़ बही और बैंक लेन-देन",
+     "ncert_sections": "4.1.2",
+     "concepts": [
+      {
+       "concept_tag": "dohra-khana-rokad-bahi",
+       "learning_objective": "दोहरे खाने वाली रोकड़ बही में नकद और बैंक लेन-देन को अलग खानों में लिखना।"
+      },
+      {
+       "concept_tag": "vipreet-pravishti",
+       "learning_objective": "विपरीत प्रविष्टि को पहचानना और उसकी खतौनी न होने का कारण बताना।"
+      },
+      {
+       "concept_tag": "check-aur-rekhankan",
+       "learning_objective": "चेक के प्रकार, रेखांकन और जमा पर्ची का उपयोग समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH04-T3",
+     "topic_number": 3,
+     "title": "लघु रोकड़ बही",
+     "ncert_sections": "4.1.3",
+     "concepts": [
+      {
+       "concept_tag": "laghu-rokad-bahi",
+       "learning_objective": "लघु रोकड़ बही की आवश्यकता, स्वरूप और लाभ समझना।"
+      },
+      {
+       "concept_tag": "agradhan-pranali",
+       "learning_objective": "अग्रधन प्रणाली के अंतर्गत प्रतिपूर्ति की राशि ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH04-T4",
+     "topic_number": 4,
+     "title": "रोकड़ बही का शेष निकालना",
+     "ncert_sections": "4.1.4",
+     "concepts": [
+      {
+       "concept_tag": "rokad-bahi-santulan",
+       "learning_objective": "रोकड़ बही के रोकड़ और बैंक खानों का शेष निकालकर अगली अवधि में आगे ले जाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH04-T5",
+     "topic_number": 5,
+     "title": "क्रय बही और क्रय वापसी बही",
+     "ncert_sections": "4.2, 4.3",
+     "concepts": [
+      {
+       "concept_tag": "kray-bahi",
+       "learning_objective": "क्रय बही में उधार माल क्रय को शुद्ध बीजक राशि पर लिखना और उसकी खतौनी करना।"
+      },
+      {
+       "concept_tag": "kray-vapsi-bahi",
+       "learning_objective": "क्रय वापसी बही और नाम पत्र के उपयोग को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH04-T6",
+     "topic_number": 6,
+     "title": "विक्रय बही और विक्रय वापसी बही",
+     "ncert_sections": "4.4, 4.5",
+     "concepts": [
+      {
+       "concept_tag": "vikray-bahi",
+       "learning_objective": "विक्रय बही में उधार माल विक्रय का अभिलेखन और खतौनी करना।"
+      },
+      {
+       "concept_tag": "vikray-vapsi-bahi",
+       "learning_objective": "विक्रय वापसी बही और जमा पत्र के उपयोग को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH04-T7",
+     "topic_number": 7,
+     "title": "मुख्य जर्नल और खातों का शेष निकालना",
+     "ncert_sections": "4.6, 4.7",
+     "concepts": [
+      {
+       "concept_tag": "mukhya-journal",
+       "learning_objective": "विशेष बहियों में न लिखे जाने वाले लेन-देनों को मुख्य जर्नल में पहचानना।"
+      },
+      {
+       "concept_tag": "khaton-ka-santulan",
+       "learning_objective": "खाता-बही के खातों का शेष निकालना और आय-व्यय खातों को बंद करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHAC1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "बैंक समाधान विवरण",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khac105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAC1-CH05-T1",
+     "topic_number": 1,
+     "title": "बैंक समाधान विवरण का अर्थ और आवश्यकता",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "samadhan-vivaran-arth",
+       "learning_objective": "बैंक समाधान विवरण का अर्थ, उद्देश्य और उसे बनाने वाले को पहचानना।"
+      },
+      {
+       "concept_tag": "passbook-rokad-bahi",
+       "learning_objective": "पासबुक और रोकड़ बही के बैंक खाने में जमा, निकासी और शेष के लेखन को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH05-T2",
+     "topic_number": 2,
+     "title": "समय-अंतराल से उत्पन्न अंतर: चेक",
+     "ncert_sections": "5.1.1(क), 5.1.1(ख)",
+     "concepts": [
+      {
+       "concept_tag": "nirgamit-cheque",
+       "learning_objective": "निर्गमित परंतु भुगतान हेतु प्रस्तुत न किए गए चेकों का दोनों शेषों पर प्रभाव समझाना।"
+      },
+      {
+       "concept_tag": "jama-cheque-sangrah",
+       "learning_objective": "जमा किए गए परंतु बैंक द्वारा संग्रहित न किए गए चेकों का दोनों शेषों पर प्रभाव समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH05-T3",
+     "topic_number": 3,
+     "title": "बैंक द्वारा सीधे की गई प्रविष्टियाँ",
+     "ncert_sections": "5.1.1(ग) से 5.1.1(छ)",
+     "concepts": [
+      {
+       "concept_tag": "seedha-namey",
+       "learning_objective": "बैंक प्रभार, स्थायी निर्देश पर भुगतान और अनादरित चेक जैसी सीधी नामे प्रविष्टियों का प्रभाव पहचानना।"
+      },
+      {
+       "concept_tag": "seedha-jama",
+       "learning_objective": "सीधे जमा, ब्याज और लाभांश संग्रह जैसी सीधी जमा प्रविष्टियों का प्रभाव पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH05-T4",
+     "topic_number": 4,
+     "title": "त्रुटियों से उत्पन्न अंतर",
+     "ncert_sections": "5.1.2",
+     "concepts": [
+      {
+       "concept_tag": "farm-ki-trutiyan",
+       "learning_objective": "रोकड़ बही में फर्म द्वारा की गई त्रुटियों का शेष पर प्रभाव ज्ञात करना।"
+      },
+      {
+       "concept_tag": "bank-ki-trutiyan",
+       "learning_objective": "पासबुक में बैंक द्वारा की गई त्रुटियों का शेष पर प्रभाव ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH05-T5",
+     "topic_number": 5,
+     "title": "अनुकूल शेष की स्थिति में बैंक समाधान विवरण बनाना",
+     "ncert_sections": "5.2, 5.2.1, 5.2.1(क)",
+     "concepts": [
+      {
+       "concept_tag": "anukul-shesh-rokad-bahi",
+       "learning_objective": "रोकड़ बही के अनुकूल शेष से आरंभ कर पासबुक शेष ज्ञात करना।"
+      },
+      {
+       "concept_tag": "anukul-shesh-passbook",
+       "learning_objective": "पासबुक के अनुकूल शेष से आरंभ कर रोकड़ बही शेष ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH05-T6",
+     "topic_number": 6,
+     "title": "अधिविकर्ष की स्थिति में बैंक समाधान विवरण",
+     "ncert_sections": "5.2.1(ख)",
+     "concepts": [
+      {
+       "concept_tag": "adhivikarsh-arth",
+       "learning_objective": "बैंक अधिविकर्ष का अर्थ तथा रोकड़ बही और पासबुक में उसके शेष को पहचानना।"
+      },
+      {
+       "concept_tag": "adhivikarsh-samadhan",
+       "learning_objective": "अधिविकर्ष शेष से आरंभ कर बैंक समाधान विवरण बनाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHAC1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "तलपट एवं अशुद्धियों का शोधन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khac106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAC1-CH06-T1",
+     "topic_number": 1,
+     "title": "तलपट का अर्थ एवं उद्देश्य",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "talpat-arth",
+       "learning_objective": "तलपट का अर्थ और लेखांकन प्रक्रिया में उसका स्थान बताना।"
+      },
+      {
+       "concept_tag": "talpat-uddeshya",
+       "learning_objective": "तलपट बनाने के उद्देश्यों तथा उसकी सीमा को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH06-T2",
+     "topic_number": 2,
+     "title": "तलपट तैयार करना",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "talpat-vidhiyan",
+       "learning_objective": "योग, शेष तथा योग-सह-शेष विधियों में अंतर करना।"
+      },
+      {
+       "concept_tag": "talpat-shesh-stambh",
+       "learning_objective": "खातों के शेषों को सही नाम या जमा स्तंभ में रखकर तलपट तैयार करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH06-T3",
+     "topic_number": 3,
+     "title": "अशुद्धियों के प्रकार",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "kriyatmak-bhool-ashuddhi",
+       "learning_objective": "क्रियात्मक तथा भूल की अशुद्धियों को उदाहरणों से पहचानना।"
+      },
+      {
+       "concept_tag": "saiddhantik-ashuddhi",
+       "learning_objective": "सैद्धांतिक अशुद्धियों और तलपट पर उनके प्रभाव को समझना।"
+      },
+      {
+       "concept_tag": "kshatipurak-ashuddhi",
+       "learning_objective": "क्षतिपूरक अशुद्धियों का अर्थ और प्रभाव बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH06-T4",
+     "topic_number": 4,
+     "title": "अशुद्धियों की खोज",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "ashuddhi-khoj-charan",
+       "learning_objective": "तलपट न मिलने पर अशुद्धियाँ खोजने के चरण बताना।"
+      },
+      {
+       "concept_tag": "antar-vishleshan",
+       "learning_objective": "तलपट के अंतर का विश्लेषण कर संभावित अशुद्धि पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH06-T5",
+     "topic_number": 5,
+     "title": "तलपट को प्रभावित न करने वाली अशुद्धियों का शोधन",
+     "ncert_sections": "6.6, 6.6.1",
+     "concepts": [
+      {
+       "concept_tag": "dwipakshiya-ashuddhi",
+       "learning_objective": "द्विपक्षीय अशुद्धियों और शोधन की प्रक्रिया को समझना।"
+      },
+      {
+       "concept_tag": "shodhan-pravishti",
+       "learning_objective": "द्विपक्षीय अशुद्धियों के लिए सही शोधन प्रविष्टि बनाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH06-T6",
+     "topic_number": 6,
+     "title": "तलपट को प्रभावित करने वाली अशुद्धियाँ एवं उचंत खाता",
+     "ncert_sections": "6.6.2, 6.6.3",
+     "concepts": [
+      {
+       "concept_tag": "ekpakshiya-ashuddhi",
+       "learning_objective": "एकपक्षीय अशुद्धियों को पहचानना और उन्हें व्याख्यात्मक टिप्पणी से सुधारना।"
+      },
+      {
+       "concept_tag": "uchant-khata",
+       "learning_objective": "उचंत खाते की सहायता से एकपक्षीय अशुद्धियों का शोधन करना।"
+      },
+      {
+       "concept_tag": "agle-varsh-shodhan",
+       "learning_objective": "अगले लेखा वर्ष में अशुद्धियों के शोधन का सिद्धांत समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHAC1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "ह्रास, प्रावधान एवं संचय",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khac107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAC1-CH07-T1",
+     "topic_number": 1,
+     "title": "ह्रास का अर्थ, विशेषताएँ तथा रिक्तीकरण एवं परिशोधन",
+     "ncert_sections": "7.1, 7.2",
+     "concepts": [
+      {
+       "concept_tag": "hras-ka-arth",
+       "learning_objective": "ह्रास को स्थायी परिसंपत्ति के पुस्तक मूल्य में स्थायी, निरंतर एवं क्रमिक कमी के रूप में समझाना।"
+      },
+      {
+       "concept_tag": "riktikaran-parishodhan",
+       "learning_objective": "ह्रास को रिक्तीकरण और परिशोधन से अलग पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH07-T2",
+     "topic_number": 2,
+     "title": "ह्रास के कारण एवं आवश्यकता",
+     "ncert_sections": "7.3, 7.4",
+     "concepts": [
+      {
+       "concept_tag": "hras-ke-karan",
+       "learning_objective": "टूट-फूट, वैधानिक अधिकारों की समाप्ति, अप्रचलन और असामान्य कारकों को ह्रास के कारणों के रूप में पहचानना।"
+      },
+      {
+       "concept_tag": "hras-ki-avashyakta",
+       "learning_objective": "आगम-व्यय मिलान, कर, सही वित्तीय स्थिति और कानूनी अनुपालन के आधार पर ह्रास लगाने की आवश्यकता बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH07-T3",
+     "topic_number": 3,
+     "title": "ह्रास की राशि को प्रभावित करने वाले कारक",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "hras-rashi-ke-karak",
+       "learning_objective": "परिसंपत्ति की लागत, अनुमानित शुद्ध अवशेष मूल्य, ह्रास योग्य लागत और उपयोगी जीवन को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH07-T4",
+     "topic_number": 4,
+     "title": "ह्रास की गणना की विधियाँ",
+     "ncert_sections": "7.6, 7.7",
+     "concepts": [
+      {
+       "concept_tag": "seedhi-rekha-paddhati",
+       "learning_objective": "सीधी रेखा पद्धति से वार्षिक ह्रास की गणना करना।"
+      },
+      {
+       "concept_tag": "kramagat-hras-paddhati",
+       "learning_objective": "क्रमागत ह्रास (अपलिखित मूल्य) पद्धति से ह्रास की गणना करना।"
+      },
+      {
+       "concept_tag": "paddhatiyon-ki-tulna",
+       "learning_objective": "दोनों पद्धतियों की आधार, वार्षिक भार और उपयुक्तता के आधार पर तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH07-T5",
+     "topic_number": 5,
+     "title": "ह्रास का अभिलेखन एवं परिसंपत्ति का निपटान",
+     "ncert_sections": "7.8, 7.9, 7.10",
+     "concepts": [
+      {
+       "concept_tag": "hras-ka-abhilekhan",
+       "learning_objective": "ह्रास को परिसंपत्ति खाते में डालने और ह्रास प्रावधान खाता बनाने की विधियों में अंतर करना।"
+      },
+      {
+       "concept_tag": "parisampatti-ka-niptan",
+       "learning_objective": "परिसंपत्ति की बिक्री पर लाभ या हानि की गणना करना तथा परिसंपत्ति निपटान खाते का उपयोग समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH07-T6",
+     "topic_number": 6,
+     "title": "प्रावधान",
+     "ncert_sections": "7.11",
+     "concepts": [
+      {
+       "concept_tag": "pravdhan-ka-arth",
+       "learning_objective": "प्रावधान का अर्थ, उदाहरण तथा रूढ़िवादिता की अवधारणा से उसका संबंध समझाना।"
+      },
+      {
+       "concept_tag": "pravdhan-ka-lekhankan",
+       "learning_objective": "प्रावधान के सृजन और तुलन-पत्र में उसके प्रदर्शन का लेखांकन व्यवहार समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC1-CH07-T7",
+     "topic_number": 7,
+     "title": "संचय एवं गुप्त संचय",
+     "ncert_sections": "7.12, 7.13",
+     "concepts": [
+      {
+       "concept_tag": "sanchay-aur-pravdhan",
+       "learning_objective": "संचय का अर्थ समझाना और उसे प्रावधान से अलग करना।"
+      },
+      {
+       "concept_tag": "sanchay-ke-prakar",
+       "learning_objective": "सामान्य, विशिष्ट, आगम और पूँजी संचयों को उदाहरणों सहित वर्गीकृत करना।"
+      },
+      {
+       "concept_tag": "gupt-sanchay",
+       "learning_objective": "गुप्त संचय का अर्थ और उसके सृजन के तरीकों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

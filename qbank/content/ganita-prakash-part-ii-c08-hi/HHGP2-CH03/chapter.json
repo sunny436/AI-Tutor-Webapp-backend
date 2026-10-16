@@ -1,0 +1,88 @@
+{
+ "chapter_id": "HHGP2-CH03",
+ "title": "समानुपातिक तर्कण— 2",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP2-CH03-T1",
+   "topic_number": 1,
+   "title": "समानुपातिकता— पुनरावलोकन",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "samanupatik-sambandh",
+     "learning_objective": "दो अनुपातों के समानुपातिक होने का अर्थ समझना।"
+    },
+    {
+     "concept_tag": "vajra-gunan-vidhi",
+     "learning_objective": "वज्र-गुणन विधि से जाँचना कि दो अनुपात समानुपातिक हैं या नहीं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH03-T2",
+   "topic_number": 2,
+   "title": "मानचित्रों में अनुपात",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "nirupak-bhinn",
+     "learning_objective": "निरूपक भिन्न की सहायता से मानचित्र की दूरी को वास्तविक भौगोलिक दूरी में बदलना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH03-T3",
+   "topic_number": 3,
+   "title": "दो से अधिक पदों के साथ अनुपात",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "bahupadi-anupat",
+     "learning_objective": "दो से अधिक पदों वाले अनुपातों में अज्ञात राशियाँ ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH03-T4",
+   "topic_number": 4,
+   "title": "पूर्ण राशि को दिए गए अनुपात में विभाजित करना",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "anupat-mein-vibhajan",
+     "learning_objective": "किसी राशि को दो या अधिक पदों वाले अनुपात में विभाजित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH03-T5",
+   "topic_number": 5,
+   "title": "पाई का एक अंश",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "vritt-aalekh-kon",
+     "learning_objective": "वृत्त आलेख में प्रत्येक भाग का कोण आँकड़ों के अनुपात से ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH03-T6",
+   "topic_number": 6,
+   "title": "व्युत्क्रमानुपात",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "vyutkramanupat",
+     "learning_objective": "व्युत्क्रमानुपाती राशियों को पहचानना और xy = k का उपयोग करना।"
+    },
+    {
+     "concept_tag": "karya-aur-samay",
+     "learning_objective": "कार्य, समय और व्यक्तियों से जुड़े प्रश्नों में व्युत्क्रमानुपात लागू करना।"
+    }
+   ]
+  }
+ ]
+}

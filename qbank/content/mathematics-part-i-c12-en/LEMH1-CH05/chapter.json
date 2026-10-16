@@ -1,0 +1,136 @@
+{
+ "chapter_id": "LEMH1-CH05",
+ "title": "Continuity and Differentiability",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEMH1-CH05-T1",
+   "topic_number": 1,
+   "title": "Continuity of a function at a point and on its domain",
+   "ncert_sections": "5.1, 5.2",
+   "concepts": [
+    {
+     "concept_tag": "continuity-at-a-point",
+     "learning_objective": "Use the condition lim f(x) as x tends to c equals f(c) to decide whether a function is continuous at c."
+    },
+    {
+     "concept_tag": "continuity-of-piecewise-functions",
+     "learning_objective": "Find unknown constants and points of discontinuity of piecewise-defined functions using one-sided limits."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH05-T2",
+   "topic_number": 2,
+   "title": "Algebra of continuous functions",
+   "ncert_sections": "5.2.1",
+   "concepts": [
+    {
+     "concept_tag": "algebra-of-continuous-functions",
+     "learning_objective": "Apply the sum, difference, product and quotient results for continuous functions, including polynomial and rational functions."
+    },
+    {
+     "concept_tag": "continuity-of-composite-functions",
+     "learning_objective": "Use the theorem that a composite of continuous functions is continuous."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH05-T3",
+   "topic_number": 3,
+   "title": "Differentiability and its relation with continuity",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "differentiability-and-continuity",
+     "learning_objective": "Explain that every differentiable function is continuous but a continuous function need not be differentiable."
+    },
+    {
+     "concept_tag": "one-sided-derivatives",
+     "learning_objective": "Compute left-hand and right-hand derivatives to test differentiability at a point."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH05-T4",
+   "topic_number": 4,
+   "title": "Derivatives of composite and implicit functions",
+   "ncert_sections": "5.3.1, 5.3.2",
+   "concepts": [
+    {
+     "concept_tag": "chain-rule",
+     "learning_objective": "Differentiate composite functions using the chain rule."
+    },
+    {
+     "concept_tag": "implicit-differentiation",
+     "learning_objective": "Find dy/dx when x and y are related implicitly by an equation."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH05-T5",
+   "topic_number": 5,
+   "title": "Derivatives of inverse trigonometric functions",
+   "ncert_sections": "5.3.3",
+   "concepts": [
+    {
+     "concept_tag": "inverse-trigonometric-derivatives",
+     "learning_objective": "Recall and apply the derivatives of inverse trigonometric functions in their domains."
+    },
+    {
+     "concept_tag": "inverse-trigonometric-simplification",
+     "learning_objective": "Simplify inverse trigonometric expressions by a suitable substitution before differentiating."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH05-T6",
+   "topic_number": 6,
+   "title": "Exponential and logarithmic functions",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "exponential-function-derivative",
+     "learning_objective": "Differentiate functions involving e^x using the chain rule."
+    },
+    {
+     "concept_tag": "logarithmic-function-derivative",
+     "learning_objective": "State the domain of log x and differentiate functions involving the natural logarithm."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH05-T7",
+   "topic_number": 7,
+   "title": "Logarithmic differentiation",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "logarithmic-differentiation-powers",
+     "learning_objective": "Differentiate functions of the form [u(x)]^v(x) by taking logarithms."
+    },
+    {
+     "concept_tag": "logarithmic-differentiation-products",
+     "learning_objective": "Use logarithms to differentiate products and quotients of several factors."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH05-T8",
+   "topic_number": 8,
+   "title": "Parametric forms and second order derivatives",
+   "ncert_sections": "5.6, 5.7",
+   "concepts": [
+    {
+     "concept_tag": "parametric-differentiation",
+     "learning_objective": "Find dy/dx when x and y are given in terms of a parameter."
+    },
+    {
+     "concept_tag": "second-order-derivative",
+     "learning_objective": "Find second order derivatives and verify relations involving them."
+    }
+   ]
+  }
+ ]
+}

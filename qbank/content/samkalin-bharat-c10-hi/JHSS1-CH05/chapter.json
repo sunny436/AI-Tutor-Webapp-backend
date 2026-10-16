@@ -1,0 +1,132 @@
+{
+ "chapter_id": "JHSS1-CH05",
+ "title": "खनिज तथा ऊर्जा संसाधन",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHSS1-CH05-T1",
+   "topic_number": 1,
+   "title": "खनिज क्या है और खनिजों की उपस्थिति की विधियाँ",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "khanij-ki-paribhasha",
+     "learning_objective": "खनिज की परिभाषा तथा भूगोलवेत्ता और भूवैज्ञानिक द्वारा खनिजों के अध्ययन का अंतर बताना।"
+    },
+    {
+     "concept_tag": "khanijon-ki-upasthiti",
+     "learning_objective": "शिराओं, परतों, अवशिष्ट पिंड, प्लेसर निक्षेपों और महासागरीय जल में खनिजों के मिलने की विधियाँ समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSS1-CH05-T2",
+   "topic_number": 2,
+   "title": "लौह खनिज: लौह अयस्क और मैंगनीज़",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "lauh-ayask-ke-prakar",
+     "learning_objective": "मैग्नेटाइट और हेमेटाइट लौह अयस्कों की लौह मात्रा और उपयोग की तुलना करना।"
+    },
+    {
+     "concept_tag": "lauh-ayask-ki-petiyan",
+     "learning_objective": "भारत की प्रमुख लौह अयस्क पेटियों, खानों और निर्यात पत्तनों की पहचान करना।"
+    },
+    {
+     "concept_tag": "manganese",
+     "learning_objective": "इस्पात निर्माण तथा अन्य उद्योगों में मैंगनीज़ के उपयोग बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSS1-CH05-T3",
+   "topic_number": 3,
+   "title": "अलौह, अधात्विक तथा शैल खनिज",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "tanba-aur-bauxite",
+     "learning_objective": "ताँबे और बॉक्साइट के गुण, उपयोग और भारत में उनके प्रमुख उत्पादक क्षेत्र बताना।"
+    },
+    {
+     "concept_tag": "abhrak-aur-choona-patthar",
+     "learning_objective": "अभ्रक और चूना पत्थर के गुण, उपयोग और प्राप्ति क्षेत्र समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSS1-CH05-T4",
+   "topic_number": 4,
+   "title": "खनन के खतरे और खनिजों का संरक्षण",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "khanan-ke-khatre",
+     "learning_objective": "खनन से श्रमिकों के स्वास्थ्य और पर्यावरण पर पड़ने वाले प्रभाव तथा रैट-होल खनन को समझाना।"
+    },
+    {
+     "concept_tag": "khanij-sanrakshan",
+     "learning_objective": "खनिजों के सीमित और अनवीकरणीय होने के कारण तथा उनके संरक्षण के उपाय बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSS1-CH05-T5",
+   "topic_number": 5,
+   "title": "ऊर्जा संसाधन और कोयला",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "urja-sansadhan-vargikaran",
+     "learning_objective": "ऊर्जा संसाधनों को पारंपरिक और गैर-पारंपरिक स्रोतों में वर्गीकृत करना।"
+    },
+    {
+     "concept_tag": "koyla",
+     "learning_objective": "कोयले के प्रकार, भूगर्भिक युग, वितरण और कोयला आधारित उद्योगों की अवस्थिति समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSS1-CH05-T6",
+   "topic_number": 6,
+   "title": "पेट्रोलियम, प्राकृतिक गैस और विद्युत",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "petroleum",
+     "learning_objective": "भारत में पेट्रोलियम की उपस्थिति की भूगर्भिक दशाएँ और प्रमुख उत्पादक क्षेत्र बताना।"
+    },
+    {
+     "concept_tag": "prakritik-gas",
+     "learning_objective": "प्राकृतिक गैस के उपयोग, भंडार क्षेत्र और गैस पाइपलाइन जाल का महत्त्व समझाना।"
+    },
+    {
+     "concept_tag": "vidyut",
+     "learning_objective": "जलविद्युत और ताप विद्युत के उत्पादन की विधियों की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSS1-CH05-T7",
+   "topic_number": 7,
+   "title": "गैर-पारंपरिक ऊर्जा स्रोत और ऊर्जा संरक्षण",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "parmanu-aur-saur-urja",
+     "learning_objective": "परमाणु और सौर ऊर्जा के स्रोत तथा भारत में उनकी संभावनाएँ बताना।"
+    },
+    {
+     "concept_tag": "pavan-jaiv-jvar-bhutapiya",
+     "learning_objective": "पवन, बायोगैस, ज्वारीय और भूतापीय ऊर्जा के स्रोत और भारत में उनके क्षेत्र पहचानना।"
+    },
+    {
+     "concept_tag": "urja-sanrakshan",
+     "learning_objective": "सतत ऊर्जा विकास के लिए ऊर्जा संरक्षण के उपायों का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

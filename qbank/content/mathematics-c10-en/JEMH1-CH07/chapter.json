@@ -1,0 +1,108 @@
+{
+ "chapter_id": "JEMH1-CH07",
+ "title": "Coordinate Geometry",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH07-T1",
+   "topic_number": 1,
+   "title": "Coordinates of a point: abscissa and ordinate",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "abscissa-and-ordinate",
+     "learning_objective": "Relate the coordinates of a point to its distances from the y-axis and the x-axis."
+    },
+    {
+     "concept_tag": "points-on-axes",
+     "learning_objective": "Recognise that points on the x-axis have the form (x, 0) and points on the y-axis have the form (0, y)."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH07-T2",
+   "topic_number": 2,
+   "title": "Distance formula",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "distance-formula",
+     "learning_objective": "Use the distance formula to find the distance between two points with given coordinates."
+    },
+    {
+     "concept_tag": "distance-from-origin",
+     "learning_objective": "Find the distance of a point (x, y) from the origin as the square root of x squared plus y squared."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH07-T3",
+   "topic_number": 3,
+   "title": "Applications of the distance formula",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "collinearity-test",
+     "learning_objective": "Decide whether three points are collinear by comparing the distances between them."
+    },
+    {
+     "concept_tag": "classifying-figures",
+     "learning_objective": "Classify a triangle or quadrilateral from the lengths of its sides and diagonals."
+    },
+    {
+     "concept_tag": "equidistant-point",
+     "learning_objective": "Find a point, or a relation between x and y, for a point equidistant from two given points."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH07-T4",
+   "topic_number": 4,
+   "title": "Section formula for internal division",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "section-formula-internal",
+     "learning_objective": "Find the coordinates of the point dividing a line segment internally in a given ratio m1 : m2."
+    },
+    {
+     "concept_tag": "k-ratio-form",
+     "learning_objective": "Write the coordinates of a point dividing a segment in the ratio k : 1."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH07-T5",
+   "topic_number": 5,
+   "title": "Finding the ratio of division",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "finding-division-ratio",
+     "learning_objective": "Find the ratio in which a given point divides the segment joining two points."
+    },
+    {
+     "concept_tag": "division-by-axes",
+     "learning_objective": "Find the ratio in which a coordinate axis divides a segment and the point of intersection."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH07-T6",
+   "topic_number": 6,
+   "title": "Mid-point formula and its applications",
+   "ncert_sections": "7.3, 7.4",
+   "concepts": [
+    {
+     "concept_tag": "mid-point-formula",
+     "learning_objective": "Find the mid-point of a segment and points dividing it into equal parts."
+    },
+    {
+     "concept_tag": "mid-point-applications",
+     "learning_objective": "Use the mid-point formula with diameters of circles and diagonals of parallelograms."
+    }
+   ]
+  }
+ ]
+}

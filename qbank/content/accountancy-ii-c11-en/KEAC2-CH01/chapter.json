@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KEAC2-CH01",
+ "title": "Financial Statements - I",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEAC2-CH01-T1",
+   "topic_number": 1,
+   "title": "Stakeholders and their information requirements",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "internal-external-users",
+     "learning_objective": "Classify stakeholders as internal or external users and identify whether their stake is monetary or non-monetary."
+    },
+    {
+     "concept_tag": "user-information-needs",
+     "learning_objective": "Explain the objectives and accounting information requirements of owners, managers, government, prospective owners and banks."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC2-CH01-T2",
+   "topic_number": 2,
+   "title": "Distinction between capital and revenue",
+   "ncert_sections": "8.2, 8.2.1, 8.2.2, 8.2.3",
+   "concepts": [
+    {
+     "concept_tag": "capital-revenue-expenditure",
+     "learning_objective": "Distinguish capital, revenue and deferred revenue expenditure by the period of benefit and their accounting treatment."
+    },
+    {
+     "concept_tag": "capital-revenue-receipts",
+     "learning_objective": "Distinguish capital receipts from revenue receipts with examples."
+    },
+    {
+     "concept_tag": "misclassification-effects",
+     "learning_objective": "Analyse how wrong classification of capital and revenue items misstates profit and assets."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC2-CH01-T3",
+   "topic_number": 3,
+   "title": "Financial statements and items of the trading and profit and loss account",
+   "ncert_sections": "8.3, 8.4, 8.4.1, 8.4.2",
+   "concepts": [
+    {
+     "concept_tag": "financial-statements-objectives",
+     "learning_objective": "State the objectives and components of the financial statements of a sole proprietor."
+    },
+    {
+     "concept_tag": "direct-indirect-expenses",
+     "learning_objective": "Identify which items are debited to the trading account and which to the profit and loss account."
+    },
+    {
+     "concept_tag": "closing-entries",
+     "learning_objective": "Record closing entries that transfer expenses, revenues and returns to the trading and profit and loss account."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC2-CH01-T4",
+   "topic_number": 4,
+   "title": "Gross profit, net profit and cost of goods sold",
+   "ncert_sections": "8.4.3, 8.4.4",
+   "concepts": [
+    {
+     "concept_tag": "gross-net-profit",
+     "learning_objective": "Compute gross profit and net profit and trace how the classification of items affects each."
+    },
+    {
+     "concept_tag": "cost-of-goods-sold",
+     "learning_objective": "Compute cost of goods sold using opening stock, purchases, direct expenses and closing stock."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC2-CH01-T5",
+   "topic_number": 5,
+   "title": "Operating profit (EBIT)",
+   "ncert_sections": "8.5",
+   "concepts": [
+    {
+     "concept_tag": "operating-profit-ebit",
+     "learning_objective": "Explain the meaning of operating profit and compute it from net profit."
+    },
+    {
+     "concept_tag": "non-operating-items",
+     "learning_objective": "Identify non-operating expenses and incomes, including abnormal and purely financial items."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC2-CH01-T6",
+   "topic_number": 6,
+   "title": "Balance sheet and its items",
+   "ncert_sections": "8.6, 8.6.1, 8.6.2",
+   "concepts": [
+    {
+     "concept_tag": "balance-sheet-preparation",
+     "learning_objective": "Explain the nature of the balance sheet and show capital after adjusting profit and drawings."
+    },
+    {
+     "concept_tag": "balance-sheet-items",
+     "learning_objective": "Classify balance sheet items as current, fixed, intangible, investments, long-term liabilities or capital."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC2-CH01-T7",
+   "topic_number": 7,
+   "title": "Marshalling, grouping and opening entry",
+   "ncert_sections": "8.6.3, 8.7",
+   "concepts": [
+    {
+     "concept_tag": "marshalling-order",
+     "learning_objective": "Arrange assets and liabilities in the order of liquidity or permanence."
+    },
+    {
+     "concept_tag": "grouping-of-items",
+     "learning_objective": "Group balance sheet items of similar nature under common headings."
+    },
+    {
+     "concept_tag": "opening-entry",
+     "learning_objective": "Pass the opening entry that carries balance sheet accounts into the next accounting period."
+    }
+   ]
+  }
+ ]
+}

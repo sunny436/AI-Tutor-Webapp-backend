@@ -1,0 +1,152 @@
+{
+ "chapter_id": "LHBO1-CH02",
+ "title": "मानव जनन",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHBO1-CH02-T1",
+   "topic_number": 1,
+   "title": "पुरुष जनन तंत्र",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "vrishan-ki-sanrachna",
+     "learning_objective": "वृषण की संरचना तथा शुक्रजनक नलिकाओं, सर्टोली कोशिकाओं और लीडिग कोशिकाओं के कार्य समझना।"
+    },
+    {
+     "concept_tag": "sahayak-vahiniyan-granthiyan",
+     "learning_objective": "पुरुष सहायक नलिकाओं का क्रम और सहायक ग्रंथियों के स्राव (शुक्रीय प्लाज्मा) का महत्त्व बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH02-T2",
+   "topic_number": 2,
+   "title": "स्त्री जनन तंत्र",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "andashay-andvahini",
+     "learning_objective": "अंडाशय और अंडवाहिनी के विभिन्न भागों की संरचना और कार्य पहचानना।"
+    },
+    {
+     "concept_tag": "garbhashay-ki-bhitti",
+     "learning_objective": "गर्भाशय की आकृति, उसकी भित्ति की तीन परतों और जनन नाल को समझना।"
+    },
+    {
+     "concept_tag": "stan-granthi",
+     "learning_objective": "स्तन ग्रंथि की संरचना और दूध के बाहर आने के मार्ग का वर्णन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH02-T3",
+   "topic_number": 3,
+   "title": "युग्मकजनन: शुक्राणुजनन",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "shukranujanan-prakriya",
+     "learning_objective": "शुक्राणुजनन के चरणों और प्रत्येक चरण में गुणसूत्र संख्या की गणना करना।"
+    },
+    {
+     "concept_tag": "shukranujanan-hormone-niyantran",
+     "learning_objective": "शुक्राणुजनन के नियमन में जीएनआरएच, एलएच, एफएसएच और एंड्रोजन की भूमिका समझाना।"
+    },
+    {
+     "concept_tag": "shukranu-ki-sanrachna",
+     "learning_objective": "शुक्राणु की संरचना और सामान्य जनन क्षमता के मानदंडों की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH02-T4",
+   "topic_number": 4,
+   "title": "युग्मकजनन: अंडजनन",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "andjanan-ke-charan",
+     "learning_objective": "अंडजनन के आरंभ, अंडक की अवस्थाओं और अर्धसूत्री विभाजन की विशेषताओं को समझना।"
+    },
+    {
+     "concept_tag": "putak-vikas",
+     "learning_objective": "प्राथमिक पुटक से ग्राफी पुटक तक पुटक विकास के क्रम को पहचानना।"
+    },
+    {
+     "concept_tag": "shukranujanan-andjanan-tulna",
+     "learning_objective": "शुक्राणुजनन और अंडजनन के बीच प्रमुख अंतरों का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH02-T5",
+   "topic_number": 5,
+   "title": "आर्तव चक्र",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "artav-chakra-pravasthayen",
+     "learning_objective": "आर्तव चक्र की प्रावस्थाओं में अंडाशय और गर्भाशय में होने वाले परिवर्तनों को समझना।"
+    },
+    {
+     "concept_tag": "artav-chakra-hormone",
+     "learning_objective": "आर्तव चक्र में पीयूष और अंडाशयी हार्मोनों की भूमिका का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH02-T6",
+   "topic_number": 6,
+   "title": "निषेचन एवं अंतर्रोपण",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "nishechan",
+     "learning_objective": "निषेचन का स्थान, प्रक्रिया और एक ही शुक्राणु के प्रवेश को सुनिश्चित करने वाली क्रिया समझना।"
+    },
+    {
+     "concept_tag": "ling-nirdharan",
+     "learning_objective": "युग्मनज में शिशु के लिंग निर्धारण के गुणसूत्रीय आधार की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "viddalan-antarropan",
+     "learning_objective": "विदलन, तूतक, कोरकपुटी और अंतर्रोपण की घटनाओं का क्रम समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH02-T7",
+   "topic_number": 7,
+   "title": "सगर्भता एवं भ्रूणीय परिवर्धन",
+   "ncert_sections": "2.6",
+   "concepts": [
+    {
+     "concept_tag": "apra-aur-hormone",
+     "learning_objective": "अपरा की रचना, उसके कार्यों और सगर्भता के हार्मोनों को पहचानना।"
+    },
+    {
+     "concept_tag": "bhrun-parivardhan",
+     "learning_objective": "जनन स्तरों के बनने और सगर्भता के विभिन्न महीनों में भ्रूण के विकास को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH02-T8",
+   "topic_number": 8,
+   "title": "प्रसव एवं दुग्धस्रवण",
+   "ncert_sections": "2.7",
+   "concepts": [
+    {
+     "concept_tag": "prasav",
+     "learning_objective": "प्रसव को प्रेरित करने वाली तंत्रिका-अंतःस्रावी क्रियाविधि की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "dugdhsravan",
+     "learning_objective": "दुग्धस्रवण और प्रारंभिक दूध (खीस) के महत्त्व को समझना।"
+    }
+   ]
+  }
+ ]
+}

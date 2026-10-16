@@ -1,0 +1,116 @@
+{
+ "chapter_id": "GEGP2-CH02",
+ "title": "Operations with Integers",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP2-CH02-T1",
+   "topic_number": 1,
+   "title": "A Quick Recap of Integers",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "sum-difference-puzzle",
+     "learning_objective": "Find two integers when their sum and difference are given."
+    },
+    {
+     "concept_tag": "number-line-movement",
+     "learning_objective": "Model movements on a number line as integers with magnitude and direction and add them to find a final position."
+    },
+    {
+     "concept_tag": "additive-inverse-subtraction",
+     "learning_objective": "Use tokens and zero pairs to show that subtracting an integer is the same as adding its additive inverse."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH02-T2",
+   "topic_number": 2,
+   "title": "Multiplication of Integers Using Tokens",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "positive-multiplier-placing-tokens",
+     "learning_objective": "Interpret a product with a positive multiplier as placing tokens into an empty bag repeatedly."
+    },
+    {
+     "concept_tag": "negative-multiplier-removing-tokens",
+     "learning_objective": "Interpret a product with a negative multiplier as removing tokens, using zero pairs when needed."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH02-T3",
+   "topic_number": 3,
+   "title": "Patterns, Sign Rules and Commutativity of Multiplication",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "sign-rules-multiplication",
+     "learning_objective": "State and apply the sign rules for the product of two integers, including Brahmagupta's rules."
+    },
+    {
+     "concept_tag": "product-with-minus-one",
+     "learning_objective": "Explain that 1 x a = a and (-1) x a = -a for every integer a."
+    },
+    {
+     "concept_tag": "commutativity-multiplication",
+     "learning_objective": "Justify that integer multiplication is commutative, a x b = b x a."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH02-T4",
+   "topic_number": 4,
+   "title": "Using Integer Multiplication in Real Situations",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "integer-contexts-marks-and-money",
+     "learning_objective": "Represent marks, profit and loss as integers and compute totals with multiplication and addition."
+    },
+    {
+     "concept_tag": "integer-contexts-motion-temperature",
+     "learning_objective": "Represent rising, falling and descending quantities as integers and find the resulting position or value."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH02-T5",
+   "topic_number": 5,
+   "title": "Division of Integers",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "division-as-inverse-multiplication",
+     "learning_objective": "Rewrite an integer division as a missing-factor multiplication and solve it."
+    },
+    {
+     "concept_tag": "sign-rules-division",
+     "learning_objective": "Apply the sign rules for the quotient of two integers."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH02-T6",
+   "topic_number": 6,
+   "title": "Expressions Using Integers",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "associative-property-multiplication",
+     "learning_objective": "Recognise that integer multiplication is associative and that three or more integers can be multiplied in any order."
+    },
+    {
+     "concept_tag": "sign-of-product-of-many-integers",
+     "learning_objective": "Find the sign of a product of many integers from the number of negative factors."
+    },
+    {
+     "concept_tag": "distributive-property-integers",
+     "learning_objective": "Apply the distributive property a x (b + c) = a x b + a x c to integers."
+    }
+   ]
+  }
+ ]
+}

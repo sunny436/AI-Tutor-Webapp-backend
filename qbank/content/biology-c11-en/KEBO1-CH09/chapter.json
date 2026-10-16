@@ -1,0 +1,148 @@
+{
+ "chapter_id": "KEBO1-CH09",
+ "title": "Biomolecules",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH09-T1",
+   "topic_number": 1,
+   "title": "How to analyse chemical composition",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "acid-soluble-and-insoluble-fractions",
+     "learning_objective": "Describe how grinding tissue in trichloroacetic acid separates an acid-soluble pool from an acid-insoluble fraction."
+    },
+    {
+     "concept_tag": "elemental-composition-and-ash",
+     "learning_objective": "Compare the elemental composition of living tissue and earth's crust and explain what wet weight, dry weight and ash reveal."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH09-T2",
+   "topic_number": 2,
+   "title": "Small biomolecules: amino acids, lipids and nucleotides",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "amino-acid-structure",
+     "learning_objective": "Identify the substituent groups of an alpha-amino acid and classify amino acids by their R groups."
+    },
+    {
+     "concept_tag": "lipids-and-glycerides",
+     "learning_objective": "Distinguish fatty acids, glycerides and phospholipids and relate saturation and melting point to fats and oils."
+    },
+    {
+     "concept_tag": "nucleosides-and-nucleotides",
+     "learning_objective": "Distinguish nitrogen bases, nucleosides and nucleotides with examples."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH09-T3",
+   "topic_number": 3,
+   "title": "Primary and secondary metabolites; biomacromolecules",
+   "ncert_sections": "9.2, 9.3",
+   "concepts": [
+    {
+     "concept_tag": "primary-secondary-metabolites",
+     "learning_objective": "Distinguish primary from secondary metabolites and give examples of secondary metabolites."
+    },
+    {
+     "concept_tag": "micro-and-macromolecules",
+     "learning_objective": "Explain the molecular-weight basis of micromolecules and macromolecules and why lipids appear in the acid-insoluble fraction."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH09-T4",
+   "topic_number": 4,
+   "title": "Proteins and polysaccharides",
+   "ncert_sections": "9.4, 9.5",
+   "concepts": [
+    {
+     "concept_tag": "protein-heteropolymer-functions",
+     "learning_objective": "Explain why proteins are heteropolymers and relate examples of proteins to their functions."
+    },
+    {
+     "concept_tag": "polysaccharide-types",
+     "learning_objective": "Compare cellulose, starch, glycogen, inulin and chitin in composition, structure and role."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH09-T5",
+   "topic_number": 5,
+   "title": "Nucleic acids and structure of proteins",
+   "ncert_sections": "9.6, 9.7",
+   "concepts": [
+    {
+     "concept_tag": "nucleotide-components",
+     "learning_objective": "Identify the components of a nucleotide and distinguish DNA from RNA by their sugar and bases."
+    },
+    {
+     "concept_tag": "protein-structure-levels",
+     "learning_objective": "Describe the primary, secondary, tertiary and quaternary levels of protein structure."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH09-T6",
+   "topic_number": 6,
+   "title": "Enzymes: chemical reactions and how enzymes act",
+   "ncert_sections": "9.8, 9.8.1, 9.8.2, 9.8.3",
+   "concepts": [
+    {
+     "concept_tag": "enzyme-nature-and-active-site",
+     "learning_objective": "State the nature of enzymes and ribozymes and the role of the active site."
+    },
+    {
+     "concept_tag": "reaction-rate-and-metabolic-pathway",
+     "learning_objective": "Interpret reaction rates, enzyme-catalysed acceleration and the idea of a metabolic pathway."
+    },
+    {
+     "concept_tag": "activation-energy-and-es-complex",
+     "learning_objective": "Explain how enzymes lower activation energy through formation of the enzyme-substrate complex."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH09-T7",
+   "topic_number": 7,
+   "title": "Factors affecting enzyme activity",
+   "ncert_sections": "9.8.4",
+   "concepts": [
+    {
+     "concept_tag": "temperature-and-ph",
+     "learning_objective": "Explain the effect of temperature and pH on enzyme activity, including optimum values and denaturation."
+    },
+    {
+     "concept_tag": "substrate-concentration-vmax",
+     "learning_objective": "Interpret how reaction velocity changes with substrate concentration up to Vmax."
+    },
+    {
+     "concept_tag": "competitive-inhibition",
+     "learning_objective": "Explain competitive inhibition using the example of malonate and succinic dehydrogenase."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH09-T8",
+   "topic_number": 8,
+   "title": "Classification of enzymes and co-factors",
+   "ncert_sections": "9.8.5, 9.8.6",
+   "concepts": [
+    {
+     "concept_tag": "enzyme-classes",
+     "learning_objective": "Classify enzymes into the six classes based on the reactions they catalyse."
+    },
+    {
+     "concept_tag": "cofactor-types",
+     "learning_objective": "Distinguish apoenzyme, prosthetic groups, co-enzymes and metal ion cofactors with examples."
+    }
+   ]
+  }
+ ]
+}

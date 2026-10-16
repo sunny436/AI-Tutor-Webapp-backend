@@ -1,0 +1,104 @@
+{
+ "chapter_id": "GEGP1-CH02",
+ "title": "Arithmetic Expressions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP1-CH02-T1",
+   "topic_number": 1,
+   "title": "Simple expressions and their values",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "expression-and-its-value",
+     "learning_objective": "Find the value of a simple arithmetic expression and recognise that different expressions can have the same value."
+    },
+    {
+     "concept_tag": "writing-expressions-from-situations",
+     "learning_objective": "Write an arithmetic expression that describes an everyday situation."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH02-T2",
+   "topic_number": 2,
+   "title": "Comparing expressions",
+   "ncert_sections": "2.1 (Comparing Expressions)",
+   "concepts": [
+    {
+     "concept_tag": "comparing-expressions-by-value",
+     "learning_objective": "Compare two expressions using =, < or > according to their values."
+    },
+    {
+     "concept_tag": "comparing-without-calculating",
+     "learning_objective": "Compare sums and differences by reasoning about how the numbers differ, without full calculation."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH02-T3",
+   "topic_number": 3,
+   "title": "Brackets and terms in expressions",
+   "ncert_sections": "2.2 (Brackets in Expressions, Terms in Expressions)",
+   "concepts": [
+    {
+     "concept_tag": "brackets-order-of-operations",
+     "learning_objective": "Use brackets to show which operation in an expression is done first."
+    },
+    {
+     "concept_tag": "identifying-terms",
+     "learning_objective": "Identify the terms of an expression by writing subtractions as additions of inverses."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH02-T4",
+   "topic_number": 4,
+   "title": "Swapping, grouping and evaluating with terms",
+   "ncert_sections": "2.2 (Swapping and Grouping, More Expressions and Their Terms)",
+   "concepts": [
+    {
+     "concept_tag": "commutative-associative-addition",
+     "learning_objective": "Explain that adding terms in any order or grouping gives the same sum."
+    },
+    {
+     "concept_tag": "evaluating-expressions-with-terms",
+     "learning_objective": "Evaluate an expression by first evaluating each term and then adding the terms."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH02-T5",
+   "topic_number": 5,
+   "title": "Removing brackets I and tinkering the terms",
+   "ncert_sections": "2.2 (Removing Brackets I, Tinker the Terms I)",
+   "concepts": [
+    {
+     "concept_tag": "removing-brackets-after-minus",
+     "learning_objective": "Remove brackets correctly, changing the signs of the terms when the bracket is preceded by a minus sign."
+    },
+    {
+     "concept_tag": "tinkering-terms",
+     "learning_objective": "Predict how the value of an expression changes when one of its terms is increased or decreased."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH02-T6",
+   "topic_number": 6,
+   "title": "Removing brackets II: the distributive property",
+   "ncert_sections": "2.2 (Removing Brackets II, Tinker the Terms II)",
+   "concepts": [
+    {
+     "concept_tag": "distributive-property",
+     "learning_objective": "Use the fact that a multiple of a sum or difference equals the sum or difference of the multiples."
+    },
+    {
+     "concept_tag": "distributive-mental-multiplication",
+     "learning_objective": "Use the distributive property to find products quickly by splitting a number."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "chapter_id": "LHAC2-CH01",
+ "title": "अंशपूँजी के लिए लेखांकन",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHAC2-CH01-T1",
+   "topic_number": 1,
+   "title": "कंपनी की विशेषताएँ एवं प्रकार",
+   "ncert_sections": "1.1, 1.2",
+   "concepts": [
+    {
+     "concept_tag": "company-ki-visheshtayen",
+     "learning_objective": "विद्यार्थी कंपनी की प्रमुख विशेषताओं जैसे पृथक वैधानिक अस्तित्व और शाश्वत उत्तराधिकार को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "company-ke-prakar",
+     "learning_objective": "विद्यार्थी सदस्यों के दायित्व और संख्या के आधार पर कंपनियों के प्रकार पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH01-T2",
+   "topic_number": 2,
+   "title": "कंपनी की अंशपूँजी एवं उसका वर्गीकरण",
+   "ncert_sections": "1.3, 1.3.1",
+   "concepts": [
+    {
+     "concept_tag": "ansh-punji-vargikaran",
+     "learning_objective": "विद्यार्थी अधिकृत, निर्गमित, अभिदत्त, याचित एवं प्रदत्त पूँजी में अंतर कर उनकी गणना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "aarakshit-punji",
+     "learning_objective": "विद्यार्थी आरक्षित पूँजी का अर्थ और उसका पूँजी संचय से अंतर समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH01-T3",
+   "topic_number": 3,
+   "title": "अंशों की श्रेणियाँ एवं प्रकृति",
+   "ncert_sections": "1.4, 1.4.1, 1.4.2",
+   "concepts": [
+    {
+     "concept_tag": "adhimani-ansh",
+     "learning_objective": "विद्यार्थी अधिमानी अंशों के लाभांश एवं पूँजी वापसी संबंधी अधिकार बता सकेंगे।"
+    },
+    {
+     "concept_tag": "samta-ansh",
+     "learning_objective": "विद्यार्थी समता अंशों की प्रकृति और उन पर लाभांश की अनिश्चितता समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH01-T4",
+   "topic_number": 4,
+   "title": "अंशों का निर्गमन, बकाया माँग एवं अग्रिम माँग",
+   "ncert_sections": "1.5, 1.6, 1.6.1, 1.6.2",
+   "concepts": [
+    {
+     "concept_tag": "nyuntam-abhidan",
+     "learning_objective": "विद्यार्थी अंश निर्गमन के चरण और न्यूनतम अभिदान की शर्त समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "bakaya-maang",
+     "learning_objective": "विद्यार्थी बकाया माँग पर ब्याज की गणना और उसका लेखांकन कर सकेंगे।"
+    },
+    {
+     "concept_tag": "agrim-maang",
+     "learning_objective": "विद्यार्थी अग्रिम माँग पर ब्याज की गणना कर उसे तुलन-पत्र में सही शीर्ष में दिखा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH01-T5",
+   "topic_number": 5,
+   "title": "अधि-अभिदान, अधिमूल्य पर निर्गमन एवं रोकड़ के अतिरिक्त प्रतिफल में निर्गमन",
+   "ncert_sections": "1.6.3, 1.6.4, 1.6.5, 1.6.6, 1.6.7",
+   "concepts": [
+    {
+     "concept_tag": "adhi-abhidan",
+     "learning_objective": "विद्यार्थी अधि-अभिदान की दशा में आनुपातिक आबंटन का लेखांकन कर सकेंगे।"
+    },
+    {
+     "concept_tag": "pratibhuti-premium",
+     "learning_objective": "विद्यार्थी प्रतिभूति प्रीमियम का लेखांकन और उसके वैध उपयोग बता सकेंगे।"
+    },
+    {
+     "concept_tag": "nakad-ke-atirikt-pratiphal",
+     "learning_objective": "विद्यार्थी परिसंपत्ति विक्रेताओं को जारी किए जाने वाले अंशों की संख्या ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH01-T6",
+   "topic_number": 6,
+   "title": "अंशों का हरण एवं पुनः निर्गमन",
+   "ncert_sections": "1.7, 1.7.1",
+   "concepts": [
+    {
+     "concept_tag": "ansh-haran",
+     "learning_objective": "विद्यार्थी अंशों के हरण की रोज़नामचा प्रविष्टि और हरण की गई राशि ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "punah-nirgaman",
+     "learning_objective": "विद्यार्थी हरण किए गए अंशों के पुनः निर्गमन पर पूँजी आरक्षित में हस्तांतरित राशि की गणना कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

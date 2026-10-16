@@ -1,0 +1,1294 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "flamingo-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "english",
+  "language": "english",
+  "title": "Flamingo",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lefl1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEFL1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "The Last Lesson",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEFL1-CH01-T1",
+     "topic_number": 1,
+     "title": "Background: the author and the Franco-Prussian War",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "historical-context",
+       "learning_objective": "Explain the historical setting of the story: France's defeat in the Franco-Prussian War and the passing of Alsace and Lorraine to Prussia."
+      },
+      {
+       "concept_tag": "author-and-setting",
+       "learning_objective": "Identify the author, the narrator and the point of view from which the story is told."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH01-T2",
+     "topic_number": 2,
+     "title": "Franz's morning: temptation, dread and the bulletin-board",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "franz-temptation-and-dread",
+       "learning_objective": "Describe Franz's fear of a scolding and the temptations he resisted on his way to school."
+      },
+      {
+       "concept_tag": "bulletin-board-bad-news",
+       "learning_objective": "Interpret the significance of the crowd at the town-hall bulletin-board and Wachter's remark."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH01-T3",
+     "topic_number": 3,
+     "title": "The unusual classroom: stillness, M. Hamel's dress and the village elders",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "unusual-classroom-atmosphere",
+       "learning_objective": "Analyse how the silence of the classroom and M. Hamel's special clothes signal a solemn occasion."
+      },
+      {
+       "concept_tag": "village-elders-presence",
+       "learning_objective": "Explain why old Hauser and the other villagers sat on the back benches."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH01-T4",
+     "topic_number": 4,
+     "title": "The order from Berlin and M. Hamel's message on language",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "order-from-berlin",
+       "learning_objective": "State the order from Berlin and its effect on the school."
+      },
+      {
+       "concept_tag": "procrastination-and-blame",
+       "learning_objective": "Evaluate M. Hamel's view that everyone, including himself, was to blame for putting off learning."
+      },
+      {
+       "concept_tag": "language-and-identity",
+       "learning_objective": "Interpret M. Hamel's idea that holding fast to one's language is like holding the key to one's prison."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH01-T5",
+     "topic_number": 5,
+     "title": "The last lessons and M. Hamel's farewell",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "final-lessons-and-farewell",
+       "learning_objective": "Describe the writing lesson, M. Hamel's last moments in the classroom and his farewell."
+      },
+      {
+       "concept_tag": "pigeons-symbolism",
+       "learning_objective": "Interpret Franz's thought about the pigeons being made to sing in German."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH01-T6",
+     "topic_number": 6,
+     "title": "Working with words and noticing form",
+     "ncert_sections": "Working with words; Noticing form",
+     "concepts": [
+      {
+       "concept_tag": "vocabulary-in-context",
+       "learning_objective": "Infer the meanings of expressions such as 'thunderclap', 'in unison' and 'in plenty of time' from the context."
+      },
+      {
+       "concept_tag": "word-origins",
+       "learning_objective": "Recognise that English has borrowed words from many languages, as shown in the chapter's examples."
+      },
+      {
+       "concept_tag": "past-perfect-tense",
+       "learning_objective": "Identify the past perfect form in the story and explain its use to show an earlier past."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEFL1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Lost Spring",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEFL1-CH02-T1",
+     "topic_number": 1,
+     "title": "Saheb, his name and the author's hollow promise",
+     "ncert_sections": "Sometimes I find a Rupee in the garbage (opening)",
+     "concepts": [
+      {
+       "concept_tag": "saheb-origins-and-migration",
+       "learning_objective": "Recall where Saheb came from and why his family migrated to the city."
+      },
+      {
+       "concept_tag": "hollow-promises",
+       "learning_objective": "Explain how casual promises to poor children reflect the bleakness of their world."
+      },
+      {
+       "concept_tag": "irony-of-saheb-name",
+       "learning_objective": "Interpret the irony of the name Saheb-e-Alam."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH02-T2",
+     "topic_number": 2,
+     "title": "Barefoot children: tradition or poverty",
+     "ncert_sections": "Sometimes I find a Rupee in the garbage (barefoot boys; the Udipi story)",
+     "concepts": [
+      {
+       "concept_tag": "barefoot-tradition-vs-poverty",
+       "learning_objective": "Evaluate the explanations offered for children going barefoot."
+      },
+      {
+       "concept_tag": "udipi-shoes-story",
+       "learning_objective": "Interpret what the Udipi temple story shows about change and lasting poverty."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH02-T3",
+     "topic_number": 3,
+     "title": "Seemapuri and the life of ragpickers",
+     "ncert_sections": "Sometimes I find a Rupee in the garbage (Seemapuri)",
+     "concepts": [
+      {
+       "concept_tag": "seemapuri-squatters-life",
+       "learning_objective": "Describe the living conditions and status of the ragpickers of Seemapuri."
+      },
+      {
+       "concept_tag": "garbage-as-gold",
+       "learning_objective": "Compare what garbage means to the children and to the elders of Seemapuri."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH02-T4",
+     "topic_number": 4,
+     "title": "Saheb at the tennis club and the tea stall",
+     "ncert_sections": "Sometimes I find a Rupee in the garbage (closing)",
+     "concepts": [
+      {
+       "concept_tag": "tennis-shoes-and-unreachable-dreams",
+       "learning_objective": "Interpret the tennis shoes and the game as symbols of what is beyond Saheb's reach."
+      },
+      {
+       "concept_tag": "loss-of-freedom-at-tea-stall",
+       "learning_objective": "Analyse how a paid job at the tea stall costs Saheb his freedom."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH02-T5",
+     "topic_number": 5,
+     "title": "Mukesh and the bangle makers of Firozabad",
+     "ncert_sections": "I want to drive a car (Firozabad and Mukesh's home)",
+     "concepts": [
+      {
+       "concept_tag": "firozabad-bangle-industry-hazards",
+       "learning_objective": "Identify Firozabad's bangle industry and the hazards of working in it."
+      },
+      {
+       "concept_tag": "mukesh-family-and-home",
+       "learning_objective": "Describe Mukesh's home and family and the poverty they live in."
+      },
+      {
+       "concept_tag": "bangles-and-suhaag",
+       "learning_objective": "Explain the irony between the sanctity of bangles and the misery of their makers."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH02-T6",
+     "topic_number": 6,
+     "title": "The vicious circle and Mukesh's dream",
+     "ncert_sections": "I want to drive a car (closing)",
+     "concepts": [
+      {
+       "concept_tag": "karam-and-tradition",
+       "learning_objective": "Explain how belief in destiny and caste keeps the bangle makers in their work."
+      },
+      {
+       "concept_tag": "vicious-circle-of-exploitation",
+       "learning_objective": "Analyse the forces that keep the bangle makers trapped in poverty."
+      },
+      {
+       "concept_tag": "mukesh-dream-and-daring",
+       "learning_objective": "Contrast Mukesh's dream with his family's acceptance of their lot."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH02-T7",
+     "topic_number": 7,
+     "title": "Literary devices and vocabulary in Lost Spring",
+     "ncert_sections": "Thinking about language",
+     "concepts": [
+      {
+       "concept_tag": "identifying-figures-of-speech",
+       "learning_objective": "Identify hyperbole, simile, metaphor and irony in lines from the text."
+      },
+      {
+       "concept_tag": "vocabulary-in-context",
+       "learning_objective": "Infer the meaning of words and phrases from their context in the text."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEFL1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Deep Water",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEFL1-CH03-T1",
+     "topic_number": 1,
+     "title": "About the author and the roots of the fear",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "author-and-source",
+       "learning_objective": "Identify the author, the source of the excerpt and the purpose of the essay."
+      },
+      {
+       "concept_tag": "early-aversion-to-water",
+       "learning_objective": "Explain how Douglas's early experiences created an aversion to water."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH03-T2",
+     "topic_number": 2,
+     "title": "The misadventure in the Y.M.C.A. pool",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "the-misadventure",
+       "learning_objective": "Recall the events of the near-drowning and the plan Douglas made to save himself."
+      },
+      {
+       "concept_tag": "vivid-portrayal-of-panic",
+       "learning_objective": "Analyse the details that make the description of panic vivid."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH03-T3",
+     "topic_number": 3,
+     "title": "The lasting effects of the fear",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "after-effects-of-trauma",
+       "learning_objective": "Describe the immediate physical and emotional effects of the incident."
+      },
+      {
+       "concept_tag": "haunting-fear-in-adult-life",
+       "learning_objective": "Explain how the fear of water handicapped Douglas over the years."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH03-T4",
+     "topic_number": 4,
+     "title": "The instructor builds a swimmer",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "instructor-method",
+       "learning_objective": "Describe the step-by-step method the instructor used to train Douglas."
+      },
+      {
+       "concept_tag": "persistence-and-practice",
+       "learning_objective": "Evaluate the role of patience and repeated practice in overcoming fear."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH03-T5",
+     "topic_number": 5,
+     "title": "Testing the victory over fear",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "testing-the-conquest",
+       "learning_objective": "Explain how Douglas tested himself to make sure the terror had gone."
+      },
+      {
+       "concept_tag": "conquering-residual-terror",
+       "learning_objective": "Interpret how Douglas faced the traces of terror that remained."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH03-T6",
+     "topic_number": 6,
+     "title": "Theme, language and narrative style",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "fear-itself-theme",
+       "learning_objective": "Interpret the larger meaning Douglas draws from conquering fear."
+      },
+      {
+       "concept_tag": "narrative-style-and-vocabulary",
+       "learning_objective": "Interpret key words, images and the first-person narrative style."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEFL1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "The Rattrap",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEFL1-CH04-T1",
+     "topic_number": 1,
+     "title": "The peddler and his rattrap idea",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "peddler-circumstances",
+       "learning_objective": "Describe the peddler's poverty and way of life at the start of the story."
+      },
+      {
+       "concept_tag": "rattrap-metaphor",
+       "learning_objective": "Explain the peddler's idea that the whole world is a big rattrap and why it pleased him."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH04-T2",
+     "topic_number": 2,
+     "title": "The crofter's hospitality and the theft",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "crofter-loneliness",
+       "learning_objective": "Explain why the lonely old crofter welcomed and confided in the peddler."
+      },
+      {
+       "concept_tag": "betrayal-of-trust",
+       "learning_objective": "Analyse how the peddler betrayed the crofter's trust by stealing the thirty kronor."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH04-T3",
+     "topic_number": 3,
+     "title": "Lost in the forest and the forge at Ramsjo",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "forest-as-trap",
+       "learning_objective": "Interpret the peddler's wandering in the forest as his own fall into the rattrap."
+      },
+      {
+       "concept_tag": "ironworks-setting",
+       "learning_objective": "Describe the forge at Ramsjo Ironworks and how the blacksmiths received the tramp."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH04-T4",
+     "topic_number": 4,
+     "title": "Mistaken identity and Edla's invitation",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mistaken-identity",
+       "learning_objective": "Explain how the ironmaster mistook the peddler for an old comrade and why the peddler played along."
+      },
+      {
+       "concept_tag": "edla-persuasion",
+       "learning_objective": "Explain how Edla's kindness persuaded the frightened peddler to come to the manor house."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH04-T5",
+     "topic_number": 5,
+     "title": "Christmas Eve and the truth revealed",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ironmaster-vs-edla",
+       "learning_objective": "Compare the ironmaster's and Edla's attitudes towards the stranger once the truth comes out."
+      },
+      {
+       "concept_tag": "peddler-defence",
+       "learning_objective": "Interpret the peddler's defence and his warning to the ironmaster about the rattrap."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH04-T6",
+     "topic_number": 6,
+     "title": "The gift, the letter and redemption",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "letter-and-signature",
+       "learning_objective": "Explain the meaning of the peddler's parting gift, his letter and his signature."
+      },
+      {
+       "concept_tag": "redemption-through-kindness",
+       "learning_objective": "Evaluate how trust and kindness awaken the essential goodness in the peddler."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH04-T7",
+     "topic_number": 7,
+     "title": "Language: words and reflexive pronouns",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "reflexive-pronouns",
+       "learning_objective": "Distinguish the emphatic and the reflexive use of pronouns ending in -self in the story."
+      },
+      {
+       "concept_tag": "words-in-context",
+       "learning_objective": "Infer the meaning of words and expressions from their context in the story."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEFL1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Indigo",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEFL1-CH05-T1",
+     "topic_number": 1,
+     "title": "Rajkumar Shukla and the road to Champaran",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rajkumar-shukla-tenacity",
+       "learning_objective": "Describe how Rajkumar Shukla's persistence brought Gandhi to Champaran."
+      },
+      {
+       "concept_tag": "journey-to-champaran",
+       "learning_objective": "Trace Gandhi's journey from Lucknow to Muzaffarpur and explain what it reveals about social attitudes of the time."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH05-T2",
+     "topic_number": 2,
+     "title": "The indigo sharecropping system",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "indigo-sharecropping-system",
+       "learning_objective": "Explain the 15 per cent indigo arrangement and how synthetic indigo changed it."
+      },
+      {
+       "concept_tag": "freedom-from-fear",
+       "learning_objective": "Explain why Gandhi held that freedom from fear mattered more to the peasants than law courts."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH05-T3",
+     "topic_number": 3,
+     "title": "Defiance and trial at Motihari",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "civil-disobedience-motihari",
+       "learning_objective": "Analyse how Gandhi's peaceful defiance at Motihari led to the first triumph of civil disobedience in modern India."
+      },
+      {
+       "concept_tag": "conflict-of-duties",
+       "learning_objective": "Interpret Gandhi's 'conflict of duties' and his appeal to the voice of conscience."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH05-T4",
+     "topic_number": 4,
+     "title": "The lawyers' resolve, the inquiry and the settlement",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lawyers-commitment",
+       "learning_objective": "Explain how Gandhi's example changed the attitude of the Bihar lawyers."
+      },
+      {
+       "concept_tag": "refund-settlement",
+       "learning_objective": "Evaluate why Gandhi accepted a 25 per cent refund and what it achieved for the peasants."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH05-T5",
+     "topic_number": 5,
+     "title": "Social reform, self-reliance and the Gandhian pattern",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "social-and-health-work",
+       "learning_objective": "Describe the educational, health and sanitation work Gandhi began in Champaran villages."
+      },
+      {
+       "concept_tag": "self-reliance-lesson",
+       "learning_objective": "Explain the lesson in self-reliance Gandhi taught through the Andrews episode."
+      },
+      {
+       "concept_tag": "gandhian-pattern",
+       "learning_objective": "Interpret why Champaran was a turning point and how Gandhi's politics were tied to people's daily problems."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH05-T6",
+     "topic_number": 6,
+     "title": "Vocabulary and language in 'Indigo'",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "legal-vocabulary",
+       "learning_objective": "Identify words related to legal procedures and infer word meanings from context."
+      },
+      {
+       "concept_tag": "narrative-technique-and-punctuation",
+       "learning_objective": "Explain the use of direct speech in narration and of the comma with subordinate clauses."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEFL1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Poets and Pancakes",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEFL1-CH06-T1",
+     "topic_number": 1,
+     "title": "The make-up department of Gemini Studios",
+     "ncert_sections": "Opening section: Pancake, the make-up room and its staff",
+     "concepts": [
+      {
+       "concept_tag": "pancake-and-make-up-room",
+       "learning_objective": "Describe the Pancake make-up, the make-up room and the 'fiery misery' of those being made up."
+      },
+      {
+       "concept_tag": "national-integration-in-make-up-department",
+       "learning_objective": "Explain how the mixed staff of the make-up department illustrates national integration."
+      },
+      {
+       "concept_tag": "make-up-hierarchy",
+       "learning_objective": "Interpret the strict hierarchy of the make-up department and the author's ironic view of it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH06-T2",
+     "topic_number": 2,
+     "title": "The office boy and the author's work",
+     "ncert_sections": "The office boy, the author's cubicle and the office boy's frustration",
+     "concepts": [
+      {
+       "concept_tag": "office-boy-frustration",
+       "learning_objective": "Explain why the office boy joined the studio, why he was frustrated and whom he blamed."
+      },
+      {
+       "concept_tag": "author-role-at-gemini",
+       "learning_objective": "Describe the author's job at Gemini Studios and why others thought he did nothing."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH06-T3",
+     "topic_number": 3,
+     "title": "Kothamangalam Subbu",
+     "ncert_sections": "Subbu, No. 2 at Gemini Studios",
+     "concepts": [
+      {
+       "concept_tag": "subbu-talents",
+       "learning_objective": "Identify Subbu's many talents as film-maker, poet, novelist and actor."
+      },
+      {
+       "concept_tag": "subbu-character",
+       "learning_objective": "Describe Subbu's loyalty, generosity and the reasons he had enemies."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH06-T4",
+     "topic_number": 4,
+     "title": "The Story Department and the legal adviser",
+     "ncert_sections": "The Story Department, the lawyer and the actress",
+     "concepts": [
+      {
+       "concept_tag": "legal-adviser-and-actress",
+       "learning_objective": "Explain how the legal adviser unwittingly ended an actress's career."
+      },
+      {
+       "concept_tag": "story-department-closure",
+       "learning_objective": "Interpret the lawyer's isolation among the poets and the irony of his losing his job."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH06-T5",
+     "topic_number": 5,
+     "title": "Communism and the Moral Re-Armament visit",
+     "ncert_sections": "The poets' politics and the MRA visit of 1952",
+     "concepts": [
+      {
+       "concept_tag": "attitude-to-communism",
+       "learning_objective": "Describe the Gemini poets' notions about Communism and their political outlook."
+      },
+      {
+       "concept_tag": "mra-visit",
+       "learning_objective": "Explain the MRA's visit, its plays and their influence on Tamil drama."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH06-T6",
+     "topic_number": 6,
+     "title": "Stephen Spender's visit and the mystery solved",
+     "ncert_sections": "The English poet's visit, The Encounter and The God That Failed",
+     "concepts": [
+      {
+       "concept_tag": "english-poet-visit",
+       "learning_objective": "Describe the English poet's visit and why it baffled the Gemini staff."
+      },
+      {
+       "concept_tag": "spender-mystery-solved",
+       "learning_objective": "Explain how the author identified Spender and why the visit stopped being a mystery."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH06-T7",
+     "topic_number": 7,
+     "title": "Humour, style and vocabulary",
+     "ncert_sections": "Gentle humour, rambling style and words and expressions from the text",
+     "concepts": [
+      {
+       "concept_tag": "vocabulary-in-context",
+       "learning_objective": "Infer the meaning of expressions such as 'blew over' and 'the favourite haunt' from context."
+      },
+      {
+       "concept_tag": "humour-and-satire",
+       "learning_objective": "Analyse how the author uses gentle irony and self-mockery to point out human foibles."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEFL1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "The Interview",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEFL1-CH07-T1",
+     "topic_number": 1,
+     "title": "The interview as a genre and its divided reputation",
+     "ncert_sections": "Part I",
+     "concepts": [
+      {
+       "concept_tag": "interview-as-commonplace-of-journalism",
+       "learning_objective": "Explain how the interview has become a commonplace of journalism and why opinions about it vary."
+      },
+      {
+       "concept_tag": "contrasting-views-of-interview",
+       "learning_objective": "Compare the admiring and hostile views of the interview presented by Silvester."
+      },
+      {
+       "concept_tag": "interview-as-serviceable-medium",
+       "learning_objective": "Explain Denis Brian's view of the interview as a powerful medium of communication."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH07-T2",
+     "topic_number": 2,
+     "title": "Celebrity writers on being interviewed",
+     "ncert_sections": "Part I",
+     "concepts": [
+      {
+       "concept_tag": "writers-who-disliked-interviews",
+       "learning_objective": "Identify the attitudes of Naipaul, Carroll and Kipling towards interviews."
+      },
+      {
+       "concept_tag": "irony-in-writers-attitudes",
+       "learning_objective": "Analyse the gap between what Kipling and Wells said about interviews and what they did."
+      },
+      {
+       "concept_tag": "thumbprints-on-windpipe",
+       "learning_objective": "Interpret Saul Bellow's image of interviews as thumbprints on his windpipe."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH07-T3",
+     "topic_number": 3,
+     "title": "Umberto Eco: one purpose and the use of interstices",
+     "ncert_sections": "Part II",
+     "concepts": [
+      {
+       "concept_tag": "eco-unifying-interests",
+       "learning_objective": "Explain how Eco's varied work is unified by the same ethical and philosophical interests."
+      },
+      {
+       "concept_tag": "interstices",
+       "learning_objective": "Interpret what Eco means by working in the interstices of life."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH07-T4",
+     "topic_number": 4,
+     "title": "Eco's narrative scholarship and his identity as an academic",
+     "ncert_sections": "Part II",
+     "concepts": [
+      {
+       "concept_tag": "narrative-academic-style",
+       "learning_objective": "Describe how Eco's dissertation led him to write scholarly work as the story of research."
+      },
+      {
+       "concept_tag": "turn-to-fiction-by-accident",
+       "learning_objective": "Recall when and how Eco began writing novels, in contrast with Roland Barthes."
+      },
+      {
+       "concept_tag": "academic-identity",
+       "learning_objective": "Evaluate Eco's view of himself as a professor who writes novels on Sundays."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH07-T5",
+     "topic_number": 5,
+     "title": "The Name of the Rose and the mystery of its success",
+     "ncert_sections": "Part II",
+     "concepts": [
+      {
+       "concept_tag": "serious-novel-mass-readership",
+       "learning_objective": "Explain why Eco was not puzzled that a serious novel found a mass audience."
+      },
+      {
+       "concept_tag": "success-a-mystery",
+       "learning_objective": "Analyse Eco's argument that the success of a book cannot be predicted."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH07-T6",
+     "topic_number": 6,
+     "title": "Discourse linkers, signallers and reporting an interview",
+     "ncert_sections": "Noticing discourse linkers and signallers; Writing",
+     "concepts": [
+      {
+       "concept_tag": "discourse-linkers",
+       "learning_objective": "Identify how reference pronouns and repetition link the turns of a conversation."
+      },
+      {
+       "concept_tag": "signallers",
+       "learning_objective": "Recognise phrases that signal a shift of topic in a conversation."
+      },
+      {
+       "concept_tag": "interview-to-report",
+       "learning_objective": "Transfer the salient points of an interview into a concise report."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEFL1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Going Places",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEFL1-CH08-T1",
+     "topic_number": 1,
+     "title": "Sophie's dreams and Jansie's realism",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sophie-ambitions",
+       "learning_objective": "Describe Sophie's fanciful ambitions and what they reveal about her as a school-leaver."
+      },
+      {
+       "concept_tag": "jansie-practicality",
+       "learning_objective": "Contrast Jansie's practical view of their future with Sophie's daydreams."
+      },
+      {
+       "concept_tag": "theme-and-author",
+       "learning_objective": "Identify A. R. Barton's theme of adolescent fantasising and hero worship."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH08-T2",
+     "topic_number": 2,
+     "title": "Sophie's home and family background",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "family-socio-economic-status",
+       "learning_objective": "Infer the family's working-class background from details of their home and talk."
+      },
+      {
+       "concept_tag": "father-character",
+       "learning_objective": "Describe the temperament of Sophie's father and his attitude to her stories."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH08-T3",
+     "topic_number": 3,
+     "title": "Sophie and her brother Geoff",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "geoff-character",
+       "learning_objective": "Describe Geoff's work and his silent, reserved nature."
+      },
+      {
+       "concept_tag": "geoff-as-symbol",
+       "learning_objective": "Explain why Geoff represents the wider, unknown world that Sophie longs to enter."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH08-T4",
+     "topic_number": 4,
+     "title": "The Danny Casey story and hero worship",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "danny-casey-meeting",
+       "learning_objective": "Recall and evaluate Sophie's account of meeting Danny Casey in the arcade."
+      },
+      {
+       "concept_tag": "football-hero-worship",
+       "learning_objective": "Explain how the family's admiration for United and Casey shows hero worship."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH08-T5",
+     "topic_number": 5,
+     "title": "Waiting by the canal: fantasy and reality",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "canal-wait-disappointment",
+       "learning_objective": "Trace how Sophie's hope turns into doubt and sadness as she waits by the canal."
+      },
+      {
+       "concept_tag": "fantasy-versus-reality",
+       "learning_objective": "Analyse how the ending suggests the meeting with Casey was imagined."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH08-T6",
+     "topic_number": 6,
+     "title": "Words, expressions and present participles",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "figurative-expressions",
+       "learning_objective": "Explain the non-literal meaning of expressions used in the story."
+      },
+      {
+       "concept_tag": "present-participles",
+       "learning_objective": "Identify present participles used to show two actions happening at the same time."
+      },
+      {
+       "concept_tag": "colloquial-words",
+       "learning_objective": "Give the meaning of informal words such as chuffed, nosey and gawky."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEFL1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Chapter 9 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl109.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "LEFL1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Chapter 10 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl110.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "LEFL1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "My Mother at Sixty-six",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEFL1-CH11-T1",
+     "topic_number": 1,
+     "title": "Kamala Das and the setting of the poem",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kamala-das-background",
+       "learning_objective": "Recall key facts about Kamala Das and recognise the qualities of her writing seen in this poem."
+      },
+      {
+       "concept_tag": "journey-setting",
+       "learning_objective": "Trace the situation of the poem: the drive from the parents' home to Cochin airport and the parting there."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH11-T2",
+     "topic_number": 2,
+     "title": "Images of the ageing mother",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "corpse-simile",
+       "learning_objective": "Interpret the image of the dozing mother's face, 'ashen like that of a corpse', and the realisation it brings."
+      },
+      {
+       "concept_tag": "late-winter-moon-simile",
+       "learning_objective": "Explain why the mother is compared to a 'late winter's moon'."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH11-T3",
+     "topic_number": 3,
+     "title": "Contrast: young trees and merry children",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sprinting-trees",
+       "learning_objective": "Explain the image of the young trees 'sprinting' and what it suggests."
+      },
+      {
+       "concept_tag": "youth-age-contrast",
+       "learning_objective": "Analyse how the images of youth outside the car contrast with the ageing mother."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH11-T4",
+     "topic_number": 4,
+     "title": "The parting: fear, smile and the poem's structure",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "childhood-fear-ache",
+       "learning_objective": "Identify the 'old familiar ache' as the poet's childhood fear of losing her mother."
+      },
+      {
+       "concept_tag": "parting-words-smile",
+       "learning_objective": "Interpret the parting words 'see you soon, Amma' and the repeated smile."
+      },
+      {
+       "concept_tag": "single-sentence-structure",
+       "learning_objective": "Recognise that the poem is a single sentence and explain the effect of this form."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEFL1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Keeping Quiet",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEFL1-CH12-T1",
+     "topic_number": 1,
+     "title": "The poet, his purpose and the call to keep still",
+     "ncert_sections": "About the poet; stanzas 1-2",
+     "concepts": [
+      {
+       "concept_tag": "poet-and-purpose",
+       "learning_objective": "Identify Pablo Neruda and the purpose of the poem: quiet introspection and mutual understanding."
+      },
+      {
+       "concept_tag": "call-to-stillness",
+       "learning_objective": "Explain why the poet asks everyone to count to twelve, keep still and not speak in any language."
+      },
+      {
+       "concept_tag": "exotic-moment",
+       "learning_objective": "Interpret the 'exotic moment' of togetherness without rush or engines."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH12-T2",
+     "topic_number": 2,
+     "title": "Harm to nature and to oneself",
+     "ncert_sections": "Stanza 3",
+     "concepts": [
+      {
+       "concept_tag": "harm-to-nature",
+       "learning_objective": "Explain how the image of fishermen and whales shows man's exploitation of nature."
+      },
+      {
+       "concept_tag": "self-realisation",
+       "learning_objective": "Interpret how the salt gatherer looking at his hurt hands shows neglected self-awareness."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH12-T3",
+     "topic_number": 3,
+     "title": "War and universal brotherhood",
+     "ncert_sections": "Stanza 4",
+     "concepts": [
+      {
+       "concept_tag": "green-wars",
+       "learning_objective": "Interpret the poet's images of green wars, wars with gas and fire, and 'victory with no survivors'."
+      },
+      {
+       "concept_tag": "brotherhood-in-peace",
+       "learning_objective": "Explain how the moment of quiet could turn war-makers towards peace and brotherhood."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH12-T4",
+     "topic_number": 4,
+     "title": "Stillness is not inactivity: the sadness of not understanding",
+     "ncert_sections": "Stanzas 5-6",
+     "concepts": [
+      {
+       "concept_tag": "not-total-inactivity",
+       "learning_objective": "Explain that the poet wants introspection, not total inactivity or death."
+      },
+      {
+       "concept_tag": "sadness-of-not-understanding",
+       "learning_objective": "Identify the 'sadness' of never understanding ourselves and threatening ourselves with death."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH12-T5",
+     "topic_number": 5,
+     "title": "The Earth as teacher and the form of the poem",
+     "ncert_sections": "Stanzas 7-8; Try this out",
+     "concepts": [
+      {
+       "concept_tag": "earth-as-teacher",
+       "learning_objective": "Explain the symbol of the Earth that seems dead and later proves to be alive."
+      },
+      {
+       "concept_tag": "free-verse-form",
+       "learning_objective": "Recognise the poem's free verse, varying line lengths and its framing by the count to twelve."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEFL1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "A Thing of Beauty",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lefl113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEFL1-CH13-T1",
+     "topic_number": 1,
+     "title": "About the poet and the poem",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "keats-romantic-poet",
+       "learning_objective": "Recall key facts about John Keats as a British Romantic poet."
+      },
+      {
+       "concept_tag": "endymion-greek-legend",
+       "learning_objective": "Explain the Greek legend of Endymion from which the poem is taken."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH13-T2",
+     "topic_number": 2,
+     "title": "Beauty as a joy forever",
+     "ncert_sections": "Lines 1-5",
+     "concepts": [
+      {
+       "concept_tag": "lasting-joy-of-beauty",
+       "learning_objective": "Explain why the poet calls a thing of beauty a joy forever whose loveliness increases."
+      },
+      {
+       "concept_tag": "bower-and-sleep-imagery",
+       "learning_objective": "Interpret the images of the quiet bower and the sleep full of sweet dreams."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH13-T3",
+     "topic_number": 3,
+     "title": "Beauty in spite of suffering",
+     "ncert_sections": "Lines 6-13",
+     "concepts": [
+      {
+       "concept_tag": "causes-of-suffering",
+       "learning_objective": "Identify the things the poet lists as causes of suffering and gloom."
+      },
+      {
+       "concept_tag": "flowery-band-metaphor",
+       "learning_objective": "Interpret the image of wreathing a flowery band that binds us to the earth."
+      },
+      {
+       "concept_tag": "beauty-removes-the-pall",
+       "learning_objective": "Explain how some shape of beauty moves away the pall from our dark spirits."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH13-T4",
+     "topic_number": 4,
+     "title": "Nature's things of beauty",
+     "ncert_sections": "Lines 13-18",
+     "concepts": [
+      {
+       "concept_tag": "natural-objects-of-beauty",
+       "learning_objective": "List and interpret the objects of nature the poet calls things of beauty."
+      },
+      {
+       "concept_tag": "vocabulary-rills-brake",
+       "learning_objective": "Use the meanings of words such as rills, brake and covert to read the nature images."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEFL1-CH13-T5",
+     "topic_number": 5,
+     "title": "The mighty dead, lovely tales and the endless fountain",
+     "ncert_sections": "Lines 19-24; rhyme and balance",
+     "concepts": [
+      {
+       "concept_tag": "grandeur-of-the-mighty-dead",
+       "learning_objective": "Explain why grandeur is associated with the mighty dead and lovely tales."
+      },
+      {
+       "concept_tag": "endless-fountain-image",
+       "learning_objective": "Interpret the image of an endless fountain of immortal drink from heaven's brink."
+      },
+      {
+       "concept_tag": "rhyme-and-balance",
+       "learning_objective": "Analyse the poem's rhyming couplets and balanced sentence structure."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

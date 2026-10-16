@@ -1,0 +1,116 @@
+{
+ "chapter_id": "KHBO1-CH02",
+ "title": "जीव जगत का वर्गीकरण",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHBO1-CH02-T1",
+   "topic_number": 1,
+   "title": "वर्गीकरण का विकास और पाँच जगत वर्गीकरण",
+   "ncert_sections": "परिचय, तालिका 2.1",
+   "concepts": [
+    {
+     "concept_tag": "vargikaran-ka-vikas",
+     "learning_objective": "अरस्तू से लिनियस तक वर्गीकरण के विकास और दो जगत पद्धति की कमियों को समझाना।"
+    },
+    {
+     "concept_tag": "panch-jagat-vargikaran",
+     "learning_objective": "व्हिटेकर के पाँच जगत वर्गीकरण के आधारों और जगतों की विशेषताओं की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH02-T2",
+   "topic_number": 2,
+   "title": "जगत मोनेरा",
+   "ncert_sections": "2.1, 2.1.1, 2.1.2",
+   "concepts": [
+    {
+     "concept_tag": "jivanu-aakriti-poshan",
+     "learning_objective": "जीवाणुओं की आकृतियों और पोषण विविधता को पहचानना।"
+    },
+    {
+     "concept_tag": "aadya-bacteria",
+     "learning_objective": "आद्य बैक्टीरिया के प्रकारों और विशेष आवासों को समझाना।"
+    },
+    {
+     "concept_tag": "eubacteria-cyanobacteria",
+     "learning_objective": "यूबैक्टीरिया, सायनोबैक्टीरिया और माइकोप्लाज्मा की विशेषताओं का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH02-T3",
+   "topic_number": 3,
+   "title": "जगत प्रोटिस्टा",
+   "ncert_sections": "2.2, 2.2.1 से 2.2.5",
+   "concepts": [
+    {
+     "concept_tag": "chrysophyte-dinoflagellate-euglenoid",
+     "learning_objective": "क्राइसोफाइट, डाइनोफ्लैजेलेट और युग्लीनाइड की विशेषताओं में अंतर करना।"
+    },
+    {
+     "concept_tag": "avpank-kavak",
+     "learning_objective": "अवपंक कवक के पोषण, प्लाज्मोडियम और बीजाणुओं को समझाना।"
+    },
+    {
+     "concept_tag": "protozoa-samooh",
+     "learning_objective": "प्रोटोजोआ के चार प्रमुख समूहों को उदाहरण सहित पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH02-T4",
+   "topic_number": 4,
+   "title": "जगत कवक",
+   "ncert_sections": "2.3, 2.3.1 से 2.3.4",
+   "concepts": [
+    {
+     "concept_tag": "kavak-sanrachna-janan",
+     "learning_objective": "कवकों की संरचना, पोषण और लैंगिक जनन के चरणों को समझाना।"
+    },
+    {
+     "concept_tag": "kavak-ke-varg",
+     "learning_objective": "कवक के चार वर्गों की कवकजाल, बीजाणु और उदाहरणों के आधार पर तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH02-T5",
+   "topic_number": 5,
+   "title": "जगत पादप और जगत जंतु",
+   "ncert_sections": "2.4, 2.5",
+   "concepts": [
+    {
+     "concept_tag": "padap-jagat",
+     "learning_objective": "पादप जगत की विशेषताओं और पीढ़ी एकांतरण को समझाना।"
+    },
+    {
+     "concept_tag": "jantu-jagat",
+     "learning_objective": "जंतु जगत की विशेषताओं, प्राणिसम पोषण और खाद्य संचय को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH02-T6",
+   "topic_number": 6,
+   "title": "विषाणु, विषाणुभ, प्रिऑन और लाइकेन",
+   "ncert_sections": "2.6",
+   "concepts": [
+    {
+     "concept_tag": "vishanu",
+     "learning_objective": "विषाणुओं की खोज, संरचना और आनुवंशिक पदार्थ को समझाना।"
+    },
+    {
+     "concept_tag": "vishanubh-prion",
+     "learning_objective": "विषाणुभ और प्रिऑन की विषाणुओं से तुलना करना।"
+    },
+    {
+     "concept_tag": "lichen",
+     "learning_objective": "लाइकेन में शैवालांश और कवकांश के सहजीवी संबंध को समझाना।"
+    }
+   ]
+  }
+ ]
+}

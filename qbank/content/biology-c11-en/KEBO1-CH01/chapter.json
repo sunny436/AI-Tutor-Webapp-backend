@@ -1,0 +1,88 @@
+{
+ "chapter_id": "KEBO1-CH01",
+ "title": "The Living World",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH01-T1",
+   "topic_number": 1,
+   "title": "Diversity in the living world and biodiversity",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "biodiversity-and-species",
+     "learning_objective": "Explain biodiversity as the number and types of organisms on earth, each kind representing a species."
+    },
+    {
+     "concept_tag": "what-is-living",
+     "learning_objective": "Distinguish the technical question of what living is from the philosophical question of the purpose of life."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH01-T2",
+   "topic_number": 2,
+   "title": "Identification, nomenclature and binomial nomenclature",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "identification-and-nomenclature",
+     "learning_objective": "Explain why standard scientific names are needed and how naming depends on correct identification under ICBN and ICZN."
+    },
+    {
+     "concept_tag": "binomial-nomenclature-rules",
+     "learning_objective": "Apply the universal rules for writing a binomial scientific name, including the author's abbreviation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH01-T3",
+   "topic_number": 3,
+   "title": "Classification, taxa, taxonomy and systematics",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "taxa-and-classification",
+     "learning_objective": "Describe classification as grouping into convenient categories called taxa that exist at different levels."
+    },
+    {
+     "concept_tag": "taxonomy-and-systematics",
+     "learning_objective": "State the basic processes of taxonomy and explain the scope of systematics."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH01-T4",
+   "topic_number": 4,
+   "title": "Taxonomic categories: species, genus and family",
+   "ncert_sections": "1.2, 1.2.1, 1.2.2, 1.2.3",
+   "concepts": [
+    {
+     "concept_tag": "species-and-genus",
+     "learning_objective": "Identify species and genus as categories, using specific epithets and genera from common examples."
+    },
+    {
+     "concept_tag": "family-category",
+     "learning_objective": "Explain family as a group of related genera characterised by vegetative and reproductive features."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH01-T5",
+   "topic_number": 5,
+   "title": "Order, class, phylum, kingdom and the taxonomic hierarchy",
+   "ncert_sections": "1.2.4, 1.2.5, 1.2.6, 1.2.7",
+   "concepts": [
+    {
+     "concept_tag": "higher-categories",
+     "learning_objective": "Place organisms in order, class, phylum or division and kingdom using examples from the chapter and Table 1.1."
+    },
+    {
+     "concept_tag": "hierarchy-trends",
+     "learning_objective": "Interpret how shared characteristics change as one moves up the taxonomic hierarchy."
+    }
+   ]
+  }
+ ]
+}

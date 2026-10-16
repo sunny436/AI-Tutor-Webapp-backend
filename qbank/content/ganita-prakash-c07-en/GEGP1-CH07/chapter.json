@@ -1,0 +1,116 @@
+{
+ "chapter_id": "GEGP1-CH07",
+ "title": "A Tale of Three Intersecting Lines",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP1-CH07-T1",
+   "topic_number": 1,
+   "title": "Equilateral triangles and constructing a triangle from its three sides",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "triangle-parts-and-naming",
+     "learning_objective": "Identify the vertices, sides and angles of a triangle and name them correctly."
+    },
+    {
+     "concept_tag": "compass-construction-three-sides",
+     "learning_objective": "Construct a triangle from three given sides using intersecting compass arcs and explain why it works."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH07-T2",
+   "topic_number": 2,
+   "title": "Triangle inequality and existence of a triangle",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "triangle-inequality",
+     "learning_objective": "Use the triangle inequality to decide whether three lengths can be the sides of a triangle."
+    },
+    {
+     "concept_tag": "third-side-range",
+     "learning_objective": "Find possible lengths of the third side when two sides of a triangle are given."
+    },
+    {
+     "concept_tag": "intersecting-circles-cases",
+     "learning_objective": "Relate the sum of the two smaller lengths to whether the construction circles touch, miss or intersect."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH07-T3",
+   "topic_number": 3,
+   "title": "Constructing triangles when some sides and angles are given",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "two-sides-included-angle",
+     "learning_objective": "Construct a triangle when two sides and the included angle are given."
+    },
+    {
+     "concept_tag": "two-angles-included-side",
+     "learning_objective": "Construct a triangle when two angles and the included side are given."
+    },
+    {
+     "concept_tag": "existence-two-angles",
+     "learning_objective": "Decide whether two given angles on a base can form a triangle using their sum."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH07-T4",
+   "topic_number": 4,
+   "title": "Angle sum property and exterior angles",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "angle-sum-property",
+     "learning_objective": "Use the angle sum property to find an unknown angle of a triangle."
+    },
+    {
+     "concept_tag": "parallel-line-proof",
+     "learning_objective": "Explain the proof of the angle sum property using a line parallel to the base."
+    },
+    {
+     "concept_tag": "exterior-angle",
+     "learning_objective": "Find an exterior angle of a triangle and relate it to the two opposite interior angles."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH07-T5",
+   "topic_number": 5,
+   "title": "Altitudes of a triangle",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "altitude-definition",
+     "learning_objective": "Define an altitude and locate it for acute, right and obtuse triangles."
+    },
+    {
+     "concept_tag": "altitude-construction",
+     "learning_objective": "Construct or fold an altitude and justify why it is perpendicular to the base."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH07-T6",
+   "topic_number": 6,
+   "title": "Types of triangles",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "classification-by-sides",
+     "learning_objective": "Classify triangles as equilateral, isosceles or scalene from their sides."
+    },
+    {
+     "concept_tag": "classification-by-angles",
+     "learning_objective": "Classify triangles as acute-angled, right-angled or obtuse-angled from their angles."
+    }
+   ]
+  }
+ ]
+}

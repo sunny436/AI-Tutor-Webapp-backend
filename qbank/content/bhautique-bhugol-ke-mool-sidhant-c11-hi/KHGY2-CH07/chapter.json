@@ -1,0 +1,72 @@
+{
+ "chapter_id": "KHGY2-CH07",
+ "title": "वायुमंडल का संघटन तथा संरचना",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHGY2-CH07-T1",
+   "topic_number": 1,
+   "title": "वायुमंडल का अर्थ एवं गैसीय संघटन",
+   "ncert_sections": "परिचय, वायुमंडल का संघटन: गैसें",
+   "concepts": [
+    {
+     "concept_tag": "vayumandal-arth",
+     "learning_objective": "वायुमंडल का अर्थ, उसके द्रव्यमान का ऊँचाई के साथ वितरण तथा जीवन के लिए महत्त्व समझना।"
+    },
+    {
+     "concept_tag": "karban-dioxide-ozone",
+     "learning_objective": "कार्बन डाइऑक्साइड और ओज़ोन गैसों की मौसम-विज्ञान संबंधी भूमिका समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH07-T2",
+   "topic_number": 2,
+   "title": "जलवाष्प तथा धूलकण",
+   "ncert_sections": "जलवाष्प, धूलकण",
+   "concepts": [
+    {
+     "concept_tag": "jalvashp",
+     "learning_objective": "वायुमंडल में जलवाष्प की परिवर्तनशील मात्रा और उसकी भूमिका समझाना।"
+    },
+    {
+     "concept_tag": "dhoolkan",
+     "learning_objective": "धूलकणों के स्रोत, वितरण तथा आर्द्रताग्राही केंद्रकों के रूप में उनकी भूमिका पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH07-T3",
+   "topic_number": 3,
+   "title": "वायुमंडल की संरचना: क्षोभमंडल और समतापमंडल",
+   "ncert_sections": "वायुमंडल की संरचना",
+   "concepts": [
+    {
+     "concept_tag": "kshobhmandal",
+     "learning_objective": "क्षोभमंडल की ऊँचाई, विशेषताएँ तथा तापमान ह्रास दर समझाना।"
+    },
+    {
+     "concept_tag": "kshobhseema-samtapmandal",
+     "learning_objective": "क्षोभसीमा तथा ओज़ोन परत युक्त समतापमंडल की विशेषताएँ बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH07-T4",
+   "topic_number": 4,
+   "title": "मध्यमंडल, आयनमंडल, बहिर्मंडल तथा मौसम के तत्व",
+   "ncert_sections": "वायुमंडल की संरचना, मौसम और जलवायु के तत्व",
+   "concepts": [
+    {
+     "concept_tag": "madhyamandal-aayanmandal",
+     "learning_objective": "मध्यमंडल, आयनमंडल और बहिर्मंडल की विशेषताओं की तुलना करना।"
+    },
+    {
+     "concept_tag": "mausam-jalvayu-tatva",
+     "learning_objective": "मौसम और जलवायु के प्रमुख तत्वों को पहचानना।"
+    }
+   ]
+  }
+ ]
+}

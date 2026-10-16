@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KHPH1-CH05",
+ "title": "कार्य, ऊर्जा और शक्ति",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH1-CH05-T1",
+   "topic_number": 1,
+   "title": "कार्य और गतिज ऊर्जा की धारणाएँ तथा कार्य",
+   "ncert_sections": "5.1, 5.2, 5.3",
+   "concepts": [
+    {
+     "concept_tag": "adish-gunanphal",
+     "learning_objective": "दो सदिशों के अदिश गुणनफल की गणना करना।"
+    },
+    {
+     "concept_tag": "karya-paribhasha",
+     "learning_objective": "नियत बल द्वारा किए गए कार्य को बल और विस्थापन के अदिश गुणनफल के रूप में समझाना।"
+    },
+    {
+     "concept_tag": "dhanatmak-rinatmak-shunya-karya",
+     "learning_objective": "धनात्मक, ऋणात्मक और शून्य कार्य की स्थितियाँ पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH05-T2",
+   "topic_number": 2,
+   "title": "गतिज ऊर्जा",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "gatij-urja",
+     "learning_objective": "गतिज ऊर्जा की परिभाषा, सूत्र और प्रकृति बताना।"
+    },
+    {
+     "concept_tag": "gatij-urja-aur-sanveg",
+     "learning_objective": "गतिज ऊर्जा, द्रव्यमान, चाल और संवेग के संबंध का उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH05-T3",
+   "topic_number": 3,
+   "title": "परिवर्ती बल द्वारा कार्य और कार्य-ऊर्जा प्रमेय",
+   "ncert_sections": "5.5, 5.6",
+   "concepts": [
+    {
+     "concept_tag": "parivarti-bal-karya",
+     "learning_objective": "बल-विस्थापन ग्राफ के क्षेत्रफल से परिवर्ती बल द्वारा कार्य ज्ञात करना।"
+    },
+    {
+     "concept_tag": "karya-urja-pramey",
+     "learning_objective": "कार्य-ऊर्जा प्रमेय को लागू करके गति संबंधी प्रश्न हल करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH05-T4",
+   "topic_number": 4,
+   "title": "स्थितिज ऊर्जा और यांत्रिक ऊर्जा का संरक्षण",
+   "ncert_sections": "5.7, 5.8",
+   "concepts": [
+    {
+     "concept_tag": "sanrakshi-bal-sthitij-urja",
+     "learning_objective": "संरक्षी बल और स्थितिज ऊर्जा के संबंध को समझाना।"
+    },
+    {
+     "concept_tag": "yantrik-urja-sanrakshan",
+     "learning_objective": "यांत्रिक ऊर्जा के संरक्षण के सिद्धांत को लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH05-T5",
+   "topic_number": 5,
+   "title": "स्प्रिंग की स्थितिज ऊर्जा",
+   "ncert_sections": "5.9",
+   "concepts": [
+    {
+     "concept_tag": "spring-bal",
+     "learning_objective": "स्प्रिंग बल और स्प्रिंग नियतांक की प्रकृति बताना।"
+    },
+    {
+     "concept_tag": "spring-sthitij-urja",
+     "learning_objective": "स्प्रिंग में संचित प्रत्यास्थ स्थितिज ऊर्जा की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH05-T6",
+   "topic_number": 6,
+   "title": "शक्ति",
+   "ncert_sections": "5.10",
+   "concepts": [
+    {
+     "concept_tag": "shakti-paribhasha",
+     "learning_objective": "शक्ति को कार्य करने की दर तथा बल और वेग के अदिश गुणनफल के रूप में ज्ञात करना।"
+    },
+    {
+     "concept_tag": "shakti-matrak",
+     "learning_objective": "शक्ति और ऊर्जा के मात्रकों जैसे वाट, अश्व शक्ति और किलोवाट घंटा को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH05-T7",
+   "topic_number": 7,
+   "title": "संघट्ट",
+   "ncert_sections": "5.11",
+   "concepts": [
+    {
+     "concept_tag": "pratyasth-apratyasth-sanghatt",
+     "learning_objective": "प्रत्यास्थ और अप्रत्यास्थ संघट्टों में संरक्षित राशियों की पहचान करना।"
+    },
+    {
+     "concept_tag": "ek-vimiya-sanghatt",
+     "learning_objective": "एकविमीय संघट्टों में अंतिम वेग और गतिज ऊर्जा की हानि ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

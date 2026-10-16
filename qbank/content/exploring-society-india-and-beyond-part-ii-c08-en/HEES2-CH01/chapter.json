@@ -1,0 +1,144 @@
+{
+ "chapter_id": "HEES2-CH01",
+ "title": "World Geography: Some Glimpses",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEES2-CH01-T1",
+   "topic_number": 1,
+   "title": "Mapping the Earth: projections and physical maps",
+   "ncert_sections": "The Complexity of Mapping the Earth",
+   "concepts": [
+    {
+     "concept_tag": "map-projection-distortion",
+     "learning_objective": "Explain why every map projection of the Earth shows some distortion."
+    },
+    {
+     "concept_tag": "mercator-and-robinson-projections",
+     "learning_objective": "Compare what the Mercator and Robinson projections preserve and distort."
+    },
+    {
+     "concept_tag": "physical-map-colours",
+     "learning_objective": "Identify the landforms and water bodies shown by each colour on a physical map."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEES2-CH01-T2",
+   "topic_number": 2,
+   "title": "The oceans of the blue planet",
+   "ncert_sections": "The Blue of the Blue Planet, the Oceans; Ocean currents; Ocean trenches",
+   "concepts": [
+    {
+     "concept_tag": "oceans-and-climate",
+     "learning_objective": "Describe how oceans cover the Earth, support life and regulate climate."
+    },
+    {
+     "concept_tag": "ocean-currents",
+     "learning_objective": "Explain how warm and cold ocean currents affect the climate of coastal areas."
+    },
+    {
+     "concept_tag": "ocean-trenches",
+     "learning_objective": "Describe ocean trenches such as the Mariana Trench and how life survives there."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEES2-CH01-T3",
+   "topic_number": 3,
+   "title": "Coral reefs and smaller water bodies",
+   "ncert_sections": "The Great Barrier Reef; Smaller water bodies and waterways",
+   "concepts": [
+    {
+     "concept_tag": "coral-reefs-great-barrier-reef",
+     "learning_objective": "Explain why coral reefs such as the Great Barrier Reef matter and what threatens them."
+    },
+    {
+     "concept_tag": "seas-gulfs-bays-straits-canals",
+     "learning_objective": "Distinguish seas, gulfs, bays, straits and canals and their role in trade."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEES2-CH01-T4",
+   "topic_number": 4,
+   "title": "Asia: Tibetan Plateau, Gobi, Steppes and Urals",
+   "ncert_sections": "Asia",
+   "concepts": [
+    {
+     "concept_tag": "tibetan-plateau",
+     "learning_objective": "Describe the formation and importance of the Tibetan Plateau, the 'Third Pole'."
+    },
+    {
+     "concept_tag": "gobi-desert-and-steppes",
+     "learning_objective": "Describe the Gobi Desert and the Eurasian Steppes and their role in nature."
+    },
+    {
+     "concept_tag": "ural-mountains",
+     "learning_objective": "Explain the importance of the Ural Mountains and the tundra and taiga around them."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEES2-CH01-T5",
+   "topic_number": 5,
+   "title": "Europe and Africa: plains, the Alps, deserts and the Nile",
+   "ncert_sections": "Europe; Africa",
+   "concepts": [
+    {
+     "concept_tag": "european-plain-and-alps",
+     "learning_objective": "Explain how the European Plain and the Alps support agriculture, water supply and settlement."
+    },
+    {
+     "concept_tag": "sahara-and-savannah",
+     "learning_objective": "Describe the Sahara Desert and the African savannah and how life adapts to them."
+    },
+    {
+     "concept_tag": "river-nile",
+     "learning_objective": "Explain the importance of the River Nile for people in Africa."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEES2-CH01-T6",
+   "topic_number": 6,
+   "title": "The Americas: Andes, Amazon, Atacama and North American landforms",
+   "ncert_sections": "South America; North America",
+   "concepts": [
+    {
+     "concept_tag": "andes-and-amazon",
+     "learning_objective": "Describe the Andes and the Amazon and why they are important for the planet."
+    },
+    {
+     "concept_tag": "atacama-desert",
+     "learning_objective": "Describe the Atacama Desert and the environmental problem it faces."
+    },
+    {
+     "concept_tag": "north-american-landforms",
+     "learning_objective": "Describe the Colorado Plateau, the Rockies, the Appalachians and the Great Lakes."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEES2-CH01-T7",
+   "topic_number": 7,
+   "title": "Australia, cold deserts and caring for the Earth",
+   "ncert_sections": "The Australian Continent; Before we move on",
+   "concepts": [
+    {
+     "concept_tag": "australian-desert",
+     "learning_objective": "Describe the Great Australian Desert, its wildlife and its people."
+    },
+    {
+     "concept_tag": "cold-deserts",
+     "learning_objective": "Recognise that deserts can be cold, with Antarctica as the largest desert on Earth."
+    },
+    {
+     "concept_tag": "human-impact-on-geography",
+     "learning_objective": "Evaluate how human actions disturb natural features and why sustainable use is needed."
+    }
+   ]
+  }
+ ]
+}

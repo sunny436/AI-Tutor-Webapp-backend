@@ -1,0 +1,116 @@
+{
+  "chapter_id": "IEST1-CH02",
+  "title": "Shaping of the Earth’s Surface",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "IEST1-CH02-T1",
+      "topic_number": 1,
+      "title": "Plate tectonics and the Earth's interior",
+      "ncert_sections": "Plate Tectonics",
+      "concepts": [
+        {
+          "concept_tag": "earth-interior-layers",
+          "learning_objective": "Describe the crust, mantle, core, lithosphere and asthenosphere and their key features."
+        },
+        {
+          "concept_tag": "tectonic-plates-types",
+          "learning_objective": "Identify the types of tectonic plates and the major plates of the world."
+        },
+        {
+          "concept_tag": "convection-currents",
+          "learning_objective": "Explain how convection currents in the mantle drive plate movement."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST1-CH02-T2",
+      "topic_number": 2,
+      "title": "Plate boundaries and their effects",
+      "ncert_sections": "Plate Tectonics (plate boundaries)",
+      "concepts": [
+        {
+          "concept_tag": "plate-boundaries",
+          "learning_objective": "Distinguish convergent, divergent and transform boundaries and the features each produces."
+        },
+        {
+          "concept_tag": "earthquakes-volcanoes-distribution",
+          "learning_objective": "Relate the distribution of earthquakes and volcanoes, including the Ring of Fire, to plate boundaries."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST1-CH02-T3",
+      "topic_number": 3,
+      "title": "Weathering and erosion",
+      "ncert_sections": "Process of Weathering and Erosion",
+      "concepts": [
+        {
+          "concept_tag": "weathering-types",
+          "learning_objective": "Differentiate physical, chemical and biological weathering."
+        },
+        {
+          "concept_tag": "erosion-and-livelihoods",
+          "learning_objective": "Explain how erosion differs from weathering and how it affects human livelihoods."
+        },
+        {
+          "concept_tag": "soil-conservation-practices",
+          "learning_objective": "Describe soil conservation practices such as contouring, bunding, terracing and the Zabo system."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST1-CH02-T4",
+      "topic_number": 4,
+      "title": "Running water and its landforms",
+      "ncert_sections": "Agents of Gradation; Running Water",
+      "concepts": [
+        {
+          "concept_tag": "agents-of-gradation",
+          "learning_objective": "Name the agents of gradation and state how they level the Earth's surface."
+        },
+        {
+          "concept_tag": "river-course-landforms",
+          "learning_objective": "Explain the formation and human uses of waterfalls, meanders, oxbow lakes and deltas."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST1-CH02-T5",
+      "topic_number": 5,
+      "title": "Landforms of waves, glaciers, wind and underground water",
+      "ncert_sections": "Waves and Currents; Glaciers; Wind; Underground Water",
+      "concepts": [
+        {
+          "concept_tag": "coastal-landforms",
+          "learning_objective": "Explain how waves form beaches, cliffs, caves, arches and stacks."
+        },
+        {
+          "concept_tag": "glacial-landforms",
+          "learning_objective": "Identify glacial landforms such as U-shaped valleys, cirques, aretes, fjords and moraines."
+        },
+        {
+          "concept_tag": "wind-and-karst-landforms",
+          "learning_objective": "Identify landforms made by wind and by underground water in limestone areas."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST1-CH02-T6",
+      "topic_number": 6,
+      "title": "Landforms and disasters",
+      "ncert_sections": "Landforms and Disasters",
+      "concepts": [
+        {
+          "concept_tag": "landslides-avalanches",
+          "learning_objective": "Explain the natural and human causes of landslides and avalanches."
+        },
+        {
+          "concept_tag": "glofs-dust-storms",
+          "learning_objective": "Explain the causes of glacial lake outburst floods and dust storms."
+        }
+      ]
+    }
+  ]
+}

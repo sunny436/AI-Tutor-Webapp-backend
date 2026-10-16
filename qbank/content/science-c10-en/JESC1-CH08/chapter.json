@@ -1,0 +1,92 @@
+{
+ "chapter_id": "JESC1-CH08",
+ "title": "Heredity",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESC1-CH08-T1",
+   "topic_number": 1,
+   "title": "Accumulation of variation during reproduction",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "variation-in-reproduction",
+     "learning_objective": "Explain how variations accumulate over generations and why sexual reproduction creates more diversity than asexual reproduction."
+    },
+    {
+     "concept_tag": "variation-and-survival",
+     "learning_objective": "Explain how environmental selection of variants helps some individuals survive better."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH08-T2",
+   "topic_number": 2,
+   "title": "Inherited traits and Mendel's monohybrid cross",
+   "ncert_sections": "8.2, 8.2.1, 8.2.2",
+   "concepts": [
+    {
+     "concept_tag": "inherited-traits",
+     "learning_objective": "Identify inherited traits and their variants, such as free and attached earlobes, in human populations."
+    },
+    {
+     "concept_tag": "monohybrid-cross",
+     "learning_objective": "Describe Mendel's cross between tall and short pea plants and predict F1 and F2 results."
+    },
+    {
+     "concept_tag": "dominant-recessive-traits",
+     "learning_objective": "Distinguish dominant and recessive traits and use them to interpret inheritance data."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH08-T3",
+   "topic_number": 3,
+   "title": "Inheritance of two traits: independent inheritance",
+   "ncert_sections": "8.2.2",
+   "concepts": [
+    {
+     "concept_tag": "dihybrid-cross",
+     "learning_objective": "Work out the F1 and F2 progeny of a cross involving two pairs of contrasting traits."
+    },
+    {
+     "concept_tag": "independent-inheritance",
+     "learning_objective": "Explain how new combinations of traits in the F2 generation show that traits are inherited independently."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH08-T4",
+   "topic_number": 4,
+   "title": "How traits are expressed: genes, proteins and chromosomes",
+   "ncert_sections": "8.2.3",
+   "concepts": [
+    {
+     "concept_tag": "genes-control-traits",
+     "learning_objective": "Explain how a gene controls a trait by providing information for a protein such as an enzyme."
+    },
+    {
+     "concept_tag": "chromosomes-and-germ-cells",
+     "learning_objective": "Explain how chromosomes and germ cells with a single gene set ensure equal contribution of both parents."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH08-T5",
+   "topic_number": 5,
+   "title": "Sex determination",
+   "ncert_sections": "8.2.4",
+   "concepts": [
+    {
+     "concept_tag": "sex-determination-strategies",
+     "learning_objective": "Describe the different ways in which sex is determined in different species."
+    },
+    {
+     "concept_tag": "human-sex-chromosomes",
+     "learning_objective": "Explain how the X and Y chromosomes determine the sex of a child in human beings."
+    }
+   ]
+  }
+ ]
+}

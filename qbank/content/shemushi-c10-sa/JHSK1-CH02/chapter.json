@@ -1,0 +1,116 @@
+{
+ "chapter_id": "JHSK1-CH02",
+ "title": "बुद्धिर्बलवती सदा",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSK1-CH02-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः कथारम्भः च",
+   "ncert_sections": "पाठपरिचयः, ग्रन्थपरिचयः, प्रथमः अनुच्छेदः",
+   "concepts": [
+    {
+     "concept_tag": "shukasaptati-parichayah",
+     "learning_objective": "शुकसप्ततिः इति कथाग्रन्थस्य परिचयं प्रयोजनं च वक्तुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "katha-arambhah",
+     "learning_objective": "कथायाः आरम्भे पात्राणि स्थानं प्रसङ्गं च अभिज्ञातुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH02-T2",
+   "topic_number": 2,
+   "title": "बुद्धिमत्याः प्रत्युत्पन्नमतिः व्याघ्रस्य पलायनं च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "buddhimatyah-yuktih",
+     "learning_objective": "व्याघ्रं दृष्ट्वा बुद्धिमत्या प्रयुक्तां युक्तिं तस्याः आशयं च व्याख्यातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "vyaghra-palayanam",
+     "learning_objective": "व्याघ्रः किं मत्वा पलायितः इति कारणं वक्तुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "nijabuddhi-shlokah",
+     "learning_objective": "निजबुद्ध्या विमुक्ता इति श्लोकस्य भावं निष्कर्षं च विवेक्तुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH02-T3",
+   "topic_number": 3,
+   "title": "शृगालव्याघ्रसंवादः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "shrigala-vyaghra-samvadah",
+     "learning_objective": "शृगालव्याघ्रयोः संवादस्य क्रमं विषयं च अवगन्तुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "shrigalasya-dhurtata",
+     "learning_objective": "शृगालस्य धूर्ततां व्याघ्रस्य शङ्कां च संवादात् विश्लेषयितुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH02-T4",
+   "topic_number": 4,
+   "title": "व्याघ्रस्य पुनरागमनं बुद्धिमत्याः विजयः नीतिः च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "dhurta-tarjanam",
+     "learning_objective": "रे रे धूर्त इति श्लोकेन बुद्धिमत्याः तर्जनस्य आशयं प्रभावं च व्याख्यातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "kathayah-nitih",
+     "learning_objective": "बुद्धिर्बलवती सदा इति कथायाः नीतिं जीवने योजयितुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH02-T5",
+   "topic_number": 5,
+   "title": "शब्दार्थाः पर्यायपदानि विलोमपदानि च",
+   "ncert_sections": "शब्दार्थाः, अभ्यासः ६-७",
+   "concepts": [
+    {
+     "concept_tag": "shabdarthah",
+     "learning_objective": "पाठे प्रयुक्तानां कठिनपदानां सन्दर्भानुसारम् अर्थं ज्ञातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "paryaya-padani",
+     "learning_objective": "पाठात् पर्यायपदानि चेतुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "viloma-padani",
+     "learning_objective": "पाठात् विलोमपदानि चेतुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH02-T6",
+   "topic_number": 6,
+   "title": "व्याकरणम्: सन्धिः समासः धातुरूपाणि प्रत्ययाः च",
+   "ncert_sections": "अभ्यासः ५, भाषिकविस्तारः, समासः",
+   "concepts": [
+    {
+     "concept_tag": "sandhi-vicchedah",
+     "learning_objective": "पाठस्थपदानां सन्धिं सन्धिविच्छेदं च कर्तुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "samasa-vigrahah",
+     "learning_objective": "पाठस्थसमस्तपदानां विग्रहं समासनाम च ज्ञातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "dhatu-lakara-pratyayah",
+     "learning_objective": "पाठस्थक्रियापदेषु धातुं लकारं पुरुषं वचनं प्रत्ययं च अभिज्ञातुं समर्थः भवेत्।"
+    }
+   ]
+  }
+ ]
+}

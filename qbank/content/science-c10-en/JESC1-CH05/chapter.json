@@ -1,0 +1,164 @@
+{
+ "chapter_id": "JESC1-CH05",
+ "title": "Life Processes",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESC1-CH05-T1",
+   "topic_number": 1,
+   "title": "What are life processes?",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "life-processes-definition",
+     "learning_objective": "Define life processes as the maintenance functions of an organism and name nutrition, respiration, transportation and excretion."
+    },
+    {
+     "concept_tag": "molecular-movement-and-life",
+     "learning_objective": "Explain why invisible molecular movement is needed to repair and maintain living structures."
+    },
+    {
+     "concept_tag": "need-for-specialised-systems",
+     "learning_objective": "Explain why diffusion is insufficient for multicellular organisms and why specialised tissues and transport are needed."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH05-T2",
+   "topic_number": 2,
+   "title": "Autotrophic nutrition and photosynthesis",
+   "ncert_sections": "5.2, 5.2.1",
+   "concepts": [
+    {
+     "concept_tag": "photosynthesis-events",
+     "learning_objective": "Describe the raw materials, events and products of photosynthesis and how plants store unused carbohydrate."
+    },
+    {
+     "concept_tag": "photosynthesis-experiments",
+     "learning_objective": "Interpret the starch-test activities showing that chlorophyll and carbon dioxide are essential for photosynthesis."
+    },
+    {
+     "concept_tag": "stomata-and-raw-materials",
+     "learning_objective": "Explain how guard cells open and close stomata and how plants obtain water and minerals such as nitrogen."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH05-T3",
+   "topic_number": 3,
+   "title": "Heterotrophic nutrition and nutrition in single-celled organisms",
+   "ncert_sections": "5.2.2, 5.2.3",
+   "concepts": [
+    {
+     "concept_tag": "heterotrophic-strategies",
+     "learning_objective": "Distinguish between organisms that break down food outside the body, those that take in whole food, and parasites."
+    },
+    {
+     "concept_tag": "nutrition-in-unicellular-organisms",
+     "learning_objective": "Describe how Amoeba and Paramoecium take in and digest food."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH05-T4",
+   "topic_number": 4,
+   "title": "Nutrition in human beings",
+   "ncert_sections": "5.2.4",
+   "concepts": [
+    {
+     "concept_tag": "digestion-in-mouth-and-stomach",
+     "learning_objective": "Explain the roles of teeth, saliva, gastric glands, acid, pepsin and mucus in digestion."
+    },
+    {
+     "concept_tag": "digestion-in-small-intestine",
+     "learning_objective": "Explain how bile, pancreatic juice and intestinal juice complete the digestion of carbohydrates, proteins and fats."
+    },
+    {
+     "concept_tag": "absorption-by-villi",
+     "learning_objective": "Explain how villi absorb digested food and how the large intestine absorbs water."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH05-T5",
+   "topic_number": 5,
+   "title": "Respiration",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "aerobic-and-anaerobic-respiration",
+     "learning_objective": "Compare the pathways by which glucose is broken down in yeast, in muscle cells and in mitochondria."
+    },
+    {
+     "concept_tag": "atp-energy-currency",
+     "learning_objective": "Describe ATP as the energy currency of the cell and how it is made and used."
+    },
+    {
+     "concept_tag": "gas-exchange-in-organisms",
+     "learning_objective": "Explain gaseous exchange in plants, aquatic animals and the human respiratory system."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH05-T6",
+   "topic_number": 6,
+   "title": "Transportation in human beings",
+   "ncert_sections": "5.4.1",
+   "concepts": [
+    {
+     "concept_tag": "heart-and-double-circulation",
+     "learning_objective": "Trace the flow of blood through the four chambers of the heart and explain double circulation."
+    },
+    {
+     "concept_tag": "blood-vessels-and-blood-pressure",
+     "learning_objective": "Distinguish arteries, veins and capillaries and interpret systolic and diastolic blood pressure."
+    },
+    {
+     "concept_tag": "platelets-and-lymph",
+     "learning_objective": "Describe the roles of platelets in clotting and of lymph in transport."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH05-T7",
+   "topic_number": 7,
+   "title": "Transportation in plants",
+   "ncert_sections": "5.4.2",
+   "concepts": [
+    {
+     "concept_tag": "plant-transport-needs",
+     "learning_objective": "Explain why plants need a transport system and why it can be relatively slow."
+    },
+    {
+     "concept_tag": "water-transport-in-xylem",
+     "learning_objective": "Explain how root pressure and transpiration pull move water and minerals up the xylem."
+    },
+    {
+     "concept_tag": "translocation-in-phloem",
+     "learning_objective": "Describe translocation of food in phloem and how it uses energy from ATP."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH05-T8",
+   "topic_number": 8,
+   "title": "Excretion in human beings and plants",
+   "ncert_sections": "5.5, 5.5.1, 5.5.2",
+   "concepts": [
+    {
+     "concept_tag": "human-excretory-system",
+     "learning_objective": "Identify the organs of the human excretory system and the path of urine."
+    },
+    {
+     "concept_tag": "nephron-and-urine-formation",
+     "learning_objective": "Explain filtration and selective reabsorption in nephrons and compare the kidney with dialysis."
+    },
+    {
+     "concept_tag": "excretion-in-plants",
+     "learning_objective": "Describe the ways in which plants get rid of their waste products."
+    }
+   ]
+  }
+ ]
+}

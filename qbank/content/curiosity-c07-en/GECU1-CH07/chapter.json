@@ -1,0 +1,128 @@
+{
+ "chapter_id": "GECU1-CH07",
+ "title": "Heat Transfer in Nature",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GECU1-CH07-T1",
+   "topic_number": 1,
+   "title": "Conduction of heat; good and poor conductors",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "conduction-in-solids",
+     "learning_objective": "Explain conduction as heat passing from particle to neighbouring particle, from the hotter to the colder part of an object, without the particles moving."
+    },
+    {
+     "concept_tag": "good-and-poor-conductors",
+     "learning_objective": "Classify materials as good or poor conductors (insulators) of heat and relate this to their everyday uses."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH07-T2",
+   "topic_number": 2,
+   "title": "Trapped air as an insulator in clothing and houses",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "trapped-air-insulation",
+     "learning_objective": "Explain how air trapped in wool, between layers of clothing or between blankets reduces heat flow because air is a poor conductor."
+    },
+    {
+     "concept_tag": "heat-and-house-design",
+     "learning_objective": "Explain how hollow bricks and walls of wood and mud keep houses comfortable in very hot or cold climates."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH07-T3",
+   "topic_number": 3,
+   "title": "Convection in air and in liquids",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "convection-in-air",
+     "learning_objective": "Explain that heated air expands, becomes lighter and rises, as seen with the paper cups, smoke and a balloon in the Sun."
+    },
+    {
+     "concept_tag": "convection-in-liquids",
+     "learning_objective": "Describe convection currents in heated water as hot water rising and cooler water sinking to take its place."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH07-T4",
+   "topic_number": 4,
+   "title": "Land and sea breeze",
+   "ncert_sections": "7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "land-water-heating-rates",
+     "learning_objective": "Compare how quickly soil and water heat up and cool down in sunlight and in shade."
+    },
+    {
+     "concept_tag": "sea-and-land-breeze",
+     "learning_objective": "Explain the formation of sea breeze by day and land breeze by night in coastal areas."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH07-T5",
+   "topic_number": 5,
+   "title": "Radiation and the three processes together",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "radiation-without-medium",
+     "learning_objective": "State that radiation transfers heat without a material medium, as from the Sun or a fire, and that all objects radiate heat."
+    },
+    {
+     "concept_tag": "colour-and-heat-absorption",
+     "learning_objective": "Explain why light-coloured clothes suit summer and dark-coloured clothes suit winter."
+    },
+    {
+     "concept_tag": "three-processes-together",
+     "learning_objective": "Identify conduction, convection and radiation acting together in heating water in a pan or using a bukhari."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH07-T6",
+   "topic_number": 6,
+   "title": "Water cycle",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "water-cycle-processes",
+     "learning_objective": "Describe evaporation, transpiration, condensation and precipitation as steps of the water cycle driven by the Sun's heat."
+    },
+    {
+     "concept_tag": "water-cycle-redistribution",
+     "learning_objective": "Explain how the water cycle redistributes and replenishes water while conserving its total amount on the Earth."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH07-T7",
+   "topic_number": 7,
+   "title": "Seepage of water, groundwater and its conservation",
+   "ncert_sections": "7.4.1",
+   "concepts": [
+    {
+     "concept_tag": "infiltration-and-seepage",
+     "learning_objective": "Relate the rate of infiltration through clay, sand and gravel to the size and connection of the spaces between particles."
+    },
+    {
+     "concept_tag": "groundwater-and-aquifers",
+     "learning_objective": "Define groundwater and aquifers and explain how water is drawn from them through wells."
+    },
+    {
+     "concept_tag": "groundwater-conservation",
+     "learning_objective": "Explain causes of groundwater depletion and ways to conserve water such as rainwater harvesting, recharge pits and ice stupas."
+    }
+   ]
+  }
+ ]
+}

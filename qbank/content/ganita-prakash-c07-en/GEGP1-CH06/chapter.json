@@ -1,0 +1,136 @@
+{
+ "chapter_id": "GEGP1-CH06",
+ "title": "Number Play",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP1-CH06-T1",
+   "topic_number": 1,
+   "title": "Numbers Tell us Things",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "taller-in-front-rule",
+     "learning_objective": "Find the number each person calls out when the rule is 'count the taller people in front of you'."
+    },
+    {
+     "concept_tag": "always-sometimes-never",
+     "learning_objective": "Judge whether statements about the called-out numbers are always, sometimes or never true."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH06-T2",
+   "topic_number": 2,
+   "title": "Picking Parity: Sums of Even and Odd Numbers",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "parity-meaning",
+     "learning_objective": "Explain parity using the idea of arranging a number in pairs."
+    },
+    {
+     "concept_tag": "parity-of-sums",
+     "learning_objective": "Decide the parity of a sum from the parity and count of the numbers added."
+    },
+    {
+     "concept_tag": "consecutive-numbers-parity",
+     "learning_objective": "Use the fact that two consecutive numbers have different parity."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH06-T3",
+   "topic_number": 3,
+   "title": "Parity in Grids and Expressions",
+   "ncert_sections": "6.2 (Small Squares in Grids, Parity of Expressions)",
+   "concepts": [
+    {
+     "concept_tag": "parity-of-products",
+     "learning_objective": "Find the parity of the number of small squares in a grid without multiplying."
+    },
+    {
+     "concept_tag": "parity-of-expressions",
+     "learning_objective": "Identify expressions that are always even, always odd, or either."
+    },
+    {
+     "concept_tag": "nth-even-odd-formula",
+     "learning_objective": "Use 2n and 2n - 1 to find the nth even and nth odd number."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH06-T4",
+   "topic_number": 4,
+   "title": "Grid Sums and 3 x 3 Magic Squares",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "row-column-sums",
+     "learning_objective": "Use the smallest and largest possible sums and the total 45 to reason about grids filled with 1-9."
+    },
+    {
+     "concept_tag": "magic-square-properties",
+     "learning_objective": "Explain why a 1-9 magic square has magic sum 15, centre 5, and 1 and 9 in middle positions."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH06-T5",
+   "topic_number": 5,
+   "title": "Generalising Magic Squares and Their History",
+   "ncert_sections": "6.3 (Generalising a 3 x 3 Magic Square, Magic Squares in History and Culture)",
+   "concepts": [
+    {
+     "concept_tag": "generalised-magic-square",
+     "learning_objective": "Use the centre number m to describe a magic square and its magic sum 3m."
+    },
+    {
+     "concept_tag": "operations-on-magic-squares",
+     "learning_objective": "Predict the new magic sum when every number of a magic square is changed in the same way."
+    },
+    {
+     "concept_tag": "magic-squares-in-history",
+     "learning_objective": "Recall the Chautisa Yantra and other magic squares in Indian history and culture."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH06-T6",
+   "topic_number": 6,
+   "title": "Virahanka-Fibonacci Numbers",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "virahanka-rule",
+     "learning_objective": "Extend the Virahanka sequence by adding the two previous terms."
+    },
+    {
+     "concept_tag": "rhythms-and-steps",
+     "learning_objective": "Count rhythms of short and long syllables, or 1-and-2 step paths, using the Virahanka numbers."
+    },
+    {
+     "concept_tag": "virahanka-history",
+     "learning_objective": "Recall who first described these numbers and the parity pattern of the sequence."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH06-T7",
+   "topic_number": 7,
+   "title": "Digits in Disguise",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "cryptarithms",
+     "learning_objective": "Solve simple cryptarithms by reasoning about place value and carries."
+    },
+    {
+     "concept_tag": "parity-puzzles",
+     "learning_objective": "Apply parity to decide everyday puzzles such as switch toggling."
+    }
+   ]
+  }
+ ]
+}

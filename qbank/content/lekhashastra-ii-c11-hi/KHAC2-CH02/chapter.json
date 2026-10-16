@@ -1,0 +1,104 @@
+{
+ "chapter_id": "KHAC2-CH02",
+ "title": "वित्तीय विवरण – 2",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHAC2-CH02-T1",
+   "topic_number": 1,
+   "title": "समायोजन की आवश्यकता और अंतिम स्टॉक",
+   "ncert_sections": "9.1, 9.2",
+   "concepts": [
+    {
+     "concept_tag": "samayojan-ki-avashyakta",
+     "learning_objective": "विद्यार्थी उपार्जन आधार पर सही लाभ ज्ञात करने के लिए समायोजनों की आवश्यकता समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "antim-stock",
+     "learning_objective": "विद्यार्थी अंतिम स्टॉक का मूल्यांकन और अंतिम खातों में उसका प्रदर्शन कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC2-CH02-T2",
+   "topic_number": 2,
+   "title": "अदत्त व्यय और पूर्वदत्त व्यय",
+   "ncert_sections": "9.3, 9.4",
+   "concepts": [
+    {
+     "concept_tag": "adatt-vyay",
+     "learning_objective": "विद्यार्थी अदत्त व्ययों का लेखांकन और अंतिम खातों में उनका दोहरा प्रभाव दर्शा सकेंगे।"
+    },
+    {
+     "concept_tag": "poorvadatt-vyay",
+     "learning_objective": "विद्यार्थी पूर्वदत्त व्ययों की गणना कर उन्हें अंतिम खातों में समायोजित कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC2-CH02-T3",
+   "topic_number": 3,
+   "title": "उपार्जित आय और अग्रिम प्राप्त आय",
+   "ncert_sections": "9.5, 9.6",
+   "concepts": [
+    {
+     "concept_tag": "upaarjit-aay",
+     "learning_objective": "विद्यार्थी उपार्जित आय को आय में जोड़कर परिसंपत्ति के रूप में दर्शा सकेंगे।"
+    },
+    {
+     "concept_tag": "agrim-prapt-aay",
+     "learning_objective": "विद्यार्थी अग्रिम प्राप्त आय को आय से घटाकर देयता के रूप में दर्शा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC2-CH02-T4",
+   "topic_number": 4,
+   "title": "ह्रास और डूबत ऋण",
+   "ncert_sections": "9.7, 9.8",
+   "concepts": [
+    {
+     "concept_tag": "hras",
+     "learning_objective": "विद्यार्थी स्थायी परिसंपत्तियों पर ह्रास की गणना कर उसे अंतिम खातों में दर्शा सकेंगे।"
+    },
+    {
+     "concept_tag": "doobat-rin",
+     "learning_objective": "विद्यार्थी अतिरिक्त डूबत ऋणों का लाभ-हानि खाते और देनदारों पर प्रभाव बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC2-CH02-T5",
+   "topic_number": 5,
+   "title": "संदिग्ध ऋणों के लिए प्रावधान और देनदारों पर बट्टे के लिए प्रावधान",
+   "ncert_sections": "9.9, 9.10",
+   "concepts": [
+    {
+     "concept_tag": "sandigdh-rin-pravdhan",
+     "learning_objective": "विद्यार्थी डूबत एवं संदिग्ध ऋणों के लिए प्रावधान की गणना और समायोजन कर सकेंगे।"
+    },
+    {
+     "concept_tag": "batta-pravdhan",
+     "learning_objective": "विद्यार्थी देनदारों पर बट्टे के लिए प्रावधान सही आधार राशि पर ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC2-CH02-T6",
+   "topic_number": 6,
+   "title": "प्रबंधक का कमीशन और पूँजी पर ब्याज",
+   "ncert_sections": "9.11, 9.12",
+   "concepts": [
+    {
+     "concept_tag": "prabandhak-kamishan",
+     "learning_objective": "विद्यार्थी कमीशन से पूर्व और पश्चात लाभ पर प्रबंधक के कमीशन की गणना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "poonji-par-byaj",
+     "learning_objective": "विद्यार्थी पूँजी पर ब्याज की गणना और उसका लेखांकन प्रभाव समझा सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

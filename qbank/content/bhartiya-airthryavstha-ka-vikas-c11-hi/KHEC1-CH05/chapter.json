@@ -1,0 +1,116 @@
+{
+ "chapter_id": "KHEC1-CH05",
+ "title": "ग्रामीण विकास",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHEC1-CH05-T1",
+   "topic_number": 1,
+   "title": "ग्रामीण विकास का अर्थ और महत्त्व",
+   "ncert_sections": "5.1, 5.2",
+   "concepts": [
+    {
+     "concept_tag": "gramin-vikas-arth",
+     "learning_objective": "ग्रामीण विकास के अर्थ और उसके प्रमुख क्षेत्रों को पहचानना।"
+    },
+    {
+     "concept_tag": "krishi-sankat-karan",
+     "learning_objective": "सुधारों के बाद कृषि संवृद्धि में गिरावट और ग्रामीण संकट के कारणों को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHEC1-CH05-T2",
+   "topic_number": 2,
+   "title": "ग्रामीण क्षेत्रों में साख",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "gramin-sakh-sansthan",
+     "learning_objective": "ग्रामीण साख की आवश्यकता और बहु-संस्था व्यवस्था, नाबार्ड आदि संस्थाओं की भूमिका समझना।"
+    },
+    {
+     "concept_tag": "swayam-sahayata-samooh",
+     "learning_objective": "स्वयं सहायता समूहों और सूक्ष्म साख की कार्यप्रणाली तथा महत्त्व को समझना।"
+    },
+    {
+     "concept_tag": "gramin-banking-moolyankan",
+     "learning_objective": "ग्रामीण बैंकिंग की उपलब्धियों और कमियों का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHEC1-CH05-T3",
+   "topic_number": 3,
+   "title": "कृषि विपणन व्यवस्था",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "krishi-vipanan-arth",
+     "learning_objective": "कृषि विपणन का अर्थ और स्वतंत्रता से पूर्व किसानों की विपणन समस्याओं को समझना।"
+    },
+    {
+     "concept_tag": "sarkari-hastakshep-upay",
+     "learning_objective": "विपणन सुधार के लिए सरकार के चार उपायों को पहचानना।"
+    },
+    {
+     "concept_tag": "vaikalpik-vipanan",
+     "learning_objective": "उभरते वैकल्पिक विपणन माध्यमों और अनुबंध खेती के लाभों को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHEC1-CH05-T4",
+   "topic_number": 4,
+   "title": "विविधीकरण: पशुपालन",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "vividhikaran-arth",
+     "learning_objective": "विविधीकरण के दो पहलुओं और उसकी आवश्यकता को समझना।"
+    },
+    {
+     "concept_tag": "pashupalan-dairy",
+     "learning_objective": "पशुपालन, डेयरी क्षेत्र और ऑपरेशन फ्लड की भूमिका को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHEC1-CH05-T5",
+   "topic_number": 5,
+   "title": "मत्स्य पालन, बागवानी और सूचना प्रौद्योगिकी",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "matsya-palan",
+     "learning_objective": "मत्स्य क्षेत्र की स्थिति और मछुआरा समुदाय की समस्याओं को समझना।"
+    },
+    {
+     "concept_tag": "bagwani",
+     "learning_objective": "बागवानी क्षेत्र के योगदान और रोजगार संभावनाओं को समझना।"
+    },
+    {
+     "concept_tag": "soochna-praudyogiki",
+     "learning_objective": "ग्रामीण विकास में सूचना प्रौद्योगिकी की भूमिका का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHEC1-CH05-T6",
+   "topic_number": 6,
+   "title": "धारणीय विकास और जैविक कृषि",
+   "ncert_sections": "5.6, 5.7",
+   "concepts": [
+    {
+     "concept_tag": "jaivik-krishi-labh",
+     "learning_objective": "जैविक कृषि के अर्थ और उसके लाभों को समझना।"
+    },
+    {
+     "concept_tag": "jaivik-krishi-seemayen",
+     "learning_objective": "जैविक कृषि की सीमाओं का मूल्यांकन करना और धारणीय विकास से उसका संबंध जोड़ना।"
+    }
+   ]
+  }
+ ]
+}

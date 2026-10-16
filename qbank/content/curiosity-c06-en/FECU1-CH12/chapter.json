@@ -1,0 +1,124 @@
+{
+ "chapter_id": "FECU1-CH12",
+ "title": "Beyond Earth",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FECU1-CH12-T1",
+   "topic_number": 1,
+   "title": "Stars and constellations",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "constellations",
+     "learning_objective": "Explain what constellations are and why recognising star patterns was useful for finding directions."
+    },
+    {
+     "concept_tag": "orion-sirius-taurus",
+     "learning_objective": "Identify Orion, Canis Major, Taurus and the star Sirius, and use Orion's belt to locate Sirius."
+    },
+    {
+     "concept_tag": "nakshatra",
+     "learning_objective": "Relate Indian names such as nakshatras, Ardra, Krittika and Rohini to stars and groups of stars."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH12-T2",
+   "topic_number": 2,
+   "title": "The Pole Star and night sky watching",
+   "ncert_sections": "12.1, 12.2",
+   "concepts": [
+    {
+     "concept_tag": "pole-star",
+     "learning_objective": "Use the Big Dipper to locate the Pole Star and explain how the Pole Star shows the North direction."
+    },
+    {
+     "concept_tag": "light-pollution",
+     "learning_objective": "Explain how light pollution, smoke, dust and obstacles reduce the number of stars we can see."
+    },
+    {
+     "concept_tag": "sky-watching-preparation",
+     "learning_objective": "Plan a safe and effective night sky watching session."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH12-T3",
+   "topic_number": 3,
+   "title": "The Sun: our nearest star",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "sun-as-a-star",
+     "learning_objective": "Describe the Sun as a star and the main source of heat and light on Earth, and explain why other stars are not seen by day."
+    },
+    {
+     "concept_tag": "sun-size-and-distance",
+     "learning_objective": "Interpret the size and distance of the Sun and use the astronomical unit to express distances."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH12-T4",
+   "topic_number": 4,
+   "title": "Planets of the Solar System",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "planets-and-revolution",
+     "learning_objective": "Define a planet and revolution, and explain why Pluto is now called a dwarf planet."
+    },
+    {
+     "concept_tag": "order-and-features-of-planets",
+     "learning_objective": "State the order of the eight planets and describe features of the inner and outer planets."
+    },
+    {
+     "concept_tag": "identifying-planets",
+     "learning_objective": "Distinguish planets from stars in the night sky and locate Venus at dawn or dusk."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH12-T5",
+   "topic_number": 5,
+   "title": "Moons, asteroids and comets",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "natural-satellites",
+     "learning_objective": "Describe natural satellites and features of the Moon, including its craters and India's Chandrayaan missions."
+    },
+    {
+     "concept_tag": "asteroids",
+     "learning_objective": "Describe asteroids and the location of the asteroid belt."
+    },
+    {
+     "concept_tag": "comets",
+     "learning_objective": "Explain how a comet's tail forms and why comets are seen only near the Sun."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH12-T6",
+   "topic_number": 6,
+   "title": "The Solar System, the Milky Way Galaxy and the Universe",
+   "ncert_sections": "12.3, 12.4, 12.5",
+   "concepts": [
+    {
+     "concept_tag": "solar-system-members",
+     "learning_objective": "Identify the members of the Solar System and explain why objects other than the Sun shine."
+    },
+    {
+     "concept_tag": "milky-way-galaxy",
+     "learning_objective": "Describe the Milky Way Galaxy as our home galaxy of which the Solar System is a part."
+    },
+    {
+     "concept_tag": "universe-and-exoplanets",
+     "learning_objective": "Explain what exoplanets are and describe the ongoing search for life in the Universe."
+    }
+   ]
+  }
+ ]
+}

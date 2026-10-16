@@ -1,0 +1,112 @@
+{
+ "chapter_id": "LHEC2-CH05",
+ "title": "बाज़ार संतुलन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHEC2-CH05-T1",
+   "topic_number": 1,
+   "title": "संतुलन, अधिमाँग और अधिपूर्ति",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "santulan-paribhasha",
+     "learning_objective": "बाज़ार संतुलन, संतुलन कीमत और संतुलन मात्रा की परिभाषा समझना।"
+    },
+    {
+     "concept_tag": "adhimang-adhipurti",
+     "learning_objective": "अधिमाँग और अधिपूर्ति की स्थितियों में कीमत के समायोजन की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH05-T2",
+   "topic_number": 2,
+   "title": "फर्मों की स्थिर संख्या में संतुलन: संख्यात्मक विश्लेषण",
+   "ncert_sections": "5.1.1",
+   "concepts": [
+    {
+     "concept_tag": "santulan-ganana",
+     "learning_objective": "माँग और पूर्ति के समीकरणों से संतुलन कीमत और मात्रा की गणना करना।"
+    },
+    {
+     "concept_tag": "adhimang-ganana",
+     "learning_objective": "दी गई कीमत पर अधिमाँग और अधिपूर्ति की मात्रा ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH05-T3",
+   "topic_number": 3,
+   "title": "श्रम बाज़ार में मज़दूरी का निर्धारण",
+   "ncert_sections": "5.1.1",
+   "concepts": [
+    {
+     "concept_tag": "shram-mang",
+     "learning_objective": "सीमांत उत्पाद मूल्य (VMPL) के आधार पर फर्म की श्रम माँग और उसके ढलान की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "shram-purti",
+     "learning_objective": "आय और अवकाश के चयन से व्यक्तिगत तथा बाज़ार श्रम पूर्ति वक्र का आकार समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH05-T4",
+   "topic_number": 4,
+   "title": "माँग और पूर्ति वक्रों का खिसकना",
+   "ncert_sections": "5.1.1",
+   "concepts": [
+    {
+     "concept_tag": "mang-sthanantaran",
+     "learning_objective": "माँग वक्र के खिसकने का संतुलन कीमत और मात्रा पर प्रभाव समझना।"
+    },
+    {
+     "concept_tag": "purti-sthanantaran",
+     "learning_objective": "आगत कीमत या फर्मों की संख्या बदलने पर पूर्ति वक्र के खिसकने का प्रभाव बताना।"
+    },
+    {
+     "concept_tag": "yugpat-sthanantaran",
+     "learning_objective": "माँग और पूर्ति वक्रों के एक साथ खिसकने के प्रभावों का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH05-T5",
+   "topic_number": 5,
+   "title": "निर्बाध प्रवेश और निकास के साथ बाज़ार संतुलन",
+   "ncert_sections": "5.1.2",
+   "concepts": [
+    {
+     "concept_tag": "mukt-pravesh-santulan",
+     "learning_objective": "निर्बाध प्रवेश-निकास में संतुलन कीमत के न्यूनतम औसत लागत के बराबर होने का कारण समझना।"
+    },
+    {
+     "concept_tag": "firmon-ki-sankhya",
+     "learning_objective": "संतुलन पर फर्मों की संख्या की गणना करना।"
+    },
+    {
+     "concept_tag": "mukt-pravesh-mang-badlav",
+     "learning_objective": "निर्बाध प्रवेश-निकास में माँग वक्र खिसकने के प्रभाव का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH05-T6",
+   "topic_number": 6,
+   "title": "अनुप्रयोग: कीमत की उच्चतम और निम्नतम सीमा",
+   "ncert_sections": "5.2, 5.2.1, 5.2.2",
+   "concepts": [
+    {
+     "concept_tag": "uchchatam-kimat-seema",
+     "learning_objective": "कीमत की उच्चतम सीमा और उससे उत्पन्न अधिमाँग, राशनिंग तथा काला बाज़ार को समझना।"
+    },
+    {
+     "concept_tag": "nimnatam-kimat-seema",
+     "learning_objective": "कीमत की निम्नतम सीमा, जैसे कृषि समर्थन कीमत और न्यूनतम मज़दूरी, के प्रभावों की व्याख्या करना।"
+    }
+   ]
+  }
+ ]
+}

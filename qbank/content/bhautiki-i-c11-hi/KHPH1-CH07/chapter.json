@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KHPH1-CH07",
+ "title": "गुरुत्वाकर्षण",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH1-CH07-T1",
+   "topic_number": 1,
+   "title": "केप्लर के नियम",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "kepler-laws",
+     "learning_objective": "केप्लर के कक्षाओं और आवर्तकालों के नियमों को बताना और उनका उपयोग करना।"
+    },
+    {
+     "concept_tag": "areal-velocity",
+     "learning_objective": "क्षेत्रफलों के नियम को कोणीय संवेग संरक्षण से जोड़ना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH07-T2",
+   "topic_number": 2,
+   "title": "गुरुत्वाकर्षण का सार्वत्रिक नियम",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "universal-law",
+     "learning_objective": "दो कणों के बीच गुरुत्वाकर्षण बल को द्रव्यमानों और दूरी के पदों में ज्ञात करना।"
+    },
+    {
+     "concept_tag": "shell-theorem",
+     "learning_objective": "एकसमान गोलीय कोश द्वारा भीतर स्थित कण पर लगने वाले बल का निर्धारण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH07-T3",
+   "topic_number": 3,
+   "title": "गुरुत्वीय स्थिरांक और पृथ्वी के पृष्ठ पर गुरुत्वीय त्वरण",
+   "ncert_sections": "7.4, 7.5",
+   "concepts": [
+    {
+     "concept_tag": "cavendish-g",
+     "learning_objective": "कैवेंडिश के प्रयोग और पृथ्वी के द्रव्यमान के आकलन को समझना।"
+    },
+    {
+     "concept_tag": "g-mass-radius",
+     "learning_objective": "गुरुत्वीय त्वरण को ग्रह के द्रव्यमान और त्रिज्या से संबंधित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH07-T4",
+   "topic_number": 4,
+   "title": "ऊँचाई और गहराई के साथ गुरुत्वीय त्वरण में परिवर्तन",
+   "ncert_sections": "7.5, 7.6",
+   "concepts": [
+    {
+     "concept_tag": "g-at-height",
+     "learning_objective": "पृष्ठ से ऊपर ऊँचाई के साथ गुरुत्वीय त्वरण का परिवर्तन ज्ञात करना।"
+    },
+    {
+     "concept_tag": "g-at-depth",
+     "learning_objective": "पृष्ठ के नीचे गहराई के साथ गुरुत्वीय त्वरण का परिवर्तन ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH07-T5",
+   "topic_number": 5,
+   "title": "गुरुत्वीय स्थितिज ऊर्जा",
+   "ncert_sections": "7.7",
+   "concepts": [
+    {
+     "concept_tag": "gravitational-potential-energy",
+     "learning_objective": "कणों के निकाय की गुरुत्वीय स्थितिज ऊर्जा और किया गया कार्य परिकलित करना।"
+    },
+    {
+     "concept_tag": "gravitational-potential",
+     "learning_objective": "गुरुत्वीय विभव की परिभाषा और उसके चिह्न को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH07-T6",
+   "topic_number": 6,
+   "title": "पलायन चाल",
+   "ncert_sections": "7.8",
+   "concepts": [
+    {
+     "concept_tag": "escape-speed-expression",
+     "learning_objective": "पलायन चाल का व्यंजक व्युत्पन्न करना और उसका उपयोग करना।"
+    },
+    {
+     "concept_tag": "escape-speed-applications",
+     "learning_objective": "पलायन चाल के आधार पर वास्तविक परिघटनाओं की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH07-T7",
+   "topic_number": 7,
+   "title": "भू-उपग्रह और उनकी ऊर्जा",
+   "ncert_sections": "7.9, 7.10",
+   "concepts": [
+    {
+     "concept_tag": "orbital-speed-period",
+     "learning_objective": "उपग्रह की कक्षीय चाल और आवर्तकाल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "satellite-energy",
+     "learning_objective": "कक्षा में परिक्रमा करते उपग्रह की कुल ऊर्जा और भारहीनता को समझना।"
+    }
+   ]
+  }
+ ]
+}

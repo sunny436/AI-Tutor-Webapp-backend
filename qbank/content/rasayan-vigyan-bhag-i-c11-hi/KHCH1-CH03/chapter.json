@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KHCH1-CH03",
+ "title": "तत्वों का वर्गीकरण एवं गुणधर्मों में आवर्तिता",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHCH1-CH03-T1",
+   "topic_number": 1,
+   "title": "वर्गीकरण की आवश्यकता और आवर्त सारणी का विकास",
+   "ncert_sections": "3.1, 3.2",
+   "concepts": [
+    {
+     "concept_tag": "early-classification",
+     "learning_objective": "डॉबेराइनर के त्रिक और न्यूलैंड्स के अष्टक नियम को समझना।"
+    },
+    {
+     "concept_tag": "mendeleev-periodic-table",
+     "learning_objective": "मेंडेलीफ की आवर्त सारणी की विशेषताओं, रिक्त स्थानों और प्रागुक्तियों को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH03-T2",
+   "topic_number": 2,
+   "title": "आधुनिक आवर्त नियम और तत्वों की नामपद्धति",
+   "ncert_sections": "3.3, 3.4",
+   "concepts": [
+    {
+     "concept_tag": "modern-periodic-law",
+     "learning_objective": "आधुनिक आवर्त नियम और दीर्घ आवर्त सारणी की संरचना बताना।"
+    },
+    {
+     "concept_tag": "iupac-naming-z-above-100",
+     "learning_objective": "100 से अधिक परमाणु क्रमांक वाले तत्वों के अस्थायी नाम और प्रतीक लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH03-T3",
+   "topic_number": 3,
+   "title": "इलेक्ट्रॉनिक विन्यास और आवर्त सारणी के ब्लॉक",
+   "ncert_sections": "3.5, 3.6.1-3.6.4",
+   "concepts": [
+    {
+     "concept_tag": "configuration-period-group",
+     "learning_objective": "इलेक्ट्रॉनिक विन्यास से तत्व का आवर्त और समूह ज्ञात करना।"
+    },
+    {
+     "concept_tag": "s-p-d-f-blocks",
+     "learning_objective": "s, p, d और f ब्लॉक तत्वों के सामान्य विन्यास और लक्षण पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH03-T4",
+   "topic_number": 4,
+   "title": "धातु, अधातु, उपधातु तथा परमाणु और आयनिक त्रिज्या",
+   "ncert_sections": "3.6.5, 3.7.1",
+   "concepts": [
+    {
+     "concept_tag": "metals-nonmetals-metalloids",
+     "learning_objective": "धातुओं, अधातुओं और उपधातुओं की आवर्त सारणी में स्थिति पहचानना।"
+    },
+    {
+     "concept_tag": "atomic-ionic-radius",
+     "learning_objective": "परमाणु और आयनिक त्रिज्या की आवर्ती प्रवृत्तियों तथा समइलेक्ट्रॉनी स्पीशीज़ की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH03-T5",
+   "topic_number": 5,
+   "title": "आयनन एन्थैल्पी, इलेक्ट्रॉन लब्धि एन्थैल्पी और विद्युत ऋणात्मकता",
+   "ncert_sections": "3.7.1",
+   "concepts": [
+    {
+     "concept_tag": "ionization-enthalpy",
+     "learning_objective": "आयनन एन्थैल्पी की प्रवृत्तियों और अपवादों की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "electron-gain-enthalpy",
+     "learning_objective": "इलेक्ट्रॉन लब्धि एन्थैल्पी की प्रवृत्तियों और अपवादों को समझाना।"
+    },
+    {
+     "concept_tag": "electronegativity",
+     "learning_objective": "विद्युत ऋणात्मकता की आवर्ती प्रवृत्ति पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH03-T6",
+   "topic_number": 6,
+   "title": "रासायनिक गुणधर्मों में आवर्ती प्रवृत्तियाँ",
+   "ncert_sections": "3.7.2, 3.7.3",
+   "concepts": [
+    {
+     "concept_tag": "valence-oxidation-state",
+     "learning_objective": "संयोजकता और ऑक्सीकरण अवस्था की आवर्तिता लागू करना।"
+    },
+    {
+     "concept_tag": "anomalous-second-period",
+     "learning_objective": "द्वितीय आवर्त के तत्वों के असंगत व्यवहार और विकर्ण संबंध की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "oxide-nature-reactivity",
+     "learning_objective": "ऑक्साइडों की अम्लीय-क्षारीय प्रकृति की आवर्ती प्रवृत्ति समझाना।"
+    }
+   ]
+  }
+ ]
+}

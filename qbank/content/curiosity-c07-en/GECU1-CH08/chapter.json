@@ -1,0 +1,120 @@
+{
+ "chapter_id": "GECU1-CH08",
+ "title": "Measurement of Time and Motion",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GECU1-CH08-T1",
+   "topic_number": 1,
+   "title": "Measuring time before clocks",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "periodic-natural-events",
+     "learning_objective": "Recognise that early timekeeping used natural events that repeat after definite intervals."
+    },
+    {
+     "concept_tag": "ancient-time-devices",
+     "learning_objective": "Describe how sundials, water clocks, hourglasses and candle clocks measured time."
+    },
+    {
+     "concept_tag": "ghatika-yantra",
+     "learning_objective": "Explain the working and limitations of ancient Indian water clocks, including the Ghatika-yantra."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH08-T2",
+   "topic_number": 2,
+   "title": "The simple pendulum",
+   "ncert_sections": "8.1.1",
+   "concepts": [
+    {
+     "concept_tag": "pendulum-oscillation",
+     "learning_objective": "Identify the mean and extreme positions of a pendulum and what counts as one oscillation."
+    },
+    {
+     "concept_tag": "pendulum-time-period",
+     "learning_objective": "Define and calculate the time period of a simple pendulum."
+    },
+    {
+     "concept_tag": "time-period-factors",
+     "learning_objective": "Analyse how the length and the bob's mass affect a pendulum's time period."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH08-T3",
+   "topic_number": 3,
+   "title": "Clocks and the SI unit of time",
+   "ncert_sections": "8.1, 8.1.2",
+   "concepts": [
+    {
+     "concept_tag": "periodic-process-clocks",
+     "learning_objective": "Explain that all clocks rely on a process repeating at equal intervals of time."
+    },
+    {
+     "concept_tag": "si-unit-time",
+     "learning_objective": "State the SI unit of time, convert between s, min and h, and write time units correctly."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH08-T4",
+   "topic_number": 4,
+   "title": "Slow or fast: speed",
+   "ncert_sections": "8.2, 8.3",
+   "concepts": [
+    {
+     "concept_tag": "comparing-motion",
+     "learning_objective": "Decide which object is faster by comparing distances covered in the same time."
+    },
+    {
+     "concept_tag": "speed-formula-units",
+     "learning_objective": "Calculate speed as total distance divided by total time and state its units."
+    },
+    {
+     "concept_tag": "speed-unit-conversion",
+     "learning_objective": "Convert speeds between m/s and km/h to compare motions."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH08-T5",
+   "topic_number": 5,
+   "title": "Relationship between speed, distance and time",
+   "ncert_sections": "8.3.1",
+   "concepts": [
+    {
+     "concept_tag": "distance-speed-time",
+     "learning_objective": "Use the relations among speed, distance and time to find an unknown quantity."
+    },
+    {
+     "concept_tag": "average-speed",
+     "learning_objective": "Calculate average speed for journeys with changing speeds or stops."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH08-T6",
+   "topic_number": 6,
+   "title": "Uniform and non-uniform linear motion",
+   "ncert_sections": "8.4",
+   "concepts": [
+    {
+     "concept_tag": "uniform-linear-motion",
+     "learning_objective": "Identify uniform linear motion as equal distances covered in equal intervals of time."
+    },
+    {
+     "concept_tag": "non-uniform-linear-motion",
+     "learning_objective": "Recognise non-uniform linear motion in data and everyday examples."
+    },
+    {
+     "concept_tag": "speedometer-odometer",
+     "learning_objective": "State what a speedometer and an odometer measure in a vehicle."
+    }
+   ]
+  }
+ ]
+}

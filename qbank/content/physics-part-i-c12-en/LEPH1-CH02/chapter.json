@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LEPH1-CH02",
+ "title": "Electrostatic Potential and Capacitance",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH1-CH02-T1",
+   "topic_number": 1,
+   "title": "Electrostatic potential and the potential of a point charge",
+   "ncert_sections": "2.1, 2.2, 2.3",
+   "concepts": [
+    {
+     "concept_tag": "electrostatic-potential-definition",
+     "learning_objective": "Define electrostatic potential as work done per unit test charge and relate it to the conservative nature of the Coulomb force."
+    },
+    {
+     "concept_tag": "potential-due-to-point-charge",
+     "learning_objective": "Calculate the potential due to a point charge using V = q/(4 pi epsilon0 r)."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH02-T2",
+   "topic_number": 2,
+   "title": "Potential due to an electric dipole and a system of charges",
+   "ncert_sections": "2.4, 2.5",
+   "concepts": [
+    {
+     "concept_tag": "dipole-potential",
+     "learning_objective": "Describe how the potential of a dipole depends on distance and on the angle with the dipole axis."
+    },
+    {
+     "concept_tag": "superposition-of-potentials",
+     "learning_objective": "Find the potential due to several point charges by algebraic addition of their potentials."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH02-T3",
+   "topic_number": 3,
+   "title": "Equipotential surfaces and the relation between field and potential",
+   "ncert_sections": "2.6, 2.6.1",
+   "concepts": [
+    {
+     "concept_tag": "equipotential-surfaces",
+     "learning_objective": "Identify equipotential surfaces and explain why the field is normal to them and no work is done along them."
+    },
+    {
+     "concept_tag": "field-potential-relation",
+     "learning_objective": "Use E = -dV/dl to find the magnitude and direction of the electric field from potential values."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH02-T4",
+   "topic_number": 4,
+   "title": "Potential energy of a system of charges and in an external field",
+   "ncert_sections": "2.7, 2.8",
+   "concepts": [
+    {
+     "concept_tag": "potential-energy-of-system",
+     "learning_objective": "Calculate the electrostatic potential energy of a system of point charges."
+    },
+    {
+     "concept_tag": "potential-energy-in-external-field",
+     "learning_objective": "Apply U = qV to a charge moving in an external potential."
+    },
+    {
+     "concept_tag": "dipole-energy-in-field",
+     "learning_objective": "Use U = -p.E to find the potential energy of a dipole and the work needed to rotate it."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH02-T5",
+   "topic_number": 5,
+   "title": "Electrostatics of conductors, dielectrics and polarisation",
+   "ncert_sections": "2.9, 2.10",
+   "concepts": [
+    {
+     "concept_tag": "electrostatics-of-conductors",
+     "learning_objective": "State the electrostatic properties of a conductor: zero interior field, surface charge, constant potential and normal surface field."
+    },
+    {
+     "concept_tag": "dielectric-polarisation",
+     "learning_objective": "Explain polar and non-polar molecules and how polarisation reduces the field inside a dielectric."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH02-T6",
+   "topic_number": 6,
+   "title": "Capacitors, the parallel plate capacitor and the effect of a dielectric",
+   "ncert_sections": "2.11, 2.12, 2.13",
+   "concepts": [
+    {
+     "concept_tag": "capacitance-definition",
+     "learning_objective": "Define capacitance as C = Q/V and state its SI unit."
+    },
+    {
+     "concept_tag": "parallel-plate-capacitance",
+     "learning_objective": "Calculate the capacitance of a parallel plate capacitor using C = epsilon0 A/d."
+    },
+    {
+     "concept_tag": "dielectric-effect-on-capacitance",
+     "learning_objective": "Explain how a dielectric changes the capacitance, charge and potential difference of a capacitor."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH02-T7",
+   "topic_number": 7,
+   "title": "Combination of capacitors and energy stored in a capacitor",
+   "ncert_sections": "2.14, 2.15",
+   "concepts": [
+    {
+     "concept_tag": "capacitors-in-series-and-parallel",
+     "learning_objective": "Find the equivalent capacitance and charges for capacitors in series and in parallel."
+    },
+    {
+     "concept_tag": "energy-stored-in-capacitor",
+     "learning_objective": "Calculate the energy stored in a capacitor and the energy changes when capacitors share charge."
+    },
+    {
+     "concept_tag": "electric-energy-density",
+     "learning_objective": "Use u = (1/2) epsilon0 E^2 to find the energy density of an electric field."
+    }
+   ]
+  }
+ ]
+}

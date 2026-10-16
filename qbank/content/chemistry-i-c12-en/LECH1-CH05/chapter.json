@@ -1,0 +1,144 @@
+{
+ "chapter_id": "LECH1-CH05",
+ "title": "Coordination Compounds",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECH1-CH05-T1",
+   "topic_number": 1,
+   "title": "Werner's theory of coordination compounds",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "werner-postulates",
+     "learning_objective": "State the postulates of Werner's theory, including primary and secondary valences and coordination polyhedra."
+    },
+    {
+     "concept_tag": "primary-secondary-valence",
+     "learning_objective": "Deduce the formulation of a complex from the moles of AgCl it precipitates and its conductivity."
+    },
+    {
+     "concept_tag": "double-salt-vs-complex",
+     "learning_objective": "Distinguish a double salt from a complex by their behaviour in aqueous solution."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH05-T2",
+   "topic_number": 2,
+   "title": "Important terms: ligands, coordination number and coordination sphere",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "ligand-types",
+     "learning_objective": "Classify ligands as unidentate, didentate, polydentate, chelating or ambidentate."
+    },
+    {
+     "concept_tag": "coordination-number",
+     "learning_objective": "Determine the coordination number of the central atom/ion from the donor atoms bonded to it."
+    },
+    {
+     "concept_tag": "coordination-sphere-and-oxidation-number",
+     "learning_objective": "Identify the coordination sphere, counter ions, oxidation number and homoleptic or heteroleptic nature of a complex."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH05-T3",
+   "topic_number": 3,
+   "title": "Nomenclature of coordination compounds",
+   "ncert_sections": "5.3, 5.3.1, 5.3.2",
+   "concepts": [
+    {
+     "concept_tag": "writing-formulas",
+     "learning_objective": "Write formulas of mononuclear coordination entities using IUPAC rules."
+    },
+    {
+     "concept_tag": "naming-complexes",
+     "learning_objective": "Write IUPAC names of mononuclear coordination compounds, including complex anions."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH05-T4",
+   "topic_number": 4,
+   "title": "Isomerism in coordination compounds",
+   "ncert_sections": "5.4, 5.4.1-5.4.6",
+   "concepts": [
+    {
+     "concept_tag": "geometrical-isomerism",
+     "learning_objective": "Explain cis-trans and fac-mer isomerism and predict when it is possible."
+    },
+    {
+     "concept_tag": "optical-isomerism",
+     "learning_objective": "Identify chiral coordination entities that show optical isomerism."
+    },
+    {
+     "concept_tag": "structural-isomerism",
+     "learning_objective": "Distinguish linkage, coordination, ionisation and solvate isomerism with examples."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH05-T5",
+   "topic_number": 5,
+   "title": "Valence bond theory and magnetic properties",
+   "ncert_sections": "5.5.1, 5.5.2, 5.5.3",
+   "concepts": [
+    {
+     "concept_tag": "vbt-hybridisation",
+     "learning_objective": "Relate the hybridisation of the central ion to the geometry of a complex using valence bond theory."
+    },
+    {
+     "concept_tag": "magnetic-moment",
+     "learning_objective": "Use magnetic data and inner or outer orbital hybridisation to explain unpaired electrons and geometry."
+    },
+    {
+     "concept_tag": "vbt-limitations",
+     "learning_objective": "State the limitations of valence bond theory."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH05-T6",
+   "topic_number": 6,
+   "title": "Crystal field theory and colour in coordination compounds",
+   "ncert_sections": "5.5.4, 5.5.5, 5.5.6",
+   "concepts": [
+    {
+     "concept_tag": "crystal-field-splitting",
+     "learning_objective": "Describe the splitting of d orbitals in octahedral and tetrahedral crystal fields."
+    },
+    {
+     "concept_tag": "spectrochemical-series",
+     "learning_objective": "Use the spectrochemical series and the relation between crystal field splitting and pairing energy to predict high or low spin."
+    },
+    {
+     "concept_tag": "colour-of-complexes",
+     "learning_objective": "Explain the colour of complexes as d-d transitions and relate the wavelength absorbed to the splitting energy."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH05-T7",
+   "topic_number": 7,
+   "title": "Metal carbonyls and applications of coordination compounds",
+   "ncert_sections": "5.6, 5.7",
+   "concepts": [
+    {
+     "concept_tag": "metal-carbonyl-bonding",
+     "learning_objective": "Describe the structures of homoleptic carbonyls and the synergic sigma and pi bonding in them."
+    },
+    {
+     "concept_tag": "applications-of-complexes",
+     "learning_objective": "Explain uses of complexes in analysis, metallurgy, industry, electroplating and photography."
+    },
+    {
+     "concept_tag": "biological-and-medicinal",
+     "learning_objective": "Identify biologically important complexes and the use of chelate therapy in medicine."
+    }
+   ]
+  }
+ ]
+}

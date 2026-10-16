@@ -1,0 +1,92 @@
+{
+ "chapter_id": "LHMH1-CH01",
+ "title": "संबंध एवं फलन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH1-CH01-T1",
+   "topic_number": 1,
+   "title": "संबंध और संबंधों के प्रकार",
+   "ncert_sections": "1.1, 1.2",
+   "concepts": [
+    {
+     "concept_tag": "sambandh-ki-paribhasha",
+     "learning_objective": "संबंध को कार्तीय गुणन के उपसमुच्चय के रूप में तथा रिक्त और सार्वत्रिक संबंध को पहचानना।"
+    },
+    {
+     "concept_tag": "svatulya-sammit-sankramak",
+     "learning_objective": "किसी संबंध के स्वतुल्य, सममित और संक्रामक होने की जाँच करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH01-T2",
+   "topic_number": 2,
+   "title": "तुल्यता संबंध और तुल्यता वर्ग",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "tulyata-sambandh",
+     "learning_objective": "तुल्यता संबंध की परिभाषा समझना और दिए गए संबंध की जाँच करना।"
+    },
+    {
+     "concept_tag": "tulyata-varg",
+     "learning_objective": "तुल्यता वर्ग ज्ञात करना और उनके असंयुक्त विभाजन वाले गुण को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH01-T3",
+   "topic_number": 3,
+   "title": "फलनों के प्रकार",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "ekaiki-phalan",
+     "learning_objective": "एकैकी फलन की परिभाषा बताना और दिए गए फलन की जाँच करना।"
+    },
+    {
+     "concept_tag": "achchhadak-phalan",
+     "learning_objective": "आच्छादक फलन की पहचान परिसर और सहप्रांत की तुलना से करना।"
+    },
+    {
+     "concept_tag": "ekaiki-tatha-achchhadak",
+     "learning_objective": "एकैकी तथा आच्छादक फलनों को पहचानना और परिमित तथा अपरिमित समुच्चयों में अंतर समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH01-T4",
+   "topic_number": 4,
+   "title": "फलनों का संयोजन",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "phalanon-ka-sanyojan",
+     "learning_objective": "दो फलनों का संयोजन ज्ञात करना और उसका मान निकालना।"
+    },
+    {
+     "concept_tag": "sanyojan-ke-gun",
+     "learning_objective": "संयुक्त फलन के एकैकी या आच्छादक होने से घटक फलनों के गुणों का निष्कर्ष निकालना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH01-T5",
+   "topic_number": 5,
+   "title": "व्युत्क्रमणीय फलन",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "vyutkramaniya-phalan",
+     "learning_objective": "फलन के व्युत्क्रमणीय होने की आवश्यक और पर्याप्त शर्त समझना।"
+    },
+    {
+     "concept_tag": "vyutkram-gyat-karna",
+     "learning_objective": "दिए गए व्युत्क्रमणीय फलन का व्युत्क्रम ज्ञात करना और उसका मान निकालना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KHGY3-CH06",
+ "title": "सुदूर संवेदन का परिचय",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHGY3-CH06-T1",
+   "topic_number": 1,
+   "title": "सुदूर संवेदन: अवधारणा और पारिभाषिक शब्दावली",
+   "ncert_sections": "परिचय, शब्दावली",
+   "concepts": [
+    {
+     "concept_tag": "sudur-sanvedan-paribhasha",
+     "learning_objective": "सुदूर संवेदन की परिभाषा और उसके मूल घटकों को समझना।"
+    },
+    {
+     "concept_tag": "paribhashik-shabdavali",
+     "learning_objective": "परावर्तकता, बैंड तथा मिथ्या वर्ण संयोजन जैसे पारिभाषिक शब्दों का अर्थ बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH06-T2",
+   "topic_number": 2,
+   "title": "सुदूर संवेदन की अवस्थाएँ: ऊर्जा स्रोत से वायुमंडल तक",
+   "ncert_sections": "अवस्थाएँ (क)-(घ)",
+   "concepts": [
+    {
+     "concept_tag": "urja-srot-vidyut-chumbakiya-spectrum",
+     "learning_objective": "ऊर्जा स्रोत, विद्युत चुंबकीय विकिरण और स्पेक्ट्रम के प्रयुक्त भागों को पहचानना।"
+    },
+    {
+     "concept_tag": "urja-antarkriya-vayumandal",
+     "learning_objective": "पृथ्वी की सतह और वायुमंडल के साथ ऊर्जा की अंतर्क्रिया की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH06-T3",
+   "topic_number": 3,
+   "title": "संवेदक द्वारा संसूचन, उपग्रह कक्षाएँ और आँकड़ों का रूपांतरण",
+   "ncert_sections": "अवस्थाएँ (ङ)-(ज), बॉक्स 6.1",
+   "concepts": [
+    {
+     "concept_tag": "surya-taulyakalik-bhusthir-upagrah",
+     "learning_objective": "सूर्य-तुल्यकालिक और भूस्थिर उपग्रहों की तुलना करना।"
+    },
+    {
+     "concept_tag": "aankda-prapti-rupantaran",
+     "learning_objective": "भू-अभिग्राही केंद्र से मानचित्र तक आँकड़ों के प्रसंस्करण के क्रम को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH06-T4",
+   "topic_number": 4,
+   "title": "संवेदक और बहुस्पेक्ट्रमी क्रमवीक्षक",
+   "ncert_sections": "संवेदक",
+   "concepts": [
+    {
+     "concept_tag": "sanvedak-prakar",
+     "learning_objective": "आँकड़ा निर्गत के आधार पर संवेदकों के प्रकार बताना।"
+    },
+    {
+     "concept_tag": "whiskbroom-pushbroom-kramvikshak",
+     "learning_objective": "व्हिस्कब्रूम और पुशब्रूम क्रमवीक्षकों की कार्यविधि में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH06-T5",
+   "topic_number": 5,
+   "title": "उपग्रहों की विभेदन क्षमता और संवेदक विभेदन",
+   "ncert_sections": "विभेदन क्षमता, संवेदक विभेदन, सारणी 6.1",
+   "concepts": [
+    {
+     "concept_tag": "kalik-vibhedan",
+     "learning_objective": "कालिक विभेदन (पुनरागमन समय) और परिवर्तन अध्ययन में उसके उपयोग को समझना।"
+    },
+    {
+     "concept_tag": "sthanik-spectrumi-radiomitiya-vibhedan",
+     "learning_objective": "स्थानिक, स्पेक्ट्रमी और रेडियोमितीय विभेदन में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH06-T6",
+   "topic_number": 6,
+   "title": "आँकड़ा उत्पाद: फोटोग्राफिक और अंकीय बिंब",
+   "ncert_sections": "आँकड़ा उत्पाद",
+   "concepts": [
+    {
+     "concept_tag": "bimb-aur-photograph",
+     "learning_objective": "बिंब और फोटोग्राफ में अंतर स्पष्ट करना।"
+    },
+    {
+     "concept_tag": "ankiya-bimb-pixel",
+     "learning_objective": "अंकीय बिंब, पिक्सेल और अंकीय संख्या की अवधारणा समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH06-T7",
+   "topic_number": 7,
+   "title": "उपग्रह बिंबों का निर्वचन",
+   "ncert_sections": "दृश्य निर्वचन के तत्व, सारणी 6.2",
+   "concepts": [
+    {
+     "concept_tag": "drishya-nirvachan-tatva",
+     "learning_objective": "दृश्य निर्वचन के बिंब और भूभाग अभिलक्षणों को पहचानना।"
+    },
+    {
+     "concept_tag": "mithya-varn-sanyojan-rang",
+     "learning_objective": "मानक मिथ्या वर्ण संयोजन में विभिन्न सतही लक्षणों के रंग पहचानना।"
+    },
+    {
+     "concept_tag": "gathan-aakriti-chhaya",
+     "learning_objective": "गठन, आकृति और छाया के आधार पर वस्तुओं की पहचान करना।"
+    }
+   ]
+  }
+ ]
+}

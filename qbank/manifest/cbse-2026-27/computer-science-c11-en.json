@@ -1,0 +1,1476 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "computer-science-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "computer_science",
+  "language": "english",
+  "title": "Computer Science",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kecs1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KECS1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Computer System",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kecs101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECS1-CH01-T1",
+     "topic_number": 1,
+     "title": "Introduction to computer system: CPU, input and output devices",
+     "ncert_sections": "1.1, 1.1.1, 1.1.2, 1.1.3",
+     "concepts": [
+      {
+       "concept_tag": "cpu-alu-control-unit",
+       "learning_objective": "Describe the role of the CPU, its registers, ALU and control unit."
+      },
+      {
+       "concept_tag": "input-output-devices",
+       "learning_objective": "Identify input and output devices and how data entered is stored."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH01-T2",
+     "topic_number": 2,
+     "title": "Evolution of computer",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "early-computing-devices",
+       "learning_objective": "Recall key inventions from the abacus to the tabulating machine."
+      },
+      {
+       "concept_tag": "von-neumann-stored-program",
+       "learning_objective": "Explain the stored program concept and Von Neumann architecture."
+      },
+      {
+       "concept_tag": "integration-and-moores-law",
+       "learning_objective": "Relate LSI, VLSI, SLSI and Moore's Law to the growth of computing power."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH01-T3",
+     "topic_number": 3,
+     "title": "Computer memory: units and types",
+     "ncert_sections": "1.3, 1.3.1, 1.3.2",
+     "concepts": [
+      {
+       "concept_tag": "units-of-memory",
+       "learning_objective": "Convert between bits, nibbles, bytes and larger memory units."
+      },
+      {
+       "concept_tag": "primary-memory-ram-rom",
+       "learning_objective": "Distinguish RAM and ROM by volatility and use."
+      },
+      {
+       "concept_tag": "cache-and-secondary-memory",
+       "learning_objective": "Explain the role of cache memory and compare secondary memory with primary memory."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH01-T4",
+     "topic_number": 4,
+     "title": "Data transfer between memory and CPU",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "system-bus-types",
+       "learning_objective": "Identify the data, address and control buses and their direction of transfer."
+      },
+      {
+       "concept_tag": "memory-read-write",
+       "learning_objective": "Describe how the CPU reads from and writes to main memory over the system bus."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH01-T5",
+     "topic_number": 5,
+     "title": "Microprocessors and microcontrollers",
+     "ncert_sections": "1.5, 1.5.1, 1.5.2",
+     "concepts": [
+      {
+       "concept_tag": "microprocessor-generations",
+       "learning_objective": "Interpret the generations of microprocessors and their memory sizes."
+      },
+      {
+       "concept_tag": "microprocessor-specifications",
+       "learning_objective": "Explain word size, clock speed and cores of a microprocessor."
+      },
+      {
+       "concept_tag": "microcontrollers",
+       "learning_objective": "Distinguish a microcontroller from a microprocessor and give its uses."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH01-T6",
+     "topic_number": 6,
+     "title": "Data and information",
+     "ncert_sections": "1.6, 1.6.1, 1.6.2, 1.6.3",
+     "concepts": [
+      {
+       "concept_tag": "types-of-data",
+       "learning_objective": "Classify data as structured, unstructured or semi-structured."
+      },
+      {
+       "concept_tag": "data-capture-storage-retrieval",
+       "learning_objective": "Describe data capturing, storage and retrieval."
+      },
+      {
+       "concept_tag": "data-deletion-recovery",
+       "learning_objective": "Explain how deleted data can be recovered and how to protect it."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH01-T7",
+     "topic_number": 7,
+     "title": "Software: system software, programming tools and application software",
+     "ncert_sections": "1.7, 1.7.1, 1.7.2, 1.7.3, 1.7.4, 1.7.5",
+     "concepts": [
+      {
+       "concept_tag": "system-software",
+       "learning_objective": "Identify operating systems, system utilities and device drivers as system software."
+      },
+      {
+       "concept_tag": "programming-languages-translators",
+       "learning_objective": "Distinguish low-level and high-level languages and the role of assembler, compiler and interpreter."
+      },
+      {
+       "concept_tag": "application-software-licensing",
+       "learning_objective": "Classify application software and distinguish FOSS, freeware and proprietary software."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH01-T8",
+     "topic_number": 8,
+     "title": "Operating system",
+     "ncert_sections": "1.8, 1.8.1, 1.8.2",
+     "concepts": [
+      {
+       "concept_tag": "os-objectives-interfaces",
+       "learning_objective": "Describe the objectives of an operating system and its types of user interface."
+      },
+      {
+       "concept_tag": "os-functions",
+       "learning_objective": "Explain process, memory, file and device management by the operating system."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECS1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Encoding Schemes and Number System",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kecs102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECS1-CH02-T1",
+     "topic_number": 1,
+     "title": "Encoding, ASCII and ISCII",
+     "ncert_sections": "2.1, 2.1.1, 2.1.2",
+     "concepts": [
+      {
+       "concept_tag": "ascii-encoding",
+       "learning_objective": "Explain how 7-bit ASCII maps keyboard characters to unique codes and binary values."
+      },
+      {
+       "concept_tag": "iscii-encoding",
+       "learning_objective": "Describe ISCII as an 8-bit code that retains ASCII and adds Indian language characters."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH02-T2",
+     "topic_number": 2,
+     "title": "UNICODE",
+     "ncert_sections": "2.1.3",
+     "concepts": [
+      {
+       "concept_tag": "unicode-standard",
+       "learning_objective": "Explain why UNICODE was developed and how it relates to ASCII."
+      },
+      {
+       "concept_tag": "utf-encodings",
+       "learning_objective": "Identify the common UNICODE encodings and represent a code point in binary."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH02-T3",
+     "topic_number": 3,
+     "title": "Number Systems: Decimal, Binary, Octal and Hexadecimal",
+     "ncert_sections": "2.2, 2.2.1, 2.2.2, 2.2.3, 2.2.4",
+     "concepts": [
+      {
+       "concept_tag": "base-and-symbols",
+       "learning_objective": "State the base and symbols of the decimal, binary, octal and hexadecimal number systems."
+      },
+      {
+       "concept_tag": "positional-value",
+       "learning_objective": "Determine the positional value of a digit in a number of any base."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH02-T4",
+     "topic_number": 4,
+     "title": "Applications of Hexadecimal Number System",
+     "ncert_sections": "2.2.5",
+     "concepts": [
+      {
+       "concept_tag": "hexadecimal-applications",
+       "learning_objective": "Use hexadecimal notation for memory addresses and RGB colour codes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH02-T5",
+     "topic_number": 5,
+     "title": "Conversion from Decimal to other Number Systems",
+     "ncert_sections": "2.3.1",
+     "concepts": [
+      {
+       "concept_tag": "decimal-to-other-bases",
+       "learning_objective": "Convert a decimal integer to binary, octal or hexadecimal by repeated division."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH02-T6",
+     "topic_number": 6,
+     "title": "Conversion from other Number Systems to Decimal",
+     "ncert_sections": "2.3.2",
+     "concepts": [
+      {
+       "concept_tag": "other-bases-to-decimal",
+       "learning_objective": "Convert binary, octal and hexadecimal integers to decimal using positional expansion."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH02-T7",
+     "topic_number": 7,
+     "title": "Conversion from Binary to Octal/Hexadecimal and Vice-Versa",
+     "ncert_sections": "2.3.3",
+     "concepts": [
+      {
+       "concept_tag": "binary-octal-grouping",
+       "learning_objective": "Convert between binary and octal by grouping bits in threes."
+      },
+      {
+       "concept_tag": "binary-hexadecimal-grouping",
+       "learning_objective": "Convert between binary and hexadecimal by grouping bits in fours."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH02-T8",
+     "topic_number": 8,
+     "title": "Conversion of a Number with Fractional Part",
+     "ncert_sections": "2.3.4",
+     "concepts": [
+      {
+       "concept_tag": "fraction-decimal-to-binary",
+       "learning_objective": "Convert a decimal fraction to binary by repeated multiplication by 2."
+      },
+      {
+       "concept_tag": "fraction-other-bases-to-decimal",
+       "learning_objective": "Convert numbers with fractional parts from other bases to decimal, octal or hexadecimal."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECS1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Emerging Trends",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kecs103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECS1-CH03-T1",
+     "topic_number": 1,
+     "title": "Artificial Intelligence, Machine Learning and NLP",
+     "ncert_sections": "3.1, 3.2, 3.2.1, 3.2.2",
+     "concepts": [
+      {
+       "concept_tag": "artificial-intelligence",
+       "learning_objective": "Describe AI as simulating human cognitive functions using a knowledge base."
+      },
+      {
+       "concept_tag": "machine-learning",
+       "learning_objective": "Explain how machine learning models are trained and tested on data to make predictions."
+      },
+      {
+       "concept_tag": "natural-language-processing",
+       "learning_objective": "Identify applications of NLP such as predictive typing, speech-to-text and machine translation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH03-T2",
+     "topic_number": 2,
+     "title": "Immersive Experiences and Robotics",
+     "ncert_sections": "3.2.3, 3.2.4",
+     "concepts": [
+      {
+       "concept_tag": "virtual-and-augmented-reality",
+       "learning_objective": "Distinguish virtual reality from augmented reality and give their applications."
+      },
+      {
+       "concept_tag": "robotics",
+       "learning_objective": "Describe robots, their types and applications such as rovers, humanoids and drones."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH03-T3",
+     "topic_number": 3,
+     "title": "Big Data and Data Analytics",
+     "ncert_sections": "3.3, 3.3.1, 3.3.2",
+     "concepts": [
+      {
+       "concept_tag": "big-data",
+       "learning_objective": "Explain what big data is and why traditional tools cannot process it."
+      },
+      {
+       "concept_tag": "characteristics-of-big-data",
+       "learning_objective": "Identify the five Vs of big data: volume, velocity, variety, veracity and value."
+      },
+      {
+       "concept_tag": "data-analytics",
+       "learning_objective": "Describe data analytics and its uses in business and science."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH03-T4",
+     "topic_number": 4,
+     "title": "Internet of Things, Web of Things, Sensors and Smart Cities",
+     "ncert_sections": "3.4, 3.4.1, 3.4.2, 3.4.3",
+     "concepts": [
+      {
+       "concept_tag": "internet-of-things",
+       "learning_objective": "Define IoT as a network of devices with embedded hardware and software that exchange data."
+      },
+      {
+       "concept_tag": "web-of-things",
+       "learning_objective": "Explain how WoT uses web services to connect IoT devices through one interface."
+      },
+      {
+       "concept_tag": "sensors-and-smart-cities",
+       "learning_objective": "Describe the role of sensors, including smart sensors, in IoT and smart cities."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH03-T5",
+     "topic_number": 5,
+     "title": "Cloud Computing and Cloud Services",
+     "ncert_sections": "3.5, 3.5.1",
+     "concepts": [
+      {
+       "concept_tag": "cloud-computing",
+       "learning_objective": "Explain cloud computing as on-demand, pay-per-use services delivered over the Internet."
+      },
+      {
+       "concept_tag": "cloud-service-models",
+       "learning_objective": "Distinguish IaaS, PaaS and SaaS with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH03-T6",
+     "topic_number": 6,
+     "title": "Grid Computing",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "grid-computing",
+       "learning_objective": "Describe a grid as dispersed, heterogeneous nodes working together on a large task."
+      },
+      {
+       "concept_tag": "grid-types-and-middleware",
+       "learning_objective": "Identify data and CPU grids, middleware like Globus, and contrast grids with IaaS."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH03-T7",
+     "topic_number": 7,
+     "title": "Blockchains",
+     "ncert_sections": "3.7",
+     "concepts": [
+      {
+       "concept_tag": "blockchain-concept",
+       "learning_objective": "Explain blockchain as a decentralised, shared, append-only ledger kept by all nodes."
+      },
+      {
+       "concept_tag": "blockchain-applications",
+       "learning_objective": "Evaluate applications of blockchain in currency, healthcare, land records and voting."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECS1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Introduction to Problem Solving",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kecs104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECS1-CH04-T1",
+     "topic_number": 1,
+     "title": "Problem solving and its steps",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "problem-solving-steps",
+       "learning_objective": "Identify the key steps of problem solving with a computer and their order."
+      },
+      {
+       "concept_tag": "testing-and-debugging",
+       "learning_objective": "Explain the role of testing, debugging and maintenance, including syntax versus logical errors."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH04-T2",
+     "topic_number": 2,
+     "title": "Algorithm and its characteristics",
+     "ncert_sections": "4.3, 4.3.1",
+     "concepts": [
+      {
+       "concept_tag": "algorithm-definition",
+       "learning_objective": "Define an algorithm as a finite sequence of precise steps that produces the desired output."
+      },
+      {
+       "concept_tag": "characteristics-of-algorithm",
+       "learning_objective": "Describe precision, uniqueness, finiteness, input and output as characteristics of a good algorithm."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH04-T3",
+     "topic_number": 3,
+     "title": "Representation of algorithms",
+     "ncert_sections": "4.4, 4.4.1, 4.4.2",
+     "concepts": [
+      {
+       "concept_tag": "flowchart-symbols",
+       "learning_objective": "Identify standard flowchart symbols and their functions."
+      },
+      {
+       "concept_tag": "pseudocode",
+       "learning_objective": "Explain pseudocode, its keywords and its benefits."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH04-T4",
+     "topic_number": 4,
+     "title": "Flow of control",
+     "ncert_sections": "4.5, 4.5.1, 4.5.2, 4.5.3",
+     "concepts": [
+      {
+       "concept_tag": "sequence-and-selection",
+       "learning_objective": "Trace algorithms that execute in sequence or choose a branch based on a condition."
+      },
+      {
+       "concept_tag": "repetition-loops",
+       "learning_objective": "Trace loops with a counter and loops that repeat until a condition becomes false."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH04-T5",
+     "topic_number": 5,
+     "title": "Verifying algorithms",
+     "ncert_sections": "4.6",
+     "concepts": [
+      {
+       "concept_tag": "dry-run",
+       "learning_objective": "Use a dry run with suitable inputs to find incorrect or missing steps in an algorithm."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH04-T6",
+     "topic_number": 6,
+     "title": "Comparison of algorithms",
+     "ncert_sections": "4.7",
+     "concepts": [
+      {
+       "concept_tag": "time-space-complexity",
+       "learning_objective": "Compare algorithms for the same problem on processing time and memory used."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH04-T7",
+     "topic_number": 7,
+     "title": "Coding and decomposition",
+     "ncert_sections": "4.8, 4.9",
+     "concepts": [
+      {
+       "concept_tag": "coding-languages",
+       "learning_objective": "Distinguish high-level and low-level languages and the factors in choosing a language."
+      },
+      {
+       "concept_tag": "decomposition",
+       "learning_objective": "Explain how decomposition breaks a complex problem into sub-problems that are solved and integrated."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECS1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Getting Started with Python",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kecs105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECS1-CH05-T1",
+     "topic_number": 1,
+     "title": "Introduction to Python: features, interpreter and execution modes",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "python-features",
+       "learning_objective": "Identify the main features of Python such as being high level, open source, portable and case-sensitive."
+      },
+      {
+       "concept_tag": "interpreter-vs-compiler",
+       "learning_objective": "Explain how an interpreter executes a program statement by statement, unlike a compiler."
+      },
+      {
+       "concept_tag": "execution-modes",
+       "learning_objective": "Distinguish between the interactive mode and the script mode of the Python interpreter."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH05-T2",
+     "topic_number": 2,
+     "title": "Keywords, identifiers, variables and comments",
+     "ncert_sections": "5.2, 5.3, 5.4, 5.5",
+     "concepts": [
+      {
+       "concept_tag": "python-keywords",
+       "learning_objective": "Recognise Python keywords as reserved words that cannot be used as identifiers."
+      },
+      {
+       "concept_tag": "identifier-naming-rules",
+       "learning_objective": "Apply the rules for naming identifiers to decide whether a name is valid."
+      },
+      {
+       "concept_tag": "variables-and-comments",
+       "learning_objective": "Explain implicit variable creation by assignment and the use of # comments."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH05-T3",
+     "topic_number": 3,
+     "title": "Everything is an object and Python data types",
+     "ncert_sections": "5.6, 5.7.1, 5.7.2, 5.7.3, 5.7.4, 5.7.5",
+     "concepts": [
+      {
+       "concept_tag": "object-identity",
+       "learning_objective": "Explain that every Python value is an object with a unique identity returned by id()."
+      },
+      {
+       "concept_tag": "number-types",
+       "learning_objective": "Identify the numeric types int, float, complex and bool from given values."
+      },
+      {
+       "concept_tag": "collection-types",
+       "learning_objective": "Describe strings, lists, tuples, sets, None and dictionaries and how they are written."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH05-T4",
+     "topic_number": 4,
+     "title": "Mutable and immutable data types and choosing a data type",
+     "ncert_sections": "5.7.6, 5.7.7",
+     "concepts": [
+      {
+       "concept_tag": "mutable-vs-immutable",
+       "learning_objective": "Classify data types as mutable or immutable and trace what happens when a variable is updated."
+      },
+      {
+       "concept_tag": "choosing-data-types",
+       "learning_objective": "Choose a suitable data type (list, tuple, set or dictionary) for a given situation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH05-T5",
+     "topic_number": 5,
+     "title": "Operators",
+     "ncert_sections": "5.8",
+     "concepts": [
+      {
+       "concept_tag": "arithmetic-and-assignment-operators",
+       "learning_objective": "Evaluate arithmetic and augmented assignment operators including %, // and **."
+      },
+      {
+       "concept_tag": "relational-and-logical-operators",
+       "learning_objective": "Evaluate relational comparisons, including string comparison, and logical operators."
+      },
+      {
+       "concept_tag": "identity-and-membership-operators",
+       "learning_objective": "Use the identity operators is, is not and the membership operators in, not in."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH05-T6",
+     "topic_number": 6,
+     "title": "Expressions, precedence of operators and statements",
+     "ncert_sections": "5.9, 5.10",
+     "concepts": [
+      {
+       "concept_tag": "expressions-and-statements",
+       "learning_objective": "Identify valid expressions and statements in Python."
+      },
+      {
+       "concept_tag": "operator-precedence",
+       "learning_objective": "Evaluate expressions using operator precedence and left-to-right evaluation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH05-T7",
+     "topic_number": 7,
+     "title": "Input, output and type conversion",
+     "ncert_sections": "5.11, 5.12",
+     "concepts": [
+      {
+       "concept_tag": "input-and-print",
+       "learning_objective": "Use input() and print() with its sep and end parameters, knowing that input() returns a string."
+      },
+      {
+       "concept_tag": "explicit-conversion",
+       "learning_objective": "Apply explicit type conversion with int(), float() and str() and predict its result."
+      },
+      {
+       "concept_tag": "implicit-conversion",
+       "learning_objective": "Explain implicit conversion (coercion) and type promotion from int to float."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH05-T8",
+     "topic_number": 8,
+     "title": "Debugging: syntax, logical and runtime errors",
+     "ncert_sections": "5.13",
+     "concepts": [
+      {
+       "concept_tag": "debugging-process",
+       "learning_objective": "Define debugging as the process of identifying and removing errors from a program."
+      },
+      {
+       "concept_tag": "error-types",
+       "learning_objective": "Distinguish syntax errors, logical errors and runtime errors with examples."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECS1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Flow of Control",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kecs106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECS1-CH06-T1",
+     "topic_number": 1,
+     "title": "Introduction to flow of control",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "flow-of-control",
+       "learning_objective": "Define flow of control and recognise sequence as statements executed in the order written."
+      },
+      {
+       "concept_tag": "control-structures",
+       "learning_objective": "Identify selection and repetition as the two control structures supported by Python."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH06-T2",
+     "topic_number": 2,
+     "title": "Selection: if, if..else and if..elif..else",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "if-else-statement",
+       "learning_objective": "Explain how if and if..else statements choose between blocks based on a condition."
+      },
+      {
+       "concept_tag": "if-elif-ladder",
+       "learning_objective": "Trace an if..elif..else chain to find which block executes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH06-T3",
+     "topic_number": 3,
+     "title": "Indentation",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "indentation-blocks",
+       "learning_objective": "Explain how Python uses indentation to form blocks and predict the effect of indentation on output."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH06-T4",
+     "topic_number": 4,
+     "title": "Repetition and the for loop with range()",
+     "ncert_sections": "6.4, 6.4.1",
+     "concepts": [
+      {
+       "concept_tag": "looping-constructs",
+       "learning_objective": "Explain how a loop's control variable and condition decide repetition and termination."
+      },
+      {
+       "concept_tag": "for-loop",
+       "learning_objective": "Trace a for loop to count the number of iterations."
+      },
+      {
+       "concept_tag": "range-function",
+       "learning_objective": "Determine the sequence generated by range() with start, stop and step values."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH06-T5",
+     "topic_number": 5,
+     "title": "The while loop",
+     "ncert_sections": "6.4.2",
+     "concepts": [
+      {
+       "concept_tag": "while-loop",
+       "learning_objective": "Trace a while loop and determine the values of variables after it ends."
+      },
+      {
+       "concept_tag": "infinite-loop",
+       "learning_objective": "Recognise an infinite loop and explain why its condition never becomes false."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH06-T6",
+     "topic_number": 6,
+     "title": "Break and continue statements",
+     "ncert_sections": "6.5, 6.5.1, 6.5.2",
+     "concepts": [
+      {
+       "concept_tag": "break-statement",
+       "learning_objective": "Explain how break terminates a loop and predict the resulting output."
+      },
+      {
+       "concept_tag": "continue-statement",
+       "learning_objective": "Explain how continue skips the rest of an iteration and predict the resulting output."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH06-T7",
+     "topic_number": 7,
+     "title": "Nested loops",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "nested-loops",
+       "learning_objective": "Define a nested loop and count how many times its inner body executes."
+      },
+      {
+       "concept_tag": "pattern-printing",
+       "learning_objective": "Trace nested loops that print number patterns and prime numbers."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECS1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Functions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kecs107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECS1-CH07-T1",
+     "topic_number": 1,
+     "title": "Functions and their advantages",
+     "ncert_sections": "7.1, 7.2, 7.2.1",
+     "concepts": [
+      {
+       "concept_tag": "function-concept",
+       "learning_objective": "Define a function as a named group of instructions that performs a specific task when invoked."
+      },
+      {
+       "concept_tag": "advantages-of-functions",
+       "learning_objective": "Explain how functions improve readability, reduce code length and enable reuse and team work."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH07-T2",
+     "topic_number": 2,
+     "title": "Creating user defined functions: arguments and parameters",
+     "ncert_sections": "7.3, 7.3.1, 7.3.2",
+     "concepts": [
+      {
+       "concept_tag": "function-definition-syntax",
+       "learning_objective": "Write a correct function header using def, a name, parameters and a colon with an indented body."
+      },
+      {
+       "concept_tag": "arguments-vs-parameters",
+       "learning_objective": "Distinguish arguments in a call from parameters in a definition."
+      },
+      {
+       "concept_tag": "default-parameters",
+       "learning_objective": "Apply the rule that default parameters must be trailing parameters."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH07-T3",
+     "topic_number": 3,
+     "title": "Functions returning values and flow of execution",
+     "ncert_sections": "7.3.3, 7.3.4",
+     "concepts": [
+      {
+       "concept_tag": "return-statement",
+       "learning_objective": "Explain how the return statement sends value(s) or None back to the caller."
+      },
+      {
+       "concept_tag": "flow-of-execution",
+       "learning_objective": "Trace the order in which statements run when functions are defined and called."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH07-T4",
+     "topic_number": 4,
+     "title": "Scope of a variable",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "global-local-scope",
+       "learning_objective": "Distinguish global and local variables and where each can be accessed."
+      },
+      {
+       "concept_tag": "global-keyword",
+       "learning_objective": "Use the global keyword to modify a global variable inside a function."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH07-T5",
+     "topic_number": 5,
+     "title": "Built-in functions of the standard library",
+     "ncert_sections": "7.5, 7.5.1",
+     "concepts": [
+      {
+       "concept_tag": "built-in-functions",
+       "learning_objective": "Identify and predict the output of commonly used built-in functions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH07-T6",
+     "topic_number": 6,
+     "title": "Modules: math, random, statistics and user defined modules",
+     "ncert_sections": "7.5.2",
+     "concepts": [
+      {
+       "concept_tag": "import-and-from",
+       "learning_objective": "Use import and from statements to access functions of a module."
+      },
+      {
+       "concept_tag": "math-random-statistics",
+       "learning_objective": "Predict the results of common math, random and statistics module functions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECS1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Strings",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kecs108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECS1-CH08-T1",
+     "topic_number": 1,
+     "title": "Strings and indexing",
+     "ncert_sections": "8.1, 8.2, 8.2.1",
+     "concepts": [
+      {
+       "concept_tag": "string-creation",
+       "learning_objective": "Create strings using single, double and triple quotes."
+      },
+      {
+       "concept_tag": "string-indexing",
+       "learning_objective": "Access characters of a string using positive and negative indices."
+      },
+      {
+       "concept_tag": "index-error",
+       "learning_objective": "Recognise when an out-of-range index raises IndexError."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH08-T2",
+     "topic_number": 2,
+     "title": "Immutability and string operators",
+     "ncert_sections": "8.2.2, 8.3.1, 8.3.2, 8.3.3",
+     "concepts": [
+      {
+       "concept_tag": "string-immutability",
+       "learning_objective": "Explain that the contents of a string cannot be changed after creation."
+      },
+      {
+       "concept_tag": "concatenation-repetition",
+       "learning_objective": "Apply the + and * operators to join and repeat strings."
+      },
+      {
+       "concept_tag": "membership-operators",
+       "learning_objective": "Use in and not in to test for substrings."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH08-T3",
+     "topic_number": 3,
+     "title": "Slicing",
+     "ncert_sections": "8.3.4",
+     "concepts": [
+      {
+       "concept_tag": "slice-start-end",
+       "learning_objective": "Extract substrings with str[n:m], including omitted and negative indices."
+      },
+      {
+       "concept_tag": "slice-step",
+       "learning_objective": "Use a step size in slicing, including negative steps to reverse a string."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH08-T4",
+     "topic_number": 4,
+     "title": "Traversing a string",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "for-loop-traversal",
+       "learning_objective": "Traverse a string character by character with a for loop."
+      },
+      {
+       "concept_tag": "while-loop-traversal",
+       "learning_objective": "Traverse a string using a while loop, an index and len()."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH08-T5",
+     "topic_number": 5,
+     "title": "String methods and built-in functions",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "case-conversion-methods",
+       "learning_objective": "Use methods such as title(), upper() and lower() to change case."
+      },
+      {
+       "concept_tag": "search-count-methods",
+       "learning_objective": "Use find(), index() and count() to locate and count substrings."
+      },
+      {
+       "concept_tag": "split-join-strip-replace",
+       "learning_objective": "Apply split(), join(), strip() and replace() to transform strings."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH08-T6",
+     "topic_number": 6,
+     "title": "Handling strings with user defined functions",
+     "ncert_sections": "8.6",
+     "concepts": [
+      {
+       "concept_tag": "user-defined-string-functions",
+       "learning_objective": "Trace user defined functions that count or replace characters in a string."
+      },
+      {
+       "concept_tag": "string-reversal-palindrome",
+       "learning_objective": "Reverse a string with negative indices and check for palindromes."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECS1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Lists",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kecs109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECS1-CH09-T1",
+     "topic_number": 1,
+     "title": "Introduction to lists: creating, accessing elements and mutability",
+     "ncert_sections": "9.1, 9.1.1, 9.1.2",
+     "concepts": [
+      {
+       "concept_tag": "list-creation",
+       "learning_objective": "Describe a list as an ordered, mutable sequence whose elements may be of different types."
+      },
+      {
+       "concept_tag": "list-indexing",
+       "learning_objective": "Access list elements using positive and negative indices and recognise an out-of-range index."
+      },
+      {
+       "concept_tag": "list-mutability",
+       "learning_objective": "Explain that list elements can be changed in place, unlike string characters."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH09-T2",
+     "topic_number": 2,
+     "title": "List operations: concatenation, repetition, membership and slicing",
+     "ncert_sections": "9.2",
+     "concepts": [
+      {
+       "concept_tag": "list-concatenation-repetition",
+       "learning_objective": "Use the + and * operators to join and repeat lists."
+      },
+      {
+       "concept_tag": "list-membership",
+       "learning_objective": "Evaluate the membership operators in and not in on lists."
+      },
+      {
+       "concept_tag": "list-slicing",
+       "learning_objective": "Predict the result of list slices with start, stop and step, including negative steps."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH09-T3",
+     "topic_number": 3,
+     "title": "Traversing a list",
+     "ncert_sections": "9.3",
+     "concepts": [
+      {
+       "concept_tag": "traversal-for-loop",
+       "learning_objective": "Traverse a list with a for loop over its elements or over range(len(list))."
+      },
+      {
+       "concept_tag": "traversal-while-loop",
+       "learning_objective": "Traverse a list with a while loop and an index variable."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH09-T4",
+     "topic_number": 4,
+     "title": "List methods and built-in functions",
+     "ncert_sections": "9.4",
+     "concepts": [
+      {
+       "concept_tag": "list-adding-methods",
+       "learning_objective": "Distinguish append(), extend() and insert() and predict the resulting list."
+      },
+      {
+       "concept_tag": "list-removing-methods",
+       "learning_objective": "Use remove() and pop() and predict their effect, including ValueError cases."
+      },
+      {
+       "concept_tag": "list-sort-and-builtins",
+       "learning_objective": "Apply count(), index(), sort(), sorted(), reverse(), len(), min(), max() and sum()."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH09-T5",
+     "topic_number": 5,
+     "title": "Nested lists and copying lists",
+     "ncert_sections": "9.5, 9.6",
+     "concepts": [
+      {
+       "concept_tag": "nested-list-indexing",
+       "learning_objective": "Access elements of a nested list using two indices."
+      },
+      {
+       "concept_tag": "aliasing-vs-copying",
+       "learning_objective": "Distinguish aliasing by assignment from copying by slicing, list() and copy.copy()."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH09-T6",
+     "topic_number": 6,
+     "title": "List as argument to a function",
+     "ncert_sections": "9.7",
+     "concepts": [
+      {
+       "concept_tag": "list-passed-by-reference",
+       "learning_objective": "Explain that a function receiving a list can change the caller's list object."
+      },
+      {
+       "concept_tag": "reassignment-inside-function",
+       "learning_objective": "Explain why assigning a new list to a parameter does not affect the caller's list."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH09-T7",
+     "topic_number": 7,
+     "title": "List manipulation programs",
+     "ncert_sections": "9.8",
+     "concepts": [
+      {
+       "concept_tag": "menu-driven-list-operations",
+       "learning_objective": "Choose suitable list methods to implement a menu of list operations."
+      },
+      {
+       "concept_tag": "list-programs-average-search",
+       "learning_objective": "Trace programs that compute an average and perform a linear search on a list."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECS1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Tuples and Dictionaries",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kecs110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECS1-CH10-T1",
+     "topic_number": 1,
+     "title": "Introduction to tuples: creation, indexing and immutability",
+     "ncert_sections": "10.1, 10.1.1, 10.1.2",
+     "concepts": [
+      {
+       "concept_tag": "tuple-creation",
+       "learning_objective": "Create tuples correctly, including a single-element tuple and a tuple without parentheses."
+      },
+      {
+       "concept_tag": "tuple-indexing",
+       "learning_objective": "Access tuple elements using positive and negative indices."
+      },
+      {
+       "concept_tag": "tuple-immutability",
+       "learning_objective": "Explain that a tuple cannot be changed after creation, though a mutable element inside it can."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH10-T2",
+     "topic_number": 2,
+     "title": "Tuple operations",
+     "ncert_sections": "10.2",
+     "concepts": [
+      {
+       "concept_tag": "tuple-concatenation-repetition",
+       "learning_objective": "Apply the + and * operators to tuples and predict the result."
+      },
+      {
+       "concept_tag": "tuple-membership-slicing",
+       "learning_objective": "Use in, not in and slicing on tuples."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH10-T3",
+     "topic_number": 3,
+     "title": "Tuple methods, built-in functions and tuple assignment",
+     "ncert_sections": "10.3, 10.4",
+     "concepts": [
+      {
+       "concept_tag": "tuple-built-in-functions",
+       "learning_objective": "Use len(), tuple(), count(), index(), sorted(), min(), max() and sum() with tuples."
+      },
+      {
+       "concept_tag": "tuple-assignment",
+       "learning_objective": "Assign the elements of a tuple to a tuple of variables and predict unpacking errors."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH10-T4",
+     "topic_number": 4,
+     "title": "Nested tuples and tuple handling",
+     "ncert_sections": "10.5, 10.6",
+     "concepts": [
+      {
+       "concept_tag": "nested-tuples",
+       "learning_objective": "Store and access records in a nested tuple."
+      },
+      {
+       "concept_tag": "tuple-handling-programs",
+       "learning_objective": "Use tuples to swap values, return multiple values and build a tuple in a loop."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH10-T5",
+     "topic_number": 5,
+     "title": "Introduction to dictionaries",
+     "ncert_sections": "10.7",
+     "concepts": [
+      {
+       "concept_tag": "dictionary-creation-keys",
+       "learning_objective": "Create a dictionary of key: value pairs and state the rules for keys."
+      },
+      {
+       "concept_tag": "dictionary-accessing",
+       "learning_objective": "Access dictionary values through keys and recognise KeyError."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH10-T6",
+     "topic_number": 6,
+     "title": "Dictionary mutability, operations and traversal",
+     "ncert_sections": "10.8, 10.9, 10.10",
+     "concepts": [
+      {
+       "concept_tag": "dictionary-mutability",
+       "learning_objective": "Add and modify items in a dictionary."
+      },
+      {
+       "concept_tag": "dictionary-membership-traversal",
+       "learning_objective": "Use membership operators on keys and traverse a dictionary with a for loop."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH10-T7",
+     "topic_number": 7,
+     "title": "Dictionary methods and manipulating dictionaries",
+     "ncert_sections": "10.11, 10.12",
+     "concepts": [
+      {
+       "concept_tag": "dictionary-methods",
+       "learning_objective": "Use len(), dict(), keys(), values(), items(), get(), update(), del and clear()."
+      },
+      {
+       "concept_tag": "dictionary-manipulation",
+       "learning_objective": "Write and trace programs that process data stored in dictionaries."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECS1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "Societal Impact",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kecs111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECS1-CH11-T1",
+     "topic_number": 1,
+     "title": "Digital Footprints",
+     "ncert_sections": "11.1, 11.2",
+     "concepts": [
+      {
+       "concept_tag": "active-and-passive-footprints",
+       "learning_objective": "Distinguish active digital footprints, submitted intentionally, from passive footprints left unintentionally."
+      },
+      {
+       "concept_tag": "permanence-of-digital-footprints",
+       "learning_objective": "Explain why digital footprints stored on servers cannot be guaranteed to be fully erased and can be used to trace a user."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH11-T2",
+     "topic_number": 2,
+     "title": "Digital Society, Netizen and Net Etiquettes",
+     "ncert_sections": "11.3, 11.3.1",
+     "concepts": [
+      {
+       "concept_tag": "netizen",
+       "learning_objective": "Define a netizen as anyone who uses digital technology with the Internet and state what being a good netizen means."
+      },
+      {
+       "concept_tag": "net-etiquettes",
+       "learning_objective": "Apply the net etiquettes of being ethical, respectful and responsible, including avoiding cyber bullying and not feeding trolls."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH11-T3",
+     "topic_number": 3,
+     "title": "Communication and Social Media Etiquettes",
+     "ncert_sections": "11.3.2, 11.3.3",
+     "concepts": [
+      {
+       "concept_tag": "communication-etiquettes",
+       "learning_objective": "Apply the communication etiquettes of being precise, polite and credible in digital communication."
+      },
+      {
+       "concept_tag": "social-media-etiquettes",
+       "learning_objective": "Apply social media etiquettes of being secure and reliable, such as choosing passwords wisely and thinking before uploading."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH11-T4",
+     "topic_number": 4,
+     "title": "Data Protection and Intellectual Property Rights",
+     "ncert_sections": "11.4, 11.4.1",
+     "concepts": [
+      {
+       "concept_tag": "sensitive-data-protection",
+       "learning_objective": "Identify sensitive data and the methods used to protect its privacy."
+      },
+      {
+       "concept_tag": "copyright-patent-trademark",
+       "learning_objective": "Distinguish copyright, patent and trademark as ways of protecting intellectual property."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH11-T5",
+     "topic_number": 5,
+     "title": "Violation of IPR, Public Access and Open Source Software",
+     "ncert_sections": "11.4.2, 11.4.3",
+     "concepts": [
+      {
+       "concept_tag": "plagiarism-and-infringement",
+       "learning_objective": "Distinguish plagiarism, copyright infringement and trademark infringement."
+      },
+      {
+       "concept_tag": "open-licences-and-foss",
+       "learning_objective": "Describe Creative Commons, GNU GPL and FOSS, and explain why software piracy is copyright infringement."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH11-T6",
+     "topic_number": 6,
+     "title": "Cyber Crime",
+     "ncert_sections": "11.5, 11.5.1, 11.5.2, 11.5.3, 11.5.4",
+     "concepts": [
+      {
+       "concept_tag": "hacking",
+       "learning_objective": "Distinguish ethical (white hat) hacking from non-ethical (black hat) hacking."
+      },
+      {
+       "concept_tag": "phishing-identity-theft-ransomware",
+       "learning_objective": "Identify phishing, identity theft and ransomware from their features."
+      },
+      {
+       "concept_tag": "preventing-cyber-crime",
+       "learning_objective": "Choose safety measures that reduce the risk of cyber crime."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECS1-CH11-T7",
+     "topic_number": 7,
+     "title": "Indian IT Act and Impact on Health",
+     "ncert_sections": "11.6, 11.7",
+     "concepts": [
+      {
+       "concept_tag": "indian-it-act",
+       "learning_objective": "State the purpose and main provisions of the Information Technology Act, 2000, amended in 2008."
+      },
+      {
+       "concept_tag": "ergonomics-and-health",
+       "learning_objective": "Explain how ergonomics and healthy habits reduce the physical and mental effects of overusing digital devices."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

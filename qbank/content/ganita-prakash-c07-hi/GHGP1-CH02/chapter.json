@@ -1,0 +1,104 @@
+{
+ "chapter_id": "GHGP1-CH02",
+ "title": "अंकगणितीय व्यंजक",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHGP1-CH02-T1",
+   "topic_number": 1,
+   "title": "सरल व्यंजक और उनकी तुलना",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "ankganitiya-vyanjak-ka-maan",
+     "learning_objective": "विद्यार्थी अंकगणितीय व्यंजक का मान ज्ञात करेंगे और समझेंगे कि भिन्न व्यंजकों का मान समान हो सकता है।"
+    },
+    {
+     "concept_tag": "vyanjakon-ki-tulna",
+     "learning_objective": "विद्यार्थी व्यंजकों के मानों के आधार पर उनकी तुलना '<', '>' और '=' चिह्नों से, बिना पूरी गणना के तर्क द्वारा करेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH02-T2",
+   "topic_number": 2,
+   "title": "कोष्ठक और व्यंजकों में पद",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "koshthak-ka-upyog",
+     "learning_objective": "विद्यार्थी समझेंगे कि कोष्ठक संक्रियाओं का क्रम स्पष्ट करते हैं और कोष्ठक के अंदर का मान पहले निकाला जाता है।"
+    },
+    {
+     "concept_tag": "vyanjak-ke-pad",
+     "learning_objective": "विद्यार्थी घटाव को प्रतिलोम के योग में बदलकर व्यंजक के पद पहचानेंगे और पदों द्वारा उसका मान ज्ञात करेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH02-T3",
+   "topic_number": 3,
+   "title": "अदला-बदली और समूहीकरण",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "kramvinimeyta-gun",
+     "learning_objective": "विद्यार्थी समझेंगे कि पदों के योग में पदों का क्रम बदलने से योगफल नहीं बदलता (योग का क्रमविनिमेयता गुण)।"
+    },
+    {
+     "concept_tag": "sahcharyata-gun",
+     "learning_objective": "विद्यार्थी समझेंगे कि पदों को किसी भी प्रकार समूहित करके जोड़ने पर योगफल समान रहता है (योग का साहचर्यता गुण)।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH02-T4",
+   "topic_number": 4,
+   "title": "कोष्ठकों को हटाना—I और पदों में परिवर्तन—I",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "koshthak-hatana-chinh-badalna",
+     "learning_objective": "विद्यार्थी जानेंगे कि ऋणात्मक चिह्न वाले कोष्ठक को हटाने पर अंदर के पदों के चिह्न बदलते हैं, अन्यथा नहीं।"
+    },
+    {
+     "concept_tag": "pad-badalne-ka-prabhav",
+     "learning_objective": "विद्यार्थी किसी पद को बढ़ाने या घटाने पर व्यंजक के मान पर पड़ने वाले प्रभाव का अनुमान कम से कम गणना से लगाएँगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH02-T5",
+   "topic_number": 5,
+   "title": "कोष्ठकों को हटाना—II: वितरण गुण",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "vitaran-gun",
+     "learning_objective": "विद्यार्थी समझेंगे कि किसी योगफल या अंतर का गुणज, गुणजों के योगफल या अंतर के समान होता है।"
+    },
+    {
+     "concept_tag": "vitaran-gun-se-vyanjak-likhna",
+     "learning_objective": "विद्यार्थी दैनिक स्थितियों के लिए कोष्ठक और वितरण गुण का उपयोग करके उचित व्यंजक लिखेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH02-T6",
+   "topic_number": 6,
+   "title": "पदों में परिवर्तन—II: गुणा में संख्याएँ बदलना",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "guna-mein-parivartan",
+     "learning_objective": "विद्यार्थी किसी गुणा में एक संख्या बदलने पर गुणनफल में होने वाले परिवर्तन को वितरण गुण से ज्ञात करेंगे।"
+    },
+    {
+     "concept_tag": "sheeghra-guna-vidhi",
+     "learning_objective": "विद्यार्थी 100 जैसी सुविधाजनक संख्या के पास की संख्याओं का गुणा वितरण गुण से शीघ्रता से करेंगे।"
+    }
+   ]
+  }
+ ]
+}

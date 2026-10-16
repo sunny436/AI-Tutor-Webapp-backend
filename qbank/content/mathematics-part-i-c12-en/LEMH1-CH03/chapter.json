@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LEMH1-CH03",
+ "title": "Matrices",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEMH1-CH03-T1",
+   "topic_number": 1,
+   "title": "Matrix and its order",
+   "ncert_sections": "3.1, 3.2, 3.2.1",
+   "concepts": [
+    {
+     "concept_tag": "matrix-order-and-elements",
+     "learning_objective": "Identify the order of a matrix and locate its element a_ij by row and column."
+    },
+    {
+     "concept_tag": "constructing-matrix-from-rule",
+     "learning_objective": "Construct a matrix whose elements are given by a rule in i and j, and list the possible orders for a given number of elements."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH03-T2",
+   "topic_number": 2,
+   "title": "Types of matrices and equality",
+   "ncert_sections": "3.3, 3.3.1",
+   "concepts": [
+    {
+     "concept_tag": "types-of-matrices",
+     "learning_objective": "Classify matrices as row, column, square, diagonal, scalar, identity or zero matrices."
+    },
+    {
+     "concept_tag": "equality-of-matrices",
+     "learning_objective": "Use the conditions for equality of matrices to find unknown elements."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH03-T3",
+   "topic_number": 3,
+   "title": "Addition and scalar multiplication",
+   "ncert_sections": "3.4.1, 3.4.2, 3.4.3, 3.4.4",
+   "concepts": [
+    {
+     "concept_tag": "matrix-addition",
+     "learning_objective": "Add and subtract matrices of the same order and apply the properties of matrix addition."
+    },
+    {
+     "concept_tag": "scalar-multiplication",
+     "learning_objective": "Multiply a matrix by a scalar and solve simple matrix equations using these operations."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH03-T4",
+   "topic_number": 4,
+   "title": "Multiplication of matrices",
+   "ncert_sections": "3.4.5, 3.4.6",
+   "concepts": [
+    {
+     "concept_tag": "matrix-product",
+     "learning_objective": "Decide when a product of matrices is defined, find its order and compute it."
+    },
+    {
+     "concept_tag": "properties-of-multiplication",
+     "learning_objective": "Apply the properties of matrix multiplication, including non-commutativity and zero products of non-zero matrices."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH03-T5",
+   "topic_number": 5,
+   "title": "Transpose, symmetric and skew symmetric matrices",
+   "ncert_sections": "3.5, 3.5.1, 3.6",
+   "concepts": [
+    {
+     "concept_tag": "transpose-properties",
+     "learning_objective": "Find the transpose of a matrix and apply the properties of transpose, including (AB)' = B'A'."
+    },
+    {
+     "concept_tag": "symmetric-skew-symmetric",
+     "learning_objective": "Identify symmetric and skew symmetric matrices and express a square matrix as their sum."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH03-T6",
+   "topic_number": 6,
+   "title": "Invertible matrices",
+   "ncert_sections": "3.7",
+   "concepts": [
+    {
+     "concept_tag": "inverse-of-matrix",
+     "learning_objective": "Use the definition AB = BA = I to recognise and verify the inverse of a square matrix."
+    },
+    {
+     "concept_tag": "inverse-properties",
+     "learning_objective": "Apply the uniqueness of the inverse and the result (AB)^(-1) = B^(-1)A^(-1)."
+    }
+   ]
+  }
+ ]
+}

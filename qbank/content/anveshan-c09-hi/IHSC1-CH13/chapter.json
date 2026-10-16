@@ -1,0 +1,140 @@
+{
+ "chapter_id": "IHSC1-CH13",
+ "title": "पृथ्वी एक तंत्र— ऊर्जा, द्रव्य और जीवन",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSC1-CH13-T1",
+   "topic_number": 1,
+   "title": "पृथ्वी के मंडल और उनकी परस्पर क्रिया",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "prithvi-ke-mandal",
+     "learning_objective": "भूमंडल, जलमंडल, हिममंडल, वायुमंडल और जैवमंडल को उनके उदाहरणों सहित पहचानना।"
+    },
+    {
+     "concept_tag": "mandalon-ki-antahkriya",
+     "learning_objective": "एक मंडल में विक्षोभ से अन्य मंडलों में होने वाले परिवर्तनों का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH13-T2",
+   "topic_number": 2,
+   "title": "पृथ्वी का असमान ऊष्मीकरण और सौर विकिरण",
+   "ncert_sections": "13.1",
+   "concepts": [
+    {
+     "concept_tag": "vidyut-chumbakiya-spectrum",
+     "learning_objective": "विद्युत चुंबकीय स्पेक्ट्रम के क्षेत्रों और पृथ्वी तक पहुँचने वाले सौर विकिरण को पहचानना।"
+    },
+    {
+     "concept_tag": "saur-sthirank-suryatap",
+     "learning_objective": "सौर स्थिरांक और सूर्यातप का अर्थ समझकर प्राप्त सौर ऊर्जा की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH13-T3",
+   "topic_number": 3,
+   "title": "एल्बिडो, अक्षांश और वायुमंडल की भूमिका",
+   "ncert_sections": "13.1.1, 13.1.2, 13.1.3",
+   "concepts": [
+    {
+     "concept_tag": "albedo",
+     "learning_objective": "विभिन्न सतहों के एल्बिडो की तुलना कर उनके गर्म होने का अनुमान लगाना।"
+    },
+    {
+     "concept_tag": "akshansh-asaman-ushman",
+     "learning_objective": "अक्षांश और पृथ्वी की गोलीय आकृति के आधार पर असमान ऊष्मण को समझाना।"
+    },
+    {
+     "concept_tag": "vayumandal-ki-parten",
+     "learning_objective": "क्षोभमंडल, समतापमंडल और वायुमंडल की सुरक्षात्मक भूमिका को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH13-T4",
+   "topic_number": 4,
+   "title": "असमान ऊष्मण के कारण पवन और महासागरीय धाराएँ",
+   "ncert_sections": "13.2, 13.2.1, 13.2.2, 13.2.3",
+   "concepts": [
+    {
+     "concept_tag": "sthaniya-pavan",
+     "learning_objective": "घाटी समीर और पर्वतीय समीर के बनने की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "grahiya-pavan",
+     "learning_objective": "वायुदाब पट्टियों, ग्रहीय पवनों और उनके विक्षेपण को समझना।"
+    },
+    {
+     "concept_tag": "mahasagariya-dharaen",
+     "learning_objective": "महासागरीय धाराओं के कारणों और जलवायु पर उनके प्रभाव का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH13-T5",
+   "topic_number": 5,
+   "title": "जैव-भू रासायनिक चक्र: जल और कार्बन चक्र",
+   "ncert_sections": "13.3, 13.3.1, 13.3.2",
+   "concepts": [
+    {
+     "concept_tag": "jaiv-bhu-rasayanik-chakra",
+     "learning_objective": "अजैविक और जैविक घटकों के बीच द्रव्य के चक्रण का अर्थ समझना।"
+    },
+    {
+     "concept_tag": "jal-chakra",
+     "learning_objective": "जल चक्र पर जलवायु परिवर्तन के प्रभाव और विभिन्न मंडलों से उसका संबंध समझाना।"
+    },
+    {
+     "concept_tag": "carbon-chakra",
+     "learning_objective": "कार्बन के तीव्र और मंद चक्र तथा कार्बन डाइऑक्साइड वृद्धि के प्रभावों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH13-T6",
+   "topic_number": 6,
+   "title": "नाइट्रोजन चक्र और ऑक्सीजन चक्र",
+   "ncert_sections": "13.3.3, 13.3.4",
+   "concepts": [
+    {
+     "concept_tag": "nitrogen-chakra",
+     "learning_objective": "नाइट्रोजन चक्र के चरणों और उनमें भाग लेने वाले जीवाणुओं को पहचानना।"
+    },
+    {
+     "concept_tag": "haber-bosch-prakram",
+     "learning_objective": "हेबर-बॉश प्रक्रम के महत्व और उसकी सीमाओं का मूल्यांकन करना।"
+    },
+    {
+     "concept_tag": "oxygen-chakra",
+     "learning_objective": "ऑक्सीजन के उपभोग और पुनःस्थापन की प्रक्रियाओं के संतुलन को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH13-T7",
+   "topic_number": 7,
+   "title": "पृथ्वी की प्रक्रियाओं पर मानवीय प्रभाव",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "suposhan",
+     "learning_objective": "उर्वरकों के अत्यधिक उपयोग से होने वाले सुपोषण की प्रक्रिया समझाना।"
+    },
+    {
+     "concept_tag": "vanonmoolan-mahasagar-amliyata",
+     "learning_objective": "वनोन्मूलन और अतिरिक्त कार्बन डाइऑक्साइड के विभिन्न मंडलों पर प्रभाव का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "paryavaran-santulan-upay",
+     "learning_objective": "ओजोन संरक्षण के अंतरराष्ट्रीय प्रयासों और पर्यावरण संतुलन के उपायों का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

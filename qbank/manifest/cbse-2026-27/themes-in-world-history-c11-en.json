@@ -1,0 +1,984 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "themes-in-world-history-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "history",
+  "language": "english",
+  "title": "Themes in World History",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kehs1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEHS1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Writing and City Life",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehs101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHS1-CH01-T1",
+     "topic_number": 1,
+     "title": "Mesopotamia: Names, Languages and Early Archaeology",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "names-and-languages",
+       "learning_objective": "Recall the names and successive languages of Mesopotamia across its history."
+      },
+      {
+       "concept_tag": "archaeology-and-the-bible",
+       "learning_objective": "Explain how links with the Old Testament shaped early archaeology in Mesopotamia and how its focus later changed."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH01-T2",
+     "topic_number": 2,
+     "title": "Mesopotamia and its Geography",
+     "ncert_sections": "Mesopotamia and its Geography",
+     "concepts": [
+      {
+       "concept_tag": "diverse-environments",
+       "learning_objective": "Identify the different environments of Iraq and the livelihoods each supported."
+      },
+      {
+       "concept_tag": "irrigation-and-productivity",
+       "learning_objective": "Explain how river silt and irrigation made the southern desert highly productive."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH01-T3",
+     "topic_number": 3,
+     "title": "The Significance of Urbanism and the Movement of Goods",
+     "ncert_sections": "The Significance of Urbanism; Movement of Goods into Cities",
+     "concepts": [
+      {
+       "concept_tag": "urban-economy",
+       "learning_objective": "Explain why division of labour and social organisation are marks of urban life."
+      },
+      {
+       "concept_tag": "trade-for-resources",
+       "learning_objective": "Describe what Mesopotamia lacked and how it obtained those resources through trade."
+      },
+      {
+       "concept_tag": "water-transport",
+       "learning_objective": "Explain why water transport was vital for the viability of city economies."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH01-T4",
+     "topic_number": 4,
+     "title": "The Development, System and Uses of Writing",
+     "ncert_sections": "The Development of Writing; The System of Writing; Literacy; The Uses of Writing",
+     "concepts": [
+      {
+       "concept_tag": "origin-of-writing",
+       "learning_objective": "Explain why writing began in Mesopotamia and what the earliest tablets recorded."
+      },
+      {
+       "concept_tag": "cuneiform-system",
+       "learning_objective": "Describe how cuneiform was written and why it was hard to master."
+      },
+      {
+       "concept_tag": "literacy-and-uses",
+       "learning_objective": "Analyse the extent of literacy and the uses and meanings of writing in Mesopotamia."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH01-T5",
+     "topic_number": 5,
+     "title": "Urbanisation in Southern Mesopotamia: Temples, Kings and Seals",
+     "ncert_sections": "Urbanisation in Southern Mesopotamia: Temples and Kings; The Seal - An Urban Artefact",
+     "concepts": [
+      {
+       "concept_tag": "temple-as-institution",
+       "learning_objective": "Describe how the temple grew into the main urban institution."
+      },
+      {
+       "concept_tag": "rise-of-kingship",
+       "learning_objective": "Analyse how war leaders became kings and how they commanded labour."
+      },
+      {
+       "concept_tag": "cylinder-seal",
+       "learning_objective": "Explain how cylinder seals were made and used in city life."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH01-T6",
+     "topic_number": 6,
+     "title": "Life in the City: Ur, Mari and Abu Salabikh",
+     "ncert_sections": "Life in the City; A Trading Town in a Pastoral Zone; Excavating Mesopotamian Towns",
+     "concepts": [
+      {
+       "concept_tag": "ur-houses-and-family",
+       "learning_objective": "Describe family life and the layout of houses and streets at Ur."
+      },
+      {
+       "concept_tag": "mari-pastoralists-and-trade",
+       "learning_objective": "Explain the relationship between herders and farmers and the prosperity of Mari."
+      },
+      {
+       "concept_tag": "excavation-methods",
+       "learning_objective": "Explain how modern excavation at Abu Salabikh recovered evidence of daily life."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH01-T7",
+     "topic_number": 7,
+     "title": "Cities in Mesopotamian Culture and the Legacy of Writing",
+     "ncert_sections": "Cities in Mesopotamian Culture; The Legacy of Writing; An Early Library; And, an Early Archaeologist!",
+     "concepts": [
+      {
+       "concept_tag": "legacy-mathematics-time",
+       "learning_objective": "Identify Mesopotamian achievements in mathematics, astronomy and the division of time."
+      },
+      {
+       "concept_tag": "assurbanipal-library",
+       "learning_objective": "Describe how Assurbanipal collected and catalogued the library at Nineveh."
+      },
+      {
+       "concept_tag": "cities-in-culture-and-tradition",
+       "learning_objective": "Analyse how the Gilgamesh Epic and Nabonidus show Mesopotamian pride in cities and the past."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHS1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "An Empire Across Three Continents",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehs102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHS1-CH02-T1",
+     "topic_number": 1,
+     "title": "Sources and the two superpowers: Rome and Iran",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sources-of-roman-history",
+       "learning_objective": "Classify the textual, documentary and material sources used by historians of the Roman Empire."
+      },
+      {
+       "concept_tag": "rome-and-iran",
+       "learning_objective": "Describe the extent of the Roman and Iranian empires and the place of the Mediterranean in Rome's empire."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH02-T2",
+     "topic_number": 2,
+     "title": "The Early Empire",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "principate-senate-army",
+       "learning_objective": "Explain the roles of the emperor, the Senate and the army in the Principate founded by Augustus."
+      },
+      {
+       "concept_tag": "provinces-and-cities",
+       "learning_objective": "Explain how cities and provincial upper classes made it possible to govern the vast empire."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH02-T3",
+     "topic_number": 3,
+     "title": "The Third-Century Crisis",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "third-century-crisis",
+       "learning_objective": "Identify the external pressures and internal strains that marked the third century."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH02-T4",
+     "topic_number": 4,
+     "title": "Gender, Literacy, Culture",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "family-and-women",
+       "learning_objective": "Describe the Roman nuclear family and the legal position of women in marriage."
+      },
+      {
+       "concept_tag": "literacy-and-cultural-diversity",
+       "learning_objective": "Analyse the evidence for casual literacy and the linguistic and cultural diversity of the empire."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH02-T5",
+     "topic_number": 5,
+     "title": "Economic Expansion",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "amphorae-and-trade",
+       "learning_objective": "Explain how amphorae help archaeologists reconstruct trade in wine and olive oil."
+      },
+      {
+       "concept_tag": "regional-diversity-and-technology",
+       "learning_objective": "Describe fertile and less developed regions and the technological sophistication of the Roman economy."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH02-T6",
+     "topic_number": 6,
+     "title": "Controlling Workers",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "slavery-and-labour",
+       "learning_objective": "Explain the place of slave, free and wage labour in the Roman economy."
+      },
+      {
+       "concept_tag": "labour-control",
+       "learning_objective": "Describe the methods Roman employers used to supervise and control workers."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH02-T7",
+     "topic_number": 7,
+     "title": "Social Hierarchies",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "social-groups",
+       "learning_objective": "Describe the social groups of the early and late empire as described by Tacitus and later sources."
+      },
+      {
+       "concept_tag": "currency-bureaucracy-law",
+       "learning_objective": "Explain the shift to gold coinage, the affluence of the bureaucracy and the role of Roman law."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH02-T8",
+     "topic_number": 8,
+     "title": "Late Antiquity",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "diocletian-constantine-reforms",
+       "learning_objective": "Describe the state reforms of Diocletian and Constantine, including the solidus and Constantinople."
+      },
+      {
+       "concept_tag": "religion-and-break-up",
+       "learning_objective": "Analyse the Christianisation of the empire, the post-Roman kingdoms in the West and the rise of Islam."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHS1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Changing Traditions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehs103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHS1-CH03-T1",
+     "topic_number": 1,
+     "title": "Western Europe after Rome and the feudal order",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "feudal-order",
+       "learning_objective": "Describe the feudal order of lords, vassals and serfs that took shape in western Europe from the ninth century."
+      },
+      {
+       "concept_tag": "church-in-feudal-society",
+       "learning_objective": "Explain the role of the Catholic Church and monasteries in feudal society."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH03-T2",
+     "topic_number": 2,
+     "title": "Commerce, crusades and the Renaissance",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mediterranean-trade-and-crusades",
+       "learning_objective": "Explain how Venetian and Genoese trade and the crusades linked Europe with the eastern Mediterranean."
+      },
+      {
+       "concept_tag": "renaissance-humanism",
+       "learning_objective": "Explain the change in attitudes towards human life that marked the Renaissance."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH03-T3",
+     "topic_number": 3,
+     "title": "Voyages of discovery and European encounters",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "voyages-of-discovery",
+       "learning_objective": "Identify the routes and goals of the European voyages of discovery."
+      },
+      {
+       "concept_tag": "cultural-intermediaries",
+       "learning_objective": "Recognise individuals who connected Europeans with other peoples, such as Leo Africanus and Dona Marina."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH03-T4",
+     "topic_number": 4,
+     "title": "Encounters seen from both sides",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "european-attitudes",
+       "learning_objective": "Analyse the contrasting attitudes Europeans showed towards the peoples they met."
+      },
+      {
+       "concept_tag": "non-european-responses",
+       "learning_objective": "Evaluate how non-Europeans perceived and responded to Europeans and the impact of European diseases."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH03-T5",
+     "topic_number": 5,
+     "title": "Timeline III (c. 1300 to 1700)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "timeline-chronology",
+       "learning_objective": "Place major events of 1300-1700 across Africa, Europe, Asia, South Asia and the Americas in sequence."
+      },
+      {
+       "concept_tag": "intercontinental-contacts",
+       "learning_objective": "Interpret how trade-driven contacts between continents shared ideas and goods but also caused war and displacement."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHS1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "The Three Orders",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehs104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHS1-CH04-T1",
+     "topic_number": 1,
+     "title": "Introduction to Feudalism: France and England",
+     "ncert_sections": "Introduction, An Introduction to Feudalism, France and England",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-feudalism",
+       "learning_objective": "Explain the economic, social and political meaning of feudalism in medieval Europe."
+      },
+      {
+       "concept_tag": "sources-and-marc-bloch",
+       "learning_objective": "Identify the sources used by historians of medieval Europe and Marc Bloch's contribution."
+      },
+      {
+       "concept_tag": "frankish-kingdom-and-church",
+       "learning_objective": "Describe how the Frankish kingdom of France developed close links with the Church."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH04-T2",
+     "topic_number": 2,
+     "title": "The Three Orders and the Nobility: Vassalage, Manor and Knights",
+     "ncert_sections": "The Three Orders, The Second Order: The Nobility, The Manorial Estate, The Knights",
+     "concepts": [
+      {
+       "concept_tag": "three-orders-idea",
+       "learning_objective": "State the idea of the three orders of society held by French priests."
+      },
+      {
+       "concept_tag": "vassalage-and-nobility",
+       "learning_objective": "Explain vassalage and the privileges enjoyed by the nobility."
+      },
+      {
+       "concept_tag": "manor-and-knights",
+       "learning_objective": "Describe the manorial estate and the role of knights and fiefs."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH04-T3",
+     "topic_number": 3,
+     "title": "The First Order: Clergy, Monks and the Church in Society",
+     "ncert_sections": "The First Order: The Clergy, Monks, The Church and Society",
+     "concepts": [
+      {
+       "concept_tag": "church-and-clergy",
+       "learning_objective": "Describe the power, income and rules of membership of the Catholic Church and clergy."
+      },
+      {
+       "concept_tag": "monasteries-and-monks",
+       "learning_objective": "Explain the life and functions of monks, nuns and friars in medieval monasteries."
+      },
+      {
+       "concept_tag": "church-and-popular-culture",
+       "learning_objective": "Analyse how Christian practice blended with feudal customs and older folk traditions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH04-T4",
+     "topic_number": 4,
+     "title": "The Third Order: Free Peasants, Serfs and Feudalism in England",
+     "ncert_sections": "The Third Order: Peasants, Free and Unfree; England",
+     "concepts": [
+      {
+       "concept_tag": "free-peasants-and-serfs",
+       "learning_objective": "Distinguish between the obligations of free peasants and serfs."
+      },
+      {
+       "concept_tag": "feudalism-in-england",
+       "learning_objective": "Describe how William I established feudalism in England after the Norman Conquest."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH04-T5",
+     "topic_number": 5,
+     "title": "Factors Affecting Social and Economic Relations: Environment, Land Use and Technology",
+     "ncert_sections": "Factors Affecting Social and Economic Relations: The Environment, Land Use, New Agricultural Technology",
+     "concepts": [
+      {
+       "concept_tag": "environment-and-climate",
+       "learning_objective": "Explain how climate and forests shaped agriculture in medieval Europe."
+      },
+      {
+       "concept_tag": "land-use-and-peasant-resistance",
+       "learning_objective": "Describe primitive land use and the passive resistance of peasants."
+      },
+      {
+       "concept_tag": "new-agricultural-technology",
+       "learning_objective": "Analyse the effects of new agricultural technology and the three-field system."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH04-T6",
+     "topic_number": 6,
+     "title": "A Fourth Order? Towns, Guilds and Cathedral-towns",
+     "ncert_sections": "A Fourth Order? New Towns and Townspeople, Cathedral-towns",
+     "concepts": [
+      {
+       "concept_tag": "growth-of-towns",
+       "learning_objective": "Explain why towns grew from the eleventh century and why they attracted serfs."
+      },
+      {
+       "concept_tag": "guilds-and-trade",
+       "learning_objective": "Describe the role of guilds and the rise of town merchants."
+      },
+      {
+       "concept_tag": "cathedral-towns",
+       "learning_objective": "Explain how cathedrals led to the growth of towns and served the people."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH04-T7",
+     "topic_number": 7,
+     "title": "The Crisis of the Fourteenth Century, Social Unrest and Political Changes",
+     "ncert_sections": "The Crisis of the Fourteenth Century, Social Unrest, Political Changes, The New Monarchy",
+     "concepts": [
+      {
+       "concept_tag": "fourteenth-century-crisis",
+       "learning_objective": "Identify the causes and consequences of the fourteenth-century crisis, including the Black Death."
+      },
+      {
+       "concept_tag": "peasant-revolts",
+       "learning_objective": "Explain why peasants revolted and why old feudal relations could not be reimposed."
+      },
+      {
+       "concept_tag": "new-monarchs",
+       "learning_objective": "Evaluate how the new monarchs centralised power and how France and England diverged."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHS1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Changing Cultural Traditions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehs105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHS1-CH05-T1",
+     "topic_number": 1,
+     "title": "The Renaissance Idea and the Revival of Italian Cities",
+     "ncert_sections": "Introduction; The Revival of Italian Cities",
+     "concepts": [
+      {
+       "concept_tag": "burckhardt-renaissance",
+       "learning_objective": "Explain how Jacob Burckhardt used the term Renaissance to describe a new humanist culture in Italian towns."
+      },
+      {
+       "concept_tag": "italian-city-states",
+       "learning_objective": "Explain why Italian towns revived as independent city-states where the idea of citizenship took root."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH05-T2",
+     "topic_number": 2,
+     "title": "Universities, Humanism and the Humanist View of History",
+     "ncert_sections": "Universities and Humanism; The Humanist View of History",
+     "concepts": [
+      {
+       "concept_tag": "petrarch-humanism",
+       "learning_objective": "Describe the humanist educational programme associated with Petrarch and the subjects called the humanities."
+      },
+      {
+       "concept_tag": "florence-renaissance-man",
+       "learning_objective": "Explain how Florence became a centre of learning and what the term 'Renaissance Man' means."
+      },
+      {
+       "concept_tag": "humanist-periodisation",
+       "learning_objective": "Evaluate the humanist division of European history into the Middle Ages and the Modern Age."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH05-T3",
+     "topic_number": 3,
+     "title": "Science and Philosophy: The Arabs' Contribution",
+     "ncert_sections": "Science and Philosophy: The Arabs' Contribution",
+     "concepts": [
+      {
+       "concept_tag": "arab-translations",
+       "learning_objective": "Explain how Arab translators preserved and transmitted Greek learning to European scholars."
+      },
+      {
+       "concept_tag": "muslim-scholars-europe",
+       "learning_objective": "Identify Muslim scholars whose works were valued in the Italian world and their contributions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH05-T4",
+     "topic_number": 4,
+     "title": "Artists, Realism and Architecture",
+     "ncert_sections": "Artists and Realism; Architecture",
+     "concepts": [
+      {
+       "concept_tag": "realism-in-art",
+       "learning_objective": "Explain how anatomy, geometry and light contributed to realism in Italian art."
+      },
+      {
+       "concept_tag": "classical-architecture",
+       "learning_objective": "Describe the revival of the imperial Roman 'classical' style in Renaissance architecture and its leading figures."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH05-T5",
+     "topic_number": 5,
+     "title": "Printing and a New Concept of Human Beings",
+     "ncert_sections": "The First Printed Books; A New Concept of Human Beings",
+     "concepts": [
+      {
+       "concept_tag": "printing-spread-ideas",
+       "learning_objective": "Explain how the printing press helped spread humanist ideas beyond Italy."
+      },
+      {
+       "concept_tag": "humanist-view-of-man",
+       "learning_objective": "Analyse the humanist views of human nature expressed by writers such as Barbaro, Valla and Machiavelli."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH05-T6",
+     "topic_number": 6,
+     "title": "The Aspirations of Women",
+     "ncert_sections": "The Aspirations of Women",
+     "concepts": [
+      {
+       "concept_tag": "women-public-role",
+       "learning_objective": "Compare the position of women in aristocratic and merchant families in Renaissance Italy."
+      },
+      {
+       "concept_tag": "women-humanist-voices",
+       "learning_objective": "Assess the contributions of women such as Cassandra Fedele and Isabella d'Este to humanist culture."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH05-T7",
+     "topic_number": 7,
+     "title": "Debates within Christianity",
+     "ncert_sections": "Debates within Christianity",
+     "concepts": [
+      {
+       "concept_tag": "christian-humanism",
+       "learning_objective": "Explain the criticisms Christian humanists made of the Church, including indulgences and the Donation of Constantine."
+      },
+      {
+       "concept_tag": "protestant-reformation",
+       "learning_objective": "Describe the Protestant Reformation, its spread, and the Catholic Church's response."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH05-T8",
+     "topic_number": 8,
+     "title": "The Scientific Revolution and Reconsidering the Renaissance",
+     "ncert_sections": "The Copernican Revolution; Reading the Universe; Was there a European 'Renaissance' in the Fourteenth Century?",
+     "concepts": [
+      {
+       "concept_tag": "copernican-revolution",
+       "learning_objective": "Explain how Copernicus, Kepler, Galileo and Newton overturned the earth-centred view of the universe."
+      },
+      {
+       "concept_tag": "scientific-societies",
+       "learning_objective": "Describe how the Scientific Revolution separated knowledge from belief and was popularised by scientific societies."
+      },
+      {
+       "concept_tag": "renaissance-debate",
+       "learning_objective": "Evaluate the arguments of historians who question Burckhardt's idea of a sharp Renaissance break."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHS1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Displacing Indigenous Peoples",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehs106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHS1-CH06-T1",
+     "topic_number": 1,
+     "title": "Introduction and European Imperialism",
+     "ncert_sections": "Introduction; European Imperialism",
+     "concepts": [
+      {
+       "concept_tag": "settler-colonies",
+       "learning_objective": "Explain how European settlement in the Americas, Australia and New Zealand displaced native peoples and how colonies became states."
+      },
+      {
+       "concept_tag": "forms-of-colonial-control",
+       "learning_objective": "Distinguish the different forms of control Europeans established in South Asia, Africa and settler colonies."
+      },
+      {
+       "concept_tag": "native-histories-and-names",
+       "learning_objective": "Describe how native histories came to be written and how native names survive in place-names."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH06-T2",
+     "topic_number": 2,
+     "title": "The Native Peoples of North America",
+     "ncert_sections": "North America; The Native Peoples",
+     "concepts": [
+      {
+       "concept_tag": "origins-of-native-americans",
+       "learning_objective": "Recall when and how the earliest inhabitants reached North America and how their population grew."
+      },
+      {
+       "concept_tag": "native-way-of-life",
+       "learning_objective": "Describe the economy, beliefs and customs of the native peoples of North America."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH06-T3",
+     "topic_number": 3,
+     "title": "Encounters with Europeans and Mutual Perceptions",
+     "ncert_sections": "Encounters with Europeans; Mutual Perceptions",
+     "concepts": [
+      {
+       "concept_tag": "fur-and-fish-trade",
+       "learning_objective": "Explain the nature of early trade between Europeans and natives and its effects."
+      },
+      {
+       "concept_tag": "european-images-of-natives",
+       "learning_objective": "Compare the different European views of native Americans, from the 'noble savage' to Jefferson."
+      },
+      {
+       "concept_tag": "gift-versus-commodity",
+       "learning_objective": "Analyse the contrast between native gift exchange and the European idea of commodities."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH06-T4",
+     "topic_number": 4,
+     "title": "Expansion of the USA and Canada and the Loss of Native Land",
+     "ncert_sections": "The Native Peoples Lose their Land; The Gold Rush, and the Growth of Industries",
+     "concepts": [
+      {
+       "concept_tag": "territorial-expansion",
+       "learning_objective": "Describe how the USA and Canada expanded and how settlers transformed the land."
+      },
+      {
+       "concept_tag": "removal-and-reservations",
+       "learning_objective": "Explain how native peoples lost their land through treaties, removal and reservations."
+      },
+      {
+       "concept_tag": "gold-rush-and-industry",
+       "learning_objective": "Explain how the Gold Rush, railways and industry changed North America."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH06-T5",
+     "topic_number": 5,
+     "title": "Constitutional Rights and the Winds of Change in North America",
+     "ncert_sections": "Constitutional Rights; The Winds of Change",
+     "concepts": [
+      {
+       "concept_tag": "limits-of-democratic-rights",
+       "learning_objective": "Explain why the democratic rights and the right to property in the USA excluded natives."
+      },
+      {
+       "concept_tag": "native-rights-reforms",
+       "learning_objective": "Trace the reforms from the Meriam survey to Canada's Constitution Act of 1982."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH06-T6",
+     "topic_number": 6,
+     "title": "Australia: Aborigines and European Settlement",
+     "ncert_sections": "Australia; The Europeans Reach Australia; The Development of Australia",
+     "concepts": [
+      {
+       "concept_tag": "aboriginal-australians",
+       "learning_objective": "Describe the origins, diversity and beliefs of Australia's native peoples."
+      },
+      {
+       "concept_tag": "convict-settlement",
+       "learning_objective": "Explain how British penal settlement led to the displacement of the aborigines."
+      },
+      {
+       "concept_tag": "australian-economy",
+       "learning_objective": "Describe the economic development of Australia and its policy towards non-white labour."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH06-T7",
+     "topic_number": 7,
+     "title": "Australia: The Winds of Change",
+     "ncert_sections": "The Winds of Change (Australia)",
+     "concepts": [
+      {
+       "concept_tag": "great-australian-silence",
+       "learning_objective": "Explain how historians and writers challenged the silence about the aborigines."
+      },
+      {
+       "concept_tag": "terra-nullius-and-reconciliation",
+       "learning_objective": "Evaluate the legal and public steps taken to recognise native land rights and past injustice."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHS1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Paths to Modernisation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehs107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHS1-CH07-T1",
+     "topic_number": 1,
+     "title": "Japan under the Tokugawa",
+     "ncert_sections": "Introduction; Japan: The Political System",
+     "concepts": [
+      {
+       "concept_tag": "tokugawa-shogunate",
+       "learning_objective": "Describe the political organisation of Tokugawa Japan under the shogun, daimyo and samurai."
+      },
+      {
+       "concept_tag": "pre-meiji-change",
+       "learning_objective": "Explain the economic and intellectual developments before 1868 that prepared Japan for rapid modernisation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH07-T2",
+     "topic_number": 2,
+     "title": "The Meiji Restoration",
+     "ncert_sections": "The Meiji Restoration",
+     "concepts": [
+      {
+       "concept_tag": "perry-opening",
+       "learning_objective": "Explain why Commodore Perry's arrival in 1853 led to the restoration of the emperor in 1868."
+      },
+      {
+       "concept_tag": "meiji-nation-building",
+       "learning_objective": "Describe the Meiji policies of 'fukoku kyohei', the emperor system and the new school system."
+      },
+      {
+       "concept_tag": "japanese-script",
+       "learning_objective": "Explain how Japan adapted the Chinese script through hiragana and katakana."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH07-T3",
+     "topic_number": 3,
+     "title": "Modernising the Economy and Aggressive Nationalism",
+     "ncert_sections": "Modernising the Economy; Industrial Workers; Aggressive Nationalism",
+     "concepts": [
+      {
+       "concept_tag": "meiji-economy",
+       "learning_objective": "Describe the steps the Meiji government took to modernise the Japanese economy."
+      },
+      {
+       "concept_tag": "industrial-workers-environment",
+       "learning_objective": "Analyse the character of Japan's industrial workforce and the environmental cost of rapid industrialisation."
+      },
+      {
+       "concept_tag": "military-power",
+       "learning_objective": "Explain how the military gained independent power under the Meiji constitution."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH07-T4",
+     "topic_number": 4,
+     "title": "Westernisation, Daily Life and Post-war Japan",
+     "ncert_sections": "'Westernisation' and 'Tradition'; Daily Life; 'Overcoming Modernity'; After Defeat: Re-emerging as a Global Economic Power",
+     "concepts": [
+      {
+       "concept_tag": "westernisation-debate",
+       "learning_objective": "Compare the views of Fukuzawa Yukichi, Miyake Setsurei and Ueki Emori on Japan's relationship with the West."
+      },
+      {
+       "concept_tag": "daily-life-change",
+       "learning_objective": "Describe how family life and urban culture in Japan changed with modernisation."
+      },
+      {
+       "concept_tag": "postwar-japan",
+       "learning_objective": "Explain the reforms of the US-led Occupation and the reasons for Japan's post-war economic recovery."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH07-T5",
+     "topic_number": 5,
+     "title": "China: From the Qing to the Guomindang",
+     "ncert_sections": "China; The Opium Trade; The Examination System; Establishing the Republic",
+     "concepts": [
+      {
+       "concept_tag": "opium-war-qing-reform",
+       "learning_objective": "Explain how the opium trade and the Opium War undermined the Qing and how reformers responded."
+      },
+      {
+       "concept_tag": "examination-system",
+       "learning_objective": "Explain why the Chinese examination system was abolished in 1905."
+      },
+      {
+       "concept_tag": "sun-yat-sen-guomindang",
+       "learning_objective": "Describe Sun Yat-sen's Three Principles and evaluate why the Guomindang failed."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH07-T6",
+     "topic_number": 6,
+     "title": "The Communist Party and the People's Republic of China",
+     "ncert_sections": "The Rise of the Communist Party of China; Establishing the New Democracy: 1949-65; Conflicting Visions: 1965-78; Reforms from 1978; The Story of Taiwan",
+     "concepts": [
+      {
+       "concept_tag": "mao-ccp-rise",
+       "learning_objective": "Explain how Mao Zedong's peasant-based strategy helped the CCP win power."
+      },
+      {
+       "concept_tag": "prc-policies",
+       "learning_objective": "Describe the policies of the People's Republic from the New Democracy to the Cultural Revolution and the 1978 reforms."
+      },
+      {
+       "concept_tag": "taiwan-story",
+       "learning_objective": "Describe the political and economic development of Taiwan after 1949."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHS1-CH07-T7",
+     "topic_number": 7,
+     "title": "The Story of Korea and Two Roads to Modernisation",
+     "ncert_sections": "The Story of Korea; Two Roads to Modernisation",
+     "concepts": [
+      {
+       "concept_tag": "korea-industrialisation",
+       "learning_objective": "Explain how state-led, export-oriented policies produced rapid economic growth in South Korea."
+      },
+      {
+       "concept_tag": "korea-democratisation",
+       "learning_objective": "Trace the struggles that led South Korea from military rule to democracy."
+      },
+      {
+       "concept_tag": "two-roads",
+       "learning_objective": "Compare the Japanese and Chinese paths to modernisation."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

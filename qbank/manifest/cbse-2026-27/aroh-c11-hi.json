@@ -1,0 +1,1649 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "aroh-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "hindi",
+  "language": "hindi",
+  "title": "Aroh",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khar1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHAR1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "नमक का दारोगा",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH01-T1",
+     "topic_number": 1,
+     "title": "लेखक-परिचय और कहानी की पृष्ठभूमि",
+     "ncert_sections": "लेखक-परिचय, पाठ-परिचय",
+     "concepts": [
+      {
+       "concept_tag": "premchand-parichay",
+       "learning_objective": "विद्यार्थी प्रेमचंद के जीवन, प्रमुख रचनाओं और हिंदी कथा-साहित्य में उनके स्थान को पहचानता है।"
+      },
+      {
+       "concept_tag": "adarshonmukh-yatharthvad",
+       "learning_objective": "विद्यार्थी आदर्शोन्मुख यथार्थवाद की अवधारणा और इस कहानी में उसकी अभिव्यक्ति को समझता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH01-T2",
+     "topic_number": 2,
+     "title": "वंशीधर की नौकरी और पिता की सीख",
+     "ncert_sections": "कहानी का आरंभिक अंश",
+     "concepts": [
+      {
+       "concept_tag": "pita-ki-seekh",
+       "learning_objective": "विद्यार्थी वृद्ध मुंशी की ऊपरी आय संबंधी सीख और उसमें छिपे सामाजिक यथार्थ का विश्लेषण करता है।"
+      },
+      {
+       "concept_tag": "namak-vibhag-niyukti",
+       "learning_objective": "विद्यार्थी नमक विभाग की स्थिति और वंशीधर की नियुक्ति की परिस्थितियों को समझता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH01-T3",
+     "topic_number": 3,
+     "title": "यमुना के पुल पर धर्म और धन का संघर्ष",
+     "ncert_sections": "पुल पर गाड़ियों को रोकने का प्रसंग",
+     "concepts": [
+      {
+       "concept_tag": "alopideen-giraftari",
+       "learning_objective": "विद्यार्थी पुल पर अलोपीदीन की गाड़ियाँ रोके जाने और उनकी गिरफ़्तारी की घटना का वर्णन करता है।"
+      },
+      {
+       "concept_tag": "rishwat-prastav-imandari",
+       "learning_objective": "विद्यार्थी बढ़ती रिश्वत के प्रस्ताव के सामने वंशीधर की ईमानदारी का मूल्यांकन करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH01-T4",
+     "topic_number": 4,
+     "title": "अदालत, समाज की प्रतिक्रिया और मुअत्तली",
+     "ncert_sections": "अदालत का प्रसंग, मुअत्तली",
+     "concepts": [
+      {
+       "concept_tag": "adalat-nyay-bhrashtachar",
+       "learning_objective": "विद्यार्थी अदालत के प्रसंग में न्याय-व्यवस्था पर धन के प्रभाव का विश्लेषण करता है।"
+      },
+      {
+       "concept_tag": "samaj-ki-pratikriya",
+       "learning_objective": "विद्यार्थी अलोपीदीन की गिरफ़्तारी पर समाज और परिवार की प्रतिक्रिया का मूल्यांकन करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH01-T5",
+     "topic_number": 5,
+     "title": "अलोपीदीन का हृदय-परिवर्तन और कहानी का अंत",
+     "ncert_sections": "कहानी का अंतिम अंश",
+     "concepts": [
+      {
+       "concept_tag": "manager-niyukti",
+       "learning_objective": "विद्यार्थी वंशीधर को मैनेजर नियुक्त किए जाने के कारणों की तर्कसहित व्याख्या करता है।"
+      },
+      {
+       "concept_tag": "kahani-ka-sandesh",
+       "learning_objective": "विद्यार्थी कहानी के अंत, शीर्षक और संदेश का मूल्यांकन करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH01-T6",
+     "topic_number": 6,
+     "title": "भाषा-शिल्प, मुहावरे और शब्द-अर्थ",
+     "ncert_sections": "भाषा की बात, शब्द-छवि",
+     "concepts": [
+      {
+       "concept_tag": "muhavare-lokoktiyan",
+       "learning_objective": "विद्यार्थी कहानी में प्रयुक्त मुहावरों, लोकोक्तियों और प्रतीकात्मक कथनों का अर्थ स्पष्ट करता है।"
+      },
+      {
+       "concept_tag": "shabd-arth",
+       "learning_objective": "विद्यार्थी पाठ के कठिन शब्दों के अर्थ और कहानी की हिंदुस्तानी भाषा की विशेषता पहचानता है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "मियाँ नसीरुद्दीन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH02-T1",
+     "topic_number": 1,
+     "title": "लेखिका कृष्णा सोबती का परिचय",
+     "ncert_sections": "परिचय",
+     "concepts": [
+      {
+       "concept_tag": "krishna-sobti-jeevan-rachnayen",
+       "learning_objective": "विद्यार्थी कृष्णा सोबती के जीवन, प्रमुख रचनाओं और सम्मानों को पहचान सकेगा।"
+      },
+      {
+       "concept_tag": "sobti-lekhan-shaili",
+       "learning_objective": "विद्यार्थी कृष्णा सोबती की संयमित लेखन-दृष्टि और बहुरंगी भाषा की विशेषताएँ समझ सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH02-T2",
+     "topic_number": 2,
+     "title": "शब्दचित्र और मियाँ से पहली भेंट",
+     "ncert_sections": "पाठ का आरंभिक अंश",
+     "concepts": [
+      {
+       "concept_tag": "shabdchitra-vidha",
+       "learning_objective": "विद्यार्थी शब्दचित्र विधा तथा पाठ के स्रोत संग्रह को पहचान सकेगा।"
+      },
+      {
+       "concept_tag": "miyan-ka-vyaktitva",
+       "learning_objective": "विद्यार्थी मियाँ नसीरुद्दीन के चेहरे, हाव-भाव और स्वभाव के वर्णन की व्याख्या कर सकेगा।"
+      },
+      {
+       "concept_tag": "akhbar-par-tippani",
+       "learning_objective": "विद्यार्थी अखबारनवीसों के प्रति मियाँ की टिप्पणी का आशय समझ सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH02-T3",
+     "topic_number": 3,
+     "title": "खानदानी पेशा और तालीम की तालीम",
+     "ncert_sections": "पाठ का मध्य अंश",
+     "concepts": [
+      {
+       "concept_tag": "khandani-pesha",
+       "learning_objective": "विद्यार्थी मियाँ के खानदानी पेशे और उनकी तीन पीढ़ियों का परिचय दे सकेगा।"
+      },
+      {
+       "concept_tag": "kaam-se-seekhna",
+       "learning_objective": "विद्यार्थी 'काम करने से आता है, नसीहतों से नहीं' विचार का आशय स्पष्ट कर सकेगा।"
+      },
+      {
+       "concept_tag": "taleem-ki-taleem",
+       "learning_objective": "विद्यार्थी 'तालीम की तालीम' और तीन जमातों वाले उदाहरण का अर्थ विश्लेषित कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH02-T4",
+     "topic_number": 4,
+     "title": "बादशाह सलामत का प्रसंग",
+     "ncert_sections": "पाठ का मध्य अंश",
+     "concepts": [
+      {
+       "concept_tag": "badshah-prasang",
+       "learning_objective": "विद्यार्थी बादशाह की फ़रमाइश और कुएँ में रोटी वाली कहावत के प्रसंग को समझ सकेगा।"
+      },
+      {
+       "concept_tag": "miyan-ki-ruchi-ka-ant",
+       "learning_objective": "विद्यार्थी बादशाह का नाम पूछे जाने पर मियाँ की घटती दिलचस्पी के कारण का मूल्यांकन कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH02-T5",
+     "topic_number": 5,
+     "title": "कारीगर, रोटियाँ और बदलता ज़माना",
+     "ncert_sections": "पाठ का अंतिम अंश",
+     "concepts": [
+      {
+       "concept_tag": "karigar-aur-majdoori",
+       "learning_objective": "विद्यार्थी कारीगर बब्बन मियाँ और मज़दूरी के प्रसंग को समझ सकेगा।"
+      },
+      {
+       "concept_tag": "rotiyon-ke-prakar",
+       "learning_objective": "विद्यार्थी पाठ में आई रोटियों के नाम और उनकी विशेषताएँ पहचान सकेगा।"
+      },
+      {
+       "concept_tag": "badalta-zamana",
+       "learning_objective": "विद्यार्थी कद्रदानों के न रहने पर मियाँ की पीड़ा का विश्लेषण कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH02-T6",
+     "topic_number": 6,
+     "title": "भाषा की बात और शब्द-संपदा",
+     "ncert_sections": "भाषा की बात, शब्द-छवि",
+     "concepts": [
+      {
+       "concept_tag": "shabd-arth",
+       "learning_objective": "विद्यार्थी पाठ में आए उर्दू-फ़ारसी शब्दों के अर्थ बता सकेगा।"
+      },
+      {
+       "concept_tag": "shabd-kram-bal",
+       "learning_objective": "विद्यार्थी अर्थ पर बल देने के लिए बदले गए शब्द-क्रम को पहचान सकेगा।"
+      },
+      {
+       "concept_tag": "muhavare-kriya-visheshan",
+       "learning_objective": "विद्यार्थी पाठ के मुहावरों और देखने संबंधी क्रिया-विशेषणों का प्रयोग समझ सकेगा।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "अपू के साथ ढाई साल",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH03-T1",
+     "topic_number": 1,
+     "title": "लेखक-परिचय और पाठ की भूमिका",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lekhak-satyajit-ray",
+       "learning_objective": "सत्यजित राय के फ़िल्मी और साहित्यिक योगदान को पहचानना।"
+      },
+      {
+       "concept_tag": "sansmaran-vidha",
+       "learning_objective": "पाठ की विधा, अनुवाद और उसके मूल भाव को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH03-T2",
+     "topic_number": 2,
+     "title": "शूटिंग की लंबी अवधि और अपू की खोज",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dhai-saal-shooting",
+       "learning_objective": "शूटिंग के ढाई साल तक खिंचने के कारणों और उससे जुड़ी आशंकाओं को समझना।"
+      },
+      {
+       "concept_tag": "apu-ki-khoj",
+       "learning_objective": "अपू की भूमिका के लिए सही बालक खोजने के प्रसंग का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH03-T3",
+     "topic_number": 3,
+     "title": "काशफूलों का दृश्य और रेलगाड़ियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kashphool-continuity",
+       "learning_objective": "काशफूल वाले दृश्य में निरंतरता की समस्या को समझाना।"
+      },
+      {
+       "concept_tag": "teen-relgadiyan",
+       "learning_objective": "तीन रेलगाड़ियों से एक दृश्य बनाने की तरकीब को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH03-T4",
+     "topic_number": 4,
+     "title": "भूलो कुत्ता और श्रीनिवास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhulo-kutta",
+       "learning_objective": "भूलो कुत्ते से जुड़ी शूटिंग की कठिनाइयों और उनके समाधान को समझना।"
+      },
+      {
+       "concept_tag": "shrinivas-bhumika",
+       "learning_objective": "श्रीनिवास की भूमिका दो व्यक्तियों से पूरी कराने की युक्ति का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH03-T5",
+     "topic_number": 5,
+     "title": "बारिश का दृश्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "barish-kathinai",
+       "learning_objective": "पैसों की कमी से बारिश का दृश्य टलने और लेखक के धैर्य को समझना।"
+      },
+      {
+       "concept_tag": "barish-shooting",
+       "learning_objective": "शरद ऋतु में हुई बारिश में दृश्य के फ़िल्मांकन का वर्णन समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH03-T6",
+     "topic_number": 6,
+     "title": "बोडाल गाँव के लोग और अनुभव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bodal-gaon-log",
+       "learning_objective": "बोडाल गाँव, सुबोध दा और धोबी से जुड़े अनुभवों को समझना।"
+      },
+      {
+       "concept_tag": "vastusarp-prasang",
+       "learning_objective": "भूपेन बाबू और वास्तुसर्प के प्रसंग का आशय समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH03-T7",
+     "topic_number": 7,
+     "title": "भाषा और फ़िल्मी शब्दावली",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "film-shabdavali",
+       "learning_objective": "पाठ में प्रयुक्त फ़िल्म-निर्माण की शब्दावली को पहचानना।"
+      },
+      {
+       "concept_tag": "shabd-arth",
+       "learning_objective": "पाठ के कठिन शब्दों के अर्थ और पर्याय जानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "विदाई-संभाषण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH04-T1",
+     "topic_number": 1,
+     "title": "लेखक परिचय और पाठ की पृष्ठभूमि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lekhak-parichay",
+       "learning_objective": "बालमुकुंद गुप्त के जीवन, पत्रकारिता और प्रमुख रचनाओं की जानकारी देना।"
+      },
+      {
+       "concept_tag": "path-prishthbhumi",
+       "learning_objective": "लॉर्ड कर्ज़न के शासन-काल के संदर्भ में पाठ की व्यंग्यात्मक पृष्ठभूमि समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH04-T2",
+     "topic_number": 2,
+     "title": "बिछड़न-समय की करुणा और शिवशंभु की गायें",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bichhdan-karuna",
+       "learning_objective": "बिछड़न-समय को करुणोत्पादक बताने वाले लेखक के भाव को समझना।"
+      },
+      {
+       "concept_tag": "do-gayon-ki-katha",
+       "learning_objective": "शिवशंभु की दो गायों की कथा का आशय भारतीयों की संवेदनशीलता से जोड़ना।"
+      },
+      {
+       "concept_tag": "teesri-shakti",
+       "learning_objective": "शासक और प्रजा के बीच 'तीसरी शक्ति' के उल्लेख का अर्थ समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH04-T3",
+     "topic_number": 3,
+     "title": "शासन-काल का दुखांत नाटक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dukhant-natak",
+       "learning_objective": "नाटक, सूत्रधार और खिलाड़ी के रूपक द्वारा शासन के दुखद अंत की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "bambai-ke-irade",
+       "learning_objective": "बंबई में घोषित इरादों और उनके उलटे परिणाम का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH04-T4",
+     "topic_number": 4,
+     "title": "दिल्ली दरबार की शान और पतन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dilli-darbar",
+       "learning_objective": "दिल्ली दरबार में कर्ज़न की शान के वर्णन में छिपे व्यंग्य को पहचानना।"
+      },
+      {
+       "concept_tag": "patan-aur-istifa",
+       "learning_objective": "फ़ौजी अफ़सर की नियुक्ति के प्रश्न पर कर्ज़न के पतन और इस्तीफ़े को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH04-T5",
+     "topic_number": 5,
+     "title": "शासक का कर्तव्य, ज़िद और बंग-विच्छेद",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shasak-ka-kartavya",
+       "learning_objective": "प्रजा के प्रति शासक के कर्तव्य और मनमाने शासन की आलोचना का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "bang-vichchhed",
+       "learning_objective": "नादिरशाह से तुलना द्वारा बंग-विच्छेद पर कर्ज़न की ज़िद का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH04-T6",
+     "topic_number": 6,
+     "title": "नरसुलतान का विदा-अभिवादन और पाठ की भाषा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "narsultan-abhivadan",
+       "learning_objective": "नरसुलतान के विदा-अभिवादन से कर्ज़न की विदाई की तुलना का आशय समझना।"
+      },
+      {
+       "concept_tag": "bhasha-aur-shabd",
+       "learning_objective": "पाठ के विशिष्ट शब्द-प्रयोग, व्यंग्य-शैली और शब्दार्थ को पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "गलता लोहा",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH05-T1",
+     "topic_number": 1,
+     "title": "लेखक-परिचय और कहानी का मूल भाव",
+     "ncert_sections": "लेखक-परिचय, पाठ-प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "shekhar-joshi-parichay",
+       "learning_objective": "शेखर जोशी के जीवन, रचनाओं और नई कहानी आंदोलन में उनके स्थान को पहचानना।"
+      },
+      {
+       "concept_tag": "kahani-ka-mool-bhav",
+       "learning_objective": "जातिगत विभाजन पर टिप्पणी करती कहानी के मूल भाव और शीर्षक की सार्थकता को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH05-T2",
+     "topic_number": 2,
+     "title": "मोहन, वंशीधर और धनराम का आफर",
+     "ncert_sections": "कहानी का आरंभ",
+     "concepts": [
+      {
+       "concept_tag": "vanshidhar-ki-vivashta",
+       "learning_objective": "बूढ़े वंशीधर की पुरोहिताई और उनकी विवशता को समझना।"
+      },
+      {
+       "concept_tag": "aafar-ka-drishya",
+       "learning_objective": "धनराम के आफर की ध्वनियों और मोहन के वहाँ पहुँचने के प्रसंग की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH05-T3",
+     "topic_number": 3,
+     "title": "मास्टर त्रिलोक सिंह और स्कूल के दिन",
+     "ncert_sections": "स्मृति-प्रसंग",
+     "concepts": [
+      {
+       "concept_tag": "trilok-singh-ka-vyaktitva",
+       "learning_objective": "एक अध्यापक के रूप में मास्टर त्रिलोक सिंह के व्यवहार और दंड-पद्धति का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "dhanram-ki-heenta",
+       "learning_objective": "धनराम के मन में बैठी जातिगत हीनता और उसकी पैतृक विरासत को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH05-T4",
+     "topic_number": 4,
+     "title": "मोहन की पढ़ाई का संघर्ष: गाँव से लखनऊ",
+     "ncert_sections": "मध्य भाग",
+     "concepts": [
+      {
+       "concept_tag": "gaon-ka-sangharsh",
+       "learning_objective": "गाँव में मोहन की पढ़ाई की कठिनाइयों और वंशीधर के सपनों को समझना।"
+      },
+      {
+       "concept_tag": "lucknow-ka-jeevan",
+       "learning_objective": "लखनऊ में रमेश के घर मोहन के जीवन और उसके सपनों के टूटने का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH05-T5",
+     "topic_number": 5,
+     "title": "गलता लोहा: कहानी का अंत और प्रतीकार्थ",
+     "ncert_sections": "अंतिम प्रसंग",
+     "concepts": [
+      {
+       "concept_tag": "jatigat-maryada-ka-tootna",
+       "learning_objective": "ब्राह्मण टोले की मान्यताओं के विरुद्ध मोहन के आचरण का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "sarjak-ki-chamak",
+       "learning_objective": "लोहे के छल्ले और सर्जक की चमक के प्रतीकार्थ की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH05-T6",
+     "topic_number": 6,
+     "title": "भाषा की बात और शब्द-छवि",
+     "ncert_sections": "भाषा की बात, शब्द-छवि",
+     "concepts": [
+      {
+       "concept_tag": "lauhkarm-shabdavali",
+       "learning_objective": "लौहकर्म से जुड़े शब्दों के अर्थ और प्रयोजन को पहचानना।"
+      },
+      {
+       "concept_tag": "shabdarth-aur-prayog",
+       "learning_objective": "पाठ के कठिन शब्दों, संयुक्त क्रियाओं और मुहावरेदार प्रयोगों का अर्थ समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "रजनी",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH06-T1",
+     "topic_number": 1,
+     "title": "लेखिका परिचय और पटकथा विधा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mannu-bhandari-parichay",
+       "learning_objective": "मन्नू भंडारी के जीवन, प्रमुख रचनाओं और नई कहानी आंदोलन में उनके योगदान को पहचानना।"
+      },
+      {
+       "concept_tag": "patkatha-vidha",
+       "learning_objective": "पटकथा विधा का अर्थ, उसकी लोकप्रियता और रजनी धारावाहिक की पृष्ठभूमि को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH06-T2",
+     "topic_number": 2,
+     "title": "लीला बेन का घर: अमित का परिणाम",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "amit-ka-parinam",
+       "learning_objective": "अमित के गणित में कम अंक आने की घटना और उस पर पात्रों की प्रतिक्रिया को समझना।"
+      },
+      {
+       "concept_tag": "tuition-ka-dabav",
+       "learning_objective": "शिक्षक द्वारा ट्यूशन के लिए डाले गए दबाव और अभिभावकों की विवशता का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH06-T3",
+     "topic_number": 3,
+     "title": "हैडमास्टर से भेंट",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "headmaster-samvad",
+       "learning_objective": "हैडमास्टर और रजनी के संवाद में नियम की आड़ में अन्याय छिपाने की प्रवृत्ति को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH06-T4",
+     "topic_number": 4,
+     "title": "रजनी और पति का संवाद",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pati-ki-udasinta",
+       "learning_objective": "पति के तटस्थ रवैये और रजनी की सामाजिक प्रतिबद्धता की तुलना करना।"
+      },
+      {
+       "concept_tag": "gunahgar-ki-dharna",
+       "learning_objective": "अन्याय सहने और चुप रहने वाले को भी गुनहगार मानने के रजनी के विचार का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH06-T5",
+     "topic_number": 5,
+     "title": "शिक्षा निदेशक और अखबार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nideshak-samvad",
+       "learning_objective": "शिक्षा निदेशक के दफ़्तर के दृश्य से व्यवस्था की संवेदनहीनता और भ्रष्टाचार को समझना।"
+      },
+      {
+       "concept_tag": "akhbar-ki-bhumika",
+       "learning_objective": "जनमत बनाने में अखबार की भूमिका को रजनी और संपादक के संवाद से समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH06-T6",
+     "topic_number": 6,
+     "title": "अभिभावक-सभा और आंदोलन की सफलता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sabha-ka-prastav",
+       "learning_objective": "अभिभावक-सभा में रखे गए प्रस्ताव और ट्यूशन समस्या के विभिन्न पहलुओं को समझना।"
+      },
+      {
+       "concept_tag": "rajni-ka-charitra",
+       "learning_objective": "रजनी के जुझारू और इंसाफ़पसंद चरित्र तथा पाठ के संदेश का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH06-T7",
+     "topic_number": 7,
+     "title": "भाषा की बात और पटकथा-शिल्प",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "code-mixing-switching",
+       "learning_objective": "कोड मिक्सिंग और कोड स्विचिंग में अंतर पहचानना।"
+      },
+      {
+       "concept_tag": "shabd-arth-muhavare",
+       "learning_objective": "पाठ के शब्दों, मुहावरों और पटकथा के दृश्य-संकेतों का अर्थ समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "जामुन का पेड़",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH07-T1",
+     "topic_number": 1,
+     "title": "लेखक परिचय और कहानी की हास्य-व्यंग्य शैली",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "krishanchandar-parichay",
+       "learning_objective": "कृश्नचंदर के जीवन, लेखन और प्रगतिशील दृष्टि से परिचित होना।"
+      },
+      {
+       "concept_tag": "hasya-vyangya-shaili",
+       "learning_objective": "अतिशयोक्ति के माध्यम से दफ़्तरी व्यवस्था पर किए गए व्यंग्य को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH07-T2",
+     "topic_number": 2,
+     "title": "पेड़ का गिरना और फ़ाइल का विभागों में भटकना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ped-ka-girna",
+       "learning_objective": "कहानी की आरंभिक घटना और दबे आदमी को निकालने के पहले प्रयास को समझना।"
+      },
+      {
+       "concept_tag": "daftari-padanukram",
+       "learning_objective": "विभागों द्वारा ज़िम्मेदारी टालने और पदानुक्रम की निरर्थकता का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH07-T3",
+     "topic_number": 3,
+     "title": "मेडिकल विभाग का निर्णय और माली की संवेदना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "plastic-surgery-prasang",
+       "learning_objective": "आदमी को काटकर निकालने के सुझाव और सर्जन की रिपोर्ट में छिपे व्यंग्य को समझना।"
+      },
+      {
+       "concept_tag": "mali-ki-samvedna",
+       "learning_objective": "माली और कांस्टेबल के व्यवहार में बची मानवीय संवेदना को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH07-T4",
+     "topic_number": 4,
+     "title": "दबा आदमी कवि: कल्चरल विभाग और साहित्य अकादमी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kavi-ki-pahchan",
+       "learning_objective": "दबे आदमी के कवि होने का पता चलने और उससे फ़ाइल की दिशा बदलने को समझना।"
+      },
+      {
+       "concept_tag": "sahitya-academy-vyangya",
+       "learning_objective": "साहित्य अकादमी के सेक्रेटरी के व्यवहार में संवेदनहीन औपचारिकता का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH07-T5",
+     "topic_number": 5,
+     "title": "विदेश विभाग, कहानी का अंत और भाषा-अध्ययन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "videsh-vibhag-ant",
+       "learning_objective": "विदेश विभाग के हस्तक्षेप और कवि की मृत्यु वाले अंत का अर्थ समझना।"
+      },
+      {
+       "concept_tag": "sanyukt-saral-vakya",
+       "learning_objective": "पाठ के संयुक्त वाक्यों को सरल और मिश्र वाक्यों से अलग पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "भारत माता",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH08-T1",
+     "topic_number": 1,
+     "title": "लेखक-परिचय और पाठ-परिचय",
+     "ncert_sections": "लेखक-परिचय, पाठ-परिचय",
+     "concepts": [
+      {
+       "concept_tag": "nehru-parichay",
+       "learning_objective": "विद्यार्थी जवाहरलाल नेहरू के जीवन, प्रमुख रचनाओं और राष्ट्र-निर्माण में उनके योगदान को पहचानता है।"
+      },
+      {
+       "concept_tag": "path-parichay",
+       "learning_objective": "विद्यार्थी पाठ के स्रोत, अनुवादक और उसकी मुख्य विषयवस्तु को समझता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH08-T2",
+     "topic_number": 2,
+     "title": "जलसों में भारत की चर्चा और किसानों की समस्याएँ",
+     "ncert_sections": "पाठ का आरंभिक अंश",
+     "concepts": [
+      {
+       "concept_tag": "jalson-mein-charcha",
+       "learning_objective": "विद्यार्थी समझता है कि नेहरू जलसों में किसानों से भारत की एकता की चर्चा किस प्रकार करते थे।"
+      },
+      {
+       "concept_tag": "kisanon-ki-samasyayen",
+       "learning_objective": "विद्यार्थी आज़ादी से पहले के किसानों की समस्याओं और विदेशी शासन से उनके संबंध का विश्लेषण करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH08-T3",
+     "topic_number": 3,
+     "title": "दुनिया की चर्चा और किसानों की समझ के आधार",
+     "ncert_sections": "पाठ का मध्य अंश",
+     "concepts": [
+      {
+       "concept_tag": "duniya-ki-charcha",
+       "learning_objective": "विद्यार्थी समझता है कि नेहरू किसानों को विश्व की घटनाओं से क्यों जोड़ते थे।"
+      },
+      {
+       "concept_tag": "samajh-ke-aadhar",
+       "learning_objective": "विद्यार्थी पहचानता है कि महाकाव्य, तीर्थयात्रा, पुराने सिपाही और आर्थिक मंदी किसानों की समझ के आधार कैसे बने।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH08-T4",
+     "topic_number": 4,
+     "title": "'भारत माता की जय' का अर्थ",
+     "ncert_sections": "पाठ का अंतिम अंश",
+     "concepts": [
+      {
+       "concept_tag": "dharti-ka-arth",
+       "learning_objective": "विद्यार्थी भारत माता को केवल धरती मानने वाली किसानों की समझ और उस पर नेहरू के प्रश्नों का विश्लेषण करता है।"
+      },
+      {
+       "concept_tag": "janta-hi-bharat-mata",
+       "learning_objective": "विद्यार्थी नेहरू के इस निष्कर्ष का मूल्यांकन करता है कि भारत माता वस्तुतः यहाँ के करोड़ों लोग हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH08-T5",
+     "topic_number": 5,
+     "title": "भाषा की बात और शब्द-छवि",
+     "ncert_sections": "भाषा की बात, शब्द-छवि",
+     "concepts": [
+      {
+       "concept_tag": "shabd-arth",
+       "learning_objective": "विद्यार्थी पाठ में प्रयुक्त हिंदुस्तानी शब्दों के प्रसंगानुसार अर्थ स्पष्ट करता है।"
+      },
+      {
+       "concept_tag": "visheshan-rachna",
+       "learning_objective": "विद्यार्थी पाठ के संज्ञा शब्दों से विशेषण बनाना जानता है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "कबीर के पद",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH09-T1",
+     "topic_number": 1,
+     "title": "कवि-परिचय: कबीर",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kabir-jivan-parichay",
+       "learning_objective": "कबीर के जीवन, रचनाओं और काव्य-स्थान से संबंधित तथ्य बता सकेंगे।"
+      },
+      {
+       "concept_tag": "nirgun-bhakti-vichardhara",
+       "learning_objective": "कबीर की निर्गुण भक्ति, अनुभव-आधारित ज्ञान और सामाजिक दृष्टि को समझ सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH09-T2",
+     "topic_number": 2,
+     "title": "ईश्वर की एकता और सृष्टि का मूल",
+     "ncert_sections": "पद 1, पंक्तियाँ 1-4",
+     "concepts": [
+      {
+       "concept_tag": "ishwar-ki-ekta",
+       "learning_objective": "समझा सकेंगे कि कबीर ईश्वर को एक मानते हैं और द्वैत-भाव को अज्ञान कहते हैं।"
+      },
+      {
+       "concept_tag": "srishti-ke-mool-tattva",
+       "learning_objective": "एक ही पवन, पानी, ज्योति और मिट्टी के दृष्टांतों से सृष्टि की एकता स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH09-T3",
+     "topic_number": 3,
+     "title": "ईश्वर की सर्वव्यापकता",
+     "ncert_sections": "पद 1, पंक्तियाँ 5-6",
+     "concepts": [
+      {
+       "concept_tag": "ishwar-ki-sarvavyapakta",
+       "learning_objective": "समझा सकेंगे कि कबीर के अनुसार ईश्वर हर प्राणी के भीतर व्याप्त है।"
+      },
+      {
+       "concept_tag": "badhai-aur-agni-drishtant",
+       "learning_objective": "बढ़ई और लकड़ी में छिपी अग्नि के दृष्टांत का आशय स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH09-T4",
+     "topic_number": 4,
+     "title": "माया, अहंकार और निर्भयता",
+     "ncert_sections": "पद 1, पंक्तियाँ 7-8",
+     "concepts": [
+      {
+       "concept_tag": "maya-aur-garv",
+       "learning_objective": "समझा सकेंगे कि माया पर मोहित होकर गर्व करना कबीर की दृष्टि में व्यर्थ है।"
+      },
+      {
+       "concept_tag": "nirbhayata-aur-diwanapan",
+       "learning_objective": "कबीर के निर्भय और 'दिवाना' होने का आशय स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH09-T5",
+     "topic_number": 5,
+     "title": "शब्द-संपदा और काव्य-सौंदर्य",
+     "ncert_sections": "शब्द-छवि, पद के आस-पास",
+     "concepts": [
+      {
+       "concept_tag": "shabd-chhavi",
+       "learning_objective": "पद के कठिन शब्दों के अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "kavya-saundarya",
+       "learning_objective": "पद की भाषा, अलंकार और गेयता का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "मीरा के पद",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH10-T1",
+     "topic_number": 1,
+     "title": "कवयित्री मीरा का जीवन-परिचय",
+     "ncert_sections": "कवि-परिचय",
+     "concepts": [
+      {
+       "concept_tag": "meera-jeevan-parichay",
+       "learning_objective": "विद्यार्थी मीरा के जन्म, प्रमुख रचनाओं, गुरु और जीवन-यात्राओं से जुड़े तथ्य पहचान सकेगा।"
+      },
+      {
+       "concept_tag": "meera-vidroh-satsang",
+       "learning_objective": "विद्यार्थी लोकलाज और कुल-मर्यादा के बंधनों के प्रति मीरा के विरोध तथा सत्संग संबंधी मान्यता को समझ सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH10-T2",
+     "topic_number": 2,
+     "title": "मीरा की भक्ति और काव्यगत विशेषताएँ",
+     "ncert_sections": "कवि-परिचय",
+     "concepts": [
+      {
+       "concept_tag": "saguna-bhakti-prem",
+       "learning_objective": "विद्यार्थी मीरा की सगुण भक्ति तथा उनकी कविता में विरह और मिलन के भाव को पहचान सकेगा।"
+      },
+      {
+       "concept_tag": "meera-bhasha-shaili",
+       "learning_objective": "विद्यार्थी मीरा के गेय पदों की भाषा, सादगी और सरलता की विशेषताएँ बता सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH10-T3",
+     "topic_number": 3,
+     "title": "पद का भाव: कृष्ण के प्रति अनन्यता",
+     "ncert_sections": "पद 1",
+     "concepts": [
+      {
+       "concept_tag": "ananya-bhakti",
+       "learning_objective": "विद्यार्थी 'मेरे तो गिरधर गोपाल, दूसरो न कोई' में व्यक्त अनन्य भक्ति का आशय स्पष्ट कर सकेगा।"
+      },
+      {
+       "concept_tag": "kul-ki-kani-lokalaj",
+       "learning_objective": "विद्यार्थी कुल की कानि छोड़ने और लोकलाज खोने के प्रसंग का अर्थ समझ सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH10-T4",
+     "topic_number": 4,
+     "title": "पद के प्रतीक और भाव-शिल्प",
+     "ncert_sections": "पद 1, पद के साथ",
+     "concepts": [
+      {
+       "concept_tag": "prem-beli-roopak",
+       "learning_objective": "विद्यार्थी आँसुओं से सींची प्रेम-बेलि के रूपक का भाव और शिल्प-सौंदर्य विश्लेषित कर सकेगा।"
+      },
+      {
+       "concept_tag": "dadhi-manthan-pratik",
+       "learning_objective": "विद्यार्थी दही मथकर घी निकालने और छाछ छोड़ने के प्रतीक की व्याख्या कर सकेगा।"
+      },
+      {
+       "concept_tag": "jagat-dekhi-royi",
+       "learning_objective": "विद्यार्थी भक्त को देखकर प्रसन्न होने और जगत को देखकर रोने के कारण का मूल्यांकन कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH10-T5",
+     "topic_number": 5,
+     "title": "शब्द-छवि और भाषा",
+     "ncert_sections": "शब्द-छवि",
+     "concepts": [
+      {
+       "concept_tag": "shabd-arth",
+       "learning_objective": "विद्यार्थी पद में आए राजस्थानी-ब्रज शब्दों के अर्थ बता सकेगा।"
+      },
+      {
+       "concept_tag": "pad-alankar",
+       "learning_objective": "विद्यार्थी पद में आए पुनरुक्ति और रूपक अलंकारों को पहचान सकेगा।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "घर की याद",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH11-T1",
+     "topic_number": 1,
+     "title": "कवि-परिचय और कविता की पृष्ठभूमि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kavi-parichay",
+       "learning_objective": "भवानी प्रसाद मिश्र के जीवन, प्रमुख रचनाओं और कविता की जेल-प्रवास वाली पृष्ठभूमि को जानना।"
+      },
+      {
+       "concept_tag": "kavya-shaili",
+       "learning_objective": "मिश्र जी की सहज, बोलचाल-निकट काव्य-शैली की विशेषताएँ पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH11-T2",
+     "topic_number": 2,
+     "title": "वर्षा, घर की स्मृति और परिताप का घर",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "varsha-aur-smriti",
+       "learning_objective": "बाहर की वर्षा और कवि के मन में उमड़ती घर की स्मृतियों के संबंध को समझना।"
+      },
+      {
+       "concept_tag": "paritap-ka-ghar",
+       "learning_objective": "मायके आई बहन के प्रसंग में घर को परिताप का घर कहने का आशय समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH11-T3",
+     "topic_number": 3,
+     "title": "माँ और पिता का व्यक्तित्व",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "maan-ka-chitran",
+       "learning_objective": "कविता में चित्रित माँ की ममता और सरलता को समझना।"
+      },
+      {
+       "concept_tag": "pita-ka-vyaktitva",
+       "learning_objective": "पिता के निर्भीक, कर्मठ और ऊर्जावान व्यक्तित्व की विशेषताएँ पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH11-T4",
+     "topic_number": 4,
+     "title": "पाँचवें बेटे की याद और माता-पिता की प्रतिक्रिया",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "panchvan-beta",
+       "learning_objective": "पिता के 'सोने पर सुहागा' कहे जाने वाले पाँचवें बेटे के प्रसंग का भाव समझना।"
+      },
+      {
+       "concept_tag": "maan-ka-dhairya",
+       "learning_objective": "माँ के धैर्य बँधाने वाले कथनों में छिपे गर्व और पीड़ा को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH11-T5",
+     "topic_number": 5,
+     "title": "सावन को संदेश और कवि की छिपी मनःस्थिति",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "saavan-sandesh",
+       "learning_objective": "सावन को संदेशवाहक बनाकर परिजनों तक संदेश भेजने की कल्पना समझना।"
+      },
+      {
+       "concept_tag": "bas-shabd-prayog",
+       "learning_objective": "'बस' शब्द के भिन्न-भिन्न अर्थों में प्रयोग की विशेषता बताना।"
+      },
+      {
+       "concept_tag": "chhipi-manasthiti",
+       "learning_objective": "कवि अपनी किस स्थिति को परिजनों से छिपाना चाहता है, इसका विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "चंपा काले काले अच्छर नहीं चीन्हती",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH12-T1",
+     "topic_number": 1,
+     "title": "कवि त्रिलोचन: जीवन, रचनाएँ और काव्य-विशेषताएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "trilochan-parichay",
+       "learning_objective": "विद्यार्थी त्रिलोचन के मूल नाम, जन्म, प्रमुख रचनाओं और सम्मानों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "pragatisheel-kavya",
+       "learning_objective": "विद्यार्थी त्रिलोचन की प्रगतिशील काव्य-धारा, सॉनेट-प्रयोग और लोकभाषा से जुड़ी शैली को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH12-T2",
+     "topic_number": 2,
+     "title": "चंपा का परिचय और स्वभाव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "champa-parichay",
+       "learning_objective": "विद्यार्थी चंपा के परिवेश, परिवार और काम का परिचय दे सकेंगे।"
+      },
+      {
+       "concept_tag": "champa-ka-swabhav",
+       "learning_objective": "विद्यार्थी कविता में वर्णित चंपा की चंचलता, नटखटपन और जिज्ञासा का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH12-T3",
+     "topic_number": 3,
+     "title": "पढ़ाई पर कवि और चंपा का संवाद",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "padhai-ka-mahatva",
+       "learning_objective": "विद्यार्थी कवि द्वारा पढ़ाई के पक्ष में दिए गए तर्कों और 'हारे गाढ़े काम सरेगा' का आशय समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "gandhi-baba-prasang",
+       "learning_objective": "विद्यार्थी गांधी बाबा के उल्लेख पर चंपा की प्रतिक्रिया का कारण विश्लेषित कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH12-T4",
+     "topic_number": 4,
+     "title": "ब्याह, कलकत्ता और पलायन की पीड़ा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "palayan-ki-peeda",
+       "learning_objective": "विद्यार्थी कविता में व्यक्त रोज़गार हेतु पलायन और उससे उपजी स्त्रियों की विडंबना को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "bajar-gire",
+       "learning_objective": "विद्यार्थी 'कलकत्ते पर बजर गिरे' कथन में निहित चंपा के आक्रोश, संघर्ष और जिजीविषा का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH12-T5",
+     "topic_number": 5,
+     "title": "भाषा-शिल्प, प्रतीक और शब्दार्थ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kale-akshar-visheshan",
+       "learning_objective": "विद्यार्थी 'काले काले अच्छर' विशेषण के माध्यम से शिक्षा-व्यवस्था के अंतर्विरोधों की व्यंजना समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "lokbhasha-shabdarth",
+       "learning_objective": "विद्यार्थी कविता के लोकभाषा-शब्दों (चीन्हती, कागद, बालम, चौपाये) का अर्थ और प्रभाव पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "साये में धूप",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH13-T1",
+     "topic_number": 1,
+     "title": "कवि दुष्यंत कुमार का परिचय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dushyant-kumar-parichay",
+       "learning_objective": "दुष्यंत कुमार के जीवन, प्रमुख रचनाओं और साहित्यिक योगदान को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH13-T2",
+     "topic_number": 2,
+     "title": "ग़ज़ल विधा और इस ग़ज़ल का मिज़ाज",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ghazal-vidha",
+       "learning_objective": "ग़ज़ल में शेरों की स्वतंत्रता तथा तुक-निर्वाह की व्यवस्था को समझना।"
+      },
+      {
+       "concept_tag": "ghazal-ka-mizaj",
+       "learning_objective": "इस ग़ज़ल के केंद्रीय भाव, अर्थात् व्यवस्था को नकारने और विकल्प की तलाश, का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH13-T3",
+     "topic_number": 3,
+     "title": "पहला और दूसरा शेर: चिराग़ और साये में धूप",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "chirag-sher",
+       "learning_objective": "चिराग़ाँ और चिराग़ के प्रयोग से अधूरे वादों पर व्यंग्य को समझना।"
+      },
+      {
+       "concept_tag": "saye-mein-dhoop",
+       "learning_objective": "दरख़्तों के साये में धूप लगने के प्रतीकार्थ की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH13-T4",
+     "topic_number": 4,
+     "title": "तीसरा और चौथा शेर: अभावग्रस्त लोग और सपना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kamiz-sher",
+       "learning_objective": "पाँवों से पेट ढँकने वाले लोगों की सहनशीलता पर कवि के व्यंग्य को समझना।"
+      },
+      {
+       "concept_tag": "aadmi-ka-khwab",
+       "learning_objective": "ख़ुदा के स्थान पर आदमी के ख़्वाब को सुंदर नज़ारा मानने के भाव को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH13-T5",
+     "topic_number": 5,
+     "title": "पाँचवाँ और छठा शेर: पत्थर, आवाज़ और निज़ाम",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "patthar-aawaz",
+       "learning_objective": "पत्थर न पिघलने के विश्वास और आवाज़ में असर की बेचैनी के विरोध को समझना।"
+      },
+      {
+       "concept_tag": "nizam-shayar",
+       "learning_objective": "शायर की ज़ुबान सिलने वाले निज़ाम पर कवि के व्यंग्य की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH13-T6",
+     "topic_number": 6,
+     "title": "अंतिम शेर: गुलमोहर और शब्द-छवि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gulmohar-sher",
+       "learning_objective": "गुलमोहर के सांकेतिक अर्थ और जीने-मरने के आदर्श को समझना।"
+      },
+      {
+       "concept_tag": "shabd-chhavi",
+       "learning_objective": "ग़ज़ल में आए उर्दू शब्दों के अर्थ पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "अक्कमहादेवी",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar114.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH14-T1",
+     "topic_number": 1,
+     "title": "कवयित्री-परिचय और वीर शैव आंदोलन",
+     "ncert_sections": "कवयित्री-परिचय, पाठ-परिचय",
+     "concepts": [
+      {
+       "concept_tag": "akkamahadevi-parichay",
+       "learning_objective": "विद्यार्थी अक्कमहादेवी के जीवन, आराध्य और प्रमुख रचनाओं को पहचानता है।"
+      },
+      {
+       "concept_tag": "veer-shaiv-andolan-stree-chetna",
+       "learning_objective": "विद्यार्थी वीर शैव आंदोलन और स्त्री-चेतना में अक्कमहादेवी के योगदान का मूल्यांकन करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH14-T2",
+     "topic_number": 2,
+     "title": "प्रथम वचन: हे भूख! मत मचल",
+     "ncert_sections": "वचन (1)",
+     "concepts": [
+      {
+       "concept_tag": "indriya-niyantran",
+       "learning_objective": "विद्यार्थी प्रथम वचन में इंद्रियों और मनोविकारों पर नियंत्रण के संदेश को समझता है।"
+      },
+      {
+       "concept_tag": "charachar-avsar",
+       "learning_objective": "विद्यार्थी 'ओ चराचर! मत चूक अवसर' पंक्ति के आशय की व्याख्या करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH14-T3",
+     "topic_number": 3,
+     "title": "द्वितीय वचन: हे मेरे जूही के फूल जैसे ईश्वर",
+     "ncert_sections": "वचन (2)",
+     "concepts": [
+      {
+       "concept_tag": "purn-samarpan",
+       "learning_objective": "विद्यार्थी द्वितीय वचन में भक्त के ईश्वर के प्रति पूर्ण समर्पण को समझता है।"
+      },
+      {
+       "concept_tag": "ahankar-vinash",
+       "learning_objective": "विद्यार्थी 'अपना घर भूलने' और भीख न मिलने की कामना में अहंकार-विनाश के भाव का विश्लेषण करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH14-T4",
+     "topic_number": 4,
+     "title": "भाषा-शिल्प और शब्द-अर्थ",
+     "ncert_sections": "शब्द-छवि, अभ्यास",
+     "concepts": [
+      {
+       "concept_tag": "shabd-arth",
+       "learning_objective": "विद्यार्थी पाठ के कठिन शब्दों के अर्थ पहचानता है।"
+      },
+      {
+       "concept_tag": "kavya-shilp",
+       "learning_objective": "विद्यार्थी वचनों में संबोधन, मानवीकरण और उपमा जैसी शिल्पगत विशेषताओं को पहचानता है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH15",
+   "chapter_number": 15,
+   "old_chapter_number": null,
+   "title": "सबसे खतरनाक",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar115.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH15-T1",
+     "topic_number": 1,
+     "title": "कवि-परिचय: पाश",
+     "ncert_sections": "कवि-परिचय",
+     "concepts": [
+      {
+       "concept_tag": "pash-jeevan-rachnayen",
+       "learning_objective": "विद्यार्थी पाश के जीवन, मूल नाम और प्रमुख रचनाओं को पहचानता है।"
+      },
+      {
+       "concept_tag": "pash-kavya-pravritti",
+       "learning_objective": "विद्यार्थी पाश की विद्रोही, राजनीतिक और लोक-संस्कृति से जुड़ी काव्य-प्रवृत्ति को समझता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH15-T2",
+     "topic_number": 2,
+     "title": "कविता का परिचय और मूल भाव",
+     "ncert_sections": "पाठ-परिचय",
+     "concepts": [
+      {
+       "concept_tag": "kavita-ka-mool-bhav",
+       "learning_objective": "विद्यार्थी कविता के मूल भाव—तटस्थता से असहमति और सपनों के मरने के खतरे—को स्पष्ट करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH15-T3",
+     "topic_number": 3,
+     "title": "'बुरा तो है' पर सबसे खतरनाक नहीं",
+     "ncert_sections": "कविता का आरंभिक अंश",
+     "concepts": [
+      {
+       "concept_tag": "bura-to-hai-sthitiyan",
+       "learning_objective": "विद्यार्थी मेहनत की लूट, पुलिस की मार जैसी स्थितियों को कवि द्वारा 'सबसे खतरनाक' न मानने का आशय समझता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH15-T4",
+     "topic_number": 4,
+     "title": "मुर्दा शांति, सपनों का मरना, घड़ी और आँख",
+     "ncert_sections": "कविता का मध्य अंश",
+     "concepts": [
+      {
+       "concept_tag": "murda-shanti-sapne",
+       "learning_objective": "विद्यार्थी मुर्दा शांति और सपनों के मर जाने को सबसे खतरनाक मानने के कारणों का विश्लेषण करता है।"
+      },
+      {
+       "concept_tag": "ghadi-aankh-pratik",
+       "learning_objective": "विद्यार्थी 'रुकी हुई घड़ी' और 'जमी बर्फ़-सी आँख' के प्रतीकार्थ की व्याख्या करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH15-T5",
+     "topic_number": 5,
+     "title": "चाँद, गीत, रात और दिशा के प्रतीक",
+     "ncert_sections": "कविता का उत्तर अंश",
+     "concepts": [
+      {
+       "concept_tag": "chand-geet-pratik",
+       "learning_objective": "विद्यार्थी हत्याकांड के बाद चढ़ते चाँद और मरसिए पढ़ते गीत के व्यंग्यार्थ को समझता है।"
+      },
+      {
+       "concept_tag": "raat-disha-pratik",
+       "learning_objective": "विद्यार्थी आत्मा के सूरज के डूबने वाली दिशा और ज़िंदा रूह पर ढलती रात के अर्थ का विश्लेषण करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH15-T6",
+     "topic_number": 6,
+     "title": "शिल्प, आवृत्ति और शब्द-छवि",
+     "ncert_sections": "कविता का शिल्प, शब्द-छवि",
+     "concepts": [
+      {
+       "concept_tag": "aavritti-shilp",
+       "learning_objective": "विद्यार्थी 'सबसे खतरनाक' की आवृत्ति, 'तो' के प्रयोग और कविता की संरचना का प्रभाव समझता है।"
+      },
+      {
+       "concept_tag": "shabd-arth",
+       "learning_objective": "विद्यार्थी गद्दारी, मरसिया, रूह, चौगाठ जैसे शब्दों के अर्थ पहचानता है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAR1-CH16",
+   "chapter_number": 16,
+   "old_chapter_number": null,
+   "title": "आओ, मिलकर बचाएँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khar116.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAR1-CH16-T1",
+     "topic_number": 1,
+     "title": "कवयित्री परिचय और कविता की पृष्ठभूमि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nirmala-putul-parichay",
+       "learning_objective": "निर्मला पुतुल के जीवन, रचनाओं और संथाली से हिंदी रूपांतर की जानकारी को पहचानना।"
+      },
+      {
+       "concept_tag": "santhali-samaj-yatharth",
+       "learning_objective": "संथाली समाज के सकारात्मक और नकारात्मक पक्षों के यथार्थ चित्रण को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH16-T2",
+     "topic_number": 2,
+     "title": "बस्तियों और पहचान को बचाने का आह्वान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "basti-ko-bachana",
+       "learning_objective": "बस्तियों को नंगी होने, शहरी आबो-हवा और हड़िया में डूबने से बचाने के आह्वान का आशय समझना।"
+      },
+      {
+       "concept_tag": "mati-ka-rang-jharkhandipan",
+       "learning_objective": "माटी का रंग और भाषा में झारखंडीपन जैसे प्रतीकों से आंचलिक पहचान को बचाने की बात समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH16-T3",
+     "topic_number": 3,
+     "title": "स्वभाव और प्रकृति की धरोहर",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "akkhadpan-jujharupan",
+       "learning_objective": "भोलेपन के साथ अक्खड़पन, जुझारूपन और भीतर की आग को बचाने की आवश्यकता का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "prakriti-ki-dharohar",
+       "learning_objective": "जंगल, नदियों, पहाड़ों, गीतों और फसलों के माध्यम से प्रकृति और लोक-संस्कृति की धरोहर को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAR1-CH16-T4",
+     "topic_number": 4,
+     "title": "विश्वास, उम्मीद और काव्य-सौंदर्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ummid-aur-vishvas",
+       "learning_objective": "अविश्वास-भरे दौर में विश्वास, उम्मीद और सपने बचाने के आशावादी संदेश का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "kavya-saundarya-shabdarth",
+       "learning_objective": "कविता के शब्दार्थ, प्रतीकों और विरोधी बिंबों के काव्य-सौंदर्य को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+  "chapter_id": "IEMH2-CH04",
+  "title": "Quadrilaterals",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "IEMH2-CH04-T1",
+      "topic_number": 1,
+      "title": "What Exactly is a Quadrilateral?",
+      "ncert_sections": "12.1",
+      "concepts": [
+        {
+          "concept_tag": "quadrilateral-definition",
+          "learning_objective": "State the precise definition of a quadrilateral and recognise figures it excludes."
+        },
+        {
+          "concept_tag": "quadrilateral-terminology",
+          "learning_objective": "Identify vertices, sides, diagonals, adjacent and opposite parts, and valid names of a quadrilateral."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH2-CH04-T2",
+      "topic_number": 2,
+      "title": "Convex, Non-convex and Self-intersecting 4-gons",
+      "ncert_sections": "12.1",
+      "concepts": [
+        {
+          "concept_tag": "convexity-tests",
+          "learning_objective": "Decide whether a quadrilateral is convex using its internal angles or its diagonals."
+        },
+        {
+          "concept_tag": "special-4-gons",
+          "learning_objective": "Recognise non-convex, self-intersecting and non-planar 4-gons and where they arise."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH2-CH04-T3",
+      "topic_number": 3,
+      "title": "Parallelograms and the Converse Tests",
+      "ncert_sections": "12.2",
+      "concepts": [
+        {
+          "concept_tag": "parallelogram-properties",
+          "learning_objective": "Recall and justify the side, angle and diagonal properties of a parallelogram."
+        },
+        {
+          "concept_tag": "parallelogram-tests",
+          "learning_objective": "Use the converse tests and the equal parallel sides test to show a quadrilateral is a parallelogram."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH2-CH04-T4",
+      "topic_number": 4,
+      "title": "The Midpoint Theorem and its Converse",
+      "ncert_sections": "12.3, 12.3.1",
+      "concepts": [
+        {
+          "concept_tag": "midpoint-theorem",
+          "learning_objective": "Apply the Midpoint Theorem to find lengths and parallel segments in a triangle."
+        },
+        {
+          "concept_tag": "midpoint-theorem-converse",
+          "learning_objective": "Apply the converse of the Midpoint Theorem to locate midpoints."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH2-CH04-T5",
+      "topic_number": 5,
+      "title": "Medians and the Centroid",
+      "ncert_sections": "12.3.2",
+      "concepts": [
+        {
+          "concept_tag": "centroid-theorem",
+          "learning_objective": "Use the concurrence of medians and the 2 : 1 division at the centroid."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH2-CH04-T6",
+      "topic_number": 6,
+      "title": "The Varignon Parallelogram",
+      "ncert_sections": "12.3.2",
+      "concepts": [
+        {
+          "concept_tag": "varignon-theorem",
+          "learning_objective": "Show that the midpoints of the sides of any quadrilateral form a parallelogram and relate it to the diagonals."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH2-CH04-T7",
+      "topic_number": 7,
+      "title": "Tiling the Plane Using Any 4-gon",
+      "ncert_sections": "12.4",
+      "concepts": [
+        {
+          "concept_tag": "tiling-with-quadrilaterals",
+          "learning_objective": "Explain how copies of any quadrilateral can tile the plane."
+        },
+        {
+          "concept_tag": "tiling-angle-condition",
+          "learning_objective": "Use the 360 degree angle condition at a vertex to decide whether a shape can tile."
+        }
+      ]
+    }
+  ]
+}

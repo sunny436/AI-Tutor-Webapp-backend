@@ -1,0 +1,116 @@
+{
+ "chapter_id": "KEPH1-CH03",
+ "title": "Motion in a Plane",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPH1-CH03-T1",
+   "topic_number": 1,
+   "title": "Scalars and vectors",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "scalars-and-vectors",
+     "learning_objective": "Distinguish scalar quantities from vector quantities with examples."
+    },
+    {
+     "concept_tag": "position-and-displacement-vectors",
+     "learning_objective": "Describe position and displacement vectors and the equality of vectors."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH03-T2",
+   "topic_number": 2,
+   "title": "Multiplication by real numbers; addition and subtraction of vectors",
+   "ncert_sections": "3.3, 3.4",
+   "concepts": [
+    {
+     "concept_tag": "multiplication-by-real-number",
+     "learning_objective": "Explain the effect of multiplying a vector by a real number."
+    },
+    {
+     "concept_tag": "graphical-vector-addition",
+     "learning_objective": "Add and subtract vectors graphically using the triangle and parallelogram methods and identify the null vector."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH03-T3",
+   "topic_number": 3,
+   "title": "Resolution of vectors and analytical addition",
+   "ncert_sections": "3.5, 3.6",
+   "concepts": [
+    {
+     "concept_tag": "resolution-into-components",
+     "learning_objective": "Resolve a vector into rectangular components using unit vectors."
+    },
+    {
+     "concept_tag": "analytical-addition",
+     "learning_objective": "Find the magnitude and direction of a resultant analytically, including the law of cosines."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH03-T4",
+   "topic_number": 4,
+   "title": "Position, velocity and acceleration in a plane",
+   "ncert_sections": "3.7",
+   "concepts": [
+    {
+     "concept_tag": "velocity-in-a-plane",
+     "learning_objective": "Define average and instantaneous velocity in a plane and relate velocity to the tangent to the path."
+    },
+    {
+     "concept_tag": "acceleration-in-a-plane",
+     "learning_objective": "Define average and instantaneous acceleration in a plane in component form."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH03-T5",
+   "topic_number": 5,
+   "title": "Motion in a plane with constant acceleration",
+   "ncert_sections": "3.8",
+   "concepts": [
+    {
+     "concept_tag": "constant-acceleration-vector-equations",
+     "learning_objective": "Apply the vector equations of motion for constant acceleration as two independent one-dimensional motions."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH03-T6",
+   "topic_number": 6,
+   "title": "Projectile motion",
+   "ncert_sections": "3.9",
+   "concepts": [
+    {
+     "concept_tag": "projectile-trajectory",
+     "learning_objective": "Show that the path of a projectile is a parabola and analyse its components of motion."
+    },
+    {
+     "concept_tag": "projectile-range-height-time",
+     "learning_objective": "Calculate time of flight, maximum height and horizontal range of a projectile."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH03-T7",
+   "topic_number": 7,
+   "title": "Uniform circular motion",
+   "ncert_sections": "3.10",
+   "concepts": [
+    {
+     "concept_tag": "centripetal-acceleration",
+     "learning_objective": "Derive and apply the expression for centripetal acceleration in uniform circular motion."
+    },
+    {
+     "concept_tag": "angular-speed-period-frequency",
+     "learning_objective": "Relate angular speed, time period, frequency and linear speed."
+    }
+   ]
+  }
+ ]
+}

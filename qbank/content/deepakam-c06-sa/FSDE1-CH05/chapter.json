@@ -1,0 +1,128 @@
+{
+ "chapter_id": "FSDE1-CH05",
+ "title": "संख्यागणना ननु सरला",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FSDE1-CH05-T1",
+   "topic_number": 1,
+   "title": "कक्षायां गणना सङ्ख्यागीतस्य परिचयः च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "kakshayam-ganana",
+     "learning_objective": "छात्रः पाठारम्भे कक्षायां छात्राणां संस्कृतेन गणनायाः प्रसङ्गं अवगच्छति।"
+    },
+    {
+     "concept_tag": "geetasya-parichayah",
+     "learning_objective": "छात्रः सङ्ख्यागीतस्य कविं, ध्रुवपदं भावं च अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH05-T2",
+   "topic_number": 2,
+   "title": "सङ्ख्यागीतम् – एकम् आरभ्य षट् यावत्",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "ekam-manavakulam",
+     "learning_objective": "छात्रः गीते 'एक'-सङ्ख्यया वर्णितानि सूर्य-चन्द्र-मानवकुलानि अभिजानाति।"
+    },
+    {
+     "concept_tag": "devah-sankhyah",
+     "learning_objective": "छात्रः त्रिनयनमूर्तिः, चतुर्मुखः, षण्मुखः इति देवानां सङ्ख्यासम्बद्धानि वर्णनानि अवगच्छति।"
+    },
+    {
+     "concept_tag": "pancha-angulyah",
+     "learning_objective": "छात्रः 'पञ्चाङ्गुल्यः गणनां विदधति' इति पङ्क्तेः भावं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH05-T3",
+   "topic_number": 3,
+   "title": "सङ्ख्यागीतम् – सप्त आरभ्य दश यावत्",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "sapta-vasarah-rishayah",
+     "learning_objective": "छात्रः गीते 'सप्त'-सङ्ख्यया वर्णितान् वासरान्, स्वरान्, लोकान्, ऋषीन् च अभिजानाति।"
+    },
+    {
+     "concept_tag": "ashta-diggajah-nava-grahah",
+     "learning_objective": "छात्रः अष्टदिग्गजानां नवग्रहाणां च गीतगतं वर्णनं अवगच्छति।"
+    },
+    {
+     "concept_tag": "dasha-dishah-geete",
+     "learning_objective": "छात्रः गीते प्रसिद्धानां दश दिशानां उल्लेखं अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH05-T4",
+   "topic_number": 4,
+   "title": "वयं शब्दार्थान् जानीमः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "shabdarthah-devavarnane",
+     "learning_objective": "छात्रः स्रष्टा, सुरसेनानीः, पाति इत्यादीनां पदानां अर्थं जानाति।"
+    },
+    {
+     "concept_tag": "shabdarthah-anye",
+     "learning_objective": "छात्रः नियततया, करतालम्, उपकृतिशीलाः इत्यादीनां पदानां अर्थं प्रयोगं च जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH05-T5",
+   "topic_number": 5,
+   "title": "गृहस्य दश दिशाः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "mukhya-dishah",
+     "learning_objective": "छात्रः पूर्वादिमुख्यदिशाः ऊर्ध्वम् अधः च इति दिशाः अभिजानाति।"
+    },
+    {
+     "concept_tag": "kona-dishah",
+     "learning_objective": "छात्रः ईशान-आग्नेय-नैर्ऋत्य-वायव्य-कोणदिशाः तासां स्थानं च निर्धारयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH05-T6",
+   "topic_number": 6,
+   "title": "वयं सङ्ख्यां गणयामः (१ – ५०)",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "sankhya-1-20",
+     "learning_objective": "छात्रः एकतः विंशतिपर्यन्तं सङ्ख्यापदानि अङ्कैः शब्दैः च लिखति।"
+    },
+    {
+     "concept_tag": "sankhya-21-50",
+     "learning_objective": "छात्रः एकविंशतितः पञ्चाशत्पर्यन्तं सङ्ख्यापदानि अवगच्छति प्रयुङ्क्ते च।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH05-T7",
+   "topic_number": 7,
+   "title": "योग्यताविस्तरः – सङ्ख्याप्रसिद्धिः कार्यकलापः च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "sankhya-prasiddhih",
+     "learning_objective": "छात्रः वचनानि, युगानि, रसाः, पञ्चाङ्गम् इत्यादीनि सङ्ख्याप्रसिद्धानि वस्तूनि अभिजानाति।"
+    },
+    {
+     "concept_tag": "karyakalapa-sankhyagitam",
+     "learning_objective": "छात्रः कार्यकलापस्य सङ्ख्यागीते वर्णितं क्रियाक्रमं अवगच्छति।"
+    }
+   ]
+  }
+ ]
+}

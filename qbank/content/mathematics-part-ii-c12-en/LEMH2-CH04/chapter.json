@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LEMH2-CH04",
+ "title": "Vector Algebra",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEMH2-CH04-T1",
+   "topic_number": 1,
+   "title": "Vectors: basic concepts, direction cosines and types",
+   "ncert_sections": "10.1, 10.2, 10.3",
+   "concepts": [
+    {
+     "concept_tag": "direction-cosines",
+     "learning_objective": "Find the direction cosines of a vector and use l^2 + m^2 + n^2 = 1."
+    },
+    {
+     "concept_tag": "types-of-vectors",
+     "learning_objective": "Distinguish scalars from vectors and identify zero, unit, collinear, equal and negative vectors."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH04-T2",
+   "topic_number": 2,
+   "title": "Addition of vectors",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "triangle-and-parallelogram-law",
+     "learning_objective": "Add vectors geometrically using the triangle and parallelogram laws."
+    },
+    {
+     "concept_tag": "properties-of-vector-addition",
+     "learning_objective": "State and apply the commutative and associative properties of vector addition."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH04-T3",
+   "topic_number": 3,
+   "title": "Multiplication of a vector by a scalar and components",
+   "ncert_sections": "10.5, 10.5.1",
+   "concepts": [
+    {
+     "concept_tag": "scalar-multiple-and-unit-vector",
+     "learning_objective": "Find unit vectors and scalar multiples, and test collinearity using b = (lambda)a."
+    },
+    {
+     "concept_tag": "components-of-a-vector",
+     "learning_objective": "Perform vector operations using components along the unit vectors along the axes."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH04-T4",
+   "topic_number": 4,
+   "title": "Vector joining two points and section formula",
+   "ncert_sections": "10.5.2, 10.5.3",
+   "concepts": [
+    {
+     "concept_tag": "vector-joining-two-points",
+     "learning_objective": "Express the vector joining two points in component form and find its magnitude."
+    },
+    {
+     "concept_tag": "section-formula",
+     "learning_objective": "Find the position vector of a point dividing a segment internally or externally in a given ratio."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH04-T5",
+   "topic_number": 5,
+   "title": "Scalar product and projection",
+   "ncert_sections": "10.6.1, 10.6.2",
+   "concepts": [
+    {
+     "concept_tag": "scalar-product",
+     "learning_objective": "Compute the scalar product and use it to find angles and test perpendicularity."
+    },
+    {
+     "concept_tag": "projection-of-a-vector",
+     "learning_objective": "Find the projection of one vector on another using (a . b)/|b|."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH04-T6",
+   "topic_number": 6,
+   "title": "Vector product",
+   "ncert_sections": "10.6.3",
+   "concepts": [
+    {
+     "concept_tag": "vector-product",
+     "learning_objective": "Compute the vector product and apply its properties such as anticommutativity."
+    },
+    {
+     "concept_tag": "area-using-vector-product",
+     "learning_objective": "Find areas of triangles and parallelograms using the magnitude of the vector product."
+    }
+   ]
+  }
+ ]
+}

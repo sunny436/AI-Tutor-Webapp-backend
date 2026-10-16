@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LEPH2-CH05",
+ "title": "Nuclei",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH2-CH05-T1",
+   "topic_number": 1,
+   "title": "Atomic masses and composition of the nucleus",
+   "ncert_sections": "13.1, 13.2",
+   "concepts": [
+    {
+     "concept_tag": "atomic-mass-unit-and-isotopic-mass",
+     "learning_objective": "Define the atomic mass unit and calculate the average atomic mass of an element from its isotopic abundances."
+    },
+    {
+     "concept_tag": "nuclear-composition-and-notation",
+     "learning_objective": "Describe the nucleus in terms of Z, N and A and explain how the neutron was discovered."
+    },
+    {
+     "concept_tag": "isotopes-isobars-isotones",
+     "learning_objective": "Classify nuclides as isotopes, isobars or isotones from their Z, N and A."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH05-T2",
+   "topic_number": 2,
+   "title": "Size of the nucleus",
+   "ncert_sections": "13.3",
+   "concepts": [
+    {
+     "concept_tag": "nuclear-radius-formula",
+     "learning_objective": "Use R = R0 A^(1/3) to find and compare nuclear radii."
+    },
+    {
+     "concept_tag": "nuclear-density",
+     "learning_objective": "Explain why nuclear density is independent of mass number and compare it with ordinary matter."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH05-T3",
+   "topic_number": 3,
+   "title": "Mass-energy and nuclear binding energy",
+   "ncert_sections": "13.4, 13.4.1, 13.4.2",
+   "concepts": [
+    {
+     "concept_tag": "mass-energy-equivalence",
+     "learning_objective": "Apply E = mc^2 and the relation 1 u = 931.5 MeV/c^2."
+    },
+    {
+     "concept_tag": "mass-defect-and-binding-energy",
+     "learning_objective": "Calculate mass defect, binding energy and binding energy per nucleon of a nucleus."
+    },
+    {
+     "concept_tag": "binding-energy-per-nucleon-curve",
+     "learning_objective": "Interpret the binding energy per nucleon curve to compare the stability of nuclei."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH05-T4",
+   "topic_number": 4,
+   "title": "Nuclear force",
+   "ncert_sections": "13.5",
+   "concepts": [
+    {
+     "concept_tag": "nuclear-force-properties",
+     "learning_objective": "State the properties of the nuclear force: strong, short-ranged and charge independent."
+    },
+    {
+     "concept_tag": "nucleon-potential-energy",
+     "learning_objective": "Interpret the potential energy curve of a pair of nucleons as a function of separation."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH05-T5",
+   "topic_number": 5,
+   "title": "Radioactivity",
+   "ncert_sections": "13.6",
+   "concepts": [
+    {
+     "concept_tag": "discovery-of-radioactivity",
+     "learning_objective": "Recall Becquerel's discovery of radioactivity and that it is a nuclear phenomenon."
+    },
+    {
+     "concept_tag": "types-of-radioactive-decay",
+     "learning_objective": "Identify alpha, beta and gamma decay and the changes they produce in a nucleus."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH05-T6",
+   "topic_number": 6,
+   "title": "Nuclear energy and fission",
+   "ncert_sections": "13.7, 13.7.1",
+   "concepts": [
+    {
+     "concept_tag": "nuclear-versus-chemical-energy",
+     "learning_objective": "Compare the energy released in nuclear and chemical processes and explain mass-energy interconversion in both."
+    },
+    {
+     "concept_tag": "nuclear-fission",
+     "learning_objective": "Balance fission reactions and estimate the energy released in fission."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH05-T7",
+   "topic_number": 7,
+   "title": "Nuclear fusion in stars and controlled fusion",
+   "ncert_sections": "13.7.2, 13.7.3",
+   "concepts": [
+    {
+     "concept_tag": "coulomb-barrier-and-thermonuclear-fusion",
+     "learning_objective": "Explain why fusion needs very high temperatures to overcome the Coulomb barrier."
+    },
+    {
+     "concept_tag": "proton-proton-cycle",
+     "learning_objective": "Describe the proton-proton cycle by which hydrogen fuses into helium in the sun."
+    },
+    {
+     "concept_tag": "controlled-thermonuclear-fusion",
+     "learning_objective": "State the main challenge of controlled thermonuclear fusion in a reactor."
+    }
+   ]
+  }
+ ]
+}

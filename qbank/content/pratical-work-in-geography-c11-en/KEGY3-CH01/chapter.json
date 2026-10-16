@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KEGY3-CH01",
+ "title": "Introduction to Maps",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY3-CH01-T1",
+   "topic_number": 1,
+   "title": "Meaning of a map",
+   "ncert_sections": "Introduction",
+   "concepts": [
+    {
+     "concept_tag": "map-definition",
+     "learning_objective": "Define a map as a selective, symbolised and generalised representation of the earth at a reduced scale."
+    },
+    {
+     "concept_tag": "map-versus-sketch",
+     "learning_objective": "Distinguish a map from a sketch on the basis of scale and orientation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH01-T2",
+   "topic_number": 2,
+   "title": "Essentials of map making",
+   "ncert_sections": "Essentials of Map Making",
+   "concepts": [
+    {
+     "concept_tag": "map-scale-and-projection",
+     "learning_objective": "Explain why scale and map projection are the first essentials of map making."
+    },
+    {
+     "concept_tag": "map-generalisation",
+     "learning_objective": "Explain map generalisation as selecting and simplifying content for the map's purpose."
+    },
+    {
+     "concept_tag": "map-design-and-production",
+     "learning_objective": "Describe map design and map construction and production as steps of cartography."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH01-T3",
+   "topic_number": 3,
+   "title": "History of map making",
+   "ncert_sections": "History of Map Making",
+   "concepts": [
+    {
+     "concept_tag": "early-world-cartography",
+     "learning_objective": "Recall the early contributions of Mesopotamia, the Greeks and the Arabs to map making."
+    },
+    {
+     "concept_tag": "map-making-in-india",
+     "learning_objective": "Trace the development of map making in India from the Vedic period to the Survey of India."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH01-T4",
+   "topic_number": 4,
+   "title": "Types of maps based on scale",
+   "ncert_sections": "Types of Maps Based on Scale",
+   "concepts": [
+    {
+     "concept_tag": "large-scale-maps",
+     "learning_objective": "Identify cadastral and topographical maps as large-scale maps and state their purposes."
+    },
+    {
+     "concept_tag": "small-scale-maps",
+     "learning_objective": "Identify wall maps and atlas maps as small-scale maps and compare their scales."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH01-T5",
+   "topic_number": 5,
+   "title": "Types of maps based on function",
+   "ncert_sections": "Types of Maps Based on Function",
+   "concepts": [
+    {
+     "concept_tag": "physical-maps",
+     "learning_objective": "Identify relief, geological, climatic and soil maps as physical maps."
+    },
+    {
+     "concept_tag": "cultural-maps",
+     "learning_objective": "Identify political, population, economic and transportation maps as cultural maps."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH01-T6",
+   "topic_number": 6,
+   "title": "Uses of maps: measuring distance, direction and area",
+   "ncert_sections": "Uses of Maps",
+   "concepts": [
+    {
+     "concept_tag": "measurement-of-distance",
+     "learning_objective": "Choose suitable methods to measure straight and zigzag distances on a map."
+    },
+    {
+     "concept_tag": "measurement-of-direction",
+     "learning_objective": "Explain how directions are determined from the north base line using cardinal points."
+    },
+    {
+     "concept_tag": "measurement-of-area",
+     "learning_objective": "Calculate area on a map using the method of squares and describe the polar planimeter."
+    }
+   ]
+  }
+ ]
+}

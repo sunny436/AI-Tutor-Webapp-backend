@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LHBO1-CH09",
+ "title": "जैव प्रौद्योगिकी : सिद्धांत व प्रक्रम",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHBO1-CH09-T1",
+   "topic_number": 1,
+   "title": "जैव प्रौद्योगिकी के सिद्धांत",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "jaiv-praudyogiki-mool-taknik",
+     "learning_objective": "जैव प्रौद्योगिकी की परिभाषा तथा आनुवंशिक अभियांत्रिकी और जैव प्रक्रम अभियांत्रिकी की भूमिका समझाना।"
+    },
+    {
+     "concept_tag": "pratham-punaryogaj-dna",
+     "learning_objective": "प्रथम पुनर्योगज DNA के निर्माण, प्रतिकृतियन उद्भव की भूमिका तथा आनुवंशिक रूपांतरण के तीन चरणों को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH09-T2",
+   "topic_number": 2,
+   "title": "प्रतिबंधन एंजाइम",
+   "ncert_sections": "9.2.1",
+   "concepts": [
+    {
+     "concept_tag": "pratibandhan-enzyme-namakaran",
+     "learning_objective": "प्रतिबंधन एंडोन्यूक्लिएज के नामकरण की परिपाटी तथा एक्सोन्यूक्लिएज से उनका अंतर बताना।"
+    },
+    {
+     "concept_tag": "palindrome-chipchipe-sire",
+     "learning_objective": "पैलिंड्रोमी अनुक्रम की पहचान करना और चिपचिपे सिरों के बनने तथा उपयोग को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH09-T3",
+   "topic_number": 3,
+   "title": "DNA खंडों का पृथक्करण: जेल वैद्युत कण संचलन",
+   "ncert_sections": "9.2.1",
+   "concepts": [
+    {
+     "concept_tag": "gel-vaidyut-kan-sanchalan",
+     "learning_objective": "ऐगारोज जेल में DNA खंडों के आकार के अनुसार पृथक्करण, दृश्यन और क्षालन की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH09-T4",
+   "topic_number": 4,
+   "title": "क्लोनिंग संवाहक",
+   "ncert_sections": "9.2.2",
+   "concepts": [
+    {
+     "concept_tag": "samvahak-lakshan",
+     "learning_objective": "संवाहक में प्रतिकृतियन उद्भव, वरण योग्य चिह्नक तथा क्लोनिंग स्थल के महत्त्व को समझाना।"
+    },
+    {
+     "concept_tag": "niveshi-nishkriyata",
+     "learning_objective": "प्रतिजैविक प्रतिरोध तथा वर्णोत्पादी क्रियाधार के आधार पर पुनर्योगजों के चयन की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "padap-pashu-samvahak",
+     "learning_objective": "पादपों और जंतुओं में जीन स्थानांतरण हेतु निरस्त्रीकृत रोगजनकों के संवाहक रूप में उपयोग को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH09-T5",
+   "topic_number": 5,
+   "title": "सक्षम परपोषी तथा पुनर्योगज DNA का प्रवेश",
+   "ncert_sections": "9.2.3, 9.3.4",
+   "concepts": [
+    {
+     "concept_tag": "saksham-parposhi",
+     "learning_objective": "जीवाणु कोशिकाओं को द्विसंयोजी धनायन और ताप प्रघात द्वारा सक्षम बनाने की विधि समझाना।"
+    },
+    {
+     "concept_tag": "dna-pravesh-vidhiyan",
+     "learning_objective": "सूक्ष्म अंतःक्षेपण, जीन गन तथा निरस्त्रीकृत रोगजनक संवाहक विधियों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH09-T6",
+   "topic_number": 6,
+   "title": "DNA का पृथक्करण, कर्तन तथा पॉलीमरेज श्रृंखला अभिक्रिया",
+   "ncert_sections": "9.3.1, 9.3.2, 9.3.3",
+   "concepts": [
+    {
+     "concept_tag": "dna-prithakkaran",
+     "learning_objective": "कोशिका भित्ति तोड़ने वाले एंजाइमों तथा शुद्ध DNA के अवक्षेपण के चरणों को समझाना।"
+    },
+    {
+     "concept_tag": "pcr-charan",
+     "learning_objective": "पॉलीमरेज श्रृंखला अभिक्रिया के तीन चरणों, उपक्रामकों और तापस्थायी पॉलीमरेज की भूमिका की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH09-T7",
+   "topic_number": 7,
+   "title": "बाह्य जीन उत्पाद की प्राप्ति, जैव रिएक्टर तथा अनुप्रवाह संसाधन",
+   "ncert_sections": "9.3.5, 9.3.6",
+   "concepts": [
+    {
+     "concept_tag": "jaiv-reactor",
+     "learning_objective": "जैव रिएक्टर तथा सतत संवर्धन तंत्र द्वारा पुनर्योगज प्रोटीन के बड़े पैमाने पर उत्पादन को समझाना।"
+    },
+    {
+     "concept_tag": "anupravah-sansadhan",
+     "learning_objective": "अनुप्रवाह संसाधन के चरणों तथा गुणवत्ता नियंत्रण के महत्त्व को बताना।"
+    }
+   ]
+  }
+ ]
+}

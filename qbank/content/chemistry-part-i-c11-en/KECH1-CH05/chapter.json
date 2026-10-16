@@ -1,0 +1,140 @@
+{
+ "chapter_id": "KECH1-CH05",
+ "title": "Thermodynamics",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECH1-CH05-T1",
+   "topic_number": 1,
+   "title": "Thermodynamic terms: system, state and internal energy",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "system-and-surroundings",
+     "learning_objective": "Classify a system as open, closed or isolated from its exchange of energy and matter."
+    },
+    {
+     "concept_tag": "state-functions",
+     "learning_objective": "Distinguish state functions from path-dependent quantities such as heat and work."
+    },
+    {
+     "concept_tag": "first-law-internal-energy",
+     "learning_objective": "Apply the first law, delta U = q + w, with the IUPAC sign convention."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH05-T2",
+   "topic_number": 2,
+   "title": "Applications: work, enthalpy and heat capacity",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "pressure-volume-work",
+     "learning_objective": "Calculate pressure-volume work for expansion against a constant external pressure and for free expansion."
+    },
+    {
+     "concept_tag": "enthalpy-and-delta-ng",
+     "learning_objective": "Relate delta H and delta U through delta H = delta U + delta n(g) RT."
+    },
+    {
+     "concept_tag": "extensive-intensive-heat-capacity",
+     "learning_objective": "Distinguish extensive and intensive properties and use heat capacities, including Cp - Cv = R."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH05-T3",
+   "topic_number": 3,
+   "title": "Measurement of delta U and delta H: calorimetry",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "bomb-calorimeter-delta-u",
+     "learning_objective": "Explain why a bomb calorimeter measures delta U and calculate it from a temperature rise."
+    },
+    {
+     "concept_tag": "constant-pressure-calorimetry",
+     "learning_objective": "Explain that heat measured at constant pressure equals delta H and relate delta H to delta U for combustion."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH05-T4",
+   "topic_number": 4,
+   "title": "Enthalpy change of a reaction and Hess's law",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "standard-enthalpy-of-formation",
+     "learning_objective": "Identify formation reactions and calculate reaction enthalpy from standard enthalpies of formation."
+    },
+    {
+     "concept_tag": "phase-transformation-enthalpy",
+     "learning_objective": "Interpret enthalpies of fusion and vaporisation and use them in enthalpy calculations."
+    },
+    {
+     "concept_tag": "hess-law",
+     "learning_objective": "Apply Hess's law by adding, reversing and scaling thermochemical equations."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH05-T5",
+   "topic_number": 5,
+   "title": "Enthalpies for different types of reactions",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "bond-enthalpy",
+     "learning_objective": "Use bond and atomization enthalpies to estimate reaction enthalpies for gaseous reactions."
+    },
+    {
+     "concept_tag": "lattice-enthalpy-born-haber",
+     "learning_objective": "Define lattice enthalpy and calculate it from a Born-Haber cycle."
+    },
+    {
+     "concept_tag": "enthalpy-of-solution",
+     "learning_objective": "Relate enthalpy of solution to lattice enthalpy and enthalpy of hydration."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH05-T6",
+   "topic_number": 6,
+   "title": "Spontaneity: entropy and Gibbs energy",
+   "ncert_sections": "5.6",
+   "concepts": [
+    {
+     "concept_tag": "entropy-and-second-law",
+     "learning_objective": "Use the entropy criterion of spontaneity and calculate the entropy change of the surroundings."
+    },
+    {
+     "concept_tag": "gibbs-energy-spontaneity",
+     "learning_objective": "Predict spontaneity from delta G = delta H - T delta S and the effect of temperature."
+    },
+    {
+     "concept_tag": "third-law-absolute-entropy",
+     "learning_objective": "State the third law of thermodynamics and its use for absolute entropies."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH05-T7",
+   "topic_number": 7,
+   "title": "Gibbs energy change and equilibrium",
+   "ncert_sections": "5.7",
+   "concepts": [
+    {
+     "concept_tag": "equilibrium-criterion",
+     "learning_objective": "State that delta r G = 0 at equilibrium and distinguish delta r G from the standard value."
+    },
+    {
+     "concept_tag": "standard-gibbs-energy-and-k",
+     "learning_objective": "Use delta r G standard = -2.303 RT log K to relate standard Gibbs energy and the equilibrium constant."
+    }
+   ]
+  }
+ ]
+}

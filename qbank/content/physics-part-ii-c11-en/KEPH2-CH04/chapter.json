@@ -1,0 +1,140 @@
+{
+ "chapter_id": "KEPH2-CH04",
+ "title": "Thermodynamics",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPH2-CH04-T1",
+   "topic_number": 1,
+   "title": "Thermal equilibrium and the Zeroth Law",
+   "ncert_sections": "11.2, 11.3",
+   "concepts": [
+    {
+     "concept_tag": "thermal-equilibrium",
+     "learning_objective": "Explain thermal equilibrium as the state in which macroscopic variables of systems in thermal contact stop changing."
+    },
+    {
+     "concept_tag": "zeroth-law",
+     "learning_objective": "State the Zeroth Law of Thermodynamics and explain how it leads to the concept of temperature."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH04-T2",
+   "topic_number": 2,
+   "title": "Heat, internal energy and work",
+   "ncert_sections": "11.4",
+   "concepts": [
+    {
+     "concept_tag": "internal-energy",
+     "learning_objective": "Describe internal energy as the sum of molecular kinetic and potential energies and as a state variable."
+    },
+    {
+     "concept_tag": "heat-and-work",
+     "learning_objective": "Distinguish heat and work as modes of energy transfer that are not state variables."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH04-T3",
+   "topic_number": 3,
+   "title": "First Law of Thermodynamics",
+   "ncert_sections": "11.5",
+   "concepts": [
+    {
+     "concept_tag": "first-law-statement",
+     "learning_objective": "State the First Law as dQ = dU + dW and apply its sign conventions."
+    },
+    {
+     "concept_tag": "first-law-applications",
+     "learning_objective": "Apply the First Law to calculate changes in internal energy, heat or work."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH04-T4",
+   "topic_number": 4,
+   "title": "Specific heat capacity",
+   "ncert_sections": "11.6",
+   "concepts": [
+    {
+     "concept_tag": "specific-and-molar-heat",
+     "learning_objective": "Define specific and molar heat capacity and use them to compute heat exchanged."
+    },
+    {
+     "concept_tag": "cp-cv-relation",
+     "learning_objective": "Use the relation Cp - Cv = R for an ideal gas and the 3R value for solids."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH04-T5",
+   "topic_number": 5,
+   "title": "Thermodynamic state variables and equation of state",
+   "ncert_sections": "11.7",
+   "concepts": [
+    {
+     "concept_tag": "state-variables",
+     "learning_objective": "Identify state variables and recognise that they describe only equilibrium states."
+    },
+    {
+     "concept_tag": "extensive-intensive",
+     "learning_objective": "Classify thermodynamic variables as extensive or intensive."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH04-T6",
+   "topic_number": 6,
+   "title": "Thermodynamic processes",
+   "ncert_sections": "11.8",
+   "concepts": [
+    {
+     "concept_tag": "quasi-static-isothermal",
+     "learning_objective": "Describe quasi-static and isothermal processes and compute work in an isothermal change."
+    },
+    {
+     "concept_tag": "adiabatic-process",
+     "learning_objective": "Apply PV^gamma = constant to adiabatic processes of an ideal gas."
+    },
+    {
+     "concept_tag": "isochoric-isobaric-cyclic",
+     "learning_objective": "Apply the First Law to isochoric, isobaric and cyclic processes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH04-T7",
+   "topic_number": 7,
+   "title": "Second Law; reversible and irreversible processes",
+   "ncert_sections": "11.9, 11.10",
+   "concepts": [
+    {
+     "concept_tag": "second-law-statements",
+     "learning_objective": "State the Kelvin-Planck and Clausius statements of the Second Law."
+    },
+    {
+     "concept_tag": "reversibility",
+     "learning_objective": "Explain the conditions for reversibility and the causes of irreversibility."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH04-T8",
+   "topic_number": 8,
+   "title": "Carnot engine",
+   "ncert_sections": "11.11",
+   "concepts": [
+    {
+     "concept_tag": "carnot-cycle",
+     "learning_objective": "Describe the four steps of the Carnot cycle and why they are chosen."
+    },
+    {
+     "concept_tag": "carnot-efficiency",
+     "learning_objective": "Calculate the efficiency of a Carnot engine using 1 - T2/T1."
+    }
+   ]
+  }
+ ]
+}

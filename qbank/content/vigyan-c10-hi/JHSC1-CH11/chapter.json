@@ -1,0 +1,136 @@
+{
+ "chapter_id": "JHSC1-CH11",
+ "title": "विद्युत",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSC1-CH11-T1",
+   "topic_number": 1,
+   "title": "विद्युत धारा और परिपथ",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "vidyut-dhara-paribhasha",
+     "learning_objective": "विद्युत धारा को आवेश प्रवाह की दर के रूप में परिभाषित करना तथा I = Q/t से धारा या आवेश परिकलित करना।"
+    },
+    {
+     "concept_tag": "avesh-aur-electron",
+     "learning_objective": "इलेक्ट्रॉन के आवेश से प्रवाहित इलेक्ट्रॉनों की संख्या ज्ञात करना तथा धारा की परिपाटी-दिशा समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH11-T2",
+   "topic_number": 2,
+   "title": "विद्युत विभव और विभवांतर",
+   "ncert_sections": "11.2",
+   "concepts": [
+    {
+     "concept_tag": "vibhavantar-paribhasha",
+     "learning_objective": "विभवांतर को एकांक आवेश पर किए गए कार्य के रूप में परिभाषित करना तथा V = W/Q का उपयोग करना।"
+    },
+    {
+     "concept_tag": "voltmeter-sanyojan",
+     "learning_objective": "विभवांतर मापने के लिए वोल्टमीटर को परिपथ में सही ढंग से संयोजित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH11-T3",
+   "topic_number": 3,
+   "title": "परिपथ आरेख और ओम का नियम",
+   "ncert_sections": "11.3, 11.4",
+   "concepts": [
+    {
+     "concept_tag": "ohm-ka-niyam",
+     "learning_objective": "ओम के नियम V = IR का कथन देना तथा उससे धारा, विभवांतर या प्रतिरोध परिकलित करना।"
+    },
+    {
+     "concept_tag": "dhara-niyantrak",
+     "learning_objective": "परिपथ आरेख के अवयवों तथा प्रतिरोध बदलने वाले धारा नियंत्रक की भूमिका पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH11-T4",
+   "topic_number": 4,
+   "title": "चालक का प्रतिरोध किन कारकों पर निर्भर करता है",
+   "ncert_sections": "11.5",
+   "concepts": [
+    {
+     "concept_tag": "pratirodhakta",
+     "learning_objective": "प्रतिरोधकता को पदार्थ का अभिलाक्षणिक गुण समझना तथा R = ρl/A से उसका मान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "lambai-aur-anuprasth-kat",
+     "learning_objective": "चालक की लंबाई और अनुप्रस्थ काट के क्षेत्रफल के बदलने पर प्रतिरोध में परिवर्तन का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH11-T5",
+   "topic_number": 5,
+   "title": "श्रेणीक्रम में संयोजित प्रतिरोधक",
+   "ncert_sections": "11.6, 11.6.1",
+   "concepts": [
+    {
+     "concept_tag": "shrenikram-tulya-pratirodh",
+     "learning_objective": "श्रेणीक्रम में तुल्य प्रतिरोध Rs = R1 + R2 + R3 ज्ञात करना।"
+    },
+    {
+     "concept_tag": "shrenikram-dhara-vibhav",
+     "learning_objective": "श्रेणीक्रम परिपथ में धारा की समानता तथा विभवांतर के बँटवारे का उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH11-T6",
+   "topic_number": 6,
+   "title": "पार्श्वक्रम में संयोजित प्रतिरोधक",
+   "ncert_sections": "11.6.2",
+   "concepts": [
+    {
+     "concept_tag": "parshvakram-tulya-pratirodh",
+     "learning_objective": "पार्श्वक्रम में तुल्य प्रतिरोध के व्युत्क्रम का संबंध लागू करके तुल्य प्रतिरोध और धारा ज्ञात करना।"
+    },
+    {
+     "concept_tag": "gharelu-paripath-parshvakram",
+     "learning_objective": "घरेलू परिपथों में साधित्रों को पार्श्वक्रम में जोड़ने के लाभ बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH11-T7",
+   "topic_number": 7,
+   "title": "विद्युत धारा का तापीय प्रभाव और उसके अनुप्रयोग",
+   "ncert_sections": "11.7, 11.7.1",
+   "concepts": [
+    {
+     "concept_tag": "joule-tapan-niyam",
+     "learning_objective": "जूल के तापन नियम H = I²Rt का कथन देना और उससे उत्पन्न ऊष्मा परिकलित करना।"
+    },
+    {
+     "concept_tag": "tapiy-prabhav-anuprayog",
+     "learning_objective": "बल्ब के तंतु, फ्यूज़ तथा तापन युक्तियों में तापीय प्रभाव के उपयोग को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH11-T8",
+   "topic_number": 8,
+   "title": "विद्युत शक्ति",
+   "ncert_sections": "11.8",
+   "concepts": [
+    {
+     "concept_tag": "vidyut-shakti",
+     "learning_objective": "P = VI = I²R = V²/R के संबंधों से विद्युत शक्ति और प्रतिरोध परिकलित करना।"
+    },
+    {
+     "concept_tag": "kilowatt-ghanta",
+     "learning_objective": "विद्युत ऊर्जा के व्यापारिक मात्रक किलोवाट घंटा का उपयोग करके ऊर्जा और उसका व्यय ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

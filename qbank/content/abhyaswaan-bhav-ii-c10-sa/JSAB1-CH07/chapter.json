@@ -1,0 +1,124 @@
+{
+ "chapter_id": "JSAB1-CH07",
+ "title": "समासाः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JSAB1-CH07-T1",
+   "topic_number": 1,
+   "title": "समासपरिचयः विग्रहश्च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "samasa-vigraha-paribhasha",
+     "learning_objective": "छात्रः विग्रहस्य समासस्य च भेदं परिभाषया उदाहरणेन च स्पष्टीकरिष्यति।"
+    },
+    {
+     "concept_tag": "samasa-chaturvidha-vibhajana",
+     "learning_objective": "छात्रः समासानां चतुर्विधं विभाजनं तत्पुरुषस्य भेदौ च ज्ञास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH07-T2",
+   "topic_number": 2,
+   "title": "अव्ययीभावसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "avyayibhava-lakshana",
+     "learning_objective": "छात्रः अव्ययीभावसमासस्य पूर्वपदप्रधानत्वं नपुंसकलिङ्गत्वं च अभिज्ञास्यति।"
+    },
+    {
+     "concept_tag": "avyayibhava-vigraha",
+     "learning_objective": "छात्रः अव्ययीभावसमस्तपदानां विग्रहं विग्रहात् समस्तपदं च रचयिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH07-T3",
+   "topic_number": 3,
+   "title": "तत्पुरुषसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vibhakti-tatpurusha",
+     "learning_objective": "छात्रः द्वितीयातः सप्तमीपर्यन्तं विभक्तितत्पुरुषस्य उपभेदान् अभिज्ञास्यति।"
+    },
+    {
+     "concept_tag": "nan-tatpurusha",
+     "learning_objective": "छात्रः नञ्-तत्पुरुषसमासस्य विग्रहं स्वरूपं च ज्ञास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH07-T4",
+   "topic_number": 4,
+   "title": "कर्मधारयसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "visheshana-visheshya-karmadharaya",
+     "learning_objective": "छात्रः विशेषणविशेष्ययोः कर्मधारयसमासस्य विग्रहं करिष्यति।"
+    },
+    {
+     "concept_tag": "upamana-upameya-karmadharaya",
+     "learning_objective": "छात्रः उपमानोपमेययोः कर्मधारयसमासे इव इत्यस्य प्रयोगं प्रधानपदं च ज्ञास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH07-T5",
+   "topic_number": 5,
+   "title": "द्विगुसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "dvigu-lakshana",
+     "learning_objective": "छात्रः द्विगुसमासस्य सङ्ख्यावाचकं पूर्वपदं समाहारार्थं च अभिज्ञास्यति।"
+    },
+    {
+     "concept_tag": "dvigu-vigraha",
+     "learning_objective": "छात्रः द्विगुसमस्तपदानां समाहारविग्रहं समस्तपदं च रचयिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH07-T6",
+   "topic_number": 6,
+   "title": "द्वन्द्वसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "itaretara-dvandva",
+     "learning_objective": "छात्रः इतरेतरद्वन्द्वे वचनस्य लिङ्गस्य च निर्धारणं ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "samahara-dvandva",
+     "learning_objective": "छात्रः समाहारद्वन्द्वस्य नपुंसकैकवचनत्वं विग्रहं च ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "ekashesha-dvandva",
+     "learning_objective": "छात्रः एकशेषद्वन्द्वस्य स्वरूपम् उदाहरणेन अभिज्ञास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH07-T7",
+   "topic_number": 7,
+   "title": "बहुव्रीहिसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "bahuvrihi-anyapada-pradhana",
+     "learning_objective": "छात्रः बहुव्रीहिसमासस्य अन्यपदप्रधानत्वं यस्य सः इत्यादिविग्रहं च ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "samanadhikarana-vyadhikarana",
+     "learning_objective": "छात्रः समानाधिकरण-व्यधिकरण-बहुव्रीह्योः भेदं विश्लेषयिष्यति।"
+    }
+   ]
+  }
+ ]
+}

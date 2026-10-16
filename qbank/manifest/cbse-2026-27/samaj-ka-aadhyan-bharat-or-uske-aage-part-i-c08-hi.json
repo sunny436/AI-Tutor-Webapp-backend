@@ -1,0 +1,912 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "samaj-ka-aadhyan-bharat-or-uske-aage-part-i-c08-hi",
+  "curriculum": "cbse",
+  "class_level": 8,
+  "subject_code": "social_science",
+  "language": "hindi",
+  "title": "Samaj Ka Aadhyan: Bharat or uske aage Part-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "hhes1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "HHES1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "प्राकृतिक संसाधन एवं उनका उपयोग",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhes101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHES1-CH01-T1",
+     "topic_number": 1,
+     "title": "प्रकृति कब एक संसाधन बन जाती है?",
+     "ncert_sections": "पृष्ठ 2-3",
+     "concepts": [
+      {
+       "concept_tag": "prakriti-se-sansadhan",
+       "learning_objective": "समझना कि प्रकृति के तत्व मानव उपयोग में आने पर संसाधन बनते हैं।"
+      },
+      {
+       "concept_tag": "sansadhan-ki-shartein",
+       "learning_objective": "पहचानना कि संसाधन बनने के लिए तत्व का तकनीकी रूप से सुलभ, आर्थिक रूप से व्यवहार्य और सांस्कृतिक रूप से स्वीकार्य होना आवश्यक है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH01-T2",
+     "topic_number": 2,
+     "title": "प्राकृतिक संसाधनों की श्रेणियाँ: उपयोग के आधार पर",
+     "ncert_sections": "पृष्ठ 3-4",
+     "concepts": [
+      {
+       "concept_tag": "upayog-adharit-vargikaran",
+       "learning_objective": "उपयोग के आधार पर संसाधनों को जीवन के लिए आवश्यक, सामग्री और ऊर्जा के संसाधनों में बाँटना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH01-T3",
+     "topic_number": 3,
+     "title": "नवीकरणीय संसाधन तथा पुनर्स्थापन और पुनर्जनन",
+     "ncert_sections": "पृष्ठ 5-8",
+     "concepts": [
+      {
+       "concept_tag": "punarsthapan-punarjanan",
+       "learning_objective": "प्रकृति के पुनर्स्थापन और पुनर्जनन के सिद्धांत में अंतर स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "navikaraniya-sansadhan",
+       "learning_objective": "समझना कि नवीकरणीय संसाधन तभी नवीकरणीय रहते हैं जब प्रकृति की लय भंग न हो।"
+      },
+      {
+       "concept_tag": "paritantra-sevayen",
+       "learning_objective": "पारितंत्र के कार्यों और पारितंत्र सेवाओं में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH01-T4",
+     "topic_number": 4,
+     "title": "अनवीकरणीय संसाधन",
+     "ncert_sections": "पृष्ठ 8",
+     "concepts": [
+      {
+       "concept_tag": "anavikaraniya-sansadhan",
+       "learning_objective": "अनवीकरणीय संसाधनों की पहचान करना और उनके विवेकपूर्ण उपयोग की आवश्यकता समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH01-T5",
+     "topic_number": 5,
+     "title": "प्राकृतिक संसाधनों का वितरण और उसके निहितार्थ",
+     "ncert_sections": "पृष्ठ 8-11",
+     "concepts": [
+      {
+       "concept_tag": "asaman-vitaran",
+       "learning_objective": "संसाधनों के असमान वितरण का बस्तियों, व्यापार, उद्योग और विस्थापन पर प्रभाव समझाना।"
+      },
+      {
+       "concept_tag": "sansadhan-sajhedari-vivad",
+       "learning_objective": "राजनीतिक सीमाओं के पार संसाधनों की साझेदारी से उत्पन्न तनाव का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "prachurta-ka-virodhabhas",
+       "learning_objective": "‘प्रचुरता का विरोधाभास’ या ‘संसाधन अभिशाप’ की अवधारणा की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH01-T6",
+     "topic_number": 6,
+     "title": "नवीकरणीय संसाधनों का पुनर्स्थापन और पुनर्जनन: भूजल, मृदा और सीमेंट",
+     "ncert_sections": "पृष्ठ 12-17",
+     "concepts": [
+      {
+       "concept_tag": "bhujal-atidohan",
+       "learning_objective": "पंजाब के उदाहरण से भूजल के अतिदोहन के कारणों और परिणामों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "mrida-punarjeevan",
+       "learning_objective": "रासायनिक उर्वरकों से मृदा क्षरण तथा वृक्षायुर्वेद और सिक्किम के जैविक खेती मॉडल को समझना।"
+      },
+      {
+       "concept_tag": "vaikalpik-nirman-samagri",
+       "learning_objective": "सीमेंट उद्योग के प्रदूषण और वैकल्पिक टिकाऊ निर्माण सामग्री का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH01-T7",
+     "topic_number": 7,
+     "title": "संसाधनों का उत्तरदायित्वपूर्ण और विवेकपूर्ण उपयोग: प्रबंधन",
+     "ncert_sections": "पृष्ठ 17-19",
+     "concepts": [
+      {
+       "concept_tag": "navikaraniya-urja-sankraman",
+       "learning_objective": "अनवीकरणीय से नवीकरणीय ऊर्जा की ओर बदलाव और अंतरराष्ट्रीय सौर गठबंधन की भूमिका समझना।"
+      },
+      {
+       "concept_tag": "nyayasangat-pahunch-lokasangrah",
+       "learning_objective": "संसाधनों तक असमान पहुँच और लोकसंग्रह के विचार के आधार पर प्रबंधन का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHES1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "भारत के राजनैतिक मानचित्र का पुनर्निर्माण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhes102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHES1-CH02-T1",
+     "topic_number": 1,
+     "title": "दिल्ली सल्तनत का उदय और पतन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dilli-saltanat-vansh",
+       "learning_objective": "दिल्ली सल्तनत की स्थापना और उसके पाँच राजवंशों की पहचान करना।"
+      },
+      {
+       "concept_tag": "tughlaq-yojnaen",
+       "learning_objective": "मुहम्मद बिन तुगलक की राजधानी-परिवर्तन और सांकेतिक मुद्रा की योजनाओं के परिणाम समझाना।"
+      },
+      {
+       "concept_tag": "taimur-akraman-aur-asthirta",
+       "learning_objective": "तैमूर के आक्रमण और सल्तनत की राजनैतिक अस्थिरता के प्रभावों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH02-T2",
+     "topic_number": 2,
+     "title": "दिल्ली सल्तनत का प्रतिरोध",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "purvi-ganga-aur-hoysal",
+       "learning_objective": "पूर्वी गंग और होयसल राज्यों द्वारा सल्तनत के प्रतिरोध का वर्णन करना।"
+      },
+      {
+       "concept_tag": "musunuri-nayak-aur-rana-kumbha",
+       "learning_objective": "मुसुनूरी नायकों और राणा कुंभा जैसे क्षेत्रीय प्रतिरोधों के महत्त्व को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH02-T3",
+     "topic_number": 3,
+     "title": "विजयनगर साम्राज्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vijaynagar-sthapna",
+       "learning_objective": "हरिहर और बुक्का द्वारा विजयनगर की स्थापना तथा दक्कन की सल्तनतों से संघर्ष को समझाना।"
+      },
+      {
+       "concept_tag": "krishnadevaraya",
+       "learning_objective": "कृष्णदेवराय के शासन में सैन्य शक्ति और सांस्कृतिक उत्कर्ष का वर्णन करना।"
+      },
+      {
+       "concept_tag": "talikota-yuddh",
+       "learning_objective": "तालीकोटा के युद्ध और विजयनगर के पतन के कारणों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH02-T4",
+     "topic_number": 4,
+     "title": "मुगल साम्राज्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "babur-aur-panipat",
+       "learning_objective": "बाबर द्वारा पानीपत के प्रथम युद्ध और मुगल साम्राज्य की स्थापना को समझाना।"
+      },
+      {
+       "concept_tag": "akbar-ki-nitiyan",
+       "learning_objective": "अकबर की सैन्य और राजनैतिक रणनीतियों की तुलना करना।"
+      },
+      {
+       "concept_tag": "aurangzeb-shasan",
+       "learning_objective": "औरंगज़ेब के शासन, उसकी नीतियों और मुगल पतन से उसके संबंध का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH02-T5",
+     "topic_number": 5,
+     "title": "मुगलों का प्रतिरोध",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rajput-pratirodh",
+       "learning_objective": "महाराणा प्रताप और राजपूतों के मुगल-विरोधी संघर्ष का वर्णन करना।"
+      },
+      {
+       "concept_tag": "ahom-paik-pratha",
+       "learning_objective": "अहोमों की पाइक प्रथा और सराईघाट के युद्ध में भूगोल की भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "sikh-uday",
+       "learning_objective": "सिख गुरुओं और खालसा की भूमिका की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH02-T6",
+     "topic_number": 6,
+     "title": "भारत का प्रशासन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "iqta-pratha",
+       "learning_objective": "दिल्ली सल्तनत की इक्ता प्रथा की विशेषताओं को समझाना।"
+      },
+      {
+       "concept_tag": "mansabdari-pratha",
+       "learning_objective": "अकबर की मनसबदारी प्रथा और मुगल प्रशासनिक ढाँचे का वर्णन करना।"
+      },
+      {
+       "concept_tag": "todarmal-rajasva",
+       "learning_objective": "टोडरमल की राजस्व व्यवस्था के महत्त्व को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH02-T7",
+     "topic_number": 7,
+     "title": "लोगों का जीवन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "krishi-aur-vyapar",
+       "learning_objective": "कृषि, शिल्प और व्यापार पर आधारित अर्थव्यवस्था का वर्णन करना।"
+      },
+      {
+       "concept_tag": "hundi-pratha",
+       "learning_objective": "हुंडी प्रणाली द्वारा धन-हस्तांतरण की उपयोगिता समझाना।"
+      },
+      {
+       "concept_tag": "mandir-arthvyavastha",
+       "learning_objective": "मंदिरों को आर्थिक गतिविधियों के केंद्र के रूप में विश्लेषित करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHES1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "मराठा साम्राज्य का उदय",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhes103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHES1-CH03-T1",
+     "topic_number": 1,
+     "title": "मराठा कौन थे: भाषा, क्षेत्र और भक्ति परंपरा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "maratha-kaun-the",
+       "learning_objective": "विद्यार्थी मराठों के क्षेत्र, भाषा और पूर्ववर्ती राजनीतिक पृष्ठभूमि को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "bhakti-sant-parampara",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि महाराष्ट्र के भक्ति संतों ने मराठा शक्ति के लिए सांस्कृतिक आधार कैसे तैयार किया।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH03-T2",
+     "topic_number": 2,
+     "title": "छत्रपति शिवाजी का उदय और मुगलों से संघर्ष",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shivaji-ka-prarambhik-jeevan",
+       "learning_objective": "विद्यार्थी छत्रपति शिवाजी के आरंभिक जीवन और स्वराज्य की कल्पना का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "guerrilla-yuddh-aur-abhiyan",
+       "learning_objective": "विद्यार्थी गुरिल्ला युद्ध, प्रतापगढ़, शाइस्ता खाँ और सूरत के अभियानों का महत्व समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "agra-se-mukti",
+       "learning_objective": "विद्यार्थी पुरंदर की संधि और आगरा से मुक्ति की घटनाओं का क्रम समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH03-T3",
+     "topic_number": 3,
+     "title": "राज्याभिषेक, दक्षिण-दिग्विजय और शिवाजी के पश्चात मराठा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rajyabhishek-aur-dakshin-digvijay",
+       "learning_objective": "विद्यार्थी 1674 के राज्याभिषेक और दक्षिण-दिग्विजय का महत्व बता सकेंगे।"
+      },
+      {
+       "concept_tag": "mughal-maratha-sangharsh",
+       "learning_objective": "विद्यार्थी संभाजी, राजाराम और ताराबाई के काल में मुगल-मराठा संघर्ष का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "peshwa-aur-angl-maratha-yuddh",
+       "learning_objective": "विद्यार्थी पेशवाओं के उदय, अखिल भारतीय विस्तार और मराठा शक्ति के पतन के कारण समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH03-T4",
+     "topic_number": 4,
+     "title": "मराठा प्रशासन: नागरिक, सैन्य और न्याय व्यवस्था",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ashtapradhan-aur-nagrik-prashasan",
+       "learning_objective": "विद्यार्थी अष्टप्रधान मंडल, वेतन व्यवस्था और चौथ-सरदेशमुखी को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sainya-prashasan-aur-durg",
+       "learning_objective": "विद्यार्थी मराठा सेना के अंगों और दुर्गों के सामरिक महत्व का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "nausena-aur-nyay-vyavastha",
+       "learning_objective": "विद्यार्थी मराठा नौसेना की उपलब्धियों और पंचायत आधारित न्याय व्यवस्था को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH03-T5",
+     "topic_number": 5,
+     "title": "व्यापार, सांस्कृतिक पुनरुत्थान और शक्तिशाली मराठा महिलाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vyapar-tantra",
+       "learning_objective": "विद्यार्थी मराठों के समुद्री व्यापार और परिवहन व्यवस्था का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sanskritik-punarutthan",
+       "learning_objective": "विद्यार्थी शिवाजी की मुहर, राज्य-व्यवहार-कोष और भाषा-नीति का सांस्कृतिक महत्व समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "maratha-mahilaen",
+       "learning_objective": "विद्यार्थी अहिल्याबाई होलकर और ताराबाई के योगदान का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH03-T6",
+     "topic_number": 6,
+     "title": "तंजावुर के मराठा और मराठा विरासत",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tanjavur-ke-maratha",
+       "learning_objective": "विद्यार्थी एकोजी और सरफोजी द्वितीय के काल में तंजावुर के सांस्कृतिक योगदान को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "maratha-virasat",
+       "learning_objective": "विद्यार्थी भारतीय इतिहास पर मराठा शासन के दीर्घकालिक प्रभाव का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHES1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "भारत में औपनिवेशिक काल",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhes104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHES1-CH04-T1",
+     "topic_number": 1,
+     "title": "उपनिवेशवाद का युग",
+     "ncert_sections": "उपनिवेशवाद का युग",
+     "concepts": [
+      {
+       "concept_tag": "upniveshvad-ki-paribhasha",
+       "learning_objective": "उपनिवेशवाद की परिभाषा बताना और यूरोपीय औपनिवेशिक विस्तार के प्रेरक कारणों को पहचानना।"
+      },
+      {
+       "concept_tag": "sabhyakari-abhiyan-ka-dava",
+       "learning_objective": "उपनिवेशकों के 'सभ्यकारी अभियान' के दावे की तुलना उपनिवेशित लोगों की वास्तविक स्थिति से करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH04-T2",
+     "topic_number": 2,
+     "title": "भारत में यूरोपीय: पुर्तगाली, डच और फ्रांसीसी",
+     "ncert_sections": "भारत में यूरोपीय",
+     "concepts": [
+      {
+       "concept_tag": "bharat-ki-samriddhi",
+       "learning_objective": "यह समझाना कि भारत की आर्थिक समृद्धि ने यूरोपीय शक्तियों को क्यों आकर्षित किया।"
+      },
+      {
+       "concept_tag": "purtgali-dach-fransisi",
+       "learning_objective": "पुर्तगालियों, डचों और फ्रांसीसियों की भारत में नीतियों और उनके अंत की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH04-T3",
+     "topic_number": 3,
+     "title": "व्यापारी से शासक: अंग्रेज़ों का आगमन",
+     "ncert_sections": "अंग्रेज़ों का आगमन; व्यापारी से शासक",
+     "concepts": [
+      {
+       "concept_tag": "phoot-dalo-raj-karo",
+       "learning_objective": "'फूट डालो और राज करो' की नीति और प्लासी के युद्ध में उसके प्रयोग को समझाना।"
+      },
+      {
+       "concept_tag": "hadap-niti-sahayak-sandhi",
+       "learning_objective": "हड़प नीति और सहायक संधि के माध्यम से ब्रिटिश क्षेत्रीय विस्तार की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH04-T4",
+     "topic_number": 4,
+     "title": "स्वर्ग से नरक की ओर: अकाल और संपदा का निकास",
+     "ncert_sections": "स्वर्ग से नरक की ओर?",
+     "concepts": [
+      {
+       "concept_tag": "vinashkari-akal",
+       "learning_objective": "बंगाल के अकाल और अन्य अकालों में ब्रिटिश राजस्व और 'मुक्त बाज़ार' नीतियों की भूमिका का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "sampada-ka-nikas",
+       "learning_objective": "भारत की संपदा के निकास की अवधारणा और दादाभाई नौरोजी जैसे विचारकों के योगदान को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH04-T5",
+     "topic_number": 5,
+     "title": "बदलते परिदृश्य: उद्योग, शासन, शिक्षा और अर्थव्यवस्था",
+     "ncert_sections": "बदलते परिदृश्य",
+     "concepts": [
+      {
+       "concept_tag": "swadeshi-udyogon-ka-patan",
+       "learning_objective": "ब्रिटिश व्यापार नीतियों के कारण भारत के वस्त्र उद्योग के पतन की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "shiksha-aur-shasan-mein-badlav",
+       "learning_objective": "ग्राम समुदायों के विघटन और मैकॉले की शिक्षा नीति के प्रभावों का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "rail-aur-arthvyavastha",
+       "learning_objective": "रेलवे जैसी परियोजनाओं के औपनिवेशिक उद्देश्यों और उनके खर्च के स्रोत का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH04-T6",
+     "topic_number": 6,
+     "title": "प्रारंभिक प्रतिरोध, 1857 का महान विद्रोह और औपनिवेशिक विरासत",
+     "ncert_sections": "प्रारंभिक प्रतिरोध आंदोलन; 1857 का महान विद्रोह; यूरोपीय उपनिवेशवाद की विरासत",
+     "concepts": [
+      {
+       "concept_tag": "prarambhik-pratirodh",
+       "learning_objective": "संन्यासी-फकीर विद्रोह, जनजातीय विद्रोहों और नील विद्रोह के कारणों और नेताओं को पहचानना।"
+      },
+      {
+       "concept_tag": "mahan-vidroh-1857",
+       "learning_objective": "1857 के महान विद्रोह के कारणों, घटनाओं, विफलता और परिणामों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "aupniveshik-virasat",
+       "learning_objective": "औपनिवेशिक शासन के अनपेक्षित परिणामों और सांस्कृतिक प्रभाव के उलटे प्रवाह का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHES1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "सार्वभौमिक मताधिकार और भारत की निर्वाचन प्रणाली",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhes105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHES1-CH05-T1",
+     "topic_number": 1,
+     "title": "सार्वभौमिक वयस्क मताधिकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sarvabhaumik-vayask-matadhikar",
+       "learning_objective": "सार्वभौमिक वयस्क मताधिकार का अर्थ और उसकी संवैधानिक आधारशिला समझना।"
+      },
+      {
+       "concept_tag": "matadhikar-ka-mahatva",
+       "learning_objective": "लोकतंत्र में सार्वभौमिक मताधिकार के महत्व का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH05-T2",
+     "topic_number": 2,
+     "title": "बाधाएँ पार करना, भागीदारी में सक्षम बनाना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sulabh-matdan-upay",
+       "learning_objective": "मतदान को सबके लिए सुलभ बनाने के निर्वाचन आयोग के उपाय पहचानना।"
+      },
+      {
+       "concept_tag": "matdan-bhagidari-chunautiyan",
+       "learning_objective": "मतदान में भागीदारी और प्राचीन निर्वाचन परंपरा का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH05-T3",
+     "topic_number": 3,
+     "title": "कक्षा प्रतिनिधि का चुनाव: एक उदाहरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gupt-matdan",
+       "learning_objective": "गुप्त मतदान और निर्वाचन अधिकारी की भूमिका समझना।"
+      },
+      {
+       "concept_tag": "nota-vikalp",
+       "learning_objective": "नोटा विकल्प का अर्थ और प्रभाव जानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH05-T4",
+     "topic_number": 4,
+     "title": "भारत निर्वाचन आयोग की भूमिका",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nirvachan-ayog-sanrachna",
+       "learning_objective": "निर्वाचन आयोग की स्थापना, संरचना और कार्य पहचानना।"
+      },
+      {
+       "concept_tag": "evm-vvpat-matdan-prakriya",
+       "learning_objective": "मतदान प्रक्रिया, ईवीएम और वीवीपैट की भूमिका समझना।"
+      },
+      {
+       "concept_tag": "adarsh-achar-sanhita",
+       "learning_objective": "आदर्श आचार संहिता के नियमों और उल्लंघनों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH05-T5",
+     "topic_number": 5,
+     "title": "लोकसभा और राज्य विधानसभाओं के चुनाव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sarvadhik-mat-vijay-pranali",
+       "learning_objective": "सर्वाधिक मत पाने वाले की जीत वाली निर्वाचन प्रणाली को समझना।"
+      },
+      {
+       "concept_tag": "sarkar-gathan-saansad-vidhayak",
+       "learning_objective": "सांसद और विधायक का अंतर तथा सरकार गठन की प्रक्रिया समझना।"
+      },
+      {
+       "concept_tag": "arakshit-nirvachan-kshetra",
+       "learning_objective": "लोकसभा में अनुसूचित जाति और जनजाति के लिए आरक्षित सीटें जानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH05-T6",
+     "topic_number": 6,
+     "title": "राज्यसभा, राष्ट्रपति और उपराष्ट्रपति का चुनाव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rajyasabha-apratyaksh-chunav",
+       "learning_objective": "राज्यसभा के अप्रत्यक्ष चुनाव और उसकी स्थायी प्रकृति को समझना।"
+      },
+      {
+       "concept_tag": "rashtrapati-uprashtrapati-chunav",
+       "learning_objective": "राष्ट्रपति और उपराष्ट्रपति के निर्वाचक मंडल की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH05-T7",
+     "topic_number": 7,
+     "title": "चुनौतियाँ और आगे की राह",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "chunav-chunautiyan",
+       "learning_objective": "भारतीय चुनाव प्रणाली की प्रमुख चुनौतियाँ पहचानना।"
+      },
+      {
+       "concept_tag": "jagruk-matdata",
+       "learning_objective": "जागरूक और सतर्क मतदाता की भूमिका का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHES1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "संसदीय प्रणाली— विधायिका और कार्यपालिका",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhes106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHES1-CH06-T1",
+     "topic_number": 1,
+     "title": "भारतीय संसद की संरचना और द्विसदनीय प्रणाली",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sansad-ki-sanrachna",
+       "learning_objective": "संसद के तीन अंगों — राष्ट्रपति, लोकसभा और राज्यसभा — तथा उनके चुनाव के ढंग को पहचानना।"
+      },
+      {
+       "concept_tag": "dvisadaniya-pranali",
+       "learning_objective": "द्विसदनीय प्रणाली का अर्थ और संघवाद की भावना से उसका संबंध समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH06-T2",
+     "topic_number": 2,
+     "title": "पीठासीन अधिकारी और संघीय कार्यपालिका",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pithasin-adhikari",
+       "learning_objective": "दोनों सदनों के पीठासीन अधिकारियों और सेंगोल के प्रतीकात्मक महत्व को पहचानना।"
+      },
+      {
+       "concept_tag": "sanghiya-karyapalika",
+       "learning_objective": "संघीय कार्यपालिका के सदस्यों और मंत्रिपरिषद के सामूहिक उत्तरदायित्व को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH06-T3",
+     "topic_number": 3,
+     "title": "संसद के कार्य: संवैधानिक कार्य और विधि निर्माण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samvaidhanik-karya",
+       "learning_objective": "संसद के संवैधानिक कार्यों और उसके द्वारा रक्षित मूल मूल्यों को पहचानना।"
+      },
+      {
+       "concept_tag": "vidheyak-se-adhiniyam",
+       "learning_objective": "विधेयक से अधिनियम बनने की प्रक्रिया को शिक्षा का अधिकार अधिनियम के उदाहरण से क्रमबद्ध करना।"
+      },
+      {
+       "concept_tag": "dhan-vidheyak",
+       "learning_objective": "धन विधेयक की विशेषता और उसे प्रस्तुत करने की शर्त बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH06-T4",
+     "topic_number": 4,
+     "title": "कार्यपालिका और वित्तीय उत्तरदायित्व",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "karyapalika-uttardayitva",
+       "learning_objective": "प्रश्नकाल और समितियों के माध्यम से कार्यपालिका की जवाबदेही समझाना।"
+      },
+      {
+       "concept_tag": "vittiya-uttardayitva",
+       "learning_objective": "बजट के माध्यम से सरकारी व्यय पर संसद की निगरानी का कारण बताना।"
+      },
+      {
+       "concept_tag": "rashtrapati-pradhanmantri",
+       "learning_objective": "राष्ट्रपति को नाममात्र प्रमुख और प्रधानमंत्री को वास्तविक कार्यकारी प्राधिकारी के रूप में पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH06-T5",
+     "topic_number": 5,
+     "title": "विधायिका और कार्यपालिका में अंतर; न्यायपालिका की भूमिका",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vidhayika-karyapalika-antar",
+       "learning_objective": "विधायिका और कार्यपालिका की संरचना, भूमिका और कार्यों में अंतर करना।"
+      },
+      {
+       "concept_tag": "nyayapalika-niyantran-santulan",
+       "learning_objective": "न्यायपालिका द्वारा संविधान की रक्षा और नियंत्रण-संतुलन की व्यवस्था का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH06-T6",
+     "topic_number": 6,
+     "title": "राज्य स्तर पर विधायिका और कार्यपालिका",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sangh-rajya-samavarti-suchi",
+       "learning_objective": "संघ सूची, राज्य सूची और समवर्ती सूची के आधार पर कानून बनाने के अधिकार पहचानना।"
+      },
+      {
+       "concept_tag": "rajya-vidhanmandal",
+       "learning_objective": "राज्य विधानमंडल की एकसदनीय या द्विसदनीय संरचना और केंद्र से उसकी समानता की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH06-T7",
+     "topic_number": 7,
+     "title": "विधायिका के प्रभावी कामकाज की चुनौतियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "utpadakta-vyavdhan",
+       "learning_objective": "संसद की उत्पादकता का अर्थ समझना और व्यवधान, अनुपस्थिति जैसी चुनौतियों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "nagrik-bhagidari",
+       "learning_objective": "विधायिका को सशक्त बनाने में जागरूक नागरिकों की भागीदारी का महत्व बताना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHES1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "उत्पादन के कारक",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhes107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHES1-CH07-T1",
+     "topic_number": 1,
+     "title": "उत्पादन के कारक और भूमि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "utpadan-ke-karak",
+       "learning_objective": "विद्यार्थी उत्पादन के चार कारकों और सहयोगी कारक के रूप में प्रौद्योगिकी को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "bhoomi-prakritik-sansadhan",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि अर्थशास्त्र में भूमि में सभी प्राकृतिक संसाधन सम्मिलित होते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH07-T2",
+     "topic_number": 2,
+     "title": "श्रम और मानव पूँजी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shram-aur-manav-poonji",
+       "learning_objective": "विद्यार्थी श्रम और मानव पूँजी में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "manav-poonji-ke-sahayak",
+       "learning_objective": "विद्यार्थी शिक्षा, प्रशिक्षण, स्वास्थ्य और सामाजिक-सांस्कृतिक प्रभावों की मानव पूँजी में भूमिका समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "manav-poonji-ki-chunautiyan",
+       "learning_objective": "विद्यार्थी साक्षरता और जनसांख्यिकीय लाभांश के संदर्भ में मानव पूँजी की चुनौतियों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH07-T3",
+     "topic_number": 3,
+     "title": "भारत की प्राचीन कौशल विरासत",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prachin-kaushal-virasat",
+       "learning_objective": "विद्यार्थी शिल्प शास्त्रों और सिले हुए जहाज़ों के उदाहरणों से भारत की कौशल परंपरा का वर्णन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH07-T4",
+     "topic_number": 4,
+     "title": "पूँजी और उद्यमिता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "poonji-aur-uske-srot",
+       "learning_objective": "विद्यार्थी पूँजी का अर्थ और व्यवसायों के लिए पूँजी के स्रोत बता सकेंगे।"
+      },
+      {
+       "concept_tag": "udyamita-aur-udyami",
+       "learning_objective": "विद्यार्थी उद्यमी के कार्यों और स्टार्टअप की विशेषताओं की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH07-T5",
+     "topic_number": 5,
+     "title": "प्रौद्योगिकी: उत्पादन की सहायक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "praudyogiki-ki-bhoomika",
+       "learning_objective": "विद्यार्थी उत्पादन, ज्ञान, कौशल और रोज़गार तक पहुँच में प्रौद्योगिकी की भूमिका समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHES1-CH07-T6",
+     "topic_number": 6,
+     "title": "कारकों का परस्पर संबंध और उत्तरदायित्व",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "karakon-ka-paraspar-sambandh",
+       "learning_objective": "विद्यार्थी श्रम-प्रधान और पूँजी-प्रधान उत्पादन तथा आपूर्ति शृंखला की भूमिका का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "utpadakon-ke-uttardayitva",
+       "learning_objective": "विद्यार्थी प्राकृतिक संसाधनों और श्रमिकों के प्रति उत्पादकों के उत्तरदायित्व तथा कॉर्पोरेट सामाजिक उत्तरदायित्व को समझा सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

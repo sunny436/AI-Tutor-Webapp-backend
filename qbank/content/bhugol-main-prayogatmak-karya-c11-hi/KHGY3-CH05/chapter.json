@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KHGY3-CH05",
+ "title": "स्थलाकृतिक मानचित्र",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHGY3-CH05-T1",
+   "topic_number": 1,
+   "title": "स्थलाकृतिक मानचित्र: अर्थ, शृंखलाएँ और मापनियाँ",
+   "ncert_sections": "परिचय, भारत एवं पड़ोसी देशों की शृंखला, विश्व की अंतर्राष्ट्रीय मानचित्र शृंखला",
+   "concepts": [
+    {
+     "concept_tag": "sthalakritik-manchitra-arth",
+     "learning_objective": "स्थलाकृतिक मानचित्रों का अर्थ, विशेषताएँ तथा उन्हें बनाने वाली संस्था बता सकेंगे।"
+    },
+    {
+     "concept_tag": "manchitra-shrinkhla-maapni",
+     "learning_objective": "भारत में स्थलाकृतिक मानचित्रों की शृंखलाओं, मापनियों और उनके अक्षांशीय-देशांतरीय विस्तार को समझ सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH05-T2",
+   "topic_number": 2,
+   "title": "उच्चावच निरूपण की विधियाँ और समोच्च रेखाएँ",
+   "ncert_sections": "उच्चावच निरूपण की विधियाँ, समोच्च रेखाएँ",
+   "concepts": [
+    {
+     "concept_tag": "uchchavach-nirupan-vidhiyan",
+     "learning_objective": "मानचित्र पर उच्चावच दिखाने की विभिन्न विधियों की पहचान कर सकेंगे।"
+    },
+    {
+     "concept_tag": "samochch-rekha-visheshtayen",
+     "learning_objective": "समोच्च रेखाओं, ऊर्ध्वाधर अंतराल और क्षैतिज तुल्यमान की विशेषताएँ समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH05-T3",
+   "topic_number": 3,
+   "title": "ढाल के प्रकार",
+   "ncert_sections": "ढाल के प्रकार: मंद, तीव्र, अवतल, उत्तल",
+   "concepts": [
+    {
+     "concept_tag": "dhal-ke-prakar",
+     "learning_objective": "समोच्च रेखाओं के अंतराल से मंद, तीव्र, अवतल और उत्तल ढाल की पहचान कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH05-T4",
+   "topic_number": 4,
+   "title": "समोच्च रेखाओं द्वारा स्थलरूपों का निरूपण",
+   "ncert_sections": "स्थलरूपों के प्रकार, घाटी, गॉर्ज, स्पर, भृगु, जलप्रपात एवं क्षिप्रिकाएँ",
+   "concepts": [
+    {
+     "concept_tag": "sthalroop-pahadi-pathar",
+     "learning_objective": "शंक्वाकार पहाड़ी और पठार के समोच्च प्रतिरूप पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "ghati-gorge-spur",
+     "learning_objective": "घाटियों, गॉर्ज, स्पर, भृगु और जलप्रपात के समोच्च प्रतिरूपों में अंतर कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH05-T5",
+   "topic_number": 5,
+   "title": "अनुप्रस्थ परिच्छेद बनाना",
+   "ncert_sections": "अनुप्रस्थ परिच्छेद बनाने के चरण",
+   "concepts": [
+    {
+     "concept_tag": "anuprasth-parichchhed-charan",
+     "learning_objective": "समोच्च रेखाओं से अनुप्रस्थ परिच्छेद बनाने के चरण क्रम से लागू कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH05-T6",
+   "topic_number": 6,
+   "title": "सांस्कृतिक लक्षणों की पहचान",
+   "ncert_sections": "बस्तियों का वितरण, परिवहन एवं संचार प्रतिरूप",
+   "concepts": [
+    {
+     "concept_tag": "basti-pratiroop",
+     "learning_objective": "ग्रामीण और नगरीय बस्तियों के प्रकार तथा उनके स्थल को प्रभावित करने वाले कारक समझ सकेंगे।"
+    },
+    {
+     "concept_tag": "parivahan-sanchar",
+     "learning_objective": "परिवहन एवं संचार प्रतिरूप पर उच्चावच और जनसंख्या के प्रभाव को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH05-T7",
+   "topic_number": 7,
+   "title": "स्थलाकृतिक मानचित्रों की व्याख्या",
+   "ncert_sections": "स्थलाकृतिक मानचित्रों की व्याख्या, मानचित्र व्याख्या की प्रक्रिया",
+   "concepts": [
+    {
+     "concept_tag": "seemant-suchna-shirshak",
+     "learning_objective": "स्थलाकृतिक पत्रक की व्याख्या के शीर्षकों और सीमांत सूचना को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "vyakhya-prakriya",
+     "learning_objective": "मानचित्रों के अध्यारोपण द्वारा लक्षणों के बीच कार्य-कारण संबंध का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

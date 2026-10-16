@@ -1,0 +1,136 @@
+{
+ "chapter_id": "JESC1-CH02",
+ "title": "Acids, Bases and Salts",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESC1-CH02-T1",
+   "topic_number": 1,
+   "title": "Acid-base indicators",
+   "ncert_sections": "2.1, 2.1.1",
+   "concepts": [
+    {
+     "concept_tag": "acid-base-indicators",
+     "learning_objective": "Identify natural and synthetic acid-base indicators and use their colour changes to tell acids from bases."
+    },
+    {
+     "concept_tag": "olfactory-indicators",
+     "learning_objective": "Explain how olfactory indicators such as vanilla, onion and clove oil show acids and bases by a change in odour."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH02-T2",
+   "topic_number": 2,
+   "title": "Chemical reactions of acids and bases",
+   "ncert_sections": "2.1.2, 2.1.3, 2.1.4, 2.1.5, 2.1.6",
+   "concepts": [
+    {
+     "concept_tag": "reactions-with-metals",
+     "learning_objective": "Describe the reactions of acids and of bases with metals, and the test for the hydrogen gas evolved."
+    },
+    {
+     "concept_tag": "carbonates-and-acids",
+     "learning_objective": "Predict the products when metal carbonates and hydrogencarbonates react with acids and test for carbon dioxide."
+    },
+    {
+     "concept_tag": "neutralisation-and-oxides",
+     "learning_objective": "Explain neutralisation and classify metallic oxides as basic and non-metallic oxides as acidic."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH02-T3",
+   "topic_number": 3,
+   "title": "What all acids and all bases have in common",
+   "ncert_sections": "2.2, 2.2.1",
+   "concepts": [
+    {
+     "concept_tag": "ions-in-solution",
+     "learning_objective": "Explain that acids produce H+(aq) ions only in water, which makes their solutions conduct electricity."
+    },
+    {
+     "concept_tag": "hydronium-and-alkalis",
+     "learning_objective": "Recognise that H+ ions exist as hydronium ions and that bases give OH- ions, soluble bases being alkalis."
+    },
+    {
+     "concept_tag": "dilution-safety",
+     "learning_objective": "Explain why dissolving acids or bases in water is exothermic and why acid must be added to water."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH02-T4",
+   "topic_number": 4,
+   "title": "Strength of acid and base solutions: the pH scale",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "ph-scale",
+     "learning_objective": "Relate the pH value of a solution to its hydrogen ion concentration and its acidic, neutral or basic nature."
+    },
+    {
+     "concept_tag": "strong-and-weak-acids",
+     "learning_objective": "Distinguish strong and weak acids by the amount of H+ ions they produce at the same concentration."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH02-T5",
+   "topic_number": 5,
+   "title": "Importance of pH in everyday life",
+   "ncert_sections": "2.3.1",
+   "concepts": [
+    {
+     "concept_tag": "ph-in-living-systems",
+     "learning_objective": "Explain the role of pH in the body, digestion, acid rain and soil for plant growth."
+    },
+    {
+     "concept_tag": "tooth-decay-and-stings",
+     "learning_objective": "Apply neutralisation to explain tooth decay prevention and remedies for bee and nettle stings."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH02-T6",
+   "topic_number": 6,
+   "title": "Salts: families, pH and chemicals from common salt",
+   "ncert_sections": "2.4.1, 2.4.2, 2.4.3",
+   "concepts": [
+    {
+     "concept_tag": "salt-families",
+     "learning_objective": "Group salts into families by their common positive or negative radicals."
+    },
+    {
+     "concept_tag": "ph-of-salts",
+     "learning_objective": "Predict whether a salt solution is acidic, basic or neutral from the strength of its parent acid and base."
+    },
+    {
+     "concept_tag": "chlor-alkali-and-bleaching-powder",
+     "learning_objective": "Describe the chlor-alkali process and the preparation and uses of bleaching powder."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH02-T7",
+   "topic_number": 7,
+   "title": "Baking soda, washing soda and water of crystallisation",
+   "ncert_sections": "2.4.3, 2.4.4",
+   "concepts": [
+    {
+     "concept_tag": "baking-and-washing-soda",
+     "learning_objective": "Describe the preparation, reactions and uses of baking soda and washing soda."
+    },
+    {
+     "concept_tag": "water-of-crystallisation",
+     "learning_objective": "Define water of crystallisation and explain the colour change of copper sulphate crystals on heating."
+    },
+    {
+     "concept_tag": "plaster-of-paris",
+     "learning_objective": "Explain the formation, setting and storage of Plaster of Paris from gypsum."
+    }
+   ]
+  }
+ ]
+}

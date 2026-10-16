@@ -1,0 +1,136 @@
+{
+ "chapter_id": "IHSC1-CH08",
+ "title": "एक यात्रा— परमाणु के भीतर",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSC1-CH08-T1",
+   "topic_number": 1,
+   "title": "परमाणु सिद्धांत की उत्पत्ति",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "kanad-parmanu",
+     "learning_objective": "आचार्य कणाद और यूनानी दार्शनिकों की अविभाज्य कणों की अवधारणा को समझना।"
+    },
+    {
+     "concept_tag": "dalton-siddhant",
+     "learning_objective": "डाल्टन के परमाणु सिद्धांत और उसके वैज्ञानिक महत्व को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH08-T2",
+   "topic_number": 2,
+   "title": "इलेक्ट्रॉन की खोज और टॉमसन का परमाणु मॉडल",
+   "ncert_sections": "8.2, 8.2.1",
+   "concepts": [
+    {
+     "concept_tag": "cathode-kiran",
+     "learning_objective": "कैथोड किरणों के अध्ययन से इलेक्ट्रॉन की खोज को समझना।"
+    },
+    {
+     "concept_tag": "thomson-model",
+     "learning_objective": "टॉमसन के परमाणु मॉडल में धनावेश और इलेक्ट्रॉनों की व्यवस्था को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH08-T3",
+   "topic_number": 3,
+   "title": "स्वर्ण पर्णिका प्रयोग और रदरफोर्ड का मॉडल",
+   "ncert_sections": "8.2.2",
+   "concepts": [
+    {
+     "concept_tag": "swarn-parnika-prayog",
+     "learning_objective": "स्वर्ण पर्णिका प्रयोग के प्रेक्षणों से नाभिक के बारे में निष्कर्ष निकालना।"
+    },
+    {
+     "concept_tag": "rutherford-model-seema",
+     "learning_objective": "रदरफोर्ड मॉडल की सीमा अर्थात् परमाणु के स्थायित्व की समस्या को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH08-T4",
+   "topic_number": 4,
+   "title": "बोर का परमाणु मॉडल",
+   "ncert_sections": "8.2.3",
+   "concepts": [
+    {
+     "concept_tag": "bohr-model",
+     "learning_objective": "बोर के कोशों, ऊर्जा स्तरों और परमाणु के स्थायित्व की व्याख्या को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH08-T5",
+   "topic_number": 5,
+   "title": "न्यूट्रॉन की खोज और तत्वों के प्रतीक",
+   "ncert_sections": "8.3, 8.3.1, 8.4",
+   "concepts": [
+    {
+     "concept_tag": "neutron-khoj",
+     "learning_objective": "न्यूट्रॉन की खोज और नाभिक के द्रव्यमान में उसके योगदान को समझना।"
+    },
+    {
+     "concept_tag": "tatva-pratik",
+     "learning_objective": "तत्वों के प्रतीक लिखने के नियमों को लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH08-T6",
+   "topic_number": 6,
+   "title": "परमाणु क्रमांक, द्रव्यमान संख्या और इलेक्ट्रॉन वितरण",
+   "ncert_sections": "8.5, 8.6, 8.7",
+   "concepts": [
+    {
+     "concept_tag": "paramanu-kramank",
+     "learning_objective": "परमाणु क्रमांक को प्रोटॉनों की संख्या के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "dravyaman-sankhya",
+     "learning_objective": "द्रव्यमान संख्या से प्रोटॉन और न्यूट्रॉन की संख्या की गणना करना।"
+    },
+    {
+     "concept_tag": "electron-vitaran",
+     "learning_objective": "बोर-बरी नियमों से तत्वों का इलेक्ट्रॉनिक विन्यास लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH08-T7",
+   "topic_number": 7,
+   "title": "परमाणु की संयोजन क्षमता: संयोजकता",
+   "ncert_sections": "8.8",
+   "concepts": [
+    {
+     "concept_tag": "sanyojakta",
+     "learning_objective": "संयोजी इलेक्ट्रॉनों और अष्टक के आधार पर संयोजकता ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH08-T8",
+   "topic_number": 8,
+   "title": "समस्थानिक और समभारिक",
+   "ncert_sections": "8.9, 8.9.1, 8.9.2",
+   "concepts": [
+    {
+     "concept_tag": "samsthanik",
+     "learning_objective": "समस्थानिकों की परिभाषा, गुण और उपयोग समझना।"
+    },
+    {
+     "concept_tag": "ausat-paramanu-dravyaman",
+     "learning_objective": "समस्थानिकों की प्रचुरता से भारित औसत परमाणु द्रव्यमान की गणना करना।"
+    },
+    {
+     "concept_tag": "sambharik",
+     "learning_objective": "समभारिकों को समस्थानिकों से अलग पहचानना।"
+    }
+   ]
+  }
+ ]
+}

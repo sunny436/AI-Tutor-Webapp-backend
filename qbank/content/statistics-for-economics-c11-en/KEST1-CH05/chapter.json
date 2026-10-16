@@ -1,0 +1,128 @@
+{
+ "chapter_id": "KEST1-CH05",
+ "title": "Measures of Central Tendency",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEST1-CH05-T1",
+   "topic_number": 1,
+   "title": "Need for averages and types of central tendency",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "summarising-data-single-value",
+     "learning_objective": "Explain why a large data set is summarised by a single representative value."
+    },
+    {
+     "concept_tag": "types-of-averages",
+     "learning_objective": "Identify the arithmetic mean, median and mode as the common averages and what each conveys."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH05-T2",
+   "topic_number": 2,
+   "title": "Arithmetic mean of ungrouped data",
+   "ncert_sections": "2",
+   "concepts": [
+    {
+     "concept_tag": "am-direct-method",
+     "learning_objective": "Compute the arithmetic mean of individual observations by the direct method."
+    },
+    {
+     "concept_tag": "assumed-mean-method",
+     "learning_objective": "Compute the mean using the assumed mean and step deviation methods."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH05-T3",
+   "topic_number": 3,
+   "title": "Arithmetic mean of grouped data, its properties and weighted mean",
+   "ncert_sections": "2",
+   "concepts": [
+    {
+     "concept_tag": "am-grouped-data",
+     "learning_objective": "Compute the mean of discrete and continuous series using frequencies and mid-points."
+    },
+    {
+     "concept_tag": "properties-of-mean",
+     "learning_objective": "State that deviations from the mean sum to zero and that the mean is affected by extreme values."
+    },
+    {
+     "concept_tag": "weighted-arithmetic-mean",
+     "learning_objective": "Compute a weighted arithmetic mean when items differ in importance."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH05-T4",
+   "topic_number": 4,
+   "title": "Median",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "median-individual-discrete",
+     "learning_objective": "Locate the median of individual and discrete series using the (N+1)/2th item."
+    },
+    {
+     "concept_tag": "median-continuous-series",
+     "learning_objective": "Compute the median of a continuous series using the median class formula."
+    },
+    {
+     "concept_tag": "median-and-extreme-values",
+     "learning_objective": "Evaluate why the median is not affected by extreme values."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH05-T5",
+   "topic_number": 5,
+   "title": "Quartiles and percentiles",
+   "ncert_sections": "4",
+   "concepts": [
+    {
+     "concept_tag": "quartiles",
+     "learning_objective": "Define and compute the lower and upper quartiles of a series."
+    },
+    {
+     "concept_tag": "percentiles",
+     "learning_objective": "Interpret percentiles and relate P50 to the median."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH05-T6",
+   "topic_number": 6,
+   "title": "Mode",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "mode-discrete-series",
+     "learning_objective": "Identify the mode of a discrete series and recognise unimodal and bimodal data."
+    },
+    {
+     "concept_tag": "mode-continuous-series",
+     "learning_objective": "Compute the mode of a continuous series using the modal class formula."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH05-T7",
+   "topic_number": 7,
+   "title": "Relative position of mean, median and mode and choice of average",
+   "ncert_sections": "6, 7",
+   "concepts": [
+    {
+     "concept_tag": "relative-position-averages",
+     "learning_objective": "State that the median lies between the mean and the mode."
+    },
+    {
+     "concept_tag": "choosing-appropriate-average",
+     "learning_objective": "Select the most appropriate average for a given purpose and distribution."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "chapter_id": "KECS1-CH07",
+ "title": "Functions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECS1-CH07-T1",
+   "topic_number": 1,
+   "title": "Functions and their advantages",
+   "ncert_sections": "7.1, 7.2, 7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "function-concept",
+     "learning_objective": "Define a function as a named group of instructions that performs a specific task when invoked."
+    },
+    {
+     "concept_tag": "advantages-of-functions",
+     "learning_objective": "Explain how functions improve readability, reduce code length and enable reuse and team work."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH07-T2",
+   "topic_number": 2,
+   "title": "Creating user defined functions: arguments and parameters",
+   "ncert_sections": "7.3, 7.3.1, 7.3.2",
+   "concepts": [
+    {
+     "concept_tag": "function-definition-syntax",
+     "learning_objective": "Write a correct function header using def, a name, parameters and a colon with an indented body."
+    },
+    {
+     "concept_tag": "arguments-vs-parameters",
+     "learning_objective": "Distinguish arguments in a call from parameters in a definition."
+    },
+    {
+     "concept_tag": "default-parameters",
+     "learning_objective": "Apply the rule that default parameters must be trailing parameters."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH07-T3",
+   "topic_number": 3,
+   "title": "Functions returning values and flow of execution",
+   "ncert_sections": "7.3.3, 7.3.4",
+   "concepts": [
+    {
+     "concept_tag": "return-statement",
+     "learning_objective": "Explain how the return statement sends value(s) or None back to the caller."
+    },
+    {
+     "concept_tag": "flow-of-execution",
+     "learning_objective": "Trace the order in which statements run when functions are defined and called."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH07-T4",
+   "topic_number": 4,
+   "title": "Scope of a variable",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "global-local-scope",
+     "learning_objective": "Distinguish global and local variables and where each can be accessed."
+    },
+    {
+     "concept_tag": "global-keyword",
+     "learning_objective": "Use the global keyword to modify a global variable inside a function."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH07-T5",
+   "topic_number": 5,
+   "title": "Built-in functions of the standard library",
+   "ncert_sections": "7.5, 7.5.1",
+   "concepts": [
+    {
+     "concept_tag": "built-in-functions",
+     "learning_objective": "Identify and predict the output of commonly used built-in functions."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH07-T6",
+   "topic_number": 6,
+   "title": "Modules: math, random, statistics and user defined modules",
+   "ncert_sections": "7.5.2",
+   "concepts": [
+    {
+     "concept_tag": "import-and-from",
+     "learning_objective": "Use import and from statements to access functions of a module."
+    },
+    {
+     "concept_tag": "math-random-statistics",
+     "learning_objective": "Predict the results of common math, random and statistics module functions."
+    }
+   ]
+  }
+ ]
+}

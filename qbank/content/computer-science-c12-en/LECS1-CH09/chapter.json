@@ -1,0 +1,164 @@
+{
+ "chapter_id": "LECS1-CH09",
+ "title": "Structured Query Language (SQL)",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECS1-CH09-T1",
+   "topic_number": 1,
+   "title": "SQL, data types and constraints in MySQL",
+   "ncert_sections": "9.1, 9.2, 9.3",
+   "concepts": [
+    {
+     "concept_tag": "sql-basics",
+     "learning_objective": "Describe SQL as a declarative, case-insensitive query language and the rules for writing its statements."
+    },
+    {
+     "concept_tag": "mysql-data-types",
+     "learning_objective": "Choose suitable MySQL data types such as CHAR, VARCHAR, INT, FLOAT and DATE for attributes."
+    },
+    {
+     "concept_tag": "sql-constraints",
+     "learning_objective": "Identify the purpose of NOT NULL, UNIQUE, DEFAULT, PRIMARY KEY and FOREIGN KEY constraints."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH09-T2",
+   "topic_number": 2,
+   "title": "SQL for data definition: CREATE, DESCRIBE, ALTER and DROP",
+   "ncert_sections": "9.4",
+   "concepts": [
+    {
+     "concept_tag": "create-and-describe",
+     "learning_objective": "Create a database and a table and view the structure of a table with DESCRIBE."
+    },
+    {
+     "concept_tag": "alter-table",
+     "learning_objective": "Use ALTER TABLE to add or remove keys, attributes and constraints and to modify data types."
+    },
+    {
+     "concept_tag": "drop-statement",
+     "learning_objective": "Explain the effect of DROP TABLE and DROP DATABASE."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH09-T3",
+   "topic_number": 3,
+   "title": "SQL for data manipulation: inserting records",
+   "ncert_sections": "9.5",
+   "concepts": [
+    {
+     "concept_tag": "insert-all-columns",
+     "learning_objective": "Insert complete records with INSERT INTO ... VALUES, quoting text and date values correctly."
+    },
+    {
+     "concept_tag": "insert-selected-columns",
+     "learning_objective": "Insert values for only some attributes by naming the columns in the INSERT statement."
+    },
+    {
+     "concept_tag": "foreign-key-insert-order",
+     "learning_objective": "Explain why records of a referenced table must be inserted before the records that refer to them."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH09-T4",
+   "topic_number": 4,
+   "title": "SQL for data query: the SELECT statement",
+   "ncert_sections": "9.6",
+   "concepts": [
+    {
+     "concept_tag": "select-where-distinct",
+     "learning_objective": "Retrieve selected columns and rows with SELECT, WHERE, aliases and DISTINCT."
+    },
+    {
+     "concept_tag": "comparison-and-null-operators",
+     "learning_objective": "Apply relational and logical operators, BETWEEN, IN and IS NULL in conditions."
+    },
+    {
+     "concept_tag": "pattern-matching-and-ordering",
+     "learning_objective": "Use LIKE with the % and _ wildcards and sort results with ORDER BY."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH09-T5",
+   "topic_number": 5,
+   "title": "Data updation and deletion",
+   "ncert_sections": "9.7",
+   "concepts": [
+    {
+     "concept_tag": "update-statement",
+     "learning_objective": "Modify values of one or more columns of existing records with UPDATE ... SET ... WHERE."
+    },
+    {
+     "concept_tag": "delete-statement",
+     "learning_objective": "Remove selected records with DELETE and predict the effect of omitting the WHERE clause."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH09-T6",
+   "topic_number": 6,
+   "title": "Single row functions",
+   "ncert_sections": "9.8, 9.8.1",
+   "concepts": [
+    {
+     "concept_tag": "math-functions",
+     "learning_objective": "Predict the output of POWER, ROUND and MOD."
+    },
+    {
+     "concept_tag": "string-functions",
+     "learning_objective": "Predict the output of string functions such as MID, LEFT, RIGHT, INSTR, LENGTH and TRIM."
+    },
+    {
+     "concept_tag": "date-functions",
+     "learning_objective": "Use date functions such as NOW, DAY, MONTH, MONTHNAME, YEAR and DAYNAME."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH09-T7",
+   "topic_number": 7,
+   "title": "Aggregate functions and the GROUP BY clause",
+   "ncert_sections": "9.8.2, 9.9",
+   "concepts": [
+    {
+     "concept_tag": "aggregate-functions",
+     "learning_objective": "Distinguish multiple row (aggregate) functions from single row functions."
+    },
+    {
+     "concept_tag": "count-and-null",
+     "learning_objective": "Distinguish COUNT(*) from COUNT(column) when a column contains NULL values."
+    },
+    {
+     "concept_tag": "group-by-having",
+     "learning_objective": "Group rows with GROUP BY and filter the groups with HAVING."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH09-T8",
+   "topic_number": 8,
+   "title": "Operations on relations and using two relations in a query",
+   "ncert_sections": "9.10, 9.11",
+   "concepts": [
+    {
+     "concept_tag": "set-operations",
+     "learning_objective": "Apply UNION, INTERSECT and MINUS to two union-compatible relations."
+    },
+    {
+     "concept_tag": "cartesian-product",
+     "learning_objective": "Compute the degree and cardinality of the Cartesian product of two relations."
+    },
+    {
+     "concept_tag": "join-natural-join",
+     "learning_objective": "Combine related tuples of two tables with JOIN ... ON and NATURAL JOIN."
+    }
+   ]
+  }
+ ]
+}

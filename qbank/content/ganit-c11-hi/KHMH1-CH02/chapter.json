@@ -1,0 +1,96 @@
+{
+ "chapter_id": "KHMH1-CH02",
+ "title": "संबंध एवं फलन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH02-T1",
+   "topic_number": 1,
+   "title": "कार्तीय गुणन",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "kramit-yugm",
+     "learning_objective": "क्रमित युग्मों की समता का प्रयोग करके अज्ञात मान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "kartiya-gunan",
+     "learning_objective": "दो समुच्चयों का कार्तीय गुणन बनाना और उसके अवयवों की संख्या ज्ञात करना।"
+    },
+    {
+     "concept_tag": "kartiya-gunan-se-samuchchay",
+     "learning_objective": "दिए गए कार्तीय गुणन से मूल समुच्चय ज्ञात करना और गुणन के गुणों का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH02-T2",
+   "topic_number": 2,
+   "title": "संबंध",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "sambandh-paribhasha",
+     "learning_objective": "संबंध, उसके प्रांत, सहप्रांत और परिसर को परिभाषित करना और ज्ञात करना।"
+    },
+    {
+     "concept_tag": "sambandhon-ki-sankhya",
+     "learning_objective": "दो परिमित समुच्चयों के बीच संभव संबंधों और किसी संबंध के युग्मों की गिनती करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH02-T3",
+   "topic_number": 3,
+   "title": "फलन",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "phalan-paribhasha",
+     "learning_objective": "पहचानना कि कोई संबंध फलन है या नहीं।"
+    },
+    {
+     "concept_tag": "vastavik-man-phalan",
+     "learning_objective": "वास्तविक मान फलन का मान, सूत्र और परिसर ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH02-T4",
+   "topic_number": 4,
+   "title": "कुछ फलन और उनके आलेख",
+   "ncert_sections": "2.4.1",
+   "concepts": [
+    {
+     "concept_tag": "tatsamak-achar-phalan",
+     "learning_objective": "तत्समक और अचर फलनों तथा उनके आलेखों को पहचानना।"
+    },
+    {
+     "concept_tag": "mapank-chinh-mahattam-purnank",
+     "learning_objective": "मापांक, चिह्न और महत्तम पूर्णांक फलनों के मान और परिसर ज्ञात करना।"
+    },
+    {
+     "concept_tag": "parimey-phalan-prant",
+     "learning_objective": "परिमेय फलन का प्रांत ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH02-T5",
+   "topic_number": 5,
+   "title": "वास्तविक फलनों का बीजगणित",
+   "ncert_sections": "2.4.2",
+   "concepts": [
+    {
+     "concept_tag": "phalanon-ka-yog-antar",
+     "learning_objective": "दो वास्तविक फलनों का योग और अंतर ज्ञात करना।"
+    },
+    {
+     "concept_tag": "phalanon-ka-gunan-bhag",
+     "learning_objective": "दो वास्तविक फलनों का गुणनफल और भागफल तथा उसका प्रांत ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LEAC2-CH02",
+ "title": "Issue and Redemption of Debentures",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEAC2-CH02-T1",
+   "topic_number": 1,
+   "title": "Meaning of debentures and distinction from shares",
+   "ncert_sections": "2.1, 2.2",
+   "concepts": [
+    {
+     "concept_tag": "meaning-of-debenture",
+     "learning_objective": "State the meaning of a debenture as a written acknowledgement of debt and part of borrowed capital."
+    },
+    {
+     "concept_tag": "shares-vs-debentures",
+     "learning_objective": "Distinguish between shares and debentures on ownership, return, repayment, voting rights, security and convertibility."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH02-T2",
+   "topic_number": 2,
+   "title": "Types of debentures",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "debentures-by-security-and-tenure",
+     "learning_objective": "Classify debentures as secured or unsecured and as redeemable or irredeemable."
+    },
+    {
+     "concept_tag": "debentures-by-convertibility-coupon-registration",
+     "learning_objective": "Classify debentures by convertibility, coupon rate and registration."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH02-T3",
+   "topic_number": 3,
+   "title": "Issue of debentures for cash and over subscription",
+   "ncert_sections": "2.4, 2.5",
+   "concepts": [
+    {
+     "concept_tag": "issue-at-par-discount-premium",
+     "learning_objective": "Record the issue of debentures for cash at par, at a discount and at a premium."
+    },
+    {
+     "concept_tag": "over-subscription-of-debentures",
+     "learning_objective": "Account for excess application money adjusted towards allotment and refunds on rejected applications."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH02-T4",
+   "topic_number": 4,
+   "title": "Issue of debentures for consideration other than cash",
+   "ncert_sections": "2.6",
+   "concepts": [
+    {
+     "concept_tag": "debentures-issued-to-vendors",
+     "learning_objective": "Record debentures issued to vendors at par, premium or discount and compute the number of debentures issued."
+    },
+    {
+     "concept_tag": "goodwill-or-capital-reserve-on-purchase",
+     "learning_objective": "Determine goodwill or capital reserve when purchase consideration differs from net assets taken over."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH02-T5",
+   "topic_number": 5,
+   "title": "Issue of debentures as collateral security",
+   "ncert_sections": "2.7",
+   "concepts": [
+    {
+     "concept_tag": "collateral-security-meaning",
+     "learning_objective": "Explain the meaning of collateral security and the lender's rights over debentures so issued."
+    },
+    {
+     "concept_tag": "collateral-security-accounting",
+     "learning_objective": "Show debentures issued as collateral security under the note method and the Debenture Suspense method."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH02-T6",
+   "topic_number": 6,
+   "title": "Terms of issue and redemption of debentures",
+   "ncert_sections": "2.8",
+   "concepts": [
+    {
+     "concept_tag": "loss-on-issue-of-debentures",
+     "learning_objective": "Compute the loss on issue of debentures under different combinations of issue and redemption terms."
+    },
+    {
+     "concept_tag": "premium-on-redemption-liability",
+     "learning_objective": "Explain the treatment of premium on redemption of debentures as a liability."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH02-T7",
+   "topic_number": 7,
+   "title": "Interest on debentures",
+   "ncert_sections": "2.9, 2.9.1",
+   "concepts": [
+    {
+     "concept_tag": "debenture-interest-calculation",
+     "learning_objective": "Calculate interest on debentures on their nominal value and record its transfer to the Statement of Profit and Loss."
+    },
+    {
+     "concept_tag": "tds-on-debenture-interest",
+     "learning_objective": "Record tax deducted at source on debenture interest and its payment to the government."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH02-T8",
+   "topic_number": 8,
+   "title": "Writing off discount or loss on issue of debentures",
+   "ncert_sections": "2.10",
+   "concepts": [
+    {
+     "concept_tag": "writing-off-discount-loss",
+     "learning_objective": "Write off discount or loss on issue of debentures first from Securities Premium Reserve and then from the Statement of Profit and Loss."
+    }
+   ]
+  }
+ ]
+}

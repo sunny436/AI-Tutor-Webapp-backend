@@ -1,0 +1,128 @@
+{
+  "chapter_id": "IEMH1-CH08",
+  "title": "Predicting What Comes Next: Exploring Sequences and Progressions",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "IEMH1-CH08-T1",
+      "topic_number": 1,
+      "title": "Introduction to sequences and their notation",
+      "ncert_sections": "8.1",
+      "concepts": [
+        {
+          "concept_tag": "sequence-terms-and-notation",
+          "learning_objective": "Identify the terms of a sequence using position notation such as t1, t2, ..., tn and distinguish finite from infinite sequences."
+        },
+        {
+          "concept_tag": "figurate-number-sequences",
+          "learning_objective": "Describe the patterns in triangular and square numbers as sums of natural numbers and odd numbers."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH1-CH08-T2",
+      "topic_number": 2,
+      "title": "Explicit rule for a sequence",
+      "ncert_sections": "8.2",
+      "concepts": [
+        {
+          "concept_tag": "explicit-formula",
+          "learning_objective": "Use an explicit formula in n to compute any term of a sequence directly."
+        },
+        {
+          "concept_tag": "checking-membership-of-a-term",
+          "learning_objective": "Decide whether a number is a term of a sequence by solving tn = k for a natural number n."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH1-CH08-T3",
+      "topic_number": 3,
+      "title": "Recursive rule for a sequence",
+      "ncert_sections": "8.3",
+      "concepts": [
+        {
+          "concept_tag": "recursive-formula",
+          "learning_objective": "Generate terms of a sequence from a recursive rule that relates each term to earlier terms."
+        },
+        {
+          "concept_tag": "virahanka-fibonacci-sequence",
+          "learning_objective": "Recognise the Virahanka-Fibonacci sequence, its rule Vn = Vn-1 + Vn-2 and its history."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH1-CH08-T4",
+      "topic_number": 4,
+      "title": "Arithmetic progressions",
+      "ncert_sections": "8.4, 8.4.1",
+      "concepts": [
+        {
+          "concept_tag": "ap-common-difference",
+          "learning_objective": "Identify an arithmetic progression and its common difference, including negative differences."
+        },
+        {
+          "concept_tag": "ap-nth-term",
+          "learning_objective": "Apply tn = a + (n - 1)d to find terms, positions and unknown first terms or differences of an AP."
+        },
+        {
+          "concept_tag": "ap-linear-graph",
+          "learning_objective": "Explain why the points (n, tn) of an AP lie on a straight line."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH1-CH08-T5",
+      "topic_number": 5,
+      "title": "Sum of the first n natural numbers",
+      "ncert_sections": "8.5",
+      "concepts": [
+        {
+          "concept_tag": "sum-first-n-natural-numbers",
+          "learning_objective": "Derive and use Sn = n(n + 1)/2 by pairing the sum with its reverse."
+        },
+        {
+          "concept_tag": "sum-of-consecutive-numbers",
+          "learning_objective": "Find the sum of a block of consecutive natural numbers as a difference of two such sums."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH1-CH08-T6",
+      "topic_number": 6,
+      "title": "Geometric progressions",
+      "ncert_sections": "8.6, 8.6.2",
+      "concepts": [
+        {
+          "concept_tag": "gp-common-ratio",
+          "learning_objective": "Identify a geometric progression by checking that the ratio of consecutive terms is constant."
+        },
+        {
+          "concept_tag": "gp-nth-term",
+          "learning_objective": "Apply tn = ar^(n-1) to find terms and positions of terms in a GP."
+        },
+        {
+          "concept_tag": "gp-growth-and-decay",
+          "learning_objective": "Model repeated multiplication, such as the heights of a bouncing ball, with a GP."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH1-CH08-T7",
+      "topic_number": 7,
+      "title": "Fun with fractals: the Sierpinski triangle and carpet",
+      "ncert_sections": "8.6.1",
+      "concepts": [
+        {
+          "concept_tag": "sierpinski-triangle-count",
+          "learning_objective": "Find the number of shaded pieces at each stage of a Sierpinski fractal as a GP."
+        },
+        {
+          "concept_tag": "fractal-area-decay",
+          "learning_objective": "Find the shaded area at each stage of a Sierpinski fractal and describe how it shrinks towards 0."
+        }
+      ]
+    }
+  ]
+}

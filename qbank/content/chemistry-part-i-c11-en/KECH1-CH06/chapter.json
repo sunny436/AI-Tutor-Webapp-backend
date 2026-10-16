@@ -1,0 +1,152 @@
+{
+ "chapter_id": "KECH1-CH06",
+ "title": "Equilibrium",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECH1-CH06-T1",
+   "topic_number": 1,
+   "title": "Equilibrium in Physical Processes",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "physical-dynamic-equilibrium",
+     "learning_objective": "Explain the dynamic nature of solid-liquid and liquid-vapour equilibria."
+    },
+    {
+     "concept_tag": "vapour-pressure-equilibrium",
+     "learning_objective": "Relate equilibrium vapour pressure to the nature of a liquid and to temperature."
+    },
+    {
+     "concept_tag": "henrys-law-dissolution",
+     "learning_objective": "Apply Henry's law to equilibria involving dissolution of gases in liquids."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH06-T2",
+   "topic_number": 2,
+   "title": "Equilibrium in Chemical Processes and the Law of Chemical Equilibrium",
+   "ncert_sections": "6.2, 6.3",
+   "concepts": [
+    {
+     "concept_tag": "dynamic-chemical-equilibrium",
+     "learning_objective": "Describe chemical equilibrium as dynamic and attainable from either direction."
+    },
+    {
+     "concept_tag": "equilibrium-constant-expression",
+     "learning_objective": "Write Kc expressions and relate Kc values for reactions written differently."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH06-T3",
+   "topic_number": 3,
+   "title": "Homogeneous and Heterogeneous Equilibria",
+   "ncert_sections": "6.4, 6.5",
+   "concepts": [
+    {
+     "concept_tag": "kp-kc-relation",
+     "learning_objective": "Use Kp = Kc(RT)^delta-n for gaseous equilibria."
+    },
+    {
+     "concept_tag": "heterogeneous-equilibrium-expression",
+     "learning_objective": "Write equilibrium constants for heterogeneous systems omitting pure solids and liquids."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH06-T4",
+   "topic_number": 4,
+   "title": "Applications of Equilibrium Constants and Relation with Gibbs Energy",
+   "ncert_sections": "6.6, 6.7",
+   "concepts": [
+    {
+     "concept_tag": "extent-of-reaction-from-k",
+     "learning_objective": "Predict the extent of a reaction from the magnitude of K."
+    },
+    {
+     "concept_tag": "reaction-quotient-direction",
+     "learning_objective": "Predict the direction of a reaction by comparing Qc with Kc."
+    },
+    {
+     "concept_tag": "gibbs-energy-and-k",
+     "learning_objective": "Use the relation delta-G standard = -RT ln K."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH06-T5",
+   "topic_number": 5,
+   "title": "Factors Affecting Equilibria",
+   "ncert_sections": "6.8",
+   "concepts": [
+    {
+     "concept_tag": "le-chatelier-concentration-pressure",
+     "learning_objective": "Apply Le Chatelier's principle to changes in concentration and pressure."
+    },
+    {
+     "concept_tag": "temperature-effect-on-k",
+     "learning_objective": "Predict how temperature changes K for exothermic and endothermic reactions."
+    },
+    {
+     "concept_tag": "catalyst-inert-gas-effect",
+     "learning_objective": "Explain why a catalyst and an inert gas at constant volume do not shift equilibrium."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH06-T6",
+   "topic_number": 6,
+   "title": "Acids, Bases and Their Ionization",
+   "ncert_sections": "6.9, 6.10, 6.11",
+   "concepts": [
+    {
+     "concept_tag": "acid-base-concepts",
+     "learning_objective": "Identify Arrhenius, Bronsted-Lowry and Lewis acids and bases."
+    },
+    {
+     "concept_tag": "ph-and-kw",
+     "learning_objective": "Calculate pH using the ionic product of water."
+    },
+    {
+     "concept_tag": "weak-acid-ionization",
+     "learning_objective": "Calculate the degree of ionization and pH of weak acids."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH06-T7",
+   "topic_number": 7,
+   "title": "Hydrolysis of Salts and Buffer Solutions",
+   "ncert_sections": "6.11.9, 6.12",
+   "concepts": [
+    {
+     "concept_tag": "salt-hydrolysis",
+     "learning_objective": "Predict the pH of salt solutions from hydrolysis of their ions."
+    },
+    {
+     "concept_tag": "buffer-solutions",
+     "learning_objective": "Describe buffers and calculate their pH with the Henderson-Hasselbalch equation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH06-T8",
+   "topic_number": 8,
+   "title": "Solubility Equilibria of Sparingly Soluble Salts",
+   "ncert_sections": "6.13",
+   "concepts": [
+    {
+     "concept_tag": "solubility-product",
+     "learning_objective": "Relate Ksp to molar solubility and predict precipitation."
+    },
+    {
+     "concept_tag": "common-ion-solubility",
+     "learning_objective": "Explain and calculate the common ion effect on solubility."
+    }
+   ]
+  }
+ ]
+}

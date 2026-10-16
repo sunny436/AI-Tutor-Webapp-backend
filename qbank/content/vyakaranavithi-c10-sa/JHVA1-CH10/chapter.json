@@ -1,0 +1,168 @@
+{
+ "chapter_id": "JHVA1-CH10",
+ "title": "कारक और विभक्ति",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHVA1-CH10-T1",
+   "topic_number": 1,
+   "title": "कारकस्य परिभाषा षट् कारकाणि च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "karaka-paribhasha",
+     "learning_objective": "छात्रः कारकस्य परिभाषां ज्ञात्वा वाक्ये क्रियासिद्धौ सहायकं पदं परिचिनोति।"
+    },
+    {
+     "concept_tag": "shat-karakani",
+     "learning_objective": "छात्रः कर्ता, कर्म, करणं, सम्प्रदानम्, अपादानम्, अधिकरणम् इति षट् कारकाणि वाक्ये परिचिनोति।"
+    },
+    {
+     "concept_tag": "sambandha-sambodhana",
+     "learning_objective": "छात्रः सम्बन्धसम्बोधनयोः अकारकत्वस्य कारणं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH10-T2",
+   "topic_number": 2,
+   "title": "विभक्तिः, सुप्-प्रत्ययाः प्रथमा विभक्तिः च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vibhakti-sup-pratyaya",
+     "learning_objective": "छात्रः सप्त विभक्तीः एकविंशतिं सुप्-प्रत्ययान् च जानाति।"
+    },
+    {
+     "concept_tag": "karaka-upapada-vibhakti",
+     "learning_objective": "छात्रः कारकविभक्तेः उपपदविभक्तेः च भेदं करोति।"
+    },
+    {
+     "concept_tag": "prathama-vibhakti",
+     "learning_objective": "छात्रः कर्तृवाच्ये कर्तरि, कर्मवाच्ये कर्मणि, इति-योगे च प्रथमायाः प्रयोगं करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH10-T3",
+   "topic_number": 3,
+   "title": "द्वितीया विभक्तिः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "dvitiya-upapada-avyaya",
+     "learning_objective": "छात्रः अभितः, परितः, समया, निकषा, धिक् इत्यादीनां योगे द्वितीयां प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "adhi-kala-marga-dvitiya",
+     "learning_objective": "छात्रः अधि-उपसर्गपूर्वकधातूनां व्यवधानरहितकालमार्गवाचिनां च योगे द्वितीयां प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "dvikarmaka-dhatu",
+     "learning_objective": "छात्रः द्विकर्मकधातून् परिचित्य उभयोः कर्मणोः द्वितीयां प्रयुङ्क्ते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH10-T4",
+   "topic_number": 4,
+   "title": "तृतीया विभक्तिः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "tritiya-karana-saha",
+     "learning_objective": "छात्रः करणकारके सह, सार्धम्, अलम् इत्यादीनां योगे च तृतीयां प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "anga-vikara-phalaprapti",
+     "learning_objective": "छात्रः अङ्गविकारे फलप्राप्तौ कालवाचिनि च तृतीयां प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "prithak-vina-nana",
+     "learning_objective": "छात्रः पृथक्, विना, नाना इत्येषां योगे द्वितीया-तृतीया-पञ्चमीनां विकल्पं जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH10-T5",
+   "topic_number": 5,
+   "title": "चतुर्थी विभक्तिः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "chaturthi-sampradana",
+     "learning_objective": "छात्रः सम्प्रदानकारके दा-धातोः योगे च चतुर्थीं प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "ruch-krudh-chaturthi",
+     "learning_objective": "छात्रः रुच्, क्रुध्, कुप्, द्रुह्, स्पृह् इत्यादीनां धातूनां योगे चतुर्थीं प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "namah-svasti-chaturthi",
+     "learning_objective": "छात्रः नमः, स्वस्ति, स्वाहा, स्वधा इत्येषां योगे चतुर्थीं प्रयुङ्क्ते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH10-T6",
+   "topic_number": 6,
+   "title": "पञ्चमी विभक्तिः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "panchami-apadana",
+     "learning_objective": "छात्रः अपादाने, उत्पत्तिस्थाने, नियमपूर्वकाध्ययने च पञ्चमीं प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "bhi-tra-panchami",
+     "learning_objective": "छात्रः भी, त्रा, त्रस् धातूनां योगे भयहेतौ पञ्चमीं प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "panchami-upapada",
+     "learning_objective": "छात्रः ऋते, बहिः, प्राक्, आरभ्य, प्रभृति इत्यादीनां योगे पञ्चमीं प्रयुङ्क्ते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH10-T7",
+   "topic_number": 7,
+   "title": "षष्ठी विभक्तिः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "shashthi-sambandha",
+     "learning_objective": "छात्रः सम्बन्धे षष्ठीं प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "shashthi-upapada",
+     "learning_objective": "छात्रः कृते, हेतोः, समक्षम्, मध्ये, तसिल्-प्रत्ययान्तपदानां च योगे षष्ठीं प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "nirdharana-shashthi-saptami",
+     "learning_objective": "छात्रः अनेकेषु एकस्य निर्धारणे षष्ठीसप्तम्योः विकल्पं जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH10-T8",
+   "topic_number": 8,
+   "title": "सप्तमी विभक्तिः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "saptami-adhikarana",
+     "learning_objective": "छात्रः अधिकरणकारके सर्वावयवव्याप्तौ च सप्तमीं प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "bhava-saptami",
+     "learning_objective": "छात्रः एकक्रियानन्तरं क्रियान्तरस्य बोधने सप्तमीं प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "pravina-chatura-saptami",
+     "learning_objective": "छात्रः प्रवीण-चतुर-शब्दयोः योगे सप्तमीं प्रयुङ्क्ते।"
+    }
+   ]
+  }
+ ]
+}

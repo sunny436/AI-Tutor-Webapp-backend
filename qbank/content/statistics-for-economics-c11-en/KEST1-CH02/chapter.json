@@ -1,0 +1,136 @@
+{
+ "chapter_id": "KEST1-CH02",
+ "title": "Collection of Data",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEST1-CH02-T1",
+   "topic_number": 1,
+   "title": "Data, variables and observations",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "data-and-variables",
+     "learning_objective": "Explain what a variable, an observation and data are, using the example of food grain production."
+    },
+    {
+     "concept_tag": "purpose-of-data-collection",
+     "learning_objective": "State the purpose of collecting data in economics."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH02-T2",
+   "topic_number": 2,
+   "title": "Sources of data: primary and secondary",
+   "ncert_sections": "2",
+   "concepts": [
+    {
+     "concept_tag": "primary-data",
+     "learning_objective": "Identify primary data as first-hand information collected by the investigator through an enquiry."
+    },
+    {
+     "concept_tag": "secondary-data",
+     "learning_objective": "Identify secondary data as data collected and processed by another agency and state its advantages."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH02-T3",
+   "topic_number": 3,
+   "title": "Preparing the questionnaire",
+   "ncert_sections": "3 (Preparation of Instrument)",
+   "concepts": [
+    {
+     "concept_tag": "questionnaire-design-rules",
+     "learning_objective": "Apply the rules for framing good questions: brief, clear, general to specific, no leading or double-negative questions."
+    },
+    {
+     "concept_tag": "open-and-closed-questions",
+     "learning_objective": "Distinguish open-ended questions from closed-ended two-way and multiple-choice questions, with their merits and limits."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH02-T4",
+   "topic_number": 4,
+   "title": "Modes of data collection and pilot survey",
+   "ncert_sections": "3 (Mode of Data Collection, Pilot Survey)",
+   "concepts": [
+    {
+     "concept_tag": "modes-of-survey",
+     "learning_objective": "Compare personal interviews, mailed questionnaires and telephone interviews by their merits and demerits."
+    },
+    {
+     "concept_tag": "pilot-survey",
+     "learning_objective": "Explain the purpose of a pilot survey (pre-testing of the questionnaire)."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH02-T5",
+   "topic_number": 5,
+   "title": "Census and sample surveys",
+   "ncert_sections": "4 (Census, Population and Sample)",
+   "concepts": [
+    {
+     "concept_tag": "census-method",
+     "learning_objective": "Describe the census or complete enumeration method and the Indian Census."
+    },
+    {
+     "concept_tag": "population-and-sample",
+     "learning_objective": "Identify the population and a representative sample for a given study and state why sample surveys are preferred."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH02-T6",
+   "topic_number": 6,
+   "title": "Random and non-random sampling",
+   "ncert_sections": "4 (Random Sampling, Non-Random Sampling)",
+   "concepts": [
+    {
+     "concept_tag": "random-sampling",
+     "learning_objective": "Explain random sampling, the lottery method and random number tables."
+    },
+    {
+     "concept_tag": "non-random-sampling",
+     "learning_objective": "Explain non-random sampling based on judgement, purpose, convenience or quota."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH02-T7",
+   "topic_number": 7,
+   "title": "Sampling and non-sampling errors",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "sampling-error",
+     "learning_objective": "Calculate the sampling error as the difference between a population parameter and its sample estimate."
+    },
+    {
+     "concept_tag": "non-sampling-errors",
+     "learning_objective": "Identify non-sampling errors (sampling bias, non-response, errors in data acquisition) and explain why they are more serious."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH02-T8",
+   "topic_number": 8,
+   "title": "Census of India and NSSO",
+   "ncert_sections": "6, 7",
+   "concepts": [
+    {
+     "concept_tag": "census-of-india",
+     "learning_objective": "State the main facts about the Census of India as a source of demographic data."
+    },
+    {
+     "concept_tag": "nss-surveys",
+     "learning_objective": "Describe the role of the National Sample Survey and its publication Sarvekshana."
+    }
+   ]
+  }
+ ]
+}

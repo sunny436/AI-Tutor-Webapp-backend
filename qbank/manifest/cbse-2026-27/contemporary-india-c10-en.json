@@ -1,0 +1,1000 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "contemporary-india-c10-en",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "social_science",
+  "language": "english",
+  "title": "Contemporary India",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jess1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JESS1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Resources and Development",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS1-CH01-T1",
+     "topic_number": 1,
+     "title": "Resources: meaning and classification",
+     "ncert_sections": "Introduction; Types of Resources",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-resource",
+       "learning_objective": "Explain what makes something in the environment a resource and why resources are a function of human activities."
+      },
+      {
+       "concept_tag": "classification-of-resources",
+       "learning_objective": "Classify resources by origin, exhaustibility, ownership and status of development."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH01-T2",
+     "topic_number": 2,
+     "title": "Development of resources and sustainable development",
+     "ncert_sections": "Development of Resources; Sustainable Development; Rio Earth Summit; Agenda 21",
+     "concepts": [
+      {
+       "concept_tag": "problems-of-indiscriminate-use",
+       "learning_objective": "Identify the problems caused by indiscriminate use of resources and the need for resource planning."
+      },
+      {
+       "concept_tag": "sustainable-development",
+       "learning_objective": "Explain the meaning of sustainable development and apply it to real situations."
+      },
+      {
+       "concept_tag": "rio-summit-agenda-21",
+       "learning_objective": "Describe the Rio de Janeiro Earth Summit of 1992 and the objectives of Agenda 21."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH01-T3",
+     "topic_number": 3,
+     "title": "Resource planning and conservation",
+     "ncert_sections": "Resource Planning; Resource Planning in India; Conservation of Resources",
+     "concepts": [
+      {
+       "concept_tag": "resource-planning-process",
+       "learning_objective": "State the steps involved in resource planning in India."
+      },
+      {
+       "concept_tag": "resources-and-development-link",
+       "learning_objective": "Analyse why availability of resources alone does not ensure development of a region."
+      },
+      {
+       "concept_tag": "resource-conservation",
+       "learning_objective": "Trace the ideas and milestones in resource conservation from Gandhiji to the Earth Summit."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH01-T4",
+     "topic_number": 4,
+     "title": "Land resources and land use pattern",
+     "ncert_sections": "Land Resources; Land Utilisation; Land Use Pattern in India",
+     "concepts": [
+      {
+       "concept_tag": "relief-and-land-resources",
+       "learning_objective": "Describe the share of plains, mountains and plateaus in India's land area and their uses."
+      },
+      {
+       "concept_tag": "land-use-categories",
+       "learning_objective": "Distinguish between the categories of land use such as fallow land, culturable waste land, net sown area and gross cropped area."
+      },
+      {
+       "concept_tag": "land-use-pattern-india",
+       "learning_objective": "Interpret the land use pattern of India and the physical and human factors behind it."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH01-T5",
+     "topic_number": 5,
+     "title": "Land degradation and conservation measures",
+     "ncert_sections": "Land Degradation and Conservation Measures",
+     "concepts": [
+      {
+       "concept_tag": "causes-of-land-degradation",
+       "learning_objective": "Identify the human activities that cause land degradation in different states of India."
+      },
+      {
+       "concept_tag": "land-conservation-measures",
+       "learning_objective": "Suggest suitable measures to check land degradation in arid, industrial and mining areas."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH01-T6",
+     "topic_number": 6,
+     "title": "Soil as a resource and classification of soils",
+     "ncert_sections": "Soil as a Resource; Classification of Soils",
+     "concepts": [
+      {
+       "concept_tag": "soil-formation-factors",
+       "learning_objective": "State the factors and processes responsible for the formation of soil."
+      },
+      {
+       "concept_tag": "alluvial-and-black-soils",
+       "learning_objective": "Describe the distribution, properties and crops of alluvial and black soils."
+      },
+      {
+       "concept_tag": "red-laterite-arid-forest-soils",
+       "learning_objective": "Compare red and yellow, laterite, arid and forest soils in terms of formation and properties."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH01-T7",
+     "topic_number": 7,
+     "title": "Soil erosion and soil conservation",
+     "ncert_sections": "Soil Erosion and Soil Conservation",
+     "concepts": [
+      {
+       "concept_tag": "soil-erosion-types",
+       "learning_objective": "Explain the causes and types of soil erosion such as gully, sheet and wind erosion."
+      },
+      {
+       "concept_tag": "soil-conservation-methods",
+       "learning_objective": "Choose suitable soil conservation methods such as contour ploughing, terracing, strip cropping and shelter belts."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Forest and Wildlife Resources",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS1-CH02-T1",
+     "topic_number": 1,
+     "title": "Biodiversity and flora and fauna in India",
+     "ncert_sections": "Introduction; Flora and Fauna in India",
+     "concepts": [
+      {
+       "concept_tag": "biodiversity-and-ecological-web",
+       "learning_objective": "Explain biodiversity as varied wild and cultivated species linked through a network of interdependencies of which humans are a part."
+      },
+      {
+       "concept_tag": "forests-as-primary-producers",
+       "learning_objective": "State why forests play a key role in the ecological system as primary producers."
+      },
+      {
+       "concept_tag": "flora-and-fauna-of-india",
+       "learning_objective": "Describe India's rich biological diversity and why it is under stress."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH02-T2",
+     "topic_number": 2,
+     "title": "Conservation and the Wildlife (Protection) Act, 1972",
+     "ncert_sections": "Conservation of Forest and Wildlife in India",
+     "concepts": [
+      {
+       "concept_tag": "need-for-conservation",
+       "learning_objective": "Explain why conservation of forests and wildlife preserves ecological and genetic diversity and life support systems."
+      },
+      {
+       "concept_tag": "wildlife-protection-act-1972",
+       "learning_objective": "State the provisions and thrust of the Indian Wildlife (Protection) Act, 1972."
+      },
+      {
+       "concept_tag": "widening-protected-species",
+       "learning_objective": "Explain the shift of conservation towards biodiversity, including insects and plants in protected lists."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH02-T3",
+     "topic_number": 3,
+     "title": "Project Tiger and tiger reserves",
+     "ncert_sections": "Project Tiger",
+     "concepts": [
+      {
+       "concept_tag": "threats-to-tiger-population",
+       "learning_objective": "Identify the threats that reduced India's tiger population and why India and Nepal were targeted by poachers."
+      },
+      {
+       "concept_tag": "project-tiger",
+       "learning_objective": "State when Project Tiger was launched and why tiger conservation also preserves large biotypes."
+      },
+      {
+       "concept_tag": "tiger-reserves",
+       "learning_objective": "Identify the tiger reserves of India named in the chapter and their states."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH02-T4",
+     "topic_number": 4,
+     "title": "Types and distribution of forest and wildlife resources",
+     "ncert_sections": "Types and Distribution of Forest and Wildlife Resources",
+     "concepts": [
+      {
+       "concept_tag": "forest-classification",
+       "learning_objective": "Distinguish reserved, protected and unclassed forests."
+      },
+      {
+       "concept_tag": "permanent-forest-estates",
+       "learning_objective": "Explain permanent forest estates and their purpose."
+      },
+      {
+       "concept_tag": "state-distribution-of-forests",
+       "learning_objective": "Identify states with large shares of reserved, protected and unclassed forests."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH02-T5",
+     "topic_number": 5,
+     "title": "Community and conservation",
+     "ncert_sections": "Community and Conservation",
+     "concepts": [
+      {
+       "concept_tag": "community-led-protection",
+       "learning_objective": "Describe how local communities such as those of Sariska and Alwar protect habitats and wildlife."
+      },
+      {
+       "concept_tag": "chipko-and-ecological-farming",
+       "learning_objective": "Explain the contribution of the Chipko movement, Beej Bachao Andolan and Navdanya."
+      },
+      {
+       "concept_tag": "joint-forest-management",
+       "learning_objective": "Explain how joint forest management involves local institutions and what benefits they receive."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH02-T6",
+     "topic_number": 6,
+     "title": "Sacred groves and traditional conservation",
+     "ncert_sections": "Sacred groves - a wealth of diverse and rare species",
+     "concepts": [
+      {
+       "concept_tag": "sacred-groves",
+       "learning_objective": "Explain how nature worship has preserved virgin forests as sacred groves."
+      },
+      {
+       "concept_tag": "tree-and-animal-worship",
+       "learning_objective": "Identify trees and animals protected by communities such as the Mundas, Santhals and Bishnois."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Water Resources",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS1-CH03-T1",
+     "topic_number": 1,
+     "title": "Water as a renewable resource",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "hydrological-cycle-renewability",
+       "learning_objective": "Explain how the hydrological cycle makes water a renewable resource."
+      },
+      {
+       "concept_tag": "usable-freshwater",
+       "learning_objective": "Identify the sources and limited share of usable freshwater on the earth."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH03-T2",
+     "topic_number": 2,
+     "title": "Water scarcity and its causes",
+     "ncert_sections": "Water Scarcity and the Need for Water Conservation and Management",
+     "concepts": [
+      {
+       "concept_tag": "population-and-irrigation-demand",
+       "learning_objective": "Explain how a large population and irrigated agriculture cause over-exploitation of water."
+      },
+      {
+       "concept_tag": "industrialisation-and-urbanisation",
+       "learning_objective": "Describe how industries and growing cities add pressure on freshwater resources."
+      },
+      {
+       "concept_tag": "poor-water-quality",
+       "learning_objective": "Explain how pollution can cause water scarcity even where water is ample."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH03-T3",
+     "topic_number": 3,
+     "title": "Need for water conservation and government initiatives",
+     "ncert_sections": "Water Scarcity and the Need for Water Conservation and Management",
+     "concepts": [
+      {
+       "concept_tag": "need-for-water-conservation",
+       "learning_objective": "State why conserving and managing water resources is the need of the hour."
+      },
+      {
+       "concept_tag": "jal-jeevan-mission",
+       "learning_objective": "Recall the goal of the Jal Jeevan Mission for rural households."
+      },
+      {
+       "concept_tag": "atal-bhujal-yojana",
+       "learning_objective": "Describe the coverage and key aim of the Atal Bhujal Yojana."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH03-T4",
+     "topic_number": 4,
+     "title": "Hydraulic structures and multi-purpose river projects",
+     "ncert_sections": "Multi-Purpose River Projects and Integrated Water Resources Management",
+     "concepts": [
+      {
+       "concept_tag": "ancient-hydraulic-structures",
+       "learning_objective": "Identify hydraulic structures built in ancient and medieval India."
+      },
+      {
+       "concept_tag": "dams-and-their-types",
+       "learning_objective": "Define a dam and classify dams by structure, materials and height."
+      },
+      {
+       "concept_tag": "multi-purpose-projects",
+       "learning_objective": "Explain why dams are called multi-purpose projects and why they were seen as vital for development."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH03-T5",
+     "topic_number": 5,
+     "title": "Opposition to multi-purpose projects",
+     "ncert_sections": "Multi-Purpose River Projects and Integrated Water Resources Management",
+     "concepts": [
+      {
+       "concept_tag": "ecological-effects-of-dams",
+       "learning_objective": "Analyse the ecological problems caused by damming and regulating rivers."
+      },
+      {
+       "concept_tag": "irrigation-and-cropping-change",
+       "learning_objective": "Explain how irrigation has changed cropping patterns and their consequences."
+      },
+      {
+       "concept_tag": "inter-state-water-disputes",
+       "learning_objective": "Describe how multi-purpose projects give rise to inter-state water disputes."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH03-T6",
+     "topic_number": 6,
+     "title": "Traditional rainwater harvesting",
+     "ncert_sections": "Rainwater Harvesting",
+     "concepts": [
+      {
+       "concept_tag": "regional-harvesting-methods",
+       "learning_objective": "Match traditional water harvesting methods with the regions where they were used."
+      },
+      {
+       "concept_tag": "tankas-rooftop-harvesting",
+       "learning_objective": "Describe how rooftop rainwater was stored in tankas in arid Rajasthan."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH03-T7",
+     "topic_number": 7,
+     "title": "Modern adaptations of rainwater harvesting",
+     "ncert_sections": "Rainwater Harvesting; Bamboo Drip Irrigation System",
+     "concepts": [
+      {
+       "concept_tag": "rooftop-harvesting-today",
+       "learning_objective": "Evaluate the present status of rooftop rainwater harvesting in different parts of India."
+      },
+      {
+       "concept_tag": "gendathur-village-model",
+       "learning_objective": "Interpret the rooftop rainwater harvesting model of Gendathur village."
+      },
+      {
+       "concept_tag": "bamboo-drip-irrigation",
+       "learning_objective": "Describe the bamboo drip irrigation system of Meghalaya."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Agriculture",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS1-CH04-T1",
+     "topic_number": 1,
+     "title": "Types of farming",
+     "ncert_sections": "Types of Farming",
+     "concepts": [
+      {
+       "concept_tag": "primitive-subsistence-farming",
+       "learning_objective": "Describe primitive subsistence (slash and burn) farming and its regional names in India."
+      },
+      {
+       "concept_tag": "intensive-subsistence-farming",
+       "learning_objective": "Explain where and why intensive subsistence farming is practised."
+      },
+      {
+       "concept_tag": "commercial-and-plantation-farming",
+       "learning_objective": "Explain the features of commercial and plantation farming and why plantations need transport networks."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH04-T2",
+     "topic_number": 2,
+     "title": "Cropping seasons",
+     "ncert_sections": "Cropping Pattern",
+     "concepts": [
+      {
+       "concept_tag": "rabi-crops",
+       "learning_objective": "State the sowing and harvesting periods of rabi crops and the factors that help them succeed."
+      },
+      {
+       "concept_tag": "kharif-crops",
+       "learning_objective": "Identify kharif crops and the regions where paddy is grown in more than one season."
+      },
+      {
+       "concept_tag": "zaid-season",
+       "learning_objective": "Identify the zaid season and the crops grown in it."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH04-T3",
+     "topic_number": 3,
+     "title": "Major food grains: rice, wheat, millets, maize and pulses",
+     "ncert_sections": "Major Crops: Rice, Wheat, Millets, Maize, Pulses",
+     "concepts": [
+      {
+       "concept_tag": "rice-and-wheat",
+       "learning_objective": "Describe the geographical conditions and main growing areas of rice and wheat."
+      },
+      {
+       "concept_tag": "millets-and-maize",
+       "learning_objective": "Describe the conditions, nutritional value and producing states of jowar, bajra, ragi and maize."
+      },
+      {
+       "concept_tag": "pulses",
+       "learning_objective": "Explain the importance of pulses and their role in restoring soil fertility."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH04-T4",
+     "topic_number": 4,
+     "title": "Food crops other than grains",
+     "ncert_sections": "Food Crops other than Grains: Sugarcane, Oil Seeds, Tea, Coffee, Horticulture Crops",
+     "concepts": [
+      {
+       "concept_tag": "sugarcane-and-oilseeds",
+       "learning_objective": "Describe the conditions for sugarcane and the seasons and uses of the main oilseeds."
+      },
+      {
+       "concept_tag": "tea-and-coffee",
+       "learning_objective": "Describe the conditions needed for tea and the origin and areas of Indian coffee."
+      },
+      {
+       "concept_tag": "horticulture-crops",
+       "learning_objective": "Relate India's tropical and temperate fruits and vegetables to the regions that produce them."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH04-T5",
+     "topic_number": 5,
+     "title": "Non-food crops: rubber and fibre crops",
+     "ncert_sections": "Non-Food Crops: Rubber, Fibre Crops, Cotton, Jute",
+     "concepts": [
+      {
+       "concept_tag": "rubber",
+       "learning_objective": "State the climatic conditions and main growing areas of rubber."
+      },
+      {
+       "concept_tag": "cotton-and-jute",
+       "learning_objective": "Compare the geographical conditions required for cotton and jute."
+      },
+      {
+       "concept_tag": "sericulture",
+       "learning_objective": "Define sericulture and identify the four major fibre crops of India."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH04-T6",
+     "topic_number": 6,
+     "title": "Technological and institutional reforms",
+     "ncert_sections": "Technological and Institutional Reforms; Bhoodan - Gramdan",
+     "concepts": [
+      {
+       "concept_tag": "land-reforms-and-revolutions",
+       "learning_objective": "Explain the land reforms after Independence and the outcomes of the Green and White Revolutions."
+      },
+      {
+       "concept_tag": "farmer-support-schemes",
+       "learning_objective": "Explain how schemes such as crop insurance, KCC and minimum support prices help farmers."
+      },
+      {
+       "concept_tag": "bhoodan-gramdan",
+       "learning_objective": "Describe the Bhoodan-Gramdan movement started by Vinoba Bhave."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Minerals and Energy Resources",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS1-CH05-T1",
+     "topic_number": 1,
+     "title": "What is a mineral",
+     "ncert_sections": "What is a mineral?; Study of minerals by geographers and geologists",
+     "concepts": [
+      {
+       "concept_tag": "mineral-definition",
+       "learning_objective": "Define a mineral and explain how minerals make up rocks."
+      },
+      {
+       "concept_tag": "mineral-properties-and-study",
+       "learning_objective": "Explain why minerals vary in their properties and distinguish how geographers and geologists study them."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH05-T2",
+     "topic_number": 2,
+     "title": "Mode of occurrence of minerals",
+     "ncert_sections": "Mode of occurrence of minerals",
+     "concepts": [
+      {
+       "concept_tag": "veins-and-lodes",
+       "learning_objective": "Describe how minerals occur as veins and lodes in igneous and metamorphic rocks."
+      },
+      {
+       "concept_tag": "sedimentary-and-residual-deposits",
+       "learning_objective": "Explain how minerals form in sedimentary beds, by evaporation and as residual deposits."
+      },
+      {
+       "concept_tag": "placer-and-ocean-deposits",
+       "learning_objective": "Describe placer deposits and the minerals obtained from ocean waters and ocean beds."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH05-T3",
+     "topic_number": 3,
+     "title": "Ferrous minerals: iron ore and manganese",
+     "ncert_sections": "Ferrous minerals; Iron ore; Manganese",
+     "concepts": [
+      {
+       "concept_tag": "iron-ore-types",
+       "learning_objective": "Compare magnetite and hematite in terms of iron content and use."
+      },
+      {
+       "concept_tag": "iron-ore-belts",
+       "learning_objective": "Identify the major iron ore belts of India, their mines and export ports."
+      },
+      {
+       "concept_tag": "manganese-uses",
+       "learning_objective": "State the uses of manganese and its role in steel making."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH05-T4",
+     "topic_number": 4,
+     "title": "Non-ferrous, non-metallic and rock minerals",
+     "ncert_sections": "Non-ferrous minerals; Copper; Bauxite; Non-metallic minerals; Rock minerals",
+     "concepts": [
+      {
+       "concept_tag": "copper-and-bauxite",
+       "learning_objective": "Describe the uses and distribution of copper and bauxite in India."
+      },
+      {
+       "concept_tag": "mica",
+       "learning_objective": "Explain the properties, uses and distribution of mica."
+      },
+      {
+       "concept_tag": "limestone",
+       "learning_objective": "State the occurrence and uses of limestone."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH05-T5",
+     "topic_number": 5,
+     "title": "Hazards of mining and conservation of minerals",
+     "ncert_sections": "Hazards of mining; Conservation of minerals",
+     "concepts": [
+      {
+       "concept_tag": "mining-hazards",
+       "learning_objective": "Describe the impact of mining on the health of miners and on the environment."
+      },
+      {
+       "concept_tag": "mineral-conservation",
+       "learning_objective": "Explain why mineral resources must be conserved and suggest ways of doing so."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH05-T6",
+     "topic_number": 6,
+     "title": "Conventional sources of energy",
+     "ncert_sections": "Energy resources; Conventional sources of energy",
+     "concepts": [
+      {
+       "concept_tag": "coal-types-and-distribution",
+       "learning_objective": "Distinguish the types of coal and describe the distribution of coal in India."
+      },
+      {
+       "concept_tag": "petroleum-and-natural-gas",
+       "learning_objective": "Explain the occurrence, uses and distribution of petroleum and natural gas in India."
+      },
+      {
+       "concept_tag": "electricity-generation",
+       "learning_objective": "Distinguish between hydroelectricity and thermal electricity."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH05-T7",
+     "topic_number": 7,
+     "title": "Non-conventional sources and conservation of energy",
+     "ncert_sections": "Non-conventional sources of energy; Conservation of energy resources",
+     "concepts": [
+      {
+       "concept_tag": "nuclear-and-solar-energy",
+       "learning_objective": "Describe how nuclear and solar energy are obtained and where their resources are found in India."
+      },
+      {
+       "concept_tag": "wind-tidal-geothermal-biogas",
+       "learning_objective": "Explain how wind, tidal, geothermal energy and biogas are harnessed and where in India."
+      },
+      {
+       "concept_tag": "energy-conservation",
+       "learning_objective": "Evaluate the need for and ways of conserving energy resources."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Manufacturing Industries",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS1-CH06-T1",
+     "topic_number": 1,
+     "title": "Manufacturing and its importance",
+     "ncert_sections": "Introduction; Importance of Manufacturing",
+     "concepts": [
+      {
+       "concept_tag": "manufacturing-and-secondary-sector",
+       "learning_objective": "Define manufacturing and place manufacturing workers in the secondary sector."
+      },
+      {
+       "concept_tag": "importance-of-manufacturing",
+       "learning_objective": "Explain why manufacturing is the backbone of economic development."
+      },
+      {
+       "concept_tag": "agriculture-industry-interdependence",
+       "learning_objective": "Explain how agriculture and industry move hand in hand."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH06-T2",
+     "topic_number": 2,
+     "title": "Classification of industries",
+     "ncert_sections": "Classification of Industries",
+     "concepts": [
+      {
+       "concept_tag": "classification-by-raw-material-and-role",
+       "learning_objective": "Classify industries by source of raw material and by their main role."
+      },
+      {
+       "concept_tag": "classification-by-ownership",
+       "learning_objective": "Distinguish public, private, joint and cooperative sector industries."
+      },
+      {
+       "concept_tag": "classification-by-bulk-and-capital",
+       "learning_objective": "Classify industries by bulk of materials and by capital investment."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH06-T3",
+     "topic_number": 3,
+     "title": "Agro-based industries: textiles and sugar",
+     "ncert_sections": "Agro-based Industries; Textile Industry; Cotton Textiles; Jute Textiles; Sugar Industry",
+     "concepts": [
+      {
+       "concept_tag": "cotton-textile-industry",
+       "learning_objective": "Describe the importance and organisation of the cotton textile industry."
+      },
+      {
+       "concept_tag": "jute-textile-industry",
+       "learning_objective": "Explain the history and location factors of the jute industry in the Hugli basin."
+      },
+      {
+       "concept_tag": "sugar-industry-location",
+       "learning_objective": "Explain the location and recent shift of the sugar industry."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH06-T4",
+     "topic_number": 4,
+     "title": "Mineral-based industries: iron and steel, aluminium",
+     "ncert_sections": "Mineral-based Industries; Iron and Steel Industry; Aluminium Smelting",
+     "concepts": [
+      {
+       "concept_tag": "iron-and-steel-industry",
+       "learning_objective": "Explain the raw materials and location of the iron and steel industry."
+      },
+      {
+       "concept_tag": "aluminium-smelting",
+       "learning_objective": "Describe the properties of aluminium and the location factors of smelters."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH06-T5",
+     "topic_number": 5,
+     "title": "Chemical, fertilizer and cement industries",
+     "ncert_sections": "Chemical Industries; Fertilizer Industry; Cement Industry",
+     "concepts": [
+      {
+       "concept_tag": "chemical-industry",
+       "learning_objective": "Distinguish inorganic and organic chemical industries and their location."
+      },
+      {
+       "concept_tag": "fertilizer-industry",
+       "learning_objective": "Describe the types of fertilizers produced and the spread of the industry."
+      },
+      {
+       "concept_tag": "cement-industry",
+       "learning_objective": "State the raw materials, uses and location of the cement industry."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH06-T6",
+     "topic_number": 6,
+     "title": "Automobile and IT-electronics industries",
+     "ncert_sections": "Automobile Industry; Information Technology and Electronics Industry",
+     "concepts": [
+      {
+       "concept_tag": "automobile-industry",
+       "learning_objective": "Describe the growth and centres of the automobile industry."
+      },
+      {
+       "concept_tag": "it-electronics-industry",
+       "learning_objective": "Identify the centres and impact of the IT and electronics industry."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH06-T7",
+     "topic_number": 7,
+     "title": "Industrial pollution and environmental degradation",
+     "ncert_sections": "Industrial Pollution and Environmental Degradation",
+     "concepts": [
+      {
+       "concept_tag": "air-and-noise-pollution",
+       "learning_objective": "Explain the causes and effects of industrial air and noise pollution."
+      },
+      {
+       "concept_tag": "water-and-land-pollution",
+       "learning_objective": "Explain how industries pollute water and land, including thermal pollution."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH06-T8",
+     "topic_number": 8,
+     "title": "Control of environmental degradation",
+     "ncert_sections": "Control of Environmental Degradation; NTPC shows the way",
+     "concepts": [
+      {
+       "concept_tag": "water-conservation-and-effluent-treatment",
+       "learning_objective": "Describe ways to reduce industrial pollution of fresh water."
+      },
+      {
+       "concept_tag": "air-and-noise-control",
+       "learning_objective": "Identify measures to control industrial air and noise pollution."
+      },
+      {
+       "concept_tag": "sustainable-development-ntpc",
+       "learning_objective": "Evaluate measures that integrate economic development with environmental concerns."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Lifelines of National Economy",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS1-CH07-T1",
+     "topic_number": 1,
+     "title": "Transport as a lifeline and roadways",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "transport-as-lifeline",
+       "learning_objective": "Explain why efficient transport and communication are prerequisites for development and trade."
+      },
+      {
+       "concept_tag": "road-merits",
+       "learning_objective": "State the reasons for the growing importance of road transport compared with rail."
+      },
+      {
+       "concept_tag": "road-classification",
+       "learning_objective": "Classify Indian roads by capacity and identify projects such as the Golden Quadrilateral and PMGSY."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH07-T2",
+     "topic_number": 2,
+     "title": "Railways",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "railway-importance",
+       "learning_objective": "Describe the role of the Indian Railways in the national economy and integration."
+      },
+      {
+       "concept_tag": "railway-distribution-factors",
+       "learning_objective": "Explain how physiographic, economic and administrative factors shape the railway network."
+      },
+      {
+       "concept_tag": "railway-gauges",
+       "learning_objective": "Interpret the gauge-wise distribution of India's railway route length."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH07-T3",
+     "topic_number": 3,
+     "title": "Pipelines",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pipeline-uses-and-merits",
+       "learning_objective": "Explain the uses, costs and advantages of pipeline transport."
+      },
+      {
+       "concept_tag": "pipeline-networks",
+       "learning_objective": "Identify the three important pipeline networks of India and the places they connect."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH07-T4",
+     "topic_number": 4,
+     "title": "Waterways and major sea ports",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "inland-waterways",
+       "learning_objective": "Identify India's National Waterways and the merits of water transport."
+      },
+      {
+       "concept_tag": "major-sea-ports",
+       "learning_objective": "Describe the location and specialisation of India's major sea ports."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH07-T5",
+     "topic_number": 5,
+     "title": "Airways and communication",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "airways",
+       "learning_objective": "Explain the advantages of air transport and schemes such as UDAN and Pawan Hans services."
+      },
+      {
+       "concept_tag": "postal-and-telecom",
+       "learning_objective": "Describe India's postal network and telecom facilities."
+      },
+      {
+       "concept_tag": "mass-communication",
+       "learning_objective": "Identify the means and agencies of mass communication in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS1-CH07-T6",
+     "topic_number": 6,
+     "title": "International trade and tourism",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "balance-of-trade",
+       "learning_objective": "Define international trade and calculate and interpret the balance of trade."
+      },
+      {
+       "concept_tag": "international-trade-composition",
+       "learning_objective": "Identify the main commodities exported from and imported to India."
+      },
+      {
+       "concept_tag": "tourism",
+       "learning_objective": "Explain the role of tourism as a trade and the schemes that promote it."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

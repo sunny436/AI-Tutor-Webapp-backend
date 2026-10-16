@@ -1,0 +1,84 @@
+{
+ "chapter_id": "IHSH1-CH12",
+ "title": "अन्वयः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSH1-CH12-T1",
+   "topic_number": 1,
+   "title": "अन्वयस्य आवश्यकता पदच्छेदः च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "anvayasya-avashyakata",
+     "learning_objective": "श्लोके पदानां छन्दोनुगुणक्रमात् अन्वयस्य आवश्यकतां वर्णयति।"
+    },
+    {
+     "concept_tag": "padachchhedah",
+     "learning_objective": "श्लोकस्य सन्धियुक्तपदानां पदच्छेदं कर्तुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH12-T2",
+   "topic_number": 2,
+   "title": "दण्डान्वयविधिः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "dandanvaya-kramah",
+     "learning_objective": "दण्डान्वये कर्तृ-कर्म-क्रियापदानां विशेषणानां च क्रमं योजयति।"
+    },
+    {
+     "concept_tag": "adhyaharah",
+     "learning_objective": "अप्रयुक्तस्य सुप्तपदस्य अध्याहारं कर्तुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH12-T3",
+   "topic_number": 3,
+   "title": "खण्डान्वयविधिः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "khandanvaya-prashnah",
+     "learning_objective": "क्रियापदम् आश्रित्य आकाङ्क्षाप्रश्नैः खण्डान्वयं करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH12-T4",
+   "topic_number": 4,
+   "title": "आकाङ्क्षा योग्यता च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "akanksha",
+     "learning_objective": "आकाङ्क्षायाः स्वरूपं भेदौ च अभिजानाति।"
+    },
+    {
+     "concept_tag": "yogyata",
+     "learning_objective": "पदानां परस्परसम्बन्धस्य योग्यतां परीक्षते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH12-T5",
+   "topic_number": 5,
+   "title": "आसत्तिः तात्पर्यं च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "asattih",
+     "learning_objective": "पदानां सामीप्यरूपाम् आसत्तिं व्याख्याति।"
+    },
+    {
+     "concept_tag": "tatparyam",
+     "learning_objective": "शब्दविशेषात् अर्थविशेषस्य ज्ञानरूपं तात्पर्यं बोधति।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,803 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "samashty-arthshastra-ek-parichay-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "economics",
+  "language": "hindi",
+  "title": "Samashty Arthshastra Ek Parichay",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhec1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHEC1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "परिचय",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhec101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHEC1-CH01-T1",
+     "topic_number": 1,
+     "title": "समष्टि अर्थशास्त्र की विषय-वस्तु और प्रतिनिधि वस्तु",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samashti-prashn",
+       "learning_objective": "समष्टि अर्थशास्त्र द्वारा पूरी अर्थव्यवस्था से जुड़े प्रश्नों (कीमत स्तर, रोज़गार, उत्पादन) के अध्ययन को समझना।"
+      },
+      {
+       "concept_tag": "pratinidhi-vastu",
+       "learning_objective": "समष्टि विश्लेषण में एक काल्पनिक प्रतिनिधि वस्तु के सरलीकरण और उसकी सीमाओं की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH01-T2",
+     "topic_number": 2,
+     "title": "व्यष्टि और समष्टि अर्थशास्त्र में अंतर",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vyashti-samashti-antar",
+       "learning_objective": "व्यष्टि और समष्टि अर्थशास्त्र के अध्ययन-क्षेत्र और निर्णयकर्ताओं में अंतर स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "arthik-ikaiyan",
+       "learning_objective": "आर्थिक इकाइयों या आर्थिक एजेंटों की पहचान करना।"
+      },
+      {
+       "concept_tag": "samashti-nirnaykarta",
+       "learning_objective": "समष्टि निर्णयकर्ताओं (राज्य और वैधानिक संस्थाएँ) और उनके सार्वजनिक लक्ष्यों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH01-T3",
+     "topic_number": 3,
+     "title": "समष्टि अर्थशास्त्र का उद्भव",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "keynes-aur-udbhav",
+       "learning_objective": "कीन्स की पुस्तक के प्रकाशन से समष्टि अर्थशास्त्र के अलग शाखा के रूप में उद्भव को जानना।"
+      },
+      {
+       "concept_tag": "mahamandi",
+       "learning_objective": "1929 की महामंदी के प्रभावों और उससे आर्थिक चिंतन में आए बदलाव का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "pratishthit-parampara",
+       "learning_objective": "प्रतिष्ठित (क्लासिकी) परंपरा की पूर्ण रोज़गार संबंधी मान्यता को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH01-T4",
+     "topic_number": 4,
+     "title": "पूँजीवादी अर्थव्यवस्था और फर्म",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "punjivadi-arthvyavastha-lakshan",
+       "learning_objective": "पूँजीवादी अर्थव्यवस्था की प्रमुख विशेषताओं की पहचान करना।"
+      },
+      {
+       "concept_tag": "utpadan-ke-karak-aay",
+       "learning_objective": "उत्पादन के कारकों और उनकी आय (लगान, ब्याज, मज़दूरी, लाभ) तथा निवेश व्यय को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH01-T5",
+     "topic_number": 5,
+     "title": "अर्थव्यवस्था के चार क्षेत्रक",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "parivar-aur-sarkar",
+       "learning_objective": "परिवार क्षेत्रक, फर्मों और सरकार की आर्थिक भूमिकाओं को समझना।"
+      },
+      {
+       "concept_tag": "bahya-kshetrak",
+       "learning_objective": "बाह्य क्षेत्रक के माध्यम से निर्यात, आयात और पूँजी प्रवाह की पहचान करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHEC1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "राष्ट्रीय आय का लेखांकन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhec102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHEC1-CH02-T1",
+     "topic_number": 1,
+     "title": "समष्टि अर्थशास्त्र की कुछ मूलभूत संकल्पनाएँ",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "antim-aur-madhyavarti-vastuen",
+       "learning_objective": "अंतिम वस्तुओं और मध्यवर्ती वस्तुओं में उनके आर्थिक उपयोग के आधार पर अंतर करना।"
+      },
+      {
+       "concept_tag": "stock-aur-pravah",
+       "learning_objective": "स्टॉक और प्रवाह चरों में अंतर पहचानना।"
+      },
+      {
+       "concept_tag": "nivesh-aur-mulyahras",
+       "learning_objective": "सकल निवेश, निवल निवेश और मूल्यह्रास के संबंध को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH02-T2",
+     "topic_number": 2,
+     "title": "आय का वर्तुल प्रवाह",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "vartul-pravah",
+       "learning_objective": "दो-क्षेत्रकीय सरल अर्थव्यवस्था में परिवारों और फर्मों के बीच आय और व्यय के वर्तुल प्रवाह को समझना।"
+      },
+      {
+       "concept_tag": "teen-vidhiyon-ki-samanta",
+       "learning_objective": "यह समझना कि उत्पाद, व्यय और आय विधियों से राष्ट्रीय आय का मान समान आता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH02-T3",
+     "topic_number": 3,
+     "title": "उत्पाद या मूल्यवर्धित विधि",
+     "ncert_sections": "2.2.1",
+     "concepts": [
+      {
+       "concept_tag": "mulya-vardhan",
+       "learning_objective": "सकल और निवल मूल्यवर्धन की गणना करना।"
+      },
+      {
+       "concept_tag": "dohri-ganana",
+       "learning_objective": "दोहरी गणना की समस्या और उससे बचने के उपाय को समझना।"
+      },
+      {
+       "concept_tag": "mal-suchi",
+       "learning_objective": "माल-सूची में परिवर्तन को उत्पादन और निवेश के भाग के रूप में समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH02-T4",
+     "topic_number": 4,
+     "title": "व्यय विधि और आय विधि",
+     "ncert_sections": "2.2.2, 2.2.3",
+     "concepts": [
+      {
+       "concept_tag": "vyay-vidhi",
+       "learning_objective": "अंतिम उपभोग, निवेश, सरकारी व्यय और निवल निर्यात से सकल घरेलू उत्पाद ज्ञात करना।"
+      },
+      {
+       "concept_tag": "aay-vidhi",
+       "learning_objective": "मजदूरी, लाभ, ब्याज और किराए के योग से सकल घरेलू उत्पाद ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH02-T5",
+     "topic_number": 5,
+     "title": "कारक लागत, आधार कीमतें, बाज़ार कीमतें और समष्टि आर्थिक समानताएँ",
+     "ncert_sections": "2.2.4, 2.3",
+     "concepts": [
+      {
+       "concept_tag": "karak-lagat-bazar-keemat",
+       "learning_objective": "कारक लागत, आधार कीमत और बाज़ार कीमत में निवल उत्पादन करों और निवल उत्पाद करों के आधार पर अंतर करना।"
+      },
+      {
+       "concept_tag": "rashtriya-aay-samuchchay",
+       "learning_objective": "विदेशों से निवल कारक आय, मूल्यह्रास और निवल अप्रत्यक्ष करों की सहायता से राष्ट्रीय आय के समुच्चय ज्ञात करना।"
+      },
+      {
+       "concept_tag": "vaiyaktik-aay",
+       "learning_objective": "वैयक्तिक आय और वैयक्तिक प्रयोज्य आय की संकल्पना समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH02-T6",
+     "topic_number": 6,
+     "title": "मौद्रिक और वास्तविक सकल घरेलू उत्पाद",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "maudrik-vastavik-gdp",
+       "learning_objective": "चालू कीमतों और स्थिर कीमतों पर मापे गए सकल घरेलू उत्पाद में अंतर करना।"
+      },
+      {
+       "concept_tag": "gdp-apasfitik",
+       "learning_objective": "सकल घरेलू उत्पाद अपस्फीतिक की गणना और व्याख्या करना।"
+      },
+      {
+       "concept_tag": "upbhokta-keemat-suchkank",
+       "learning_objective": "उपभोक्ता कीमत सूचकांक की गणना करना और उसे अपस्फीतिक से अलग पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH02-T7",
+     "topic_number": 7,
+     "title": "सकल घरेलू उत्पाद और कल्याण",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "gdp-kalyan-seemayen",
+       "learning_objective": "सकल घरेलू उत्पाद को कल्याण का सूचक मानने की सीमाओं का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHEC1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "मुद्रा और बैंकिंग",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhec103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHEC1-CH03-T1",
+     "topic_number": 1,
+     "title": "वस्तु विनिमय और मुद्रा के कार्य",
+     "ncert_sections": "परिचय, 3.1",
+     "concepts": [
+      {
+       "concept_tag": "vastu-vinimay-dohra-sanyog",
+       "learning_objective": "वस्तु विनिमय प्रणाली और आवश्यकताओं के दोहरे संयोग की कठिनाई को समझाना।"
+      },
+      {
+       "concept_tag": "mudra-ke-karya",
+       "learning_objective": "मुद्रा के विनिमय माध्यम, लेखा इकाई और मूल्य संचय के कार्यों की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH03-T2",
+     "topic_number": 2,
+     "title": "मुद्रा की माँग: लेन-देन और सट्टा उद्देश्य",
+     "ncert_sections": "3.2.1, बॉक्स 3.1",
+     "concepts": [
+      {
+       "concept_tag": "mudra-ki-mang-nirdharak",
+       "learning_objective": "मुद्रा की माँग पर आय और ब्याज दर के प्रभाव को बताना।"
+      },
+      {
+       "concept_tag": "len-den-uddeshya",
+       "learning_objective": "लेन-देन हेतु मुद्रा की माँग और मुद्रा के संचलन वेग की गणना करना।"
+      },
+      {
+       "concept_tag": "satta-uddeshya-taralta-jal",
+       "learning_objective": "बॉण्ड कीमत, ब्याज दर और सट्टा माँग के संबंध का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH03-T3",
+     "topic_number": 3,
+     "title": "केंद्रीय बैंक और वाणिज्यिक बैंक",
+     "ncert_sections": "3.2.2",
+     "concepts": [
+      {
+       "concept_tag": "kendriya-bank-karya",
+       "learning_objective": "केंद्रीय बैंक के कार्यों और उच्च शक्तिशाली मुद्रा का अर्थ पहचानना।"
+      },
+      {
+       "concept_tag": "vanijyik-bank-madhyasthata",
+       "learning_objective": "वाणिज्यिक बैंकों द्वारा जमा स्वीकारने, ऋण देने और ब्याज-अंतर से लाभ कमाने को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH03-T4",
+     "topic_number": 4,
+     "title": "बैंकिंग प्रणाली द्वारा मुद्रा सृजन",
+     "ncert_sections": "3.3, 3.3.1, 3.3.2",
+     "concepts": [
+      {
+       "concept_tag": "bank-tulan-patra",
+       "learning_objective": "बैंक के तुलन-पत्र में परिसंपत्तियों, देयताओं और निवल मूल्य की पहचान करना।"
+      },
+      {
+       "concept_tag": "mudra-gunak",
+       "learning_objective": "नकद आरक्षित अनुपात से मुद्रा गुणक तथा सृजित जमा और ऋण की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH03-T5",
+     "topic_number": 5,
+     "title": "मुद्रा पूर्ति नियंत्रण के नीतिगत उपकरण",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "antim-rindata",
+       "learning_objective": "केंद्रीय बैंक को अंतिम ऋणदाता कहे जाने का कारण समझाना।"
+      },
+      {
+       "concept_tag": "parimanatmak-gunatmak-upkaran",
+       "learning_objective": "परिमाणात्मक और गुणात्मक उपकरणों में अंतर करना तथा बैंक दर के प्रभाव को बताना।"
+      },
+      {
+       "concept_tag": "khule-bazar-ki-kriyayen",
+       "learning_objective": "खुले बाज़ार की क्रियाओं, रेपो और रिवर्स रेपो का मुद्रा पूर्ति पर प्रभाव समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH03-T6",
+     "topic_number": 6,
+     "title": "मुद्रा पूर्ति के माप और विमुद्रीकरण",
+     "ncert_sections": "मुद्रा पूर्ति के विभिन्न माप, बॉक्स 3.2",
+     "concepts": [
+      {
+       "concept_tag": "adesh-mudra-vaidh-mudra",
+       "learning_objective": "आदेश मुद्रा और वैध मुद्रा का अर्थ बताना।"
+      },
+      {
+       "concept_tag": "mudra-purti-ke-map",
+       "learning_objective": "M1, M2, M3 और M4 की परिभाषा देना और उनकी गणना करना।"
+      },
+      {
+       "concept_tag": "vimudrikaran",
+       "learning_objective": "2016 के विमुद्रीकरण के प्रभावों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHEC1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "आय एवं रोज़गार का निर्धारण",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhec104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHEC1-CH04-T1",
+     "topic_number": 1,
+     "title": "समग्र माँग के घटक: उपभोग",
+     "ncert_sections": "4.1, 4.1.1",
+     "concepts": [
+      {
+       "concept_tag": "upbhog-falan",
+       "learning_objective": "उपभोग फलन के स्वायत्त और प्रेरित घटकों को पहचानना।"
+      },
+      {
+       "concept_tag": "simant-upbhog-pravritti",
+       "learning_objective": "सीमांत उपभोग प्रवृत्ति और सीमांत बचत प्रवृत्ति का संबंध तथा उनके मान समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH04-T2",
+     "topic_number": 2,
+     "title": "निवेश तथा प्रत्याशित और यथार्थ मान",
+     "ncert_sections": "4.1, 4.1.2",
+     "concepts": [
+      {
+       "concept_tag": "pratyashit-yatharth",
+       "learning_objective": "प्रत्याशित (नियोजित) और यथार्थ (वास्तविक) निवेश में अंतर करना।"
+      },
+      {
+       "concept_tag": "swayatt-nivesh",
+       "learning_objective": "निवेश को स्वायत्त मानने का अर्थ और उसे प्रभावित करने वाले कारक समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH04-T3",
+     "topic_number": 3,
+     "title": "द्वि-क्षेत्रक मॉडल में आय का निर्धारण",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "samagra-mang",
+       "learning_objective": "द्वि-क्षेत्रक अर्थव्यवस्था में समग्र माँग का समीकरण बनाना और प्रयोग करना।"
+      },
+      {
+       "concept_tag": "samagra-purti",
+       "learning_objective": "स्थिर कीमत पर समग्र पूर्ति और 45 अंश रेखा का अर्थ समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH04-T4",
+     "topic_number": 4,
+     "title": "स्थिर कीमत पर समष्टि संतुलन",
+     "ncert_sections": "4.3, 4.3.1",
+     "concepts": [
+      {
+       "concept_tag": "santulan-aay",
+       "learning_objective": "समग्र माँग और समग्र पूर्ति की समानता से संतुलन आय की गणना करना।"
+      },
+      {
+       "concept_tag": "aniyojit-maal-suchi",
+       "learning_objective": "असंतुलन में माल-सूची के अनियोजित परिवर्तन से उत्पादन के समायोजन को समझाना।"
+      },
+      {
+       "concept_tag": "prabhavi-mang",
+       "learning_objective": "प्रभावी माँग के सिद्धांत की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH04-T5",
+     "topic_number": 5,
+     "title": "समग्र माँग में स्वायत्त परिवर्तन",
+     "ncert_sections": "4.3.2",
+     "concepts": [
+      {
+       "concept_tag": "prachalik-vivartan",
+       "learning_objective": "रेखा के ढाल और अंतःखंड में परिवर्तन से प्राचलिक विवर्तन समझना।"
+      },
+      {
+       "concept_tag": "swayatt-parivartan",
+       "learning_objective": "स्वायत्त निवेश या उपभोग बढ़ने पर संतुलन आय में परिवर्तन ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH04-T6",
+     "topic_number": 6,
+     "title": "गुणक क्रियाविधि और मितव्ययिता का विरोधाभास",
+     "ncert_sections": "4.3.3",
+     "concepts": [
+      {
+       "concept_tag": "gunak",
+       "learning_objective": "स्वायत्त व्यय गुणक का सूत्र निकालना और उसका प्रयोग करना।"
+      },
+      {
+       "concept_tag": "mitavyayita-virodhabhas",
+       "learning_objective": "मितव्ययिता के विरोधाभास का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH04-T7",
+     "topic_number": 7,
+     "title": "पूर्ण रोज़गार, न्यून माँग और अधिमाँग",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "purn-rozgar",
+       "learning_objective": "पूर्ण रोज़गार आय और संतुलन आय में अंतर करना।"
+      },
+      {
+       "concept_tag": "nyun-adhi-mang",
+       "learning_objective": "न्यून माँग और अधिमाँग की स्थितियों तथा उनके कीमत-प्रभाव को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHEC1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "सरकारी बजट एवं अर्थव्यवस्था",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhec105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHEC1-CH05-T1",
+     "topic_number": 1,
+     "title": "सरकारी बजट का अर्थ और उद्देश्य",
+     "ncert_sections": "5.1, 5.1.1",
+     "concepts": [
+      {
+       "concept_tag": "bajat-arth",
+       "learning_objective": "सरकारी बजट को वित्तीय वर्ष की अनुमानित प्राप्तियों और व्यय के विवरण के रूप में समझना।"
+      },
+      {
+       "concept_tag": "sarvajanik-vastuen",
+       "learning_objective": "सार्वजनिक वस्तुओं की गैर-प्रतिद्वंद्विता, गैर-अपवर्जनीयता और मुफ़्तखोरी की समस्या को पहचानना।"
+      },
+      {
+       "concept_tag": "punarvitaran-sthirikaran",
+       "learning_objective": "बजट के आबंटन, पुनर्वितरण और स्थिरीकरण कार्यों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH05-T2",
+     "topic_number": 2,
+     "title": "सरकारी प्राप्तियों का वर्गीकरण",
+     "ncert_sections": "5.1.2",
+     "concepts": [
+      {
+       "concept_tag": "rajasv-praptiyan",
+       "learning_objective": "राजस्व प्राप्तियों के कर तथा गैर-कर भेदों और प्रत्यक्ष व अप्रत्यक्ष करों को पहचानना।"
+      },
+      {
+       "concept_tag": "punji-praptiyan",
+       "learning_objective": "पूँजीगत प्राप्तियों को देयता उत्पन्न करने या वित्तीय परिसंपत्तियाँ घटाने के आधार पर पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH05-T3",
+     "topic_number": 3,
+     "title": "सरकारी व्यय का वर्गीकरण",
+     "ncert_sections": "5.1.3",
+     "concepts": [
+      {
+       "concept_tag": "rajasv-vyay",
+       "learning_objective": "राजस्व व्यय की पहचान करना, जो परिसंपत्ति निर्माण नहीं करता।"
+      },
+      {
+       "concept_tag": "punji-vyay",
+       "learning_objective": "पूँजीगत व्यय को परिसंपत्तियों के निर्माण या देयताओं में कमी के आधार पर पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH05-T4",
+     "topic_number": 4,
+     "title": "संतुलित, आधिक्य और घाटे का बजट तथा घाटे के माप",
+     "ncert_sections": "5.2, 5.2.1",
+     "concepts": [
+      {
+       "concept_tag": "rajasv-ghata",
+       "learning_objective": "राजस्व घाटे की गणना और उसके निहितार्थ समझाना।"
+      },
+      {
+       "concept_tag": "rajkoshiya-ghata",
+       "learning_objective": "राजकोषीय घाटे की गणना कर उसे सरकार की कुल उधारी आवश्यकता के रूप में समझना।"
+      },
+      {
+       "concept_tag": "prathmik-ghata",
+       "learning_objective": "प्राथमिक घाटे की गणना और वर्तमान राजकोषीय असंतुलन से उसका संबंध समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH05-T5",
+     "topic_number": 5,
+     "title": "राजकोषीय नीति और एकमुश्त करों के साथ गुणक",
+     "ncert_sections": "बॉक्स 5.1",
+     "concepts": [
+      {
+       "concept_tag": "sarkari-vyay-gunak",
+       "learning_objective": "सरकारी व्यय गुणक 1/(1 – c) की गणना और व्याख्या करना।"
+      },
+      {
+       "concept_tag": "kar-gunak",
+       "learning_objective": "कर गुणक –c/(1 – c) की गणना कर उसके ऋणात्मक होने का कारण समझाना।"
+      },
+      {
+       "concept_tag": "santulit-bajat-gunak",
+       "learning_objective": "संतुलित बजट गुणक के इकाई होने का कारण समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH05-T6",
+     "topic_number": 6,
+     "title": "आनुपातिक कर, अंतरण और स्वचालित स्थिरीकारक",
+     "ncert_sections": "बॉक्स 5.1",
+     "concepts": [
+      {
+       "concept_tag": "anupatik-kar-gunak",
+       "learning_objective": "आनुपातिक कर की स्थिति में गुणक 1/[1 – c(1 – t)] की गणना करना।"
+      },
+      {
+       "concept_tag": "swachalit-sthirikarak",
+       "learning_objective": "स्वचालित स्थिरीकारकों और विवेकाधीन राजकोषीय नीति में अंतर करना।"
+      },
+      {
+       "concept_tag": "antaran-gunak",
+       "learning_objective": "अंतरण भुगतान गुणक c/(1 – c) की गणना और सरकारी क्रय गुणक से तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH05-T7",
+     "topic_number": 7,
+     "title": "सरकारी ऋण और घाटे में कमी",
+     "ncert_sections": "ऋण",
+     "concepts": [
+      {
+       "concept_tag": "sarkari-rin-bhar",
+       "learning_objective": "घाटे (प्रवाह) और ऋण (स्टॉक) के संबंध तथा घाटे के प्रभावों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "rikardiyan-tulyata",
+       "learning_objective": "रिकार्डियन तुल्यता और बहिर्गमन प्रभाव के विचारों का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "ghata-kami",
+       "learning_objective": "सरकारी घाटा कम करने के उपायों और उनकी सीमाओं को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHEC1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "खुली अर्थव्यवस्था समष्टि अर्थशास्त्र",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhec106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHEC1-CH06-T1",
+     "topic_number": 1,
+     "title": "खुली अर्थव्यवस्था, उसके संबंध और विदेशी व्यापार",
+     "ncert_sections": "परिचय",
+     "concepts": [
+      {
+       "concept_tag": "khuli-arthvyavastha-sambandh",
+       "learning_objective": "उन निर्गत, वित्तीय और श्रम बाज़ार संबंधों की पहचान करना जिनके द्वारा खुली अर्थव्यवस्था अन्य देशों से जुड़ती है।"
+      },
+      {
+       "concept_tag": "videshi-vyapar-aur-samagra-maang",
+       "learning_objective": "समझाना कि आय के चक्रीय प्रवाह में आयात क्षरण और निर्यात अंतःक्षेपण कैसे हैं।"
+      },
+      {
+       "concept_tag": "antarrashtriya-mudra-vishvas",
+       "learning_objective": "समझाना कि कोई राष्ट्रीय मुद्रा अंतर्राष्ट्रीय स्तर पर तभी स्वीकार होती है जब उसकी क्रय शक्ति स्थिर रहे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH06-T2",
+     "topic_number": 2,
+     "title": "भुगतान शेष और चालू खाता",
+     "ncert_sections": "6.1, 6.1.1",
+     "concepts": [
+      {
+       "concept_tag": "bhugtan-shesh-arth",
+       "learning_objective": "भुगतान शेष को परिभाषित करना और उसके मुख्य खातों की पहचान करना।"
+      },
+      {
+       "concept_tag": "chalu-khata-ghatak",
+       "learning_objective": "वस्तुओं, सेवाओं और अंतरण भुगतानों के व्यापार को चालू खाते के घटकों के रूप में वर्गीकृत करना।"
+      },
+      {
+       "concept_tag": "vyapar-shesh-aur-adrishya",
+       "learning_objective": "व्यापार शेष और चालू खाता शेष में अंतर करना और दिए गए आँकड़ों से दोनों की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH06-T3",
+     "topic_number": 3,
+     "title": "पूँजी खाता तथा भुगतान शेष का आधिक्य या घाटा",
+     "ncert_sections": "6.1.2, 6.1.3",
+     "concepts": [
+      {
+       "concept_tag": "punji-khata-madein",
+       "learning_objective": "पूँजी खाते की जमा और नामे मदों, जैसे प्रत्यक्ष विदेशी निवेश, पोर्टफोलियो निवेश, उधार और सहायता की पहचान करना।"
+      },
+      {
+       "concept_tag": "bhugtan-shesh-ghata-arakshit-nidhi",
+       "learning_objective": "समग्र भुगतान शेष की गणना करना और समझाना कि आधिकारिक आरक्षित निधि लेनदेन घाटे या आधिक्य का निपटान कैसे करते हैं।"
+      },
+      {
+       "concept_tag": "swayatt-samanjak-sauda",
+       "learning_objective": "स्वायत्त (रेखा से ऊपर) और समायोजक (रेखा से नीचे) लेनदेनों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH06-T4",
+     "topic_number": 4,
+     "title": "विदेशी मुद्रा बाज़ार और विनिमय दर",
+     "ncert_sections": "6.2, 6.2.1",
+     "concepts": [
+      {
+       "concept_tag": "videshi-mudra-bazar",
+       "learning_objective": "विदेशी मुद्रा बाज़ार, उसके प्रतिभागियों और विदेशी विनिमय दर के अर्थ का वर्णन करना।"
+      },
+      {
+       "concept_tag": "videshi-mudra-maang-poorti",
+       "learning_objective": "विदेशी मुद्रा की माँग और पूर्ति के स्रोतों तथा विनिमय दर के प्रति उनकी प्रतिक्रिया को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH06-T5",
+     "topic_number": 5,
+     "title": "नम्य विनिमय दर और उसके निर्धारक",
+     "ncert_sections": "6.2.2 (नम्य विनिमय दर)",
+     "concepts": [
+      {
+       "concept_tag": "namya-dar-mulyahras-mulyavriddhi",
+       "learning_objective": "समझाना कि नम्य विनिमय दर कैसे निर्धारित होती है तथा मूल्यह्रास और मूल्यवृद्धि में अंतर करना।"
+      },
+      {
+       "concept_tag": "alpkalin-vinimay-dar-karak",
+       "learning_objective": "विश्लेषण करना कि सट्टा, ब्याज दर अंतर और आय में परिवर्तन अल्पकाल में विनिमय दर को कैसे प्रभावित करते हैं।"
+      },
+      {
+       "concept_tag": "kray-shakti-samta",
+       "learning_objective": "दीर्घकालीन विनिमय दर का अनुमान लगाने के लिए क्रय शक्ति समता सिद्धांत का प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH06-T6",
+     "topic_number": 6,
+     "title": "स्थिर विनिमय दर और प्रबंधित तिरती विनिमय दर",
+     "ncert_sections": "6.2.2 (स्थिर विनिमय दर), 6.2.3, 6.2.4",
+     "concepts": [
+      {
+       "concept_tag": "sthir-vinimay-dar-pranali",
+       "learning_objective": "समझाना कि सरकार स्थिर विनिमय दर कैसे बनाए रखती है तथा अवमूल्यन और पुनर्मूल्यन में अंतर करना।"
+      },
+      {
+       "concept_tag": "sthir-banam-namya-gun",
+       "learning_objective": "सट्टेबाज़ी के आक्रमण सहित स्थिर और नम्य विनिमय दर प्रणालियों के गुण-दोषों का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "prabandhit-tirti-dar",
+       "learning_objective": "प्रबंधित तिरती दर को नम्य दर और केंद्रीय बैंक के हस्तक्षेप के मिश्रण के रूप में वर्णित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC1-CH06-T7",
+     "topic_number": 7,
+     "title": "खुली अर्थव्यवस्था में संतुलन आय का निर्धारण",
+     "ncert_sections": "परिशिष्ट 6.1",
+     "concepts": [
+      {
+       "concept_tag": "khuli-arthvyavastha-aay-samikaran",
+       "learning_objective": "खुली अर्थव्यवस्था के लिए राष्ट्रीय आय की सर्वसमिका लिखना और निवल निर्यात की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "seemant-aayat-pravritti",
+       "learning_objective": "आयात फलन से सीमांत आयात प्रवृत्ति की पहचान करना और समग्र माँग में उसकी भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "khuli-arthvyavastha-gunak",
+       "learning_objective": "खुली अर्थव्यवस्था के गुणक की गणना करना और समझाना कि यह बंद अर्थव्यवस्था के गुणक से छोटा क्यों है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

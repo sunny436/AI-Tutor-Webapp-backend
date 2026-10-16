@@ -1,0 +1,1687 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "samaj-ka-aadhyan-bharat-or-uske-aage-c06-hi",
+  "curriculum": "cbse",
+  "class_level": 6,
+  "subject_code": "social_science",
+  "language": "hindi",
+  "title": "Samaj Ka Aadhyan: Bharat or uske aage",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "fhes1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "FHES1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "पृथ्वी पर स्थानों की स्थिति",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH01-T1",
+     "topic_number": 1,
+     "title": "मानचित्र और उसके प्रकार",
+     "ncert_sections": "मानचित्र और उसके घटक",
+     "concepts": [
+      {
+       "concept_tag": "manchitra-ki-paribhasha",
+       "learning_objective": "विद्यार्थी मानचित्र और मानचित्रावली (एटलस) का अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "manchitra-ke-prakar",
+       "learning_objective": "विद्यार्थी भौतिक, राजनैतिक और थिमैटिक मानचित्रों में अंतर पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH01-T2",
+     "topic_number": 2,
+     "title": "मानचित्र के घटक: दूरी, दिशा और प्रतीक चिह्न",
+     "ncert_sections": "मानचित्र और उसके घटक",
+     "concepts": [
+      {
+       "concept_tag": "scale-aur-doori",
+       "learning_objective": "विद्यार्थी मानचित्र के स्केल की सहायता से वास्तविक दूरी की गणना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "chaturdish-aur-disha",
+       "learning_objective": "विद्यार्थी चतुर्दिश और मध्यवर्ती दिशाओं को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "pratik-chinh",
+       "learning_objective": "विद्यार्थी मानचित्र में प्रतीक चिह्नों के उपयोग का कारण समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH01-T3",
+     "topic_number": 3,
+     "title": "पृथ्वी का मानचित्रण और निर्देशांक",
+     "ncert_sections": "पृथ्वी का मानचित्रण; (क) निर्देशांक को समझना",
+     "concepts": [
+      {
+       "concept_tag": "globe-aur-prithvi-ka-aakar",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि ग्लोब पृथ्वी का बेहतर प्रतिनिधित्व क्यों करता है।"
+      },
+      {
+       "concept_tag": "nirdeshank-pranali",
+       "learning_objective": "विद्यार्थी दो निर्देशांकों से किसी स्थिति के निर्धारण की विधि समझ सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH01-T4",
+     "topic_number": 4,
+     "title": "अक्षांश",
+     "ncert_sections": "(ख) अक्षांश",
+     "concepts": [
+      {
+       "concept_tag": "akshansh-ki-paribhasha",
+       "learning_objective": "विद्यार्थी अक्षांश को भूमध्य रेखा से दूरी के माप के रूप में परिभाषित कर सकेंगे।"
+      },
+      {
+       "concept_tag": "akshansh-aur-jalvayu",
+       "learning_objective": "विद्यार्थी अक्षांश और जलवायु के बीच संबंध बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH01-T5",
+     "topic_number": 5,
+     "title": "देशांतर और प्रमुख याम्योत्तर",
+     "ncert_sections": "(ग) देशांतर",
+     "concepts": [
+      {
+       "concept_tag": "deshantar-aur-yamyottar",
+       "learning_objective": "विद्यार्थी देशांतर और याम्योत्तर की विशेषताएँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "pramukh-yamyottar",
+       "learning_objective": "विद्यार्थी ग्रिनिच और उज्जयिनी की प्रमुख याम्योत्तर का महत्त्व समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH01-T6",
+     "topic_number": 6,
+     "title": "समय क्षेत्र, मानक समय और अंतर्राष्ट्रीय तिथि रेखा",
+     "ncert_sections": "समय क्षेत्र (टाइम जोन) को समझना",
+     "concepts": [
+      {
+       "concept_tag": "sthaniya-samay",
+       "learning_objective": "विद्यार्थी देशांतर के अंतर से स्थानीय समय के अंतर की गणना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "manak-samay",
+       "learning_objective": "विद्यार्थी मानक समय और भारतीय मानक समय की आवश्यकता समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "antarrashtriya-tithi-rekha",
+       "learning_objective": "विद्यार्थी अंतर्राष्ट्रीय तिथि रेखा की स्थिति और महत्त्व बता सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "महासागर एवं महाद्वीप",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH02-T1",
+     "topic_number": 1,
+     "title": "नीला ग्रह: महासागर और महाद्वीप का परिचय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "neela-grah",
+       "learning_objective": "पृथ्वी के नीला ग्रह कहलाने का कारण और जल व भूमि के अनुपात को समझना।"
+      },
+      {
+       "concept_tag": "mahasagar-mahadweep-paribhasha",
+       "learning_objective": "महासागर, भूखंड और महाद्वीप की परिभाषा बताना।"
+      },
+      {
+       "concept_tag": "varun-aur-mahasagar",
+       "learning_objective": "भारतीय संस्कृति में महासागर से जुड़े वैदिक देवता वरुण और नौसेना के आदर्श वाक्य को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH02-T2",
+     "topic_number": 2,
+     "title": "पृथ्वी पर जल एवं भूमि का वितरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "golardh-mein-vitaran",
+       "learning_objective": "उत्तरी और दक्षिणी गोलार्ध में जल एवं भूमि के असमान वितरण की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "lavaniya-alavaniya-jal",
+       "learning_objective": "लवणीय और अलवणीय जल के अंतर तथा जल संकट के कारण को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH02-T3",
+     "topic_number": 3,
+     "title": "पाँच महासागर और समुद्री जीवन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "paanch-mahasagar",
+       "learning_objective": "पाँच महासागरों के नाम, आकार का क्रम और उनके आपस में जुड़े होने को समझना।"
+      },
+      {
+       "concept_tag": "hind-mahasagar-vistar",
+       "learning_objective": "हिंद महासागर का विस्तार तथा भारत के दोनों ओर उसके भागों को पहचानना।"
+      },
+      {
+       "concept_tag": "samudri-jeevan",
+       "learning_objective": "समुद्री वनस्पति जगत और प्राणि जगत के उदाहरण बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH02-T4",
+     "topic_number": 4,
+     "title": "महासागर और आपदाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mansoon-aur-chakravat",
+       "learning_objective": "मानसूनी वर्षा और चक्रवात में महासागरों की भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "sunami-aur-chetavani",
+       "learning_objective": "सुनामी के कारण, प्रभाव और पूर्व चेतावनी प्रणाली के महत्व की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH02-T5",
+     "topic_number": 5,
+     "title": "महाद्वीप और उनकी गिनती",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mahadweep-ginti",
+       "learning_objective": "महाद्वीपों को चार से सात तक अलग-अलग प्रकार से गिनने के कारण समझाना।"
+      },
+      {
+       "concept_tag": "mahadweep-aakar",
+       "learning_objective": "सात महाद्वीपों के सापेक्षिक आकार की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH02-T6",
+     "topic_number": 6,
+     "title": "द्वीप, भारत के द्वीप समूह और अंटार्कटिका",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dweep-paribhasha",
+       "learning_objective": "द्वीप की परिभाषा बताना और द्वीप को महाद्वीप से अलग करना।"
+      },
+      {
+       "concept_tag": "bharat-ke-dweep",
+       "learning_objective": "भारत के दो प्रमुख द्वीप समूहों और उनकी स्थिति को पहचानना।"
+      },
+      {
+       "concept_tag": "antarctica-anveshan",
+       "learning_objective": "अंटार्कटिका में भारत के वैज्ञानिक अन्वेषण के बारे में बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH02-T7",
+     "topic_number": 7,
+     "title": "महासागर और जीवन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jalvayu-aur-oxygen",
+       "learning_objective": "जलवायु, वर्षा और ऑक्सीजन उत्पादन में महासागरों के योगदान की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "manav-aur-mahasagar",
+       "learning_objective": "व्यापार, यात्रा और संस्कृति पर महासागरों के प्रभाव को समझना।"
+      },
+      {
+       "concept_tag": "pradushan-aur-sanrakshan",
+       "learning_objective": "महासागरों के प्रदूषण के कारणों और उनके संरक्षण के उपायों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "स्थलरूप एवं जीवन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH03-T1",
+     "topic_number": 1,
+     "title": "स्थलरूप: अर्थ और प्रमुख प्रकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sthalroop-ki-paribhasha",
+       "learning_objective": "विद्यार्थी स्थलरूप का अर्थ और उसके बनने की लंबी अवधि को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "sthalroop-ke-teen-prakar",
+       "learning_objective": "विद्यार्थी पर्वत, पठार और मैदान को स्थलरूपों की तीन प्रमुख श्रेणियों के रूप में पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH03-T2",
+     "topic_number": 2,
+     "title": "पर्वत और विश्व के प्रमुख गिरिशृंग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "parvat-ki-visheshtaen",
+       "learning_objective": "विद्यार्थी पर्वत की भौतिक विशेषताएँ बता सकेंगे और उसे पहाड़ी से अलग कर सकेंगे।"
+      },
+      {
+       "concept_tag": "pramukh-girishring",
+       "learning_objective": "विद्यार्थी विश्व और भारत के प्रमुख पर्वत शिखरों तथा शृंखलाओं को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "naveen-aur-prachin-parvat",
+       "learning_objective": "विद्यार्थी नवीन और प्राचीन पर्वतों के आकार में अंतर का कारण समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH03-T3",
+     "topic_number": 3,
+     "title": "पर्वतीय परिवेश और पर्वतीय जीवन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "parvatiya-van-aur-jeev",
+       "learning_objective": "विद्यार्थी पर्वतीय वनों, वनस्पति और जीव-जंतुओं की विशेषताएँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "parvatiya-aajeevika",
+       "learning_objective": "विद्यार्थी वेदिका कृषि, पशुपालन और पर्यटन जैसी पर्वतीय आजीविकाओं को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "parvatiya-chunautiyan",
+       "learning_objective": "विद्यार्थी भूस्खलन, बादल फटना और हिमस्खलन जैसी पर्वतीय चुनौतियों को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH03-T4",
+     "topic_number": 4,
+     "title": "पठार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pathar-ki-visheshtaen",
+       "learning_objective": "विद्यार्थी पठार की विशेषताएँ, उदाहरण और उनकी मिट्टी की प्रकृति समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "pathar-khanij-aur-jalprapat",
+       "learning_objective": "विद्यार्थी पठारों को खनिजों का भंडार-गृह मानने का कारण और प्रमुख जल प्रपात बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH03-T5",
+     "topic_number": 5,
+     "title": "मैदान और मैदानी जीवन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "maidan-ka-nirman",
+       "learning_objective": "विद्यार्थी नदियों के तलछट से मैदानों के बनने और उनकी ऊँचाई को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "maidani-jeevan-aur-krishi",
+       "learning_objective": "विद्यार्थी गंगा के मैदान में जनसंख्या, कृषि और सिंचाई के प्रभावों का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "nadiyan-parivahan-aur-sanskriti",
+       "learning_objective": "विद्यार्थी मैदानी नदियों में नौका-परिवहन और संगम स्थलों के सांस्कृतिक महत्व को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH03-T6",
+     "topic_number": 6,
+     "title": "मरुस्थल, अनुकूलन और संगम कविता के टिनै",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "marusthal-ki-visheshtaen",
+       "learning_objective": "विद्यार्थी गर्म और ठंडे मरुस्थलों के उदाहरण पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "anukoolan-aur-lacheelapan",
+       "learning_objective": "विद्यार्थी विभिन्न स्थलरूपों में मानव के अनुकूलन और लचीलेपन को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sangam-kavita-tinai",
+       "learning_objective": "विद्यार्थी संगम कविता के पाँच टिनै को उनकी दृश्यभूमि और मुख्य व्यवसाय से जोड़ सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "इतिहास की समय-रेखा एवं उसके स्रोत",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH04-T1",
+     "topic_number": 1,
+     "title": "इतिहास और अतीत का अध्ययन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "itihas-aur-atit",
+       "learning_objective": "विद्यार्थी समझेंगे कि इतिहास मानव के अतीत का अध्ययन है और पृथ्वी के लंबे इतिहास में मानव इतिहास एक छोटा व नवीनतम भाग है।"
+      },
+      {
+       "concept_tag": "atit-ke-adhyeta",
+       "learning_objective": "विद्यार्थी भू-विज्ञानी, जीवाश्म विज्ञानी, मानव विज्ञानी और पुरातत्व विज्ञानी के कार्यों में अंतर कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH04-T2",
+     "topic_number": 2,
+     "title": "इतिहास में समय की गणना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gregorian-tithipatra",
+       "learning_objective": "विद्यार्थी ग्रेगोरियन तिथिपत्र और उसके अधिवर्ष के नियम को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sa-san-aur-sa-san-poo",
+       "learning_objective": "विद्यार्थी सामान्य संवत (सा.सं.) और सामान्य संवत पूर्व (सा.सं.पू.) के अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "varshon-ki-ganana",
+       "learning_objective": "विद्यार्थी शून्य वर्ष न होने का ध्यान रखते हुए सा.सं.पू. और सा.सं. तिथियों के बीच के वर्ष गिन सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH04-T3",
+     "topic_number": 3,
+     "title": "शताब्दी, सहस्राब्दी, समय-रेखा और पंचांग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samay-rekha",
+       "learning_objective": "विद्यार्थी समय-रेखा पर घटनाओं का अनुक्रम पढ़ और समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "shatabdi-sahasrabdi",
+       "learning_objective": "विद्यार्थी किसी तिथि की शताब्दी और सहस्राब्दी निर्धारित कर सकेंगे।"
+      },
+      {
+       "concept_tag": "panchang",
+       "learning_objective": "विद्यार्थी भारतीय पारंपरिक तिथिपत्र पंचांग की विशेषताएँ और उपयोग बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH04-T4",
+     "topic_number": 4,
+     "title": "इतिहास के स्रोत",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "itihas-ke-srot",
+       "learning_objective": "विद्यार्थी इतिहास के स्रोत का अर्थ और उसके विभिन्न प्रकार पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "srot-aur-punarnirman",
+       "learning_objective": "विद्यार्थी समझेंगे कि इतिहासकार अनेक स्रोतों का मिलान करके अतीत का पुनर्निर्माण कैसे करते हैं।"
+      },
+      {
+       "concept_tag": "itihas-ke-yogdankarta",
+       "learning_objective": "विद्यार्थी इतिहास के पुनर्निर्माण में विभिन्न विशेषज्ञों और नए स्रोतों के योगदान को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH04-T5",
+     "topic_number": 5,
+     "title": "मानव इतिहास का प्रारंभ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "adimanav-ka-jeevan",
+       "learning_objective": "विद्यार्थी आदिमानवों के आखेटक एवं खाद्य संग्राहक जीवन और समूहों में रहने के कारण समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "upkaran-aur-shail-chitra",
+       "learning_objective": "विद्यार्थी आदिमानवों के उपकरणों, आभूषणों और शैल-चित्रों से मिलने वाली जानकारी की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH04-T6",
+     "topic_number": 6,
+     "title": "पहली उपज और समाज का विकास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "him-yug-aur-krishi",
+       "learning_objective": "विद्यार्थी हिम युग के अंत के बाद स्थायी बस्तियों और कृषि के आरंभ को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "samaj-ki-jatilta",
+       "learning_objective": "विद्यार्थी पल्ली से गाँव और कस्बों के बनने तथा समाज के जटिल होने की प्रक्रिया बता सकेंगे।"
+      },
+      {
+       "concept_tag": "simit-sakshya-ki-vyakhya",
+       "learning_objective": "विद्यार्थी सीमित साक्ष्यों के आधार पर अतीत की भूमिकाओं की सावधानीपूर्वक व्याख्या कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "भारत, अर्थात इंडिया",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH05-T1",
+     "topic_number": 1,
+     "title": "भारतीय उपमहाद्वीप और ऋग्वेद का 'सप्त सैंधव'",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "upmahadweep-ki-seemayen",
+       "learning_objective": "विद्यार्थी भारतीय उपमहाद्वीप की प्राकृतिक सीमाओं और भारत के अतीत को जानने के स्रोतों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "sapt-saindhav",
+       "learning_objective": "विद्यार्थी ऋग्वेद में आए नाम 'सप्त सैंधव' का अर्थ और उसका नदियों से संबंध समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH05-T2",
+     "topic_number": 2,
+     "title": "महाभारत के क्षेत्र, भारतवर्ष और जम्बूद्वीप",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mahabharat-ke-kshetra",
+       "learning_objective": "विद्यार्थी महाभारत में सूचीबद्ध क्षेत्रों को आज के क्षेत्रों से मिला सकेंगे।"
+      },
+      {
+       "concept_tag": "bharatvarsh",
+       "learning_objective": "विद्यार्थी 'भारतवर्ष' नाम का अर्थ और 'भरत' नाम के प्रयोग को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "jambudweep",
+       "learning_objective": "विद्यार्थी 'जम्बूद्वीप' का अर्थ और अशोक के समय उसके विस्तार को बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH05-T3",
+     "topic_number": 3,
+     "title": "'भारत' नाम का प्रचलन और उसकी साझा परिभाषा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vishnu-puran-ki-paribhasha",
+       "learning_objective": "विद्यार्थी विष्णु पुराण में दी गई भारत की भौगोलिक परिभाषा को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "tamil-sahitya-mein-bharat",
+       "learning_objective": "विद्यार्थी प्राचीन तमिल कविता के आधार पर भारत की साझा भौगोलिक समझ को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "samvidhan-bharat-arthat-india",
+       "learning_objective": "विद्यार्थी संविधान में आए वाक्यांश 'भारत अर्थात इंडिया' को भारत के नामों के इतिहास से जोड़ सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH05-T4",
+     "topic_number": 4,
+     "title": "विदेशियों द्वारा दिए गए नाम: हिंद, इंडोई और यिन्तु",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "farsi-hind-hindustan",
+       "learning_objective": "विद्यार्थी प्राचीन फारसियों द्वारा दिए गए नाम 'हिंद' और बाद के शब्द 'हिंदुस्तान' की उत्पत्ति बता सकेंगे।"
+      },
+      {
+       "concept_tag": "yunani-indoi",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि 'सिंधु' से 'हिंदु' और फिर 'इंडोई' तथा 'इंडिया' जैसे नाम कैसे बने।"
+      },
+      {
+       "concept_tag": "chini-yintu-tiyanzhu",
+       "learning_objective": "विद्यार्थी प्राचीन चीनियों द्वारा भारत के लिए प्रयुक्त नामों और उनके अर्थ को पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "भारतीय सभ्यता का प्रारंभ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH06-T1",
+     "topic_number": 1,
+     "title": "सभ्यता क्या है?",
+     "ncert_sections": "सभ्यता क्या है?",
+     "concepts": [
+      {
+       "concept_tag": "sabhyata-ki-visheshtayen",
+       "learning_objective": "विद्यार्थी सभ्यता की प्रमुख विशेषताओं की पहचान और उनका महत्व समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "prachin-sabhyataon-ka-aarambh",
+       "learning_objective": "विद्यार्थी मेसोपोटामिया, मिस्र और सिंधु-सरस्वती सभ्यताओं के आरंभ के क्रम को समय-रेखा पर रख सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH06-T2",
+     "topic_number": 2,
+     "title": "गाँव से नगर और सभ्यता के नाम",
+     "ncert_sections": "गाँव से नगर; सरस्वती नदी",
+     "concepts": [
+      {
+       "concept_tag": "gaon-se-nagar",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि गाँव नगरों में और नगर महानगरों में कैसे बदले।"
+      },
+      {
+       "concept_tag": "sabhyata-ke-naam",
+       "learning_objective": "विद्यार्थी इस सभ्यता के विभिन्न नामों और उनके कारणों को बता सकेंगे।"
+      },
+      {
+       "concept_tag": "saraswati-nadi",
+       "learning_objective": "विद्यार्थी सरस्वती (घग्गर-हाकरा) नदी और उसके किनारे की बस्तियों का महत्व बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH06-T3",
+     "topic_number": 3,
+     "title": "नगर-योजना और महास्नानागार",
+     "ncert_sections": "नगर-योजना",
+     "concepts": [
+      {
+       "concept_tag": "nagar-yojana",
+       "learning_objective": "विद्यार्थी हड़प्पाई नगरों की योजना, किलेबंदी और ऊपरी-निचले नगर की व्यवस्था समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "mahasnanagar",
+       "learning_objective": "विद्यार्थी मोहनजो-दड़ो के महास्नानागार की बनावट और उसकी व्याख्याओं का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH06-T4",
+     "topic_number": 4,
+     "title": "जल प्रबंधन",
+     "ncert_sections": "जल प्रबंधन",
+     "concepts": [
+      {
+       "concept_tag": "jal-nikas-aur-swachhata",
+       "learning_objective": "विद्यार्थी हड़प्पाई जल-निकास, कुओं और स्वच्छता की व्यवस्था का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "dholavira-ke-jalashay",
+       "learning_objective": "विद्यार्थी धौलावीरा के जलाशयों से जल संचयन और प्रशासन के बारे में निष्कर्ष निकाल सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH06-T5",
+     "topic_number": 5,
+     "title": "हड़प्पावासी क्या खाते थे?",
+     "ncert_sections": "हड़प्पावासी क्या खाते थे?",
+     "concepts": [
+      {
+       "concept_tag": "krishi-aur-faslen",
+       "learning_objective": "विद्यार्थी हड़प्पावासियों की फसलों, कृषि उपकरणों और गाँव-नगर के संबंध को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "bhojan-ki-vividhata",
+       "learning_objective": "विद्यार्थी पुरातात्विक प्रमाणों से हड़प्पावासियों के विविध भोजन का पता लगा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH06-T6",
+     "topic_number": 6,
+     "title": "सक्रिय व्यापार, शिल्प और मुहरें",
+     "ncert_sections": "सक्रिय व्यापार; प्राचीन जीवन",
+     "concepts": [
+      {
+       "concept_tag": "vyapar-ke-marg",
+       "learning_objective": "विद्यार्थी हड़प्पाई व्यापार की वस्तुओं, मार्गों और लोथल के बेसिन का महत्व बता सकेंगे।"
+      },
+      {
+       "concept_tag": "shilp-aur-dhatu",
+       "learning_objective": "विद्यार्थी कार्नेलियन मोती, शंख की चूड़ियों और कांस्य जैसे शिल्पों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "muhren-aur-lekhan",
+       "learning_objective": "विद्यार्थी हड़प्पाई मुहरों की सामग्री, आकार और उपयोग समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH06-T7",
+     "topic_number": 7,
+     "title": "अंत अथवा नई शुरुआत?",
+     "ncert_sections": "अंत अथवा नई शुरुआत?",
+     "concepts": [
+      {
+       "concept_tag": "hras-ke-karan",
+       "learning_objective": "विद्यार्थी सिंधु-सरस्वती सभ्यता के ह्रास के स्वीकृत कारणों का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "gramin-jeevan-aur-virasat",
+       "learning_objective": "विद्यार्थी नगरों के बाद ग्रामीण जीवन और हड़प्पा की बची हुई विरासत को पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "भारत की सांस्कृतिक जड़ें",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH07-T1",
+     "topic_number": 1,
+     "title": "वेद क्या हैं?",
+     "ncert_sections": "(क) वेद क्या हैं?",
+     "concepts": [
+      {
+       "concept_tag": "ved-aur-maukhik-parampara",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि वेद क्या हैं और उनकी ऋचाएँ अनेक पीढ़ियों तक मौखिक रूप से कैसे सुरक्षित रहीं।"
+      },
+      {
+       "concept_tag": "vaidik-vaishvik-darshan",
+       "learning_objective": "विद्यार्थी ऋत, एक परम सत्य के अनेक नाम और लोगों में एकता के वैदिक विचार समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH07-T2",
+     "topic_number": 2,
+     "title": "वैदिक समाज",
+     "ncert_sections": "(ख) वैदिक समाज",
+     "concepts": [
+      {
+       "concept_tag": "jan-sabha-samiti",
+       "learning_objective": "विद्यार्थी वैदिक जनों और उनके शासन से जुड़े राजा, सभा और समिति जैसे संकेतों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vaidik-vyavsay",
+       "learning_objective": "विद्यार्थी वैदिक ग्रंथों में वर्णित विभिन्न व्यवसायों को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH07-T3",
+     "topic_number": 3,
+     "title": "वैदिक दर्शन: अनुष्ठान, वेदांत और योग",
+     "ncert_sections": "(ग) वैदिक दर्शन",
+     "concepts": [
+      {
+       "concept_tag": "yagya-anushthan",
+       "learning_objective": "विद्यार्थी वैदिक अनुष्ठानों (यज्ञ) के स्वरूप का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "brahm-aur-atman",
+       "learning_objective": "विद्यार्थी उपनिषदों और वेदांत के ब्रह्म तथा आत्मन् के विचार और सबके परस्पर जुड़े होने की भावना समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "yog-darshan",
+       "learning_objective": "विद्यार्थी वेदों से विकसित योग दर्शन के उद्देश्य की पहचान कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH07-T4",
+     "topic_number": 4,
+     "title": "उपनिषदों की कथाएँ",
+     "ncert_sections": "श्वेतकेतु, नचिकेता, गार्गी और याज्ञवल्क्य की कथाएँ",
+     "concepts": [
+      {
+       "concept_tag": "shvetaketu-katha",
+       "learning_objective": "विद्यार्थी श्वेतकेतु की कथा में उद्दालक द्वारा दिए गए उदाहरणों का अर्थ समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "nachiketa-katha",
+       "learning_objective": "विद्यार्थी नचिकेता की ज्ञान पिपासा और यम से मिले आत्मा के ज्ञान का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "gargi-yajnavalkya-shastrarth",
+       "learning_objective": "विद्यार्थी गार्गी और याज्ञवल्क्य के शास्त्रार्थ से प्रश्न पूछने के महत्त्व का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH07-T5",
+     "topic_number": 5,
+     "title": "बौद्ध मत",
+     "ncert_sections": "बौद्ध मत",
+     "concepts": [
+      {
+       "concept_tag": "buddh-ka-jivan",
+       "learning_objective": "विद्यार्थी सिद्धार्थ गौतम के जीवन की उन घटनाओं का वर्णन कर सकेंगे जो उनके ज्ञान प्राप्ति तक ले गईं।"
+      },
+      {
+       "concept_tag": "buddh-ke-updesh",
+       "learning_objective": "विद्यार्थी अविद्या, मोह, अहिंसा और आंतरिक अनुशासन संबंधी बुद्ध के उपदेश समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sangh-aur-jatak-katha",
+       "learning_objective": "विद्यार्थी संघ और जातक कथाओं में व्यक्त मूल्यों का वर्णन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH07-T6",
+     "topic_number": 6,
+     "title": "जैन मत",
+     "ncert_sections": "जैन मत",
+     "concepts": [
+      {
+       "concept_tag": "mahavir-aur-jain-katha",
+       "learning_objective": "विद्यार्थी महावीर के जीवन और रोहिनेय जैसी जैन कथाओं की सीख का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "jain-siddhant",
+       "learning_objective": "विद्यार्थी अहिंसा, अनेकांतवाद और अपरिग्रह के जैन सिद्धांत समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH07-T7",
+     "topic_number": 7,
+     "title": "अनेक मत, एक तना",
+     "ncert_sections": "उपदेशों का प्रसार, चार्वाक दर्शन और समान संकल्पनाएँ",
+     "concepts": [
+      {
+       "concept_tag": "bhikshu-vihar-aur-gufaen",
+       "learning_objective": "विद्यार्थी भिक्षुओं द्वारा उपदेशों के प्रसार तथा विहारों और गुफाओं से मिले प्रमाणों का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "charvak-aur-vividhta",
+       "learning_objective": "विद्यार्थी चार्वाक दर्शन सहित विचारों की विविधता और 'दर्शन' या 'मत' शब्दों के प्रयोग का कारण समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "saman-sankalpanaen",
+       "learning_objective": "विद्यार्थी वैदिक, बौद्ध और जैन दर्शनों में समान संकल्पनाओं की पहचान कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH07-T8",
+     "topic_number": 8,
+     "title": "लोक और जनजातीय जड़ें",
+     "ncert_sections": "लोक और जनजातीय जड़ें; जनजाति क्या है?",
+     "concepts": [
+      {
+       "concept_tag": "janjati-aur-maukhik-parampara",
+       "learning_objective": "विद्यार्थी जनजाति की परिभाषा दे सकेंगे और लोक तथा जनजातीय परंपराओं को मौखिक परंपराओं के रूप में समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "prakriti-pavitra-aur-parmatma",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि जनजातीय विश्वास प्रकृति को पवित्र मानते हुए उच्चतर देवत्व की संकल्पना भी रखते हैं।"
+      },
+      {
+       "concept_tag": "janjati-hindu-adan-pradan",
+       "learning_objective": "विद्यार्थी जनजातीय परंपराओं और हिंदू दर्शन के बीच दोतरफा आदान-प्रदान का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "विविधता में एकता या ‘एक में अनेक’",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH08-T1",
+     "topic_number": 1,
+     "title": "समृद्ध विविधता और ‘विविधता में एकता’ का अर्थ",
+     "ncert_sections": "आरंभ, समृद्ध विविधता",
+     "concepts": [
+      {
+       "concept_tag": "bharat-ki-samriddh-vividhata",
+       "learning_objective": "विद्यार्थी भारत की भाषाओं, लोगों, भोजन और परिधानों की समृद्ध विविधता का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "bharat-ke-log-pariyojana",
+       "learning_objective": "विद्यार्थी ‘भारत के लोग’ परियोजना के प्रमुख निष्कर्षों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "vividhata-mein-ekta-arth",
+       "learning_objective": "विद्यार्थी ‘विविधता में एकता’ या ‘एक में अनेक’ के अर्थ की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH08-T2",
+     "topic_number": 2,
+     "title": "सभी के लिए भोजन",
+     "ncert_sections": "सभी के लिए भोजन",
+     "concepts": [
+      {
+       "concept_tag": "mukhya-anaj",
+       "learning_objective": "विद्यार्थी पूरे भारत में उपयोग होने वाले मुख्य अनाजों और दालों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "saman-samagri-anek-vyanjan",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि एक जैसी सामग्री से अनगिनत व्यंजन कैसे बनते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH08-T3",
+     "topic_number": 3,
+     "title": "वस्त्र एवं परिधान: साड़ी",
+     "ncert_sections": "वस्त्र एवं परिधान",
+     "concepts": [
+      {
+       "concept_tag": "sadi-mein-ekta-vividhata",
+       "learning_objective": "विद्यार्थी साड़ी के उदाहरण से विविधता में एकता की व्याख्या कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sadi-ka-itihas",
+       "learning_objective": "विद्यार्थी साड़ी के लंबे इतिहास और उसके विविध उपयोगों का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "chheent-aur-vastra-vyapar",
+       "learning_objective": "विद्यार्थी भारतीय सूती वस्त्र ‘छींट’ के यूरोप पर प्रभाव को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH08-T4",
+     "topic_number": 4,
+     "title": "त्योहारों की विविधता",
+     "ncert_sections": "त्योहारों की विविधता",
+     "concepts": [
+      {
+       "concept_tag": "makar-sankranti-fasal-parv",
+       "learning_objective": "विद्यार्थी मकर संक्रांति के समय और फसल कटाई से उसके संबंध को बता सकेंगे।"
+      },
+      {
+       "concept_tag": "ek-parv-anek-naam",
+       "learning_objective": "विद्यार्थी एक ही पर्व के विभिन्न क्षेत्रीय नामों से विविधता में एकता को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH08-T5",
+     "topic_number": 5,
+     "title": "महाकाव्य का विस्तार",
+     "ncert_sections": "महाकाव्य का विस्तार",
+     "concepts": [
+      {
+       "concept_tag": "panchatantra-ka-prasar",
+       "learning_objective": "विद्यार्थी पंचतंत्र के स्वरूप और उसके व्यापक प्रसार का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "ramayan-mahabharat-katha",
+       "learning_objective": "विद्यार्थी रामायण और महाभारत की मुख्य कथाओं को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "janjatiya-lok-sanskaran",
+       "learning_objective": "विद्यार्थी महाकाव्यों के लोक और जनजातीय संस्करणों के महत्व का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "परिवार और समुदाय",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH09-T1",
+     "topic_number": 1,
+     "title": "परिवार: समाज की मूलभूत इकाई और उसके प्रकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "parivar-mool-ikai",
+       "learning_objective": "विद्यार्थी परिवार को समाज की मूलभूत और सबसे प्राचीन इकाई के रूप में पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "sanyukt-ekal-parivar",
+       "learning_objective": "विद्यार्थी संयुक्त परिवार और एकल परिवार में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "rishton-ke-shabd",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि भारतीय भाषाओं में पारिवारिक संबंधों के लिए अनेक अलग शब्द होते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH09-T2",
+     "topic_number": 2,
+     "title": "परिवार में भूमिकाएँ एवं दायित्व",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sahyog-antarnirbharta",
+       "learning_objective": "विद्यार्थी परिवार के संबंधों में प्रेम, सहयोग और अंतर्निर्भरता का महत्व समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "parivarik-mulya-tyag",
+       "learning_objective": "विद्यार्थी शालिनी की कहानी से परिवार में साझा करने और त्याग जैसे मूल्यों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "gharelu-bhumikaen",
+       "learning_objective": "विद्यार्थी तेनजिंग के परिवार के उदाहरण से घरेलू भूमिकाओं के बँटवारे का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH09-T3",
+     "topic_number": 3,
+     "title": "समुदाय: अर्थ और साझा संसाधन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samudaay-arth",
+       "learning_objective": "विद्यार्थी समुदाय का अर्थ और उसके सदस्यों के एक साथ आने के अवसर बता सकेंगे।"
+      },
+      {
+       "concept_tag": "sajha-sansadhan-niyam",
+       "learning_objective": "विद्यार्थी साझा संसाधनों के उपयोग से जुड़े अलिखित नियमों और कर्तव्यों का महत्व समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH09-T4",
+     "topic_number": 4,
+     "title": "समुदाय के हित में सामूहिक प्रयास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "halma-parampara",
+       "learning_objective": "विद्यार्थी भील समुदाय की हलमा परंपरा और उसके उद्देश्य का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "nihswarth-seva",
+       "learning_objective": "विद्यार्थी चेन्नई की बाढ़ और कमल परमार के उदाहरणों से निःस्वार्थ सामुदायिक सेवा का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH09-T5",
+     "topic_number": 5,
+     "title": "समुदायों के नए रूप और परस्पर निर्भरता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nagariya-samudaay",
+       "learning_objective": "विद्यार्थी आवासीय कल्याण समितियों जैसे नए नगरीय समुदायों की कार्यप्रणाली समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "samudaayon-ki-antarnirbharta",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि समुदाय एक-दूसरे पर निर्भर होते हैं।"
+      },
+      {
+       "concept_tag": "samudaay-lachili-sankalpana",
+       "learning_objective": "विद्यार्थी समुदाय को एक लचीली संकल्पना के रूप में पहचानकर उसके विविध उदाहरण दे सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "आधारभूत लोकतंत्र — भाग 1: शासन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH10-T1",
+     "topic_number": 1,
+     "title": "परिचय: नियम, शासन और सरकार",
+     "ncert_sections": "परिचय",
+     "concepts": [
+      {
+       "concept_tag": "niyamon-ki-aavashyakta",
+       "learning_objective": "समाज में व्यवस्था और सद्भाव बनाए रखने के लिए नियमों की आवश्यकता समझना।"
+      },
+      {
+       "concept_tag": "shasan-aur-sarkar",
+       "learning_objective": "शासन, सरकार और कानून के अर्थ तथा उनके आपसी संबंध को पहचानना।"
+      },
+      {
+       "concept_tag": "niyamon-mein-badlav",
+       "learning_objective": "समझना कि नियम और कानून बदले जा सकते हैं और नागरिक उनमें अपनी बात रख सकते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH10-T2",
+     "topic_number": 2,
+     "title": "सरकार के तीन अंग और शक्तियों का पृथक्करण",
+     "ncert_sections": "सरकार के तीन अंग",
+     "concepts": [
+      {
+       "concept_tag": "teen-ang-vidhayika-karyapalika-nyayapalika",
+       "learning_objective": "विधायिका, कार्यपालिका और न्यायपालिका के अलग-अलग कार्य पहचानना।"
+      },
+      {
+       "concept_tag": "shaktiyon-ka-prithakkaran",
+       "learning_objective": "शक्तियों के पृथक्करण और नियंत्रण-संतुलन के उद्देश्य को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH10-T3",
+     "topic_number": 3,
+     "title": "सरकार के तीन स्तर",
+     "ncert_sections": "सरकार के तीन स्तर; चित्र 10.4, 10.5",
+     "concepts": [
+      {
+       "concept_tag": "sarkar-ke-teen-star",
+       "learning_objective": "स्थानीय, राज्य और केंद्र स्तर की सरकारों की भूमिका को परिस्थिति के अनुसार पहचानना।"
+      },
+      {
+       "concept_tag": "rashtriya-aur-rajya-star-ke-karya",
+       "learning_objective": "राष्ट्रीय और राज्य स्तर पर सरकार के अंगों और उनके प्रमुख कार्यों को पहचानना।"
+      },
+      {
+       "concept_tag": "aupcharik-pramukh-aur-kalam",
+       "learning_objective": "राष्ट्रपति के औपचारिक प्रमुख होने और डॉ. कलाम के योगदान का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH10-T4",
+     "topic_number": 4,
+     "title": "लोकतंत्र और जन-प्रतिनिधि",
+     "ncert_sections": "लोकतंत्र",
+     "concepts": [
+      {
+       "concept_tag": "loktantra-ka-arth",
+       "learning_objective": "लोकतंत्र शब्द की उत्पत्ति और उसके शाब्दिक अर्थ को समझना।"
+      },
+      {
+       "concept_tag": "pratinidhi-loktantra",
+       "learning_objective": "समझाना कि बड़े समाज में जनता चुने हुए प्रतिनिधियों के माध्यम से शासन क्यों करती है।"
+      },
+      {
+       "concept_tag": "matdan-ka-adhikar",
+       "learning_objective": "भारत में मतदान के अधिकार की आयु और सबसे बड़े लोकतंत्र के तथ्य को जानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH10-T5",
+     "topic_number": 5,
+     "title": "प्रत्यक्ष लोकतंत्र और आधारभूत लोकतंत्र",
+     "ncert_sections": "लोकतंत्र; आगे बढ़ने से पहले",
+     "concepts": [
+      {
+       "concept_tag": "pratyaksh-loktantra-aur-matdan",
+       "learning_objective": "मतदान द्वारा निर्णय लेने वाले प्रत्यक्ष लोकतंत्र को उदाहरण से पहचानना।"
+      },
+      {
+       "concept_tag": "aadharbhut-loktantra",
+       "learning_objective": "आधारभूत लोकतंत्र में सामान्य नागरिकों की भागीदारी के महत्व को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "आधारभूत लोकतंत्र — भाग 2: ग्रामीण क्षेत्रों में स्थानीय सरकार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH11-T1",
+     "topic_number": 1,
+     "title": "स्थानीय सरकार की आवश्यकता: गाँवों का भारत",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gaon-pradhan-bharat",
+       "learning_objective": "भारत में गाँवों की संख्या और ग्रामीण जनसंख्या के आधार पर ग्रामीण शासन के महत्व को समझना।"
+      },
+      {
+       "concept_tag": "sthaniya-samasyaen",
+       "learning_objective": "गाँव की दैनिक समस्याओं के समाधान के लिए स्थानीय सरकार की आवश्यकता को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH11-T2",
+     "topic_number": 2,
+     "title": "पंचायती राज व्यवस्था और उसके तीन स्तर",
+     "ncert_sections": "चित्र 11.1",
+     "concepts": [
+      {
+       "concept_tag": "panchayati-raj-swashasan",
+       "learning_objective": "पंचायती राज को स्व-शासन के एक रूप के रूप में समझना और उसके दायित्वों को पहचानना।"
+      },
+      {
+       "concept_tag": "tristariya-vyavastha",
+       "learning_objective": "ग्राम, खंड और जिला स्तर वाली त्रिस्तरीय व्यवस्था का क्रम और नाम बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH11-T3",
+     "topic_number": 3,
+     "title": "ग्राम सभा, ग्राम पंचायत और सरपंच",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gram-sabha-gram-panchayat",
+       "learning_objective": "ग्राम सभा और ग्राम पंचायत के बीच का अंतर और उनका संबंध समझना।"
+      },
+      {
+       "concept_tag": "sarpanch-netritva",
+       "learning_objective": "आदर्श सरपंचों के उदाहरणों से गाँव के विकास में नेतृत्व की भूमिका को समझना।"
+      },
+      {
+       "concept_tag": "panchayat-sachiv-patwari",
+       "learning_objective": "पंचायत सचिव और पटवारी के प्रशासनिक कार्यों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH11-T4",
+     "topic_number": 4,
+     "title": "बाल हितैषी पंचायत और बाल संसद",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bal-hitaishi-panchayat",
+       "learning_objective": "बाल हितैषी पंचायत की पहल से बच्चों की भलाई और भागीदारी के महत्व को समझना।"
+      },
+      {
+       "concept_tag": "bal-sansad",
+       "learning_objective": "राजस्थान की बाल संसद के उदाहरण से बच्चों द्वारा लोकतंत्र सीखने की प्रक्रिया को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH11-T5",
+     "topic_number": 5,
+     "title": "पंचायत समिति, जिला परिषद और सबकी भागीदारी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "panchayat-samiti-zila-parishad",
+       "learning_objective": "पंचायत समिति और जिला परिषद की भूमिका तथा विकास योजनाओं में उनके योगदान को समझना।"
+      },
+      {
+       "concept_tag": "aarakshan-vanchit-varg",
+       "learning_objective": "वंचित वर्गों और महिलाओं के लिए पंचायतों में बने विशेष प्रावधानों का उद्देश्य समझना।"
+      },
+      {
+       "concept_tag": "rajyon-mein-vividhata",
+       "learning_objective": "विभिन्न राज्यों में पंचायती राज संस्थाओं की विविधता का कारण बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH11-T6",
+     "topic_number": 6,
+     "title": "कौटिल्य का अर्थशास्त्र और प्राचीन प्रशासनिक ढाँचा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kautilya-arthashastra",
+       "learning_objective": "कौटिल्य और उनके ग्रंथ 'अर्थशास्त्र' के विषयों को जानना तथा उसकी तुलना आज की व्यवस्था से करना।"
+      },
+      {
+       "concept_tag": "prachin-prashasnik-dhancha",
+       "learning_objective": "कौटिल्य द्वारा सुझाए गए गाँवों के समूहों पर आधारित प्रशासनिक केंद्रों को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "आधारभूत लोकतंत्र — भाग 3: नगरीय क्षेत्रों में स्थानीय सरकार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH12-T1",
+     "topic_number": 1,
+     "title": "परिचय: नगरीय शासन और शासन का पिरामिड",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nagariya-shasan-ki-jatilta",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि नगरीय शासन ग्रामीण शासन की तुलना में अधिक जटिल और विविध क्यों होता है।"
+      },
+      {
+       "concept_tag": "shasan-ka-piramid",
+       "learning_objective": "विद्यार्थी शासन के पिरामिड में स्थानीय, राज्य और संघ स्तर तथा ग्रामीण और नगरीय पक्ष को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "sahbhagi-loktantra",
+       "learning_objective": "विद्यार्थी सहभागी लोकतंत्र में हर स्तर पर नागरिकों की सक्रिय भागीदारी का अर्थ समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH12-T2",
+     "topic_number": 2,
+     "title": "नगरीय स्थानीय निकाय और वार्ड",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nagariya-sthaniya-nikay",
+       "learning_objective": "विद्यार्थी नगरीय स्थानीय निकाय का अर्थ और उसकी स्वायत्तता बता सकेंगे।"
+      },
+      {
+       "concept_tag": "ward-aur-ward-samiti",
+       "learning_objective": "विद्यार्थी वार्ड और वार्ड समितियों की भूमिका का वर्णन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH12-T3",
+     "topic_number": 3,
+     "title": "नगरीय निकायों के कार्य और नागरिकों के कर्तव्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nagariya-nikay-ke-karya",
+       "learning_objective": "विद्यार्थी नगरीय स्थानीय निकायों के प्रमुख कार्यों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "nagrikon-ke-kartavya",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि नागरिकों के कर्तव्य-पालन से नगरीय निकाय कुशलता से कैसे कार्य करते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH12-T4",
+     "topic_number": 4,
+     "title": "मद्रास कॉरपोरेशन और इंदौर नगर निगम",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "madras-corporation-ka-itihas",
+       "learning_objective": "विद्यार्थी भारत के सबसे प्राचीन नगर निगम मद्रास कॉरपोरेशन के इतिहास के मुख्य तथ्य बता सकेंगे।"
+      },
+      {
+       "concept_tag": "indore-nagar-nigam-ki-sevayen",
+       "learning_objective": "विद्यार्थी इंदौर नगर निगम की सेवाओं और संसाधन जुटाने के साधनों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH12-T5",
+     "topic_number": 5,
+     "title": "नगरीय निकायों के प्रकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jansankhya-aur-nikay-ka-prakar",
+       "learning_objective": "विद्यार्थी जनसंख्या के आधार पर नगर निगम, नगरपालिका और नगर पंचायत में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "nikayon-ke-anya-naam",
+       "learning_objective": "विद्यार्थी नगर निगम और नगरपालिका के अन्य प्रचलित नाम बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH12-T6",
+     "topic_number": 6,
+     "title": "गाँव और नगर: समीर और अनीता का संवाद",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gaon-aur-nagar-ki-tulna",
+       "learning_objective": "विद्यार्थी गाँव और नगर के जीवन तथा स्थानीय शासन में समानताओं और अंतरों की तुलना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "samudayik-bhavna-aur-bhagidari",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि गाँव और नगर दोनों में सामुदायिक भावना और भागीदारी लोकतंत्र को मज़बूत करती है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "कार्य का महत्व",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH13-T1",
+     "topic_number": 1,
+     "title": "लोगों द्वारा किए जाने वाले विभिन्न कार्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vividh-karya",
+       "learning_objective": "विद्यार्थी अनु और कबीर की कहानी के पात्रों द्वारा किए जाने वाले विभिन्न कार्यों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "swaichchhik-karya",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि लोग नौकरी के साथ-साथ स्वेच्छा से निःशुल्क कार्य भी करते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH13-T2",
+     "topic_number": 2,
+     "title": "आर्थिक और गैर-आर्थिक गतिविधियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "arthik-gatividhi",
+       "learning_objective": "विद्यार्थी आर्थिक गतिविधियों का अर्थ बताकर उनके उदाहरण पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "gair-arthik-gatividhi",
+       "learning_objective": "विद्यार्थी गैर-आर्थिक गतिविधियों को आर्थिक गतिविधियों से अलग कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH13-T3",
+     "topic_number": 3,
+     "title": "आर्थिक गतिविधियों के प्रकार और पारिश्रमिक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vetan-aur-mazdoori",
+       "learning_objective": "विद्यार्थी वेतन और मजदूरी में अंतर स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "shulk",
+       "learning_objective": "विद्यार्थी शुल्क का अर्थ समझकर उसके उदाहरण पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "vastu-ke-roop-mein-bhugtan",
+       "learning_objective": "विद्यार्थी वस्तु के रूप में भुगतान को उदाहरण सहित समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH13-T4",
+     "topic_number": 4,
+     "title": "मूल्य संवर्धन और बाजार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mulya-samvardhan",
+       "learning_objective": "विद्यार्थी मूल्य संवर्धन का अर्थ समझकर उसकी गणना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "bazar",
+       "learning_objective": "विद्यार्थी बाजार को वस्तुओं और सेवाओं के लेन-देन के स्थान के रूप में पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH13-T5",
+     "topic_number": 5,
+     "title": "गैर-आर्थिक गतिविधियों का महत्व: सेवा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "seva-karya",
+       "learning_objective": "विद्यार्थी सेवा कार्यों की विशेषताएँ और उदाहरण बता सकेंगे।"
+      },
+      {
+       "concept_tag": "gair-arthik-mahatva",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि गैर-आर्थिक गतिविधियाँ सामाजिक और निजी कल्याण में कैसे योगदान देती हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH13-T6",
+     "topic_number": 6,
+     "title": "सामुदायिक सहभागिता का महत्व",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samudayik-sahbhagita",
+       "learning_objective": "विद्यार्थी सामुदायिक सहभागिता के उदाहरण पहचानकर उसका महत्व समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "swachh-bharat-abhiyan",
+       "learning_objective": "विद्यार्थी स्वच्छ भारत अभियान के सामूहिक स्वरूप को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "van-mahotsav",
+       "learning_objective": "विद्यार्थी वन महोत्सव के उद्देश्य को बता सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHES1-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "हमारे आस-पास की आर्थिक गतिविधियाँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhes114.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHES1-CH14-T1",
+     "topic_number": 1,
+     "title": "आर्थिक गतिविधियाँ और आर्थिक क्षेत्रकों में उनका वर्गीकरण",
+     "ncert_sections": "परिचय; आर्थिक क्षेत्रकों में आर्थिक गतिविधियों का वर्गीकरण",
+     "concepts": [
+      {
+       "concept_tag": "arthik-gatividhi-maudrik-mulya",
+       "learning_objective": "मौद्रिक मूल्य के आधार पर आर्थिक और गैर-आर्थिक गतिविधियों में अंतर पहचानना।"
+      },
+      {
+       "concept_tag": "arthik-kshetrak-vargikaran",
+       "learning_objective": "समान विशेषताओं के आधार पर आर्थिक गतिविधियों को तीन मुख्य आर्थिक क्षेत्रकों में बाँटने का आधार समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH14-T2",
+     "topic_number": 2,
+     "title": "प्राथमिक गतिविधियाँ",
+     "ncert_sections": "(क) प्राथमिक गतिविधियाँ",
+     "concepts": [
+      {
+       "concept_tag": "prathamik-kshetrak",
+       "learning_objective": "प्राथमिक क्षेत्रक को प्रकृति पर प्रत्यक्ष निर्भरता वाली गतिविधियों के समूह के रूप में परिभाषित करना।"
+      },
+      {
+       "concept_tag": "prakritik-sansadhan-upyog",
+       "learning_objective": "कृषि, खनन, वानिकी, मत्स्य पालन जैसी गतिविधियों में प्रयुक्त प्राकृतिक संसाधनों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH14-T3",
+     "topic_number": 3,
+     "title": "द्वितीयक गतिविधियाँ",
+     "ncert_sections": "(ख) द्वितीयक गतिविधियाँ",
+     "concepts": [
+      {
+       "concept_tag": "dvitiyak-kshetrak-rupantaran",
+       "learning_objective": "प्राथमिक क्षेत्रक के कच्चे माल को नए उत्पादों में रूपांतरित करने वाली गतिविधियों को पहचानना।"
+      },
+      {
+       "concept_tag": "nirman-aur-urja-aapurti",
+       "learning_objective": "भवन-सड़क निर्माण तथा बिजली, पानी, गैस जैसी आपूर्ति को द्वितीयक क्षेत्रक के अंग के रूप में समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH14-T4",
+     "topic_number": 4,
+     "title": "तृतीयक गतिविधियाँ (सेवा क्षेत्रक)",
+     "ncert_sections": "(ग) तृतीयक गतिविधियाँ",
+     "concepts": [
+      {
+       "concept_tag": "tritiyak-kshetrak-sahayata",
+       "learning_objective": "यह समझाना कि तृतीयक गतिविधियाँ प्राथमिक और द्वितीयक क्षेत्रकों को सेवाओं द्वारा सहायता देती हैं।"
+      },
+      {
+       "concept_tag": "seva-kshetrak-udaharan",
+       "learning_objective": "परिवहन, बैंक, गोदाम, मरम्मत, संचार जैसी सेवाओं को तृतीयक क्षेत्रक के उदाहरणों के रूप में वर्गीकृत करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH14-T5",
+     "topic_number": 5,
+     "title": "क्षेत्रकों में परस्पर निर्भरता: डेयरी सहकारिता",
+     "ncert_sections": "क्षेत्रकों में परस्पर निर्भरता; डेयरी सहकारिता — खेत से थाली तक",
+     "concepts": [
+      {
+       "concept_tag": "sahkari-sangathan",
+       "learning_objective": "सहकारी संगठन की विशेषताएँ और अमूल की स्थापना की कहानी का वर्णन करना।"
+      },
+      {
+       "concept_tag": "bichauliye-ki-bhumika",
+       "learning_objective": "बिचौलियों पर निर्भरता से किसानों को होने वाली कठिनाइयों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "amul-mein-teeno-kshetrak",
+       "learning_objective": "अमूल के उदाहरण में तीनों क्षेत्रकों की गतिविधियों और उनकी परस्पर निर्भरता को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHES1-CH14-T6",
+     "topic_number": 6,
+     "title": "पाठ्यपुस्तक कैसे बनती है और कागज का पुनर्चक्रण",
+     "ncert_sections": "चित्र 14.1; पुनर्चक्रण",
+     "concepts": [
+      {
+       "concept_tag": "pathyapustak-nirman-shrinkhala",
+       "learning_objective": "लुगदी से पाठ्यपुस्तक बनने तक की प्रक्रिया के चरणों को तीनों क्षेत्रकों में वर्गीकृत करना।"
+      },
+      {
+       "concept_tag": "kagaz-punarchakran",
+       "learning_objective": "कागज के पुनर्चक्रण से पेड़, लैंडफिल स्थान, ऊर्जा और पानी की बचत का आकलन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

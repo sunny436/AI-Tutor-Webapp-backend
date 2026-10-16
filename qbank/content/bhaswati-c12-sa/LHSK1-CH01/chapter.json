@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LHSK1-CH01",
+ "title": "अनुशासनम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHSK1-CH01-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः – उपनिषदः तैत्तिरीयोपनिषत् च",
+   "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "upanishad-svarupam",
+     "learning_objective": "उपनिषद्शब्दस्य अर्थं, उपनिषदां महत्त्वं प्रमुखोपनिषदां च नामानि जानीयात्।"
+    },
+    {
+     "concept_tag": "taittiriya-shikshavalli",
+     "learning_objective": "पाठः तैत्तिरीयोपनिषदः शिक्षावल्ल्याः सङ्कलितः इति तस्याः वेदसम्बन्धं वल्लीविभागं च जानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH01-T2",
+   "topic_number": 2,
+   "title": "आचार्यस्य मूलोपदेशाः – सत्यं वद, धर्मं चर",
+   "ncert_sections": "मूलपाठः (वेदमनूच्य ... मा व्यवच्छेत्सीः)",
+   "concepts": [
+    {
+     "concept_tag": "satyam-dharmah-svadhyayah",
+     "learning_objective": "सत्यवचनस्य, धर्माचरणस्य, स्वाध्याये अप्रमादस्य च उपदेशं व्याख्यातुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "prajatantu-raksha",
+     "learning_objective": "गुरुदक्षिणां दत्त्वा प्रजातन्तोः अविच्छेदस्य उपदेशस्य भावं स्पष्टीकुर्यात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH01-T3",
+   "topic_number": 3,
+   "title": "प्रमादवर्जनम् – न प्रमदितव्यम्",
+   "ncert_sections": "मूलपाठः (सत्यान्न प्रमदितव्यम् ... देवपितृकार्याभ्यां न प्रमदितव्यम्)",
+   "concepts": [
+    {
+     "concept_tag": "pramada-varjanam",
+     "learning_objective": "'न प्रमदितव्यम्' इत्यस्य अर्थं (आलस्यस्य असावधानतायाः च त्यागः) अवगच्छेत्।"
+    },
+    {
+     "concept_tag": "kartavya-kshetrani",
+     "learning_objective": "कुशलं, भूतिः, स्वाध्यायप्रवचनं, देवपितृकार्यं च – एतेषु कर्तव्यक्षेत्रेषु अप्रमादस्य महत्त्वं जीवने प्रयुञ्जीत।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH01-T4",
+   "topic_number": 4,
+   "title": "देवभावः अनवद्यानि कर्माणि च",
+   "ncert_sections": "मूलपाठः (मातृदेवो भव ... त्वयोपास्यानि नो इतराणि)",
+   "concepts": [
+    {
+     "concept_tag": "devo-bhava",
+     "learning_objective": "मातरं, पितरम्, आचार्यम्, अतिथिं च देववत् पूजयेत् इति उपदेशं जानीयात्।"
+    },
+    {
+     "concept_tag": "anavadya-sucharita",
+     "learning_objective": "अनवद्यानां कर्मणां सुचरितानां च एव अनुसरणं करणीयम् इति विवेकपूर्णं उपदेशं विश्लेषयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH01-T5",
+   "topic_number": 5,
+   "title": "विचिकित्सायां मार्गदर्शनम् उपसंहारश्च",
+   "ncert_sections": "मूलपाठः (अथ यदि ते कर्मविचिकित्सा ... एवं चैतदुपास्यम्)",
+   "concepts": [
+    {
+     "concept_tag": "vichikitsa-margadarshanam",
+     "learning_objective": "कर्मविषये आचरणविषये वा सन्देहे विचारशीलानां ज्ञानिनाम् आचरणम् अनुसरणीयम् इति अवगच्छेत्।"
+    },
+    {
+     "concept_tag": "anushasana-upasamhara",
+     "learning_objective": "'एष आदेशः, एष उपदेशः, एतदनुशासनम्' इति उपसंहारस्य अभिप्रायं जानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH01-T6",
+   "topic_number": 6,
+   "title": "भाषिककार्यम् – शब्दार्थाः सन्धिः प्रकृतिप्रत्ययौ च",
+   "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, सन्धिविच्छेदः, अभ्यासः",
+   "concepts": [
+    {
+     "concept_tag": "sandhi-vichchhedah",
+     "learning_objective": "पाठगतानां पदानां सन्धिविच्छेदं कर्तुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "prakriti-pratyayah",
+     "learning_objective": "पाठगतेषु पदेषु प्रकृतिप्रत्ययविभागं लकारं च अभिजानीयात्।"
+    },
+    {
+     "concept_tag": "paryaya-vilomah",
+     "learning_objective": "पाठगतानां पदानां समानार्थकानि विपरीतार्थकानि च पदानि चिनुयात्।"
+    }
+   ]
+  }
+ ]
+}

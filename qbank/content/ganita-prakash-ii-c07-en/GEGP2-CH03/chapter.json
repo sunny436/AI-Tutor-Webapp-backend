@@ -1,0 +1,120 @@
+{
+ "chapter_id": "GEGP2-CH03",
+ "title": "Finding Common Ground",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP2-CH03-T1",
+   "topic_number": 1,
+   "title": "The greatest of all: common factors and HCF",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "common-factors",
+     "learning_objective": "Find the common factors of two numbers by listing the factors of each."
+    },
+    {
+     "concept_tag": "hcf-meaning",
+     "learning_objective": "Explain the Highest Common Factor (GCD) and use it to solve tiling, packing and jump problems."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH03-T2",
+   "topic_number": 2,
+   "title": "Primes and prime factorisation",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "prime-factorisation",
+     "learning_objective": "Write a number as a product of primes and recognise that the prime factors are unique apart from order."
+    },
+    {
+     "concept_tag": "division-method",
+     "learning_objective": "Use the division method to find the prime factorisation of a number."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH03-T3",
+   "topic_number": 3,
+   "title": "Factors from prime factorisation; conjectures",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "factors-from-prime-factorisation",
+     "learning_objective": "Construct the factors of a number from subparts of its prime factorisation."
+    },
+    {
+     "concept_tag": "conjecture-and-counterexample",
+     "learning_objective": "Recognise a conjecture and disprove a false one with a counterexample."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH03-T4",
+   "topic_number": 4,
+   "title": "Finding the HCF using prime factorisation",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "common-subparts-hcf",
+     "learning_objective": "Find the common factors and HCF of numbers as common subparts of their prime factorisations."
+    },
+    {
+     "concept_tag": "minimum-occurrences-rule",
+     "learning_objective": "Find the HCF by taking each common prime the minimum number of times it occurs."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH03-T5",
+   "topic_number": 5,
+   "title": "Least, but not last: common multiples and LCM",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "common-multiples-lcm",
+     "learning_objective": "Find the LCM as the lowest common multiple and apply it to repeating-event problems."
+    },
+    {
+     "concept_tag": "lcm-by-prime-factorisation",
+     "learning_objective": "Find the LCM by taking each prime the maximum number of times it occurs in the factorisations."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH03-T6",
+   "topic_number": 6,
+   "title": "Patterns and properties of HCF and LCM",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "hcf-lcm-generalisations",
+     "learning_objective": "Make and justify general statements about the HCF and LCM of special pairs of numbers."
+    },
+    {
+     "concept_tag": "hcf-of-multiples",
+     "learning_objective": "Find the HCF when numbers are doubled or are multiples of the same number."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH03-T7",
+   "topic_number": 7,
+   "title": "Efficient procedures and the HCF-LCM product property",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "common-division-procedure",
+     "learning_objective": "Use the joint division procedure to find both the HCF and the LCM of two numbers."
+    },
+    {
+     "concept_tag": "hcf-lcm-product",
+     "learning_objective": "Use the relation HCF x LCM = product of the two numbers."
+    }
+   ]
+  }
+ ]
+}

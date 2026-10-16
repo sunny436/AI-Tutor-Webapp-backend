@@ -1,0 +1,136 @@
+{
+  "chapter_id": "KHBO1-CH17",
+  "title": "गमन एवं संचलन",
+  "title_verified": true,
+  "source": "english_edition",
+  "topics": [
+    {
+      "topic_id": "KHBO1-CH17-T1",
+      "topic_number": 1,
+      "title": "गति के प्रकार",
+      "ncert_sections": "17.1",
+      "concepts": [
+        {
+          "concept_tag": "amibiy-gati",
+          "learning_objective": "अमीबीय गति करने वाली कोशिकाओं और उसमें कूटपादों व सूक्ष्मतंतुओं की भूमिका को पहचानना।"
+        },
+        {
+          "concept_tag": "pakshmabhi-gati",
+          "learning_objective": "शरीर के नलिकाकार अंगों में पक्ष्माभी गति के कार्यों को समझाना।"
+        },
+        {
+          "concept_tag": "gaman-evam-sanchalan",
+          "learning_objective": "संचलन और गमन में अंतर स्पष्ट करना तथा गमन के लिए तंत्रों के समन्वय को समझना।"
+        }
+      ]
+    },
+    {
+      "topic_id": "KHBO1-CH17-T2",
+      "topic_number": 2,
+      "title": "पेशियों के प्रकार और गुण",
+      "ncert_sections": "17.2",
+      "concepts": [
+        {
+          "concept_tag": "peshi-ke-prakar",
+          "learning_objective": "स्थिति, रूप और नियंत्रण के आधार पर कंकाली, अंतरंग और हृद पेशियों में भेद करना।"
+        },
+        {
+          "concept_tag": "peshi-ke-gun",
+          "learning_objective": "पेशी ऊतक की उत्पत्ति और उसके विशेष गुणों को बताना।"
+        }
+      ]
+    },
+    {
+      "topic_id": "KHBO1-CH17-T3",
+      "topic_number": 3,
+      "title": "पेशी तंतु और संकुचनशील प्रोटीनों की संरचना",
+      "ncert_sections": "17.2, 17.2.1",
+      "concepts": [
+        {
+          "concept_tag": "peshi-tantu-sanrachna",
+          "learning_objective": "पेशी पूल, पेशी तंतु और सार्कोमियर की संरचना तथा पट्टियों की व्याख्या करना।"
+        },
+        {
+          "concept_tag": "actin-myosin-sanrachna",
+          "learning_objective": "एक्टिन और मायोसिन तंतुओं की आण्विक संरचना और उनके घटकों को पहचानना।"
+        }
+      ]
+    },
+    {
+      "topic_id": "KHBO1-CH17-T4",
+      "topic_number": 4,
+      "title": "पेशी संकुचन की क्रियाविधि",
+      "ncert_sections": "17.2.2",
+      "concepts": [
+        {
+          "concept_tag": "sarpi-tantu-siddhant",
+          "learning_objective": "सर्पी तंतु सिद्धांत के अनुसार संकुचन के चरणों और पट्टियों में परिवर्तन को समझाना।"
+        },
+        {
+          "concept_tag": "lal-shwet-peshi-tantu",
+          "learning_objective": "लाल और श्वेत पेशी तंतुओं तथा पेशी थकान के कारण की तुलना करना।"
+        }
+      ]
+    },
+    {
+      "topic_id": "KHBO1-CH17-T5",
+      "topic_number": 5,
+      "title": "अक्षीय कंकाल",
+      "ncert_sections": "17.3",
+      "concepts": [
+        {
+          "concept_tag": "akshiya-kankal",
+          "learning_objective": "खोपड़ी, कशेरुक दंड, उरोस्थि और पसलियों की अस्थियों की संख्या व व्यवस्था बताना।"
+        },
+        {
+          "concept_tag": "pasliyan",
+          "learning_objective": "वास्तविक, कूट और प्लावी पसलियों में भेद करना।"
+        }
+      ]
+    },
+    {
+      "topic_id": "KHBO1-CH17-T6",
+      "topic_number": 6,
+      "title": "उपांगीय कंकाल",
+      "ncert_sections": "17.3",
+      "concepts": [
+        {
+          "concept_tag": "upangiya-kankal",
+          "learning_objective": "अग्रपाद और पश्चपाद की अस्थियों की संख्या और नाम पहचानना।"
+        },
+        {
+          "concept_tag": "mekhalayen",
+          "learning_objective": "अंस मेखला और श्रोणि मेखला की संरचना तथा संधियों में उनकी भूमिका समझाना।"
+        }
+      ]
+    },
+    {
+      "topic_id": "KHBO1-CH17-T7",
+      "topic_number": 7,
+      "title": "संधियाँ",
+      "ncert_sections": "17.4",
+      "concepts": [
+        {
+          "concept_tag": "sandhi-prakar",
+          "learning_objective": "रेशीय, उपास्थियुक्त और साइनोवियल संधियों में गतिशीलता के आधार पर भेद करना।"
+        },
+        {
+          "concept_tag": "synovial-sandhi-udaharan",
+          "learning_objective": "साइनोवियल संधियों के प्रकारों को उनके उदाहरणों से मिलाना।"
+        }
+      ]
+    },
+    {
+      "topic_id": "KHBO1-CH17-T8",
+      "topic_number": 8,
+      "title": "पेशीय और कंकाल तंत्र के विकार",
+      "ncert_sections": "17.5",
+      "concepts": [
+        {
+          "concept_tag": "peshi-kankal-vikar",
+          "learning_objective": "पेशीय और कंकाल तंत्र के प्रमुख विकारों के कारण और लक्षण पहचानना।"
+        }
+      ]
+    }
+  ]
+}

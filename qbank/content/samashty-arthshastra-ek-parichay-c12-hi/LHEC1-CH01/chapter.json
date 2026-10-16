@@ -1,0 +1,96 @@
+{
+ "chapter_id": "LHEC1-CH01",
+ "title": "परिचय",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHEC1-CH01-T1",
+   "topic_number": 1,
+   "title": "समष्टि अर्थशास्त्र की विषय-वस्तु और प्रतिनिधि वस्तु",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "samashti-prashn",
+     "learning_objective": "समष्टि अर्थशास्त्र द्वारा पूरी अर्थव्यवस्था से जुड़े प्रश्नों (कीमत स्तर, रोज़गार, उत्पादन) के अध्ययन को समझना।"
+    },
+    {
+     "concept_tag": "pratinidhi-vastu",
+     "learning_objective": "समष्टि विश्लेषण में एक काल्पनिक प्रतिनिधि वस्तु के सरलीकरण और उसकी सीमाओं की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH01-T2",
+   "topic_number": 2,
+   "title": "व्यष्टि और समष्टि अर्थशास्त्र में अंतर",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vyashti-samashti-antar",
+     "learning_objective": "व्यष्टि और समष्टि अर्थशास्त्र के अध्ययन-क्षेत्र और निर्णयकर्ताओं में अंतर स्पष्ट करना।"
+    },
+    {
+     "concept_tag": "arthik-ikaiyan",
+     "learning_objective": "आर्थिक इकाइयों या आर्थिक एजेंटों की पहचान करना।"
+    },
+    {
+     "concept_tag": "samashti-nirnaykarta",
+     "learning_objective": "समष्टि निर्णयकर्ताओं (राज्य और वैधानिक संस्थाएँ) और उनके सार्वजनिक लक्ष्यों को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH01-T3",
+   "topic_number": 3,
+   "title": "समष्टि अर्थशास्त्र का उद्भव",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "keynes-aur-udbhav",
+     "learning_objective": "कीन्स की पुस्तक के प्रकाशन से समष्टि अर्थशास्त्र के अलग शाखा के रूप में उद्भव को जानना।"
+    },
+    {
+     "concept_tag": "mahamandi",
+     "learning_objective": "1929 की महामंदी के प्रभावों और उससे आर्थिक चिंतन में आए बदलाव का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "pratishthit-parampara",
+     "learning_objective": "प्रतिष्ठित (क्लासिकी) परंपरा की पूर्ण रोज़गार संबंधी मान्यता को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH01-T4",
+   "topic_number": 4,
+   "title": "पूँजीवादी अर्थव्यवस्था और फर्म",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "punjivadi-arthvyavastha-lakshan",
+     "learning_objective": "पूँजीवादी अर्थव्यवस्था की प्रमुख विशेषताओं की पहचान करना।"
+    },
+    {
+     "concept_tag": "utpadan-ke-karak-aay",
+     "learning_objective": "उत्पादन के कारकों और उनकी आय (लगान, ब्याज, मज़दूरी, लाभ) तथा निवेश व्यय को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH01-T5",
+   "topic_number": 5,
+   "title": "अर्थव्यवस्था के चार क्षेत्रक",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "parivar-aur-sarkar",
+     "learning_objective": "परिवार क्षेत्रक, फर्मों और सरकार की आर्थिक भूमिकाओं को समझना।"
+    },
+    {
+     "concept_tag": "bahya-kshetrak",
+     "learning_objective": "बाह्य क्षेत्रक के माध्यम से निर्यात, आयात और पूँजी प्रवाह की पहचान करना।"
+    }
+   ]
+  }
+ ]
+}

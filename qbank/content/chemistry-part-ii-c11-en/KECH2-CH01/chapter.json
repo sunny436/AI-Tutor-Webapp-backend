@@ -1,0 +1,104 @@
+{
+ "chapter_id": "KECH2-CH01",
+ "title": "Redox Reactions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECH2-CH01-T1",
+   "topic_number": 1,
+   "title": "Classical idea of redox reactions",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "oxidation-reduction-classical",
+     "learning_objective": "Define oxidation and reduction in terms of addition or removal of oxygen, hydrogen or electronegative elements."
+    },
+    {
+     "concept_tag": "oxidant-reductant-classical",
+     "learning_objective": "Identify the oxidising and reducing agent in a reaction using the classical definitions."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH2-CH01-T2",
+   "topic_number": 2,
+   "title": "Redox reactions in terms of electron transfer",
+   "ncert_sections": "7.2, 7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "electron-transfer-redox",
+     "learning_objective": "Explain oxidation as loss and reduction as gain of electrons using half reactions."
+    },
+    {
+     "concept_tag": "competitive-electron-transfer",
+     "learning_objective": "Use competitive electron transfer experiments to compare the tendency of metals to release electrons."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH2-CH01-T3",
+   "topic_number": 3,
+   "title": "Oxidation number",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "oxidation-number-rules",
+     "learning_objective": "Apply the rules to calculate the oxidation number of an element in a compound or ion."
+    },
+    {
+     "concept_tag": "redox-by-oxidation-number",
+     "learning_objective": "Identify oxidation, reduction, oxidant and reductant from changes in oxidation number."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH2-CH01-T4",
+   "topic_number": 4,
+   "title": "Types of redox reactions",
+   "ncert_sections": "7.3.1",
+   "concepts": [
+    {
+     "concept_tag": "combination-decomposition-displacement",
+     "learning_objective": "Classify redox reactions as combination, decomposition or displacement reactions."
+    },
+    {
+     "concept_tag": "disproportionation",
+     "learning_objective": "Recognise disproportionation reactions and the oxidation states that allow them."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH2-CH01-T5",
+   "topic_number": 5,
+   "title": "Balancing redox reactions, titrations and limitations",
+   "ncert_sections": "7.3.2, 7.3.3, 7.3.4",
+   "concepts": [
+    {
+     "concept_tag": "balancing-redox-equations",
+     "learning_objective": "Balance redox equations by the oxidation number and half-reaction methods."
+    },
+    {
+     "concept_tag": "redox-titration-indicators",
+     "learning_objective": "Explain how end points are detected in permanganate, dichromate and iodometric titrations."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH2-CH01-T6",
+   "topic_number": 6,
+   "title": "Redox reactions and electrode processes",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "galvanic-cell-electrodes",
+     "learning_objective": "Describe a Daniell cell, its electrodes, salt bridge and direction of electron flow."
+    },
+    {
+     "concept_tag": "electrode-potential-series",
+     "learning_objective": "Use standard electrode potentials to compare oxidising and reducing strengths."
+    }
+   ]
+  }
+ ]
+}

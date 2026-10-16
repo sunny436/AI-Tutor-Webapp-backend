@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LEPH2-CH03",
+ "title": "Dual Nature of Radiation and Matter",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH2-CH03-T1",
+   "topic_number": 1,
+   "title": "Electron emission and the work function",
+   "ncert_sections": "11.1, 11.2",
+   "concepts": [
+    {
+     "concept_tag": "cathode-ray-particles",
+     "learning_objective": "Explain how the measurements of e/m by Thomson and of e by Millikan established the electron as a universal particle of known mass."
+    },
+    {
+     "concept_tag": "work-function-and-electron-volt",
+     "learning_objective": "Define the work function of a metal and use the electron volt as a unit of energy."
+    },
+    {
+     "concept_tag": "electron-emission-processes",
+     "learning_objective": "Distinguish thermionic, field and photoelectric emission by the way energy is supplied to free electrons."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH03-T2",
+   "topic_number": 2,
+   "title": "Discovery of the photoelectric effect",
+   "ncert_sections": "11.3",
+   "concepts": [
+    {
+     "concept_tag": "early-photoelectric-observations",
+     "learning_objective": "Describe the observations of Hertz, Hallwachs and Lenard that revealed photoelectric emission."
+    },
+    {
+     "concept_tag": "threshold-frequency-and-photosensitivity",
+     "learning_objective": "Explain why different metals need light above different threshold frequencies to emit electrons."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH03-T3",
+   "topic_number": 3,
+   "title": "Experimental study of the photoelectric effect",
+   "ncert_sections": "11.4",
+   "concepts": [
+    {
+     "concept_tag": "photocurrent-and-intensity",
+     "learning_objective": "Relate the photocurrent and the saturation current to the intensity of the incident light."
+    },
+    {
+     "concept_tag": "stopping-potential-and-saturation-current",
+     "learning_objective": "Define the stopping potential and relate it to the maximum kinetic energy of photoelectrons."
+    },
+    {
+     "concept_tag": "frequency-dependence-of-stopping-potential",
+     "learning_objective": "Interpret photocurrent versus collector potential curves for light of different frequencies."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH03-T4",
+   "topic_number": 4,
+   "title": "Photoelectric effect and the wave theory of light",
+   "ncert_sections": "11.5",
+   "concepts": [
+    {
+     "concept_tag": "wave-theory-predictions",
+     "learning_objective": "State what the classical wave picture of light predicts for photoelectric emission."
+    },
+    {
+     "concept_tag": "failure-of-wave-picture",
+     "learning_objective": "Explain which observations of the photoelectric effect the wave picture fails to explain and why."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH03-T5",
+   "topic_number": 5,
+   "title": "Einstein's photoelectric equation",
+   "ncert_sections": "11.6",
+   "concepts": [
+    {
+     "concept_tag": "einstein-photoelectric-equation",
+     "learning_objective": "Apply Einstein's equation Kmax = h nu - phi0 to calculate kinetic energies and stopping potentials."
+    },
+    {
+     "concept_tag": "threshold-frequency-relation",
+     "learning_objective": "Calculate the threshold frequency of a metal from its work function using nu0 = phi0/h."
+    },
+    {
+     "concept_tag": "stopping-potential-frequency-graph",
+     "learning_objective": "Interpret the straight-line graph of stopping potential against frequency to obtain h/e and the threshold frequency."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH03-T6",
+   "topic_number": 6,
+   "title": "Particle nature of light: the photon",
+   "ncert_sections": "11.7",
+   "concepts": [
+    {
+     "concept_tag": "photon-energy-and-momentum",
+     "learning_objective": "Calculate the energy and momentum of a photon and the photon flux of a monochromatic source."
+    },
+    {
+     "concept_tag": "photon-properties",
+     "learning_objective": "State the properties of photons, including their neutrality and behaviour in collisions."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH2-CH03-T7",
+   "topic_number": 7,
+   "title": "Wave nature of matter",
+   "ncert_sections": "11.8",
+   "concepts": [
+    {
+     "concept_tag": "de-broglie-relation",
+     "learning_objective": "Apply the de Broglie relation lambda = h/p to material particles and photons."
+    },
+    {
+     "concept_tag": "matter-wave-observability",
+     "learning_objective": "Explain why matter waves are significant for sub-atomic particles but not for everyday objects."
+    }
+   ]
+  }
+ ]
+}

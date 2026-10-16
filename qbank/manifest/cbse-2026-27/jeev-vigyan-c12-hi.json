@@ -1,0 +1,1818 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "jeev-vigyan-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "biology",
+  "language": "hindi",
+  "title": "Jeev Vigyan",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhbo1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHBO1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "पुष्पी पादपों में लैंगिक प्रजनन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH01-T1",
+     "topic_number": 1,
+     "title": "पुष्प, पुंकेसर एवं लघुबीजाणुधानी",
+     "ncert_sections": "1.1, 1.2.1",
+     "concepts": [
+      {
+       "concept_tag": "laghubijanudhani-bhitti",
+       "learning_objective": "परागकोश की चतुर्बीजाणुधानीय संरचना तथा लघुबीजाणुधानी की चारों भित्ति परतों के कार्य बताना।"
+      },
+      {
+       "concept_tag": "laghubijanujanan",
+       "learning_objective": "पराग मातृ कोशिका से अर्धसूत्री विभाजन द्वारा लघुबीजाणु चतुष्क बनने की प्रक्रिया और उसकी गुणिता समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH01-T2",
+     "topic_number": 2,
+     "title": "परागकण: भित्ति, कोशिकाएँ एवं जीवनक्षमता",
+     "ncert_sections": "1.2.1",
+     "concepts": [
+      {
+       "concept_tag": "paragkan-bhitti",
+       "learning_objective": "परागकण के बाह्यचोल, अंतःचोल तथा जनन छिद्रों की रचना और महत्त्व स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "paragkan-koshikaen",
+       "learning_objective": "परिपक्व परागकण की कायिक तथा जनन कोशिका और द्विकोशिकीय व त्रिकोशिकीय अवस्था में अंतर करना।"
+      },
+      {
+       "concept_tag": "paragkan-jeevankshamata",
+       "learning_objective": "परागकणों की जीवनक्षमता, उनके भंडारण तथा पराग बैंक के उपयोग को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH01-T3",
+     "topic_number": 3,
+     "title": "स्त्रीकेसर, गुरुबीजाणुधानी (बीजांड) एवं भ्रूणकोष",
+     "ncert_sections": "1.2.2",
+     "concepts": [
+      {
+       "concept_tag": "strikesar-beejand",
+       "learning_objective": "स्त्रीकेसर के भागों तथा प्रारूपिक बीजांड की संरचनाओं को पहचानना।"
+      },
+      {
+       "concept_tag": "gurubijanujanan",
+       "learning_objective": "गुरुबीजाणुजनन तथा भ्रूणकोष के एकबीजाणुज विकास और विभिन्न कोशिकाओं की गुणिता समझाना।"
+      },
+      {
+       "concept_tag": "bhrunkosh-sanrachana",
+       "learning_objective": "परिपक्व भ्रूणकोष की सात कोशिकाओं और आठ केंद्रकों की व्यवस्था का वर्णन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH01-T4",
+     "topic_number": 4,
+     "title": "परागण: प्रकार एवं कारक",
+     "ncert_sections": "1.2.3",
+     "concepts": [
+      {
+       "concept_tag": "paragan-prakar",
+       "learning_objective": "स्वयुग्मन, सजातपुष्पी परागण तथा परनिषेचन और उन्मीलपरागणी व अनुन्मीलपरागणी पुष्पों में अंतर करना।"
+      },
+      {
+       "concept_tag": "paragan-karak",
+       "learning_objective": "वायु, जल तथा जंतु परागित पुष्पों के अनुकूलनों को उनके परागण कारक से जोड़ना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH01-T5",
+     "topic_number": 5,
+     "title": "बहिःप्रजनन युक्तियाँ, पराग-स्त्रीकेसर संकर्षण एवं कृत्रिम संकरण",
+     "ncert_sections": "1.2.3",
+     "concepts": [
+      {
+       "concept_tag": "bahihprajanan-yuktiyan",
+       "learning_objective": "स्वपरागण को रोकने वाली युक्तियों तथा स्व-असामंजस्य की क्रियाविधि को समझाना।"
+      },
+      {
+       "concept_tag": "parag-strikesar-sankarshan",
+       "learning_objective": "वर्तिकाग्र पर परागकण के गिरने से लेकर परागनलिका के सहायक कोशिका में प्रवेश तक की घटनाओं का क्रम बताना।"
+      },
+      {
+       "concept_tag": "kritrim-sankaran",
+       "learning_objective": "कृत्रिम संकरण में विपुंसन तथा बोरावस्त्रावरण (थैली लगाने) की आवश्यकता का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH01-T6",
+     "topic_number": 6,
+     "title": "दोहरा निषेचन",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "yugmak-sanlayan-trisanlayan",
+       "learning_objective": "युग्मक संलयन तथा त्रिसंलयन में भाग लेने वाले केंद्रकों और उनके उत्पादों की गुणिता बताना।"
+      },
+      {
+       "concept_tag": "dohra-nishechan-mahatva",
+       "learning_objective": "दोहरे निषेचन की विशिष्टता तथा भ्रूणपोष निर्माण में उसके महत्त्व का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH01-T7",
+     "topic_number": 7,
+     "title": "निषेचन-पश्च: भ्रूणपोष, भ्रूण, बीज एवं फल",
+     "ncert_sections": "1.4, 1.4.1, 1.4.2, 1.4.3",
+     "concepts": [
+      {
+       "concept_tag": "bhrunposh-vikas",
+       "learning_objective": "भ्रूणपोष के मुक्त केंद्रकीय व कोशिकीय विकास तथा भ्रूण से पहले उसके बनने का कारण समझाना।"
+      },
+      {
+       "concept_tag": "bhrun-sanrachana",
+       "learning_objective": "द्विबीजपत्री तथा एकबीजपत्री भ्रूण के भागों को पहचानना।"
+      },
+      {
+       "concept_tag": "beej-phal",
+       "learning_objective": "भ्रूणपोषी व अभ्रूणपोषी बीज, परिभ्रूणपोष, वास्तविक व आभासी फल तथा अनिषेकफलन में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH01-T8",
+     "topic_number": 8,
+     "title": "असंगजनन एवं बहुभ्रूणता",
+     "ncert_sections": "1.5",
+     "concepts": [
+      {
+       "concept_tag": "asangjanan",
+       "learning_objective": "असंगजनन की परिभाषा तथा संकर बीज उद्योग में उसके महत्त्व को समझाना।"
+      },
+      {
+       "concept_tag": "bahubhrunata",
+       "learning_objective": "बहुभ्रूणता तथा बीजांडकाय कोशिकाओं से बने भ्रूणों की आनुवंशिक प्रकृति को समझाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHBO1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "मानव जनन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH02-T1",
+     "topic_number": 1,
+     "title": "पुरुष जनन तंत्र",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "vrishan-ki-sanrachna",
+       "learning_objective": "वृषण की संरचना तथा शुक्रजनक नलिकाओं, सर्टोली कोशिकाओं और लीडिग कोशिकाओं के कार्य समझना।"
+      },
+      {
+       "concept_tag": "sahayak-vahiniyan-granthiyan",
+       "learning_objective": "पुरुष सहायक नलिकाओं का क्रम और सहायक ग्रंथियों के स्राव (शुक्रीय प्लाज्मा) का महत्त्व बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH02-T2",
+     "topic_number": 2,
+     "title": "स्त्री जनन तंत्र",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "andashay-andvahini",
+       "learning_objective": "अंडाशय और अंडवाहिनी के विभिन्न भागों की संरचना और कार्य पहचानना।"
+      },
+      {
+       "concept_tag": "garbhashay-ki-bhitti",
+       "learning_objective": "गर्भाशय की आकृति, उसकी भित्ति की तीन परतों और जनन नाल को समझना।"
+      },
+      {
+       "concept_tag": "stan-granthi",
+       "learning_objective": "स्तन ग्रंथि की संरचना और दूध के बाहर आने के मार्ग का वर्णन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH02-T3",
+     "topic_number": 3,
+     "title": "युग्मकजनन: शुक्राणुजनन",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "shukranujanan-prakriya",
+       "learning_objective": "शुक्राणुजनन के चरणों और प्रत्येक चरण में गुणसूत्र संख्या की गणना करना।"
+      },
+      {
+       "concept_tag": "shukranujanan-hormone-niyantran",
+       "learning_objective": "शुक्राणुजनन के नियमन में जीएनआरएच, एलएच, एफएसएच और एंड्रोजन की भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "shukranu-ki-sanrachna",
+       "learning_objective": "शुक्राणु की संरचना और सामान्य जनन क्षमता के मानदंडों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH02-T4",
+     "topic_number": 4,
+     "title": "युग्मकजनन: अंडजनन",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "andjanan-ke-charan",
+       "learning_objective": "अंडजनन के आरंभ, अंडक की अवस्थाओं और अर्धसूत्री विभाजन की विशेषताओं को समझना।"
+      },
+      {
+       "concept_tag": "putak-vikas",
+       "learning_objective": "प्राथमिक पुटक से ग्राफी पुटक तक पुटक विकास के क्रम को पहचानना।"
+      },
+      {
+       "concept_tag": "shukranujanan-andjanan-tulna",
+       "learning_objective": "शुक्राणुजनन और अंडजनन के बीच प्रमुख अंतरों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH02-T5",
+     "topic_number": 5,
+     "title": "आर्तव चक्र",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "artav-chakra-pravasthayen",
+       "learning_objective": "आर्तव चक्र की प्रावस्थाओं में अंडाशय और गर्भाशय में होने वाले परिवर्तनों को समझना।"
+      },
+      {
+       "concept_tag": "artav-chakra-hormone",
+       "learning_objective": "आर्तव चक्र में पीयूष और अंडाशयी हार्मोनों की भूमिका का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH02-T6",
+     "topic_number": 6,
+     "title": "निषेचन एवं अंतर्रोपण",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "nishechan",
+       "learning_objective": "निषेचन का स्थान, प्रक्रिया और एक ही शुक्राणु के प्रवेश को सुनिश्चित करने वाली क्रिया समझना।"
+      },
+      {
+       "concept_tag": "ling-nirdharan",
+       "learning_objective": "युग्मनज में शिशु के लिंग निर्धारण के गुणसूत्रीय आधार की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "viddalan-antarropan",
+       "learning_objective": "विदलन, तूतक, कोरकपुटी और अंतर्रोपण की घटनाओं का क्रम समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH02-T7",
+     "topic_number": 7,
+     "title": "सगर्भता एवं भ्रूणीय परिवर्धन",
+     "ncert_sections": "2.6",
+     "concepts": [
+      {
+       "concept_tag": "apra-aur-hormone",
+       "learning_objective": "अपरा की रचना, उसके कार्यों और सगर्भता के हार्मोनों को पहचानना।"
+      },
+      {
+       "concept_tag": "bhrun-parivardhan",
+       "learning_objective": "जनन स्तरों के बनने और सगर्भता के विभिन्न महीनों में भ्रूण के विकास को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH02-T8",
+     "topic_number": 8,
+     "title": "प्रसव एवं दुग्धस्रवण",
+     "ncert_sections": "2.7",
+     "concepts": [
+      {
+       "concept_tag": "prasav",
+       "learning_objective": "प्रसव को प्रेरित करने वाली तंत्रिका-अंतःस्रावी क्रियाविधि की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "dugdhsravan",
+       "learning_objective": "दुग्धस्रवण और प्रारंभिक दूध (खीस) के महत्त्व को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHBO1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "जनन स्वास्थ्य",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH03-T1",
+     "topic_number": 1,
+     "title": "जनन स्वास्थ्य – समस्याएँ एवं कार्यनीतियाँ",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "janan-swasthya-paribhasha",
+       "learning_objective": "विश्व स्वास्थ्य संगठन के अनुसार जनन स्वास्थ्य का व्यापक अर्थ समझाना।"
+      },
+      {
+       "concept_tag": "rch-karyakram-karyaniti",
+       "learning_objective": "परिवार नियोजन तथा जनन एवं बाल स्वास्थ्य देखभाल कार्यक्रमों की कार्यनीतियों और सुधार के संकेतकों को पहचानना।"
+      },
+      {
+       "concept_tag": "ulbvedhan-pratibandh",
+       "learning_objective": "उल्बवेधन की प्रक्रिया तथा लिंग निर्धारण हेतु इस पर लगे वैधानिक प्रतिबंध का औचित्य स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH03-T2",
+     "topic_number": 2,
+     "title": "जनसंख्या विस्फोट तथा प्राकृतिक एवं रोध विधियाँ",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "jansankhya-visphot",
+       "learning_objective": "जनसंख्या विस्फोट के संभावित कारणों को पहचानना।"
+      },
+      {
+       "concept_tag": "prakritik-garbhnirodhan",
+       "learning_objective": "आवधिक संयम, बाह्य स्खलन और दुग्धस्रावी अनार्तव जैसी प्राकृतिक विधियों का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "rodh-garbhnirodhan",
+       "learning_objective": "कंडोम, डायाफ्राम और गर्भाशय-ग्रीवा टोपी जैसी रोध विधियों की क्रियाविधि समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH03-T3",
+     "topic_number": 3,
+     "title": "अंतर्गर्भाशयी युक्तियाँ, हॉर्मोनी तथा शल्य विधियाँ",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "antargarbhashayi-yukti",
+       "learning_objective": "अंतर्गर्भाशयी युक्तियों के प्रकार और उनकी क्रियाविधि में अंतर करना।"
+      },
+      {
+       "concept_tag": "mukhiya-goliyan",
+       "learning_objective": "मुखीय गोलियों, अंतःक्षेप्य और आपातकालीन गर्भनिरोधकों की क्रियाविधि तथा उपयोग-क्रम समझाना।"
+      },
+      {
+       "concept_tag": "shalya-vidhiyan",
+       "learning_objective": "शुक्रवाहक-उच्छेदन और डिंबवाहिनी-उच्छेदन जैसी शल्य विधियों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH03-T4",
+     "topic_number": 4,
+     "title": "सगर्भता का चिकित्सीय समापन",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "mtp-vaidhata",
+       "learning_objective": "भारत में सगर्भता के चिकित्सीय समापन की वैधता और उससे जुड़े कानूनी प्रावधान बताना।"
+      },
+      {
+       "concept_tag": "mtp-suraksha-durupyog",
+       "learning_objective": "गर्भ-समापन की सुरक्षा, उसके कारणों और उसके दुरुपयोग का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH03-T5",
+     "topic_number": 5,
+     "title": "यौन संचारित संक्रमण",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "yaun-sankraman-prakar",
+       "learning_objective": "सामान्य यौन संचारित संक्रमणों और उनके संचरण के तरीकों को पहचानना।"
+      },
+      {
+       "concept_tag": "yaun-sankraman-jatiltayen",
+       "learning_objective": "यौन संचारित संक्रमणों की उपचार-योग्यता और उनकी जटिलताओं को समझाना।"
+      },
+      {
+       "concept_tag": "yaun-sankraman-roktham",
+       "learning_objective": "यौन संचारित संक्रमणों से बचाव के सरल सिद्धांतों को लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH03-T6",
+     "topic_number": 6,
+     "title": "बंध्यता",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "bandhyata-karan",
+       "learning_objective": "बंध्यता की परिभाषा और उसके संभावित कारण बताना।"
+      },
+      {
+       "concept_tag": "ivf-bhrun-sthanantaran",
+       "learning_objective": "पात्रे निषेचन तथा भ्रूण स्थानांतरण की विधियों में अंतर करना।"
+      },
+      {
+       "concept_tag": "anya-sahayak-janan",
+       "learning_objective": "युग्मक अंतः डिंबवाहिनी स्थानांतरण, अंतःकोशिकाद्रव्यी शुक्राणु निक्षेपण और कृत्रिम वीर्यसेचन का उपयोग समझाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHBO1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "वंशागति तथा विविधता के सिद्धांत",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH04-T1",
+     "topic_number": 1,
+     "title": "मेंडल के वंशागति के नियम तथा एक जीन की वंशागति",
+     "ncert_sections": "4.1, 4.2, 4.2.1, 4.2.2",
+     "concepts": [
+      {
+       "concept_tag": "mendel-ke-prayog",
+       "learning_objective": "मटर पर मेंडल के संकरण प्रयोगों की विधि और विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "ekasankar-cross",
+       "learning_objective": "एकसंकर क्रॉस तथा परीक्षार्थ संकरण के परिणामों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "prabhavita-prithakkaran-niyam",
+       "learning_objective": "प्रभाविता और पृथक्करण के नियमों को समझकर लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH04-T2",
+     "topic_number": 2,
+     "title": "अपूर्ण प्रभाविता तथा सहप्रभाविता",
+     "ncert_sections": "4.2.2.1, 4.2.2.2",
+     "concepts": [
+      {
+       "concept_tag": "apurn-prabhavita",
+       "learning_objective": "श्वानपुष्प के उदाहरण से अपूर्ण प्रभाविता के अनुपात समझाना।"
+      },
+      {
+       "concept_tag": "sahprabhavita-abo",
+       "learning_objective": "ABO रक्त समूह के आधार पर सहप्रभाविता और बहुविकल्पी युग्मविकल्पियों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH04-T3",
+     "topic_number": 3,
+     "title": "दो जीनों की वंशागति तथा वंशागति का गुणसूत्रीय सिद्धांत",
+     "ncert_sections": "4.3, 4.3.1, 4.3.2",
+     "concepts": [
+      {
+       "concept_tag": "dvisankar-cross",
+       "learning_objective": "द्विसंकर क्रॉस के F2 अनुपात से संततियों की संख्या ज्ञात करना।"
+      },
+      {
+       "concept_tag": "svatantra-apvyuhan",
+       "learning_objective": "स्वतंत्र अपव्यूहन के नियम के अनुसार युग्मकों के प्रकार बताना।"
+      },
+      {
+       "concept_tag": "gunsutriya-siddhant",
+       "learning_objective": "गुणसूत्रों के व्यवहार और जीनों के व्यवहार की समानता को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH04-T4",
+     "topic_number": 4,
+     "title": "सहलग्नता तथा पुनर्योजन",
+     "ncert_sections": "4.3.3",
+     "concepts": [
+      {
+       "concept_tag": "sahlagnata",
+       "learning_objective": "मॉर्गन के प्रयोगों से सहलग्नता की अवधारणा समझाना।"
+      },
+      {
+       "concept_tag": "punaryojan",
+       "learning_objective": "पुनर्योजन की आवृत्ति को जीनों के बीच की दूरी से जोड़ना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH04-T5",
+     "topic_number": 5,
+     "title": "बहुजीनी वंशागति तथा बहुप्रभाविता",
+     "ncert_sections": "4.4, 4.5",
+     "concepts": [
+      {
+       "concept_tag": "bahujeeni-vanshagati",
+       "learning_objective": "बहुजीनी लक्षणों में युग्मविकल्पियों के योगात्मक प्रभाव की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "bahuprabhavita",
+       "learning_objective": "एक जीन के अनेक लक्षणप्ररूपी प्रभावों को उदाहरण सहित पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH04-T6",
+     "topic_number": 6,
+     "title": "लिंग निर्धारण",
+     "ncert_sections": "4.6, 4.6.1, 4.6.2",
+     "concepts": [
+      {
+       "concept_tag": "xo-xy-zw-tantra",
+       "learning_objective": "कीटों, मनुष्य और पक्षियों में लिंग निर्धारण की क्रियाविधियों की तुलना करना।"
+      },
+      {
+       "concept_tag": "manav-ling-nirdharan",
+       "learning_objective": "मानव में संतान के लिंग निर्धारण का आधार समझाना।"
+      },
+      {
+       "concept_tag": "madhumakkhi-ling-nirdharan",
+       "learning_objective": "मधुमक्खी में अगुणित-द्विगुणित लिंग निर्धारण की विशेषताएँ बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH04-T7",
+     "topic_number": 7,
+     "title": "उत्परिवर्तन तथा वंशावली विश्लेषण",
+     "ncert_sections": "4.7, 4.8.1",
+     "concepts": [
+      {
+       "concept_tag": "utparivartan",
+       "learning_objective": "उत्परिवर्तन के प्रकारों और उत्परिवर्तजनों को पहचानना।"
+      },
+      {
+       "concept_tag": "vanshavali-vishleshan",
+       "learning_objective": "वंशावली के आधार पर किसी विशेषक की वंशागति का प्रकार निर्धारित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH04-T8",
+     "topic_number": 8,
+     "title": "मेंडलीय तथा गुणसूत्रीय विकार",
+     "ncert_sections": "4.8.2, 4.8.3",
+     "concepts": [
+      {
+       "concept_tag": "mendeliya-vikar",
+       "learning_objective": "प्रमुख मेंडलीय विकारों के कारण और वंशागति के प्रतिरूप समझाना।"
+      },
+      {
+       "concept_tag": "gunsutriya-vikar",
+       "learning_objective": "गुणसूत्रीय विकारों के कारण और लक्षण पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHBO1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "वंशागति के आणविक आधार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH05-T1",
+     "topic_number": 1,
+     "title": "डीएनए की संरचना तथा पैकेजिंग",
+     "ncert_sections": "5.1, 5.1.1, 5.1.2",
+     "concepts": [
+      {
+       "concept_tag": "dna-dvikundali-sanrachna",
+       "learning_objective": "डीएनए की द्विकुंडलीय संरचना और क्षारक युग्मन के नियम समझाना।"
+      },
+      {
+       "concept_tag": "dna-packaging-nucleosome",
+       "learning_objective": "न्यूक्लियोसोम द्वारा डीएनए के संवेष्टन की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH05-T2",
+     "topic_number": 2,
+     "title": "आनुवंशिक पदार्थ की खोज तथा आरएनए संसार",
+     "ncert_sections": "5.2, 5.3",
+     "concepts": [
+      {
+       "concept_tag": "rupantaran-griffith-avery",
+       "learning_objective": "ग्रिफिथ तथा एवरी के प्रयोगों से रूपांतरण के सिद्धांत को समझना।"
+      },
+      {
+       "concept_tag": "hershey-chase-prayog",
+       "learning_objective": "हर्षे-चेज प्रयोग से डीएनए के आनुवंशिक पदार्थ होने का निष्कर्ष निकालना।"
+      },
+      {
+       "concept_tag": "dna-rna-sthayitva",
+       "learning_objective": "आनुवंशिक पदार्थ के गुणों के आधार पर डीएनए और आरएनए की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH05-T3",
+     "topic_number": 3,
+     "title": "डीएनए प्रतिकृतियन",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "ardhsanrakshi-pratikritiyan",
+       "learning_objective": "मेसेल्सन-स्टाल प्रयोग से अर्धसंरक्षी प्रतिकृतियन को सिद्ध करना।"
+      },
+      {
+       "concept_tag": "pratikritiyan-enzyme",
+       "learning_objective": "प्रतिकृतियन में डीएनए पॉलीमरेज, लाइगेज और ओकाजाकी खंडों की भूमिका बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH05-T4",
+     "topic_number": 4,
+     "title": "अनुलेखन",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "anulekhan-ikai",
+       "learning_objective": "अनुलेखन इकाई के प्रोमोटर, संरचनात्मक जीन और समापक को पहचानना।"
+      },
+      {
+       "concept_tag": "rna-polymerase-prakar",
+       "learning_objective": "जीवाणु और यूकैरियोट में आरएनए पॉलीमरेज की भूमिकाओं की तुलना करना।"
+      },
+      {
+       "concept_tag": "splicing-capping-tailing",
+       "learning_objective": "यूकैरियोटिक प्रसंस्करण में समबंधन, कैपिंग और पुच्छन को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH05-T5",
+     "topic_number": 5,
+     "title": "आनुवंशिक कूट, उत्परिवर्तन तथा टीआरएनए",
+     "ncert_sections": "5.6, 5.6.1, 5.6.2",
+     "concepts": [
+      {
+       "concept_tag": "anuvanshik-koot-gun",
+       "learning_objective": "आनुवंशिक कूट की विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "utparivartan-koot",
+       "learning_objective": "क्षारकों के निवेशन या विलोपन से पठन ढाँचे पर प्रभाव की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "trna-adapter",
+       "learning_objective": "टीआरएनए की अनुकूलक अणु के रूप में भूमिका समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH05-T6",
+     "topic_number": 6,
+     "title": "स्थानांतरण",
+     "ncert_sections": "5.7",
+     "concepts": [
+      {
+       "concept_tag": "aminoacylation",
+       "learning_objective": "अमीनो अम्लों के सक्रियण और टीआरएनए आवेशन को समझाना।"
+      },
+      {
+       "concept_tag": "ribosome-sthanantaran",
+       "learning_objective": "राइबोसोम पर स्थानांतरण के प्रारंभ, दीर्घीकरण और समापन की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH05-T7",
+     "topic_number": 7,
+     "title": "जीन अभिव्यक्ति का नियमन: लैक ओपेरॉन",
+     "ncert_sections": "5.8, 5.8.1",
+     "concepts": [
+      {
+       "concept_tag": "jeen-niyaman-star",
+       "learning_objective": "जीन अभिव्यक्ति के नियमन के विभिन्न स्तर पहचानना।"
+      },
+      {
+       "concept_tag": "lac-operon",
+       "learning_objective": "लैक ओपेरॉन के घटकों और प्रेरक की भूमिका का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH05-T8",
+     "topic_number": 8,
+     "title": "मानव जीनोम परियोजना तथा डीएनए अंगुलिछापन",
+     "ncert_sections": "5.9, 5.10",
+     "concepts": [
+      {
+       "concept_tag": "manav-genome-pariyojana",
+       "learning_objective": "मानव जीनोम परियोजना के लक्ष्य, विधियाँ और मुख्य निष्कर्ष बताना।"
+      },
+      {
+       "concept_tag": "dna-anguli-chhapan",
+       "learning_objective": "वीएनटीआर और बहुरूपता के आधार पर डीएनए अंगुलिछापन की विधि समझाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHBO1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "विकास",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH06-T1",
+     "topic_number": 1,
+     "title": "जीवन की उत्पत्ति",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "jeevan-ki-utpatti-siddhant",
+       "learning_objective": "विद्यार्थी पैनस्पर्मिया, स्वतः जनन तथा ओपेरिन-हाल्डेन के रासायनिक विकास की परिकल्पना में अंतर कर सकेगा।"
+      },
+      {
+       "concept_tag": "miller-prayog",
+       "learning_objective": "विद्यार्थी मिलर के प्रयोग की परिस्थितियों और उसके परिणाम की व्याख्या कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH06-T2",
+     "topic_number": 2,
+     "title": "जीव-स्वरूप का विकास: एक सिद्धांत",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "vishesh-srishti-vad",
+       "learning_objective": "विद्यार्थी विशेष सृष्टिवाद की तीन मान्यताओं को पहचान सकेगा।"
+      },
+      {
+       "concept_tag": "prakritik-varan-darwin",
+       "learning_objective": "विद्यार्थी डार्विन के प्राकृतिक वरण तथा जनन योग्यता की अवधारणा समझा सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH06-T3",
+     "topic_number": 3,
+     "title": "विकास के प्रमाण",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "jeevashm-bhrun-praman",
+       "learning_objective": "विद्यार्थी जीवाश्मिकीय तथा भ्रूणीय प्रमाणों का महत्व और उनकी सीमाएँ बता सकेगा।"
+      },
+      {
+       "concept_tag": "samjat-samvriti-ang",
+       "learning_objective": "विद्यार्थी समजात तथा समवृत्ति अंगों के उदाहरण पहचानकर उन्हें अपसारी और अभिसारी विकास से जोड़ सकेगा।"
+      },
+      {
+       "concept_tag": "audyogik-melanikaran",
+       "learning_objective": "विद्यार्थी औद्योगिक मेलेनिनता तथा प्रतिरोधी जीवों के चयन को प्राकृतिक वरण के प्रमाण के रूप में समझा सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH06-T4",
+     "topic_number": 4,
+     "title": "अनुकूली विकिरण",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "anukuli-vikiran",
+       "learning_objective": "विद्यार्थी डार्विन की फिंचों तथा ऑस्ट्रेलियाई शिशुधानियों के उदाहरण से अनुकूली विकिरण समझा सकेगा।"
+      },
+      {
+       "concept_tag": "abhisari-vikas-shishudhani",
+       "learning_objective": "विद्यार्थी ऑस्ट्रेलियाई शिशुधानी और अपरास्तनियों में अभिसारी विकास पहचान सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH06-T5",
+     "topic_number": 5,
+     "title": "जैव विकास तथा विकास की क्रियाविधि",
+     "ncert_sections": "6.5, 6.6",
+     "concepts": [
+      {
+       "concept_tag": "yogyata-aur-varan",
+       "learning_objective": "विद्यार्थी समझा सकेगा कि योग्यता वंशागत लक्षणों पर आधारित है और प्रकृति योग्यता का वरण करती है।"
+      },
+      {
+       "concept_tag": "lamark-darwin-tulna",
+       "learning_objective": "विद्यार्थी लैमार्क के उपार्जित लक्षणों की वंशागति के विचार की डार्विनवाद से तुलना कर सकेगा।"
+      },
+      {
+       "concept_tag": "de-vries-utparivartan",
+       "learning_objective": "विद्यार्थी ह्यूगो डी व्रीज के उत्परिवर्तन सिद्धांत तथा साल्टेशन को डार्विन की विभिन्नताओं से अलग कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH06-T6",
+     "topic_number": 6,
+     "title": "हार्डी-वेनबर्ग सिद्धांत",
+     "ncert_sections": "6.7",
+     "concepts": [
+      {
+       "concept_tag": "hardy-weinberg-samikaran",
+       "learning_objective": "विद्यार्थी p² + 2pq + q² = 1 का उपयोग कर युग्मविकल्पी तथा जीनप्ररूप आवृत्तियाँ परिकलित कर सकेगा।"
+      },
+      {
+       "concept_tag": "santulan-prabhavit-karak",
+       "learning_objective": "विद्यार्थी आनुवंशिक संतुलन को प्रभावित करने वाले पाँच कारकों तथा संस्थापक प्रभाव को समझा सकेगा।"
+      },
+      {
+       "concept_tag": "varan-ke-prakar",
+       "learning_objective": "विद्यार्थी स्थायीकारी, दिशात्मक तथा विदारक प्राकृतिक वरण में अंतर कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH06-T7",
+     "topic_number": 7,
+     "title": "विकास का संक्षिप्त विवरण तथा मानव का उद्भव",
+     "ncert_sections": "6.8, 6.9",
+     "concepts": [
+      {
+       "concept_tag": "vikas-ka-kram",
+       "learning_objective": "विद्यार्थी भूवैज्ञानिक काल में पादपों और कशेरुकियों के विकास का क्रम बता सकेगा।"
+      },
+      {
+       "concept_tag": "manav-vikas",
+       "learning_objective": "विद्यार्थी ड्रायोपिथेकस से होमो सेपियंस तक मानव विकास के चरणों तथा मस्तिष्क क्षमता की तुलना कर सकेगा।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHBO1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "मानव स्वास्थ्य तथा रोग",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH07-T1",
+     "topic_number": 1,
+     "title": "मानव में सामान्य रोग तथा उनका नियंत्रण",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "rogjanak-aur-rog",
+       "learning_objective": "जीवाणु, विषाणु, प्रोटोजोआ, कृमि और कवक से होने वाले प्रमुख मानव रोगों तथा उनके लक्षणों को पहचानना।"
+      },
+      {
+       "concept_tag": "plasmodium-jeevan-chakra",
+       "learning_objective": "मलेरिया परजीवी प्लाज्मोडियम के जीवन चक्र और उसके दो पोषकों की भूमिका को समझना।"
+      },
+      {
+       "concept_tag": "rog-niyantran",
+       "learning_objective": "स्वच्छता और रोगवाहक नियंत्रण द्वारा संक्रामक रोगों की रोकथाम के उपाय समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH07-T2",
+     "topic_number": 2,
+     "title": "प्रतिरक्षा: सहज तथा उपार्जित प्रतिरक्षा",
+     "ncert_sections": "7.2, 7.2.1, 7.2.2",
+     "concepts": [
+      {
+       "concept_tag": "sahaj-pratiraksha",
+       "learning_objective": "सहज प्रतिरक्षा के चार प्रकार के रोधों को उदाहरण सहित पहचानना।"
+      },
+      {
+       "concept_tag": "upaarjit-pratiraksha",
+       "learning_objective": "उपार्जित प्रतिरक्षा की स्मृति, प्राथमिक और द्वितीयक अनुक्रिया को समझाना।"
+      },
+      {
+       "concept_tag": "antibody-sanrachna",
+       "learning_objective": "प्रतिरक्षी की संरचना, तरल और कोशिका-माध्यित प्रतिरक्षा में अंतर बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH07-T3",
+     "topic_number": 3,
+     "title": "सक्रिय-निष्क्रिय प्रतिरक्षा, टीकाकरण, एलर्जी तथा स्वप्रतिरक्षा",
+     "ncert_sections": "7.2.3, 7.2.4, 7.2.5, 7.2.6",
+     "concepts": [
+      {
+       "concept_tag": "sakriya-nishkriya-pratiraksha",
+       "learning_objective": "सक्रिय और निष्क्रिय प्रतिरक्षा में अंतर कर उनके उदाहरण पहचानना।"
+      },
+      {
+       "concept_tag": "tikakaran",
+       "learning_objective": "टीकाकरण के स्मृति-आधारित सिद्धांत और निष्क्रिय प्रतिरक्षीकरण के उपयोग को समझाना।"
+      },
+      {
+       "concept_tag": "allergy-swapratiraksha",
+       "learning_objective": "एलर्जी और स्वप्रतिरक्षा रोगों के कारण तथा लक्षण समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH07-T4",
+     "topic_number": 4,
+     "title": "शरीर में प्रतिरक्षा तंत्र: लसीकाभ अंग",
+     "ncert_sections": "7.2.7",
+     "concepts": [
+      {
+       "concept_tag": "prathamik-lasikabh-ang",
+       "learning_objective": "प्राथमिक लसीकाभ अंगों, अस्थि मज्जा और थाइमस, की भूमिका बताना।"
+      },
+      {
+       "concept_tag": "dwitiyak-lasikabh-ang",
+       "learning_objective": "प्लीहा, लसिका पर्व और श्लेष्मा-संबद्ध लसीकाभ ऊतक के कार्य समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH07-T5",
+     "topic_number": 5,
+     "title": "एड्स",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "hiv-sancharan",
+       "learning_objective": "एचआईवी के संचरण के तरीकों और उच्च जोखिम वाले समूहों को पहचानना।"
+      },
+      {
+       "concept_tag": "hiv-pratikritiyan",
+       "learning_objective": "शरीर में एचआईवी की प्रतिकृति तथा सहायक टी-लसीकाणुओं पर उसके प्रभाव को समझाना।"
+      },
+      {
+       "concept_tag": "aids-roktham",
+       "learning_objective": "एड्स के निदान, उपचार की सीमा और रोकथाम के उपाय बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH07-T6",
+     "topic_number": 6,
+     "title": "कैंसर",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "cancer-koshika-gun",
+       "learning_objective": "संपर्क संदमन की हानि, सुदम और दुर्दम अर्बुद तथा मेटास्टेसिस को समझाना।"
+      },
+      {
+       "concept_tag": "carcinogen",
+       "learning_objective": "भौतिक, रासायनिक और जैविक कैंसरजनों तथा ओंकोजीन की भूमिका पहचानना।"
+      },
+      {
+       "concept_tag": "cancer-nidan-upchar",
+       "learning_objective": "कैंसर के संसूचन और उपचार की विधियों की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH07-T7",
+     "topic_number": 7,
+     "title": "ड्रग्स तथा ऐल्कोहॉल का कुप्रयोग",
+     "ncert_sections": "7.5, 7.5.1, 7.5.2, 7.5.3, 7.5.4",
+     "concepts": [
+      {
+       "concept_tag": "drug-prakar",
+       "learning_objective": "ओपिऑइड, कैनेबिनॉइड और कोका ऐल्कलॉइड के स्रोत और प्रभाव पहचानना।"
+      },
+      {
+       "concept_tag": "vyasan-nirbharta",
+       "learning_objective": "व्यसन, निर्भरता और विनिवर्तन लक्षणों में अंतर समझाना।"
+      },
+      {
+       "concept_tag": "kupryog-prabhav-roktham",
+       "learning_objective": "किशोरों में ड्रग्स और ऐल्कोहॉल के कुप्रयोग के प्रभाव तथा रोकथाम के उपायों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHBO1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "मानव कल्याण में सूक्ष्मजीव",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH08-T1",
+     "topic_number": 1,
+     "title": "घरेलू उत्पादों में सूक्ष्मजीव",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "dahi-lactic-amla-jeevanu",
+       "learning_objective": "लैक्टिक अम्ल जीवाणुओं द्वारा दूध से दही बनने की प्रक्रिया और उसके पोषण लाभ समझाना।"
+      },
+      {
+       "concept_tag": "aata-kinvan",
+       "learning_objective": "इडली, डोसा और डबलरोटी के आटे के किण्वन में सूक्ष्मजीवों की भूमिका बताना।"
+      },
+      {
+       "concept_tag": "cheese-sukshmjeev",
+       "learning_objective": "चीज़ की विभिन्न किस्मों के गठन और स्वाद में सूक्ष्मजीवों का योगदान पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH08-T2",
+     "topic_number": 2,
+     "title": "औद्योगिक उत्पाद: किण्वित पेय और प्रतिजैविक",
+     "ncert_sections": "8.2, 8.2.1, 8.2.2",
+     "concepts": [
+      {
+       "concept_tag": "kinvit-pey",
+       "learning_objective": "यीस्ट द्वारा किण्वित पेयों के उत्पादन तथा आसवित और अनासवित पेयों का अंतर समझाना।"
+      },
+      {
+       "concept_tag": "pratijaivik-penicillin",
+       "learning_objective": "प्रतिजैविकों की परिभाषा, पेनिसिलिन की खोज और रोग-नियंत्रण में उनका महत्व बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH08-T3",
+     "topic_number": 3,
+     "title": "रसायन, एंजाइम और अन्य जैवसक्रिय अणु",
+     "ncert_sections": "8.2.3",
+     "concepts": [
+      {
+       "concept_tag": "karbanik-amla-utpadan",
+       "learning_objective": "कार्बनिक अम्लों और एथेनॉल का उत्पादन करने वाले सूक्ष्मजीवों को पहचानना।"
+      },
+      {
+       "concept_tag": "enzyme-jaivsakriya-anu",
+       "learning_objective": "सूक्ष्मजीवी एंजाइमों और जैवसक्रिय अणुओं के स्रोत और उपयोग बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH08-T4",
+     "topic_number": 4,
+     "title": "वाहितमल उपचार में सूक्ष्मजीव",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "prathamik-upchar",
+       "learning_objective": "वाहितमल के प्राथमिक उपचार में कणों के भौतिक निष्कासन के चरण बताना।"
+      },
+      {
+       "concept_tag": "dwitiyak-upchar-bod",
+       "learning_objective": "द्वितीयक (जैविक) उपचार, सक्रियित आपंक और बी.ओ.डी. की संकल्पना का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH08-T5",
+     "topic_number": 5,
+     "title": "बायोगैस के उत्पादन में सूक्ष्मजीव",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "methanogen",
+       "learning_objective": "मेथेनोजन जीवाणुओं की प्रकृति, आवास और मेथेन उत्पादन में उनकी भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "biogas-sanyantra",
+       "learning_objective": "बायोगैस की संरचना तथा बायोगैस संयंत्र की बनावट और कार्यविधि बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH08-T6",
+     "topic_number": 6,
+     "title": "जैव नियंत्रण कारक के रूप में सूक्ष्मजीव",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "jaiv-niyantran-siddhant",
+       "learning_objective": "जैव नियंत्रण तथा जैविक खेती के सिद्धांत और लाभ का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "bt-jeevanu",
+       "learning_objective": "इल्लियों के नियंत्रण में बैसिलस थुरिंजिएंसिस की क्रियाविधि समझाना।"
+      },
+      {
+       "concept_tag": "trichoderma-baculovirus",
+       "learning_objective": "ट्राइकोडर्मा और बैकुलोविषाणुओं की जैव नियंत्रण कारक के रूप में उपयोगिता बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH08-T7",
+     "topic_number": 7,
+     "title": "जैव उर्वरक के रूप में सूक्ष्मजीव",
+     "ncert_sections": "8.6",
+     "concepts": [
+      {
+       "concept_tag": "nitrogen-sthirikarak-jeevanu",
+       "learning_objective": "सहजीवी और मुक्तजीवी नाइट्रोजन स्थिरीकारक जीवाणुओं में अंतर करना।"
+      },
+      {
+       "concept_tag": "mycorrhiza",
+       "learning_objective": "माइकोराइज़ा संबंध में कवक की भूमिका और पौधे को होने वाले लाभ बताना।"
+      },
+      {
+       "concept_tag": "cyanobacteria-urvarak",
+       "learning_objective": "धान के खेतों में सायनोबैक्टीरिया के जैव उर्वरक के रूप में महत्व को समझाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHBO1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "जैव प्रौद्योगिकी : सिद्धांत व प्रक्रम",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH09-T1",
+     "topic_number": 1,
+     "title": "जैव प्रौद्योगिकी के सिद्धांत",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "jaiv-praudyogiki-mool-taknik",
+       "learning_objective": "जैव प्रौद्योगिकी की परिभाषा तथा आनुवंशिक अभियांत्रिकी और जैव प्रक्रम अभियांत्रिकी की भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "pratham-punaryogaj-dna",
+       "learning_objective": "प्रथम पुनर्योगज DNA के निर्माण, प्रतिकृतियन उद्भव की भूमिका तथा आनुवंशिक रूपांतरण के तीन चरणों को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH09-T2",
+     "topic_number": 2,
+     "title": "प्रतिबंधन एंजाइम",
+     "ncert_sections": "9.2.1",
+     "concepts": [
+      {
+       "concept_tag": "pratibandhan-enzyme-namakaran",
+       "learning_objective": "प्रतिबंधन एंडोन्यूक्लिएज के नामकरण की परिपाटी तथा एक्सोन्यूक्लिएज से उनका अंतर बताना।"
+      },
+      {
+       "concept_tag": "palindrome-chipchipe-sire",
+       "learning_objective": "पैलिंड्रोमी अनुक्रम की पहचान करना और चिपचिपे सिरों के बनने तथा उपयोग को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH09-T3",
+     "topic_number": 3,
+     "title": "DNA खंडों का पृथक्करण: जेल वैद्युत कण संचलन",
+     "ncert_sections": "9.2.1",
+     "concepts": [
+      {
+       "concept_tag": "gel-vaidyut-kan-sanchalan",
+       "learning_objective": "ऐगारोज जेल में DNA खंडों के आकार के अनुसार पृथक्करण, दृश्यन और क्षालन की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH09-T4",
+     "topic_number": 4,
+     "title": "क्लोनिंग संवाहक",
+     "ncert_sections": "9.2.2",
+     "concepts": [
+      {
+       "concept_tag": "samvahak-lakshan",
+       "learning_objective": "संवाहक में प्रतिकृतियन उद्भव, वरण योग्य चिह्नक तथा क्लोनिंग स्थल के महत्त्व को समझाना।"
+      },
+      {
+       "concept_tag": "niveshi-nishkriyata",
+       "learning_objective": "प्रतिजैविक प्रतिरोध तथा वर्णोत्पादी क्रियाधार के आधार पर पुनर्योगजों के चयन की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "padap-pashu-samvahak",
+       "learning_objective": "पादपों और जंतुओं में जीन स्थानांतरण हेतु निरस्त्रीकृत रोगजनकों के संवाहक रूप में उपयोग को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH09-T5",
+     "topic_number": 5,
+     "title": "सक्षम परपोषी तथा पुनर्योगज DNA का प्रवेश",
+     "ncert_sections": "9.2.3, 9.3.4",
+     "concepts": [
+      {
+       "concept_tag": "saksham-parposhi",
+       "learning_objective": "जीवाणु कोशिकाओं को द्विसंयोजी धनायन और ताप प्रघात द्वारा सक्षम बनाने की विधि समझाना।"
+      },
+      {
+       "concept_tag": "dna-pravesh-vidhiyan",
+       "learning_objective": "सूक्ष्म अंतःक्षेपण, जीन गन तथा निरस्त्रीकृत रोगजनक संवाहक विधियों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH09-T6",
+     "topic_number": 6,
+     "title": "DNA का पृथक्करण, कर्तन तथा पॉलीमरेज श्रृंखला अभिक्रिया",
+     "ncert_sections": "9.3.1, 9.3.2, 9.3.3",
+     "concepts": [
+      {
+       "concept_tag": "dna-prithakkaran",
+       "learning_objective": "कोशिका भित्ति तोड़ने वाले एंजाइमों तथा शुद्ध DNA के अवक्षेपण के चरणों को समझाना।"
+      },
+      {
+       "concept_tag": "pcr-charan",
+       "learning_objective": "पॉलीमरेज श्रृंखला अभिक्रिया के तीन चरणों, उपक्रामकों और तापस्थायी पॉलीमरेज की भूमिका की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH09-T7",
+     "topic_number": 7,
+     "title": "बाह्य जीन उत्पाद की प्राप्ति, जैव रिएक्टर तथा अनुप्रवाह संसाधन",
+     "ncert_sections": "9.3.5, 9.3.6",
+     "concepts": [
+      {
+       "concept_tag": "jaiv-reactor",
+       "learning_objective": "जैव रिएक्टर तथा सतत संवर्धन तंत्र द्वारा पुनर्योगज प्रोटीन के बड़े पैमाने पर उत्पादन को समझाना।"
+      },
+      {
+       "concept_tag": "anupravah-sansadhan",
+       "learning_objective": "अनुप्रवाह संसाधन के चरणों तथा गुणवत्ता नियंत्रण के महत्त्व को बताना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHBO1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "जैव प्रौद्योगिकी एवं उसके उपयोग",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH10-T1",
+     "topic_number": 1,
+     "title": "ऊतक संवर्धन, सूक्ष्मप्रवर्धन तथा कायिक संकरण",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "ootak-samvardhan-sookshmapravardhan",
+       "learning_objective": "पूर्णशक्तता, कर्तोतक, सूक्ष्मप्रवर्धन और कायिक क्लोन की अवधारणाओं को समझाना।"
+      },
+      {
+       "concept_tag": "vishanu-mukt-paudhe-kayik-sankaran",
+       "learning_objective": "विभज्योतक संवर्धन से विषाणुमुक्त पौधे प्राप्त करने तथा जीवद्रव्यक संलयन द्वारा कायिक संकरण को स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH10-T2",
+     "topic_number": 2,
+     "title": "आनुवंशिकतः रूपांतरित फसलें और बीटी कपास",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "gm-fasalon-ke-labh",
+       "learning_objective": "आनुवंशिकतः रूपांतरित जीवों की परिभाषा तथा GM पौधों के लाभ बताना।"
+      },
+      {
+       "concept_tag": "bt-vish-kriya-vidhi",
+       "learning_objective": "बीटी आविष के निष्क्रिय पूर्वविष से सक्रिय विष बनने और कीट को मारने की क्रिया-विधि समझाना।"
+      },
+      {
+       "concept_tag": "cry-jeen",
+       "learning_objective": "विभिन्न cry जीनों तथा उनके लक्षित पीड़कों के संबंध को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH10-T3",
+     "topic_number": 3,
+     "title": "पीड़क प्रतिरोधी पौधे: RNA अंतरक्षेप",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "rnai-siddhant",
+       "learning_objective": "RNA अंतरक्षेप की प्रक्रिया द्वारा विशिष्ट mRNA के निष्क्रियन को समझाना।"
+      },
+      {
+       "concept_tag": "sutrakrimi-pratirodhi-tambaku",
+       "learning_objective": "तंबाकू में सूत्रकृमि मेलोइडोगाइनी इनकोग्निटा के विरुद्ध पारजीनी प्रतिरोध की रणनीति का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH10-T4",
+     "topic_number": 4,
+     "title": "आनुवंशिकतः निर्मित इंसुलिन",
+     "ncert_sections": "10.2, 10.2.1",
+     "concepts": [
+      {
+       "concept_tag": "punaryogaj-chikitsa-utpad",
+       "learning_objective": "पुनर्योगज चिकित्सीय उत्पादों के लाभ, विशेषकर अवांछित प्रतिरक्षा अनुक्रिया न होने को समझाना।"
+      },
+      {
+       "concept_tag": "insulin-sanrachna-utpadan",
+       "learning_objective": "इंसुलिन की संरचना, प्राक्-हॉर्मोन के परिपक्वन तथा A और B शृंखलाओं के अलग-अलग उत्पादन की विधि बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH10-T5",
+     "topic_number": 5,
+     "title": "जीन चिकित्सा",
+     "ncert_sections": "10.2.2",
+     "concepts": [
+      {
+       "concept_tag": "jeen-chikitsa-ada",
+       "learning_objective": "एडिनोसीन डिएमीनेज (ADA) की कमी के उपचार में जीन चिकित्सा के चरणों और सीमाओं को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH10-T6",
+     "topic_number": 6,
+     "title": "आण्विक निदान",
+     "ncert_sections": "10.2.3",
+     "concepts": [
+      {
+       "concept_tag": "pcr-dwara-shighra-nidan",
+       "learning_objective": "रोगजनक की अल्प मात्रा का शीघ्र पता लगाने में PCR की भूमिका स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "probe-evam-elisa",
+       "learning_objective": "रेडियोधर्मी प्रोब द्वारा उत्परिवर्ती जीन की पहचान तथा ELISA के प्रतिजन-प्रतिरक्षी सिद्धांत को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH10-T7",
+     "topic_number": 7,
+     "title": "पारजीनी जंतु",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "parjeeni-jantu-paribhasha",
+       "learning_objective": "पारजीनी जंतुओं की परिभाषा तथा उनके उदाहरण पहचानना।"
+      },
+      {
+       "concept_tag": "parjeeni-jantu-upyog",
+       "learning_objective": "सामान्य शरीर क्रिया, रोग अध्ययन, जैविक उत्पाद, टीका तथा रसायन सुरक्षा परीक्षण में पारजीनी जंतुओं के उपयोग बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH10-T8",
+     "topic_number": 8,
+     "title": "नैतिक मुद्दे, पेटेंट और जैव दस्युता",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "geac-naitik-mudde",
+       "learning_objective": "GM अनुसंधान के नियमन में GEAC की भूमिका तथा नैतिक मुद्दों को समझाना।"
+      },
+      {
+       "concept_tag": "jaiv-dasyuta-patent",
+       "learning_objective": "जैव दस्युता की परिभाषा तथा बासमती चावल पेटेंट के उदाहरण का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHBO1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "जीव और समष्टियाँ",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH11-T1",
+     "topic_number": 1,
+     "title": "समष्टि के गुण: जन्मदर, मृत्युदर, लिंग अनुपात और आयु पिरैमिड",
+     "ncert_sections": "11.1.1",
+     "concepts": [
+      {
+       "concept_tag": "janmdar-mrityudar",
+       "learning_objective": "प्रति व्यक्ति जन्मदर और मृत्युदर की गणना करना तथा उन्हें समष्टि का गुण समझना।"
+      },
+      {
+       "concept_tag": "aayu-pyramid",
+       "learning_objective": "आयु पिरैमिड की आकृति से समष्टि की वृद्धि-स्थिति की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH11-T2",
+     "topic_number": 2,
+     "title": "समष्टि का आकार और घनत्व का मापन",
+     "ncert_sections": "11.1.1",
+     "concepts": [
+      {
+       "concept_tag": "samashti-ghanatva-mapan",
+       "learning_objective": "परिस्थिति के अनुसार संख्या, प्रतिशत आवरण, जैवभार या सापेक्ष घनत्व में से उपयुक्त माप चुनना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH11-T3",
+     "topic_number": 3,
+     "title": "समष्टि घनत्व को प्रभावित करने वाले कारक",
+     "ncert_sections": "11.1.2",
+     "concepts": [
+      {
+       "concept_tag": "natality-mortality-pravasan",
+       "learning_objective": "जन्मदर, मृत्युदर, आप्रवासन और उत्प्रवासन के आधार पर समष्टि घनत्व में परिवर्तन की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH11-T4",
+     "topic_number": 4,
+     "title": "वृद्धि मॉडल: चरघातांकी और संभार वृद्धि",
+     "ncert_sections": "11.1.2",
+     "concepts": [
+      {
+       "concept_tag": "charghatanki-vriddhi",
+       "learning_objective": "चरघातांकी वृद्धि के समीकरण और J-आकार वक्र की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "sambhar-vriddhi-poshan-kshamata",
+       "learning_objective": "पोषण क्षमता (K) सहित संभार वृद्धि और S-आकार वक्र को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH11-T5",
+     "topic_number": 5,
+     "title": "जीवन इतिहास विभिन्नता",
+     "ncert_sections": "11.1.3",
+     "concepts": [
+      {
+       "concept_tag": "jeevan-itihas-lakshan",
+       "learning_objective": "जनन रणनीतियों को डार्विनीय योग्यता बढ़ाने के अनुकूलन के रूप में समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH11-T6",
+     "topic_number": 6,
+     "title": "समष्टि पारस्परिक क्रियाएँ और परभक्षण",
+     "ncert_sections": "11.1.4",
+     "concepts": [
+      {
+       "concept_tag": "antarjatiya-kriya-prakar",
+       "learning_objective": "+, - और 0 चिह्नों के आधार पर अंतरजातीय क्रियाओं को वर्गीकृत करना।"
+      },
+      {
+       "concept_tag": "parbhakshan-bhumika",
+       "learning_objective": "पारितंत्र में परभक्षियों की भूमिका और शिकार की रक्षा-युक्तियों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH11-T7",
+     "topic_number": 7,
+     "title": "स्पर्धा",
+     "ncert_sections": "11.1.4",
+     "concepts": [
+      {
+       "concept_tag": "spardha-paribhasha",
+       "learning_objective": "स्पर्धा की परिभाषा, स्पर्धी अपवर्जन और स्पर्धी मोचन को समझना।"
+      },
+      {
+       "concept_tag": "sansadhan-vibhajan",
+       "learning_objective": "संसाधन विभाजन द्वारा सहअस्तित्व का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH11-T8",
+     "topic_number": 8,
+     "title": "परजीविता, सहभोजिता और सहोपकारिता",
+     "ncert_sections": "11.1.4",
+     "concepts": [
+      {
+       "concept_tag": "parjeevita",
+       "learning_objective": "बाह्यपरजीवी, अंतःपरजीवी और अंडपरजीविता के लक्षण पहचानना।"
+      },
+      {
+       "concept_tag": "sahbhojita",
+       "learning_objective": "सहभोजिता के उदाहरणों में लाभ-हानि का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "sahopkarita-sahvikas",
+       "learning_objective": "सहोपकारिता और सहविकास के उदाहरणों की व्याख्या करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHBO1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "पारितंत्र",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH12-T1",
+     "topic_number": 1,
+     "title": "पारितंत्र : संरचना एवं प्रकार्य",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "paritantra-sanrachna-starvinyas",
+       "learning_objective": "पारितंत्र की संरचना, जाति संघटन और स्तरविन्यास को समझाना।"
+      },
+      {
+       "concept_tag": "talab-paritantra",
+       "learning_objective": "तालाब के उदाहरण से पारितंत्र के जैविक-अजैविक घटकों और उनके प्रकार्यों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH12-T2",
+     "topic_number": 2,
+     "title": "उत्पादकता",
+     "ncert_sections": "12.2",
+     "concepts": [
+      {
+       "concept_tag": "sakal-evam-shuddh-prathamik-utpadakta",
+       "learning_objective": "सकल प्राथमिक उत्पादकता, शुद्ध प्राथमिक उत्पादकता और द्वितीयक उत्पादकता में अंतर करना।"
+      },
+      {
+       "concept_tag": "utpadakta-ko-prabhavit-karne-wale-karak",
+       "learning_objective": "उत्पादकता को प्रभावित करने वाले कारकों और जैवमंडल की वार्षिक उत्पादकता को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH12-T3",
+     "topic_number": 3,
+     "title": "अपघटन",
+     "ncert_sections": "12.3",
+     "concepts": [
+      {
+       "concept_tag": "apghatan-ke-charan",
+       "learning_objective": "अपघटन के चरणों - खंडन, निक्षालन, अपचय, ह्यूमसभवन और खनिजीकरण - को पहचानना।"
+      },
+      {
+       "concept_tag": "apghatan-dar-ke-karak",
+       "learning_objective": "अपरद के रासायनिक संघटन और जलवायवीय कारकों का अपघटन दर पर प्रभाव समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH12-T4",
+     "topic_number": 4,
+     "title": "ऊर्जा प्रवाह",
+     "ncert_sections": "12.4",
+     "concepts": [
+      {
+       "concept_tag": "saur-urja-evam-par",
+       "learning_objective": "सौर ऊर्जा, प्रकाश-संश्लेषणीय सक्रिय विकिरण और ऊर्जा के एकदिशीय प्रवाह को समझाना।"
+      },
+      {
+       "concept_tag": "charan-evam-apard-khadya-shrinkhala",
+       "learning_objective": "चारण खाद्य श्रृंखला, अपरद खाद्य श्रृंखला और खाद्य जाल में अंतर करना।"
+      },
+      {
+       "concept_tag": "poshan-star-evam-das-pratishat-niyam",
+       "learning_objective": "पोषण स्तर, खड़ी फसल और 10 प्रतिशत नियम का अनुप्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH12-T5",
+     "topic_number": 5,
+     "title": "पारिस्थितिक पिरैमिड",
+     "ncert_sections": "12.5",
+     "concepts": [
+      {
+       "concept_tag": "pyramid-ke-prakar",
+       "learning_objective": "संख्या, जैवभार और ऊर्जा के पिरैमिडों को पहचानना।"
+      },
+      {
+       "concept_tag": "ulta-pyramid",
+       "learning_objective": "उल्टे पिरैमिडों के उदाहरणों और ऊर्जा पिरैमिड के सदा सीधा रहने के कारण का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHBO1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "जैव विविधता एवं संरक्षण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbo113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBO1-CH13-T1",
+     "topic_number": 1,
+     "title": "जैव विविधता और उसके स्तर",
+     "ncert_sections": "13.1",
+     "concepts": [
+      {
+       "concept_tag": "jaiv-vividhata-avdharna",
+       "learning_objective": "जैव विविधता शब्द का अर्थ और उसे लोकप्रिय बनाने वाले वैज्ञानिक को जानना।"
+      },
+      {
+       "concept_tag": "anuvanshik-vividhata",
+       "learning_objective": "एक ही जाति के भीतर पाई जाने वाली आनुवंशिक विविधता को उदाहरणों से पहचानना।"
+      },
+      {
+       "concept_tag": "paristhitik-vividhata",
+       "learning_objective": "जातीय और पारिस्थितिक (पारितंत्र) विविधता में उदाहरण सहित भेद करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH13-T2",
+     "topic_number": 2,
+     "title": "पृथ्वी और भारत में जातियों की संख्या",
+     "ncert_sections": "13.1.1",
+     "concepts": [
+      {
+       "concept_tag": "prajati-sankhya-anuman",
+       "learning_objective": "विश्व में अभिलिखित और अनुमानित जातियों की संख्या तथा अनुमान की विधि समझना।"
+      },
+      {
+       "concept_tag": "bharat-mahavividhata",
+       "learning_objective": "महाविविधता वाले देश के रूप में भारत की जातीय संपदा का आकलन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH13-T3",
+     "topic_number": 3,
+     "title": "जैव विविधता के प्रतिरूप",
+     "ncert_sections": "13.1.2",
+     "concepts": [
+      {
+       "concept_tag": "akshanshiya-pravanata",
+       "learning_objective": "अक्षांशीय प्रवणता और उष्णकटिबंध में अधिक विविधता के कारणों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "jati-kshetra-sambandh",
+       "learning_objective": "जाति-क्षेत्र संबंध के समीकरण और Z के मान की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH13-T4",
+     "topic_number": 4,
+     "title": "पारितंत्र के लिए जाति विविधता का महत्व",
+     "ncert_sections": "13.1.3",
+     "concepts": [
+      {
+       "concept_tag": "samudaay-sthirata",
+       "learning_objective": "स्थिर समुदाय के गुण और टिलमैन के प्रयोगों के निष्कर्ष समझना।"
+      },
+      {
+       "concept_tag": "rivet-popper",
+       "learning_objective": "रिवेट पॉपर परिकल्पना द्वारा जातियों की क्षति के प्रभाव को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH13-T5",
+     "topic_number": 5,
+     "title": "जैव विविधता की क्षति",
+     "ncert_sections": "13.1.4",
+     "concepts": [
+      {
+       "concept_tag": "chhathi-vilupti",
+       "learning_objective": "वर्तमान छठी विलुप्ति की दर की तुलना पूर्व के सामूहिक विलोपनों से करना।"
+      },
+      {
+       "concept_tag": "dusht-chaukdi",
+       "learning_objective": "जैव विविधता ह्रास के चार प्रमुख कारणों को उदाहरणों से पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH13-T6",
+     "topic_number": 6,
+     "title": "जैव विविधता का संरक्षण क्यों आवश्यक है",
+     "ncert_sections": "13.2.1",
+     "concepts": [
+      {
+       "concept_tag": "upayogitavadi-tark",
+       "learning_objective": "संकीर्ण और व्यापक उपयोगितावादी तर्कों में उदाहरण सहित भेद करना।"
+      },
+      {
+       "concept_tag": "naitik-tark",
+       "learning_objective": "जैव विविधता संरक्षण के नैतिक तर्क और जातियों के अंतर्निहित मूल्य को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBO1-CH13-T7",
+     "topic_number": 7,
+     "title": "जैव विविधता का संरक्षण कैसे करें",
+     "ncert_sections": "13.2.2",
+     "concepts": [
+      {
+       "concept_tag": "svasthane-sanrakshan",
+       "learning_objective": "हॉट स्पॉट, संरक्षित क्षेत्रों और पवित्र उपवनों द्वारा स्वस्थाने संरक्षण समझना।"
+      },
+      {
+       "concept_tag": "baahya-sthane-sanrakshan",
+       "learning_objective": "बाह्य-स्थाने संरक्षण की विधियों और उनके उपयुक्त प्रयोग को चुनना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

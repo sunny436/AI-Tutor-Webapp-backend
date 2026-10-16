@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KHST1-CH04",
+ "title": "आँकड़ों का प्रस्तुतीकरण",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHST1-CH04-T1",
+   "topic_number": 1,
+   "title": "आँकड़ों के प्रस्तुतीकरण के रूप और पाठ्य प्रस्तुतीकरण",
+   "ncert_sections": "1, 2",
+   "concepts": [
+    {
+     "concept_tag": "prastutikaran-ke-roop",
+     "learning_objective": "आँकड़ों के प्रस्तुतीकरण के तीन रूपों—पाठ्य, सारणीय और आरेखी—को पहचानना।"
+    },
+    {
+     "concept_tag": "pathya-prastutikaran",
+     "learning_objective": "पाठ्य प्रस्तुतीकरण की उपयुक्तता और उसकी सीमाओं को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH04-T2",
+   "topic_number": 2,
+   "title": "सारणीय प्रस्तुतीकरण और वर्गीकरण के प्रकार",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "sarni-panktiyan-stambh",
+     "learning_objective": "सारणी की पंक्तियों, स्तंभों और कोष्ठों की संरचना समझना।"
+    },
+    {
+     "concept_tag": "vargikaran-prakar",
+     "learning_objective": "गुणात्मक, मात्रात्मक, कालिक और स्थानिक वर्गीकरण में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH04-T3",
+   "topic_number": 3,
+   "title": "आँकड़ों का सारणीयन और सारणी के भाग",
+   "ncert_sections": "4",
+   "concepts": [
+    {
+     "concept_tag": "sarni-ke-bhag",
+     "learning_objective": "एक अच्छी सांख्यिकीय सारणी के आवश्यक भागों और उनके स्थान को पहचानना।"
+    },
+    {
+     "concept_tag": "sarni-nirman",
+     "learning_objective": "दिए गए विवरण से सारणी के भागों का उचित उपयोग करके सारणी बनाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH04-T4",
+   "topic_number": 4,
+   "title": "ज्यामितीय आरेख: दंड आरेख और वृत्त आरेख",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "dand-aarekh",
+     "learning_objective": "सरल, बहुगुणी और घटक दंड आरेखों के उपयोग में अंतर करना।"
+    },
+    {
+     "concept_tag": "vritt-aarekh",
+     "learning_objective": "घटकों के प्रतिशत को वृत्त आरेख के कोणों में बदलना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH04-T5",
+   "topic_number": 5,
+   "title": "आवृत्ति आरेख: आयतचित्र, आवृत्ति बहुभुज, आवृत्ति वक्र और तोरण",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "aayatchitra",
+     "learning_objective": "आयतचित्र की रचना, असमान वर्ग-अंतराल में आवृत्ति घनत्व और दंड आरेख से उसका अंतर समझना।"
+    },
+    {
+     "concept_tag": "aavritti-bahubhuj-vakra",
+     "learning_objective": "आवृत्ति बहुभुज और आवृत्ति वक्र बनाने की विधि समझना।"
+    },
+    {
+     "concept_tag": "toran",
+     "learning_objective": "'से कम' और 'से अधिक' तोरण बनाना और उनसे माध्यिका ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH04-T6",
+   "topic_number": 6,
+   "title": "अंकगणितीय रेखाचित्र और उपयुक्त प्रस्तुतीकरण का चयन",
+   "ncert_sections": "5, 6",
+   "concepts": [
+    {
+     "concept_tag": "ankganitiya-rekhachitra",
+     "learning_objective": "काल श्रेणी आँकड़ों के लिए अंकगणितीय रेखाचित्र की रचना और व्याख्या करना।"
+    },
+    {
+     "concept_tag": "aarekh-chayan",
+     "learning_objective": "दिए गए आँकड़ों के लिए उपयुक्त प्रस्तुतीकरण या आरेख का चयन करना।"
+    }
+   ]
+  }
+ ]
+}

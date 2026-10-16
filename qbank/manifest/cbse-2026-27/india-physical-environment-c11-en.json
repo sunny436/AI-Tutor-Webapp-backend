@@ -1,0 +1,811 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "india-physical-environment-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "geography",
+  "language": "english",
+  "title": "India Physical Environment",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kegy1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEGY1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "India — Location",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY1-CH01-T1",
+     "topic_number": 1,
+     "title": "Location: latitudinal and longitudinal extent",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "latitudinal-longitudinal-extent",
+       "learning_objective": "Identify India's latitudinal extent, its southern limit and the extent of its territorial waters."
+      },
+      {
+       "concept_tag": "north-south-east-west-distance",
+       "learning_objective": "Explain why India's north-south distance exceeds its east-west distance despite similar degree extents."
+      },
+      {
+       "concept_tag": "tropical-subtropical-location",
+       "learning_objective": "Explain how India's position across tropical and sub-tropical zones causes physical diversity."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH01-T2",
+     "topic_number": 2,
+     "title": "Longitude, time and the standard meridian",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "local-time-difference",
+       "learning_objective": "Calculate and interpret the local time difference arising from India's longitudinal extent."
+      },
+      {
+       "concept_tag": "indian-standard-time",
+       "learning_objective": "Explain the choice of 82°30' E as the standard meridian and the relation of IST to GMT."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH01-T3",
+     "topic_number": 3,
+     "title": "Size of India",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "area-and-rank",
+       "learning_objective": "Recall India's area, its share of world land surface and its rank by size."
+      },
+      {
+       "concept_tag": "physical-diversity-and-coastline",
+       "learning_objective": "Explain how India's size and peninsular shape provide physical diversity and a long coastline."
+      },
+      {
+       "concept_tag": "indian-subcontinent",
+       "learning_objective": "Describe the countries of the Indian subcontinent and the role of the Himalayas as a barrier."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH01-T4",
+     "topic_number": 4,
+     "title": "India and its neighbours",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "south-central-asia-location",
+       "learning_objective": "Describe India's location in south-central Asia and the advantages of its maritime position."
+      },
+      {
+       "concept_tag": "neighbouring-countries",
+       "learning_objective": "Identify India's land and island neighbours and the water bodies separating them."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Structure and Physiography",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY1-CH02-T1",
+     "topic_number": 1,
+     "title": "Geological divisions and the Peninsular Block",
+     "ncert_sections": "Geological divisions; The Peninsular Block",
+     "concepts": [
+      {
+       "concept_tag": "geological-divisions-of-india",
+       "learning_objective": "Identify the three geological divisions of India and the forces that shaped them."
+      },
+      {
+       "concept_tag": "peninsular-block-structure",
+       "learning_objective": "Describe the boundary, rock composition and stability of the Peninsular Block."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH02-T2",
+     "topic_number": 2,
+     "title": "The Himalayas and the Indo-Ganga-Brahmaputra Plain as geological divisions",
+     "ncert_sections": "The Himalayas and other Peninsular mountains; Indo-Ganga-Brahmaputra Plain",
+     "concepts": [
+      {
+       "concept_tag": "young-fold-mountains",
+       "learning_objective": "Explain why the Himalayas are young, weak and flexible and what landforms show their youthful rivers."
+      },
+      {
+       "concept_tag": "geosynclinal-plain-origin",
+       "learning_objective": "Describe the origin of the Indo-Ganga-Brahmaputra Plain from a geosynclinal depression."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH02-T3",
+     "topic_number": 3,
+     "title": "The North and Northeastern Mountains",
+     "ncert_sections": "The North and Northeastern Mountains",
+     "concepts": [
+      {
+       "concept_tag": "himalayan-ranges-orientation",
+       "learning_objective": "State the main Himalayan ranges, their dimensions and changing orientation across India."
+      },
+      {
+       "concept_tag": "himalaya-as-divide",
+       "learning_objective": "Evaluate the role of the Himalayas as a physical, climatic, drainage and cultural divide."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH02-T4",
+     "topic_number": 4,
+     "title": "The Northern Plains",
+     "ncert_sections": "The Northern Plains",
+     "concepts": [
+      {
+       "concept_tag": "bhabar-tarai-zones",
+       "learning_objective": "Distinguish the Bhabar, Tarai, Bhangar and Khadar zones of the northern plains."
+      },
+      {
+       "concept_tag": "fluvial-landforms-plains",
+       "learning_objective": "Explain the mature-stage fluvial landforms, deltas and water divides of the northern plains."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH02-T5",
+     "topic_number": 5,
+     "title": "The Peninsular Plateau",
+     "ncert_sections": "The Peninsular Plateau; The Deccan Plateau; The Central Highlands; The Northeastern Plateau",
+     "concepts": [
+      {
+       "concept_tag": "peninsular-plateau-features",
+       "learning_objective": "Describe the extent, elevation and characteristic landforms of the Peninsular plateau."
+      },
+      {
+       "concept_tag": "deccan-western-eastern-ghats",
+       "learning_objective": "Compare the Western and Eastern Ghats and locate the main peaks of the Deccan plateau."
+      },
+      {
+       "concept_tag": "central-highlands-northeast-plateau",
+       "learning_objective": "Explain the features of the Central Highlands and the origin of the Meghalaya plateau."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH02-T6",
+     "topic_number": 6,
+     "title": "The Indian Desert",
+     "ncert_sections": "The Indian Desert",
+     "concepts": [
+      {
+       "concept_tag": "marusthali-landforms",
+       "learning_objective": "Identify the climate and wind-formed landforms of the Indian desert."
+      },
+      {
+       "concept_tag": "desert-geological-history",
+       "learning_objective": "Interpret the evidence that the desert region was once under the sea."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH02-T7",
+     "topic_number": 7,
+     "title": "The Coastal Plains",
+     "ncert_sections": "The Coastal Plains",
+     "concepts": [
+      {
+       "concept_tag": "western-submerged-coast",
+       "learning_objective": "Explain why the western coastal plain is narrow, deltaless and rich in natural ports."
+      },
+      {
+       "concept_tag": "eastern-emergent-coast",
+       "learning_objective": "Explain the features of the broad, emergent eastern coastal plain."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH02-T8",
+     "topic_number": 8,
+     "title": "The Islands",
+     "ncert_sections": "The Islands",
+     "concepts": [
+      {
+       "concept_tag": "andaman-nicobar-islands",
+       "learning_objective": "Describe the location, origin and features of the Andaman and Nicobar Islands."
+      },
+      {
+       "concept_tag": "lakshadweep-islands",
+       "learning_objective": "Describe the location, coral origin and features of the Lakshadweep and Minicoy islands."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Drainage System",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY1-CH03-T1",
+     "topic_number": 1,
+     "title": "Drainage, drainage basins and drainage patterns",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "drainage-basin-watershed",
+       "learning_objective": "Define drainage, catchment area, drainage basin and watershed and distinguish a river basin from a watershed."
+      },
+      {
+       "concept_tag": "drainage-patterns",
+       "learning_objective": "Identify dendritic, radial, trellis and centripetal drainage patterns with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH03-T2",
+     "topic_number": 2,
+     "title": "Classification of the Indian drainage system",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sea-orientation-drainage",
+       "learning_objective": "Classify Indian drainage into the Arabian Sea and Bay of Bengal drainage and name the water divide between them."
+      },
+      {
+       "concept_tag": "basin-size-categories",
+       "learning_objective": "Classify Indian river basins as major, medium and minor on the basis of catchment area."
+      },
+      {
+       "concept_tag": "himalayan-peninsular-classification",
+       "learning_objective": "Explain the basis and limitation of classifying Indian drainage into Himalayan and Peninsular drainage."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH03-T3",
+     "topic_number": 3,
+     "title": "The Himalayan drainage and its evolution",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "himalayan-river-characteristics",
+       "learning_objective": "Describe the erosional and depositional features and the perennial nature of Himalayan rivers."
+      },
+      {
+       "concept_tag": "indo-brahma-evolution",
+       "learning_objective": "Explain the Indo-Brahma hypothesis and the events that dismembered it into three river systems."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH03-T4",
+     "topic_number": 4,
+     "title": "The Indus system",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "indus-course",
+       "learning_objective": "Describe the source, course and right bank tributaries of the Indus."
+      },
+      {
+       "concept_tag": "indus-tributaries-panjnad",
+       "learning_objective": "Identify the five rivers of the Panjnad and their key features."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH03-T5",
+     "topic_number": 5,
+     "title": "The Ganga and Brahmaputra systems",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ganga-course-tributaries",
+       "learning_objective": "Describe the source, course and important tributaries of the Ganga."
+      },
+      {
+       "concept_tag": "brahmaputra-system",
+       "learning_objective": "Describe the course, names and tributaries of the Brahmaputra and its flood problems."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH03-T6",
+     "topic_number": 6,
+     "title": "The Peninsular drainage system",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "peninsular-characteristics-evolution",
+       "learning_objective": "Explain the characteristics of Peninsular rivers and the geological events that shaped them."
+      },
+      {
+       "concept_tag": "peninsular-river-systems",
+       "learning_objective": "Identify the major east-flowing and west-flowing Peninsular rivers and their features."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH03-T7",
+     "topic_number": 7,
+     "title": "Extent of usability of river water",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "river-water-usability",
+       "learning_objective": "Evaluate problems in using river water, including uneven flow, pollution and inter-basin transfer."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Climate",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY1-CH04-T1",
+     "topic_number": 1,
+     "title": "Unity and Diversity in the Monsoon Climate",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "weather-and-climate",
+       "learning_objective": "Distinguish weather as the momentary state of the atmosphere from climate as long-period average conditions."
+      },
+      {
+       "concept_tag": "regional-variations-temperature-rainfall",
+       "learning_objective": "Describe regional variations in temperature and precipitation within India's monsoon climate."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH04-T2",
+     "topic_number": 2,
+     "title": "Factors Determining the Climate of India",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "latitude-himalayas-land-water",
+       "learning_objective": "Explain how latitude, the Himalayas and the distribution of land and water control India's climate."
+      },
+      {
+       "concept_tag": "distance-sea-altitude-relief",
+       "learning_objective": "Explain the effect of distance from the sea, altitude and relief on temperature and rainfall."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH04-T3",
+     "topic_number": 3,
+     "title": "The Nature of Indian Monsoon",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "onset-and-itcz",
+       "learning_objective": "Explain the onset of the monsoon through differential heating, the northward shift of the ITCZ and jet streams."
+      },
+      {
+       "concept_tag": "break-in-monsoon",
+       "learning_objective": "Explain the causes of breaks in the monsoon in different regions."
+      },
+      {
+       "concept_tag": "el-nino-southern-oscillation",
+       "learning_objective": "Describe El Nino and the Southern Oscillation and their use in monsoon forecasting."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH04-T4",
+     "topic_number": 4,
+     "title": "The Cold Weather Season",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "cold-season-temperature",
+       "learning_objective": "Explain the causes of excessive cold in north India and the mild winter of the Peninsula."
+      },
+      {
+       "concept_tag": "cold-season-pressure-winds-rainfall",
+       "learning_objective": "Describe pressure, winds and the sources of winter rainfall in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH04-T5",
+     "topic_number": 5,
+     "title": "The Hot Weather Season",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "hot-season-temperature-pressure",
+       "learning_objective": "Describe the northward shift of the heat belt and the position of the ITCZ in summer."
+      },
+      {
+       "concept_tag": "local-storms",
+       "learning_objective": "Identify the local storms of the hot weather season and their effects."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH04-T6",
+     "topic_number": 6,
+     "title": "The Southwest Monsoon and Retreating Monsoon Seasons",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "monsoon-branches",
+       "learning_objective": "Explain the Arabian Sea and Bay of Bengal branches of the southwest monsoon and the rainfall they cause."
+      },
+      {
+       "concept_tag": "retreating-monsoon",
+       "learning_objective": "Describe the retreating monsoon, October heat and cyclonic rainfall on the east coast."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH04-T7",
+     "topic_number": 7,
+     "title": "Traditional Seasons, Rainfall Distribution and Economic Life",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "traditional-seasons",
+       "learning_objective": "Match the six traditional Indian seasons with their months."
+      },
+      {
+       "concept_tag": "rainfall-distribution",
+       "learning_objective": "Classify regions of India by annual rainfall."
+      },
+      {
+       "concept_tag": "monsoon-economic-life",
+       "learning_objective": "Evaluate the role of the monsoon in India's agriculture and economic life."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH04-T8",
+     "topic_number": 8,
+     "title": "Global Warming",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "greenhouse-gases-global-warming",
+       "learning_objective": "Explain the role of greenhouse gases and human activities in global warming."
+      },
+      {
+       "concept_tag": "effects-of-global-warming",
+       "learning_objective": "Predict the effects of global warming such as sea-level rise and shifting climatic boundaries."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Natural Vegetation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY1-CH05-T1",
+     "topic_number": 1,
+     "title": "Natural Vegetation and Tropical Evergreen and Semi Evergreen Forests",
+     "ncert_sections": "Introduction; Types of Forests; Tropical Evergreen and Semi Evergreen Forests",
+     "concepts": [
+      {
+       "concept_tag": "natural-vegetation-meaning",
+       "learning_objective": "Explain what natural vegetation is and how it differs from planted vegetation."
+      },
+      {
+       "concept_tag": "tropical-evergreen-forests",
+       "learning_objective": "Describe the climate, distribution, structure and species of tropical evergreen and semi evergreen forests."
+      },
+      {
+       "concept_tag": "colonial-forest-exploitation",
+       "learning_objective": "Explain how British commercial exploitation changed the structure of Indian forests."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH05-T2",
+     "topic_number": 2,
+     "title": "Tropical Deciduous and Tropical Thorn Forests",
+     "ncert_sections": "Tropical Deciduous Forests; Tropical Thorn Forests",
+     "concepts": [
+      {
+       "concept_tag": "moist-and-dry-deciduous-forests",
+       "learning_objective": "Distinguish moist and dry deciduous forests by rainfall, distribution and species."
+      },
+      {
+       "concept_tag": "tropical-thorn-forests",
+       "learning_objective": "Describe the rainfall conditions, areas and species of tropical thorn forests."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH05-T3",
+     "topic_number": 3,
+     "title": "Montane Forests",
+     "ncert_sections": "Montane Forests",
+     "concepts": [
+      {
+       "concept_tag": "himalayan-altitudinal-zonation",
+       "learning_objective": "Relate the change in Himalayan vegetation to altitude and slope aspect."
+      },
+      {
+       "concept_tag": "southern-mountain-forests",
+       "learning_objective": "Describe the southern mountain forests including the Sholas."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH05-T4",
+     "topic_number": 4,
+     "title": "Littoral and Swamp Forests",
+     "ncert_sections": "Littoral and Swamp Forests",
+     "concepts": [
+      {
+       "concept_tag": "wetlands-of-india",
+       "learning_objective": "Identify the extent, categories and Ramsar sites of India's wetlands."
+      },
+      {
+       "concept_tag": "mangrove-forests",
+       "learning_objective": "Describe where mangroves grow in India and why they need conservation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH05-T5",
+     "topic_number": 5,
+     "title": "Forest Conservation and Social Forestry",
+     "ncert_sections": "Forest Conservation; Forests and Life; Social Forestry; Farm Forestry",
+     "concepts": [
+      {
+       "concept_tag": "national-forest-policy",
+       "learning_objective": "State the aims of India's forest policy of 1952 as modified in 1988."
+      },
+      {
+       "concept_tag": "social-forestry-types",
+       "learning_objective": "Distinguish urban, rural (agro and community) and farm forestry."
+      },
+      {
+       "concept_tag": "forests-and-tribal-life",
+       "learning_objective": "Explain the role of forests in tribal life and of tribals in conservation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH05-T6",
+     "topic_number": 6,
+     "title": "Wildlife and Its Conservation",
+     "ncert_sections": "Wildlife; Wildlife Conservation in India; Biosphere Reserves",
+     "concepts": [
+      {
+       "concept_tag": "decline-of-wildlife",
+       "learning_objective": "Identify the causes of the decline of wildlife in India."
+      },
+      {
+       "concept_tag": "wildlife-protection-measures",
+       "learning_objective": "Describe the Wildlife Act of 1972 and projects such as Project Tiger and Project Elephant."
+      },
+      {
+       "concept_tag": "biosphere-reserves",
+       "learning_objective": "Explain the concept of a Biosphere Reserve and identify India's Biosphere Reserves."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Natural Hazards and Disasters",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY1-CH06-T1",
+     "topic_number": 1,
+     "title": "Disasters and natural hazards: meaning and changing perception",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "disaster-definition",
+       "learning_objective": "State the meaning of a disaster and identify disasters caused directly or indirectly by human actions."
+      },
+      {
+       "concept_tag": "hazard-vs-disaster",
+       "learning_objective": "Distinguish a natural hazard from a natural disaster and explain when a hazard becomes a disaster."
+      },
+      {
+       "concept_tag": "changing-perception-vulnerability",
+       "learning_objective": "Explain how intensified human activity in hazard-prone areas has increased vulnerability."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH06-T2",
+     "topic_number": 2,
+     "title": "Classification of natural disasters and international efforts",
+     "ncert_sections": "Table 6.1",
+     "concepts": [
+      {
+       "concept_tag": "classification-of-disasters",
+       "learning_objective": "Classify natural disasters as atmospheric, terrestrial, aquatic or biological."
+      },
+      {
+       "concept_tag": "yokohama-strategy-idndr",
+       "learning_objective": "Describe the Yokohama Strategy (1994) and the International Decade for Natural Disaster Reduction."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH06-T3",
+     "topic_number": 3,
+     "title": "Earthquakes in India",
+     "ncert_sections": "Table 6.2, Figure 6.2",
+     "concepts": [
+      {
+       "concept_tag": "earthquake-causes-india",
+       "learning_objective": "Explain why the Himalayan arc and parts of the Peninsula experience earthquakes."
+      },
+      {
+       "concept_tag": "earthquake-hazard-zones",
+       "learning_objective": "Identify the earthquake damage risk zones of India and the regions in them."
+      },
+      {
+       "concept_tag": "earthquake-effects-mitigation",
+       "learning_objective": "Describe the effects of earthquakes and the preparedness measures to mitigate them."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH06-T4",
+     "topic_number": 4,
+     "title": "Tsunami",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tsunami-mechanism",
+       "learning_objective": "Explain how tsunamis form and why their height increases in shallow coastal water."
+      },
+      {
+       "concept_tag": "tsunami-impact-mitigation",
+       "learning_objective": "Explain why tsunami losses are large and why mitigation needs international cooperation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH06-T5",
+     "topic_number": 5,
+     "title": "Tropical cyclones",
+     "ncert_sections": "Figure 6.4",
+     "concepts": [
+      {
+       "concept_tag": "cyclone-formation-conditions",
+       "learning_objective": "State the initial conditions needed for the formation of a tropical cyclone."
+      },
+      {
+       "concept_tag": "cyclone-distribution-india",
+       "learning_objective": "Describe where and when tropical cyclones originate around India."
+      },
+      {
+       "concept_tag": "cyclone-consequences-storm-surge",
+       "learning_objective": "Explain the consequences of tropical cyclones, including storm surge."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH06-T6",
+     "topic_number": 6,
+     "title": "Floods",
+     "ncert_sections": "Figure 6.6",
+     "concepts": [
+      {
+       "concept_tag": "flood-causes",
+       "learning_objective": "Explain the natural and human causes of floods."
+      },
+      {
+       "concept_tag": "flood-prone-areas",
+       "learning_objective": "Identify the flood-prone states of India and the types of flooding they face."
+      },
+      {
+       "concept_tag": "flood-consequences-control",
+       "learning_objective": "Evaluate the consequences of floods and the measures to control them."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH06-T7",
+     "topic_number": 7,
+     "title": "Droughts",
+     "ncert_sections": "Figure 6.7",
+     "concepts": [
+      {
+       "concept_tag": "types-of-drought",
+       "learning_objective": "Distinguish meteorological, agricultural, hydrological and ecological droughts."
+      },
+      {
+       "concept_tag": "drought-prone-areas",
+       "learning_objective": "Identify the extreme, severe and moderate drought-affected areas of India."
+      },
+      {
+       "concept_tag": "drought-consequences-mitigation",
+       "learning_objective": "Explain the consequences of drought and its immediate and long-term mitigation measures."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY1-CH06-T8",
+     "topic_number": 8,
+     "title": "Landslides and disaster management",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "landslide-vulnerability-zones",
+       "learning_objective": "Identify the landslide vulnerability zones of India and the factors controlling landslides."
+      },
+      {
+       "concept_tag": "landslide-consequences-mitigation",
+       "learning_objective": "Explain the consequences of landslides and area-specific mitigation measures."
+      },
+      {
+       "concept_tag": "disaster-management-stages",
+       "learning_objective": "Describe pre-disaster, during-disaster and post-disaster management stages."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

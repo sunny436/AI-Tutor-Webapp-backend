@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KEST1-CH01",
+ "title": "Introduction",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEST1-CH01-T1",
+   "topic_number": 1,
+   "title": "Why Economics? Economic activities and economic agents",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "economic-activity",
+     "learning_objective": "Identify economic activities as those undertaken for monetary gain, the 'ordinary business of life'."
+    },
+    {
+     "concept_tag": "economic-agents",
+     "learning_objective": "Distinguish consumer, seller, producer, employee and employer by the role a person plays."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH01-T2",
+   "topic_number": 2,
+   "title": "Scarcity, alternative uses and the problem of choice",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "scarcity",
+     "learning_objective": "Explain scarcity of resources relative to unlimited wants as the root of all economic problems."
+    },
+    {
+     "concept_tag": "alternative-uses-and-choice",
+     "learning_objective": "Explain how alternative uses of limited resources give rise to the problem of choice."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH01-T3",
+   "topic_number": 3,
+   "title": "Consumption, production, distribution and the scope of economics",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "consumption-production-distribution",
+     "learning_objective": "Classify an economic question as a study of consumption, production or distribution."
+    },
+    {
+     "concept_tag": "scope-of-modern-economics",
+     "learning_objective": "Explain why modern economics includes special studies such as poverty and disparity, which need statistics."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH01-T4",
+   "topic_number": 4,
+   "title": "Statistics in economics: data, analysis and policies",
+   "ncert_sections": "2",
+   "concepts": [
+    {
+     "concept_tag": "economic-data",
+     "learning_objective": "Recognise economic facts as economic data needed to analyse economic problems."
+    },
+    {
+     "concept_tag": "analysis-and-policy",
+     "learning_objective": "Relate the analysis of causes of an economic problem to the formulation of policies."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH01-T5",
+   "topic_number": 5,
+   "title": "What is statistics? Quantitative and qualitative data",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "meaning-of-statistics",
+     "learning_objective": "State the meaning of statistics and the stages of a statistical study."
+    },
+    {
+     "concept_tag": "quantitative-qualitative-data",
+     "learning_objective": "Distinguish quantitative data from qualitative data (attributes)."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH01-T6",
+   "topic_number": 6,
+   "title": "What statistics does: functions and limits",
+   "ncert_sections": "4, 5",
+   "concepts": [
+    {
+     "concept_tag": "functions-of-statistics",
+     "learning_objective": "Explain how statistics makes facts precise and condenses mass data into summary measures."
+    },
+    {
+     "concept_tag": "relationships-and-prediction",
+     "learning_objective": "Explain the use of statistics in finding economic relationships, predicting trends and framing policy."
+    },
+    {
+     "concept_tag": "statistics-and-common-sense",
+     "learning_objective": "Evaluate the misuse of statistical measures and why they are no substitute for common sense."
+    }
+   ]
+  }
+ ]
+}

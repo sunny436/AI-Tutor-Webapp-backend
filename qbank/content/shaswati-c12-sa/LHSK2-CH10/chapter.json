@@ -1,0 +1,128 @@
+{
+ "chapter_id": "LHSK2-CH10",
+ "title": "योगस्य वैशिष्ट्यम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHSK2-CH10-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः योगकक्षायाः आरम्भश्च",
+   "ncert_sections": "पाठपरिचयः, संवादस्य आरम्भः",
+   "concepts": [
+    {
+     "concept_tag": "yoga-patha-parichayah",
+     "learning_objective": "पाठस्य आधारं योगकक्षायाः प्रसङ्गं च ज्ञातुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "antarrashtriya-yogadivasah",
+     "learning_objective": "योगस्य उपयोगितां अन्ताराष्ट्रिययोगदिवसं च वक्तुं शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH10-T2",
+   "topic_number": 2,
+   "title": "योगस्य लक्षणं चित्तवृत्तयश्च",
+   "ncert_sections": "योगः चित्तवृत्तिनिरोधः; पञ्च वृत्तयः",
+   "concepts": [
+    {
+     "concept_tag": "yoga-lakshanam",
+     "learning_objective": "‘योगश्चित्तवृत्तिनिरोधः’ इति योगलक्षणं व्याख्यातुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "chittavrittayah",
+     "learning_objective": "प्रमाणादीनां पञ्चानां चित्तवृत्तीनां लक्षणानि भेदयितुं शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH10-T3",
+   "topic_number": 3,
+   "title": "अष्टाङ्गयोगः यमाः नियमाश्च",
+   "ncert_sections": "योगाङ्गानि, यमः, नियमः",
+   "concepts": [
+    {
+     "concept_tag": "ashtanga-yoga",
+     "learning_objective": "योगस्य अष्टौ अङ्गानि क्रमेण वक्तुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "yama-niyama",
+     "learning_objective": "पञ्च यमान् पञ्च नियमान् च परिचेतुं शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH10-T4",
+   "topic_number": 4,
+   "title": "आसनादीनां लक्षणानि",
+   "ncert_sections": "आसनम्, प्राणायामः, प्रत्याहारः, धारणा, ध्यानम्, समाधिः",
+   "concepts": [
+    {
+     "concept_tag": "asana-pranayama-lakshanam",
+     "learning_objective": "आसनस्य प्राणायामस्य प्रत्याहारस्य च लक्षणानि वक्तुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "dharana-dhyana-samadhi",
+     "learning_objective": "धारणाध्यानसमाधीनां लक्षणानि तुलयितुं शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH10-T5",
+   "topic_number": 5,
+   "title": "यमानां फलानि",
+   "ncert_sections": "यमप्रतिष्ठायाः फलम्",
+   "concepts": [
+    {
+     "concept_tag": "yama-phalani",
+     "learning_objective": "अहिंसादीनां पञ्चानां यमानां फलानि वक्तुं विश्लेषयितुं च शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH10-T6",
+   "topic_number": 6,
+   "title": "नियमानां फलानि",
+   "ncert_sections": "नियमप्रतिष्ठायाः फलम्",
+   "concepts": [
+    {
+     "concept_tag": "niyama-phalani",
+     "learning_objective": "शौचादीनां पञ्चानां नियमानां फलानि वक्तुं विश्लेषयितुं च शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH10-T7",
+   "topic_number": 7,
+   "title": "आसनादीनां फलानि संयमश्च",
+   "ncert_sections": "आसनादीनां फलम्, संयमः",
+   "concepts": [
+    {
+     "concept_tag": "asanadi-phalani",
+     "learning_objective": "आसनप्राणायामप्रत्याहाराणां फलानि वक्तुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "samyamah",
+     "learning_objective": "धारणाध्यानसमाधीनां संयमं तस्य फलं च व्याख्यातुं शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH10-T8",
+   "topic_number": 8,
+   "title": "शब्दार्थाः व्याकरणं च",
+   "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः",
+   "concepts": [
+    {
+     "concept_tag": "sandhi-viccheda",
+     "learning_objective": "पाठगतपदानां सन्धिं विच्छेदं च कर्तुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "shabdarupa-prakriti-pratyaya",
+     "learning_objective": "पाठगतपदानां मूलशब्दं, विभक्तिं, प्रत्ययं च ज्ञातुं शक्नुयात्।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "chapter_id": "LHAT1-CH01",
+ "title": "जयशंकर प्रसाद",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHAT1-CH01-T1",
+   "topic_number": 1,
+   "title": "कवि-परिचय: जयशंकर प्रसाद का जीवन और रचना-संसार",
+   "ncert_sections": "कवि-परिचय",
+   "concepts": [
+    {
+     "concept_tag": "prasad-jivan-vyaktitva",
+     "learning_objective": "विद्यार्थी जयशंकर प्रसाद के जीवन, शिक्षा और व्यक्तित्व की प्रमुख बातें बता सकेंगे।"
+    },
+    {
+     "concept_tag": "prasad-rachnaen",
+     "learning_objective": "विद्यार्थी प्रसाद की प्रमुख रचनाओं को उनकी विधाओं के अनुसार पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAT1-CH01-T2",
+   "topic_number": 2,
+   "title": "'देवसेना का गीत': स्कंदगुप्त नाटक का प्रसंग",
+   "ncert_sections": "पाठ-परिचय: देवसेना का गीत",
+   "concepts": [
+    {
+     "concept_tag": "skandgupt-natak-prasang",
+     "learning_objective": "विद्यार्थी 'स्कंदगुप्त' नाटक के उस प्रसंग को समझा सकेंगे जिसमें यह गीत आता है।"
+    },
+    {
+     "concept_tag": "devsena-charitra",
+     "learning_objective": "विद्यार्थी देवसेना के त्याग, स्वाभिमान और वेदना से भरे चरित्र का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAT1-CH01-T3",
+   "topic_number": 3,
+   "title": "'देवसेना का गीत': वेदना का भाव और काव्य-सौंदर्य",
+   "ncert_sections": "देवसेना का गीत; प्रश्न-अभ्यास; शब्दार्थ",
+   "concepts": [
+    {
+     "concept_tag": "vedna-aur-pashchattap",
+     "learning_objective": "विद्यार्थी गीत में व्यक्त देवसेना की वेदना, निराशा और पश्चात्ताप के भाव को स्पष्ट कर सकेंगे।"
+    },
+    {
+     "concept_tag": "devsena-kavya-saundarya",
+     "learning_objective": "विद्यार्थी गीत की प्रतीकात्मक व्यंजना, अलंकार और कठिन शब्दों के अर्थ समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAT1-CH01-T4",
+   "topic_number": 4,
+   "title": "'कार्नेलिया का गीत': प्रसंग और भारत का गौरवगान",
+   "ncert_sections": "पाठ-परिचय: कार्नेलिया का गीत; प्रश्न-अभ्यास",
+   "concepts": [
+    {
+     "concept_tag": "carnelia-prasang",
+     "learning_objective": "विद्यार्थी 'चंद्रगुप्त' नाटक में कार्नेलिया और उसके गीत के प्रसंग को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "bharat-ki-visheshtaen",
+     "learning_objective": "विद्यार्थी गीत में बताई गई भारत की विशेषताओं, जैसे शरण देना और अपनापन, की व्याख्या कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAT1-CH01-T5",
+   "topic_number": 5,
+   "title": "'कार्नेलिया का गीत': प्रकृति-चित्रण और शब्दार्थ",
+   "ncert_sections": "कार्नेलिया का गीत; शब्दार्थ और टिप्पणी",
+   "concepts": [
+    {
+     "concept_tag": "prakriti-chitran",
+     "learning_objective": "विद्यार्थी गीत के प्रकृति-चित्रों, मानवीकरण और बिंबों का सौंदर्य स्पष्ट कर सकेंगे।"
+    },
+    {
+     "concept_tag": "carnelia-shabdarth",
+     "learning_objective": "विद्यार्थी गीत के कठिन शब्दों के पाठ में दिए गए अर्थ बता सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

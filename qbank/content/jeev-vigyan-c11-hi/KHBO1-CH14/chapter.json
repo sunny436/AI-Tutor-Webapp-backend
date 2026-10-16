@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KHBO1-CH14",
+ "title": "श्वसन और गैसों का विनिमय",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHBO1-CH14-T1",
+   "topic_number": 1,
+   "title": "श्वसन अंग एवं विभिन्न जंतुओं में श्वसन",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "shvasan-ang-vividhata",
+     "learning_objective": "विभिन्न जंतु समूहों में आवास और संगठन स्तर के अनुसार श्वसन अंगों (देह सतह, श्वासनलिकाएँ, क्लोम, फुप्फुस, त्वचा) को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH14-T2",
+   "topic_number": 2,
+   "title": "मानव श्वसन तंत्र एवं श्वसन के चरण",
+   "ncert_sections": "14.1.1",
+   "concepts": [
+    {
+     "concept_tag": "manav-shvasan-tantra",
+     "learning_objective": "नासाद्वार से कूपिकाओं तक वायु मार्ग, फुप्फुसावरण तथा संवहन और विनिमय भाग का वर्णन करना।"
+    },
+    {
+     "concept_tag": "shvasan-ke-charan",
+     "learning_objective": "श्वसन के पाँच चरणों को उनके सही क्रम में पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH14-T3",
+   "topic_number": 3,
+   "title": "श्वासोच्छ्वास की क्रियाविधि",
+   "ncert_sections": "14.2",
+   "concepts": [
+    {
+     "concept_tag": "antahshvasan-uchchhvasan",
+     "learning_objective": "डायाफ्राम और अंतरापर्शुक पेशियों की भूमिका से अंतःश्वसन और उच्छ्वसन में दाब प्रवणता को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH14-T4",
+   "topic_number": 4,
+   "title": "श्वसन क्षमताएँ और आयतन",
+   "ncert_sections": "14.2.1",
+   "concepts": [
+    {
+     "concept_tag": "shvasan-aayatan",
+     "learning_objective": "ज्वारीय, अंतःश्वसन आरक्षित, उच्छ्वसन आरक्षित और अवशिष्ट आयतन को परिभाषित करना।"
+    },
+    {
+     "concept_tag": "phupphus-kshamata",
+     "learning_objective": "श्वसन आयतनों को जोड़कर विभिन्न फुप्फुस क्षमताओं की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH14-T5",
+   "topic_number": 5,
+   "title": "गैसों का विनिमय",
+   "ncert_sections": "14.3",
+   "concepts": [
+    {
+     "concept_tag": "anshik-dab",
+     "learning_objective": "वायुमंडल, कूपिकाओं, रुधिर और ऊतकों में pO2 तथा pCO2 की प्रवणता की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "visaran-jhilli",
+     "learning_objective": "विसरण झिल्ली की संरचना तथा विसरण दर को प्रभावित करने वाले कारकों को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH14-T6",
+   "topic_number": 6,
+   "title": "गैसों का परिवहन",
+   "ncert_sections": "14.4, 14.4.1, 14.4.2",
+   "concepts": [
+    {
+     "concept_tag": "oxygen-parivahan",
+     "learning_objective": "हीमोग्लोबिन द्वारा ऑक्सीजन परिवहन तथा ऑक्सीजन वियोजन वक्र को प्रभावित करने वाले कारकों का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "co2-parivahan",
+     "learning_objective": "कार्बन डाइऑक्साइड के परिवहन के तीन रूपों तथा कार्बोनिक एनहाइड्रेज़ की भूमिका को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH14-T7",
+   "topic_number": 7,
+   "title": "श्वसन का नियमन एवं श्वसन तंत्र के विकार",
+   "ncert_sections": "14.5, 14.6",
+   "concepts": [
+    {
+     "concept_tag": "shvasan-niyaman",
+     "learning_objective": "मेड्यूला के श्वसन लय केंद्र, पोंस के श्वास प्रभावी केंद्र और रसोसंवेदी क्षेत्र की भूमिका बताना।"
+    },
+    {
+     "concept_tag": "shvasan-vikar",
+     "learning_objective": "दमा, वातस्फीति और व्यावसायिक श्वसन विकारों के कारण और लक्षण पहचानना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LEBO1-CH12",
+ "title": "Ecosystem",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBO1-CH12-T1",
+   "topic_number": 1,
+   "title": "Ecosystem - structure and function",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "ecosystem-components",
+     "learning_objective": "Identify the abiotic, autotrophic, consumer and decomposer components of an ecosystem such as a pond."
+    },
+    {
+     "concept_tag": "stratification",
+     "learning_objective": "Explain species composition and stratification as structural features of an ecosystem."
+    },
+    {
+     "concept_tag": "ecosystem-functions",
+     "learning_objective": "Describe how the components of an ecosystem function as a unit through energy flow and recycling of matter."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH12-T2",
+   "topic_number": 2,
+   "title": "Productivity",
+   "ncert_sections": "12.2",
+   "concepts": [
+    {
+     "concept_tag": "primary-productivity",
+     "learning_objective": "Define primary production, GPP and NPP and relate them using GPP - R = NPP."
+    },
+    {
+     "concept_tag": "secondary-productivity",
+     "learning_objective": "Define secondary productivity as the rate of formation of new organic matter by consumers."
+    },
+    {
+     "concept_tag": "productivity-variation",
+     "learning_objective": "Explain why primary productivity varies between ecosystems, including the low productivity of oceans."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH12-T3",
+   "topic_number": 3,
+   "title": "Decomposition",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "decomposition-steps",
+     "learning_objective": "Describe fragmentation, leaching and catabolism as steps in the decomposition of detritus."
+    },
+    {
+     "concept_tag": "humification-mineralisation",
+     "learning_objective": "Explain the formation and role of humus and the release of nutrients by mineralisation."
+    },
+    {
+     "concept_tag": "decomposition-rate",
+     "learning_objective": "Analyse how the chemical nature of detritus and climatic factors control the rate of decomposition."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH12-T4",
+   "topic_number": 4,
+   "title": "Energy flow",
+   "ncert_sections": "12.4",
+   "concepts": [
+    {
+     "concept_tag": "solar-energy-capture",
+     "learning_objective": "State the share of solar radiation that is PAR and the fraction of PAR captured by plants."
+    },
+    {
+     "concept_tag": "food-chains",
+     "learning_objective": "Distinguish the grazing food chain from the detritus food chain and explain how they form a food web."
+    },
+    {
+     "concept_tag": "trophic-levels",
+     "learning_objective": "Apply the 10 per cent law and the idea of standing crop to energy transfer between trophic levels."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH12-T5",
+   "topic_number": 5,
+   "title": "Ecological pyramids",
+   "ncert_sections": "12.5",
+   "concepts": [
+    {
+     "concept_tag": "pyramid-types",
+     "learning_objective": "Describe pyramids of number, biomass and energy and explain why the energy pyramid is always upright."
+    },
+    {
+     "concept_tag": "inverted-pyramids",
+     "learning_objective": "Explain the occurrence of inverted pyramids, such as the pyramid of biomass in the sea."
+    },
+    {
+     "concept_tag": "pyramid-limitations",
+     "learning_objective": "Evaluate the limitations of ecological pyramids, such as species occupying more than one trophic level."
+    }
+   ]
+  }
+ ]
+}

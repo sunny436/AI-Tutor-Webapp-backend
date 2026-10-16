@@ -1,0 +1,985 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "political-theory-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "political_science",
+  "language": "english",
+  "title": "Political Theory",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "keps1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEPS1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Political Theory: An Introduction",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS1-CH01-T1",
+     "topic_number": 1,
+     "title": "Political Theory: Its Roots and Objectives",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "roots-of-political-theory",
+       "learning_objective": "Explain how reason, reflection and language form the roots of political theory."
+      },
+      {
+       "concept_tag": "objectives-of-political-theory",
+       "learning_objective": "State what political theory examines and its objective of training citizens to think rationally."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH01-T2",
+     "topic_number": 2,
+     "title": "What is Politics?",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "conflicting-images-of-politics",
+       "learning_objective": "Distinguish the negative popular image of politics from politics as a worthwhile and integral activity."
+      },
+      {
+       "concept_tag": "politics-as-collective-decision-making",
+       "learning_objective": "Explain politics as negotiation and collective decision making at the level of government and of people."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH01-T3",
+     "topic_number": 3,
+     "title": "Ideas, Thinkers and the Constitution",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "thinkers-and-ideas",
+       "learning_objective": "Identify the contributions of major political thinkers to ideas such as freedom and equality."
+      },
+      {
+       "concept_tag": "scope-of-political-theory",
+       "learning_objective": "Describe how political theory clarifies concepts and probes principles that shape constitutions and social life."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH01-T4",
+     "topic_number": 4,
+     "title": "Why Questions of Freedom and Equality Persist",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "unequal-realisation-of-values",
+       "learning_objective": "Explain why values guaranteed formally may not be realised equally in all spheres of life."
+      },
+      {
+       "concept_tag": "reinterpretation-of-rights",
+       "learning_objective": "Explain how constitutional rights are reinterpreted and expanded in response to new circumstances."
+      },
+      {
+       "concept_tag": "new-dimensions-of-freedom",
+       "learning_objective": "Analyse new opportunities and threats to freedom created by communication technology and the internet."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH01-T5",
+     "topic_number": 5,
+     "title": "Putting Political Theory to Practice",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "multiple-definitions-of-concepts",
+       "learning_objective": "Explain why political concepts have many definitions unlike mathematical terms."
+      },
+      {
+       "concept_tag": "socratic-method",
+       "learning_objective": "Describe how Socrates used reason to reveal the limitations of a given view of justice."
+      },
+      {
+       "concept_tag": "contextual-meaning-of-equality",
+       "learning_objective": "Analyse how the meaning of equality changes with context, from equal opportunity to special provisions and fair distribution."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH01-T6",
+     "topic_number": 6,
+     "title": "Why Should We Study Political Theory?",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "relevance-for-citizens",
+       "learning_objective": "Explain why political theory is useful for students, professionals and voting citizens."
+      },
+      {
+       "concept_tag": "examining-ideas-and-prejudices",
+       "learning_objective": "Evaluate how political theory helps us examine our prejudices and debate rationally."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Freedom",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS1-CH02-T1",
+     "topic_number": 1,
+     "title": "The ideal of freedom",
+     "ncert_sections": "Overview; 2.1",
+     "concepts": [
+      {
+       "concept_tag": "struggle-against-unjust-constraints",
+       "learning_objective": "Explain, using Nelson Mandela's struggle against apartheid, why people sacrifice for freedom."
+      },
+      {
+       "concept_tag": "freedom-from-fear",
+       "learning_objective": "Interpret Aung San Suu Kyi's idea that real freedom is freedom from fear."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH02-T2",
+     "topic_number": 2,
+     "title": "What is freedom?",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "two-dimensions-of-freedom",
+       "learning_objective": "Distinguish freedom as absence of external constraints from freedom as conditions to develop one's potential."
+      },
+      {
+       "concept_tag": "swaraj",
+       "learning_objective": "Explain the meaning of Swaraj as rule of the self and rule over the self, as highlighted by Tilak and Gandhi."
+      },
+      {
+       "concept_tag": "sources-of-constraints",
+       "learning_objective": "Identify the political, social and economic sources of constraints on freedom."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH02-T3",
+     "topic_number": 3,
+     "title": "Why do we need constraints?",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "need-for-constraints",
+       "learning_objective": "Explain why some constraints are necessary to prevent chaos and settle disputes in society."
+      },
+      {
+       "concept_tag": "justifiable-constraints",
+       "learning_objective": "Analyse why legal and political restraints are needed to stop one group coercively imposing its views."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH02-T4",
+     "topic_number": 4,
+     "title": "Harm principle",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "self-and-other-regarding-actions",
+       "learning_objective": "Distinguish between self-regarding and other-regarding actions in J.S. Mill's harm principle."
+      },
+      {
+       "concept_tag": "serious-and-minor-harm",
+       "learning_objective": "Apply Mill's distinction between minor harm (social disapproval) and serious harm (force of law)."
+      },
+      {
+       "concept_tag": "reasonable-restrictions",
+       "learning_objective": "Explain the meaning of reasonable restrictions in Indian constitutional discussions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH02-T5",
+     "topic_number": 5,
+     "title": "Negative and positive liberty",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "negative-liberty",
+       "learning_objective": "Explain negative liberty as an inviolable minimum area of non-interference, or 'freedom from'."
+      },
+      {
+       "concept_tag": "positive-liberty",
+       "learning_objective": "Explain positive liberty as 'freedom to' and the enabling social conditions it requires."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH02-T6",
+     "topic_number": 6,
+     "title": "Freedom of expression",
+     "ncert_sections": "2.5 (Freedom of Expression)",
+     "concepts": [
+      {
+       "concept_tag": "mills-defence-of-expression",
+       "learning_objective": "State J.S. Mill's four reasons for protecting freedom of expression even for 'false' ideas."
+      },
+      {
+       "concept_tag": "banning-and-coercion",
+       "learning_objective": "Evaluate demands to ban books and films and the long-term effect of banning on freedom."
+      },
+      {
+       "concept_tag": "freedom-and-responsibility",
+       "learning_objective": "Explain why the capacity to make choices carries responsibility and must be built through education."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Equality",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS1-CH03-T1",
+     "topic_number": 1,
+     "title": "Why does equality matter?",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "equality-as-moral-political-ideal",
+       "learning_objective": "Explain equality as a moral and political ideal based on the equal worth of all human beings."
+      },
+      {
+       "concept_tag": "paradox-of-equality",
+       "learning_objective": "Describe the paradox that equality is widely accepted as an ideal while inequality is visible everywhere."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH03-T2",
+     "topic_number": 2,
+     "title": "What is equality? Equal opportunities and natural versus social inequalities",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "equality-of-opportunity",
+       "learning_objective": "Explain why equality means equal access to basic goods and opportunities rather than identical outcomes."
+      },
+      {
+       "concept_tag": "natural-vs-social-inequalities",
+       "learning_objective": "Distinguish natural inequalities from socially-produced inequalities and recognise the limits of this distinction."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH03-T3",
+     "topic_number": 3,
+     "title": "Political and social equality",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "political-equality",
+       "learning_objective": "Identify the rights that make up political equality and explain why it is necessary but not sufficient."
+      },
+      {
+       "concept_tag": "social-equality",
+       "learning_objective": "Explain how social equality requires minimum conditions of life and the removal of discriminatory customs."
+      },
+      {
+       "concept_tag": "feminism-patriarchy",
+       "learning_objective": "Explain the feminist critique of patriarchy and the distinction between sex and gender."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH03-T4",
+     "topic_number": 4,
+     "title": "Economic equality: Marxism, liberalism and socialism",
+     "ncert_sections": "3.3, 3.4",
+     "concepts": [
+      {
+       "concept_tag": "economic-equality",
+       "learning_objective": "Explain how economic inequality is measured and why entrenched inequalities are dangerous."
+      },
+      {
+       "concept_tag": "marxism-and-liberalism",
+       "learning_objective": "Compare the Marxist and liberal views on the causes of and remedies for inequality."
+      },
+      {
+       "concept_tag": "socialism-lohia",
+       "learning_objective": "Describe the socialist approach to equality and Lohia's idea of Sapta Kranti."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH03-T5",
+     "topic_number": 5,
+     "title": "Formal equality and equality through differential treatment",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "formal-equality",
+       "learning_objective": "Explain formal equality as the ending of legally protected privileges and discrimination."
+      },
+      {
+       "concept_tag": "differential-treatment",
+       "learning_objective": "Evaluate when differential treatment enhances rather than violates equality."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH03-T6",
+     "topic_number": 6,
+     "title": "Affirmative action and the debate on reservations",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "affirmative-action",
+       "learning_objective": "Explain the rationale and forms of affirmative action and its time-bound nature."
+      },
+      {
+       "concept_tag": "reservation-debate",
+       "learning_objective": "Analyse the arguments of supporters and critics of reservations as policies for equality."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Social Justice",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS1-CH04-T1",
+     "topic_number": 1,
+     "title": "What is justice?",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "justice-across-traditions",
+       "learning_objective": "Identify how different cultures and thinkers such as Plato, Confucius and ancient Indian tradition understood justice."
+      },
+      {
+       "concept_tag": "giving-each-his-due",
+       "learning_objective": "Explain the idea of giving each person his due and how Kant's idea of human dignity changed its meaning."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH04-T2",
+     "topic_number": 2,
+     "title": "Equal treatment for equals",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "equal-rights",
+       "learning_objective": "Identify the civil, political and social rights that follow from treating equals equally."
+      },
+      {
+       "concept_tag": "non-discrimination",
+       "learning_objective": "Apply the principle that people doing the same work must not be treated differently on grounds of class, caste, race or gender."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH04-T3",
+     "topic_number": 3,
+     "title": "Proportionate justice",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "reward-by-effort-and-skill",
+       "learning_objective": "Explain why rewarding people in proportion to effort, skill and risk can be just."
+      },
+      {
+       "concept_tag": "balancing-equality-and-proportionality",
+       "learning_objective": "Analyse why equal treatment needs to be balanced with proportionality."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH04-T4",
+     "topic_number": 4,
+     "title": "Recognition of special needs",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "special-needs",
+       "learning_objective": "Explain why taking account of special needs extends rather than contradicts equal treatment."
+      },
+      {
+       "concept_tag": "harmonising-principles",
+       "learning_objective": "Evaluate the difficulty governments face in harmonising the three principles of justice."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH04-T5",
+     "topic_number": 5,
+     "title": "Just distribution",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "redistribution",
+       "learning_objective": "Explain why social justice may require redistribution of resources to create a level playing field."
+      },
+      {
+       "concept_tag": "constitutional-measures",
+       "learning_objective": "Identify Indian measures such as abolition of untouchability and land reforms that aim at just distribution."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH04-T6",
+     "topic_number": 6,
+     "title": "John Rawls' theory of justice",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "veil-of-ignorance",
+       "learning_objective": "Explain Rawls' idea of deciding the rules of society under a veil of ignorance."
+      },
+      {
+       "concept_tag": "rational-not-moral-fairness",
+       "learning_objective": "Analyse why Rawls holds that fairness follows from rational self-interest rather than morality or generosity."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH04-T7",
+     "topic_number": 7,
+     "title": "Pursuing social justice: basic minimum",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "basic-minimum-conditions",
+       "learning_objective": "Identify the basic minimum conditions of life a just society should provide."
+      },
+      {
+       "concept_tag": "meaning-of-unjust-society",
+       "learning_objective": "Evaluate when inequality makes a society unjust, given that justice does not require absolute equality."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH04-T8",
+     "topic_number": 8,
+     "title": "Free markets versus state intervention",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "free-market-arguments",
+       "learning_objective": "Explain the arguments made by supporters of free markets for a just distribution."
+      },
+      {
+       "concept_tag": "case-for-state-intervention",
+       "learning_objective": "Evaluate why the state may need to step in to provide basic facilities to the disadvantaged."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Rights",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS1-CH05-T1",
+     "topic_number": 1,
+     "title": "What are rights?",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "right-as-justified-claim",
+       "learning_objective": "Define a right as an entitlement or justified claim and distinguish it from a mere want."
+      },
+      {
+       "concept_tag": "grounds-dignity-well-being",
+       "learning_objective": "Explain dignity and well-being as grounds on which rights are claimed, and why harmful activities cannot be rights."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH05-T2",
+     "topic_number": 2,
+     "title": "Where do rights come from?",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "natural-rights",
+       "learning_objective": "Describe the seventeenth and eighteenth century theory of natural rights to life, liberty and property."
+      },
+      {
+       "concept_tag": "human-rights",
+       "learning_objective": "Explain the idea of universal human rights and how the list of human rights has expanded."
+      },
+      {
+       "concept_tag": "kant-human-dignity",
+       "learning_objective": "Explain Kant's moral conception of rights based on human dignity."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH05-T3",
+     "topic_number": 3,
+     "title": "Legal rights and the state",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "legal-recognition-of-rights",
+       "learning_objective": "Explain why legal and constitutional recognition gives rights a special status without being their basis."
+      },
+      {
+       "concept_tag": "rights-and-state-obligations",
+       "learning_objective": "Explain how rights require the state to act in some ways and to refrain from acting in others."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH05-T4",
+     "topic_number": 4,
+     "title": "Kinds of rights",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "political-rights-civil-liberties",
+       "learning_objective": "Identify political rights and civil liberties and explain how they make government accountable."
+      },
+      {
+       "concept_tag": "economic-and-cultural-rights",
+       "learning_objective": "Distinguish economic and cultural rights and explain why democracies recognise them."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH05-T5",
+     "topic_number": 5,
+     "title": "Rights and responsibilities",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "obligations-of-rights",
+       "learning_objective": "Explain the obligations that rights place on individuals, including the common good and respect for the rights of others."
+      },
+      {
+       "concept_tag": "balancing-and-vigilance",
+       "learning_objective": "Evaluate how rights are balanced when they conflict and why citizens must be vigilant about restrictions on civil liberties."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Citizenship",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS1-CH06-T1",
+     "topic_number": 1,
+     "title": "Introduction: meaning of citizenship",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "full-and-equal-membership",
+       "learning_objective": "Explain citizenship as full and equal membership of a political community with rights and identity."
+      },
+      {
+       "concept_tag": "struggles-for-citizen-rights",
+       "learning_objective": "Recognise that citizen rights were won through historical struggles."
+      },
+      {
+       "concept_tag": "citizen-obligations",
+       "learning_objective": "Describe the legal and moral obligations of citizens to each other and to society."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH06-T2",
+     "topic_number": 2,
+     "title": "Full and equal membership",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "freedom-of-movement",
+       "learning_objective": "Analyse debates over the freedom of movement and the rights of migrant workers."
+      },
+      {
+       "concept_tag": "democratic-resolution-of-disputes",
+       "learning_objective": "Explain how citizens can resolve disputes through protest, negotiation and courts."
+      },
+      {
+       "concept_tag": "civil-rights-movement-king",
+       "learning_objective": "Describe Martin Luther King Jr.'s arguments against segregation laws."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH06-T3",
+     "topic_number": 3,
+     "title": "Equal rights",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "urban-poor-and-rights",
+       "learning_objective": "Examine how slum-dwellers and the urban poor struggle to exercise citizen rights."
+      },
+      {
+       "concept_tag": "marshall-citizenship-rights",
+       "learning_objective": "Identify T. H. Marshall's three kinds of citizenship rights and his view of equality."
+      },
+      {
+       "concept_tag": "equal-rights-different-needs",
+       "learning_objective": "Evaluate why equal rights may require policies that respond to different needs."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH06-T4",
+     "topic_number": 4,
+     "title": "Citizen and nation",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "nation-state-identity",
+       "learning_objective": "Explain how nation states express national identity and its inclusiveness."
+      },
+      {
+       "concept_tag": "criteria-of-citizenship",
+       "learning_objective": "Compare the criteria for granting citizenship used in different countries."
+      },
+      {
+       "concept_tag": "indian-citizenship",
+       "learning_objective": "Describe the inclusive notion of citizenship in the Indian Constitution."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH06-T5",
+     "topic_number": 5,
+     "title": "Universal citizenship",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "stateless-people-refugees",
+       "learning_objective": "Explain the problems faced by refugees and stateless people."
+      },
+      {
+       "concept_tag": "limits-of-universal-citizenship",
+       "learning_objective": "Analyse why the promise of universal democratic citizenship remains unfulfilled."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH06-T6",
+     "topic_number": 6,
+     "title": "Global citizenship",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "interconnected-world",
+       "learning_objective": "Explain how new communication links people across national boundaries."
+      },
+      {
+       "concept_tag": "global-vs-national-citizenship",
+       "learning_objective": "Evaluate whether global citizenship could supplement or replace national citizenship."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Nationalism",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS1-CH07-T1",
+     "topic_number": 1,
+     "title": "Introducing nationalism",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "nationalism-as-political-force",
+       "learning_objective": "Explain why nationalism is a powerful but hard-to-define political creed."
+      },
+      {
+       "concept_tag": "phases-of-nationalism",
+       "learning_objective": "Identify how nationalism led both to unification of states and to the break-up of empires."
+      },
+      {
+       "concept_tag": "separatist-movements",
+       "learning_objective": "Distinguish unifying nationalism from separatist nationalist movements within existing states."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH07-T2",
+     "topic_number": 2,
+     "title": "Nation: shared beliefs, history and territory",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "imagined-community",
+       "learning_objective": "Explain how a nation differs from a family or kinship group and why it is called an imagined community."
+      },
+      {
+       "concept_tag": "shared-beliefs-and-history",
+       "learning_objective": "Describe how shared beliefs and a continuing historical identity constitute a nation."
+      },
+      {
+       "concept_tag": "territory-and-homeland",
+       "learning_objective": "Explain the significance of territory and homeland, and why it causes conflict."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH07-T3",
+     "topic_number": 3,
+     "title": "Shared political ideals and common political identity",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "shared-political-ideals",
+       "learning_objective": "Explain why a shared vision of the future and political values distinguish nations from other groups."
+      },
+      {
+       "concept_tag": "political-vs-cultural-identity",
+       "learning_objective": "Evaluate why democracies should imagine the nation in political rather than cultural terms."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH07-T4",
+     "topic_number": 4,
+     "title": "National self-determination",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "right-to-self-determination",
+       "learning_objective": "State the meaning of the right to national self-determination and its use by liberation movements."
+      },
+      {
+       "concept_tag": "one-culture-one-state",
+       "learning_objective": "Analyse the consequences of reorganising boundaries on the principle of one culture-one state."
+      },
+      {
+       "concept_tag": "basque-case",
+       "learning_objective": "Interpret the Basque demand for self-determination and the democratic alternative to new states."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH07-T5",
+     "topic_number": 5,
+     "title": "Nationalism and pluralism",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "group-rights-minorities",
+       "learning_objective": "Identify group rights given to minorities and the reinterpretation of self-determination."
+      },
+      {
+       "concept_tag": "tagore-critique",
+       "learning_objective": "Explain Rabindranath Tagore's critique of narrow nationalism."
+      },
+      {
+       "concept_tag": "multiple-identities",
+       "learning_objective": "Evaluate why an inclusive citizenship that accommodates many identities is needed in a democracy."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Secularism",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS1-CH08-T1",
+     "topic_number": 1,
+     "title": "What is secularism?",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "inter-religious-domination",
+       "learning_objective": "Explain inter-religious domination using examples of communities targeted for their religious identity."
+      },
+      {
+       "concept_tag": "intra-religious-domination",
+       "learning_objective": "Explain intra-religious domination and why secularism opposes it without being anti-religious."
+      },
+      {
+       "concept_tag": "secularism-normative-doctrine",
+       "learning_objective": "Describe secularism as a normative doctrine promoting freedom within religions and equality between and within them."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH08-T2",
+     "topic_number": 2,
+     "title": "Secular state",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "theocratic-state",
+       "learning_objective": "Identify a theocratic state and explain why religious and state institutions must be separated."
+      },
+      {
+       "concept_tag": "separation-necessary-not-sufficient",
+       "learning_objective": "Explain why separation of religion and state is necessary but not sufficient for a secular state."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH08-T3",
+     "topic_number": 3,
+     "title": "The western model of secularism",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "mutual-exclusion",
+       "learning_objective": "Explain the western (American) idea of separation of religion and state as mutual exclusion."
+      },
+      {
+       "concept_tag": "individualist-freedom-equality",
+       "learning_objective": "Explain why the western model interprets freedom and equality individually and neglects minority rights."
+      },
+      {
+       "concept_tag": "ataturk-secularism",
+       "learning_objective": "Describe Kemal Ataturk's secularism of active intervention in and suppression of religion in Turkey."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH08-T4",
+     "topic_number": 4,
+     "title": "The Indian model of secularism",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "distinct-features-indian-secularism",
+       "learning_objective": "Identify the differences between Indian and mainstream western secularism."
+      },
+      {
+       "concept_tag": "principled-distance",
+       "learning_objective": "Explain how the Indian state may disengage or engage with religion, negatively or positively, in pursuit of equality."
+      },
+      {
+       "concept_tag": "nehru-on-secularism",
+       "learning_objective": "Describe Nehru's view of secularism as equal protection to all religions and opposition to communalism."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH08-T5",
+     "topic_number": 5,
+     "title": "Criticisms: anti-religious and western import",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "anti-religious-criticism",
+       "learning_objective": "Evaluate the criticism that secularism is anti-religious and threatens religious identity."
+      },
+      {
+       "concept_tag": "western-import-criticism",
+       "learning_objective": "Evaluate the criticism that secularism is a western concept unsuited to India."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH08-T6",
+     "topic_number": 6,
+     "title": "Criticisms: minoritism and interventionism",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "minority-rights-justification",
+       "learning_objective": "Explain, through the chapter's examples, why minority rights protect fundamental interests and are not special privileges."
+      },
+      {
+       "concept_tag": "interventionist-personal-laws",
+       "learning_objective": "Evaluate the charge that Indian secularism is interventionist, including the dilemma of personal laws."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS1-CH08-T7",
+     "topic_number": 7,
+     "title": "Criticisms: vote bank politics and impossible project",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "vote-bank-politics",
+       "learning_objective": "Analyse when vote bank politics becomes a problem for democracy and for the groups concerned."
+      },
+      {
+       "concept_tag": "impossible-project",
+       "learning_objective": "Evaluate the claim that secularism is an impossible project and the chapter's responses to it."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

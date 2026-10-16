@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LHGY2-CH01",
+ "title": "जनसंख्या: वितरण, घनत्व, वृद्धि और संघटन",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHGY2-CH01-T1",
+   "topic_number": 1,
+   "title": "जनसंख्या आँकड़ों के स्रोत और जनसंख्या का वितरण",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "janganana-srot",
+     "learning_objective": "विद्यार्थी भारत में जनगणना द्वारा जनसंख्या आँकड़े एकत्र करने की व्यवस्था और उसके इतिहास को बता सकेंगे।"
+    },
+    {
+     "concept_tag": "vitaran-karak",
+     "learning_objective": "विद्यार्थी भारत में जनसंख्या के असमान वितरण को प्रभावित करने वाले भौतिक, सामाजिक-आर्थिक और ऐतिहासिक कारकों को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY2-CH01-T2",
+   "topic_number": 2,
+   "title": "जनसंख्या का घनत्व",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "ghanatva-pratirup",
+     "learning_objective": "विद्यार्थी भारत में जनसंख्या घनत्व के स्थानिक प्रतिरूप और उसमें समय के साथ हुए परिवर्तन की व्याख्या कर सकेंगे।"
+    },
+    {
+     "concept_tag": "kayik-krishi-ghanatva",
+     "learning_objective": "विद्यार्थी कायिक घनत्व और कृषि घनत्व की गणना करके उनका महत्त्व समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY2-CH01-T3",
+   "topic_number": 3,
+   "title": "जनसंख्या की वृद्धि और उसकी प्रावस्थाएँ",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "dashakiya-vriddhi-dar",
+     "learning_objective": "विद्यार्थी जनसंख्या वृद्धि के घटकों को पहचान सकेंगे और दशकीय वृद्धि दर की गणना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "vriddhi-pravasthayen",
+     "learning_objective": "विद्यार्थी 1901 से अब तक भारत की जनसंख्या वृद्धि की चार प्रावस्थाओं और उनके कारणों का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY2-CH01-T4",
+   "topic_number": 4,
+   "title": "जनसंख्या वृद्धि में प्रादेशिक भिन्नता और किशोर जनसंख्या",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "pradeshik-bhinnata",
+     "learning_objective": "विद्यार्थी राज्यों के बीच जनसंख्या वृद्धि दर की प्रादेशिक भिन्नता के प्रतिरूप की व्याख्या कर सकेंगे।"
+    },
+    {
+     "concept_tag": "kishor-yuva-niti",
+     "learning_objective": "विद्यार्थी किशोर जनसंख्या की चुनौतियों और राष्ट्रीय युवा नीति जैसे सरकारी प्रयासों को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY2-CH01-T5",
+   "topic_number": 5,
+   "title": "ग्रामीण-नगरीय संघटन और भाषाई संघटन",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "gramin-nagariya-sanghatan",
+     "learning_objective": "विद्यार्थी भारत में ग्रामीण और नगरीय जनसंख्या के वितरण तथा ग्रामीण-नगरीय प्रवास के क्षेत्रों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "bhashai-parivar",
+     "learning_objective": "विद्यार्थी भारत की भाषाई विविधता और भाषाओं के चार भाषा-परिवारों को बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY2-CH01-T6",
+   "topic_number": 6,
+   "title": "धार्मिक संघटन",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "dharmik-vitaran",
+     "learning_objective": "विद्यार्थी भारत में विभिन्न धार्मिक समुदायों के स्थानिक वितरण का वर्णन कर सकेंगे।"
+    },
+    {
+     "concept_tag": "dharm-aur-bhudrishya",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि धर्म की औपचारिक अभिव्यक्ति भूदृश्य पर किस प्रकार दिखाई देती है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY2-CH01-T7",
+   "topic_number": 7,
+   "title": "कार्यशील जनसंख्या का संघटन",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "shramik-vargikaran",
+     "learning_objective": "विद्यार्थी मुख्य श्रमिक, सीमांत श्रमिक और अश्रमिक में अंतर कर सकेंगे तथा कार्य सहभागिता दर की भिन्नता समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "vyavsayik-sanrachna",
+     "learning_objective": "विद्यार्थी भारत की व्यावसायिक संरचना और उसमें हो रहे क्षेत्रीय बदलाव का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

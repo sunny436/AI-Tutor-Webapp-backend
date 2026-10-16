@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LECS1-CH01",
+ "title": "Exception Handling in Python",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECS1-CH01-T1",
+   "topic_number": 1,
+   "title": "Introduction and syntax errors",
+   "ncert_sections": "1.1, 1.2",
+   "concepts": [
+    {
+     "concept_tag": "types-of-program-errors",
+     "learning_objective": "Distinguish syntax errors, runtime errors and logical errors in a Python program."
+    },
+    {
+     "concept_tag": "syntax-errors",
+     "learning_objective": "Explain how the interpreter detects and reports syntax (parsing) errors in shell and script mode."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH01-T2",
+   "topic_number": 2,
+   "title": "Exceptions and built-in exceptions",
+   "ncert_sections": "1.3, 1.4",
+   "concepts": [
+    {
+     "concept_tag": "exception-as-object",
+     "learning_objective": "Describe an exception as a Python object that represents an error raised during execution."
+    },
+    {
+     "concept_tag": "built-in-exceptions",
+     "learning_objective": "Identify the built-in exception raised by common erroneous statements."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH01-T3",
+   "topic_number": 3,
+   "title": "Raising exceptions: raise and assert",
+   "ncert_sections": "1.5, 1.5.1, 1.5.2",
+   "concepts": [
+    {
+     "concept_tag": "raise-statement",
+     "learning_objective": "Use the raise statement to throw a built-in exception with an optional message."
+    },
+    {
+     "concept_tag": "assert-statement",
+     "learning_objective": "Use the assert statement to test an expression and predict when AssertionError is raised."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH01-T4",
+   "topic_number": 4,
+   "title": "Need for and process of exception handling",
+   "ncert_sections": "1.6, 1.6.1, 1.6.2",
+   "concepts": [
+    {
+     "concept_tag": "need-for-exception-handling",
+     "learning_objective": "Explain why exception handling is needed and how it separates error code from main logic."
+    },
+    {
+     "concept_tag": "throwing-catching-call-stack",
+     "learning_objective": "Describe throwing and catching an exception and the reverse search of the call stack."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH01-T5",
+   "topic_number": 5,
+   "title": "Catching exceptions: try, except and else",
+   "ncert_sections": "1.6.3, 1.6.4",
+   "concepts": [
+    {
+     "concept_tag": "try-except-block",
+     "learning_objective": "Write and trace a try...except block that handles a specific exception."
+    },
+    {
+     "concept_tag": "multiple-except-clauses",
+     "learning_objective": "Trace programs with several except clauses, including a final except clause with no exception name."
+    },
+    {
+     "concept_tag": "else-clause",
+     "learning_objective": "Predict when the else clause of a try...except statement is executed."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH01-T6",
+   "topic_number": 6,
+   "title": "The finally clause",
+   "ncert_sections": "1.7, 1.7.1",
+   "concepts": [
+    {
+     "concept_tag": "finally-clause",
+     "learning_objective": "State the position and purpose of the finally clause and when it is executed."
+    },
+    {
+     "concept_tag": "unhandled-exception-with-finally",
+     "learning_objective": "Trace how an unhandled exception is re-raised after the finally block executes."
+    }
+   ]
+  }
+ ]
+}

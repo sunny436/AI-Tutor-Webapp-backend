@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KHCH1-CH04",
+ "title": "रासायनिक आबंधन तथा आण्विक संरचना",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHCH1-CH04-T1",
+   "topic_number": 1,
+   "title": "कॉसेल-लूइस उपागम, अष्टक नियम तथा औपचारिक आवेश",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "ashtak-niyam",
+     "learning_objective": "अष्टक नियम तथा उसकी सीमाओं (अपूर्ण अष्टक, विषम इलेक्ट्रॉन अणु, प्रसारित अष्टक) को समझना।"
+    },
+    {
+     "concept_tag": "lewis-sanrachna",
+     "learning_objective": "सरल अणुओं की लूइस संरचनाएँ लिखना।"
+    },
+    {
+     "concept_tag": "aupcharik-aavesh",
+     "learning_objective": "लूइस संरचना में किसी परमाणु पर औपचारिक आवेश की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH04-T2",
+   "topic_number": 2,
+   "title": "आयनिक अथवा वैद्युत संयोजी आबंध",
+   "ncert_sections": "4.2, 4.2.1",
+   "concepts": [
+    {
+     "concept_tag": "aayanik-aabandh-nirman",
+     "learning_objective": "आयनिक आबंध बनने की परिस्थितियों को आयनन एन्थैल्पी और इलेक्ट्रॉन लब्धि एन्थैल्पी से जोड़ना।"
+    },
+    {
+     "concept_tag": "jalak-enthalpy",
+     "learning_objective": "जालक एन्थैल्पी की परिभाषा तथा आयनिक यौगिकों के स्थायित्व में उसकी भूमिका समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH04-T3",
+   "topic_number": 3,
+   "title": "आबंध प्राचल, अनुनाद तथा आबंधों की ध्रुवता",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "aabandh-kotee",
+     "learning_objective": "लूइस संरचना तथा अनुनाद के आधार पर आबंध कोटि ज्ञात करना।"
+    },
+    {
+     "concept_tag": "aabandh-dhruvta",
+     "learning_objective": "द्विध्रुव आघूर्ण तथा अणु की ज्यामिति के आधार पर अणु की ध्रुवता का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH04-T4",
+   "topic_number": 4,
+   "title": "संयोजकता कोश इलेक्ट्रॉन युग्म प्रतिकर्षण (वी.एस.ई.पी.आर.) सिद्धांत",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "vsepr-pratikarshan-kram",
+     "learning_objective": "एकाकी युग्मों और आबंधी युग्मों के बीच प्रतिकर्षण के क्रम को समझाना।"
+    },
+    {
+     "concept_tag": "anu-jyamiti",
+     "learning_objective": "इलेक्ट्रॉन युग्मों की संख्या से सरल अणुओं की आकृति की प्रागुक्ति करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH04-T5",
+   "topic_number": 5,
+   "title": "संयोजकता आबंध सिद्धांत तथा संकरण",
+   "ncert_sections": "4.5, 4.6",
+   "concepts": [
+    {
+     "concept_tag": "kakshak-atichhadan",
+     "learning_objective": "कक्षकों के अतिव्यापन से सिग्मा तथा पाई आबंधों के बनने और उनकी प्रबलता की तुलना करना।"
+    },
+    {
+     "concept_tag": "sankaran",
+     "learning_objective": "संकरण के प्रकार ज्ञात कर अणुओं की आकृति समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH04-T6",
+   "topic_number": 6,
+   "title": "आण्विक कक्षक सिद्धांत तथा समनाभिकीय द्विपरमाणुक अणु",
+   "ncert_sections": "4.7, 4.8",
+   "concepts": [
+    {
+     "concept_tag": "anuvik-kakshak-nirman",
+     "learning_objective": "परमाणु कक्षकों के रैखिक संयोजन से आबंधी तथा प्रतिआबंधी आण्विक कक्षकों के बनने को समझना।"
+    },
+    {
+     "concept_tag": "aabandh-kotee-chumbakiya-gun",
+     "learning_objective": "इलेक्ट्रॉनिक विन्यास से आबंध कोटि, स्थायित्व तथा चुंबकीय गुण ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH04-T7",
+   "topic_number": 7,
+   "title": "हाइड्रोजन आबंधन",
+   "ncert_sections": "4.9",
+   "concepts": [
+    {
+     "concept_tag": "hydrogen-aabandh-karan",
+     "learning_objective": "हाइड्रोजन आबंध बनने के कारण तथा भौतिक गुणों पर उसके प्रभाव को समझाना।"
+    },
+    {
+     "concept_tag": "hydrogen-aabandh-prakar",
+     "learning_objective": "अंतराअणुक तथा अंतःअणुक हाइड्रोजन आबंधों में अंतर करना।"
+    }
+   ]
+  }
+ ]
+}

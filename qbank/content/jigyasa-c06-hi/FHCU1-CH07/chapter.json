@@ -1,0 +1,112 @@
+{
+ "chapter_id": "FHCU1-CH07",
+ "title": "ताप एवं उसका मापन",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHCU1-CH07-T1",
+   "topic_number": 1,
+   "title": "गरम या ठंडा? स्पर्श द्वारा अनुमान",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "sparsh-indriya-ki-seema",
+     "learning_objective": "समझना कि किसी वस्तु के गरम या ठंडे होने का निश्चय करने के लिए हम सदैव स्पर्श-इंद्रिय पर भरोसा नहीं कर सकते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH07-T2",
+   "topic_number": 2,
+   "title": "ताप और तापमापी",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "taap-ki-paribhasha",
+     "learning_objective": "ताप को किसी पिंड की गरमाहट या ठंडक के विश्वसनीय माप के रूप में परिभाषित करना और तापांतर का अर्थ समझना।"
+    },
+    {
+     "concept_tag": "taapmapi-ke-prakar",
+     "learning_objective": "डॉक्टरी थर्मामीटर और प्रयोगशाला तापमापी के उपयोग में अंतर पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH07-T3",
+   "topic_number": 3,
+   "title": "डॉक्टरी थर्मामीटर और शरीर का ताप",
+   "ncert_sections": "7.3.1",
+   "concepts": [
+    {
+     "concept_tag": "ankiya-doctori-thermameter",
+     "learning_objective": "अंकीय डॉक्टरी थर्मामीटर की विशेषताएँ और पारे वाले थर्मामीटर के स्थान पर उसके उपयोग का कारण बताना।"
+    },
+    {
+     "concept_tag": "doctori-thermameter-savdhaniyan",
+     "learning_objective": "अंकीय डॉक्टरी थर्मामीटर के उपयोग में बरती जाने वाली सावधानियाँ पहचानना।"
+    },
+    {
+     "concept_tag": "samanya-sharir-taap",
+     "learning_objective": "स्वस्थ मानव शरीर के सामान्य ताप 37.0 °C को एक औसत मान के रूप में समझना और उसमें होने वाले अंतर की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH07-T4",
+   "topic_number": 4,
+   "title": "ताप के मापक्रम और मात्रक",
+   "ncert_sections": "7.3.1",
+   "concepts": [
+    {
+     "concept_tag": "taap-ke-maapkram",
+     "learning_objective": "सेल्सियस, फारेनहाइट और केल्विन मापक्रमों तथा उनके मात्रकों °C, °F और K को पहचानना।"
+    },
+    {
+     "concept_tag": "celsius-se-kelvin",
+     "learning_objective": "सेल्सियस स्केल के ताप को केल्विन स्केल में बदलना।"
+    },
+    {
+     "concept_tag": "taap-likhne-ke-niyam",
+     "learning_objective": "ताप को संख्या, रिक्त स्थान और सही संकेत के साथ लिखने के नियम लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH07-T5",
+   "topic_number": 5,
+   "title": "प्रयोगशाला तापमापी",
+   "ncert_sections": "7.3.2",
+   "concepts": [
+    {
+     "concept_tag": "prayogshala-taapmapi-sanrachna",
+     "learning_objective": "प्रयोगशाला तापमापी की बनावट, उसमें भरे द्रव और उसके ताप-परिसर का वर्णन करना।"
+    },
+    {
+     "concept_tag": "alpatam-maan",
+     "learning_objective": "दो बड़े चिह्नों के बीच के भागों से तापमापी का अल्पतम मान और पाठ्यांक ज्ञात करना।"
+    },
+    {
+     "concept_tag": "taap-mapan-ki-sahi-vidhi",
+     "learning_objective": "प्रयोगशाला तापमापी से ताप मापने की सही विधि और सावधानियाँ लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH07-T6",
+   "topic_number": 6,
+   "title": "वायु का ताप",
+   "ncert_sections": "7.3.3",
+   "concepts": [
+    {
+     "concept_tag": "vayu-taap-aur-mausam",
+     "learning_objective": "कक्ष-तापमापी और मौसम रिपोर्ट के अधिकतम-न्यूनतम वायु ताप की जानकारी की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "anna-mani",
+     "learning_objective": "मौसम-मापन उपकरणों के क्षेत्र में अन्ना मणि के योगदान को पहचानना।"
+    }
+   ]
+  }
+ ]
+}

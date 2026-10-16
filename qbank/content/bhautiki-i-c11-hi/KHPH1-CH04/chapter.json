@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KHPH1-CH04",
+ "title": "गति के नियम",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH1-CH04-T1",
+   "topic_number": 1,
+   "title": "अरस्तू की भ्रांति, जड़त्व का नियम और न्यूटन का गति का प्रथम नियम",
+   "ncert_sections": "4.2, 4.3, 4.4",
+   "concepts": [
+    {
+     "concept_tag": "arastu-ki-bhranti",
+     "learning_objective": "गति बनाए रखने के लिए बल की आवश्यकता संबंधी अरस्तू की धारणा की भ्रांति पहचानना।"
+    },
+    {
+     "concept_tag": "jadatva-ka-niyam",
+     "learning_objective": "गैलीलियो के नत समतल प्रयोगों से जड़त्व के नियम को समझाना।"
+    },
+    {
+     "concept_tag": "pratham-niyam",
+     "learning_objective": "न्यूटन के प्रथम नियम को दैनिक जीवन की स्थितियों पर लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH04-T2",
+   "topic_number": 2,
+   "title": "न्यूटन का गति का द्वितीय नियम, संवेग और आवेग",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "sanveg-dvitiya-niyam",
+     "learning_objective": "संवेग की परिभाषा देना और बल को संवेग परिवर्तन की दर के रूप में प्रयोग करना।"
+    },
+    {
+     "concept_tag": "aaveg",
+     "learning_objective": "आवेग को संवेग परिवर्तन के रूप में परिकलित करना और उसके व्यावहारिक उदाहरण समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH04-T3",
+   "topic_number": 3,
+   "title": "न्यूटन का गति का तृतीय नियम",
+   "ncert_sections": "4.6",
+   "concepts": [
+    {
+     "concept_tag": "kriya-pratikriya",
+     "learning_objective": "क्रिया-प्रतिक्रिया बलों की विशेषताएँ बताना और उन्हें सही पिंडों पर पहचानना।"
+    },
+    {
+     "concept_tag": "sampark-bal-tantra",
+     "learning_objective": "संपर्क में रखे पिंडों के तंत्र में पारस्परिक बल परिकलित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH04-T4",
+   "topic_number": 4,
+   "title": "संवेग संरक्षण",
+   "ncert_sections": "4.7",
+   "concepts": [
+    {
+     "concept_tag": "sanveg-sanrakshan",
+     "learning_objective": "विलगित तंत्र के लिए संवेग संरक्षण के नियम को प्रतिक्षेप, विस्फोट और टक्कर पर लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH04-T5",
+   "topic_number": 5,
+   "title": "कण का संतुलन और यांत्रिकी में समस्याएँ हल करना",
+   "ncert_sections": "4.8, 4.11",
+   "concepts": [
+    {
+     "concept_tag": "santulan-shart",
+     "learning_objective": "कण के संतुलन के लिए सभी बलों के सदिश योग के शून्य होने की शर्त लागू करना।"
+    },
+    {
+     "concept_tag": "mukt-pind-aarekh",
+     "learning_objective": "मुक्त-पिंड आरेख बनाकर लिफ़्ट जैसी स्थितियों में बल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH04-T6",
+   "topic_number": 6,
+   "title": "यांत्रिकी में सामान्य बल: घर्षण",
+   "ncert_sections": "4.9",
+   "concepts": [
+    {
+     "concept_tag": "sthaitik-gatij-gharshan",
+     "learning_objective": "स्थैतिक और गतिज घर्षण के नियमों तथा सीमांत घर्षण को समझाना और लागू करना।"
+    },
+    {
+     "concept_tag": "lotanik-gharshan",
+     "learning_objective": "लोटनिक घर्षण तथा घर्षण घटाने के उपायों और घर्षण की उपयोगिता को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH04-T7",
+   "topic_number": 7,
+   "title": "वृत्तीय गति",
+   "ncert_sections": "4.10",
+   "concepts": [
+    {
+     "concept_tag": "abhikendra-bal",
+     "learning_objective": "वृत्तीय गति के लिए आवश्यक अभिकेंद्र बल और उसके स्रोत की पहचान करना।"
+    },
+    {
+     "concept_tag": "bankit-sadak",
+     "learning_objective": "समतल और बंकित सड़क पर वाहन की अधिकतम और इष्टतम चाल परिकलित करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "chapter_id": "KECH1-CH01",
+ "title": "Some Basic Concepts of Chemistry",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECH1-CH01-T1",
+   "topic_number": 1,
+   "title": "Importance of chemistry and nature of matter",
+   "ncert_sections": "1.1, 1.2",
+   "concepts": [
+    {
+     "concept_tag": "role-of-chemistry",
+     "learning_objective": "Describe how chemistry contributes to health, industry and the environment."
+    },
+    {
+     "concept_tag": "states-of-matter",
+     "learning_objective": "Explain the solid, liquid and gaseous states in terms of particle arrangement and motion."
+    },
+    {
+     "concept_tag": "classification-of-matter",
+     "learning_objective": "Classify matter into mixtures, elements and compounds."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH01-T2",
+   "topic_number": 2,
+   "title": "Properties of matter and their measurement",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "si-units-prefixes",
+     "learning_objective": "Identify the SI base units and the quantities they measure."
+    },
+    {
+     "concept_tag": "mass-weight-volume",
+     "learning_objective": "Distinguish mass from weight and convert between units of volume."
+    },
+    {
+     "concept_tag": "density-temperature",
+     "learning_objective": "Calculate density and convert temperatures between the Celsius, Fahrenheit and Kelvin scales."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH01-T3",
+   "topic_number": 3,
+   "title": "Uncertainty in measurement",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "significant-figures",
+     "learning_objective": "Apply the rules of significant figures and scientific notation to measured quantities and results."
+    },
+    {
+     "concept_tag": "precision-accuracy",
+     "learning_objective": "Distinguish precision from accuracy using sets of measurements."
+    },
+    {
+     "concept_tag": "dimensional-analysis",
+     "learning_objective": "Convert units using the unit factor method."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH01-T4",
+   "topic_number": 4,
+   "title": "Laws of chemical combinations",
+   "ncert_sections": "1.5",
+   "concepts": [
+    {
+     "concept_tag": "conservation-of-mass",
+     "learning_objective": "State the law of conservation of mass and its significance."
+    },
+    {
+     "concept_tag": "definite-and-multiple-proportions",
+     "learning_objective": "Apply the laws of definite and multiple proportions to mass data."
+    },
+    {
+     "concept_tag": "gay-lussac-and-avogadro",
+     "learning_objective": "Apply Gay Lussac's law of gaseous volumes and Avogadro's law."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH01-T5",
+   "topic_number": 5,
+   "title": "Dalton's atomic theory and atomic and molecular masses",
+   "ncert_sections": "1.6, 1.7",
+   "concepts": [
+    {
+     "concept_tag": "daltons-atomic-theory",
+     "learning_objective": "State the postulates of Dalton's atomic theory."
+    },
+    {
+     "concept_tag": "average-atomic-mass",
+     "learning_objective": "Define the atomic mass unit and calculate average atomic mass from isotopic data."
+    },
+    {
+     "concept_tag": "molecular-and-formula-mass",
+     "learning_objective": "Calculate molecular mass and explain when formula mass is used."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH01-T6",
+   "topic_number": 6,
+   "title": "Mole concept, percentage composition and empirical formula",
+   "ncert_sections": "1.8, 1.9, 1.9.1",
+   "concepts": [
+    {
+     "concept_tag": "mole-and-avogadro-number",
+     "learning_objective": "Relate mass, moles and number of particles using molar mass and the Avogadro constant."
+    },
+    {
+     "concept_tag": "percentage-composition",
+     "learning_objective": "Calculate the mass per cent of an element in a compound."
+    },
+    {
+     "concept_tag": "empirical-molecular-formula",
+     "learning_objective": "Derive empirical and molecular formulas from percentage composition and molar mass."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH01-T7",
+   "topic_number": 7,
+   "title": "Stoichiometry, limiting reagent and reactions in solutions",
+   "ncert_sections": "1.10, 1.10.1, 1.10.2",
+   "concepts": [
+    {
+     "concept_tag": "stoichiometric-calculations",
+     "learning_objective": "Use a balanced equation to calculate masses of reactants and products."
+    },
+    {
+     "concept_tag": "limiting-reagent",
+     "learning_objective": "Identify the limiting reagent and the amount of product it allows."
+    },
+    {
+     "concept_tag": "concentration-of-solutions",
+     "learning_objective": "Express and calculate concentration as molarity and related terms."
+    }
+   ]
+  }
+ ]
+}

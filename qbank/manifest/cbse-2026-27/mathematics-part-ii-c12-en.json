@@ -1,0 +1,768 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "mathematics-part-ii-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "mathematics",
+  "language": "english",
+  "title": "Mathematics Part-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lemh2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEMH2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Integrals",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH2-CH01-T1",
+     "topic_number": 1,
+     "title": "Integration as an inverse process of differentiation",
+     "ncert_sections": "7.2, 7.2.1, 7.2.2",
+     "concepts": [
+      {
+       "concept_tag": "antiderivative-and-constant",
+       "learning_objective": "Recognise that a function has a family of antiderivatives differing by a constant and fix the constant from a given condition."
+      },
+      {
+       "concept_tag": "standard-integral-formulas",
+       "learning_objective": "Recall the standard indefinite integrals that follow from the derivatives of standard functions."
+      },
+      {
+       "concept_tag": "linearity-of-indefinite-integral",
+       "learning_objective": "Use the sum and constant-multiple properties of indefinite integrals to integrate combinations of functions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH01-T2",
+     "topic_number": 2,
+     "title": "Integration by substitution and trigonometric identities",
+     "ncert_sections": "7.3, 7.3.1, 7.3.2",
+     "concepts": [
+      {
+       "concept_tag": "integration-by-substitution",
+       "learning_objective": "Choose a suitable substitution to reduce an integral to a standard form."
+      },
+      {
+       "concept_tag": "trigonometric-identities-integration",
+       "learning_objective": "Use trigonometric identities to rewrite integrands such as powers and products of sines and cosines."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH01-T3",
+     "topic_number": 3,
+     "title": "Integrals of some particular functions",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "special-standard-forms",
+       "learning_objective": "Apply the standard integrals of 1/(x^2 ± a^2), 1/(a^2 - x^2) and their square-root forms."
+      },
+      {
+       "concept_tag": "completing-the-square",
+       "learning_objective": "Reduce integrals with a quadratic ax^2 + bx + c in the denominator to standard forms by completing the square."
+      },
+      {
+       "concept_tag": "linear-over-quadratic",
+       "learning_objective": "Integrate (px + q)/(ax^2 + bx + c) by writing the numerator as A times the derivative of the denominator plus B."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH01-T4",
+     "topic_number": 4,
+     "title": "Integration by partial fractions",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "proper-improper-rational-functions",
+       "learning_objective": "Distinguish proper and improper rational functions and reduce improper ones by long division."
+      },
+      {
+       "concept_tag": "partial-fraction-decomposition",
+       "learning_objective": "Write the correct partial fraction form for a proper rational function and integrate it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH01-T5",
+     "topic_number": 5,
+     "title": "Integration by parts",
+     "ncert_sections": "7.6, 7.6.1, 7.6.2",
+     "concepts": [
+      {
+       "concept_tag": "integration-by-parts",
+       "learning_objective": "Apply the integration by parts formula with a sensible choice of the first and second functions."
+      },
+      {
+       "concept_tag": "exponential-f-plus-f-prime",
+       "learning_objective": "Use the result that the integral of e^x[f(x) + f'(x)] is e^x f(x) + C."
+      },
+      {
+       "concept_tag": "square-root-quadratic-integrals",
+       "learning_objective": "Apply the standard integrals of the square roots of x^2 + a^2, x^2 - a^2 and a^2 - x^2."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH01-T6",
+     "topic_number": 6,
+     "title": "Definite integral and the fundamental theorem of calculus",
+     "ncert_sections": "7.7, 7.8",
+     "concepts": [
+      {
+       "concept_tag": "area-function-first-theorem",
+       "learning_objective": "Interpret the area function and use the first fundamental theorem to differentiate it."
+      },
+      {
+       "concept_tag": "second-fundamental-theorem",
+       "learning_objective": "Evaluate definite integrals as F(b) - F(a) using an antiderivative F."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH01-T7",
+     "topic_number": 7,
+     "title": "Evaluation of definite integrals by substitution",
+     "ncert_sections": "7.9",
+     "concepts": [
+      {
+       "concept_tag": "change-of-limits",
+       "learning_objective": "Change the limits of integration when a substitution is made and evaluate the new definite integral."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH01-T8",
+     "topic_number": 8,
+     "title": "Some properties of definite integrals",
+     "ncert_sections": "7.10",
+     "concepts": [
+      {
+       "concept_tag": "basic-definite-integral-properties",
+       "learning_objective": "Use the properties of interchanging limits and splitting the interval of integration."
+      },
+      {
+       "concept_tag": "property-a-plus-b-minus-x",
+       "learning_objective": "Apply the property that the integral of f(x) from 0 to a equals the integral of f(a - x) to evaluate integrals."
+      },
+      {
+       "concept_tag": "odd-even-function-property",
+       "learning_objective": "Use the properties of definite integrals of odd and even functions over a symmetric interval."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEMH2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Application of Integrals",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH2-CH02-T1",
+     "topic_number": 1,
+     "title": "Area under a curve using vertical strips",
+     "ncert_sections": "8.1, 8.2",
+     "concepts": [
+      {
+       "concept_tag": "elementary-vertical-strip",
+       "learning_objective": "Explain the area under y = f(x) as the sum of thin vertical strips of area dA = y dx."
+      },
+      {
+       "concept_tag": "area-under-curve-x-axis",
+       "learning_objective": "Calculate the area bounded by y = f(x), the x-axis and the ordinates x = a and x = b when f(x) is non-negative."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH02-T2",
+     "topic_number": 2,
+     "title": "Area using horizontal strips",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "horizontal-strip-area",
+       "learning_objective": "Calculate the area bounded by x = g(y), the y-axis and the lines y = c and y = d."
+      },
+      {
+       "concept_tag": "choosing-strip-direction",
+       "learning_objective": "Decide whether vertical or horizontal strips describe a given region and set up the correct integral."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH02-T3",
+     "topic_number": 3,
+     "title": "Regions below the x-axis and curves crossing it",
+     "ncert_sections": "8.2 (Remark), Miscellaneous Examples",
+     "concepts": [
+      {
+       "concept_tag": "area-below-x-axis",
+       "learning_objective": "Take the absolute value of the definite integral when the curve lies below the x-axis."
+      },
+      {
+       "concept_tag": "curve-crossing-x-axis",
+       "learning_objective": "Split the interval at the points where the curve crosses the x-axis and add the absolute areas of the parts."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH02-T4",
+     "topic_number": 4,
+     "title": "Areas of circles, ellipses and parabolic regions",
+     "ncert_sections": "8.2 (Examples 1, 2), Exercise 8.1",
+     "concepts": [
+      {
+       "concept_tag": "area-of-circle",
+       "learning_objective": "Find the area enclosed by a circle x² + y² = a², or a quadrant of it, by integration."
+      },
+      {
+       "concept_tag": "area-of-ellipse",
+       "learning_objective": "Find the area enclosed by the ellipse x²/a² + y²/b² = 1 by integration."
+      },
+      {
+       "concept_tag": "symmetry-in-area",
+       "learning_objective": "Use the symmetry of a circle, ellipse or parabola to reduce an area to one quadrant and multiply."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEMH2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Differential Equations",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH2-CH03-T1",
+     "topic_number": 1,
+     "title": "Differential equations: order and degree",
+     "ncert_sections": "9.1, 9.2, 9.2.1, 9.2.2",
+     "concepts": [
+      {
+       "concept_tag": "ordinary-differential-equation",
+       "learning_objective": "Recognise a differential equation and distinguish an ordinary differential equation from a partial one."
+      },
+      {
+       "concept_tag": "order-of-differential-equation",
+       "learning_objective": "Find the order of a differential equation from its highest order derivative."
+      },
+      {
+       "concept_tag": "degree-of-differential-equation",
+       "learning_objective": "Find the degree of a differential equation when it is a polynomial in its derivatives, and recognise when it is not defined."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH03-T2",
+     "topic_number": 2,
+     "title": "General and particular solutions",
+     "ncert_sections": "9.3",
+     "concepts": [
+      {
+       "concept_tag": "verifying-a-solution",
+       "learning_objective": "Verify by substitution that a given function is a solution of a differential equation."
+      },
+      {
+       "concept_tag": "general-and-particular-solution",
+       "learning_objective": "Distinguish general and particular solutions and relate the number of arbitrary constants to the order."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH03-T3",
+     "topic_number": 3,
+     "title": "Differential equations with variables separable",
+     "ncert_sections": "9.4, 9.4.1",
+     "concepts": [
+      {
+       "concept_tag": "separation-of-variables",
+       "learning_objective": "Identify and solve first order, first degree equations whose variables can be separated."
+      },
+      {
+       "concept_tag": "particular-solution-initial-condition",
+       "learning_objective": "Use a given condition or point on a curve to find a particular solution."
+      },
+      {
+       "concept_tag": "growth-model-application",
+       "learning_objective": "Model continuous growth with dP/dt = kP and interpret its solution."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH03-T4",
+     "topic_number": 4,
+     "title": "Homogeneous differential equations",
+     "ncert_sections": "9.4.2",
+     "concepts": [
+      {
+       "concept_tag": "homogeneous-function-degree",
+       "learning_objective": "Test whether a function of x and y is homogeneous and find its degree."
+      },
+      {
+       "concept_tag": "homogeneous-de-substitution",
+       "learning_objective": "Solve a homogeneous differential equation using the substitution y = vx."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH03-T5",
+     "topic_number": 5,
+     "title": "Linear differential equations",
+     "ncert_sections": "9.4.3",
+     "concepts": [
+      {
+       "concept_tag": "integrating-factor",
+       "learning_objective": "Write a first order linear equation in standard form and find its integrating factor."
+      },
+      {
+       "concept_tag": "solving-linear-de",
+       "learning_objective": "Solve a first order linear differential equation using its integrating factor."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEMH2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Vector Algebra",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH2-CH04-T1",
+     "topic_number": 1,
+     "title": "Vectors: basic concepts, direction cosines and types",
+     "ncert_sections": "10.1, 10.2, 10.3",
+     "concepts": [
+      {
+       "concept_tag": "direction-cosines",
+       "learning_objective": "Find the direction cosines of a vector and use l^2 + m^2 + n^2 = 1."
+      },
+      {
+       "concept_tag": "types-of-vectors",
+       "learning_objective": "Distinguish scalars from vectors and identify zero, unit, collinear, equal and negative vectors."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH04-T2",
+     "topic_number": 2,
+     "title": "Addition of vectors",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "triangle-and-parallelogram-law",
+       "learning_objective": "Add vectors geometrically using the triangle and parallelogram laws."
+      },
+      {
+       "concept_tag": "properties-of-vector-addition",
+       "learning_objective": "State and apply the commutative and associative properties of vector addition."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH04-T3",
+     "topic_number": 3,
+     "title": "Multiplication of a vector by a scalar and components",
+     "ncert_sections": "10.5, 10.5.1",
+     "concepts": [
+      {
+       "concept_tag": "scalar-multiple-and-unit-vector",
+       "learning_objective": "Find unit vectors and scalar multiples, and test collinearity using b = (lambda)a."
+      },
+      {
+       "concept_tag": "components-of-a-vector",
+       "learning_objective": "Perform vector operations using components along the unit vectors along the axes."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH04-T4",
+     "topic_number": 4,
+     "title": "Vector joining two points and section formula",
+     "ncert_sections": "10.5.2, 10.5.3",
+     "concepts": [
+      {
+       "concept_tag": "vector-joining-two-points",
+       "learning_objective": "Express the vector joining two points in component form and find its magnitude."
+      },
+      {
+       "concept_tag": "section-formula",
+       "learning_objective": "Find the position vector of a point dividing a segment internally or externally in a given ratio."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH04-T5",
+     "topic_number": 5,
+     "title": "Scalar product and projection",
+     "ncert_sections": "10.6.1, 10.6.2",
+     "concepts": [
+      {
+       "concept_tag": "scalar-product",
+       "learning_objective": "Compute the scalar product and use it to find angles and test perpendicularity."
+      },
+      {
+       "concept_tag": "projection-of-a-vector",
+       "learning_objective": "Find the projection of one vector on another using (a . b)/|b|."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH04-T6",
+     "topic_number": 6,
+     "title": "Vector product",
+     "ncert_sections": "10.6.3",
+     "concepts": [
+      {
+       "concept_tag": "vector-product",
+       "learning_objective": "Compute the vector product and apply its properties such as anticommutativity."
+      },
+      {
+       "concept_tag": "area-using-vector-product",
+       "learning_objective": "Find areas of triangles and parallelograms using the magnitude of the vector product."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEMH2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Three Dimensional Geometry",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH2-CH05-T1",
+     "topic_number": 1,
+     "title": "Direction cosines and direction ratios of a line",
+     "ncert_sections": "11.2",
+     "concepts": [
+      {
+       "concept_tag": "direction-cosines",
+       "learning_objective": "Define the direction cosines of a directed line and use the identity l^2 + m^2 + n^2 = 1."
+      },
+      {
+       "concept_tag": "direction-ratios-to-cosines",
+       "learning_objective": "Convert a set of direction ratios of a line into its direction cosines."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH05-T2",
+     "topic_number": 2,
+     "title": "Direction cosines of a line through two points",
+     "ncert_sections": "11.2.1",
+     "concepts": [
+      {
+       "concept_tag": "line-through-two-points",
+       "learning_objective": "Find the direction ratios and direction cosines of the line joining two given points."
+      },
+      {
+       "concept_tag": "collinearity-of-points",
+       "learning_objective": "Use proportional direction ratios to test whether three points are collinear."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH05-T3",
+     "topic_number": 3,
+     "title": "Equation of a line in space",
+     "ncert_sections": "11.3, 11.3.1",
+     "concepts": [
+      {
+       "concept_tag": "vector-equation-of-line",
+       "learning_objective": "Write and interpret the vector equation r = a + λb of a line through a point parallel to a vector."
+      },
+      {
+       "concept_tag": "cartesian-equation-of-line",
+       "learning_objective": "Write the Cartesian form of a line and convert between the vector and Cartesian forms."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH05-T4",
+     "topic_number": 4,
+     "title": "Angle between two lines",
+     "ncert_sections": "11.4",
+     "concepts": [
+      {
+       "concept_tag": "angle-between-lines",
+       "learning_objective": "Find the acute angle between two lines from their direction ratios, direction cosines or equations."
+      },
+      {
+       "concept_tag": "perpendicular-parallel-conditions",
+       "learning_objective": "Apply the conditions for two lines to be perpendicular or parallel."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH05-T5",
+     "topic_number": 5,
+     "title": "Shortest distance between skew lines",
+     "ncert_sections": "11.5, 11.5.1",
+     "concepts": [
+      {
+       "concept_tag": "skew-lines",
+       "learning_objective": "Identify skew lines as lines in space that are neither parallel nor intersecting."
+      },
+      {
+       "concept_tag": "shortest-distance-skew-lines",
+       "learning_objective": "Compute the shortest distance between two skew lines using the vector formula."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH05-T6",
+     "topic_number": 6,
+     "title": "Distance between parallel lines",
+     "ncert_sections": "11.5.2",
+     "concepts": [
+      {
+       "concept_tag": "parallel-lines-recognition",
+       "learning_objective": "Recognise parallel lines in space from proportional direction vectors and know they are coplanar."
+      },
+      {
+       "concept_tag": "distance-between-parallel-lines",
+       "learning_objective": "Compute the distance between two parallel lines using d = |b × (a2 − a1)| / |b|."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEMH2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Linear Programming",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH2-CH06-T1",
+     "topic_number": 1,
+     "title": "Linear programming problems and their terms",
+     "ncert_sections": "12.1, 12.2",
+     "concepts": [
+      {
+       "concept_tag": "lpp-definition",
+       "learning_objective": "Describe a linear programming problem and the meaning of the words linear and programming in it."
+      },
+      {
+       "concept_tag": "objective-function-and-decision-variables",
+       "learning_objective": "Identify a linear objective function Z = ax + by and its decision variables."
+      },
+      {
+       "concept_tag": "constraints-and-non-negativity",
+       "learning_objective": "Recognise linear constraints and the non-negative restrictions x >= 0, y >= 0."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH06-T2",
+     "topic_number": 2,
+     "title": "Mathematical formulation of a linear programming problem",
+     "ncert_sections": "12.2.1",
+     "concepts": [
+      {
+       "concept_tag": "formulating-constraints",
+       "learning_objective": "Translate the limits stated in a real-life problem into linear inequalities in the decision variables."
+      },
+      {
+       "concept_tag": "formulating-objective-function",
+       "learning_objective": "Write the linear objective function to be maximised or minimised from the data of a problem."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH06-T3",
+     "topic_number": 3,
+     "title": "Feasible region, feasible solutions and the fundamental theorems",
+     "ncert_sections": "12.2.2",
+     "concepts": [
+      {
+       "concept_tag": "feasible-region-and-solutions",
+       "learning_objective": "Determine the feasible region, its corner points and whether a point is a feasible or an infeasible solution."
+      },
+      {
+       "concept_tag": "bounded-unbounded-region",
+       "learning_objective": "Distinguish a bounded feasible region from an unbounded one."
+      },
+      {
+       "concept_tag": "fundamental-theorems",
+       "learning_objective": "Apply the theorems that place optimal values of a linear objective function at corner points of the feasible region."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH06-T4",
+     "topic_number": 4,
+     "title": "Corner point method on bounded regions",
+     "ncert_sections": "12.2.2",
+     "concepts": [
+      {
+       "concept_tag": "corner-point-method",
+       "learning_objective": "Solve a linear programming problem with a bounded feasible region by evaluating Z at its corner points."
+      },
+      {
+       "concept_tag": "multiple-optimal-solutions",
+       "learning_objective": "Recognise that when two corner points give the same optimal value, every point of the segment joining them is optimal."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH06-T5",
+     "topic_number": 5,
+     "title": "Unbounded regions and problems with no feasible solution",
+     "ncert_sections": "12.2.2",
+     "concepts": [
+      {
+       "concept_tag": "unbounded-optimum-test",
+       "learning_objective": "Use the open half-plane test to decide whether the smallest or largest corner value is the optimum on an unbounded region."
+      },
+      {
+       "concept_tag": "no-feasible-region",
+       "learning_objective": "Recognise a system of constraints that has no feasible region and hence no feasible solution."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEMH2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Probability",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lemh207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEMH2-CH07-T1",
+     "topic_number": 1,
+     "title": "Conditional probability",
+     "ncert_sections": "13.2",
+     "concepts": [
+      {
+       "concept_tag": "conditional-probability-definition",
+       "learning_objective": "Define and compute the conditional probability P(E|F) = P(E ∩ F)/P(F) for events of a finite sample space."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH07-T2",
+     "topic_number": 2,
+     "title": "Properties of conditional probability",
+     "ncert_sections": "13.2.1",
+     "concepts": [
+      {
+       "concept_tag": "conditional-probability-properties",
+       "learning_objective": "Apply P(S|F) = P(F|F) = 1, the addition property for P((A ∪ B)|F) and P(E′|F) = 1 − P(E|F)."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH07-T3",
+     "topic_number": 3,
+     "title": "Multiplication theorem on probability",
+     "ncert_sections": "13.3",
+     "concepts": [
+      {
+       "concept_tag": "multiplication-rule",
+       "learning_objective": "Use P(E ∩ F) = P(E) P(F|E) = P(F) P(E|F), and its extension to three events, to find probabilities of successive events."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH07-T4",
+     "topic_number": 4,
+     "title": "Independent events",
+     "ncert_sections": "13.4",
+     "concepts": [
+      {
+       "concept_tag": "independent-events",
+       "learning_objective": "Test and use independence of events through P(E ∩ F) = P(E) P(F)."
+      },
+      {
+       "concept_tag": "independent-vs-mutually-exclusive",
+       "learning_objective": "Distinguish independent events from mutually exclusive events."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH07-T5",
+     "topic_number": 5,
+     "title": "Partition of a sample space and theorem of total probability",
+     "ncert_sections": "13.5.1, 13.5.2",
+     "concepts": [
+      {
+       "concept_tag": "partition-of-sample-space",
+       "learning_objective": "Identify when a set of events forms a partition of a sample space."
+      },
+      {
+       "concept_tag": "total-probability",
+       "learning_objective": "Find the probability of an event using the theorem of total probability over a partition."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEMH2-CH07-T6",
+     "topic_number": 6,
+     "title": "Bayes' theorem",
+     "ncert_sections": "13.5",
+     "concepts": [
+      {
+       "concept_tag": "bayes-theorem",
+       "learning_objective": "Apply Bayes' theorem to find the reverse probability of a cause given an observed event."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

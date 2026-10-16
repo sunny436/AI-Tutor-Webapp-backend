@@ -1,0 +1,72 @@
+{
+ "chapter_id": "LHMH2-CH02",
+ "title": "समाकलनों के अनुप्रयोग",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH2-CH02-T1",
+   "topic_number": 1,
+   "title": "वक्र, x-अक्ष और कोटियों से घिरा क्षेत्रफल",
+   "ncert_sections": "8.1, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "prarambhik-kshetrafal-patti",
+     "learning_objective": "ऊर्ध्वाधर प्रारंभिक पट्टी के क्षेत्रफल dA = y dx का अर्थ समझना।"
+    },
+    {
+     "concept_tag": "x-aksh-ke-sapeksh-kshetrafal",
+     "learning_objective": "वक्र y = f(x), x-अक्ष तथा कोटियों x = a, x = b से घिरे क्षेत्र का क्षेत्रफल निश्चित समाकलन से ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH02-T2",
+   "topic_number": 2,
+   "title": "y-अक्ष के सापेक्ष क्षेत्रफल तथा x-अक्ष के नीचे का क्षेत्र",
+   "ncert_sections": "8.2 (टिप्पणी)",
+   "concepts": [
+    {
+     "concept_tag": "y-aksh-ke-sapeksh-kshetrafal",
+     "learning_objective": "वक्र x = g(y), y-अक्ष तथा रेखाओं y = c, y = d से घिरे क्षेत्र का क्षेत्रफल क्षैतिज पट्टियों से ज्ञात करना।"
+    },
+    {
+     "concept_tag": "rinatmak-kshetra-nirpeksh-man",
+     "learning_objective": "x-अक्ष के नीचे स्थित भाग के लिए समाकलन के निरपेक्ष मान का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH02-T3",
+   "topic_number": 3,
+   "title": "वृत्त और दीर्घवृत्त से घिरा क्षेत्रफल",
+   "ncert_sections": "8.2 (उदाहरण 1, 2), प्रश्नावली 8.1",
+   "concepts": [
+    {
+     "concept_tag": "vritt-ka-kshetrafal",
+     "learning_objective": "सममिति का प्रयोग कर वृत्त x² + y² = a² से घिरे क्षेत्र का क्षेत्रफल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "dirghvritt-ka-kshetrafal",
+     "learning_objective": "दीर्घवृत्त x²/a² + y²/b² = 1 से घिरे क्षेत्र या उसके भाग का क्षेत्रफल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH02-T4",
+   "topic_number": 4,
+   "title": "रेखाओं और अन्य वक्रों से घिरा क्षेत्रफल",
+   "ncert_sections": "विविध उदाहरण, विविध प्रश्नावली",
+   "concepts": [
+    {
+     "concept_tag": "rekha-se-ghira-kshetrafal",
+     "learning_objective": "x-अक्ष को काटने वाली रेखा से घिरे क्षेत्र का क्षेत्रफल भागों में बाँटकर ज्ञात करना।"
+    },
+    {
+     "concept_tag": "trikonmitiya-aur-anya-vakra",
+     "learning_objective": "त्रिकोणमितीय वक्रों और खंडशः परिभाषित वक्रों से घिरा क्षेत्रफल ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

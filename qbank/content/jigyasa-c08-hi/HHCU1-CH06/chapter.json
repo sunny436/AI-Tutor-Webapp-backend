@@ -1,0 +1,124 @@
+{
+ "chapter_id": "HHCU1-CH06",
+ "title": "दाब, पवन, झंझावात एवं चक्रवात",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHCU1-CH06-T1",
+   "topic_number": 1,
+   "title": "दाब: बल और क्षेत्रफल का संबंध",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "dab-paribhasha",
+     "learning_objective": "विद्यार्थी दाब को प्रति एकांक क्षेत्रफल पर लगने वाले बल के रूप में परिभाषित करता है और उसका SI मात्रक बताता है।"
+    },
+    {
+     "concept_tag": "dab-ganana",
+     "learning_objective": "विद्यार्थी बल और क्षेत्रफल से दाब की गणना करता है और दैनिक जीवन के उदाहरणों में दाब घटाने-बढ़ाने की व्याख्या करता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH06-T2",
+   "topic_number": 2,
+   "title": "द्रवों द्वारा आरोपित दाब",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "drav-stambh-unchai",
+     "learning_objective": "विद्यार्थी समझाता है कि द्रव का दाब उसके स्तंभ की ऊँचाई पर निर्भर करता है।"
+    },
+    {
+     "concept_tag": "drav-diwar-dab",
+     "learning_objective": "विद्यार्थी बताता है कि द्रव पात्र की दीवारों सहित सभी दिशाओं में दाब डालता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH06-T3",
+   "topic_number": 3,
+   "title": "वायु द्वारा आरोपित दाब",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "vayumandaliya-dab",
+     "learning_objective": "विद्यार्थी वायुमंडलीय दाब को पहचानता है और बताता है कि हम उसके नीचे कुचले क्यों नहीं जाते।"
+    },
+    {
+     "concept_tag": "chushak-dab-antar",
+     "learning_objective": "विद्यार्थी रबर के चूषक के चिपकने की व्याख्या वायुदाब के अंतर से करता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH06-T4",
+   "topic_number": 4,
+   "title": "पवन का बनना",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "pavan-dab-antar",
+     "learning_objective": "विद्यार्थी समझाता है कि वायु उच्च दाब वाले क्षेत्र से निम्न दाब वाले क्षेत्र की ओर बहती है।"
+    },
+    {
+     "concept_tag": "samudri-sthaliya-samir",
+     "learning_objective": "विद्यार्थी समुद्री और स्थलीय समीर को दाब के अंतर से समझाता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH06-T5",
+   "topic_number": 5,
+   "title": "तीव्रगामी पवन से वायुदाब घट जाता है",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "tivra-pavan-nimn-dab",
+     "learning_objective": "विद्यार्थी समझाता है कि तीव्रगामी पवन के साथ वायुदाब कम हो जाता है और इससे छतें उड़ सकती हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH06-T6",
+   "topic_number": 6,
+   "title": "झंझावात, तड़ितझंझा और तड़ित",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "jhanjhavat-nirman",
+     "learning_objective": "विद्यार्थी झंझावात और तड़ितझंझा बनने की प्रक्रिया का वर्णन करता है।"
+    },
+    {
+     "concept_tag": "tadit-aavesh",
+     "learning_objective": "विद्यार्थी बादलों में आवेश पृथक्करण और तड़ित उत्पन्न होने की व्याख्या करता है।"
+    },
+    {
+     "concept_tag": "tadit-suraksha",
+     "learning_objective": "विद्यार्थी तड़ित से बचाव के उपाय बताता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH06-T7",
+   "topic_number": 7,
+   "title": "चक्रवात",
+   "ncert_sections": "6.6",
+   "concepts": [
+    {
+     "concept_tag": "chakravat-nirman",
+     "learning_objective": "विद्यार्थी गरम महासागरीय जल के ऊपर चक्रवात बनने की प्रक्रिया समझाता है।"
+    },
+    {
+     "concept_tag": "chakravat-akshi",
+     "learning_objective": "विद्यार्थी चक्रवात अक्षि की विशेषताएँ पहचानता है।"
+    },
+    {
+     "concept_tag": "chakravat-suraksha",
+     "learning_objective": "विद्यार्थी चक्रवात से होने वाली हानियों को पहचानता है।"
+    }
+   ]
+  }
+ ]
+}

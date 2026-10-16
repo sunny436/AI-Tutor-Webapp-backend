@@ -1,0 +1,100 @@
+{
+ "chapter_id": "KEPH2-CH06",
+ "title": "Oscillations",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPH2-CH06-T1",
+   "topic_number": 1,
+   "title": "Periodic and oscillatory motions: period, frequency and displacement",
+   "ncert_sections": "13.2",
+   "concepts": [
+    {
+     "concept_tag": "periodic-vs-oscillatory-motion",
+     "learning_objective": "Distinguish periodic motion from oscillatory motion with everyday examples."
+    },
+    {
+     "concept_tag": "period-and-frequency",
+     "learning_objective": "Relate period and frequency and use the hertz as the unit of frequency."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH06-T2",
+   "topic_number": 2,
+   "title": "Simple harmonic motion: amplitude, phase and angular frequency",
+   "ncert_sections": "13.3",
+   "concepts": [
+    {
+     "concept_tag": "shm-displacement-equation",
+     "learning_objective": "Identify amplitude, phase and phase constant in x(t) = A cos(omega t + phi)."
+    },
+    {
+     "concept_tag": "angular-frequency",
+     "learning_objective": "Use omega = 2 pi / T to relate angular frequency and period."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH06-T3",
+   "topic_number": 3,
+   "title": "Simple harmonic motion and uniform circular motion",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "reference-circle-projection",
+     "learning_objective": "Explain SHM as the projection of uniform circular motion on a diameter."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH06-T4",
+   "topic_number": 4,
+   "title": "Velocity, acceleration and the force law in SHM",
+   "ncert_sections": "13.5, 13.6",
+   "concepts": [
+    {
+     "concept_tag": "velocity-and-acceleration-in-shm",
+     "learning_objective": "Obtain v = -omega A sin(omega t + phi) and a = -omega^2 x and their maximum values."
+    },
+    {
+     "concept_tag": "restoring-force-law",
+     "learning_objective": "Apply F = -kx and omega = sqrt(k/m) to a linear oscillator such as a spring-mass system."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH06-T5",
+   "topic_number": 5,
+   "title": "Energy in simple harmonic motion",
+   "ncert_sections": "13.7",
+   "concepts": [
+    {
+     "concept_tag": "kinetic-and-potential-energy-in-shm",
+     "learning_objective": "Express K and U of an oscillator as functions of displacement and time."
+    },
+    {
+     "concept_tag": "conservation-of-mechanical-energy",
+     "learning_objective": "Use the constancy of E = (1/2)kA^2 to find speeds and energy shares."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH06-T6",
+   "topic_number": 6,
+   "title": "The simple pendulum",
+   "ncert_sections": "13.8",
+   "concepts": [
+    {
+     "concept_tag": "pendulum-period",
+     "learning_objective": "Use T = 2 pi sqrt(L/g) and its independence from mass and amplitude."
+    },
+    {
+     "concept_tag": "small-angle-approximation",
+     "learning_objective": "Explain why a pendulum is simple harmonic only for small angular displacements."
+    }
+   ]
+  }
+ ]
+}

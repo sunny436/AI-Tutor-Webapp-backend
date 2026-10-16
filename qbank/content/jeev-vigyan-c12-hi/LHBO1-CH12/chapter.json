@@ -1,0 +1,92 @@
+{
+ "chapter_id": "LHBO1-CH12",
+ "title": "पारितंत्र",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHBO1-CH12-T1",
+   "topic_number": 1,
+   "title": "पारितंत्र : संरचना एवं प्रकार्य",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "paritantra-sanrachna-starvinyas",
+     "learning_objective": "पारितंत्र की संरचना, जाति संघटन और स्तरविन्यास को समझाना।"
+    },
+    {
+     "concept_tag": "talab-paritantra",
+     "learning_objective": "तालाब के उदाहरण से पारितंत्र के जैविक-अजैविक घटकों और उनके प्रकार्यों की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH12-T2",
+   "topic_number": 2,
+   "title": "उत्पादकता",
+   "ncert_sections": "12.2",
+   "concepts": [
+    {
+     "concept_tag": "sakal-evam-shuddh-prathamik-utpadakta",
+     "learning_objective": "सकल प्राथमिक उत्पादकता, शुद्ध प्राथमिक उत्पादकता और द्वितीयक उत्पादकता में अंतर करना।"
+    },
+    {
+     "concept_tag": "utpadakta-ko-prabhavit-karne-wale-karak",
+     "learning_objective": "उत्पादकता को प्रभावित करने वाले कारकों और जैवमंडल की वार्षिक उत्पादकता को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH12-T3",
+   "topic_number": 3,
+   "title": "अपघटन",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "apghatan-ke-charan",
+     "learning_objective": "अपघटन के चरणों - खंडन, निक्षालन, अपचय, ह्यूमसभवन और खनिजीकरण - को पहचानना।"
+    },
+    {
+     "concept_tag": "apghatan-dar-ke-karak",
+     "learning_objective": "अपरद के रासायनिक संघटन और जलवायवीय कारकों का अपघटन दर पर प्रभाव समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH12-T4",
+   "topic_number": 4,
+   "title": "ऊर्जा प्रवाह",
+   "ncert_sections": "12.4",
+   "concepts": [
+    {
+     "concept_tag": "saur-urja-evam-par",
+     "learning_objective": "सौर ऊर्जा, प्रकाश-संश्लेषणीय सक्रिय विकिरण और ऊर्जा के एकदिशीय प्रवाह को समझाना।"
+    },
+    {
+     "concept_tag": "charan-evam-apard-khadya-shrinkhala",
+     "learning_objective": "चारण खाद्य श्रृंखला, अपरद खाद्य श्रृंखला और खाद्य जाल में अंतर करना।"
+    },
+    {
+     "concept_tag": "poshan-star-evam-das-pratishat-niyam",
+     "learning_objective": "पोषण स्तर, खड़ी फसल और 10 प्रतिशत नियम का अनुप्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH12-T5",
+   "topic_number": 5,
+   "title": "पारिस्थितिक पिरैमिड",
+   "ncert_sections": "12.5",
+   "concepts": [
+    {
+     "concept_tag": "pyramid-ke-prakar",
+     "learning_objective": "संख्या, जैवभार और ऊर्जा के पिरैमिडों को पहचानना।"
+    },
+    {
+     "concept_tag": "ulta-pyramid",
+     "learning_objective": "उल्टे पिरैमिडों के उदाहरणों और ऊर्जा पिरैमिड के सदा सीधा रहने के कारण का विश्लेषण करना।"
+    }
+   ]
+  }
+ ]
+}

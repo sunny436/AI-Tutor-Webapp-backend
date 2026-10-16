@@ -1,0 +1,864 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "bhautiki-ii-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "physics",
+  "language": "hindi",
+  "title": "Bhautiki-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khph2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHPH2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "ठोसों के यांत्रिक गुण",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH2-CH01-T1",
+     "topic_number": 1,
+     "title": "प्रत्यास्थता और सुघट्यता",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "pratyasthata",
+       "learning_objective": "विरूपक बल हटाने पर वस्तु के मूल आकार और आकृति में लौटने के गुण, प्रत्यास्थता, को पहचान सके।"
+      },
+      {
+       "concept_tag": "sughatyata",
+       "learning_objective": "सुघट्य पदार्थों और स्थायी विरूपण का अर्थ समझा सके।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH01-T2",
+     "topic_number": 2,
+     "title": "प्रतिबल और विकृति",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "pratibal",
+       "learning_objective": "प्रतिबल को प्रति एकांक क्षेत्रफल प्रत्यानयन बल के रूप में परिभाषित कर उसका मात्रक और विमा बता सके।"
+      },
+      {
+       "concept_tag": "vikriti-ke-prakar",
+       "learning_objective": "अनुदैर्ध्य, अपरूपण और आयतन विकृति में अंतर कर सके।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH01-T3",
+     "topic_number": 3,
+     "title": "हुक का नियम और प्रतिबल-विकृति वक्र",
+     "ncert_sections": "8.3, 8.4",
+     "concepts": [
+      {
+       "concept_tag": "hook-ka-niyam",
+       "learning_objective": "अल्प विरूपण के लिए प्रतिबल और विकृति की आनुपातिकता का कथन और उसकी सीमा बता सके।"
+      },
+      {
+       "concept_tag": "pratibal-vikriti-vakra",
+       "learning_objective": "प्रतिबल-विकृति वक्र पर प्रत्यास्थ सीमा, पराभव बिंदु, चरम तनन सामर्थ्य और भंजन बिंदु की व्याख्या कर सके।"
+      },
+      {
+       "concept_tag": "bhangur-tanya-pratyasth-bahulak",
+       "learning_objective": "भंगुर, तन्य पदार्थों और प्रत्यास्थ बहुलकों के वक्रों की तुलना कर सके।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH01-T4",
+     "topic_number": 4,
+     "title": "यंग गुणांक और अपरूपण गुणांक",
+     "ncert_sections": "8.5.1, 8.5.2",
+     "concepts": [
+      {
+       "concept_tag": "young-gunank",
+       "learning_objective": "यंग गुणांक Y = (F/A)/(ΔL/L) का प्रयोग कर तार के प्रसार की गणना कर सके।"
+      },
+      {
+       "concept_tag": "aparupan-gunank",
+       "learning_objective": "अपरूपण गुणांक G की परिभाषा देकर अपरूपण विस्थापन की गणना कर सके।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH01-T5",
+     "topic_number": 5,
+     "title": "आयतन गुणांक, पॉयसन अनुपात और प्रत्यास्थ स्थितिज ऊर्जा",
+     "ncert_sections": "8.5.3, 8.5.4, 8.5.5",
+     "concepts": [
+      {
+       "concept_tag": "aayatan-gunank",
+       "learning_objective": "आयतन गुणांक B और संपीड्यता k = 1/B का प्रयोग कर आयतन परिवर्तन ज्ञात कर सके।"
+      },
+      {
+       "concept_tag": "poisson-anupat",
+       "learning_objective": "पॉयसन अनुपात को पार्श्विक और अनुदैर्ध्य विकृति के अनुपात के रूप में परिकलित कर सके।"
+      },
+      {
+       "concept_tag": "pratyasth-sthitij-urja",
+       "learning_objective": "खिंचे तार में प्रति एकांक आयतन संचित ऊर्जा u = ½ × प्रतिबल × विकृति ज्ञात कर सके।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH01-T6",
+     "topic_number": 6,
+     "title": "पदार्थों के प्रत्यास्थ व्यवहार के अनुप्रयोग",
+     "ncert_sections": "8.6",
+     "concepts": [
+      {
+       "concept_tag": "crane-rassi",
+       "learning_objective": "क्रेन की रस्सी का न्यूनतम अनुप्रस्थ क्षेत्रफल पराभव सामर्थ्य से ज्ञात कर सके।"
+      },
+      {
+       "concept_tag": "dharan-jhukav",
+       "learning_objective": "धरन के झुकाव δ = Wl³/(4bd³Y) के आधार पर I आकृति के धरन की उपयोगिता समझा सके।"
+      },
+      {
+       "concept_tag": "parvat-unchai",
+       "learning_objective": "चट्टानों की प्रत्यास्थ सीमा से पर्वत की अधिकतम ऊँचाई का अनुमान लगा सके।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPH2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "तरलों के यांत्रिकी गुण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH2-CH02-T1",
+     "topic_number": 1,
+     "title": "दाब, पास्कल का नियम तथा गहराई के साथ दाब में परिवर्तन",
+     "ncert_sections": "9.1, 9.2, 9.2.1, 9.2.2",
+     "concepts": [
+      {
+       "concept_tag": "dab-ki-paribhasha",
+       "learning_objective": "दाब को एकांक क्षेत्रफल पर लगने वाले अभिलंब बल के रूप में परिभाषित कर उसके मात्रक और विमाएँ बताना।"
+      },
+      {
+       "concept_tag": "pascal-ka-niyam",
+       "learning_objective": "स्थिर तरल में दाब के सभी दिशाओं में समान होने तथा तरल बल के सतह के लंबवत होने को समझाना।"
+      },
+      {
+       "concept_tag": "gahrai-ke-sath-dab",
+       "learning_objective": "सूत्र P = Pa + ρgh द्वारा किसी गहराई पर दाब ज्ञात करना और द्रवस्थैतिक विरोधाभास को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH02-T2",
+     "topic_number": 2,
+     "title": "वायुमंडलीय दाब, प्रमापी दाब तथा द्रवचालित मशीनें",
+     "ncert_sections": "9.2.3, 9.2.4",
+     "concepts": [
+      {
+       "concept_tag": "vayumandaliya-aur-pramapi-dab",
+       "learning_objective": "पारद दाबमापी तथा खुली नली मैनोमीटर द्वारा वायुमंडलीय और प्रमापी दाब को समझना।"
+      },
+      {
+       "concept_tag": "dravchalit-mashin",
+       "learning_objective": "पास्कल के नियम के आधार पर द्रवचालित उत्थापक और ब्रेक की कार्यविधि तथा यांत्रिक लाभ ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH02-T3",
+     "topic_number": 3,
+     "title": "धारारेखी प्रवाह तथा सांतत्य समीकरण",
+     "ncert_sections": "9.3",
+     "concepts": [
+      {
+       "concept_tag": "dhararekhi-pravah",
+       "learning_objective": "स्थायी प्रवाह, धारारेखा तथा विक्षुब्ध प्रवाह के अर्थ को समझाना।"
+      },
+      {
+       "concept_tag": "santatya-samikaran",
+       "learning_objective": "सांतत्य समीकरण Av = नियतांक का उपयोग कर प्रवाह की चाल ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH02-T4",
+     "topic_number": 4,
+     "title": "बर्नूली का सिद्धांत और उसके अनुप्रयोग",
+     "ncert_sections": "9.4, 9.4.1, 9.4.2",
+     "concepts": [
+      {
+       "concept_tag": "bernoulli-samikaran",
+       "learning_objective": "बर्नूली समीकरण को ऊर्जा संरक्षण से जोड़ना और उसकी सीमाएँ पहचानना।"
+      },
+      {
+       "concept_tag": "bahisrav-ki-chal",
+       "learning_objective": "टॉरिसेली के नियम द्वारा बहिःस्राव की चाल ज्ञात करना।"
+      },
+      {
+       "concept_tag": "gatik-utthapak",
+       "learning_objective": "वायुयान के पंख तथा घूमती गेंद पर गतिक उत्थापक को बर्नूली सिद्धांत से समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH02-T5",
+     "topic_number": 5,
+     "title": "श्यानता तथा स्टोक्स का नियम",
+     "ncert_sections": "9.5, 9.5.1",
+     "concepts": [
+      {
+       "concept_tag": "shyanta-gunank",
+       "learning_objective": "श्यानता गुणांक के अर्थ, मात्रक तथा ताप पर उसकी निर्भरता को समझना।"
+      },
+      {
+       "concept_tag": "stokes-niyam-sima-veg",
+       "learning_objective": "स्टोक्स के नियम से श्यान बल और सीमांत वेग ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH02-T6",
+     "topic_number": 6,
+     "title": "पृष्ठ तनाव, संपर्क कोण, बूँदें-बुलबुले तथा केशिकीय उन्नयन",
+     "ncert_sections": "9.6, 9.6.1, 9.6.2, 9.6.3, 9.6.4, 9.6.5",
+     "concepts": [
+      {
+       "concept_tag": "prishth-tanav",
+       "learning_objective": "पृष्ठ तनाव को एकांक लंबाई पर बल तथा पृष्ठ ऊर्जा के रूप में समझना।"
+      },
+      {
+       "concept_tag": "boond-bulbule-adhik-dab",
+       "learning_objective": "बूँद तथा साबुन के बुलबुले के भीतर अधिक दाब की गणना करना।"
+      },
+      {
+       "concept_tag": "keshikiya-unnayan",
+       "learning_objective": "संपर्क कोण के आधार पर केशिकीय उन्नयन या अवनमन को समझाना और उसकी ऊँचाई ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPH2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "द्रव्य के तापीय गुण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH2-CH03-T1",
+     "topic_number": 1,
+     "title": "ताप, ऊष्मा और ताप का मापन",
+     "ncert_sections": "10.2, 10.3",
+     "concepts": [
+      {
+       "concept_tag": "tap-aur-ushma",
+       "learning_objective": "ताप और ऊष्मा में अंतर करना तथा ऊष्मा को ताप-अंतर के कारण स्थानांतरित ऊर्जा के रूप में पहचानना।"
+      },
+      {
+       "concept_tag": "tap-mapan-paimane",
+       "learning_objective": "सेल्सियस और फारेनहाइट पैमानों के नियत बिंदु जानना और उनके बीच रूपांतरण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH03-T2",
+     "topic_number": 2,
+     "title": "आदर्श गैस समीकरण और परम ताप",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "adarsh-gas-niyam",
+       "learning_objective": "बॉयल, चार्ल्स के नियमों और आदर्श गैस समीकरण PV = μRT का उपयोग करना।"
+      },
+      {
+       "concept_tag": "param-tap-shunya",
+       "learning_objective": "परम शून्य और केल्विन पैमाने की संकल्पना को गैस तापमापी से समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH03-T3",
+     "topic_number": 3,
+     "title": "तापीय प्रसार",
+     "ncert_sections": "10.5",
+     "concepts": [
+      {
+       "concept_tag": "rekhiy-kshetriy-ayatan-prasar",
+       "learning_objective": "रैखिक, क्षेत्रीय और आयतन प्रसार गुणांकों तथा उनके संबंध का उपयोग करना।"
+      },
+      {
+       "concept_tag": "jal-asamanya-prasar",
+       "learning_objective": "जल के असामान्य प्रसार और उसके प्राकृतिक महत्व को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH03-T4",
+     "topic_number": 4,
+     "title": "विशिष्ट ऊष्मा धारिता और ऊष्मामिति",
+     "ncert_sections": "10.6, 10.7",
+     "concepts": [
+      {
+       "concept_tag": "vishisht-ushma-dharita",
+       "learning_objective": "विशिष्ट ऊष्मा धारिता की परिभाषा, मात्रक और Q = mcΔT का उपयोग करना।"
+      },
+      {
+       "concept_tag": "ushmamiti-mishran",
+       "learning_objective": "ऊष्मामिति के सिद्धांत (दी गई ऊष्मा = ली गई ऊष्मा) से अंतिम ताप या विशिष्ट ऊष्मा ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH03-T5",
+     "topic_number": 5,
+     "title": "अवस्था परिवर्तन और गुप्त ऊष्मा",
+     "ncert_sections": "10.8, 10.8.1",
+     "concepts": [
+      {
+       "concept_tag": "avastha-parivartan",
+       "learning_objective": "गलन और क्वथन के दौरान ताप की स्थिरता तथा क्वथनांक पर दाब के प्रभाव को समझना।"
+      },
+      {
+       "concept_tag": "gupt-ushma",
+       "learning_objective": "गलन और वाष्पन की गुप्त ऊष्मा से Q = mL की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH03-T6",
+     "topic_number": 6,
+     "title": "ऊष्मा स्थानांतरण",
+     "ncert_sections": "10.9",
+     "concepts": [
+      {
+       "concept_tag": "chalan",
+       "learning_objective": "ऊष्मा चालन की दर H = KA(T₁ − T₂)/L का उपयोग करना।"
+      },
+      {
+       "concept_tag": "samvahan",
+       "learning_objective": "प्राकृतिक संवहन के उदाहरणों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "vikiran-krishnika",
+       "learning_objective": "विकिरण, वीन के विस्थापन नियम और स्टेफ़ान के नियम का उपयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH03-T7",
+     "topic_number": 7,
+     "title": "न्यूटन का शीतलन नियम",
+     "ncert_sections": "10.10",
+     "concepts": [
+      {
+       "concept_tag": "nyutan-shitalan-niyam",
+       "learning_objective": "न्यूटन के शीतलन नियम को लिखना और उससे शीतलन-समय ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPH2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "ऊष्मागतिकी",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH2-CH04-T1",
+     "topic_number": 1,
+     "title": "ऊष्मीय साम्य तथा ऊष्मागतिकी का शून्य कोटि नियम",
+     "ncert_sections": "11.2, 11.3",
+     "concepts": [
+      {
+       "concept_tag": "ushmiya-samya",
+       "learning_objective": "ऊष्मीय साम्य की स्थिति तथा रुद्धोष्म और ऊष्मा-पारक दीवारों की भूमिका समझना।"
+      },
+      {
+       "concept_tag": "shunya-koti-niyam",
+       "learning_objective": "शून्य कोटि नियम का कथन देना तथा उससे ताप की संकल्पना को जोड़ना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH04-T2",
+     "topic_number": 2,
+     "title": "ऊष्मा, आंतरिक ऊर्जा और कार्य",
+     "ncert_sections": "11.4",
+     "concepts": [
+      {
+       "concept_tag": "antarik-urja",
+       "learning_objective": "आंतरिक ऊर्जा को अवस्था चर के रूप में पहचानना जो केवल निकाय की अवस्था पर निर्भर है।"
+      },
+      {
+       "concept_tag": "ushma-aur-karya",
+       "learning_objective": "ऊष्मा और कार्य को ऊर्जा-स्थानांतरण के दो ढंगों के रूप में पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH04-T3",
+     "topic_number": 3,
+     "title": "ऊष्मागतिकी का प्रथम नियम",
+     "ncert_sections": "11.5",
+     "concepts": [
+      {
+       "concept_tag": "pratham-niyam",
+       "learning_objective": "प्रथम नियम ΔQ = ΔU + ΔW को ऊर्जा संरक्षण के कथन के रूप में समझना।"
+      },
+      {
+       "concept_tag": "pratham-niyam-anuprayog",
+       "learning_objective": "प्रथम नियम का उपयोग कर ऊष्मा, कार्य और आंतरिक ऊर्जा परिवर्तन की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH04-T4",
+     "topic_number": 4,
+     "title": "विशिष्ट ऊष्मा धारिता",
+     "ncert_sections": "11.6",
+     "concepts": [
+      {
+       "concept_tag": "vishisht-ushma-dharita",
+       "learning_objective": "विशिष्ट ऊष्मा धारिता का उपयोग कर ऊष्मा की मात्रा की गणना करना।"
+      },
+      {
+       "concept_tag": "gas-cp-cv",
+       "learning_objective": "आदर्श गैस के लिए Cp − Cv = R संबंध को समझना और लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH04-T5",
+     "topic_number": 5,
+     "title": "ऊष्मागतिक अवस्था चर तथा ऊष्मागतिक प्रक्रम",
+     "ncert_sections": "11.7, 11.8",
+     "concepts": [
+      {
+       "concept_tag": "avastha-char",
+       "learning_objective": "विस्तीर्ण और गहन अवस्था चरों में अंतर करना।"
+      },
+      {
+       "concept_tag": "samtapi-prakram",
+       "learning_objective": "समतापी प्रक्रम में ऊष्मा, कार्य और आंतरिक ऊर्जा का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "ruddhoshm-prakram",
+       "learning_objective": "रुद्धोष्म प्रक्रम के संबंध PVᵞ = नियतांक का उपयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH04-T6",
+     "topic_number": 6,
+     "title": "ऊष्मागतिकी का द्वितीय नियम तथा उत्क्रमणीय और अनुत्क्रमणीय प्रक्रम",
+     "ncert_sections": "11.9, 11.10",
+     "concepts": [
+      {
+       "concept_tag": "dwitiya-niyam",
+       "learning_objective": "द्वितीय नियम के केल्विन-प्लांक तथा क्लॉसियस कथनों को समझना।"
+      },
+      {
+       "concept_tag": "utkramaniya-prakram",
+       "learning_objective": "उत्क्रमणीय तथा अनुत्क्रमणीय प्रक्रमों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH04-T7",
+     "topic_number": 7,
+     "title": "कार्नो इंजन",
+     "ncert_sections": "11.11",
+     "concepts": [
+      {
+       "concept_tag": "carnot-chakra",
+       "learning_objective": "कार्नो चक्र के चरणों तथा कार्नो प्रमेय को समझना।"
+      },
+      {
+       "concept_tag": "carnot-dakshata",
+       "learning_objective": "कार्नो इंजन की दक्षता η = 1 − T₂/T₁ की गणना और विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPH2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "अणुगति सिद्धांत",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH2-CH05-T1",
+     "topic_number": 1,
+     "title": "पदार्थ की आण्विक प्रकृति",
+     "ncert_sections": "5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "parmanu-parikalpana",
+       "learning_objective": "परमाणु परिकल्पना तथा रासायनिक संयोजन के नियमों को पदार्थ की आण्विक प्रकृति से जोड़ना।"
+      },
+      {
+       "concept_tag": "antar-anuk-doori",
+       "learning_objective": "ठोस, द्रव और गैस में अणुओं के बीच की दूरी और उनके व्यवहार की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH05-T2",
+     "topic_number": 2,
+     "title": "गैसों का व्यवहार",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "adarsh-gas-samikaran",
+       "learning_objective": "आदर्श गैस समीकरण का प्रयोग करके दाब, आयतन, ताप और मोल संख्या की गणना करना।"
+      },
+      {
+       "concept_tag": "boyle-charles-niyam",
+       "learning_objective": "बॉयल और चार्ल्स के नियमों को आदर्श गैस समीकरण की विशेष स्थितियों के रूप में समझना।"
+      },
+      {
+       "concept_tag": "dalton-anshik-dab",
+       "learning_objective": "डाल्टन के आंशिक दाबों के नियम से गैस मिश्रण का दाब ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH05-T3",
+     "topic_number": 3,
+     "title": "आदर्श गैस का अणुगति सिद्धांत",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "dab-anugati-vyanjak",
+       "learning_objective": "अणुओं की टक्करों से गैस के दाब का व्यंजक समझना और प्रयोग करना।"
+      },
+      {
+       "concept_tag": "tap-anugati-vyakhya",
+       "learning_objective": "ताप को अणुओं की माध्य गतिज ऊर्जा के रूप में समझना तथा वर्ग माध्य मूल चाल ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH05-T4",
+     "topic_number": 4,
+     "title": "ऊर्जा के समविभाजन का नियम",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "swatantrata-kotiyan",
+       "learning_objective": "विभिन्न प्रकार के अणुओं की स्थानांतरीय, घूर्णी और कंपनिक स्वातंत्र्य कोटियाँ गिनना।"
+      },
+      {
+       "concept_tag": "samvibhajan-niyam",
+       "learning_objective": "समविभाजन नियम से अणु और गैस की औसत आंतरिक ऊर्जा ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH05-T5",
+     "topic_number": 5,
+     "title": "विशिष्ट ऊष्मा धारिता",
+     "ncert_sections": "5.6",
+     "concepts": [
+      {
+       "concept_tag": "gas-vishisht-ushma",
+       "learning_objective": "एकपरमाणुक, द्विपरमाणुक और बहुपरमाणुक गैसों की मोलर विशिष्ट ऊष्मा तथा उनके अनुपात की गणना करना।"
+      },
+      {
+       "concept_tag": "thos-vishisht-ushma",
+       "learning_objective": "ठोसों की मोलर विशिष्ट ऊष्मा का समविभाजन नियम से अनुमान लगाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH05-T6",
+     "topic_number": 6,
+     "title": "माध्य मुक्त पथ",
+     "ncert_sections": "5.7",
+     "concepts": [
+      {
+       "concept_tag": "madhya-mukt-path",
+       "learning_objective": "माध्य मुक्त पथ के व्यंजक से उसकी संख्या घनत्व और अणु व्यास पर निर्भरता समझना।"
+      },
+      {
+       "concept_tag": "takkar-avriti",
+       "learning_objective": "माध्य मुक्त पथ और चाल से टक्कर आवृत्ति ज्ञात करना तथा विसरण की धीमी गति समझाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPH2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "दोलन",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH2-CH06-T1",
+     "topic_number": 1,
+     "title": "आवर्ती और दोलनी गतियाँ, आवर्तकाल और आवृत्ति",
+     "ncert_sections": "13.1, 13.2",
+     "concepts": [
+      {
+       "concept_tag": "aavarti-aur-dolani-gati",
+       "learning_objective": "आवर्ती गति और दोलनी गति में अंतर पहचानना।"
+      },
+      {
+       "concept_tag": "aavartkaal-aur-aavritti",
+       "learning_objective": "आवर्तकाल और आवृत्ति के संबंध का उपयोग करके उनके मान ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH06-T2",
+     "topic_number": 2,
+     "title": "सरल आवर्त गति",
+     "ncert_sections": "13.3",
+     "concepts": [
+      {
+       "concept_tag": "shm-visthapan-samikaran",
+       "learning_objective": "सरल आवर्त गति के विस्थापन-समीकरण में आयाम, कोणीय आवृत्ति और आवर्तकाल पहचानना।"
+      },
+      {
+       "concept_tag": "kala-aur-kala-niyatank",
+       "learning_objective": "कला और कला-नियतांक का अर्थ समझकर प्रारंभिक स्थिति से कला-नियतांक ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH06-T3",
+     "topic_number": 3,
+     "title": "सरल आवर्त गति और एकसमान वृत्तीय गति",
+     "ncert_sections": "13.4",
+     "concepts": [
+      {
+       "concept_tag": "sandarbh-vritt",
+       "learning_objective": "सरल आवर्त गति को एकसमान वृत्तीय गति के व्यास पर प्रक्षेप के रूप में समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH06-T4",
+     "topic_number": 4,
+     "title": "सरल आवर्त गति में वेग और त्वरण",
+     "ncert_sections": "13.5",
+     "concepts": [
+      {
+       "concept_tag": "shm-me-veg",
+       "learning_objective": "सरल आवर्त गति में किसी स्थिति पर वेग और अधिकतम वेग ज्ञात करना।"
+      },
+      {
+       "concept_tag": "shm-me-tvaran",
+       "learning_objective": "सरल आवर्त गति में त्वरण और विस्थापन के संबंध a = −ω²x का उपयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH06-T5",
+     "topic_number": 5,
+     "title": "सरल आवर्त गति के लिए बल नियम",
+     "ncert_sections": "13.6",
+     "concepts": [
+      {
+       "concept_tag": "bal-niyam",
+       "learning_objective": "सरल आवर्त गति के प्रत्यानयन बल F = −kx की प्रकृति पहचानना।"
+      },
+      {
+       "concept_tag": "spring-dravyaman-aavartkaal",
+       "learning_objective": "स्प्रिंग-द्रव्यमान निकाय का आवर्तकाल और आवृत्ति परिकलित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH06-T6",
+     "topic_number": 6,
+     "title": "सरल आवर्त गति में ऊर्जा",
+     "ncert_sections": "13.7",
+     "concepts": [
+      {
+       "concept_tag": "gatij-aur-sthitij-urja",
+       "learning_objective": "सरल आवर्त गति में विभिन्न स्थितियों पर गतिज और स्थितिज ऊर्जा ज्ञात करना।"
+      },
+      {
+       "concept_tag": "kul-yantrik-urja",
+       "learning_objective": "कुल यांत्रिक ऊर्जा E = ½kA² के संरक्षण और आयाम पर निर्भरता को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH06-T7",
+     "topic_number": 7,
+     "title": "सरल लोलक",
+     "ncert_sections": "13.8",
+     "concepts": [
+      {
+       "concept_tag": "saral-lolak-aavartkaal",
+       "learning_objective": "सरल लोलक के आवर्तकाल T = 2π√(L/g) का उपयोग करना।"
+      },
+      {
+       "concept_tag": "laghu-kon-sannikatan",
+       "learning_objective": "छोटे कोणीय विस्थापन के सन्निकटन से सरल लोलक की गति के सरल आवर्त होने का कारण समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPH2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "तरंगें",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH2-CH07-T1",
+     "topic_number": 1,
+     "title": "तरंगें: अनुप्रस्थ और अनुदैर्ध्य तरंगें",
+     "ncert_sections": "14.1, 14.2",
+     "concepts": [
+      {
+       "concept_tag": "tarang-prakriti",
+       "learning_objective": "समझना कि तरंग में माध्यम का प्रवाह नहीं, केवल विक्षोभ और ऊर्जा का संचरण होता है।"
+      },
+      {
+       "concept_tag": "anuprasth-anudairghya",
+       "learning_objective": "अनुप्रस्थ और अनुदैर्ध्य तरंगों में अंतर करना और उनके माध्यम पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH07-T2",
+     "topic_number": 2,
+     "title": "प्रगामी तरंग में विस्थापन संबंध",
+     "ncert_sections": "14.3",
+     "concepts": [
+      {
+       "concept_tag": "aayam-kala",
+       "learning_objective": "आवर्ती तरंग के आयाम और कला को पहचानना।"
+      },
+      {
+       "concept_tag": "tarangdairghya-sankhya-avarta",
+       "learning_objective": "तरंगदैर्ध्य, कोणीय तरंग संख्या, आवर्तकाल और आवृत्ति के संबंधों का प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH07-T3",
+     "topic_number": 3,
+     "title": "प्रगामी तरंग की चाल",
+     "ncert_sections": "14.4",
+     "concepts": [
+      {
+       "concept_tag": "dori-anuprasth-chal",
+       "learning_objective": "तनी डोरी पर अनुप्रस्थ तरंग की चाल v = √(T/μ) का प्रयोग करना।"
+      },
+      {
+       "concept_tag": "dhwani-chal-newton-laplace",
+       "learning_objective": "न्यूटन सूत्र और लाप्लास संशोधन द्वारा गैस में ध्वनि की चाल ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH07-T4",
+     "topic_number": 4,
+     "title": "तरंगों के अध्यारोपण का सिद्धांत",
+     "ncert_sections": "14.5",
+     "concepts": [
+      {
+       "concept_tag": "adhyaropan-siddhant",
+       "learning_objective": "अध्यारोपण सिद्धांत से परिणामी विस्थापन ज्ञात करना।"
+      },
+      {
+       "concept_tag": "vyatikaran-kalantar",
+       "learning_objective": "कलांतर के अनुसार संपोषी और विनाशी व्यतिकरण में परिणामी आयाम ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH07-T5",
+     "topic_number": 5,
+     "title": "तरंगों का परावर्तन तथा अप्रगामी तरंगें",
+     "ncert_sections": "14.6",
+     "concepts": [
+      {
+       "concept_tag": "paravartan-kala-parivartan",
+       "learning_objective": "दृढ़ और खुली सीमा पर परावर्तन में कला परिवर्तन को समझना।"
+      },
+      {
+       "concept_tag": "aprgami-tarang-nispand",
+       "learning_objective": "अप्रगामी तरंगों में निस्पंद और प्रस्पंद की स्थितियाँ बताना।"
+      },
+      {
+       "concept_tag": "prasamanya-vidhayen",
+       "learning_objective": "डोरी और वायु स्तंभों की प्रसामान्य विधाओं की आवृत्तियाँ ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH2-CH07-T6",
+     "topic_number": 6,
+     "title": "विस्पंद",
+     "ncert_sections": "14.7",
+     "concepts": [
+      {
+       "concept_tag": "vispand-avritti",
+       "learning_objective": "विस्पंद आवृत्ति को दो आवृत्तियों के अंतर के रूप में समझना।"
+      },
+      {
+       "concept_tag": "vispand-anuprayog",
+       "learning_objective": "विस्पंदों की सहायता से अज्ञात आवृत्ति ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

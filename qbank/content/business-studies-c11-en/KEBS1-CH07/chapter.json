@@ -1,0 +1,136 @@
+{
+ "chapter_id": "KEBS1-CH07",
+ "title": "Formation of a Company",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBS1-CH07-T1",
+   "topic_number": 1,
+   "title": "Stages in the formation of a company",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "stages-of-company-formation",
+     "learning_objective": "Name the three stages in the formation of a company in their proper order and identify the promoters who carry them out."
+    },
+    {
+     "concept_tag": "private-vs-public-company-formation",
+     "learning_objective": "Explain why a private company does not need the capital subscription stage while a public company raising public funds does."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH07-T2",
+   "topic_number": 2,
+   "title": "Promotion and the functions of a promoter",
+   "ncert_sections": "7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "meaning-of-promoter",
+     "learning_objective": "State who is a promoter under section 69 and distinguish promoters from professionals who merely assist them."
+    },
+    {
+     "concept_tag": "feasibility-studies",
+     "learning_objective": "Distinguish between technical, financial and economic feasibility of a business opportunity."
+    },
+    {
+     "concept_tag": "name-approval",
+     "learning_objective": "Explain how a company's name is approved and when a proposed name is considered undesirable."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH07-T3",
+   "topic_number": 3,
+   "title": "Memorandum of Association and its clauses",
+   "ncert_sections": "7.2.1 (Documents required to be submitted: A)",
+   "concepts": [
+    {
+     "concept_tag": "memorandum-of-association",
+     "learning_objective": "Explain why the Memorandum of Association is the most important document of a company."
+    },
+    {
+     "concept_tag": "moa-clauses",
+     "learning_objective": "Identify the contents of the name, registered office and objects clauses of the Memorandum."
+    },
+    {
+     "concept_tag": "liability-and-capital-clauses",
+     "learning_objective": "Apply the liability and capital clauses to calculate a member's liability and the limit on share issues."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH07-T4",
+   "topic_number": 4,
+   "title": "Articles of Association and other documents for registration",
+   "ncert_sections": "7.2.1 (Documents required to be submitted: B to F)",
+   "concepts": [
+    {
+     "concept_tag": "articles-of-association",
+     "learning_objective": "Describe the Articles of Association as rules of internal management subsidiary to the Memorandum."
+    },
+    {
+     "concept_tag": "other-registration-documents",
+     "learning_objective": "Identify the consent of directors, agreement, statutory declaration and fee receipt filed for registration."
+    },
+    {
+     "concept_tag": "moa-vs-aoa",
+     "learning_objective": "Distinguish between the Memorandum and the Articles of Association on objectives, position and validity of acts."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH07-T5",
+   "topic_number": 5,
+   "title": "Legal position of promoters and preliminary contracts",
+   "ncert_sections": "7.2.1 (Position of Promoters), 7.2.2 (Preliminary Contracts)",
+   "concepts": [
+    {
+     "concept_tag": "legal-position-of-promoters",
+     "learning_objective": "Explain the fiduciary position of promoters, their liability and their right to expenses and remuneration."
+    },
+    {
+     "concept_tag": "preliminary-contracts",
+     "learning_objective": "Explain what preliminary contracts are and who is bound by them."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH07-T6",
+   "topic_number": 6,
+   "title": "Incorporation and the Certificate of Incorporation",
+   "ncert_sections": "7.2.2",
+   "concepts": [
+    {
+     "concept_tag": "incorporation-procedure",
+     "learning_objective": "Describe the application for incorporation, the documents filed with it and the role of the Registrar."
+    },
+    {
+     "concept_tag": "certificate-of-incorporation",
+     "learning_objective": "Explain the effect of the Certificate of Incorporation as conclusive evidence of a company's legal existence."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBS1-CH07-T7",
+   "topic_number": 7,
+   "title": "Capital subscription",
+   "ncert_sections": "7.2.3",
+   "concepts": [
+    {
+     "concept_tag": "prospectus-and-sebi-approval",
+     "learning_objective": "Explain the meaning of a prospectus and the need for SEBI approval before raising funds from the public."
+    },
+    {
+     "concept_tag": "minimum-subscription",
+     "learning_objective": "Apply the 90 per cent minimum subscription rule to decide whether shares can be allotted."
+    },
+    {
+     "concept_tag": "listing-and-allotment",
+     "learning_objective": "Describe the stock exchange application, allotment of shares and filing of the return of allotment."
+    }
+   ]
+  }
+ ]
+}

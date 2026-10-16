@@ -1,0 +1,136 @@
+{
+ "chapter_id": "HEGP2-CH01",
+ "title": "Fractions in Disguise",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP2-CH01-T1",
+   "topic_number": 1,
+   "title": "Fractions as Percentages",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "fraction-to-percentage",
+     "learning_objective": "Express a fraction or decimal as a percentage by finding an equivalent fraction with denominator 100 or multiplying by 100."
+    },
+    {
+     "concept_tag": "percentage-to-fraction",
+     "learning_objective": "Express a percentage z% as the fraction z/100 and its equivalent forms."
+    },
+    {
+     "concept_tag": "why-hundred-as-base",
+     "learning_objective": "Explain why expressing quantities as parts per hundred makes comparison of proportions easier."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH01-T2",
+   "topic_number": 2,
+   "title": "Percentage of Some Quantity",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "percentage-of-quantity",
+     "learning_objective": "Find a given percentage of a quantity using fraction, decimal or proportional reasoning."
+    },
+    {
+     "concept_tag": "mental-percentage-computation",
+     "learning_objective": "Compute percentages mentally by combining easy percentages such as 10%, 5% and 20%."
+    },
+    {
+     "concept_tag": "ratio-to-percentage",
+     "learning_objective": "Convert a ratio of parts into a fraction of the whole and then into a percentage."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH01-T3",
+   "topic_number": 3,
+   "title": "Finding the Whole and Percentages Greater than 100",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "finding-the-whole",
+     "learning_objective": "Find the whole quantity or the remaining part when a percentage of it is known."
+    },
+    {
+     "concept_tag": "percentage-greater-than-hundred",
+     "learning_objective": "Interpret percentages greater than 100 as more than the whole and relate them to decimals and multiples."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH01-T4",
+   "topic_number": 4,
+   "title": "Comparing Proportions and Percentage Change",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "comparing-proportions",
+     "learning_objective": "Use percentages to compare proportions when the wholes are different."
+    },
+    {
+     "concept_tag": "percentage-increase-decrease",
+     "learning_objective": "Calculate percentage increase or decrease with respect to the original amount."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH01-T5",
+   "topic_number": 5,
+   "title": "Profit, Loss, Discount and Taxes",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "profit-loss-percentage",
+     "learning_objective": "Calculate profit or loss percentage with respect to the cost price, and find cost or selling price from it."
+    },
+    {
+     "concept_tag": "discount-and-selling-price",
+     "learning_objective": "Find the selling price after a percentage discount on the marked price."
+    },
+    {
+     "concept_tag": "gst-tax",
+     "learning_objective": "Find the final price of an item when a tax such as GST is added as a percentage."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH01-T6",
+   "topic_number": 6,
+   "title": "Growth, Compounding and Decline",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "growth-without-compounding",
+     "learning_objective": "Find the amount after t years without compounding using p(1 + rt)."
+    },
+    {
+     "concept_tag": "compound-growth",
+     "learning_objective": "Find the amount after t years with compounding using p(1 + r)^t."
+    },
+    {
+     "concept_tag": "depreciation-and-decline",
+     "learning_objective": "Find the value of a quantity that decreases by a fixed percentage over one or more periods."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH01-T7",
+   "topic_number": 7,
+   "title": "Tricky Percentages",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "successive-percentage-changes",
+     "learning_objective": "Recognise that successive percentage changes compound and do not simply add."
+    },
+    {
+     "concept_tag": "percentage-versus-absolute-value",
+     "learning_objective": "Distinguish between comparing percentages and comparing absolute amounts."
+    }
+   ]
+  }
+ ]
+}

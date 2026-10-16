@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KHSK2-CH11",
+ "title": "नवद्रव्याणि",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHSK2-CH11-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः – अन्नम्भट्टः तर्कसङ्ग्रहः च",
+   "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "annambhatta-tarkasangraha",
+     "learning_objective": "छात्रः तर्कसङ्ग्रहस्य रचयितारम्, तस्य कालं प्रयोजनं च जानाति।"
+    },
+    {
+     "concept_tag": "nyaya-vaisheshika-padartha",
+     "learning_objective": "छात्रः गौतमस्य षोडशपदार्थान् कणादस्य सप्तपदार्थान् च तुलयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH11-T2",
+   "topic_number": 2,
+   "title": "सप्त पदार्थाः – द्रव्यं गुणाः कर्माणि च",
+   "ncert_sections": "पदार्थोद्देशः",
+   "concepts": [
+    {
+     "concept_tag": "sapta-padarthah",
+     "learning_objective": "छात्रः सप्त पदार्थान् नव द्रव्याणि च क्रमेण परिगणयति।"
+    },
+    {
+     "concept_tag": "chaturvimshati-gunah",
+     "learning_objective": "छात्रः चतुर्विंशतिः गुणाः, संस्कारस्य त्रैविध्यं च अवगच्छति।"
+    },
+    {
+     "concept_tag": "pancha-karmani",
+     "learning_objective": "छात्रः पञ्च कर्माणि तेषां लक्षणानि च सोदाहरणं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH11-T3",
+   "topic_number": 3,
+   "title": "सामान्यं विशेषः समवायः अभावः च",
+   "ncert_sections": "पदार्थोद्देशः, शब्दार्थाः",
+   "concepts": [
+    {
+     "concept_tag": "samanya-vishesha-samavaya",
+     "learning_objective": "छात्रः सामान्यस्य द्वैविध्यं, विशेषाणाम् आनन्त्यं, समवायस्य एकत्वं च जानाति।"
+    },
+    {
+     "concept_tag": "chaturvidha-abhava",
+     "learning_objective": "छात्रः प्रागभावादीन् चतुर्विधान् अभावान् लक्षणैः विवेचयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH11-T4",
+   "topic_number": 4,
+   "title": "पृथिवी आपः तेजः वायुः च",
+   "ncert_sections": "द्रव्यलक्षणप्रकरणम्",
+   "concepts": [
+    {
+     "concept_tag": "prithivi-ap-tejas-lakshana",
+     "learning_objective": "छात्रः पृथिव्याः, अपां, तेजसः च लक्षणानि भेदांश्च जानाति।"
+    },
+    {
+     "concept_tag": "vayu-lakshana",
+     "learning_objective": "छात्रः वायोः लक्षणं 'रूपरहितः स्पर्शवान्' इति व्याख्याति।"
+    },
+    {
+     "concept_tag": "nitya-anitya-bheda",
+     "learning_objective": "छात्रः परमाणुरूप-कार्यरूपभेदेन शरीरेन्द्रियविषयभेदेन च द्रव्याणां विभागं विश्लेषयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH11-T5",
+   "topic_number": 5,
+   "title": "आकाशं कालः दिक् आत्मा मनः च",
+   "ncert_sections": "द्रव्यलक्षणप्रकरणम्",
+   "concepts": [
+    {
+     "concept_tag": "akasha-kala-dik",
+     "learning_objective": "छात्रः आकाशस्य कालस्य दिशः च लक्षणानि एकत्व-विभुत्व-नित्यत्वानि च जानाति।"
+    },
+    {
+     "concept_tag": "atma-manas",
+     "learning_objective": "छात्रः आत्मनः द्वैविध्यं मनसः लक्षणं परमाणुरूपत्वं च व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH11-T6",
+   "topic_number": 6,
+   "title": "भाषिकबिन्दवः – सन्धिः समासः पदपरिचयः च",
+   "ncert_sections": "अभ्यासः",
+   "concepts": [
+    {
+     "concept_tag": "sandhi-viccheda",
+     "learning_objective": "छात्रः पाठगतपदानां सन्धिविच्छेदं कृत्वा सन्धेः नाम निर्दिशति।"
+    },
+    {
+     "concept_tag": "samasa-pada-parichaya",
+     "learning_objective": "छात्रः पाठगतसमस्तपदानां विग्रहं पदानां विभक्तिवचनलिङ्गानि च जानाति।"
+    }
+   ]
+  }
+ ]
+}

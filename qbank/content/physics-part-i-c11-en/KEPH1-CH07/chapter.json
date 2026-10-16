@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KEPH1-CH07",
+ "title": "Gravitation",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPH1-CH07-T1",
+   "topic_number": 1,
+   "title": "Kepler's laws of planetary motion",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "kepler-law-of-orbits",
+     "learning_objective": "State Kepler's law of orbits and locate the Sun relative to a planet's elliptical orbit."
+    },
+    {
+     "concept_tag": "kepler-law-of-areas",
+     "learning_objective": "Relate Kepler's law of areas to conservation of angular momentum under a central force."
+    },
+    {
+     "concept_tag": "kepler-law-of-periods",
+     "learning_objective": "Use T^2 proportional to a^3 to compare the periods of planets or satellites."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH07-T2",
+   "topic_number": 2,
+   "title": "Universal law of gravitation and the gravitational constant",
+   "ncert_sections": "7.3, 7.4",
+   "concepts": [
+    {
+     "concept_tag": "inverse-square-law",
+     "learning_objective": "Apply Newton's law F = G m1 m2 / r^2 to find the force between two masses."
+    },
+    {
+     "concept_tag": "shell-theorem",
+     "learning_objective": "State the force exerted by a uniform spherical shell on a point mass outside and inside it."
+    },
+    {
+     "concept_tag": "cavendish-gravitational-constant",
+     "learning_objective": "Describe how G was measured by Cavendish and state its value and SI unit."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH07-T3",
+   "topic_number": 3,
+   "title": "Acceleration due to gravity of the earth",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "g-from-mass-radius",
+     "learning_objective": "Express g at the earth's surface as G M_E / R_E^2 and use it to compare g on different bodies."
+    },
+    {
+     "concept_tag": "mass-of-earth",
+     "learning_objective": "Use g, R_E and G to determine the mass of the earth."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH07-T4",
+   "topic_number": 4,
+   "title": "Acceleration due to gravity below and above the surface",
+   "ncert_sections": "7.6",
+   "concepts": [
+    {
+     "concept_tag": "g-at-height",
+     "learning_objective": "Find the variation of g with height above the earth's surface, exactly and for h much less than R_E."
+    },
+    {
+     "concept_tag": "g-at-depth",
+     "learning_objective": "Find the variation of g with depth below the earth's surface using g(d) = g(1 - d/R_E)."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH07-T5",
+   "topic_number": 5,
+   "title": "Gravitational potential energy",
+   "ncert_sections": "7.7",
+   "concepts": [
+    {
+     "concept_tag": "gravitational-potential-energy",
+     "learning_objective": "Calculate the gravitational potential energy of a system of masses with zero at infinity."
+    },
+    {
+     "concept_tag": "gravitational-potential",
+     "learning_objective": "Define gravitational potential as potential energy per unit mass."
+    },
+    {
+     "concept_tag": "mgh-approximation",
+     "learning_objective": "Explain mgh as an approximation to the change in gravitational potential energy for small heights."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH07-T6",
+   "topic_number": 6,
+   "title": "Escape speed",
+   "ncert_sections": "7.8",
+   "concepts": [
+    {
+     "concept_tag": "escape-speed-expression",
+     "learning_objective": "Derive and use the escape speed v_e = sqrt(2 g R_E) = sqrt(2 G M_E / R_E)."
+    },
+    {
+     "concept_tag": "escape-speed-applications",
+     "learning_objective": "Apply energy conservation to bodies launched at or above escape speed and explain why the moon has no atmosphere."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH07-T7",
+   "topic_number": 7,
+   "title": "Earth satellites and their energy",
+   "ncert_sections": "7.9, 7.10",
+   "concepts": [
+    {
+     "concept_tag": "orbital-speed-and-period",
+     "learning_objective": "Find the orbital speed and period of a satellite in a circular orbit around the earth."
+    },
+    {
+     "concept_tag": "satellite-energy",
+     "learning_objective": "Find the kinetic, potential and total energy of an orbiting satellite and explain weightlessness."
+    }
+   ]
+  }
+ ]
+}

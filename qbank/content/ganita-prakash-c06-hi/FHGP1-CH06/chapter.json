@@ -1,0 +1,116 @@
+{
+ "chapter_id": "FHGP1-CH06",
+ "title": "परिमाप और क्षेत्रफल",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHGP1-CH06-T1",
+   "topic_number": 1,
+   "title": "बहुभुज, आयत, वर्ग और त्रिभुज का परिमाप",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "parimap-ki-paribhasha",
+     "learning_objective": "किसी बंद समतल आकृति के परिमाप को उसकी सीमा के साथ तय की गई कुल दूरी के रूप में समझना।"
+    },
+    {
+     "concept_tag": "aayat-varg-parimap-sutra",
+     "learning_objective": "आयत और वर्ग के परिमाप के सूत्रों का प्रयोग करके परिमाप या लुप्त भुजा ज्ञात करना।"
+    },
+    {
+     "concept_tag": "tribhuj-parimap",
+     "learning_objective": "त्रिभुज का परिमाप उसकी तीनों भुजाओं के योग से ज्ञात करना और लुप्त भुजा निकालना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH06-T2",
+   "topic_number": 2,
+   "title": "परिमाप के अनुप्रयोग और सम बहुभुज",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "parimap-anuprayog-chakkar-baad",
+     "learning_objective": "चक्कर लगाने, फीता लगाने और बाड़ के व्यय जैसी दैनिक समस्याओं में परिमाप का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "sam-bahubhuj-parimap",
+     "learning_objective": "सम बहुभुज को पहचानना और उसका परिमाप भुजाओं की संख्या × एक भुजा से ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH06-T3",
+   "topic_number": 3,
+   "title": "आयत और वर्ग का क्षेत्रफल",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "kshetrafal-paribhasha",
+     "learning_objective": "किसी बंद आकृति द्वारा घेरे गए क्षेत्र के माप के रूप में क्षेत्रफल को समझना।"
+    },
+    {
+     "concept_tag": "aayat-varg-kshetrafal",
+     "learning_objective": "आयत और वर्ग के क्षेत्रफल के सूत्रों से क्षेत्रफल, लुप्त भुजा और लागत ज्ञात करना।"
+    },
+    {
+     "concept_tag": "shesh-kshetrafal",
+     "learning_objective": "पूरे क्षेत्रफल में से किसी भाग का क्षेत्रफल घटाकर शेष क्षेत्रफल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH06-T4",
+   "topic_number": 4,
+   "title": "वर्गांकित कागज और टैनग्राम से क्षेत्रफल",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "graph-paper-aakalan",
+     "learning_objective": "वर्गांकित कागज पर वर्ग गिनने के नियमों से किसी आकृति के क्षेत्रफल का आकलन करना।"
+    },
+    {
+     "concept_tag": "tangram-kshetrafal-tulna",
+     "learning_objective": "टैनग्राम के टुकड़ों के क्षेत्रफलों की आपस में तुलना करना।"
+    },
+    {
+     "concept_tag": "varg-ikai-ka-mahatva",
+     "learning_objective": "समझना कि क्षेत्रफल मापने के लिए वर्ग ही सबसे उपयुक्त इकाई आकार क्यों है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH06-T5",
+   "topic_number": 5,
+   "title": "त्रिभुज का क्षेत्रफल",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "tribhuj-aayat-ka-aadha",
+     "learning_objective": "समझना कि आयत की एक भुजा और सामने की भुजा पर शीर्ष वाले त्रिभुज का क्षेत्रफल आयत का आधा होता है।"
+    },
+    {
+     "concept_tag": "sanyukt-aakriti-vibhajan",
+     "learning_objective": "संयुक्त आकृतियों को आयतों और त्रिभुजों में बाँटकर उनका क्षेत्रफल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH06-T6",
+   "topic_number": 6,
+   "title": "समान क्षेत्रफल, भिन्न परिमाप और क्षेत्रफल पहेलियाँ",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "samaan-kshetrafal-bhinn-parimap",
+     "learning_objective": "समझना कि समान क्षेत्रफल वाली आकृतियों के परिमाप भिन्न हो सकते हैं और इसके विपरीत भी।"
+    },
+    {
+     "concept_tag": "kshetrafal-paheli-nakshe",
+     "learning_objective": "घर के नक्शों और क्षेत्रफल पहेलियों में लुप्त माप और क्षेत्रफल ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

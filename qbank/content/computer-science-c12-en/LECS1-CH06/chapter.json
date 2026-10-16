@@ -1,0 +1,116 @@
+{
+ "chapter_id": "LECS1-CH06",
+ "title": "Searching",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECS1-CH06-T1",
+   "topic_number": 1,
+   "title": "Introduction to Searching",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "searching-meaning",
+     "learning_objective": "Explain what searching means and why it is an important technique in computer science."
+    },
+    {
+     "concept_tag": "search-key-and-result",
+     "learning_objective": "Describe the key being searched and the possible results of a search."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH06-T2",
+   "topic_number": 2,
+   "title": "Linear Search",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "linear-search-method",
+     "learning_objective": "Describe how linear (sequential) search compares each element with the key in order."
+    },
+    {
+     "concept_tag": "linear-search-comparisons",
+     "learning_objective": "Determine the number of comparisons linear search makes in the minimum and maximum work cases."
+    },
+    {
+     "concept_tag": "linear-search-program",
+     "learning_objective": "Trace the Python linear search function and interpret the position it returns."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH06-T3",
+   "topic_number": 3,
+   "title": "Binary Search: Principle and Algorithm",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "binary-search-precondition",
+     "learning_objective": "State that binary search works only on a list sorted in some order."
+    },
+    {
+     "concept_tag": "binary-search-mid-calculation",
+     "learning_objective": "Calculate the middle index using floor division of first and last."
+    },
+    {
+     "concept_tag": "binary-search-iterations",
+     "learning_objective": "Trace binary search to find the iterations and the final values of first and last."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH06-T4",
+   "topic_number": 4,
+   "title": "Binary Search: Program, Applications and Comparison",
+   "ncert_sections": "6.3, 6.3.1",
+   "concepts": [
+    {
+     "concept_tag": "binary-search-program",
+     "learning_objective": "Trace the Python binary search function, including its result when the key is absent."
+    },
+    {
+     "concept_tag": "binary-search-applications",
+     "learning_objective": "Identify applications of binary search and modified binary search."
+    },
+    {
+     "concept_tag": "linear-vs-binary-search",
+     "learning_objective": "Compare the work done by linear and binary search for different keys."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH06-T5",
+   "topic_number": 5,
+   "title": "Search by Hashing",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "hash-function-remainder-method",
+     "learning_objective": "Apply the remainder method to compute hash values and build a hash table."
+    },
+    {
+     "concept_tag": "hash-table-search",
+     "learning_objective": "Search a key in a hash table using the hash function with a single comparison."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH06-T6",
+   "topic_number": 6,
+   "title": "Collision and Perfect Hash Function",
+   "ncert_sections": "6.4.1",
+   "concepts": [
+    {
+     "concept_tag": "collision-in-hashing",
+     "learning_objective": "Identify a collision and explain the need for collision resolution."
+    },
+    {
+     "concept_tag": "perfect-hash-function",
+     "learning_objective": "Explain a perfect hash function and evaluate whether a hash function avoids collisions."
+    }
+   ]
+  }
+ ]
+}

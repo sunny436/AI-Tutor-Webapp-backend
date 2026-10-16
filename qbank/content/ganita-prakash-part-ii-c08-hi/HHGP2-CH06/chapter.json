@@ -1,0 +1,108 @@
+{
+ "chapter_id": "HHGP2-CH06",
+ "title": "बीजगणित का खेल",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP2-CH06-T1",
+   "topic_number": 1,
+   "title": "‘एक संख्या सोचिए’ युक्तियों पर विचार",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "ek-sankhya-sochiye-yukti",
+     "learning_objective": "बीजगणितीय व्यंजकों द्वारा ‘एक संख्या सोचिए’ युक्ति के चरणों का विश्लेषण कर सकना।"
+    },
+    {
+     "concept_tag": "dinank-yukti-vishleshan",
+     "learning_objective": "दिनांक वाली युक्ति के अंतिम उत्तर से माह और दिन ज्ञात कर सकना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH06-T2",
+   "topic_number": 2,
+   "title": "संख्या पिरामिड",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "pyramid-niyam-agyat-maan",
+     "learning_objective": "पिरामिड के नियम से समीकरण बनाकर रिक्त खानों के मान ज्ञात कर सकना।"
+    },
+    {
+     "concept_tag": "pyramid-shirsh-vyanjak",
+     "learning_objective": "नीचे की पंक्ति के अक्षर-संख्याओं से शीर्ष संख्या का व्यंजक लिख सकना।"
+    },
+    {
+     "concept_tag": "virahanka-fibonacci-pyramid",
+     "learning_objective": "विरहांक-फिबोनाची संख्याओं वाले पिरामिड के पैटर्न को समझ सकना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH06-T3",
+   "topic_number": 3,
+   "title": "ग्रिड के साथ मनोरंजन",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "calendar-grid-yog",
+     "learning_objective": "कैलेंडर के ग्रिड की संख्याओं का योग व्यंजक के रूप में लिखकर संख्याएँ ज्ञात कर सकना।"
+    },
+    {
+     "concept_tag": "beejganitiya-grid-aakritiyan",
+     "learning_objective": "आकृतियों वाले ग्रिड में समीकरण बनाकर आकृतियों के मान ज्ञात कर सकना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH06-T4",
+   "topic_number": 4,
+   "title": "सबसे बड़ा गुणनफल",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "sabse-bada-gunanfal",
+     "learning_objective": "दिए गए अंकों से सबसे बड़ा गुणनफल बनाने का नियम लागू कर सकना।"
+    },
+    {
+     "concept_tag": "gunanfal-tulna-beejganit",
+     "learning_objective": "अक्षर-संख्याओं से गुणनफलों का विस्तार कर उनकी तुलना कर सकना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH06-T5",
+   "topic_number": 5,
+   "title": "विभाज्यता की युक्तियों को समझना",
+   "ncert_sections": "6.6",
+   "concepts": [
+    {
+     "concept_tag": "ulte-ank-vibhajyata",
+     "learning_objective": "अंकों को उलटकर बनी संख्याओं के अंतर और योग की विभाज्यता सिद्ध कर सकना।"
+    },
+    {
+     "concept_tag": "dohrav-sankhya-vibhajyata",
+     "learning_objective": "अंकों को दोहराकर बनी संख्या की 7, 11 और 13 से विभाज्यता समझा सकना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH06-T6",
+   "topic_number": 6,
+   "title": "बीजगणित से पहेलियाँ हल करना",
+   "ncert_sections": "6.6",
+   "concepts": [
+    {
+     "concept_tag": "shabd-paheli-sameekaran",
+     "learning_objective": "शब्द-पहेलियों को समीकरण में बदलकर हल कर सकना।"
+    },
+    {
+     "concept_tag": "dugna-paheli",
+     "learning_objective": "बार-बार दुगना होने वाली स्थितियों का बीजगणितीय प्रतिरूपण कर सकना।"
+    }
+   ]
+  }
+ ]
+}

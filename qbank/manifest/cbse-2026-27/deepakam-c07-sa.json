@@ -1,0 +1,1868 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "deepakam-c07-sa",
+  "curriculum": "cbse",
+  "class_level": 7,
+  "subject_code": "sanskrit",
+  "language": "sanskrit",
+  "title": "Deepakam",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "gsde1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "GSDE1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "वन्दे भारतमातरम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH01-T1",
+     "topic_number": 1,
+     "title": "'वन्दे मातरम्' गीतस्य परिचयः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vande-mataram-rachayita",
+       "learning_objective": "छात्रः 'वन्दे मातरम्' गीतस्य रचयितारं, उपन्यासं, रचनाकालं, रचनायाः कारणं च ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "vande-mataram-arthah",
+       "learning_objective": "छात्रः 'वन्दे मातरम्' इत्यस्य अर्थं, गीतस्य भाषाद्वयं, स्वतन्त्रता-आन्दोलने तस्य महत्त्वं च अवगमिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH01-T2",
+     "topic_number": 2,
+     "title": "भारतमातुः स्वरूपम् – पर्वताः, नद्यः, तीर्थक्षेत्राणि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "himalaya-samudra-varnanam",
+       "learning_objective": "छात्रः भारतमातुः वर्णने हिमालयस्य समुद्रस्य च भूमिकां वक्तुं शक्ष्यति।"
+      },
+      {
+       "concept_tag": "nadyah-parvatah-tirthani",
+       "learning_objective": "छात्रः पाठे उक्तानां पवित्रनदीनां, श्रेष्ठपर्वतानां, तीर्थक्षेत्राणां च परिचयं प्राप्स्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH01-T3",
+     "topic_number": 3,
+     "title": "प्राचीनानि आधुनिकानि च भौगोलिकनामानि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nagara-namani",
+       "learning_objective": "छात्रः प्राचीननगराणां तीर्थक्षेत्राणां च आधुनिकनामानि मेलयितुं शक्ष्यति।"
+      },
+      {
+       "concept_tag": "nadi-parvata-namani",
+       "learning_objective": "छात्रः पवित्रनदीनां पर्वतमालानां च प्राचीनानि आधुनिकानि च नामानि ज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH01-T4",
+     "topic_number": 4,
+     "title": "त्रिवर्णध्वजस्य वर्णाः तेषां सन्देशः च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "keshara-varnah",
+       "learning_objective": "छात्रः केशरवर्णः त्यागस्य शौर्यस्य वीराणां बलिदानस्य च सूचकः इति अवगमिष्यति।"
+      },
+      {
+       "concept_tag": "harita-varnah",
+       "learning_objective": "छात्रः हरितवर्णः कृषकाणां परिश्रमस्य भारतस्य समृद्धेः च सूचकः इति ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "shveta-varnah",
+       "learning_objective": "छात्रः श्वेतवर्णः शान्तेः सत्यस्य वैज्ञानिकानां यशसः च द्योतकः इति वक्तुं शक्ष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH01-T5",
+     "topic_number": 5,
+     "title": "धर्मचक्रं तस्य सन्देशः च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dharmachakra-swaroopam",
+       "learning_objective": "छात्रः धर्मचक्रस्य नाम, वर्णं, अराणां सङ्ख्यां च ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "dharmachakra-sandeshah",
+       "learning_objective": "छात्रः 'न विरम, सततं चल' इति धर्मचक्रस्य सन्देशं जीवने प्रयोक्तुं शक्ष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH01-T6",
+     "topic_number": 6,
+     "title": "शब्दार्थाः व्याकरणं च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shabdarthah",
+       "learning_objective": "छात्रः पाठे प्रयुक्तानां कठिनशब्दानाम् अर्थान् ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "vibhakti-vachanam",
+       "learning_objective": "छात्रः पाठस्य पदेषु विभक्तिं वचनं च अभिज्ञास्यति, शब्दरूपाणि च लेखिष्यति।"
+      },
+      {
+       "concept_tag": "lat-lakarah",
+       "learning_objective": "छात्रः कर्तुः अनुसारं लट्-लकारस्य शुद्धं क्रियापदं प्रयोक्तुं शक्ष्यति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "नित्यं पिबामः सुभाषितरसम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH02-T1",
+     "topic_number": 1,
+     "title": "सुभाषितानां महत्त्वं पञ्च वकाराः च",
+     "ncert_sections": "भूमिका, श्लोकः १",
+     "concepts": [
+      {
+       "concept_tag": "subhashita-mahattvam",
+       "learning_objective": "छात्रः सुभाषितानाम् अर्थं, प्रयोजनं, 'अयोग्यः पुरुषो नास्ति' इत्यस्य भावं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "pancha-vakarah",
+       "learning_objective": "छात्रः वस्त्रं, वपुः, वाक्, विद्या, विनयः इति पञ्च वकारान् अभिज्ञाय जीवने योजयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH02-T2",
+     "topic_number": 2,
+     "title": "षड् दोषाः शुद्धिसाधनानि च",
+     "ncert_sections": "श्लोकौ २, ३",
+     "concepts": [
+      {
+       "concept_tag": "shad-doshah",
+       "learning_objective": "छात्रः उन्नतिम् इच्छता त्यक्तव्यान् षड् दोषान् अभिजानाति, व्यवहारे च तान् परिचिनोति।"
+      },
+      {
+       "concept_tag": "shuddhi-sadhanani",
+       "learning_objective": "छात्रः शरीर-मनः-आत्म-बुद्धीनां शुद्धिसाधनानि श्लोकानुसारं वदति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH02-T3",
+     "topic_number": 3,
+     "title": "भारतवर्षं निरन्तराभ्यासः च",
+     "ncert_sections": "श्लोकौ ४, ५",
+     "concepts": [
+      {
+       "concept_tag": "bharatavarsha-svarupam",
+       "learning_objective": "छात्रः श्लोके वर्णितं भारतवर्षस्य भौगोलिकं स्वरूपं वदति।"
+      },
+      {
+       "concept_tag": "nirantara-abhyasah",
+       "learning_objective": "छात्रः जलबिन्दुनिपातस्य दृष्टान्तेन निरन्तराभ्यासस्य महत्त्वं व्याख्याति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH02-T4",
+     "topic_number": 4,
+     "title": "बुद्धिविकासः प्रियवचनं च",
+     "ncert_sections": "श्लोकौ ६, ७",
+     "concepts": [
+      {
+       "concept_tag": "buddhi-vikasah",
+       "learning_objective": "छात्रः पठन-लेखन-दर्शन-प्रश्न-सत्सङ्गैः बुद्धेः विकासं कथं भवति इति अवगच्छति।"
+      },
+      {
+       "concept_tag": "priyavachanam",
+       "learning_objective": "छात्रः प्रियवचनस्य महत्त्वं 'वचने का दरिद्रता' इत्यस्य भावं च व्याख्याति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH02-T5",
+     "topic_number": 5,
+     "title": "आलस्यम् उद्यमः परोपकारः च",
+     "ncert_sections": "श्लोकौ ८, ९",
+     "concepts": [
+      {
+       "concept_tag": "alasyam-udyamah",
+       "learning_objective": "छात्रः आलस्यं शत्रुः, उद्यमः च बन्धुः इति भावम् अवगच्छति।"
+      },
+      {
+       "concept_tag": "paropakarah",
+       "learning_objective": "छात्रः व्यासस्य वचनद्वयानुसारं परोपकारस्य परपीडनस्य च फलं विवेचयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH02-T6",
+     "topic_number": 6,
+     "title": "तृतीयाविभक्तिः पर्यायपदानि च",
+     "ncert_sections": "शब्दरूपाणि, अभ्यासः, योग्यताविस्तरः",
+     "concepts": [
+      {
+       "concept_tag": "tritiya-vibhaktih",
+       "learning_objective": "छात्रः अकारान्त-आकारान्तशब्दानां तृतीयाविभक्तेः रूपाणि जानाति प्रयुङ्क्ते च।"
+      },
+      {
+       "concept_tag": "paryayapadani",
+       "learning_objective": "छात्रः पाठगतानां शब्दानां पर्यायपदानि अमरकोशानुसारं अभिजानाति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "मित्राय नमः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH03-T1",
+     "topic_number": 1,
+     "title": "संवादः — उद्याने योगशिक्षिकायाः समीपे",
+     "ncert_sections": "पृष्ठ २९-३०",
+     "concepts": [
+      {
+       "concept_tag": "samvada-sandarbhah",
+       "learning_objective": "छात्रः पाठस्य संवादस्य पात्राणि घटनाक्रमं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "suryanamaskara-parichayah",
+       "learning_objective": "छात्रः सूर्यनमस्कारः द्वादशानाम् आसनानां समाहारः, प्रत्येकस्मात् पूर्वं मन्त्रः भवति इति जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH03-T2",
+     "topic_number": 2,
+     "title": "सूर्यनमस्कारस्य मन्त्राः सूर्यस्य नामानि च",
+     "ncert_sections": "पृष्ठ ३०-३१",
+     "concepts": [
+      {
+       "concept_tag": "surya-mantra-kramah",
+       "learning_objective": "छात्रः सूर्यनमस्कारस्य द्वादश मन्त्रान् क्रमेण जानाति।"
+      },
+      {
+       "concept_tag": "surya-paryayah",
+       "learning_objective": "छात्रः मित्रः, रविः, भानुः, खगः, पूषा इत्यादीनि सूर्यस्य पर्यायपदानि परिचिनोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH03-T3",
+     "topic_number": 3,
+     "title": "श्लोकः सूर्यनमस्कारस्य प्रयोजनानि शब्दार्थाः च",
+     "ncert_sections": "पृष्ठ ३१-३२",
+     "concepts": [
+      {
+       "concept_tag": "shloka-prayojanani",
+       "learning_objective": "छात्रः 'आदित्यस्य नमस्कारान्' इति श्लोकस्य अर्थं सूर्यनमस्कारस्य लाभान् च वदति।"
+      },
+      {
+       "concept_tag": "shabdarthah",
+       "learning_objective": "छात्रः प्रज्ञा, वीर्यम्, तेजः, स्वस्थम् इत्यादीनां पदानाम् अर्थान् जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH03-T4",
+     "topic_number": 4,
+     "title": "चतुर्थी-विभक्तेः रूपाणि",
+     "ncert_sections": "पृष्ठ ३३, ३६ (अभ्यासः ८)",
+     "concepts": [
+      {
+       "concept_tag": "chaturthi-roopani",
+       "learning_objective": "छात्रः अकारान्त-आकारान्त-ईकारान्त-शब्दानां चतुर्थी-विभक्तेः रूपाणि त्रिषु वचनेषु लिखति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH03-T5",
+     "topic_number": 5,
+     "title": "चतुर्थी-विभक्तेः प्रयोगः — 'नमः' योगे दानार्थे च",
+     "ncert_sections": "पृष्ठ ३४-३६ (अत्र इदम् अवधेयम्)",
+     "concepts": [
+      {
+       "concept_tag": "namah-yoge-chaturthi",
+       "learning_objective": "छात्रः 'नमः' शब्दस्य योगे चतुर्थी-विभक्तेः प्रयोगं करोति।"
+      },
+      {
+       "concept_tag": "danarthe-chaturthi",
+       "learning_objective": "छात्रः दा-धातोः यच्छ्-धातोः च योगे यस्मै दीयते तस्मिन् चतुर्थीं प्रयुङ्क्ते।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH03-T6",
+     "topic_number": 6,
+     "title": "योग्यताविस्तरः दा-धातोः रूपाणि च",
+     "ncert_sections": "योग्यताविस्तरः, पृष्ठ ३७-३८",
+     "concepts": [
+      {
+       "concept_tag": "yoga-granthah",
+       "learning_objective": "छात्रः विश्वयोगदिवसं, योगसूत्रं हठयोगप्रदीपिकां च जानाति।"
+      },
+      {
+       "concept_tag": "da-dhatu-roopani",
+       "learning_objective": "छात्रः दा-धातोः लट्-लकारे लोट्-लकारे च रूपाणि प्रयुङ्क्ते।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "न लभ्यते चेत् आम्लं द्राक्षाफलम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH04-T1",
+     "topic_number": 1,
+     "title": "गीतम् — शृगालस्य वनगमनं श्रान्तिः च",
+     "ncert_sections": "पृष्ठ ४०",
+     "concepts": [
+      {
+       "concept_tag": "shrigala-vanagamanam",
+       "learning_objective": "छात्रः पिपासया बुभुक्षया च शृगालस्य वनगमनं निष्फलम् अन्वेषणं च वर्णयति।"
+      },
+      {
+       "concept_tag": "shrantih-khedah",
+       "learning_objective": "छात्रः शृगालस्य श्रान्तिं, खेदं, स्वेदं, तृषां, चतसृषु दिक्षु दर्शनं च क्रमेण अवगच्छति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH04-T2",
+     "topic_number": 2,
+     "title": "गीतम् — द्राक्षाफलदर्शनम् उत्पतनं पलायनं च",
+     "ncert_sections": "पृष्ठ ४१",
+     "concepts": [
+      {
+       "concept_tag": "drakshalata-darshanam",
+       "learning_objective": "छात्रः लतासु उपरि द्राक्षाफलस्य दर्शनं शृगालस्य मुखे रसोत्पत्तिं च जानाति।"
+      },
+      {
+       "concept_tag": "utpatanam-palayanam",
+       "learning_objective": "छात्रः शृगालस्य पुनः पुनः उत्पतनं, 'आम्लं द्राक्षाफलम्' इति कथनं, पलायनं च वर्णयति।"
+      },
+      {
+       "concept_tag": "katha-sandeshah",
+       "learning_objective": "छात्रः 'न लभ्यते चेत् आम्लं द्राक्षाफलम्' इति उक्तेः भावं जीवनस्थितिषु योजयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH04-T3",
+     "topic_number": 3,
+     "title": "शब्दार्थाः",
+     "ncert_sections": "वयं शब्दार्थान् जानीमः (पृष्ठ ४२-४३)",
+     "concepts": [
+      {
+       "concept_tag": "shabdartha-paryayah",
+       "learning_objective": "छात्रः पाठस्य शब्दानां पर्यायपदानि अर्थान् च जानाति।"
+      },
+      {
+       "concept_tag": "dik-vachakah",
+       "learning_objective": "छात्रः वामतः, दक्षिणतः, अग्रतः, पृष्ठतः इति दिग्वाचकपदानाम् अर्थान् जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH04-T4",
+     "topic_number": 4,
+     "title": "आत्मनेपदि-धातूनां लट्लकाररूपाणि",
+     "ncert_sections": "अत्र इदम् अवधेयम्, अभ्यासाः ४-७ (पृष्ठ ४४-४५)",
+     "concepts": [
+      {
+       "concept_tag": "atmanepada-lat-roopani",
+       "learning_objective": "छात्रः लभ्, वन्द्, वृत् इत्यादीनां धातूनां लट्लकारे त्रिषु पुरुषेषु त्रिषु वचनेषु रूपाणि जानाति।"
+      },
+      {
+       "concept_tag": "kartri-kriya-anvayah",
+       "learning_objective": "छात्रः कर्तुः पुरुषानुसारं वचनानुसारं च उचितं क्रियापदं प्रयुङ्क्ते।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH04-T5",
+     "topic_number": 5,
+     "title": "योग्यताविस्तरः — सुभाषितश्लोकौ",
+     "ncert_sections": "योग्यताविस्तरः (पृष्ठ ४६)",
+     "concepts": [
+      {
+       "concept_tag": "shloka-uttama-janah",
+       "learning_objective": "छात्रः 'प्रारभ्यते न खलु' इति श्लोके नीच-मध्य-उत्तमजनानां भेदम् अवगच्छति।"
+      },
+      {
+       "concept_tag": "shloka-pipilaka",
+       "learning_objective": "छात्रः 'गच्छन् पिपीलकः' इति श्लोकस्य निरन्तर-प्रयत्न-सन्देशं व्याख्याति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "सेवा हि परमो धर्मः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH05-T1",
+     "topic_number": 1,
+     "title": "मानवीयाः गुणाः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "maanaviya-gunaah",
+       "learning_objective": "छात्रः सत्यं करुणा सेवा अक्रोधः इत्यादीन् मानवीयगुणान् अभिजानाति।"
+      },
+      {
+       "concept_tag": "siddhaartha-udaaharanam",
+       "learning_objective": "छात्रः सिद्धार्थस्य उदाहरणेन मानवीयगुणानां महत्त्वं बोधति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH05-T2",
+     "topic_number": 2,
+     "title": "नागार्जुनस्य सहायकपरीक्षा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "naagaarjuna-parichayah",
+       "learning_objective": "छात्रः नागार्जुनस्य परिचयं तस्य निवेदनं च स्मरति।"
+      },
+      {
+       "concept_tag": "pariikshaa-vidhih",
+       "learning_objective": "छात्रः नागार्जुनेन कृतायाः परीक्षायाः विधिं तस्याः उद्देश्यं च विश्लेषयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH05-T3",
+     "topic_number": 3,
+     "title": "युवकयोः आचरणं सहायकस्य चयनं च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "yuvakayoh-aacharanam",
+       "learning_objective": "छात्रः द्वयोः युवकयोः आचरणं वृत्तान्तं च स्मरति।"
+      },
+      {
+       "concept_tag": "sevaabhaavanaa",
+       "learning_objective": "छात्रः चिकित्सकस्य कृते सेवाभावनायाः महत्त्वं मूल्याङ्कयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH05-T4",
+     "topic_number": 4,
+     "title": "शब्दार्थाः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "paryaaya-padaani",
+       "learning_objective": "छात्रः पाठस्य कठिनपदानां समानार्थकपदानि जानाति।"
+      },
+      {
+       "concept_tag": "sandarbhe-arthah",
+       "learning_objective": "छात्रः वाक्यसन्दर्भे पदानां भावं च अर्थं च निर्धारयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH05-T5",
+     "topic_number": 5,
+     "title": "क्तवतु-प्रत्ययः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ktavatu-pumlingam",
+       "learning_objective": "छात्रः क्तवतु-प्रत्ययान्तानि पुंलिङ्गरूपाणि रचयति प्रयुङ्क्ते च।"
+      },
+      {
+       "concept_tag": "ktavatu-striilingam",
+       "learning_objective": "छात्रः क्तवतु-प्रत्ययान्तानि स्त्रीलिङ्गरूपाणि रचयति प्रयुङ्क्ते च।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH05-T6",
+     "topic_number": 6,
+     "title": "स्म-प्रयोगः भूतकालः च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sma-prayogah",
+       "learning_objective": "छात्रः वर्तमानकालिकक्रियया सह 'स्म' योजयित्वा भूतकालार्थं व्यक्तीकरोति।"
+      },
+      {
+       "concept_tag": "lang-lakaarah",
+       "learning_objective": "छात्रः लङ्लकार-क्तवतु-स्मप्रयोगाणां समानार्थकत्वं तुलयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH05-T7",
+     "topic_number": 7,
+     "title": "स्वास्थ्यरक्षणाय नियमाः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "svaasthya-niyamaah",
+       "learning_objective": "छात्रः श्लोकोक्तान् स्वास्थ्यरक्षणनियमान् स्मरति।"
+      },
+      {
+       "concept_tag": "shloka-bhaavah",
+       "learning_objective": "छात्रः श्लोकस्य भावं विश्लेष्य जीवने प्रयोक्तुं शक्नोति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "क्रीडाम वयं श्लोकान्त्याक्षरीम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH06-T1",
+     "topic_number": 1,
+     "title": "अन्त्याक्षरीक्रीडायाः परिचयः नियमाः च",
+     "ncert_sections": "संवादः, कार्यकलापः",
+     "concepts": [
+      {
+       "concept_tag": "antyakshari-krida-niyamah",
+       "learning_objective": "छात्रः अन्त्याक्षरीक्रीडायाः गणद्वयं नियमान् च वर्णयितुं समर्थः भवेत्।"
+      },
+      {
+       "concept_tag": "antima-vyanjana-varnah",
+       "learning_objective": "छात्रः पदस्य श्लोकस्य वा अन्तिमं व्यञ्जनवर्णं ज्ञात्वा अग्रिमं पदं श्लोकं वा चेतुं समर्थः भवेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH06-T2",
+     "topic_number": 2,
+     "title": "विद्याहीनानां जनानां दशा",
+     "ncert_sections": "श्लोकौ १, ४",
+     "concepts": [
+      {
+       "concept_tag": "vidyahina-kimshuka-upama",
+       "learning_objective": "छात्रः विद्याहीनानां जनानां निर्गन्धकिंशुकैः सह उपमां व्याख्यातुं समर्थः भवेत्।"
+      },
+      {
+       "concept_tag": "vidyahina-bharabhutah",
+       "learning_objective": "छात्रः विद्यादिगुणरहिताः जनाः भुवि भारभूताः कथं भवन्ति इति अवगच्छेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH06-T3",
+     "topic_number": 3,
+     "title": "धीमतां मूर्खाणां खलसाधूनां च भेदः",
+     "ncert_sections": "श्लोकौ २, ३",
+     "concepts": [
+      {
+       "concept_tag": "dhimatam-kalah",
+       "learning_objective": "छात्रः धीमतां मूर्खाणां च कालयापनस्य भेदं वर्णयितुं समर्थः भवेत्।"
+      },
+      {
+       "concept_tag": "khala-sadhu-viparitam",
+       "learning_objective": "छात्रः खलस्य साधोः च विद्याधनशक्तीनाम् उपयोगं तोलयितुं समर्थः भवेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH06-T4",
+     "topic_number": 4,
+     "title": "विद्यायाः महिमा फलानि च",
+     "ncert_sections": "श्लोकाः ५, ६, ८",
+     "concepts": [
+      {
+       "concept_tag": "vidya-phalani",
+       "learning_objective": "छात्रः विद्यया प्राप्यमाणानि वृत्तिकीर्तिलक्ष्म्यादीनि फलानि अभिज्ञातुं समर्थः भवेत्।"
+      },
+      {
+       "concept_tag": "vidya-nama-narasya-rupam",
+       "learning_objective": "छात्रः विद्या नरस्य रूपं धनं गुरुः बन्धुः देवता च कथम् इति व्याख्यातुं समर्थः भवेत्।"
+      },
+      {
+       "concept_tag": "vidyabhyasa-dharmarthamoksha",
+       "learning_objective": "छात्रः धर्मार्थमोक्षेभ्यः विद्याभ्यासस्य आवश्यकताम् अवगच्छेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH06-T5",
+     "topic_number": 5,
+     "title": "शनैः शनैः साधनं विद्या भूषणं विद्याधनं च",
+     "ncert_sections": "श्लोकाः ७, ९, १०",
+     "concepts": [
+      {
+       "concept_tag": "shanaih-shanaih",
+       "learning_objective": "छात्रः शनैः शनैः साधनीयानि पञ्च कार्याणि तेषाम् आशयं च ज्ञातुं समर्थः भवेत्।"
+      },
+      {
+       "concept_tag": "vidya-sarvasya-bhushanam",
+       "learning_objective": "छात्रः चन्द्रसुमराजदृष्टान्तैः विद्या सर्वस्य भूषणम् इति अवगच्छेत्।"
+      },
+      {
+       "concept_tag": "vidyadhanam-sarvadhana-pradhanam",
+       "learning_objective": "छात्रः विद्याधनं सर्वधनप्रधानं कथम् इति सामान्यधनेन सह तोलयितुं समर्थः भवेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH06-T6",
+     "topic_number": 6,
+     "title": "शब्दार्थाः व्याकरणं च",
+     "ncert_sections": "शब्दार्थाः, अभ्यासः, योग्यताविस्तरः",
+     "concepts": [
+      {
+       "concept_tag": "shabdarthah",
+       "learning_objective": "छात्रः पाठस्थानां कठिनशब्दानाम् अर्थान् ज्ञातुं समर्थः भवेत्।"
+      },
+      {
+       "concept_tag": "vibhakti-vachanam",
+       "learning_objective": "छात्रः पाठस्थपदानां विभक्तिं वचनं च अभिज्ञाय प्रश्ननिर्माणं कर्तुं समर्थः भवेत्।"
+      },
+      {
+       "concept_tag": "vidya-shabdarupani",
+       "learning_objective": "छात्रः आकारान्तस्त्रीलिङ्गस्य विद्या-शब्दस्य रूपाणि प्रयोक्तुं समर्थः भवेत्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "ईशावास्यम् इदं सर्वम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH07-T1",
+     "topic_number": 1,
+     "title": "पाठारम्भः — ईश्वरः सर्वत्र अस्ति",
+     "ncert_sections": "पाठारम्भः संवादः",
+     "concepts": [
+      {
+       "concept_tag": "ishavasyam-arthah",
+       "learning_objective": "छात्रः 'ईशावास्यम् इदं सर्वम्' इति वाक्यस्य अर्थं वदति।"
+      },
+      {
+       "concept_tag": "ishvarah-sarvatra",
+       "learning_objective": "छात्रः जानाति यत् ईश्वरः सर्वत्र व्याप्तः इति पाठस्य मुख्यः सन्देशः।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH07-T2",
+     "topic_number": 2,
+     "title": "हिरण्यकशिपोः सभा",
+     "ncert_sections": "नाटकम् — हिरण्यकशिपोः सभा",
+     "concepts": [
+      {
+       "concept_tag": "hiranyakashipu-ahankarah",
+       "learning_objective": "छात्रः हिरण्यकशिपोः अहङ्कारं सभासदां वचनानि च अवगच्छति।"
+      },
+      {
+       "concept_tag": "prahlada-vadha-prayasah",
+       "learning_objective": "छात्रः प्रह्लादं मारयितुं कृतान् प्रयासान् जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH07-T3",
+     "topic_number": 3,
+     "title": "होलिकाप्रसङ्गः",
+     "ncert_sections": "नाटकम् — होलिका प्रह्लादः च",
+     "concepts": [
+      {
+       "concept_tag": "holika-varah",
+       "learning_objective": "छात्रः होलिकायाः वरं तस्य दुरुपयोगस्य परिणामं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "holika-kridaa",
+       "learning_objective": "छात्रः होलिकायाः छलपूर्णक्रीडायाः घटनाक्रमं जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH07-T4",
+     "topic_number": 4,
+     "title": "नृसिंहावतारः हिरण्यकशिपोः वधः च",
+     "ncert_sections": "नाटकम् — स्तम्भात् नृसिंहः",
+     "concepts": [
+      {
+       "concept_tag": "stambhe-harih",
+       "learning_objective": "छात्रः प्रह्लादस्य दृढविश्वासं स्तम्भात् नृसिंहस्य प्राकट्यं च जानाति।"
+      },
+      {
+       "concept_tag": "vara-anullanghanam",
+       "learning_objective": "छात्रः अवगच्छति यत् नृसिंहः ब्रह्मणः वरम् अनुल्लङ्घ्य हिरण्यकशिपुं हतवान्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH07-T5",
+     "topic_number": 5,
+     "title": "शब्दार्थाः",
+     "ncert_sections": "वयं शब्दार्थान् जानीमः",
+     "concepts": [
+      {
+       "concept_tag": "shabdarthah",
+       "learning_objective": "छात्रः पाठस्य कठिननामपदानाम् अव्ययानां च अर्थं जानाति।"
+      },
+      {
+       "concept_tag": "kriyapada-arthah",
+       "learning_objective": "छात्रः पाठस्य क्रियापदानां समानार्थकपदानि अभिजानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH07-T6",
+     "topic_number": 6,
+     "title": "तृतीया-विभक्तिः",
+     "ncert_sections": "तृतीया-विभक्तेः रूपाणि, अत्र इदम् अवधेयम्, अभ्यासः ३, ५",
+     "concepts": [
+      {
+       "concept_tag": "tritiya-rupani",
+       "learning_objective": "छात्रः विविधशब्दानां तृतीयाविभक्तेः रूपाणि जानाति।"
+      },
+      {
+       "concept_tag": "tritiya-prayogah",
+       "learning_objective": "छात्रः उपकरणार्थे क्रियाविशेषणार्थे च तृतीयायाः प्रयोगं करोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH07-T7",
+     "topic_number": 7,
+     "title": "लृट्लकारः गुणसन्धिः च",
+     "ncert_sections": "लृट्लकारः, अभ्यासः ६, ७, ८",
+     "concepts": [
+      {
+       "concept_tag": "lrit-lakarah",
+       "learning_objective": "छात्रः भविष्यत्काले लृट्लकारस्य रूपाणि प्रयुङ्क्ते।"
+      },
+      {
+       "concept_tag": "guna-sandhih",
+       "learning_objective": "छात्रः अ/आ + इ/ई = ए, अ/आ + उ/ऊ = ओ इति गुणसन्धिं करोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH07-T8",
+     "topic_number": 8,
+     "title": "योग्यताविस्तरः — पुराणानि होलिकोत्सवः च",
+     "ncert_sections": "योग्यताविस्तरः",
+     "concepts": [
+      {
+       "concept_tag": "puranani",
+       "learning_objective": "छात्रः अष्टादशपुराणानि तेषां रचयितारं च जानाति।"
+      },
+      {
+       "concept_tag": "holikotsavah",
+       "learning_objective": "छात्रः होलिकोत्सवस्य परम्परां सम्बद्धस्थानस्य महत्त्वं च जानाति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "हितं मनोहारि च दुर्लभं वचः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH08-T1",
+     "topic_number": 1,
+     "title": "सूक्तेः परिचयः 'माता भूमिः पुत्रोऽहं पृथिव्याः' च",
+     "ncert_sections": "पाठारम्भः संवादः, सूक्तिः १",
+     "concepts": [
+      {
+       "concept_tag": "sukti-parichayah",
+       "learning_objective": "छात्रः जानाति यत् सूक्तिः सुन्दरं वचनं, यस्मिन् जीवनमूल्यानि निहितानि भवन्ति।"
+      },
+      {
+       "concept_tag": "mata-bhumih",
+       "learning_objective": "छात्रः 'माता भूमिः पुत्रोऽहं पृथिव्याः' इति सूक्त्याः पदच्छेदम् अन्वयं भावं च अवगच्छति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH08-T2",
+     "topic_number": 2,
+     "title": "'न रत्नमन्विष्यति' 'शरीरमाद्यं खलु धर्मसाधनम्' च",
+     "ncert_sections": "सूक्ती २-३",
+     "concepts": [
+      {
+       "concept_tag": "ratnam-anvishyati",
+       "learning_objective": "छात्रः अवगच्छति यत् गुणवन्तं जनं गुणज्ञाः स्वयमेव अन्विष्य आगच्छन्ति।"
+      },
+      {
+       "concept_tag": "shariram-dharmasadhanam",
+       "learning_objective": "छात्रः जानाति यत् स्वस्थं शरीरं धर्मपालनस्य प्रथमं साधनम् अस्ति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH08-T3",
+     "topic_number": 3,
+     "title": "'क्षणशः कणशश्चैव' 'सुखार्थिनः कुतो विद्या' च",
+     "ncert_sections": "सूक्ती ४-५",
+     "concepts": [
+      {
+       "concept_tag": "kshanashah-kanashah",
+       "learning_objective": "छात्रः अवगच्छति यत् विद्या क्षणशः अर्थः च कणशः साधनीयः।"
+      },
+      {
+       "concept_tag": "sukharthinah-vidya",
+       "learning_objective": "छात्रः जानाति यत् आलस्यं सुखं च त्यक्त्वा एव विद्या लभ्यते।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH08-T4",
+     "topic_number": 4,
+     "title": "'गुणाः पूजास्थानं गुणिषु' 'मा ब्रूहि दीनं वचः' च",
+     "ncert_sections": "सूक्ती ६-७",
+     "concepts": [
+      {
+       "concept_tag": "gunah-pujasthanam",
+       "learning_objective": "छात्रः अवगच्छति यत् आदरस्य कारणं गुणाः एव, न लिङ्गं न वयः।"
+      },
+      {
+       "concept_tag": "ma-bruhi-dinam-vachah",
+       "learning_objective": "छात्रः जानाति यत् स्वाभिमानी जनः दीनं वचः न वदेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH08-T5",
+     "topic_number": 5,
+     "title": "'यस्तु क्रियावान् पुरुषः स विद्वान्' 'शीलं परं भूषणम्' च",
+     "ncert_sections": "सूक्ती ८-९",
+     "concepts": [
+      {
+       "concept_tag": "kriyavan-vidvan",
+       "learning_objective": "छात्रः अवगच्छति यत् ज्ञानस्य आचरणेन एव मनुष्यः वास्तविकः विद्वान् भवति।"
+      },
+      {
+       "concept_tag": "shilam-bhushanam",
+       "learning_objective": "छात्रः जानाति यत् सदाचारः एव मनुष्यस्य श्रेष्ठम् आभूषणम् अस्ति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH08-T6",
+     "topic_number": 6,
+     "title": "'हितं मनोहारि च दुर्लभं वचः' सूक्तीनां ग्रन्थाः च",
+     "ncert_sections": "सूक्तिः १०, योग्यताविस्तरः ३",
+     "concepts": [
+      {
+       "concept_tag": "hitam-manohari",
+       "learning_objective": "छात्रः अवगच्छति यत् हितकारकं मनोरमं च वचनं दुर्लभं भवति।"
+      },
+      {
+       "concept_tag": "grantha-parichayah",
+       "learning_objective": "छात्रः सूक्तीनां मूलग्रन्थान् तेषां रचयितॄन् च अभिजानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH08-T7",
+     "topic_number": 7,
+     "title": "मकारलेखनं विभक्तिः शब्दार्थाः च",
+     "ncert_sections": "योग्यताविस्तरः १-२, अभ्यासः ६-८",
+     "concepts": [
+      {
+       "concept_tag": "makara-anusvara-lekhanam",
+       "learning_objective": "छात्रः स्वरात् पूर्वं 'म्' व्यञ्जनात् पूर्वं च अनुस्वारं लिखति।"
+      },
+      {
+       "concept_tag": "vibhakti-nirdeshah",
+       "learning_objective": "छात्रः सूक्तिषु प्रयुक्तानां पदानां विभक्तिं निर्दिशति।"
+      },
+      {
+       "concept_tag": "shabdarthah",
+       "learning_objective": "छात्रः पाठस्य पदानां समानार्थकपदानि जानाति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "अन्नाद् भवन्ति भूतानि",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH09-T1",
+     "topic_number": 1,
+     "title": "भारतस्य संस्कृताश्रिता ज्ञानपरम्परा (प्रस्तावना)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sanskritam-sanskritih-pratishthe",
+       "learning_objective": "छात्रः भारतस्य प्रतिष्ठाद्वयं संस्कृताश्रितं प्राचीनज्ञानं च वर्णयितुं शक्नोति।"
+      },
+      {
+       "concept_tag": "prachina-acharyah-yashah",
+       "learning_objective": "छात्रः विविधक्षेत्रेषु प्राचीनाचार्याणां योगदानं तेषां यशोविस्तारं च ज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH09-T2",
+     "topic_number": 2,
+     "title": "सृष्टेः आरम्भः – ब्रह्म, आकाशः, वायुः, अग्निः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "brahma-svarupam",
+       "learning_objective": "छात्रः पाठानुसारं ब्रह्मणः स्वरूपं सर्वव्याप्तत्वं च व्याख्यातुं शक्नोति।"
+      },
+      {
+       "concept_tag": "akasha-vayu-agni-kramah",
+       "learning_objective": "छात्रः आकाशात् वायोः, वायोः अग्नेः उत्पत्तिक्रमं वक्तुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH09-T3",
+     "topic_number": 3,
+     "title": "जलात् प्राणिपर्यन्तं सृष्टिक्रमः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jala-prithivi-oshadhayah",
+       "learning_objective": "छात्रः अग्नेः जलस्य, जलात् पृथिव्याः, पृथिव्याः ओषधीनां च उत्पत्तिं ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "aharat-praninah",
+       "learning_objective": "छात्रः सस्येभ्यः आहारस्य, आहारात् प्राणिनां मनुष्याणां च उत्पत्तिं वक्तुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH09-T4",
+     "topic_number": 4,
+     "title": "उपनिषदां महत्त्वं तैत्तिरीयोपनिषद्वचनं च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "upanishad-mahattvam",
+       "learning_objective": "छात्रः उपनिषद्ग्रन्थानां पठनस्य महत्त्वं कारणं च वक्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "taittiriya-srishti-vakyam",
+       "learning_objective": "छात्रः तैत्तिरीयोपनिषदः सृष्टिक्रमवचनं पाठेन सह तोलयितुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH09-T5",
+     "topic_number": 5,
+     "title": "शब्दार्थाः पर्यायपदानि च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shabdarthah",
+       "learning_objective": "छात्रः पाठस्थानां कठिनशब्दानाम् अर्थान् ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "paryayapadani",
+       "learning_objective": "छात्रः दत्तपदानां पर्यायपदानि पाठात् चेतुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH09-T6",
+     "topic_number": 6,
+     "title": "पञ्चमी विभक्तिः – रूपाणि प्रश्ननिर्माणं च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "panchami-rupani",
+       "learning_objective": "छात्रः अकारान्त-इकारान्त-आकारान्त-ईकारान्तशब्दानां पञ्चमीरूपाणि लेखितुं शक्नोति।"
+      },
+      {
+       "concept_tag": "kasmat-prashna-nirmanam",
+       "learning_objective": "छात्रः पञ्चम्यन्तपदम् आश्रित्य कस्मात्, कस्याः, कुतः इति पदैः प्रश्ननिर्माणं कर्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "acharyat-vidya-praptih",
+       "learning_objective": "छात्रः कः शिष्यः कस्मात् आचार्यात् विद्यां प्राप्तवान् इति पञ्चम्या वक्तुं शक्नोति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "दशमः कः ?",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH10-T1",
+     "topic_number": 1,
+     "title": "संवादः – संस्कृत-ओलम्पियाड्-परीक्षायाः परिणामः",
+     "ncert_sections": "पाठारम्भः (संवादः)",
+     "concepts": [
+      {
+       "concept_tag": "olampiad-parinamah",
+       "learning_objective": "छात्रः संवादात् परीक्षायाः परिणामं स्थानानि च अवगच्छति।"
+      },
+      {
+       "concept_tag": "dashamasya-prashnah",
+       "learning_objective": "छात्रः 'दशमः कः' इति प्रश्नात् कथायाः आरम्भं बोधति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH10-T2",
+     "topic_number": 2,
+     "title": "कथा – दश बालकाः नद्यां स्नानं गणनादोषः च",
+     "ncert_sections": "कथायाः पूर्वभागः",
+     "concepts": [
+      {
+       "concept_tag": "balakanam-snanam",
+       "learning_objective": "छात्रः बालकानां नदीस्नानस्य नदीतरणस्य च घटनां वर्णयति।"
+      },
+      {
+       "concept_tag": "ganana-dosha",
+       "learning_objective": "छात्रः गणनाकाले आत्मानं त्यक्त्वा गणनस्य दोषं विश्लेषयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH10-T3",
+     "topic_number": 3,
+     "title": "कथा – पथिकस्य समाधानं कथायाः सन्देशः च",
+     "ncert_sections": "कथायाः उत्तरभागः",
+     "concepts": [
+      {
+       "concept_tag": "pathikasya-ganana",
+       "learning_objective": "छात्रः पथिकेन कृतां गणनां बालकानां हर्षं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "kathayah-sandeshah",
+       "learning_objective": "छात्रः कथायाः मुख्यं सन्देशं मूल्याङ्कयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH10-T4",
+     "topic_number": 4,
+     "title": "शब्दार्थाः",
+     "ncert_sections": "शब्दार्थाः",
+     "concepts": [
+      {
+       "concept_tag": "shabdarthah",
+       "learning_objective": "छात्रः पाठस्थानां कठिनशब्दानां अर्थान् समानार्थकान् विपरीतार्थकान् च जानाति।"
+      },
+      {
+       "concept_tag": "kriyapadani",
+       "learning_objective": "छात्रः पाठस्थानां क्रियापदानाम् अर्थं बोधति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH10-T5",
+     "topic_number": 5,
+     "title": "पूरणसंख्याशब्दाः – अङ्गुलयः, सप्ताहः, मासाः",
+     "ncert_sections": "अभ्यासः ३-६, अत्र इदम् अवधेयम्",
+     "concepts": [
+      {
+       "concept_tag": "purana-shabdah",
+       "learning_objective": "छात्रः संख्याशब्देभ्यः पूरणशब्दान् निर्माति।"
+      },
+      {
+       "concept_tag": "purana-linga",
+       "learning_objective": "छात्रः विशेष्यानुसारं पूरणशब्दस्य लिङ्गं प्रयुङ्क्ते।"
+      },
+      {
+       "concept_tag": "dina-masa-kramah",
+       "learning_objective": "छात्रः सप्ताहस्य दिवसानां मासानां च क्रमं पूरणशब्दैः वदति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH10-T6",
+     "topic_number": 6,
+     "title": "संख्याशब्दाः, त्रिषु लिङ्गेषु रूपाणि, श्रीगणेशस्तोत्रम्",
+     "ncert_sections": "योग्यताविस्तरः, परियोजनाकार्यम्",
+     "concepts": [
+      {
+       "concept_tag": "sankhya-shabdah",
+       "learning_objective": "छात्रः एकतः शतपर्यन्तं संख्याशब्दान् जानाति।"
+      },
+      {
+       "concept_tag": "sankhya-linga",
+       "learning_objective": "छात्रः एकतः चतुःपर्यन्तं संख्याशब्दानां लिङ्गभेदं प्रयुङ्क्ते।"
+      },
+      {
+       "concept_tag": "ganesha-stotram",
+       "learning_objective": "छात्रः स्तोत्रे पूरणशब्दैः उक्तानि गणेशनामानि जानाति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "द्वीपेषु रम्यः द्वीपोऽण्डमानः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH11-T1",
+     "topic_number": 1,
+     "title": "अण्डमान-द्वीपसमूहस्य परिचयः नामेतिहासः च",
+     "ncert_sections": "संवादः (आरम्भभागः)",
+     "concepts": [
+      {
+       "concept_tag": "andaman-parichayah",
+       "learning_objective": "छात्रः अण्डमान-द्वीपसमूहस्य स्थानं, राजधानीं, शासनप्रकारं च वदति।"
+      },
+      {
+       "concept_tag": "nama-itihasah",
+       "learning_objective": "छात्रः विभिन्नकालेषु द्वीपस्य नाम्नां क्रमं परिवर्तनं च अवगच्छति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH11-T2",
+     "topic_number": 2,
+     "title": "सेल्युलर-कारागारं स्वातन्त्र्यवीराः च",
+     "ncert_sections": "संवादः (कालापानी-प्रसङ्गः)",
+     "concepts": [
+      {
+       "concept_tag": "cellular-karagaram",
+       "learning_objective": "छात्रः सेल्युलर-कारागारस्य अपरं नाम, स्वरूपं, निर्माणस्य उद्देश्यं च जानाति।"
+      },
+      {
+       "concept_tag": "svatantrya-veerah",
+       "learning_objective": "छात्रः सावरकरादीनां स्वातन्त्र्यवीराणां त्यागस्य महत्त्वं विवेचयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH11-T3",
+     "topic_number": 3,
+     "title": "जनजातयः आजीविका च",
+     "ncert_sections": "संवादः (जनजाति-आजीविका-प्रसङ्गः)",
+     "concepts": [
+      {
+       "concept_tag": "janajatayah",
+       "learning_objective": "छात्रः अण्डमाने निवसन्तीः जनजातीः तासां वैशिष्ट्यं च अभिजानाति।"
+      },
+      {
+       "concept_tag": "ajivika",
+       "learning_objective": "छात्रः स्थानीयजनानाम् आजीविकायाः साधनानि वदति व्यवहारे योजयति च।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH11-T4",
+     "topic_number": 4,
+     "title": "दर्शनीयस्थलानि जलक्रीडाः च",
+     "ncert_sections": "राजर्षेः वर्णनम्, स्वराजद्वीपः, योग्यताविस्तरः",
+     "concepts": [
+      {
+       "concept_tag": "darshaniya-sthalani",
+       "learning_objective": "छात्रः राधानगरतटादीनि दर्शनीयस्थलानि तेषां सौन्दर्यं च वर्णयति।"
+      },
+      {
+       "concept_tag": "jalakridah",
+       "learning_objective": "छात्रः स्नॉर्कलिङ्ग-सिन्धुतलविहारादीनां जलक्रीडानां भेदं स्पष्टीकरोति।"
+      },
+      {
+       "concept_tag": "dvipanam-nutana-nama",
+       "learning_objective": "छात्रः द्वीपानां पुरातनानि नूतनानि च नामानि मेलयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH11-T5",
+     "topic_number": 5,
+     "title": "शब्दार्थाः पर्यायपदानि च",
+     "ncert_sections": "वयं शब्दार्थान् जानीमः",
+     "concepts": [
+      {
+       "concept_tag": "paryaya-padani",
+       "learning_objective": "छात्रः पाठगतानां शब्दानां संस्कृतपर्यायपदानि अभिजानाति।"
+      },
+      {
+       "concept_tag": "sandarbha-arthah",
+       "learning_objective": "छात्रः वाक्यसन्दर्भे पदानाम् अर्थं भावं च अवगच्छति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH11-T6",
+     "topic_number": 6,
+     "title": "विशेषण-विशेष्यं सर्वनामविशेषणानि च",
+     "ncert_sections": "अभ्यासः ४, ५, ६",
+     "concepts": [
+      {
+       "concept_tag": "visheshana-visheshyam",
+       "learning_objective": "छात्रः लिङ्ग-विभक्ति-वचनानुसारं विशेषणेन सह विशेष्यं योजयति।"
+      },
+      {
+       "concept_tag": "sarvanama-visheshanam",
+       "learning_objective": "छात्रः विशेष्यानुसारम् उचितं सर्वनामविशेषणपदं प्रयुङ्क्ते।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH11-T7",
+     "topic_number": 7,
+     "title": "अव्ययानि क्रियापदानि समस्तपदानि च",
+     "ncert_sections": "अभ्यासः ७, ८",
+     "concepts": [
+      {
+       "concept_tag": "avyaya-kriyapadani",
+       "learning_objective": "छात्रः पाठगतानि अव्ययपदानि क्रियापदानि च पृथक्करोति, लकारं च अभिजानाति।"
+      },
+      {
+       "concept_tag": "samasta-padani",
+       "learning_objective": "छात्रः षष्ठीविग्रहात् समस्तपदं समस्तपदात् च विग्रहं रचयति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "वीराङ्गना पन्नाधाया",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH12-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः – भारतभूमिः वीराङ्गनाः च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "matribhumih-bharatam",
+       "learning_objective": "छात्रः भारतीयाः भूमिं मातरं मन्यन्ते इति अथर्ववेदस्य वचनेन सह ज्ञातुं शक्नोति।"
+      },
+      {
+       "concept_tag": "rajasthanasya-viranganah",
+       "learning_objective": "छात्रः त्यागे वीरतायां च महिलानां योगदानं पन्नाधायायाः विशिष्टतां च वक्तुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH12-T2",
+     "topic_number": 2,
+     "title": "मेवाडराज्यं बनवीरस्य कुतन्त्रं च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mevadasya-rajavanshah",
+       "learning_objective": "छात्रः महाराणासङ्ग्रामसिंहस्य पुत्रौ भ्रातरं बनवीरस्य सम्बन्धं च अभिज्ञातुं शक्नोति।"
+      },
+      {
+       "concept_tag": "banavirasya-kutantram",
+       "learning_objective": "छात्रः बनवीरः किमर्थं कथं च विक्रमादित्यम् अमारयत् उदयसिंहं मारयितुं कुतन्त्रम् अरचयत् इति वर्णयितुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH12-T3",
+     "topic_number": 3,
+     "title": "पन्नाधायायाः त्यागः निर्णयः च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "chandanasya-balidanam",
+       "learning_objective": "छात्रः पन्नाधाया उदयसिंहस्य रक्षणार्थं स्वपुत्रं चन्दनं कथं समर्पितवती इति वर्णयितुं शक्नोति।"
+      },
+      {
+       "concept_tag": "rashtrahitam-shreshtham",
+       "learning_objective": "छात्रः 'व्यक्तिहितं न, राष्ट्रहितम् एव श्रेष्ठम्' इति पन्नाधायायाः निर्णयस्य आशयं विवेचयितुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH12-T4",
+     "topic_number": 4,
+     "title": "परिणामः – उदयसिंहः महाराणाप्रतापः च, बलिदानस्य शिक्षा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "udayasimhah-pratapah",
+       "learning_objective": "छात्रः उदयसिंहः राजा कथम् अभवत् महाराणाप्रतापस्य च सम्बन्धं ज्ञातुं शक्नोति।"
+      },
+      {
+       "concept_tag": "balidanasya-shiksha",
+       "learning_objective": "छात्रः पन्नाधायायाः बलिदानं याः शिक्षाः ददाति ताः तस्य ऐतिहासिकं महत्त्वं च वक्तुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH12-T5",
+     "topic_number": 5,
+     "title": "शब्दार्थाः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shabdarthah-prathamah",
+       "learning_objective": "छात्रः पाठस्य पूर्वभागे आगतानां कठिनपदानां संस्कृतपर्यायान् ज्ञातुं शक्नोति।"
+      },
+      {
+       "concept_tag": "shabdarthah-dvitiyah",
+       "learning_objective": "छात्रः पाठस्य उत्तरभागे आगतानां कठिनपदानां संस्कृतपर्यायान् ज्ञातुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH12-T6",
+     "topic_number": 6,
+     "title": "लङ्लकारः – रूपाणि वचनपरिवर्तनं च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lang-lakarasya-rupani",
+       "learning_objective": "छात्रः भूतकाले प्रयुक्तस्य लङ्लकारस्य पुरुष-वचनानुसारं रूपाणि अभिज्ञातुं शक्नोति।"
+      },
+      {
+       "concept_tag": "lang-vachana-parivartanam",
+       "learning_objective": "छात्रः लङ्लकारस्य वाक्येषु वचनपरिवर्तनं कर्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "lang-tah-lat",
+       "learning_objective": "छात्रः लङ्लकारस्य वाक्यानि लट्लकारे परिवर्तयितुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH12-T7",
+     "topic_number": 7,
+     "title": "प्रश्ननिर्माणं सन्धिः च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prashna-nirmanam",
+       "learning_objective": "छात्रः रेखाङ्कितपदम् आश्रित्य उचितेन प्रश्नवाचकपदेन प्रश्नं रचयितुं शक्नोति।"
+      },
+      {
+       "concept_tag": "dirgha-sandhih",
+       "learning_objective": "छात्रः समानस्वरयोः मेलने दीर्घसन्धिं कृत्वा पदानि योजयितुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH12-T8",
+     "topic_number": 8,
+     "title": "योग्यताविस्तरः – क्तवतुप्रत्ययः राज्याङ्गानि व्यूहाः च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ktavatu-pratyayah",
+       "learning_objective": "छात्रः भूतकाले लङ्लकारस्य स्थाने क्तवतुप्रत्ययान्तपदानां पुंलिङ्गे स्त्रीलिङ्गे च प्रयोगं कर्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "rajyasya-saptangani",
+       "learning_objective": "छात्रः राज्यस्य सप्त अङ्गानि प्राचीनयुद्धेषु व्यूहानां नामानि च ज्ञातुं शक्नोति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "वर्णमात्रा-परिचयः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH13-T1",
+     "topic_number": 1,
+     "title": "स्वराणां त्रिविधाः मात्राः – ह्रस्वः, दीर्घः, प्लुतः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "hrasva-dirgha-pluta-svarah",
+       "learning_objective": "छात्रः स्वराणां ह्रस्व-दीर्घ-प्लुत-भेदान् तेषां मात्राः च अभिज्ञास्यति।"
+      },
+      {
+       "concept_tag": "dvavimshatih-svarah",
+       "learning_objective": "छात्रः समानाक्षर-सन्ध्यक्षर-भेदेन संस्कृतस्य द्वाविंशतिः स्वरान् गणयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH13-T2",
+     "topic_number": 2,
+     "title": "प्लुत-स्वराणां प्रयोगः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pluta-prayogah-ahvane",
+       "learning_objective": "छात्रः दूरात् आह्वाने प्लुतस्वरस्य प्रयोगं ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "pluta-prayogah-omkare",
+       "learning_objective": "छात्रः वेदमन्त्राणां प्रारम्भे ओ३म् इति प्लुतोच्चारणं ज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH13-T3",
+     "topic_number": 3,
+     "title": "व्यञ्जनानाम् अर्धमात्रा, चतुर्विधाः मात्राः च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vyanjanam-ardhamatrikam",
+       "learning_objective": "छात्रः व्यञ्जनानाम् अयोगवाहयोः च अर्धमात्रां ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "chaturvidhah-matrah",
+       "learning_objective": "छात्रः संस्कृतवर्णानां चतुर्विधाः मात्राः वर्णयिष्यति।"
+      },
+      {
+       "concept_tag": "yajnavalkya-shiksha-shlokah",
+       "learning_objective": "छात्रः याज्ञवल्क्य-शिक्षायाः मात्राविषयकं श्लोकम् अवगमिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH13-T4",
+     "topic_number": 4,
+     "title": "प्रकृतौ ध्वनिषु मात्राः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kukkuta-dhvanih",
+       "learning_objective": "छात्रः कुक्कुटध्वनौ ह्रस्व-दीर्घ-प्लुत-मात्राः अभिज्ञास्यति।"
+      },
+      {
+       "concept_tag": "paniniya-shiksha-shlokah",
+       "learning_objective": "छात्रः पाणिनीय-शिक्षायाः श्लोकानुसारं पशुपक्षिणां ध्वनिमात्राः ज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH13-T5",
+     "topic_number": 5,
+     "title": "मात्रा-गणना-क्रीडा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "matra-ganana-sarala",
+       "learning_objective": "छात्रः सरलशब्दानां वर्णविच्छेदं कृत्वा मात्राः गणयिष्यति।"
+      },
+      {
+       "concept_tag": "matra-ganana-samyukta",
+       "learning_objective": "छात्रः संयुक्तव्यञ्जनयुक्तानां शब्दानां मात्राः गणयिष्यति।"
+      },
+      {
+       "concept_tag": "matra-ganana-pluta-anunasika",
+       "learning_objective": "छात्रः प्लुतस्वरयुक्तानां शब्दानां मात्राः गणयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH13-T6",
+     "topic_number": 6,
+     "title": "मात्राणां महत्त्वं विशेषचिह्नानि च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "matranam-mahattvam",
+       "learning_objective": "छात्रः उच्चारणे श्लोकरचनायां च मात्राणां महत्त्वं ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "omkara-chihnam",
+       "learning_objective": "छात्रः ॐ इति पवित्रचिह्नस्य प्रयोगं ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "avagrahah",
+       "learning_objective": "छात्रः अवग्रहचिह्नस्य (ऽ) प्रयोगं तस्य उच्चारणाभावं च ज्ञास्यति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "शब्दरूपाणि",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde114.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH14-T1",
+     "topic_number": 1,
+     "title": "अकारान्ताः पुंलिङ्गशब्दाः — 'देव', 'राम'",
+     "ncert_sections": "पृष्ठ १४९",
+     "concepts": [
+      {
+       "concept_tag": "ajanta-parichayah",
+       "learning_objective": "छात्रः अजन्तशब्दस्य अर्थं शब्दस्य अन्तिमवर्णस्य निर्णयं च जानाति।"
+      },
+      {
+       "concept_tag": "akaranta-pumlinga-rupani",
+       "learning_objective": "छात्रः 'देव'-शब्दस्य सप्तसु विभक्तिषु त्रिषु वचनेषु रूपाणि जानाति।"
+      },
+      {
+       "concept_tag": "natva-prayogah",
+       "learning_objective": "छात्रः 'राम'-सदृशेषु शब्देषु 'ण'कारस्य प्रयोगं (रामेण, रामाणाम्) अवगच्छति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH14-T2",
+     "topic_number": 2,
+     "title": "इकारान्ताः उकारान्ताः ऋकारान्ताः च पुंलिङ्गशब्दाः",
+     "ncert_sections": "पृष्ठ १४९-१५०",
+     "concepts": [
+      {
+       "concept_tag": "ikaranta-pumlinga",
+       "learning_objective": "छात्रः 'कवि', 'हरि' इति इकारान्तपुंलिङ्गशब्दयोः रूपाणि जानाति।"
+      },
+      {
+       "concept_tag": "ukaranta-pumlinga",
+       "learning_objective": "छात्रः 'शम्भु', 'गुरु' इति उकारान्तपुंलिङ्गशब्दयोः रूपाणि जानाति।"
+      },
+      {
+       "concept_tag": "rikaranta-pumlinga",
+       "learning_objective": "छात्रः 'पितृ', 'नेतृ' इति ऋकारान्तपुंलिङ्गशब्दयोः रूपाणि तयोः भेदं च जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH14-T3",
+     "topic_number": 3,
+     "title": "आकारान्ताः इकारान्ताः च स्त्रीलिङ्गशब्दाः",
+     "ncert_sections": "पृष्ठ १५१",
+     "concepts": [
+      {
+       "concept_tag": "akaranta-strilinga",
+       "learning_objective": "छात्रः 'माला', 'रमा' इति आकारान्तस्त्रीलिङ्गशब्दयोः रूपाणि जानाति प्रयुङ्क्ते च।"
+      },
+      {
+       "concept_tag": "ikaranta-strilinga",
+       "learning_objective": "छात्रः 'मति', 'कीर्ति' इति इकारान्तस्त्रीलिङ्गशब्दयोः रूपाणि विकल्परूपाणि च जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH14-T4",
+     "topic_number": 4,
+     "title": "ईकारान्ताः उकारान्ताः ऋकारान्ताः च स्त्रीलिङ्गशब्दाः",
+     "ncert_sections": "पृष्ठ १५२",
+     "concepts": [
+      {
+       "concept_tag": "ikaranta-dirgha-strilinga",
+       "learning_objective": "छात्रः 'नदी', 'गौरी' इति ईकारान्तस्त्रीलिङ्गशब्दयोः रूपाणि जानाति।"
+      },
+      {
+       "concept_tag": "ukaranta-strilinga",
+       "learning_objective": "छात्रः 'धेनु'-शब्दस्य रूपाणि विकल्परूपाणि च जानाति।"
+      },
+      {
+       "concept_tag": "rikaranta-strilinga",
+       "learning_objective": "छात्रः 'मातृ'-शब्दस्य रूपाणि 'पितृ'-शब्दात् भेदं च जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH14-T5",
+     "topic_number": 5,
+     "title": "अकारान्ताः नपुंसकलिङ्गशब्दाः — 'फल', 'मित्र'",
+     "ncert_sections": "पृष्ठ १५३",
+     "concepts": [
+      {
+       "concept_tag": "akaranta-napumsaka-rupani",
+       "learning_objective": "छात्रः 'फल', 'मित्र' इति नपुंसकलिङ्गशब्दयोः रूपाणि जानाति।"
+      },
+      {
+       "concept_tag": "napumsaka-pumlinga-bhedah",
+       "learning_objective": "छात्रः अकारान्तनपुंसकलिङ्गस्य अकारान्तपुंलिङ्गस्य च रूपेषु भेदं वाक्ये प्रयुङ्क्ते।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH14-T6",
+     "topic_number": 6,
+     "title": "सर्वनामशब्दाः — 'तद्', 'एतद्', 'किम्' (त्रिषु लिङ्गेषु)",
+     "ncert_sections": "पृष्ठ १५३-१५५",
+     "concepts": [
+      {
+       "concept_tag": "tad-etad-rupani",
+       "learning_objective": "छात्रः 'तद्', 'एतद्' इति सर्वनाम्नोः त्रिषु लिङ्गेषु रूपाणि जानाति।"
+      },
+      {
+       "concept_tag": "kim-rupani",
+       "learning_objective": "छात्रः 'किम्'-शब्दस्य त्रिषु लिङ्गेषु रूपाणि जानाति।"
+      },
+      {
+       "concept_tag": "sarvanama-linga-anusarah",
+       "learning_objective": "छात्रः विशेष्यस्य लिङ्गविभक्तिवचनानुसारं सर्वनामरूपं प्रयुङ्क्ते।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH14-T7",
+     "topic_number": 7,
+     "title": "सर्वनामशब्दाः — 'अस्मद्', 'युष्मद्'",
+     "ncert_sections": "पृष्ठ १५५",
+     "concepts": [
+      {
+       "concept_tag": "asmad-rupani",
+       "learning_objective": "छात्रः 'अस्मद्'-शब्दस्य रूपाणि जानाति प्रयुङ्क्ते च।"
+      },
+      {
+       "concept_tag": "yushmad-rupani",
+       "learning_objective": "छात्रः 'युष्मद्'-शब्दस्य रूपाणि जानाति वाक्ये च प्रयुङ्क्ते।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GSDE1-CH15",
+   "chapter_number": 15,
+   "old_chapter_number": null,
+   "title": "धातुरूपाणि",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gsde115.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GSDE1-CH15-T1",
+     "topic_number": 1,
+     "title": "परस्मैपदिधातूनां लट्-लकारः (वर्तमानकालः)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dhatu-prakarah",
+       "learning_objective": "छात्रः धातूनां त्रीन् प्रकारान् तिङन्तपदस्य च परिचयं ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "lat-parasmaipadi-rupani",
+       "learning_objective": "छात्रः पठ्-आदीनां परस्मैपदिधातूनां लट्-लकाररूपाणि पुरुषवचनानुसारं प्रयोक्ष्यति।"
+      },
+      {
+       "concept_tag": "lat-vishesha-dhatavah",
+       "learning_objective": "छात्रः अस्, कृ, श्रु, दा, ज्ञा, क्री इत्येतेषां विशेषधातूनां लट्-रूपाणि प्रयोक्ष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH15-T2",
+     "topic_number": 2,
+     "title": "आत्मनेपदिधातूनां लट्-लकारः (वर्तमानकालः)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lat-atmanepadi-rupani",
+       "learning_objective": "छात्रः भाष्-धातोः आत्मनेपदिलट्-रूपाणि पुरुषवचनानुसारं प्रयोक्ष्यति।"
+      },
+      {
+       "concept_tag": "atmanepadi-dhatu-abhijnanam",
+       "learning_objective": "छात्रः यत्, वृध्, कम्प्, राज् इत्यादीन् आत्मनेपदिधातून् अभिज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH15-T3",
+     "topic_number": 3,
+     "title": "लृट्-लकारः (भविष्यत्कालः)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lrit-parasmaipadi-rupani",
+       "learning_objective": "छात्रः परस्मैपदिधातूनां लृट्-लकाररूपाणि भविष्यत्काले प्रयोक्ष्यति।"
+      },
+      {
+       "concept_tag": "lrit-atmanepadi-rupani",
+       "learning_objective": "छात्रः भाष्, यत् इत्यनयोः आत्मनेपदिलृट्-रूपाणि प्रयोक्ष्यति।"
+      },
+      {
+       "concept_tag": "lrit-vishesha-dhatavah",
+       "learning_objective": "छात्रः अस्-धातोः भू-आदेशं कृ-धातोः च लृट्-रूपाणि ज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH15-T4",
+     "topic_number": 4,
+     "title": "लङ्-लकारः (भूतकालः)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lang-parasmaipadi-rupani",
+       "learning_objective": "छात्रः पठ्, लिख् इत्यादीनां लङ्-लकाररूपाणि भूतकाले प्रयोक्ष्यति।"
+      },
+      {
+       "concept_tag": "lang-vishesha-dhatavah",
+       "learning_objective": "छात्रः अस्, कृ, श्रु, दा इत्यादीनां विशेषधातूनां लङ्-रूपाणि ज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH15-T5",
+     "topic_number": 5,
+     "title": "लोट्-लकारः (आज्ञार्थे)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lot-artha-rupani",
+       "learning_objective": "छात्रः लोट्-लकारस्य अर्थान् पठ्-लिख्-धात्वोः रूपाणि च ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "lot-vishesha-dhatavah",
+       "learning_objective": "छात्रः अस्, कृ, दा इत्यादीनां लोट्-रूपाणि वाक्ये प्रयोक्ष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH15-T6",
+     "topic_number": 6,
+     "title": "विधिलिङ्-लकारः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vidhilin-rupani",
+       "learning_objective": "छात्रः पठ्-लिख्-आदीनां विधिलिङ्-रूपाणि वाक्ये प्रयोक्ष्यति।"
+      },
+      {
+       "concept_tag": "vidhilin-vishesha-dhatavah",
+       "learning_objective": "छात्रः अस्, कृ, दा इत्यादीनां विधिलिङ्-रूपाणि ज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GSDE1-CH15-T7",
+     "topic_number": 7,
+     "title": "सन्धीनां सामान्यः परिचयः (स्वरसन्धयः)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sandhi-prakarah",
+       "learning_objective": "छात्रः संहितायाः सन्धेः च अर्थं सन्धीनां प्रकारान् च ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "savarnadirgha-guna-sandhi",
+       "learning_objective": "छात्रः सवर्णदीर्घसन्धिं गुणसन्धिं च उदाहरणैः अभिज्ञास्यति।"
+      },
+      {
+       "concept_tag": "vriddhi-yan-sandhi",
+       "learning_objective": "छात्रः वृद्धिसन्धिं यण्सन्धिं च उदाहरणैः अभिज्ञास्यति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

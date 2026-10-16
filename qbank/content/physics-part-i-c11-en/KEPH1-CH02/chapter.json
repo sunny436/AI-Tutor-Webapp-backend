@@ -1,0 +1,88 @@
+{
+ "chapter_id": "KEPH1-CH02",
+ "title": "Motion in a Straight Line",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPH1-CH02-T1",
+   "topic_number": 1,
+   "title": "Describing motion: position, point objects and average velocity",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "point-object-and-kinematics",
+     "learning_objective": "Explain when a moving body can be treated as a point object and what kinematics studies."
+    },
+    {
+     "concept_tag": "average-speed-vs-average-velocity",
+     "learning_objective": "Distinguish average speed from average velocity and compare their magnitudes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH02-T2",
+   "topic_number": 2,
+   "title": "Instantaneous velocity and speed",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "instantaneous-velocity-as-derivative",
+     "learning_objective": "Find instantaneous velocity as the limit of average velocity, v = dx/dt."
+    },
+    {
+     "concept_tag": "slope-of-position-time-graph",
+     "learning_objective": "Interpret instantaneous velocity as the slope of the tangent to the x-t graph."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH02-T3",
+   "topic_number": 3,
+   "title": "Acceleration and velocity-time graphs",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "average-and-instantaneous-acceleration",
+     "learning_objective": "Define average and instantaneous acceleration and relate their sign to the chosen axis."
+    },
+    {
+     "concept_tag": "velocity-time-graph-interpretation",
+     "learning_objective": "Use the slope and area of a v-t graph to obtain acceleration and displacement."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH02-T4",
+   "topic_number": 4,
+   "title": "Kinematic equations for uniformly accelerated motion",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "equations-of-motion",
+     "learning_objective": "Apply v = v0 + at, x = v0t + at^2/2 and v^2 = v0^2 + 2ax with proper signs."
+    },
+    {
+     "concept_tag": "validity-of-kinematic-equations",
+     "learning_objective": "State the conditions under which the kinematic equations are valid."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH02-T5",
+   "topic_number": 5,
+   "title": "Applications: free fall, Galileo's law, stopping distance and reaction time",
+   "ncert_sections": "2.4 (Examples 2.5-2.7)",
+   "concepts": [
+    {
+     "concept_tag": "free-fall",
+     "learning_objective": "Analyse vertical motion under gravity, including the top of the path."
+    },
+    {
+     "concept_tag": "stopping-distance-and-reaction-time",
+     "learning_objective": "Use kinematics to estimate stopping distance and reaction time."
+    }
+   ]
+  }
+ ]
+}

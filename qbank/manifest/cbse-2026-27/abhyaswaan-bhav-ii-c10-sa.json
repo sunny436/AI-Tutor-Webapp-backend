@@ -1,0 +1,1691 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "abhyaswaan-bhav-ii-c10-sa",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "sanskrit",
+  "language": "sanskrit",
+  "title": "Abhyaswaan Bhav-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jsab1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JSAB1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "अपठितावबोधनम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH01-T1",
+     "topic_number": 1,
+     "title": "गद्यांशः 1 – धात्रीफलस्य महिमा",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "dhatriphala-bodhah",
+       "learning_objective": "छात्रः धात्रीफलविषयकं गद्यांशं पठित्वा तस्य गुणान् परम्परां च अवगच्छति।"
+      },
+      {
+       "concept_tag": "dhatriphala-padaprayogah",
+       "learning_objective": "छात्रः गद्यांशात् विशेषणं, पर्यायपदं, सर्वनामनिर्देशं च अभिजानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH01-T2",
+     "topic_number": 2,
+     "title": "गद्यांशः 2 – सरदारपटेलः एकतायाः मूर्तिः च",
+     "ncert_sections": "2",
+     "concepts": [
+      {
+       "concept_tag": "patel-ekatamurtih-bodhah",
+       "learning_objective": "छात्रः सरदारपटेलस्य एकतायाः मूर्तेः च विषये गद्यांशगतान् तथ्यान् अवगच्छति।"
+      },
+      {
+       "concept_tag": "patel-ekatamurtih-padaprayogah",
+       "learning_objective": "छात्रः गद्यांशात् विलोमपदं विशेष्यपदं च चिनोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH01-T3",
+     "topic_number": 3,
+     "title": "गद्यांशः 3 – परिश्रमस्य महत्त्वम्",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "parishrama-mahattva-bodhah",
+       "learning_objective": "छात्रः परिश्रमस्य महत्त्वविषयकं गद्यांशं सूक्तीः च अवगच्छति।"
+      },
+      {
+       "concept_tag": "parishrama-padaprayogah",
+       "learning_objective": "छात्रः गद्यांशात् समानार्थकपदं कर्तृपदं च अभिजानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH01-T4",
+     "topic_number": 4,
+     "title": "गद्यांशः 4 – जीवनमूल्यानि",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "jivanamulya-bodhah",
+       "learning_objective": "छात्रः जीवनमूल्यानां महत्त्वं भारतीयसंस्कृतौ तेषां स्थानं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "jivanamulya-padaprayogah",
+       "learning_objective": "छात्रः गद्यांशात् पर्यायपदं सर्वनामनिर्देशं च अभिजानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH01-T5",
+     "topic_number": 5,
+     "title": "गद्यांशः 5 – दूरतः पर्वताः रम्याः",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "akinchana-katha-bodhah",
+       "learning_objective": "छात्रः अकिञ्चनस्य कथां पठित्वा तस्याः घटनाः सन्देशं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "akinchana-katha-padaprayogah",
+       "learning_objective": "छात्रः कथायाः विशेष्यपदं कर्तृपदं च अभिजानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH01-T6",
+     "topic_number": 6,
+     "title": "गद्यांशः 6 – प्रदूषणस्य समस्या",
+     "ncert_sections": "6",
+     "concepts": [
+      {
+       "concept_tag": "pradushana-bodhah",
+       "learning_objective": "छात्रः त्रिविधस्य प्रदूषणस्य कारणानि दुष्प्रभावान् च अवगच्छति।"
+      },
+      {
+       "concept_tag": "pradushana-padaprayogah",
+       "learning_objective": "छात्रः गद्यांशात् समानार्थकं विपरीतार्थकं च पदं चिनोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH01-T7",
+     "topic_number": 7,
+     "title": "गद्यांशः 7 – वैश्विकी उष्णता",
+     "ncert_sections": "7",
+     "concepts": [
+      {
+       "concept_tag": "vaishviki-ushnata-bodhah",
+       "learning_objective": "छात्रः वैश्विक्याः उष्णतायाः कारणानि निवारणोपायान् च अवगच्छति।"
+      },
+      {
+       "concept_tag": "vaishviki-ushnata-padaprayogah",
+       "learning_objective": "छात्रः गद्यांशात् विपरीतार्थकपदं कर्तृपदं च अभिजानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH01-T8",
+     "topic_number": 8,
+     "title": "गद्यांशः 8 – बहुभूमिकभवनानि प्रकृतिः च",
+     "ncert_sections": "8",
+     "concepts": [
+      {
+       "concept_tag": "bahubhumika-bhavana-bodhah",
+       "learning_objective": "छात्रः बहुभूमिकभवनानां सुविधाः प्रकृतेः उपेक्षायाः समस्यां च अवगच्छति।"
+      },
+      {
+       "concept_tag": "bahubhumika-bhavana-padaprayogah",
+       "learning_objective": "छात्रः गद्यांशात् अव्ययपदं विपरीतार्थकपदं च अभिजानाति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "पत्रलेखनम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH02-T1",
+     "topic_number": 1,
+     "title": "पत्राणां प्रकाराः – औपचारिकम् अनौपचारिकं च",
+     "ncert_sections": "(क), (ख)",
+     "concepts": [
+      {
+       "concept_tag": "aupacharika-anaupacharika-bheda",
+       "learning_objective": "औपचारिकपत्रस्य अनौपचारिकपत्रस्य च भेदं प्रापकस्य सम्बन्धस्य आधारेण अभिज्ञातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "sambodhana-samapana",
+       "learning_objective": "प्रापकानुसारम् उचितं सम्बोधनम् अभिवादनं समापनपदं च चेतुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH02-T2",
+     "topic_number": 2,
+     "title": "आरक्ष्यधिकारिणं प्रति प्राथमिकसूचनापत्रम्",
+     "ncert_sections": "(क) 1",
+     "concepts": [
+      {
+       "concept_tag": "prathamika-suchana-vishaya",
+       "learning_objective": "चोरितस्य स्यूतस्य सूचनापत्रस्य विषयवस्तु अवगन्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "aupacharika-patra-rachana",
+       "learning_objective": "औपचारिकपत्रस्य अंशानां क्रमं भाषाप्रयोगं च अवगन्तुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH02-T3",
+     "topic_number": 3,
+     "title": "प्रधानाचार्यं प्रति आवेदनपत्रम्",
+     "ncert_sections": "(ख) 1",
+     "concepts": [
+      {
+       "concept_tag": "avedana-patra-vishaya",
+       "learning_objective": "विज्ञानविषयग्रहणाय लिखितस्य आवेदनपत्रस्य कारणानि अनुरोधं च अवगन्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "avedana-patra-tarka",
+       "learning_objective": "आवेदनपत्रे प्रस्तुतानां तर्काणां विश्लेषणं कर्तुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH02-T4",
+     "topic_number": 4,
+     "title": "मातरं प्रति पत्रम् – मञ्जूषापदैः पूरणम्",
+     "ncert_sections": "(ख) 2",
+     "concepts": [
+      {
+       "concept_tag": "matr-patra-padapurana",
+       "learning_objective": "प्रसङ्गानुसारं मञ्जूषायाः उचितपदेन पत्रं पूरयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "linga-vachana-anvaya",
+       "learning_objective": "विशेषणविशेष्ययोः लिङ्गवचनसामञ्जस्यं विश्लेषयितुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH02-T5",
+     "topic_number": 5,
+     "title": "जलसंरक्षणस्य महत्त्वं – मित्रं प्रति पत्रम्",
+     "ncert_sections": "(ख) 3",
+     "concepts": [
+      {
+       "concept_tag": "jala-patra-padapurana",
+       "learning_objective": "जलसंरक्षणपत्रस्य रिक्तस्थानानि उचितपदैः पूरयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "jalasamrakshana-mahattva",
+       "learning_objective": "पत्रे वर्णितं जलसंरक्षणस्य महत्त्वं जलसङ्कटस्य परिणामं च अवगन्तुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH02-T6",
+     "topic_number": 6,
+     "title": "उपदेशपत्राणि – सन्तुलितभोजनं सामान्यज्ञानं च",
+     "ncert_sections": "(ख) 4, 6",
+     "concepts": [
+      {
+       "concept_tag": "santulita-bhojana",
+       "learning_objective": "सन्तुलितभोजनस्य महत्त्वं वर्णयतः पत्रस्य आशयम् अवगन्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "samanyajnana-abhyasa",
+       "learning_objective": "प्रतियोगिपरीक्षार्थं सामान्यज्ञानस्य अभ्यासविषयकं उपदेशम् अवगन्तुं शक्नुयात्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "अनुच्छेदलेखनम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH03-T1",
+     "topic_number": 1,
+     "title": "जन्तुशाला स्वच्छता च, अनुच्छेदस्य स्वरूपम्",
+     "ncert_sections": "अनुच्छेदौ 1, 2; अभ्यासः 1",
+     "concepts": [
+      {
+       "concept_tag": "jantushala",
+       "learning_objective": "छात्रः 'जन्तुशाला' इति अनुच्छेदस्य विषयं पदविग्रहं वाक्यरचनां च अवगच्छति।"
+      },
+      {
+       "concept_tag": "svachchhata",
+       "learning_objective": "छात्रः स्वच्छताविषयकस्य अनुच्छेदस्य मुख्यान् विचारान् स्वच्छताभियानस्य आरम्भं च जानाति।"
+      },
+      {
+       "concept_tag": "anuchchheda-lekhana-vidhih",
+       "learning_objective": "छात्रः पञ्चवाक्यात्मकस्य अनुच्छेदस्य सम्बद्धं क्रमं चिनोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH03-T2",
+     "topic_number": 2,
+     "title": "वृक्षो रक्षति रक्षितः, मयूरः",
+     "ncert_sections": "अनुच्छेदौ 3, 10",
+     "concepts": [
+      {
+       "concept_tag": "vriksha-sanrakshanam",
+       "learning_objective": "छात्रः वृक्षाणां महत्त्वं तेषां रक्षणस्य आवश्यकतां च अवगच्छति।"
+      },
+      {
+       "concept_tag": "mayurah-rashtriyapakshi",
+       "learning_objective": "छात्रः राष्ट्रियपक्षिणः मयूरस्य विशेषताः जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH03-T3",
+     "topic_number": 3,
+     "title": "हीमादासः",
+     "ncert_sections": "अनुच्छेदः 4",
+     "concepts": [
+      {
+       "concept_tag": "himadas-sangharshah",
+       "learning_objective": "छात्रः हीमादासस्य जन्म, दारिद्र्यं संघर्षं च वर्णयति।"
+      },
+      {
+       "concept_tag": "himadas-prerana",
+       "learning_objective": "छात्रः हीमादासस्य उपलब्धिं तस्याः प्रेरणास्वरूपत्वं च मूल्याङ्कयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH03-T4",
+     "topic_number": 4,
+     "title": "सहिष्णुता, आतङ्कवादः",
+     "ncert_sections": "अनुच्छेदौ 5, 11",
+     "concepts": [
+      {
+       "concept_tag": "sahishnuta",
+       "learning_objective": "छात्रः सहिष्णुतायाः महत्त्वं तदभावस्य परिणामं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "atankavadah",
+       "learning_objective": "छात्रः आतङ्कवादस्य स्वरूपं लक्ष्यं तन्निवारणस्य उपायं च जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH03-T5",
+     "topic_number": 5,
+     "title": "संस्कृतशिक्षणम्, मम धर्मः",
+     "ncert_sections": "अनुच्छेदौ 6, 7",
+     "concepts": [
+      {
+       "concept_tag": "sanskrita-shikshanam",
+       "learning_objective": "छात्रः संस्कृतभारत्याः प्रयासान् प्रकाशितानि पुस्तकानि च जानाति।"
+      },
+      {
+       "concept_tag": "mama-dharmah",
+       "learning_objective": "छात्रः भारतीयपरम्परानुसारं धर्मस्य अर्थं लेखकस्य सङ्कल्पं च अवगच्छति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH03-T6",
+     "topic_number": 6,
+     "title": "पुस्तकम्, स्वाध्यायः",
+     "ncert_sections": "अनुच्छेदौ 8, 9",
+     "concepts": [
+      {
+       "concept_tag": "pustakam-mitram",
+       "learning_objective": "छात्रः पुस्तकानां मित्ररूपं महत्त्वं सूक्तेः भावं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "svadhyayah",
+       "learning_objective": "छात्रः स्वाध्यायस्य अर्थं तदभावस्य परिणामं च विश्लेषयति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "चित्रवर्णनम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH04-T1",
+     "topic_number": 1,
+     "title": "चित्रे १-२: रक्षाबन्धनपर्व, जलौघपीडितानां सहायता च",
+     "ncert_sections": "चित्रम् 1, 2",
+     "concepts": [
+      {
+       "concept_tag": "rakshabandhana-chitravarnana",
+       "learning_objective": "रक्षाबन्धनचित्रं दृष्ट्वा मञ्जूषापदैः शुद्धानि वाक्यानि रचयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "jalaugha-sahayata-chitravarnana",
+       "learning_objective": "जलौघपीडितानां सहायतायाः चित्रं कर्तृक्रियान्वितिपूर्वकं वर्णयितुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH04-T2",
+     "topic_number": 2,
+     "title": "चित्रे ३-४: सीमारक्षकाः, रेलदुर्घटना च",
+     "ncert_sections": "चित्रम् 3, 4",
+     "concepts": [
+      {
+       "concept_tag": "seemaraksha-chitravarnana",
+       "learning_objective": "सीमारक्षायाः चित्रवर्णने उपपदविभक्तिं वचनान्वितिं च प्रयोक्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "rela-durghatana-chitravarnana",
+       "learning_objective": "रेलदुर्घटनायाः चित्रवर्णने पदानां विभक्तिवचनानि अभिज्ञातुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH04-T3",
+     "topic_number": 3,
+     "title": "चित्रे ५-६: यातायातनियमाः, वर्षाऋतुः च",
+     "ncert_sections": "चित्रम् 5, 6",
+     "concepts": [
+      {
+       "concept_tag": "yatayata-chitravarnana",
+       "learning_objective": "यातायातनियमानां चित्रं दृष्ट्वा शुद्धविभक्तियुक्तानि वाक्यानि रचयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "varsharitu-chitravarnana",
+       "learning_objective": "वर्षाऋतोः चित्रवर्णने सङ्ख्यावाचकपदानि क्रियापदानि च शुद्धं प्रयोक्तुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH04-T4",
+     "topic_number": 4,
+     "title": "चित्रे ७-८: कारयानदुर्घटना, फलापणः च",
+     "ncert_sections": "चित्रम् 7, 8",
+     "concepts": [
+      {
+       "concept_tag": "karayana-vivada-chitravarnana",
+       "learning_objective": "कारयानदुर्घटनायाः चित्रं वर्णयन् धैर्यक्षमाभावयोः महत्त्वं प्रकटयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "phalapana-chitravarnana",
+       "learning_objective": "फलापणस्य चित्रवर्णने विशेष्यविशेषणकर्तृक्रियान्वितिं परीक्षितुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH04-T5",
+     "topic_number": 5,
+     "title": "चित्रे ९-१०: धावनप्रतियोगिता, कृषकः च",
+     "ncert_sections": "चित्रम् 9, 10",
+     "concepts": [
+      {
+       "concept_tag": "dhavana-pratiyogita-chitravarnana",
+       "learning_objective": "धावनप्रतियोगितायाः चित्रं तार्किकक्रमेण वाक्यैः वर्णयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "krishaka-chitravarnana",
+       "learning_objective": "कृषकस्य चित्रवर्णने क्रियापदानि विभक्तीः च शुद्धं प्रयोक्तुं शक्नुयात्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "रचनानुवादः (वाक्यरचनाकौशलम्)",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH05-T1",
+     "topic_number": 1,
+     "title": "कारकाणि विभक्तयः च",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "karaka-parichaya",
+       "learning_objective": "छात्रः वाक्ये कर्ता-कर्म-करण-सम्प्रदान-अपादान-सम्बन्ध-अधिकरण-सम्बोधनानि अभिज्ञास्यति।"
+      },
+      {
+       "concept_tag": "karaka-vibhakti-prayoga",
+       "learning_objective": "छात्रः प्रत्येकस्मिन् कारके उचितां विभक्तिं नियमेन सह प्रयोक्ष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH05-T2",
+     "topic_number": 2,
+     "title": "उपपदविभक्तयः",
+     "ncert_sections": "2",
+     "concepts": [
+      {
+       "concept_tag": "upapada-dvitiya-tritiya-chaturthi",
+       "learning_objective": "छात्रः अभितः, सह, नमः इत्यादीनां योगे द्वितीया-तृतीया-चतुर्थीविभक्तीः ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "upapada-panchami-shashthi-saptami",
+       "learning_objective": "छात्रः भी, बहिः, उपरि, स्निह् इत्यादीनां योगे पञ्चमी-षष्ठी-सप्तमीविभक्तीः प्रयोक्ष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH05-T3",
+     "topic_number": 3,
+     "title": "कर्तृक्रियान्वितिः पुरुषवचनानि च",
+     "ncert_sections": "3, 4",
+     "concepts": [
+      {
+       "concept_tag": "kartri-kriya-anviti",
+       "learning_objective": "छात्रः ज्ञास्यति यत् क्रियापदस्य अन्वितिः कर्तृपदेन सह भवति, लिङ्गेन न परिवर्तते।"
+      },
+      {
+       "concept_tag": "purusha-vachana-roopa",
+       "learning_objective": "छात्रः कर्तुः पुरुषवचनानुसारं क्रियापदस्य उचितं रूपं चेष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH05-T4",
+     "topic_number": 4,
+     "title": "लकाराः",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "pancha-pramukha-lakara",
+       "learning_objective": "छात्रः लट्-लृट्-लङ्-लोट्-विधिलिङ्लकाराणां कालम् अर्थं च अभिज्ञाय प्रयोक्ष्यति।"
+      },
+      {
+       "concept_tag": "dasha-lakara-parichaya",
+       "learning_objective": "छात्रः संस्कृते दश लकाराः, त्रयः पुरुषाः, त्रीणि वचनानि च इति ज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH05-T5",
+     "topic_number": 5,
+     "title": "वाक्यरचना अनुवादः च",
+     "ncert_sections": "5, अभ्यासः 1",
+     "concepts": [
+      {
+       "concept_tag": "hindi-sanskrit-anuvada",
+       "learning_objective": "छात्रः हिन्दीवाक्यानां शुद्धं संस्कृतानुवादं करिष्यति।"
+      },
+      {
+       "concept_tag": "vakya-rachana-shuddhi",
+       "learning_objective": "छात्रः विभक्ति-लकार-वचनानां समन्वयेन शुद्धं वाक्यं चेष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH05-T6",
+     "topic_number": 6,
+     "title": "प्रत्ययाधारिता वाक्यसंरचना",
+     "ncert_sections": "अभ्यासः 2, 3",
+     "concepts": [
+      {
+       "concept_tag": "tavyat-aniyar",
+       "learning_objective": "छात्रः विध्यर्थे तव्यत्-अनीयर्-प्रत्यययोः प्रयोगं करिष्यति।"
+      },
+      {
+       "concept_tag": "shatri-shanach",
+       "learning_objective": "छात्रः शतृ-शानच्-प्रत्यययोः परस्मैपद-आत्मनेपद-भेदं ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "kta-ktavatu",
+       "learning_objective": "छात्रः भूतकाले क्त-क्तवतु-प्रत्यययोः वाच्यानुसारं प्रयोगं करिष्यति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "सन्धिः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH06-T1",
+     "topic_number": 1,
+     "title": "स्वरसन्धिः – दीर्घः, गुणः, वृद्धिः, यण् (पुनरावृत्तिः)",
+     "ncert_sections": "स्वरसन्धिः (आरम्भिकः संवादः, अनुच्छेदाभ्यासः)",
+     "concepts": [
+      {
+       "concept_tag": "swar-sandhi-deergha-guna",
+       "learning_objective": "छात्रः दीर्घगुणसन्ध्योः नियमान् प्रयुज्य सन्धिं सन्धिविच्छेदं च कर्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "swar-sandhi-vriddhi-yan",
+       "learning_objective": "छात्रः वृद्धियण्सन्ध्योः उदाहरणानि अभिज्ञाय तेषां सन्धिरूपं लेखितुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH06-T2",
+     "topic_number": 2,
+     "title": "अयादिसन्धिः (एचोऽयवायावः)",
+     "ncert_sections": "स्वरसन्धिः – अयादिचतुष्टयम्",
+     "concepts": [
+      {
+       "concept_tag": "ayadi-sandhi",
+       "learning_objective": "छात्रः ए, ऐ, ओ, औ इत्येषां स्थाने अय्, आय्, अव्, आव् आदेशान् प्रयोक्तुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH06-T3",
+     "topic_number": 3,
+     "title": "पूर्वरूपसन्धिः स्वरसन्धेः भेदाः च",
+     "ncert_sections": "स्वरसन्धिः – पूर्वरूपम्, अभ्यासः",
+     "concepts": [
+      {
+       "concept_tag": "purvarupa-sandhi",
+       "learning_objective": "छात्रः पदान्तात् एकार-ओकारात् परे अकारे पूर्वरूपसन्धिं अवग्रहचिह्नेन सह कर्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "swar-sandhi-bheda",
+       "learning_objective": "छात्रः स्वरसन्धेः दशमकक्षायां पठितान् षड् भेदान् अन्यभेदान् च जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH06-T4",
+     "topic_number": 4,
+     "title": "व्यञ्जनसन्धिः",
+     "ncert_sections": "व्यञ्जनसन्धिः (क-छ)",
+     "concepts": [
+      {
+       "concept_tag": "vyanjan-jashtva-chartva",
+       "learning_objective": "छात्रः वर्गस्य प्रथमवर्णस्य तृतीयवर्णे तृतीयवर्णस्य च प्रथमवर्णे परिवर्तनं प्रयोक्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "vyanjan-shchutva-shtutva",
+       "learning_objective": "छात्रः सकार-तवर्गयोः शकार-चवर्गेण षकार-टवर्गेण च योगे परिवर्तनं ज्ञातुं शक्नोति।"
+      },
+      {
+       "concept_tag": "vyanjan-anusvara-parasavarna",
+       "learning_objective": "छात्रः पदान्तमकारस्य अनुस्वारे परवर्गपञ्चमवर्णे च परिवर्तनं प्रयोक्तुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH06-T5",
+     "topic_number": 5,
+     "title": "विसर्गसन्धिः",
+     "ncert_sections": "विसर्गसन्धिः (क-घ)",
+     "concepts": [
+      {
+       "concept_tag": "visarga-satva-shatva",
+       "learning_objective": "छात्रः विसर्गस्य स्, श्, ष् इत्येषु परिवर्तनं परवर्णानुसारं कर्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "visarga-utva-rutva",
+       "learning_objective": "छात्रः विसर्गस्य ओकारे रेफे च परिवर्तनस्य नियमान् भेदयितुं शक्नोति।"
+      },
+      {
+       "concept_tag": "visarga-lopa",
+       "learning_objective": "छात्रः विसर्गलोपस्य उदाहरणानि अभिज्ञातुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH06-T6",
+     "topic_number": 6,
+     "title": "अनुनासिकसन्धिः",
+     "ncert_sections": "अनुनासिकसन्धिः",
+     "concepts": [
+      {
+       "concept_tag": "anunasika-sandhi",
+       "learning_objective": "छात्रः अनुनासिकवर्णे परे पूर्वपदान्तवर्णस्य स्ववर्गपञ्चमवर्णे परिवर्तनं कर्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "anunasika-varna",
+       "learning_objective": "छात्रः ङ्, ञ्, ण्, न्, म् इति अनुनासिकवर्णान् अभिज्ञातुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH06-T7",
+     "topic_number": 7,
+     "title": "तुक्-आगमसन्धिः",
+     "ncert_sections": "तुक् आगमसन्धिः",
+     "concepts": [
+      {
+       "concept_tag": "tuk-agama-nitya",
+       "learning_objective": "छात्रः ह्रस्वस्वरात् परे छकारे च् वर्णस्य आगमं कर्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "tuk-agama-vikalpa",
+       "learning_objective": "छात्रः दीर्घस्वरात् परे छकारे च् आगमः विकल्पेन भवति इति ज्ञातुं शक्नोति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "समासाः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH07-T1",
+     "topic_number": 1,
+     "title": "समासपरिचयः विग्रहश्च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samasa-vigraha-paribhasha",
+       "learning_objective": "छात्रः विग्रहस्य समासस्य च भेदं परिभाषया उदाहरणेन च स्पष्टीकरिष्यति।"
+      },
+      {
+       "concept_tag": "samasa-chaturvidha-vibhajana",
+       "learning_objective": "छात्रः समासानां चतुर्विधं विभाजनं तत्पुरुषस्य भेदौ च ज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH07-T2",
+     "topic_number": 2,
+     "title": "अव्ययीभावसमासः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "avyayibhava-lakshana",
+       "learning_objective": "छात्रः अव्ययीभावसमासस्य पूर्वपदप्रधानत्वं नपुंसकलिङ्गत्वं च अभिज्ञास्यति।"
+      },
+      {
+       "concept_tag": "avyayibhava-vigraha",
+       "learning_objective": "छात्रः अव्ययीभावसमस्तपदानां विग्रहं विग्रहात् समस्तपदं च रचयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH07-T3",
+     "topic_number": 3,
+     "title": "तत्पुरुषसमासः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vibhakti-tatpurusha",
+       "learning_objective": "छात्रः द्वितीयातः सप्तमीपर्यन्तं विभक्तितत्पुरुषस्य उपभेदान् अभिज्ञास्यति।"
+      },
+      {
+       "concept_tag": "nan-tatpurusha",
+       "learning_objective": "छात्रः नञ्-तत्पुरुषसमासस्य विग्रहं स्वरूपं च ज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH07-T4",
+     "topic_number": 4,
+     "title": "कर्मधारयसमासः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "visheshana-visheshya-karmadharaya",
+       "learning_objective": "छात्रः विशेषणविशेष्ययोः कर्मधारयसमासस्य विग्रहं करिष्यति।"
+      },
+      {
+       "concept_tag": "upamana-upameya-karmadharaya",
+       "learning_objective": "छात्रः उपमानोपमेययोः कर्मधारयसमासे इव इत्यस्य प्रयोगं प्रधानपदं च ज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH07-T5",
+     "topic_number": 5,
+     "title": "द्विगुसमासः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dvigu-lakshana",
+       "learning_objective": "छात्रः द्विगुसमासस्य सङ्ख्यावाचकं पूर्वपदं समाहारार्थं च अभिज्ञास्यति।"
+      },
+      {
+       "concept_tag": "dvigu-vigraha",
+       "learning_objective": "छात्रः द्विगुसमस्तपदानां समाहारविग्रहं समस्तपदं च रचयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH07-T6",
+     "topic_number": 6,
+     "title": "द्वन्द्वसमासः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "itaretara-dvandva",
+       "learning_objective": "छात्रः इतरेतरद्वन्द्वे वचनस्य लिङ्गस्य च निर्धारणं ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "samahara-dvandva",
+       "learning_objective": "छात्रः समाहारद्वन्द्वस्य नपुंसकैकवचनत्वं विग्रहं च ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "ekashesha-dvandva",
+       "learning_objective": "छात्रः एकशेषद्वन्द्वस्य स्वरूपम् उदाहरणेन अभिज्ञास्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH07-T7",
+     "topic_number": 7,
+     "title": "बहुव्रीहिसमासः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bahuvrihi-anyapada-pradhana",
+       "learning_objective": "छात्रः बहुव्रीहिसमासस्य अन्यपदप्रधानत्वं यस्य सः इत्यादिविग्रहं च ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "samanadhikarana-vyadhikarana",
+       "learning_objective": "छात्रः समानाधिकरण-व्यधिकरण-बहुव्रीह्योः भेदं विश्लेषयिष्यति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "प्रत्ययाः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH08-T1",
+     "topic_number": 1,
+     "title": "प्रत्ययानां परिचयः भेदाश्च",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "pratyaya-paribhasha",
+       "learning_objective": "छात्रः शब्दस्य धातोः वा अन्ते युज्यमानं प्रत्ययं परिचिनोति।"
+      },
+      {
+       "concept_tag": "pratyaya-traividhyam",
+       "learning_objective": "छात्रः कृदन्त-तद्धित-स्त्रीप्रत्ययानां त्रैविध्यं विभेदयति।"
+      },
+      {
+       "concept_tag": "ktva-tumun-avyaya",
+       "learning_objective": "छात्रः क्त्वा-तुमुन्-प्रत्यययुक्तानि पदानि अव्ययानि इति अवगच्छति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH08-T2",
+     "topic_number": 2,
+     "title": "शतृ-शानच्-प्रत्ययौ",
+     "ncert_sections": "2, 3",
+     "concepts": [
+      {
+       "concept_tag": "shatri-pratyaya-nirmanam",
+       "learning_objective": "छात्रः धातुना सह शतृप्रत्ययं योजयित्वा विशेषणपदं निर्माति।"
+      },
+      {
+       "concept_tag": "shatri-vibhakti-rupani",
+       "learning_objective": "छात्रः विशेष्यानुसारं शतृप्रत्ययान्तपदस्य लिङ्गविभक्तिवचनानि प्रयुङ्क्ते।"
+      },
+      {
+       "concept_tag": "shanach-pratyaya",
+       "learning_objective": "छात्रः आत्मनेपदिधातुभिः सह शानच्प्रत्ययस्य प्रयोगं करोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH08-T3",
+     "topic_number": 3,
+     "title": "तव्यत्-अनीयर्-प्रत्ययौ",
+     "ncert_sections": "4, 5",
+     "concepts": [
+      {
+       "concept_tag": "tavyat-pratyaya",
+       "learning_objective": "छात्रः तव्यत्प्रत्ययस्य रूपनिर्माणं विधिलिङर्थं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "aniyar-pratyaya",
+       "learning_objective": "छात्रः योग्यार्थे अनीयर्प्रत्ययस्य प्रयोगं परिचिनोति।"
+      },
+      {
+       "concept_tag": "karmavachya-prayoga",
+       "learning_objective": "छात्रः कर्मवाच्ये कर्मानुसारं तव्यत्-अनीयर्-पदानां प्रयोगं करोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH08-T4",
+     "topic_number": 4,
+     "title": "मतुप्-वतुप्-इन्-प्रत्ययाः",
+     "ncert_sections": "6",
+     "concepts": [
+      {
+       "concept_tag": "matup-vatup-prayoga",
+       "learning_objective": "छात्रः युक्ततार्थे मतुप्-वतुप्प्रत्यययोः प्रयोगनियमं जानाति।"
+      },
+      {
+       "concept_tag": "matup-vatup-rupani",
+       "learning_objective": "छात्रः मतुप्-वतुप्प्रत्ययान्तपदानां रूपाणि वाक्ये प्रयुङ्क्ते।"
+      },
+      {
+       "concept_tag": "ini-pratyaya",
+       "learning_objective": "छात्रः अकारान्तशब्दैः सह णिनि (इन्) प्रत्ययस्य प्रयोगं करोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH08-T5",
+     "topic_number": 5,
+     "title": "त्व-तल्-प्रत्ययौ",
+     "ncert_sections": "7",
+     "concepts": [
+      {
+       "concept_tag": "tva-pratyaya",
+       "learning_objective": "छात्रः भाववाचके त्वप्रत्ययं तस्य नपुंसकलिङ्गं च जानाति।"
+      },
+      {
+       "concept_tag": "tal-pratyaya",
+       "learning_objective": "छात्रः तल्प्रत्ययान्तपदानि स्त्रीलिङ्गे प्रयुङ्क्ते।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH08-T6",
+     "topic_number": 6,
+     "title": "ठक्-प्रत्ययः",
+     "ncert_sections": "8",
+     "concepts": [
+      {
+       "concept_tag": "thak-vriddhi-nirmanam",
+       "learning_objective": "छात्रः ठक्प्रत्यये इकादेशम् आदिस्वरवृद्धिं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "thak-linga-rupani",
+       "learning_objective": "छात्रः ठक्प्रत्ययान्तपदानां त्रिषु लिङ्गेषु रूपाणि प्रयुङ्क्ते।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH08-T7",
+     "topic_number": 7,
+     "title": "स्त्रीप्रत्ययाः (टाप्, ङीप्)",
+     "ncert_sections": "9",
+     "concepts": [
+      {
+       "concept_tag": "tap-pratyaya",
+       "learning_objective": "छात्रः टाप्प्रत्ययेन पुंलिङ्गशब्दान् स्त्रीलिङ्गे परिवर्तयति।"
+      },
+      {
+       "concept_tag": "ngip-pratyaya",
+       "learning_objective": "छात्रः ङीप्प्रत्ययान्तानि स्त्रीलिङ्गपदानि नदीवत् प्रयुङ्क्ते।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "अव्ययानि",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH09-T1",
+     "topic_number": 1,
+     "title": "अव्ययस्य लक्षणम्",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "avyaya-lakshanam",
+       "learning_objective": "छात्रः 'सदृशं त्रिषु लिङ्गेषु' इति श्लोकानुसारम् अव्ययस्य लक्षणं ज्ञात्वा अव्ययपदानि अभिजानाति।"
+      },
+      {
+       "concept_tag": "avyaya-aparivartanam",
+       "learning_objective": "छात्रः लिङ्गवचनविभक्तिपरिवर्तने अपि अव्ययपदानां रूपं न परिवर्तते इति उदाहरणैः व्याख्याति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH09-T2",
+     "topic_number": 2,
+     "title": "कालवाचकानि अव्ययानि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kalavachaka-artha",
+       "learning_objective": "छात्रः पुरा, सद्यः, सततम्, नक्तम्, श्वः इत्यादीनां कालवाचकाव्ययानाम् अर्थं जानाति।"
+      },
+      {
+       "concept_tag": "kalavachaka-prayogah",
+       "learning_objective": "छात्रः प्रसङ्गानुसारम् उचितं कालवाचकम् अव्ययं वाक्ये प्रयुङ्क्ते।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH09-T3",
+     "topic_number": 3,
+     "title": "स्थानवाचकानि अव्ययानि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sthanavachaka-artha",
+       "learning_objective": "छात्रः अभितः, परितः, उभयतः, कुतः, कुत्र इत्यादीनां स्थानवाचकाव्ययानाम् अर्थं जानाति।"
+      },
+      {
+       "concept_tag": "sthanavachaka-prayogah",
+       "learning_objective": "छात्रः प्रसङ्गानुसारम् उचितं स्थानवाचकम् अव्ययं चिनोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH09-T4",
+     "topic_number": 4,
+     "title": "युग्मानि अव्ययानि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "yugma-avyaya-yojanam",
+       "learning_objective": "छात्रः यदा-तदा, यदि-तर्हि, यावत्-तावत् इत्यादीनि युग्माव्ययानि सम्यक् योजयति।"
+      },
+      {
+       "concept_tag": "yugma-avyaya-prayogah",
+       "learning_objective": "छात्रः युग्माव्ययानाम् अर्थं वाक्यस्य भावं च अवगच्छति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH09-T5",
+     "topic_number": 5,
+     "title": "समानार्थकानि अव्ययानि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samanarthaka-nishchaya",
+       "learning_objective": "छात्रः ननु, ननूनम्, खलु इति निश्चयबोधकानि समानार्थकानि अव्ययानि अभिजानाति।"
+      },
+      {
+       "concept_tag": "samanarthaka-kala",
+       "learning_objective": "छात्रः सम्प्रति, अधुना, इदानीम्, साम्प्रतम्, सदा, सर्वदा इति समानार्थकाव्ययसमूहान् अभिजानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH09-T6",
+     "topic_number": 6,
+     "title": "विकीर्णानि अव्ययानि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vikirna-artha",
+       "learning_objective": "छात्रः इव, तूष्णीम्, अलम्, मा, अपि इत्यादीनां विकीर्णाव्ययानाम् अर्थं जानाति।"
+      },
+      {
+       "concept_tag": "vikirna-prayogah",
+       "learning_objective": "छात्रः विकीर्णाव्ययानि वाक्ये उचितरूपेण प्रयुङ्क्ते।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "समयः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH10-T1",
+     "topic_number": 1,
+     "title": "पूर्णवादनम् – पूर्णसमयस्य बोधनम्",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "purna-vadanam",
+       "learning_objective": "छात्रः सङ्ख्यावाचकशब्देन सह 'वादनम्' योजयित्वा पूर्णसमयं (एकवादनतः द्वादशवादनपर्यन्तम्) वक्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "vadane-saptami-prayogah",
+       "learning_objective": "छात्रः 'कस्मिन् समये' इति अर्थे समयवाचकपदे सप्तमीविभक्तेः (वादने) प्रयोगं जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH10-T2",
+     "topic_number": 2,
+     "title": "सपादवादनम् – पादेन अधिकः समयः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sapada-samayah",
+       "learning_objective": "छात्रः पूर्णवादनात् परं पञ्चदशनिमेषाधिकं समयं 'सपाद' इति शब्देन वक्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "sapada-sandhih",
+       "learning_objective": "छात्रः 'सपाद' इत्यस्य स्वरादिसङ्ख्यया सह सन्धियुक्तं शुद्धं रूपं जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH10-T3",
+     "topic_number": 3,
+     "title": "सार्धवादनम् – अर्धेन अधिकः समयः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sardha-samayah",
+       "learning_objective": "छात्रः पूर्णवादनात् परं त्रिंशन्निमेषाधिकं समयं 'सार्ध' इति शब्देन वक्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "sardha-vakya-prayogah",
+       "learning_objective": "छात्रः वाक्येषु सार्धवादनयुक्तानि पदानि प्रयुज्य समयगणनां कर्तुं शक्नोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH10-T4",
+     "topic_number": 4,
+     "title": "पादोनवादनम् – पादेन न्यूनः समयः",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "padona-samayah",
+       "learning_objective": "छात्रः अग्रिमवादनात् पञ्चदशनिमेषन्यूनं समयं 'पादोन' इति शब्देन वक्तुं शक्नोति।"
+      },
+      {
+       "concept_tag": "padona-sandhih",
+       "learning_objective": "छात्रः 'पादोन' इत्यस्य स्वरादिसङ्ख्यया सह सन्धियुक्तं शुद्धं रूपं जानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH10-T5",
+     "topic_number": 5,
+     "title": "वादनतः ... वादनपर्यन्तम् – कालावधेः बोधनम्",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vadanatah-paryantam",
+       "learning_objective": "छात्रः 'वादनतः' (आरम्भः) 'वादनपर्यन्तम्' (समाप्तिः) इति पदाभ्यां कार्यस्य कालावधिं बोद्धुं शक्नोति।"
+      },
+      {
+       "concept_tag": "kalavadhi-ganana",
+       "learning_objective": "छात्रः दिनचर्यायाः अनुच्छेदं पठित्वा कार्याणां कालावधिं गणयितुं तुलनां च कर्तुं शक्नोति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "वाच्यम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH11-T1",
+     "topic_number": 1,
+     "title": "वाच्यस्य स्वरूपं भेदाश्च",
+     "ncert_sections": "उदाहरणानि (क), (ख); अवधेयांशाः",
+     "concepts": [
+      {
+       "concept_tag": "vachya-svarupa",
+       "learning_objective": "वाच्यं कथनस्य विशिष्टा विधा इति अवगत्य कर्तृप्रधान-कर्मप्रधानवाक्ययोः भेदं ज्ञातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "vachya-bheda",
+       "learning_objective": "कर्तृवाच्यं कर्मवाच्यं भाववाच्यं च इति त्रीन् भेदान् अभिज्ञातुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH11-T2",
+     "topic_number": 2,
+     "title": "कर्तृवाच्यस्य लक्षणानि",
+     "ncert_sections": "अवधेयांशाः",
+     "concepts": [
+      {
+       "concept_tag": "kartrivachya-vibhakti",
+       "learning_objective": "कर्तृवाच्ये कर्तरि प्रथमां कर्मणि च द्वितीयां विभक्तिं प्रयोक्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "kartrivachya-kriya",
+       "learning_objective": "कर्तृवाच्ये क्रियापदं कर्तृपदानुसारं चेतुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH11-T3",
+     "topic_number": 3,
+     "title": "कर्मवाच्ये कर्तृपदस्य परिवर्तनम्",
+     "ncert_sections": "अभ्यासः 1",
+     "concepts": [
+      {
+       "concept_tag": "kartripada-tritiya",
+       "learning_objective": "वाच्यपरिवर्तने कर्तृपदं तृतीयाविभक्तौ परिवर्तयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "sarvanama-tritiya-rupa",
+       "learning_objective": "अस्मद्-युष्मद्-आदीनां सर्वनाम्नां तृतीयारूपाणि प्रयोक्तुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH11-T4",
+     "topic_number": 4,
+     "title": "कर्मवाच्ये कर्मपदं क्रियापदं च",
+     "ncert_sections": "अभ्यासः 2, 3",
+     "concepts": [
+      {
+       "concept_tag": "karmapada-prathama",
+       "learning_objective": "कर्मवाच्ये कर्मपदं प्रथमाविभक्तौ परिवर्तयितुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "kriya-karma-anusara",
+       "learning_objective": "कर्मवाच्ये क्रियापदस्य वचनं कर्मपदानुसारं निर्धारयितुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH11-T5",
+     "topic_number": 5,
+     "title": "भाववाच्यम् अकर्मकधातवश्च",
+     "ncert_sections": "अवधेयांशाः; अभ्यासः 1, 3",
+     "concepts": [
+      {
+       "concept_tag": "akarmaka-dhatu",
+       "learning_objective": "अकर्मकधातून् अभिज्ञाय तेषां भाववाच्ये प्रयोगं ज्ञातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "bhavavachya-kriya",
+       "learning_objective": "भाववाच्ये क्रियापदं प्रथमपुरुषे एकवचने एव प्रयोक्तुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH11-T6",
+     "topic_number": 6,
+     "title": "कर्मवाच्य-भाववाच्ययोः क्रियारूपाणि",
+     "ncert_sections": "कतिपयक्रियारूपाणि",
+     "concepts": [
+      {
+       "concept_tag": "vishesha-kriyarupa",
+       "learning_objective": "स्थीयते, उह्यते, पीयते, दृश्यते, श्रूयते इत्यादीनि विशेषक्रियारूपाणि अभिज्ञातुं शक्नुयात्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "अशुद्धिसंशोधनम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH12-T1",
+     "topic_number": 1,
+     "title": "कर्तृक्रिययोः अशुद्धयः",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "kartri-kriya-purusha-vachana",
+       "learning_objective": "कर्तुः पुरुषवचनानुसारं क्रियापदस्य शुद्धं रूपं चेतुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "lot-lakara-madhyama-purusha",
+       "learning_objective": "लोट्लकारे मध्यमपुरुषस्य एकवचन-द्विवचन-बहुवचनरूपाणि शुद्धं प्रयोक्तुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH12-T2",
+     "topic_number": 2,
+     "title": "विशेषणविशेष्ययोः अशुद्धयः",
+     "ncert_sections": "2",
+     "concepts": [
+      {
+       "concept_tag": "visheshana-linga-vachana-samya",
+       "learning_objective": "विशेषणं विशेष्यस्य लिङ्गवचनविभक्त्यनुसारं भवति इति नियमं प्रयोक्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "sarvanama-visheshana",
+       "learning_objective": "सर्वनामविशेषणस्य शुद्धं रूपं विशेष्यानुसारं चेतुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH12-T3",
+     "topic_number": 3,
+     "title": "लिङ्गसम्बन्धि-अशुद्धयः",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "napumsakalinga-shabda-roopa",
+       "learning_objective": "नपुंसकलिङ्गशब्दानां शुद्धानि रूपाणि अभिज्ञातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "pumlinga-strilinga-shabda-roopa",
+       "learning_objective": "पुंलिङ्गस्त्रीलिङ्गशब्दानां विभक्तिरूपेषु अशुद्धिं संशोधयितुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH12-T4",
+     "topic_number": 4,
+     "title": "वाच्यसम्बन्धि-अशुद्धयः",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "karmavachya-karta-tritiya",
+       "learning_objective": "कर्मवाच्ये कर्तरि तृतीयाविभक्तिः भवति इति नियमं प्रयोक्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "karmavachya-kriya-karmanusara",
+       "learning_objective": "कर्मवाच्ये क्रियापदं कर्मणः वचनानुसारं भवति इति अवगन्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "bhavavachya-prayoga",
+       "learning_objective": "अकर्मकधातोः भाववाच्ये प्रयोगं विश्लेषयितुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH12-T5",
+     "topic_number": 5,
+     "title": "उपपदसम्बन्धि-अशुद्धयः",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "upapada-saha-prati-sadrisha",
+       "learning_objective": "सह, प्रति, सदृश इत्यादीनाम् उपपदानां योगे उचितां विभक्तिं प्रयोक्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "dhatu-yoga-vibhakti",
+       "learning_objective": "भी, क्रुध्, विश्वस्, स्निह्, पत् इत्यादिधातूनां योगे उचितां विभक्तिं चेतुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH12-T6",
+     "topic_number": 6,
+     "title": "वचनसम्बन्धि-अशुद्धयः",
+     "ncert_sections": "6",
+     "concepts": [
+      {
+       "concept_tag": "kartri-vachana-kriya-vachana",
+       "learning_objective": "कर्तुः वचनानुसारं क्रियायाः वचनं शुद्धं कर्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "dvivachana-prayoga",
+       "learning_objective": "द्विवचनस्य कर्तृपदैः सह द्विवचनक्रियायाः प्रयोगं कर्तुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH12-T7",
+     "topic_number": 7,
+     "title": "संख्यासम्बन्धि-अशुद्धयः",
+     "ncert_sections": "7",
+     "concepts": [
+      {
+       "concept_tag": "tri-chatur-linga-roopa",
+       "learning_objective": "त्रि-चतुर्-संख्याशब्दानां लिङ्गानुसारं रूपाणि शुद्धं प्रयोक्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "eka-dvi-pancha-roopa",
+       "learning_objective": "एक-द्वि-पञ्च-संख्याशब्दानां विशेष्यानुसारं शुद्धरूपाणि अभिज्ञातुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH12-T8",
+     "topic_number": 8,
+     "title": "अन्याः अशुद्धयः – कालः भवत्-शब्दः च",
+     "ncert_sections": "8",
+     "concepts": [
+      {
+       "concept_tag": "kala-bodhaka-avyaya-lakara",
+       "learning_objective": "श्वः, ह्यः इत्यादिकालबोधकाव्ययानुसारं उचितं लकारं प्रयोक्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "bhavat-prathama-purusha",
+       "learning_objective": "भवत्-शब्देन सह प्रथमपुरुषस्य क्रिया भवति इति नियमं प्रयोक्तुं शक्नुयात्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "मिश्रिताभ्यासः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH13-T1",
+     "topic_number": 1,
+     "title": "अपठितगद्यांशः – सुवीरस्य परिवर्तनम्",
+     "ncert_sections": "अभ्यासः I – 1",
+     "concepts": [
+      {
+       "concept_tag": "suvira-gadyansha-bodha",
+       "learning_objective": "छात्रः सुवीरस्य पिपीलकस्य च गद्यांशं पठित्वा तस्य घटनाः सन्देशं च अवगमिष्यति।"
+      },
+      {
+       "concept_tag": "gadyansha-bhashika-karya",
+       "learning_objective": "छात्रः गद्यांशात् अव्ययपदं, समानार्थकपदं, कर्तृपदं विशेषणपदं च चेष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH13-T2",
+     "topic_number": 2,
+     "title": "अपठितगद्यांशः – मनसः प्रसन्नता",
+     "ncert_sections": "अभ्यासः II – 1",
+     "concepts": [
+      {
+       "concept_tag": "prasannata-gadyansha-bodha",
+       "learning_objective": "छात्रः प्रसन्नताविषयकं गद्यांशं पठित्वा प्रश्नानाम् उत्तराणि दास्यति।"
+      },
+      {
+       "concept_tag": "gadyansha-paryaya-vilom-shirshaka",
+       "learning_objective": "छात्रः गद्यांशात् पर्यायपदं विलोमपदं च चित्वा उचितं शीर्षकं निर्धारयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH13-T3",
+     "topic_number": 3,
+     "title": "सन्धिः",
+     "ncert_sections": "अभ्यासः I – 4, अभ्यासः II – 4",
+     "concepts": [
+      {
+       "concept_tag": "visarga-sandhi",
+       "learning_objective": "छात्रः विसर्गसन्धेः उत्व-रुत्व-नियमान् प्रयुज्य सन्धिं विच्छेदं च करिष्यति।"
+      },
+      {
+       "concept_tag": "svara-sandhi",
+       "learning_objective": "छात्रः यण्-दीर्घ-आदीनां स्वरसन्धीनां पहचानं प्रयोगं च करिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH13-T4",
+     "topic_number": 4,
+     "title": "समासः",
+     "ncert_sections": "अभ्यासः I – 5, अभ्यासः II – 5",
+     "concepts": [
+      {
+       "concept_tag": "tatpurusha-karmadharaya",
+       "learning_objective": "छात्रः तत्पुरुष-कर्मधारयसमासयोः विग्रहं समस्तपदं च ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "bahuvrihi-dvandva",
+       "learning_objective": "छात्रः बहुव्रीहि-द्वन्द्वसमासयोः विग्रहं लक्षणं च अवगमिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH13-T5",
+     "topic_number": 5,
+     "title": "प्रत्ययाः",
+     "ncert_sections": "अभ्यासः I – 6, अभ्यासः II – 6",
+     "concepts": [
+      {
+       "concept_tag": "shanach-ktavatu-tumun",
+       "learning_objective": "छात्रः शानच्-क्तवतु-तुमुन्-प्रत्ययानां लिङ्गवचनानुसारं शुद्धं प्रयोगं करिष्यति।"
+      },
+      {
+       "concept_tag": "tavyat-lyap",
+       "learning_objective": "छात्रः तव्यत्-ल्यप्-प्रत्यययोः प्रयोगं वाच्यानुसारं करिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH13-T6",
+     "topic_number": 6,
+     "title": "वाच्यपरिवर्तनम्",
+     "ncert_sections": "अभ्यासः I – 7, अभ्यासः II – 7",
+     "concepts": [
+      {
+       "concept_tag": "kartri-karma-vachya",
+       "learning_objective": "छात्रः कर्तृवाच्यात् कर्मवाच्ये कर्मवाच्यात् च कर्तृवाच्ये वाक्यं परिवर्तयिष्यति।"
+      },
+      {
+       "concept_tag": "bhava-vachya",
+       "learning_objective": "छात्रः अकर्मकधातूनां वाक्यानि भाववाच्ये परिवर्तयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH13-T7",
+     "topic_number": 7,
+     "title": "अनुवादः अशुद्धिसंशोधनं च",
+     "ncert_sections": "अभ्यासः I – 8, 9, अभ्यासः II – 8, 9",
+     "concepts": [
+      {
+       "concept_tag": "hindi-sanskrit-anuvada",
+       "learning_objective": "छात्रः हिन्दीवाक्यानां शुद्धं संस्कृतानुवादं करिष्यति।"
+      },
+      {
+       "concept_tag": "vakya-ashuddhi-shodhana",
+       "learning_objective": "छात्रः वाक्येषु कर्तृक्रियान्वितेः विभक्तेः च अशुद्धिं संशोधयिष्यति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JSAB1-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "आदर्शप्रश्नपत्रम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jsab114.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JSAB1-CH14-T1",
+     "topic_number": 1,
+     "title": "अपठितः अनुच्छेदः – बाल्यावस्थायाः महत्त्वम्",
+     "ncert_sections": "खण्डः क, प्रश्नः 1",
+     "concepts": [
+      {
+       "concept_tag": "apathita-balyakala-bodhah",
+       "learning_objective": "छात्रः बाल्यावस्थाविषयकम् अपठितम् अनुच्छेदं पठित्वा तस्य तथ्यानि मुख्यभावं च अवगच्छति।"
+      },
+      {
+       "concept_tag": "apathita-padaprayogah",
+       "learning_objective": "छात्रः अनुच्छेदात् विलोमपदं, विशेषणं, क्रियापदं च अभिजानाति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH14-T2",
+     "topic_number": 2,
+     "title": "रचनात्मककार्यम् – पत्रलेखनम् अनुवादः च",
+     "ncert_sections": "खण्डः ख, प्रश्नाः 2-4",
+     "concepts": [
+      {
+       "concept_tag": "patralekhanam",
+       "learning_objective": "छात्रः मञ्जूषाप्रदत्तपदानां सहायतया पारिवारिकं पत्रं पूरयति।"
+      },
+      {
+       "concept_tag": "anuvadah",
+       "learning_objective": "छात्रः सरलहिन्दीवाक्यानां शुद्धं संस्कृतानुवादं करोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH14-T3",
+     "topic_number": 3,
+     "title": "अनुप्रयुक्तव्याकरणम् – सन्धिः समासः प्रत्ययाः च",
+     "ncert_sections": "खण्डः ग, प्रश्नाः 5-7",
+     "concepts": [
+      {
+       "concept_tag": "sandhih",
+       "learning_objective": "छात्रः वाक्येषु प्रयुक्तानां पदानां सन्धिं सन्धिविच्छेदं च करोति।"
+      },
+      {
+       "concept_tag": "samasah",
+       "learning_objective": "छात्रः विग्रहवाक्यात् समस्तपदं रचयति।"
+      },
+      {
+       "concept_tag": "pratyayah",
+       "learning_objective": "छात्रः पदेषु प्रकृतिप्रत्ययविभागं करोति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH14-T4",
+     "topic_number": 4,
+     "title": "अनुप्रयुक्तव्याकरणम् – वाच्यं समयः अव्ययानि अशुद्धिसंशोधनं च",
+     "ncert_sections": "खण्डः ग, प्रश्नाः 8-11",
+     "concepts": [
+      {
+       "concept_tag": "vachyam",
+       "learning_objective": "छात्रः वाच्यानुसारं कर्तृपदं क्रियापदं च चिनोति।"
+      },
+      {
+       "concept_tag": "samaya-lekhanam",
+       "learning_objective": "छात्रः अङ्कैः प्रदत्तं समयं संस्कृतेन लिखति।"
+      },
+      {
+       "concept_tag": "avyaya-ashuddhi-sanshodhanam",
+       "learning_objective": "छात्रः उचितानि अव्ययानि प्रयुङ्क्ते, वाक्येषु अशुद्धिं च संशोधयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH14-T5",
+     "topic_number": 5,
+     "title": "पठितावबोधनम् – गद्यांशः पद्यांशः नाट्यांशः च",
+     "ncert_sections": "खण्डः घ, प्रश्नाः 12-14",
+     "concepts": [
+      {
+       "concept_tag": "pathita-gadyamsha-bodhah",
+       "learning_objective": "छात्रः पठितं गद्यांशं पठित्वा प्रश्नानाम् उत्तराणि ददाति।"
+      },
+      {
+       "concept_tag": "pathita-padyamsha-bodhah",
+       "learning_objective": "छात्रः पठितं श्लोकं पठित्वा तस्य अर्थं पदानि च अवगच्छति।"
+      },
+      {
+       "concept_tag": "pathita-natyamsha-bodhah",
+       "learning_objective": "छात्रः पठितं नाट्यांशं पठित्वा पात्राणां कथनस्य आशयं विश्लेषयति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JSAB1-CH14-T6",
+     "topic_number": 6,
+     "title": "पठितावबोधनम् – प्रश्ननिर्माणम् अन्वयः घटनाक्रमः च",
+     "ncert_sections": "खण्डः घ, प्रश्नाः 15-18",
+     "concepts": [
+      {
+       "concept_tag": "prashna-nirmanam",
+       "learning_objective": "छात्रः रेखाङ्कितपदम् आधृत्य उचितेन प्रश्नवाचकपदेन प्रश्नं निर्माति।"
+      },
+      {
+       "concept_tag": "anvaya-purtih",
+       "learning_objective": "छात्रः श्लोकस्य अन्वये रिक्तस्थानानि पूरयति।"
+      },
+      {
+       "concept_tag": "ghatanakramah",
+       "learning_objective": "छात्रः कथायाः घटनाः उचितक्रमेण योजयति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

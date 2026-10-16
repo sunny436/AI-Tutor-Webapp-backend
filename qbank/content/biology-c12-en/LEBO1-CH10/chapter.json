@@ -1,0 +1,152 @@
+{
+ "chapter_id": "LEBO1-CH10",
+ "title": "Biotechnology and its Applications",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBO1-CH10-T1",
+   "topic_number": 1,
+   "title": "Tissue culture, micropropagation and somatic hybridisation",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "totipotency-and-culture-medium",
+     "learning_objective": "Explain totipotency and state the components of a plant tissue culture medium."
+    },
+    {
+     "concept_tag": "micropropagation-and-meristem-culture",
+     "learning_objective": "Describe micropropagation, somaclones and the raising of virus-free plants from meristems."
+    },
+    {
+     "concept_tag": "somatic-hybridisation",
+     "learning_objective": "Outline how protoplast fusion produces somatic hybrids such as the pomato."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH10-T2",
+   "topic_number": 2,
+   "title": "Genetically modified crops and Bt cotton",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "gm-crop-benefits",
+     "learning_objective": "List the ways in which genetic modification has improved crop plants."
+    },
+    {
+     "concept_tag": "bt-toxin-mechanism",
+     "learning_objective": "Explain how the Bt protoxin is activated in the insect gut and kills the insect."
+    },
+    {
+     "concept_tag": "cry-genes",
+     "learning_objective": "Relate specific cry genes to the insect pests they control."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH10-T3",
+   "topic_number": 3,
+   "title": "Pest resistant plants through RNA interference",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "rna-interference",
+     "learning_objective": "Explain how a complementary dsRNA silences a specific mRNA in RNA interference."
+    },
+    {
+     "concept_tag": "nematode-resistant-tobacco",
+     "learning_objective": "Describe how RNAi was used to protect tobacco roots from Meloidogyne incognita."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH10-T4",
+   "topic_number": 4,
+   "title": "Genetically engineered insulin",
+   "ncert_sections": "10.2, 10.2.1",
+   "concepts": [
+    {
+     "concept_tag": "recombinant-therapeutics",
+     "learning_objective": "State the advantages of recombinant therapeutics over products from non-human sources."
+    },
+    {
+     "concept_tag": "insulin-structure-and-maturation",
+     "learning_objective": "Describe the two-chain structure of insulin and the removal of the C peptide from pro-insulin."
+    },
+    {
+     "concept_tag": "rdna-insulin-production",
+     "learning_objective": "Explain how Eli Lilly produced human insulin in E. coli."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH10-T5",
+   "topic_number": 5,
+   "title": "Gene therapy",
+   "ncert_sections": "10.2.2",
+   "concepts": [
+    {
+     "concept_tag": "gene-therapy-principle",
+     "learning_objective": "Define gene therapy and state how it corrects a genetic defect."
+    },
+    {
+     "concept_tag": "ada-deficiency-treatment",
+     "learning_objective": "Describe the treatment options for adenosine deaminase deficiency, including gene therapy."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH10-T6",
+   "topic_number": 6,
+   "title": "Molecular diagnosis",
+   "ncert_sections": "10.2.3",
+   "concepts": [
+    {
+     "concept_tag": "pcr-early-detection",
+     "learning_objective": "Explain how PCR allows detection of a pathogen at very low concentration."
+    },
+    {
+     "concept_tag": "probe-hybridisation",
+     "learning_objective": "Interpret the use of a radioactive probe and autoradiography to detect a mutated gene."
+    },
+    {
+     "concept_tag": "elisa-principle",
+     "learning_objective": "State the antigen-antibody principle of ELISA and what it detects."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH10-T7",
+   "topic_number": 7,
+   "title": "Transgenic animals",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "transgenic-animals-overview",
+     "learning_objective": "Define transgenic animals and give examples of them."
+    },
+    {
+     "concept_tag": "uses-of-transgenic-animals",
+     "learning_objective": "Match the uses of transgenic animals with suitable examples."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH10-T8",
+   "topic_number": 8,
+   "title": "Ethical issues, patents and biopiracy",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "geac-regulation",
+     "learning_objective": "State the need for regulating GM research and the role of GEAC."
+    },
+    {
+     "concept_tag": "patents-and-biopiracy",
+     "learning_objective": "Evaluate patent disputes such as Basmati and explain biopiracy."
+    }
+   ]
+  }
+ ]
+}

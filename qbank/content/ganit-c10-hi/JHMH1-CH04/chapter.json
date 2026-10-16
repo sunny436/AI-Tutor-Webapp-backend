@@ -1,0 +1,80 @@
+{
+ "chapter_id": "JHMH1-CH04",
+ "title": "द्विघात समीकरण",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH04-T1",
+   "topic_number": 1,
+   "title": "द्विघात समीकरण: पहचान और निरूपण",
+   "ncert_sections": "4.1, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "dvighat-samikaran-manak-roop",
+     "learning_objective": "समीकरण को सरल करके पहचानना कि वह मानक रूप ax² + bx + c = 0, a ≠ 0 वाला द्विघात समीकरण है या नहीं।"
+    },
+    {
+     "concept_tag": "sthiti-ka-dvighat-nirupan",
+     "learning_objective": "वास्तविक जीवन की स्थितियों को द्विघात समीकरण के रूप में निरूपित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH04-T2",
+   "topic_number": 2,
+   "title": "गुणनखंडों द्वारा द्विघात समीकरण का हल",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "dvighat-samikaran-ke-mool",
+     "learning_objective": "जाँचना कि कोई वास्तविक संख्या द्विघात समीकरण का मूल है या नहीं।"
+    },
+    {
+     "concept_tag": "madhya-pad-vibhajan",
+     "learning_objective": "मध्य पद को विभक्त करके गुणनखंड बनाना और प्रत्येक गुणनखंड को शून्य रखकर मूल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "gunankhandan-se-shabd-samasya",
+     "learning_objective": "शाब्दिक समस्याओं को गुणनखंड विधि से हल करके अर्थपूर्ण उत्तर चुनना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH04-T3",
+   "topic_number": 3,
+   "title": "विविक्तकर और मूलों की प्रकृति",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "vivektakar",
+     "learning_objective": "किसी द्विघात समीकरण का विविक्तकर b² − 4ac ज्ञात करना।"
+    },
+    {
+     "concept_tag": "mulon-ki-prakriti",
+     "learning_objective": "विविक्तकर के चिह्न से मूलों की प्रकृति निर्धारित करना।"
+    },
+    {
+     "concept_tag": "barabar-mool-ke-liye-k",
+     "learning_objective": "बराबर मूलों की शर्त से अज्ञात अचर k का मान ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH04-T4",
+   "topic_number": 4,
+   "title": "द्विघात सूत्र और उसके अनुप्रयोग",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "dvighat-sutra",
+     "learning_objective": "द्विघात सूत्र का प्रयोग करके मूल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "sthiti-ki-sambhavyata",
+     "learning_objective": "विविक्तकर द्वारा जाँचना कि कोई व्यावहारिक स्थिति संभव है या नहीं।"
+    }
+   ]
+  }
+ ]
+}

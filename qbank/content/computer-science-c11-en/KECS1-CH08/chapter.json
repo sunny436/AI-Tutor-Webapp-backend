@@ -1,0 +1,116 @@
+{
+ "chapter_id": "KECS1-CH08",
+ "title": "Strings",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECS1-CH08-T1",
+   "topic_number": 1,
+   "title": "Strings and indexing",
+   "ncert_sections": "8.1, 8.2, 8.2.1",
+   "concepts": [
+    {
+     "concept_tag": "string-creation",
+     "learning_objective": "Create strings using single, double and triple quotes."
+    },
+    {
+     "concept_tag": "string-indexing",
+     "learning_objective": "Access characters of a string using positive and negative indices."
+    },
+    {
+     "concept_tag": "index-error",
+     "learning_objective": "Recognise when an out-of-range index raises IndexError."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH08-T2",
+   "topic_number": 2,
+   "title": "Immutability and string operators",
+   "ncert_sections": "8.2.2, 8.3.1, 8.3.2, 8.3.3",
+   "concepts": [
+    {
+     "concept_tag": "string-immutability",
+     "learning_objective": "Explain that the contents of a string cannot be changed after creation."
+    },
+    {
+     "concept_tag": "concatenation-repetition",
+     "learning_objective": "Apply the + and * operators to join and repeat strings."
+    },
+    {
+     "concept_tag": "membership-operators",
+     "learning_objective": "Use in and not in to test for substrings."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH08-T3",
+   "topic_number": 3,
+   "title": "Slicing",
+   "ncert_sections": "8.3.4",
+   "concepts": [
+    {
+     "concept_tag": "slice-start-end",
+     "learning_objective": "Extract substrings with str[n:m], including omitted and negative indices."
+    },
+    {
+     "concept_tag": "slice-step",
+     "learning_objective": "Use a step size in slicing, including negative steps to reverse a string."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH08-T4",
+   "topic_number": 4,
+   "title": "Traversing a string",
+   "ncert_sections": "8.4",
+   "concepts": [
+    {
+     "concept_tag": "for-loop-traversal",
+     "learning_objective": "Traverse a string character by character with a for loop."
+    },
+    {
+     "concept_tag": "while-loop-traversal",
+     "learning_objective": "Traverse a string using a while loop, an index and len()."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH08-T5",
+   "topic_number": 5,
+   "title": "String methods and built-in functions",
+   "ncert_sections": "8.5",
+   "concepts": [
+    {
+     "concept_tag": "case-conversion-methods",
+     "learning_objective": "Use methods such as title(), upper() and lower() to change case."
+    },
+    {
+     "concept_tag": "search-count-methods",
+     "learning_objective": "Use find(), index() and count() to locate and count substrings."
+    },
+    {
+     "concept_tag": "split-join-strip-replace",
+     "learning_objective": "Apply split(), join(), strip() and replace() to transform strings."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH08-T6",
+   "topic_number": 6,
+   "title": "Handling strings with user defined functions",
+   "ncert_sections": "8.6",
+   "concepts": [
+    {
+     "concept_tag": "user-defined-string-functions",
+     "learning_objective": "Trace user defined functions that count or replace characters in a string."
+    },
+    {
+     "concept_tag": "string-reversal-palindrome",
+     "learning_objective": "Reverse a string with negative indices and check for palindromes."
+    }
+   ]
+  }
+ ]
+}

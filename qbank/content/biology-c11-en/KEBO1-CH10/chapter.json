@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KEBO1-CH10",
+ "title": "Cell Cycle and Cell Division",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH10-T1",
+   "topic_number": 1,
+   "title": "Cell cycle and its phases",
+   "ncert_sections": "10.1, 10.1.1",
+   "concepts": [
+    {
+     "concept_tag": "cell-cycle-duration-and-phases",
+     "learning_objective": "Describe the cell cycle as interphase and M phase and state their relative durations."
+    },
+    {
+     "concept_tag": "interphase-subphases",
+     "learning_objective": "Explain the events of G1, S and G2 phases and the change in DNA content and chromosome number."
+    },
+    {
+     "concept_tag": "g0-quiescent-stage",
+     "learning_objective": "Explain the quiescent stage (G0) and identify cells that enter it."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH10-T2",
+   "topic_number": 2,
+   "title": "Karyokinesis: stages of mitosis",
+   "ncert_sections": "10.2, 10.2.1, 10.2.2, 10.2.3, 10.2.4",
+   "concepts": [
+    {
+     "concept_tag": "prophase-and-metaphase",
+     "learning_objective": "Identify the key events of prophase and metaphase of mitosis."
+    },
+    {
+     "concept_tag": "anaphase-and-telophase",
+     "learning_objective": "Identify the key events of anaphase and telophase of mitosis."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH10-T3",
+   "topic_number": 3,
+   "title": "Cytokinesis",
+   "ncert_sections": "10.2.5",
+   "concepts": [
+    {
+     "concept_tag": "cytokinesis-animal-vs-plant",
+     "learning_objective": "Distinguish cytokinesis in animal cells from that in plant cells."
+    },
+    {
+     "concept_tag": "syncytium-formation",
+     "learning_objective": "Explain how a multinucleate syncytium arises when karyokinesis is not followed by cytokinesis."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH10-T4",
+   "topic_number": 4,
+   "title": "Significance of mitosis",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "significance-of-mitosis",
+     "learning_objective": "State the roles of mitosis in growth, repair and continuous plant growth."
+    },
+    {
+     "concept_tag": "nucleo-cytoplasmic-ratio",
+     "learning_objective": "Explain why cell growth makes division necessary to restore the nucleo-cytoplasmic ratio."
+    },
+    {
+     "concept_tag": "mitosis-in-haploid-cells",
+     "learning_objective": "Identify organisms and stages in which haploid cells divide by mitosis."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH10-T5",
+   "topic_number": 5,
+   "title": "Meiosis and meiosis I",
+   "ncert_sections": "10.4, 10.4.1",
+   "concepts": [
+    {
+     "concept_tag": "meiosis-key-features",
+     "learning_objective": "State the key features of meiosis as a reduction division."
+    },
+    {
+     "concept_tag": "prophase-i-substages",
+     "learning_objective": "Describe the events of leptotene, zygotene, pachytene, diplotene and diakinesis."
+    },
+    {
+     "concept_tag": "metaphase-to-telophase-i",
+     "learning_objective": "Describe metaphase I, anaphase I and telophase I and their outcome."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH10-T6",
+   "topic_number": 6,
+   "title": "Meiosis II and significance of meiosis",
+   "ncert_sections": "10.4.2, 10.5",
+   "concepts": [
+    {
+     "concept_tag": "meiosis-ii-events",
+     "learning_objective": "Describe interkinesis and the stages of meiosis II."
+    },
+    {
+     "concept_tag": "mitosis-vs-meiosis",
+     "learning_objective": "Distinguish the events of mitosis from those of meiosis."
+    },
+    {
+     "concept_tag": "significance-of-meiosis",
+     "learning_objective": "Explain how meiosis conserves chromosome number and increases genetic variability."
+    }
+   ]
+  }
+ ]
+}

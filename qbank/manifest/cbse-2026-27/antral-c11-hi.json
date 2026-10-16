@@ -1,0 +1,275 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "antral-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "hindi",
+  "language": "hindi",
+  "title": "Antral",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khan1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHAN1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "हुसैन की कहानी अपनी ज़बानी",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khan101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAN1-CH01-T1",
+     "topic_number": 1,
+     "title": "बड़ौदा का बोर्डिंग स्कूल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "boarding-bhejne-ka-karan",
+       "learning_objective": "दादा की मृत्यु के बाद मकबूल को बड़ौदा के बोर्डिंग स्कूल भेजे जाने के कारण और अपेक्षाएँ समझना।"
+      },
+      {
+       "concept_tag": "madarse-ka-mahaul",
+       "learning_objective": "मदरसा हुसामिया के वातावरण, उस्तादों और राष्ट्रीय प्रभाव का वर्णन पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAN1-CH01-T2",
+     "topic_number": 2,
+     "title": "पाँच दोस्तों के शब्द-चित्र",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dost-shabd-chitra",
+       "learning_objective": "लेखक द्वारा प्रस्तुत पाँच मित्रों के शब्द-चित्रों से उनके अलग-अलग व्यक्तित्व पहचानना।"
+      },
+      {
+       "concept_tag": "ghanishth-mitrata",
+       "learning_objective": "भिन्न स्वभाव और भिन्न जीवन-मार्ग के बावजूद मित्रों की घनिष्ठता का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAN1-CH01-T3",
+     "topic_number": 3,
+     "title": "बोर्डिंग में कला-प्रतिभा का प्रकटीकरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kala-pratibha-prakatikaran",
+       "learning_objective": "ग्रुप फ़ोटो, चिड़िया के चित्र और गांधी जी के पोर्ट्रेट जैसी घटनाओं से मकबूल की जन्मजात प्रतिभा पहचानना।"
+      },
+      {
+       "concept_tag": "hunar-ka-kamal",
+       "learning_objective": "‘इलम’ पर भाषण और हुनर के कमाल वाले विचार का आशय समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAN1-CH01-T4",
+     "topic_number": 4,
+     "title": "रानीपुर बाज़ार में दुकान पर बैठा कलाकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dukan-par-kalakar",
+       "learning_objective": "दुकान पर बैठे मकबूल के कार्यकलापों में उसके भीतर के कलाकार की अभिव्यक्ति पहचानना।"
+      },
+      {
+       "concept_tag": "prachar-ke-tarike",
+       "learning_objective": "पाठ में वर्णित फ़िल्मी इश्तिहार के पुराने तरीकों की तुलना आज के प्रचार-प्रसार से करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAN1-CH01-T5",
+     "topic_number": 5,
+     "title": "पहली ऑयल पेंटिंग और बेंद्रे का साथ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pahli-oil-painting",
+       "learning_objective": "‘सिंहगढ़’ के पोस्टर से प्रेरित पहली ऑयल पेंटिंग की घटना और उस पर परिवार की प्रतिक्रिया समझना।"
+      },
+      {
+       "concept_tag": "bendre-ka-prabhav",
+       "learning_objective": "बेंद्रे की तकनीक, उनकी पेंटिंग ‘वैगबांड’ और मकबूल पर उनके प्रभाव का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAN1-CH01-T6",
+     "topic_number": 6,
+     "title": "पिता की रोशनख़याली और पाठ की भाषा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pita-ki-roshankhayali",
+       "learning_objective": "रूढ़ बंदिशें तोड़कर बेटे को कला की राह पर भेजने वाले पिता के प्रगतिशील दृष्टिकोण का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "shabdarth-bhasha",
+       "learning_objective": "पाठ में प्रयुक्त उर्दू-फ़ारसी शब्दों के अर्थ और लेखक की भाषा-शैली पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHAN1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "आवारा मसीहा",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khan102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAN1-CH02-T1",
+     "topic_number": 1,
+     "title": "भागलपुर से विदाई और पिता मोतीलाल",
+     "ncert_sections": "खंड 1",
+     "concepts": [
+      {
+       "concept_tag": "jivani-aur-lekhak",
+       "learning_objective": "विद्यार्थी जान सकेंगे कि यह पाठ विष्णु प्रभाकर द्वारा लिखित शरत्चंद्र की जीवनी 'आवारा मसीहा' का अंश है।"
+      },
+      {
+       "concept_tag": "bhagalpur-se-vidai",
+       "learning_objective": "विद्यार्थी भागलपुर से विदा होते समय शरत् की मनःस्थिति और स्वभाव को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "motilal-ka-swabhav",
+       "learning_objective": "विद्यार्थी शरत् के पिता मोतीलाल के स्वप्नदर्शी, यायावर स्वभाव और उसके परिणामों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAN1-CH02-T2",
+     "topic_number": 2,
+     "title": "भागलपुर में शिक्षा और कठोर अनुशासन",
+     "ncert_sections": "खंड 2",
+     "concepts": [
+      {
+       "concept_tag": "chhatravritti-school-shiksha",
+       "learning_objective": "विद्यार्थी भागलपुर में शरत् की स्कूली शिक्षा और उस समय की शिक्षण-पद्धति को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "ganguli-parivar-anushasan",
+       "learning_objective": "विद्यार्थी गांगुली परिवार के कठोर अनुशासन और बच्चों पर लगे निषेधों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAN1-CH02-T3",
+     "topic_number": 3,
+     "title": "शरत् के शौक, तपोवन और सूक्ष्म पर्यवेक्षण",
+     "ncert_sections": "खंड 2",
+     "concepts": [
+      {
+       "concept_tag": "shauk-aur-netritva",
+       "learning_objective": "विद्यार्थी शरत् के शौकों, अपरिग्रही स्वभाव और बालदल के नेतृत्व के गुणों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "tapovan-aur-ekant",
+       "learning_objective": "विद्यार्थी तपोवन के प्रसंग के माध्यम से शरत् की एकांत-प्रियता और चिंतनशीलता को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "sukshm-paryavekshan",
+       "learning_objective": "विद्यार्थी शरत् की सूक्ष्म पर्यवेक्षण-शक्ति और उसके भावी कथाशिल्पी बनने के संकेतों का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAN1-CH02-T4",
+     "topic_number": 4,
+     "title": "साहित्यिक संस्कार: अमरनाथ, कुसुमकामिनी और कविगुरु",
+     "ncert_sections": "खंड 2",
+     "concepts": [
+      {
+       "concept_tag": "amarnath-aur-bangdarshan",
+       "learning_objective": "विद्यार्थी जान सकेंगे कि अमरनाथ के माध्यम से 'बंगदर्शन' जैसी नवयुग की पत्रिका गांगुली परिवार तक कैसे पहुँची।"
+      },
+      {
+       "concept_tag": "kusumkamini-ki-goshthi",
+       "learning_objective": "विद्यार्थी शरत् के साहित्यिक निर्माण में कुसुमकामिनी की गोष्ठी के योगदान को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "ravindranath-ka-prabhav",
+       "learning_objective": "विद्यार्थी शरत् पर रवींद्रनाथ की रचनाओं के प्रभाव का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAN1-CH02-T5",
+     "topic_number": 5,
+     "title": "भागलपुर से वापसी और राजू से मित्रता",
+     "ncert_sections": "खंड 3",
+     "concepts": [
+      {
+       "concept_tag": "bhagalpur-chhodne-ke-karan",
+       "learning_objective": "विद्यार्थी उन परिस्थितियों को समझ सकेंगे जिनके कारण शरत् के परिवार को भागलपुर छोड़कर देवानंदपुर लौटना पड़ा।"
+      },
+      {
+       "concept_tag": "raju-se-mitrata",
+       "learning_objective": "विद्यार्थी राजू (राजेंद्रनाथ मजूमदार) के व्यक्तित्व और शरत् से उसकी मित्रता के आधारों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAN1-CH02-T6",
+     "topic_number": 6,
+     "title": "पारिवारिक पृष्ठभूमि और देवानंदपुर का बचपन",
+     "ncert_sections": "खंड 4, 5",
+     "concepts": [
+      {
+       "concept_tag": "parivarik-prishthbhumi",
+       "learning_objective": "विद्यार्थी शरत् के दादा बैकुंठनाथ, पिता मोतीलाल और माँ भुवनमोहिनी के माध्यम से उसकी पारिवारिक पृष्ठभूमि समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "devanandpur-ka-bachpan",
+       "learning_objective": "विद्यार्थी देवानंदपुर में शरत् की पाठशाला, शरारतों और बचपन की संगिनी धीरू के प्रसंगों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "nayan-bagdi-prasang",
+       "learning_objective": "विद्यार्थी नयन बागदी के साथ बसंतपुर-यात्रा के प्रसंग से शरत् के कोमल हृदय का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAN1-CH02-T7",
+     "topic_number": 7,
+     "title": "किशोरावस्था के अनुभव और लेखन की प्रेरणा",
+     "ncert_sections": "खंड 6",
+     "concepts": [
+      {
+       "concept_tag": "robinhood-jaisa-paropkar",
+       "learning_objective": "विद्यार्थी देवानंदपुर में किशोर शरत् के दुस्साहसी पर परोपकारी व्यवहार को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "niru-didi-aur-vilasi",
+       "learning_objective": "विद्यार्थी नीरू दीदी और विलासी-मृत्युंजय के प्रसंगों के माध्यम से समाज की हृदयहीनता और शरत् की संवेदना का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "lekhan-ki-prerna",
+       "learning_objective": "विद्यार्थी पहचान सकेंगे कि शरत् के कहानीकार बनने में कौन-कौन से अनुभव और प्रेरणाएँ सहायक बनीं।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

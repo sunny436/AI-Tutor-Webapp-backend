@@ -1,0 +1,120 @@
+{
+ "chapter_id": "GHCU1-CH04",
+ "title": "धातुओं और अधातुओं का संसार",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHCU1-CH04-T1",
+   "topic_number": 1,
+   "title": "द्युति, कठोरता और आघातवर्धनीयता",
+   "ncert_sections": "4.1, 4.1.1",
+   "concepts": [
+    {
+     "concept_tag": "dhatvik-dyuti-aur-kathorta",
+     "learning_objective": "धातुओं की धात्विक द्युति और कठोरता को पहचानना तथा अपवादों (पारा, सोडियम) को समझना।"
+    },
+    {
+     "concept_tag": "aaghatvardhaniyata",
+     "learning_objective": "आघातवर्धनीयता का अर्थ समझना और दैनिक जीवन में उसके उदाहरण पहचानना।"
+    },
+    {
+     "concept_tag": "bhangurta",
+     "learning_objective": "भंगुर पदार्थों को आघातवर्धनीय पदार्थों से अलग पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH04-T2",
+   "topic_number": 2,
+   "title": "तन्यता और ध्वानिकता",
+   "ncert_sections": "4.1.2, 4.1.3",
+   "concepts": [
+    {
+     "concept_tag": "tanyata",
+     "learning_objective": "तन्यता का अर्थ और धातु के तारों के उपयोगों को समझाना।"
+    },
+    {
+     "concept_tag": "dhvanikta",
+     "learning_objective": "ध्वानिकता का अर्थ समझना और धातुओं से बनी ध्वनि उत्पन्न करने वाली वस्तुओं को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH04-T3",
+   "topic_number": 3,
+   "title": "ऊष्मा और विद्युत का चालन",
+   "ncert_sections": "4.1.4, 4.1.5",
+   "concepts": [
+    {
+     "concept_tag": "ushma-chalan",
+     "learning_objective": "धातुओं को ऊष्मा के सुचालक और लकड़ी जैसी सामग्रियों को कुचालक के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "vidyut-chalan",
+     "learning_objective": "परिक्षित्र परिपथ की सहायता से विद्युत के सुचालकों और कुचालकों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH04-T4",
+   "topic_number": 4,
+   "title": "लोहे पर वायु और जल का प्रभाव",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "jang-lagne-ki-sharten",
+     "learning_objective": "प्रयोग द्वारा समझना कि लोहे पर जंग लगने के लिए वायु और जल दोनों आवश्यक हैं।"
+    },
+    {
+     "concept_tag": "sankshran",
+     "learning_objective": "संक्षारण का अर्थ और विभिन्न धातुओं पर उसके उदाहरण पहचानना।"
+    },
+    {
+     "concept_tag": "jang-se-bachav",
+     "learning_objective": "लोहे को जंग से बचाने के उपायों का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH04-T5",
+   "topic_number": 5,
+   "title": "धातुओं और अधातुओं के ऑक्साइडों की प्रकृति",
+   "ncert_sections": "4.3, 4.4",
+   "concepts": [
+    {
+     "concept_tag": "dhatu-oxide-ki-prakriti",
+     "learning_objective": "मैग्नीशियम के जलने से बने ऑक्साइड की क्षारीय प्रकृति को लिटमस से पहचानना।"
+    },
+    {
+     "concept_tag": "adhatu-oxide-ki-prakriti",
+     "learning_objective": "सल्फर के जलने से बने ऑक्साइड की अम्लीय प्रकृति को समझना।"
+    },
+    {
+     "concept_tag": "kriyasheel-padarthon-ka-bhandaran",
+     "learning_objective": "सोडियम और फॉस्फोरस के विशेष भंडारण के कारण समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH04-T6",
+   "topic_number": 6,
+   "title": "अधातुएँ, तत्व और दैनिक जीवन में अधातुओं का महत्त्व",
+   "ncert_sections": "4.4, 4.5",
+   "concepts": [
+    {
+     "concept_tag": "adhatuon-ke-gun",
+     "learning_objective": "अधातुओं के सामान्य गुणों के आधार पर किसी पदार्थ को अधातु के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "tatva-aur-vargikaran",
+     "learning_objective": "समझना कि केवल तत्वों को ही धातु या अधातु के रूप में वर्गीकृत किया जाता है।"
+    },
+    {
+     "concept_tag": "adhatuon-ke-upyog",
+     "learning_objective": "ऑक्सीजन, नाइट्रोजन, क्लोरीन, आयोडीन जैसी अधातुओं के उपयोग बताना।"
+    }
+   ]
+  }
+ ]
+}

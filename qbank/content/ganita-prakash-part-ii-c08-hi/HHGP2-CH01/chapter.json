@@ -1,0 +1,88 @@
+{
+ "chapter_id": "HHGP2-CH01",
+ "title": "भिन्न के विविध रूप",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP2-CH01-T1",
+   "topic_number": 1,
+   "title": "प्रतिशत के रूप में भिन्न",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "bhinn-se-pratishat",
+     "learning_objective": "किसी भिन्न या दशमलव को हर 100 वाले समतुल्य भिन्न द्वारा प्रतिशत में व्यक्त करना।"
+    },
+    {
+     "concept_tag": "pratishat-se-bhinn",
+     "learning_objective": "प्रतिशत को सरलतम भिन्न में बदलना और भिन्न, दशमलव तथा प्रतिशत की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH01-T2",
+   "topic_number": 2,
+   "title": "कुछ मात्राओं का प्रतिशत",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "matra-ka-pratishat",
+     "learning_objective": "किसी मात्रा का दिया गया प्रतिशत ज्ञात करना और प्रतिशत से पूरी मात्रा ज्ञात करना।"
+    },
+    {
+     "concept_tag": "mishran-pratishat",
+     "learning_objective": "मिश्रण में किसी घटक के प्रतिशत की गणना करना और प्रतिशत को दशमलव रूप में लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH01-T3",
+   "topic_number": 3,
+   "title": "अनुपातों की तुलना तथा प्रतिशत वृद्धि या कमी",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "anupat-tulna",
+     "learning_objective": "अलग-अलग मात्राओं वाली वस्तुओं के अनुपात की तुलना प्रतिशत के द्वारा करना।"
+    },
+    {
+     "concept_tag": "pratishat-vriddhi-kami",
+     "learning_objective": "मूल राशि को आधार मानकर प्रतिशत वृद्धि या प्रतिशत कमी ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH01-T4",
+   "topic_number": 4,
+   "title": "लाभ, हानि, छूट और कर",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "labh-hani-pratishat",
+     "learning_objective": "क्रय मूल्य और विक्रय मूल्य से लाभ या हानि तथा उसका प्रतिशत ज्ञात करना।"
+    },
+    {
+     "concept_tag": "chhoot-aur-kar",
+     "learning_objective": "अंकित मूल्य पर छूट और बिल में जुड़े कर की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH01-T5",
+   "topic_number": 5,
+   "title": "वृद्धि और चक्रवृद्धि",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "byaj-bina-chakravriddhi",
+     "learning_objective": "हर वर्ष ब्याज लौटाए जाने पर कुल प्राप्त राशि ज्ञात करना।"
+    },
+    {
+     "concept_tag": "chakravriddhi",
+     "learning_objective": "ब्याज को मूलधन में जोड़ते हुए चक्रवृद्धि से मिलने वाली राशि और प्रतिशत वृद्धि ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

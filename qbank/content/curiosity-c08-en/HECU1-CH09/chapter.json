@@ -1,0 +1,112 @@
+{
+ "chapter_id": "HECU1-CH09",
+ "title": "The Amazing World of Solutes, Solvents, and Solutions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HECU1-CH09-T1",
+   "topic_number": 1,
+   "title": "Solute, solvent and solution",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "uniform-and-non-uniform-mixtures",
+     "learning_objective": "Distinguish uniform mixtures (solutions) from non-uniform mixtures using everyday examples."
+    },
+    {
+     "concept_tag": "solute-and-solvent",
+     "learning_objective": "Identify the solute and the solvent in solutions of a solid in a liquid and of two liquids."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH09-T2",
+   "topic_number": 2,
+   "title": "Saturated and unsaturated solutions, concentration and solubility",
+   "ncert_sections": "9.2",
+   "concepts": [
+    {
+     "concept_tag": "saturated-and-unsaturated-solutions",
+     "learning_objective": "Explain when a solution is saturated or unsaturated at a given temperature."
+    },
+    {
+     "concept_tag": "concentration-and-solubility",
+     "learning_objective": "Compare the concentration of solutions and state the meaning of solubility."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH09-T3",
+   "topic_number": 3,
+   "title": "Effect of temperature on solubility of solids and gases",
+   "ncert_sections": "9.2.1, 9.3",
+   "concepts": [
+    {
+     "concept_tag": "temperature-and-solubility-of-solids",
+     "learning_objective": "Describe how the solubility of most solids in water changes as temperature rises."
+    },
+    {
+     "concept_tag": "solubility-of-gases",
+     "learning_objective": "Explain how the solubility of gases such as oxygen in water changes with temperature and why it matters to aquatic life."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH09-T4",
+   "topic_number": 4,
+   "title": "Floating, sinking and density",
+   "ncert_sections": "9.4, 9.5",
+   "concepts": [
+    {
+     "concept_tag": "density-definition-and-calculation",
+     "learning_objective": "Define density as mass per unit volume and use it to compare substances and predict floating or sinking."
+    },
+    {
+     "concept_tag": "density-units-and-relative-density",
+     "learning_objective": "Use the units of density and calculate relative density with respect to water."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH09-T5",
+   "topic_number": 5,
+   "title": "Determination of density: measuring mass and volume",
+   "ncert_sections": "9.5.1",
+   "concepts": [
+    {
+     "concept_tag": "measuring-mass",
+     "learning_objective": "Measure mass correctly with a digital weighing balance using the tare button."
+    },
+    {
+     "concept_tag": "measuring-volume-of-liquids",
+     "learning_objective": "Read a measuring cylinder correctly and choose a suitable cylinder for a given volume."
+    },
+    {
+     "concept_tag": "volume-by-displacement",
+     "learning_objective": "Find the volume of an irregular solid by water displacement and use it to calculate density."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH09-T6",
+   "topic_number": 6,
+   "title": "Effect of temperature and pressure on density",
+   "ncert_sections": "9.5.2, 9.5.3",
+   "concepts": [
+    {
+     "concept_tag": "temperature-and-density",
+     "learning_objective": "Explain why density generally decreases on heating, using the particle nature of matter."
+    },
+    {
+     "concept_tag": "pressure-and-density",
+     "learning_objective": "Compare how pressure affects the density of gases, liquids and solids."
+    },
+    {
+     "concept_tag": "ice-floats-on-water",
+     "learning_objective": "Explain why ice floats on water and why this helps aquatic life in cold weather."
+    }
+   ]
+  }
+ ]
+}

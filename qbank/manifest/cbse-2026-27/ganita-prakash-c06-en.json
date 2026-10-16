@@ -1,0 +1,1363 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "ganita-prakash-c06-en",
+  "curriculum": "cbse",
+  "class_level": 6,
+  "subject_code": "mathematics",
+  "language": "english",
+  "title": "Ganita Prakash",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "fegp1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "FEGP1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Patterns in Mathematics",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fegp101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEGP1-CH01-T1",
+     "topic_number": 1,
+     "title": "What is Mathematics?",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "mathematics-as-search-for-patterns",
+       "learning_objective": "Describe mathematics as the search for patterns and for explanations of why they exist."
+      },
+      {
+       "concept_tag": "explanations-and-applications",
+       "learning_objective": "Explain why finding the reason behind a pattern matters and how it leads to applications."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH01-T2",
+     "topic_number": 2,
+     "title": "Patterns in Numbers",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "number-theory",
+       "learning_objective": "Identify number theory as the branch of mathematics that studies patterns in whole numbers."
+      },
+      {
+       "concept_tag": "rules-of-number-sequences",
+       "learning_objective": "Recognise the rule of each key number sequence and extend it."
+      },
+      {
+       "concept_tag": "virahanka-numbers",
+       "learning_objective": "Form Virahanka numbers by adding the two previous terms."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH01-T3",
+     "topic_number": 3,
+     "title": "Visualising Number Sequences",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "pictorial-representation-of-sequences",
+       "learning_objective": "Explain sequence names such as triangular, square and cube numbers using dot and block pictures."
+      },
+      {
+       "concept_tag": "hexagonal-numbers",
+       "learning_objective": "Recognise hexagonal numbers and find further terms."
+      },
+      {
+       "concept_tag": "same-number-different-pictures",
+       "learning_objective": "Show that one number can be arranged in more than one pictorial shape."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH01-T4",
+     "topic_number": 4,
+     "title": "Relations among Number Sequences",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "sum-of-odd-numbers-gives-squares",
+       "learning_objective": "Show that adding consecutive odd numbers from 1 gives square numbers and use this to find sums."
+      },
+      {
+       "concept_tag": "adding-up-and-down",
+       "learning_objective": "Use the pattern of adding counting numbers up and then down to obtain square numbers."
+      },
+      {
+       "concept_tag": "relations-among-sequences",
+       "learning_objective": "Find and use other relations among sequences, such as sums of triangular numbers and powers of 2."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH01-T5",
+     "topic_number": 5,
+     "title": "Patterns in Shapes",
+     "ncert_sections": "1.5",
+     "concepts": [
+      {
+       "concept_tag": "geometry-and-shape-patterns",
+       "learning_objective": "Identify geometry as the branch that studies patterns in shapes in one, two or three dimensions."
+      },
+      {
+       "concept_tag": "shape-sequences",
+       "learning_objective": "Recognise the rule of shape sequences such as regular polygons, stacked squares and the Koch snowflake."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH01-T6",
+     "topic_number": 6,
+     "title": "Relation to Number Sequences",
+     "ncert_sections": "1.6",
+     "concepts": [
+      {
+       "concept_tag": "regular-polygons-and-counting-numbers",
+       "learning_objective": "Relate the sides and corners of regular polygons to the counting numbers from 3, and explain the meaning of 'regular'."
+      },
+      {
+       "concept_tag": "complete-graphs-and-triangular-numbers",
+       "learning_objective": "Relate the number of lines in complete graphs to the triangular numbers."
+      },
+      {
+       "concept_tag": "stacked-shapes-and-koch-counts",
+       "learning_objective": "Count little squares, little triangles and Koch snowflake segments and name the number sequences they form."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEGP1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Lines and Angles",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fegp102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEGP1-CH02-T1",
+     "topic_number": 1,
+     "title": "Point, line segment and line",
+     "ncert_sections": "2.1, 2.2, 2.3",
+     "concepts": [
+      {
+       "concept_tag": "point-as-location",
+       "learning_objective": "Describe a point as a precise location with no length, breadth or height."
+      },
+      {
+       "concept_tag": "line-segment",
+       "learning_objective": "Identify a line segment as the shortest path between two end points and name it."
+      },
+      {
+       "concept_tag": "line-through-two-points",
+       "learning_objective": "Recognise that a line extends endlessly both ways and that two points determine a unique line."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH02-T2",
+     "topic_number": 2,
+     "title": "Ray",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "ray-definition",
+       "learning_objective": "Describe a ray as a part of a line with one starting point going endlessly in one direction."
+      },
+      {
+       "concept_tag": "naming-rays",
+       "learning_objective": "Name a ray correctly using its starting point first and any other point on it."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH02-T3",
+     "topic_number": 3,
+     "title": "Angle: vertex, arms and size",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "angle-vertex-arms",
+       "learning_objective": "Identify the vertex and arms of an angle formed by two rays with a common starting point."
+      },
+      {
+       "concept_tag": "naming-angles",
+       "learning_objective": "Name angles using three letters with the vertex as the middle letter."
+      },
+      {
+       "concept_tag": "angle-size-as-rotation",
+       "learning_objective": "Explain the size of an angle as the amount of turn about the vertex."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH02-T4",
+     "topic_number": 4,
+     "title": "Comparing angles",
+     "ncert_sections": "2.6, 2.7",
+     "concepts": [
+      {
+       "concept_tag": "superimposition",
+       "learning_objective": "Compare two angles by superimposing them with their vertices overlapping."
+      },
+      {
+       "concept_tag": "comparing-with-transparent-circle",
+       "learning_objective": "Compare angles without superimposition using a transparent circle centred at the vertex."
+      },
+      {
+       "concept_tag": "angle-size-not-arm-length",
+       "learning_objective": "Recognise that the size of an angle does not depend on the lengths of its arms."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH02-T5",
+     "topic_number": 5,
+     "title": "Special types of angles",
+     "ncert_sections": "2.8",
+     "concepts": [
+      {
+       "concept_tag": "straight-and-right-angles",
+       "learning_objective": "Relate straight and right angles to half and quarter turns."
+      },
+      {
+       "concept_tag": "perpendicular-lines",
+       "learning_objective": "Identify perpendicular lines as lines meeting at right angles and justify right angles made by folding."
+      },
+      {
+       "concept_tag": "acute-and-obtuse",
+       "learning_objective": "Classify angles as acute or obtuse by comparing them with a right angle."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH02-T6",
+     "topic_number": 6,
+     "title": "Measuring and drawing angles",
+     "ncert_sections": "2.9, 2.10",
+     "concepts": [
+      {
+       "concept_tag": "degree-measure",
+       "learning_objective": "Use the fact that a full turn is 360 degrees to find measures of angles."
+      },
+      {
+       "concept_tag": "using-protractor",
+       "learning_objective": "Read and draw angles correctly with a protractor."
+      },
+      {
+       "concept_tag": "angle-bisector",
+       "learning_objective": "Explain bisecting an angle and find angles made by repeated halving."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH02-T7",
+     "topic_number": 7,
+     "title": "Types of angles and their measures",
+     "ncert_sections": "2.11",
+     "concepts": [
+      {
+       "concept_tag": "classifying-by-measure",
+       "learning_objective": "Classify angles as acute, right, obtuse, straight or reflex from their degree measures."
+      },
+      {
+       "concept_tag": "reflex-angles",
+       "learning_objective": "Find the measure of a reflex angle from the angle on the other side."
+      },
+      {
+       "concept_tag": "finding-unknown-angles",
+       "learning_objective": "Find an unknown angle using the fact that a straight angle measures 180 degrees."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEGP1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Number Play",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fegp103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEGP1-CH03-T1",
+     "topic_number": 1,
+     "title": "Numbers can tell us things and supercells",
+     "ncert_sections": "3.1, 3.2",
+     "concepts": [
+      {
+       "concept_tag": "taller-neighbours",
+       "learning_objective": "Interpret numbers that tell how many taller neighbours each child in a line has."
+      },
+      {
+       "concept_tag": "supercells",
+       "learning_objective": "Identify supercells as cells whose number is greater than all adjacent cells and reason about them."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH03-T2",
+     "topic_number": 2,
+     "title": "Number line and playing with digits",
+     "ncert_sections": "3.3, 3.4",
+     "concepts": [
+      {
+       "concept_tag": "number-line-positions",
+       "learning_objective": "Read and place large numbers at evenly spaced marks on a number line."
+      },
+      {
+       "concept_tag": "counting-with-digits",
+       "learning_objective": "Count how many numbers have a given number of digits and how often a digit occurs."
+      },
+      {
+       "concept_tag": "digit-sums",
+       "learning_objective": "Find digit sums and build numbers with a given digit sum."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH03-T3",
+     "topic_number": 3,
+     "title": "Pretty palindromic patterns",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "palindromic-numbers",
+       "learning_objective": "Recognise and form palindromes that read the same from left to right and right to left."
+      },
+      {
+       "concept_tag": "reverse-and-add",
+       "learning_objective": "Apply the reverse-and-add procedure until a palindrome is reached."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH03-T4",
+     "topic_number": 4,
+     "title": "Kaprekar's magic number, clock and calendar numbers",
+     "ncert_sections": "3.6, 3.7",
+     "concepts": [
+      {
+       "concept_tag": "kaprekar-routine",
+       "learning_objective": "Carry out Kaprekar's largest-minus-smallest steps and recognise 6174 and 495."
+      },
+      {
+       "concept_tag": "clock-and-calendar-patterns",
+       "learning_objective": "Find palindromic and patterned times on a 12-hour clock."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH03-T5",
+     "topic_number": 5,
+     "title": "Mental math",
+     "ncert_sections": "3.8",
+     "concepts": [
+      {
+       "concept_tag": "mental-sums-combinations",
+       "learning_objective": "Make a target number mentally by adding and subtracting given numbers."
+      },
+      {
+       "concept_tag": "digits-in-sums-differences",
+       "learning_objective": "Decide how many digits a sum or difference of numbers of given sizes can have."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH03-T6",
+     "topic_number": 6,
+     "title": "Number patterns and the Collatz conjecture",
+     "ncert_sections": "3.9, 3.10",
+     "concepts": [
+      {
+       "concept_tag": "pattern-sums",
+       "learning_objective": "Find the sum of numbers arranged in a pattern using grouping or multiplication."
+      },
+      {
+       "concept_tag": "collatz-conjecture",
+       "learning_objective": "Form Collatz sequences and explain why the conjecture is still unsolved."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH03-T7",
+     "topic_number": 7,
+     "title": "Simple estimation",
+     "ncert_sections": "3.11",
+     "concepts": [
+      {
+       "concept_tag": "estimating-quantities",
+       "learning_objective": "Make reasonable estimates of quantities when an exact count is not needed."
+      },
+      {
+       "concept_tag": "checking-estimates",
+       "learning_objective": "Judge whether a stated estimate is reasonable using rough calculation."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH03-T8",
+     "topic_number": 8,
+     "title": "Games and winning strategies",
+     "ncert_sections": "3.12",
+     "concepts": [
+      {
+       "concept_tag": "game-rules-and-moves",
+       "learning_objective": "Follow the rules of number games such as the game of 21."
+      },
+      {
+       "concept_tag": "winning-strategy",
+       "learning_objective": "Find the key numbers that give a winning strategy in a counting game."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEGP1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Data Handling and Presentation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fegp104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEGP1-CH04-T1",
+     "topic_number": 1,
+     "title": "What is data and why we collect it",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-data",
+       "learning_objective": "Define data as a collection of facts, numbers, measures or observations that convey information."
+      },
+      {
+       "concept_tag": "purpose-of-data-collection",
+       "learning_objective": "Decide when a question needs data to be collected and use collected data to answer it."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH04-T2",
+     "topic_number": 2,
+     "title": "Organising data: tally marks and frequency tables",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "tally-marks",
+       "learning_objective": "Record and read counts using tally marks grouped in fives."
+      },
+      {
+       "concept_tag": "frequency-table",
+       "learning_objective": "Prepare and interpret a frequency table, including totals found from it."
+      },
+      {
+       "concept_tag": "arranging-data-in-order",
+       "learning_objective": "Arrange raw data in ascending order to find the largest, smallest and counts of values."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH04-T3",
+     "topic_number": 3,
+     "title": "Pictographs",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "reading-pictographs",
+       "learning_objective": "Read a pictograph, including half symbols, to find and compare frequencies."
+      },
+      {
+       "concept_tag": "pictograph-scale-key",
+       "learning_objective": "Choose and use a suitable scale or key so that each symbol stands for one or many units."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH04-T4",
+     "topic_number": 4,
+     "title": "Reading and interpreting bar graphs",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "reading-bar-graphs",
+       "learning_objective": "Read the value shown by each bar and compare categories in a bar graph."
+      },
+      {
+       "concept_tag": "interpreting-scaled-bar-graphs",
+       "learning_objective": "Use the scale of a bar graph to convert bar lengths to values and draw inferences."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH04-T5",
+     "topic_number": 5,
+     "title": "Drawing a bar graph",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "features-of-bar-graphs",
+       "learning_objective": "State the rules for drawing a bar graph: equal widths, equal gaps and markings starting from zero."
+      },
+      {
+       "concept_tag": "calculating-bar-heights",
+       "learning_objective": "Calculate the height of each bar by dividing the value by the chosen scale."
+      },
+      {
+       "concept_tag": "choosing-a-scale",
+       "learning_objective": "Choose a scale for a bar graph that fits the space and suits the smallest and largest values."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH04-T6",
+     "topic_number": 6,
+     "title": "Artistic and aesthetic considerations; infographics",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "column-graphs-and-orientation",
+       "learning_objective": "Choose vertical bars (column graphs) or horizontal bars to suit the kind of quantity shown."
+      },
+      {
+       "concept_tag": "misleading-infographics",
+       "learning_objective": "Evaluate whether an infographic presents data accurately or could mislead its audience."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEGP1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Prime Time",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fegp105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEGP1-CH05-T1",
+     "topic_number": 1,
+     "title": "Common multiples and common factors",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "common-multiples",
+       "learning_objective": "Find common multiples of two numbers using the idli-vada game and the smallest number divisible by several numbers."
+      },
+      {
+       "concept_tag": "common-factors",
+       "learning_objective": "Find common factors of two or more numbers and relate them to jump sizes that reach every treasure."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH05-T2",
+     "topic_number": 2,
+     "title": "Prime and composite numbers",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "prime-and-composite-numbers",
+       "learning_objective": "Classify numbers as prime, composite or neither by counting their factors."
+      },
+      {
+       "concept_tag": "sieve-of-eratosthenes",
+       "learning_objective": "Use the Sieve of Eratosthenes to list the prime numbers up to 100 and explain why it works."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH05-T3",
+     "topic_number": 3,
+     "title": "Co-prime numbers",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "co-prime-numbers",
+       "learning_objective": "Identify co-prime pairs as numbers with no common factor other than 1, using the safe-treasure game."
+      },
+      {
+       "concept_tag": "co-prime-first-common-multiple",
+       "learning_objective": "Relate the first common multiple of two numbers to their product when the numbers are co-prime."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH05-T4",
+     "topic_number": 4,
+     "title": "Prime factorisation",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "prime-factorisation",
+       "learning_objective": "Write a number greater than 1 as a product of primes and recognise that this factorisation is unique apart from order."
+      },
+      {
+       "concept_tag": "prime-factorisation-of-product",
+       "learning_objective": "Find the prime factorisation of a product by combining the prime factorisations of its factors."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH05-T5",
+     "topic_number": 5,
+     "title": "Using prime factorisation for co-primes and divisibility",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "co-prime-check-by-factorisation",
+       "learning_objective": "Decide whether two numbers are co-prime by looking for a common prime factor in their prime factorisations."
+      },
+      {
+       "concept_tag": "divisibility-by-factorisation",
+       "learning_objective": "Decide whether one number divides another by checking if its prime factorisation is included in the other's."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH05-T6",
+     "topic_number": 6,
+     "title": "Divisibility tests",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "divisibility-by-2-5-10",
+       "learning_objective": "Use the last digit of a number to test divisibility by 2, 5 and 10 and to find remainders."
+      },
+      {
+       "concept_tag": "divisibility-by-4-and-8",
+       "learning_objective": "Use the number formed by the last two or three digits to test divisibility by 4 and by 8."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH05-T7",
+     "topic_number": 7,
+     "title": "Fun with numbers: special numbers and prime puzzles",
+     "ncert_sections": "5.6",
+     "concepts": [
+      {
+       "concept_tag": "special-numbers",
+       "learning_objective": "Give reasons why a number in a group is special, using properties such as prime, composite, even, odd and square."
+      },
+      {
+       "concept_tag": "prime-puzzle",
+       "learning_objective": "Solve grid puzzles in which prime numbers must give the stated row and column products."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEGP1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Perimeter and Area",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fegp106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEGP1-CH06-T1",
+     "topic_number": 1,
+     "title": "Perimeter of rectangles, squares and triangles",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "perimeter-of-polygon",
+       "learning_objective": "State that the perimeter of a closed figure is the total length of its boundary, the sum of all sides for a polygon."
+      },
+      {
+       "concept_tag": "perimeter-rectangle-square",
+       "learning_objective": "Use the formulas 2 x (length + breadth) and 4 x side to find the perimeter of rectangles and squares."
+      },
+      {
+       "concept_tag": "missing-side-from-perimeter",
+       "learning_objective": "Find an unknown side length when the perimeter and the other sides of a figure are known."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH06-T2",
+     "topic_number": 2,
+     "title": "Perimeter in real-life situations",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "perimeter-word-problems",
+       "learning_objective": "Apply perimeter to fencing, lace, rope and cost problems."
+      },
+      {
+       "concept_tag": "perimeter-running-tracks",
+       "learning_objective": "Find and compare distances covered in several rounds of a rectangular or square track."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH06-T3",
+     "topic_number": 3,
+     "title": "Regular polygons and joined shapes",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "perimeter-regular-polygon",
+       "learning_objective": "Identify regular polygons and find their perimeter as number of sides x length of a side."
+      },
+      {
+       "concept_tag": "straight-and-diagonal-units",
+       "learning_objective": "Explain why a diagonal of a grid square is longer than a side when finding perimeters on a grid."
+      },
+      {
+       "concept_tag": "split-and-rejoin-perimeter",
+       "learning_objective": "Reason how the perimeter changes when pieces of a shape are joined in different ways."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH06-T4",
+     "topic_number": 4,
+     "title": "Area of rectangles and squares",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "area-meaning-units",
+       "learning_objective": "Describe area as the region enclosed by a closed figure, measured in square units."
+      },
+      {
+       "concept_tag": "area-rectangle-square",
+       "learning_objective": "Use length x width and side x side to find areas and missing dimensions."
+      },
+      {
+       "concept_tag": "area-remaining-region",
+       "learning_objective": "Find the area of a region left over after parts of it are covered or removed."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH06-T5",
+     "topic_number": 5,
+     "title": "Estimating area and tangram shapes",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "estimate-area-grid-conventions",
+       "learning_objective": "Estimate the area of a shape on squared paper using the counting conventions for full, more than half, half and less than half squares."
+      },
+      {
+       "concept_tag": "squares-as-area-units",
+       "learning_objective": "Explain why squares are the preferred unit shape for measuring area."
+      },
+      {
+       "concept_tag": "tangram-area-relationships",
+       "learning_objective": "Compare the areas of tangram pieces and reason that rearranging pieces keeps the total area unchanged."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH06-T6",
+     "topic_number": 6,
+     "title": "Area of a triangle",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "triangle-half-of-rectangle",
+       "learning_objective": "Show that a triangle drawn on the side of a rectangle with its third vertex on the opposite side has half the area of the rectangle."
+      },
+      {
+       "concept_tag": "area-composite-rectangles-triangles",
+       "learning_objective": "Find the area of a figure by splitting it into rectangles and triangles."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH06-T7",
+     "topic_number": 7,
+     "title": "Same area, different perimeters",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "same-area-different-perimeter",
+       "learning_objective": "Recognise that figures with the same area can have different perimeters, and the reverse."
+      },
+      {
+       "concept_tag": "area-perimeter-puzzles",
+       "learning_objective": "Solve puzzles and plans that combine area and perimeter reasoning."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEGP1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Fractions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fegp107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEGP1-CH07-T1",
+     "topic_number": 1,
+     "title": "Fractional Units and Equal Shares",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "fraction-as-equal-share",
+       "learning_objective": "Express the share each person gets when a whole number of things is shared equally as a fraction."
+      },
+      {
+       "concept_tag": "comparing-unit-fractions",
+       "learning_objective": "Compare fractional units by reasoning that sharing among more people gives a smaller share."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH07-T2",
+     "topic_number": 2,
+     "title": "Fractional Units as Parts of a Whole and Measuring",
+     "ncert_sections": "7.2, 7.3",
+     "concepts": [
+      {
+       "concept_tag": "fractional-unit-of-whole",
+       "learning_objective": "Identify the fractional unit obtained when a whole is divided into equal parts, whatever their shape."
+      },
+      {
+       "concept_tag": "measuring-with-fractional-units",
+       "learning_objective": "Describe a fractional quantity as a number of fractional units and read a fraction such as 3/4 as '3 times 1/4'."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH07-T3",
+     "topic_number": 3,
+     "title": "Marking Fraction Lengths on the Number Line",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "fraction-on-number-line",
+       "learning_objective": "Find and mark fraction lengths on the number line by dividing a unit into equal parts."
+      },
+      {
+       "concept_tag": "fractions-between-numbers",
+       "learning_objective": "Recognise that there are endlessly many fractions between 0 and 1 and locate fractions between given values."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH07-T4",
+     "topic_number": 4,
+     "title": "Mixed Fractions",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "fraction-to-mixed-number",
+       "learning_objective": "Find the whole units in a fraction greater than 1 and write it as a mixed number."
+      },
+      {
+       "concept_tag": "mixed-number-to-fraction",
+       "learning_objective": "Convert a mixed number into a fraction by counting its fractional units."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH07-T5",
+     "topic_number": 5,
+     "title": "Equivalent Fractions and Lowest Terms",
+     "ncert_sections": "7.6",
+     "concepts": [
+      {
+       "concept_tag": "equivalent-fractions",
+       "learning_objective": "Recognise and generate equivalent fractions using the fraction wall and equal-share situations."
+      },
+      {
+       "concept_tag": "lowest-terms",
+       "learning_objective": "Express a fraction in lowest terms by dividing the numerator and denominator by common factors."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH07-T6",
+     "topic_number": 6,
+     "title": "Comparing Fractions",
+     "ncert_sections": "7.6, 7.7",
+     "concepts": [
+      {
+       "concept_tag": "compare-common-denominator",
+       "learning_objective": "Compare fractions by converting them to equivalent fractions with a common denominator."
+      },
+      {
+       "concept_tag": "compare-same-numerator-or-denominator",
+       "learning_objective": "Compare fractions with the same numerator or the same denominator by reasoning about shares."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH07-T7",
+     "topic_number": 7,
+     "title": "Addition and Subtraction of Fractions",
+     "ncert_sections": "7.8",
+     "concepts": [
+      {
+       "concept_tag": "adding-fractions",
+       "learning_objective": "Add fractions with the same or different denominators using Brahmagupta's method."
+      },
+      {
+       "concept_tag": "subtracting-fractions",
+       "learning_objective": "Subtract fractions with the same or different denominators using Brahmagupta's method."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH07-T8",
+     "topic_number": 8,
+     "title": "A Pinch of History and Unit Fraction Puzzles",
+     "ncert_sections": "7.9",
+     "concepts": [
+      {
+       "concept_tag": "history-of-fractions",
+       "learning_objective": "Recall how fractions were named, written and worked with in ancient India and how the notation spread."
+      },
+      {
+       "concept_tag": "sums-of-unit-fractions",
+       "learning_objective": "Reason about writing fractions and the number 1 as sums of different fractional units."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEGP1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Playing with Constructions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fegp108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEGP1-CH08-T1",
+     "topic_number": 1,
+     "title": "Circles and the compass in artwork",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "circle-centre-and-radius",
+       "learning_objective": "Describe a circle as all points at the same distance (radius) from its centre."
+      },
+      {
+       "concept_tag": "compass-artwork-curves",
+       "learning_objective": "Use a compass with a fixed radius to draw circles and half circles in artwork such as the wavy wave."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH08-T2",
+     "topic_number": 2,
+     "title": "Squares and rectangles: properties and names",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "rectangle-and-square-properties",
+       "learning_objective": "State the two defining properties of a rectangle and of a square."
+      },
+      {
+       "concept_tag": "naming-by-order-of-corners",
+       "learning_objective": "Name a rectangle or square by listing its corners in an order of travel around it."
+      },
+      {
+       "concept_tag": "rotated-squares-and-rectangles",
+       "learning_objective": "Explain why a rotated square or rectangle keeps its properties, including on a dot grid."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH08-T3",
+     "topic_number": 3,
+     "title": "Constructing squares and rectangles",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "square-construction-steps",
+       "learning_objective": "Construct a square of given side using a ruler, perpendiculars and a compass."
+      },
+      {
+       "concept_tag": "rectangle-construction",
+       "learning_objective": "Construct a rectangle of given sides and check that it satisfies the rectangle properties."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH08-T4",
+     "topic_number": 4,
+     "title": "An exploration in rectangles",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "moving-points-distance",
+       "learning_objective": "Investigate how the distance between points moving on opposite sides of a rectangle changes."
+      },
+      {
+       "concept_tag": "rectangles-of-identical-squares",
+       "learning_objective": "Plan with a rough diagram and construct rectangles that divide into identical squares."
+      },
+      {
+       "concept_tag": "centred-square-in-rectangle",
+       "learning_objective": "Use side lengths to place a square inside a rectangle with the same centre."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH08-T5",
+     "topic_number": 5,
+     "title": "Diagonals of rectangles and squares",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "diagonal-properties",
+       "learning_objective": "Compare the diagonals of a rectangle and the angles into which a diagonal divides its corners."
+      },
+      {
+       "concept_tag": "rectangle-from-diagonal-angle",
+       "learning_objective": "Construct a rectangle when a diagonal divides its opposite angles into given parts."
+      },
+      {
+       "concept_tag": "rectangle-from-side-and-diagonal",
+       "learning_objective": "Construct a rectangle from one side and a diagonal using an arc to locate a corner."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH08-T6",
+     "topic_number": 6,
+     "title": "Points equidistant from two given points",
+     "ncert_sections": "8.6",
+     "concepts": [
+      {
+       "concept_tag": "intersecting-arcs",
+       "learning_objective": "Locate a point at given distances from two points by drawing intersecting arcs."
+      },
+      {
+       "concept_tag": "house-construction-sequence",
+       "learning_objective": "Plan the order of steps in a construction such as the House figure."
+      },
+      {
+       "concept_tag": "equal-sided-non-square",
+       "learning_objective": "Construct a 4-sided figure with all sides equal that is not a square."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEGP1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Symmetry",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fegp109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEGP1-CH09-T1",
+     "topic_number": 1,
+     "title": "Symmetry in the world around us",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "symmetry-as-repeated-pattern",
+       "learning_objective": "Describe symmetry as parts of a figure that repeat in a definite pattern."
+      },
+      {
+       "concept_tag": "symmetric-vs-asymmetric-figures",
+       "learning_objective": "Distinguish symmetrical figures such as a rangoli or butterfly from figures with no repeating pattern such as clouds."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH09-T2",
+     "topic_number": 2,
+     "title": "Line of symmetry and figures with more than one line of symmetry",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "line-of-symmetry-definition",
+       "learning_objective": "Define a line of symmetry as a line along which a figure folds into two exactly overlapping parts."
+      },
+      {
+       "concept_tag": "lines-of-symmetry-of-shapes",
+       "learning_objective": "Find the number of lines of symmetry of squares, rectangles and triangles of different kinds."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH09-T3",
+     "topic_number": 3,
+     "title": "Reflection",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "reflection-symmetry",
+       "learning_objective": "Explain that a figure with a line of symmetry has reflection symmetry, each side being reflected onto the other."
+      },
+      {
+       "concept_tag": "reflecting-labelled-points",
+       "learning_objective": "Track where the labelled corners of a square go when it is reflected in a line of symmetry."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH09-T4",
+     "topic_number": 4,
+     "title": "Generating shapes having lines of symmetry",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "fold-as-line-of-symmetry",
+       "learning_objective": "Recognise that the fold is the line of symmetry of ink blot, cut-out and punched designs."
+      },
+      {
+       "concept_tag": "punching-and-cutting-folded-paper",
+       "learning_objective": "Predict the holes and shapes obtained when folded paper is punched or cut and then unfolded."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH09-T5",
+     "topic_number": 5,
+     "title": "Rotational symmetry and angles of symmetry",
+     "ncert_sections": "9.2",
+     "concepts": [
+      {
+       "concept_tag": "centre-and-angle-of-rotation",
+       "learning_objective": "Define the centre of rotation, an angle of symmetry and when a figure has rotational symmetry."
+      },
+      {
+       "concept_tag": "angles-of-symmetry-of-figures",
+       "learning_objective": "List the angles of symmetry of figures such as a square and a paper windmill."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH09-T6",
+     "topic_number": 6,
+     "title": "Rotational symmetry of figures with radial arms",
+     "ncert_sections": "9.2",
+     "concepts": [
+      {
+       "concept_tag": "angle-between-radial-arms",
+       "learning_objective": "Find the angle between equally spaced radial arms as 360 degrees divided by the number of arms."
+      },
+      {
+       "concept_tag": "smallest-angle-and-multiples",
+       "learning_objective": "Use the facts that angles of symmetry are multiples of the smallest one and that a whole-number smallest angle is a factor of 360."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH09-T7",
+     "topic_number": 7,
+     "title": "Symmetries of a circle and figures with both kinds of symmetry",
+     "ncert_sections": "9.2",
+     "concepts": [
+      {
+       "concept_tag": "symmetries-of-circle",
+       "learning_objective": "State that every angle is an angle of symmetry of a circle and every diameter is a line of symmetry."
+      },
+      {
+       "concept_tag": "reflection-and-rotation-together",
+       "learning_objective": "Classify figures as having reflection symmetry, rotational symmetry, both or neither."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEGP1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "The Other Side of Zero",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fegp110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEGP1-CH10-T1",
+     "topic_number": 1,
+     "title": "Bela's Building of Fun: positive and negative numbers",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "positive-and-negative-numbers",
+       "learning_objective": "Use positive and negative numbers to name floors above and below a reference level, and recognise that zero is neither positive nor negative."
+      },
+      {
+       "concept_tag": "addition-as-movement",
+       "learning_objective": "Interpret addition of integers as Starting Floor + Movement = Target Floor and as combining button presses."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH10-T2",
+     "topic_number": 2,
+     "title": "Inverses and comparing integers",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "additive-inverse",
+       "learning_objective": "Find the inverse of an integer and use it to return to zero."
+      },
+      {
+       "concept_tag": "comparing-integers",
+       "learning_objective": "Compare and order integers using floors and the symbols < and >."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH10-T3",
+     "topic_number": 3,
+     "title": "Subtraction as the movement needed",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "subtraction-as-movement-needed",
+       "learning_objective": "Interpret subtraction of integers as Target Floor - Starting Floor = Movement needed, including with larger numbers in a mine."
+      },
+      {
+       "concept_tag": "subtracting-a-negative",
+       "learning_objective": "Recognise that subtracting a negative number is the same as adding the corresponding positive number."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH10-T4",
+     "topic_number": 4,
+     "title": "The number line and the unmarked number line",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "integers-on-number-line",
+       "learning_objective": "Place integers on the number line and describe movements along it."
+      },
+      {
+       "concept_tag": "unmarked-number-line",
+       "learning_objective": "Use an unmarked number line to add and subtract larger integers."
+      },
+      {
+       "concept_tag": "converting-subtraction-to-addition",
+       "learning_objective": "Convert a subtraction into addition of the inverse, and vice versa."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH10-T5",
+     "topic_number": 5,
+     "title": "The token model",
+     "ncert_sections": "10.2",
+     "concepts": [
+      {
+       "concept_tag": "zero-pairs-addition",
+       "learning_objective": "Add integers with positive and negative tokens by removing zero pairs."
+      },
+      {
+       "concept_tag": "tokens-subtraction",
+       "learning_objective": "Subtract integers with tokens, adding zero pairs when there are not enough tokens to take away."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH10-T6",
+     "topic_number": 6,
+     "title": "Integers in other places",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "credits-and-debits",
+       "learning_objective": "Represent credits as positive and debits as negative numbers and find a bank balance."
+      },
+      {
+       "concept_tag": "heights-and-temperatures",
+       "learning_objective": "Use integers for heights relative to sea level and for temperatures above and below 0 degrees Celsius."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH10-T7",
+     "topic_number": 7,
+     "title": "Explorations with integers",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "border-sum-grids",
+       "learning_objective": "Find and complete border sums in hollow integer grids."
+      },
+      {
+       "concept_tag": "signs-of-results",
+       "learning_objective": "Decide whether sums and differences of positive and negative integers are positive, negative or either."
+      },
+      {
+       "concept_tag": "integer-patterns-and-puzzles",
+       "learning_objective": "Solve puzzles with integers such as listing integers between two numbers and possible dice sums."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEGP1-CH10-T8",
+     "topic_number": 8,
+     "title": "A pinch of history",
+     "ncert_sections": "10.5",
+     "concepts": [
+      {
+       "concept_tag": "history-of-negative-numbers",
+       "learning_objective": "Describe the early use of negative numbers in China and India and their later acceptance elsewhere."
+      },
+      {
+       "concept_tag": "brahmagupta-rules",
+       "learning_objective": "Apply Brahmagupta's rules for addition and subtraction of positive numbers, negative numbers and zero."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

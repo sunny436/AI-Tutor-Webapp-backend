@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LHGY1-CH07",
+ "title": "परिवहन एवं संचार",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHGY1-CH07-T1",
+   "topic_number": 1,
+   "title": "परिवहन: अर्थ, परिवहन जाल और प्रमुख साधन",
+   "ncert_sections": "परिवहन; परिवहन के साधन",
+   "concepts": [
+    {
+     "concept_tag": "parivahan-jaal",
+     "learning_objective": "परिवहन जाल के नोड और कड़ियों की पहचान करना तथा परिवहन साधनों की सापेक्ष लागत समझना।"
+    },
+    {
+     "concept_tag": "parivahan-sadhan-upyuktata",
+     "learning_objective": "माल के प्रकार, लागत और दूरी के अनुसार उपयुक्त परिवहन साधन का चयन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY1-CH07-T2",
+   "topic_number": 2,
+   "title": "स्थल परिवहन: लद्दू पशु, सड़कें और राजमार्ग",
+   "ncert_sections": "स्थल परिवहन; सड़कें; राजमार्ग; सीमा सड़कें",
+   "concepts": [
+    {
+     "concept_tag": "laddu-pashu",
+     "learning_objective": "विभिन्न प्रदेशों में बोझा ढोने वाले पशुओं के उपयोग को पहचानना।"
+    },
+    {
+     "concept_tag": "sadak-rajmarg",
+     "learning_objective": "सड़क परिवहन के लाभ, समस्याएँ और विश्व के प्रमुख राजमार्गों को समझना।"
+    },
+    {
+     "concept_tag": "seema-sadak",
+     "learning_objective": "सीमा सड़कों के उद्देश्य और महत्त्व की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY1-CH07-T3",
+   "topic_number": 3,
+   "title": "रेलमार्ग और पारमहाद्वीपीय रेलमार्ग",
+   "ncert_sections": "रेलमार्ग; पारमहाद्वीपीय रेलमार्ग",
+   "concepts": [
+    {
+     "concept_tag": "vishv-rail-jaal",
+     "learning_objective": "विभिन्न महाद्वीपों में रेल जाल के वितरण और उपयोग की तुलना करना।"
+    },
+    {
+     "concept_tag": "parmahadvipiya-relmarg",
+     "learning_objective": "प्रमुख पारमहाद्वीपीय रेलमार्गों के मार्ग और आर्थिक महत्त्व को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY1-CH07-T4",
+   "topic_number": 4,
+   "title": "जल परिवहन: समुद्री मार्ग और नौपरिवहन नहरें",
+   "ncert_sections": "जल परिवहन; समुद्री मार्ग; तटीय नौवहन; नौपरिवहन नहरें",
+   "concepts": [
+    {
+     "concept_tag": "jal-parivahan-labh",
+     "learning_objective": "जल परिवहन के सस्ता होने के कारणों की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "samudri-marg",
+     "learning_objective": "विश्व के प्रमुख समुद्री मार्गों और उन पर व्यापार की मात्रा का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "naukaparivahan-naharen",
+     "learning_objective": "स्वेज़ और पनामा नहरों की विशेषताओं और महत्त्व की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY1-CH07-T5",
+   "topic_number": 5,
+   "title": "आंतरिक जलमार्ग",
+   "ncert_sections": "आंतरिक जलमार्ग",
+   "concepts": [
+    {
+     "concept_tag": "antarik-jalmarg-karak",
+     "learning_objective": "आंतरिक जलमार्गों के विकास को प्रभावित करने वाले कारकों को समझना।"
+    },
+    {
+     "concept_tag": "pramukh-antarik-jalmarg",
+     "learning_objective": "विश्व के प्रमुख आंतरिक जलमार्गों की विशेषताएँ पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY1-CH07-T6",
+   "topic_number": 6,
+   "title": "वायु परिवहन और पाइपलाइन",
+   "ncert_sections": "वायु परिवहन; पाइपलाइन",
+   "concepts": [
+    {
+     "concept_tag": "vayu-parivahan",
+     "learning_objective": "वायु परिवहन के लाभ, सीमाएँ और वायुमार्गों के वितरण को समझना।"
+    },
+    {
+     "concept_tag": "pipeline-parivahan",
+     "learning_objective": "पाइपलाइनों द्वारा ढोए जाने वाले पदार्थों और प्रमुख पाइपलाइनों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY1-CH07-T7",
+   "topic_number": 7,
+   "title": "संचार: दूरसंचार, उपग्रह संचार और साइबर स्पेस",
+   "ncert_sections": "संचार; उपग्रह संचार; साइबर स्पेस",
+   "concepts": [
+    {
+     "concept_tag": "doorsanchar",
+     "learning_objective": "दूरसंचार के विकास और प्रकाशीय तंतु केबल के महत्त्व को समझना।"
+    },
+    {
+     "concept_tag": "upgrah-sanchar",
+     "learning_objective": "उपग्रह संचार की विशेषताएँ और भारत की उपग्रह उपलब्धियाँ जानना।"
+    },
+    {
+     "concept_tag": "cyber-space",
+     "learning_objective": "साइबर स्पेस के अर्थ और मानव के आर्थिक-सामाजिक स्थान पर उसके प्रभाव का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

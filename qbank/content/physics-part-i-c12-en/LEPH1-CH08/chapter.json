@@ -1,0 +1,100 @@
+{
+ "chapter_id": "LEPH1-CH08",
+ "title": "Electromagnetic Waves",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH1-CH08-T1",
+   "topic_number": 1,
+   "title": "Displacement current and the Ampere-Maxwell law",
+   "ncert_sections": "8.1, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "displacement-current",
+     "learning_objective": "Explain how a time-varying electric field gives rise to a displacement current i_d = ε0 dΦE/dt that equals the conduction current in a charging capacitor."
+    },
+    {
+     "concept_tag": "ampere-maxwell-law",
+     "learning_objective": "State the Ampere-Maxwell law and explain how it restores consistency and symmetry between electric and magnetic laws."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH08-T2",
+   "topic_number": 2,
+   "title": "Sources of electromagnetic waves",
+   "ncert_sections": "8.3.1",
+   "concepts": [
+    {
+     "concept_tag": "accelerated-charge-radiation",
+     "learning_objective": "Identify accelerated (oscillating) charges as the source of electromagnetic waves whose frequency equals the frequency of oscillation."
+    },
+    {
+     "concept_tag": "hertz-bose-marconi",
+     "learning_objective": "Recall the experimental work of Hertz, J.C. Bose and Marconi on producing and transmitting electromagnetic waves."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH08-T3",
+   "topic_number": 3,
+   "title": "Nature of electromagnetic waves",
+   "ncert_sections": "8.3.2",
+   "concepts": [
+    {
+     "concept_tag": "transverse-field-orientation",
+     "learning_objective": "Describe the mutually perpendicular orientation of E, B and the direction of propagation in a plane electromagnetic wave."
+    },
+    {
+     "concept_tag": "wave-relations",
+     "learning_objective": "Use the relations ω = ck, νλ = c and B0 = E0/c to analyse a plane electromagnetic wave."
+    },
+    {
+     "concept_tag": "speed-in-medium",
+     "learning_objective": "Relate the speed of electromagnetic waves to μ0, ε0 in vacuum and to μ, ε in a material medium."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH08-T4",
+   "topic_number": 4,
+   "title": "Electromagnetic spectrum: radio waves, microwaves and infrared",
+   "ncert_sections": "8.4, 8.4.1, 8.4.2, 8.4.3",
+   "concepts": [
+    {
+     "concept_tag": "spectrum-classification",
+     "learning_objective": "Explain that regions of the electromagnetic spectrum differ in wavelength or frequency and are classified by production and detection."
+    },
+    {
+     "concept_tag": "radio-and-microwaves",
+     "learning_objective": "Describe the frequency bands, production and uses of radio waves and microwaves."
+    },
+    {
+     "concept_tag": "infrared-waves",
+     "learning_objective": "Explain why infrared waves are called heat waves and their role in the greenhouse effect."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH08-T5",
+   "topic_number": 5,
+   "title": "Visible light, ultraviolet, X-rays and gamma rays",
+   "ncert_sections": "8.4.4, 8.4.5, 8.4.6, 8.4.7",
+   "concepts": [
+    {
+     "concept_tag": "visible-and-ultraviolet",
+     "learning_objective": "Recall the range of visible light and the sources, effects and absorption of ultraviolet radiation."
+    },
+    {
+     "concept_tag": "x-rays-and-gamma-rays",
+     "learning_objective": "Describe the production, wavelength ranges and uses of X-rays and gamma rays."
+    },
+    {
+     "concept_tag": "production-and-detection",
+     "learning_objective": "Match each type of electromagnetic wave with its typical production method and detector (Table 8.1)."
+    }
+   ]
+  }
+ ]
+}

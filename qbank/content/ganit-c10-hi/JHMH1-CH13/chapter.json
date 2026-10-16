@@ -1,0 +1,88 @@
+{
+ "chapter_id": "JHMH1-CH13",
+ "title": "सांख्यिकी",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH13-T1",
+   "topic_number": 1,
+   "title": "वर्गीकृत आँकड़ों का माध्य: प्रत्यक्ष विधि",
+   "ncert_sections": "13.2",
+   "concepts": [
+    {
+     "concept_tag": "varg-chihn",
+     "learning_objective": "किसी वर्ग अंतराल का वर्ग चिह्न (मध्य-बिंदु) ज्ञात करना और माध्य की गणना में उसकी भूमिका समझना।"
+    },
+    {
+     "concept_tag": "pratyaksh-vidhi",
+     "learning_objective": "प्रत्यक्ष विधि के सूत्र Σfᵢxᵢ/Σfᵢ से वर्गीकृत आँकड़ों का माध्य ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH13-T2",
+   "topic_number": 2,
+   "title": "माध्य: कल्पित माध्य विधि और पद-विचलन विधि",
+   "ncert_sections": "13.2",
+   "concepts": [
+    {
+     "concept_tag": "kalpit-madhya-vidhi",
+     "learning_objective": "कल्पित माध्य a और विचलन dᵢ = xᵢ − a का प्रयोग करके माध्य ज्ञात करना।"
+    },
+    {
+     "concept_tag": "pad-vichalan-vidhi",
+     "learning_objective": "पद-विचलन uᵢ = (xᵢ − a)/h का प्रयोग करके माध्य ज्ञात करना और तीनों विधियों की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH13-T3",
+   "topic_number": 3,
+   "title": "वर्गीकृत आँकड़ों का बहुलक",
+   "ncert_sections": "13.3",
+   "concepts": [
+    {
+     "concept_tag": "bahulak-varg",
+     "learning_objective": "अधिकतम बारंबारता वाले वर्ग को बहुलक वर्ग के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "bahulak-sutra",
+     "learning_objective": "सूत्र l + [(f₁ − f₀)/(2f₁ − f₀ − f₂)] × h से बहुलक ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH13-T4",
+   "topic_number": 4,
+   "title": "संचयी बारंबारता और वर्गीकृत आँकड़ों का माध्यक",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "sanchayi-barambarta",
+     "learning_objective": "संचयी बारंबारता सारणी बनाना और उससे माध्यक वर्ग पहचानना।"
+    },
+    {
+     "concept_tag": "madhyak-sutra",
+     "learning_objective": "सूत्र l + [(n/2 − cf)/f] × h से वर्गीकृत आँकड़ों का माध्यक ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH13-T5",
+   "topic_number": 5,
+   "title": "केंद्रीय प्रवृत्ति के मापकों की तुलना और आनुभविक संबंध",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "anubhavik-sambandh",
+     "learning_objective": "आनुभविक संबंध 3 माध्यक = बहुलक + 2 माध्य का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "mapak-chayan",
+     "learning_objective": "किसी स्थिति के लिए माध्य, माध्यक या बहुलक में से उपयुक्त मापक चुनना।"
+    }
+   ]
+  }
+ ]
+}

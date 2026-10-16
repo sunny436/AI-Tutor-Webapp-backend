@@ -1,0 +1,128 @@
+{
+ "chapter_id": "KHAC1-CH01",
+ "title": "लेखांकन – एक परिचय",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHAC1-CH01-T1",
+   "topic_number": 1,
+   "title": "लेखांकन का अर्थ और प्रक्रिया",
+   "ncert_sections": "1.1, 1.1.1, 1.1.2, 1.1.3",
+   "concepts": [
+    {
+     "concept_tag": "lekhankan-paribhasha",
+     "learning_objective": "लेखांकन की परिभाषा और उसके ऐतिहासिक विकास को बताना।"
+    },
+    {
+     "concept_tag": "arthik-ghatnayen",
+     "learning_objective": "बाह्य और आंतरिक आर्थिक घटनाओं में अंतर पहचानना।"
+    },
+    {
+     "concept_tag": "pahchan-maapan-abhilekhan-sampreshan",
+     "learning_objective": "पहचान, मापन, अभिलेखन और संप्रेषण के चरणों को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH01-T2",
+   "topic_number": 2,
+   "title": "लेखांकन सूचना के उपयोगकर्ता और लेखांकन की शाखाएँ",
+   "ncert_sections": "1.1.4, 1.2",
+   "concepts": [
+    {
+     "concept_tag": "antarik-bahya-upyogkarta",
+     "learning_objective": "लेखांकन सूचना के आंतरिक और बाह्य उपयोगकर्ताओं की पहचान करना।"
+    },
+    {
+     "concept_tag": "lekhankan-ki-shakhayen",
+     "learning_objective": "वित्तीय, लागत और प्रबंध लेखांकन के उद्देश्यों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH01-T3",
+   "topic_number": 3,
+   "title": "लेखांकन सूचना की गुणात्मक विशेषताएँ",
+   "ncert_sections": "1.2.1",
+   "concepts": [
+    {
+     "concept_tag": "vishvasniyata-prasangikta",
+     "learning_objective": "विश्वसनीयता और प्रासंगिकता की विशेषताओं को समझाना।"
+    },
+    {
+     "concept_tag": "bodhgamyata-tulniyata",
+     "learning_objective": "बोधगम्यता और तुलनीयता की विशेषताओं को पहचानना और लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH01-T4",
+   "topic_number": 4,
+   "title": "लेखांकन के उद्देश्य",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "abhilekh-aur-labh-hani",
+     "learning_objective": "व्यावसायिक लेन-देनों के अभिलेख रखने और लाभ-हानि ज्ञात करने के उद्देश्य को समझाना।"
+    },
+    {
+     "concept_tag": "vittiya-sthiti-aur-suchna",
+     "learning_objective": "वित्तीय स्थिति दर्शाने तथा विभिन्न उपयोगकर्ताओं को सूचना देने के उद्देश्य का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH01-T5",
+   "topic_number": 5,
+   "title": "लेखांकन की भूमिका",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "lekhankan-ki-bhumika",
+     "learning_objective": "व्यवसाय की भाषा और सूचना प्रणाली के रूप में लेखांकन की भूमिका समझाना।"
+    },
+    {
+     "concept_tag": "lekhankan-ki-simayen",
+     "learning_objective": "लेखांकन सूचना की सीमाओं का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH01-T6",
+   "topic_number": 6,
+   "title": "आधारभूत शब्द: इकाई, लेन-देन, परिसंपत्ति, दायित्व और पूँजी",
+   "ncert_sections": "1.5.1 से 1.5.5",
+   "concepts": [
+    {
+     "concept_tag": "ikai-aur-len-den",
+     "learning_objective": "व्यावसायिक इकाई और लेन-देन का अर्थ बताना।"
+    },
+    {
+     "concept_tag": "parisampatti-dayitva-punji",
+     "learning_objective": "परिसंपत्तियों, दायित्वों और पूँजी को पहचानना और वर्गीकृत करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH01-T7",
+   "topic_number": 7,
+   "title": "आधारभूत शब्द: आगम, व्यय, लाभ, बट्टा, स्टॉक, देनदार और लेनदार",
+   "ncert_sections": "1.5.6 से 1.5.20",
+   "concepts": [
+    {
+     "concept_tag": "aagam-vyay-labh-hani",
+     "learning_objective": "आगम, व्यय, खर्च, लाभ, अभिलाभ और हानि में अंतर करना।"
+    },
+    {
+     "concept_tag": "batta-pramanak-aharan",
+     "learning_objective": "बट्टे, प्रमाणक, माल और आहरण की अवधारणाओं को लागू करना।"
+    },
+    {
+     "concept_tag": "stock-dendar-lendar",
+     "learning_objective": "स्टॉक, देनदार और लेनदार को पहचानना और तुलन-पत्र में उनकी स्थिति बताना।"
+    }
+   ]
+  }
+ ]
+}

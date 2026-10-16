@@ -1,0 +1,148 @@
+{
+ "chapter_id": "LECH1-CH02",
+ "title": "Electrochemistry",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECH1-CH02-T1",
+   "topic_number": 1,
+   "title": "Electrochemical cells and galvanic cells",
+   "ncert_sections": "2.1, 2.2",
+   "concepts": [
+    {
+     "concept_tag": "galvanic-vs-electrolytic-cell",
+     "learning_objective": "Distinguish a galvanic cell from an electrolytic cell using the Daniell cell under an external opposing potential."
+    },
+    {
+     "concept_tag": "cell-representation-and-emf",
+     "learning_objective": "Represent a galvanic cell by the standard notation and relate electron flow, anode, cathode and emf."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH02-T2",
+   "topic_number": 2,
+   "title": "Measurement of electrode potential and the electrochemical series",
+   "ncert_sections": "2.2.1",
+   "concepts": [
+    {
+     "concept_tag": "standard-hydrogen-electrode",
+     "learning_objective": "Explain how the standard hydrogen electrode is used to measure standard electrode potentials."
+    },
+    {
+     "concept_tag": "electrochemical-series",
+     "learning_objective": "Use standard electrode potentials to compare oxidising and reducing power and predict feasibility of reactions."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH02-T3",
+   "topic_number": 3,
+   "title": "Nernst equation",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "nernst-equation-form",
+     "learning_objective": "Write the Nernst equation for an electrode and for a cell, with the correct number of electrons and concentration terms."
+    },
+    {
+     "concept_tag": "nernst-calculations",
+     "learning_objective": "Calculate electrode and cell potentials at non-standard concentrations at 298 K."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH02-T4",
+   "topic_number": 4,
+   "title": "Equilibrium constant and Gibbs energy from cell potential",
+   "ncert_sections": "2.3.1, 2.3.2",
+   "concepts": [
+    {
+     "concept_tag": "gibbs-energy-and-emf",
+     "learning_objective": "Relate the standard Gibbs energy of a cell reaction to its standard cell potential using ΔrG° = –nFE°cell."
+    },
+    {
+     "concept_tag": "equilibrium-constant-from-emf",
+     "learning_objective": "Calculate the equilibrium constant of a cell reaction from its standard cell potential."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH02-T5",
+   "topic_number": 5,
+   "title": "Conductance of electrolytic solutions and its measurement",
+   "ncert_sections": "2.4, 2.4.1",
+   "concepts": [
+    {
+     "concept_tag": "resistivity-and-conductivity",
+     "learning_objective": "Define resistance, resistivity, conductance and conductivity and state their SI units and the factors affecting them."
+    },
+    {
+     "concept_tag": "conductivity-cell-measurement",
+     "learning_objective": "Determine the cell constant and conductivity of a solution using a conductivity cell and AC Wheatstone bridge."
+    },
+    {
+     "concept_tag": "molar-conductivity-definition",
+     "learning_objective": "Calculate molar conductivity from conductivity and concentration with correct units."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH02-T6",
+   "topic_number": 6,
+   "title": "Variation of conductivity with concentration and Kohlrausch's law",
+   "ncert_sections": "2.4.2",
+   "concepts": [
+    {
+     "concept_tag": "dilution-and-conductivity",
+     "learning_objective": "Explain why conductivity decreases and molar conductivity increases on dilution for strong and weak electrolytes."
+    },
+    {
+     "concept_tag": "kohlrausch-law",
+     "learning_objective": "Apply Kohlrausch's law of independent migration of ions to find limiting molar conductivities."
+    },
+    {
+     "concept_tag": "weak-electrolyte-dissociation",
+     "learning_objective": "Calculate the degree of dissociation and dissociation constant of a weak electrolyte from conductivity data."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH02-T7",
+   "topic_number": 7,
+   "title": "Electrolytic cells and electrolysis",
+   "ncert_sections": "2.5, 2.5.1",
+   "concepts": [
+    {
+     "concept_tag": "faradays-laws",
+     "learning_objective": "Apply Faraday's laws of electrolysis to relate charge passed to the amount of substance deposited or liberated."
+    },
+    {
+     "concept_tag": "products-of-electrolysis",
+     "learning_objective": "Predict the products of electrolysis using electrode potentials, the nature of electrodes and overpotential."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH02-T8",
+   "topic_number": 8,
+   "title": "Batteries, fuel cells and corrosion",
+   "ncert_sections": "2.6, 2.7, 2.8",
+   "concepts": [
+    {
+     "concept_tag": "primary-and-secondary-batteries",
+     "learning_objective": "Describe the construction and electrode reactions of the dry cell, mercury cell, lead storage battery and nickel-cadmium cell."
+    },
+    {
+     "concept_tag": "fuel-cells",
+     "learning_objective": "Explain the working of the hydrogen-oxygen fuel cell and its advantages."
+    },
+    {
+     "concept_tag": "corrosion-and-prevention",
+     "learning_objective": "Explain rusting of iron as an electrochemical process and evaluate methods of preventing corrosion."
+    }
+   ]
+  }
+ ]
+}

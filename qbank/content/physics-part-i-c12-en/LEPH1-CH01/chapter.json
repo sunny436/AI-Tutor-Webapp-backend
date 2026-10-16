@@ -1,0 +1,148 @@
+{
+ "chapter_id": "LEPH1-CH01",
+ "title": "Electric Charges and Fields",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH1-CH01-T1",
+   "topic_number": 1,
+   "title": "Electric charge, conductors and insulators",
+   "ncert_sections": "1.1, 1.2, 1.3",
+   "concepts": [
+    {
+     "concept_tag": "charging-by-rubbing",
+     "learning_objective": "Explain charging by rubbing as a transfer of electrons and predict attraction or repulsion between charged bodies."
+    },
+    {
+     "concept_tag": "conductors-and-insulators",
+     "learning_objective": "Distinguish conductors from insulators by the mobility of their charges and explain how each holds charge."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH01-T2",
+   "topic_number": 2,
+   "title": "Basic properties of electric charge",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "additivity-of-charge",
+     "learning_objective": "Add the charges of a system algebraically, treating charge as a scalar."
+    },
+    {
+     "concept_tag": "conservation-of-charge",
+     "learning_objective": "Apply conservation of charge to redistribution and particle processes in an isolated system."
+    },
+    {
+     "concept_tag": "quantisation-of-charge",
+     "learning_objective": "Use q = ne to relate the charge on a body to the number of electrons transferred."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH01-T3",
+   "topic_number": 3,
+   "title": "Coulomb's law",
+   "ncert_sections": "1.5",
+   "concepts": [
+    {
+     "concept_tag": "coulombs-law-statement",
+     "learning_objective": "State Coulomb's law and the inverse-square dependence of the force on distance."
+    },
+    {
+     "concept_tag": "coulomb-force-calculation",
+     "learning_objective": "Calculate the electrostatic force between two point charges in vacuum."
+    },
+    {
+     "concept_tag": "electric-vs-gravitational-force",
+     "learning_objective": "Compare electric and gravitational forces between charged particles."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH01-T4",
+   "topic_number": 4,
+   "title": "Forces between multiple charges",
+   "ncert_sections": "1.6",
+   "concepts": [
+    {
+     "concept_tag": "superposition-principle",
+     "learning_objective": "State the superposition principle for forces between several point charges."
+    },
+    {
+     "concept_tag": "net-force-on-charge",
+     "learning_objective": "Find the net force on a charge due to several charges by vector addition."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH01-T5",
+   "topic_number": 5,
+   "title": "Electric field and electric field lines",
+   "ncert_sections": "1.7, 1.8",
+   "concepts": [
+    {
+     "concept_tag": "electric-field-of-point-charge",
+     "learning_objective": "Define electric field and calculate the field of a point charge and its effect on charged particles."
+    },
+    {
+     "concept_tag": "electric-field-lines",
+     "learning_objective": "Interpret electric field lines and explain their general properties."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH01-T6",
+   "topic_number": 6,
+   "title": "Electric flux",
+   "ncert_sections": "1.9",
+   "concepts": [
+    {
+     "concept_tag": "electric-flux-definition",
+     "learning_objective": "Define electric flux as E.dS and calculate it for a flat surface in a uniform field."
+    },
+    {
+     "concept_tag": "area-vector",
+     "learning_objective": "Use the area vector and the outward-normal convention for closed surfaces."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH01-T7",
+   "topic_number": 7,
+   "title": "Electric dipole and dipole in an external field",
+   "ncert_sections": "1.10, 1.11",
+   "concepts": [
+    {
+     "concept_tag": "dipole-moment-and-field",
+     "learning_objective": "Describe the dipole moment and compare the fields of a short dipole on its axis and equatorial plane."
+    },
+    {
+     "concept_tag": "dipole-in-external-field",
+     "learning_objective": "Find the force and torque on a dipole in uniform and non-uniform electric fields."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH01-T8",
+   "topic_number": 8,
+   "title": "Continuous charge distribution, Gauss's law and its applications",
+   "ncert_sections": "1.12, 1.13, 1.14",
+   "concepts": [
+    {
+     "concept_tag": "charge-densities",
+     "learning_objective": "Define linear, surface and volume charge densities with their units."
+    },
+    {
+     "concept_tag": "gauss-law-statement",
+     "learning_objective": "State Gauss's law and use it to find the flux through a closed surface."
+    },
+    {
+     "concept_tag": "gauss-law-applications",
+     "learning_objective": "Apply Gauss's law to find the field of an infinite line charge and of plane sheets of charge."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1136 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "psychology-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "psychology",
+  "language": "english",
+  "title": "Psychology",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lepy1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEPY1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Variations in Psychological Attributes",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lepy101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPY1-CH01-T1",
+     "topic_number": 1,
+     "title": "Individual Differences and Assessment of Psychological Attributes",
+     "ncert_sections": "Individual Differences in Human Functioning; Assessment of Psychological Attributes",
+     "concepts": [
+      {
+       "concept_tag": "individual-differences-situationism",
+       "learning_objective": "Explain individual differences and how situationism accounts for behaviour through situational factors."
+      },
+      {
+       "concept_tag": "domains-of-psychological-attributes",
+       "learning_objective": "Identify the domains of intelligence, aptitude, interest, personality and values."
+      },
+      {
+       "concept_tag": "assessment-methods",
+       "learning_objective": "Distinguish formal from informal assessment and the methods of test, interview, case study, observation and self-report."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH01-T2",
+     "topic_number": 2,
+     "title": "Intelligence and Psychometric Theories",
+     "ncert_sections": "Intelligence; Theories of Intelligence",
+     "concepts": [
+      {
+       "concept_tag": "defining-intelligence",
+       "learning_objective": "State how Binet, Wechsler and later theorists defined intelligence."
+      },
+      {
+       "concept_tag": "psychometric-theories",
+       "learning_objective": "Describe the one-factor, two-factor, primary mental abilities, hierarchical and structure-of-intellect theories."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH01-T3",
+     "topic_number": 3,
+     "title": "Multiple Intelligences, Triarchic Theory and the PASS Model",
+     "ncert_sections": "Theory of Multiple Intelligences; Triarchic Theory of Intelligence; PASS Model of Intelligence",
+     "concepts": [
+      {
+       "concept_tag": "multiple-intelligences",
+       "learning_objective": "Identify Gardner's eight independent intelligences and the persons typically high on each."
+      },
+      {
+       "concept_tag": "triarchic-theory",
+       "learning_objective": "Distinguish componential, experiential and contextual intelligence in Sternberg's theory."
+      },
+      {
+       "concept_tag": "pass-model",
+       "learning_objective": "Explain arousal/attention, simultaneous and successive processing, and planning in the PASS model."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH01-T4",
+     "topic_number": 4,
+     "title": "Nature, Nurture and the Measurement of IQ",
+     "ncert_sections": "Intelligence: Interplay of Nature and Nurture; Assessment of Intelligence",
+     "concepts": [
+      {
+       "concept_tag": "nature-nurture-evidence",
+       "learning_objective": "Interpret twin and adoption evidence on heredity and environment in intelligence."
+      },
+      {
+       "concept_tag": "iq-computation",
+       "learning_objective": "Calculate IQ from mental age and chronological age, and mental age from IQ."
+      },
+      {
+       "concept_tag": "iq-distribution",
+       "learning_objective": "Interpret the normal distribution of IQ scores and the classification in Table 1.1."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH01-T5",
+     "topic_number": 5,
+     "title": "Variations of Intelligence",
+     "ncert_sections": "Variations of Intelligence: Intellectual Deficiency; Intellectual Giftedness",
+     "concepts": [
+      {
+       "concept_tag": "intellectual-disability",
+       "learning_objective": "Explain the AAMD definition and the levels of intellectual disability."
+      },
+      {
+       "concept_tag": "intellectual-giftedness",
+       "learning_objective": "Distinguish giftedness from talent and describe how gifted children are identified."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH01-T6",
+     "topic_number": 6,
+     "title": "Types of Intelligence Tests and Testing in India",
+     "ncert_sections": "Types of Intelligence Tests; Some Misuses of Intelligence Tests (Box 1.1); Intelligence Testing in India",
+     "concepts": [
+      {
+       "concept_tag": "types-of-intelligence-tests",
+       "learning_objective": "Distinguish individual and group, verbal, non-verbal and performance, and culture-fair and culture-biased tests."
+      },
+      {
+       "concept_tag": "misuses-of-intelligence-tests",
+       "learning_objective": "Recognise the ill-effects of intelligence testing by untrained testers."
+      },
+      {
+       "concept_tag": "intelligence-testing-in-india",
+       "learning_objective": "Identify pioneering efforts and tests in intelligence testing in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH01-T7",
+     "topic_number": 7,
+     "title": "Culture, Intelligence and Emotional Intelligence",
+     "ncert_sections": "Culture and Intelligence; Intelligence in the Indian Tradition; Emotional Intelligence",
+     "concepts": [
+      {
+       "concept_tag": "culture-and-intelligence",
+       "learning_objective": "Compare technological intelligence with non-western views and Vygotsky's view of culture."
+      },
+      {
+       "concept_tag": "buddhi-indian-tradition",
+       "learning_objective": "Describe integral intelligence, buddhi and the competencies valued in the Indian tradition."
+      },
+      {
+       "concept_tag": "emotional-intelligence",
+       "learning_objective": "Explain emotional intelligence and the characteristics of emotionally intelligent persons."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH01-T8",
+     "topic_number": 8,
+     "title": "Aptitude and Creativity",
+     "ncert_sections": "Special Abilities: Aptitude: Nature and Measurement; Creativity; Creativity and Intelligence",
+     "concepts": [
+      {
+       "concept_tag": "aptitude-nature-measurement",
+       "learning_objective": "Explain aptitude, how it differs from interest, and how independent and multiple aptitude tests measure it."
+      },
+      {
+       "concept_tag": "creativity-variations",
+       "learning_objective": "Explain variations in creativity and the roles of heredity and environment."
+      },
+      {
+       "concept_tag": "creativity-and-intelligence",
+       "learning_objective": "Evaluate the relationship between creativity and intelligence and how creativity tests differ."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPY1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Self and Personality",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lepy102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPY1-CH02-T1",
+     "topic_number": 1,
+     "title": "Concept of Self",
+     "ncert_sections": "Concept of Self; Self as Subject and Self as Object; Kinds of Self",
+     "concepts": [
+      {
+       "concept_tag": "personal-and-social-identity",
+       "learning_objective": "Distinguish personal identity from social identity using a person's self-descriptions."
+      },
+      {
+       "concept_tag": "self-as-subject-and-object",
+       "learning_objective": "Explain the dual status of the self as a subject (knower) and as an object (known)."
+      },
+      {
+       "concept_tag": "kinds-of-self",
+       "learning_objective": "Describe the biological, personal and social (relational) self and how they emerge."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH02-T2",
+     "topic_number": 2,
+     "title": "Cognitive and Behavioural Aspects of Self",
+     "ncert_sections": "Self-concept; Self-esteem; Self-efficacy; Self-regulation",
+     "concepts": [
+      {
+       "concept_tag": "self-concept-and-self-esteem",
+       "learning_objective": "Define self-concept and self-esteem and relate self-esteem to behaviour and parenting."
+      },
+      {
+       "concept_tag": "self-efficacy",
+       "learning_objective": "Explain self-efficacy, its basis in Bandura's social learning theory and how it develops."
+      },
+      {
+       "concept_tag": "self-regulation",
+       "learning_objective": "Apply the techniques of self-regulation and self-control to everyday situations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH02-T3",
+     "topic_number": 3,
+     "title": "Culture and Self",
+     "ncert_sections": "Culture and Self",
+     "concepts": [
+      {
+       "concept_tag": "indian-and-western-self",
+       "learning_objective": "Compare the Indian and Western views of the boundary between self and other."
+      },
+      {
+       "concept_tag": "individualism-and-collectivism",
+       "learning_objective": "Relate individualistic and collectivistic cultures to the way self and group are related."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH02-T4",
+     "topic_number": 4,
+     "title": "Concept of Personality",
+     "ncert_sections": "Concept of Personality; Box 2.1 Personality-related Terms",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-personality",
+       "learning_objective": "State the origin and psychological meaning of the term personality."
+      },
+      {
+       "concept_tag": "features-of-personality",
+       "learning_objective": "Identify the main features of personality and use them to understand and deal with people."
+      },
+      {
+       "concept_tag": "personality-related-terms",
+       "learning_objective": "Distinguish temperament, trait, disposition, character, habit and values."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH02-T5",
+     "topic_number": 5,
+     "title": "Type and Trait Approaches",
+     "ncert_sections": "Type Approaches; Trait Approaches; Box 2.2 Five-Factor Model",
+     "concepts": [
+      {
+       "concept_tag": "type-approaches",
+       "learning_objective": "Describe the typologies of Hippocrates, Charak Samhita, Sheldon, Jung and Friedman and Rosenman."
+      },
+      {
+       "concept_tag": "trait-approaches",
+       "learning_objective": "Explain the trait theories of Allport, Cattell and Eysenck."
+      },
+      {
+       "concept_tag": "five-factor-model",
+       "learning_objective": "Interpret a personality description in terms of the Big Five factors."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH02-T6",
+     "topic_number": 6,
+     "title": "Psychodynamic Approach",
+     "ncert_sections": "Psychodynamic Approach; Post-Freudian Approaches",
+     "concepts": [
+      {
+       "concept_tag": "freudian-theory",
+       "learning_objective": "Explain Freud's levels of consciousness, structure of personality and stages of development."
+      },
+      {
+       "concept_tag": "defence-mechanisms",
+       "learning_objective": "Identify ego defence mechanisms such as repression, projection, denial, reaction formation and rationalisation."
+      },
+      {
+       "concept_tag": "post-freudian-approaches",
+       "learning_objective": "Describe the contributions of Jung, Horney, Adler, Fromm and Erikson."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH02-T7",
+     "topic_number": 7,
+     "title": "Behavioural, Cultural and Humanistic Approaches",
+     "ncert_sections": "Behavioural Approach; Cultural Approach; Humanistic Approach; Box 2.3",
+     "concepts": [
+      {
+       "concept_tag": "behavioural-approach",
+       "learning_objective": "Explain how the behavioural approach views personality as learnt responses to the environment."
+      },
+      {
+       "concept_tag": "cultural-approach",
+       "learning_objective": "Explain personality as an adaptation to the ecological and cultural demands of a group."
+      },
+      {
+       "concept_tag": "humanistic-approach",
+       "learning_objective": "Explain Rogers' real and ideal self and Maslow's idea of self-actualisation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH02-T8",
+     "topic_number": 8,
+     "title": "Assessment of Personality",
+     "ncert_sections": "Assessment of Personality; Self-report Measures; Projective Techniques; Behavioural Analysis",
+     "concepts": [
+      {
+       "concept_tag": "self-report-measures",
+       "learning_objective": "Describe MMPI, EPQ and 16PF and the problems of self-report measures."
+      },
+      {
+       "concept_tag": "projective-techniques",
+       "learning_objective": "Explain the assumptions, features and examples of projective techniques."
+      },
+      {
+       "concept_tag": "behavioural-analysis",
+       "learning_objective": "Describe interview, observation, ratings, nomination and situational tests and their limitations."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPY1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Meeting Life Challenges",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lepy103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPY1-CH03-T1",
+     "topic_number": 1,
+     "title": "Nature of stress",
+     "ncert_sections": "Introduction; Nature, Types and Sources of Stress; Nature of Stress",
+     "concepts": [
+      {
+       "concept_tag": "eustress-and-distress",
+       "learning_objective": "Distinguish eustress from distress and explain stress as a pattern of responses to demands that exceed coping ability."
+      },
+      {
+       "concept_tag": "cognitive-appraisal",
+       "learning_objective": "Explain Lazarus's primary and secondary appraisal and the harm, threat and challenge appraisals of an event."
+      },
+      {
+       "concept_tag": "stress-dimensions-and-responses",
+       "learning_objective": "Describe stress reactions and how intensity, duration, complexity and predictability shape the outcome of stress."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH03-T2",
+     "topic_number": 2,
+     "title": "Types and sources of stress",
+     "ncert_sections": "Types of Stress; Sources of Stress; Box 3.1",
+     "concepts": [
+      {
+       "concept_tag": "types-of-stress",
+       "learning_objective": "Identify physical and environmental, psychological and social stress with examples."
+      },
+      {
+       "concept_tag": "psychological-stress-sources",
+       "learning_objective": "Explain frustration, conflict, internal pressure and social pressure as sources of psychological stress."
+      },
+      {
+       "concept_tag": "life-events-hassles-trauma",
+       "learning_objective": "Distinguish life events, daily hassles and traumatic events and interpret life event measures of stress."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH03-T3",
+     "topic_number": 3,
+     "title": "Effects of stress on psychological functioning",
+     "ncert_sections": "Effects of Stress on Psychological Functioning and Health; Box 3.2",
+     "concepts": [
+      {
+       "concept_tag": "four-effects-of-stress",
+       "learning_objective": "Classify emotional, physiological, cognitive and behavioural effects of stress."
+      },
+      {
+       "concept_tag": "examination-anxiety",
+       "learning_objective": "Explain how examination anxiety can help or impair a student's performance."
+      },
+      {
+       "concept_tag": "burnout",
+       "learning_objective": "Define burnout as a state of physical, emotional and psychological exhaustion."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH03-T4",
+     "topic_number": 4,
+     "title": "Stress and health",
+     "ncert_sections": "Stress and Health; General Adaptation Syndrome; Stress and the Immune System; Lifestyle",
+     "concepts": [
+      {
+       "concept_tag": "general-adaptation-syndrome",
+       "learning_objective": "Describe the alarm reaction, resistance and exhaustion stages of Selye's General Adaptation Syndrome."
+      },
+      {
+       "concept_tag": "stress-and-immune-system",
+       "learning_objective": "Explain how stress impairs the immune system, as studied by psychoneuroimmunology."
+      },
+      {
+       "concept_tag": "lifestyle-and-health",
+       "learning_objective": "Analyse how stress leads to health-damaging lifestyle behaviours."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH03-T5",
+     "topic_number": 5,
+     "title": "Coping with stress",
+     "ncert_sections": "Coping with Stress",
+     "concepts": [
+      {
+       "concept_tag": "endler-parker-coping-strategies",
+       "learning_objective": "Distinguish the task-oriented, emotion-oriented and avoidance-oriented coping strategies of Endler and Parker."
+      },
+      {
+       "concept_tag": "problem-and-emotion-focused-coping",
+       "learning_objective": "Differentiate problem-focused and emotion-focused coping as described by Lazarus and Folkman."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH03-T6",
+     "topic_number": 6,
+     "title": "Stress management techniques",
+     "ncert_sections": "Stress Management Techniques",
+     "concepts": [
+      {
+       "concept_tag": "relaxation-meditation-biofeedback",
+       "learning_objective": "Describe relaxation, meditation and the stages of biofeedback training."
+      },
+      {
+       "concept_tag": "stress-inoculation-training",
+       "learning_objective": "Explain the aim and phases of Meichenbaum's stress inoculation training."
+      },
+      {
+       "concept_tag": "visualisation-and-exercise",
+       "learning_objective": "Explain how creative visualisation and exercise help to manage stress."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH03-T7",
+     "topic_number": 7,
+     "title": "Hardiness and life skills",
+     "ncert_sections": "Promoting Positive Health and Well-being; Life Skills",
+     "concepts": [
+      {
+       "concept_tag": "hardiness",
+       "learning_objective": "Explain Kobasa's stress resistant personality and its three Cs: commitment, control and challenge."
+      },
+      {
+       "concept_tag": "life-skills",
+       "learning_objective": "Identify life skills such as assertiveness, time management, rational thinking, improving relationships and self-care."
+      },
+      {
+       "concept_tag": "unhelpful-habits",
+       "learning_objective": "Recognise perfectionism, avoidance and procrastination as unhelpful habits that increase vulnerability to stress."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH03-T8",
+     "topic_number": 8,
+     "title": "Factors promoting positive health",
+     "ncert_sections": "Box 3.3; factors facilitating positive health",
+     "concepts": [
+      {
+       "concept_tag": "resilience",
+       "learning_objective": "Explain resilience and its I HAVE, I AM and I CAN resources."
+      },
+      {
+       "concept_tag": "positive-attitude-and-thinking",
+       "learning_objective": "Explain how diet, exercise, positive attitude and optimism act as stress buffers."
+      },
+      {
+       "concept_tag": "social-support",
+       "learning_objective": "Distinguish tangible, informational and emotional social support and explain their effect on well-being."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPY1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Psychological Disorders",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lepy104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPY1-CH04-T1",
+     "topic_number": 1,
+     "title": "Concepts of abnormality and historical background",
+     "ncert_sections": "Introduction; Concepts of Abnormality and Psychological Disorders; Historical Background",
+     "concepts": [
+      {
+       "concept_tag": "four-ds-of-abnormality",
+       "learning_objective": "Identify the four Ds (deviance, distress, dysfunction, danger) common to definitions of psychological disorders."
+      },
+      {
+       "concept_tag": "social-norm-vs-maladaptive-views",
+       "learning_objective": "Distinguish the view of abnormality as deviation from social norms from the view of abnormality as maladaptive behaviour."
+      },
+      {
+       "concept_tag": "historical-perspectives",
+       "learning_objective": "Trace the supernatural, biological and psychological perspectives on abnormal behaviour through history to the bio-psycho-social approach."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH04-T2",
+     "topic_number": 2,
+     "title": "Classification of psychological disorders",
+     "ncert_sections": "Classification of Psychological Disorders; Activity 4.2",
+     "concepts": [
+      {
+       "concept_tag": "dsm-and-icd-systems",
+       "learning_objective": "State the features of DSM-5 (American Psychiatric Association) and ICD-10 (World Health Organisation)."
+      },
+      {
+       "concept_tag": "uses-of-classification",
+       "learning_objective": "Explain why classifying psychological disorders is useful to professionals."
+      },
+      {
+       "concept_tag": "context-in-judging-abnormality",
+       "learning_objective": "Evaluate why the situation in which a behaviour occurs matters in judging it as abnormal."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH04-T3",
+     "topic_number": 3,
+     "title": "Factors underlying abnormal behaviour",
+     "ncert_sections": "Factors Underlying Abnormal Behaviour",
+     "concepts": [
+      {
+       "concept_tag": "biological-factors-neurotransmitters",
+       "learning_objective": "Relate genetic and neurotransmitter factors to specific psychological disorders."
+      },
+      {
+       "concept_tag": "psychological-models",
+       "learning_objective": "Explain abnormal behaviour using the psychodynamic, behavioural, cognitive and humanistic-existential models."
+      },
+      {
+       "concept_tag": "sociocultural-and-diathesis-stress",
+       "learning_objective": "Apply the socio-cultural model and the diathesis-stress model to explain the onset of disorders."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH04-T4",
+     "topic_number": 4,
+     "title": "Anxiety, obsessive-compulsive and trauma-related disorders",
+     "ncert_sections": "Anxiety Disorders; Obsessive-Compulsive and Related Disorders; Trauma- and Stressor-Related Disorders",
+     "concepts": [
+      {
+       "concept_tag": "anxiety-disorders",
+       "learning_objective": "Identify generalised anxiety disorder, panic disorder and separation anxiety disorder, and when anxiety becomes a disorder."
+      },
+      {
+       "concept_tag": "phobias",
+       "learning_objective": "Distinguish specific phobias, social anxiety disorder and agoraphobia."
+      },
+      {
+       "concept_tag": "ocd-and-ptsd",
+       "learning_objective": "Distinguish obsessions from compulsions and recognise the symptoms of post-traumatic stress disorder."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH04-T5",
+     "topic_number": 5,
+     "title": "Somatic symptom and dissociative disorders",
+     "ncert_sections": "Somatic Symptom and Related Disorders; Dissociative Disorders; Box 4.1",
+     "concepts": [
+      {
+       "concept_tag": "somatic-symptom-disorders",
+       "learning_objective": "Distinguish somatic symptom disorder, illness anxiety disorder and conversion disorder."
+      },
+      {
+       "concept_tag": "dissociative-disorders",
+       "learning_objective": "Describe dissociative amnesia, fugue, dissociative identity disorder and depersonalisation/derealisation disorder."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH04-T6",
+     "topic_number": 6,
+     "title": "Depressive and bipolar disorders; suicide",
+     "ncert_sections": "Depressive Disorders; Bipolar and Related Disorders; Suicide",
+     "concepts": [
+      {
+       "concept_tag": "major-depressive-disorder",
+       "learning_objective": "Identify the symptoms of and risk factors for major depressive disorder."
+      },
+      {
+       "concept_tag": "bipolar-disorders",
+       "learning_objective": "Describe bipolar I disorder and the related disorders in this category."
+      },
+      {
+       "concept_tag": "suicide-prevention",
+       "learning_objective": "Evaluate risk factors for suicide and measures for identifying and helping students in distress."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH04-T7",
+     "topic_number": 7,
+     "title": "Schizophrenia spectrum and other psychotic disorders",
+     "ncert_sections": "Schizophrenia Spectrum and Other Psychotic Disorders",
+     "concepts": [
+      {
+       "concept_tag": "positive-symptoms",
+       "learning_objective": "Classify delusions, formal thought disorders, hallucinations and inappropriate affect as positive symptoms."
+      },
+      {
+       "concept_tag": "negative-and-psychomotor-symptoms",
+       "learning_objective": "Distinguish negative symptoms (alogia, blunted affect, avolition) from psychomotor symptoms such as catatonia."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH04-T8",
+     "topic_number": 8,
+     "title": "Neurodevelopmental, conduct, eating and substance-related disorders",
+     "ncert_sections": "Neurodevelopmental Disorders; Disruptive, Impulse-Control and Conduct Disorders; Feeding and Eating Disorders; Substance-Related and Addictive Disorders",
+     "concepts": [
+      {
+       "concept_tag": "neurodevelopmental-disorders",
+       "learning_objective": "Describe ADHD, autism spectrum disorder, intellectual disability and specific learning disorder."
+      },
+      {
+       "concept_tag": "conduct-and-eating-disorders",
+       "learning_objective": "Identify features of oppositional defiant disorder, conduct disorder and the eating disorders."
+      },
+      {
+       "concept_tag": "substance-related-disorders",
+       "learning_objective": "Explain tolerance, withdrawal and the effects of alcohol, heroin and cocaine."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPY1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Therapeutic Approaches",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lepy105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPY1-CH05-T1",
+     "topic_number": 1,
+     "title": "Nature and process of psychotherapy and the therapeutic relationship",
+     "ncert_sections": "Nature and Process of Psychotherapy; Therapeutic Relationship",
+     "concepts": [
+      {
+       "concept_tag": "psychotherapy-nature-and-goals",
+       "learning_objective": "Describe the characteristics and goals shared by all psychotherapeutic approaches."
+      },
+      {
+       "concept_tag": "therapeutic-alliance",
+       "learning_objective": "Explain the components and unique properties of the therapeutic alliance, including unconditional positive regard."
+      },
+      {
+       "concept_tag": "empathy-vs-sympathy",
+       "learning_objective": "Distinguish empathy from sympathy and intellectual understanding."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH05-T2",
+     "topic_number": 2,
+     "title": "Types of therapies and clinical formulation",
+     "ncert_sections": "Type of Therapies; Box 5.1",
+     "concepts": [
+      {
+       "concept_tag": "classification-of-psychotherapies",
+       "learning_objective": "Compare psychodynamic, behaviour and existential therapies on the parameters used to classify them."
+      },
+      {
+       "concept_tag": "clinical-formulation",
+       "learning_objective": "Explain the advantages of clinical formulation of a client's problem."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH05-T3",
+     "topic_number": 3,
+     "title": "Behaviour therapy",
+     "ncert_sections": "Behaviour Therapy; Box 5.2",
+     "concepts": [
+      {
+       "concept_tag": "behavioural-analysis",
+       "learning_objective": "Identify malfunctioning behaviours, antecedent and maintaining factors, and establishing operations."
+      },
+      {
+       "concept_tag": "behaviour-modification-techniques",
+       "learning_objective": "Apply techniques such as reinforcement, aversive conditioning, token economy and differential reinforcement."
+      },
+      {
+       "concept_tag": "systematic-desensitisation",
+       "learning_objective": "Explain systematic desensitisation, reciprocal inhibition and relaxation procedures."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH05-T4",
+     "topic_number": 4,
+     "title": "Cognitive therapy and cognitive behaviour therapy",
+     "ncert_sections": "Cognitive Therapy; Cognitive Behaviour Therapy",
+     "concepts": [
+      {
+       "concept_tag": "rational-emotive-therapy",
+       "learning_objective": "Explain Ellis's ABC analysis and the disputing of irrational beliefs in RET."
+      },
+      {
+       "concept_tag": "beck-cognitive-therapy",
+       "learning_objective": "Describe Beck's account of core schemas, critical incidents and negative automatic thoughts."
+      },
+      {
+       "concept_tag": "cognitive-behaviour-therapy",
+       "learning_objective": "Explain the bio-psychosocial rationale of cognitive behaviour therapy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH05-T5",
+     "topic_number": 5,
+     "title": "Humanistic-existential therapies",
+     "ncert_sections": "Humanistic-existential Therapy; Existential Therapy; Client-centred Therapy; Gestalt Therapy",
+     "concepts": [
+      {
+       "concept_tag": "self-actualisation",
+       "learning_objective": "Explain how frustration of self-actualisation causes distress and how humanistic therapy heals."
+      },
+      {
+       "concept_tag": "logotherapy",
+       "learning_objective": "Describe Frankl's logotherapy and the process of meaning making."
+      },
+      {
+       "concept_tag": "client-centred-and-gestalt-therapy",
+       "learning_objective": "Describe the techniques and goals of client-centred and gestalt therapy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH05-T6",
+     "topic_number": 6,
+     "title": "Factors contributing to healing and ethics in psychotherapy",
+     "ncert_sections": "Factors Contributing to Healing in Psychotherapy; Ethics in Psychotherapy",
+     "concepts": [
+      {
+       "concept_tag": "healing-factors",
+       "learning_objective": "Identify techniques, therapeutic alliance, catharsis and non-specific factors as contributors to healing."
+      },
+      {
+       "concept_tag": "ethics-in-psychotherapy",
+       "learning_objective": "State the ethical standards to be practised by professional psychotherapists."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH05-T7",
+     "topic_number": 7,
+     "title": "Alternative therapies",
+     "ncert_sections": "Alternative Therapies",
+     "concepts": [
+      {
+       "concept_tag": "yoga-and-meditation",
+       "learning_objective": "Distinguish yoga, focused meditation and Vipasana meditation as alternative therapies."
+      },
+      {
+       "concept_tag": "research-on-yogic-practices",
+       "learning_objective": "Describe research findings on SKY, Kundalini Yoga and mindfulness-based meditation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH05-T8",
+     "topic_number": 8,
+     "title": "Rehabilitation of the mentally ill",
+     "ncert_sections": "Rehabilitation of the Mentally Ill",
+     "concepts": [
+      {
+       "concept_tag": "need-for-rehabilitation",
+       "learning_objective": "Explain why rehabilitation is needed when symptom reduction does not improve quality of life."
+      },
+      {
+       "concept_tag": "rehabilitation-techniques",
+       "learning_objective": "Distinguish occupational therapy, social skills training, cognitive retraining and vocational training."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPY1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Attitude and Social Cognition",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lepy106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPY1-CH06-T1",
+     "topic_number": 1,
+     "title": "Nature and Components of Attitudes",
+     "ncert_sections": "Nature and Components of Attitudes; Box 6.1",
+     "concepts": [
+      {
+       "concept_tag": "abc-components-of-attitude",
+       "learning_objective": "Identify the affective, behavioural (conative) and cognitive components of an attitude and how far they agree."
+      },
+      {
+       "concept_tag": "attitude-versus-opinion",
+       "learning_objective": "Distinguish an attitude from a mere opinion and from actual behaviour."
+      },
+      {
+       "concept_tag": "beliefs-and-values",
+       "learning_objective": "Distinguish attitudes from beliefs and values."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH06-T2",
+     "topic_number": 2,
+     "title": "Features of Attitudes",
+     "ncert_sections": "Nature and Components of Attitudes (Valence, Extremeness, Simplicity or Complexity, Centrality)",
+     "concepts": [
+      {
+       "concept_tag": "valence-and-extremeness",
+       "learning_objective": "Interpret the valence and extremeness of an attitude from ratings on a scale."
+      },
+      {
+       "concept_tag": "simplicity-complexity-multiplexity",
+       "learning_objective": "Explain simple and complex (multiplex) attitude systems with member attitudes."
+      },
+      {
+       "concept_tag": "centrality-of-attitude",
+       "learning_objective": "Explain the role of a central attitude within an attitude system."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH06-T3",
+     "topic_number": 3,
+     "title": "Attitude Formation",
+     "ncert_sections": "Attitude Formation: Process of Attitude Formation; Factors that Influence Attitude Formation",
+     "concepts": [
+      {
+       "concept_tag": "processes-of-attitude-formation",
+       "learning_objective": "Explain learning of attitudes by association, reward and punishment, modelling, group norms and exposure to information."
+      },
+      {
+       "concept_tag": "factors-in-attitude-formation",
+       "learning_objective": "Describe how family and school, reference groups, personal experiences and media shape attitudes."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH06-T4",
+     "topic_number": 4,
+     "title": "Process of Attitude Change",
+     "ncert_sections": "Attitude Change: Process of Attitude Change; Box 6.2",
+     "concepts": [
+      {
+       "concept_tag": "balance-pox-triangle",
+       "learning_objective": "Apply Heider's P-O-X triangle to judge balance and imbalance."
+      },
+      {
+       "concept_tag": "cognitive-dissonance",
+       "learning_objective": "Explain Festinger's cognitive dissonance and the Festinger and Carlsmith experiment."
+      },
+      {
+       "concept_tag": "two-step-concept",
+       "learning_objective": "Describe Mohsin's two-step concept of attitude change through identification and imitation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH06-T5",
+     "topic_number": 5,
+     "title": "Factors that Influence Attitude Change",
+     "ncert_sections": "Attitude Change: Factors that Influence Attitude Change",
+     "concepts": [
+      {
+       "concept_tag": "existing-attitude-characteristics",
+       "learning_objective": "Explain how properties of the existing attitude and the direction of change affect attitude change."
+      },
+      {
+       "concept_tag": "source-message-target",
+       "learning_objective": "Analyse how source, message and target characteristics influence attitude change."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH06-T6",
+     "topic_number": 6,
+     "title": "Attitude-Behaviour Relationship",
+     "ncert_sections": "Attitude-Behaviour Relationship",
+     "concepts": [
+      {
+       "concept_tag": "attitude-behaviour-consistency",
+       "learning_objective": "State the conditions under which attitudes and behaviour are consistent, with LaPiere's study."
+      },
+      {
+       "concept_tag": "behaviour-shapes-attitude",
+       "learning_objective": "Explain how behaviour can sometimes decide the attitude."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH06-T7",
+     "topic_number": 7,
+     "title": "Prejudice and Discrimination",
+     "ncert_sections": "Prejudice and Discrimination",
+     "concepts": [
+      {
+       "concept_tag": "prejudice-stereotype-discrimination",
+       "learning_objective": "Distinguish stereotype, prejudice and discrimination as components of attitudes towards a group."
+      },
+      {
+       "concept_tag": "sources-of-prejudice",
+       "learning_objective": "Identify the sources of prejudice such as learning, ingroup bias, scapegoating, kernel of truth and self-fulfilling prophecy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH06-T8",
+     "topic_number": 8,
+     "title": "Strategies for Handling Prejudice",
+     "ncert_sections": "Strategies for Handling Prejudice",
+     "concepts": [
+      {
+       "concept_tag": "strategies-for-handling-prejudice",
+       "learning_objective": "Describe the aims and strategies for handling prejudice."
+      },
+      {
+       "concept_tag": "intergroup-contact-conditions",
+       "learning_objective": "Evaluate the conditions under which intergroup contact reduces prejudice."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPY1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Social Influence and Group Processes",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lepy107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPY1-CH07-T1",
+     "topic_number": 1,
+     "title": "What is a group: characteristics, and groups versus crowds, teams, audiences and mobs",
+     "ncert_sections": "Nature and Formation of Groups: What is a Group?",
+     "concepts": [
+      {
+       "concept_tag": "group-characteristics",
+       "learning_objective": "Define a group and identify its salient characteristics such as interdependence, roles, norms and a sense of belonging."
+      },
+      {
+       "concept_tag": "groups-crowds-teams-mobs",
+       "learning_objective": "Distinguish groups from crowds, teams, audiences and mobs."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH07-T2",
+     "topic_number": 2,
+     "title": "Why do people join groups?",
+     "ncert_sections": "Why Do People Join Groups?",
+     "concepts": [
+      {
+       "concept_tag": "security-status-self-esteem",
+       "learning_objective": "Explain how groups satisfy needs for security, status and self-esteem."
+      },
+      {
+       "concept_tag": "goals-needs-information",
+       "learning_objective": "Explain how groups help in goal achievement, satisfy social needs and provide knowledge and information."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH07-T3",
+     "topic_number": 3,
+     "title": "Group formation and Tuckman's stages of group development",
+     "ncert_sections": "Group Formation; Stages of Group Formation",
+     "concepts": [
+      {
+       "concept_tag": "proximity-similarity-common-goals",
+       "learning_objective": "Explain how proximity, similarity and common motives and goals facilitate group formation."
+      },
+      {
+       "concept_tag": "tuckman-stages",
+       "learning_objective": "Describe Tuckman's stages of forming, storming, norming, performing and adjourning and recognise them in real groups."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH07-T4",
+     "topic_number": 4,
+     "title": "Group structure: roles, norms, status, cohesiveness and groupthink",
+     "ncert_sections": "Stages of Group Formation (group structure); Box 7.1 Groupthink",
+     "concepts": [
+      {
+       "concept_tag": "roles-norms-status",
+       "learning_objective": "Explain roles, norms and ascribed versus achieved status as elements of group structure."
+      },
+      {
+       "concept_tag": "cohesiveness",
+       "learning_objective": "Explain group cohesiveness and why extreme cohesiveness may not be in a group's interest."
+      },
+      {
+       "concept_tag": "groupthink",
+       "learning_objective": "Describe groupthink, the conditions that favour it and ways to prevent it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH07-T5",
+     "topic_number": 5,
+     "title": "Types of groups and the minimal group paradigm",
+     "ncert_sections": "Type of Groups; Box 7.2 The Minimal Group Paradigm Experiments",
+     "concepts": [
+      {
+       "concept_tag": "primary-secondary-groups",
+       "learning_objective": "Distinguish primary groups from secondary groups."
+      },
+      {
+       "concept_tag": "formal-informal-groups",
+       "learning_objective": "Distinguish formal groups from informal groups."
+      },
+      {
+       "concept_tag": "ingroup-outgroup-bias",
+       "learning_objective": "Explain ingroup and outgroup perceptions and interpret Tajfel's minimal group paradigm."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH07-T6",
+     "topic_number": 6,
+     "title": "Social facilitation and social loafing",
+     "ncert_sections": "Influence of Group on Individual Behaviour: Social Loafing",
+     "concepts": [
+      {
+       "concept_tag": "facilitation-and-loafing",
+       "learning_objective": "Distinguish social facilitation from social loafing and describe Latane's findings."
+      },
+      {
+       "concept_tag": "causes-of-social-loafing",
+       "learning_objective": "Explain why social loafing occurs on collective tasks."
+      },
+      {
+       "concept_tag": "reducing-social-loafing",
+       "learning_objective": "Suggest ways of reducing social loafing in groups."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPY1-CH07-T7",
+     "topic_number": 7,
+     "title": "Group polarisation",
+     "ncert_sections": "Group Polarisation",
+     "concepts": [
+      {
+       "concept_tag": "group-polarisation-meaning",
+       "learning_objective": "Define group polarisation and predict its effect on group decisions."
+      },
+      {
+       "concept_tag": "causes-of-polarisation",
+       "learning_objective": "Explain the three reasons why group polarisation occurs."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

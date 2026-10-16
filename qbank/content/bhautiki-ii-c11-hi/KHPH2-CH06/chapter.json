@@ -1,0 +1,116 @@
+{
+ "chapter_id": "KHPH2-CH06",
+ "title": "दोलन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH2-CH06-T1",
+   "topic_number": 1,
+   "title": "आवर्ती और दोलनी गतियाँ, आवर्तकाल और आवृत्ति",
+   "ncert_sections": "13.1, 13.2",
+   "concepts": [
+    {
+     "concept_tag": "aavarti-aur-dolani-gati",
+     "learning_objective": "आवर्ती गति और दोलनी गति में अंतर पहचानना।"
+    },
+    {
+     "concept_tag": "aavartkaal-aur-aavritti",
+     "learning_objective": "आवर्तकाल और आवृत्ति के संबंध का उपयोग करके उनके मान ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH06-T2",
+   "topic_number": 2,
+   "title": "सरल आवर्त गति",
+   "ncert_sections": "13.3",
+   "concepts": [
+    {
+     "concept_tag": "shm-visthapan-samikaran",
+     "learning_objective": "सरल आवर्त गति के विस्थापन-समीकरण में आयाम, कोणीय आवृत्ति और आवर्तकाल पहचानना।"
+    },
+    {
+     "concept_tag": "kala-aur-kala-niyatank",
+     "learning_objective": "कला और कला-नियतांक का अर्थ समझकर प्रारंभिक स्थिति से कला-नियतांक ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH06-T3",
+   "topic_number": 3,
+   "title": "सरल आवर्त गति और एकसमान वृत्तीय गति",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "sandarbh-vritt",
+     "learning_objective": "सरल आवर्त गति को एकसमान वृत्तीय गति के व्यास पर प्रक्षेप के रूप में समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH06-T4",
+   "topic_number": 4,
+   "title": "सरल आवर्त गति में वेग और त्वरण",
+   "ncert_sections": "13.5",
+   "concepts": [
+    {
+     "concept_tag": "shm-me-veg",
+     "learning_objective": "सरल आवर्त गति में किसी स्थिति पर वेग और अधिकतम वेग ज्ञात करना।"
+    },
+    {
+     "concept_tag": "shm-me-tvaran",
+     "learning_objective": "सरल आवर्त गति में त्वरण और विस्थापन के संबंध a = −ω²x का उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH06-T5",
+   "topic_number": 5,
+   "title": "सरल आवर्त गति के लिए बल नियम",
+   "ncert_sections": "13.6",
+   "concepts": [
+    {
+     "concept_tag": "bal-niyam",
+     "learning_objective": "सरल आवर्त गति के प्रत्यानयन बल F = −kx की प्रकृति पहचानना।"
+    },
+    {
+     "concept_tag": "spring-dravyaman-aavartkaal",
+     "learning_objective": "स्प्रिंग-द्रव्यमान निकाय का आवर्तकाल और आवृत्ति परिकलित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH06-T6",
+   "topic_number": 6,
+   "title": "सरल आवर्त गति में ऊर्जा",
+   "ncert_sections": "13.7",
+   "concepts": [
+    {
+     "concept_tag": "gatij-aur-sthitij-urja",
+     "learning_objective": "सरल आवर्त गति में विभिन्न स्थितियों पर गतिज और स्थितिज ऊर्जा ज्ञात करना।"
+    },
+    {
+     "concept_tag": "kul-yantrik-urja",
+     "learning_objective": "कुल यांत्रिक ऊर्जा E = ½kA² के संरक्षण और आयाम पर निर्भरता को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH06-T7",
+   "topic_number": 7,
+   "title": "सरल लोलक",
+   "ncert_sections": "13.8",
+   "concepts": [
+    {
+     "concept_tag": "saral-lolak-aavartkaal",
+     "learning_objective": "सरल लोलक के आवर्तकाल T = 2π√(L/g) का उपयोग करना।"
+    },
+    {
+     "concept_tag": "laghu-kon-sannikatan",
+     "learning_objective": "छोटे कोणीय विस्थापन के सन्निकटन से सरल लोलक की गति के सरल आवर्त होने का कारण समझना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KHAC1-CH06",
+ "title": "तलपट एवं अशुद्धियों का शोधन",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHAC1-CH06-T1",
+   "topic_number": 1,
+   "title": "तलपट का अर्थ एवं उद्देश्य",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "talpat-arth",
+     "learning_objective": "तलपट का अर्थ और लेखांकन प्रक्रिया में उसका स्थान बताना।"
+    },
+    {
+     "concept_tag": "talpat-uddeshya",
+     "learning_objective": "तलपट बनाने के उद्देश्यों तथा उसकी सीमा को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH06-T2",
+   "topic_number": 2,
+   "title": "तलपट तैयार करना",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "talpat-vidhiyan",
+     "learning_objective": "योग, शेष तथा योग-सह-शेष विधियों में अंतर करना।"
+    },
+    {
+     "concept_tag": "talpat-shesh-stambh",
+     "learning_objective": "खातों के शेषों को सही नाम या जमा स्तंभ में रखकर तलपट तैयार करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH06-T3",
+   "topic_number": 3,
+   "title": "अशुद्धियों के प्रकार",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "kriyatmak-bhool-ashuddhi",
+     "learning_objective": "क्रियात्मक तथा भूल की अशुद्धियों को उदाहरणों से पहचानना।"
+    },
+    {
+     "concept_tag": "saiddhantik-ashuddhi",
+     "learning_objective": "सैद्धांतिक अशुद्धियों और तलपट पर उनके प्रभाव को समझना।"
+    },
+    {
+     "concept_tag": "kshatipurak-ashuddhi",
+     "learning_objective": "क्षतिपूरक अशुद्धियों का अर्थ और प्रभाव बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH06-T4",
+   "topic_number": 4,
+   "title": "अशुद्धियों की खोज",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "ashuddhi-khoj-charan",
+     "learning_objective": "तलपट न मिलने पर अशुद्धियाँ खोजने के चरण बताना।"
+    },
+    {
+     "concept_tag": "antar-vishleshan",
+     "learning_objective": "तलपट के अंतर का विश्लेषण कर संभावित अशुद्धि पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH06-T5",
+   "topic_number": 5,
+   "title": "तलपट को प्रभावित न करने वाली अशुद्धियों का शोधन",
+   "ncert_sections": "6.6, 6.6.1",
+   "concepts": [
+    {
+     "concept_tag": "dwipakshiya-ashuddhi",
+     "learning_objective": "द्विपक्षीय अशुद्धियों और शोधन की प्रक्रिया को समझना।"
+    },
+    {
+     "concept_tag": "shodhan-pravishti",
+     "learning_objective": "द्विपक्षीय अशुद्धियों के लिए सही शोधन प्रविष्टि बनाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH06-T6",
+   "topic_number": 6,
+   "title": "तलपट को प्रभावित करने वाली अशुद्धियाँ एवं उचंत खाता",
+   "ncert_sections": "6.6.2, 6.6.3",
+   "concepts": [
+    {
+     "concept_tag": "ekpakshiya-ashuddhi",
+     "learning_objective": "एकपक्षीय अशुद्धियों को पहचानना और उन्हें व्याख्यात्मक टिप्पणी से सुधारना।"
+    },
+    {
+     "concept_tag": "uchant-khata",
+     "learning_objective": "उचंत खाते की सहायता से एकपक्षीय अशुद्धियों का शोधन करना।"
+    },
+    {
+     "concept_tag": "agle-varsh-shodhan",
+     "learning_objective": "अगले लेखा वर्ष में अशुद्धियों के शोधन का सिद्धांत समझना।"
+    }
+   ]
+  }
+ ]
+}

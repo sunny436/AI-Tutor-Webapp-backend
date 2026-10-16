@@ -1,0 +1,88 @@
+{
+ "chapter_id": "JHMH1-CH12",
+ "title": "पृष्ठीय क्षेत्रफल और आयतन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH12-T1",
+   "topic_number": 1,
+   "title": "ठोसों के संयोजन और मूल सूत्र",
+   "ncert_sections": "12.1, 12.2",
+   "concepts": [
+    {
+     "concept_tag": "thos-sanyojan-pahchan",
+     "learning_objective": "दैनिक जीवन की वस्तुओं को मूल ठोसों (घनाभ, शंकु, बेलन, गोला, अर्धगोला) के संयोजन के रूप में पहचानना और उनके भागों की माप ज्ञात करना।"
+    },
+    {
+     "concept_tag": "mool-thos-sutra",
+     "learning_objective": "मूल ठोसों के वक्र और कुल पृष्ठीय क्षेत्रफल के सूत्रों का सही प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH12-T2",
+   "topic_number": 2,
+   "title": "ठोसों को जोड़कर बने ठोस का पृष्ठीय क्षेत्रफल",
+   "ncert_sections": "12.2",
+   "concepts": [
+    {
+     "concept_tag": "jode-thos-prishthiya-kshetrafal",
+     "learning_objective": "जोड़ने पर छिप जाने वाले पृष्ठों को छोड़कर संयोजित ठोस का पृष्ठीय क्षेत्रफल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "ghan-par-ardhgola",
+     "learning_objective": "घन पर रखे अर्धगोले वाले ठोस का पृष्ठीय क्षेत्रफल और अर्धगोले का अधिकतम व्यास ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH12-T3",
+   "topic_number": 3,
+   "title": "गड्ढे या खोखले भाग वाले ठोस का पृष्ठीय क्षेत्रफल",
+   "ncert_sections": "12.2",
+   "concepts": [
+    {
+     "concept_tag": "gadda-yukt-thos",
+     "learning_objective": "किसी ठोस से अर्धगोला या शंकु निकालने पर शेष ठोस का पृष्ठीय क्षेत्रफल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "rang-kshetra-vibhajan",
+     "learning_objective": "संयोजित ठोस के अलग-अलग भागों पर रंगे जाने वाले क्षेत्रफल को अलग-अलग ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH12-T4",
+   "topic_number": 4,
+   "title": "ठोसों के संयोजन का आयतन",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "aayatan-yog",
+     "learning_objective": "समझना कि जोड़कर बने ठोस का आयतन उसके घटकों के आयतनों का योग होता है।"
+    },
+    {
+     "concept_tag": "sanyojit-aayatan-ganana",
+     "learning_objective": "शंकु, बेलन, अर्धगोला और घनाभ के संयोजन से बने ठोसों का आयतन परिकलित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH12-T5",
+   "topic_number": 5,
+   "title": "आयतन के व्यावहारिक अनुप्रयोग",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "vastavik-dharita",
+     "learning_objective": "किसी पात्र की प्रतीत धारिता और वास्तविक धारिता में अंतर समझकर वास्तविक धारिता ज्ञात करना।"
+    },
+    {
+     "concept_tag": "vyavaharik-aayatan",
+     "learning_objective": "शेष जल, द्रव्यमान और प्रतिशत जैसी स्थितियों में संयोजित ठोसों के आयतन का प्रयोग करना।"
+    }
+   ]
+  }
+ ]
+}

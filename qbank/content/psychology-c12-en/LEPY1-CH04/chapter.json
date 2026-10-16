@@ -1,0 +1,160 @@
+{
+ "chapter_id": "LEPY1-CH04",
+ "title": "Psychological Disorders",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPY1-CH04-T1",
+   "topic_number": 1,
+   "title": "Concepts of abnormality and historical background",
+   "ncert_sections": "Introduction; Concepts of Abnormality and Psychological Disorders; Historical Background",
+   "concepts": [
+    {
+     "concept_tag": "four-ds-of-abnormality",
+     "learning_objective": "Identify the four Ds (deviance, distress, dysfunction, danger) common to definitions of psychological disorders."
+    },
+    {
+     "concept_tag": "social-norm-vs-maladaptive-views",
+     "learning_objective": "Distinguish the view of abnormality as deviation from social norms from the view of abnormality as maladaptive behaviour."
+    },
+    {
+     "concept_tag": "historical-perspectives",
+     "learning_objective": "Trace the supernatural, biological and psychological perspectives on abnormal behaviour through history to the bio-psycho-social approach."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPY1-CH04-T2",
+   "topic_number": 2,
+   "title": "Classification of psychological disorders",
+   "ncert_sections": "Classification of Psychological Disorders; Activity 4.2",
+   "concepts": [
+    {
+     "concept_tag": "dsm-and-icd-systems",
+     "learning_objective": "State the features of DSM-5 (American Psychiatric Association) and ICD-10 (World Health Organisation)."
+    },
+    {
+     "concept_tag": "uses-of-classification",
+     "learning_objective": "Explain why classifying psychological disorders is useful to professionals."
+    },
+    {
+     "concept_tag": "context-in-judging-abnormality",
+     "learning_objective": "Evaluate why the situation in which a behaviour occurs matters in judging it as abnormal."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPY1-CH04-T3",
+   "topic_number": 3,
+   "title": "Factors underlying abnormal behaviour",
+   "ncert_sections": "Factors Underlying Abnormal Behaviour",
+   "concepts": [
+    {
+     "concept_tag": "biological-factors-neurotransmitters",
+     "learning_objective": "Relate genetic and neurotransmitter factors to specific psychological disorders."
+    },
+    {
+     "concept_tag": "psychological-models",
+     "learning_objective": "Explain abnormal behaviour using the psychodynamic, behavioural, cognitive and humanistic-existential models."
+    },
+    {
+     "concept_tag": "sociocultural-and-diathesis-stress",
+     "learning_objective": "Apply the socio-cultural model and the diathesis-stress model to explain the onset of disorders."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPY1-CH04-T4",
+   "topic_number": 4,
+   "title": "Anxiety, obsessive-compulsive and trauma-related disorders",
+   "ncert_sections": "Anxiety Disorders; Obsessive-Compulsive and Related Disorders; Trauma- and Stressor-Related Disorders",
+   "concepts": [
+    {
+     "concept_tag": "anxiety-disorders",
+     "learning_objective": "Identify generalised anxiety disorder, panic disorder and separation anxiety disorder, and when anxiety becomes a disorder."
+    },
+    {
+     "concept_tag": "phobias",
+     "learning_objective": "Distinguish specific phobias, social anxiety disorder and agoraphobia."
+    },
+    {
+     "concept_tag": "ocd-and-ptsd",
+     "learning_objective": "Distinguish obsessions from compulsions and recognise the symptoms of post-traumatic stress disorder."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPY1-CH04-T5",
+   "topic_number": 5,
+   "title": "Somatic symptom and dissociative disorders",
+   "ncert_sections": "Somatic Symptom and Related Disorders; Dissociative Disorders; Box 4.1",
+   "concepts": [
+    {
+     "concept_tag": "somatic-symptom-disorders",
+     "learning_objective": "Distinguish somatic symptom disorder, illness anxiety disorder and conversion disorder."
+    },
+    {
+     "concept_tag": "dissociative-disorders",
+     "learning_objective": "Describe dissociative amnesia, fugue, dissociative identity disorder and depersonalisation/derealisation disorder."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPY1-CH04-T6",
+   "topic_number": 6,
+   "title": "Depressive and bipolar disorders; suicide",
+   "ncert_sections": "Depressive Disorders; Bipolar and Related Disorders; Suicide",
+   "concepts": [
+    {
+     "concept_tag": "major-depressive-disorder",
+     "learning_objective": "Identify the symptoms of and risk factors for major depressive disorder."
+    },
+    {
+     "concept_tag": "bipolar-disorders",
+     "learning_objective": "Describe bipolar I disorder and the related disorders in this category."
+    },
+    {
+     "concept_tag": "suicide-prevention",
+     "learning_objective": "Evaluate risk factors for suicide and measures for identifying and helping students in distress."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPY1-CH04-T7",
+   "topic_number": 7,
+   "title": "Schizophrenia spectrum and other psychotic disorders",
+   "ncert_sections": "Schizophrenia Spectrum and Other Psychotic Disorders",
+   "concepts": [
+    {
+     "concept_tag": "positive-symptoms",
+     "learning_objective": "Classify delusions, formal thought disorders, hallucinations and inappropriate affect as positive symptoms."
+    },
+    {
+     "concept_tag": "negative-and-psychomotor-symptoms",
+     "learning_objective": "Distinguish negative symptoms (alogia, blunted affect, avolition) from psychomotor symptoms such as catatonia."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPY1-CH04-T8",
+   "topic_number": 8,
+   "title": "Neurodevelopmental, conduct, eating and substance-related disorders",
+   "ncert_sections": "Neurodevelopmental Disorders; Disruptive, Impulse-Control and Conduct Disorders; Feeding and Eating Disorders; Substance-Related and Addictive Disorders",
+   "concepts": [
+    {
+     "concept_tag": "neurodevelopmental-disorders",
+     "learning_objective": "Describe ADHD, autism spectrum disorder, intellectual disability and specific learning disorder."
+    },
+    {
+     "concept_tag": "conduct-and-eating-disorders",
+     "learning_objective": "Identify features of oppositional defiant disorder, conduct disorder and the eating disorders."
+    },
+    {
+     "concept_tag": "substance-related-disorders",
+     "learning_objective": "Explain tolerance, withdrawal and the effects of alcohol, heroin and cocaine."
+    }
+   ]
+  }
+ ]
+}

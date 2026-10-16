@@ -1,0 +1,1541 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "jigyasa-c07-hi",
+  "curriculum": "cbse",
+  "class_level": 7,
+  "subject_code": "science",
+  "language": "hindi",
+  "title": "Jigyasa",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "ghcu1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "GHCU1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "विज्ञान का निरंतर बढ़ता संसार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghcu101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHCU1-CH01-T1",
+     "topic_number": 1,
+     "title": "विज्ञान: खोज और प्रश्न पूछने की निरंतर प्रक्रिया",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vigyan-ek-nirantar-prakriya",
+       "learning_objective": "विज्ञान को तथ्यों के संग्रह के बजाय सोचने, प्रयोग करने और खोजने की एक निरंतर प्रक्रिया के रूप में समझना।"
+      },
+      {
+       "concept_tag": "jigyasa-aur-prashn-poochhna",
+       "learning_objective": "समझना कि जिज्ञासा और गहरे प्रश्न पूछना वैज्ञानिक सोच का आधार है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH01-T2",
+     "topic_number": 2,
+     "title": "पुस्तक की विशेषता: तितली, कागज़ का हवाई जहाज़ और उड़ान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prishth-ank-ka-pratik",
+       "learning_objective": "पृष्ठ अंकों पर दिखाई गई तितली और कागज़ के हवाई जहाज़ की उड़ान का प्रतीकात्मक अर्थ बताना।"
+      },
+      {
+       "concept_tag": "udaan-ki-prerna",
+       "learning_objective": "समझना कि सरल प्रेक्षणों और प्रयोगों से विमान जैसी बड़ी खोजें संभव हुईं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH01-T3",
+     "topic_number": 3,
+     "title": "विज्ञान के जुड़े हुए क्षेत्र, पदार्थ और परिवर्तन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vigyan-ke-kshetron-ka-judav",
+       "learning_objective": "पहचानना कि भौतिकी, रसायन, जीव विज्ञान और भू-विज्ञान परस्पर जुड़े हुए हैं।"
+      },
+      {
+       "concept_tag": "padarthon-ka-vargikaran",
+       "learning_objective": "पदार्थों का उनके गुणधर्मों, जैसे धातु और अधातु, के आधार पर वर्गीकरण समझना।"
+      },
+      {
+       "concept_tag": "asthai-aur-sthai-parivartan",
+       "learning_objective": "आस-पास होने वाले अस्थायी और स्थायी परिवर्तनों तथा ऊष्मा की भूमिका में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH01-T4",
+     "topic_number": 4,
+     "title": "जीवन, समय, प्रकाश और आकाश",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jaivik-prakram",
+       "learning_objective": "जीवन के लिए श्वसन, भोजन और पोषक तत्वों के परिवहन जैसे जैविक प्रक्रमों का महत्व समझना।"
+      },
+      {
+       "concept_tag": "samay-aur-parchhai",
+       "learning_objective": "समझना कि प्राचीन काल में परछाई की स्थिति देखकर समय बताया जाता था।"
+      },
+      {
+       "concept_tag": "prithvi-chandrama-aur-grahan",
+       "learning_objective": "दिन-रात और ग्रहण को पृथ्वी व चंद्रमा की गतियों और परछाइयों से जोड़ना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH01-T5",
+     "topic_number": 5,
+     "title": "आनंददायक अन्वेषण: उत्तरों के प्रश्न बनाइए",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "uttaron-se-prashn-banana",
+       "learning_objective": "क्रियाकलाप 1.1 में दिए गए उत्तरों के लिए उपयुक्त प्रश्न या परिस्थितियाँ बनाना।"
+      },
+      {
+       "concept_tag": "rachnatmak-prashn",
+       "learning_objective": "रचनात्मक और रोचक प्रश्नों तथा पूर्वानुमानित प्रश्नों में अंतर करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHCU1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "पदार्थों का अन्वेषण— अम्लीय, क्षारीय एवं उदासीन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghcu102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHCU1-CH02-T1",
+     "topic_number": 1,
+     "title": "लिटमस: एक प्राकृतिक अम्ल-क्षार सूचक",
+     "ncert_sections": "2.1, 2.1.1",
+     "concepts": [
+      {
+       "concept_tag": "litmus-ka-srot",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि लिटमस लाइकेन से प्राप्त प्राकृतिक पदार्थ है और लाइकेन कवक तथा शैवाल की सहजीविता से बनते हैं।"
+      },
+      {
+       "concept_tag": "litmus-se-vargikaran",
+       "learning_objective": "विद्यार्थी नीले और लाल लिटमस पत्र की सहायता से पदार्थों को अम्लीय, क्षारीय और उदासीन समूहों में वर्गीकृत कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH02-T2",
+     "topic_number": 2,
+     "title": "अम्लीय और क्षारीय पदार्थों के सामान्य गुण",
+     "ncert_sections": "2.1.1",
+     "concepts": [
+      {
+       "concept_tag": "amliya-swad-aur-khadya-amla",
+       "learning_objective": "विद्यार्थी पहचान सकेंगे कि खट्टे स्वाद वाले खाद्य पदार्थों में अम्ल होते हैं और उनमें उपस्थित सामान्य अम्लों के नाम बता सकेंगे।"
+      },
+      {
+       "concept_tag": "ksharon-ke-gun",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि क्षार छूने पर चिकने और प्रायः कड़वे होते हैं, पर हर कड़वा पदार्थ क्षारीय नहीं होता।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH02-T3",
+     "topic_number": 3,
+     "title": "लाल गुलाब तथा अन्य प्राकृतिक सूचक",
+     "ncert_sections": "2.1.2",
+     "concepts": [
+      {
+       "concept_tag": "gulab-ark-banana",
+       "learning_objective": "विद्यार्थी लाल गुलाब की पंखुड़ियों से सूचक अर्क बनाने की विधि का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "gulab-ark-rang-parivartan",
+       "learning_objective": "विद्यार्थी लाल गुलाब के अर्क के रंग-परिवर्तन से अम्लीय, क्षारीय और उदासीन पदार्थ पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "anya-prakritik-suchak",
+       "learning_objective": "विद्यार्थी चुकंदर, पत्तागोभी, गुड़हल और हाइड्रेंजिया जैसे अन्य प्राकृतिक सूचकों के उदाहरण समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH02-T4",
+     "topic_number": 4,
+     "title": "हल्दी-पत्र और घ्राण सूचक",
+     "ncert_sections": "2.1.3",
+     "concepts": [
+      {
+       "concept_tag": "haldi-patra",
+       "learning_objective": "विद्यार्थी हल्दी-पत्र बनाकर समझा सकेंगे कि यह केवल क्षारीय पदार्थों में लाल होता है और अम्लीय तथा उदासीन पदार्थों में भेद नहीं कर पाता।"
+      },
+      {
+       "concept_tag": "ghran-suchak",
+       "learning_objective": "विद्यार्थी घ्राण सूचकों का अर्थ बताकर उनके उपयोग की स्थिति पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH02-T5",
+     "topic_number": 5,
+     "title": "अम्ल और क्षार को मिलाना: उदासीनीकरण",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "udasinikaran-abhikriya",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि अम्ल और क्षार की अभिक्रिया में लवण, जल और ऊष्मा बनते हैं।"
+      },
+      {
+       "concept_tag": "udasinikaran-prayog",
+       "learning_objective": "विद्यार्थी नींबू के रस, लिटमस विलयन और चूने के पानी वाले प्रयोग के रंग-परिवर्तन की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH02-T6",
+     "topic_number": 6,
+     "title": "दैनिक जीवन में उदासीनीकरण",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "chinti-ka-katna",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि चींटी के काटने पर नम बेकिंग सोडा लगाने से आराम क्यों मिलता है।"
+      },
+      {
+       "concept_tag": "mrida-upchar",
+       "learning_objective": "विद्यार्थी अम्लीय मृदा के उपचार के लिए चूना और क्षारीय मृदा के लिए जैविक पदार्थ चुन सकेंगे।"
+      },
+      {
+       "concept_tag": "audyogik-apshisht",
+       "learning_objective": "विद्यार्थी कारखानों के अम्लीय अपशिष्ट को उदासीन करने के उपाय का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHCU1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "विद्युत — परिपथ एवं उनके घटक",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghcu103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHCU1-CH03-T1",
+     "topic_number": 1,
+     "title": "टॉर्च-लाइट और विद्युत सेल",
+     "ncert_sections": "3.1, 3.2.1",
+     "concepts": [
+      {
+       "concept_tag": "torch-switch-ki-sthiti",
+       "learning_objective": "विद्यार्थी टॉर्च के स्विच की ऑन और ऑफ स्थिति को लैंप के दीप्त होने से जोड़ सकेंगे।"
+      },
+      {
+       "concept_tag": "vidyut-sel-ke-terminal",
+       "learning_objective": "विद्यार्थी विद्युत सेल के धन और ऋण टर्मिनल पहचान सकेंगे और सेल को सुवाह्य ऊर्जा स्रोत के रूप में समझेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH03-T2",
+     "topic_number": 2,
+     "title": "बैटरी",
+     "ncert_sections": "3.2.2",
+     "concepts": [
+      {
+       "concept_tag": "baitari-mein-sel-ka-sanyojan",
+       "learning_objective": "विद्यार्थी समझेंगे कि एक सेल का धन सिरा अगले सेल के ऋण सिरे से जोड़कर बैटरी बनती है।"
+      },
+      {
+       "concept_tag": "anek-selon-ka-labh",
+       "learning_objective": "विद्यार्थी एक से अधिक सेल जोड़ने के लाभ और गलत क्रम के प्रभाव को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH03-T3",
+     "topic_number": 3,
+     "title": "विद्युत लैंप: तापदीप्त लैंप और एल.ई.डी.",
+     "ncert_sections": "3.2.3",
+     "concepts": [
+      {
+       "concept_tag": "tapdipt-lamp-ka-tantu",
+       "learning_objective": "विद्यार्थी तापदीप्त लैंप के तंतु, मोटे तारों और दोनों टर्मिनलों की भूमिका बता सकेंगे।"
+      },
+      {
+       "concept_tag": "led-ke-terminal",
+       "learning_objective": "विद्यार्थी एल.ई.डी. के धन और ऋण टर्मिनल पहचान सकेंगे और इसे तापदीप्त लैंप से अलग कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH03-T4",
+     "topic_number": 4,
+     "title": "विद्युत परिपथ",
+     "ncert_sections": "3.2.4, 3.2.5",
+     "concepts": [
+      {
+       "concept_tag": "sampoorn-paripath",
+       "learning_objective": "विद्यार्थी समझेंगे कि लैंप तभी दीप्त होता है जब सेल और लैंप से होकर धारा के लिए संपूर्ण पथ बने।"
+      },
+      {
+       "concept_tag": "dhara-ki-disha",
+       "learning_objective": "विद्यार्थी बंद परिपथ में धारा की दिशा बता सकेंगे।"
+      },
+      {
+       "concept_tag": "led-mein-ek-dishiya-dhara",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि एल.ई.डी. में धारा एक ही दिशा में बहती है, इसलिए उसे सही प्रकार जोड़ना आवश्यक है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH03-T5",
+     "topic_number": 5,
+     "title": "विद्युत स्विच",
+     "ncert_sections": "3.2.6",
+     "concepts": [
+      {
+       "concept_tag": "switch-ka-karya",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि स्विच परिपथ को पूर्ण या भंग करने वाली सरल युक्ति है और इसे परिपथ में कहीं भी लगाया जा सकता है।"
+      },
+      {
+       "concept_tag": "khula-aur-band-paripath",
+       "learning_objective": "विद्यार्थी ऑन और ऑफ स्थिति को बंद और खुले परिपथ से जोड़कर धारा-प्रवाह का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH03-T6",
+     "topic_number": 6,
+     "title": "परिपथ आरेख",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "paripath-ke-pratik",
+       "learning_objective": "विद्यार्थी सेल, बैटरी, लैंप, एल.ई.डी., स्विच और तार के प्रतीक पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "paripath-aarekh",
+       "learning_objective": "विद्यार्थी परिपथ आरेख का अर्थ समझेंगे और उससे परिपथ के व्यवहार का अनुमान लगा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH03-T7",
+     "topic_number": 7,
+     "title": "विद्युत चालक एवं विद्युतरोधी",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "chalak-aur-vidyutrodhi",
+       "learning_objective": "विद्यार्थी परीक्षण-यंत्र की सहायता से पदार्थों को विद्युत चालक और विद्युतरोधी में वर्गीकृत कर सकेंगे।"
+      },
+      {
+       "concept_tag": "chalak-aur-rodhi-ka-upyog",
+       "learning_objective": "विद्यार्थी तारों में ताँबे और आवरण में प्लास्टिक या रबर के उपयोग तथा विद्युत सुरक्षा के कारण समझा सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHCU1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "धातुओं और अधातुओं का संसार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghcu104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHCU1-CH04-T1",
+     "topic_number": 1,
+     "title": "द्युति, कठोरता और आघातवर्धनीयता",
+     "ncert_sections": "4.1, 4.1.1",
+     "concepts": [
+      {
+       "concept_tag": "dhatvik-dyuti-aur-kathorta",
+       "learning_objective": "धातुओं की धात्विक द्युति और कठोरता को पहचानना तथा अपवादों (पारा, सोडियम) को समझना।"
+      },
+      {
+       "concept_tag": "aaghatvardhaniyata",
+       "learning_objective": "आघातवर्धनीयता का अर्थ समझना और दैनिक जीवन में उसके उदाहरण पहचानना।"
+      },
+      {
+       "concept_tag": "bhangurta",
+       "learning_objective": "भंगुर पदार्थों को आघातवर्धनीय पदार्थों से अलग पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH04-T2",
+     "topic_number": 2,
+     "title": "तन्यता और ध्वानिकता",
+     "ncert_sections": "4.1.2, 4.1.3",
+     "concepts": [
+      {
+       "concept_tag": "tanyata",
+       "learning_objective": "तन्यता का अर्थ और धातु के तारों के उपयोगों को समझाना।"
+      },
+      {
+       "concept_tag": "dhvanikta",
+       "learning_objective": "ध्वानिकता का अर्थ समझना और धातुओं से बनी ध्वनि उत्पन्न करने वाली वस्तुओं को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH04-T3",
+     "topic_number": 3,
+     "title": "ऊष्मा और विद्युत का चालन",
+     "ncert_sections": "4.1.4, 4.1.5",
+     "concepts": [
+      {
+       "concept_tag": "ushma-chalan",
+       "learning_objective": "धातुओं को ऊष्मा के सुचालक और लकड़ी जैसी सामग्रियों को कुचालक के रूप में पहचानना।"
+      },
+      {
+       "concept_tag": "vidyut-chalan",
+       "learning_objective": "परिक्षित्र परिपथ की सहायता से विद्युत के सुचालकों और कुचालकों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH04-T4",
+     "topic_number": 4,
+     "title": "लोहे पर वायु और जल का प्रभाव",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "jang-lagne-ki-sharten",
+       "learning_objective": "प्रयोग द्वारा समझना कि लोहे पर जंग लगने के लिए वायु और जल दोनों आवश्यक हैं।"
+      },
+      {
+       "concept_tag": "sankshran",
+       "learning_objective": "संक्षारण का अर्थ और विभिन्न धातुओं पर उसके उदाहरण पहचानना।"
+      },
+      {
+       "concept_tag": "jang-se-bachav",
+       "learning_objective": "लोहे को जंग से बचाने के उपायों का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH04-T5",
+     "topic_number": 5,
+     "title": "धातुओं और अधातुओं के ऑक्साइडों की प्रकृति",
+     "ncert_sections": "4.3, 4.4",
+     "concepts": [
+      {
+       "concept_tag": "dhatu-oxide-ki-prakriti",
+       "learning_objective": "मैग्नीशियम के जलने से बने ऑक्साइड की क्षारीय प्रकृति को लिटमस से पहचानना।"
+      },
+      {
+       "concept_tag": "adhatu-oxide-ki-prakriti",
+       "learning_objective": "सल्फर के जलने से बने ऑक्साइड की अम्लीय प्रकृति को समझना।"
+      },
+      {
+       "concept_tag": "kriyasheel-padarthon-ka-bhandaran",
+       "learning_objective": "सोडियम और फॉस्फोरस के विशेष भंडारण के कारण समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH04-T6",
+     "topic_number": 6,
+     "title": "अधातुएँ, तत्व और दैनिक जीवन में अधातुओं का महत्त्व",
+     "ncert_sections": "4.4, 4.5",
+     "concepts": [
+      {
+       "concept_tag": "adhatuon-ke-gun",
+       "learning_objective": "अधातुओं के सामान्य गुणों के आधार पर किसी पदार्थ को अधातु के रूप में पहचानना।"
+      },
+      {
+       "concept_tag": "tatva-aur-vargikaran",
+       "learning_objective": "समझना कि केवल तत्वों को ही धातु या अधातु के रूप में वर्गीकृत किया जाता है।"
+      },
+      {
+       "concept_tag": "adhatuon-ke-upyog",
+       "learning_objective": "ऑक्सीजन, नाइट्रोजन, क्लोरीन, आयोडीन जैसी अधातुओं के उपयोग बताना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHCU1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "हमारे आस-पास के परिवर्तन— भौतिक एवं रासायनिक",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghcu105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHCU1-CH05-T1",
+     "topic_number": 1,
+     "title": "भौतिक परिवर्तन: रूप बदलता है, पदार्थ वही रहता है",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "bhautik-parivartan",
+       "learning_objective": "भौतिक परिवर्तन को पहचानना कि इसमें केवल आकार, आमाप या अवस्था बदलती है और कोई नया पदार्थ नहीं बनता।"
+      },
+      {
+       "concept_tag": "avastha-parivartan",
+       "learning_objective": "पिघलना, उबलना जैसे अवस्था परिवर्तनों को भौतिक परिवर्तन के रूप में समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH05-T2",
+     "topic_number": 2,
+     "title": "रासायनिक परिवर्तन और रासायनिक अभिक्रिया",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "rasayanik-parivartan",
+       "learning_objective": "रासायनिक परिवर्तन को नए पदार्थ के बनने के आधार पर परिभाषित करना।"
+      },
+      {
+       "concept_tag": "choone-ka-pani-pareekshan",
+       "learning_objective": "चूने के पानी के दूधिया होने से कार्बन डाइऑक्साइड की पहचान करना।"
+      },
+      {
+       "concept_tag": "sirka-aur-baking-soda",
+       "learning_objective": "सिरके या नींबू के रस और बेकिंग सोडा की अभिक्रिया में बनी गैस की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH05-T3",
+     "topic_number": 3,
+     "title": "जंग लगना और दहन",
+     "ncert_sections": "5.3.1, 5.3.2",
+     "concepts": [
+      {
+       "concept_tag": "jang-lagna",
+       "learning_objective": "जंग लगने को आयरन ऑक्साइड बनने वाले रासायनिक परिवर्तन के रूप में समझाना।"
+      },
+      {
+       "concept_tag": "magnesium-ka-dahan",
+       "learning_objective": "मैग्नीशियम रिबन के जलने को रासायनिक परिवर्तन के रूप में वर्गीकृत करना।"
+      },
+      {
+       "concept_tag": "dahan-aur-dahansheel-padarth",
+       "learning_objective": "दहन की परिभाषा देना और दहनशील पदार्थों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH05-T4",
+     "topic_number": 4,
+     "title": "दहन की आवश्यक शर्तें: ऑक्सीजन, प्रज्वलन तापमान और अग्नि त्रिकोण",
+     "ncert_sections": "5.3.2",
+     "concepts": [
+      {
+       "concept_tag": "dahan-mein-oxygen",
+       "learning_objective": "समझाना कि दहन के लिए ऑक्सीजन की निरंतर आपूर्ति आवश्यक है।"
+      },
+      {
+       "concept_tag": "prajvalan-taapmaan",
+       "learning_objective": "प्रज्वलन तापमान की परिभाषा देना और उसके आधार पर आग लगने की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "agni-trikon",
+       "learning_objective": "अग्नि त्रिकोण के तीन घटकों के आधार पर आग बुझाने के उपायों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH05-T5",
+     "topic_number": 5,
+     "title": "मोमबत्ती का जलना: एक ही प्रक्रिया में दोनों परिवर्तन",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "mombatti-mein-bhautik-parivartan",
+       "learning_objective": "मोमबत्ती जलते समय मोम के पिघलने, जमने और वाष्पित होने को भौतिक परिवर्तन बताना।"
+      },
+      {
+       "concept_tag": "mombatti-mein-rasayanik-parivartan",
+       "learning_objective": "मोम की वाष्प के जलने को रासायनिक परिवर्तन के रूप में पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH05-T6",
+     "topic_number": 6,
+     "title": "उत्क्रमणीय और अनुत्क्रमणीय परिवर्तन",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "utkramaniya-parivartan",
+       "learning_objective": "उन परिवर्तनों को पहचानना जिनमें पदार्थ को पुनः मूल रूप में लाया जा सकता है।"
+      },
+      {
+       "concept_tag": "anutkramaniya-parivartan",
+       "learning_objective": "उन परिवर्तनों को पहचानना जिन्हें उत्क्रमित नहीं किया जा सकता।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH05-T7",
+     "topic_number": 7,
+     "title": "वांछनीय और अवांछनीय परिवर्तन",
+     "ncert_sections": "5.6",
+     "concepts": [
+      {
+       "concept_tag": "vanchhaniya-avanchhaniya",
+       "learning_objective": "दैनिक जीवन के परिवर्तनों को वांछनीय और अवांछनीय में वर्गीकृत करना।"
+      },
+      {
+       "concept_tag": "paryavaran-par-prabhav",
+       "learning_objective": "मानवीय क्रियाकलापों से होने वाले परिवर्तनों के पर्यावरण पर दीर्घकालिक प्रभाव बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH05-T8",
+     "topic_number": 8,
+     "title": "धीमे प्राकृतिक परिवर्तन: अपक्षय और अपरदन",
+     "ncert_sections": "5.7.1, 5.7.2",
+     "concepts": [
+      {
+       "concept_tag": "chattanon-ka-apakshay",
+       "learning_objective": "चट्टानों के भौतिक और रासायनिक अपक्षय से मृदा बनने की प्रक्रिया समझाना।"
+      },
+      {
+       "concept_tag": "apardan",
+       "learning_objective": "वायु और बहते जल द्वारा होने वाले अपरदन को भौतिक परिवर्तन के रूप में समझाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHCU1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "किशोरावस्था — वृद्धि एवं परिवर्तन की अवस्था",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghcu106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHCU1-CH06-T1",
+     "topic_number": 1,
+     "title": "आयु के साथ वृद्धि — किशोरवय के वर्ष",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "kishoravastha-ki-avadhi",
+       "learning_objective": "किशोरावस्था की आयु-सीमा तथा परिवर्तनों के समय और मात्रा में व्यक्तिगत भिन्नता को पहचानना।"
+      },
+      {
+       "concept_tag": "sharirik-parivartan",
+       "learning_objective": "किशोरावस्था में लंबाई, आवाज, त्वचा और बालों में होने वाले शारीरिक परिवर्तनों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH06-T2",
+     "topic_number": 2,
+     "title": "द्वितीयक लैंगिक विशेषताएँ और यौवनारंभ",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "dvitiyak-laingik-visheshtayen",
+       "learning_objective": "द्वितीयक लैंगिक विशेषताओं को पहचानना और उन्हें लड़कों, लड़कियों या दोनों में वर्गीकृत करना।"
+      },
+      {
+       "concept_tag": "yauvanarambh",
+       "learning_objective": "यौवनारंभ का अर्थ और उसमें होने वाले बाह्य तथा आंतरिक परिवर्तनों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH06-T3",
+     "topic_number": 3,
+     "title": "जनन क्षमता को इंगित करने वाले परिवर्तन",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "artav-chakra",
+       "learning_objective": "आर्तव चक्र (ऋतुचक्र) और मासिक धर्म की अवधि, सामान्य सीमा और समाप्ति को समझना।"
+      },
+      {
+       "concept_tag": "masik-dharm-mithak",
+       "learning_objective": "मासिक धर्म से जुड़े मिथकों और वर्जनाओं का वैज्ञानिक दृष्टिकोण से मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH06-T4",
+     "topic_number": 4,
+     "title": "किशोरावस्था में संवेगात्मक और व्यवहारगत परिवर्तन",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "samvegatmak-parivartan",
+       "learning_objective": "किशोरावस्था के प्रमुख संवेगात्मक परिवर्तनों और व्यवहार पर उनके प्रभाव को पहचानना।"
+      },
+      {
+       "concept_tag": "sakaratmak-vikas",
+       "learning_objective": "प्रबल संवेगों और बढ़ी संवेदनशीलता को सकारात्मक वृद्धि एवं विकास की दिशा में लगाने के उपाय बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH06-T5",
+     "topic_number": 5,
+     "title": "पोषण संबंधी आवश्यकताएँ और व्यक्तिगत स्वच्छता",
+     "ncert_sections": "6.4.1, 6.4.2",
+     "concepts": [
+      {
+       "concept_tag": "poshan-avashyakta",
+       "learning_objective": "किशोरावस्था में पौष्टिक आहार, खाद्य स्रोतों और उनके पोषकों के कार्यों को समझना।"
+      },
+      {
+       "concept_tag": "vyaktigat-svachhata",
+       "learning_objective": "व्यक्तिगत तथा मासिक धर्म संबंधी स्वच्छता और सेनीटरी पैड के सही निपटान का महत्व समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH06-T6",
+     "topic_number": 6,
+     "title": "शारीरिक गतिविधियाँ और संतुलित सामाजिक जीवन",
+     "ncert_sections": "6.4.3, 6.4.4",
+     "concepts": [
+      {
+       "concept_tag": "sharirik-gatividhi",
+       "learning_objective": "नियमित व्यायाम और शारीरिक गतिविधियों के शारीरिक एवं मानसिक लाभ बताना।"
+      },
+      {
+       "concept_tag": "saibar-utpidan",
+       "learning_objective": "साइबर उत्पीड़न को पहचानना और सोशल मीडिया का उत्तरदायी उपयोग करना।"
+      },
+      {
+       "concept_tag": "santulit-samajik-jivan",
+       "learning_objective": "साथियों के साथ नम्र, आदरपूर्ण और विचारशील व्यवहार का महत्व समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH06-T7",
+     "topic_number": 7,
+     "title": "हानिकारक पदार्थों से बचना — 'ना' कहना सीखें",
+     "ncert_sections": "6.4.5",
+     "concepts": [
+      {
+       "concept_tag": "madak-padarth-lat",
+       "learning_objective": "मादक पदार्थों की लत का अर्थ और स्वास्थ्य पर उनके हानिकारक प्रभावों को समझना।"
+      },
+      {
+       "concept_tag": "na-kahna-aur-sahayata",
+       "learning_objective": "हानिकारक पदार्थों को 'ना' कहने और व्यसन से मुक्ति हेतु सहायता लेने के उपाय बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH06-T8",
+     "topic_number": 8,
+     "title": "किशोरावस्था के संदर्भ में 'क्यों प्रश्न' — हार्मोन",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "harmon-ki-bhumika",
+       "learning_objective": "किशोरावस्था के परिवर्तनों को नियंत्रित करने में हार्मोन की भूमिका समझाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHCU1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "प्रकृति में ऊष्मा का स्थानांतरण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghcu107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHCU1-CH07-T1",
+     "topic_number": 1,
+     "title": "ऊष्मा का चालन",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "chalan-ki-prakriya",
+       "learning_objective": "विद्यार्थी चालन को ऐसी प्रक्रिया के रूप में समझा सकेंगे जिसमें गरम कण अगले कण को ऊष्मा देते हैं पर स्वयं स्थान नहीं बदलते।"
+      },
+      {
+       "concept_tag": "dhatu-patti-kriyakalap",
+       "learning_objective": "विद्यार्थी धातु-पट्टी पर पिनों के गिरने के क्रम से ऊष्मा के प्रवाह की दिशा का अनुमान लगा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH07-T2",
+     "topic_number": 2,
+     "title": "ऊष्मा के सुचालक और कुचालक",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "suchalak-kuchalak",
+       "learning_objective": "विद्यार्थी दैनिक जीवन की वस्तुओं को ऊष्मा के सुचालक और कुचालक में वर्गीकृत कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vayu-kuchalak",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि फँसी हुई वायु ऊष्मा की कुचालक होकर हमें गरम कैसे रखती है।"
+      },
+      {
+       "concept_tag": "gharon-mein-ushma-rodh",
+       "learning_objective": "विद्यार्थी घरों के निर्माण में कुचालक पदार्थों के उपयोग का कारण बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH07-T3",
+     "topic_number": 3,
+     "title": "संवहन",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "vayu-mein-sanvahan",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि गरम वायु फैलकर हल्की होती है और ऊपर उठती है।"
+      },
+      {
+       "concept_tag": "drav-mein-sanvahan",
+       "learning_objective": "विद्यार्थी द्रव में कणों की वास्तविक गति द्वारा ऊष्मा के स्थानांतरण की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH07-T4",
+     "topic_number": 4,
+     "title": "स्थल समीर और समुद्र समीर",
+     "ncert_sections": "7.2.1",
+     "concepts": [
+      {
+       "concept_tag": "sthal-jal-ka-garam-hona",
+       "learning_objective": "विद्यार्थी तुलना कर सकेंगे कि मृदा (स्थल) जल की अपेक्षा शीघ्र गरम और शीघ्र ठंडी होती है।"
+      },
+      {
+       "concept_tag": "samudra-sameer",
+       "learning_objective": "विद्यार्थी दिन में समुद्र से स्थल की ओर बहने वाली समुद्र समीर का कारण बता सकेंगे।"
+      },
+      {
+       "concept_tag": "sthal-sameer",
+       "learning_objective": "विद्यार्थी रात में स्थल से समुद्र की ओर बहने वाली स्थल समीर का कारण बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH07-T5",
+     "topic_number": 5,
+     "title": "विकिरण",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "vikiran",
+       "learning_objective": "विद्यार्थी पहचान सकेंगे कि विकिरण द्वारा ऊष्मा के स्थानांतरण में किसी माध्यम की आवश्यकता नहीं होती।"
+      },
+      {
+       "concept_tag": "halke-gahre-rang",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि हल्के रंग ऊष्मा परावर्तित और गहरे रंग अवशोषित करते हैं।"
+      },
+      {
+       "concept_tag": "teeno-prakram-saath",
+       "learning_objective": "विद्यार्थी दैनिक उदाहरणों में चालन, संवहन और विकिरण को एक साथ पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH07-T6",
+     "topic_number": 6,
+     "title": "जल चक्र",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "jal-chakra-prakram",
+       "learning_objective": "विद्यार्थी वाष्पन, वाष्पोत्सर्जन, संघनन और वर्षण के क्रम को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "jal-chakra-mahatva",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि जल चक्र जल का पुनः वितरण करता है और उसकी कुल मात्रा बनाए रखता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH07-T7",
+     "topic_number": 7,
+     "title": "जल का धरती में अंतःस्यंदन और भौम जल",
+     "ncert_sections": "7.4.1",
+     "concepts": [
+      {
+       "concept_tag": "antahsyandan",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि कणों के बीच चौड़े रिक्त स्थानों से जल अधिक तेजी से रिसता है।"
+      },
+      {
+       "concept_tag": "bhaum-jal-jalbhrit",
+       "learning_objective": "विद्यार्थी भौम जल, जलभृत और भौम जल के घटने के कारणों की व्याख्या कर सकेंगे।"
+      },
+      {
+       "concept_tag": "jal-sanrakshan",
+       "learning_objective": "विद्यार्थी हिम-स्तूप जैसी जल संरक्षण विधियों के कार्य को समझा सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHCU1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "समय एवं गति का मापन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghcu108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHCU1-CH08-T1",
+     "topic_number": 1,
+     "title": "समय मापन की प्राचीन युक्तियाँ",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "prachin-samay-mapan-yuktiyan",
+       "learning_objective": "धूप-घड़ी, जल-घड़ी, रेत-घड़ी और मोमबत्ती-घड़ी किस आधार पर समय मापती थीं, यह समझाना।"
+      },
+      {
+       "concept_tag": "ghatika-yantra",
+       "learning_objective": "प्लवमान पात्र प्रकार की जल-घड़ी (घटिका यंत्र) और घटी मात्रक को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH08-T2",
+     "topic_number": 2,
+     "title": "सरल लोलक और दोलनकाल",
+     "ncert_sections": "8.1.1",
+     "concepts": [
+      {
+       "concept_tag": "dolan-aur-dolankal",
+       "learning_objective": "सरल लोलक के एक दोलन और दोलनकाल को पहचानना तथा दोलनकाल का परिकलन करना।"
+      },
+      {
+       "concept_tag": "dolankal-ki-nirbharta",
+       "learning_objective": "यह जानना कि दोलनकाल डोरी की लंबाई पर निर्भर करता है, गोलक के द्रव्यमान पर नहीं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH08-T3",
+     "topic_number": 3,
+     "title": "समय का SI मात्रक और समय का सूक्ष्म मापन",
+     "ncert_sections": "8.1.2",
+     "concepts": [
+      {
+       "concept_tag": "samay-ka-si-matrak",
+       "learning_objective": "समय के SI मात्रक सेकंड तथा मिनट और घंटे के साथ उसके संबंध का उपयोग करना।"
+      },
+      {
+       "concept_tag": "matrak-lekhan-niyam",
+       "learning_objective": "समय के मात्रकों और प्रतीकों को लिखने के मानक नियम लागू करना।"
+      },
+      {
+       "concept_tag": "sukshma-samay-mapan",
+       "learning_objective": "दैनिक जीवन में सेकंड के सूक्ष्म अंशों के मापन का महत्व समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH08-T4",
+     "topic_number": 4,
+     "title": "धीमा या तेज और चाल",
+     "ncert_sections": "8.2, 8.3",
+     "concepts": [
+      {
+       "concept_tag": "tej-ya-dheema",
+       "learning_objective": "समान समय में चली गई दूरी या चाल की तुलना करके तेज और धीमी गति का निर्णय करना।"
+      },
+      {
+       "concept_tag": "chaal-paribhasha-matrak",
+       "learning_objective": "चाल की परिभाषा देना और उसका परिकलन m/s तथा km/h में करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH08-T5",
+     "topic_number": 5,
+     "title": "चाल, दूरी एवं समय में संबंध",
+     "ncert_sections": "8.3.1",
+     "concepts": [
+      {
+       "concept_tag": "doori-chaal-samay-sambandh",
+       "learning_objective": "चाल, दूरी और समय के संबंध से किसी एक अज्ञात राशि का परिकलन करना।"
+      },
+      {
+       "concept_tag": "ausat-chaal",
+       "learning_objective": "कुल दूरी को कुल समय से विभाजित करके औसत चाल ज्ञात करना।"
+      },
+      {
+       "concept_tag": "chaalmapi-pathmapi",
+       "learning_objective": "वाहनों में चालमापी और पथमापी के कार्य को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH08-T6",
+     "topic_number": 6,
+     "title": "एकसमान एवं असमान रेखीय गति",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "eksaman-rekhiya-gati",
+       "learning_objective": "समान समय-अंतरालों में समान दूरी तय करने वाली एकसमान रेखीय गति को पहचानना।"
+      },
+      {
+       "concept_tag": "asaman-rekhiya-gati",
+       "learning_objective": "बदलती चाल वाली असमान रेखीय गति को आँकड़ों और उदाहरणों से पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHCU1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "जंतुओं में जैव प्रक्रम",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghcu109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHCU1-CH09-T1",
+     "topic_number": 1,
+     "title": "मुख गुहा में पाचन और लार की भूमिका",
+     "ncert_sections": "9.1, 9.1.1",
+     "concepts": [
+      {
+       "concept_tag": "yantrik-pachan",
+       "learning_objective": "विद्यार्थी दाँतों द्वारा भोजन के संदलन और चर्वण को यांत्रिक पाचन के रूप में पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "lar-dwara-mand-vighatan",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि लार का पाचक रस मंड को शर्करा में विघटित करता है।"
+      },
+      {
+       "concept_tag": "iodine-mand-parikshan",
+       "learning_objective": "विद्यार्थी आयोडीन परीक्षण के परिणामों से मंड की उपस्थिति या अनुपस्थिति का निष्कर्ष निकाल सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH09-T2",
+     "topic_number": 2,
+     "title": "ग्रासनली और आमाशय",
+     "ncert_sections": "9.1.1",
+     "concepts": [
+      {
+       "concept_tag": "grasnali-lahardar-gati",
+       "learning_objective": "विद्यार्थी ग्रासनली की भित्तियों के लहरदार संकुचन और शिथिलन से भोजन के आगे बढ़ने को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "amashay-ke-srav",
+       "learning_objective": "विद्यार्थी आमाशय के अम्ल, पाचक रस और श्लेष्मा के कार्य बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH09-T3",
+     "topic_number": 3,
+     "title": "क्षुद्रांत्र, यकृत, अग्न्याशय और अवशोषण",
+     "ncert_sections": "9.1.1",
+     "concepts": [
+      {
+       "concept_tag": "yakrit-agnyashay-srav",
+       "learning_objective": "विद्यार्थी पित्तरस और अग्न्याशयी रस के स्रोत और कार्य बता सकेंगे।"
+      },
+      {
+       "concept_tag": "poshak-avshoshan",
+       "learning_objective": "विद्यार्थी क्षुद्रांत्र के अँगुली जैसे प्रवर्धों द्वारा पोषकों के अवशोषण को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH09-T4",
+     "topic_number": 4,
+     "title": "बृहदांत्र और पाचन तंत्र का स्वास्थ्य",
+     "ncert_sections": "9.1.1",
+     "concepts": [
+      {
+       "concept_tag": "brihadantra-karya",
+       "learning_objective": "विद्यार्थी बृहदांत्र द्वारा जल और लवणों के अवशोषण तथा मल के बनने और बहिःक्षेपण को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "pachan-swasthya",
+       "learning_objective": "विद्यार्थी रेशे-समृद्ध और किण्वित भोजन तथा आँत के जीवाणुओं का पाचन स्वास्थ्य में महत्व बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH09-T5",
+     "topic_number": 5,
+     "title": "अन्य जंतुओं में पाचन",
+     "ncert_sections": "9.1.2",
+     "concepts": [
+      {
+       "concept_tag": "romanthan",
+       "learning_objective": "विद्यार्थी रोमंथी जंतुओं में रोमंथन की प्रक्रिया समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "pakshi-peshani",
+       "learning_objective": "विद्यार्थी दाँत न होने पर भी पक्षियों में पेषणी द्वारा भोजन के विघटन को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH09-T6",
+     "topic_number": 6,
+     "title": "मनुष्य में श्वास लेना: श्वसन तंत्र और क्रियाविधि",
+     "ncert_sections": "9.2, 9.2.1",
+     "concepts": [
+      {
+       "concept_tag": "shwasan-tantra-ke-bhag",
+       "learning_objective": "विद्यार्थी नासाद्वार से कूपिकाओं तक श्वसन तंत्र के भागों और उनके कार्यों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "antahshwasan-uchchhvasan",
+       "learning_objective": "विद्यार्थी अंतःश्वसन और उच्छ्वसन में पसलियों और डायाफ्राम की गति को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH09-T7",
+     "topic_number": 7,
+     "title": "गैसों का विनिमय और श्वसन",
+     "ncert_sections": "9.2.1",
+     "concepts": [
+      {
+       "concept_tag": "kupika-gas-vinimay",
+       "learning_objective": "विद्यार्थी कूपिकाओं में ऑक्सीजन और कार्बन डाइऑक्साइड के विनिमय तथा रक्त द्वारा उनके वहन को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "shwasan-rasayanik-prakriya",
+       "learning_objective": "विद्यार्थी श्वसन को ग्लूकोस के विघटन से ऊर्जा मुक्त करने वाली रासायनिक प्रक्रिया के रूप में श्वास लेने से अलग कर सकेंगे।"
+      },
+      {
+       "concept_tag": "chune-ka-pani-parikshan",
+       "learning_objective": "विद्यार्थी चूने के पानी के परीक्षण से उच्छ्वसित वायु में अधिक कार्बन डाइऑक्साइड का निष्कर्ष निकाल सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH09-T8",
+     "topic_number": 8,
+     "title": "अन्य जंतुओं में श्वास लेना",
+     "ncert_sections": "9.2.2",
+     "concepts": [
+      {
+       "concept_tag": "klom-shwasan",
+       "learning_objective": "विद्यार्थी मछली जैसे जलीय जंतुओं में क्लोम द्वारा गैस विनिमय को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "twacha-aur-mendhak-shwasan",
+       "learning_objective": "विद्यार्थी मेंढक और केंचुए में त्वचा तथा जीवन-अवस्था के अनुसार श्वास लेने के अनुकूलन बता सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHCU1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "पादपों में जैव प्रक्रम",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghcu110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHCU1-CH10-T1",
+     "topic_number": 1,
+     "title": "पादपों में वृद्धि: जल और सूर्य के प्रकाश की भूमिका",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "vriddhi-ke-sanket",
+       "learning_objective": "विद्यार्थी पौधे में वृद्धि होने पर दिखने वाले परिवर्तनों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "jal-aur-prakash-ki-avashyakta",
+       "learning_objective": "विद्यार्थी क्रियाकलाप के आधार पर समझा सकेंगे कि पौधों की वृद्धि के लिए जल और सूर्य का प्रकाश दोनों आवश्यक हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH10-T2",
+     "topic_number": 2,
+     "title": "पत्तियाँ: पौधों की भोजन निर्माणशाला",
+     "ncert_sections": "10.2, 10.2.1",
+     "concepts": [
+      {
+       "concept_tag": "mand-ka-iodine-parikshan",
+       "learning_objective": "विद्यार्थी आयोडीन परीक्षण द्वारा पत्ती में मंड की उपस्थिति की जाँच की विधि समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "parnaharit-aur-prakash",
+       "learning_objective": "विद्यार्थी मंड बनने में पर्णहरित और सूर्य के प्रकाश की भूमिका का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH10-T3",
+     "topic_number": 3,
+     "title": "भोजन निर्माण में वायु की भूमिका और ऑक्सीजन की निर्मुक्ति",
+     "ncert_sections": "10.2.2",
+     "concepts": [
+      {
+       "concept_tag": "carbon-dioxide-ki-bhumika",
+       "learning_objective": "विद्यार्थी प्रयोग के आधार पर बता सकेंगे कि मंड बनाने के लिए वायु की कार्बन डाइऑक्साइड आवश्यक है।"
+      },
+      {
+       "concept_tag": "oxygen-ki-nirmukti",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि प्रकाश संश्लेषण के दौरान ऑक्सीजन निर्मुक्त होती है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH10-T4",
+     "topic_number": 4,
+     "title": "प्रकाश संश्लेषण संक्षेप में और रंध्रों द्वारा गैसों का विनिमय",
+     "ncert_sections": "10.2.3, 10.2.4",
+     "concepts": [
+      {
+       "concept_tag": "prakash-sanshleshan-ka-samikaran",
+       "learning_objective": "विद्यार्थी प्रकाश संश्लेषण के कच्चे पदार्थ, उत्पाद और शब्द समीकरण लिख सकेंगे।"
+      },
+      {
+       "concept_tag": "randhra-aur-gas-vinimay",
+       "learning_objective": "विद्यार्थी पत्ती के रंध्रों की पहचान कर गैसों के विनिमय में उनकी भूमिका बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH10-T5",
+     "topic_number": 5,
+     "title": "पादपों में जल, खनिज और भोजन का परिवहन",
+     "ncert_sections": "10.3, 10.3.1, 10.3.2",
+     "concepts": [
+      {
+       "concept_tag": "daru-dvara-jal-parivahan",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि दारु जड़ों से जल और खनिजों को ऊपरी भागों तक ले जाता है।"
+      },
+      {
+       "concept_tag": "poshvah-dvara-bhojan-parivahan",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि पोषवाह पत्तियों में बने भोजन को पौधे के सभी भागों तक पहुँचाता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH10-T6",
+     "topic_number": 6,
+     "title": "क्या पौधे श्वसन करते हैं?",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "ankurit-beejon-mein-shvasan",
+       "learning_objective": "विद्यार्थी अंकुरित बीजों के प्रयोग से पौधों में श्वसन का प्रमाण समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "shvasan-ka-samikaran",
+       "learning_objective": "विद्यार्थी श्वसन का शब्द समीकरण लिखकर इसकी प्रकाश संश्लेषण से तुलना कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHCU1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "प्रकाश— छाया एवं परावर्तन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghcu111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHCU1-CH11-T1",
+     "topic_number": 1,
+     "title": "प्रकाश के स्रोत: दीप्त और अदीप्त पिंड",
+     "ncert_sections": "11.1",
+     "concepts": [
+      {
+       "concept_tag": "deept-adeept-pind",
+       "learning_objective": "विद्यार्थी स्वयं प्रकाश उत्सर्जित करने के आधार पर पिंडों को दीप्त और अदीप्त में पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "prakash-ke-srot",
+       "learning_objective": "विद्यार्थी प्रकाश के प्राकृतिक और कृत्रिम स्रोतों तथा एल.ई.डी. लैंपों के लाभ बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH11-T2",
+     "topic_number": 2,
+     "title": "प्रकाश का सरल रेखा में गमन",
+     "ncert_sections": "11.2",
+     "concepts": [
+      {
+       "concept_tag": "saral-rekha-gaman",
+       "learning_objective": "विद्यार्थी क्रियाकलापों के आधार पर समझा सकेंगे कि प्रकाश सरल रेखा में गमन करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH11-T3",
+     "topic_number": 3,
+     "title": "पारदर्शी, पारभासी और अपारदर्शी पदार्थों से प्रकाश का संचरण",
+     "ncert_sections": "11.3",
+     "concepts": [
+      {
+       "concept_tag": "padarthon-ka-vargikaran",
+       "learning_objective": "विद्यार्थी प्रकाश के संचरण के आधार पर पदार्थों को पारदर्शी, पारभासी और अपारदर्शी में वर्गीकृत कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH11-T4",
+     "topic_number": 4,
+     "title": "छाया बनना",
+     "ncert_sections": "11.4",
+     "concepts": [
+      {
+       "concept_tag": "chhaya-ka-banna",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि छाया कैसे बनती है और इसके लिए किन चीज़ों की आवश्यकता होती है।"
+      },
+      {
+       "concept_tag": "chhaya-ki-visheshtayen",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि छाया का आकार, आमाप, स्पष्टता और रंग किन बातों पर निर्भर करते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH11-T5",
+     "topic_number": 5,
+     "title": "प्रकाश का परावर्तन",
+     "ncert_sections": "11.5",
+     "concepts": [
+      {
+       "concept_tag": "prakash-ka-paravartan",
+       "learning_objective": "विद्यार्थी दर्पण या चमकीली सतह द्वारा प्रकाश की दिशा बदलने को परावर्तन के रूप में पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH11-T6",
+     "topic_number": 6,
+     "title": "समतल दर्पण से प्रतिबिंब का बनना",
+     "ncert_sections": "11.6",
+     "concepts": [
+      {
+       "concept_tag": "samtal-darpan-pratibimb",
+       "learning_objective": "विद्यार्थी समतल दर्पण द्वारा बने प्रतिबिंब के आमाप, सीधेपन और पर्दे पर प्राप्त न होने की विशेषताएँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "parshv-utkraman",
+       "learning_objective": "विद्यार्थी पार्श्व उत्क्रमण को समझकर दैनिक जीवन में उसके उदाहरणों की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH11-T7",
+     "topic_number": 7,
+     "title": "सूचीछिद्र कैमरा",
+     "ncert_sections": "11.7",
+     "concepts": [
+      {
+       "concept_tag": "suchichhidra-kaimra",
+       "learning_objective": "विद्यार्थी सूचीछिद्र कैमरे की बनावट और उससे बने उल्टे प्रतिबिंब की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH11-T8",
+     "topic_number": 8,
+     "title": "कुछ उपयोगी उपकरण: परिदर्शी और बहुमूर्तिदर्शी",
+     "ncert_sections": "11.8, 11.8.1, 11.8.2",
+     "concepts": [
+      {
+       "concept_tag": "paridarshi",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि परिदर्शी दो समतल दर्पणों पर क्रमिक परावर्तन से कैसे कार्य करता है।"
+      },
+      {
+       "concept_tag": "bahumurtidarshi",
+       "learning_objective": "विद्यार्थी बहुमूर्तिदर्शी में बार-बार परावर्तन से सुंदर प्रतिरूप बनने की व्याख्या कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHCU1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "पृथ्वी, चंद्रमा एवं सूर्य",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghcu112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHCU1-CH12-T1",
+     "topic_number": 1,
+     "title": "पृथ्वी का घूर्णन और दिन-रात",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "prithvi-ka-ghurnan",
+       "learning_objective": "पृथ्वी के घूर्णन-अक्ष, घूर्णन की दिशा और एक घूर्णन में लगने वाले समय को पहचानना।"
+      },
+      {
+       "concept_tag": "din-raat-ka-chakra",
+       "learning_objective": "पश्चिम से पूर्व की ओर घूर्णन से दिन-रात तथा सूर्य के पूर्व में उदय होने की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH12-T2",
+     "topic_number": 2,
+     "title": "तारों की आभासी गति और ध्रुव तारा",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "dhruv-tara-aur-saptarishi",
+       "learning_objective": "ध्रुव तारे के लगभग स्थिर दिखने और सप्तर्षि के उसके चारों ओर घूमते दिखने की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "taron-ki-abhasi-gati",
+       "learning_objective": "तारों की आभासी गति को पृथ्वी के घूर्णन, फोको लोलक और आर्यभट के विचारों से जोड़ना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH12-T3",
+     "topic_number": 3,
+     "title": "पृथ्वी का परिक्रमण और बदलता रात्रि-आकाश",
+     "ncert_sections": "12.2, 12.2.1",
+     "concepts": [
+      {
+       "concept_tag": "prithvi-ka-parikraman",
+       "learning_objective": "घूर्णन और परिक्रमण में अंतर करना तथा कक्षा और परिक्रमण-काल बताना।"
+      },
+      {
+       "concept_tag": "ratri-akash-ka-parivartan",
+       "learning_objective": "परिक्रमण के कारण वर्ष भर एक ही समय पर दिखने वाले तारों के बदलने की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH12-T4",
+     "topic_number": 4,
+     "title": "पृथ्वी पर ऋतुएँ",
+     "ncert_sections": "12.2.2",
+     "concepts": [
+      {
+       "concept_tag": "rituon-ka-karan",
+       "learning_objective": "ऋतु-परिवर्तन को अक्ष के झुकाव और पृथ्वी की गोलाकार आकृति से जोड़ना तथा भ्रांतियाँ पहचानना।"
+      },
+      {
+       "concept_tag": "ayanant-aur-vishuv",
+       "learning_objective": "अयनांत, विषुव तथा ध्रुवों पर दिन और रात की अवधि बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH12-T5",
+     "topic_number": 5,
+     "title": "ग्रहण और सूर्य-ग्रहण",
+     "ncert_sections": "12.3, 12.3.1",
+     "concepts": [
+      {
+       "concept_tag": "abhasi-aamap",
+       "learning_objective": "चंद्रमा द्वारा सूर्य को ढक पाने को आभासी आमाप (आकार और दूरी) से समझाना।"
+      },
+      {
+       "concept_tag": "surya-grahan",
+       "learning_objective": "सूर्य-ग्रहण में सूर्य, चंद्रमा और पृथ्वी की स्थिति तथा पूर्ण और आंशिक ग्रहण को समझना।"
+      },
+      {
+       "concept_tag": "surakshit-avlokan",
+       "learning_objective": "सूर्य-ग्रहण देखने की सुरक्षित विधियाँ पहचानना और अंधविश्वास से मुक्त दृष्टिकोण अपनाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHCU1-CH12-T6",
+     "topic_number": 6,
+     "title": "चंद्र-ग्रहण",
+     "ncert_sections": "12.3.2",
+     "concepts": [
+      {
+       "concept_tag": "chandra-grahan",
+       "learning_objective": "चंद्र-ग्रहण में सूर्य, पृथ्वी और चंद्रमा की स्थिति तथा पूर्ण और आंशिक चंद्र-ग्रहण पहचानना।"
+      },
+      {
+       "concept_tag": "grahanon-ki-tulna",
+       "learning_objective": "सूर्य-ग्रहण और चंद्र-ग्रहण की तुलना दिखने के क्षेत्र और सुरक्षा के आधार पर करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

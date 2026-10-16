@@ -1,0 +1,104 @@
+{
+ "chapter_id": "JHMH1-CH03",
+ "title": "दो चर वाले रैखिक समीकरण युग्म",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH03-T1",
+   "topic_number": 1,
+   "title": "स्थितियों का रैखिक समीकरण युग्म द्वारा निरूपण",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "rekhik-samikaran-yugm",
+     "learning_objective": "दो चरों वाले रैखिक समीकरण युग्म को पहचानना और उसके हल का अर्थ समझना।"
+    },
+    {
+     "concept_tag": "sthiti-ka-bijganitiya-nirupan",
+     "learning_objective": "दैनिक जीवन की स्थिति को दो चरों वाले रैखिक समीकरण युग्म के रूप में लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH03-T2",
+   "topic_number": 2,
+   "title": "रैखिक समीकरण युग्म का ग्राफीय निरूपण और हल",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "rekhaon-ki-sthitiyan",
+     "learning_objective": "प्रतिच्छेदी, संपाती और समांतर रेखाओं से हलों की संख्या का संबंध बताना।"
+    },
+    {
+     "concept_tag": "graphiya-hal",
+     "learning_objective": "आलेख खींचकर रेखाओं के प्रतिच्छेद बिंदु से समीकरण युग्म का हल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH03-T3",
+   "topic_number": 3,
+   "title": "गुणांकों के अनुपात और युग्म की संगतता",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "gunank-anupat-kasauti",
+     "learning_objective": "अनुपातों a₁/a₂, b₁/b₂ और c₁/c₂ की तुलना से रेखाओं की स्थिति ज्ञात करना।"
+    },
+    {
+     "concept_tag": "sangat-asangat-ashrit",
+     "learning_objective": "किसी युग्म को संगत, असंगत या आश्रित के रूप में वर्गीकृत करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH03-T4",
+   "topic_number": 4,
+   "title": "प्रतिस्थापन विधि",
+   "ncert_sections": "3.3, 3.3.1",
+   "concepts": [
+    {
+     "concept_tag": "pratisthapan-vidhi-charan",
+     "learning_objective": "प्रतिस्थापन विधि के चरणों से रैखिक समीकरण युग्म हल करना।"
+    },
+    {
+     "concept_tag": "pratisthapan-se-hal-ki-prakriti",
+     "learning_objective": "प्रतिस्थापन से प्राप्त चर-रहित कथन द्वारा हलों की प्रकृति पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH03-T5",
+   "topic_number": 5,
+   "title": "विलोपन विधि",
+   "ncert_sections": "3.3.2",
+   "concepts": [
+    {
+     "concept_tag": "vilopan-vidhi-charan",
+     "learning_objective": "उपयुक्त अचरों से गुणा करके एक चर का विलोपन कर युग्म हल करना।"
+    },
+    {
+     "concept_tag": "vilopan-se-hal-ki-prakriti",
+     "learning_objective": "विलोपन के बाद प्राप्त सत्य या असत्य कथन से हलों की प्रकृति बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH03-T6",
+   "topic_number": 6,
+   "title": "रैखिक समीकरण युग्म पर आधारित शाब्दिक समस्याएँ",
+   "ncert_sections": "3.3, 3.4",
+   "concepts": [
+    {
+     "concept_tag": "aayu-sankhya-aur-kon-samasyaen",
+     "learning_objective": "आयु, संख्याओं और कोणों से जुड़ी समस्याओं को समीकरण युग्म बनाकर हल करना।"
+    },
+    {
+     "concept_tag": "mulya-aur-shulk-samasyaen",
+     "learning_objective": "मूल्य, किराया और शुल्क से जुड़ी समस्याओं को समीकरण युग्म द्वारा हल करना।"
+    }
+   ]
+  }
+ ]
+}

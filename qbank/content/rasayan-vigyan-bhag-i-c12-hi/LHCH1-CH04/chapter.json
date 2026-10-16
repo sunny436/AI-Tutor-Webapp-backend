@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LHCH1-CH04",
+ "title": "d- एवं f- ब्लॉक के तत्व",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHCH1-CH04-T1",
+   "topic_number": 1,
+   "title": "आवर्त सारणी में स्थिति और इलेक्ट्रॉनिक विन्यास",
+   "ncert_sections": "4.1, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "d-block-ki-sthiti",
+     "learning_objective": "d-ब्लॉक तत्वों की आवर्त सारणी में स्थिति और संक्रमण तत्वों की परिभाषा बताना।"
+    },
+    {
+     "concept_tag": "electronic-vinyas",
+     "learning_objective": "संक्रमण तत्वों के सामान्य और अपवादी इलेक्ट्रॉनिक विन्यास लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH04-T2",
+   "topic_number": 2,
+   "title": "संक्रमण तत्वों के भौतिक गुण, आकार, आयनन एन्थैल्पी और ऑक्सीकरण अवस्थाएँ",
+   "ncert_sections": "4.3.1, 4.3.2, 4.3.3, 4.3.4",
+   "concepts": [
+    {
+     "concept_tag": "bhautik-gun-aur-parmanviya-aakar",
+     "learning_objective": "परमाण्वीकरण एन्थैल्पी और परमाणु त्रिज्या की प्रवृत्तियाँ समझाना।"
+    },
+    {
+     "concept_tag": "oxikaran-avasthayen",
+     "learning_objective": "संक्रमण तत्वों की परिवर्ती ऑक्सीकरण अवस्थाओं और उनकी स्थिरता का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH04-T3",
+   "topic_number": 3,
+   "title": "इलेक्ट्रोड विभव, चुंबकीय गुण, रंग, उत्प्रेरक और अन्य अभिलक्षण",
+   "ncert_sections": "4.3.5 से 4.3.14",
+   "concepts": [
+    {
+     "concept_tag": "electrode-vibhav",
+     "learning_objective": "M²⁺/M इलेक्ट्रोड विभवों की प्रवृत्ति की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "chumbakiya-gun-aur-rang",
+     "learning_objective": "केवल चक्रण चुंबकीय आघूर्ण की गणना करना और आयनों के रंग का कारण बताना।"
+    },
+    {
+     "concept_tag": "utprerak-antaraali-mishradhatu",
+     "learning_objective": "उत्प्रेरकीय गुण, अंतराकाशी यौगिकों और मिश्रातुओं के निर्माण को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH04-T4",
+   "topic_number": 4,
+   "title": "पोटैशियम डाइक्रोमेट और पोटैशियम परमैंगनेट",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "potassium-dichromate",
+     "learning_objective": "पोटैशियम डाइक्रोमेट के निर्माण, गुणों और ऑक्सीकारक अभिक्रियाओं को समझाना।"
+    },
+    {
+     "concept_tag": "potassium-permanganate",
+     "learning_objective": "पोटैशियम परमैंगनेट के निर्माण और विभिन्न माध्यमों में ऑक्सीकारक व्यवहार को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH04-T5",
+   "topic_number": 5,
+   "title": "लैन्थेनॉयड",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "lanthanoid-sankuchan",
+     "learning_objective": "लैन्थेनॉयड संकुचन का कारण और उसके परिणाम बताना।"
+    },
+    {
+     "concept_tag": "lanthanoid-oxikaran-avastha",
+     "learning_objective": "लैन्थेनॉयडों की ऑक्सीकरण अवस्थाओं और सामान्य अभिलक्षणों को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH04-T6",
+   "topic_number": 6,
+   "title": "ऐक्टिनॉयड तथा d- और f-ब्लॉक तत्वों के अनुप्रयोग",
+   "ncert_sections": "4.6, 4.7",
+   "concepts": [
+    {
+     "concept_tag": "actinoid",
+     "learning_objective": "ऐक्टिनॉयडों के विन्यास, ऑक्सीकरण अवस्थाओं और संकुचन की तुलना लैन्थेनॉयडों से करना।"
+    },
+    {
+     "concept_tag": "anuprayog",
+     "learning_objective": "d- और f-ब्लॉक तत्वों तथा उनके यौगिकों के प्रमुख अनुप्रयोग पहचानना।"
+    }
+   ]
+  }
+ ]
+}

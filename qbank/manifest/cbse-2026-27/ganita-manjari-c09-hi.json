@@ -1,0 +1,1057 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "ganita-manjari-c09-hi",
+  "curriculum": "cbse",
+  "class_level": 9,
+  "subject_code": "mathematics",
+  "language": "hindi",
+  "title": "Ganita Manjari (Hindi)",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "ihmh1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "IHMH1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "स्वयं को प्रवृत्त करना — निर्देशांकों का उपयोग",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihmh101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHMH1-CH01-T1",
+     "topic_number": 1,
+     "title": "निर्देशांक पद्धति का इतिहास",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "nirdeshank-itihas-bharat",
+       "learning_objective": "सिंधु-सरस्वती नगरों, उज्जयिनी मध्याह्न रेखा और आर्यभट्ट के कार्यों में निर्देशांक संबंधी भारतीय योगदान को पहचानना।"
+      },
+      {
+       "concept_tag": "nirdeshank-vishv-yogdan",
+       "learning_objective": "ब्रह्मगुप्त, अल-बिरुनी और देकार्त के योगदान से आधुनिक निर्देशांक ज्यामिति के विकास को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH01-T2",
+     "topic_number": 2,
+     "title": "अक्ष, मूलबिंदु और अक्षों पर बिंदु",
+     "ncert_sections": "1.2, 1.3",
+     "concepts": [
+      {
+       "concept_tag": "aksh-aur-mool-bindu",
+       "learning_objective": "x-अक्ष, y-अक्ष, मूलबिंदु और पैमाने की भूमिका को समझना।"
+      },
+      {
+       "concept_tag": "akshon-par-bindu",
+       "learning_objective": "अक्षों पर स्थित बिंदुओं के निर्देशांक पहचानना और उनसे दूरियाँ ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH01-T3",
+     "topic_number": 3,
+     "title": "चतुर्थांश और बिंदु के निर्देशांक",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "chaturthansh",
+       "learning_objective": "चारों चतुर्थांशों में निर्देशांकों के चिह्न पहचानना और बिंदु का चतुर्थांश ज्ञात करना।"
+      },
+      {
+       "concept_tag": "kramit-yugm",
+       "learning_objective": "(x, y) में x और y का अर्थ तथा (x, y) और (y, x) के अंतर को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH01-T4",
+     "topic_number": 4,
+     "title": "दो बिंदुओं के मध्य दूरी",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "aksh-samantar-doori",
+       "learning_objective": "अक्षों के समांतर रेखाखंडों की लंबाई निर्देशांकों के अंतर से ज्ञात करना।"
+      },
+      {
+       "concept_tag": "doori-sutra",
+       "learning_objective": "बौधायन-पाइथागोरस प्रमेय पर आधारित दूरी सूत्र का उपयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH01-T5",
+     "topic_number": 5,
+     "title": "अक्षों में परावर्तन",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "paravartan-nirdeshank",
+       "learning_objective": "x-अक्ष और y-अक्ष में परावर्तन से प्रतिबिंब के निर्देशांक ज्ञात करना।"
+      },
+      {
+       "concept_tag": "paravartan-doori-sanrakshan",
+       "learning_objective": "परावर्तन में भुजाओं की लंबाइयों के संरक्षित रहने का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH01-T6",
+     "topic_number": 6,
+     "title": "निर्देशांकों के अनुप्रयोग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "madhyabindu",
+       "learning_objective": "रेखाखंड के मध्यबिंदु और उसके सिरों के निर्देशांकों का संबंध लागू करना।"
+      },
+      {
+       "concept_tag": "sanrekhata",
+       "learning_objective": "दूरियों की तुलना से तीन बिंदुओं के एक सरल रेखा पर होने की जाँच करना।"
+      },
+      {
+       "concept_tag": "doori-anuprayog",
+       "learning_objective": "दूरी सूत्र से वृत्त और वर्ग से जुड़ी समस्याएँ हल करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHMH1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "रैखिक बहुपदों का परिचय",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihmh102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHMH1-CH02-T1",
+     "topic_number": 1,
+     "title": "बीजीय व्यंजक और एक चर वाले बहुपद",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "pad-char-gunank",
+       "learning_objective": "किसी बीजीय व्यंजक के पद, चर, गुणांक और अचर पद की पहचान करना।"
+      },
+      {
+       "concept_tag": "bahupad-ki-ghaat",
+       "learning_objective": "एक चर वाले बहुपद की घात ज्ञात करके उसे अचर, रैखिक, द्विघाती या त्रिघाती के रूप में वर्गीकृत करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH02-T2",
+     "topic_number": 2,
+     "title": "रैखिक बहुपद, रैखिक समीकरण और आगत-निर्गत विधि",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "bahupad-ka-maan",
+       "learning_objective": "चर का मान प्रतिस्थापित करके बहुपद का मान ज्ञात करना और इसे आगत-निर्गत विधि के रूप में समझना।"
+      },
+      {
+       "concept_tag": "rekhik-samikaran-shabd-samasya",
+       "learning_objective": "शाब्दिक समस्या में रैखिक बहुपद को अचर के समीकृत करके रैखिक समीकरण बनाना और हल करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH02-T3",
+     "topic_number": 3,
+     "title": "रैखिक प्रतिरूपों का अन्वेषण",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "rekhik-pratirup-achar-antar",
+       "learning_objective": "पहचानना कि रैखिक प्रतिरूप में क्रमागत पदों का अंतर अचर होता है।"
+      },
+      {
+       "concept_tag": "nvan-pad-rekhik-pratirup",
+       "learning_objective": "बढ़ते प्रतिरूप के nवें पद के लिए n में रैखिक व्यंजक ज्ञात करना और उसका उपयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH02-T4",
+     "topic_number": 4,
+     "title": "रैखिक वृद्धि और रैखिक ह्रास",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "rekhik-vriddhi",
+       "learning_objective": "समान अंतरालों में निश्चित मात्रा से बढ़ने वाली राशि को रैखिक फलन द्वारा निरूपित करना।"
+      },
+      {
+       "concept_tag": "rekhik-hras",
+       "learning_objective": "समान अंतरालों में निश्चित मात्रा से घटने वाली राशि को रैखिक फलन द्वारा निरूपित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH02-T5",
+     "topic_number": 5,
+     "title": "रैखिक संबंध y = ax + b",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "a-aur-b-gyat-karna",
+       "learning_objective": "x और y के मानों के दो युग्मों से y = ax + b में a और b ज्ञात करना।"
+      },
+      {
+       "concept_tag": "a-aur-b-ki-vyakhya",
+       "learning_objective": "वास्तविक जीवन के रैखिक संबंध में a को परिवर्तन की दर और b को प्रारंभिक नियत मान के रूप में समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH02-T6",
+     "topic_number": 6,
+     "title": "रैखिक संबंधों का दृश्यांकन: ढलान और y-अंतःखंड",
+     "ncert_sections": "2.6",
+     "concepts": [
+      {
+       "concept_tag": "rekhik-samikaran-alekhan",
+       "learning_objective": "दो बिंदुओं की सहायता से y = ax + b का आलेख खींचना और जाँचना कि कोई बिंदु रेखा पर है या नहीं।"
+      },
+      {
+       "concept_tag": "dhalan-aur-antahkhand",
+       "learning_objective": "y = ax + b में ढलान a और y-अंतःखंड b की पहचान करना तथा रेखा पर उनके प्रभाव का वर्णन करना।"
+      },
+      {
+       "concept_tag": "samantar-rekhayen",
+       "learning_objective": "पहचानना कि समान ढलान और भिन्न y-अंतःखंड वाली रेखाएँ समांतर होती हैं।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHMH1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "संख्याओं का संसार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihmh103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHMH1-CH03-T1",
+     "topic_number": 1,
+     "title": "गणित का उदय: गिनती की आवश्यकता और प्राकृत संख्याएँ",
+     "ncert_sections": "3.1, 3.1.1, 3.1.2",
+     "concepts": [
+      {
+       "concept_tag": "ekaiki-sangatata",
+       "learning_objective": "समझाना कि एकैकी-संगतता से आदिमानव ने गिनती और मात्राओं का लेखा कैसे रखा।"
+      },
+      {
+       "concept_tag": "asthiyon-par-ganana",
+       "learning_objective": "इशांगो और लेबोम्बो अस्थियों तथा वेदों में 10 के घातांकों के नामों जैसे संख्या-प्रयोग के प्रारंभिक साक्ष्य पहचानना।"
+      },
+      {
+       "concept_tag": "prakrit-sankhyaon-ki-sanvritata",
+       "learning_objective": "प्रति-उदाहरण द्वारा निर्णय करना कि प्राकृत संख्याएँ किसी संक्रिया के अंतर्गत संवृत हैं या नहीं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH03-T2",
+     "topic_number": 2,
+     "title": "शून्य की क्रांति और ब्रह्मगुप्त के नियम",
+     "ncert_sections": "3.2, 3.2.1, 3.2.2",
+     "concepts": [
+      {
+       "concept_tag": "shunyata-se-shunya",
+       "learning_objective": "वर्णन करना कि शून्यता की संकल्पना और बख्शाली पांडुलिपि से शून्य एक संख्या कैसे बना।"
+      },
+      {
+       "concept_tag": "brahmagupt-ke-shunya-niyam",
+       "learning_objective": "शून्य के साथ योग, व्यवकलन और गुणन के ब्रह्मगुप्त के नियमों का प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH03-T3",
+     "topic_number": 3,
+     "title": "पूर्णांक: धन और ऋण",
+     "ncert_sections": "3.3, 3.3.1",
+     "concepts": [
+      {
+       "concept_tag": "dhan-rin-purnank",
+       "learning_objective": "पूर्णांकों को धन-संपत्ति, ऋणभार और शून्य के रूप में तथा प्रतीक Z का वर्णन करना।"
+      },
+      {
+       "concept_tag": "purnankon-ka-ankganit",
+       "learning_objective": "दैनिक जीवन की स्थितियों में पूर्णांकों के योग, व्यवकलन और गुणन के लिए चिह्न-नियमों का प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH03-T4",
+     "topic_number": 4,
+     "title": "भिन्न और परिमेय संख्याएँ",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "parimey-sankhya-ki-paribhasha",
+       "learning_objective": "परिमेय संख्या p/q की परिभाषा बताना और समझाना कि q शून्य क्यों नहीं हो सकता।"
+      },
+      {
+       "concept_tag": "samtulya-parimey-sankhyaen",
+       "learning_objective": "नियम ad = bc से जाँचना कि दो परिमेय संख्याएँ बराबर हैं या नहीं।"
+      },
+      {
+       "concept_tag": "parimey-sankhyaon-par-sankriyaen",
+       "learning_objective": "परिमेय संख्याओं का योग, व्यवकलन, गुणन और भाग करना तथा उनके संवृत गुणों का प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH03-T5",
+     "topic_number": 5,
+     "title": "संख्या रेखा, निरपेक्ष मान और परिमेय संख्याओं का घनत्व",
+     "ncert_sections": "3.4.1, 3.4.2",
+     "concepts": [
+      {
+       "concept_tag": "sankhya-rekha-par-parimey",
+       "learning_objective": "इकाई अंतरालों को बराबर भागों में बाँटकर संख्या रेखा पर परिमेय संख्याएँ निरूपित करना।"
+      },
+      {
+       "concept_tag": "nirpeksh-maan-doori",
+       "learning_objective": "निरपेक्ष मान तथा दो परिमेय संख्याओं के बीच की दूरी |a − b| ज्ञात करना।"
+      },
+      {
+       "concept_tag": "parimey-sankhyaon-ka-ghanatva",
+       "learning_objective": "औसत द्वारा दो परिमेय संख्याओं के बीच परिमेय संख्याएँ ज्ञात करना और घनत्व समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH03-T6",
+     "topic_number": 6,
+     "title": "अपरिमेय संख्याएँ",
+     "ncert_sections": "3.5, 3.5.1, 3.5.2, 3.5.3",
+     "concepts": [
+      {
+       "concept_tag": "virodhabhas-dwara-upapatti",
+       "learning_objective": "विरोधाभास द्वारा उपपत्ति के चरणों से समझना कि √2 अपरिमेय है।"
+      },
+      {
+       "concept_tag": "vargmool-lambaiyon-ki-rachna",
+       "learning_objective": "समकोण त्रिभुजों की सहायता से संख्या रेखा पर √2 और √3 जैसी लंबाइयाँ बनाना।"
+      },
+      {
+       "concept_tag": "pai-aur-madhav-shreni",
+       "learning_objective": "π को अपरिमेय संख्या के रूप में पहचानना और माधव की श्रेणी के आंशिक योग ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH03-T7",
+     "topic_number": 7,
+     "title": "वास्तविक संख्याएँ और दशमलव प्रसार",
+     "ncert_sections": "3.6, 3.6.1, 3.6.2, 3.6.3, 3.7",
+     "concepts": [
+      {
+       "concept_tag": "sant-aur-aavarti-dashmalav",
+       "learning_objective": "हर के अभाज्य गुणनखंडों से अनुमान लगाना कि परिमेय संख्या का दशमलव प्रसार सांत होगा या आवर्ती।"
+      },
+      {
+       "concept_tag": "aavarti-dashmalav-se-bhinn",
+       "learning_objective": "शुद्ध और मिश्रित आवर्ती दशमलवों को p/q के रूप में बदलना।"
+      },
+      {
+       "concept_tag": "aparimey-dashmalav-vastavik-sankhyaen",
+       "learning_objective": "दशमलव प्रसार के आधार पर परिमेय और अपरिमेय संख्याओं में अंतर करना और वास्तविक संख्याओं का वर्णन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHMH1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "बीजीय सर्वसमिकाओं का अन्वेषण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihmh104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHMH1-CH04-T1",
+     "topic_number": 1,
+     "title": "भूमिका और सर्वसमिकाओं का दृश्यांकन",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "varg-sarvasamika-drishyankan",
+       "learning_objective": "वर्ग और आयतों के क्षेत्रफल से (a + b)² = a² + 2ab + b² को समझना और प्रयोग करना।"
+      },
+      {
+       "concept_tag": "sarvasamika-aur-samikaran",
+       "learning_objective": "सर्वसमिका और समीकरण के अंतर को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH04-T2",
+     "topic_number": 2,
+     "title": "सर्वसमिकाओं का उपयोग करके गुणनखंडन",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "purn-varg-gunankhandan",
+       "learning_objective": "पूर्ण वर्ग व्यंजकों का (a + b)² के रूप में गुणनखंडन करना।"
+      },
+      {
+       "concept_tag": "ghata-varg-sarvasamika",
+       "learning_objective": "(a − b)² = a² − 2ab + b² का प्रयोग संख्याओं के वर्ग और प्रतिरूपों की व्याख्या में करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH04-T3",
+     "topic_number": 3,
+     "title": "कुछ अन्य सर्वसमिकाएँ",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "teen-padon-ka-varg",
+       "learning_objective": "(a + b + c)² की सर्वसमिका से प्रसार और संख्याओं के वर्ग ज्ञात करना।"
+      },
+      {
+       "concept_tag": "shridharacharya-sarvasamika",
+       "learning_objective": "श्रीधराचार्य की सर्वसमिका a² = (a + b)(a − b) + b² से वर्ग ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH04-T4",
+     "topic_number": 4,
+     "title": "बीजीय टाइलों का उपयोग करके गुणनखंडन",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "beejiya-tile-gunanfal",
+       "learning_objective": "बीजीय टाइलों से रैखिक व्यंजकों के गुणनफल को निरूपित करना।"
+      },
+      {
+       "concept_tag": "tile-aayat-vinyas",
+       "learning_objective": "टाइलों को आयत के रूप में सजाकर द्विघात व्यंजक के गुणनखंड ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH04-T5",
+     "topic_number": 5,
+     "title": "बीजीय टाइलों के उपयोग के बिना गुणनखंडन",
+     "ncert_sections": "4.6",
+     "concepts": [
+      {
+       "concept_tag": "madhya-pad-vibhajan",
+       "learning_objective": "a + b और ab की शर्तों से मध्य पद को विभाजित कर गुणनखंडन करना।"
+      },
+      {
+       "concept_tag": "rinatmak-gunank-gunankhandan",
+       "learning_objective": "ऋणात्मक गुणांकों या अचर पदों वाले द्विघात व्यंजकों का गुणनखंडन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH04-T6",
+     "topic_number": 6,
+     "title": "नई सर्वसमिकाएँ ज्ञात करना",
+     "ncert_sections": "4.7",
+     "concepts": [
+      {
+       "concept_tag": "ghan-sarvasamika",
+       "learning_objective": "(a + b)³ और (a − b)³ की सर्वसमिकाओं को समझना और प्रयोग करना।"
+      },
+      {
+       "concept_tag": "ghan-yog-antar",
+       "learning_objective": "x³ − y³ और x³ + y³ के गुणनखंड संबंधी सर्वसमिकाओं को पहचानना।"
+      },
+      {
+       "concept_tag": "teen-ghan-sarvasamika",
+       "learning_objective": "x³ + y³ + z³ − 3xyz वाली सर्वसमिका का समस्याओं में प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH04-T7",
+     "topic_number": 7,
+     "title": "परिमेय व्यंजकों का सरलीकरण",
+     "ncert_sections": "4.8",
+     "concepts": [
+      {
+       "concept_tag": "parimey-vyanjak-saralikaran",
+       "learning_objective": "गुणनखंडन द्वारा अंश और हर के उभयनिष्ठ गुणनखंड हटाकर परिमेय व्यंजक सरल करना।"
+      },
+      {
+       "concept_tag": "gunankhand-se-samasya",
+       "learning_objective": "गुणनखंडन से क्षेत्रफल संबंधी व्यावहारिक समस्याएँ हल करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHMH1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "मैं हूँ गोल-गोल, ऊपर-नीचे",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihmh105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHMH1-CH05-T1",
+     "topic_number": 1,
+     "title": "वृत्त की परिभाषाएँ और सममिति",
+     "ncert_sections": "5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "vritt-paribhasha-bindupath",
+       "learning_objective": "विद्यार्थी वृत्त को किसी दिए गए बिंदु से समदूरस्थ बिंदुओं के बिंदुपथ के रूप में परिभाषित कर सकेंगे।"
+      },
+      {
+       "concept_tag": "jiva-aur-vyas",
+       "learning_objective": "विद्यार्थी जीवा, व्यास और त्रिज्या में संबंध पहचानकर सबसे लंबी जीवा ज्ञात कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vritt-ki-sammiti",
+       "learning_objective": "विद्यार्थी वृत्त की पूर्ण घूर्णन सममिति और व्यासों के परावर्तन सममिति रेखा होने को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH05-T2",
+     "topic_number": 2,
+     "title": "दिए गए बिंदुओं से होकर कितने वृत्त",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "do-binduon-se-vritt",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि दो बिंदुओं से होकर जाने वाले सभी वृत्तों के केंद्र उन्हें मिलाने वाले रेखाखंड के लंब समद्विभाजक पर होते हैं।"
+      },
+      {
+       "concept_tag": "teen-binduon-se-adwitiya-vritt",
+       "learning_objective": "विद्यार्थी तीन असंरेख बिंदुओं से होकर जाने वाले अद्वितीय वृत्त के प्रमेय का प्रयोग कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH05-T3",
+     "topic_number": 3,
+     "title": "जीवाएँ और केंद्र पर अंतरित कोण",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "saman-jiva-saman-kon",
+       "learning_objective": "विद्यार्थी प्रमेय का प्रयोग कर सकेंगे कि वृत्त की समान जीवाएँ केंद्र पर समान कोण अंतरित करती हैं।"
+      },
+      {
+       "concept_tag": "saman-kon-saman-jiva",
+       "learning_objective": "विद्यार्थी विलोम प्रमेय का प्रयोग कर सकेंगे कि केंद्र पर समान कोण अंतरित करने वाली जीवाएँ समान होती हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH05-T4",
+     "topic_number": 4,
+     "title": "जीवाओं के मध्यबिंदु और लंब समद्विभाजक",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "kendra-madhyabindu-lamb",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि केंद्र को जीवा के मध्यबिंदु से मिलाने वाली रेखा जीवा पर लंब होती है।"
+      },
+      {
+       "concept_tag": "kendra-se-lamb-samdwibhajan",
+       "learning_objective": "विद्यार्थी केंद्र से जीवा पर डाले गए लंब द्वारा जीवा के समद्विभाजन का प्रयोग गणना में कर सकेंगे।"
+      },
+      {
+       "concept_tag": "lamb-samdwibhajak-kendra-se",
+       "learning_objective": "विद्यार्थी जीवाओं के लंब समद्विभाजकों की सहायता से वृत्त का केंद्र ज्ञात कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH05-T5",
+     "topic_number": 5,
+     "title": "केंद्र से जीवाओं की दूरी",
+     "ncert_sections": "5.6, 5.6.1",
+     "concepts": [
+      {
+       "concept_tag": "saman-jiva-saman-doori",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि समान जीवाएँ केंद्र से समदूरस्थ होती हैं और इसका विलोम भी सत्य है।"
+      },
+      {
+       "concept_tag": "lambi-jiva-kendra-ke-nikat",
+       "learning_objective": "विद्यार्थी दो असमान जीवाओं में से केंद्र के निकट वाली जीवा पहचानकर उसका कारण बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH05-T6",
+     "topic_number": 6,
+     "title": "चाप द्वारा अंतरित कोण",
+     "ncert_sections": "5.7, 5.7.1",
+     "concepts": [
+      {
+       "concept_tag": "laghu-dirgh-chap",
+       "learning_objective": "विद्यार्थी केंद्र पर अंतरित कोण के आधार पर लघु चाप और दीर्घ चाप में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kendra-par-kon-dugna",
+       "learning_objective": "विद्यार्थी चाप द्वारा केंद्र पर अंतरित कोण के, वृत्त के शेष भाग के किसी बिंदु पर अंतरित कोण का दुगुना होने का प्रयोग कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vyas-dwara-samkon",
+       "learning_objective": "विद्यार्थी उपप्रमेय का प्रयोग कर सकेंगे कि व्यास वृत्त के किसी भी बिंदु पर समकोण अंतरित करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH05-T7",
+     "topic_number": 7,
+     "title": "बिंदुओं की संवृत्तीयता और चक्रीय चतुर्भुज",
+     "ncert_sections": "5.8",
+     "concepts": [
+      {
+       "concept_tag": "samvrittiya-bindu",
+       "learning_objective": "विद्यार्थी पहचान सकेंगे कि चार बिंदु कब एक ही वृत्त पर स्थित होते हैं।"
+      },
+      {
+       "concept_tag": "chakriya-chaturbhuj-sammukh-kon",
+       "learning_objective": "विद्यार्थी चक्रीय चतुर्भुज के सम्मुख कोणों का योग 180° होने तथा इसके विलोम का प्रयोग कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHMH1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "समष्टि मापन — परिमाप और क्षेत्रफल",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihmh106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHMH1-CH06-T1",
+     "topic_number": 1,
+     "title": "आकृति का परिमाप और परिधि-व्यास अनुपात",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "parimap-sutra",
+       "learning_objective": "वर्ग, समबाहु त्रिभुज और आयत के परिमाप के सूत्रों का प्रयोग करना।"
+      },
+      {
+       "concept_tag": "paridhi-vyas-anupat",
+       "learning_objective": "समझना कि सभी वृत्तों के लिए परिधि और व्यास का अनुपात स्थिर रहता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH06-T2",
+     "topic_number": 2,
+     "title": "π की ऐतिहासिक यात्रा और उसकी अपरिमेयता",
+     "ncert_sections": "6.2, 6.3",
+     "concepts": [
+      {
+       "concept_tag": "pi-sannikatan-itihas",
+       "learning_objective": "विभिन्न गणितज्ञों द्वारा दिए गए π के सन्निकट मानों और माधव के यथार्थ सूत्र को पहचानना।"
+      },
+      {
+       "concept_tag": "pi-aparimeyata",
+       "learning_objective": "समझना कि π अपरिमेय है और π ≈ 22/7 होते हुए भी π ≠ 22/7 है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH06-T3",
+     "topic_number": 3,
+     "title": "वृत्त की चाप की लंबाई और परिमाप पर आधारित प्रश्न",
+     "ncert_sections": "6.4, 6.5",
+     "concepts": [
+      {
+       "concept_tag": "chap-lambai",
+       "learning_objective": "केंद्रीय कोण θ के लिए चाप की लंबाई 2πr × θ/360 ज्ञात करना।"
+      },
+      {
+       "concept_tag": "daud-path-santaran",
+       "learning_objective": "दौड़-पथ में सांतरण की आवश्यकता को चाप की लंबाई से समझाना।"
+      },
+      {
+       "concept_tag": "parimap-paheliyan",
+       "learning_objective": "वृत्तीय चापों से बनी आकृतियों के परिमाप वाली पहेलियाँ हल करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH06-T4",
+     "topic_number": 4,
+     "title": "आयत, समांतर चतुर्भुज और त्रिभुज का क्षेत्रफल",
+     "ncert_sections": "6.6, 6.7, 6.8",
+     "concepts": [
+      {
+       "concept_tag": "samantar-chaturbhuj-kshetrafal",
+       "learning_objective": "समांतर चतुर्भुज का क्षेत्रफल आधार × ऊँचाई से ज्ञात करना और उसकी सीमाएँ समझना।"
+      },
+      {
+       "concept_tag": "tribhuj-kshetrafal",
+       "learning_objective": "त्रिभुज के क्षेत्रफल 1/2 × आधार × ऊँचाई का प्रयोग करना।"
+      },
+      {
+       "concept_tag": "madhyika-gun",
+       "learning_objective": "समझना कि माध्यिका त्रिभुज को समान क्षेत्रफल वाले दो त्रिभुजों में बाँटती है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH06-T5",
+     "topic_number": 5,
+     "title": "हीरोन का सूत्र और ब्रह्मगुप्त का सूत्र",
+     "ncert_sections": "6.8.1",
+     "concepts": [
+      {
+       "concept_tag": "heron-sutra",
+       "learning_objective": "तीनों भुजाएँ ज्ञात होने पर हीरोन के सूत्र से त्रिभुज का क्षेत्रफल ज्ञात करना।"
+      },
+      {
+       "concept_tag": "brahmagupta-sutra",
+       "learning_objective": "चक्रीय चतुर्भुज के क्षेत्रफल के लिए ब्रह्मगुप्त का सूत्र पहचानना।"
+      },
+      {
+       "concept_tag": "vishisht-sthiti-vyapkikaran",
+       "learning_objective": "समझना कि हीरोन का सूत्र ब्रह्मगुप्त के सूत्र की एक विशिष्ट स्थिति है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH06-T6",
+     "topic_number": 6,
+     "title": "आयत को वर्ग बनाना",
+     "ncert_sections": "6.9",
+     "concepts": [
+      {
+       "concept_tag": "baudhayan-vargikaran",
+       "learning_objective": "शुल्बसूत्र में दी गई बौधायन की रचना से आयत के समान क्षेत्रफल का वर्ग बनाना समझना।"
+      },
+      {
+       "concept_tag": "varg-sarvasamika",
+       "learning_objective": "रचना के पीछे की सर्वसमिका ab = ((a+b)/2)² − ((a−b)/2)² का प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH06-T7",
+     "topic_number": 7,
+     "title": "वृत्त और त्रिज्यखंड का क्षेत्रफल",
+     "ncert_sections": "6.10, 6.10.1",
+     "concepts": [
+      {
+       "concept_tag": "vritt-kshetrafal",
+       "learning_objective": "वृत्त के क्षेत्रफल πr² को समझना और उसका प्रयोग करना।"
+      },
+      {
+       "concept_tag": "trijyakhand-kshetrafal",
+       "learning_objective": "केंद्रीय कोण θ वाले त्रिज्यखंड का क्षेत्रफल πr² × θ/360 ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHMH1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "संभावनाओं का गणित — प्रायिकता का परिचय",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihmh107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHMH1-CH07-T1",
+     "topic_number": 1,
+     "title": "प्रायिकता और यादृच्छिकता",
+     "ncert_sections": "7.1, 7.1.1",
+     "concepts": [
+      {
+       "concept_tag": "yadrichchhikta",
+       "learning_objective": "यादृच्छिक घटनाओं की पहचान करना और समझना कि उनके परिणाम पहले से निश्चित नहीं होते।"
+      },
+      {
+       "concept_tag": "yadrichchhik-prayog",
+       "learning_objective": "यादृच्छिक प्रयोग की विशेषताएँ पहचानना और उदाहरणों पर लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH07-T2",
+     "topic_number": 2,
+     "title": "प्रायिकता का पैमाना",
+     "ncert_sections": "7.1.2",
+     "concepts": [
+      {
+       "concept_tag": "prayikta-paimana",
+       "learning_objective": "प्रायिकता को 0 से 1 तक के पैमाने पर व्यक्त करना और उसके मान की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "sambhavna-vargikaran",
+       "learning_objective": "घटनाओं को असंभव, कम संभव, समप्रायिक, अधिक संभव और निश्चित में वर्गीकृत करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH07-T3",
+     "topic_number": 3,
+     "title": "प्रायोगिक प्रायिकता",
+     "ncert_sections": "7.2, 7.2.1",
+     "concepts": [
+      {
+       "concept_tag": "vastunishtha-vidhiyan",
+       "learning_objective": "प्रायिकता के वस्तुनिष्ठ मापन की दो विधियों में अंतर करना।"
+      },
+      {
+       "concept_tag": "prayogik-prayikta",
+       "learning_objective": "प्रयोग के आँकड़ों से प्रायोगिक प्रायिकता की गणना करना।"
+      },
+      {
+       "concept_tag": "sapekshik-avritti",
+       "learning_objective": "किसी परिणाम की सापेक्षिक आवृत्ति ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH07-T4",
+     "topic_number": 4,
+     "title": "सैद्धांतिक प्रायिकता",
+     "ncert_sections": "7.2.2",
+     "concepts": [
+      {
+       "concept_tag": "saiddhantik-prayikta",
+       "learning_objective": "अनुकूल और संभव परिणामों की संख्या से सैद्धांतिक प्रायिकता ज्ञात करना।"
+      },
+      {
+       "concept_tag": "samprayik-parinam",
+       "learning_objective": "पहचानना कि किन प्रयोगों के परिणाम समप्रायिक हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH07-T5",
+     "topic_number": 5,
+     "title": "प्रायिकता के माध्यम से सांख्यिकीय आँकड़ों का विश्लेषण",
+     "ncert_sections": "7.2.3",
+     "concepts": [
+      {
+       "concept_tag": "sankhyikiya-anuman",
+       "learning_objective": "प्रतिदर्श के आँकड़ों से पूरी समष्टि के लिए अनुमान लगाना।"
+      },
+      {
+       "concept_tag": "brihat-sankhya-niyam",
+       "learning_objective": "बृहत संख्याओं के नियम के अनुसार प्रयोगों की संख्या बढ़ने का प्रभाव समझना।"
+      },
+      {
+       "concept_tag": "dyutkar-bhram",
+       "learning_objective": "द्यूतकार के भ्रम को पहचानना और स्वतंत्र परीक्षणों की प्रायिकता समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH07-T6",
+     "topic_number": 6,
+     "title": "प्रतिदर्श समष्टि और घटनाएँ",
+     "ncert_sections": "7.3, 7.3.1, 7.3.2",
+     "concepts": [
+      {
+       "concept_tag": "pratidarsh-samashti",
+       "learning_objective": "किसी यादृच्छिक प्रयोग की प्रतिदर्श समष्टि और प्रतिदर्श आकार लिखना।"
+      },
+      {
+       "concept_tag": "ghatna-upsamuchchay",
+       "learning_objective": "घटना को प्रतिदर्श समष्टि के उपसमुच्चय के रूप में लिखना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH07-T7",
+     "topic_number": 7,
+     "title": "वृक्ष आरेख",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "vriksh-aarekh",
+       "learning_objective": "बहु-चरणीय प्रयोग के सभी परिणाम वृक्ष आरेख से सूचीबद्ध करना।"
+      },
+      {
+       "concept_tag": "bahu-charan-prayikta",
+       "learning_objective": "वृक्ष आरेख की सहायता से बहु-चरणीय प्रयोगों की प्रायिकता ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHMH1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "अगले पद का पूर्वानुमान — अनुक्रमों और श्रेढ़ियों का अन्वेषण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihmh108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHMH1-CH08-T1",
+     "topic_number": 1,
+     "title": "अनुक्रम से परिचय",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "anukram-aur-pad",
+       "learning_objective": "अनुक्रम को संख्याओं की क्रमिक सूची के रूप में समझना, परिमित-अपरिमित अनुक्रम पहचानना और tn संकेतन का प्रयोग करना।"
+      },
+      {
+       "concept_tag": "tribhujakar-aur-varg-sankhyaen",
+       "learning_objective": "त्रिभुजाकार और वर्ग संख्याओं के अनुक्रमों के प्रतिरूप तथा प्राकृत और विषम संख्याओं के योग से उनका संबंध समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH08-T2",
+     "topic_number": 2,
+     "title": "अनुक्रम के लिए व्यापक सूत्र",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "vyapak-sutra",
+       "learning_objective": "व्यापक सूत्र में n का मान रखकर अनुक्रम का कोई भी पद ज्ञात करना।"
+      },
+      {
+       "concept_tag": "pad-ki-jaanch",
+       "learning_objective": "व्यापक सूत्र से यह जाँचना कि कोई संख्या अनुक्रम का पद है या नहीं और उसकी स्थिति ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH08-T3",
+     "topic_number": 3,
+     "title": "अनुक्रम के लिए पुनरावर्ती सूत्र",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "punaravarti-sutra",
+       "learning_objective": "पुनरावर्ती सूत्र से पिछले पदों की सहायता से अगले पद ज्ञात करना।"
+      },
+      {
+       "concept_tag": "virahank-anukram",
+       "learning_objective": "विरहांक अनुक्रम और पिछले कई पदों पर आधारित पुनरावर्ती नियमों से पद ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH08-T4",
+     "topic_number": 4,
+     "title": "समानांतर श्रेढ़ियाँ और उनका दृश्यांकन",
+     "ncert_sections": "8.4, 8.4.1",
+     "concepts": [
+      {
+       "concept_tag": "samanantar-shredhi-nva-pad",
+       "learning_objective": "समानांतर श्रेढ़ी का nवाँ पद a + (n – 1)d ज्ञात करना और व्यावहारिक समस्याओं में प्रयोग करना।"
+      },
+      {
+       "concept_tag": "samanantar-shredhi-drishyankan",
+       "learning_objective": "समानांतर श्रेढ़ी से बने क्रमित युग्मों के एक सरल रेखा पर स्थित होने का कारण समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH08-T5",
+     "topic_number": 5,
+     "title": "आरंभिक n प्राकृत संख्याओं का योग",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "prakrit-sankhyaon-ka-yog",
+       "learning_objective": "सूत्र n(n + 1)/2 से प्रथम n प्राकृत संख्याओं और क्रमागत संख्याओं का योग ज्ञात करना।"
+      },
+      {
+       "concept_tag": "tribhujakar-sankhya-sutra",
+       "learning_objective": "त्रिभुजाकार संख्याओं का nवाँ पद योग-सूत्र से ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH08-T6",
+     "topic_number": 6,
+     "title": "गुणोत्तर श्रेढ़ियाँ",
+     "ncert_sections": "8.6",
+     "concepts": [
+      {
+       "concept_tag": "sarv-anupat",
+       "learning_objective": "क्रमागत पदों के अनुपात से गुणोत्तर श्रेढ़ी पहचानना और सार्व अनुपात ज्ञात करना।"
+      },
+      {
+       "concept_tag": "gunottar-shredhi-nva-pad",
+       "learning_objective": "गुणोत्तर श्रेढ़ी का nवाँ पद arⁿ⁻¹ ज्ञात करना और दिए गए पद की स्थिति निकालना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHMH1-CH08-T7",
+     "topic_number": 7,
+     "title": "फ्रैक्टल्स और गुणोत्तर श्रेढ़ी का दृश्यांकन",
+     "ncert_sections": "8.6.1, 8.6.2",
+     "concepts": [
+      {
+       "concept_tag": "siyarpinski-tribhuj",
+       "learning_objective": "सिएरपिंस्की त्रिभुज के चरणों में त्रिभुजों की संख्या और क्षेत्रफल से बनी गुणोत्तर श्रेढ़ियाँ पहचानना।"
+      },
+      {
+       "concept_tag": "gunottar-shredhi-drishyankan",
+       "learning_objective": "गुणोत्तर श्रेढ़ी के क्रमित युग्मों के आलेख की प्रकृति की तुलना समानांतर श्रेढ़ी से करना।"
+      },
+      {
+       "concept_tag": "uchhalti-gend",
+       "learning_objective": "उछलती गेंद जैसी स्थितियों में गुणोत्तर श्रेढ़ी का अनुप्रयोग करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "chapter_id": "GHGP1-CH05",
+ "title": "समांतर और प्रतिच्छेदी रेखाएँ",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHGP1-CH05-T1",
+   "topic_number": 1,
+   "title": "प्रतिच्छेदी रेखाएँ: रैखिक युग्म और शीर्षाभिमुख कोण",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "raikhik-yugm",
+     "learning_objective": "विद्यार्थी बता सकेंगे कि दो प्रतिच्छेदी रेखाओं से बने रैखिक युग्म के कोणों का योग 180° होता है।"
+    },
+    {
+     "concept_tag": "shirshabhimukh-kon",
+     "learning_objective": "विद्यार्थी शीर्षाभिमुख कोणों को पहचानकर उनकी समानता का उपयोग करके अज्ञात कोण ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "mapan-aur-tark",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि मापन-त्रुटि और रेखाओं की मोटाई के कारण मापे गए कोण तर्क से प्राप्त मान से थोड़े भिन्न हो सकते हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH05-T2",
+   "topic_number": 2,
+   "title": "लम्ब रेखाएँ और समांतर रेखाएँ",
+   "ncert_sections": "5.2, 5.3",
+   "concepts": [
+    {
+     "concept_tag": "lamb-rekhayen",
+     "learning_objective": "विद्यार्थी पहचान सकेंगे कि समकोण पर प्रतिच्छेद करने वाली रेखाएँ लम्ब रेखाएँ होती हैं।"
+    },
+    {
+     "concept_tag": "samantar-rekhayen",
+     "learning_objective": "विद्यार्थी समांतर रेखाओं की परिभाषा में एक ही तल की शर्त का महत्त्व समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "rekhakhandon-ka-milna",
+     "learning_objective": "विद्यार्थी रेखाखंडों के अंत-बिंदु पर मिलने से बने कोणों का वर्णन और गणना कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH05-T3",
+   "topic_number": 3,
+   "title": "कागज मोड़ने में समांतर एवं लम्ब रेखाएँ तथा संकेतन",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "kagaj-modna",
+     "learning_objective": "विद्यार्थी कागज मोड़कर समांतर और लम्ब रेखाएँ बना सकेंगे और मोड़ों से बनी रेखाओं का पैटर्न पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "samantar-sanketan",
+     "learning_objective": "विद्यार्थी समांतर रेखाओं के लिए तीर के चिह्न और लम्ब रेखाओं के लिए वर्ग के चिह्न का अर्थ बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH05-T4",
+   "topic_number": 4,
+   "title": "तिर्यक रेखाएँ और संगत कोण",
+   "ncert_sections": "5.5, 5.6",
+   "concepts": [
+    {
+     "concept_tag": "tiryak-rekha",
+     "learning_objective": "विद्यार्थी तिर्यक रेखा की पहचान कर सकेंगे और बता सकेंगे कि उससे बने 8 कोणों के अधिकतम 4 भिन्न माप होते हैं।"
+    },
+    {
+     "concept_tag": "sangat-kon",
+     "learning_objective": "विद्यार्थी संगत कोणों को पहचान सकेंगे और जान सकेंगे कि समांतर रेखाओं पर बने संगत कोण बराबर होते हैं।"
+    },
+    {
+     "concept_tag": "sangat-kon-se-samantarta",
+     "learning_objective": "विद्यार्थी संगत कोणों की समानता के आधार पर निर्णय कर सकेंगे कि दो रेखाएँ समांतर हैं या नहीं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH05-T5",
+   "topic_number": 5,
+   "title": "समांतर रेखाएँ खींचना",
+   "ncert_sections": "5.7",
+   "concepts": [
+    {
+     "concept_tag": "samkonak-se-samantar",
+     "learning_objective": "विद्यार्थी मापक और समकोणक की सहायता से समांतर रेखाएँ खींचने की विधि और उसका कारण समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "kagaj-modkar-samantar",
+     "learning_objective": "विद्यार्थी कागज मोड़कर किसी बिंदु से होकर दी गई रेखा के समांतर रेखा बना सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH05-T6",
+   "topic_number": 6,
+   "title": "एकांतर कोण और अंतः कोण",
+   "ncert_sections": "5.8",
+   "concepts": [
+    {
+     "concept_tag": "ekantar-kon",
+     "learning_objective": "विद्यार्थी एकांतर कोणों को पहचान सकेंगे और संगत तथा शीर्षाभिमुख कोणों के तर्क से उनकी समानता सिद्ध कर सकेंगे।"
+    },
+    {
+     "concept_tag": "antah-kon",
+     "learning_objective": "विद्यार्थी बता सकेंगे कि समांतर रेखाओं पर तिर्यक रेखा के एक ही ओर बने अंतः कोणों का योग 180° होता है।"
+    },
+    {
+     "concept_tag": "kon-gyat-karna",
+     "learning_objective": "विद्यार्थी समांतर रेखाओं और तिर्यक रेखा से बने कोणों के संबंधों का उपयोग करके अज्ञात कोण ज्ञात कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

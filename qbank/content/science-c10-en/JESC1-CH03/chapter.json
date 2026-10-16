@@ -1,0 +1,128 @@
+{
+ "chapter_id": "JESC1-CH03",
+ "title": "Metals and Non-metals",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESC1-CH03-T1",
+   "topic_number": 1,
+   "title": "Physical properties of metals and non-metals",
+   "ncert_sections": "3.1, 3.1.1, 3.1.2",
+   "concepts": [
+    {
+     "concept_tag": "physical-properties-of-metals",
+     "learning_objective": "Describe lustre, hardness, malleability, ductility, conduction of heat and electricity and sonority of metals and relate them to uses."
+    },
+    {
+     "concept_tag": "non-metals-and-exceptions",
+     "learning_objective": "Identify the physical properties of non-metals and the exceptions that make physical properties alone insufficient for classification."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH03-T2",
+   "topic_number": 2,
+   "title": "Reactions of metals with oxygen, water and acids",
+   "ncert_sections": "3.2, 3.2.1, 3.2.2, 3.2.3",
+   "concepts": [
+    {
+     "concept_tag": "reaction-with-oxygen",
+     "learning_objective": "Explain how metals form oxides with oxygen, including basic and amphoteric oxides and protective oxide layers."
+    },
+    {
+     "concept_tag": "reaction-with-water",
+     "learning_objective": "Compare the reactions of metals with cold water, hot water and steam and write the products formed."
+    },
+    {
+     "concept_tag": "reaction-with-acids",
+     "learning_objective": "Explain the reactions of metals with dilute acids, including the special behaviour of nitric acid."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH03-T3",
+   "topic_number": 3,
+   "title": "Displacement reactions and the reactivity series",
+   "ncert_sections": "3.2.4, 3.2.5",
+   "concepts": [
+    {
+     "concept_tag": "displacement-reactions",
+     "learning_objective": "Predict whether a metal will displace another metal from its salt solution."
+    },
+    {
+     "concept_tag": "reactivity-series",
+     "learning_objective": "Use the reactivity series and displacement results to arrange metals in order of reactivity."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH03-T4",
+   "topic_number": 4,
+   "title": "Ionic compounds and their properties",
+   "ncert_sections": "3.3, 3.3.1",
+   "concepts": [
+    {
+     "concept_tag": "ionic-bond-formation",
+     "learning_objective": "Show the formation of ionic compounds by transfer of electrons from a metal to a non-metal."
+    },
+    {
+     "concept_tag": "properties-of-ionic-compounds",
+     "learning_objective": "Explain the physical nature, melting points, solubility and electrical conduction of ionic compounds."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH03-T5",
+   "topic_number": 5,
+   "title": "Occurrence and extraction of metals",
+   "ncert_sections": "3.4, 3.4.1, 3.4.2, 3.4.3, 3.4.4, 3.4.5",
+   "concepts": [
+    {
+     "concept_tag": "minerals-ores-gangue",
+     "learning_objective": "Define minerals, ores and gangue and relate the occurrence of metals to their reactivity."
+    },
+    {
+     "concept_tag": "roasting-and-calcination",
+     "learning_objective": "Distinguish roasting from calcination and outline how metals of medium reactivity are extracted."
+    },
+    {
+     "concept_tag": "reduction-methods",
+     "learning_objective": "Choose a suitable reduction method (heat, carbon, displacement or electrolysis) from a metal's place in the activity series."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH03-T6",
+   "topic_number": 6,
+   "title": "Refining of metals",
+   "ncert_sections": "3.4.6",
+   "concepts": [
+    {
+     "concept_tag": "electrolytic-refining",
+     "learning_objective": "Describe electrolytic refining, including the electrodes, the electrolyte and the fate of impurities."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH03-T7",
+   "topic_number": 7,
+   "title": "Corrosion and its prevention",
+   "ncert_sections": "3.5, 3.5.1",
+   "concepts": [
+    {
+     "concept_tag": "conditions-for-rusting",
+     "learning_objective": "Identify the conditions needed for iron to rust from an experiment."
+    },
+    {
+     "concept_tag": "prevention-of-corrosion",
+     "learning_objective": "Explain methods of preventing rusting, such as painting and galvanisation."
+    },
+    {
+     "concept_tag": "alloys",
+     "learning_objective": "Explain what alloys are and how alloying changes the properties of metals."
+    }
+   ]
+  }
+ ]
+}

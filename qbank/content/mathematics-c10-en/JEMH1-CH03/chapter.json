@@ -1,0 +1,88 @@
+{
+ "chapter_id": "JEMH1-CH03",
+ "title": "Pair of Linear Equations in Two Variables",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH03-T1",
+   "topic_number": 1,
+   "title": "Representing situations as a pair of linear equations",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "forming-pair-of-equations",
+     "learning_objective": "Translate a real-life situation into a pair of linear equations in two variables."
+    },
+    {
+     "concept_tag": "general-form-linear-equation",
+     "learning_objective": "Write a linear equation in two variables in the general form ax + by + c = 0 and identify a, b and c."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH03-T2",
+   "topic_number": 2,
+   "title": "Graphical method of solution",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "graphical-interpretation",
+     "learning_objective": "Interpret the graphs of a pair of linear equations as intersecting, coincident or parallel lines and read the solution."
+    },
+    {
+     "concept_tag": "consistency-classification",
+     "learning_objective": "Classify a pair of linear equations as consistent, inconsistent or dependent."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH03-T3",
+   "topic_number": 3,
+   "title": "Comparing ratios of coefficients",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "coefficient-ratio-conditions",
+     "learning_objective": "Use the ratios a1/a2, b1/b2 and c1/c2 to decide the number of solutions of a pair of linear equations."
+    },
+    {
+     "concept_tag": "finding-unknown-for-condition",
+     "learning_objective": "Find an unknown coefficient for which a pair of linear equations has a unique, no or infinitely many solutions."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH03-T4",
+   "topic_number": 4,
+   "title": "Substitution method",
+   "ncert_sections": "3.3, 3.3.1",
+   "concepts": [
+    {
+     "concept_tag": "substitution-method",
+     "learning_objective": "Solve a pair of linear equations by expressing one variable in terms of the other and substituting."
+    },
+    {
+     "concept_tag": "substitution-word-problems",
+     "learning_objective": "Model and solve word problems using the substitution method."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH03-T5",
+   "topic_number": 5,
+   "title": "Elimination method",
+   "ncert_sections": "3.3.2",
+   "concepts": [
+    {
+     "concept_tag": "elimination-method",
+     "learning_objective": "Solve a pair of linear equations by making the coefficients of one variable numerically equal and eliminating it."
+    },
+    {
+     "concept_tag": "elimination-word-problems",
+     "learning_objective": "Model and solve word problems such as digit, income and speed problems using the elimination method."
+    }
+   ]
+  }
+ ]
+}

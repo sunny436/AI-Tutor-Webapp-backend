@@ -1,0 +1,128 @@
+{
+ "chapter_id": "FECU1-CH07",
+ "title": "Temperature and its Measurement",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FECU1-CH07-T1",
+   "topic_number": 1,
+   "title": "Hot or Cold?",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "touch-unreliable-for-temperature",
+     "learning_objective": "Explain why our sense of touch cannot always correctly judge whether a body is hot or cold."
+    },
+    {
+     "concept_tag": "relative-feeling-of-hotness",
+     "learning_objective": "Predict how the same water feels to hands that were earlier kept in warm and in cold water."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH07-T2",
+   "topic_number": 2,
+   "title": "Temperature",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "temperature-measure-of-hotness",
+     "learning_objective": "State that temperature is a reliable measure of the hotness or coldness of a body and compare bodies by it."
+    },
+    {
+     "concept_tag": "kinds-of-thermometers",
+     "learning_objective": "Identify a thermometer as the device for measuring temperature and distinguish clinical from laboratory thermometers by use."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH07-T3",
+   "topic_number": 3,
+   "title": "Clinical thermometer and body temperature",
+   "ncert_sections": "7.3.1",
+   "concepts": [
+    {
+     "concept_tag": "digital-clinical-thermometer",
+     "learning_objective": "Describe the digital clinical thermometer and why it has replaced the mercury thermometer."
+    },
+    {
+     "concept_tag": "clinical-thermometer-precautions",
+     "learning_objective": "List the steps and precautions for measuring body temperature with a digital clinical thermometer."
+    },
+    {
+     "concept_tag": "normal-body-temperature",
+     "learning_objective": "Interpret normal body temperature as an average and relate armpit readings to actual body temperature."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH07-T4",
+   "topic_number": 4,
+   "title": "Scales and units of temperature",
+   "ncert_sections": "7.3.1",
+   "concepts": [
+    {
+     "concept_tag": "temperature-scales-and-units",
+     "learning_objective": "Name the Celsius, Fahrenheit and Kelvin scales, their units and the SI unit of temperature."
+    },
+    {
+     "concept_tag": "celsius-kelvin-conversion",
+     "learning_objective": "Convert a temperature from the Celsius scale to the Kelvin scale."
+    },
+    {
+     "concept_tag": "writing-temperature-units",
+     "learning_objective": "Write temperatures and their unit symbols correctly."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH07-T5",
+   "topic_number": 5,
+   "title": "Laboratory thermometer: range and smallest value",
+   "ncert_sections": "7.3.2",
+   "concepts": [
+    {
+     "concept_tag": "lab-thermometer-parts-and-range",
+     "learning_objective": "Describe the parts of a laboratory thermometer and its usual range."
+    },
+    {
+     "concept_tag": "smallest-division-value",
+     "learning_objective": "Calculate the smallest value a thermometer can read and use it to take a reading."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH07-T6",
+   "topic_number": 6,
+   "title": "Measuring temperature with a laboratory thermometer",
+   "ncert_sections": "7.3.2",
+   "concepts": [
+    {
+     "concept_tag": "lab-thermometer-correct-use",
+     "learning_objective": "Follow the correct way of measuring the temperature of water with a laboratory thermometer."
+    },
+    {
+     "concept_tag": "constant-temperature-boiling-melting",
+     "learning_objective": "Recognise that water stays at a constant temperature while boiling and ice while melting."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH07-T7",
+   "topic_number": 7,
+   "title": "Air temperature",
+   "ncert_sections": "7.3.3",
+   "concepts": [
+    {
+     "concept_tag": "air-temperature-weather-reports",
+     "learning_objective": "Interpret maximum and minimum air temperatures from weather reports and their use in forecasts."
+    },
+    {
+     "concept_tag": "anna-mani-weather-instruments",
+     "learning_objective": "Recall Anna Mani's contribution to weather measurement instruments in India."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "accountancy-ii-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "accountancy",
+  "language": "english",
+  "title": "Accountancy-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "keac2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEAC2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Financial Statements - I",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keac201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEAC2-CH01-T1",
+     "topic_number": 1,
+     "title": "Stakeholders and their information requirements",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "internal-external-users",
+       "learning_objective": "Classify stakeholders as internal or external users and identify whether their stake is monetary or non-monetary."
+      },
+      {
+       "concept_tag": "user-information-needs",
+       "learning_objective": "Explain the objectives and accounting information requirements of owners, managers, government, prospective owners and banks."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEAC2-CH01-T2",
+     "topic_number": 2,
+     "title": "Distinction between capital and revenue",
+     "ncert_sections": "8.2, 8.2.1, 8.2.2, 8.2.3",
+     "concepts": [
+      {
+       "concept_tag": "capital-revenue-expenditure",
+       "learning_objective": "Distinguish capital, revenue and deferred revenue expenditure by the period of benefit and their accounting treatment."
+      },
+      {
+       "concept_tag": "capital-revenue-receipts",
+       "learning_objective": "Distinguish capital receipts from revenue receipts with examples."
+      },
+      {
+       "concept_tag": "misclassification-effects",
+       "learning_objective": "Analyse how wrong classification of capital and revenue items misstates profit and assets."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEAC2-CH01-T3",
+     "topic_number": 3,
+     "title": "Financial statements and items of the trading and profit and loss account",
+     "ncert_sections": "8.3, 8.4, 8.4.1, 8.4.2",
+     "concepts": [
+      {
+       "concept_tag": "financial-statements-objectives",
+       "learning_objective": "State the objectives and components of the financial statements of a sole proprietor."
+      },
+      {
+       "concept_tag": "direct-indirect-expenses",
+       "learning_objective": "Identify which items are debited to the trading account and which to the profit and loss account."
+      },
+      {
+       "concept_tag": "closing-entries",
+       "learning_objective": "Record closing entries that transfer expenses, revenues and returns to the trading and profit and loss account."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEAC2-CH01-T4",
+     "topic_number": 4,
+     "title": "Gross profit, net profit and cost of goods sold",
+     "ncert_sections": "8.4.3, 8.4.4",
+     "concepts": [
+      {
+       "concept_tag": "gross-net-profit",
+       "learning_objective": "Compute gross profit and net profit and trace how the classification of items affects each."
+      },
+      {
+       "concept_tag": "cost-of-goods-sold",
+       "learning_objective": "Compute cost of goods sold using opening stock, purchases, direct expenses and closing stock."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEAC2-CH01-T5",
+     "topic_number": 5,
+     "title": "Operating profit (EBIT)",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "operating-profit-ebit",
+       "learning_objective": "Explain the meaning of operating profit and compute it from net profit."
+      },
+      {
+       "concept_tag": "non-operating-items",
+       "learning_objective": "Identify non-operating expenses and incomes, including abnormal and purely financial items."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEAC2-CH01-T6",
+     "topic_number": 6,
+     "title": "Balance sheet and its items",
+     "ncert_sections": "8.6, 8.6.1, 8.6.2",
+     "concepts": [
+      {
+       "concept_tag": "balance-sheet-preparation",
+       "learning_objective": "Explain the nature of the balance sheet and show capital after adjusting profit and drawings."
+      },
+      {
+       "concept_tag": "balance-sheet-items",
+       "learning_objective": "Classify balance sheet items as current, fixed, intangible, investments, long-term liabilities or capital."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEAC2-CH01-T7",
+     "topic_number": 7,
+     "title": "Marshalling, grouping and opening entry",
+     "ncert_sections": "8.6.3, 8.7",
+     "concepts": [
+      {
+       "concept_tag": "marshalling-order",
+       "learning_objective": "Arrange assets and liabilities in the order of liquidity or permanence."
+      },
+      {
+       "concept_tag": "grouping-of-items",
+       "learning_objective": "Group balance sheet items of similar nature under common headings."
+      },
+      {
+       "concept_tag": "opening-entry",
+       "learning_objective": "Pass the opening entry that carries balance sheet accounts into the next accounting period."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEAC2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Financial Statements - II",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keac202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEAC2-CH02-T1",
+     "topic_number": 1,
+     "title": "Need for adjustments and closing stock",
+     "ncert_sections": "9.1, 9.2",
+     "concepts": [
+      {
+       "concept_tag": "accrual-basis-adjustments",
+       "learning_objective": "Explain why adjustments are needed under the accrual basis while preparing financial statements."
+      },
+      {
+       "concept_tag": "closing-stock-treatment",
+       "learning_objective": "Record and present closing stock given as an adjustment or shown inside the trial balance."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEAC2-CH02-T2",
+     "topic_number": 2,
+     "title": "Outstanding and prepaid expenses",
+     "ncert_sections": "9.3, 9.4",
+     "concepts": [
+      {
+       "concept_tag": "outstanding-expenses",
+       "learning_objective": "Treat expenses incurred but unpaid at the year end in the profit and loss account and balance sheet."
+      },
+      {
+       "concept_tag": "prepaid-expenses",
+       "learning_objective": "Treat expenses paid in advance for the next period in the profit and loss account and balance sheet."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEAC2-CH02-T3",
+     "topic_number": 3,
+     "title": "Accrued income and income received in advance",
+     "ncert_sections": "9.5, 9.6",
+     "concepts": [
+      {
+       "concept_tag": "accrued-income",
+       "learning_objective": "Treat income earned during the year but not yet received."
+      },
+      {
+       "concept_tag": "income-received-in-advance",
+       "learning_objective": "Treat income received during the year that belongs to the next accounting period."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEAC2-CH02-T4",
+     "topic_number": 4,
+     "title": "Depreciation and further bad debts",
+     "ncert_sections": "9.7, 9.8",
+     "concepts": [
+      {
+       "concept_tag": "depreciation-adjustment",
+       "learning_objective": "Record depreciation as an adjustment and show the asset net of depreciation."
+      },
+      {
+       "concept_tag": "further-bad-debts",
+       "learning_objective": "Distinguish bad debts in the trial balance from further bad debts given as an adjustment."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEAC2-CH02-T5",
+     "topic_number": 5,
+     "title": "Provision for bad and doubtful debts",
+     "ncert_sections": "9.9",
+     "concepts": [
+      {
+       "concept_tag": "provision-for-doubtful-debts",
+       "learning_objective": "Create a provision for doubtful debts and show it as a deduction from debtors."
+      },
+      {
+       "concept_tag": "old-and-new-provision",
+       "learning_objective": "Compute the net charge to profit and loss when an old provision exists."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEAC2-CH02-T6",
+     "topic_number": 6,
+     "title": "Provision for discount on debtors",
+     "ncert_sections": "9.10",
+     "concepts": [
+      {
+       "concept_tag": "provision-for-discount-on-debtors",
+       "learning_objective": "Calculate the provision for discount on good debtors and show debtors at their expected realisable value."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEAC2-CH02-T7",
+     "topic_number": 7,
+     "title": "Manager's commission and interest on capital",
+     "ncert_sections": "9.11, 9.12",
+     "concepts": [
+      {
+       "concept_tag": "managers-commission",
+       "learning_objective": "Calculate manager's commission on net profit before or after charging such commission."
+      },
+      {
+       "concept_tag": "interest-on-capital",
+       "learning_objective": "Calculate interest on capital, including on additional capital, and show its effect on profit and capital."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

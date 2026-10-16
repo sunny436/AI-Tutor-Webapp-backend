@@ -1,0 +1,136 @@
+{
+ "chapter_id": "LECS1-CH11",
+ "title": "Data Communication",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECS1-CH11-T1",
+   "topic_number": 1,
+   "title": "Concept and components of data communication",
+   "ncert_sections": "11.1, 11.2",
+   "concepts": [
+    {
+     "concept_tag": "data-communication-concept",
+     "learning_objective": "Explain data communication as the exchange of data between networked devices over a medium."
+    },
+    {
+     "concept_tag": "components-of-data-communication",
+     "learning_objective": "Identify the sender, receiver, message, medium and protocol in a communication."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH11-T2",
+   "topic_number": 2,
+   "title": "Measuring capacity: bandwidth and data transfer rate",
+   "ncert_sections": "11.3",
+   "concepts": [
+    {
+     "concept_tag": "bandwidth",
+     "learning_objective": "Define bandwidth and calculate it from the frequency range of a signal."
+    },
+    {
+     "concept_tag": "data-transfer-rate",
+     "learning_objective": "Calculate data transfer rates and convert between bit-rate units."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH11-T3",
+   "topic_number": 3,
+   "title": "Types of data communication",
+   "ncert_sections": "11.4",
+   "concepts": [
+    {
+     "concept_tag": "simplex-communication",
+     "learning_objective": "Recognise one-way communication and its examples."
+    },
+    {
+     "concept_tag": "half-duplex-communication",
+     "learning_objective": "Explain two-way communication that happens in only one direction at a time."
+    },
+    {
+     "concept_tag": "full-duplex-communication",
+     "learning_objective": "Explain simultaneous two-way communication and how link capacity is shared."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH11-T4",
+   "topic_number": 4,
+   "title": "Switching techniques",
+   "ncert_sections": "11.5",
+   "concepts": [
+    {
+     "concept_tag": "circuit-switching",
+     "learning_objective": "Describe circuit switching with its dedicated path set up before communication."
+    },
+    {
+     "concept_tag": "packet-switching",
+     "learning_objective": "Describe how packet switching breaks messages into independently routed packets."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH11-T5",
+   "topic_number": 5,
+   "title": "Transmission media",
+   "ncert_sections": "11.6, 11.6.1, 11.6.2",
+   "concepts": [
+    {
+     "concept_tag": "guided-vs-unguided-media",
+     "learning_objective": "Classify transmission media as guided (wired) or unguided (wireless)."
+    },
+    {
+     "concept_tag": "wired-media-types",
+     "learning_objective": "Compare twisted pair, coaxial and optical fibre cables."
+    },
+    {
+     "concept_tag": "wireless-wave-types",
+     "learning_objective": "Compare radio waves, microwaves and infrared waves by frequency and properties."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH11-T6",
+   "topic_number": 6,
+   "title": "Wireless technologies and mobile telecommunication",
+   "ncert_sections": "11.6.3, 11.7",
+   "concepts": [
+    {
+     "concept_tag": "bluetooth-piconet",
+     "learning_objective": "Describe Bluetooth and the master-slave working of a piconet."
+    },
+    {
+     "concept_tag": "wireless-lan",
+     "learning_objective": "Explain how access points create a Wi-Fi (IEEE 802.11) wireless LAN."
+    },
+    {
+     "concept_tag": "mobile-generations",
+     "learning_objective": "Distinguish the features of 1G to 5G mobile network generations."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH11-T7",
+   "topic_number": 7,
+   "title": "Protocols",
+   "ncert_sections": "11.8",
+   "concepts": [
+    {
+     "concept_tag": "need-for-protocols",
+     "learning_objective": "Explain why protocols are needed for flow control, access control and addressing."
+    },
+    {
+     "concept_tag": "http-and-ftp",
+     "learning_objective": "Describe the working of HTTP and FTP on a client-server model."
+    },
+    {
+     "concept_tag": "ppp-smtp-tcp-ip",
+     "learning_objective": "Describe the roles of PPP, SMTP and TCP/IP in communication."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "chapter_id": "LEEC1-CH03",
+ "title": "Money and Banking",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEEC1-CH03-T1",
+   "topic_number": 1,
+   "title": "Barter exchange and the functions of money",
+   "ncert_sections": "Introduction, 3.1",
+   "concepts": [
+    {
+     "concept_tag": "barter-double-coincidence",
+     "learning_objective": "Explain barter exchange and why the double coincidence of wants makes it costly in a large economy."
+    },
+    {
+     "concept_tag": "functions-of-money",
+     "learning_objective": "Describe money as a medium of exchange and a unit of account and use it to work out relative prices."
+    },
+    {
+     "concept_tag": "store-of-value",
+     "learning_objective": "Explain money as a store of value and how a rising price level erodes its purchasing power."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH03-T2",
+   "topic_number": 2,
+   "title": "Demand for money: income, interest and the transaction motive",
+   "ncert_sections": "3.2.1, Box 3.1",
+   "concepts": [
+    {
+     "concept_tag": "money-demand-determinants",
+     "learning_objective": "State how the demand for money depends on income and on the rate of interest."
+    },
+    {
+     "concept_tag": "transaction-motive",
+     "learning_objective": "Calculate and interpret the transaction demand for money using MdT = kT and MdT = kPY."
+    },
+    {
+     "concept_tag": "velocity-of-circulation",
+     "learning_objective": "Calculate the velocity of circulation of money and relate it to k."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH03-T3",
+   "topic_number": 3,
+   "title": "Speculative demand for money, bond prices and the liquidity trap",
+   "ncert_sections": "Box 3.1",
+   "concepts": [
+    {
+     "concept_tag": "bond-price-interest-rate",
+     "learning_objective": "Explain, using present value, why the price of a bond is inversely related to the market rate of interest."
+    },
+    {
+     "concept_tag": "speculative-demand",
+     "learning_objective": "Explain why the speculative demand for money is inversely related to the rate of interest."
+    },
+    {
+     "concept_tag": "liquidity-trap",
+     "learning_objective": "Describe the liquidity trap and why extra money then fails to lower the rate of interest."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH03-T4",
+   "topic_number": 4,
+   "title": "Central bank and commercial banks",
+   "ncert_sections": "3.2.2",
+   "concepts": [
+    {
+     "concept_tag": "central-bank-functions",
+     "learning_objective": "Identify the functions of the central bank and the meaning of high-powered money."
+    },
+    {
+     "concept_tag": "commercial-bank-intermediation",
+     "learning_objective": "Explain how commercial banks accept deposits, lend part of them and earn the spread, as in Lala's story."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH03-T5",
+   "topic_number": 5,
+   "title": "Money creation by the banking system and the money multiplier",
+   "ncert_sections": "3.3, 3.3.1, 3.3.2",
+   "concepts": [
+    {
+     "concept_tag": "bank-balance-sheet",
+     "learning_objective": "Identify the assets, liabilities and net worth of a bank's balance sheet."
+    },
+    {
+     "concept_tag": "cash-reserve-ratio",
+     "learning_objective": "Explain how the Cash Reserve Ratio limits the loans a bank can make in each round."
+    },
+    {
+     "concept_tag": "money-multiplier",
+     "learning_objective": "Calculate the money multiplier and the deposits and loans created from a given amount of reserves."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH03-T6",
+   "topic_number": 6,
+   "title": "Policy tools to control money supply",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "lender-of-last-resort",
+     "learning_objective": "Explain why the central bank is called the lender of last resort."
+    },
+    {
+     "concept_tag": "quantitative-qualitative-tools",
+     "learning_objective": "Distinguish quantitative and qualitative tools of monetary control and the effect of the bank rate."
+    },
+    {
+     "concept_tag": "open-market-operations",
+     "learning_objective": "Explain outright open market operations, repo and reverse repo and their effect on money supply."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH03-T7",
+   "topic_number": 7,
+   "title": "Measures of money supply, fiat money and demonetisation",
+   "ncert_sections": "The supply of money: various measures; Box 3.2",
+   "concepts": [
+    {
+     "concept_tag": "fiat-money-legal-tender",
+     "learning_objective": "Define fiat money and legal tender and explain why demand deposits are not legal tender."
+    },
+    {
+     "concept_tag": "measures-of-money-supply",
+     "learning_objective": "State and calculate M1, M2, M3 and M4 and rank them by liquidity."
+    },
+    {
+     "concept_tag": "demonetisation",
+     "learning_objective": "Evaluate the effects of the 2016 demonetisation on the economy and the banking system."
+    }
+   ]
+  }
+ ]
+}

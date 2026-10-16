@@ -1,0 +1,96 @@
+{
+ "chapter_id": "LHEC2-CH01",
+ "title": "परिचय",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHEC2-CH01-T1",
+   "topic_number": 1,
+   "title": "सामान्य अर्थव्यवस्था",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "durlabhta-aur-chayan",
+     "learning_objective": "संसाधनों की दुर्लभता से चयन की समस्या कैसे उत्पन्न होती है, यह समझना।"
+    },
+    {
+     "concept_tag": "vastu-seva-sansadhan",
+     "learning_objective": "वस्तु, सेवा, संसाधन और निर्णय लेने वाली इकाई के अर्थ पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH01-T2",
+   "topic_number": 2,
+   "title": "अर्थव्यवस्था की केंद्रीय समस्याएँ",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "kendriya-samasyaen",
+     "learning_objective": "क्या, कैसे और किसके लिए उत्पादन की केंद्रीय समस्याओं को पहचानना और उनमें भेद करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH01-T3",
+   "topic_number": 3,
+   "title": "उत्पादन संभावनाएँ और अवसर लागत",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "utpadan-sambhavna-seemant",
+     "learning_objective": "सीमांत उत्पादन संभावना वक्र तथा उस पर और उसके नीचे के बिंदुओं की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "avsar-lagat",
+     "learning_objective": "तालिका से किसी वस्तु की अतिरिक्त इकाई की अवसर लागत की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH01-T4",
+   "topic_number": 4,
+   "title": "आर्थिक क्रियाकलापों का आयोजन",
+   "ncert_sections": "1.3, 1.3.1, 1.3.2",
+   "concepts": [
+    {
+     "concept_tag": "kendrikrit-yojanabaddh-arthvyavastha",
+     "learning_objective": "केंद्रीकृत योजनाबद्ध अर्थव्यवस्था में सरकार की भूमिका समझना।"
+    },
+    {
+     "concept_tag": "bazar-arthvyavastha",
+     "learning_objective": "बाज़ार अर्थव्यवस्था में कीमत संकेतों द्वारा समन्वय को समझाना।"
+    },
+    {
+     "concept_tag": "mishrit-arthvyavastha",
+     "learning_objective": "मिश्रित अर्थव्यवस्था की विशेषता पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH01-T5",
+   "topic_number": 5,
+   "title": "सकारात्मक तथा आदर्शक अर्थशास्त्र",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "sakaratmak-adarshak-vishleshan",
+     "learning_objective": "सकारात्मक और आदर्शक आर्थिक विश्लेषण में भेद करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH01-T6",
+   "topic_number": 6,
+   "title": "व्यष्टि अर्थशास्त्र तथा समष्टि अर्थशास्त्र",
+   "ncert_sections": "1.5, 1.6",
+   "concepts": [
+    {
+     "concept_tag": "vyashti-samashti",
+     "learning_objective": "व्यष्टि और समष्टि अर्थशास्त्र की विषय-वस्तु में भेद करना।"
+    }
+   ]
+  }
+ ]
+}

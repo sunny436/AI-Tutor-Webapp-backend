@@ -1,0 +1,104 @@
+{
+ "chapter_id": "JESC1-CH13",
+ "title": "Our Environment",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESC1-CH13-T1",
+   "topic_number": 1,
+   "title": "Ecosystem and its components",
+   "ncert_sections": "13.1",
+   "concepts": [
+    {
+     "concept_tag": "ecosystem-components",
+     "learning_objective": "Identify the biotic and abiotic components of an ecosystem and distinguish natural from human-made ecosystems."
+    },
+    {
+     "concept_tag": "producers-consumers-decomposers",
+     "learning_objective": "Explain the roles of producers, consumers and decomposers and how they depend on one another."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH13-T2",
+   "topic_number": 2,
+   "title": "Food chains, trophic levels and food webs",
+   "ncert_sections": "13.1.1",
+   "concepts": [
+    {
+     "concept_tag": "trophic-levels",
+     "learning_objective": "Place organisms of a food chain at the correct trophic level and consumer category."
+    },
+    {
+     "concept_tag": "food-webs",
+     "learning_objective": "Explain why feeding relationships form branching food webs rather than single straight chains."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH13-T3",
+   "topic_number": 3,
+   "title": "Flow of energy in an ecosystem",
+   "ncert_sections": "13.1.1",
+   "concepts": [
+    {
+     "concept_tag": "ten-percent-law",
+     "learning_objective": "Apply the 10 percent rule to calculate energy available at successive trophic levels."
+    },
+    {
+     "concept_tag": "unidirectional-energy-flow",
+     "learning_objective": "Explain why energy flow in an ecosystem is unidirectional and diminishes at each level."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH13-T4",
+   "topic_number": 4,
+   "title": "Biological magnification",
+   "ncert_sections": "13.1.1",
+   "concepts": [
+    {
+     "concept_tag": "biological-magnification",
+     "learning_objective": "Explain how non-degradable chemicals accumulate progressively along a food chain."
+    },
+    {
+     "concept_tag": "pesticide-entry-into-food-chain",
+     "learning_objective": "Describe how pesticides from fields enter food chains through soil and water."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH13-T5",
+   "topic_number": 5,
+   "title": "Ozone layer and its depletion",
+   "ncert_sections": "13.2, 13.2.1",
+   "concepts": [
+    {
+     "concept_tag": "ozone-formation-and-role",
+     "learning_objective": "Describe how ozone forms in the upper atmosphere and how it shields the Earth from UV radiation."
+    },
+    {
+     "concept_tag": "cfc-ozone-depletion",
+     "learning_objective": "Relate the drop in ozone to CFCs and evaluate steps taken to limit the damage."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH13-T6",
+   "topic_number": 6,
+   "title": "Managing the garbage we produce",
+   "ncert_sections": "13.2.2",
+   "concepts": [
+    {
+     "concept_tag": "biodegradable-non-biodegradable",
+     "learning_objective": "Classify substances as biodegradable or non-biodegradable and explain the role of enzyme specificity."
+    },
+    {
+     "concept_tag": "waste-management",
+     "learning_objective": "Evaluate everyday practices and choices for reducing and disposing of waste."
+    }
+   ]
+  }
+ ]
+}

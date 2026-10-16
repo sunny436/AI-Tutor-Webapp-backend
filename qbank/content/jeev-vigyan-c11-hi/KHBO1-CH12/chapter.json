@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KHBO1-CH12",
+ "title": "पादप में श्वसन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHBO1-CH12-T1",
+   "topic_number": 1,
+   "title": "क्या पादप साँस लेते हैं?",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "padap-gas-vinimay",
+     "learning_objective": "पादपों में रंध्रों और वातरंध्रों द्वारा गैस-विनिमय तथा विशेष श्वसन अंगों के अभाव का कारण समझाना।"
+    },
+    {
+     "concept_tag": "koshikiy-shvasan-arth",
+     "learning_objective": "कोशिकीय श्वसन को भोजन के ऑक्सीकरण से ऊर्जा मुक्त होने और ATP बनने की प्रक्रिया के रूप में बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH12-T2",
+   "topic_number": 2,
+   "title": "ग्लाइकोलिसिस",
+   "ncert_sections": "12.2",
+   "concepts": [
+    {
+     "concept_tag": "glycolysis-charan",
+     "learning_objective": "ग्लाइकोलिसिस के स्थान, चरणों और उसमें ATP के उपयोग व निर्माण को पहचानना।"
+    },
+    {
+     "concept_tag": "pyruvic-amla-bhagya",
+     "learning_objective": "ऑक्सीजन की उपलब्धता के अनुसार पाइरुविक अम्ल के विभिन्न भाग्यों को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH12-T3",
+   "topic_number": 3,
+   "title": "किण्वन",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "alcoholic-kinvan",
+     "learning_objective": "यीस्ट द्वारा ऐल्कोहॉली किण्वन और उसके एंजाइमों का वर्णन करना।"
+    },
+    {
+     "concept_tag": "lactic-kinvan",
+     "learning_objective": "पेशियों और कुछ जीवाणुओं में लैक्टिक अम्ल किण्वन तथा किण्वन की सीमाओं को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH12-T4",
+   "topic_number": 4,
+   "title": "वायवीय श्वसन: पाइरुवेट का ऑक्सीकरण और क्रेब्स चक्र",
+   "ncert_sections": "12.4, 12.4.1",
+   "concepts": [
+    {
+     "concept_tag": "pyruvate-oxikaran",
+     "learning_objective": "पाइरुविक अम्ल के ऑक्सीकारक विकार्बोक्सिलीकरण से ऐसीटिल को-एंजाइम A बनने को समझाना।"
+    },
+    {
+     "concept_tag": "krebs-chakra",
+     "learning_objective": "क्रेब्स चक्र के चरणों और उसमें बनने वाले अपचयित सहएंजाइमों की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH12-T5",
+   "topic_number": 5,
+   "title": "इलेक्ट्रॉन परिवहन तंत्र और ऑक्सीकारी फॉस्फोरिलीकरण",
+   "ncert_sections": "12.4.2",
+   "concepts": [
+    {
+     "concept_tag": "ilektran-parivahan",
+     "learning_objective": "आंतरिक माइटोकॉन्ड्रियल झिल्ली पर संकुलों द्वारा इलेक्ट्रॉन परिवहन का क्रम बताना।"
+    },
+    {
+     "concept_tag": "atp-synthase",
+     "learning_objective": "ATP सिंथेज के F1 और F0 घटकों द्वारा ATP निर्माण को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH12-T6",
+   "topic_number": 6,
+   "title": "श्वसन संतुलन चार्ट",
+   "ncert_sections": "12.5",
+   "concepts": [
+    {
+     "concept_tag": "atp-ganana",
+     "learning_objective": "एक ग्लूकोस अणु के पूर्ण ऑक्सीकरण से ATP की शुद्ध प्राप्ति और उसकी मान्यताओं का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "kinvan-vayviya-tulna",
+     "learning_objective": "किण्वन और वायवीय श्वसन की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH12-T7",
+   "topic_number": 7,
+   "title": "ऐंफीबोलिक पथ और श्वसन गुणांक",
+   "ncert_sections": "12.6, 12.7",
+   "concepts": [
+    {
+     "concept_tag": "amphibolic-path",
+     "learning_objective": "श्वसन पथ को उपचय और अपचय दोनों से जुड़ा ऐंफीबोलिक पथ मानने का कारण समझाना।"
+    },
+    {
+     "concept_tag": "shvasan-gunank",
+     "learning_objective": "विभिन्न श्वसन क्रियाधारों के लिए श्वसन गुणांक की गणना और तुलना करना।"
+    }
+   ]
+  }
+ ]
+}

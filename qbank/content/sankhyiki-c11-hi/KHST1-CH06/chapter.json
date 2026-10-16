@@ -1,0 +1,84 @@
+{
+ "chapter_id": "KHST1-CH06",
+ "title": "सहसंबंध",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHST1-CH06-T1",
+   "topic_number": 1,
+   "title": "सहसंबंध का अर्थ और संबंधों के प्रकार",
+   "ncert_sections": "1, 2",
+   "concepts": [
+    {
+     "concept_tag": "sahsambandh-arth",
+     "learning_objective": "विद्यार्थी समझेगा कि सहसंबंध दो चरों के बीच संबंध की दिशा और तीव्रता मापता है, कार्य-कारण संबंध नहीं।"
+    },
+    {
+     "concept_tag": "sanyog-tritiya-char",
+     "learning_objective": "विद्यार्थी संयोगवश संबंध और किसी तीसरे चर के प्रभाव से बने संबंध को पहचानेगा।"
+    },
+    {
+     "concept_tag": "dhanatmak-rinatmak",
+     "learning_objective": "विद्यार्थी धनात्मक और ऋणात्मक सहसंबंध में अंतर उदाहरणों सहित करेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH06-T2",
+   "topic_number": 2,
+   "title": "प्रकीर्ण आरेख",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "prakirn-aarekh",
+     "learning_objective": "विद्यार्थी प्रकीर्ण आरेख से संबंध की दिशा और निकटता का अनुमान लगाएगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH06-T3",
+   "topic_number": 3,
+   "title": "कार्ल पियरसन का सहसंबंध गुणांक",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "pearson-sutra",
+     "learning_objective": "विद्यार्थी सहप्रसरण और मानक विचलनों से कार्ल पियरसन का सहसंबंध गुणांक परिकलित करेगा।"
+    },
+    {
+     "concept_tag": "pad-vichalan-vidhi",
+     "learning_objective": "विद्यार्थी पद-विचलन विधि में मूल और पैमाने के परिवर्तन का प्रयोग करेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH06-T4",
+   "topic_number": 4,
+   "title": "सहसंबंध गुणांक के गुण",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "r-ke-gun",
+     "learning_objective": "विद्यार्थी r के गुण - इकाई रहित होना, -1 से +1 का परिसर और r = 0 का अर्थ - समझेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH06-T5",
+   "topic_number": 5,
+   "title": "स्पीयरमैन का कोटि सहसंबंध",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "spearman-upyog",
+     "learning_objective": "विद्यार्थी बताएगा कि स्पीयरमैन का कोटि सहसंबंध कब उपयुक्त है।"
+    },
+    {
+     "concept_tag": "spearman-ganana",
+     "learning_objective": "विद्यार्थी दी गई, न दी गई और पुनरावृत्त कोटियों में कोटि सहसंबंध परिकलित करेगा।"
+    }
+   ]
+  }
+ ]
+}

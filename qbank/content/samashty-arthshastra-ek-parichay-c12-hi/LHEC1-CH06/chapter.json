@@ -1,0 +1,144 @@
+{
+ "chapter_id": "LHEC1-CH06",
+ "title": "खुली अर्थव्यवस्था समष्टि अर्थशास्त्र",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHEC1-CH06-T1",
+   "topic_number": 1,
+   "title": "खुली अर्थव्यवस्था, उसके संबंध और विदेशी व्यापार",
+   "ncert_sections": "परिचय",
+   "concepts": [
+    {
+     "concept_tag": "khuli-arthvyavastha-sambandh",
+     "learning_objective": "उन निर्गत, वित्तीय और श्रम बाज़ार संबंधों की पहचान करना जिनके द्वारा खुली अर्थव्यवस्था अन्य देशों से जुड़ती है।"
+    },
+    {
+     "concept_tag": "videshi-vyapar-aur-samagra-maang",
+     "learning_objective": "समझाना कि आय के चक्रीय प्रवाह में आयात क्षरण और निर्यात अंतःक्षेपण कैसे हैं।"
+    },
+    {
+     "concept_tag": "antarrashtriya-mudra-vishvas",
+     "learning_objective": "समझाना कि कोई राष्ट्रीय मुद्रा अंतर्राष्ट्रीय स्तर पर तभी स्वीकार होती है जब उसकी क्रय शक्ति स्थिर रहे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH06-T2",
+   "topic_number": 2,
+   "title": "भुगतान शेष और चालू खाता",
+   "ncert_sections": "6.1, 6.1.1",
+   "concepts": [
+    {
+     "concept_tag": "bhugtan-shesh-arth",
+     "learning_objective": "भुगतान शेष को परिभाषित करना और उसके मुख्य खातों की पहचान करना।"
+    },
+    {
+     "concept_tag": "chalu-khata-ghatak",
+     "learning_objective": "वस्तुओं, सेवाओं और अंतरण भुगतानों के व्यापार को चालू खाते के घटकों के रूप में वर्गीकृत करना।"
+    },
+    {
+     "concept_tag": "vyapar-shesh-aur-adrishya",
+     "learning_objective": "व्यापार शेष और चालू खाता शेष में अंतर करना और दिए गए आँकड़ों से दोनों की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH06-T3",
+   "topic_number": 3,
+   "title": "पूँजी खाता तथा भुगतान शेष का आधिक्य या घाटा",
+   "ncert_sections": "6.1.2, 6.1.3",
+   "concepts": [
+    {
+     "concept_tag": "punji-khata-madein",
+     "learning_objective": "पूँजी खाते की जमा और नामे मदों, जैसे प्रत्यक्ष विदेशी निवेश, पोर्टफोलियो निवेश, उधार और सहायता की पहचान करना।"
+    },
+    {
+     "concept_tag": "bhugtan-shesh-ghata-arakshit-nidhi",
+     "learning_objective": "समग्र भुगतान शेष की गणना करना और समझाना कि आधिकारिक आरक्षित निधि लेनदेन घाटे या आधिक्य का निपटान कैसे करते हैं।"
+    },
+    {
+     "concept_tag": "swayatt-samanjak-sauda",
+     "learning_objective": "स्वायत्त (रेखा से ऊपर) और समायोजक (रेखा से नीचे) लेनदेनों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH06-T4",
+   "topic_number": 4,
+   "title": "विदेशी मुद्रा बाज़ार और विनिमय दर",
+   "ncert_sections": "6.2, 6.2.1",
+   "concepts": [
+    {
+     "concept_tag": "videshi-mudra-bazar",
+     "learning_objective": "विदेशी मुद्रा बाज़ार, उसके प्रतिभागियों और विदेशी विनिमय दर के अर्थ का वर्णन करना।"
+    },
+    {
+     "concept_tag": "videshi-mudra-maang-poorti",
+     "learning_objective": "विदेशी मुद्रा की माँग और पूर्ति के स्रोतों तथा विनिमय दर के प्रति उनकी प्रतिक्रिया को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH06-T5",
+   "topic_number": 5,
+   "title": "नम्य विनिमय दर और उसके निर्धारक",
+   "ncert_sections": "6.2.2 (नम्य विनिमय दर)",
+   "concepts": [
+    {
+     "concept_tag": "namya-dar-mulyahras-mulyavriddhi",
+     "learning_objective": "समझाना कि नम्य विनिमय दर कैसे निर्धारित होती है तथा मूल्यह्रास और मूल्यवृद्धि में अंतर करना।"
+    },
+    {
+     "concept_tag": "alpkalin-vinimay-dar-karak",
+     "learning_objective": "विश्लेषण करना कि सट्टा, ब्याज दर अंतर और आय में परिवर्तन अल्पकाल में विनिमय दर को कैसे प्रभावित करते हैं।"
+    },
+    {
+     "concept_tag": "kray-shakti-samta",
+     "learning_objective": "दीर्घकालीन विनिमय दर का अनुमान लगाने के लिए क्रय शक्ति समता सिद्धांत का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH06-T6",
+   "topic_number": 6,
+   "title": "स्थिर विनिमय दर और प्रबंधित तिरती विनिमय दर",
+   "ncert_sections": "6.2.2 (स्थिर विनिमय दर), 6.2.3, 6.2.4",
+   "concepts": [
+    {
+     "concept_tag": "sthir-vinimay-dar-pranali",
+     "learning_objective": "समझाना कि सरकार स्थिर विनिमय दर कैसे बनाए रखती है तथा अवमूल्यन और पुनर्मूल्यन में अंतर करना।"
+    },
+    {
+     "concept_tag": "sthir-banam-namya-gun",
+     "learning_objective": "सट्टेबाज़ी के आक्रमण सहित स्थिर और नम्य विनिमय दर प्रणालियों के गुण-दोषों का मूल्यांकन करना।"
+    },
+    {
+     "concept_tag": "prabandhit-tirti-dar",
+     "learning_objective": "प्रबंधित तिरती दर को नम्य दर और केंद्रीय बैंक के हस्तक्षेप के मिश्रण के रूप में वर्णित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC1-CH06-T7",
+   "topic_number": 7,
+   "title": "खुली अर्थव्यवस्था में संतुलन आय का निर्धारण",
+   "ncert_sections": "परिशिष्ट 6.1",
+   "concepts": [
+    {
+     "concept_tag": "khuli-arthvyavastha-aay-samikaran",
+     "learning_objective": "खुली अर्थव्यवस्था के लिए राष्ट्रीय आय की सर्वसमिका लिखना और निवल निर्यात की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "seemant-aayat-pravritti",
+     "learning_objective": "आयात फलन से सीमांत आयात प्रवृत्ति की पहचान करना और समग्र माँग में उसकी भूमिका समझाना।"
+    },
+    {
+     "concept_tag": "khuli-arthvyavastha-gunak",
+     "learning_objective": "खुली अर्थव्यवस्था के गुणक की गणना करना और समझाना कि यह बंद अर्थव्यवस्था के गुणक से छोटा क्यों है।"
+    }
+   ]
+  }
+ ]
+}

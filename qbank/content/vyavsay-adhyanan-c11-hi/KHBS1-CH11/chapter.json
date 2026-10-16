@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KHBS1-CH11",
+ "title": "अंतर्राष्ट्रीय व्यापार",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHBS1-CH11-T1",
+   "topic_number": 1,
+   "title": "अंतर्राष्ट्रीय व्यवसाय का अर्थ एवं कारण",
+   "ncert_sections": "11.1, 11.1.1, 11.1.2",
+   "concepts": [
+    {
+     "concept_tag": "antarrashtriya-vyavsay-arth",
+     "learning_objective": "अंतर्राष्ट्रीय व्यवसाय और अंतर्राष्ट्रीय व्यापार के अर्थ में अंतर समझना।"
+    },
+    {
+     "concept_tag": "vyavsay-ke-karan",
+     "learning_objective": "संसाधनों के असमान वितरण और भौगोलिक विशिष्टीकरण को अंतर्राष्ट्रीय व्यवसाय के कारण के रूप में समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH11-T2",
+   "topic_number": 2,
+   "title": "अंतर्राष्ट्रीय व्यवसाय बनाम घरेलू व्यवसाय",
+   "ncert_sections": "11.1.3",
+   "concepts": [
+    {
+     "concept_tag": "gharelu-antarrashtriya-antar",
+     "learning_objective": "घरेलू और अंतर्राष्ट्रीय व्यवसाय के बीच अंतर के आधारों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH11-T3",
+   "topic_number": 3,
+   "title": "अंतर्राष्ट्रीय व्यवसाय का क्षेत्र एवं लाभ",
+   "ncert_sections": "11.1.4, 11.1.5",
+   "concepts": [
+    {
+     "concept_tag": "vyavsay-ka-kshetra",
+     "learning_objective": "वस्तु व्यापार, सेवा व्यापार, अनुज्ञप्ति एवं विदेशी निवेश को अंतर्राष्ट्रीय व्यवसाय के क्षेत्र में पहचानना।"
+    },
+    {
+     "concept_tag": "rashtron-firmon-ko-labh",
+     "learning_objective": "राष्ट्रों एवं फर्मों को अंतर्राष्ट्रीय व्यवसाय से मिलने वाले लाभों का वर्णन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH11-T4",
+   "topic_number": 4,
+   "title": "प्रवेश की विधियाँ: आयात-निर्यात, संविदा विनिर्माण एवं अनुज्ञप्ति",
+   "ncert_sections": "11.2, 11.2.1, 11.2.2, 11.2.3",
+   "concepts": [
+    {
+     "concept_tag": "aayat-niryat-vidhi",
+     "learning_objective": "प्रत्यक्ष एवं अप्रत्यक्ष आयात-निर्यात के लाभ और सीमाएँ बताना।"
+    },
+    {
+     "concept_tag": "samvida-vinirman",
+     "learning_objective": "संविदा विनिर्माण के स्वरूप, लाभ और सीमाओं को समझाना।"
+    },
+    {
+     "concept_tag": "anugyapti-franchising",
+     "learning_objective": "अनुज्ञप्ति और फ्रैंचाइज़िंग में अंतर तथा इनके लाभ-सीमाएँ समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH11-T5",
+   "topic_number": 5,
+   "title": "संयुक्त उपक्रम एवं पूर्ण स्वामित्व वाली सहायक कंपनी",
+   "ncert_sections": "11.2.4, 11.2.5",
+   "concepts": [
+    {
+     "concept_tag": "sanyukt-upakram",
+     "learning_objective": "संयुक्त उपक्रम बनाने के तरीके, लाभ और सीमाएँ बताना।"
+    },
+    {
+     "concept_tag": "purna-swamitva-sahayak",
+     "learning_objective": "पूर्ण स्वामित्व वाली सहायक कंपनी के लाभ और सीमाओं का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH11-T6",
+   "topic_number": 6,
+   "title": "निर्यात प्रक्रिया एवं प्रलेख",
+   "ncert_sections": "11.3, 11.3.1",
+   "concepts": [
+    {
+     "concept_tag": "niryat-prakriya-charan",
+     "learning_objective": "निर्यात सौदे के क्रियान्वयन के चरणों को सही क्रम में समझाना।"
+    },
+    {
+     "concept_tag": "niryat-pralekh",
+     "learning_objective": "जहाज़ी बिल, मेट्स रसीद, जहाज़ी बिल्टी, साख पत्र जैसे निर्यात प्रलेखों के उद्देश्य पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH11-T7",
+   "topic_number": 7,
+   "title": "आयात प्रक्रिया एवं प्रलेख",
+   "ncert_sections": "11.3.2",
+   "concepts": [
+    {
+     "concept_tag": "aayat-prakriya-charan",
+     "learning_objective": "आयात सौदे के चरणों को सही क्रम में समझाना।"
+    },
+    {
+     "concept_tag": "aayat-pralekh",
+     "learning_objective": "प्रवेश बिल, डॉक चालान और विनिमय विपत्र के प्रकारों का उपयोग समझाना।"
+    }
+   ]
+  }
+ ]
+}

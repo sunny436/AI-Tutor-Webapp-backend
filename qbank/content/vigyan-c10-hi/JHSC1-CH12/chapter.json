@@ -1,0 +1,108 @@
+{
+ "chapter_id": "JHSC1-CH12",
+ "title": "विद्युत धारा के चुंबकीय प्रभाव",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSC1-CH12-T1",
+   "topic_number": 1,
+   "title": "चुंबकीय क्षेत्र और क्षेत्र रेखाएँ",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "chumbakiya-kshetra",
+     "learning_objective": "छात्र चुंबक के चारों ओर के उस क्षेत्र को पहचान सकेंगे जिसमें उसका बल अनुभव होता है।"
+    },
+    {
+     "concept_tag": "kshetra-rekhaon-ke-gun",
+     "learning_objective": "छात्र चुंबकीय क्षेत्र रेखाओं की दिशा, निकटता और अप्रतिच्छेदन के गुण समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH12-T2",
+   "topic_number": 2,
+   "title": "सीधे धारावाही चालक के कारण चुंबकीय क्षेत्र तथा दक्षिण-हस्त अंगुष्ठ नियम",
+   "ncert_sections": "12.2, 12.2.1, 12.2.2",
+   "concepts": [
+    {
+     "concept_tag": "seedhe-chalak-ka-kshetra",
+     "learning_objective": "छात्र सीधे धारावाही चालक के चारों ओर चुंबकीय क्षेत्र का पैटर्न और दूरी के साथ उसका परिवर्तन बता सकेंगे।"
+    },
+    {
+     "concept_tag": "dakshin-hast-angushth-niyam",
+     "learning_objective": "छात्र दक्षिण-हस्त अंगुष्ठ नियम से धारावाही चालक के चुंबकीय क्षेत्र की दिशा ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH12-T3",
+   "topic_number": 3,
+   "title": "विद्युत धारावाही वृत्ताकार पाश के कारण चुंबकीय क्षेत्र",
+   "ncert_sections": "12.2.3",
+   "concepts": [
+    {
+     "concept_tag": "vrittakar-pash-ka-kshetra",
+     "learning_objective": "छात्र वृत्ताकार पाश के केंद्र पर चुंबकीय क्षेत्र का पैटर्न और दिशा बता सकेंगे।"
+    },
+    {
+     "concept_tag": "pash-mein-kshetra-ki-prabalta",
+     "learning_objective": "छात्र फेरों की संख्या और धारा से पाश के चुंबकीय क्षेत्र की प्रबलता का संबंध समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH12-T4",
+   "topic_number": 4,
+   "title": "परिनालिका में प्रवाहित विद्युत धारा के कारण चुंबकीय क्षेत्र",
+   "ncert_sections": "12.2.4",
+   "concepts": [
+    {
+     "concept_tag": "parinalika-ka-kshetra",
+     "learning_objective": "छात्र परिनालिका के भीतर और बाहर के चुंबकीय क्षेत्र की तुलना छड़ चुंबक से कर सकेंगे।"
+    },
+    {
+     "concept_tag": "vidyut-chumbak",
+     "learning_objective": "छात्र नर्म लोहे के क्रोड वाली परिनालिका से विद्युत चुंबक बनने को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH12-T5",
+   "topic_number": 5,
+   "title": "चुंबकीय क्षेत्र में किसी विद्युत धारावाही चालक पर बल",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "chalak-par-bal",
+     "learning_objective": "छात्र चुंबकीय क्षेत्र में धारावाही चालक पर लगने वाले बल की दिशा और परिमाण के कारक बता सकेंगे।"
+    },
+    {
+     "concept_tag": "fleming-vamhast-niyam",
+     "learning_objective": "छात्र फ्लेमिंग के वामहस्त नियम से चालक या आवेशित कण पर बल की दिशा ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH12-T6",
+   "topic_number": 6,
+   "title": "घरेलू विद्युत परिपथ",
+   "ncert_sections": "12.4",
+   "concepts": [
+    {
+     "concept_tag": "gharelu-paripath-ke-tar",
+     "learning_objective": "छात्र घरेलू परिपथ के विद्युन्मय, उदासीन और भूसंपर्क तारों तथा उनके विभवांतर को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "bhusampark-tar",
+     "learning_objective": "छात्र धात्विक आवरण वाले साधित्रों में भूसंपर्क तार की सुरक्षा भूमिका समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "fuse-aur-atibharan",
+     "learning_objective": "छात्र अतिभारण और लघुपथन में फ्यूज़ की भूमिका का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

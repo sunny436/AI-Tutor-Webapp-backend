@@ -1,0 +1,140 @@
+{
+  "chapter_id": "KEPH1-CH04",
+  "title": "Laws of Motion",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "KEPH1-CH04-T1",
+      "topic_number": 1,
+      "title": "Aristotle's fallacy and the law of inertia",
+      "ncert_sections": "4.2, 4.3",
+      "concepts": [
+        {
+          "concept_tag": "aristotle-fallacy",
+          "learning_objective": "Explain why Aristotle's view that a force is needed to keep a body moving uniformly is wrong."
+        },
+        {
+          "concept_tag": "galileo-inclined-plane",
+          "learning_objective": "Interpret Galileo's inclined-plane experiments that led to the law of inertia."
+        },
+        {
+          "concept_tag": "inertia",
+          "learning_objective": "Define inertia as the resistance of a body to a change in its state of rest or uniform motion."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPH1-CH04-T2",
+      "topic_number": 2,
+      "title": "Newton's first law of motion",
+      "ncert_sections": "4.4",
+      "concepts": [
+        {
+          "concept_tag": "first-law-statement",
+          "learning_objective": "State Newton's first law and relate zero net external force to zero acceleration."
+        },
+        {
+          "concept_tag": "first-law-applications",
+          "learning_objective": "Explain everyday and space situations using Newton's first law."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPH1-CH04-T3",
+      "topic_number": 3,
+      "title": "Newton's second law of motion and impulse",
+      "ncert_sections": "4.5",
+      "concepts": [
+        {
+          "concept_tag": "second-law-momentum",
+          "learning_objective": "Apply F = dp/dt = ma to calculate forces and accelerations, including apparent weight."
+        },
+        {
+          "concept_tag": "impulse",
+          "learning_objective": "Relate impulse to change in momentum and explain how stretching the impact time reduces force."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPH1-CH04-T4",
+      "topic_number": 4,
+      "title": "Newton's third law of motion",
+      "ncert_sections": "4.6",
+      "concepts": [
+        {
+          "concept_tag": "action-reaction-pairs",
+          "learning_objective": "Identify action-reaction pairs and recognise that they act on different bodies."
+        },
+        {
+          "concept_tag": "contact-forces-between-bodies",
+          "learning_objective": "Calculate the mutual contact force between bodies accelerated together."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPH1-CH04-T5",
+      "topic_number": 5,
+      "title": "Conservation of momentum",
+      "ncert_sections": "4.7",
+      "concepts": [
+        {
+          "concept_tag": "momentum-conservation",
+          "learning_objective": "State the law of conservation of momentum for an isolated system."
+        },
+        {
+          "concept_tag": "recoil-and-collisions",
+          "learning_objective": "Apply momentum conservation to recoil, explosions and sticking collisions."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPH1-CH04-T6",
+      "topic_number": 6,
+      "title": "Equilibrium of a particle",
+      "ncert_sections": "4.8",
+      "concepts": [
+        {
+          "concept_tag": "concurrent-force-equilibrium",
+          "learning_objective": "Apply the condition that the vector sum of concurrent forces is zero for equilibrium."
+        },
+        {
+          "concept_tag": "resolving-forces",
+          "learning_objective": "Resolve forces into components to find unknown tensions in equilibrium."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPH1-CH04-T7",
+      "topic_number": 7,
+      "title": "Common forces in mechanics: friction",
+      "ncert_sections": "4.9",
+      "concepts": [
+        {
+          "concept_tag": "static-friction",
+          "learning_objective": "Explain the self-adjusting nature of static friction and the limiting value mu_s N."
+        },
+        {
+          "concept_tag": "kinetic-and-rolling-friction",
+          "learning_objective": "Compare kinetic, static and rolling friction and use the angle of repose."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPH1-CH04-T8",
+      "topic_number": 8,
+      "title": "Circular motion and solving problems in mechanics",
+      "ncert_sections": "4.10, 4.11",
+      "concepts": [
+        {
+          "concept_tag": "centripetal-force-roads",
+          "learning_objective": "Identify the force supplying centripetal force for vehicles on level and banked roads."
+        },
+        {
+          "concept_tag": "free-body-problem-solving",
+          "learning_objective": "Use free-body diagrams to solve connected-body and circular-motion problems."
+        }
+      ]
+    }
+  ]
+}

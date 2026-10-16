@@ -1,0 +1,747 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "ganita-manjari-part-ii-c09-en",
+  "curriculum": "cbse",
+  "class_level": 9,
+  "subject_code": "mathematics",
+  "language": "english",
+  "title": "Ganita Manjari PART-II",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "iemh2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "IEMH2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Propositions and their Converses",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH2-CH01-T1",
+     "topic_number": 1,
+     "title": "Propositions and the converse of a proposition",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "proposition-meaning",
+       "learning_objective": "State that a proposition is a statement that is either true or false."
+      },
+      {
+       "concept_tag": "forming-the-converse",
+       "learning_objective": "Write the converse 'if Y then X' of a proposition of the form 'if X then Y'."
+      },
+      {
+       "concept_tag": "equivalent-phrasings",
+       "learning_objective": "Recognise 'X implies Y' and 'Y when X' as other ways of saying 'if X then Y'."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH01-T2",
+     "topic_number": 2,
+     "title": "Counterexamples",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "counterexample-meaning",
+       "learning_objective": "Explain that a single counterexample is enough to show that a proposition is false."
+      },
+      {
+       "concept_tag": "prime-generating-claims",
+       "learning_objective": "Find counterexamples to claims that expressions such as Fermat numbers, 4n^2 + 1 or n^2 + n + 11 always give primes."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH01-T3",
+     "topic_number": 3,
+     "title": "Truth of a proposition compared with its converse",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "true-proposition-false-converse",
+       "learning_objective": "Show that a true proposition can have a false converse, using examples from numbers and daily life."
+      },
+      {
+       "concept_tag": "both-true-or-both-false",
+       "learning_objective": "Give examples where a proposition and its converse are both true or both false."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH01-T4",
+     "topic_number": 4,
+     "title": "Perfect squares and an odd number of factors",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "factor-partner-pairs",
+       "learning_objective": "Use factor-partner pairs to decide whether a number has an odd or an even number of factors."
+      },
+      {
+       "concept_tag": "direction-of-a-proof",
+       "learning_objective": "Identify which of a proposition and its converse a chain of implications actually proves."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH01-T5",
+     "topic_number": 5,
+     "title": "Converses in geometry: the Baudhayana-Pythagoras theorem",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pythagoras-converse",
+       "learning_objective": "State and apply the converse of the Baudhayana-Pythagoras theorem to decide whether a triangle is right-angled."
+      },
+      {
+       "concept_tag": "geometric-converses",
+       "learning_objective": "Judge the truth of converses of geometric propositions about lines and quadrilaterals."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH01-T6",
+     "topic_number": 6,
+     "title": "Divisibility and algebraic propositions and their converses",
+     "ncert_sections": "Exercise Set 9.1",
+     "concepts": [
+      {
+       "concept_tag": "divisibility-converses",
+       "learning_objective": "Decide whether converses of divisibility statements are true, giving counterexamples where needed."
+      },
+      {
+       "concept_tag": "algebraic-converses",
+       "learning_objective": "Decide whether converses of statements such as 'if x = y then x^2 = y^2' are true for real numbers."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEMH2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "How Quantities Combine: Understanding Data",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH2-CH02-T1",
+     "topic_number": 1,
+     "title": "Average of averages",
+     "ncert_sections": "10.1.1",
+     "concepts": [
+      {
+       "concept_tag": "average-of-averages-pitfall",
+       "learning_objective": "Explain why simply averaging the averages of groups of different sizes gives a wrong combined average."
+      },
+      {
+       "concept_tag": "combined-average-formula",
+       "learning_objective": "Use (an + bm)/(n + m) to find the combined average of two collections of data."
+      },
+      {
+       "concept_tag": "equal-size-collections",
+       "learning_objective": "Recognise that the average of averages is correct when all collections have the same size."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH02-T2",
+     "topic_number": 2,
+     "title": "Mixtures and the weighted mean",
+     "ncert_sections": "10.1.2",
+     "concepts": [
+      {
+       "concept_tag": "mixture-concentration",
+       "learning_objective": "Calculate the concentration of a mixture as total quantity of the substance divided by total quantity of the mixture."
+      },
+      {
+       "concept_tag": "weighted-mean-general",
+       "learning_objective": "State the weighted mean formula and its history in the work of Brahmagupta and Sridharacharya."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH02-T3",
+     "topic_number": 3,
+     "title": "Custom weights",
+     "ncert_sections": "10.1.3",
+     "concepts": [
+      {
+       "concept_tag": "weights-as-importance",
+       "learning_objective": "Interpret weights as the relative importance given to each part of the data."
+      },
+      {
+       "concept_tag": "weighted-score-calculation",
+       "learning_objective": "Compute a weighted score such as an annual mark or a combined rating from given weights."
+      },
+      {
+       "concept_tag": "changing-the-weights",
+       "learning_objective": "Analyse how the weighted mean changes when all weights are scaled or increased by a constant."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH02-T4",
+     "topic_number": 4,
+     "title": "Stacked bar and column charts",
+     "ncert_sections": "10.2.1",
+     "concepts": [
+      {
+       "concept_tag": "cluster-vs-stacked-choice",
+       "learning_objective": "Choose between cluster-column and stacked bar charts according to the comparison of interest."
+      },
+      {
+       "concept_tag": "reading-stacked-bars",
+       "learning_objective": "Read totals, components and shares from a stacked bar chart."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH02-T5",
+     "topic_number": 5,
+     "title": "100% stacked bar charts as an alternative to pie charts",
+     "ncert_sections": "10.2.2",
+     "concepts": [
+      {
+       "concept_tag": "hundred-percent-stacked-construction",
+       "learning_objective": "Construct a 100% stacked bar chart by converting each component into a percentage of its bar's total."
+      },
+      {
+       "concept_tag": "comparison-with-pie-chart",
+       "learning_objective": "Compare 100% stacked bar charts with pie charts as ways of showing proportions."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH02-T6",
+     "topic_number": 6,
+     "title": "Drawing inferences from stacked charts",
+     "ncert_sections": "10.2.2",
+     "concepts": [
+      {
+       "concept_tag": "inference-limits-of-proportions",
+       "learning_objective": "Decide which comparisons can and cannot be inferred from a 100% stacked bar chart."
+      },
+      {
+       "concept_tag": "equal-total-stacked-bars",
+       "learning_objective": "Interpret charts that are both stacked and 100% stacked because every bar has the same total."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEMH2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "The World of Algorithms",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH2-CH03-T1",
+     "topic_number": 1,
+     "title": "Adding numbers digit by digit",
+     "ncert_sections": "11.1, 11.1.1",
+     "concepts": [
+      {
+       "concept_tag": "what-is-an-algorithm",
+       "learning_objective": "Describe an algorithm as a precise step-by-step procedure built from basic steps."
+      },
+      {
+       "concept_tag": "column-addition-carry",
+       "learning_objective": "Execute and justify the right-to-left column addition algorithm with a carry."
+      },
+      {
+       "concept_tag": "addition-efficiency",
+       "learning_objective": "Compare the effort of counting dots with the effort of adding column by column."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH03-T2",
+     "topic_number": 2,
+     "title": "Computing the divisors of a number",
+     "ncert_sections": "11.2, 11.2.1",
+     "concepts": [
+      {
+       "concept_tag": "divisors-list-algorithm",
+       "learning_objective": "Execute the algorithm that builds the list of divisors of n by checking each j from 1 to n."
+      },
+      {
+       "concept_tag": "divisor-pairs",
+       "learning_objective": "Use the pairing of divisors to reduce the numbers that must be examined."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH03-T3",
+     "topic_number": 3,
+     "title": "Finding the gcd from common divisors",
+     "ncert_sections": "11.2.2, 11.2.3",
+     "concepts": [
+      {
+       "concept_tag": "common-divisors-list",
+       "learning_objective": "Build the list of common divisors of two numbers from their lists of divisors."
+      },
+      {
+       "concept_tag": "first-gcd-algorithm",
+       "learning_objective": "Explain why the rightmost element of the common-divisors list is the gcd."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH03-T4",
+     "topic_number": 4,
+     "title": "Data structures and improving the gcd algorithm",
+     "ncert_sections": "11.3, 11.3.1, 11.3.2",
+     "concepts": [
+      {
+       "concept_tag": "list-data-structure",
+       "learning_objective": "Recognise a list as a data structure that stores named intermediate values."
+      },
+      {
+       "concept_tag": "refining-gcd-algorithm",
+       "learning_objective": "Refine the gcd algorithm by combining scans, scanning up to min(m, n) and dropping lists."
+      },
+      {
+       "concept_tag": "gcd-scan-efficiency",
+       "learning_objective": "Analyse how the work of the scanning gcd algorithm grows with the size of the numbers."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH03-T5",
+     "topic_number": 5,
+     "title": "Euclid's subtraction algorithm",
+     "ncert_sections": "11.3.3",
+     "concepts": [
+      {
+       "concept_tag": "gcd-difference-property",
+       "learning_objective": "Justify that gcd(m, n) = gcd(n, m - n) when m is at least n."
+      },
+      {
+       "concept_tag": "euclid-subtraction-steps",
+       "learning_objective": "Execute Euclid's subtraction algorithm, including the reversal and stopping steps."
+      },
+      {
+       "concept_tag": "subtraction-efficiency",
+       "learning_objective": "Evaluate why the subtraction algorithm can need many steps for inputs like gcd(2k + 1, 2)."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH03-T6",
+     "topic_number": 6,
+     "title": "Aryabhata's division algorithm and the history of the word",
+     "ncert_sections": "11.3.4, A Pinch of History",
+     "concepts": [
+      {
+       "concept_tag": "gcd-mod-reduction",
+       "learning_objective": "Use the reduction gcd(m, n) = gcd(n, m mod n) to compute a gcd in few steps."
+      },
+      {
+       "concept_tag": "long-division-gcd",
+       "learning_objective": "Carry out the long-division layout for the gcd and read off the answer."
+      },
+      {
+       "concept_tag": "origin-of-word-algorithm",
+       "learning_objective": "Recall how the word algorithm arose from Al-Khwarizmi and Indian arithmetic."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEMH2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Quadrilaterals",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH2-CH04-T1",
+     "topic_number": 1,
+     "title": "What Exactly is a Quadrilateral?",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "quadrilateral-definition",
+       "learning_objective": "State the precise definition of a quadrilateral and recognise figures it excludes."
+      },
+      {
+       "concept_tag": "quadrilateral-terminology",
+       "learning_objective": "Identify vertices, sides, diagonals, adjacent and opposite parts, and valid names of a quadrilateral."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH04-T2",
+     "topic_number": 2,
+     "title": "Convex, Non-convex and Self-intersecting 4-gons",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "convexity-tests",
+       "learning_objective": "Decide whether a quadrilateral is convex using its internal angles or its diagonals."
+      },
+      {
+       "concept_tag": "special-4-gons",
+       "learning_objective": "Recognise non-convex, self-intersecting and non-planar 4-gons and where they arise."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH04-T3",
+     "topic_number": 3,
+     "title": "Parallelograms and the Converse Tests",
+     "ncert_sections": "12.2",
+     "concepts": [
+      {
+       "concept_tag": "parallelogram-properties",
+       "learning_objective": "Recall and justify the side, angle and diagonal properties of a parallelogram."
+      },
+      {
+       "concept_tag": "parallelogram-tests",
+       "learning_objective": "Use the converse tests and the equal parallel sides test to show a quadrilateral is a parallelogram."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH04-T4",
+     "topic_number": 4,
+     "title": "The Midpoint Theorem and its Converse",
+     "ncert_sections": "12.3, 12.3.1",
+     "concepts": [
+      {
+       "concept_tag": "midpoint-theorem",
+       "learning_objective": "Apply the Midpoint Theorem to find lengths and parallel segments in a triangle."
+      },
+      {
+       "concept_tag": "midpoint-theorem-converse",
+       "learning_objective": "Apply the converse of the Midpoint Theorem to locate midpoints."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH04-T5",
+     "topic_number": 5,
+     "title": "Medians and the Centroid",
+     "ncert_sections": "12.3.2",
+     "concepts": [
+      {
+       "concept_tag": "centroid-theorem",
+       "learning_objective": "Use the concurrence of medians and the 2 : 1 division at the centroid."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH04-T6",
+     "topic_number": 6,
+     "title": "The Varignon Parallelogram",
+     "ncert_sections": "12.3.2",
+     "concepts": [
+      {
+       "concept_tag": "varignon-theorem",
+       "learning_objective": "Show that the midpoints of the sides of any quadrilateral form a parallelogram and relate it to the diagonals."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH04-T7",
+     "topic_number": 7,
+     "title": "Tiling the Plane Using Any 4-gon",
+     "ncert_sections": "12.4",
+     "concepts": [
+      {
+       "concept_tag": "tiling-with-quadrilaterals",
+       "learning_objective": "Explain how copies of any quadrilateral can tile the plane."
+      },
+      {
+       "concept_tag": "tiling-angle-condition",
+       "learning_objective": "Use the 360 degree angle condition at a vertex to decide whether a shape can tile."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEMH2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Two Variables, One Line",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH2-CH05-T1",
+     "topic_number": 1,
+     "title": "Linear equations in two variables and standard form",
+     "ncert_sections": "13.1, 13.1.1",
+     "concepts": [
+      {
+       "concept_tag": "standard-form-linear-equation",
+       "learning_objective": "Identify a linear equation in two variables and write it in the standard form ax + by + c = 0."
+      },
+      {
+       "concept_tag": "modelling-with-two-variables",
+       "learning_objective": "Express an everyday situation as a linear equation in two variables."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH05-T2",
+     "topic_number": 2,
+     "title": "Solutions of a linear equation in two variables",
+     "ncert_sections": "13.2, 13.2.1, 13.2.2",
+     "concepts": [
+      {
+       "concept_tag": "solution-as-ordered-pair",
+       "learning_objective": "Check whether an ordered pair satisfies a linear equation and recognise that there are infinitely many solutions."
+      },
+      {
+       "concept_tag": "graph-of-linear-equation",
+       "learning_objective": "Find the axis-intercept points of a line and relate solutions to points on its graph."
+      },
+      {
+       "concept_tag": "line-through-origin",
+       "learning_objective": "Explain why the line ax + by + c = 0 passes through the origin exactly when c = 0."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH05-T3",
+     "topic_number": 3,
+     "title": "Slope and the slope-intercept form",
+     "ncert_sections": "13.3, 13.3.1, 13.3.2",
+     "concepts": [
+      {
+       "concept_tag": "slope-rise-over-run",
+       "learning_objective": "Calculate the slope of a line as rise over run using two points on it."
+      },
+      {
+       "concept_tag": "slope-intercept-form",
+       "learning_objective": "Read the slope and y-intercept from y = mx + d after rewriting ax + by + c = 0."
+      },
+      {
+       "concept_tag": "zero-and-undefined-slope",
+       "learning_objective": "Recognise horizontal lines as having zero slope and vertical lines as having undefined slope."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH05-T4",
+     "topic_number": 4,
+     "title": "Pair of linear equations in two variables",
+     "ncert_sections": "13.4",
+     "concepts": [
+      {
+       "concept_tag": "forming-a-pair-of-equations",
+       "learning_objective": "Frame a pair of linear equations in two variables from a word situation."
+      },
+      {
+       "concept_tag": "solution-of-a-pair",
+       "learning_objective": "State that a solution of a pair is an ordered pair satisfying both equations."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH05-T5",
+     "topic_number": 5,
+     "title": "Algebraic methods: substitution and elimination",
+     "ncert_sections": "13.5, 13.5.1",
+     "concepts": [
+      {
+       "concept_tag": "substitution-method",
+       "learning_objective": "Solve a pair of linear equations by expressing one variable in terms of the other."
+      },
+      {
+       "concept_tag": "elimination-method",
+       "learning_objective": "Solve a pair of linear equations by making coefficients equal and eliminating a variable."
+      },
+      {
+       "concept_tag": "ratio-test-for-solutions",
+       "learning_objective": "Use the ratios a1/a2, b1/b2 and c1/c2 to decide whether a pair has a unique, no or infinitely many solutions."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH05-T6",
+     "topic_number": 6,
+     "title": "Graphical method for solving a pair of linear equations",
+     "ncert_sections": "13.6",
+     "concepts": [
+      {
+       "concept_tag": "graphical-solution",
+       "learning_objective": "Find the solution of a pair of equations as the point common to both lines."
+      },
+      {
+       "concept_tag": "intersecting-parallel-coincident",
+       "learning_objective": "Relate intersecting, parallel and coincident lines to unique, no and infinitely many solutions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEMH2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Math of Space: Surface Area and Volume",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH2-CH06-T1",
+     "topic_number": 1,
+     "title": "Cuboids and cubes",
+     "ncert_sections": "14.1",
+     "concepts": [
+      {
+       "concept_tag": "cuboid-surface-area-volume",
+       "learning_objective": "Calculate the total surface area 2(lw + wh + hl) and volume lwh of a cuboid."
+      },
+      {
+       "concept_tag": "cube-surface-area-volume",
+       "learning_objective": "Use 6a² and a³ for the surface area and volume of a cube, including packing problems."
+      },
+      {
+       "concept_tag": "surface-area-volume-comparison",
+       "learning_objective": "Compare solids of equal volume and reason about how surface area changes with shape."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH06-T2",
+     "topic_number": 2,
+     "title": "Right circular cylinder",
+     "ncert_sections": "14.2, 14.2.1",
+     "concepts": [
+      {
+       "concept_tag": "cylinder-cross-section",
+       "learning_objective": "Distinguish a right circular cylinder from an oblique one and describe its cross-sections."
+      },
+      {
+       "concept_tag": "cylinder-surface-area",
+       "learning_objective": "Find the curved and total surface areas of a cylinder using 2πrh and 2πr(h + r)."
+      },
+      {
+       "concept_tag": "cylinder-volume",
+       "learning_objective": "Find and compare cylinder volumes using V = πr²h, including recasting and scaling problems."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH06-T3",
+     "topic_number": 3,
+     "title": "Cones",
+     "ncert_sections": "14.3",
+     "concepts": [
+      {
+       "concept_tag": "cone-slant-height",
+       "learning_objective": "Relate slant height, height and base radius of a right circular cone by l² = h² + r²."
+      },
+      {
+       "concept_tag": "cone-surface-area",
+       "learning_objective": "Find the curved and total surface areas of a cone using πrl and πr(l + r)."
+      },
+      {
+       "concept_tag": "cone-volume",
+       "learning_objective": "Use V = (1/3)πr²h, including solids formed by rotating a right triangle."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH06-T4",
+     "topic_number": 4,
+     "title": "Pyramidal shapes",
+     "ncert_sections": "14.4",
+     "concepts": [
+      {
+       "concept_tag": "pyramid-structure",
+       "learning_objective": "Describe a pyramidal shape as a base joined to a single apex in a different plane."
+      },
+      {
+       "concept_tag": "pyramid-volume",
+       "learning_objective": "Find the volume of a pyramid as one third of base area times height."
+      },
+      {
+       "concept_tag": "pyramid-surface-area",
+       "learning_objective": "Find the surface area of a pyramid by adding the areas of its faces."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH06-T5",
+     "topic_number": 5,
+     "title": "Spheres and hemispheres",
+     "ncert_sections": "14.5, 14.5.1, 14.5.2",
+     "concepts": [
+      {
+       "concept_tag": "sphere-surface-area",
+       "learning_objective": "Use 4πr² for the surface area of a sphere and relate it to the result of Archimedes about the enclosing cylinder."
+      },
+      {
+       "concept_tag": "sphere-volume",
+       "learning_objective": "Use V = (4/3)πr³ and reason about how volume scales with the radius."
+      },
+      {
+       "concept_tag": "hemisphere-area-volume",
+       "learning_objective": "Find the curved surface area 2πr², total surface area 3πr² and volume (2/3)πr³ of a hemisphere."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH2-CH06-T6",
+     "topic_number": 6,
+     "title": "Areas and volumes around us: guesstimates",
+     "ncert_sections": "14.6, 14.6.1",
+     "concepts": [
+      {
+       "concept_tag": "everyday-volume-estimation",
+       "learning_objective": "Model everyday situations with solids and make reasoned estimates of quantities."
+      },
+      {
+       "concept_tag": "packing-and-upper-bounds",
+       "learning_objective": "Explain why dividing volumes gives an upper bound when spheres are packed with gaps."
+      },
+      {
+       "concept_tag": "litre-conversion",
+       "learning_objective": "Convert volumes between cubic centimetres and litres using 1000 cm³ = 1 litre."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

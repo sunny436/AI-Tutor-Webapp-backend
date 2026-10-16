@@ -1,0 +1,124 @@
+{
+ "chapter_id": "LEPH1-CH05",
+ "title": "Magnetism and Matter",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH1-CH05-T1",
+   "topic_number": 1,
+   "title": "The bar magnet and magnetic field lines",
+   "ncert_sections": "5.1, 5.2, 5.2.1",
+   "concepts": [
+    {
+     "concept_tag": "magnetic-poles",
+     "learning_objective": "Describe the basic properties of magnetic poles, including the non-existence of isolated poles."
+    },
+    {
+     "concept_tag": "magnetic-field-lines",
+     "learning_objective": "State and apply the properties of magnetic field lines of a bar magnet."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH05-T2",
+   "topic_number": 2,
+   "title": "Bar magnet as an equivalent solenoid",
+   "ncert_sections": "5.2.2",
+   "concepts": [
+    {
+     "concept_tag": "bar-magnet-solenoid-equivalence",
+     "learning_objective": "Explain why a bar magnet can be treated as an equivalent current-carrying solenoid."
+    },
+    {
+     "concept_tag": "solenoid-magnetic-moment",
+     "learning_objective": "Calculate the magnetic moment of a solenoid and compare the far axial fields it produces."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH05-T3",
+   "topic_number": 3,
+   "title": "The dipole in a uniform magnetic field",
+   "ncert_sections": "5.2.3",
+   "concepts": [
+    {
+     "concept_tag": "torque-on-dipole",
+     "learning_objective": "Use tau = m x B to find the torque on a magnetic dipole in a uniform field."
+    },
+    {
+     "concept_tag": "dipole-potential-energy",
+     "learning_objective": "Use U = -m.B to find potential energy, work done and equilibrium positions of a dipole."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH05-T4",
+   "topic_number": 4,
+   "title": "The electrostatic analog",
+   "ncert_sections": "5.2.4",
+   "concepts": [
+    {
+     "concept_tag": "dipole-analogy",
+     "learning_objective": "Map the equations of an electric dipole onto those of a magnetic dipole."
+    },
+    {
+     "concept_tag": "axial-equatorial-field",
+     "learning_objective": "Calculate the axial and equatorial fields of a short bar magnet and their directions."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH05-T5",
+   "topic_number": 5,
+   "title": "Magnetism and Gauss's law",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "gauss-law-magnetism",
+     "learning_objective": "State Gauss's law for magnetism and relate it to the absence of magnetic monopoles."
+    },
+    {
+     "concept_tag": "field-line-validity",
+     "learning_objective": "Judge whether a given field-line pattern can represent a static magnetic field."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH05-T6",
+   "topic_number": 6,
+   "title": "Magnetisation and magnetic intensity",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "magnetisation-intensity",
+     "learning_objective": "Define magnetisation M and magnetic intensity H and use B = mu0 (H + M)."
+    },
+    {
+     "concept_tag": "susceptibility-permeability",
+     "learning_objective": "Relate susceptibility, relative permeability and permeability of a material."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH05-T7",
+   "topic_number": 7,
+   "title": "Magnetic properties of materials",
+   "ncert_sections": "5.5, 5.5.1, 5.5.2, 5.5.3",
+   "concepts": [
+    {
+     "concept_tag": "diamagnetism",
+     "learning_objective": "Describe the behaviour and examples of diamagnetic substances, including superconductors."
+    },
+    {
+     "concept_tag": "paramagnetism",
+     "learning_objective": "Explain paramagnetism and the effect of field and temperature on magnetisation."
+    },
+    {
+     "concept_tag": "ferromagnetism",
+     "learning_objective": "Explain ferromagnetism using domains and distinguish hard and soft ferromagnets."
+    }
+   ]
+  }
+ ]
+}

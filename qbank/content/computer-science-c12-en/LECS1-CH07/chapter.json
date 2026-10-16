@@ -1,0 +1,116 @@
+{
+ "chapter_id": "LECS1-CH07",
+ "title": "Understanding Data",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECS1-CH07-T1",
+   "topic_number": 1,
+   "title": "Introduction to Data and its Importance",
+   "ncert_sections": "7.1, 7.1.1",
+   "concepts": [
+    {
+     "concept_tag": "meaning-of-data",
+     "learning_objective": "Explain what data are and why raw data must be processed before decisions are made."
+    },
+    {
+     "concept_tag": "importance-of-data",
+     "learning_objective": "Describe how organisations use stored and analysed data for decision making."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH07-T2",
+   "topic_number": 2,
+   "title": "Types of Data",
+   "ncert_sections": "7.1.2",
+   "concepts": [
+    {
+     "concept_tag": "structured-data",
+     "learning_objective": "Identify structured data organised in rows (observations) and columns (attributes) and compute from it."
+    },
+    {
+     "concept_tag": "unstructured-data",
+     "learning_objective": "Recognise unstructured data that has no fixed row and column format."
+    },
+    {
+     "concept_tag": "metadata",
+     "learning_objective": "Explain metadata as data about data and identify metadata of files."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH07-T3",
+   "topic_number": 3,
+   "title": "Data Collection and Data Storage",
+   "ncert_sections": "7.2, 7.3",
+   "concepts": [
+    {
+     "concept_tag": "data-collection",
+     "learning_objective": "Describe how data are identified or gathered from appropriate sources and put into digital form."
+    },
+    {
+     "concept_tag": "data-storage",
+     "learning_objective": "Explain data storage, common storage devices and the limitations of file processing."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH07-T4",
+   "topic_number": 4,
+   "title": "Data Processing",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "data-processing-cycle",
+     "learning_objective": "Describe the input, processing and output stages of the data processing cycle."
+    },
+    {
+     "concept_tag": "processing-examples",
+     "learning_objective": "Classify the inputs, processing and outputs of real data-based tasks."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH07-T5",
+   "topic_number": 5,
+   "title": "Measures of Central Tendency",
+   "ncert_sections": "7.5.1",
+   "concepts": [
+    {
+     "concept_tag": "mean",
+     "learning_objective": "Calculate the mean and judge the effect of outliers on it."
+    },
+    {
+     "concept_tag": "median",
+     "learning_objective": "Find the median of an odd or even number of sorted values."
+    },
+    {
+     "concept_tag": "mode",
+     "learning_objective": "Find the mode of numeric or non-numeric data."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH07-T6",
+   "topic_number": 6,
+   "title": "Measures of Variability",
+   "ncert_sections": "7.5.2",
+   "concepts": [
+    {
+     "concept_tag": "range",
+     "learning_objective": "Calculate the range as the maximum minus the minimum value."
+    },
+    {
+     "concept_tag": "standard-deviation",
+     "learning_objective": "Compute and interpret the standard deviation as a measure of spread."
+    },
+    {
+     "concept_tag": "choosing-statistical-technique",
+     "learning_objective": "Select a suitable statistical technique for a given data problem."
+    }
+   ]
+  }
+ ]
+}

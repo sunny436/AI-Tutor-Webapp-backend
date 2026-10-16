@@ -1,0 +1,124 @@
+{
+ "chapter_id": "LHMH2-CH01",
+ "title": "समाकलन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH2-CH01-T1",
+   "topic_number": 1,
+   "title": "अवकलन के व्युत्क्रम प्रक्रम के रूप में समाकलन",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "pratiavkalaj-aniyat-samakal",
+     "learning_objective": "प्रतिअवकलज और अनिश्चित समाकलन की संकल्पना तथा मानक सूत्रों का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "aniyat-samakal-gundharm",
+     "learning_objective": "अनिश्चित समाकलन के गुणधर्मों और स्वेच्छ अचर की भूमिका को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH01-T2",
+   "topic_number": 2,
+   "title": "प्रतिस्थापन द्वारा समाकलन",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "pratisthapan-vidhi",
+     "learning_objective": "उपयुक्त प्रतिस्थापन द्वारा समाकल्य को मानक रूप में बदलकर समाकलन ज्ञात करना।"
+    },
+    {
+     "concept_tag": "trikonmitiya-sarvasamika-samakal",
+     "learning_objective": "त्रिकोणमितीय सर्वसमिकाओं का प्रयोग करके समाकलन ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH01-T3",
+   "topic_number": 3,
+   "title": "कुछ विशिष्ट फलनों के समाकलन",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "vishisht-manak-sutra",
+     "learning_objective": "दो वर्गों के योग या अंतर वाले हर वाले विशिष्ट समाकलनों के सूत्र पहचानना और प्रयोग करना।"
+    },
+    {
+     "concept_tag": "dwighat-varg-poorn",
+     "learning_objective": "द्विघात व्यंजक को पूर्ण वर्ग बनाकर समाकलन को मानक रूप में लाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH01-T4",
+   "topic_number": 4,
+   "title": "आंशिक भिन्नों द्वारा समाकलन",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "anshik-bhinn-viyojan",
+     "learning_objective": "परिमेय फलन का आंशिक भिन्नों में सही रूप लिखना और अचर ज्ञात करना।"
+    },
+    {
+     "concept_tag": "anshik-bhinn-samakal",
+     "learning_objective": "आंशिक भिन्नों में वियोजन करके परिमेय फलनों का समाकलन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH01-T5",
+   "topic_number": 5,
+   "title": "खंडशः समाकलन",
+   "ncert_sections": "7.6",
+   "concepts": [
+    {
+     "concept_tag": "khandshah-samakal-niyam",
+     "learning_objective": "खंडशः समाकलन के नियम और प्रथम फलन के चयन का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "ex-vishesh-roop",
+     "learning_objective": "विशेष रूप वाले समाकल्य का समाकलन करना जिसमें घातांकी फलन किसी फलन और उसके अवकलज के योग से गुणा हो।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH01-T6",
+   "topic_number": 6,
+   "title": "निश्चित समाकलन और कलन की आधारभूत प्रमेय",
+   "ncert_sections": "7.7, 7.8, 7.9",
+   "concepts": [
+    {
+     "concept_tag": "nishchit-samakal-moolyankan",
+     "learning_objective": "कलन की द्वितीय आधारभूत प्रमेय से निश्चित समाकलन का मान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "kshetrafal-falan",
+     "learning_objective": "क्षेत्रफल फलन और कलन की प्रथम आधारभूत प्रमेय को समझना।"
+    },
+    {
+     "concept_tag": "pratisthapan-nishchit",
+     "learning_objective": "प्रतिस्थापन द्वारा निश्चित समाकलन का मान सीमाएँ बदलकर ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH01-T7",
+   "topic_number": 7,
+   "title": "निश्चित समाकलनों के कुछ गुणधर्म",
+   "ncert_sections": "7.10",
+   "concepts": [
+    {
+     "concept_tag": "nishchit-gundharm-prayog",
+     "learning_objective": "निश्चित समाकलनों के गुणधर्मों से समाकलन का मान सरलता से ज्ञात करना।"
+    },
+    {
+     "concept_tag": "visham-sam-falan",
+     "learning_objective": "सम और विषम फलनों के लिए सममित सीमाओं वाले समाकलन के गुणधर्म का प्रयोग करना।"
+    }
+   ]
+  }
+ ]
+}

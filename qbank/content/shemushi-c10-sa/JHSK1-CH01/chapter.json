@@ -1,0 +1,108 @@
+{
+ "chapter_id": "JHSK1-CH01",
+ "title": "शुचिपर्यावरणम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSK1-CH01-T1",
+   "topic_number": 1,
+   "title": "कविपरिचयः पाठपरिचयः छन्दश्च",
+   "ncert_sections": "पाठपरिचयः, कविपरिचयः, छन्दः परिचयः",
+   "concepts": [
+    {
+     "concept_tag": "kavi-path-parichaya",
+     "learning_objective": "छात्रः पाठस्य कविं हरिदत्तशर्माणं तस्य रचनासङ्ग्रहं लसल्लतिकां च अभिजानाति।"
+    },
+    {
+     "concept_tag": "geetika-chhanda-dhruvaka",
+     "learning_objective": "छात्रः गीतस्य गीतिकाछन्दः, प्रतिपङ्क्ति षड्विंशतिमात्राः ध्रुवकस्य भूमिकां च अवगच्छति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH01-T2",
+   "topic_number": 2,
+   "title": "महानगरस्य यन्त्राधिक्यम्",
+   "ncert_sections": "पद्ये 1-2",
+   "concepts": [
+    {
+     "concept_tag": "kalayasa-chakra",
+     "learning_objective": "छात्रः महानगरे अनिशं चलतः कालायसचक्रस्य तनुमनःशोषकं प्रभावं वर्णयति।"
+    },
+    {
+     "concept_tag": "yana-dhuma-pradushana",
+     "learning_objective": "छात्रः यानानां धूमेन ध्वानेन पङ्क्तिभिः च जनितं कष्टं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH01-T3",
+   "topic_number": 3,
+   "title": "प्रदूषणं शुद्धीकरणं च",
+   "ncert_sections": "पद्यम् 3",
+   "concepts": [
+    {
+     "concept_tag": "vayu-jala-bhumi-pradushana",
+     "learning_objective": "छात्रः वायोः जलस्य भक्ष्यस्य धरातलस्य च प्रदूषणं पाठानुसारं निर्दिशति।"
+    },
+    {
+     "concept_tag": "bahirantar-shuddhikarana",
+     "learning_objective": "छात्रः बाह्ये आन्तरिके च जगति शुद्धीकरणस्य आवश्यकतां विवेचयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH01-T4",
+   "topic_number": 4,
+   "title": "प्रकृतेः सान्निध्यस्य कामना",
+   "ncert_sections": "पद्यानि 4-6",
+   "concepts": [
+    {
+     "concept_tag": "gramanta-kantara-sancharana",
+     "learning_objective": "छात्रः ग्रामान्ते एकान्ते कान्तारे च सञ्चरणस्य कवेः अभिलाषं वर्णयति।"
+    },
+    {
+     "concept_tag": "vanadesha-sukhasandesha",
+     "learning_objective": "छात्रः तरुलताकुसुमखगकलरवयुक्तस्य वनप्रदेशस्य सुखसन्देशं विश्लेषयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH01-T5",
+   "topic_number": 5,
+   "title": "पाषाणी सभ्यता जीवनकामना च",
+   "ncert_sections": "पद्यम् 7",
+   "concepts": [
+    {
+     "concept_tag": "pashani-sabhyata",
+     "learning_objective": "छात्रः पाषाणीसभ्यतायाः निसर्गे प्रवेशस्य विषये कवेः चिन्तां व्याख्याति।"
+    },
+    {
+     "concept_tag": "manava-jivana-kamana",
+     "learning_objective": "छात्रः मानवाय जीवनं न तु जीवन्मरणम् इति कवेः कामनां मूल्याङ्कयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSK1-CH01-T6",
+   "topic_number": 6,
+   "title": "व्याकरणम् – सन्धिः समासः पदार्थाश्च",
+   "ncert_sections": "अभ्यासः, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "sandhi-viccheda",
+     "learning_objective": "छात्रः पाठगतानां पदानां सन्धिविच्छेदं करोति।"
+    },
+    {
+     "concept_tag": "samasa-vigraha",
+     "learning_objective": "छात्रः पाठगतानां समस्तपदानां विग्रहं समासनाम च निर्धारयति।"
+    },
+    {
+     "concept_tag": "paryaya-vilom",
+     "learning_objective": "छात्रः पाठगतानां पदानां पर्यायान् विलोमानि अर्थांश्च अभिजानाति।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "chapter_id": "JHVA1-CH07",
+ "title": "अव्यय",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHVA1-CH07-T1",
+   "topic_number": 1,
+   "title": "अव्ययस्य परिभाषा स्वरूपं च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "avyaya-paribhasha",
+     "learning_objective": "छात्रः 'सदृशं त्रिषु लिङ्गेषु' इति श्लोकस्य आधारेण अव्ययस्य परिभाषां वक्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "avyaya-pahachan",
+     "learning_objective": "छात्रः विकाररहितानि अव्ययपदानि विकारयुक्तेभ्यः नामपदेभ्यः क्रियापदेभ्यः च पृथक् कर्तुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH07-T2",
+   "topic_number": 2,
+   "title": "कालवाचकानि अव्ययानि",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "kalavachaka-artha",
+     "learning_objective": "छात्रः श्वः, ह्यः, नक्तम्, पुरा इत्यादीनां कालवाचकाव्ययानाम् अर्थं जानाति।"
+    },
+    {
+     "concept_tag": "kalavachaka-prayoga",
+     "learning_objective": "छात्रः क्रियापदस्य लकारानुसारं उचितं कालवाचकम् अव्ययं प्रयोक्तुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH07-T3",
+   "topic_number": 3,
+   "title": "स्थानवाचकानि दिग्वाचकानि च अव्ययानि",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "sthanavachaka-avyaya",
+     "learning_objective": "छात्रः अत्र, तत्र, कुतः, इतस्ततः इत्यादीनां स्थानवाचकाव्ययानाम् अर्थं प्रयोगं च जानाति।"
+    },
+    {
+     "concept_tag": "dishavachaka-avyaya",
+     "learning_objective": "छात्रः परितः, अभितः, उभयतः, सर्वतः इत्येतेषाम् अर्थं तद्योगे द्वितीयाविभक्तिं च जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH07-T4",
+   "topic_number": 4,
+   "title": "रीतिवाचकानि निषेधार्थकानि च अव्ययानि",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "ritivachaka-avyaya",
+     "learning_objective": "छात्रः शनैः, सहसा, तूष्णीम्, ईषत् इत्यादीनां रीतिवाचकाव्ययानां प्रयोगं जानाति।"
+    },
+    {
+     "concept_tag": "nishedha-alam-avyaya",
+     "learning_objective": "छात्रः मा, न, अलम् इत्येतेषां निषेधार्थे प्रयोगम् 'अलम्' योगे विभक्तिं च जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH07-T5",
+   "topic_number": 5,
+   "title": "संयोजकानि युग्मरूपेण प्रयुक्तानि च अव्ययानि",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "yugma-avyaya",
+     "learning_objective": "छात्रः यद्यपि-तथापि, यदा-तदा, यत्र-तत्र इत्यादीनां युग्माव्ययानां सह प्रयोगं जानाति।"
+    },
+    {
+     "concept_tag": "samyojaka-avyaya",
+     "learning_objective": "छात्रः अन्यथा, नो चेत्, अतः इत्यादीनां संयोजकाव्ययानाम् अर्थं प्रयोगं च जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH07-T6",
+   "topic_number": 6,
+   "title": "वाक्येषु अव्ययपदानाम् अभिज्ञानं प्रयोगश्च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "avyaya-chayana",
+     "learning_objective": "छात्रः वाक्येषु अव्ययपदानि चित्वा लेखितुं शक्नोति।"
+    },
+    {
+     "concept_tag": "avyaya-vakyartha",
+     "learning_objective": "छात्रः वाक्ये प्रयुक्तस्य अव्ययस्य अर्थं वाक्यभावं च अवगन्तुं शुद्धं प्रयोगं च परीक्षितुं शक्नोति।"
+    }
+   ]
+  }
+ ]
+}

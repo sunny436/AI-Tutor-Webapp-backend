@@ -1,0 +1,1822 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "anveshan-c09-hi",
+  "curriculum": "cbse",
+  "class_level": 9,
+  "subject_code": "science",
+  "language": "hindi",
+  "title": "Anveshan",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "ihsc1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "IHSC1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "अन्वेषण — माध्यमिक विज्ञान के संसार में प्रवेश",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH01-T1",
+     "topic_number": 1,
+     "title": "विज्ञान में मॉडल और सरलीकरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "model-aur-saralikaran",
+       "learning_objective": "समझना कि मॉडल वास्तविक प्रणाली का सरल रूप है जिसमें केवल महत्वपूर्ण विवरण रखे जाते हैं।"
+      },
+      {
+       "concept_tag": "vivaran-ki-upeksha",
+       "learning_objective": "किसी प्रश्न के लिए कौन-से विवरण आवश्यक हैं और कौन-से जानबूझकर छोड़े जा सकते हैं, यह पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH01-T2",
+     "topic_number": 2,
+     "title": "विज्ञान की भाषा: शब्द, प्रतीक और मानक मात्रक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vaigyanik-shabd-pratik",
+       "learning_objective": "वैज्ञानिक शब्दों और प्रतीकों के विशिष्ट, सटीक अर्थ तथा उनकी अंतरराष्ट्रीय सहमति को समझना।"
+      },
+      {
+       "concept_tag": "manak-matrak",
+       "learning_objective": "मानक मात्रकों (SI) के महत्व और मात्रकों की गड़बड़ी से होने वाली त्रुटियों को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH01-T3",
+     "topic_number": 3,
+     "title": "विज्ञान में गणित की भूमिका",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ganit-vichar-ki-bhasha",
+       "learning_objective": "समझना कि समीकरण राशियों के बीच संबंध का संक्षिप्त विवरण है, केवल परिकलन का साधन नहीं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH01-T4",
+     "topic_number": 4,
+     "title": "नियम, सिद्धांत और आधारभूत सिद्धांत",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "niyam-siddhant-antar",
+       "learning_objective": "नियम, सिद्धांत और आधारभूत सिद्धांत के वैज्ञानिक अर्थों में अंतर करना।"
+      },
+      {
+       "concept_tag": "vigyan-ki-parivartansheelta",
+       "learning_objective": "समझना कि नए प्रमाण मिलने पर वैज्ञानिक विचारों में परिवर्तन और परिष्करण होता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH01-T5",
+     "topic_number": 5,
+     "title": "पूर्वानुमान और प्रमाणों पर आधारित जाँच",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "purvanuman",
+       "learning_objective": "वैज्ञानिक पूर्वानुमान को प्रमाणों पर आधारित तर्कयुक्त अपेक्षा के रूप में समझना और परखना।"
+      },
+      {
+       "concept_tag": "dava-ki-jaanch",
+       "learning_objective": "प्रचलित दावों को मापने योग्य प्रश्नों और प्रमाणों के आधार पर जाँचना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH01-T6",
+     "topic_number": 6,
+     "title": "अनुमान आधारित आकलन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "anumanit-aaklan",
+       "learning_objective": "सन्निकट मानों से आकलन करके यह जाँचना कि कोई उत्तर तर्कसंगत है या नहीं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH01-T7",
+     "topic_number": 7,
+     "title": "विज्ञान की शाखाओं का परस्पर संबंध",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shakhaon-ka-sambandh",
+       "learning_objective": "समझना कि वास्तविक समस्याओं को हल करने के लिए विज्ञान की अनेक शाखाओं का ज्ञान एक साथ चाहिए।"
+      },
+      {
+       "concept_tag": "vigyan-manviya-gatividhi",
+       "learning_objective": "विज्ञान को जिज्ञासा, सहयोग और प्रश्न पूछने से विकसित होने वाली मानवीय गतिविधि के रूप में समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHSC1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "कोशिका— जीवन की निर्माण इकाई",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH02-T1",
+     "topic_number": 1,
+     "title": "कोशिकाओं का अध्ययन कैसे करें?",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "vibhedan-seema",
+       "learning_objective": "मानव नेत्र की विभेदन सीमा (0.1 mm) और कोशिका देखने के लिए सूक्ष्मदर्शी की आवश्यकता समझना।"
+      },
+      {
+       "concept_tag": "sukshmdarshi-aavardhan",
+       "learning_objective": "सूक्ष्मदर्शी का कुल आवर्धन तथा दृश्य क्षेत्र से कोशिका के आकार का अनुमान लगाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH02-T2",
+     "topic_number": 2,
+     "title": "कोशिका झिल्ली और कोशिका भित्ति",
+     "ncert_sections": "2.2, 2.2.1, 2.2.2",
+     "concepts": [
+      {
+       "concept_tag": "parasaran",
+       "learning_objective": "चयनात्मक पारगम्य झिल्ली से जल की गति (परासरण) तथा विलयनों के प्रभाव की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "taral-mosaic-model",
+       "learning_objective": "तरल-मोज़ेक मॉडल के अनुसार कोशिका झिल्ली की संरचना पहचानना।"
+      },
+      {
+       "concept_tag": "koshika-bhitti",
+       "learning_objective": "कोशिका भित्ति की संरचना, पारगम्यता और पादप कोशिकाओं के लिए उसका महत्त्व समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH02-T3",
+     "topic_number": 3,
+     "title": "कोशिका का आंतरिक भाग: पूर्वकेंद्रकी और सुकेंद्रकी कोशिकाएँ",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "purvakendraki-sukendraki",
+       "learning_objective": "पूर्वकेंद्रकी और सुकेंद्रकी कोशिकाओं के लक्षणों की तुलना करना।"
+      },
+      {
+       "concept_tag": "koshika-panjar",
+       "learning_objective": "कोशिका पंजर और कोशिका अंतरंगक के कार्य पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH02-T4",
+     "topic_number": 4,
+     "title": "केंद्रक, राइबोसोम, अंतर्द्रव्यी जालिका, गॉल्जी उपकरण और लाइसोसोम",
+     "ncert_sections": "2.3.1",
+     "concepts": [
+      {
+       "concept_tag": "kendrak",
+       "learning_objective": "केंद्रक, केंद्रिका, क्रोमैटिन और गुणसूत्रों की संरचना व कार्य समझना।"
+      },
+      {
+       "concept_tag": "antardravyi-jalika-golgi",
+       "learning_objective": "राइबोसोम, अंतर्द्रव्यी जालिका और गॉल्जी उपकरण की प्रोटीन निर्माण व स्रवण में भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "lysosome",
+       "learning_objective": "लाइसोसोम को कोशिका की निर्मलन प्रणाली के रूप में पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH02-T5",
+     "topic_number": 5,
+     "title": "माइटोकॉन्ड्रिया, लवक और रसधानी",
+     "ncert_sections": "2.3.1",
+     "concepts": [
+      {
+       "concept_tag": "mitochondria",
+       "learning_objective": "माइटोकॉन्ड्रिया की संरचना और ऊर्जा उत्पादन में उसकी भूमिका समझना।"
+      },
+      {
+       "concept_tag": "lavak",
+       "learning_objective": "हरितलवक, वर्णीलवक और अवर्णी लवक के कार्यों में अंतर करना।"
+      },
+      {
+       "concept_tag": "rasdhani",
+       "learning_objective": "रसधानी द्वारा भंडारण और पादप कोशिका की दृढ़ता बनाए रखने को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH02-T6",
+     "topic_number": 6,
+     "title": "कोशिका वृद्धि और विभाजन",
+     "ncert_sections": "2.4, 2.4.1",
+     "concepts": [
+      {
+       "concept_tag": "samsutri-vibhajan",
+       "learning_objective": "समसूत्री विभाजन के परिणाम और वृद्धि व मरम्मत में उसका महत्त्व समझना।"
+      },
+      {
+       "concept_tag": "ardhsutri-vibhajan",
+       "learning_objective": "अर्धसूत्री विभाजन द्वारा युग्मक बनने और गुणसूत्र संख्या आधी होने की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH02-T7",
+     "topic_number": 7,
+     "title": "कोशिका सिद्धांत और कोशिका का जीवनकाल",
+     "ncert_sections": "2.5, 2.5.1",
+     "concepts": [
+      {
+       "concept_tag": "koshika-siddhant",
+       "learning_objective": "कोशिका सिद्धांत के बिंदु और उसमें योगदान देने वाले वैज्ञानिकों को पहचानना।"
+      },
+      {
+       "concept_tag": "samparka-avrodh",
+       "learning_objective": "संपर्क अवरोध, कैंसर कोशिकाओं और कोशिका की निश्चित जीवन अवधि का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHSC1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "क्रियाशील ऊतक",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH03-T1",
+     "topic_number": 1,
+     "title": "ऊतक, संगठन के स्तर और पादप-जंतु ऊतकों में अंतर",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "utak-aur-sangathan",
+       "learning_objective": "ऊतक की परिभाषा, संगठन के स्तरों और श्रम विभाजन को समझना।"
+      },
+      {
+       "concept_tag": "padap-jantu-utak-antar",
+       "learning_objective": "पादप और जंतु ऊतकों में अंतर के कारणों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH03-T2",
+     "topic_number": 2,
+     "title": "पादपों में वृद्धि के ऊतक: विभज्योतक",
+     "ncert_sections": "3.2, 3.2.1, 3.2.2, 3.2.3",
+     "concepts": [
+      {
+       "concept_tag": "vibhajyotak-prakar",
+       "learning_objective": "शीर्षस्थ, पार्श्व और अंतर्वेशी विभज्योतक की स्थिति और कार्य पहचानना।"
+      },
+      {
+       "concept_tag": "vibhajyotak-lakshan",
+       "learning_objective": "विभज्योतक कोशिकाओं के लक्षणों और विभेदन की प्रक्रिया को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH03-T3",
+     "topic_number": 3,
+     "title": "स्थायी ऊतक और ऊतक तंत्र",
+     "ncert_sections": "3.2.4",
+     "concepts": [
+      {
+       "concept_tag": "bahyatvacha-suraksha",
+       "learning_objective": "बाह्यत्वचा, उपत्वचा, मूलरोम और रंध्रों के सुरक्षात्मक कार्यों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "saral-sthayi-utak",
+       "learning_objective": "मृदूतक, श्लेषोतक और दृढ़ोतक की संरचना को उनके कार्य से जोड़ना।"
+      },
+      {
+       "concept_tag": "jatil-sthayi-utak",
+       "learning_objective": "जाइलम और फ्लोएम के घटकों और उनके कार्यों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH03-T4",
+     "topic_number": 4,
+     "title": "उपकला और संयोजी ऊतक",
+     "ncert_sections": "3.3, 3.3.1, 3.3.2",
+     "concepts": [
+      {
+       "concept_tag": "upakala-utak",
+       "learning_objective": "विभिन्न उपकला ऊतकों की संरचना को उनके कार्य और स्थान से जोड़ना।"
+      },
+      {
+       "concept_tag": "sanyoji-utak",
+       "learning_objective": "रक्त, अस्थि, उपास्थि, कंडरा और स्नायु के कार्यों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH03-T5",
+     "topic_number": 5,
+     "title": "पेशी ऊतक और तंत्रिका ऊतक",
+     "ncert_sections": "3.3.3, 3.3.4",
+     "concepts": [
+      {
+       "concept_tag": "peshi-utak-prakar",
+       "learning_objective": "कंकाल, चिकनी और हृदय पेशियों की संरचना और कार्य की तुलना करना।"
+      },
+      {
+       "concept_tag": "tantrika-utak",
+       "learning_objective": "न्यूरॉन के भागों और तंत्रिका ऊतक द्वारा नियंत्रण को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH03-T6",
+     "topic_number": 6,
+     "title": "पेशी-कंकाल तंत्र और संधियों के प्रकार",
+     "ncert_sections": "3.4, 3.4.1, 3.5",
+     "concepts": [
+      {
+       "concept_tag": "peshi-kankal-tantra",
+       "learning_objective": "पेशी-कंकाल तंत्र के घटकों और गति उत्पन्न होने की प्रक्रिया को समझना।"
+      },
+      {
+       "concept_tag": "sandhi-prakar",
+       "learning_objective": "कंदुक-खल्लिका, कोर, धुराग्र और अचल संधियों द्वारा संभव गतियों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH03-T7",
+     "topic_number": 7,
+     "title": "कंकाल तंत्र और पूर्णशक्तता",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "kankal-tantra",
+       "learning_objective": "मेरुदंड, उपास्थि चक्रिका और पसली पिंजर के कार्यों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "purnashaktata",
+       "learning_objective": "गाजर की फ्लोएम कोशिकाओं के प्रयोग से पूर्णशक्तता की अवधारणा समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHSC1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "अपने परिवेश में गति का वर्णन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH04-T1",
+     "topic_number": 1,
+     "title": "स्थिति का वर्णन, चलित दूरी और विस्थापन",
+     "ncert_sections": "4.1, 4.1.1, 4.1.2",
+     "concepts": [
+      {
+       "concept_tag": "sandarbh-bindu-sthiti",
+       "learning_objective": "संदर्भ बिंदु से दूरी और दिशा द्वारा किसी वस्तु की स्थिति का वर्णन करना।"
+      },
+      {
+       "concept_tag": "doori-aur-visthapan",
+       "learning_objective": "कुल चलित दूरी और विस्थापन में अंतर करना तथा उनका परिकलन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH04-T2",
+     "topic_number": 2,
+     "title": "माध्य चाल एवं माध्य वेग",
+     "ncert_sections": "4.1.3",
+     "concepts": [
+      {
+       "concept_tag": "madhya-chaal",
+       "learning_objective": "माध्य चाल को कुल चलित दूरी और समय अंतराल के अनुपात के रूप में परिकलित करना।"
+      },
+      {
+       "concept_tag": "madhya-veg",
+       "learning_objective": "माध्य वेग को विस्थापन और समय अंतराल के अनुपात के रूप में परिकलित करना।"
+      },
+      {
+       "concept_tag": "saman-asaman-gati",
+       "learning_objective": "समान और असमान सरल रेखीय गति को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH04-T3",
+     "topic_number": 3,
+     "title": "माध्य त्वरण",
+     "ncert_sections": "4.1.4",
+     "concepts": [
+      {
+       "concept_tag": "madhya-tvaran",
+       "learning_objective": "वेग में परिवर्तन और समय अंतराल से माध्य त्वरण ज्ञात करना।"
+      },
+      {
+       "concept_tag": "tvaran-ki-disha",
+       "learning_objective": "वेग के परिमाण के बढ़ने या घटने पर त्वरण की दिशा निर्धारित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH04-T4",
+     "topic_number": 4,
+     "title": "स्थिति-समय ग्राफ",
+     "ncert_sections": "4.2, 4.2.1, 4.2.2",
+     "concepts": [
+      {
+       "concept_tag": "sthiti-samay-graph",
+       "learning_objective": "स्थिति-समय ग्राफ के आकार से गति की प्रकृति की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "pravanata-se-veg",
+       "learning_objective": "स्थिति-समय ग्राफ की प्रवणता से वेग ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH04-T5",
+     "topic_number": 5,
+     "title": "वेग-समय ग्राफ",
+     "ncert_sections": "4.2.3",
+     "concepts": [
+      {
+       "concept_tag": "veg-samay-pravanata",
+       "learning_objective": "वेग-समय ग्राफ की प्रवणता से त्वरण की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "kshetrafal-se-visthapan",
+       "learning_objective": "वेग-समय ग्राफ के नीचे के क्षेत्रफल से विस्थापन ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH04-T6",
+     "topic_number": 6,
+     "title": "नियत त्वरण से गति के लिए शुद्धगतिक समीकरण",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "shuddhagatik-samikaran",
+       "learning_objective": "शुद्धगतिक समीकरणों को पहचानना और नियत त्वरण वाली गति पर लागू करना।"
+      },
+      {
+       "concept_tag": "rukne-ki-doori",
+       "learning_objective": "ब्रेक लगाने पर वाहन के रुकने की दूरी का परिकलन और सुरक्षित दूरी का महत्व समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH04-T7",
+     "topic_number": 7,
+     "title": "समतल में गति और एकसमान वृत्तीय गति",
+     "ncert_sections": "4.4, 4.4.1",
+     "concepts": [
+      {
+       "concept_tag": "samtal-mein-gati",
+       "learning_objective": "समतल में गति (द्वि-विमीय गति) के उदाहरण पहचानना।"
+      },
+      {
+       "concept_tag": "ekasaman-vrittiya-gati",
+       "learning_objective": "एकसमान वृत्तीय गति में चाल, वेग की दिशा और त्वरण की व्याख्या करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHSC1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "मिश्रण एवं उनके पृथक्करण का अन्वेषण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH05-T1",
+     "topic_number": 1,
+     "title": "मिश्रणों का वर्गीकरण",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "samangi-vishamangi-mishran",
+       "learning_objective": "समांगी और विषमांगी मिश्रणों में अंतर कर उनके उदाहरण पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH05-T2",
+     "topic_number": 2,
+     "title": "विलयन और उसकी सांद्रता",
+     "ncert_sections": "5.2, 5.2.1, 5.2.2",
+     "concepts": [
+      {
+       "concept_tag": "vilayan-sandrata",
+       "learning_objective": "विलेय, विलायक और विलयन की सांद्रता का अर्थ समझना।"
+      },
+      {
+       "concept_tag": "pratishat-sandrata",
+       "learning_objective": "द्रव्यमान/द्रव्यमान, द्रव्यमान/आयतन और आयतन/आयतन प्रतिशत की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH05-T3",
+     "topic_number": 3,
+     "title": "पदार्थों की विलेयता",
+     "ncert_sections": "5.2.3",
+     "concepts": [
+      {
+       "concept_tag": "vileyata-santript",
+       "learning_objective": "विलेयता और संतृप्त विलयन का अर्थ तथा उन पर ताप का प्रभाव समझना।"
+      },
+      {
+       "concept_tag": "vileyata-vakra",
+       "learning_objective": "विलेयता वक्र अथवा सारणी से आँकड़े पढ़कर निष्कर्ष निकालना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH05-T4",
+     "topic_number": 4,
+     "title": "समांगी मिश्रणों के पृथक्करण की विधियाँ",
+     "ncert_sections": "5.3, 5.3.1, 5.3.2, 5.3.3",
+     "concepts": [
+      {
+       "concept_tag": "kristalikaran",
+       "learning_objective": "क्रिस्टलीकरण द्वारा संतृप्त विलयन से शुद्ध ठोस प्राप्त करने की विधि समझना।"
+      },
+      {
+       "concept_tag": "aasavan",
+       "learning_objective": "क्वथनांकों के अंतर के आधार पर आसवन और प्रभाजी आसवन का चयन करना।"
+      },
+      {
+       "concept_tag": "kagaj-varnlekhiki",
+       "learning_objective": "कागज वर्णलेखिकी द्वारा रंगीन घटकों के पृथक्करण का सिद्धांत समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH05-T5",
+     "topic_number": 5,
+     "title": "विषमांगी मिश्रणों के घटकों का पृथक्करण",
+     "ncert_sections": "5.4, 5.4.1, 5.4.2",
+     "concepts": [
+      {
+       "concept_tag": "amishraniya-drav",
+       "learning_objective": "पृथक्कारी कीप द्वारा अमिश्रणीय द्रवों को घनत्व के आधार पर अलग करना।"
+      },
+      {
+       "concept_tag": "urdhvapatan",
+       "learning_objective": "ऊर्ध्वपातन और निक्षेपण द्वारा ऊर्ध्वपातित होने वाले ठोस को अलग करना।"
+      },
+      {
+       "concept_tag": "mishradhatu",
+       "learning_objective": "मिश्रधातु को समांगी मिश्रण के रूप में पहचानना और उसके उदाहरण जानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH05-T6",
+     "topic_number": 6,
+     "title": "निलंबन तथा अपकेंद्रण और स्कंदन",
+     "ncert_sections": "5.4.3",
+     "concepts": [
+      {
+       "concept_tag": "nilamban",
+       "learning_objective": "निलंबन के गुण और उसके कणों के आकार को पहचानना।"
+      },
+      {
+       "concept_tag": "apkendran",
+       "learning_objective": "अपकेंद्रण द्वारा भारी और हल्के घटकों के पृथक्करण को समझाना।"
+      },
+      {
+       "concept_tag": "skandan",
+       "learning_objective": "फिटकरी जैसे स्कंदक द्वारा स्कंदन की प्रक्रिया समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH05-T7",
+     "topic_number": 7,
+     "title": "कोलॉइड और टिंडल प्रभाव",
+     "ncert_sections": "5.4.4, 5.5",
+     "concepts": [
+      {
+       "concept_tag": "colloid",
+       "learning_objective": "विलयन, कोलॉइड और निलंबन की कण आकार के आधार पर तुलना करना।"
+      },
+      {
+       "concept_tag": "tyndall-prabhav",
+       "learning_objective": "टिंडल प्रभाव के आधार पर मिश्रणों के प्रकार का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "payas",
+       "learning_objective": "परिक्षिप्त प्रावस्था, परिक्षेपण माध्यम और पायस को पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHSC1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "गति पर बलों का प्रभाव",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH06-T1",
+     "topic_number": 1,
+     "title": "बल की अवधारणा और बल के परिमाण का मापन",
+     "ncert_sections": "6.1, 6.1.1",
+     "concepts": [
+      {
+       "concept_tag": "bal-ki-avdharana",
+       "learning_objective": "बल को परिमाण, मात्रक और दिशा वाली भौतिक राशि के रूप में पहचानना।"
+      },
+      {
+       "concept_tag": "bal-ka-maapan",
+       "learning_objective": "कमानीदार तुला से बल का परिमाण मापना और न्यूटन मात्रक का सही प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH06-T2",
+     "topic_number": 2,
+     "title": "संतुलित एवं असंतुलित बल",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "santulit-asantulit-bal",
+       "learning_objective": "संतुलित और असंतुलित बलों में अंतर स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "parinami-bal",
+       "learning_objective": "एक ही रेखा में लगे बलों का परिणामी बल परिमाण और दिशा सहित ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH06-T3",
+     "topic_number": 3,
+     "title": "घर्षण बल— प्रायः अनदेखा परंतु सदैव विद्यमान बल",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "gharshan-bal-ki-disha",
+       "learning_objective": "घर्षण बल की दिशा तथा धकेली गई वस्तु पर लगने वाले अन्य बलों को पहचानना।"
+      },
+      {
+       "concept_tag": "satah-aur-gharshan",
+       "learning_objective": "संपर्क सतहों की प्रकृति के अनुसार घर्षण बल में अंतर का प्रयोगों से विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH06-T4",
+     "topic_number": 4,
+     "title": "न्यूटन का गति का प्रथम नियम",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "pratham-niyam",
+       "learning_objective": "परिणामी बल शून्य होने पर वस्तु की गति का वर्णन प्रथम नियम से करना।"
+      },
+      {
+       "concept_tag": "jadatva",
+       "learning_objective": "जड़त्व को वस्तु की अवस्था-परिवर्तन का विरोध करने की प्रवृत्ति के रूप में समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH06-T5",
+     "topic_number": 5,
+     "title": "न्यूटन का गति का द्वितीय नियम",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "dvitiya-niyam-f-ma",
+       "learning_objective": "संबंध F = ma का प्रयोग करके बल, द्रव्यमान और त्वरण की गणना करना।"
+      },
+      {
+       "concept_tag": "gurutvaj-tvaran",
+       "learning_objective": "गुरुत्वीय त्वरण g और भार F = mg को समझना।"
+      },
+      {
+       "concept_tag": "samay-badhakar-bal-kam",
+       "learning_objective": "रुकने का समय बढ़ाकर बल घटाने के दैनिक उदाहरणों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH06-T6",
+     "topic_number": 6,
+     "title": "न्यूटन का गति का तृतीय नियम",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "bal-yugm",
+       "learning_objective": "समझना कि बल-युग्म के दोनों बल बराबर, विपरीत और भिन्न वस्तुओं पर लगते हैं।"
+      },
+      {
+       "concept_tag": "tritiya-niyam-anuprayog",
+       "learning_objective": "चलना, नाव खेना, रॉकेट और प्रतिक्षेप को तृतीय नियम से समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH06-T7",
+     "topic_number": 7,
+     "title": "वस्तुओं के निकाय पर लगने वाले बल",
+     "ncert_sections": "6.7",
+     "concepts": [
+      {
+       "concept_tag": "aantarik-bahya-bal",
+       "learning_objective": "किसी निकाय के आंतरिक और बाह्य बलों में अंतर करना।"
+      },
+      {
+       "concept_tag": "nikay-ka-tvaran",
+       "learning_objective": "जुड़ी हुई वस्तुओं के निकाय का त्वरण a = F/(m1 + m2) से ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHSC1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "कार्य, ऊर्जा एवं सरल मशीनें",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH07-T1",
+     "topic_number": 1,
+     "title": "नियत बल द्वारा किया गया कार्य",
+     "ncert_sections": "7.1, 7.1.1, 7.1.2",
+     "concepts": [
+      {
+       "concept_tag": "karya-ki-paribhasha",
+       "learning_objective": "नियत बल द्वारा किए गए कार्य को बल और बल की दिशा में विस्थापन के गुणनफल के रूप में परिभाषित कर जूल इकाई में गणना करना।"
+      },
+      {
+       "concept_tag": "shunya-karya",
+       "learning_objective": "पहचानना कि बल शून्य, विस्थापन शून्य या बल के लंबवत विस्थापन होने पर किया गया कार्य शून्य होता है।"
+      },
+      {
+       "concept_tag": "dhanatmak-rinatmak-karya",
+       "learning_objective": "बल और विस्थापन की आपेक्षिक दिशाओं के आधार पर धनात्मक और ऋणात्मक कार्य में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH07-T2",
+     "topic_number": 2,
+     "title": "कार्य-ऊर्जा प्रमेय और ऊर्जा के रूप",
+     "ncert_sections": "7.2, 7.3",
+     "concepts": [
+      {
+       "concept_tag": "karya-urja-pramey",
+       "learning_objective": "समझना कि किसी वस्तु पर किया गया कार्य उसकी ऊर्जा में परिवर्तन के बराबर होता है।"
+      },
+      {
+       "concept_tag": "urja-ke-roop",
+       "learning_objective": "ऊर्जा के विभिन्न रूपों को पहचानना और दैनिक उदाहरणों में ऊर्जा रूपांतरण बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH07-T3",
+     "topic_number": 3,
+     "title": "गतिज ऊर्जा",
+     "ncert_sections": "7.4, 7.4.1",
+     "concepts": [
+      {
+       "concept_tag": "gatij-urja",
+       "learning_objective": "गति के कारण वस्तु की ऊर्जा को गतिज ऊर्जा के रूप में पहचानकर K = ½mv² से गणना करना।"
+      },
+      {
+       "concept_tag": "gatij-urja-veg-sambandh",
+       "learning_objective": "गतिज ऊर्जा पर द्रव्यमान और वेग के परिवर्तन के प्रभाव का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH07-T4",
+     "topic_number": 4,
+     "title": "स्थितिज ऊर्जा",
+     "ncert_sections": "7.4.2",
+     "concepts": [
+      {
+       "concept_tag": "sthitij-urja-vinyas",
+       "learning_objective": "पहचानना कि विरूपण या निकाय में वस्तुओं की आपेक्षिक स्थितियों के कारण स्थितिज ऊर्जा संचित होती है।"
+      },
+      {
+       "concept_tag": "gurutviya-sthitij-urja",
+       "learning_objective": "पृथ्वी के पृष्ठ के निकट गुरुत्वीय स्थितिज ऊर्जा U = mgh की गणना और व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH07-T5",
+     "topic_number": 5,
+     "title": "यांत्रिक ऊर्जा का संरक्षण",
+     "ncert_sections": "7.4.3",
+     "concepts": [
+      {
+       "concept_tag": "yantrik-urja-sanrakshan",
+       "learning_objective": "गुरुत्वीय बल के अधीन गति में गतिज और स्थितिज ऊर्जा के योग के संरक्षण का उपयोग करना।"
+      },
+      {
+       "concept_tag": "sarl-lolak-urja",
+       "learning_objective": "सरल लोलक में ऊर्जा रूपांतरण और घर्षण के कारण उसके रुकने की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH07-T6",
+     "topic_number": 6,
+     "title": "शक्ति",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "shakti",
+       "learning_objective": "शक्ति को कार्य करने की दर के रूप में परिभाषित कर वाट इकाई में उसकी गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH07-T7",
+     "topic_number": 7,
+     "title": "सरल मशीनें: घिरनी और आनत तल",
+     "ncert_sections": "7.6, 7.6.1, 7.6.2",
+     "concepts": [
+      {
+       "concept_tag": "yantrik-labh",
+       "learning_objective": "यांत्रिक लाभ को भार और आयास के अनुपात के रूप में परिभाषित करना।"
+      },
+      {
+       "concept_tag": "ghirni",
+       "learning_objective": "स्थिर घिरनी और घिरनी निकाय द्वारा दी जाने वाली सुविधा और यांत्रिक लाभ को समझना।"
+      },
+      {
+       "concept_tag": "aanat-tal",
+       "learning_objective": "आनत तल के यांत्रिक लाभ L/h की गणना करना और समझना कि कुल कार्य कम नहीं होता।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH07-T8",
+     "topic_number": 8,
+     "title": "उत्तोलक",
+     "ncert_sections": "7.6.3",
+     "concepts": [
+      {
+       "concept_tag": "uttolak-santulan",
+       "learning_objective": "आयास × आयास भुजा = भार × भार भुजा का उपयोग कर उत्तोलक का संतुलन और यांत्रिक लाभ ज्ञात करना।"
+      },
+      {
+       "concept_tag": "uttolak-ke-varg",
+       "learning_objective": "आलंब, भार और आयास की स्थितियों के आधार पर उत्तोलकों के तीन वर्गों को पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHSC1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "एक यात्रा— परमाणु के भीतर",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH08-T1",
+     "topic_number": 1,
+     "title": "परमाणु सिद्धांत की उत्पत्ति",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "kanad-parmanu",
+       "learning_objective": "आचार्य कणाद और यूनानी दार्शनिकों की अविभाज्य कणों की अवधारणा को समझना।"
+      },
+      {
+       "concept_tag": "dalton-siddhant",
+       "learning_objective": "डाल्टन के परमाणु सिद्धांत और उसके वैज्ञानिक महत्व को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH08-T2",
+     "topic_number": 2,
+     "title": "इलेक्ट्रॉन की खोज और टॉमसन का परमाणु मॉडल",
+     "ncert_sections": "8.2, 8.2.1",
+     "concepts": [
+      {
+       "concept_tag": "cathode-kiran",
+       "learning_objective": "कैथोड किरणों के अध्ययन से इलेक्ट्रॉन की खोज को समझना।"
+      },
+      {
+       "concept_tag": "thomson-model",
+       "learning_objective": "टॉमसन के परमाणु मॉडल में धनावेश और इलेक्ट्रॉनों की व्यवस्था को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH08-T3",
+     "topic_number": 3,
+     "title": "स्वर्ण पर्णिका प्रयोग और रदरफोर्ड का मॉडल",
+     "ncert_sections": "8.2.2",
+     "concepts": [
+      {
+       "concept_tag": "swarn-parnika-prayog",
+       "learning_objective": "स्वर्ण पर्णिका प्रयोग के प्रेक्षणों से नाभिक के बारे में निष्कर्ष निकालना।"
+      },
+      {
+       "concept_tag": "rutherford-model-seema",
+       "learning_objective": "रदरफोर्ड मॉडल की सीमा अर्थात् परमाणु के स्थायित्व की समस्या को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH08-T4",
+     "topic_number": 4,
+     "title": "बोर का परमाणु मॉडल",
+     "ncert_sections": "8.2.3",
+     "concepts": [
+      {
+       "concept_tag": "bohr-model",
+       "learning_objective": "बोर के कोशों, ऊर्जा स्तरों और परमाणु के स्थायित्व की व्याख्या को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH08-T5",
+     "topic_number": 5,
+     "title": "न्यूट्रॉन की खोज और तत्वों के प्रतीक",
+     "ncert_sections": "8.3, 8.3.1, 8.4",
+     "concepts": [
+      {
+       "concept_tag": "neutron-khoj",
+       "learning_objective": "न्यूट्रॉन की खोज और नाभिक के द्रव्यमान में उसके योगदान को समझना।"
+      },
+      {
+       "concept_tag": "tatva-pratik",
+       "learning_objective": "तत्वों के प्रतीक लिखने के नियमों को लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH08-T6",
+     "topic_number": 6,
+     "title": "परमाणु क्रमांक, द्रव्यमान संख्या और इलेक्ट्रॉन वितरण",
+     "ncert_sections": "8.5, 8.6, 8.7",
+     "concepts": [
+      {
+       "concept_tag": "paramanu-kramank",
+       "learning_objective": "परमाणु क्रमांक को प्रोटॉनों की संख्या के रूप में पहचानना।"
+      },
+      {
+       "concept_tag": "dravyaman-sankhya",
+       "learning_objective": "द्रव्यमान संख्या से प्रोटॉन और न्यूट्रॉन की संख्या की गणना करना।"
+      },
+      {
+       "concept_tag": "electron-vitaran",
+       "learning_objective": "बोर-बरी नियमों से तत्वों का इलेक्ट्रॉनिक विन्यास लिखना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH08-T7",
+     "topic_number": 7,
+     "title": "परमाणु की संयोजन क्षमता: संयोजकता",
+     "ncert_sections": "8.8",
+     "concepts": [
+      {
+       "concept_tag": "sanyojakta",
+       "learning_objective": "संयोजी इलेक्ट्रॉनों और अष्टक के आधार पर संयोजकता ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH08-T8",
+     "topic_number": 8,
+     "title": "समस्थानिक और समभारिक",
+     "ncert_sections": "8.9, 8.9.1, 8.9.2",
+     "concepts": [
+      {
+       "concept_tag": "samsthanik",
+       "learning_objective": "समस्थानिकों की परिभाषा, गुण और उपयोग समझना।"
+      },
+      {
+       "concept_tag": "ausat-paramanu-dravyaman",
+       "learning_objective": "समस्थानिकों की प्रचुरता से भारित औसत परमाणु द्रव्यमान की गणना करना।"
+      },
+      {
+       "concept_tag": "sambharik",
+       "learning_objective": "समभारिकों को समस्थानिकों से अलग पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHSC1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "द्रव्य का परमाण्विक आधार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH09-T1",
+     "topic_number": 1,
+     "title": "द्रव्यमान संरक्षण का नियम",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "dravyaman-sanrakshan-niyam",
+       "learning_objective": "रासायनिक अभिक्रिया में कुल द्रव्यमान के संरक्षित रहने के नियम और उसकी प्रायोगिक जाँच को समझना।"
+      },
+      {
+       "concept_tag": "sanrakshan-ganana",
+       "learning_objective": "अभिकारकों और उत्पादों के द्रव्यमानों से द्रव्यमान संरक्षण के नियम पर आधारित गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH09-T2",
+     "topic_number": 2,
+     "title": "स्थिर अनुपात का नियम",
+     "ncert_sections": "9.2",
+     "concepts": [
+      {
+       "concept_tag": "sthir-anupat-niyam",
+       "learning_objective": "किसी यौगिक में तत्वों के द्रव्यमान के निश्चित अनुपात के नियम को समझना।"
+      },
+      {
+       "concept_tag": "anupat-ganana",
+       "learning_objective": "द्रव्यमान अनुपात का उपयोग करके किसी यौगिक के घटकों का द्रव्यमान ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH09-T3",
+     "topic_number": 3,
+     "title": "डाल्टन का परमाणु सिद्धांत",
+     "ncert_sections": "9.3",
+     "concepts": [
+      {
+       "concept_tag": "dalton-abhidharana",
+       "learning_objective": "डाल्टन के परमाणु सिद्धांत की अभिधारणाओं को पहचानना।"
+      },
+      {
+       "concept_tag": "dalton-niyam-vyakhya",
+       "learning_objective": "डाल्टन की अभिधारणाओं से रासायनिक संयोजन के नियमों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH09-T4",
+     "topic_number": 4,
+     "title": "परमाणुओं का संयोजन और सहसंयोजक आबंध",
+     "ncert_sections": "9.4, 9.4.1",
+     "concepts": [
+      {
+       "concept_tag": "anu-aur-rasayanik-abandh",
+       "learning_objective": "अणु और रासायनिक आबंध का अर्थ तथा परमाणुओं के संयोजन का कारण समझना।"
+      },
+      {
+       "concept_tag": "sahsanyojak-abandh",
+       "learning_objective": "इलेक्ट्रॉनों की साझेदारी से एकल, द्वि और त्रि आबंध वाले अणुओं के बनने की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "sahsanyojak-namkaran",
+       "learning_objective": "उपसर्ग पद्धति से सहसंयोजी यौगिकों का नामकरण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH09-T5",
+     "topic_number": 5,
+     "title": "इलेक्ट्रॉन स्थानांतरण द्वारा आयनिक आबंध",
+     "ncert_sections": "9.4.2",
+     "concepts": [
+      {
+       "concept_tag": "aayan-nirman",
+       "learning_objective": "इलेक्ट्रॉन खोने या ग्रहण करने से धनायन और ऋणायन के बनने को समझना।"
+      },
+      {
+       "concept_tag": "aayanik-abandh",
+       "learning_objective": "आयनिक आबंध और आयनिक यौगिकों की क्रिस्टल संरचना को समझना।"
+      },
+      {
+       "concept_tag": "aayanik-namkaran",
+       "learning_objective": "सामान्य एकपरमाणुक और बहुपरमाणुक आयनों के नाम व संयोजकता पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH09-T6",
+     "topic_number": 6,
+     "title": "रासायनिक सूत्र लिखना",
+     "ncert_sections": "9.5, 9.5.1, 9.5.2",
+     "concepts": [
+      {
+       "concept_tag": "sutra-sahsanyoji",
+       "learning_objective": "संयोजकताओं के आदान-प्रदान द्वारा सहसंयोजी यौगिकों के सूत्र लिखना।"
+      },
+      {
+       "concept_tag": "sutra-aayanik",
+       "learning_objective": "आवेशों के आदान-प्रदान और सरलतम अनुपात से आयनिक यौगिकों के सूत्र लिखना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH09-T7",
+     "topic_number": 7,
+     "title": "आयनिक और सहसंयोजी यौगिकों के गुण",
+     "ncert_sections": "9.6",
+     "concepts": [
+      {
+       "concept_tag": "vilayata",
+       "learning_objective": "जल, केरोसिन और पेट्रोल में आयनिक और सहसंयोजी यौगिकों की विलेयता की तुलना करना।"
+      },
+      {
+       "concept_tag": "vidyut-chalakta",
+       "learning_objective": "ठोस और जलीय अवस्था में यौगिकों की विद्युत चालकता की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "galnank-kvathnank",
+       "learning_objective": "आयनिक और सहसंयोजी यौगिकों के गलनांक व क्वथनांक का कारण सहित अंतर बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH09-T8",
+     "topic_number": 8,
+     "title": "आण्विक द्रव्यमान और सूत्र इकाई द्रव्यमान",
+     "ncert_sections": "9.7, 9.8",
+     "concepts": [
+      {
+       "concept_tag": "anvik-dravyaman",
+       "learning_objective": "परमाणु द्रव्यमानों को जोड़कर सहसंयोजी यौगिकों का आण्विक द्रव्यमान ज्ञात करना।"
+      },
+      {
+       "concept_tag": "sutra-ikai-dravyaman",
+       "learning_objective": "सूत्र इकाई का अर्थ समझकर आयनिक यौगिकों का सूत्र इकाई द्रव्यमान ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHSC1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "ध्वनि तरंगें — अभिलक्षण एवं अनुप्रयोग",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH10-T1",
+     "topic_number": 1,
+     "title": "ध्वनि का उत्पादन और स्वरित्र द्विभुज",
+     "ncert_sections": "10.1, 10.1.1",
+     "concepts": [
+      {
+       "concept_tag": "dhvani-kampan-se-utpann",
+       "learning_objective": "समझना कि ध्वनि कंपन करती वस्तुओं द्वारा उत्पन्न होती है और मनुष्य वाक् तंतुओं के कंपन से ध्वनि उत्पन्न करते हैं।"
+      },
+      {
+       "concept_tag": "svaritra-dvibhuj",
+       "learning_objective": "स्वरित्र द्विभुज की बनावट और उससे कंपन व ध्वनि के संबंध को प्रदर्शित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH10-T2",
+     "topic_number": 2,
+     "title": "ध्वनि का संचरण और माध्यम की आवश्यकता",
+     "ncert_sections": "10.2, 10.2.1",
+     "concepts": [
+      {
+       "concept_tag": "madhyam-ki-avashyakta",
+       "learning_objective": "निर्वात बेलजार प्रयोग के आधार पर समझाना कि ध्वनि संचरण हेतु माध्यम आवश्यक है।"
+      },
+      {
+       "concept_tag": "thos-drav-gas-sancharan",
+       "learning_objective": "पहचानना कि ध्वनि ठोसों, द्रवों और गैसों से होकर संचरित हो सकती है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH10-T3",
+     "topic_number": 3,
+     "title": "ध्वनि तरंगें और उनकी ऊर्जा",
+     "ncert_sections": "10.3, 10.4",
+     "concepts": [
+      {
+       "concept_tag": "sampidan-viralan",
+       "learning_objective": "संपीडन और विरलन के बनने तथा माध्यम के कणों के माध्य स्थिति के इर्द-गिर्द कंपन को समझाना।"
+      },
+      {
+       "concept_tag": "anudairghya-yantrik-tarang",
+       "learning_objective": "अनुदैर्घ्य, अनुप्रस्थ और यांत्रिक तरंगों में अंतर करना।"
+      },
+      {
+       "concept_tag": "dhvani-urja",
+       "learning_objective": "समझना कि ध्वनि तरंगें माध्यम के कणों को नहीं, बल्कि ऊर्जा को स्थानांतरित करती हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH10-T4",
+     "topic_number": 4,
+     "title": "आलेखीय निरूपण: तरंगदैर्घ्य, आवृत्ति और आवर्तकाल",
+     "ncert_sections": "10.5, 10.6.1",
+     "concepts": [
+      {
+       "concept_tag": "ghanatva-aalekh",
+       "learning_objective": "घनत्व-दूरी आलेख में शृंग, गर्त और तरंगदैर्घ्य की पहचान करना।"
+      },
+      {
+       "concept_tag": "avritti-avartkal",
+       "learning_objective": "आवृत्ति और आवर्तकाल को परिभाषित कर उनके व्युत्क्रम संबंध से परिकलन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH10-T5",
+     "topic_number": 5,
+     "title": "आयाम, तीव्रता और ध्वनि की चाल",
+     "ncert_sections": "10.6.2, 10.6.3",
+     "concepts": [
+      {
+       "concept_tag": "ayam-tivrata",
+       "learning_objective": "आयाम, ऊर्जा और तीव्रता का संबंध तथा दूरी के साथ तीव्रता घटने का कारण समझाना।"
+      },
+      {
+       "concept_tag": "dhvani-ki-chal",
+       "learning_objective": "संबंध v = λν का उपयोग करना और विभिन्न माध्यमों में ध्वनि की चाल की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH10-T6",
+     "topic_number": 6,
+     "title": "मानव द्वारा ध्वनि-बोध",
+     "ncert_sections": "10.6.4",
+     "concepts": [
+      {
+       "concept_tag": "taratva-prabalta",
+       "learning_objective": "तारत्व को आवृत्ति से और प्रबलता को आयाम से जोड़ना।"
+      },
+      {
+       "concept_tag": "shravya-parisar",
+       "learning_objective": "मानव श्रव्य परिसर तथा अवश्रव्य और पराश्रव्य तरंगों की सीमाएँ पहचानना।"
+      },
+      {
+       "concept_tag": "dhvanigunta-ashtak",
+       "learning_objective": "मूल आवृत्ति, अधिस्वरक, ध्वनिगुणता और अष्टक की अवधारणाएँ समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH10-T7",
+     "topic_number": 7,
+     "title": "ध्वनि का परावर्तन: प्रतिध्वनि और अनुरणन",
+     "ncert_sections": "10.7, 10.7.1, 10.7.2",
+     "concepts": [
+      {
+       "concept_tag": "pratidhvani",
+       "learning_objective": "प्रतिध्वनि सुनने की शर्त और परावर्तक सतह की दूरी का परिकलन करना।"
+      },
+      {
+       "concept_tag": "anuranan",
+       "learning_objective": "अनुरणन का कारण और सभागारों में उसे नियंत्रित करने के उपाय समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH10-T8",
+     "topic_number": 8,
+     "title": "पराश्रव्य और अवश्रव्य तरंगें तथा उनके अनुप्रयोग",
+     "ncert_sections": "10.8, 10.8.1",
+     "concepts": [
+      {
+       "concept_tag": "parashravya-anuprayog",
+       "learning_objective": "पराश्रव्य और अवश्रव्य तरंगों के चिकित्सा, उद्योग और प्राकृतिक घटनाओं में अनुप्रयोग पहचानना।"
+      },
+      {
+       "concept_tag": "sonar-pratidhvani-sthan",
+       "learning_objective": "प्रतिध्वनि द्वारा स्थान निर्धारण और सोनार के सिद्धांत से दूरी का परिकलन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHSC1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "जनन — जीवन की निरंतरता",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH11-T1",
+     "topic_number": 1,
+     "title": "अलैंगिक जनन और कायिक प्रवर्धन",
+     "ncert_sections": "11.1, 11.1.1",
+     "concepts": [
+      {
+       "concept_tag": "kayik-pravardhan",
+       "learning_objective": "पौधों के कायिक भागों से नए पौधे बनने की प्रक्रिया और उसके उदाहरण पहचानना।"
+      },
+      {
+       "concept_tag": "kritrim-kayik-pravardhan",
+       "learning_objective": "कर्तन, कलम बाँधना, परतन और ऊतक संवर्धन विधियों तथा कृषि में उनके उपयोग को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH11-T2",
+     "topic_number": 2,
+     "title": "मुकुलन, बीजाणु निर्माण और समसूत्री विभाजन",
+     "ncert_sections": "11.1",
+     "concepts": [
+      {
+       "concept_tag": "mukulan",
+       "learning_objective": "यीस्ट और हाइड्रा में मुकुलन द्वारा जनन को समझाना।"
+      },
+      {
+       "concept_tag": "beejanu-nirman",
+       "learning_objective": "कवकों में बीजाणु निर्माण और फफूँद की वृद्धि की परिस्थितियों को समझना।"
+      },
+      {
+       "concept_tag": "samsutri-vibhajan-klon",
+       "learning_objective": "समसूत्री विभाजन के कारण अलैंगिक संतति के क्लोन होने का कारण बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH11-T3",
+     "topic_number": 3,
+     "title": "लैंगिक जनन और अर्धसूत्री विभाजन",
+     "ncert_sections": "11.2, 11.2.1",
+     "concepts": [
+      {
+       "concept_tag": "ardhsutri-vibhajan",
+       "learning_objective": "अर्धसूत्री विभाजन द्वारा गुणसूत्रों की संख्या आधी होने का महत्व समझना।"
+      },
+      {
+       "concept_tag": "vibhinnata",
+       "learning_objective": "गुणसूत्रों के यादृच्छिक संयोजन से विभिन्नताओं की उत्पत्ति और उनका महत्व समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH11-T4",
+     "topic_number": 4,
+     "title": "पुष्पी पादपों में लैंगिक जनन",
+     "ncert_sections": "11.2.2, 11.2.3, 11.2.4, 11.2.5",
+     "concepts": [
+      {
+       "concept_tag": "pushp-ke-bhag",
+       "learning_objective": "पुष्प के भागों और उनके कार्यों को पहचानना।"
+      },
+      {
+       "concept_tag": "paragan",
+       "learning_objective": "स्व-परागण, पर-परागण और परागण की विभिन्न युक्तियों में अंतर करना।"
+      },
+      {
+       "concept_tag": "nishechan-beej-nirman",
+       "learning_objective": "निषेचन तथा अंडाशय से फल और बीजांड से बीज बनने की प्रक्रिया समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH11-T5",
+     "topic_number": 5,
+     "title": "जंतुओं में लैंगिक जनन और उसकी विभिन्नताएँ",
+     "ncert_sections": "11.3, 11.4",
+     "concepts": [
+      {
+       "concept_tag": "bahya-antarik-nishechan",
+       "learning_objective": "बाह्य और आंतरिक निषेचन की तुलना अंडों की संख्या और संतति की उत्तरजीविता के आधार पर करना।"
+      },
+      {
+       "concept_tag": "larva-peetak",
+       "learning_objective": "पीतक की मात्रा और लार्वा अवस्था के बीच संबंध को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH11-T6",
+     "topic_number": 6,
+     "title": "मानव जनन तंत्र और युग्मकजनन",
+     "ncert_sections": "11.5.1, 11.5.2, 11.5.3, 11.5.4",
+     "concepts": [
+      {
+       "concept_tag": "nar-janan-tantra",
+       "learning_objective": "नर जनन तंत्र के अंगों और उनके कार्यों को पहचानना।"
+      },
+      {
+       "concept_tag": "mada-janan-tantra",
+       "learning_objective": "मादा जनन तंत्र के अंगों और उनके कार्यों को पहचानना।"
+      },
+      {
+       "concept_tag": "yugmakjanan",
+       "learning_objective": "युग्मकजनन तथा शुक्राणु और अंडाणु के बीच अंतर को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH11-T7",
+     "topic_number": 7,
+     "title": "निषेचन, रजोधर्म, गर्भावस्था और जनन स्वास्थ्य",
+     "ncert_sections": "11.5.5, 11.5.6, 11.5.7, 11.5.8, 11.5.9, 11.5.10",
+     "concepts": [
+      {
+       "concept_tag": "andotsarg-rajodharm",
+       "learning_objective": "अंडोत्सर्ग, निषेचन और रजोधर्म चक्र की घटनाओं का क्रम समझना।"
+      },
+      {
+       "concept_tag": "garbhavastha",
+       "learning_objective": "गर्भावस्था के त्रिमासों और माँ के स्वास्थ्य की देखभाल को समझना।"
+      },
+      {
+       "concept_tag": "janan-swasthya",
+       "learning_objective": "यौन संचारित संक्रमणों और गर्भनिरोधक विधियों के बारे में उत्तरदायी जानकारी रखना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHSC1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "जीवजगत का स्वरूप— विविधता एवं वर्गीकरण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH12-T1",
+     "topic_number": 1,
+     "title": "जैव विविधता और भारत एक हॉटस्पॉट के रूप में",
+     "ncert_sections": "12.1, 12.2",
+     "concepts": [
+      {
+       "concept_tag": "sthanik-jatiyan-hotspot",
+       "learning_objective": "स्थानिक जातियों और जैव विविधता हॉटस्पॉट का अर्थ तथा भारत के उदाहरण पहचानना।"
+      },
+      {
+       "concept_tag": "jaiv-vividhata-vikas",
+       "learning_objective": "छोटे अंतरों के अनेक पीढ़ियों में संचय से जैव विविधता के विकास को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH12-T2",
+     "topic_number": 2,
+     "title": "वर्गीकरण के मानदंड और उसकी आवश्यकता",
+     "ncert_sections": "12.3, 12.3.1, 12.4",
+     "concepts": [
+      {
+       "concept_tag": "vargikaran-mandand",
+       "learning_objective": "जीवों को समूहित करने वाले विभिन्न मानदंडों को पहचानना और लागू करना।"
+      },
+      {
+       "concept_tag": "vargikaran-avashyakta",
+       "learning_objective": "जैविक वर्गीकरण के लाभों और संरक्षण में उसकी भूमिका को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH12-T3",
+     "topic_number": 3,
+     "title": "समय के साथ वर्गीकरण प्रणालियों का विकास",
+     "ncert_sections": "12.5",
+     "concepts": [
+      {
+       "concept_tag": "vargikaran-pranali-kram",
+       "learning_objective": "अरस्तू से व्हिटेकर तक वर्गीकरण प्रणालियों का क्रम और उनके आधार जानना।"
+      },
+      {
+       "concept_tag": "pranali-sudhar-karan",
+       "learning_objective": "नई खोजों के कारण वर्गीकरण प्रणालियों में हुए परिवर्तनों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH12-T4",
+     "topic_number": 4,
+     "title": "मोनेरा, प्रोटिस्टा और फंजाई जगत",
+     "ncert_sections": "12.6, 12.6.1, 12.6.2, 12.6.3",
+     "concepts": [
+      {
+       "concept_tag": "panch-jagat-adhar",
+       "learning_objective": "पाँच जगत वर्गीकरण के मानदंडों के आधार पर जीवों को जगतों में रखना।"
+      },
+      {
+       "concept_tag": "monera-protista",
+       "learning_objective": "मोनेरा और प्रोटिस्टा जगत के जीवों की विशेषताएँ और उदाहरण पहचानना।"
+      },
+      {
+       "concept_tag": "kavak-lichen",
+       "learning_objective": "कवकों के पोषण, काइटिन भित्ति और लाइकेन के सहजीवन को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH12-T5",
+     "topic_number": 5,
+     "title": "पादप जगत के वर्ग",
+     "ncert_sections": "12.6.4",
+     "concepts": [
+      {
+       "concept_tag": "thallophyta-bryophyta",
+       "learning_objective": "थैलोफाइटा और ब्रायोफाइटा की विशेषताएँ और जल पर उनकी निर्भरता समझना।"
+      },
+      {
+       "concept_tag": "pteridophyta-beejdhari",
+       "learning_objective": "टेरिडोफाइटा, जिम्नोस्पर्म और एंजियोस्पर्म की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH12-T6",
+     "topic_number": 6,
+     "title": "जंतु जगत और अनुकूलन",
+     "ncert_sections": "12.6.5, 12.7",
+     "concepts": [
+      {
+       "concept_tag": "akasheruki-sangh",
+       "learning_objective": "अकशेरुकी जंतुओं के संघों को उनके शरीर संगठन के आधार पर पहचानना।"
+      },
+      {
+       "concept_tag": "prishthrajju-kasheruki",
+       "learning_objective": "पृष्ठरज्जु के आधार पर कॉर्डेटा, प्रोटोकॉर्डेटा और कशेरुकी वर्गों को समझना।"
+      },
+      {
+       "concept_tag": "sanrachnatmak-anukulan",
+       "learning_objective": "संरचनात्मक विशेषताओं को विभिन्न पर्यावासों में उत्तरजीविता से जोड़ना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH12-T7",
+     "topic_number": 7,
+     "title": "वर्गीकरण का पदानुक्रम और द्विनाम पद्धति",
+     "ncert_sections": "12.7.1, 12.8",
+     "concepts": [
+      {
+       "concept_tag": "vargikaran-padanukram",
+       "learning_objective": "जगत से जाति तक वर्गीकरण के पदानुक्रमी स्तरों का क्रम समझना।"
+      },
+      {
+       "concept_tag": "dvinam-paddhati",
+       "learning_objective": "द्विनाम पद्धति के नियम लागू कर वैज्ञानिक नाम के वंश और जाति भाग पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH12-T8",
+     "topic_number": 8,
+     "title": "जीवाश्म और जैव विविधता पर खतरा",
+     "ncert_sections": "12.9, 12.10",
+     "concepts": [
+      {
+       "concept_tag": "jivashm-praman",
+       "learning_objective": "जीवाश्मों को जीवन में परिवर्तन के प्रमाण के रूप में समझना।"
+      },
+      {
+       "concept_tag": "jaiv-vividhata-khatra",
+       "learning_objective": "जैव विविधता के ह्रास के कारणों और प्रभावों का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IHSC1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "पृथ्वी एक तंत्र— ऊर्जा, द्रव्य और जीवन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ihsc113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IHSC1-CH13-T1",
+     "topic_number": 1,
+     "title": "पृथ्वी के मंडल और उनकी परस्पर क्रिया",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prithvi-ke-mandal",
+       "learning_objective": "भूमंडल, जलमंडल, हिममंडल, वायुमंडल और जैवमंडल को उनके उदाहरणों सहित पहचानना।"
+      },
+      {
+       "concept_tag": "mandalon-ki-antahkriya",
+       "learning_objective": "एक मंडल में विक्षोभ से अन्य मंडलों में होने वाले परिवर्तनों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH13-T2",
+     "topic_number": 2,
+     "title": "पृथ्वी का असमान ऊष्मीकरण और सौर विकिरण",
+     "ncert_sections": "13.1",
+     "concepts": [
+      {
+       "concept_tag": "vidyut-chumbakiya-spectrum",
+       "learning_objective": "विद्युत चुंबकीय स्पेक्ट्रम के क्षेत्रों और पृथ्वी तक पहुँचने वाले सौर विकिरण को पहचानना।"
+      },
+      {
+       "concept_tag": "saur-sthirank-suryatap",
+       "learning_objective": "सौर स्थिरांक और सूर्यातप का अर्थ समझकर प्राप्त सौर ऊर्जा की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH13-T3",
+     "topic_number": 3,
+     "title": "एल्बिडो, अक्षांश और वायुमंडल की भूमिका",
+     "ncert_sections": "13.1.1, 13.1.2, 13.1.3",
+     "concepts": [
+      {
+       "concept_tag": "albedo",
+       "learning_objective": "विभिन्न सतहों के एल्बिडो की तुलना कर उनके गर्म होने का अनुमान लगाना।"
+      },
+      {
+       "concept_tag": "akshansh-asaman-ushman",
+       "learning_objective": "अक्षांश और पृथ्वी की गोलीय आकृति के आधार पर असमान ऊष्मण को समझाना।"
+      },
+      {
+       "concept_tag": "vayumandal-ki-parten",
+       "learning_objective": "क्षोभमंडल, समतापमंडल और वायुमंडल की सुरक्षात्मक भूमिका को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH13-T4",
+     "topic_number": 4,
+     "title": "असमान ऊष्मण के कारण पवन और महासागरीय धाराएँ",
+     "ncert_sections": "13.2, 13.2.1, 13.2.2, 13.2.3",
+     "concepts": [
+      {
+       "concept_tag": "sthaniya-pavan",
+       "learning_objective": "घाटी समीर और पर्वतीय समीर के बनने की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "grahiya-pavan",
+       "learning_objective": "वायुदाब पट्टियों, ग्रहीय पवनों और उनके विक्षेपण को समझना।"
+      },
+      {
+       "concept_tag": "mahasagariya-dharaen",
+       "learning_objective": "महासागरीय धाराओं के कारणों और जलवायु पर उनके प्रभाव का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH13-T5",
+     "topic_number": 5,
+     "title": "जैव-भू रासायनिक चक्र: जल और कार्बन चक्र",
+     "ncert_sections": "13.3, 13.3.1, 13.3.2",
+     "concepts": [
+      {
+       "concept_tag": "jaiv-bhu-rasayanik-chakra",
+       "learning_objective": "अजैविक और जैविक घटकों के बीच द्रव्य के चक्रण का अर्थ समझना।"
+      },
+      {
+       "concept_tag": "jal-chakra",
+       "learning_objective": "जल चक्र पर जलवायु परिवर्तन के प्रभाव और विभिन्न मंडलों से उसका संबंध समझाना।"
+      },
+      {
+       "concept_tag": "carbon-chakra",
+       "learning_objective": "कार्बन के तीव्र और मंद चक्र तथा कार्बन डाइऑक्साइड वृद्धि के प्रभावों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH13-T6",
+     "topic_number": 6,
+     "title": "नाइट्रोजन चक्र और ऑक्सीजन चक्र",
+     "ncert_sections": "13.3.3, 13.3.4",
+     "concepts": [
+      {
+       "concept_tag": "nitrogen-chakra",
+       "learning_objective": "नाइट्रोजन चक्र के चरणों और उनमें भाग लेने वाले जीवाणुओं को पहचानना।"
+      },
+      {
+       "concept_tag": "haber-bosch-prakram",
+       "learning_objective": "हेबर-बॉश प्रक्रम के महत्व और उसकी सीमाओं का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "oxygen-chakra",
+       "learning_objective": "ऑक्सीजन के उपभोग और पुनःस्थापन की प्रक्रियाओं के संतुलन को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "IHSC1-CH13-T7",
+     "topic_number": 7,
+     "title": "पृथ्वी की प्रक्रियाओं पर मानवीय प्रभाव",
+     "ncert_sections": "13.4",
+     "concepts": [
+      {
+       "concept_tag": "suposhan",
+       "learning_objective": "उर्वरकों के अत्यधिक उपयोग से होने वाले सुपोषण की प्रक्रिया समझाना।"
+      },
+      {
+       "concept_tag": "vanonmoolan-mahasagar-amliyata",
+       "learning_objective": "वनोन्मूलन और अतिरिक्त कार्बन डाइऑक्साइड के विभिन्न मंडलों पर प्रभाव का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "paryavaran-santulan-upay",
+       "learning_objective": "ओजोन संरक्षण के अंतरराष्ट्रीय प्रयासों और पर्यावरण संतुलन के उपायों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "chapter_id": "KEGY2-CH11",
+ "title": "World Climate and Climate Change",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH11-T1",
+   "topic_number": 1,
+   "title": "Approaches to classification and Koeppen's scheme",
+   "ncert_sections": "Koeppen's Scheme of Classification of Climate",
+   "concepts": [
+    {
+     "concept_tag": "climate-classification-approaches",
+     "learning_objective": "Distinguish between empirical, genetic and applied approaches to classifying climate."
+    },
+    {
+     "concept_tag": "koeppen-groups-and-letters",
+     "learning_objective": "Explain how Koeppen used temperature, precipitation and letter codes to define climatic groups and types."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH11-T2",
+   "topic_number": 2,
+   "title": "Tropical humid climates (Group A)",
+   "ncert_sections": "Group A : Tropical Humid Climates",
+   "concepts": [
+    {
+     "concept_tag": "tropical-humid-climate-types",
+     "learning_objective": "Describe the location and features of the Af, Am and Aw climate types."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH11-T3",
+   "topic_number": 3,
+   "title": "Dry climates (Group B)",
+   "ncert_sections": "Dry Climates : B",
+   "concepts": [
+    {
+     "concept_tag": "dry-climate-distribution",
+     "learning_objective": "Explain where and why dry climates occur at low and middle latitudes."
+    },
+    {
+     "concept_tag": "steppe-and-desert",
+     "learning_objective": "Compare subtropical steppe and desert climates."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH11-T4",
+   "topic_number": 4,
+   "title": "Warm temperate (mid-latitude) climates (Group C)",
+   "ncert_sections": "Warm Temperate (Mid-Latitude) Climates-C",
+   "concepts": [
+    {
+     "concept_tag": "mediterranean-climate",
+     "learning_objective": "Explain the location and the hot dry summer and rainy winter of the Mediterranean climate."
+    },
+    {
+     "concept_tag": "humid-subtropical-and-marine-west-coast",
+     "learning_objective": "Describe the Cwa, Cfa and Cfb climate types and their locations."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH11-T5",
+   "topic_number": 5,
+   "title": "Cold snow forest and polar climates (Groups D and E)",
+   "ncert_sections": "Cold Snow Forest Climates (D); Polar Climates (E)",
+   "concepts": [
+    {
+     "concept_tag": "cold-snow-forest-climates",
+     "learning_objective": "Describe the distribution and features of the Df and Dw climate types."
+    },
+    {
+     "concept_tag": "tundra-climate",
+     "learning_objective": "Describe the tundra climate, permafrost and its vegetation."
+    },
+    {
+     "concept_tag": "ice-cap-climate",
+     "learning_objective": "Explain the features of the ice cap climate and how icebergs form."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH11-T6",
+   "topic_number": 6,
+   "title": "Climate change: evidence and the past",
+   "ncert_sections": "Climate Change; Climate in the recent past",
+   "concepts": [
+    {
+     "concept_tag": "evidence-of-climate-change",
+     "learning_objective": "Identify the geological, biological and historical evidence that climate changes naturally."
+    },
+    {
+     "concept_tag": "past-climate-episodes",
+     "learning_objective": "Recall major climatic episodes of the geological and recent past, including India."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH11-T7",
+   "topic_number": 7,
+   "title": "Causes of climate change",
+   "ncert_sections": "Causes of Climate Change",
+   "concepts": [
+    {
+     "concept_tag": "astronomical-causes",
+     "learning_objective": "Explain sunspots and Milankovitch oscillations as astronomical causes of climate change."
+    },
+    {
+     "concept_tag": "volcanism-and-human-causes",
+     "learning_objective": "Explain how volcanic aerosols and human greenhouse gas emissions change climate."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH11-T8",
+   "topic_number": 8,
+   "title": "Global warming and greenhouse gases",
+   "ncert_sections": "Global Warming; Greenhouse Gases (GHGs)",
+   "concepts": [
+    {
+     "concept_tag": "greenhouse-effect",
+     "learning_objective": "Explain the greenhouse effect using the analogy of a glasshouse."
+    },
+    {
+     "concept_tag": "greenhouse-gases",
+     "learning_objective": "Identify the main greenhouse gases, their sources and sinks, and what makes a GHG effective."
+    },
+    {
+     "concept_tag": "global-warming-trends-and-response",
+     "learning_objective": "Interpret the 20th-century temperature record, the impacts of warming and the Kyoto Protocol."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,573 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "practical-work-in-geography-part-ii-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "geography",
+  "language": "english",
+  "title": "Practical Work in Geography Part II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "legy3"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEGY3-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Data – Its Source and Compilation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy301.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY3-CH01-T1",
+     "topic_number": 1,
+     "title": "What is data, need of data and its presentation",
+     "ncert_sections": "What is Data?; Need of Data; Presentation of the Data",
+     "concepts": [
+      {
+       "concept_tag": "data-and-information",
+       "learning_objective": "Distinguish data, a datum and information as defined in the chapter."
+      },
+      {
+       "concept_tag": "need-for-data",
+       "learning_objective": "Explain why quantitative data are needed to study geographical phenomena such as cropping patterns and city growth."
+      },
+      {
+       "concept_tag": "statistical-fallacy",
+       "learning_objective": "Recognise how a statistical fallacy, such as relying on an average alone, can mislead conclusions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH01-T2",
+     "topic_number": 2,
+     "title": "Sources of primary data",
+     "ncert_sections": "Sources of Data; Sources of Primary Data",
+     "concepts": [
+      {
+       "concept_tag": "primary-data-methods",
+       "learning_objective": "Identify primary data and the methods used to collect it, including personal observation and field instruments."
+      },
+      {
+       "concept_tag": "interview-precautions",
+       "learning_objective": "State the precautions an interviewer should take while collecting information."
+      },
+      {
+       "concept_tag": "questionnaire-vs-schedule",
+       "learning_objective": "Distinguish between a questionnaire and a schedule and judge when each is suitable."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH01-T3",
+     "topic_number": 3,
+     "title": "Secondary sources of data",
+     "ncert_sections": "Secondary Source of Data; Published Sources; Unpublished Sources",
+     "concepts": [
+      {
+       "concept_tag": "published-secondary-sources",
+       "learning_objective": "Classify published secondary sources into government, quasi-government, international, private, newspaper and electronic sources."
+      },
+      {
+       "concept_tag": "unpublished-secondary-sources",
+       "learning_objective": "Identify unpublished government, quasi-government and private records as secondary sources."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH01-T4",
+     "topic_number": 4,
+     "title": "Tabulation, compilation and presentation of data",
+     "ncert_sections": "Tabulation and Classification of Data; Data Compilation and Presentation",
+     "concepts": [
+      {
+       "concept_tag": "statistical-table",
+       "learning_objective": "Describe a statistical table and its purpose in summarising raw data."
+      },
+      {
+       "concept_tag": "absolute-and-percentage-data",
+       "learning_objective": "Distinguish absolute data from percentage or ratio data and compute a rate such as literacy rate."
+      },
+      {
+       "concept_tag": "index-number",
+       "learning_objective": "Calculate and interpret an index number by the simple aggregate method."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH01-T5",
+     "topic_number": 5,
+     "title": "Processing, grouping and frequency distribution",
+     "ncert_sections": "Processing of Data; Grouping of Data; Process of Classification; Frequency Distribution",
+     "concepts": [
+      {
+       "concept_tag": "grouping-and-class-interval",
+       "learning_objective": "Decide the number of classes and the class interval from the range of raw data."
+      },
+      {
+       "concept_tag": "tally-marks",
+       "learning_objective": "Classify raw data into groups using the Four and Cross Method of tally marks."
+      },
+      {
+       "concept_tag": "simple-and-cumulative-frequency",
+       "learning_objective": "Compute simple and cumulative frequencies and interpret them."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH01-T6",
+     "topic_number": 6,
+     "title": "Exclusive and inclusive methods of grouping",
+     "ncert_sections": "Exclusive Method; Inclusive Method",
+     "concepts": [
+      {
+       "concept_tag": "exclusive-method",
+       "learning_objective": "Place marginal values correctly into classes formed by the exclusive method."
+      },
+      {
+       "concept_tag": "inclusive-method",
+       "learning_objective": "Describe how classes are formed and values counted in the inclusive method."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH01-T7",
+     "topic_number": 7,
+     "title": "Frequency polygon and Ogive",
+     "ncert_sections": "Frequency Polygon; Ogive",
+     "concepts": [
+      {
+       "concept_tag": "frequency-polygon",
+       "learning_objective": "Describe a frequency polygon and its use in comparing frequency distributions."
+      },
+      {
+       "concept_tag": "ogive",
+       "learning_objective": "Construct and interpret less than and more than Ogives from cumulative frequencies."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY3-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Data Processing",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy302.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY3-CH02-T1",
+     "topic_number": 1,
+     "title": "Statistical techniques and measures of central tendency",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "statistical-techniques",
+       "learning_objective": "Distinguish measures of central tendency, dispersion and relationship by what each one describes."
+      },
+      {
+       "concept_tag": "central-tendency-concept",
+       "learning_objective": "Explain why a measure of central tendency is a representative figure for a data set."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH02-T2",
+     "topic_number": 2,
+     "title": "Mean from ungrouped data: direct and indirect methods",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mean-ungrouped-direct",
+       "learning_objective": "Calculate the mean of ungrouped data by the direct method."
+      },
+      {
+       "concept_tag": "mean-ungrouped-indirect",
+       "learning_objective": "Calculate the mean of ungrouped data by coding with an assumed mean."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH02-T3",
+     "topic_number": 3,
+     "title": "Mean from grouped data: direct and indirect methods",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mean-grouped-direct",
+       "learning_objective": "Calculate the mean of a frequency distribution using class midpoints."
+      },
+      {
+       "concept_tag": "mean-grouped-indirect",
+       "learning_objective": "Calculate the mean of grouped data from deviations about an assumed mean group."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH02-T4",
+     "topic_number": 4,
+     "title": "Median for ungrouped and grouped data",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "median-ungrouped",
+       "learning_objective": "Locate the median of an arranged series using the (N+1)/2 th item."
+      },
+      {
+       "concept_tag": "median-grouped",
+       "learning_objective": "Compute the median of grouped data with cumulative frequencies and the median formula."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH02-T5",
+     "topic_number": 5,
+     "title": "Mode for ungrouped data",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mode-ungrouped",
+       "learning_objective": "Identify the mode of an ungrouped series."
+      },
+      {
+       "concept_tag": "modality-types",
+       "learning_objective": "Classify a series as unimodal, bimodal, trimodal, multimodal or without mode."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH02-T6",
+     "topic_number": 6,
+     "title": "Comparison of mean, median and mode",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "normal-distribution",
+       "learning_objective": "Describe the normal curve and the coincidence of mean, median and mode in it."
+      },
+      {
+       "concept_tag": "skewed-distribution",
+       "learning_objective": "Interpret the relative positions of mean, median and mode in skewed distributions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY3-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Graphical Representation of Data",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy303.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY3-CH03-T1",
+     "topic_number": 1,
+     "title": "Representation of data and general rules for drawing graphs, diagrams and maps",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "representation-of-data",
+       "learning_objective": "Explain what representation of data means and why graphic methods aid understanding and comparison."
+      },
+      {
+       "concept_tag": "selection-of-method-and-scale",
+       "learning_objective": "Select a suitable graphical method and scale for a given type of data."
+      },
+      {
+       "concept_tag": "cartographic-design-components",
+       "learning_objective": "Identify the title, legend and direction as components of cartographic design and their usual placement."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH03-T2",
+     "topic_number": 2,
+     "title": "Line graph and polygraph",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "line-graph-construction",
+       "learning_objective": "Construct and interpret a line graph of time series data, including negative values."
+      },
+      {
+       "concept_tag": "polygraph",
+       "learning_objective": "Use a polygraph to compare two or more variables with distinct line patterns."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH03-T3",
+     "topic_number": 3,
+     "title": "Bar diagrams: simple, line and bar, multiple and compound",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "simple-bar-diagram",
+       "learning_objective": "State the rules for constructing a simple bar diagram."
+      },
+      {
+       "concept_tag": "line-and-bar-graph",
+       "learning_objective": "Combine a line graph and a bar diagram to show temperature and rainfall on one diagram."
+      },
+      {
+       "concept_tag": "multiple-and-compound-bar-diagram",
+       "learning_objective": "Distinguish multiple and compound bar diagrams and choose the right one for given data."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH03-T4",
+     "topic_number": 4,
+     "title": "Pie diagram",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pie-angle-calculation",
+       "learning_objective": "Calculate the angles of the sectors of a pie diagram from absolute or percentage data."
+      },
+      {
+       "concept_tag": "pie-diagram-construction",
+       "learning_objective": "Describe the steps and precautions in constructing a pie diagram."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH03-T5",
+     "topic_number": 5,
+     "title": "Flow maps and charts",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "flow-map-features",
+       "learning_objective": "Describe the features of and requirements for a flow map."
+      },
+      {
+       "concept_tag": "flow-map-scale",
+       "learning_objective": "Apply a scale to convert flow data into strips of proportional width."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH03-T6",
+     "topic_number": 6,
+     "title": "Thematic maps: dot maps and choropleth maps",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "thematic-map-classification",
+       "learning_objective": "Distinguish quantitative and non-quantitative thematic maps."
+      },
+      {
+       "concept_tag": "dot-map",
+       "learning_objective": "State the requirements and precautions of a dot map and calculate the number of dots."
+      },
+      {
+       "concept_tag": "choropleth-map",
+       "learning_objective": "Group data into categories and prepare a choropleth map for administrative units."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH03-T7",
+     "topic_number": 7,
+     "title": "Isopleth maps and interpolation",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "isopleth-types",
+       "learning_objective": "Identify types of isopleths and the kind of data they represent."
+      },
+      {
+       "concept_tag": "interpolation",
+       "learning_objective": "Locate the exact point of an isopleth between two stations by interpolation."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY3-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Spatial Information Technology",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy304.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY3-CH04-T1",
+     "topic_number": 1,
+     "title": "Spatial Information Technology and GIS",
+     "ncert_sections": "What is Spatial Information Technology?; What is GIS?; Forms of Geographical Information",
+     "concepts": [
+      {
+       "concept_tag": "spatial-information-technology",
+       "learning_objective": "Explain the meaning of spatial information and the technologies that make up Spatial Information Technology."
+      },
+      {
+       "concept_tag": "gis-definition",
+       "learning_objective": "Define GIS and explain how it goes beyond database management and computer assisted cartography to support decisions."
+      },
+      {
+       "concept_tag": "spatial-non-spatial-data",
+       "learning_objective": "Distinguish spatial data (positional, linear and areal) from non-spatial or attribute data."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH04-T2",
+     "topic_number": 2,
+     "title": "Sources of Spatial Data and Advantages of GIS",
+     "ncert_sections": "Forms of Geographical Information; Advantages of GIS over Manual Methods",
+     "concepts": [
+      {
+       "concept_tag": "spatial-data-sources",
+       "learning_objective": "Identify the ways spatial data are built in a GIS core and the factors governing the choice of a data source."
+      },
+      {
+       "concept_tag": "map-characteristics",
+       "learning_objective": "State the characteristics of topographical and thematic maps that make them a source of spatial data."
+      },
+      {
+       "concept_tag": "gis-advantages",
+       "learning_objective": "Evaluate the advantages of GIS over manual methods of map making and analysis."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH04-T3",
+     "topic_number": 3,
+     "title": "Components of GIS",
+     "ncert_sections": "Components of GIS",
+     "concepts": [
+      {
+       "concept_tag": "gis-components",
+       "learning_objective": "Identify the five components of GIS and the role of each."
+      },
+      {
+       "concept_tag": "gis-software-modules",
+       "learning_objective": "Relate GIS operations to the functional modules of GIS application software."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH04-T4",
+     "topic_number": 4,
+     "title": "Spatial Data Formats: Raster and Vector",
+     "ncert_sections": "Spatial Data Formats; Box 4.2",
+     "concepts": [
+      {
+       "concept_tag": "raster-data-format",
+       "learning_objective": "Describe how raster data represent features as grid cells and how cell size affects resolution."
+      },
+      {
+       "concept_tag": "vector-data-format",
+       "learning_objective": "Describe how vector data represent features through coordinate pairs of points."
+      },
+      {
+       "concept_tag": "raster-vector-comparison",
+       "learning_objective": "Compare the advantages, disadvantages and typical uses of raster and vector formats."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH04-T5",
+     "topic_number": 5,
+     "title": "Sequence of GIS Activities and Spatial Data Input",
+     "ncert_sections": "Sequence of GIS Activities; Spatial Data Input; Scanners",
+     "concepts": [
+      {
+       "concept_tag": "gis-activity-sequence",
+       "learning_objective": "Arrange the activities involved in GIS-related work in their correct sequence."
+      },
+      {
+       "concept_tag": "data-supplier-compatibility",
+       "learning_objective": "Explain the compatibility checks needed when digital data sets from different suppliers are combined."
+      },
+      {
+       "concept_tag": "scanners",
+       "learning_objective": "Explain how scanners convert analogue maps into digital raster images."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH04-T6",
+     "topic_number": 6,
+     "title": "Attribute Data, Verification, Editing and Conversion",
+     "ncert_sections": "Entering the Attribute Data; Data Verification and Editing; Data Conversion",
+     "concepts": [
+      {
+       "concept_tag": "attribute-data",
+       "learning_objective": "Identify attribute data of spatial entities and the sources from which they are entered into GIS."
+      },
+      {
+       "concept_tag": "spatial-data-errors",
+       "learning_objective": "Identify common errors in captured spatial data and the methods used to verify and correct them."
+      },
+      {
+       "concept_tag": "data-conversion",
+       "learning_objective": "Explain why and how data are converted between vector and raster formats."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH04-T7",
+     "topic_number": 7,
+     "title": "Geographic Data: Linkages and Matching",
+     "ncert_sections": "Geographic Data: Linkages and Matching",
+     "concepts": [
+      {
+       "concept_tag": "data-linkage",
+       "learning_objective": "Explain why spatial and attribute data sets must be correctly linked in GIS."
+      },
+      {
+       "concept_tag": "exact-matching",
+       "learning_objective": "Explain exact matching of files through a common key."
+      },
+      {
+       "concept_tag": "hierarchical-fuzzy-matching",
+       "learning_objective": "Distinguish hierarchical matching from fuzzy matching and choose the right one for a given data set."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY3-CH04-T8",
+     "topic_number": 8,
+     "title": "Spatial Analysis: Overlay and Buffer Operations",
+     "ncert_sections": "Spatial Analysis; Overlay Analysis Operations; Buffer Operation",
+     "concepts": [
+      {
+       "concept_tag": "overlay-analysis",
+       "learning_objective": "Explain overlay analysis and its use in studying land use change and urban sprawl."
+      },
+      {
+       "concept_tag": "buffer-analysis",
+       "learning_objective": "Apply buffer operations to proximity analysis of facilities and pollution sources."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "chapter_id": "LEGY2-CH04",
+ "title": "Water Resources",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEGY2-CH04-T1",
+   "topic_number": 1,
+   "title": "Water resources of India and surface water",
+   "ncert_sections": "Water Resources of India; Surface Water Resources",
+   "concepts": [
+    {
+     "concept_tag": "india-water-availability",
+     "learning_objective": "Recall and calculate India's total, available and utilisable water resources."
+    },
+    {
+     "concept_tag": "surface-water-distribution",
+     "learning_objective": "Explain the uneven spatial distribution and limited utilisation of surface water across river basins."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH04-T2",
+   "topic_number": 2,
+   "title": "Groundwater resources, lagoons and backwaters",
+   "ncert_sections": "Groundwater Resources; Lagoons and Backwaters",
+   "concepts": [
+    {
+     "concept_tag": "groundwater-utilisation-pattern",
+     "learning_objective": "Compare the levels of groundwater utilisation among Indian states."
+    },
+    {
+     "concept_tag": "lagoons-backwaters",
+     "learning_objective": "Describe the coastal lagoons and backwaters as a surface water resource and their uses."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH04-T3",
+   "topic_number": 3,
+   "title": "Water demand, utilisation and irrigation",
+   "ncert_sections": "Water Demand and Utilisation; Demand of Water for Irrigation; PMKSY",
+   "concepts": [
+    {
+     "concept_tag": "sectoral-water-utilisation",
+     "learning_objective": "Compare the shares of agriculture, industry and domestic sectors in surface and groundwater use."
+    },
+    {
+     "concept_tag": "irrigation-need",
+     "learning_objective": "Explain why irrigation is needed in India and analyse the effects of its intensive use on groundwater."
+    },
+    {
+     "concept_tag": "pmksy",
+     "learning_objective": "State the vision and objectives of the Pradhan Mantri Krishi Sinchayee Yojana."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH04-T4",
+   "topic_number": 4,
+   "title": "Emerging water problems and prevention of water pollution",
+   "ncert_sections": "Emerging Water Problems; Deterioration of Water Quality; Prevention of Water Pollution",
+   "concepts": [
+    {
+     "concept_tag": "water-quality-deterioration",
+     "learning_objective": "Explain what water quality means and how pollutants deteriorate it."
+    },
+    {
+     "concept_tag": "river-pollution-control",
+     "learning_objective": "Identify severely polluted rivers and evaluate legal and public measures to control water pollution."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH04-T5",
+   "topic_number": 5,
+   "title": "Water conservation, recycling and watershed management",
+   "ncert_sections": "Water Conservation and Management; Recycle and Reuse of Water; Watershed Management",
+   "concepts": [
+    {
+     "concept_tag": "recycle-reuse-water",
+     "learning_objective": "Give examples of how water of lesser quality can be recycled and reused."
+    },
+    {
+     "concept_tag": "watershed-management",
+     "learning_objective": "Explain the meaning and aims of watershed management."
+    },
+    {
+     "concept_tag": "community-watershed-programmes",
+     "learning_objective": "Analyse community-based watershed programmes such as Haryali, Neeru-Meeru and Ralegan Siddhi."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH04-T6",
+   "topic_number": 6,
+   "title": "Rainwater harvesting and national water initiatives",
+   "ncert_sections": "Rainwater Harvesting; National Water Policy 2012; Jal Kranti Abhiyan",
+   "concepts": [
+    {
+     "concept_tag": "rainwater-harvesting",
+     "learning_objective": "Describe methods and benefits of rainwater harvesting."
+    },
+    {
+     "concept_tag": "national-water-policy-2012",
+     "learning_objective": "Interpret the salient features of India's National Water Policy, 2012."
+    },
+    {
+     "concept_tag": "jal-kranti-abhiyan",
+     "learning_objective": "State the aims and proposed activities of the Jal Kranti Abhiyan."
+    }
+   ]
+  }
+ ]
+}

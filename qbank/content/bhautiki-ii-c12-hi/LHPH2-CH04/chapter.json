@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LHPH2-CH04",
+ "title": "परमाणु",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHPH2-CH04-T1",
+   "topic_number": 1,
+   "title": "भूमिका: टॉमसन का परमाणु मॉडल और रेखिल स्पेक्ट्रम",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "thomson-model",
+     "learning_objective": "टॉमसन के प्लम पुडिंग मॉडल में धनावेश और इलेक्ट्रॉनों की व्यवस्था को समझना।"
+    },
+    {
+     "concept_tag": "vishisht-spectrum",
+     "learning_objective": "विरल गैसों से उत्सर्जित विविक्त तरंगदैर्घ्यों और परमाणु की आंतरिक संरचना के संबंध को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH04-T2",
+   "topic_number": 2,
+   "title": "ऐल्फा-कण प्रकीर्णन और रदरफोर्ड का नाभिकीय मॉडल",
+   "ncert_sections": "12.2",
+   "concepts": [
+    {
+     "concept_tag": "geiger-marsden-prayog",
+     "learning_objective": "गाइगर-मार्सडन के ऐल्फा-कण प्रकीर्णन प्रयोग के प्रेक्षणों का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "nabhikiya-model",
+     "learning_objective": "प्रेक्षणों से नाभिक के अत्यंत छोटे आकार और परमाणु के अधिकांश रिक्त होने का निष्कर्ष निकालना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH04-T3",
+   "topic_number": 3,
+   "title": "ऐल्फा-कण का प्रक्षेप-पथ और उपगमन की निकटतम दूरी",
+   "ncert_sections": "12.2.1",
+   "concepts": [
+    {
+     "concept_tag": "sanghatt-prachal",
+     "learning_objective": "संघट्ट प्राचल और प्रकीर्णन कोण के संबंध को समझना।"
+    },
+    {
+     "concept_tag": "nikattam-duri",
+     "learning_objective": "ऊर्जा संरक्षण से उपगमन की निकटतम दूरी की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH04-T4",
+   "topic_number": 4,
+   "title": "रदरफोर्ड मॉडल में इलेक्ट्रॉन कक्षाएँ",
+   "ncert_sections": "12.2.2",
+   "concepts": [
+    {
+     "concept_tag": "kaksha-urja",
+     "learning_objective": "वृत्तीय कक्षा में इलेक्ट्रॉन की गतिज, स्थितिज और कुल ऊर्जा के व्यंजक प्राप्त करना।"
+    },
+    {
+     "concept_tag": "rutherford-seemaen",
+     "learning_objective": "रदरफोर्ड मॉडल के स्थायित्व और सतत स्पेक्ट्रम संबंधी दोषों का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH04-T5",
+   "topic_number": 5,
+   "title": "परमाणवीय स्पेक्ट्रम",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "utsarjan-avshoshan",
+     "learning_objective": "उत्सर्जन रेखा स्पेक्ट्रम और अवशोषण स्पेक्ट्रम में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH04-T6",
+   "topic_number": 6,
+   "title": "हाइड्रोजन परमाणु का बोर मॉडल और ऊर्जा स्तर",
+   "ncert_sections": "12.4, 12.4.1",
+   "concepts": [
+    {
+     "concept_tag": "bohr-abhigrihit",
+     "learning_objective": "बोर के तीन अभिगृहीतों को बताना और लागू करना।"
+    },
+    {
+     "concept_tag": "kaksha-tirjya-veg",
+     "learning_objective": "n वीं कक्षा की त्रिज्या और इलेक्ट्रॉन की चाल की गणना करना।"
+    },
+    {
+     "concept_tag": "urja-star",
+     "learning_objective": "ऊर्जा स्तरों, आयनन ऊर्जा और उत्तेजन ऊर्जा की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH04-T7",
+   "topic_number": 7,
+   "title": "हाइड्रोजन परमाणु के रेखिल स्पेक्ट्रम",
+   "ncert_sections": "12.5",
+   "concepts": [
+    {
+     "concept_tag": "sankraman-photon",
+     "learning_objective": "दो ऊर्जा स्तरों के बीच संक्रमण में उत्सर्जित फ़ोटॉन की आवृत्ति और तरंगदैर्घ्य ज्ञात करना।"
+    },
+    {
+     "concept_tag": "rekhaon-ki-sankhya",
+     "learning_objective": "उत्तेजित अवस्था से संभावित स्पेक्ट्रमी रेखाओं की संख्या का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH04-T8",
+   "topic_number": 8,
+   "title": "बोर के द्वितीय अभिगृहीत की दे ब्रॉग्ली व्याख्या",
+   "ncert_sections": "12.6",
+   "concepts": [
+    {
+     "concept_tag": "apragami-tarang",
+     "learning_objective": "कक्षा की परिधि पर अप्रगामी तरंग की शर्त 2πr = nλ से कोणीय संवेग का क्वांटमीकरण समझाना।"
+    }
+   ]
+  }
+ ]
+}

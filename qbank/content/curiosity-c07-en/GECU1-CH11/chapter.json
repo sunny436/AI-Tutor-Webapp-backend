@@ -1,0 +1,108 @@
+{
+ "chapter_id": "GECU1-CH11",
+ "title": "Light: Shadows and Reflections",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GECU1-CH11-T1",
+   "topic_number": 1,
+   "title": "Sources of Light",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "luminous-and-non-luminous-objects",
+     "learning_objective": "Distinguish luminous objects, which emit their own light, from non-luminous objects such as the Moon, which only reflect light."
+    },
+    {
+     "concept_tag": "natural-and-artificial-light-sources",
+     "learning_objective": "Identify natural sources of light and artificial sources such as fire and electric lamps, including LEDs."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH11-T2",
+   "topic_number": 2,
+   "title": "Does Light Travel in a Straight Line?",
+   "ncert_sections": "11.2",
+   "concepts": [
+    {
+     "concept_tag": "light-travels-in-straight-line",
+     "learning_objective": "Explain how the matchbox, bent-pipe and laser activities show that light travels in a straight line."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH11-T3",
+   "topic_number": 3,
+   "title": "Light through Transparent, Translucent, and Opaque Materials",
+   "ncert_sections": "11.3",
+   "concepts": [
+    {
+     "concept_tag": "transparent-translucent-opaque",
+     "learning_objective": "Classify materials as transparent, translucent or opaque by how much light passes through them."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH11-T4",
+   "topic_number": 4,
+   "title": "Shadow Formation",
+   "ncert_sections": "11.4",
+   "concepts": [
+    {
+     "concept_tag": "conditions-for-shadow",
+     "learning_objective": "State that a shadow forms when an object blocks light, and that a light source, an opaque object and a screen are needed to observe it."
+    },
+    {
+     "concept_tag": "shadow-size-and-position",
+     "learning_objective": "Explain how the size and shape of a shadow change with the position of the object relative to the light source and the screen."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH11-T5",
+   "topic_number": 5,
+   "title": "Reflection of Light",
+   "ncert_sections": "11.5",
+   "concepts": [
+    {
+     "concept_tag": "reflection-of-light",
+     "learning_objective": "Describe reflection as the change in direction of light by a mirror or shiny surface."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH11-T6",
+   "topic_number": 6,
+   "title": "Images Formed in a Plane Mirror",
+   "ncert_sections": "11.6",
+   "concepts": [
+    {
+     "concept_tag": "plane-mirror-image-properties",
+     "learning_objective": "State that a plane mirror image is erect, of the same size as the object and cannot be obtained on a screen."
+    },
+    {
+     "concept_tag": "lateral-inversion",
+     "learning_objective": "Explain lateral inversion and its everyday uses, such as the lettering on an ambulance."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH11-T7",
+   "topic_number": 7,
+   "title": "Pinhole Camera, Periscope and Kaleidoscope",
+   "ncert_sections": "11.7, 11.8",
+   "concepts": [
+    {
+     "concept_tag": "pinhole-camera",
+     "learning_objective": "Explain how a pinhole camera forms an inverted image of an object on a screen."
+    },
+    {
+     "concept_tag": "periscope-and-kaleidoscope",
+     "learning_objective": "Describe how plane mirrors are used in a periscope and a kaleidoscope."
+    }
+   ]
+  }
+ ]
+}

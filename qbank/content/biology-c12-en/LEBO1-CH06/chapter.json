@@ -1,0 +1,156 @@
+{
+ "chapter_id": "LEBO1-CH06",
+ "title": "Evolution",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBO1-CH06-T1",
+   "topic_number": 1,
+   "title": "Origin of Life",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "big-bang-and-early-earth",
+     "learning_objective": "Describe the formation of the universe and the conditions on early earth before life appeared."
+    },
+    {
+     "concept_tag": "spontaneous-generation-and-biogenesis",
+     "learning_objective": "Explain how Pasteur's experiments rejected spontaneous generation and established that life comes from pre-existing life."
+    },
+    {
+     "concept_tag": "chemical-evolution-miller-experiment",
+     "learning_objective": "Explain the Oparin-Haldane hypothesis of chemical evolution and the significance of Miller's experiment."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH06-T2",
+   "topic_number": 2,
+   "title": "Evolution of Life Forms - A Theory",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "special-creation-theory",
+     "learning_objective": "State the three connotations of the theory of special creation and why they were challenged."
+    },
+    {
+     "concept_tag": "natural-selection-and-fitness",
+     "learning_objective": "Explain Darwin's idea of natural selection and fitness as reproductive fitness."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH06-T3",
+   "topic_number": 3,
+   "title": "Evidences for Evolution",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "fossil-and-embryological-evidence",
+     "learning_objective": "Explain paleontological evidence and the embryological argument for evolution and its rejection."
+    },
+    {
+     "concept_tag": "homology-and-analogy",
+     "learning_objective": "Distinguish homologous and analogous structures as results of divergent and convergent evolution."
+    },
+    {
+     "concept_tag": "natural-selection-in-action",
+     "learning_objective": "Interpret industrial melanism and resistance to pesticides and antibiotics as evidence of natural selection."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH06-T4",
+   "topic_number": 4,
+   "title": "Adaptive Radiation",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "adaptive-radiation",
+     "learning_objective": "Define adaptive radiation using Darwin's finches and Australian marsupials as examples."
+    },
+    {
+     "concept_tag": "convergent-evolution-marsupials-placentals",
+     "learning_objective": "Explain how parallel radiations of Australian marsupials and placental mammals illustrate convergent evolution."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH06-T5",
+   "topic_number": 5,
+   "title": "Biological Evolution and Mechanism of Evolution",
+   "ncert_sections": "6.5, 6.6",
+   "concepts": [
+    {
+     "concept_tag": "darwinian-natural-selection",
+     "learning_objective": "Explain branching descent and natural selection, and the observations on which Darwin based them."
+    },
+    {
+     "concept_tag": "lamarckism",
+     "learning_objective": "Describe Lamarck's theory of use and disuse of organs and inheritance of acquired characters."
+    },
+    {
+     "concept_tag": "mutation-theory-de-vries",
+     "learning_objective": "Contrast de Vries' mutation theory (saltation) with Darwinian variation."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH06-T6",
+   "topic_number": 6,
+   "title": "Hardy-Weinberg Principle",
+   "ncert_sections": "6.7",
+   "concepts": [
+    {
+     "concept_tag": "hardy-weinberg-equilibrium",
+     "learning_objective": "Apply the Hardy-Weinberg equation to calculate allele and genotype frequencies."
+    },
+    {
+     "concept_tag": "factors-affecting-equilibrium",
+     "learning_objective": "Identify the factors that disturb Hardy-Weinberg equilibrium, including gene flow, genetic drift and founder effect."
+    },
+    {
+     "concept_tag": "types-of-natural-selection",
+     "learning_objective": "Distinguish stabilising, directional and disruptive selection."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH06-T7",
+   "topic_number": 7,
+   "title": "A Brief Account of Evolution",
+   "ncert_sections": "6.8",
+   "concepts": [
+    {
+     "concept_tag": "evolution-of-vertebrates",
+     "learning_objective": "Trace the sequence from invertebrates and lobefins to amphibians, reptiles and mammals."
+    },
+    {
+     "concept_tag": "mammals-and-continental-drift",
+     "learning_objective": "Explain the rise of mammals and the effect of continental drift on their distribution."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH06-T8",
+   "topic_number": 8,
+   "title": "Origin and Evolution of Man",
+   "ncert_sections": "6.9",
+   "concepts": [
+    {
+     "concept_tag": "early-primates-and-hominids",
+     "learning_objective": "Describe Dryopithecus, Ramapithecus, Australopithecines and Homo habilis."
+    },
+    {
+     "concept_tag": "homo-species-brain-capacity",
+     "learning_objective": "Compare the brain capacities and habits of Homo habilis, Homo erectus and Neanderthal man."
+    },
+    {
+     "concept_tag": "modern-humans-and-culture",
+     "learning_objective": "Outline the rise of modern Homo sapiens, cave art and agriculture."
+    }
+   ]
+  }
+ ]
+}

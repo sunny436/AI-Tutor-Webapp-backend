@@ -1,0 +1,116 @@
+{
+ "chapter_id": "JHSC1-CH03",
+ "title": "धातु एवं अधातु",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSC1-CH03-T1",
+   "topic_number": 1,
+   "title": "धातुओं और अधातुओं के भौतिक गुणधर्म",
+   "ncert_sections": "3.1, 3.1.1, 3.1.2",
+   "concepts": [
+    {
+     "concept_tag": "dhatu-bhautik-gundharm",
+     "learning_objective": "धातुओं के भौतिक गुणधर्मों—चमक, कठोरता, आघातवर्ध्यता, तन्यता, चालकता और ध्वानिकता—को पहचानना और उनका उपयोग समझाना।"
+    },
+    {
+     "concept_tag": "adhatu-bhautik-gundharm-apvad",
+     "learning_objective": "अधातुओं के भौतिक गुणधर्म तथा सामान्य नियमों के अपवादों (मर्करी, ब्रोमीन, आयोडीन, ग्रेफ़ाइट, हीरा, क्षार धातुएँ) की पहचान करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH03-T2",
+   "topic_number": 2,
+   "title": "धातुओं की ऑक्सीजन, जल और अम्लों के साथ अभिक्रियाएँ",
+   "ncert_sections": "3.2, 3.2.1, 3.2.2, 3.2.3",
+   "concepts": [
+    {
+     "concept_tag": "dhatu-oxide-ubhaydharmi",
+     "learning_objective": "धातुओं के दहन से बने क्षारकीय तथा उभयधर्मी ऑक्साइडों को पहचानना।"
+    },
+    {
+     "concept_tag": "dhatu-jal-abhikriya",
+     "learning_objective": "विभिन्न धातुओं की ठंडे जल, गर्म जल और भाप के साथ अभिक्रियाशीलता की तुलना करना।"
+    },
+    {
+     "concept_tag": "dhatu-amla-abhikriya",
+     "learning_objective": "तनु अम्लों के साथ धातुओं की अभिक्रिया तथा नाइट्रिक अम्ल के विशेष व्यवहार को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH03-T3",
+   "topic_number": 3,
+   "title": "विस्थापन अभिक्रियाएँ और सक्रियता श्रेणी",
+   "ncert_sections": "3.2.4, 3.2.5",
+   "concepts": [
+    {
+     "concept_tag": "vistapan-abhikriya",
+     "learning_objective": "लवण विलयनों में धातुओं की विस्थापन अभिक्रियाओं का पूर्वानुमान लगाना।"
+    },
+    {
+     "concept_tag": "sakriyata-shreni",
+     "learning_objective": "प्रेक्षणों से धातुओं को सक्रियता श्रेणी में क्रमबद्ध करना और उससे निष्कर्ष निकालना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH03-T4",
+   "topic_number": 4,
+   "title": "आयनिक यौगिकों का निर्माण और गुणधर्म",
+   "ncert_sections": "3.3, 3.3.1",
+   "concepts": [
+    {
+     "concept_tag": "aayanik-bandh-nirman",
+     "learning_objective": "इलेक्ट्रॉनों के स्थानांतरण द्वारा आयनिक यौगिकों के निर्माण को समझाना।"
+    },
+    {
+     "concept_tag": "aayanik-yaugik-gundharm",
+     "learning_objective": "आयनिक यौगिकों के गलनांक, विलेयता और विद्युत चालकता संबंधी गुणधर्मों का कारण बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH03-T5",
+   "topic_number": 5,
+   "title": "धातुओं की प्राप्ति और निष्कर्षण",
+   "ncert_sections": "3.4, 3.4.1, 3.4.2, 3.4.3, 3.4.4, 3.4.5",
+   "concepts": [
+    {
+     "concept_tag": "khanij-ayask-gang",
+     "learning_objective": "खनिज, अयस्क और गैंग में अंतर करना तथा अयस्क के समृद्धीकरण को समझना।"
+    },
+    {
+     "concept_tag": "bharjan-nistapan-apchayan",
+     "learning_objective": "मध्यम अभिक्रियाशील धातुओं के निष्कर्षण में भर्जन, निस्तापन और अपचयन के चरणों को लागू करना।"
+    },
+    {
+     "concept_tag": "vidyut-apghatan-nishkarshan",
+     "learning_objective": "अत्यधिक अभिक्रियाशील धातुओं को विद्युत अपघटनी अपचयन से प्राप्त करने का कारण समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH03-T6",
+   "topic_number": 6,
+   "title": "धातुओं का परिष्करण, संक्षारण और मिश्रातु",
+   "ncert_sections": "3.4.6, 3.5, 3.5.1",
+   "concepts": [
+    {
+     "concept_tag": "vidyut-apghatani-parishkaran",
+     "learning_objective": "विद्युत अपघटनी परिष्करण में ऐनोड, कैथोड और विद्युत अपघट्य की भूमिका बताना।"
+    },
+    {
+     "concept_tag": "sankshaaran-suraksha",
+     "learning_objective": "लोहे में जंग लगने की परिस्थितियों तथा संक्षारण से बचाव के उपायों का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "mishratu",
+     "learning_objective": "मिश्रातुओं के संघटन और शुद्ध धातु की तुलना में उनके गुणधर्मों को समझना।"
+    }
+   ]
+  }
+ ]
+}

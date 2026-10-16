@@ -1,0 +1,112 @@
+{
+ "chapter_id": "LHMH1-CH03",
+ "title": "आव्यूह",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH1-CH03-T1",
+   "topic_number": 1,
+   "title": "आव्यूह और उसकी कोटि",
+   "ncert_sections": "3.1, 3.2, 3.2.1",
+   "concepts": [
+    {
+     "concept_tag": "avyuh-ki-koti",
+     "learning_objective": "किसी आव्यूह की पंक्तियाँ, स्तंभ और कोटि पहचानना तथा अवयवों की संख्या से संभावित कोटियाँ ज्ञात करना।"
+    },
+    {
+     "concept_tag": "avyuh-ki-rachna",
+     "learning_objective": "दिए गए नियम से आव्यूह के अवयव aᵢⱼ की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH03-T2",
+   "topic_number": 2,
+   "title": "आव्यूहों के प्रकार और आव्यूहों की समानता",
+   "ncert_sections": "3.3, 3.3.1",
+   "concepts": [
+    {
+     "concept_tag": "avyuh-ke-prakar",
+     "learning_objective": "पंक्ति, स्तंभ, वर्ग, विकर्ण, अदिश, तत्समक और शून्य आव्यूहों को पहचानना।"
+    },
+    {
+     "concept_tag": "avyuhon-ki-samanta",
+     "learning_objective": "समान आव्यूहों के संगत अवयवों की तुलना करके अज्ञात मान ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH03-T3",
+   "topic_number": 3,
+   "title": "आव्यूहों का योग और अदिश गुणन",
+   "ncert_sections": "3.4.1, 3.4.2, 3.4.3, 3.4.4",
+   "concepts": [
+    {
+     "concept_tag": "avyuhon-ka-yog",
+     "learning_objective": "समान कोटि के आव्यूहों का योग, अंतर और उनके गुणधर्म लागू करना।"
+    },
+    {
+     "concept_tag": "adish-gunan",
+     "learning_objective": "किसी आव्यूह का अदिश से गुणन करना और आव्यूह समीकरण हल करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH03-T4",
+   "topic_number": 4,
+   "title": "आव्यूहों का गुणन",
+   "ncert_sections": "3.4.5, 3.4.6",
+   "concepts": [
+    {
+     "concept_tag": "gunan-ki-shart",
+     "learning_objective": "आव्यूह गुणन के परिभाषित होने की शर्त और गुणनफल की कोटि बताना।"
+    },
+    {
+     "concept_tag": "gunanfal-ki-ganana",
+     "learning_objective": "दो आव्यूहों का गुणनफल परिकलित करना और उसके गुणधर्मों का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH03-T5",
+   "topic_number": 5,
+   "title": "आव्यूह का परिवर्त",
+   "ncert_sections": "3.5, 3.5.1",
+   "concepts": [
+    {
+     "concept_tag": "parivart-ke-gundharm",
+     "learning_objective": "आव्यूह का परिवर्त ज्ञात करना और परिवर्त के गुणधर्म लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH03-T6",
+   "topic_number": 6,
+   "title": "सममित तथा विषम सममित आव्यूह",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "sammit-avyuh",
+     "learning_objective": "सममित और विषम सममित आव्यूहों की पहचान करना और उनके गुणधर्म परखना।"
+    },
+    {
+     "concept_tag": "sammit-vishamsammit-yog",
+     "learning_objective": "किसी वर्ग आव्यूह को सममित और विषम सममित आव्यूहों के योग के रूप में व्यक्त करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH03-T7",
+   "topic_number": 7,
+   "title": "व्युत्क्रमणीय आव्यूह",
+   "ncert_sections": "3.7",
+   "concepts": [
+    {
+     "concept_tag": "vyutkramniya-avyuh",
+     "learning_objective": "व्युत्क्रम आव्यूह की परिभाषा, अद्वितीयता और गुणधर्म समझना तथा लागू करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "chapter_id": "LHBO1-CH10",
+ "title": "जैव प्रौद्योगिकी एवं उसके उपयोग",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHBO1-CH10-T1",
+   "topic_number": 1,
+   "title": "ऊतक संवर्धन, सूक्ष्मप्रवर्धन तथा कायिक संकरण",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "ootak-samvardhan-sookshmapravardhan",
+     "learning_objective": "पूर्णशक्तता, कर्तोतक, सूक्ष्मप्रवर्धन और कायिक क्लोन की अवधारणाओं को समझाना।"
+    },
+    {
+     "concept_tag": "vishanu-mukt-paudhe-kayik-sankaran",
+     "learning_objective": "विभज्योतक संवर्धन से विषाणुमुक्त पौधे प्राप्त करने तथा जीवद्रव्यक संलयन द्वारा कायिक संकरण को स्पष्ट करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH10-T2",
+   "topic_number": 2,
+   "title": "आनुवंशिकतः रूपांतरित फसलें और बीटी कपास",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "gm-fasalon-ke-labh",
+     "learning_objective": "आनुवंशिकतः रूपांतरित जीवों की परिभाषा तथा GM पौधों के लाभ बताना।"
+    },
+    {
+     "concept_tag": "bt-vish-kriya-vidhi",
+     "learning_objective": "बीटी आविष के निष्क्रिय पूर्वविष से सक्रिय विष बनने और कीट को मारने की क्रिया-विधि समझाना।"
+    },
+    {
+     "concept_tag": "cry-jeen",
+     "learning_objective": "विभिन्न cry जीनों तथा उनके लक्षित पीड़कों के संबंध को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH10-T3",
+   "topic_number": 3,
+   "title": "पीड़क प्रतिरोधी पौधे: RNA अंतरक्षेप",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "rnai-siddhant",
+     "learning_objective": "RNA अंतरक्षेप की प्रक्रिया द्वारा विशिष्ट mRNA के निष्क्रियन को समझाना।"
+    },
+    {
+     "concept_tag": "sutrakrimi-pratirodhi-tambaku",
+     "learning_objective": "तंबाकू में सूत्रकृमि मेलोइडोगाइनी इनकोग्निटा के विरुद्ध पारजीनी प्रतिरोध की रणनीति का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH10-T4",
+   "topic_number": 4,
+   "title": "आनुवंशिकतः निर्मित इंसुलिन",
+   "ncert_sections": "10.2, 10.2.1",
+   "concepts": [
+    {
+     "concept_tag": "punaryogaj-chikitsa-utpad",
+     "learning_objective": "पुनर्योगज चिकित्सीय उत्पादों के लाभ, विशेषकर अवांछित प्रतिरक्षा अनुक्रिया न होने को समझाना।"
+    },
+    {
+     "concept_tag": "insulin-sanrachna-utpadan",
+     "learning_objective": "इंसुलिन की संरचना, प्राक्-हॉर्मोन के परिपक्वन तथा A और B शृंखलाओं के अलग-अलग उत्पादन की विधि बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH10-T5",
+   "topic_number": 5,
+   "title": "जीन चिकित्सा",
+   "ncert_sections": "10.2.2",
+   "concepts": [
+    {
+     "concept_tag": "jeen-chikitsa-ada",
+     "learning_objective": "एडिनोसीन डिएमीनेज (ADA) की कमी के उपचार में जीन चिकित्सा के चरणों और सीमाओं को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH10-T6",
+   "topic_number": 6,
+   "title": "आण्विक निदान",
+   "ncert_sections": "10.2.3",
+   "concepts": [
+    {
+     "concept_tag": "pcr-dwara-shighra-nidan",
+     "learning_objective": "रोगजनक की अल्प मात्रा का शीघ्र पता लगाने में PCR की भूमिका स्पष्ट करना।"
+    },
+    {
+     "concept_tag": "probe-evam-elisa",
+     "learning_objective": "रेडियोधर्मी प्रोब द्वारा उत्परिवर्ती जीन की पहचान तथा ELISA के प्रतिजन-प्रतिरक्षी सिद्धांत को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH10-T7",
+   "topic_number": 7,
+   "title": "पारजीनी जंतु",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "parjeeni-jantu-paribhasha",
+     "learning_objective": "पारजीनी जंतुओं की परिभाषा तथा उनके उदाहरण पहचानना।"
+    },
+    {
+     "concept_tag": "parjeeni-jantu-upyog",
+     "learning_objective": "सामान्य शरीर क्रिया, रोग अध्ययन, जैविक उत्पाद, टीका तथा रसायन सुरक्षा परीक्षण में पारजीनी जंतुओं के उपयोग बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH10-T8",
+   "topic_number": 8,
+   "title": "नैतिक मुद्दे, पेटेंट और जैव दस्युता",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "geac-naitik-mudde",
+     "learning_objective": "GM अनुसंधान के नियमन में GEAC की भूमिका तथा नैतिक मुद्दों को समझाना।"
+    },
+    {
+     "concept_tag": "jaiv-dasyuta-patent",
+     "learning_objective": "जैव दस्युता की परिभाषा तथा बासमती चावल पेटेंट के उदाहरण का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

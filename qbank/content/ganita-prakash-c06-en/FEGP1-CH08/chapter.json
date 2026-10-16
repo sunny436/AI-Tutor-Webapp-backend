@@ -1,0 +1,120 @@
+{
+ "chapter_id": "FEGP1-CH08",
+ "title": "Playing with Constructions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FEGP1-CH08-T1",
+   "topic_number": 1,
+   "title": "Circles and the compass in artwork",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "circle-centre-and-radius",
+     "learning_objective": "Describe a circle as all points at the same distance (radius) from its centre."
+    },
+    {
+     "concept_tag": "compass-artwork-curves",
+     "learning_objective": "Use a compass with a fixed radius to draw circles and half circles in artwork such as the wavy wave."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH08-T2",
+   "topic_number": 2,
+   "title": "Squares and rectangles: properties and names",
+   "ncert_sections": "8.2",
+   "concepts": [
+    {
+     "concept_tag": "rectangle-and-square-properties",
+     "learning_objective": "State the two defining properties of a rectangle and of a square."
+    },
+    {
+     "concept_tag": "naming-by-order-of-corners",
+     "learning_objective": "Name a rectangle or square by listing its corners in an order of travel around it."
+    },
+    {
+     "concept_tag": "rotated-squares-and-rectangles",
+     "learning_objective": "Explain why a rotated square or rectangle keeps its properties, including on a dot grid."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH08-T3",
+   "topic_number": 3,
+   "title": "Constructing squares and rectangles",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "square-construction-steps",
+     "learning_objective": "Construct a square of given side using a ruler, perpendiculars and a compass."
+    },
+    {
+     "concept_tag": "rectangle-construction",
+     "learning_objective": "Construct a rectangle of given sides and check that it satisfies the rectangle properties."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH08-T4",
+   "topic_number": 4,
+   "title": "An exploration in rectangles",
+   "ncert_sections": "8.4",
+   "concepts": [
+    {
+     "concept_tag": "moving-points-distance",
+     "learning_objective": "Investigate how the distance between points moving on opposite sides of a rectangle changes."
+    },
+    {
+     "concept_tag": "rectangles-of-identical-squares",
+     "learning_objective": "Plan with a rough diagram and construct rectangles that divide into identical squares."
+    },
+    {
+     "concept_tag": "centred-square-in-rectangle",
+     "learning_objective": "Use side lengths to place a square inside a rectangle with the same centre."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH08-T5",
+   "topic_number": 5,
+   "title": "Diagonals of rectangles and squares",
+   "ncert_sections": "8.5",
+   "concepts": [
+    {
+     "concept_tag": "diagonal-properties",
+     "learning_objective": "Compare the diagonals of a rectangle and the angles into which a diagonal divides its corners."
+    },
+    {
+     "concept_tag": "rectangle-from-diagonal-angle",
+     "learning_objective": "Construct a rectangle when a diagonal divides its opposite angles into given parts."
+    },
+    {
+     "concept_tag": "rectangle-from-side-and-diagonal",
+     "learning_objective": "Construct a rectangle from one side and a diagonal using an arc to locate a corner."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH08-T6",
+   "topic_number": 6,
+   "title": "Points equidistant from two given points",
+   "ncert_sections": "8.6",
+   "concepts": [
+    {
+     "concept_tag": "intersecting-arcs",
+     "learning_objective": "Locate a point at given distances from two points by drawing intersecting arcs."
+    },
+    {
+     "concept_tag": "house-construction-sequence",
+     "learning_objective": "Plan the order of steps in a construction such as the House figure."
+    },
+    {
+     "concept_tag": "equal-sided-non-square",
+     "learning_objective": "Construct a 4-sided figure with all sides equal that is not a square."
+    }
+   ]
+  }
+ ]
+}

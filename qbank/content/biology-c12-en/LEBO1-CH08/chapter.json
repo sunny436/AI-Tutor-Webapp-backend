@@ -1,0 +1,140 @@
+{
+ "chapter_id": "LEBO1-CH08",
+ "title": "Microbes in Human Welfare",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBO1-CH08-T1",
+   "topic_number": 1,
+   "title": "Microbes in household products",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "lactic-acid-bacteria-curd",
+     "learning_objective": "Explain how lactic acid bacteria convert milk into curd and improve its nutritional value."
+    },
+    {
+     "concept_tag": "fermented-dough-and-foods",
+     "learning_objective": "Describe the role of microbes in fermenting dough and traditional foods and drinks."
+    },
+    {
+     "concept_tag": "cheese-microbes",
+     "learning_objective": "Relate the texture and flavour of different cheeses to the specific microbes used."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH08-T2",
+   "topic_number": 2,
+   "title": "Fermented beverages and antibiotics",
+   "ncert_sections": "8.2, 8.2.1, 8.2.2",
+   "concepts": [
+    {
+     "concept_tag": "fermented-beverages",
+     "learning_objective": "Describe the use of brewer's yeast in producing distilled and undistilled alcoholic beverages."
+    },
+    {
+     "concept_tag": "antibiotics-discovery",
+     "learning_objective": "Explain what antibiotics are and outline the discovery and development of penicillin."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH08-T3",
+   "topic_number": 3,
+   "title": "Chemicals, enzymes and other bioactive molecules",
+   "ncert_sections": "8.2.3",
+   "concepts": [
+    {
+     "concept_tag": "organic-acid-producers",
+     "learning_objective": "Identify the microbes used for commercial production of organic acids and ethanol."
+    },
+    {
+     "concept_tag": "industrial-enzymes",
+     "learning_objective": "State the uses of microbial enzymes such as lipases, pectinases, proteases and streptokinase."
+    },
+    {
+     "concept_tag": "bioactive-molecules",
+     "learning_objective": "Describe the sources and uses of cyclosporin A and statins."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH08-T4",
+   "topic_number": 4,
+   "title": "Microbes in sewage treatment",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "primary-treatment",
+     "learning_objective": "Describe the physical steps of primary sewage treatment."
+    },
+    {
+     "concept_tag": "secondary-treatment-bod",
+     "learning_objective": "Explain biological secondary treatment and interpret BOD as a measure of organic pollution."
+    },
+    {
+     "concept_tag": "activated-sludge-digestion",
+     "learning_objective": "Explain the fate of activated sludge and the role of anaerobic sludge digesters."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH08-T5",
+   "topic_number": 5,
+   "title": "Microbes in production of biogas",
+   "ncert_sections": "8.4",
+   "concepts": [
+    {
+     "concept_tag": "methanogens",
+     "learning_objective": "Explain the role of methanogens in producing methane from cellulosic material."
+    },
+    {
+     "concept_tag": "biogas-plant",
+     "learning_objective": "Describe the structure and working of a gobar gas plant."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH08-T6",
+   "topic_number": 6,
+   "title": "Microbes as biocontrol agents",
+   "ncert_sections": "8.5",
+   "concepts": [
+    {
+     "concept_tag": "biocontrol-organic-farming",
+     "learning_objective": "Explain the principle of biological pest control in organic farming."
+    },
+    {
+     "concept_tag": "bacillus-thuringiensis",
+     "learning_objective": "Explain how Bacillus thuringiensis is used to control caterpillars."
+    },
+    {
+     "concept_tag": "trichoderma-baculoviruses",
+     "learning_objective": "Describe Trichoderma and baculoviruses as specific biocontrol agents."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH08-T7",
+   "topic_number": 7,
+   "title": "Microbes as biofertilisers",
+   "ncert_sections": "8.6",
+   "concepts": [
+    {
+     "concept_tag": "nitrogen-fixing-bacteria",
+     "learning_objective": "Distinguish between symbiotic and free-living nitrogen-fixing bacteria used as biofertilisers."
+    },
+    {
+     "concept_tag": "mycorrhiza",
+     "learning_objective": "Explain the benefits of mycorrhizal associations to plants."
+    },
+    {
+     "concept_tag": "cyanobacteria-biofertiliser",
+     "learning_objective": "Describe the role of cyanobacteria as biofertilisers in paddy fields."
+    }
+   ]
+  }
+ ]
+}

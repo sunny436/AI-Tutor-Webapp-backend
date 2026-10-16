@@ -1,0 +1,152 @@
+{
+ "chapter_id": "GEES2-CH08",
+ "title": "Banks and the Magic of Finance",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEES2-CH08-T1",
+   "topic_number": 1,
+   "title": "Financial infrastructure and what banks do",
+   "ncert_sections": "Introduction; What are banks and what do they do?",
+   "concepts": [
+    {
+     "concept_tag": "financial-infrastructure-meaning",
+     "learning_objective": "Explain what financial infrastructure is and how it supports physical infrastructure."
+    },
+    {
+     "concept_tag": "banks-as-intermediaries",
+     "learning_objective": "Describe how a bank links savers who deposit money with borrowers who need loans."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES2-CH08-T2",
+   "topic_number": 2,
+   "title": "Holding deposits: types of bank accounts and the passbook",
+   "ncert_sections": "Hold deposits; Types of bank accounts (Fig. 8.4); Passbook",
+   "concepts": [
+    {
+     "concept_tag": "types-of-bank-accounts",
+     "learning_objective": "Distinguish between savings, current and fixed deposit accounts."
+    },
+    {
+     "concept_tag": "passbook-debit-credit",
+     "learning_objective": "Interpret debit and credit entries recorded in a bank passbook."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES2-CH08-T3",
+   "topic_number": 3,
+   "title": "Interest and the magic of compounding",
+   "ncert_sections": "Interest on deposits; The Magic of Compounding - the story of a King and a Sage",
+   "concepts": [
+    {
+     "concept_tag": "interest-meaning",
+     "learning_objective": "Define interest as the cost of borrowing or the gain from lending money."
+    },
+    {
+     "concept_tag": "compound-interest-calculation",
+     "learning_objective": "Calculate how a deposit grows when interest is earned on earlier interest."
+    },
+    {
+     "concept_tag": "exponential-growth-story",
+     "learning_objective": "Use the king and sage chessboard story to explain exponential growth."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES2-CH08-T4",
+   "topic_number": 4,
+   "title": "Loans, how banks earn, and the Jan Dhan Yojana",
+   "ncert_sections": "Offer loans or credit; Don't miss out; Jan Dhan Yojana",
+   "concepts": [
+    {
+     "concept_tag": "bank-loans",
+     "learning_objective": "Identify the purposes for which people and businesses take bank loans."
+    },
+    {
+     "concept_tag": "interest-rate-spread",
+     "learning_objective": "Explain how the gap between deposit and loan interest rates gives banks income."
+    },
+    {
+     "concept_tag": "jan-dhan-financial-inclusion",
+     "learning_objective": "Describe how the Pradhan Mantri Jan Dhan Yojana widened access to banking."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES2-CH08-T5",
+   "topic_number": 5,
+   "title": "Other financial institutions and the Reserve Bank of India",
+   "ncert_sections": "Other Financial Institutions; Reserve Bank of India - Banker to Banks; Temples as lenders",
+   "concepts": [
+    {
+     "concept_tag": "post-office-and-specialised-institutions",
+     "learning_objective": "Identify the financial roles of post offices, NABARD and the Industrial Finance Corporation of India."
+    },
+    {
+     "concept_tag": "rbi-central-bank",
+     "learning_objective": "State the functions of the RBI as India's central bank and banker to banks."
+    },
+    {
+     "concept_tag": "temples-as-ancient-banks",
+     "learning_objective": "Compare the lending role of temples in ancient India with modern banks."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES2-CH08-T6",
+   "topic_number": 6,
+   "title": "Payment modes and systems",
+   "ncert_sections": "Payment Modes and Systems; Cheque; Debit cards and POS; Internet banking; Mobile payments; UPI",
+   "concepts": [
+    {
+     "concept_tag": "cash-withdrawal-and-atm",
+     "learning_objective": "Describe how cash is withdrawn using a withdrawal slip or a debit card at an ATM."
+    },
+    {
+     "concept_tag": "cheque-and-electronic-payments",
+     "learning_objective": "Compare cheques with electronic payment methods such as POS machines and internet banking."
+    },
+    {
+     "concept_tag": "upi-payment-system",
+     "learning_objective": "Explain the steps of a UPI transaction and why UPI became popular."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES2-CH08-T7",
+   "topic_number": 7,
+   "title": "Stock market",
+   "ncert_sections": "Stock Market",
+   "concepts": [
+    {
+     "concept_tag": "shares-and-stock-exchange",
+     "learning_objective": "Explain what a share is and why companies issue shares on a stock exchange."
+    },
+    {
+     "concept_tag": "share-price-fluctuations",
+     "learning_objective": "Analyse the factors that cause share prices to rise and fall, leading to booms and crashes."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES2-CH08-T8",
+   "topic_number": 8,
+   "title": "Financial frauds and the role of financial infrastructure",
+   "ncert_sections": "Financial frauds and how to prevent them; Before we move on",
+   "concepts": [
+    {
+     "concept_tag": "digital-fraud-prevention",
+     "learning_objective": "Apply safety practices to avoid and report digital payment frauds."
+    },
+    {
+     "concept_tag": "financial-infrastructure-and-progress",
+     "learning_objective": "Evaluate how financial infrastructure contributes to a nation's progress."
+    }
+   ]
+  }
+ ]
+}

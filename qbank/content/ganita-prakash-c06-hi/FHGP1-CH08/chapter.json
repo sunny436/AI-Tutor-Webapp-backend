@@ -1,0 +1,104 @@
+{
+ "chapter_id": "FHGP1-CH08",
+ "title": "रचनाओं के साथ खेलना",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHGP1-CH08-T1",
+   "topic_number": 1,
+   "title": "कलाकृति: परकार और वृत्त",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "vritt-kendra-trijya",
+     "learning_objective": "वृत्त को केंद्र से समान दूरी पर स्थित बिंदुओं के समूह के रूप में पहचानना तथा केंद्र और त्रिज्या को परिभाषित करना।"
+    },
+    {
+     "concept_tag": "parkar-se-chaap-aur-ardhvritt",
+     "learning_objective": "परकार की सहायता से चाप, अर्धवृत्त और लहरों जैसी कलाकृतियाँ बनाने के लिए सही त्रिज्या और केंद्र चुनना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH08-T2",
+   "topic_number": 2,
+   "title": "वर्ग और आयत",
+   "ncert_sections": "8.2",
+   "concepts": [
+    {
+     "concept_tag": "aayat-aur-varg-ke-gun",
+     "learning_objective": "आयत के गुण (सम्मुख भुजाएँ बराबर, सभी कोण 90°) और वर्ग के गुण (सभी भुजाएँ बराबर, सभी कोण 90°) बताना।"
+    },
+    {
+     "concept_tag": "aayat-ka-namkaran",
+     "learning_objective": "शीर्षों के क्रम के आधार पर आयत या वर्ग के मान्य और अमान्य नामों में अंतर करना।"
+    },
+    {
+     "concept_tag": "ghumaye-gaye-varg-aur-aayat",
+     "learning_objective": "समझाना कि घुमाने पर वर्ग या आयत की भुजाओं की लंबाई और कोण नहीं बदलते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH08-T3",
+   "topic_number": 3,
+   "title": "वर्ग और आयत की रचना",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "varg-aur-aayat-ki-rachna",
+     "learning_objective": "दी गई भुजाओं से रूलर, परकार और लंब रेखाओं की सहायता से वर्ग और आयत की रचना के चरण क्रम से लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH08-T4",
+   "topic_number": 4,
+   "title": "आयतों में एक खोज",
+   "ncert_sections": "8.4",
+   "concepts": [
+    {
+     "concept_tag": "aayat-mein-bindu-ki-doori",
+     "learning_objective": "आयत की सम्मुख भुजाओं पर चलते बिंदुओं X और Y की न्यूनतम और अधिकतम दूरी की तुलना भुजा और विकर्ण से करना।"
+    },
+    {
+     "concept_tag": "aayat-ko-samroop-vargon-mein-baantna",
+     "learning_objective": "रफ आकृति की सहायता से ऐसे आयत की योजना बनाना जिसे दो या तीन समरूप वर्गों में बाँटा जा सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH08-T5",
+   "topic_number": 5,
+   "title": "आयतों और वर्गों के विकर्ण",
+   "ncert_sections": "8.5",
+   "concepts": [
+    {
+     "concept_tag": "vikarn-aur-sammukh-kon",
+     "learning_objective": "पहचानना कि विकर्ण सम्मुख कोणों को कैसे बाँटते हैं और वर्ग में ये भाग 45° के बराबर क्यों होते हैं।"
+    },
+    {
+     "concept_tag": "bhuja-aur-vikarn-se-aayat-ki-rachna",
+     "learning_objective": "एक भुजा और विकर्ण दिए होने पर लंब रेखा और चाप की सहायता से आयत की रचना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH08-T6",
+   "topic_number": 6,
+   "title": "दो दिए हुए बिंदुओं से समदूरस्थ बिंदु",
+   "ncert_sections": "8.6",
+   "concepts": [
+    {
+     "concept_tag": "samdoorasth-bindu-chaapon-se",
+     "learning_objective": "दो बिंदुओं से दी गई दूरी वाला बिंदु दोनों बिंदुओं को केंद्र मानकर खींचे गए चापों के प्रतिच्छेद से ज्ञात करना।"
+    },
+    {
+     "concept_tag": "ghar-aur-samchaturbhuj-ki-rachna",
+     "learning_objective": "समदूरस्थ बिंदु की विधि से 'घर' की आकृति और ऐसी चार समान भुजाओं वाली आकृति बनाना जो वर्ग न हो।"
+    }
+   ]
+  }
+ ]
+}

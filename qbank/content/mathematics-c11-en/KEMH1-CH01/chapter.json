@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KEMH1-CH01",
+ "title": "Sets",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH01-T1",
+   "topic_number": 1,
+   "title": "Sets and their representations",
+   "ncert_sections": "1.1, 1.2",
+   "concepts": [
+    {
+     "concept_tag": "well-defined-collection",
+     "learning_objective": "Identify whether a collection of objects is well defined and hence forms a set."
+    },
+    {
+     "concept_tag": "roster-and-set-builder-form",
+     "learning_objective": "Write a set in roster form and in set-builder form and convert between the two."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH01-T2",
+   "topic_number": 2,
+   "title": "Empty, finite, infinite and equal sets",
+   "ncert_sections": "1.3, 1.4, 1.5",
+   "concepts": [
+    {
+     "concept_tag": "empty-set",
+     "learning_objective": "Recognise the empty set and distinguish it from sets such as {0}."
+    },
+    {
+     "concept_tag": "finite-and-infinite-sets",
+     "learning_objective": "Classify a given set as finite or infinite."
+    },
+    {
+     "concept_tag": "equal-sets",
+     "learning_objective": "Decide whether two sets are equal by comparing their elements."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH01-T3",
+   "topic_number": 3,
+   "title": "Subsets and intervals",
+   "ncert_sections": "1.6",
+   "concepts": [
+    {
+     "concept_tag": "subsets",
+     "learning_objective": "Use the subset relation correctly and distinguish it from membership of an element."
+    },
+    {
+     "concept_tag": "intervals",
+     "learning_objective": "Express subsets of R as open, closed and half-open intervals and in set-builder form."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH01-T4",
+   "topic_number": 4,
+   "title": "Universal set and Venn diagrams",
+   "ncert_sections": "1.7, 1.8",
+   "concepts": [
+    {
+     "concept_tag": "universal-set",
+     "learning_objective": "Choose a suitable universal set for a given collection of sets."
+    },
+    {
+     "concept_tag": "venn-diagrams",
+     "learning_objective": "Represent the universal set and its subsets with Venn diagrams."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH01-T5",
+   "topic_number": 5,
+   "title": "Operations on sets",
+   "ncert_sections": "1.9",
+   "concepts": [
+    {
+     "concept_tag": "union-and-intersection",
+     "learning_objective": "Find the union and intersection of sets and use their basic properties."
+    },
+    {
+     "concept_tag": "difference-and-disjoint-sets",
+     "learning_objective": "Find the difference of two sets and identify disjoint sets."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH01-T6",
+   "topic_number": 6,
+   "title": "Complement of a set",
+   "ncert_sections": "1.10",
+   "concepts": [
+    {
+     "concept_tag": "complement",
+     "learning_objective": "Find the complement of a set with respect to a universal set and apply the complement laws."
+    },
+    {
+     "concept_tag": "de-morgans-laws",
+     "learning_objective": "Apply De Morgan's laws to complements of unions and intersections."
+    }
+   ]
+  }
+ ]
+}

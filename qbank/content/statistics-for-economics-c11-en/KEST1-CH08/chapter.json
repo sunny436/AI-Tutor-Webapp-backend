@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KEST1-CH08",
+ "title": "Use of Statistical Tools",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEST1-CH08-T1",
+   "topic_number": 1,
+   "title": "Introduction: identifying the problem and the target group",
+   "ncert_sections": "1; Steps towards making a project (identifying a problem, choice of target group)",
+   "concepts": [
+    {
+     "concept_tag": "identifying-the-problem",
+     "learning_objective": "Explain why a project must begin with a clearly identified problem or area of study."
+    },
+    {
+     "concept_tag": "choice-of-target-group",
+     "learning_objective": "Choose a suitable target group for a project and explain its role in framing questions."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH08-T2",
+   "topic_number": 2,
+   "title": "Collection of data for a project",
+   "ncert_sections": "Steps towards making a project (collection of data)",
+   "concepts": [
+    {
+     "concept_tag": "primary-or-secondary-data",
+     "learning_objective": "Decide, from the objective of the survey, whether primary data, secondary data or both are needed."
+    },
+    {
+     "concept_tag": "questionnaire-and-sampling",
+     "learning_objective": "State the requirements of a postal questionnaire and of a suitable sampling method."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH08-T3",
+   "topic_number": 3,
+   "title": "Organisation, analysis, conclusion and bibliography",
+   "ncert_sections": "Steps towards making a project (organisation and presentation, analysis and interpretation, conclusion, bibliography)",
+   "concepts": [
+    {
+     "concept_tag": "organisation-and-presentation",
+     "learning_objective": "Identify tabulation and diagrams as the tools for organising and presenting collected data."
+    },
+    {
+     "concept_tag": "statistical-analysis-tools",
+     "learning_objective": "Select the measure of central tendency, dispersion or correlation suited to a given analytical need."
+    },
+    {
+     "concept_tag": "conclusion-and-bibliography",
+     "learning_objective": "Describe the role of the conclusion and the bibliography in a project report."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH08-T4",
+   "topic_number": 4,
+   "title": "Suggested list of projects",
+   "ncert_sections": "2",
+   "concepts": [
+    {
+     "concept_tag": "choosing-a-project-topic",
+     "learning_objective": "Recognise that a project may take up any topic dealing with an economic issue."
+    },
+    {
+     "concept_tag": "planning-data-for-a-project",
+     "learning_objective": "Identify the data needed for a suggested project such as a savings survey or a loan proposal."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH08-T5",
+   "topic_number": 5,
+   "title": "Sample project: information needs and the questionnaire",
+   "ncert_sections": "3 (sample project, example of questionnaire)",
+   "concepts": [
+    {
+     "concept_tag": "information-requirements",
+     "learning_objective": "List the information the toothpaste project needs and relate it to the study's objective."
+    },
+    {
+     "concept_tag": "questionnaire-design",
+     "learning_objective": "Explain how the questionnaire is designed to generate the required information."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH08-T6",
+   "topic_number": 6,
+   "title": "Sample project: data analysis, interpretation and concluding note",
+   "ncert_sections": "3 (data analysis and interpretation, simplified project report)",
+   "concepts": [
+    {
+     "concept_tag": "step-deviation-mean-and-sd",
+     "learning_objective": "Calculate the mean and standard deviation of a grouped distribution by the step-deviation method."
+    },
+    {
+     "concept_tag": "interpreting-observations",
+     "learning_objective": "Interpret the tables of the sample report to draw observations."
+    },
+    {
+     "concept_tag": "concluding-note",
+     "learning_objective": "Summarise the main findings stated in the concluding note of the sample report."
+    }
+   ]
+  }
+ ]
+}

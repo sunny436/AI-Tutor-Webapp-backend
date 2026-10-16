@@ -1,0 +1,88 @@
+{
+ "chapter_id": "KHCH2-CH01",
+ "title": "अपचयोपचय अभिक्रियाएँ",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHCH2-CH01-T1",
+   "topic_number": 1,
+   "title": "ऑक्सीकरण एवं अपचयन की चिरप्रतिष्ठित अवधारणा",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "oxikaran-shastriya-avdharna",
+     "learning_objective": "ऑक्सीजन या विद्युतऋणी तत्व के योग अथवा हाइड्रोजन या विद्युतधनी तत्व के निष्कासन के आधार पर ऑक्सीकरण पहचानना।"
+    },
+    {
+     "concept_tag": "apchayan-shastriya-avdharna",
+     "learning_objective": "ऑक्सीजन या विद्युतऋणी तत्व के निष्कासन अथवा हाइड्रोजन या विद्युतधनी तत्व के योग के आधार पर अपचयन पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH01-T2",
+   "topic_number": 2,
+   "title": "इलेक्ट्रॉन स्थानांतरण के रूप में अपचयोपचय अभिक्रियाएँ",
+   "ncert_sections": "7.2, 7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "electron-sthanantaran",
+     "learning_objective": "ऑक्सीकरण को इलेक्ट्रॉन त्याग और अपचयन को इलेक्ट्रॉन ग्रहण के रूप में समझाना।"
+    },
+    {
+     "concept_tag": "pratiyogi-electron-sthanantaran",
+     "learning_objective": "धातुओं की प्रतियोगी इलेक्ट्रॉन स्थानांतरण क्षमता की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH01-T3",
+   "topic_number": 3,
+   "title": "ऑक्सीकरण संख्या एवं अपचयोपचय अभिक्रियाओं के प्रकार",
+   "ncert_sections": "7.3, 7.3.1",
+   "concepts": [
+    {
+     "concept_tag": "oxikaran-sankhya",
+     "learning_objective": "यौगिकों और आयनों में तत्वों की ऑक्सीकरण संख्या ज्ञात करना।"
+    },
+    {
+     "concept_tag": "apchayopchay-prakar",
+     "learning_objective": "संयोजन, अपघटन, विस्थापन और असमानुपातन अभिक्रियाओं में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH01-T4",
+   "topic_number": 4,
+   "title": "अपचयोपचय अभिक्रियाओं का संतुलन एवं अनुमापन",
+   "ncert_sections": "7.3.2, 7.3.3, 7.3.4",
+   "concepts": [
+    {
+     "concept_tag": "ardh-abhikriya-santulan",
+     "learning_objective": "अर्ध-अभिक्रिया विधि से अम्लीय माध्यम में अपचयोपचय समीकरण संतुलित करना।"
+    },
+    {
+     "concept_tag": "apchayopchay-anumapan",
+     "learning_objective": "अपचयोपचय अनुमापन में सूचक और मात्रात्मक गणना को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH01-T5",
+   "topic_number": 5,
+   "title": "अपचयोपचय अभिक्रियाएँ एवं इलेक्ट्रोड प्रक्रम",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "galvani-sel",
+     "learning_objective": "गैल्वेनी सेल में ऐनोड और कैथोड पर होने वाले प्रक्रमों को समझाना।"
+    },
+    {
+     "concept_tag": "manak-electrode-vibhav",
+     "learning_objective": "मानक इलेक्ट्रोड विभव के आधार पर ऑक्सीकारक और अपचायक क्षमता की तुलना करना।"
+    }
+   ]
+  }
+ ]
+}

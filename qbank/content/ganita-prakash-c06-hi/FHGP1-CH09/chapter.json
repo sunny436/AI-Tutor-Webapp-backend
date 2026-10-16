@@ -1,0 +1,120 @@
+{
+ "chapter_id": "FHGP1-CH09",
+ "title": "सममिति",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHGP1-CH09-T1",
+   "topic_number": 1,
+   "title": "सममिति का परिचय: दोहराए जाने वाले पैटर्न",
+   "ncert_sections": "प्रारंभिक भाग",
+   "concepts": [
+    {
+     "concept_tag": "sammiti-ka-arth",
+     "learning_objective": "विद्यार्थी समझेंगे कि किसी आकृति के भागों का एक निश्चित पैटर्न में दोहराव सममिति कहलाता है।"
+    },
+    {
+     "concept_tag": "sammit-asammit-pahchan",
+     "learning_objective": "विद्यार्थी अपने परिवेश की सममित और असममित आकृतियों को पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH09-T2",
+   "topic_number": 2,
+   "title": "सममिति की रेखा",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "sammiti-rekha-paribhasha",
+     "learning_objective": "विद्यार्थी मोड़ने पर दोनों भागों के पूर्णतया ढकने के आधार पर सममिति की रेखा पहचानेंगे।"
+    },
+    {
+     "concept_tag": "anek-sammiti-rekhaen",
+     "learning_objective": "विद्यार्थी वर्ग, आयत, त्रिभुज और षट्भुज जैसी आकृतियों की सममिति रेखाओं की संख्या ज्ञात करेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH09-T3",
+   "topic_number": 3,
+   "title": "परावर्तन और परावर्तीय सममिति",
+   "ncert_sections": "9.1 (प्रतिबिंब)",
+   "concepts": [
+    {
+     "concept_tag": "paravartan-bindu",
+     "learning_objective": "विद्यार्थी सममिति रेखा में परावर्तन के बाद आकृति के बिंदुओं की नई स्थितियाँ बता सकेंगे।"
+    },
+    {
+     "concept_tag": "paravartiya-sammiti",
+     "learning_objective": "विद्यार्थी समझेंगे कि सममिति रेखा वाली आकृति को परावर्तीय सममिति वाली आकृति भी कहते हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH09-T4",
+   "topic_number": 4,
+   "title": "सममिति की रेखाओं वाले आकार बनाना",
+   "ncert_sections": "9.1 (इंक-ब्लॉट, मोड़ना-काटना, पंचिंग खेल)",
+   "concepts": [
+    {
+     "concept_tag": "mod-kar-sammit-aakar",
+     "learning_objective": "विद्यार्थी स्याही के धब्बे और कागज मोड़कर काटने से सममित आकार बनाने की विधि समझेंगे।"
+    },
+    {
+     "concept_tag": "panching-chhed-anuman",
+     "learning_objective": "विद्यार्थी मुड़े कागज में किए गए छेदों से खुलने पर बनने वाले सममित पैटर्न का अनुमान लगाएँगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH09-T5",
+   "topic_number": 5,
+   "title": "घूर्णन सममिति और सममिति के कोण",
+   "ncert_sections": "9.2",
+   "concepts": [
+    {
+     "concept_tag": "ghurnan-kendra",
+     "learning_objective": "विद्यार्थी घूर्णन सममिति और घूर्णन के केंद्र का अर्थ समझेंगे।"
+    },
+    {
+     "concept_tag": "sammiti-ke-kon",
+     "learning_objective": "विद्यार्थी पवन-चक्की, वर्ग और पट्टी जैसी आकृतियों के सममिति के कोण ज्ञात करेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH09-T6",
+   "topic_number": 6,
+   "title": "किरण-संबंधी भुजाओं वाली आकृतियाँ और न्यूनतम कोण",
+   "ncert_sections": "9.2 (किरण-संबंधी भुजाएँ)",
+   "concepts": [
+    {
+     "concept_tag": "kiran-bhujaen-kon",
+     "learning_objective": "विद्यार्थी समान दूरी पर रखी किरण-संबंधी भुजाओं के बीच का कोण 360° को भुजाओं की संख्या से भाग देकर ज्ञात करेंगे।"
+    },
+    {
+     "concept_tag": "nyuntam-kon-gunaj",
+     "learning_objective": "विद्यार्थी समझेंगे कि सभी सममिति कोण न्यूनतम कोण के गुणज होते हैं और न्यूनतम कोण 360° का गुणनखंड होता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH09-T7",
+   "topic_number": 7,
+   "title": "वृत्त की सममितियाँ और दोनों प्रकार की सममिति",
+   "ncert_sections": "9.2 (एक वृत्त की सममितियाँ)",
+   "concepts": [
+    {
+     "concept_tag": "vritt-ki-sammiti",
+     "learning_objective": "विद्यार्थी जानेंगे कि वृत्त के लिए प्रत्येक कोण सममिति का कोण और प्रत्येक व्यास सममिति की रेखा है।"
+    },
+    {
+     "concept_tag": "paravartan-aur-ghurnan-tulna",
+     "learning_objective": "विद्यार्थी आकृतियों में परावर्तीय और घूर्णन सममिति की उपस्थिति की तुलना कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

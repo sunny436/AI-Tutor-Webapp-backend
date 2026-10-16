@@ -1,0 +1,104 @@
+{
+ "chapter_id": "HHGP2-CH02",
+ "title": "बौधायन-पाइथागोरस प्रमेय",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP2-CH02-T1",
+   "topic_number": 1,
+   "title": "वर्ग को दोगुना और आधा करना",
+   "ncert_sections": "2.1, 2.2",
+   "concepts": [
+    {
+     "concept_tag": "varg-dugna-vikarn",
+     "learning_objective": "समझना कि किसी वर्ग के विकर्ण पर बने वर्ग का क्षेत्रफल मूल वर्ग का दोगुना होता है।"
+    },
+    {
+     "concept_tag": "varg-aadha-karna",
+     "learning_objective": "वर्ग की भुजाओं के मध्य-बिंदुओं को मिलाकर आधे क्षेत्रफल वाला वर्ग बनाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH02-T2",
+   "topic_number": 2,
+   "title": "समद्विबाहु समकोण त्रिभुज का कर्ण",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "samdvibahu-karn-sutra",
+     "learning_objective": "समद्विबाहु समकोण त्रिभुज में संबंध c² = 2a² का उपयोग कर कर्ण या भुजा ज्ञात करना।"
+    },
+    {
+     "concept_tag": "vargmool-do-aparimey",
+     "learning_objective": "समझना कि √2 न सांत दशमलव है और न ही m/n के रूप में लिखा जा सकता है, तथा उसकी सीमाएँ ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH02-T3",
+   "topic_number": 3,
+   "title": "दो भिन्न वर्गों को जोड़ना",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "baudhayan-prameya",
+     "learning_objective": "बौधायन प्रमेय a² + b² = c² को पहचानना और उसके ऐतिहासिक स्रोत को जानना।"
+    },
+    {
+     "concept_tag": "prameya-prayog-bhuja",
+     "learning_objective": "प्रमेय का उपयोग कर समकोण त्रिभुज की अज्ञात भुजा ज्ञात करना और नए वर्ग की रचना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH02-T4",
+   "topic_number": 4,
+   "title": "पूर्णांक भुजाओं वाले समकोण त्रिभुज",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "baudhayan-trik",
+     "learning_objective": "पहचानना कि कौन-से पूर्णांक त्रिक a² + b² = c² को संतुष्ट करते हैं।"
+    },
+    {
+     "concept_tag": "mool-trik",
+     "learning_objective": "मूल त्रिक और उसके गुणित रूपों में अंतर करना।"
+    },
+    {
+     "concept_tag": "vishm-sankhya-trik",
+     "learning_objective": "सर्वसमिका (n − 1)² + (2n − 1) = n² से नए बौधायन त्रिक बनाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH02-T5",
+   "topic_number": 5,
+   "title": "दीर्घकाल से अनसुलझा प्रश्न",
+   "ncert_sections": "2.6",
+   "concepts": [
+    {
+     "concept_tag": "fermat-antim-prameya",
+     "learning_objective": "फर्मा के अंतिम प्रमेय का कथन, उसका अर्थ और उसके सिद्ध होने का इतिहास जानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH02-T6",
+   "topic_number": 6,
+   "title": "बौधायन-पाइथागोरस प्रमेय के अन्य अनुप्रयोग",
+   "ncert_sections": "2.7",
+   "concepts": [
+    {
+     "concept_tag": "lilavati-kamal-prashn",
+     "learning_objective": "लीलावती के कमल-प्रश्न जैसी स्थितियों को समकोण त्रिभुज के रूप में व्यक्त कर हल करना।"
+    },
+    {
+     "concept_tag": "prameya-anuprayog",
+     "learning_objective": "प्रमेय का उपयोग विकर्ण, समचतुर्भुज की भुजा और समबाहु त्रिभुज के क्षेत्रफल ज्ञात करने में करना।"
+    }
+   ]
+  }
+ ]
+}

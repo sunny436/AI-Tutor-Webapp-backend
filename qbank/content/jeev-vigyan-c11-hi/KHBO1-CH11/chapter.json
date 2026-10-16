@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KHBO1-CH11",
+ "title": "उच्च पादपों में प्रकाश-संश्लेषण",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHBO1-CH11-T1",
+   "topic_number": 1,
+   "title": "प्रकाश-संश्लेषण की मूल बातें एवं प्रारंभिक प्रयोग",
+   "ncert_sections": "11.1, 11.2",
+   "concepts": [
+    {
+     "concept_tag": "prarambhik-prayog",
+     "learning_objective": "प्रीस्टले, इंजेनहाउज़, सैक्स, एंगलमैन और वान नील के प्रयोगों के निष्कर्ष बताना।"
+    },
+    {
+     "concept_tag": "prakash-sanshleshan-samikaran",
+     "learning_objective": "प्रकाश-संश्लेषण के समग्र समीकरण तथा ऑक्सीजन के जल से मुक्त होने की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH11-T2",
+   "topic_number": 2,
+   "title": "प्रकाश-संश्लेषण का स्थल एवं वर्णक",
+   "ncert_sections": "11.3, 11.4",
+   "concepts": [
+    {
+     "concept_tag": "haritlavak-sanrachna",
+     "learning_objective": "हरितलवक में ग्रेना और पीठिका में होने वाली अभिक्रियाओं को पहचानना।"
+    },
+    {
+     "concept_tag": "varnak-avshoshan",
+     "learning_objective": "विभिन्न वर्णकों, उनके रंगों तथा अवशोषण और क्रिया स्पेक्ट्रम के संबंध को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH11-T3",
+   "topic_number": 3,
+   "title": "प्रकाश अभिक्रिया, जल का विघटन एवं प्रकाश-फॉस्फोरिलीकरण",
+   "ncert_sections": "11.5, 11.6, 11.6.1, 11.6.2",
+   "concepts": [
+    {
+     "concept_tag": "prakash-tantra",
+     "learning_objective": "प्रकाश तंत्र I और II, उनके अभिक्रिया केंद्रों तथा Z योजना को समझाना।"
+    },
+    {
+     "concept_tag": "jal-vighatan",
+     "learning_objective": "जल के विघटन का स्थान, उत्पाद और प्रकाश तंत्र II से उसका संबंध बताना।"
+    },
+    {
+     "concept_tag": "chakriya-achakriya",
+     "learning_objective": "चक्रीय और अचक्रीय प्रकाश-फॉस्फोरिलीकरण में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH11-T4",
+   "topic_number": 4,
+   "title": "रसोपरासरण परिकल्पना एवं एटीपी संश्लेषण",
+   "ncert_sections": "11.6.3",
+   "concepts": [
+    {
+     "concept_tag": "proton-pravanata",
+     "learning_objective": "थायलेकॉइड झिल्ली के आर-पार प्रोटॉन प्रवणता बनने के कारणों का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "atp-synthase",
+     "learning_objective": "एटीपी सिंथेज़ के दोनों भागों की भूमिका तथा प्रोटॉन प्रवाह से एटीपी बनने को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH11-T5",
+   "topic_number": 5,
+   "title": "एटीपी और एनएडीपीएच का उपयोग: केल्विन चक्र",
+   "ncert_sections": "11.7, 11.7.1, 11.7.2",
+   "concepts": [
+    {
+     "concept_tag": "prathamik-grahi",
+     "learning_objective": "C3 पथ में कार्बन डाइऑक्साइड के प्राथमिक ग्राही और प्रथम स्थायी उत्पाद को पहचानना।"
+    },
+    {
+     "concept_tag": "calvin-chakra-charan",
+     "learning_objective": "केल्विन चक्र के तीन चरणों तथा एटीपी और एनएडीपीएच की आवश्यकता की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH11-T6",
+   "topic_number": 6,
+   "title": "C4 पथ एवं प्रकाश-श्वसन",
+   "ncert_sections": "11.8, 11.9",
+   "concepts": [
+    {
+     "concept_tag": "c4-path-kranz",
+     "learning_objective": "C4 पादपों की क्रैंज शारीरिकी तथा हैच-स्लैक पथ के चरणों को समझाना।"
+    },
+    {
+     "concept_tag": "prakash-shvasan",
+     "learning_objective": "प्रकाश-श्वसन की प्रक्रिया तथा C4 पादपों में इसके अभाव के कारण का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH11-T7",
+   "topic_number": 7,
+   "title": "प्रकाश-संश्लेषण को प्रभावित करने वाले कारक",
+   "ncert_sections": "11.10, 11.10.1, 11.10.2, 11.10.3, 11.10.4",
+   "concepts": [
+    {
+     "concept_tag": "simakari-karak",
+     "learning_objective": "ब्लैकमैन के सीमाकारी कारकों के नियम को परिस्थितियों पर लागू करना।"
+    },
+    {
+     "concept_tag": "prakash-co2-tap-jal",
+     "learning_objective": "प्रकाश, कार्बन डाइऑक्साइड, ताप और जल का प्रकाश-संश्लेषण की दर पर प्रभाव समझाना।"
+    }
+   ]
+  }
+ ]
+}

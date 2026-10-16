@@ -1,0 +1,1013 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "manav-bhugol-ke-mool-sidhant-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "geography",
+  "language": "hindi",
+  "title": "Manav Bhugol Ke Mool Sidhant",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhgy1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHGY1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "मानव भूगोल: प्रकृति एवं विषय क्षेत्र",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY1-CH01-T1",
+     "topic_number": 1,
+     "title": "मानव भूगोल का अर्थ और परिभाषाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "manav-bhugol-paribhasha",
+       "learning_objective": "विद्यार्थी रैटजेल, सेम्पल और विडाल डी ला ब्लाश की परिभाषाओं के मुख्य शब्द पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "dvaitvad-aur-samagrata",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि भौतिक और मानवीय पक्षों का द्वैत क्यों पूर्णतः मान्य नहीं है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH01-T2",
+     "topic_number": 2,
+     "title": "मानव भूगोल की प्रकृति",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhautik-aur-samajik-paryavaran",
+       "learning_objective": "विद्यार्थी भौतिक पर्यावरण और मानव-निर्मित सामाजिक-सांस्कृतिक पर्यावरण के तत्वों में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "praudyogiki-ki-bhumika",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि प्रौद्योगिकी प्रकृति के ज्ञान पर आधारित है और समाज के सांस्कृतिक विकास का सूचक है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH01-T3",
+     "topic_number": 3,
+     "title": "मानव का प्राकृतीकरण और प्रकृति का मानवीकरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "paryavaraniya-nishchayvad",
+       "learning_objective": "विद्यार्थी पर्यावरणीय निश्चयवाद और प्राकृतिक मानव की अवधारणा को उदाहरण सहित समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sambhavvad",
+       "learning_objective": "विद्यार्थी संभववाद और सांस्कृतिक भूदृश्य की अवधारणा को उदाहरणों में पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH01-T4",
+     "topic_number": 4,
+     "title": "नवनियतिवाद: मध्य मार्ग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "navniyativad",
+       "learning_objective": "विद्यार्थी ग्रिफिथ टेलर के नवनियतिवाद को यातायात-बत्ती के उदाहरण से समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "satat-vikas-ki-seema",
+       "learning_objective": "विद्यार्थी पर्यावरण की सीमाओं के उल्लंघन से उत्पन्न समस्याओं का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH01-T5",
+     "topic_number": 5,
+     "title": "मानव भूगोल के विकास के चरण और विचारधाराएँ",
+     "ncert_sections": "सारणी 1.1",
+     "concepts": [
+      {
+       "concept_tag": "vikas-ke-charan",
+       "learning_objective": "विद्यार्थी विभिन्न कालों को मानव भूगोल के संगत उपागमों से मिला सकेंगे।"
+      },
+      {
+       "concept_tag": "vicharadharayen",
+       "learning_objective": "विद्यार्थी मानवतावादी, आमूलवादी और व्यवहारवादी विचारधाराओं के मुख्य सरोकार पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH01-T6",
+     "topic_number": 6,
+     "title": "मानव भूगोल के क्षेत्र और उप-क्षेत्र",
+     "ncert_sections": "सारणी 1.2",
+     "concepts": [
+      {
+       "concept_tag": "antarvishayak-prakriti",
+       "learning_objective": "विद्यार्थी मानव भूगोल की अंतर्विषयक प्रकृति को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "upkshetra-aur-sahayogi-vishay",
+       "learning_objective": "विद्यार्थी मानव भूगोल के उप-क्षेत्रों को सामाजिक विज्ञानों के सहयोगी विषयों से मिला सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "विश्व जनसंख्या : वितरण, घनत्व और वृद्धि",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY1-CH02-T1",
+     "topic_number": 1,
+     "title": "विश्व में जनसंख्या वितरण के प्रतिरूप",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jansankhya-vitaran-arth",
+       "learning_objective": "जनसंख्या वितरण का अर्थ और विश्व में उसकी असमानता को समझना।"
+      },
+      {
+       "concept_tag": "sarvadhik-jansankhya-wale-desh",
+       "learning_objective": "सर्वाधिक जनसंख्या वाले देशों के वैश्विक जनसंख्या में योगदान की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH02-T2",
+     "topic_number": 2,
+     "title": "जनसंख्या घनत्व",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jansankhya-ghanatva-ganana",
+       "learning_objective": "जनसंख्या घनत्व की परिभाषा देना और उसकी गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH02-T3",
+     "topic_number": 3,
+     "title": "जनसंख्या वितरण को प्रभावित करने वाले कारक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhaugolik-karak",
+       "learning_objective": "जल, भू-आकृति, जलवायु और मृदा जैसे भौगोलिक कारकों का प्रभाव समझाना।"
+      },
+      {
+       "concept_tag": "arthik-karak",
+       "learning_objective": "खनिज, नगरीकरण और औद्योगीकरण जैसे आर्थिक कारकों का प्रभाव समझाना।"
+      },
+      {
+       "concept_tag": "samajik-sanskritik-karak",
+       "learning_objective": "सामाजिक और सांस्कृतिक कारकों से जनसंख्या वितरण पर पड़ने वाले प्रभाव को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH02-T4",
+     "topic_number": 4,
+     "title": "जनसंख्या वृद्धि और उसकी मूल संकल्पनाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vriddhi-ke-prakar",
+       "learning_objective": "जनसंख्या वृद्धि, वृद्धि दर, प्राकृतिक और वास्तविक वृद्धि में अंतर करना।"
+      },
+      {
+       "concept_tag": "dhanatmak-rinatmak-vriddhi",
+       "learning_objective": "धनात्मक और ऋणात्मक जनसंख्या वृद्धि की स्थितियों को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH02-T5",
+     "topic_number": 5,
+     "title": "जनसंख्या परिवर्तन के घटक : जन्म और मृत्यु",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "aparishkrit-janm-dar",
+       "learning_objective": "अपरिष्कृत जन्म दर की परिभाषा देना और उसकी गणना करना।"
+      },
+      {
+       "concept_tag": "aparishkrit-mrityu-dar",
+       "learning_objective": "अपरिष्कृत मृत्यु दर की गणना करना और मर्त्यता को प्रभावित करने वाले कारक समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH02-T6",
+     "topic_number": 6,
+     "title": "प्रवास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pravas-ke-prakar",
+       "learning_objective": "उद्गम स्थान, गंतव्य स्थान, आप्रवास और उत्प्रवास की संकल्पनाएँ समझना।"
+      },
+      {
+       "concept_tag": "pratikarsh-apkarsh-karak",
+       "learning_objective": "प्रवास के प्रतिकर्ष और अपकर्ष कारकों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH02-T7",
+     "topic_number": 7,
+     "title": "जनांकिकीय संक्रमण और जनसंख्या नियंत्रण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "janankikiya-sankraman-avasthaen",
+       "learning_objective": "जनांकिकीय संक्रमण सिद्धांत की तीन अवस्थाओं की विशेषताओं का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "jansankhya-niyantran-upay",
+       "learning_objective": "परिवार नियोजन, जनसंख्या नियंत्रण के उपायों और माल्थस के सिद्धांत को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "मानव विकास",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY1-CH03-T1",
+     "topic_number": 1,
+     "title": "वृद्धि और विकास तथा मानव विकास की संकल्पना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vriddhi-aur-vikas",
+       "learning_objective": "वृद्धि को मात्रात्मक और मूल्य-निरपेक्ष तथा विकास को गुणात्मक और सदैव धनात्मक परिवर्तन के रूप में पहचानना।"
+      },
+      {
+       "concept_tag": "manav-vikas-sankalpana",
+       "learning_objective": "महबूब-उल-हक और अमर्त्य सेन के विचारों के आधार पर मानव विकास की संकल्पना को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH03-T2",
+     "topic_number": 2,
+     "title": "विकल्प, क्षमताएँ और सार्थक जीवन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sarthak-jivan",
+       "learning_objective": "सार्थक जीवन के लिए स्वास्थ्य, ज्ञान और संसाधनों तक पहुँच के महत्त्व को समझना।"
+      },
+      {
+       "concept_tag": "kshamata-aur-vikalp",
+       "learning_objective": "यह समझाना कि स्वास्थ्य, शिक्षा और संसाधनों में क्षमता की कमी से लोगों के विकल्प कैसे सीमित होते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH03-T3",
+     "topic_number": 3,
+     "title": "मानव विकास के चार स्तंभ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samata",
+       "learning_objective": "समता को सभी लोगों के लिए अवसरों तक समान पहुँच के रूप में पहचानना।"
+      },
+      {
+       "concept_tag": "satat-poshaniyata",
+       "learning_objective": "सतत पोषणीयता को आने वाली पीढ़ियों के लिए अवसरों की निरंतरता के रूप में समझना।"
+      },
+      {
+       "concept_tag": "utpadakata-sashaktikaran",
+       "learning_objective": "उत्पादकता और सशक्तीकरण का अर्थ तथा मानव विकास में उनकी भूमिका समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH03-T4",
+     "topic_number": 4,
+     "title": "मानव विकास के उपागम",
+     "ncert_sections": "सारणी 3.1",
+     "concepts": [
+      {
+       "concept_tag": "aay-upagam",
+       "learning_objective": "आय उपागम की मान्यता को पहचानना कि आय का स्तर स्वतंत्रता के स्तर को दर्शाता है।"
+      },
+      {
+       "concept_tag": "kalyan-aur-mool-avashyakta-upagam",
+       "learning_objective": "कल्याण उपागम और आधारभूत आवश्यकता उपागम की विशेषताओं में अंतर करना।"
+      },
+      {
+       "concept_tag": "kshamta-upagam",
+       "learning_objective": "अमर्त्य सेन से जुड़े क्षमता उपागम की मूल धारणा को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH03-T5",
+     "topic_number": 5,
+     "title": "मानव विकास का मापन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "hdi-sanketak",
+       "learning_objective": "मानव विकास सूचकांक में स्वास्थ्य, ज्ञान और संसाधनों तक पहुँच के सूचकों को पहचानना।"
+      },
+      {
+       "concept_tag": "hdi-ank-vyakhya",
+       "learning_objective": "मानव विकास सूचकांक के 0 से 1 के बीच के अंकों और समान भार की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "manav-garibi-suchakank",
+       "learning_objective": "मानव विकास सूचकांक की सीमा और मानव गरीबी सूचकांक से उसके संबंध का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "प्राथमिक क्रियाएँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY1-CH04-T1",
+     "topic_number": 1,
+     "title": "प्राथमिक क्रियाएँ: आखेट एवं भोजन संग्रह",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prathmik-kriyaon-ki-prakriti",
+       "learning_objective": "प्राथमिक क्रियाओं की पर्यावरण पर प्रत्यक्ष निर्भरता और उनके प्रकार पहचानना।"
+      },
+      {
+       "concept_tag": "bhojan-sangrah",
+       "learning_objective": "भोजन संग्रह के क्षेत्रों, विशेषताओं और उसके वाणिज्यीकरण को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH04-T2",
+     "topic_number": 2,
+     "title": "पशुचारण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "chalvasi-pashucharan",
+       "learning_objective": "चलवासी पशुचारण के क्षेत्रों, पशुओं और ऋतु प्रवास को समझाना।"
+      },
+      {
+       "concept_tag": "vanijya-pashudhan-palan",
+       "learning_objective": "वाणिज्य पशुधन पालन की विशेषताओं की चलवासी पशुचारण से तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH04-T3",
+     "topic_number": 3,
+     "title": "निर्वाह कृषि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "adikalin-nirvah-krishi",
+       "learning_objective": "स्थानांतरी (कर्तन एवं दहन) कृषि की विशेषताओं और समस्याओं को बताना।"
+      },
+      {
+       "concept_tag": "gahan-nirvah-krishi",
+       "learning_objective": "गहन निर्वाह कृषि के दोनों प्रकारों की विशेषताओं में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH04-T4",
+     "topic_number": 4,
+     "title": "रोपण कृषि एवं विस्तृत वाणिज्य अनाज कृषि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ropan-krishi",
+       "learning_objective": "रोपण कृषि की विशेषताओं, फसलों और औपनिवेशिक उत्पत्ति को समझाना।"
+      },
+      {
+       "concept_tag": "vistrit-vanijya-anaj-krishi",
+       "learning_objective": "विस्तृत वाणिज्य अनाज कृषि के क्षेत्रों और उत्पादकता के स्वरूप का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH04-T5",
+     "topic_number": 5,
+     "title": "मिश्रित, डेयरी, भूमध्यसागरीय एवं बाज़ार उद्यान कृषि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mishrit-evam-dairy-krishi",
+       "learning_objective": "मिश्रित कृषि और डेयरी कृषि की विशेषताएँ एवं क्षेत्र बताना।"
+      },
+      {
+       "concept_tag": "bhumadhyasagariya-krishi",
+       "learning_objective": "भूमध्यसागरीय कृषि की विशिष्टताओं, विशेषकर अंगूर की खेती, को समझाना।"
+      },
+      {
+       "concept_tag": "bazar-udyan-krishi",
+       "learning_objective": "बाज़ार के लिए सब्ज़ी खेती, ट्रक कृषि और कारखाना कृषि में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH04-T6",
+     "topic_number": 6,
+     "title": "सहकारी एवं सामूहिक कृषि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sahkari-krishi",
+       "learning_objective": "सहकारी कृषि के सिद्धांत, लाभ और सफल देशों की पहचान करना।"
+      },
+      {
+       "concept_tag": "samuhik-krishi",
+       "learning_objective": "सामूहिक कृषि (कोलखोज़) के सिद्धांत को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH04-T7",
+     "topic_number": 7,
+     "title": "खनन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "khanan-ke-karak",
+       "learning_objective": "खनन की लाभप्रदता को प्रभावित करने वाले भौतिक और आर्थिक कारकों को पहचानना।"
+      },
+      {
+       "concept_tag": "khanan-ki-vidhiyan",
+       "learning_objective": "धरातलीय और भूमिगत खनन विधियों की तुलना करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "द्वितीयक क्रियाएँ",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY1-CH05-T1",
+     "topic_number": 1,
+     "title": "द्वितीयक क्रियाएँ और विनिर्माण का अर्थ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mulya-vardhan",
+       "learning_objective": "द्वितीयक क्रियाओं द्वारा कच्चे माल को मूल्यवान उत्पादों में बदलकर मूल्य बढ़ाने की प्रक्रिया समझना।"
+      },
+      {
+       "concept_tag": "vinirman-arth",
+       "learning_objective": "विनिर्माण तथा 'विनिर्माण उद्योग' शब्द के अर्थ और उसकी सामान्य विशेषताओं को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH05-T2",
+     "topic_number": 2,
+     "title": "आधुनिक बड़े पैमाने के विनिर्माण की विशेषताएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vishishtikaran-yantrikaran",
+       "learning_objective": "कौशल के विशिष्टीकरण, यंत्रीकरण, स्वचालन और प्रौद्योगिकीय नवाचार की भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "asaman-vitaran",
+       "learning_objective": "आधुनिक विनिर्माण के संगठनात्मक ढाँचे और असमान भौगोलिक वितरण का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH05-T3",
+     "topic_number": 3,
+     "title": "उद्योगों की अवस्थिति के कारक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bazar-kachcha-mal",
+       "learning_objective": "बाज़ार और कच्चे माल तक पहुँच के आधार पर उद्योगों की अवस्थिति को समझाना।"
+      },
+      {
+       "concept_tag": "urja-parivahan-niti",
+       "learning_objective": "श्रम, ऊर्जा, परिवहन, सरकारी नीति और समूहन अर्थव्यवस्थाओं के प्रभाव का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "svachhand-udyog",
+       "learning_objective": "स्वच्छंद उद्योगों की विशेषताओं और उनकी अवस्थिति के मुख्य कारक को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH05-T4",
+     "topic_number": 4,
+     "title": "आकार पर आधारित उद्योग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kutir-udyog",
+       "learning_objective": "घरेलू या कुटीर उद्योग की विशेषताओं को पहचानना।"
+      },
+      {
+       "concept_tag": "laghu-bade-udyog",
+       "learning_objective": "लघु और बड़े पैमाने के विनिर्माण में अंतर स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH05-T5",
+     "topic_number": 5,
+     "title": "कच्चे माल पर आधारित उद्योग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "krishi-adharit",
+       "learning_objective": "कृषि आधारित उद्योगों, खाद्य प्रसंस्करण और कृषि व्यापार को समझना।"
+      },
+      {
+       "concept_tag": "khanij-rasayan-adharit",
+       "learning_objective": "खनिज, रसायन, वन और पशु आधारित उद्योगों का वर्गीकरण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH05-T6",
+     "topic_number": 6,
+     "title": "उत्पाद और स्वामित्व पर आधारित उद्योग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "aadharbhut-upbhokta",
+       "learning_objective": "आधारभूत और उपभोक्ता वस्तु उद्योगों में अंतर करना।"
+      },
+      {
+       "concept_tag": "swamitva",
+       "learning_objective": "सार्वजनिक, निजी और संयुक्त क्षेत्र के उद्योगों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH05-T7",
+     "topic_number": 7,
+     "title": "उच्च प्रौद्योगिकी उद्योग की संकल्पना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "uchch-praudyogiki",
+       "learning_objective": "उच्च प्रौद्योगिकी उद्योग की विशेषताओं और उसके भू-दृश्य को समझना।"
+      },
+      {
+       "concept_tag": "praudyogik-dhruv",
+       "learning_objective": "प्रौद्योगिक ध्रुवों (टेक्नोपोलिस) की पहचान और उदाहरण बताना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "तृतीयक और चतुर्थ क्रियाकलाप",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY1-CH06-T1",
+     "topic_number": 1,
+     "title": "तृतीयक क्रियाकलापों का स्वरूप",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tritiyak-swaroop",
+       "learning_objective": "तृतीयक क्रियाकलापों को मूर्त वस्तुओं के उत्पादन के बजाय सेवाओं के व्यावसायिक उत्पादन के रूप में समझना।"
+      },
+      {
+       "concept_tag": "dwitiyak-tritiyak-antar",
+       "learning_objective": "द्वितीयक और तृतीयक क्रियाकलापों में कौशल, ज्ञान और उत्पादन तकनीक के आधार पर अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH06-T2",
+     "topic_number": 2,
+     "title": "व्यापार और वाणिज्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vyapar-kendra",
+       "learning_objective": "ग्रामीण, आवधिक और नगरीय विपणन केंद्रों की विशेषताएँ पहचानना।"
+      },
+      {
+       "concept_tag": "phutkar-thok",
+       "learning_objective": "फुटकर और थोक व्यापार तथा भंडारों के प्रकारों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH06-T3",
+     "topic_number": 3,
+     "title": "परिवहन और संचार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "parivahan-doori",
+       "learning_objective": "परिवहन दूरी के मापों, जाल, नोड और योजक की अवधारणाओं को समझना।"
+      },
+      {
+       "concept_tag": "parivahan-karak",
+       "learning_objective": "परिवहन की माँग और मार्गों को प्रभावित करने वाले कारकों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "sanchar-doorsanchar",
+       "learning_objective": "संचार सेवाओं और दूरसंचार द्वारा लाए गए परिवर्तनों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH06-T4",
+     "topic_number": 4,
+     "title": "सेवाएँ और तृतीयक क्रियाकलापों में संलग्न लोग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "seva-star",
+       "learning_objective": "निम्न-श्रेणी और उच्च-श्रेणी सेवाओं तथा व्यावसायिक और व्यक्तिगत सेवाओं में अंतर करना।"
+      },
+      {
+       "concept_tag": "seva-rojgar",
+       "learning_objective": "विकसित और विकासशील देशों में सेवा क्षेत्र के रोज़गार की प्रवृत्ति समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH06-T5",
+     "topic_number": 5,
+     "title": "पर्यटन और चिकित्सा पर्यटन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "paryatan-akarshan",
+       "learning_objective": "पर्यटन प्रदेशों और जलवायु, भूदृश्य, इतिहास व संस्कृति जैसे आकर्षणों की पहचान करना।"
+      },
+      {
+       "concept_tag": "chikitsa-paryatan",
+       "learning_objective": "चिकित्सा पर्यटन और चिकित्सा सेवाओं के बाह्यस्रोतन के लाभ समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH06-T6",
+     "topic_number": 6,
+     "title": "चतुर्थ और पंचम क्रियाकलाप",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "chaturth-kriyakalap",
+       "learning_objective": "चतुर्थ क्रियाकलापों को ज्ञान-आधारित, सूचना केंद्रित सेवाओं के रूप में पहचानना।"
+      },
+      {
+       "concept_tag": "pancham-kriyakalap",
+       "learning_objective": "पंचम क्रियाकलापों और स्वर्ण कॉलर व्यवसायों की विशेषताएँ बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH06-T7",
+     "topic_number": 7,
+     "title": "बाह्यस्रोतन और अंकीय विभाजक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bahyasrotan",
+       "learning_objective": "बाह्यस्रोतन, अपतटन, बी.पी.ओ. और के.पी.ओ. में अंतर करना।"
+      },
+      {
+       "concept_tag": "ankiya-vibhajak",
+       "learning_objective": "देशों के बीच और देशों के भीतर अंकीय विभाजक के कारणों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "परिवहन एवं संचार",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY1-CH07-T1",
+     "topic_number": 1,
+     "title": "परिवहन: अर्थ, परिवहन जाल और प्रमुख साधन",
+     "ncert_sections": "परिवहन; परिवहन के साधन",
+     "concepts": [
+      {
+       "concept_tag": "parivahan-jaal",
+       "learning_objective": "परिवहन जाल के नोड और कड़ियों की पहचान करना तथा परिवहन साधनों की सापेक्ष लागत समझना।"
+      },
+      {
+       "concept_tag": "parivahan-sadhan-upyuktata",
+       "learning_objective": "माल के प्रकार, लागत और दूरी के अनुसार उपयुक्त परिवहन साधन का चयन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH07-T2",
+     "topic_number": 2,
+     "title": "स्थल परिवहन: लद्दू पशु, सड़कें और राजमार्ग",
+     "ncert_sections": "स्थल परिवहन; सड़कें; राजमार्ग; सीमा सड़कें",
+     "concepts": [
+      {
+       "concept_tag": "laddu-pashu",
+       "learning_objective": "विभिन्न प्रदेशों में बोझा ढोने वाले पशुओं के उपयोग को पहचानना।"
+      },
+      {
+       "concept_tag": "sadak-rajmarg",
+       "learning_objective": "सड़क परिवहन के लाभ, समस्याएँ और विश्व के प्रमुख राजमार्गों को समझना।"
+      },
+      {
+       "concept_tag": "seema-sadak",
+       "learning_objective": "सीमा सड़कों के उद्देश्य और महत्त्व की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH07-T3",
+     "topic_number": 3,
+     "title": "रेलमार्ग और पारमहाद्वीपीय रेलमार्ग",
+     "ncert_sections": "रेलमार्ग; पारमहाद्वीपीय रेलमार्ग",
+     "concepts": [
+      {
+       "concept_tag": "vishv-rail-jaal",
+       "learning_objective": "विभिन्न महाद्वीपों में रेल जाल के वितरण और उपयोग की तुलना करना।"
+      },
+      {
+       "concept_tag": "parmahadvipiya-relmarg",
+       "learning_objective": "प्रमुख पारमहाद्वीपीय रेलमार्गों के मार्ग और आर्थिक महत्त्व को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH07-T4",
+     "topic_number": 4,
+     "title": "जल परिवहन: समुद्री मार्ग और नौपरिवहन नहरें",
+     "ncert_sections": "जल परिवहन; समुद्री मार्ग; तटीय नौवहन; नौपरिवहन नहरें",
+     "concepts": [
+      {
+       "concept_tag": "jal-parivahan-labh",
+       "learning_objective": "जल परिवहन के सस्ता होने के कारणों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "samudri-marg",
+       "learning_objective": "विश्व के प्रमुख समुद्री मार्गों और उन पर व्यापार की मात्रा का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "naukaparivahan-naharen",
+       "learning_objective": "स्वेज़ और पनामा नहरों की विशेषताओं और महत्त्व की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH07-T5",
+     "topic_number": 5,
+     "title": "आंतरिक जलमार्ग",
+     "ncert_sections": "आंतरिक जलमार्ग",
+     "concepts": [
+      {
+       "concept_tag": "antarik-jalmarg-karak",
+       "learning_objective": "आंतरिक जलमार्गों के विकास को प्रभावित करने वाले कारकों को समझना।"
+      },
+      {
+       "concept_tag": "pramukh-antarik-jalmarg",
+       "learning_objective": "विश्व के प्रमुख आंतरिक जलमार्गों की विशेषताएँ पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH07-T6",
+     "topic_number": 6,
+     "title": "वायु परिवहन और पाइपलाइन",
+     "ncert_sections": "वायु परिवहन; पाइपलाइन",
+     "concepts": [
+      {
+       "concept_tag": "vayu-parivahan",
+       "learning_objective": "वायु परिवहन के लाभ, सीमाएँ और वायुमार्गों के वितरण को समझना।"
+      },
+      {
+       "concept_tag": "pipeline-parivahan",
+       "learning_objective": "पाइपलाइनों द्वारा ढोए जाने वाले पदार्थों और प्रमुख पाइपलाइनों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH07-T7",
+     "topic_number": 7,
+     "title": "संचार: दूरसंचार, उपग्रह संचार और साइबर स्पेस",
+     "ncert_sections": "संचार; उपग्रह संचार; साइबर स्पेस",
+     "concepts": [
+      {
+       "concept_tag": "doorsanchar",
+       "learning_objective": "दूरसंचार के विकास और प्रकाशीय तंतु केबल के महत्त्व को समझना।"
+      },
+      {
+       "concept_tag": "upgrah-sanchar",
+       "learning_objective": "उपग्रह संचार की विशेषताएँ और भारत की उपग्रह उपलब्धियाँ जानना।"
+      },
+      {
+       "concept_tag": "cyber-space",
+       "learning_objective": "साइबर स्पेस के अर्थ और मानव के आर्थिक-सामाजिक स्थान पर उसके प्रभाव का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "अंतर्राष्ट्रीय व्यापार",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY1-CH08-T1",
+     "topic_number": 1,
+     "title": "व्यापार का अर्थ, वस्तु विनिमय और मुद्रा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vastu-vinimay-pranali",
+       "learning_objective": "विद्यार्थी व्यापार के अर्थ तथा वस्तु विनिमय प्रणाली की विशेषताएँ और कठिनाइयाँ समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "mudra-ka-vikas",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि मुद्रा ने वस्तु विनिमय की कठिनाइयों को कैसे दूर किया।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH08-T2",
+     "topic_number": 2,
+     "title": "अंतर्राष्ट्रीय व्यापार का इतिहास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "resham-marg",
+       "learning_objective": "विद्यार्थी रेशम मार्ग को लंबी दूरी के प्राचीन व्यापार के उदाहरण के रूप में पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "das-vyapar",
+       "learning_objective": "विद्यार्थी उपनिवेशवाद काल के दास व्यापार और उसके उन्मूलन का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "audyogik-kranti-ke-baad-vyapar",
+       "learning_objective": "विद्यार्थी औद्योगिक क्रांति और विश्व युद्धों के बाद व्यापार के स्वरूप में आए परिवर्तनों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH08-T3",
+     "topic_number": 3,
+     "title": "अंतर्राष्ट्रीय व्यापार के अस्तित्व के कारण एवं आधार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vishishtikaran-tulnatmak-labh",
+       "learning_objective": "विद्यार्थी विशिष्टीकरण और तुलनात्मक लाभ को व्यापार का कारण बता सकेंगे।"
+      },
+      {
+       "concept_tag": "sansadhan-evam-jansankhya-karak",
+       "learning_objective": "विद्यार्थी राष्ट्रीय संसाधनों और जनसंख्या कारकों का व्यापार पर प्रभाव समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "vikas-nivesh-parivahan",
+       "learning_objective": "विद्यार्थी आर्थिक विकास की अवस्था, विदेशी निवेश और परिवहन की भूमिका का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH08-T4",
+     "topic_number": 4,
+     "title": "व्यापार संतुलन, व्यापार के प्रकार और मुक्त व्यापार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vyapar-santulan",
+       "learning_objective": "विद्यार्थी अनुकूल और प्रतिकूल व्यापार संतुलन में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "dvipakshiya-bahupakshiya-vyapar",
+       "learning_objective": "विद्यार्थी द्विपार्श्विक और बहुपार्श्विक व्यापार में अंतर स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "mukt-vyapar-dumping",
+       "learning_objective": "विद्यार्थी मुक्त व्यापार और राशिपातन के अर्थ तथा प्रभावों का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH08-T5",
+     "topic_number": 5,
+     "title": "विश्व व्यापार संगठन, प्रादेशिक व्यापार समूह और व्यापार से जुड़ी चिंताएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vishva-vyapar-sangathan",
+       "learning_objective": "विद्यार्थी विश्व व्यापार संगठन की स्थापना, कार्यों और उसकी आलोचना को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "kshetriya-vyapar-samooh",
+       "learning_objective": "विद्यार्थी प्रादेशिक व्यापार समूहों के बनने के कारण बता सकेंगे।"
+      },
+      {
+       "concept_tag": "vyapar-ki-chintayen",
+       "learning_objective": "विद्यार्थी अंतर्राष्ट्रीय व्यापार के लाभों और हानिकारक प्रभावों का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY1-CH08-T6",
+     "topic_number": 6,
+     "title": "अंतर्राष्ट्रीय व्यापार के प्रवेश द्वार: पत्तन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pattan-ka-mahattva",
+       "learning_objective": "विद्यार्थी पत्तनों के कार्य और उनके महत्त्व के मापदंड बता सकेंगे।"
+      },
+      {
+       "concept_tag": "naubhar-evam-sthiti-anusar-pattan",
+       "learning_objective": "विद्यार्थी नौभार तथा अवस्थिति के आधार पर पत्तनों का वर्गीकरण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vishishtikrit-karya-anusar-pattan",
+       "learning_objective": "विद्यार्थी विशिष्टीकृत कार्यों के आधार पर पत्तनों के प्रकार उदाहरण सहित पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

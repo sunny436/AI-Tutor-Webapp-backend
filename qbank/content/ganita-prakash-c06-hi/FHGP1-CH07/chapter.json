@@ -1,0 +1,124 @@
+{
+ "chapter_id": "FHGP1-CH07",
+ "title": "भिन्न",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHGP1-CH07-T1",
+   "topic_number": 1,
+   "title": "भिन्नात्मक इकाइयाँ और संपूर्ण के हिस्से",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "bhinnatmak-ikai",
+     "learning_objective": "विद्यार्थी भिन्नात्मक इकाई को पहचानेंगे और दो भिन्नात्मक इकाइयों की तुलना करेंगे।"
+    },
+    {
+     "concept_tag": "sampurn-ke-hisse",
+     "learning_objective": "विद्यार्थी किसी संपूर्ण वस्तु के टुकड़े को भिन्नात्मक इकाइयों से मापकर भिन्न के रूप में लिखेंगे।"
+    },
+    {
+     "concept_tag": "saman-bantvara",
+     "learning_objective": "विद्यार्थी समान बँटवारे की स्थितियों में प्रत्येक के हिस्से को भिन्न के रूप में व्यक्त करेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH07-T2",
+   "topic_number": 2,
+   "title": "भिन्नात्मक इकाइयों द्वारा मापना और संख्या रेखा",
+   "ncert_sections": "7.3, 7.4",
+   "concepts": [
+    {
+     "concept_tag": "ikaiyon-se-mapna",
+     "learning_objective": "विद्यार्थी भिन्न को भिन्नात्मक इकाई के गुणज के रूप में पढ़ेंगे तथा अंश और हर पहचानेंगे।"
+    },
+    {
+     "concept_tag": "sankhya-rekha-par-bhinn",
+     "learning_objective": "विद्यार्थी संख्या रेखा पर भिन्नों की लंबाइयाँ पहचानेंगे और अंकित करेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH07-T3",
+   "topic_number": 3,
+   "title": "मिश्रित भिन्न",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "ek-se-badi-bhinn",
+     "learning_objective": "विद्यार्थी एक से बड़ी भिन्नों में पूर्ण इकाइयाँ ज्ञात करके उन्हें मिश्रित भिन्न के रूप में लिखेंगे।"
+    },
+    {
+     "concept_tag": "mishrit-se-bhinn",
+     "learning_objective": "विद्यार्थी मिश्रित संख्या को सामान्य भिन्न के रूप में बदलेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH07-T4",
+   "topic_number": 4,
+   "title": "तुल्य भिन्न और सरलतम रूप",
+   "ncert_sections": "7.6",
+   "concepts": [
+    {
+     "concept_tag": "tulya-bhinn",
+     "learning_objective": "विद्यार्थी समान बँटवारे और भिन्न पट्टियों के आधार पर तुल्य भिन्न पहचानेंगे और बनाएँगे।"
+    },
+    {
+     "concept_tag": "saraltam-roop",
+     "learning_objective": "विद्यार्थी अंश और हर को उभयनिष्ठ गुणनखंड से भाग देकर भिन्न को सरलतम रूप में लिखेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH07-T5",
+   "topic_number": 5,
+   "title": "भिन्नों की तुलना",
+   "ncert_sections": "7.7",
+   "concepts": [
+    {
+     "concept_tag": "saman-ansh-tulna",
+     "learning_objective": "विद्यार्थी समान अंश वाली भिन्नों की तुलना हरों के आधार पर करेंगे।"
+    },
+    {
+     "concept_tag": "saman-har-tulna",
+     "learning_objective": "विद्यार्थी भिन्नों को समान हर वाली तुल्य भिन्नों में बदलकर उनकी तुलना और क्रम निर्धारण करेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH07-T6",
+   "topic_number": 6,
+   "title": "भिन्नों को जोड़ना और घटाना",
+   "ncert_sections": "7.8",
+   "concepts": [
+    {
+     "concept_tag": "saman-har-yog-antar",
+     "learning_objective": "विद्यार्थी समान भिन्नात्मक इकाई वाली भिन्नों का योग और अंतर ज्ञात करेंगे।"
+    },
+    {
+     "concept_tag": "brahmagupt-vidhi",
+     "learning_objective": "विद्यार्थी ब्रह्मगुप्त विधि से भिन्न हर वाली भिन्नों को जोड़ेंगे और घटाएँगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH07-T7",
+   "topic_number": 7,
+   "title": "एक चुटकी इतिहास और पहेली",
+   "ncert_sections": "7.9",
+   "concepts": [
+    {
+     "concept_tag": "bhinn-ka-itihas",
+     "learning_objective": "विद्यार्थी भिन्नों के लेखन और नियमों के विकास में भारतीय तथा अन्य गणितज्ञों के योगदान को जानेंगे।"
+    },
+    {
+     "concept_tag": "ikaiyon-ka-yog",
+     "learning_objective": "विद्यार्थी भिन्नों को भिन्न-भिन्न भिन्नात्मक इकाइयों के योग के रूप में लिखेंगे।"
+    }
+   ]
+  }
+ ]
+}

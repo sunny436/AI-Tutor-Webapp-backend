@@ -1,0 +1,124 @@
+{
+ "chapter_id": "GHGP2-CH04",
+ "title": "दशमलव से परे एक और दृष्टि",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHGP2-CH04-T1",
+   "topic_number": 1,
+   "title": "दशमलव का संक्षिप्त पुनरावलोकन",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "dashamlav-sthaniya-maan",
+     "learning_objective": "दशमलव संख्या के प्रत्येक अंक का स्थानीय मान (दशांश, शतांश, सहस्रांश) पहचानना और भिन्न को दशमलव में लिखना।"
+    },
+    {
+     "concept_tag": "das-sau-hazar-se-bhag",
+     "learning_objective": "किसी संख्या को 10, 100, 1000 आदि से भाग देने पर दशमलव बिंदु को बाईं ओर खिसकाने का नियम लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH04-T2",
+   "topic_number": 2,
+   "title": "दशमलव का गुणन",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "dashamlav-gunan-niyam",
+     "learning_objective": "दो दशमलवों के गुणनफल में दशमलव बिंदु का स्थान गुणक और गुण्य के दशमलव स्थानों के योग से निर्धारित करना।"
+    },
+    {
+     "concept_tag": "dashamlav-gunan-anuprayog",
+     "learning_objective": "दैनिक जीवन की समस्याओं (मूल्य, लंबाई, दूरी) में दशमलव गुणन का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH04-T3",
+   "topic_number": 3,
+   "title": "गुणनफल और संख्याओं का संबंध",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "gunan-10-100-1000",
+     "learning_objective": "दशमलव को 10, 100, 1000 से गुणा करने पर दशमलव बिंदु को दाईं ओर खिसकाना।"
+    },
+    {
+     "concept_tag": "gunanphal-ka-parimaan",
+     "learning_objective": "यह तय करना कि गुणनफल गुणा की गई संख्याओं से बड़ा होगा या छोटा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH04-T4",
+   "topic_number": 4,
+   "title": "दशमलव विभाजन: दशमलव भागफल",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "dashamlav-ka-10-100-se-bhag",
+     "learning_objective": "दशमलव को 10, 100, 1000 से भाग देकर भागफल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "samtulya-bhinn-vidhi",
+     "learning_objective": "भिन्न को 10, 100, 1000 हर वाली समतुल्य भिन्न में बदलकर दशमलव भागफल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "dirgh-vibhajan-sthaniya-maan",
+     "learning_objective": "स्थानीय मान का प्रयोग कर दीर्घ विभाजन से दशमलव भागफल ज्ञात करना और दशमलव बिंदु सही स्थान पर लगाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH04-T5",
+   "topic_number": 5,
+   "title": "दशमलव भाजक और भाज्य-भाजक-भागफल संबंध",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "dashamlav-bhajak",
+     "learning_objective": "भाजक और भाज्य को 10, 100 आदि से गुणा करके दशमलव भाजक को गणन संख्या में बदलकर भाग करना।"
+    },
+    {
+     "concept_tag": "bhajya-bhajak-bhagphal",
+     "learning_objective": "भाजक के मान के आधार पर भागफल के भाज्य से बड़ा या छोटा होने का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH04-T6",
+   "topic_number": 6,
+   "title": "कभी न समाप्त होने वाले विभाजन और चक्रीय संख्या",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "anant-dashamlav",
+     "learning_objective": "पहचानना कि कुछ विभाजनों में शेषफल बार-बार आता है और भागफल कभी समाप्त नहीं होता।"
+    },
+    {
+     "concept_tag": "chakriya-sankhya-142857",
+     "learning_objective": "1 ÷ 7 से प्राप्त चक्रीय संख्या 142857 के गुणों और अंकों के दोहराव को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH04-T7",
+   "topic_number": 7,
+   "title": "आगे बढ़ने से पहले देखिए! (कालदर्शक और अधिवर्ष)",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "adhivarsh-niyam",
+     "learning_objective": "4, 100 और 400 से विभाज्यता के आधार पर अधिवर्ष का नियम लागू करना।"
+    },
+    {
+     "concept_tag": "kaaldarshak-antar-ganana",
+     "learning_objective": "दशमलव गुणन से कालदर्शक दिनों और पृथ्वी की वास्तविक परिक्रमा के दिनों के अंतर की गणना करना।"
+    }
+   ]
+  }
+ ]
+}

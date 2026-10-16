@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KEBO1-CH14",
+ "title": "Breathing and Exchange of Gases",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH14-T1",
+   "topic_number": 1,
+   "title": "Respiratory organs in different animals",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "diffusion-and-tracheal-respiration",
+     "learning_objective": "Identify animals that exchange gases by diffusion over the body surface, a moist cuticle or tracheal tubes."
+    },
+    {
+     "concept_tag": "branchial-pulmonary-cutaneous-respiration",
+     "learning_objective": "Distinguish branchial, pulmonary and cutaneous respiration with examples from invertebrates and vertebrates."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH14-T2",
+   "topic_number": 2,
+   "title": "Human respiratory system",
+   "ncert_sections": "14.1.1",
+   "concepts": [
+    {
+     "concept_tag": "air-passage-and-lungs",
+     "learning_objective": "Trace the path of air from the external nostrils to the alveoli and describe the lungs and pleura."
+    },
+    {
+     "concept_tag": "conducting-and-exchange-parts",
+     "learning_objective": "Distinguish the conducting part from the respiratory or exchange part and state their functions."
+    },
+    {
+     "concept_tag": "thoracic-chamber-and-steps",
+     "learning_objective": "Explain why the air-tight thoracic chamber is essential for breathing and list the steps of respiration."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH14-T3",
+   "topic_number": 3,
+   "title": "Mechanism of breathing",
+   "ncert_sections": "14.2",
+   "concepts": [
+    {
+     "concept_tag": "pressure-gradient-breathing",
+     "learning_objective": "Explain inspiration and expiration in terms of intra-pulmonary and atmospheric pressure."
+    },
+    {
+     "concept_tag": "muscles-of-breathing",
+     "learning_objective": "Describe the roles of the diaphragm, intercostal and abdominal muscles in changing thoracic volume."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH14-T4",
+   "topic_number": 4,
+   "title": "Respiratory volumes and capacities",
+   "ncert_sections": "14.2.1",
+   "concepts": [
+    {
+     "concept_tag": "respiratory-volumes",
+     "learning_objective": "Define TV, IRV, ERV and RV and use their average values in calculations."
+    },
+    {
+     "concept_tag": "pulmonary-capacities",
+     "learning_objective": "Derive IC, EC, FRC, VC and TLC by adding the appropriate respiratory volumes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH14-T5",
+   "topic_number": 5,
+   "title": "Exchange of gases",
+   "ncert_sections": "14.3",
+   "concepts": [
+    {
+     "concept_tag": "partial-pressure-gradients",
+     "learning_objective": "Interpret the partial pressures of O2 and CO2 at different sites to predict the direction of diffusion."
+    },
+    {
+     "concept_tag": "diffusion-membrane-factors",
+     "learning_objective": "Explain how solubility and the thin three-layered diffusion membrane favour gas exchange at the alveoli."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH14-T6",
+   "topic_number": 6,
+   "title": "Transport of gases",
+   "ncert_sections": "14.4",
+   "concepts": [
+    {
+     "concept_tag": "oxygen-transport-haemoglobin",
+     "learning_objective": "Describe how O2 is carried by haemoglobin and plasma and how much O2 blood delivers to tissues."
+    },
+    {
+     "concept_tag": "oxygen-dissociation-curve",
+     "learning_objective": "Interpret the sigmoid oxygen dissociation curve and the factors that favour binding or release of O2."
+    },
+    {
+     "concept_tag": "carbon-dioxide-transport",
+     "learning_objective": "Explain the transport of CO2 as bicarbonate, carbamino-haemoglobin and dissolved CO2, with the role of carbonic anhydrase."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH14-T7",
+   "topic_number": 7,
+   "title": "Regulation of respiration and respiratory disorders",
+   "ncert_sections": "14.5, 14.6",
+   "concepts": [
+    {
+     "concept_tag": "respiratory-centres",
+     "learning_objective": "Describe the roles of the respiratory rhythm centre in the medulla and the pneumotaxic centre in the pons."
+    },
+    {
+     "concept_tag": "chemoreceptor-control",
+     "learning_objective": "Explain how the chemosensitive area and receptors of the aortic arch and carotid artery respond to CO2 and H+."
+    },
+    {
+     "concept_tag": "respiratory-disorders",
+     "learning_objective": "Identify asthma, emphysema and occupational respiratory disorders from their causes and effects."
+    }
+   ]
+  }
+ ]
+}

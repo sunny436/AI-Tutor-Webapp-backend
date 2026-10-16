@@ -1,0 +1,88 @@
+{
+ "chapter_id": "JEMH1-CH08",
+ "title": "Introduction to Trigonometry",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH08-T1",
+   "topic_number": 1,
+   "title": "Trigonometric ratios of an acute angle",
+   "ncert_sections": "8.1, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "defining-trigonometric-ratios",
+     "learning_objective": "Identify the opposite side, adjacent side and hypotenuse for an acute angle and define sin, cos and tan as ratios of these sides."
+    },
+    {
+     "concept_tag": "reciprocal-and-quotient-relations",
+     "learning_objective": "Use cosec A = 1/sin A, sec A = 1/cos A, cot A = 1/tan A, tan A = sin A/cos A and cot A = cos A/sin A."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH08-T2",
+   "topic_number": 2,
+   "title": "Finding all trigonometric ratios from one given ratio",
+   "ncert_sections": "8.2",
+   "concepts": [
+    {
+     "concept_tag": "ratios-independent-of-triangle-size",
+     "learning_objective": "Explain, using similar triangles, that trigonometric ratios depend only on the angle, and that sin A and cos A never exceed 1."
+    },
+    {
+     "concept_tag": "ratios-from-one-given-ratio",
+     "learning_objective": "Find the remaining trigonometric ratios of an acute angle from one known ratio using the Pythagoras theorem."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH08-T3",
+   "topic_number": 3,
+   "title": "Trigonometric ratios of 30, 45 and 60 degrees",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "standard-angle-values",
+     "learning_objective": "Recall the values of the trigonometric ratios of 30°, 45° and 60° and how they are derived from geometry."
+    },
+    {
+     "concept_tag": "evaluating-standard-angle-expressions",
+     "learning_objective": "Evaluate expressions and solve simple equations involving the trigonometric ratios of 30°, 45° and 60°."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH08-T4",
+   "topic_number": 4,
+   "title": "Ratios of 0 and 90 degrees and solving right triangles",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "ratios-of-0-and-90-degrees",
+     "learning_objective": "State the trigonometric ratios of 0° and 90°, identify which are not defined, and describe how sin A and cos A change from 0° to 90°."
+    },
+    {
+     "concept_tag": "solving-right-triangles",
+     "learning_objective": "Find the unknown sides and angles of a right triangle when one side and one other part are known."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH08-T5",
+   "topic_number": 5,
+   "title": "Trigonometric identities",
+   "ncert_sections": "8.4, 8.5",
+   "concepts": [
+    {
+     "concept_tag": "fundamental-identities",
+     "learning_objective": "Use sin²A + cos²A = 1, 1 + tan²A = sec²A and 1 + cot²A = cosec²A together with the angles for which each holds."
+    },
+    {
+     "concept_tag": "proving-identities",
+     "learning_objective": "Simplify trigonometric expressions and prove identities by writing them in terms of sin and cos or by using the basic identities."
+    }
+   ]
+  }
+ ]
+}

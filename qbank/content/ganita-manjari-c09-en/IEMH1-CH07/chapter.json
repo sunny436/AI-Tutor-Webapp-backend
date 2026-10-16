@@ -1,0 +1,124 @@
+{
+ "chapter_id": "IEMH1-CH07",
+ "title": "The Mathematics of Maybe: Introduction to Probability",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IEMH1-CH07-T1",
+   "topic_number": 1,
+   "title": "Probability and randomness",
+   "ncert_sections": "7.1, 7.1.1",
+   "concepts": [
+    {
+     "concept_tag": "random-experiment",
+     "learning_objective": "Identify a random experiment as one whose possible outcomes are known but whose result in a single trial cannot be predicted."
+    },
+    {
+     "concept_tag": "probability-as-likelihood",
+     "learning_objective": "Explain probability as a measure of how likely an event is, distinguishing subjective judgement from objective estimates."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH07-T2",
+   "topic_number": 2,
+   "title": "The probability scale",
+   "ncert_sections": "7.1.2",
+   "concepts": [
+    {
+     "concept_tag": "probability-scale-range",
+     "learning_objective": "State that probability lies on a scale from 0 (impossible) to 1 (certain)."
+    },
+    {
+     "concept_tag": "describing-likelihood",
+     "learning_objective": "Describe and rank events as impossible, less likely, even chance, more likely or certain."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH07-T3",
+   "topic_number": 3,
+   "title": "Experimental probability",
+   "ncert_sections": "7.2, 7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "experimental-probability-formula",
+     "learning_objective": "Calculate experimental probability as the number of times an event occurred divided by the total number of trials."
+    },
+    {
+     "concept_tag": "relative-frequency",
+     "learning_objective": "Distinguish the frequency of an event from its relative frequency in observed data."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH07-T4",
+   "topic_number": 4,
+   "title": "Theoretical probability",
+   "ncert_sections": "7.2.2",
+   "concepts": [
+    {
+     "concept_tag": "equally-likely-outcomes",
+     "learning_objective": "Decide whether the outcomes of an experiment are equally likely."
+    },
+    {
+     "concept_tag": "theoretical-probability-calculation",
+     "learning_objective": "Calculate theoretical probability as favourable outcomes divided by possible outcomes."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH07-T5",
+   "topic_number": 5,
+   "title": "Statistical data, sampling and the long run",
+   "ncert_sections": "7.2.3",
+   "concepts": [
+    {
+     "concept_tag": "statistical-probability-sampling",
+     "learning_objective": "Estimate probabilities from sample data and use them to make predictions for a population."
+    },
+    {
+     "concept_tag": "law-of-large-numbers",
+     "learning_objective": "Explain that experimental probability tends towards theoretical probability as the number of trials increases."
+    },
+    {
+     "concept_tag": "gamblers-fallacy",
+     "learning_objective": "Recognise that independent trials have no memory, so past results do not change the next probability."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH07-T6",
+   "topic_number": 6,
+   "title": "Sample spaces and events",
+   "ncert_sections": "7.3, 7.3.1, 7.3.2",
+   "concepts": [
+    {
+     "concept_tag": "sample-space",
+     "learning_objective": "Write the sample space of an experiment, listing every outcome exactly once, and find its size n(S)."
+    },
+    {
+     "concept_tag": "events-as-subsets",
+     "learning_objective": "Identify an event as a subset of the sample space and list its outcomes."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH07-T7",
+   "topic_number": 7,
+   "title": "Tree diagrams",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "tree-diagram-outcomes",
+     "learning_objective": "Use a tree diagram to list all outcomes of a multi-step experiment."
+    },
+    {
+     "concept_tag": "probability-from-tree",
+     "learning_objective": "Find probabilities of events in multi-step experiments using a tree diagram."
+    }
+   ]
+  }
+ ]
+}

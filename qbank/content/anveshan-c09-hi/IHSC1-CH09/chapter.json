@@ -1,0 +1,148 @@
+{
+ "chapter_id": "IHSC1-CH09",
+ "title": "द्रव्य का परमाण्विक आधार",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSC1-CH09-T1",
+   "topic_number": 1,
+   "title": "द्रव्यमान संरक्षण का नियम",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "dravyaman-sanrakshan-niyam",
+     "learning_objective": "रासायनिक अभिक्रिया में कुल द्रव्यमान के संरक्षित रहने के नियम और उसकी प्रायोगिक जाँच को समझना।"
+    },
+    {
+     "concept_tag": "sanrakshan-ganana",
+     "learning_objective": "अभिकारकों और उत्पादों के द्रव्यमानों से द्रव्यमान संरक्षण के नियम पर आधारित गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH09-T2",
+   "topic_number": 2,
+   "title": "स्थिर अनुपात का नियम",
+   "ncert_sections": "9.2",
+   "concepts": [
+    {
+     "concept_tag": "sthir-anupat-niyam",
+     "learning_objective": "किसी यौगिक में तत्वों के द्रव्यमान के निश्चित अनुपात के नियम को समझना।"
+    },
+    {
+     "concept_tag": "anupat-ganana",
+     "learning_objective": "द्रव्यमान अनुपात का उपयोग करके किसी यौगिक के घटकों का द्रव्यमान ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH09-T3",
+   "topic_number": 3,
+   "title": "डाल्टन का परमाणु सिद्धांत",
+   "ncert_sections": "9.3",
+   "concepts": [
+    {
+     "concept_tag": "dalton-abhidharana",
+     "learning_objective": "डाल्टन के परमाणु सिद्धांत की अभिधारणाओं को पहचानना।"
+    },
+    {
+     "concept_tag": "dalton-niyam-vyakhya",
+     "learning_objective": "डाल्टन की अभिधारणाओं से रासायनिक संयोजन के नियमों की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH09-T4",
+   "topic_number": 4,
+   "title": "परमाणुओं का संयोजन और सहसंयोजक आबंध",
+   "ncert_sections": "9.4, 9.4.1",
+   "concepts": [
+    {
+     "concept_tag": "anu-aur-rasayanik-abandh",
+     "learning_objective": "अणु और रासायनिक आबंध का अर्थ तथा परमाणुओं के संयोजन का कारण समझना।"
+    },
+    {
+     "concept_tag": "sahsanyojak-abandh",
+     "learning_objective": "इलेक्ट्रॉनों की साझेदारी से एकल, द्वि और त्रि आबंध वाले अणुओं के बनने की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "sahsanyojak-namkaran",
+     "learning_objective": "उपसर्ग पद्धति से सहसंयोजी यौगिकों का नामकरण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH09-T5",
+   "topic_number": 5,
+   "title": "इलेक्ट्रॉन स्थानांतरण द्वारा आयनिक आबंध",
+   "ncert_sections": "9.4.2",
+   "concepts": [
+    {
+     "concept_tag": "aayan-nirman",
+     "learning_objective": "इलेक्ट्रॉन खोने या ग्रहण करने से धनायन और ऋणायन के बनने को समझना।"
+    },
+    {
+     "concept_tag": "aayanik-abandh",
+     "learning_objective": "आयनिक आबंध और आयनिक यौगिकों की क्रिस्टल संरचना को समझना।"
+    },
+    {
+     "concept_tag": "aayanik-namkaran",
+     "learning_objective": "सामान्य एकपरमाणुक और बहुपरमाणुक आयनों के नाम व संयोजकता पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH09-T6",
+   "topic_number": 6,
+   "title": "रासायनिक सूत्र लिखना",
+   "ncert_sections": "9.5, 9.5.1, 9.5.2",
+   "concepts": [
+    {
+     "concept_tag": "sutra-sahsanyoji",
+     "learning_objective": "संयोजकताओं के आदान-प्रदान द्वारा सहसंयोजी यौगिकों के सूत्र लिखना।"
+    },
+    {
+     "concept_tag": "sutra-aayanik",
+     "learning_objective": "आवेशों के आदान-प्रदान और सरलतम अनुपात से आयनिक यौगिकों के सूत्र लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH09-T7",
+   "topic_number": 7,
+   "title": "आयनिक और सहसंयोजी यौगिकों के गुण",
+   "ncert_sections": "9.6",
+   "concepts": [
+    {
+     "concept_tag": "vilayata",
+     "learning_objective": "जल, केरोसिन और पेट्रोल में आयनिक और सहसंयोजी यौगिकों की विलेयता की तुलना करना।"
+    },
+    {
+     "concept_tag": "vidyut-chalakta",
+     "learning_objective": "ठोस और जलीय अवस्था में यौगिकों की विद्युत चालकता की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "galnank-kvathnank",
+     "learning_objective": "आयनिक और सहसंयोजी यौगिकों के गलनांक व क्वथनांक का कारण सहित अंतर बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH09-T8",
+   "topic_number": 8,
+   "title": "आण्विक द्रव्यमान और सूत्र इकाई द्रव्यमान",
+   "ncert_sections": "9.7, 9.8",
+   "concepts": [
+    {
+     "concept_tag": "anvik-dravyaman",
+     "learning_objective": "परमाणु द्रव्यमानों को जोड़कर सहसंयोजी यौगिकों का आण्विक द्रव्यमान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "sutra-ikai-dravyaman",
+     "learning_objective": "सूत्र इकाई का अर्थ समझकर आयनिक यौगिकों का सूत्र इकाई द्रव्यमान ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

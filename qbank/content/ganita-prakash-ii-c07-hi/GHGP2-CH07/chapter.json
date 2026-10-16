@@ -1,0 +1,116 @@
+{
+ "chapter_id": "GHGP2-CH07",
+ "title": "अज्ञात की खोज",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHGP2-CH07-T1",
+   "topic_number": 1,
+   "title": "अज्ञात को खोजें: तराजू, प्रतिरूप और समीकरण",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "santulit-taraju",
+     "learning_objective": "विद्यार्थी संतुलित तराजू की स्थिति से अज्ञात भार ज्ञात कर सकेंगे और उसे समीकरण के रूप में लिख सकेंगे।"
+    },
+    {
+     "concept_tag": "samikaran-ki-paribhasha",
+     "learning_objective": "विद्यार्थी समीकरण, उसके बाएँ पक्ष और दाएँ पक्ष तथा समीकरण हल करने का अर्थ समझ सकेंगे।"
+    },
+    {
+     "concept_tag": "pratirup-se-samikaran",
+     "learning_objective": "विद्यार्थी माचिस की तीलियों के प्रतिरूप के व्यापक व्यंजक से समीकरण बनाकर स्थिति संख्या ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH07-T2",
+   "topic_number": 2,
+   "title": "परीक्षण और त्रुटि विधि तथा व्युत्क्रम संक्रियाएँ",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "parikshan-aur-truti-vidhi",
+     "learning_objective": "विद्यार्थी अक्षर-संख्या के स्थान पर मान रखकर जाँच सकेंगे कि कौन-सा मान बायाँ पक्ष = दायाँ पक्ष बनाता है।"
+    },
+    {
+     "concept_tag": "vyutkram-sankriyaen",
+     "learning_objective": "विद्यार्थी जोड़-घटाव तथा गुणा-भाग को व्युत्क्रम संक्रियाएँ मानकर दोनों पक्षों पर समान संक्रिया कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH07-T3",
+   "topic_number": 3,
+   "title": "समीकरणों को व्यवस्थित रूप से हल करना",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "dono-pakshon-par-saman-sankriya",
+     "learning_objective": "विद्यार्थी दोनों पक्षों पर समान संक्रिया करके अज्ञात को एक ओर अकेला कर सकेंगे।"
+    },
+    {
+     "concept_tag": "pakshantaran",
+     "learning_objective": "विद्यार्थी पद को दूसरी ओर ले जाते समय उसकी व्युत्क्रम संक्रिया का प्रयोग कर सकेंगे।"
+    },
+    {
+     "concept_tag": "hal-ki-janch",
+     "learning_objective": "विद्यार्थी प्राप्त हल को मूल समीकरण में रखकर उसकी जाँच कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH07-T4",
+   "topic_number": 4,
+   "title": "समस्याओं को हल कीजिए और समीकरण का निर्माण",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "shabd-samasya-se-samikaran",
+     "learning_objective": "विद्यार्थी दैनिक जीवन की समस्याओं को समीकरण के रूप में लिखकर हल कर सकेंगे।"
+    },
+    {
+     "concept_tag": "samikaran-ka-nirman",
+     "learning_objective": "विद्यार्थी अक्षर-संख्या के दिए गए मान से ऐसे समीकरण बना सकेंगे जिनका वही हल हो।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH07-T5",
+   "topic_number": 5,
+   "title": "त्रुटि ढूँढ़िए और सुधारिए",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "truti-pahchan",
+     "learning_objective": "विद्यार्थी समीकरण हल करने के चरणों में हुई त्रुटि पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "truti-sudhar",
+     "learning_objective": "विद्यार्थी त्रुटि सुधारकर समीकरण का सही हल ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH07-T6",
+   "topic_number": 6,
+   "title": "इतिहास की एक झलक",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "bijganit-ka-itihas",
+     "learning_objective": "विद्यार्थी ब्रह्मगुप्त, आर्यभट्ट, भास्कराचार्य और अल-ख़्वारिज़्मी के बीजगणित में योगदान को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "brahmagupta-ka-sutra",
+     "learning_objective": "विद्यार्थी Ax + B = Cx + D प्रकार के समीकरणों को ब्रह्मगुप्त के सूत्र से हल कर सकेंगे।"
+    },
+    {
+     "concept_tag": "prachin-sanketan",
+     "learning_objective": "विद्यार्थी प्राचीन भारतीय संकेतन (या, रू, ऋण का बिंदु) को आधुनिक संकेतन में बदल सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

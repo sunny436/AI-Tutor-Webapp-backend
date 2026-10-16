@@ -1,0 +1,156 @@
+{
+ "chapter_id": "KEBO1-CH11",
+ "title": "Photosynthesis in Higher Plants",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH11-T1",
+   "topic_number": 1,
+   "title": "What we know and early experiments",
+   "ncert_sections": "11.1, 11.2",
+   "concepts": [
+    {
+     "concept_tag": "early-experiments",
+     "learning_objective": "Describe the classic experiments of Priestley, Ingenhousz, Sachs and Engelmann and what each revealed about photosynthesis."
+    },
+    {
+     "concept_tag": "source-of-oxygen",
+     "learning_objective": "Explain van Niel's inference that the oxygen released by green plants comes from water and use the balanced equation of photosynthesis."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH11-T2",
+   "topic_number": 2,
+   "title": "Where photosynthesis takes place",
+   "ncert_sections": "11.3",
+   "concepts": [
+    {
+     "concept_tag": "chloroplast-division-of-labour",
+     "learning_objective": "Relate the membrane system and the stroma of the chloroplast to the reactions that occur in each."
+    },
+    {
+     "concept_tag": "light-and-dark-reactions",
+     "learning_objective": "Distinguish light reactions from the carbon (dark) reactions and explain why the term dark reaction is a misnomer."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH11-T3",
+   "topic_number": 3,
+   "title": "Photosynthetic pigments",
+   "ncert_sections": "11.4",
+   "concepts": [
+    {
+     "concept_tag": "leaf-pigments-chromatography",
+     "learning_objective": "Identify the four leaf pigments separated by paper chromatography by their colours."
+    },
+    {
+     "concept_tag": "absorption-and-action-spectra",
+     "learning_objective": "Interpret the absorption spectrum of chlorophyll a against the action spectrum of photosynthesis."
+    },
+    {
+     "concept_tag": "accessory-pigments",
+     "learning_objective": "Explain the roles of accessory pigments and why chlorophyll a is the chief pigment."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH11-T4",
+   "topic_number": 4,
+   "title": "Light reaction and electron transport",
+   "ncert_sections": "11.5, 11.6, 11.6.1",
+   "concepts": [
+    {
+     "concept_tag": "photosystems-reaction-centres",
+     "learning_objective": "Describe the light harvesting complexes and the reaction centres P700 and P680 of PS I and PS II."
+    },
+    {
+     "concept_tag": "z-scheme",
+     "learning_objective": "Trace the path of electrons from PS II to NADP+ in the Z scheme."
+    },
+    {
+     "concept_tag": "water-splitting",
+     "learning_objective": "Explain how splitting of water associated with PS II replaces electrons and releases oxygen and protons."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH11-T5",
+   "topic_number": 5,
+   "title": "Photophosphorylation and chemiosmosis",
+   "ncert_sections": "11.6.2, 11.6.3",
+   "concepts": [
+    {
+     "concept_tag": "cyclic-and-non-cyclic-photophosphorylation",
+     "learning_objective": "Compare cyclic and non-cyclic photophosphorylation in terms of photosystems involved and products formed."
+    },
+    {
+     "concept_tag": "chemiosmotic-atp-synthesis",
+     "learning_objective": "Explain how a proton gradient across the thylakoid membrane drives ATP synthesis through ATP synthase."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH11-T6",
+   "topic_number": 6,
+   "title": "Use of ATP and NADPH: the Calvin cycle",
+   "ncert_sections": "11.7, 11.7.1, 11.7.2",
+   "concepts": [
+    {
+     "concept_tag": "co2-acceptor-and-first-product",
+     "learning_objective": "Identify RuBP as the CO2 acceptor and 3-PGA as the first stable product of the C3 pathway."
+    },
+    {
+     "concept_tag": "calvin-cycle-stages",
+     "learning_objective": "Describe carboxylation, reduction and regeneration as the three stages of the Calvin cycle."
+    },
+    {
+     "concept_tag": "calvin-cycle-energy-budget",
+     "learning_objective": "Calculate the ATP and NADPH used by the Calvin cycle for CO2 fixed and glucose formed."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH11-T7",
+   "topic_number": 7,
+   "title": "The C4 pathway and photorespiration",
+   "ncert_sections": "11.8, 11.9",
+   "concepts": [
+    {
+     "concept_tag": "kranz-anatomy",
+     "learning_objective": "Describe the Kranz anatomy of C4 leaves and the features of bundle sheath cells."
+    },
+    {
+     "concept_tag": "hatch-and-slack-pathway",
+     "learning_objective": "Trace the steps of the Hatch and Slack pathway between mesophyll and bundle sheath cells."
+    },
+    {
+     "concept_tag": "photorespiration",
+     "learning_objective": "Explain photorespiration in C3 plants and why it is absent in C4 plants."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH11-T8",
+   "topic_number": 8,
+   "title": "Factors affecting photosynthesis",
+   "ncert_sections": "11.10",
+   "concepts": [
+    {
+     "concept_tag": "law-of-limiting-factors",
+     "learning_objective": "State Blackman's law of limiting factors and apply it to a given situation."
+    },
+    {
+     "concept_tag": "light-and-co2-as-factors",
+     "learning_objective": "Analyse how light intensity and CO2 concentration affect the rate of photosynthesis in C3 and C4 plants."
+    },
+    {
+     "concept_tag": "temperature-and-water-as-factors",
+     "learning_objective": "Explain how temperature and water stress influence the rate of photosynthesis."
+    }
+   ]
+  }
+ ]
+}

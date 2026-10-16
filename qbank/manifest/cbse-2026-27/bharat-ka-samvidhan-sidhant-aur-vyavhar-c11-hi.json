@@ -1,0 +1,1283 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "bharat-ka-samvidhan-sidhant-aur-vyavhar-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "political_science",
+  "language": "hindi",
+  "title": "Bharat ka Samvidhan Sidhant aur Vyavhar",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khps2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHPS2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "संविधान : क्यों और कैसे?",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS2-CH01-T1",
+     "topic_number": 1,
+     "title": "संविधान की आवश्यकता : समन्वय, आश्वासन और निर्णय की शक्ति",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samanvay-aur-ashvasan",
+       "learning_objective": "यह समझाना कि संविधान बुनियादी नियमों द्वारा समाज के सदस्यों में समन्वय और परस्पर विश्वास पैदा करता है।"
+      },
+      {
+       "concept_tag": "nirnay-nirman-ki-shakti",
+       "learning_objective": "यह पहचानना कि संविधान तय करता है कि कानून बनाने और सरकार गठित करने की शक्ति किसके पास होगी।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH01-T2",
+     "topic_number": 2,
+     "title": "सरकार की शक्तियों पर सीमाएँ तथा समाज की आकांक्षाएँ और लक्ष्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shakti-par-simayen",
+       "learning_objective": "यह समझाना कि संविधान नागरिकों के अधिकारों द्वारा सरकार की शक्ति को सीमित करता है।"
+      },
+      {
+       "concept_tag": "akanksha-aur-lakshya",
+       "learning_objective": "यह स्पष्ट करना कि संविधान सरकार को एक न्यायपूर्ण समाज की आकांक्षाएँ पूरी करने में सक्षम बनाता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH01-T3",
+     "topic_number": 3,
+     "title": "जनता की मूलभूत पहचान और संविधान का स्वरूप",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mulbhut-pahchan",
+       "learning_objective": "यह समझना कि संविधान जनता को एक सामूहिक राजनीतिक पहचान और साझा मूल्य देता है।"
+      },
+      {
+       "concept_tag": "samvidhan-ka-swaroop",
+       "learning_objective": "यह पहचानना कि संविधान एक लिखित दस्तावेज़ या कई दस्तावेज़ों का समूह हो सकता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH01-T4",
+     "topic_number": 4,
+     "title": "संविधान की सत्ता : प्रख्यापन, मौलिक प्रावधान और संतुलित संस्थागत रूपरेखा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prakhyapan-ka-dhang",
+       "learning_objective": "यह समझाना कि संविधान बनाने वालों की विश्वसनीयता उसकी सत्ता और प्रभावशीलता को कैसे प्रभावित करती है।"
+      },
+      {
+       "concept_tag": "maulik-pravdhan",
+       "learning_objective": "यह विश्लेषण करना कि सभी को स्वतंत्रता और समानता देने वाले प्रावधान संविधान को स्वीकार्य बनाते हैं।"
+      },
+      {
+       "concept_tag": "santulit-sansthagat-rooprekha",
+       "learning_objective": "शक्तियों के विभाजन, नियंत्रण-संतुलन तथा कठोरता-लचीलेपन के संतुलन का महत्त्व समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH01-T5",
+     "topic_number": 5,
+     "title": "भारतीय संविधान का निर्माण : संविधान सभा की संरचना और कार्यविधि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samvidhan-sabha-ki-sanrachna",
+       "learning_objective": "कैबिनेट मिशन योजना के आधार पर संविधान सभा की संरचना और प्रतिनिधित्व को जानना।"
+      },
+      {
+       "concept_tag": "vichar-vimarsh-ka-siddhant",
+       "learning_objective": "संविधान सभा की समितियों, सार्वजनिक तर्क और विचार-विमर्श की प्रक्रिया को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH01-T6",
+     "topic_number": 6,
+     "title": "राष्ट्रीय आंदोलन की विरासत, संस्थागत व्यवस्थाएँ और अन्य देशों से लिए गए प्रावधान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "uddeshya-prastav",
+       "learning_objective": "नेहरू द्वारा प्रस्तुत उद्देश्य प्रस्ताव के मुख्य सिद्धांतों को राष्ट्रीय आंदोलन की विरासत से जोड़ना।"
+      },
+      {
+       "concept_tag": "anya-deshon-se-pravdhan",
+       "learning_objective": "विभिन्न देशों के संविधानों से लिए गए प्रावधानों को पहचानना और उनके भारतीय अनुकूलन को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "भारतीय संविधान में अधिकार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS2-CH02-T1",
+     "topic_number": 1,
+     "title": "अधिकारों का महत्त्व और भारतीय संविधान में मौलिक अधिकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "adhikaron-ka-mahattva",
+       "learning_objective": "अधिकार-पत्र के अर्थ और संविधान द्वारा अधिकारों की सुरक्षा के महत्त्व को समझना।"
+      },
+      {
+       "concept_tag": "maulik-banam-samanya-adhikar",
+       "learning_objective": "मौलिक अधिकारों और सामान्य कानूनी अधिकारों के अंतर को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH02-T2",
+     "topic_number": 2,
+     "title": "समानता का अधिकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samanta-ke-pravdhan",
+       "learning_objective": "समानता के अधिकार के अंतर्गत भेदभाव निषेध, छुआछूत और उपाधियों के उन्मूलन को पहचानना।"
+      },
+      {
+       "concept_tag": "avsar-ki-samanta-aarakshan",
+       "learning_objective": "अवसर की समानता और अनुच्छेद 16(4) के अंतर्गत आरक्षण के औचित्य को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH02-T3",
+     "topic_number": 3,
+     "title": "स्वतंत्रता का अधिकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jeevan-aur-swatantrata",
+       "learning_objective": "अनुच्छेद 21 के अंतर्गत जीवन और व्यक्तिगत स्वतंत्रता के अधिकार तथा उसके विस्तार को समझना।"
+      },
+      {
+       "concept_tag": "nivarak-nazarbandi",
+       "learning_objective": "निवारक नज़रबंदी के अर्थ और उससे जुड़े तनाव का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "abhiyukt-ke-adhikar",
+       "learning_objective": "अभियुक्तों के अधिकारों तथा निष्पक्ष सुनवाई की व्यवस्था को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH02-T4",
+     "topic_number": 4,
+     "title": "शोषण के विरुद्ध, धार्मिक स्वतंत्रता तथा सांस्कृतिक और शैक्षिक अधिकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shoshan-ke-viruddh",
+       "learning_objective": "बेगार, मानव व्यापार और बाल श्रम के निषेध को समझना।"
+      },
+      {
+       "concept_tag": "dharmik-swatantrata",
+       "learning_objective": "धार्मिक स्वतंत्रता, उसकी सीमाओं और सभी धर्मों की समानता को समझाना।"
+      },
+      {
+       "concept_tag": "alpsankhyak-adhikar",
+       "learning_objective": "अल्पसंख्यकों के सांस्कृतिक और शैक्षिक अधिकारों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH02-T5",
+     "topic_number": 5,
+     "title": "संवैधानिक उपचारों का अधिकार और राष्ट्रीय मानवाधिकार आयोग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sanvaidhanik-upchar-yachika",
+       "learning_objective": "संवैधानिक उपचारों के अधिकार और विभिन्न रिटों के प्रयोग को समझना।"
+      },
+      {
+       "concept_tag": "manavadhikar-aayog",
+       "learning_objective": "राष्ट्रीय मानवाधिकार आयोग की संरचना, कार्यों और सीमाओं को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH02-T6",
+     "topic_number": 6,
+     "title": "राज्य के नीति-निर्देशक तत्त्व और मौलिक अधिकारों से उनका संबंध",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "niti-nirdeshak-tattva",
+       "learning_objective": "नीति-निर्देशक तत्त्वों की वाद-अयोग्य प्रकृति और विषय-वस्तु को समझना।"
+      },
+      {
+       "concept_tag": "adhikar-nirdeshak-sambandh",
+       "learning_objective": "मौलिक अधिकारों और नीति-निर्देशक तत्त्वों के संबंध तथा संपत्ति के अधिकार के विवाद का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "maulik-kartavya",
+       "learning_objective": "मौलिक कर्तव्यों के समावेश और उनकी स्थिति को पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "चुनाव और प्रतिनिधित्व",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS2-CH03-T1",
+     "topic_number": 1,
+     "title": "चुनाव और लोकतंत्र",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pratyaksh-apratyaksh-loktantra",
+       "learning_objective": "प्रत्यक्ष और अप्रत्यक्ष लोकतंत्र में अंतर करना और प्रतिनिधित्व की आवश्यकता समझना।"
+      },
+      {
+       "concept_tag": "chunav-niyam-samvidhan",
+       "learning_objective": "समझना कि चुनाव के मूल नियम संविधान में क्यों लिखे जाते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH03-T2",
+     "topic_number": 2,
+     "title": "सर्वाधिक वोट से जीत प्रणाली और समानुपातिक प्रतिनिधित्व",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sarvadhik-vot-se-jeet",
+       "learning_objective": "सर्वाधिक वोट से जीत (FPTP) प्रणाली में विजेता तय होने की विधि समझना।"
+      },
+      {
+       "concept_tag": "samanupatik-pratinidhitva",
+       "learning_objective": "समानुपातिक प्रतिनिधित्व प्रणाली की विशेषताओं की FPTP से तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH03-T3",
+     "topic_number": 3,
+     "title": "राज्यसभा चुनाव: एकल संक्रमणीय मत प्रणाली",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ekal-sankramaniya-mat",
+       "learning_objective": "राज्यसभा आदि के चुनाव में प्रयुक्त एकल संक्रमणीय मत प्रणाली को समझना।"
+      },
+      {
+       "concept_tag": "kota-ganana",
+       "learning_objective": "विजय के लिए आवश्यक न्यूनतम कोटा की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH03-T4",
+     "topic_number": 4,
+     "title": "भारत ने सर्वाधिक वोट से जीत प्रणाली क्यों अपनाई",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "saralta-aur-javabdehi",
+       "learning_objective": "FPTP की सरलता और प्रतिनिधि की जवाबदेही के लाभ समझना।"
+      },
+      {
+       "concept_tag": "sthir-sarkar",
+       "learning_objective": "संसदीय व्यवस्था में स्थिर सरकार और FPTP के संबंध का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "samajik-samuh-aur-dal-vyavastha",
+       "learning_objective": "FPTP का सामाजिक समूहों और भारत की दलीय व्यवस्था पर प्रभाव समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH03-T5",
+     "topic_number": 5,
+     "title": "निर्वाचन क्षेत्रों का आरक्षण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prithak-nirvachak-mandal",
+       "learning_objective": "पृथक निर्वाचक मंडल और आरक्षित निर्वाचन क्षेत्र में अंतर करना।"
+      },
+      {
+       "concept_tag": "parisiman-ayog",
+       "learning_objective": "परिसीमन आयोग द्वारा आरक्षित क्षेत्र तय करने की प्रक्रिया समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH03-T6",
+     "topic_number": 6,
+     "title": "सार्वभौमिक वयस्क मताधिकार और चुनाव लड़ने का अधिकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sarvbhaumik-vayask-matadhikar",
+       "learning_objective": "सार्वभौमिक वयस्क मताधिकार और उसके पीछे के समानता के सिद्धांत को समझना।"
+      },
+      {
+       "concept_tag": "chunav-ladne-ka-adhikar",
+       "learning_objective": "चुनाव लड़ने के अधिकार की शर्तें और प्रतिबंध पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH03-T7",
+     "topic_number": 7,
+     "title": "स्वतंत्र निर्वाचन आयोग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "anuchchhed-324",
+       "learning_objective": "अनुच्छेद 324 के अंतर्गत निर्वाचन आयोग की संवैधानिक स्थिति समझना।"
+      },
+      {
+       "concept_tag": "ayukt-niyukti-karyakal",
+       "learning_objective": "मुख्य चुनाव आयुक्त की नियुक्ति, कार्यकाल और पद से हटाने की प्रक्रिया जानना।"
+      },
+      {
+       "concept_tag": "nirvachan-ayog-karya",
+       "learning_objective": "निर्वाचन आयोग के कार्यों और शक्तियों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH03-T8",
+     "topic_number": 8,
+     "title": "चुनाव सुधार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "chunav-sudhar-sujhav",
+       "learning_objective": "चुनाव सुधार के प्रमुख सुझावों को पहचानना।"
+      },
+      {
+       "concept_tag": "loktantrik-bhavna-safalta",
+       "learning_objective": "भारतीय चुनाव व्यवस्था की सफलता और कानूनी सुधारों की सीमाओं का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "कार्यपालिका",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS2-CH04-T1",
+     "topic_number": 1,
+     "title": "कार्यपालिका क्या है?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "karyapalika-ka-arth",
+       "learning_objective": "सरकार के उस अंग के रूप में कार्यपालिका को पहचानना जो कानूनों और नीतियों को लागू करता है।"
+      },
+      {
+       "concept_tag": "rajnitik-aur-sthayi-karyapalika",
+       "learning_objective": "राजनीतिक कार्यपालिका और स्थायी कार्यपालिका के बीच अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH04-T2",
+     "topic_number": 2,
+     "title": "कार्यपालिका के विभिन्न प्रकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "adhyakshatmak-vyavastha",
+       "learning_objective": "अध्यक्षात्मक व्यवस्था में राष्ट्रपति की दोहरी भूमिका को समझाना।"
+      },
+      {
+       "concept_tag": "sansadiya-vyavastha",
+       "learning_objective": "संसदीय व्यवस्था में नाममात्र और वास्तविक प्रधान के भेद को पहचानना।"
+      },
+      {
+       "concept_tag": "ardh-adhyakshatmak-vyavastha",
+       "learning_objective": "अर्ध-अध्यक्षात्मक व्यवस्था की विशेषताओं की तुलना अन्य व्यवस्थाओं से करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH04-T3",
+     "topic_number": 3,
+     "title": "भारत में संसदीय कार्यपालिका",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sansadiya-pranali-ka-chayan",
+       "learning_objective": "संविधान निर्माताओं द्वारा संसदीय कार्यपालिका अपनाने के कारणों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "rashtrapati-ka-nirvachan",
+       "learning_objective": "राष्ट्रपति के अप्रत्यक्ष निर्वाचन और महाभियोग की प्रक्रिया को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH04-T4",
+     "topic_number": 4,
+     "title": "राष्ट्रपति की शक्ति और स्थिति",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "anuchchhed-74",
+       "learning_objective": "अनुच्छेद 74(1) के अनुसार मंत्रिपरिषद की सलाह की बाध्यकारी प्रकृति को समझाना।"
+      },
+      {
+       "concept_tag": "rashtrapati-ke-vivekadhikar",
+       "learning_objective": "राष्ट्रपति के विवेकाधिकार, जेबी वीटो और प्रधानमंत्री की नियुक्ति में उसकी भूमिका का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "uparashtrapati",
+       "learning_objective": "भारत के उपराष्ट्रपति के निर्वाचन, पद से हटाए जाने और कार्यों को जानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH04-T5",
+     "topic_number": 5,
+     "title": "प्रधानमंत्री और मंत्रिपरिषद",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mantriparishad-ka-aakar",
+       "learning_objective": "91वें संशोधन द्वारा मंत्रिपरिषद के आकार पर लगी सीमा को समझाना।"
+      },
+      {
+       "concept_tag": "samuhik-uttardayitva",
+       "learning_objective": "मंत्रिपरिषद के लोकसभा के प्रति सामूहिक उत्तरदायित्व के सिद्धांत को लागू करना।"
+      },
+      {
+       "concept_tag": "pradhanmantri-ki-sthiti",
+       "learning_objective": "प्रधानमंत्री की शक्ति के स्रोतों और गठबंधन राजनीति के उस पर प्रभाव का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH04-T6",
+     "topic_number": 6,
+     "title": "स्थायी कार्यपालिका: नौकरशाही",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "naukarshahi-ki-tatasthata",
+       "learning_objective": "राजनीतिक रूप से तटस्थ और पेशेवर नौकरशाही की भूमिका को समझाना।"
+      },
+      {
+       "concept_tag": "lok-seva-aayog-aur-bharti",
+       "learning_objective": "संघ लोक सेवा आयोग, आरक्षण और अखिल भारतीय सेवाओं पर केंद्र के नियंत्रण को समझाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "विधायिका",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS2-CH05-T1",
+     "topic_number": 1,
+     "title": "हमें संसद की आवश्यकता क्यों है?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vidhayika-ka-mahatva",
+       "learning_objective": "लोकतंत्र में विधायिका की केंद्रीय और प्रतिनिधिक भूमिका को समझना।"
+      },
+      {
+       "concept_tag": "karyapalika-par-niyantran-ki-kshamta",
+       "learning_objective": "कार्यपालिका के बढ़ते प्रभाव के बावजूद संसद की लोकतांत्रिक क्षमता का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH05-T2",
+     "topic_number": 2,
+     "title": "संसद के दो सदन: राज्यसभा और लोकसभा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dvisadaniya-vidhayika",
+       "learning_objective": "द्विसदनीय विधायिका के अर्थ और लाभों को पहचानना।"
+      },
+      {
+       "concept_tag": "rajya-sabha-ki-sanrachna",
+       "learning_objective": "राज्यसभा के अप्रत्यक्ष चुनाव, प्रतिनिधित्व और स्थायी स्वरूप को समझाना।"
+      },
+      {
+       "concept_tag": "lok-sabha-ki-sanrachna",
+       "learning_objective": "लोकसभा के प्रत्यक्ष चुनाव, निर्वाचन क्षेत्रों और कार्यकाल को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH05-T3",
+     "topic_number": 3,
+     "title": "संसद के कार्य और दोनों सदनों की शक्तियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sansad-ke-karya",
+       "learning_objective": "संसद के विधायी, वित्तीय, निर्वाचन, न्यायिक आदि कार्यों को पहचानना।"
+      },
+      {
+       "concept_tag": "dono-sadanon-ki-shaktiyan",
+       "learning_objective": "लोकसभा और राज्यसभा की शक्तियों की तुलना करना।"
+      },
+      {
+       "concept_tag": "rajya-sabha-ki-vishesh-shakti",
+       "learning_objective": "राज्यों से जुड़े विषयों में राज्यसभा की विशेष शक्ति को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH05-T4",
+     "topic_number": 4,
+     "title": "संसद कानून कैसे बनाती है?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vidheyak-ke-prakar",
+       "learning_objective": "सरकारी, निजी सदस्य, धन और साधारण विधेयकों में अंतर करना।"
+      },
+      {
+       "concept_tag": "kanoon-nirman-ke-charan",
+       "learning_objective": "विधेयक के कानून बनने के चरणों का क्रम समझना।"
+      },
+      {
+       "concept_tag": "dhan-vidheyak-prakriya",
+       "learning_objective": "धन विधेयक की विशेष प्रक्रिया और संयुक्त अधिवेशन को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH05-T5",
+     "topic_number": 5,
+     "title": "संसद कार्यपालिका पर नियंत्रण कैसे करती है?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sansadiya-visheshadhikar",
+       "learning_objective": "संसदीय विशेषाधिकार के अर्थ और उद्देश्य को समझना।"
+      },
+      {
+       "concept_tag": "vimarsh-aur-prashnakal",
+       "learning_objective": "प्रश्नकाल, शून्यकाल आदि विमर्श के साधनों की भूमिका पहचानना।"
+      },
+      {
+       "concept_tag": "vittiya-niyantran-aur-avishvas-prastav",
+       "learning_objective": "वित्तीय नियंत्रण और अविश्वास प्रस्ताव की प्रभावशीलता का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH05-T6",
+     "topic_number": 6,
+     "title": "संसदीय समितियाँ क्या करती हैं?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sthayi-samitiyan",
+       "learning_objective": "विभागों से संबंधित स्थायी समितियों के कार्य समझना।"
+      },
+      {
+       "concept_tag": "sanyukt-sansadiya-samiti",
+       "learning_objective": "संयुक्त संसदीय समितियों की भूमिका और समिति व्यवस्था के प्रभाव का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH05-T7",
+     "topic_number": 7,
+     "title": "संसद स्वयं को कैसे नियंत्रित करती है?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "peethasin-adhikari-ki-bhumika",
+       "learning_objective": "सदन की कार्यवाही के संचालन में पीठासीन अधिकारी की भूमिका समझना।"
+      },
+      {
+       "concept_tag": "dal-badal-virodhi-kanoon",
+       "learning_objective": "दल-बदल विरोधी कानून के प्रावधानों और प्रभाव का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "न्यायपालिका",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS2-CH06-T1",
+     "topic_number": 1,
+     "title": "स्वतंत्र न्यायपालिका की आवश्यकता और उसकी स्वतंत्रता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kanoon-ka-shasan",
+       "learning_objective": "कानून के शासन की रक्षा में न्यायपालिका की मुख्य भूमिका को समझाना।"
+      },
+      {
+       "concept_tag": "nyayapalika-ki-swatantrata",
+       "learning_objective": "न्यायपालिका की स्वतंत्रता के अर्थ और उसे सुनिश्चित करने वाले संवैधानिक उपायों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH06-T2",
+     "topic_number": 2,
+     "title": "न्यायाधीशों की नियुक्ति और उन्हें पद से हटाना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nyayadhishon-ki-niyukti",
+       "learning_objective": "मुख्य न्यायाधीश तथा अन्य न्यायाधीशों की नियुक्ति की प्रक्रिया और न्यायाधीश-मंडल के सिद्धांत को समझाना।"
+      },
+      {
+       "concept_tag": "nyayadhish-ko-hatana",
+       "learning_objective": "न्यायाधीशों को हटाने की कठिन प्रक्रिया और विशेष बहुमत की शर्त का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH06-T3",
+     "topic_number": 3,
+     "title": "न्यायपालिका की संरचना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ekikrit-nyayik-vyavastha",
+       "learning_objective": "भारत की एकीकृत और पिरामिडनुमा न्यायिक व्यवस्था तथा विभिन्न स्तरों के न्यायालयों के कार्य बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH06-T4",
+     "topic_number": 4,
+     "title": "सर्वोच्च न्यायालय का क्षेत्राधिकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "maulik-kshetradhikar",
+       "learning_objective": "संघ और राज्यों के विवादों में सर्वोच्च न्यायालय के मौलिक क्षेत्राधिकार को समझाना।"
+      },
+      {
+       "concept_tag": "apiliy-aur-salahkari",
+       "learning_objective": "अपीलीय और सलाहकारी क्षेत्राधिकार में अंतर करना।"
+      },
+      {
+       "concept_tag": "rit-kshetradhikar",
+       "learning_objective": "मौलिक अधिकारों की रक्षा हेतु रिट क्षेत्राधिकार को लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH06-T5",
+     "topic_number": 5,
+     "title": "न्यायिक सक्रियता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "janhit-yachika",
+       "learning_objective": "जनहित याचिका के उद्भव और उसकी विशेषताओं को समझाना।"
+      },
+      {
+       "concept_tag": "nyayik-sakriyata-ke-prabhav",
+       "learning_objective": "न्यायिक सक्रियता के सकारात्मक और नकारात्मक प्रभावों का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH06-T6",
+     "topic_number": 6,
+     "title": "न्यायपालिका और अधिकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rit-aur-adhikar-raksha",
+       "learning_objective": "अनुच्छेद 32 और 226 के अंतर्गत अधिकारों की रक्षा के उपाय बताना।"
+      },
+      {
+       "concept_tag": "nyayik-punravalokan",
+       "learning_objective": "न्यायिक पुनरावलोकन की शक्ति के अर्थ, आधार और विस्तार का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH06-T7",
+     "topic_number": 7,
+     "title": "न्यायपालिका और संसद",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mool-dhancha",
+       "learning_objective": "केशवानंद भारती मामले और संविधान के मूल ढाँचे के सिद्धांत को समझाना।"
+      },
+      {
+       "concept_tag": "shakti-santulan",
+       "learning_objective": "संसद और न्यायपालिका के बीच शक्ति-संतुलन और टकराव के मुद्दों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "संघवाद",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS2-CH07-T1",
+     "topic_number": 1,
+     "title": "संघवाद क्या है?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sanghvad-ki-visheshtayen",
+       "learning_objective": "संघवाद की प्रमुख विशेषताओं, जैसे दो स्तरों की सरकार, लिखित संविधान और स्वतंत्र न्यायपालिका, को पहचानना।"
+      },
+      {
+       "concept_tag": "sanghvad-ki-safalta-ki-sharten",
+       "learning_objective": "नाइजीरिया, वेस्टइंडीज़ और सोवियत संघ के उदाहरणों से संघवाद की सफलता की शर्तों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH07-T2",
+     "topic_number": 2,
+     "title": "भारतीय संविधान में संघवाद",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shaktiyon-ka-vibhajan",
+       "learning_objective": "संघ सूची, राज्य सूची, समवर्ती सूची और अवशिष्ट शक्तियों के अनुसार शक्तियों के विभाजन को समझना।"
+      },
+      {
+       "concept_tag": "sahyog-aur-ekta",
+       "learning_objective": "यह समझना कि भारतीय संविधान ने विविधता को मान्यता देते हुए केंद्र-राज्य सहयोग और एकता पर बल दिया।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH07-T3",
+     "topic_number": 3,
+     "title": "शक्तिशाली केंद्र वाला संघवाद",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shaktishali-kendra-ke-pravdhan",
+       "learning_objective": "उन संवैधानिक प्रावधानों को पहचानना जो एक शक्तिशाली केंद्र सरकार बनाते हैं।"
+      },
+      {
+       "concept_tag": "shaktishali-kendra-ke-karan",
+       "learning_objective": "संविधान निर्माताओं द्वारा शक्तिशाली केंद्र बनाने के कारणों को समझाना।"
+      },
+      {
+       "concept_tag": "kendra-ki-vittiya-shaktiyan",
+       "learning_objective": "केंद्र की वित्तीय शक्तियों और राज्यों की वित्तीय निर्भरता का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH07-T4",
+     "topic_number": 4,
+     "title": "भारत की संघीय व्यवस्था में टकराव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kendra-rajya-sambandh",
+       "learning_objective": "दलीय राजनीति में बदलाव के साथ केंद्र-राज्य संबंधों में आए परिवर्तन को समझाना।"
+      },
+      {
+       "concept_tag": "swayattata-ki-mangen",
+       "learning_objective": "राज्यों की स्वायत्तता की माँगों के विभिन्न पहलुओं को पहचानना।"
+      },
+      {
+       "concept_tag": "rajyapal-aur-rashtrapati-shasan",
+       "learning_objective": "राज्यपाल की भूमिका और अनुच्छेद 356 से जुड़े विवादों का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH07-T5",
+     "topic_number": 5,
+     "title": "नए राज्यों की माँग और अंतर्राज्यीय विवाद",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "naye-rajyon-ki-mang",
+       "learning_objective": "भाषाई आधार पर राज्यों के पुनर्गठन और नए राज्यों के निर्माण की प्रक्रिया को समझना।"
+      },
+      {
+       "concept_tag": "antarrajyiya-vivad",
+       "learning_objective": "सीमा विवादों और नदी जल विवादों की प्रकृति का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH07-T6",
+     "topic_number": 6,
+     "title": "विशिष्ट प्रावधान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vishisht-pravdhan",
+       "learning_objective": "कुछ राज्यों के लिए विशिष्ट प्रावधानों और उनके कारणों को समझना।"
+      },
+      {
+       "concept_tag": "anuchchhed-370-jammu-kashmir",
+       "learning_objective": "अनुच्छेद 370 के अंतर्गत जम्मू-कश्मीर की पूर्व स्थिति और 2019 के बदलाव को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS2-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "स्थानीय शासन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps208.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS2-CH08-T1",
+     "topic_number": 1,
+     "title": "स्थानीय शासन क्यों?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sthaniya-shasan-ka-mahattva",
+       "learning_objective": "स्थानीय शासन की आम लोगों से निकटता और उसके लाभों को समझना।"
+      },
+      {
+       "concept_tag": "bhagidari-aur-javabdehi",
+       "learning_objective": "यह विश्लेषण करना कि सशक्त स्थानीय शासन लोकतंत्र में भागीदारी और जवाबदेही को कैसे सुनिश्चित करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH08-T2",
+     "topic_number": 2,
+     "title": "भारत में स्थानीय शासन का विकास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "aitihasik-vikas",
+       "learning_objective": "सभाओं से लेकर लॉर्ड रिपन के स्थानीय बोर्डों तक स्थानीय शासन के ऐतिहासिक विकास को जानना।"
+      },
+      {
+       "concept_tag": "gandhi-aur-vikendrikaran",
+       "learning_objective": "गांधीजी के विकेंद्रीकरण के विचार और संविधान में स्थानीय शासन को कम महत्त्व मिलने के कारणों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH08-T3",
+     "topic_number": 3,
+     "title": "स्वतंत्र भारत में स्थानीय शासन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samudayik-vikas-karyakram",
+       "learning_objective": "सामुदायिक विकास कार्यक्रम और प्रारंभिक त्रि-स्तरीय पंचायती राज की कमज़ोरियों को पहचानना।"
+      },
+      {
+       "concept_tag": "thungon-samiti",
+       "learning_objective": "पी.के. थुंगन समिति की संवैधानिक मान्यता संबंधी सिफ़ारिश को जानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH08-T4",
+     "topic_number": 4,
+     "title": "73वाँ संशोधन: ढाँचा, चुनाव और आरक्षण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tristariya-dhancha-gram-sabha",
+       "learning_objective": "पंचायती राज के त्रि-स्तरीय ढाँचे और ग्राम सभा की संरचना को जानना।"
+      },
+      {
+       "concept_tag": "chunav-aur-aarakshan",
+       "learning_objective": "पंचायतों के चुनाव, कार्यकाल और आरक्षण संबंधी प्रावधानों को लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH08-T5",
+     "topic_number": 5,
+     "title": "73वाँ संशोधन: विषयों का हस्तांतरण तथा राज्य आयोग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gyarahvin-anusuchi",
+       "learning_objective": "ग्यारहवीं अनुसूची के 29 विषयों और उनके हस्तांतरण की प्रक्रिया को समझना।"
+      },
+      {
+       "concept_tag": "adivasi-kshetron-ka-adhiniyam",
+       "learning_objective": "आदिवासी क्षेत्रों पर पंचायत प्रावधानों के विस्तार संबंधी 1996 के अधिनियम का उद्देश्य समझना।"
+      },
+      {
+       "concept_tag": "rajya-chunav-aur-vitt-ayog",
+       "learning_objective": "राज्य चुनाव आयुक्त और राज्य वित्त आयोग की भूमिका स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH08-T6",
+     "topic_number": 6,
+     "title": "74वाँ संशोधन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shahari-kshetra-ki-paribhasha",
+       "learning_objective": "जनगणना के अनुसार शहरी क्षेत्र की कसौटियों को लागू करना।"
+      },
+      {
+       "concept_tag": "nagarpalika-aur-barahvin-anusuchi",
+       "learning_objective": "74वें संशोधन के प्रावधानों की 73वें संशोधन से तुलना करना और बारहवीं अनुसूची को जानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH08-T7",
+     "topic_number": 7,
+     "title": "73वें और 74वें संशोधन का क्रियान्वयन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pratinidhitva-me-badlav",
+       "learning_objective": "स्थानीय निकायों में महिलाओं और वंचित वर्गों के प्रतिनिधित्व से आए बदलावों का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "simit-swayattata-aur-vitt",
+       "learning_objective": "स्थानीय निकायों की सीमित स्वायत्तता और वित्तीय निर्भरता का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS2-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "संविधान — एक जीवंत दस्तावेज़",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps209.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS2-CH09-T1",
+     "topic_number": 1,
+     "title": "क्या संविधान अपरिवर्तनीय होते हैं?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samvidhan-parivartan-avashyakta",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि बदलती परिस्थितियों में संविधानों में परिवर्तन क्यों आवश्यक होता है।"
+      },
+      {
+       "concept_tag": "pavitra-dastavez-aur-sadhan",
+       "learning_objective": "विद्यार्थी संविधान के पवित्र दस्तावेज़ और परिवर्तनीय साधन, दोनों रूपों के संतुलन को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH09-T2",
+     "topic_number": 2,
+     "title": "संविधान में संशोधन कैसे किया जाता है?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sanshodhan-ki-vidhiyan",
+       "learning_objective": "विद्यार्थी अनुच्छेद 368 सहित संविधान संशोधन की विभिन्न विधियों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vishesh-bahumat",
+       "learning_objective": "विद्यार्थी विशेष बहुमत की दोनों शर्तों को लागू करके गणना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "rajyon-dwara-anumodan",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि किन संशोधनों के लिए आधे राज्यों के विधानमंडलों का अनुमोदन आवश्यक है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH09-T3",
+     "topic_number": 3,
+     "title": "इतने अधिक संशोधन क्यों हुए?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "takniki-prashasanik-sanshodhan",
+       "learning_objective": "विद्यार्थी तकनीकी या प्रशासनिक प्रकृति के संशोधनों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "vyakhya-aur-sahmati-sanshodhan",
+       "learning_objective": "विद्यार्थी अलग-अलग व्याख्याओं और राजनीतिक आम सहमति से हुए संशोधनों का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vivadaspad-sanshodhan",
+       "learning_objective": "विद्यार्थी 38वें, 39वें और 42वें संशोधनों के विवाद के कारणों का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH09-T4",
+     "topic_number": 4,
+     "title": "मूल ढाँचा और संविधान का विकास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mool-dhancha-siddhant",
+       "learning_objective": "विद्यार्थी केशवानंद भारती मामले से उपजे मूल ढाँचे के सिद्धांत की विशेषताएँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "nyayik-vyakhya-anaupcharik-sanshodhan",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि न्यायिक व्याख्या किस प्रकार संविधान में अनौपचारिक बदलाव लाती है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH09-T5",
+     "topic_number": 5,
+     "title": "संविधान: एक जीवंत दस्तावेज़",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jeevant-dastavez",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि संविधान को जीवंत दस्तावेज़ क्यों कहा जाता है।"
+      },
+      {
+       "concept_tag": "nyayapalika-ka-yogdan",
+       "learning_objective": "विद्यार्थी संविधान के अक्षर और भावना के संतुलन में न्यायपालिका के योगदान का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "rajnitik-netritva-paripakvata",
+       "learning_objective": "विद्यार्थी मूल ढाँचे को स्वीकार करने में राजनीतिक नेतृत्व की परिपक्वता का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPS2-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "संविधान का राजनीतिक दर्शन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khps210.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPS2-CH10-T1",
+     "topic_number": 1,
+     "title": "संविधान के दर्शन का आशय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kanoon-aur-naitik-mulya",
+       "learning_objective": "कानूनों और नैतिक मूल्यों के बीच के संबंध को समझना।"
+      },
+      {
+       "concept_tag": "rajnitik-darshan-drishtikon",
+       "learning_objective": "संविधान के प्रति राजनीतिक दर्शन के दृष्टिकोण की तीन बातों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH10-T2",
+     "topic_number": 2,
+     "title": "लोकतांत्रिक बदलाव का साधन और संविधान सभा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "loktantrik-rupantaran",
+       "learning_objective": "संविधान को सत्ता पर अंकुश और शांतिपूर्ण सामाजिक बदलाव के साधन के रूप में समझना।"
+      },
+      {
+       "concept_tag": "samvidhan-sabha-ki-prasangikta",
+       "learning_objective": "संविधान सभा की बहसों को आज भी पढ़ने की आवश्यकता का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH10-T3",
+     "topic_number": 3,
+     "title": "व्यक्ति की स्वतंत्रता, सामाजिक न्याय और विविधता का सम्मान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vyaktigat-swatantrata",
+       "learning_objective": "संविधान में व्यक्ति की स्वतंत्रता के प्रति प्रतिबद्धता के ऐतिहासिक आधार को समझना।"
+      },
+      {
+       "concept_tag": "samajik-nyay",
+       "learning_objective": "भारतीय उदारवाद को सामाजिक न्याय से जोड़ने वाले प्रावधानों को पहचानना।"
+      },
+      {
+       "concept_tag": "vividhata-alpsankhyak-adhikar",
+       "learning_objective": "समुदायों के बीच समान सम्मान और समुदाय-आधारित अधिकारों के औचित्य को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH10-T4",
+     "topic_number": 4,
+     "title": "धर्मनिरपेक्षता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pashchimi-dharmnirpekshata",
+       "learning_objective": "धर्मनिरपेक्षता की पश्चिमी अवधारणा में परस्पर निषेध के अर्थ को समझना।"
+      },
+      {
+       "concept_tag": "siddhantik-doori",
+       "learning_objective": "भारतीय धर्मनिरपेक्षता में धार्मिक समूहों के अधिकार और राज्य के हस्तक्षेप की 'सैद्धांतिक दूरी' का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH10-T5",
+     "topic_number": 5,
+     "title": "सार्वभौमिक मताधिकार, संघवाद और राष्ट्रीय पहचान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sarvabhaumik-matadhikar",
+       "learning_objective": "सार्वभौमिक मताधिकार को राष्ट्रवाद से जुड़ी उपलब्धि के रूप में समझना।"
+      },
+      {
+       "concept_tag": "asamamit-sanghvad",
+       "learning_objective": "अनुच्छेद 371 के संदर्भ में असममित संघवाद की अवधारणा को समझना।"
+      },
+      {
+       "concept_tag": "rashtriya-pahchan",
+       "learning_objective": "साझी राष्ट्रीय पहचान और पृथक निर्वाचन मंडल की अस्वीकृति के कारणों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH10-T6",
+     "topic_number": 6,
+     "title": "प्रक्रियागत उपलब्धियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prakriyagat-uplabdhiyan",
+       "learning_objective": "राजनीतिक विचार-विमर्श तथा समझौते और समायोजन की भावना को संविधान की प्रक्रियागत उपलब्धि के रूप में समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH10-T7",
+     "topic_number": 7,
+     "title": "संविधान की आलोचनाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "alochnayen",
+       "learning_objective": "संविधान के अत्यधिक विस्तृत, गैर-प्रतिनिधिक और विदेशी होने की आलोचनाओं का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPS2-CH10-T8",
+     "topic_number": 8,
+     "title": "संविधान की सीमाएँ और निष्कर्ष",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "seemayen",
+       "learning_objective": "संविधान की तीन प्रमुख सीमाओं को पहचानना।"
+      },
+      {
+       "concept_tag": "jeevant-dastavez",
+       "learning_objective": "प्रस्तावना को संविधान के दर्शन के सार और जनता को उसका निर्माता मानने के विचार को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

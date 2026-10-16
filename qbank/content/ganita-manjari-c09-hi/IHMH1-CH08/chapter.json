@@ -1,0 +1,124 @@
+{
+ "chapter_id": "IHMH1-CH08",
+ "title": "अगले पद का पूर्वानुमान — अनुक्रमों और श्रेढ़ियों का अन्वेषण",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHMH1-CH08-T1",
+   "topic_number": 1,
+   "title": "अनुक्रम से परिचय",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "anukram-aur-pad",
+     "learning_objective": "अनुक्रम को संख्याओं की क्रमिक सूची के रूप में समझना, परिमित-अपरिमित अनुक्रम पहचानना और tn संकेतन का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "tribhujakar-aur-varg-sankhyaen",
+     "learning_objective": "त्रिभुजाकार और वर्ग संख्याओं के अनुक्रमों के प्रतिरूप तथा प्राकृत और विषम संख्याओं के योग से उनका संबंध समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH08-T2",
+   "topic_number": 2,
+   "title": "अनुक्रम के लिए व्यापक सूत्र",
+   "ncert_sections": "8.2",
+   "concepts": [
+    {
+     "concept_tag": "vyapak-sutra",
+     "learning_objective": "व्यापक सूत्र में n का मान रखकर अनुक्रम का कोई भी पद ज्ञात करना।"
+    },
+    {
+     "concept_tag": "pad-ki-jaanch",
+     "learning_objective": "व्यापक सूत्र से यह जाँचना कि कोई संख्या अनुक्रम का पद है या नहीं और उसकी स्थिति ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH08-T3",
+   "topic_number": 3,
+   "title": "अनुक्रम के लिए पुनरावर्ती सूत्र",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "punaravarti-sutra",
+     "learning_objective": "पुनरावर्ती सूत्र से पिछले पदों की सहायता से अगले पद ज्ञात करना।"
+    },
+    {
+     "concept_tag": "virahank-anukram",
+     "learning_objective": "विरहांक अनुक्रम और पिछले कई पदों पर आधारित पुनरावर्ती नियमों से पद ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH08-T4",
+   "topic_number": 4,
+   "title": "समानांतर श्रेढ़ियाँ और उनका दृश्यांकन",
+   "ncert_sections": "8.4, 8.4.1",
+   "concepts": [
+    {
+     "concept_tag": "samanantar-shredhi-nva-pad",
+     "learning_objective": "समानांतर श्रेढ़ी का nवाँ पद a + (n – 1)d ज्ञात करना और व्यावहारिक समस्याओं में प्रयोग करना।"
+    },
+    {
+     "concept_tag": "samanantar-shredhi-drishyankan",
+     "learning_objective": "समानांतर श्रेढ़ी से बने क्रमित युग्मों के एक सरल रेखा पर स्थित होने का कारण समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH08-T5",
+   "topic_number": 5,
+   "title": "आरंभिक n प्राकृत संख्याओं का योग",
+   "ncert_sections": "8.5",
+   "concepts": [
+    {
+     "concept_tag": "prakrit-sankhyaon-ka-yog",
+     "learning_objective": "सूत्र n(n + 1)/2 से प्रथम n प्राकृत संख्याओं और क्रमागत संख्याओं का योग ज्ञात करना।"
+    },
+    {
+     "concept_tag": "tribhujakar-sankhya-sutra",
+     "learning_objective": "त्रिभुजाकार संख्याओं का nवाँ पद योग-सूत्र से ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH08-T6",
+   "topic_number": 6,
+   "title": "गुणोत्तर श्रेढ़ियाँ",
+   "ncert_sections": "8.6",
+   "concepts": [
+    {
+     "concept_tag": "sarv-anupat",
+     "learning_objective": "क्रमागत पदों के अनुपात से गुणोत्तर श्रेढ़ी पहचानना और सार्व अनुपात ज्ञात करना।"
+    },
+    {
+     "concept_tag": "gunottar-shredhi-nva-pad",
+     "learning_objective": "गुणोत्तर श्रेढ़ी का nवाँ पद arⁿ⁻¹ ज्ञात करना और दिए गए पद की स्थिति निकालना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH08-T7",
+   "topic_number": 7,
+   "title": "फ्रैक्टल्स और गुणोत्तर श्रेढ़ी का दृश्यांकन",
+   "ncert_sections": "8.6.1, 8.6.2",
+   "concepts": [
+    {
+     "concept_tag": "siyarpinski-tribhuj",
+     "learning_objective": "सिएरपिंस्की त्रिभुज के चरणों में त्रिभुजों की संख्या और क्षेत्रफल से बनी गुणोत्तर श्रेढ़ियाँ पहचानना।"
+    },
+    {
+     "concept_tag": "gunottar-shredhi-drishyankan",
+     "learning_objective": "गुणोत्तर श्रेढ़ी के क्रमित युग्मों के आलेख की प्रकृति की तुलना समानांतर श्रेढ़ी से करना।"
+    },
+    {
+     "concept_tag": "uchhalti-gend",
+     "learning_objective": "उछलती गेंद जैसी स्थितियों में गुणोत्तर श्रेढ़ी का अनुप्रयोग करना।"
+    }
+   ]
+  }
+ ]
+}

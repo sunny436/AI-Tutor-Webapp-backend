@@ -1,0 +1,92 @@
+{
+ "chapter_id": "KEGY3-CH03",
+ "title": "Latitude, Longitude and Time",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY3-CH03-T1",
+   "topic_number": 1,
+   "title": "Shape of the Earth and the Geographical Grid",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "oblate-spheroid-shape",
+     "learning_objective": "Explain why the earth is described as an oblate spheroid rather than a perfect sphere."
+    },
+    {
+     "concept_tag": "geographical-grid-coordinates",
+     "learning_objective": "Describe how the poles provide reference points for a grid of parallels and meridians that acts as geographical coordinates."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH03-T2",
+   "topic_number": 2,
+   "title": "Parallels of Latitude",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "latitude-definition-values",
+     "learning_objective": "Define latitude and state the values and number of parallels at one-degree intervals."
+    },
+    {
+     "concept_tag": "length-of-degree-latitude",
+     "learning_objective": "Interpret how the length of a degree of latitude varies slightly between the equator and the poles."
+    },
+    {
+     "concept_tag": "drawing-parallels",
+     "learning_objective": "Describe the steps for drawing a parallel of latitude on a circle using a protractor."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH03-T3",
+   "topic_number": 3,
+   "title": "Meridians of Longitude",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "meridian-properties-prime-meridian",
+     "learning_objective": "State the properties of meridians and the role of the Prime Meridian at Greenwich."
+    },
+    {
+     "concept_tag": "drawing-meridians-polar-view",
+     "learning_objective": "Explain how meridians are drawn as seen from above the North Pole, with east and west reversed."
+    },
+    {
+     "concept_tag": "latitude-longitude-comparison",
+     "learning_objective": "Compare parallels of latitude with meridians of longitude in shape, length and spacing."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH03-T4",
+   "topic_number": 4,
+   "title": "Longitude and Time",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "local-time-calculation",
+     "learning_objective": "Calculate local time from longitude using the rate of 4 minutes per degree."
+    },
+    {
+     "concept_tag": "standard-time-ist",
+     "learning_objective": "Explain the choice of a standard meridian and how Indian Standard Time is derived from 82 degrees 30 minutes E."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH03-T5",
+   "topic_number": 5,
+   "title": "International Date Line",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "international-date-line",
+     "learning_objective": "Explain why the date changes on crossing the International Date Line near the 180 degree meridian."
+    }
+   ]
+  }
+ ]
+}

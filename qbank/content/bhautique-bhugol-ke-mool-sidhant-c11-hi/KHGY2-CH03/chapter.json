@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KHGY2-CH03",
+ "title": "पृथ्वी की आंतरिक संरचना",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHGY2-CH03-T1",
+   "topic_number": 1,
+   "title": "पृथ्वी के आंतरिक भाग की जानकारी के स्रोत",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "pratyaksh-srot",
+     "learning_objective": "खनन, गहन प्रवेधन और ज्वालामुखी उद्गार जैसे प्रत्यक्ष स्रोतों को पहचानना।"
+    },
+    {
+     "concept_tag": "apratyaksh-srot",
+     "learning_objective": "तापमान-दबाव-घनत्व, उल्का, गुरुत्वाकर्षण और चुंबकीय सर्वेक्षण जैसे अप्रत्यक्ष स्रोतों की भूमिका समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH03-T2",
+   "topic_number": 2,
+   "title": "भूकंप और भूकंपीय तरंगें",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "bhukamp-udgam-adhikendra",
+     "learning_objective": "भूकंप के कारण, उद्गम केंद्र और अधिकेंद्र की अवधारणा समझना।"
+    },
+    {
+     "concept_tag": "bhukampiya-tarangen",
+     "learning_objective": "भूगर्भिक तथा धरातलीय तरंगों के प्रकार, वेग और संचरण की विशेषताओं में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH03-T3",
+   "topic_number": 3,
+   "title": "छाया क्षेत्र का उद्भव",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "chhaya-kshetra",
+     "learning_objective": "P और S तरंगों के छाया क्षेत्रों की स्थिति, विस्तार और उनके कारण का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH03-T4",
+   "topic_number": 4,
+   "title": "भूकंप के प्रकार, मापन और प्रभाव",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "bhukamp-ke-prakar",
+     "learning_objective": "विवर्तनिक, ज्वालामुखीजन्य, नियात, विस्फोट और बाँधजनित भूकंपों में अंतर करना।"
+    },
+    {
+     "concept_tag": "bhukamp-mapan",
+     "learning_objective": "रिक्टर और मरकेली मापनियों के आधार और परास को समझना।"
+    },
+    {
+     "concept_tag": "bhukamp-ke-prabhav",
+     "learning_objective": "भूकंप के तात्कालिक प्रभावों और सुनामी की परिस्थितियों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH03-T5",
+   "topic_number": 5,
+   "title": "पृथ्वी की संरचना",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "bhuparpati",
+     "learning_objective": "महाद्वीपीय और महासागरीय भूपर्पटी की मोटाई और स्वभाव को जानना।"
+    },
+    {
+     "concept_tag": "mantle-durbaltamandal",
+     "learning_objective": "मैंटल, दुर्बलतामंडल और स्थलमंडल का विस्तार तथा महत्त्व समझना।"
+    },
+    {
+     "concept_tag": "krod",
+     "learning_objective": "बाह्य और आंतरिक क्रोड की अवस्था तथा संघटन को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH03-T6",
+   "topic_number": 6,
+   "title": "ज्वालामुखी और उनके प्रकार",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "jwalamukhi-prakar",
+     "learning_objective": "शील्ड, मिश्रित, ज्वालामुखी कुंड, बाढ़ बेसाल्ट और मध्य-महासागरीय कटक ज्वालामुखियों की विशेषताओं की तुलना करना।"
+    },
+    {
+     "concept_tag": "magma-lava",
+     "learning_objective": "मैग्मा, लावा और ज्वालामुखी से निकलने वाले पदार्थों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH03-T7",
+   "topic_number": 7,
+   "title": "ज्वालामुखी स्थलाकृतियाँ: अंतर्वेधी आकृतियाँ",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "antarvedhi-akritiyan",
+     "learning_objective": "बैथोलिथ, लैकोलिथ, लैपोलिथ, फैकोलिथ, सिल और डाइक की आकृति तथा उदाहरणों को पहचानना।"
+    }
+   ]
+  }
+ ]
+}

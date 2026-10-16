@@ -1,0 +1,124 @@
+{
+ "chapter_id": "FHCU1-CH11",
+ "title": "प्रकृति की अमूल्य संपदा",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHCU1-CH11-T1",
+   "topic_number": 1,
+   "title": "वायु",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "vayu-ka-sanghatan",
+     "learning_objective": "विद्यार्थी वायु में उपस्थित गैसों और उनके प्रतिशत को बता सकेंगे।"
+    },
+    {
+     "concept_tag": "oxygen-ki-avashyakta",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि सभी जीवों को जीवित रहने के लिए ऑक्सीजन क्यों आवश्यक है।"
+    },
+    {
+     "concept_tag": "pavan-aur-pavanchakki",
+     "learning_objective": "विद्यार्थी पवन का अर्थ और फिरकी व पवनचक्की में पवन के उपयोग को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH11-T2",
+   "topic_number": 2,
+   "title": "जल",
+   "ncert_sections": "11.2",
+   "concepts": [
+    {
+     "concept_tag": "mridu-jal-ke-srot",
+     "learning_objective": "विद्यार्थी पृथ्वी पर जल के वितरण और मृदु (अलवणीय) जल के स्रोतों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "jal-sanrakshan-aur-sanchayan",
+     "learning_objective": "विद्यार्थी जल की व्यर्थता, जल प्रदूषण और जल संचयन की विधियों को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH11-T3",
+   "topic_number": 3,
+   "title": "सूर्य से ऊर्जा",
+   "ncert_sections": "11.3",
+   "concepts": [
+    {
+     "concept_tag": "surya-urja-ka-mukhya-srot",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि पृथ्वी पर ऊर्जा का मुख्य स्रोत सूर्य है।"
+    },
+    {
+     "concept_tag": "saur-urja-ke-upyog",
+     "learning_objective": "विद्यार्थी सौर पैनल, सोलर कुकर और सौर जल ऊष्मक जैसे सौर-ऊर्जा के उपयोग बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH11-T4",
+   "topic_number": 4,
+   "title": "वन",
+   "ncert_sections": "11.4",
+   "concepts": [
+    {
+     "concept_tag": "van-ka-mahatva",
+     "learning_objective": "विद्यार्थी वनों से मिलने वाले उत्पादों और जीवों के आवास के रूप में वनों के महत्व को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "van-sanrakshan",
+     "learning_objective": "विद्यार्थी चिपको आंदोलन, वन महोत्सव और वनों के संरक्षण की आवश्यकता को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH11-T5",
+   "topic_number": 5,
+   "title": "मृदा, चट्टानें और खनिज",
+   "ncert_sections": "11.5",
+   "concepts": [
+    {
+     "concept_tag": "mrida-ka-nirman",
+     "learning_objective": "विद्यार्थी मृदा के घटकों और उसके बनने की प्रक्रिया को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "chattanen-aur-khanij",
+     "learning_objective": "विद्यार्थी चट्टानों और खनिजों के उपयोग तथा उनके संरक्षण की आवश्यकता बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH11-T6",
+   "topic_number": 6,
+   "title": "जीवाश्म ईंधन",
+   "ncert_sections": "11.6",
+   "concepts": [
+    {
+     "concept_tag": "jeevashm-indhan-ka-nirman",
+     "learning_objective": "विद्यार्थी जीवाश्म ईंधनों के प्रकार और उनके बनने की प्रक्रिया बता सकेंगे।"
+    },
+    {
+     "concept_tag": "jeevashm-indhan-aur-pradushan",
+     "learning_objective": "विद्यार्थी जीवाश्म ईंधनों के सीमित भंडार और उनसे होने वाले वायु प्रदूषण को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH11-T7",
+   "topic_number": 7,
+   "title": "प्राकृतिक संसाधन: नवीकरणीय और अनवीकरणीय",
+   "ncert_sections": "11.7, 11.8",
+   "concepts": [
+    {
+     "concept_tag": "navikarniya-anavikarniya",
+     "learning_objective": "विद्यार्थी प्राकृतिक संसाधनों को नवीकरणीय और अनवीकरणीय में वर्गीकृत कर सकेंगे।"
+    },
+    {
+     "concept_tag": "manav-nirmit-sansadhan",
+     "learning_objective": "विद्यार्थी प्राकृतिक और मानव-निर्मित संसाधनों में अंतर कर सकेंगे और उनके विवेकपूर्ण उपयोग को समझा सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

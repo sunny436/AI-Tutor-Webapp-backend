@@ -1,0 +1,116 @@
+{
+ "chapter_id": "KHST1-CH05",
+ "title": "केंद्रीय प्रवृत्ति की माप",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHST1-CH05-T1",
+   "topic_number": 1,
+   "title": "केंद्रीय प्रवृत्ति की आवश्यकता और प्रमुख औसत",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "kendriya-pravritti-avdharna",
+     "learning_objective": "आँकड़ों को एक प्रतिनिधि मान में संक्षेपित करने की आवश्यकता और तीन प्रमुख औसतों को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH05-T2",
+   "topic_number": 2,
+   "title": "समांतर माध्य: अवर्गीकृत आँकड़े",
+   "ncert_sections": "2",
+   "concepts": [
+    {
+     "concept_tag": "samantar-madhya-pratyaksh-vidhi",
+     "learning_objective": "प्रत्यक्ष विधि से अवर्गीकृत आँकड़ों का समांतर माध्य ज्ञात करना।"
+    },
+    {
+     "concept_tag": "kalpit-madhya-vidhi",
+     "learning_objective": "कल्पित माध्य और पद विचलन विधियों से समांतर माध्य की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH05-T3",
+   "topic_number": 3,
+   "title": "वर्गीकृत आँकड़ों का समांतर माध्य और भारित माध्य",
+   "ncert_sections": "2",
+   "concepts": [
+    {
+     "concept_tag": "vargikrit-shrenee-madhya",
+     "learning_objective": "खंडित और सतत श्रेणियों का समांतर माध्य ज्ञात करना।"
+    },
+    {
+     "concept_tag": "bharit-samantar-madhya",
+     "learning_objective": "मदों के सापेक्ष महत्व के अनुसार भारित समांतर माध्य की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH05-T4",
+   "topic_number": 4,
+   "title": "माध्यिका",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "madhyika-avargikrit",
+     "learning_objective": "अवर्गीकृत आँकड़ों में माध्यिका को स्थितिक औसत के रूप में ज्ञात करना।"
+    },
+    {
+     "concept_tag": "madhyika-satat-shrenee",
+     "learning_objective": "सतत श्रेणी में सूत्र द्वारा माध्यिका की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH05-T5",
+   "topic_number": 5,
+   "title": "चतुर्थक और शतमक",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "chaturthak",
+     "learning_objective": "चतुर्थकों द्वारा श्रेणी को चार बराबर भागों में बाँटना और उनकी गणना करना।"
+    },
+    {
+     "concept_tag": "shatmak",
+     "learning_objective": "शतमकों का अर्थ और उनकी व्याख्या समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH05-T6",
+   "topic_number": 6,
+   "title": "बहुलक",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "bahulak-avdharna",
+     "learning_objective": "बहुलक को सर्वाधिक बार आने वाले मान के रूप में पहचानना और उसका उपयोग समझना।"
+    },
+    {
+     "concept_tag": "bahulak-satat-shrenee",
+     "learning_objective": "सतत श्रेणी में सूत्र द्वारा बहुलक की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH05-T7",
+   "topic_number": 7,
+   "title": "माध्य, माध्यिका और बहुलक की सापेक्ष स्थिति तथा उपयुक्त औसत का चयन",
+   "ncert_sections": "6, 7",
+   "concepts": [
+    {
+     "concept_tag": "sapeksh-sthiti",
+     "learning_objective": "समांतर माध्य, माध्यिका और बहुलक की सापेक्ष स्थिति समझना।"
+    },
+    {
+     "concept_tag": "upyukt-ausat-chayan",
+     "learning_objective": "आँकड़ों की प्रकृति और उद्देश्य के अनुसार उपयुक्त औसत का चयन करना।"
+    }
+   ]
+  }
+ ]
+}

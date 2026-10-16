@@ -1,0 +1,808 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "ganita-prakash-part-ii-c08-hi",
+  "curriculum": "cbse",
+  "class_level": 8,
+  "subject_code": "mathematics",
+  "language": "hindi",
+  "title": "Ganita Prakash Part-II (Hindi)",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "hhgp2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "HHGP2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "भिन्न के विविध रूप",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP2-CH01-T1",
+     "topic_number": 1,
+     "title": "प्रतिशत के रूप में भिन्न",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "bhinn-se-pratishat",
+       "learning_objective": "किसी भिन्न या दशमलव को हर 100 वाले समतुल्य भिन्न द्वारा प्रतिशत में व्यक्त करना।"
+      },
+      {
+       "concept_tag": "pratishat-se-bhinn",
+       "learning_objective": "प्रतिशत को सरलतम भिन्न में बदलना और भिन्न, दशमलव तथा प्रतिशत की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH01-T2",
+     "topic_number": 2,
+     "title": "कुछ मात्राओं का प्रतिशत",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "matra-ka-pratishat",
+       "learning_objective": "किसी मात्रा का दिया गया प्रतिशत ज्ञात करना और प्रतिशत से पूरी मात्रा ज्ञात करना।"
+      },
+      {
+       "concept_tag": "mishran-pratishat",
+       "learning_objective": "मिश्रण में किसी घटक के प्रतिशत की गणना करना और प्रतिशत को दशमलव रूप में लिखना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH01-T3",
+     "topic_number": 3,
+     "title": "अनुपातों की तुलना तथा प्रतिशत वृद्धि या कमी",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "anupat-tulna",
+       "learning_objective": "अलग-अलग मात्राओं वाली वस्तुओं के अनुपात की तुलना प्रतिशत के द्वारा करना।"
+      },
+      {
+       "concept_tag": "pratishat-vriddhi-kami",
+       "learning_objective": "मूल राशि को आधार मानकर प्रतिशत वृद्धि या प्रतिशत कमी ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH01-T4",
+     "topic_number": 4,
+     "title": "लाभ, हानि, छूट और कर",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "labh-hani-pratishat",
+       "learning_objective": "क्रय मूल्य और विक्रय मूल्य से लाभ या हानि तथा उसका प्रतिशत ज्ञात करना।"
+      },
+      {
+       "concept_tag": "chhoot-aur-kar",
+       "learning_objective": "अंकित मूल्य पर छूट और बिल में जुड़े कर की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH01-T5",
+     "topic_number": 5,
+     "title": "वृद्धि और चक्रवृद्धि",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "byaj-bina-chakravriddhi",
+       "learning_objective": "हर वर्ष ब्याज लौटाए जाने पर कुल प्राप्त राशि ज्ञात करना।"
+      },
+      {
+       "concept_tag": "chakravriddhi",
+       "learning_objective": "ब्याज को मूलधन में जोड़ते हुए चक्रवृद्धि से मिलने वाली राशि और प्रतिशत वृद्धि ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHGP2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "बौधायन-पाइथागोरस प्रमेय",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP2-CH02-T1",
+     "topic_number": 1,
+     "title": "वर्ग को दोगुना और आधा करना",
+     "ncert_sections": "2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "varg-dugna-vikarn",
+       "learning_objective": "समझना कि किसी वर्ग के विकर्ण पर बने वर्ग का क्षेत्रफल मूल वर्ग का दोगुना होता है।"
+      },
+      {
+       "concept_tag": "varg-aadha-karna",
+       "learning_objective": "वर्ग की भुजाओं के मध्य-बिंदुओं को मिलाकर आधे क्षेत्रफल वाला वर्ग बनाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH02-T2",
+     "topic_number": 2,
+     "title": "समद्विबाहु समकोण त्रिभुज का कर्ण",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "samdvibahu-karn-sutra",
+       "learning_objective": "समद्विबाहु समकोण त्रिभुज में संबंध c² = 2a² का उपयोग कर कर्ण या भुजा ज्ञात करना।"
+      },
+      {
+       "concept_tag": "vargmool-do-aparimey",
+       "learning_objective": "समझना कि √2 न सांत दशमलव है और न ही m/n के रूप में लिखा जा सकता है, तथा उसकी सीमाएँ ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH02-T3",
+     "topic_number": 3,
+     "title": "दो भिन्न वर्गों को जोड़ना",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "baudhayan-prameya",
+       "learning_objective": "बौधायन प्रमेय a² + b² = c² को पहचानना और उसके ऐतिहासिक स्रोत को जानना।"
+      },
+      {
+       "concept_tag": "prameya-prayog-bhuja",
+       "learning_objective": "प्रमेय का उपयोग कर समकोण त्रिभुज की अज्ञात भुजा ज्ञात करना और नए वर्ग की रचना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH02-T4",
+     "topic_number": 4,
+     "title": "पूर्णांक भुजाओं वाले समकोण त्रिभुज",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "baudhayan-trik",
+       "learning_objective": "पहचानना कि कौन-से पूर्णांक त्रिक a² + b² = c² को संतुष्ट करते हैं।"
+      },
+      {
+       "concept_tag": "mool-trik",
+       "learning_objective": "मूल त्रिक और उसके गुणित रूपों में अंतर करना।"
+      },
+      {
+       "concept_tag": "vishm-sankhya-trik",
+       "learning_objective": "सर्वसमिका (n − 1)² + (2n − 1) = n² से नए बौधायन त्रिक बनाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH02-T5",
+     "topic_number": 5,
+     "title": "दीर्घकाल से अनसुलझा प्रश्न",
+     "ncert_sections": "2.6",
+     "concepts": [
+      {
+       "concept_tag": "fermat-antim-prameya",
+       "learning_objective": "फर्मा के अंतिम प्रमेय का कथन, उसका अर्थ और उसके सिद्ध होने का इतिहास जानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH02-T6",
+     "topic_number": 6,
+     "title": "बौधायन-पाइथागोरस प्रमेय के अन्य अनुप्रयोग",
+     "ncert_sections": "2.7",
+     "concepts": [
+      {
+       "concept_tag": "lilavati-kamal-prashn",
+       "learning_objective": "लीलावती के कमल-प्रश्न जैसी स्थितियों को समकोण त्रिभुज के रूप में व्यक्त कर हल करना।"
+      },
+      {
+       "concept_tag": "prameya-anuprayog",
+       "learning_objective": "प्रमेय का उपयोग विकर्ण, समचतुर्भुज की भुजा और समबाहु त्रिभुज के क्षेत्रफल ज्ञात करने में करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHGP2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "समानुपातिक तर्कण— 2",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP2-CH03-T1",
+     "topic_number": 1,
+     "title": "समानुपातिकता— पुनरावलोकन",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "samanupatik-sambandh",
+       "learning_objective": "दो अनुपातों के समानुपातिक होने का अर्थ समझना।"
+      },
+      {
+       "concept_tag": "vajra-gunan-vidhi",
+       "learning_objective": "वज्र-गुणन विधि से जाँचना कि दो अनुपात समानुपातिक हैं या नहीं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH03-T2",
+     "topic_number": 2,
+     "title": "मानचित्रों में अनुपात",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "nirupak-bhinn",
+       "learning_objective": "निरूपक भिन्न की सहायता से मानचित्र की दूरी को वास्तविक भौगोलिक दूरी में बदलना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH03-T3",
+     "topic_number": 3,
+     "title": "दो से अधिक पदों के साथ अनुपात",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "bahupadi-anupat",
+       "learning_objective": "दो से अधिक पदों वाले अनुपातों में अज्ञात राशियाँ ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH03-T4",
+     "topic_number": 4,
+     "title": "पूर्ण राशि को दिए गए अनुपात में विभाजित करना",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "anupat-mein-vibhajan",
+       "learning_objective": "किसी राशि को दो या अधिक पदों वाले अनुपात में विभाजित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH03-T5",
+     "topic_number": 5,
+     "title": "पाई का एक अंश",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "vritt-aalekh-kon",
+       "learning_objective": "वृत्त आलेख में प्रत्येक भाग का कोण आँकड़ों के अनुपात से ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH03-T6",
+     "topic_number": 6,
+     "title": "व्युत्क्रमानुपात",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "vyutkramanupat",
+       "learning_objective": "व्युत्क्रमानुपाती राशियों को पहचानना और xy = k का उपयोग करना।"
+      },
+      {
+       "concept_tag": "karya-aur-samay",
+       "learning_objective": "कार्य, समय और व्यक्तियों से जुड़े प्रश्नों में व्युत्क्रमानुपात लागू करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHGP2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "कुछ ज्यामितीय संरचनाओं की खोज",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP2-CH04-T1",
+     "topic_number": 1,
+     "title": "खंडक: स्व-समरूपता, प्रकृति और कला",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "swa-samroopta",
+       "learning_objective": "खंडक को ऐसी स्व-समान आकृति के रूप में पहचानना जिसमें वही प्रतिरूप छोटे-छोटे मापों पर दोहराया जाता है।"
+      },
+      {
+       "concept_tag": "kala-mein-khandak",
+       "learning_objective": "मंदिरों, कपड़ों और चित्रकला में खंडक जैसे प्रतिरूपों के उदाहरण पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH04-T2",
+     "topic_number": 2,
+     "title": "सिएरपिंस्की चटाई और सिएरपिंस्की त्रिभुज",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "sierpinski-chatai",
+       "learning_objective": "सिएरपिंस्की चटाई के प्रत्येक चरण में शेष वर्गों, छिद्रों और क्षेत्रफल की गणना करना।"
+      },
+      {
+       "concept_tag": "sierpinski-tribhuj",
+       "learning_objective": "सिएरपिंस्की त्रिभुज के प्रत्येक चरण में शेष त्रिभुजों, छिद्रों और क्षेत्रफल की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH04-T3",
+     "topic_number": 3,
+     "title": "कोच हिमकण",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "koch-rachna",
+       "learning_objective": "कोच हिमकण की रचना के चरणों और भुजाओं की संख्या का प्रतिरूप समझना।"
+      },
+      {
+       "concept_tag": "koch-parimap",
+       "learning_objective": "कोच हिमकण के n-वें चरण का परिमाप ज्ञात करना और उसकी वृद्धि की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH04-T4",
+     "topic_number": 4,
+     "title": "ठोसों का दृश्यांकन: रूपरेखा, फलक, किनारे और शीर्ष",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "thos-ki-ruprekha",
+       "learning_objective": "किसी ठोस की विभिन्न दृष्टिकोणों से दिखने वाली रूपरेखाओं की कल्पना करना।"
+      },
+      {
+       "concept_tag": "prism-pyramid-ganana",
+       "learning_objective": "प्रिज़्म और पिरामिड के फलकों, किनारों तथा शीर्षों की संख्या ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH04-T5",
+     "topic_number": 5,
+     "title": "ठोसों के जाल",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "ghan-ka-jaal",
+       "learning_objective": "घन, चतुष्फलक, अष्टफलक आदि के जालों को पहचानना और उनकी संख्या जानना।"
+      },
+      {
+       "concept_tag": "belan-shanku-jaal",
+       "learning_objective": "बेलन और शंकु के जाल का आकार तथा उसकी मापें बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH04-T6",
+     "topic_number": 6,
+     "title": "घनाभ पर सबसे छोटा मार्ग",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "sabse-chhota-marg",
+       "learning_objective": "जाल की सहायता से घनाभ की सतह पर दो बिंदुओं के बीच सबसे छोटा मार्ग ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH04-T7",
+     "topic_number": 7,
+     "title": "प्रक्षेप, तीन दृश्य और छाया",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "prakshep",
+       "learning_objective": "किसी बिंदु और रेखा के प्रक्षेप को समझना तथा प्रक्षेपित लंबाई की तुलना वास्तविक लंबाई से करना।"
+      },
+      {
+       "concept_tag": "agra-urdhva-parshv-drishya",
+       "learning_objective": "किसी ठोस के अग्र दृश्य, ऊर्ध्व दृश्य और पार्श्व दृश्य पहचानना।"
+      },
+      {
+       "concept_tag": "chhaya-aur-samantar",
+       "learning_objective": "छाया और प्रक्षेप का संबंध तथा समांतर रेखाओं के प्रक्षेप का गुण समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH04-T8",
+     "topic_number": 8,
+     "title": "समदूरीक प्रक्षेप और समदूरीक ग्रिड",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "samdurik-prakshep",
+       "learning_objective": "घन के समदूरीक प्रक्षेप और समदूरीक ग्रिड पर ठोस बनाने की विधि समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHGP2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "बिंदुओं तथा रेखाओं द्वारा बनी कहानियाँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP2-CH05-T1",
+     "topic_number": 1,
+     "title": "संतुलन कार्य: माध्य एक केंद्र के रूप में",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "madhya-santulan",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि माध्य के दोनों ओर के मानों की कुल दूरियाँ बराबर होती हैं।"
+      },
+      {
+       "concept_tag": "maan-jodna-hatana",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि कोई मान जोड़ने या हटाने पर माध्य कैसे बदलता है या अपरिवर्तित रहता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH05-T2",
+     "topic_number": 2,
+     "title": "सापेक्षत: अपरिवर्तित: सभी मानों में समान परिवर्तन",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "sthir-sankhya-jodna",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि प्रत्येक मान में कोई निश्चित संख्या जोड़ने या घटाने पर माध्य भी उतना ही बदलता है।"
+      },
+      {
+       "concept_tag": "guna-karna",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि प्रत्येक मान को किसी संख्या से गुणा करने पर माध्य भी उसी संख्या से गुणा हो जाता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH05-T3",
+     "topic_number": 3,
+     "title": "माध्यिका के साथ प्रयोग",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "madhyika-par-prabhav",
+       "learning_objective": "विद्यार्थी माध्यिका ज्ञात कर सकेंगे और नया मान जोड़ने पर उसमें होने वाले परिवर्तन का अनुमान लगा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH05-T4",
+     "topic_number": 4,
+     "title": "अज्ञात मान ज्ञात करना",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "yog-se-agyat",
+       "learning_objective": "विद्यार्थी माध्य और मानों की संख्या से योग तथा किसी लुप्त मान को ज्ञात कर सकेंगे।"
+      },
+      {
+       "concept_tag": "truti-sudhar",
+       "learning_objective": "विद्यार्थी किसी गलत लिखे मान को सुधारकर सही माध्य ज्ञात कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH05-T5",
+     "topic_number": 5,
+     "title": "बारंबारता के साथ माध्य और माध्यिका",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "barambarta-madhya",
+       "learning_objective": "विद्यार्थी बारंबारता सारणी से माध्य ज्ञात कर सकेंगे।"
+      },
+      {
+       "concept_tag": "barambarta-madhyika",
+       "learning_objective": "विद्यार्थी बारंबारताओं को क्रमशः जोड़कर माध्यिका ज्ञात कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH05-T6",
+     "topic_number": 6,
+     "title": "स्प्रेडशीट",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "koshthika-sandarbh",
+       "learning_objective": "विद्यार्थी स्प्रेडशीट में कोष्ठिका, पंक्ति और स्तंभ के नामों को पढ़ और लिख सकेंगे।"
+      },
+      {
+       "concept_tag": "sutra-yog-ausat",
+       "learning_objective": "विद्यार्थी योग और औसत ज्ञात करने के सूत्रों का अर्थ समझ और उनका प्रयोग कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH05-T7",
+     "topic_number": 7,
+     "title": "रेखा आलेख: पढ़ना और व्याख्या करना",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "rekha-alekh-upyog",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि रेखा आलेख समय के साथ परिवर्तन दर्शाने के लिए उपयुक्त क्यों है।"
+      },
+      {
+       "concept_tag": "rekha-alekh-vyakhya",
+       "learning_objective": "विद्यार्थी रेखा आलेख से प्रवृत्तियों को पहचानकर उचित निष्कर्ष निकाल सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH05-T8",
+     "topic_number": 8,
+     "title": "इन्फोग्राफिक, गतिविधि पट्टी और आँकड़ों की कहानी",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "infographic-vyakhya",
+       "learning_objective": "विद्यार्थी रंग-पैमाने वाले इन्फोग्राफिक को सही ढंग से पढ़ सकेंगे।"
+      },
+      {
+       "concept_tag": "gatividhi-patti",
+       "learning_objective": "विद्यार्थी समय-पट्टी और नींद के रेखा आलेख से दैनिक गतिविधियों की व्याख्या कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHGP2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "बीजगणित का खेल",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP2-CH06-T1",
+     "topic_number": 1,
+     "title": "‘एक संख्या सोचिए’ युक्तियों पर विचार",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "ek-sankhya-sochiye-yukti",
+       "learning_objective": "बीजगणितीय व्यंजकों द्वारा ‘एक संख्या सोचिए’ युक्ति के चरणों का विश्लेषण कर सकना।"
+      },
+      {
+       "concept_tag": "dinank-yukti-vishleshan",
+       "learning_objective": "दिनांक वाली युक्ति के अंतिम उत्तर से माह और दिन ज्ञात कर सकना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH06-T2",
+     "topic_number": 2,
+     "title": "संख्या पिरामिड",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "pyramid-niyam-agyat-maan",
+       "learning_objective": "पिरामिड के नियम से समीकरण बनाकर रिक्त खानों के मान ज्ञात कर सकना।"
+      },
+      {
+       "concept_tag": "pyramid-shirsh-vyanjak",
+       "learning_objective": "नीचे की पंक्ति के अक्षर-संख्याओं से शीर्ष संख्या का व्यंजक लिख सकना।"
+      },
+      {
+       "concept_tag": "virahanka-fibonacci-pyramid",
+       "learning_objective": "विरहांक-फिबोनाची संख्याओं वाले पिरामिड के पैटर्न को समझ सकना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH06-T3",
+     "topic_number": 3,
+     "title": "ग्रिड के साथ मनोरंजन",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "calendar-grid-yog",
+       "learning_objective": "कैलेंडर के ग्रिड की संख्याओं का योग व्यंजक के रूप में लिखकर संख्याएँ ज्ञात कर सकना।"
+      },
+      {
+       "concept_tag": "beejganitiya-grid-aakritiyan",
+       "learning_objective": "आकृतियों वाले ग्रिड में समीकरण बनाकर आकृतियों के मान ज्ञात कर सकना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH06-T4",
+     "topic_number": 4,
+     "title": "सबसे बड़ा गुणनफल",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "sabse-bada-gunanfal",
+       "learning_objective": "दिए गए अंकों से सबसे बड़ा गुणनफल बनाने का नियम लागू कर सकना।"
+      },
+      {
+       "concept_tag": "gunanfal-tulna-beejganit",
+       "learning_objective": "अक्षर-संख्याओं से गुणनफलों का विस्तार कर उनकी तुलना कर सकना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH06-T5",
+     "topic_number": 5,
+     "title": "विभाज्यता की युक्तियों को समझना",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "ulte-ank-vibhajyata",
+       "learning_objective": "अंकों को उलटकर बनी संख्याओं के अंतर और योग की विभाज्यता सिद्ध कर सकना।"
+      },
+      {
+       "concept_tag": "dohrav-sankhya-vibhajyata",
+       "learning_objective": "अंकों को दोहराकर बनी संख्या की 7, 11 और 13 से विभाज्यता समझा सकना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH06-T6",
+     "topic_number": 6,
+     "title": "बीजगणित से पहेलियाँ हल करना",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "shabd-paheli-sameekaran",
+       "learning_objective": "शब्द-पहेलियों को समीकरण में बदलकर हल कर सकना।"
+      },
+      {
+       "concept_tag": "dugna-paheli",
+       "learning_objective": "बार-बार दुगना होने वाली स्थितियों का बीजगणितीय प्रतिरूपण कर सकना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HHGP2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "क्षेत्रफल",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hhgp207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HHGP2-CH07-T1",
+     "topic_number": 1,
+     "title": "आयत और वर्ग: क्षेत्रफल और परिमाप",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "aayat-kshetrafal",
+       "learning_objective": "इकाई वर्गों की गिनती से आयत का क्षेत्रफल लंबाई × चौड़ाई के रूप में ज्ञात करना।"
+      },
+      {
+       "concept_tag": "parimap-banam-kshetrafal",
+       "learning_objective": "समझना कि परिमाप किसी क्षेत्र के क्षेत्रफल का सूचक नहीं होता।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH07-T2",
+     "topic_number": 2,
+     "title": "त्रिभुज का क्षेत्रफल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tribhuj-kshetrafal",
+       "learning_objective": "आधार और संगत ऊँचाई से त्रिभुज का क्षेत्रफल 1/2 × आधार × ऊँचाई द्वारा ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH07-T3",
+     "topic_number": 3,
+     "title": "क्षेत्रफल सूत्र के अनुप्रयोग और बहुभुज का क्षेत्रफल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "saman-aadhar-samantar-rekhayen",
+       "learning_objective": "समान आधार और समान समांतर रेखाओं के बीच बने त्रिभुजों के क्षेत्रफल की समानता को पहचानना।"
+      },
+      {
+       "concept_tag": "bahubhuj-tribhujikaran",
+       "learning_objective": "किसी बहुभुज को त्रिभुजों में बाँटकर उसका क्षेत्रफल ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH07-T4",
+     "topic_number": 4,
+     "title": "समांतर चतुर्भुज का क्षेत्रफल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samantar-chaturbhuj",
+       "learning_objective": "समांतर चतुर्भुज को आयत में बदलकर क्षेत्रफल = आधार × ऊँचाई प्राप्त करना और प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH07-T5",
+     "topic_number": 5,
+     "title": "समचतुर्भुज का क्षेत्रफल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samchaturbhuj-vikarn",
+       "learning_objective": "समचतुर्भुज का क्षेत्रफल उसके विकर्णों के गुणनफल के आधे के रूप में ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH07-T6",
+     "topic_number": 6,
+     "title": "समलंब चतुर्भुज का क्षेत्रफल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samlamb-kshetrafal",
+       "learning_objective": "समलंब चतुर्भुज का क्षेत्रफल 1/2 × ऊँचाई × समांतर भुजाओं का योग द्वारा ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "HHGP2-CH07-T7",
+     "topic_number": 7,
+     "title": "वास्तविक जीवन में क्षेत्रफल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kshetrafal-ikaiyan",
+       "learning_objective": "क्षेत्रफल की विभिन्न इकाइयों (cm², in², ft², m², एकड़, km²) के बीच रूपांतरण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

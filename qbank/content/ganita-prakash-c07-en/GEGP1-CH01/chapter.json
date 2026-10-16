@@ -1,0 +1,124 @@
+{
+ "chapter_id": "GEGP1-CH01",
+ "title": "Large Numbers Around Us",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP1-CH01-T1",
+   "topic_number": 1,
+   "title": "A Lakh Varieties and Getting a Feel of Large Numbers",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "one-lakh-value",
+     "learning_objective": "Recognise one lakh as 1,00,000, the smallest 6-digit number, and compare quantities with it."
+    },
+    {
+     "concept_tag": "comparing-with-familiar-quantities",
+     "learning_objective": "Get a sense of large measurements by comparing them with familiar quantities."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH01-T2",
+   "topic_number": 2,
+   "title": "Reading and Writing Numbers in the Indian System",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "indian-place-value-commas",
+     "learning_objective": "Place commas in the Indian place value system and identify the place of each digit."
+    },
+    {
+     "concept_tag": "number-names-indian",
+     "learning_objective": "Convert between numerals and number names using lakhs and thousands."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH01-T3",
+   "topic_number": 3,
+   "title": "Land of Tens: Place Value through Button Clicks",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "place-value-button-clicks",
+     "learning_objective": "Find how many presses of +10, +100 or +1000 buttons make a given number."
+    },
+    {
+     "concept_tag": "minimum-clicks-digit-sum",
+     "learning_objective": "Explain why the fewest button clicks for a number equals the sum of its digits."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH01-T4",
+   "topic_number": 4,
+   "title": "Of Crores and Crores: Indian and American Systems",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "crore-arab-relations",
+     "learning_objective": "Relate thousand, lakh, crore and arab and count the zeroes in each."
+    },
+    {
+     "concept_tag": "indian-american-systems",
+     "learning_objective": "Read, write and compare numbers in the Indian and American (International) systems."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH01-T5",
+   "topic_number": 5,
+   "title": "Exact and Approximate Values",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "rounding-up-down",
+     "learning_objective": "Decide when rounding up or rounding down is appropriate in a real situation."
+    },
+    {
+     "concept_tag": "nearest-neighbours",
+     "learning_objective": "Find the nearest thousand, ten thousand, lakh, ten lakh and crore of a number."
+    },
+    {
+     "concept_tag": "estimating-sums-differences",
+     "learning_objective": "Estimate sums and differences of large numbers and judge which estimate is closer."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH01-T6",
+   "topic_number": 6,
+   "title": "Patterns in Products",
+   "ncert_sections": "1.5",
+   "concepts": [
+    {
+     "concept_tag": "multiplication-shortcuts",
+     "learning_objective": "Regroup factors such as 5 = 10/2 and 125 = 1000/8 to multiply quickly."
+    },
+    {
+     "concept_tag": "digits-in-product",
+     "learning_objective": "Predict the possible number of digits in a product from the digits of its factors."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH01-T7",
+   "topic_number": 7,
+   "title": "Did You Ever Wonder...? Thought Experiments",
+   "ncert_sections": "1.6",
+   "concepts": [
+    {
+     "concept_tag": "thought-experiments",
+     "learning_objective": "Make reasonable assumptions to test whether a large-number claim is possible."
+    },
+    {
+     "concept_tag": "calculating-in-stages",
+     "learning_objective": "Carry out large calculations in stages to answer distance and time questions."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LHCH1-CH03",
+ "title": "रासायनिक बलगतिकी",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHCH1-CH03-T1",
+   "topic_number": 1,
+   "title": "रासायनिक अभिक्रिया का वेग",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "ausat-tatkshanik-veg",
+     "learning_objective": "विद्यार्थी औसत वेग और तात्क्षणिक वेग को परिभाषित कर उनकी गणना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "rassamikaran-veg-vyanjak",
+     "learning_objective": "विद्यार्थी संतुलित समीकरण के अनुसार अभिकारकों और उत्पादों के पदों में वेग व्यक्त कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH03-T2",
+   "topic_number": 2,
+   "title": "वेग नियम, वेग स्थिरांक और अभिक्रिया की कोटि",
+   "ncert_sections": "3.2.1, 3.2.2, 3.2.3",
+   "concepts": [
+    {
+     "concept_tag": "veg-niyam-veg-sthirank",
+     "learning_objective": "विद्यार्थी वेग नियम लिखकर सांद्रता बदलने पर वेग में परिवर्तन ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "abhikriya-koti-ikai",
+     "learning_objective": "विद्यार्थी वेग नियम से अभिक्रिया की कोटि और वेग स्थिरांक की इकाई ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH03-T3",
+   "topic_number": 3,
+   "title": "अभिक्रिया की आण्विकता और क्रियाविधि",
+   "ncert_sections": "3.2.4",
+   "concepts": [
+    {
+     "concept_tag": "aanvikta",
+     "learning_objective": "विद्यार्थी प्राथमिक अभिक्रिया की आण्विकता पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "koti-aanvikta-antar",
+     "learning_objective": "विद्यार्थी कोटि और आण्विकता में अंतर तथा वेग निर्धारक पद की भूमिका समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH03-T4",
+   "topic_number": 4,
+   "title": "समाकलित वेग समीकरण",
+   "ncert_sections": "3.3.1, 3.3.2",
+   "concepts": [
+    {
+     "concept_tag": "shunya-koti-abhikriya",
+     "learning_objective": "विद्यार्थी शून्य कोटि अभिक्रिया के समाकलित वेग समीकरण का प्रयोग कर सकेंगे।"
+    },
+    {
+     "concept_tag": "pratham-koti-abhikriya",
+     "learning_objective": "विद्यार्थी प्रथम कोटि अभिक्रिया के समाकलित वेग समीकरण से समय और वेग स्थिरांक की गणना कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH03-T5",
+   "topic_number": 5,
+   "title": "अर्धायु और छद्म प्रथम कोटि अभिक्रियाएँ",
+   "ncert_sections": "3.3.3",
+   "concepts": [
+    {
+     "concept_tag": "ardhayu",
+     "learning_objective": "विद्यार्थी शून्य और प्रथम कोटि अभिक्रियाओं की अर्धायु ज्ञात कर उसकी सांद्रता पर निर्भरता बता सकेंगे।"
+    },
+    {
+     "concept_tag": "chhadm-pratham-koti",
+     "learning_objective": "विद्यार्थी छद्म प्रथम कोटि अभिक्रियाओं को उदाहरण सहित पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH03-T6",
+   "topic_number": 6,
+   "title": "अभिक्रिया वेग की ताप पर निर्भरता और उत्प्रेरक का प्रभाव",
+   "ncert_sections": "3.4, 3.4.1",
+   "concepts": [
+    {
+     "concept_tag": "arrhenius-sameekaran",
+     "learning_objective": "विद्यार्थी आरेनियस समीकरण से सक्रियण ऊर्जा और वेग स्थिरांक की गणना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "utprerak-prabhav",
+     "learning_objective": "विद्यार्थी उत्प्रेरक द्वारा सक्रियण ऊर्जा घटाने और साम्य पर उसके प्रभाव न पड़ने को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH03-T7",
+   "topic_number": 7,
+   "title": "रासायनिक अभिक्रियाओं का संघट्ट सिद्धांत",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "sanghatt-avriti-prabhavi-sanghatt",
+     "learning_objective": "विद्यार्थी संघट्ट आवृत्ति, देहली ऊर्जा और प्रभावी संघट्ट की अवधारणा समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "tribim-karak-abhivinyas",
+     "learning_objective": "विद्यार्थी अणुओं के उचित अभिविन्यास और त्रिविम कारक का महत्व विश्लेषित कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

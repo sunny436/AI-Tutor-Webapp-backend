@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LHPH1-CH06",
+ "title": "वैद्युतचुंबकीय प्रेरण",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHPH1-CH06-T1",
+   "topic_number": 1,
+   "title": "फैराडे एवं हेनरी के प्रयोग तथा चुंबकीय फ्लक्स",
+   "ncert_sections": "6.2, 6.3",
+   "concepts": [
+    {
+     "concept_tag": "faraday-henry-prayog",
+     "learning_objective": "फैराडे और हेनरी के प्रयोगों से यह समझना कि प्रेरित धारा केवल चुंबकीय फ्लक्स के परिवर्तन से उत्पन्न होती है।"
+    },
+    {
+     "concept_tag": "chumbakiy-flux",
+     "learning_objective": "चुंबकीय फ्लक्स Φ = BA cos θ की परिभाषा, मात्रक और गणना को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH06-T2",
+   "topic_number": 2,
+   "title": "फैराडे का प्रेरण का नियम",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "faraday-prerana-niyam",
+     "learning_objective": "प्रेरित विद्युत वाहक बल को फ्लक्स परिवर्तन की दर से संबंधित करना।"
+    },
+    {
+     "concept_tag": "prerit-dhara-ganana",
+     "learning_objective": "फेरों की संख्या और प्रतिरोध के आधार पर प्रेरित वि. वा. बल और धारा की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH06-T3",
+   "topic_number": 3,
+   "title": "लेंज़ का नियम तथा ऊर्जा संरक्षण",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "lenz-niyam",
+     "learning_objective": "लेंज़ के नियम से प्रेरित धारा की दिशा ज्ञात करना।"
+    },
+    {
+     "concept_tag": "urja-sanrakshan",
+     "learning_objective": "लेंज़ के नियम को ऊर्जा संरक्षण के सिद्धांत से जोड़ना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH06-T4",
+   "topic_number": 4,
+   "title": "गतिक विद्युत वाहक बल",
+   "ncert_sections": "6.6",
+   "concepts": [
+    {
+     "concept_tag": "gatik-vidyut-vahak-bal",
+     "learning_objective": "चुंबकीय क्षेत्र में गतिमान चालक में प्रेरित वि. वा. बल ε = Blv की गणना करना।"
+    },
+    {
+     "concept_tag": "ghurni-chhad-vvb",
+     "learning_objective": "घूर्णन करती छड़ तथा पटरियों पर चलती छड़ पर बल और वि. वा. बल का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH06-T5",
+   "topic_number": 5,
+   "title": "अन्योन्य प्रेरकत्व",
+   "ncert_sections": "6.7, 6.7.1",
+   "concepts": [
+    {
+     "concept_tag": "anyonya-prerakatva",
+     "learning_objective": "अन्योन्य प्रेरकत्व की परिभाषा, मात्रक और उस पर निर्भर करने वाले कारकों को समझना।"
+    },
+    {
+     "concept_tag": "anyonya-prerit-vvb",
+     "learning_objective": "अन्योन्य प्रेरकत्व से फ्लक्स संबंधन और प्रेरित वि. वा. बल की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH06-T6",
+   "topic_number": 6,
+   "title": "स्व-प्रेरकत्व",
+   "ncert_sections": "6.7.2",
+   "concepts": [
+    {
+     "concept_tag": "sva-prerakatva",
+     "learning_objective": "स्व-प्रेरकत्व, विरोधी वि. वा. बल और परिनालिका के स्व-प्रेरकत्व के व्यंजक को समझना।"
+    },
+    {
+     "concept_tag": "chumbakiy-sthitij-urja",
+     "learning_objective": "प्रेरक में संचित ऊर्जा ½LI² की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH06-T7",
+   "topic_number": 7,
+   "title": "प्रत्यावर्ती धारा जनित्र",
+   "ncert_sections": "6.8",
+   "concepts": [
+    {
+     "concept_tag": "ac-janitra-siddhant",
+     "learning_objective": "प्रत्यावर्ती धारा जनित्र के कार्य-सिद्धांत को समझना।"
+    },
+    {
+     "concept_tag": "tatkshanik-vvb",
+     "learning_objective": "जनित्र के वि. वा. बल ε = NBAω sin ωt का विश्लेषण करना।"
+    }
+   ]
+  }
+ ]
+}

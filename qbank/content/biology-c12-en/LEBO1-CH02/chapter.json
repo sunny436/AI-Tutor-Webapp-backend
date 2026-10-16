@@ -1,0 +1,128 @@
+{
+ "chapter_id": "LEBO1-CH02",
+ "title": "Human Reproduction",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBO1-CH02-T1",
+   "topic_number": 1,
+   "title": "The Male Reproductive System",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "testis-structure",
+     "learning_objective": "Describe the location and internal organisation of the testis, including seminiferous tubules, Sertoli cells and Leydig cells."
+    },
+    {
+     "concept_tag": "male-accessory-ducts-glands",
+     "learning_objective": "Trace the path of sperms through the male accessory ducts and state the role of the accessory glands and seminal plasma."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH02-T2",
+   "topic_number": 2,
+   "title": "The Female Reproductive System",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "female-reproductive-organs",
+     "learning_objective": "Describe the structure and functions of the ovaries, oviducts, uterus and external genitalia."
+    },
+    {
+     "concept_tag": "mammary-gland",
+     "learning_objective": "Describe the structure of the mammary gland and the path of milk from the alveoli to the nipple."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH02-T3",
+   "topic_number": 3,
+   "title": "Gametogenesis",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "spermatogenesis",
+     "learning_objective": "Explain the stages of spermatogenesis, the chromosome number at each stage and its hormonal control."
+    },
+    {
+     "concept_tag": "sperm-structure",
+     "learning_objective": "Relate the parts of a human sperm to their functions and state the criteria for normal fertility."
+    },
+    {
+     "concept_tag": "oogenesis",
+     "learning_objective": "Explain the stages of oogenesis and compare it with spermatogenesis."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH02-T4",
+   "topic_number": 4,
+   "title": "Menstrual Cycle",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "menstrual-cycle-phases",
+     "learning_objective": "Describe the menstrual, follicular, ovulatory and luteal phases and the changes in the ovary and uterus."
+    },
+    {
+     "concept_tag": "hormonal-control-of-cycle",
+     "learning_objective": "Explain how pituitary and ovarian hormones regulate ovulation and the maintenance of the endometrium."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH02-T5",
+   "topic_number": 5,
+   "title": "Fertilisation and Implantation",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "fertilisation",
+     "learning_objective": "Explain where and how fertilisation occurs and how entry of additional sperms is blocked."
+    },
+    {
+     "concept_tag": "sex-determination",
+     "learning_objective": "Explain why the sex of a baby is determined by the sperm that fertilises the ovum."
+    },
+    {
+     "concept_tag": "cleavage-and-implantation",
+     "learning_objective": "Describe cleavage, the formation of the morula and blastocyst, and implantation."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH02-T6",
+   "topic_number": 6,
+   "title": "Pregnancy and Embryonic Development",
+   "ncert_sections": "2.6",
+   "concepts": [
+    {
+     "concept_tag": "placenta-and-hormones",
+     "learning_objective": "Describe the formation and functions of the placenta and the hormones of pregnancy."
+    },
+    {
+     "concept_tag": "embryonic-development",
+     "learning_objective": "Describe germ layer formation and the major features of foetal development during pregnancy."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH02-T7",
+   "topic_number": 7,
+   "title": "Parturition and Lactation",
+   "ncert_sections": "2.7",
+   "concepts": [
+    {
+     "concept_tag": "parturition",
+     "learning_objective": "Explain the neuroendocrine mechanism of parturition, including the role of oxytocin."
+    },
+    {
+     "concept_tag": "lactation",
+     "learning_objective": "Explain lactation and the importance of colostrum for the new-born."
+    }
+   ]
+  }
+ ]
+}

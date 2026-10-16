@@ -1,0 +1,112 @@
+{
+ "chapter_id": "LHMH1-CH05",
+ "title": "सांतत्य तथा अवकलनीयता",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH1-CH05-T1",
+   "topic_number": 1,
+   "title": "किसी बिंदु पर सांतत्य",
+   "ncert_sections": "5.1, 5.2",
+   "concepts": [
+    {
+     "concept_tag": "bindu-par-santatya",
+     "learning_objective": "किसी बिंदु पर फलन के सांतत्य की शर्त बताना और उसे जाँचना।"
+    },
+    {
+     "concept_tag": "khandashah-phalan-santatya",
+     "learning_objective": "खंडशः परिभाषित फलनों में असांतत्य के बिंदु ज्ञात करना और अज्ञात अचर निकालना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH05-T2",
+   "topic_number": 2,
+   "title": "संतत फलनों का बीजगणित",
+   "ncert_sections": "5.2.1",
+   "concepts": [
+    {
+     "concept_tag": "santat-phalanon-ka-beejganit",
+     "learning_objective": "संतत फलनों के योग, अंतर, गुणनफल और भागफल के सांतत्य को समझना।"
+    },
+    {
+     "concept_tag": "sanyukt-phalan-santatya",
+     "learning_objective": "संतत फलनों के संयोजन से बने फलन का सांतत्य पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH05-T3",
+   "topic_number": 3,
+   "title": "अवकलनीयता और संयुक्त फलनों के अवकलज",
+   "ncert_sections": "5.3, 5.3.1",
+   "concepts": [
+    {
+     "concept_tag": "avakalaniyata-aur-santatya",
+     "learning_objective": "अवकलनीयता और सांतत्य के संबंध को समझना तथा किसी बिंदु पर अवकलनीयता जाँचना।"
+    },
+    {
+     "concept_tag": "shrinkhala-niyam",
+     "learning_objective": "शृंखला नियम से संयुक्त फलनों का अवकलज ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH05-T4",
+   "topic_number": 4,
+   "title": "अस्पष्ट फलनों और प्रतिलोम त्रिकोणमितीय फलनों के अवकलज",
+   "ncert_sections": "5.3.2, 5.3.3",
+   "concepts": [
+    {
+     "concept_tag": "aspasht-avakalan",
+     "learning_objective": "अस्पष्ट रूप में दिए संबंध से dy/dx ज्ञात करना।"
+    },
+    {
+     "concept_tag": "pratilom-trikonmitiya-avakalaj",
+     "learning_objective": "प्रतिलोम त्रिकोणमितीय फलनों के अवकलज ज्ञात करना और प्रतिस्थापन से सरल करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH05-T5",
+   "topic_number": 5,
+   "title": "चरघातांकी और लघुगणकीय फलन तथा लघुगणकीय अवकलन",
+   "ncert_sections": "5.4, 5.5",
+   "concepts": [
+    {
+     "concept_tag": "charghatanki-laghuganakiy-avakalaj",
+     "learning_objective": "चरघातांकी और लघुगणकीय फलनों के अवकलज ज्ञात करना।"
+    },
+    {
+     "concept_tag": "laghuganakiy-avakalan",
+     "learning_objective": "चर घातांक वाले फलनों का अवकलज लघुगणकीय अवकलन से ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH05-T6",
+   "topic_number": 6,
+   "title": "प्राचलिक रूपों में फलनों के अवकलज",
+   "ncert_sections": "5.6",
+   "concepts": [
+    {
+     "concept_tag": "prachalik-avakalan",
+     "learning_objective": "प्राचलिक रूप में दिए फलनों के लिए dy/dx ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH05-T7",
+   "topic_number": 7,
+   "title": "द्वितीय कोटि का अवकलज",
+   "ncert_sections": "5.7",
+   "concepts": [
+    {
+     "concept_tag": "dvitiya-koti-avakalaj",
+     "learning_objective": "द्वितीय कोटि का अवकलज ज्ञात करना और उससे संबंधों को सिद्ध करना।"
+    }
+   ]
+  }
+ ]
+}

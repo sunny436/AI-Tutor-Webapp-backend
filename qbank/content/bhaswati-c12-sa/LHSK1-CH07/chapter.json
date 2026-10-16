@@ -1,0 +1,100 @@
+{
+ "chapter_id": "LHSK1-CH07",
+ "title": "हल्दीघाटी",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHSK1-CH07-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः – प्रतापविजयः खण्डकाव्यम्",
+   "ncert_sections": "पाठपरिचयः",
+   "concepts": [
+    {
+     "concept_tag": "path-parichayah",
+     "learning_objective": "छात्रः पाठस्य स्रोतं, लेखकं, ऐतिहासिकं सन्दर्भं च जानाति।"
+    },
+    {
+     "concept_tag": "svatantrya-bhavana",
+     "learning_objective": "छात्रः पाठे निहितां स्वाधीनताभावनां स्वाभिमानं च अवगच्छति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH07-T2",
+   "topic_number": 2,
+   "title": "हल्दीघाट्याः स्वरूपं प्रभातशोभा च",
+   "ncert_sections": "श्लोकाः 1-2",
+   "concepts": [
+    {
+     "concept_tag": "shativa-haldighati",
+     "learning_objective": "छात्रः प्रथमश्लोके हल्दीघाट्याः मूर्तिमत्याः स्वाधीनतायाः शाट्याः च उपमां अवगच्छति।"
+    },
+    {
+     "concept_tag": "prabhata-shobha",
+     "learning_objective": "छात्रः उषसि हल्दीघाट्याः काञ्चनीयां शोभां व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH07-T3",
+   "topic_number": 3,
+   "title": "तरूणाम् उद्बोधनं कुर्याः विलापः प्रकृतिपूजनं च",
+   "ncert_sections": "श्लोकाः 3-5",
+   "concepts": [
+    {
+     "concept_tag": "taru-udbodhanam",
+     "learning_objective": "छात्रः वृक्षपङ्क्तेः मर्मरध्वनौ निहितं पराधीनताविरोधिसन्देशं व्याख्याति।"
+    },
+    {
+     "concept_tag": "kurari-vilapah",
+     "learning_objective": "छात्रः प्रतापस्य अभावे कुर्याः मातृवत् रोदनस्य भावम् अवगच्छति।"
+    },
+    {
+     "concept_tag": "panchopachara-pujanam",
+     "learning_objective": "छात्रः प्रकृतेः पञ्चोपचारपूजनस्य पञ्च पदार्थान् अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH07-T4",
+   "topic_number": 4,
+   "title": "शुकाः, असिधारा, सैषा स्थली, मयूरनृत्यं च",
+   "ncert_sections": "श्लोकाः 6-9",
+   "concepts": [
+    {
+     "concept_tag": "shuka-varnanam",
+     "learning_objective": "छात्रः श्रीरामनाम क्वणतां सुशुकानां वर्णनम् अवगच्छति।"
+    },
+    {
+     "concept_tag": "asidhara-chapala",
+     "learning_objective": "छात्रः युद्धे प्रतापस्य असेः चपलया सह उपमां विश्लेषयति।"
+    },
+    {
+     "concept_tag": "saisha-sthali",
+     "learning_objective": "छात्रः हल्दीघाट्याः वीरभूमिरूपेण वर्णनम् अवगच्छति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH07-T5",
+   "topic_number": 5,
+   "title": "व्याकरणम् – सन्धिः, समासः, प्रकृतिप्रत्ययौ",
+   "ncert_sections": "अभ्यासः, शब्दार्थाः टिप्पण्यश्च",
+   "concepts": [
+    {
+     "concept_tag": "sandhi-viccheda",
+     "learning_objective": "छात्रः पाठगतपदेषु सन्धिं सन्धिविच्छेदं च करोति।"
+    },
+    {
+     "concept_tag": "prakriti-pratyaya",
+     "learning_objective": "छात्रः पाठगतपदेषु प्रकृतिं प्रत्ययं च पृथक् करोति।"
+    },
+    {
+     "concept_tag": "samasa-parichayah",
+     "learning_objective": "छात्रः पाठगतसमासान् अभिजानाति।"
+    }
+   ]
+  }
+ ]
+}

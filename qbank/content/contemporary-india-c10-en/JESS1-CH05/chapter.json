@@ -1,0 +1,140 @@
+{
+ "chapter_id": "JESS1-CH05",
+ "title": "Minerals and Energy Resources",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESS1-CH05-T1",
+   "topic_number": 1,
+   "title": "What is a mineral",
+   "ncert_sections": "What is a mineral?; Study of minerals by geographers and geologists",
+   "concepts": [
+    {
+     "concept_tag": "mineral-definition",
+     "learning_objective": "Define a mineral and explain how minerals make up rocks."
+    },
+    {
+     "concept_tag": "mineral-properties-and-study",
+     "learning_objective": "Explain why minerals vary in their properties and distinguish how geographers and geologists study them."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH05-T2",
+   "topic_number": 2,
+   "title": "Mode of occurrence of minerals",
+   "ncert_sections": "Mode of occurrence of minerals",
+   "concepts": [
+    {
+     "concept_tag": "veins-and-lodes",
+     "learning_objective": "Describe how minerals occur as veins and lodes in igneous and metamorphic rocks."
+    },
+    {
+     "concept_tag": "sedimentary-and-residual-deposits",
+     "learning_objective": "Explain how minerals form in sedimentary beds, by evaporation and as residual deposits."
+    },
+    {
+     "concept_tag": "placer-and-ocean-deposits",
+     "learning_objective": "Describe placer deposits and the minerals obtained from ocean waters and ocean beds."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH05-T3",
+   "topic_number": 3,
+   "title": "Ferrous minerals: iron ore and manganese",
+   "ncert_sections": "Ferrous minerals; Iron ore; Manganese",
+   "concepts": [
+    {
+     "concept_tag": "iron-ore-types",
+     "learning_objective": "Compare magnetite and hematite in terms of iron content and use."
+    },
+    {
+     "concept_tag": "iron-ore-belts",
+     "learning_objective": "Identify the major iron ore belts of India, their mines and export ports."
+    },
+    {
+     "concept_tag": "manganese-uses",
+     "learning_objective": "State the uses of manganese and its role in steel making."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH05-T4",
+   "topic_number": 4,
+   "title": "Non-ferrous, non-metallic and rock minerals",
+   "ncert_sections": "Non-ferrous minerals; Copper; Bauxite; Non-metallic minerals; Rock minerals",
+   "concepts": [
+    {
+     "concept_tag": "copper-and-bauxite",
+     "learning_objective": "Describe the uses and distribution of copper and bauxite in India."
+    },
+    {
+     "concept_tag": "mica",
+     "learning_objective": "Explain the properties, uses and distribution of mica."
+    },
+    {
+     "concept_tag": "limestone",
+     "learning_objective": "State the occurrence and uses of limestone."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH05-T5",
+   "topic_number": 5,
+   "title": "Hazards of mining and conservation of minerals",
+   "ncert_sections": "Hazards of mining; Conservation of minerals",
+   "concepts": [
+    {
+     "concept_tag": "mining-hazards",
+     "learning_objective": "Describe the impact of mining on the health of miners and on the environment."
+    },
+    {
+     "concept_tag": "mineral-conservation",
+     "learning_objective": "Explain why mineral resources must be conserved and suggest ways of doing so."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH05-T6",
+   "topic_number": 6,
+   "title": "Conventional sources of energy",
+   "ncert_sections": "Energy resources; Conventional sources of energy",
+   "concepts": [
+    {
+     "concept_tag": "coal-types-and-distribution",
+     "learning_objective": "Distinguish the types of coal and describe the distribution of coal in India."
+    },
+    {
+     "concept_tag": "petroleum-and-natural-gas",
+     "learning_objective": "Explain the occurrence, uses and distribution of petroleum and natural gas in India."
+    },
+    {
+     "concept_tag": "electricity-generation",
+     "learning_objective": "Distinguish between hydroelectricity and thermal electricity."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH05-T7",
+   "topic_number": 7,
+   "title": "Non-conventional sources and conservation of energy",
+   "ncert_sections": "Non-conventional sources of energy; Conservation of energy resources",
+   "concepts": [
+    {
+     "concept_tag": "nuclear-and-solar-energy",
+     "learning_objective": "Describe how nuclear and solar energy are obtained and where their resources are found in India."
+    },
+    {
+     "concept_tag": "wind-tidal-geothermal-biogas",
+     "learning_objective": "Explain how wind, tidal, geothermal energy and biogas are harnessed and where in India."
+    },
+    {
+     "concept_tag": "energy-conservation",
+     "learning_objective": "Evaluate the need for and ways of conserving energy resources."
+    }
+   ]
+  }
+ ]
+}

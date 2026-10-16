@@ -1,0 +1,790 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "india-and-the-contemporary-world-ii-c10-en",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "social_science",
+  "language": "english",
+  "title": "India and the Contemporary World-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jess3"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JESS3-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "The Rise of Nationalism in Europe",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess301.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS3-CH01-T1",
+     "topic_number": 1,
+     "title": "The French Revolution and the Idea of the Nation",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "collective-identity-measures",
+       "learning_objective": "Identify the measures French revolutionaries used to create a collective national identity."
+      },
+      {
+       "concept_tag": "napoleonic-code-reforms",
+       "learning_objective": "Explain the administrative reforms of Napoleon, including the Civil Code of 1804."
+      },
+      {
+       "concept_tag": "reactions-to-french-rule",
+       "learning_objective": "Analyse why reactions to French rule in conquered territories turned from welcome to hostility."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH01-T2",
+     "topic_number": 2,
+     "title": "The Making of Nationalism: Aristocracy, Middle Class and Liberalism",
+     "ncert_sections": "2, 2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "aristocracy-and-middle-class",
+       "learning_objective": "Distinguish the landed aristocracy from the new middle classes and their role in national unity."
+      },
+      {
+       "concept_tag": "liberal-nationalism",
+       "learning_objective": "Explain the political and economic ideas of nineteenth-century liberalism."
+      },
+      {
+       "concept_tag": "zollverein-economic-nationalism",
+       "learning_objective": "Explain how the zollverein and economic nationalism promoted German unity."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH01-T3",
+     "topic_number": 3,
+     "title": "A New Conservatism after 1815 and the Revolutionaries",
+     "ncert_sections": "2.3, 2.4",
+     "concepts": [
+      {
+       "concept_tag": "conservatism-after-1815",
+       "learning_objective": "Describe the beliefs of conservatives after the defeat of Napoleon."
+      },
+      {
+       "concept_tag": "treaty-of-vienna",
+       "learning_objective": "Identify the aims and provisions of the Treaty of Vienna of 1815."
+      },
+      {
+       "concept_tag": "mazzini-and-secret-societies",
+       "learning_objective": "Describe the role of Giuseppe Mazzini and secret societies in the revolutionary movement."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH01-T4",
+     "topic_number": 4,
+     "title": "The Age of Revolutions and the Romantic Imagination",
+     "ncert_sections": "3, 3.1",
+     "concepts": [
+      {
+       "concept_tag": "july-revolution-and-greek-independence",
+       "learning_objective": "Explain the July Revolution of 1830 and the Greek war of independence."
+      },
+      {
+       "concept_tag": "romanticism-and-folk-culture",
+       "learning_objective": "Explain how Romanticism and folk culture helped shape national feeling."
+      },
+      {
+       "concept_tag": "language-and-national-resistance",
+       "learning_objective": "Analyse how language served as a tool of national resistance in Poland."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH01-T5",
+     "topic_number": 5,
+     "title": "Hunger, Hardship and the 1848 Revolution of the Liberals",
+     "ncert_sections": "3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "economic-hardship-popular-revolt",
+       "learning_objective": "Explain the economic hardships that led to popular revolts in the 1830s and 1840s."
+      },
+      {
+       "concept_tag": "revolution-of-liberals-1848",
+       "learning_objective": "Evaluate the aims, course and outcome of the 1848 revolution of the liberals and the Frankfurt parliament."
+      },
+      {
+       "concept_tag": "women-and-liberal-movement",
+       "learning_objective": "Analyse the debate over political rights for women within the liberal movement."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH01-T6",
+     "topic_number": 6,
+     "title": "The Making of Germany and Italy and the Case of Britain",
+     "ncert_sections": "4.1, 4.2, 4.3",
+     "concepts": [
+      {
+       "concept_tag": "german-unification",
+       "learning_objective": "Describe the process of German unification under Prussian leadership."
+      },
+      {
+       "concept_tag": "italian-unification",
+       "learning_objective": "Trace the stages and leaders of Italian unification."
+      },
+      {
+       "concept_tag": "british-nation-state",
+       "learning_objective": "Explain how the British nation-state was formed through a long-drawn-out process."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH01-T7",
+     "topic_number": 7,
+     "title": "Visualising the Nation",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "female-allegory-of-nation",
+       "learning_objective": "Explain why nations were personified as female allegories such as Marianne and Germania."
+      },
+      {
+       "concept_tag": "symbols-of-germania",
+       "learning_objective": "Interpret the symbols used in allegorical images of the nation."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH01-T8",
+     "topic_number": 8,
+     "title": "Nationalism and Imperialism",
+     "ncert_sections": "6",
+     "concepts": [
+      {
+       "concept_tag": "balkan-nationalist-tensions",
+       "learning_objective": "Explain why the Balkans became a source of nationalist tension after 1871."
+      },
+      {
+       "concept_tag": "nationalism-and-imperialism",
+       "learning_objective": "Evaluate how nationalism changed in the late nineteenth century and its link with imperialism."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS3-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Nationalism in India",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS3-CH02-T1",
+     "topic_number": 1,
+     "title": "The First World War and the idea of satyagraha",
+     "ncert_sections": "1, 1.1",
+     "concepts": [
+      {
+       "concept_tag": "war-economic-political-impact",
+       "learning_objective": "Explain how the First World War created a new economic and political situation in India."
+      },
+      {
+       "concept_tag": "idea-of-satyagraha",
+       "learning_objective": "Explain the idea of satyagraha as active, non-violent resistance based on truth."
+      },
+      {
+       "concept_tag": "early-satyagraha-movements",
+       "learning_objective": "Identify Gandhiji's early satyagrahas at Champaran, Ahmedabad and Kheda and the groups they supported."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH02-T2",
+     "topic_number": 2,
+     "title": "The Rowlatt Act, Khilafat and the call for Non-Cooperation",
+     "ncert_sections": "1.2, 1.3",
+     "concepts": [
+      {
+       "concept_tag": "rowlatt-act-satyagraha",
+       "learning_objective": "Explain why Indians opposed the Rowlatt Act and how the Rowlatt satyagraha unfolded."
+      },
+      {
+       "concept_tag": "jallianwala-bagh",
+       "learning_objective": "Describe the Jallianwala Bagh massacre and the repression that followed."
+      },
+      {
+       "concept_tag": "khilafat-and-non-cooperation",
+       "learning_objective": "Explain why Gandhiji joined the Khilafat issue to Non-Cooperation and how the movement was planned in stages."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH02-T3",
+     "topic_number": 3,
+     "title": "Differing strands within the Non-Cooperation Movement",
+     "ncert_sections": "2, 2.1, 2.2, 2.3",
+     "concepts": [
+      {
+       "concept_tag": "movement-in-the-towns",
+       "learning_objective": "Describe middle-class participation and the economic boycott in the towns, and why it slowed down."
+      },
+      {
+       "concept_tag": "peasant-and-tribal-movements",
+       "learning_objective": "Explain how peasants in Awadh and tribals in the Gudem Hills interpreted swaraj in their own ways."
+      },
+      {
+       "concept_tag": "swaraj-in-the-plantations",
+       "learning_objective": "Explain what freedom meant to Assam plantation workers under the Inland Emigration Act."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH02-T4",
+     "topic_number": 4,
+     "title": "Towards Civil Disobedience and the Salt March",
+     "ncert_sections": "3, 3.1",
+     "concepts": [
+      {
+       "concept_tag": "swaraj-party-and-depression",
+       "learning_objective": "Explain the withdrawal of Non-Cooperation, the Swaraj Party's council politics and the impact of the depression."
+      },
+      {
+       "concept_tag": "simon-commission-and-purna-swaraj",
+       "learning_objective": "Describe the protests against the Simon Commission and the Lahore Congress demand for Purna Swaraj."
+      },
+      {
+       "concept_tag": "salt-march-civil-disobedience",
+       "learning_objective": "Explain why the Salt March was an effective symbol and how Civil Disobedience differed from Non-Cooperation."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH02-T5",
+     "topic_number": 5,
+     "title": "How participants saw Civil Disobedience and its limits",
+     "ncert_sections": "3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "social-groups-in-civil-disobedience",
+       "learning_objective": "Compare why rich peasants, poor peasants, business classes, workers and women joined Civil Disobedience."
+      },
+      {
+       "concept_tag": "dalits-and-poona-pact",
+       "learning_objective": "Explain the dalit demand for separate electorates and the outcome of the Poona Pact."
+      },
+      {
+       "concept_tag": "muslim-alienation",
+       "learning_objective": "Analyse why large sections of Muslims felt alienated from the Congress-led movement."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH02-T6",
+     "topic_number": 6,
+     "title": "The sense of collective belonging",
+     "ncert_sections": "4, Conclusion",
+     "concepts": [
+      {
+       "concept_tag": "bharat-mata-image",
+       "learning_objective": "Describe how the image of Bharat Mata came to symbolise the nation."
+      },
+      {
+       "concept_tag": "folklore-and-national-symbols",
+       "learning_objective": "Explain how folklore revival and nationalist flags helped create a feeling of nationalism."
+      },
+      {
+       "concept_tag": "reinterpretation-of-history",
+       "learning_objective": "Evaluate how nationalist histories built pride in the past and why they could exclude some communities."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS3-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "The Making of a Global World",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess303.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS3-CH03-T1",
+     "topic_number": 1,
+     "title": "The pre-modern world: silk routes and travelling foods",
+     "ncert_sections": "1, 1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "pre-modern-links",
+       "learning_objective": "Describe how trade, travel and migration linked distant societies long before modern globalisation."
+      },
+      {
+       "concept_tag": "silk-routes",
+       "learning_objective": "Explain the silk routes as an example of pre-modern trade and cultural exchange between Asia, Europe and Africa."
+      },
+      {
+       "concept_tag": "food-exchange",
+       "learning_objective": "Explain how foods and crops travelled between continents and how new crops changed lives."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH03-T2",
+     "topic_number": 2,
+     "title": "Conquest, disease and trade in the sixteenth century",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "disease-and-conquest",
+       "learning_objective": "Explain how germs such as smallpox helped the European conquest of the Americas."
+      },
+      {
+       "concept_tag": "world-shrinks-1500s",
+       "learning_objective": "Explain how the sea routes to Asia and America and American silver 'shrank' the world from the sixteenth century."
+      },
+      {
+       "concept_tag": "shift-of-trade-centre",
+       "learning_objective": "Explain why the centre of world trade moved westwards towards Europe."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH03-T3",
+     "topic_number": 3,
+     "title": "The nineteenth century: a world economy takes shape and the role of technology",
+     "ncert_sections": "2, 2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "three-flows",
+       "learning_objective": "Identify the three flows of international economic exchange: trade, labour and capital."
+      },
+      {
+       "concept_tag": "corn-laws-and-food-economy",
+       "learning_objective": "Trace how the abolition of the Corn Laws led to a global agricultural economy, migration and capital flows."
+      },
+      {
+       "concept_tag": "technology-and-meat-trade",
+       "learning_objective": "Analyse how technology such as refrigerated ships changed the meat trade and diets in Europe."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH03-T4",
+     "topic_number": 4,
+     "title": "Late nineteenth-century colonialism and rinderpest in Africa",
+     "ncert_sections": "2.3, 2.4",
+     "concepts": [
+      {
+       "concept_tag": "partition-of-africa",
+       "learning_objective": "Describe how European powers partitioned Africa and how exploration served imperial projects."
+      },
+      {
+       "concept_tag": "rinderpest-and-labour",
+       "learning_objective": "Explain how colonisers recruited African labour and how rinderpest helped them subdue Africa."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH03-T5",
+     "topic_number": 5,
+     "title": "Indian labour, entrepreneurs and trade in the global system",
+     "ncert_sections": "2.4, 2.5, 2.6",
+     "concepts": [
+      {
+       "concept_tag": "indentured-labour",
+       "learning_objective": "Describe the nineteenth-century indentured labour migration from India and the cultures it created."
+      },
+      {
+       "concept_tag": "indian-entrepreneurs-abroad",
+       "learning_objective": "Identify the Indian bankers and traders who financed export agriculture and traded abroad."
+      },
+      {
+       "concept_tag": "india-in-global-trade",
+       "learning_objective": "Explain the change in India's exports and how Britain's trade surplus with India worked in the multilateral settlement system."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH03-T6",
+     "topic_number": 6,
+     "title": "The inter-war economy: war, recovery and mass production",
+     "ncert_sections": "3, 3.1, 3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "first-world-war-impact",
+       "learning_objective": "Explain the economic effects of the First World War as the first modern industrial war."
+      },
+      {
+       "concept_tag": "post-war-recovery",
+       "learning_objective": "Explain why post-war recovery was difficult for Britain and for agricultural economies."
+      },
+      {
+       "concept_tag": "mass-production",
+       "learning_objective": "Explain mass production, the assembly line and the consumer boom in the US in the 1920s."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH03-T7",
+     "topic_number": 7,
+     "title": "The Great Depression and India",
+     "ncert_sections": "3.4, 3.5",
+     "concepts": [
+      {
+       "concept_tag": "depression-causes",
+       "learning_objective": "Explain the causes of the Great Depression, including agricultural overproduction and the withdrawal of US loans."
+      },
+      {
+       "concept_tag": "depression-in-us",
+       "learning_objective": "Describe the effects of the Great Depression on the US economy and its banking system."
+      },
+      {
+       "concept_tag": "depression-in-india",
+       "learning_objective": "Analyse how the Great Depression affected Indian trade, peasants and urban India differently."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH03-T8",
+     "topic_number": 8,
+     "title": "Rebuilding a world economy: the post-war era and globalisation",
+     "ncert_sections": "4, 4.1, 4.2, 4.3, 4.4",
+     "concepts": [
+      {
+       "concept_tag": "bretton-woods-system",
+       "learning_objective": "Explain the lessons of the inter-war years and the institutions and fixed exchange rates of the Bretton Woods system."
+      },
+      {
+       "concept_tag": "decolonisation-and-g77",
+       "learning_objective": "Explain why newly independent countries formed the G-77 and demanded a new international economic order."
+      },
+      {
+       "concept_tag": "end-of-bretton-woods-globalisation",
+       "learning_objective": "Explain the end of the Bretton Woods system and the relocation of industry to low-wage Asian countries."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS3-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "The Age of Industrialisation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess304.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS3-CH04-T1",
+     "topic_number": 1,
+     "title": "Before the Industrial Revolution: proto-industrialisation",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "proto-industrialisation",
+       "learning_objective": "Explain proto-industrialisation as large-scale production for international markets before factories, organised by merchants."
+      },
+      {
+       "concept_tag": "merchants-and-rural-producers",
+       "learning_objective": "Explain why merchants turned to the countryside and why peasant households worked for them."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH04-T2",
+     "topic_number": 2,
+     "title": "The coming up of the factory and the pace of industrial change",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "rise-of-the-factory",
+       "learning_objective": "Describe how the cotton mill brought production under one roof and the advantages this gave."
+      },
+      {
+       "concept_tag": "pace-of-industrial-change",
+       "learning_objective": "Evaluate evidence that industrialisation in Britain was gradual and that new technology spread slowly."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH04-T3",
+     "topic_number": 3,
+     "title": "Hand labour and steam power; life of the workers",
+     "ncert_sections": "2, 2.1",
+     "concepts": [
+      {
+       "concept_tag": "preference-for-hand-labour",
+       "learning_objective": "Explain why many Victorian industrialists preferred hand labour to machines."
+      },
+      {
+       "concept_tag": "life-of-workers",
+       "learning_objective": "Describe the hardships of workers in industrial Britain and their hostility to new technology."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH04-T4",
+     "topic_number": 4,
+     "title": "The age of Indian textiles and what happened to weavers",
+     "ncert_sections": "3, 3.1, 3.2",
+     "concepts": [
+      {
+       "concept_tag": "indian-textile-trade-network",
+       "learning_objective": "Describe the pre-colonial network of Indian textile trade and its breakdown with the rise of European companies."
+      },
+      {
+       "concept_tag": "company-control-over-weavers",
+       "learning_objective": "Explain how the East India Company controlled weavers through gomasthas and advances, and how weavers responded."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH04-T5",
+     "topic_number": 5,
+     "title": "Manchester comes to India",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "manchester-imports",
+       "learning_objective": "Explain how British cotton imports led to the decline of Indian textile exports and weaving."
+      },
+      {
+       "concept_tag": "raw-cotton-crisis",
+       "learning_objective": "Explain how the American Civil War and raw cotton exports affected Indian weavers."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH04-T6",
+     "topic_number": 6,
+     "title": "Factories come up: entrepreneurs and workers",
+     "ncert_sections": "4, 4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "early-entrepreneurs",
+       "learning_objective": "Identify the early Indian industrialists and the sources of their capital."
+      },
+      {
+       "concept_tag": "managing-agencies",
+       "learning_objective": "Describe the role of European Managing Agencies in Indian industry before the First World War."
+      },
+      {
+       "concept_tag": "jobbers-and-mill-workers",
+       "learning_objective": "Explain where Indian mill workers came from and the role of the jobber in recruiting them."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH04-T7",
+     "topic_number": 7,
+     "title": "The peculiarities of industrial growth",
+     "ncert_sections": "5, 5.1",
+     "concepts": [
+      {
+       "concept_tag": "changes-in-industrial-pattern",
+       "learning_objective": "Explain how yarn production, the swadeshi movement and the First World War shaped Indian industrial growth."
+      },
+      {
+       "concept_tag": "small-scale-industry-predominance",
+       "learning_objective": "Recognise that small-scale production predominated over registered factories in colonial India."
+      },
+      {
+       "concept_tag": "survival-of-handloom-weaving",
+       "learning_objective": "Analyse why handloom weaving survived and expanded in the twentieth century."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH04-T8",
+     "topic_number": 8,
+     "title": "Market for goods: advertisements, labels and calendars",
+     "ncert_sections": "6",
+     "concepts": [
+      {
+       "concept_tag": "labels-and-calendars",
+       "learning_objective": "Analyse how labels, calendars and images were used to create markets for new products."
+      },
+      {
+       "concept_tag": "swadeshi-advertising",
+       "learning_objective": "Explain how Indian manufacturers used advertisements to carry the nationalist message of swadeshi."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS3-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Print Culture and the Modern World",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess305.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS3-CH05-T1",
+     "topic_number": 1,
+     "title": "The First Printed Books in East Asia",
+     "ncert_sections": "1, 1.1",
+     "concepts": [
+      {
+       "concept_tag": "woodblock-printing-china",
+       "learning_objective": "Describe how woodblock printing began and spread in China and how its uses widened."
+      },
+      {
+       "concept_tag": "print-in-japan",
+       "learning_objective": "Explain how print reached Japan and shaped its urban visual culture, including ukiyo prints."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH05-T2",
+     "topic_number": 2,
+     "title": "Print Comes to Europe and Gutenberg's Press",
+     "ncert_sections": "2, 2.1",
+     "concepts": [
+      {
+       "concept_tag": "manuscripts-and-woodblocks-in-europe",
+       "learning_objective": "Explain how paper and woodblock printing reached Europe and why manuscripts could not meet demand."
+      },
+      {
+       "concept_tag": "gutenberg-printing-press",
+       "learning_objective": "Describe Gutenberg's printing press, its sources and its effect on book production."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH05-T3",
+     "topic_number": 3,
+     "title": "The Print Revolution and Its Impact",
+     "ncert_sections": "3, 3.1, 3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "new-reading-public",
+       "learning_objective": "Explain how print created a new reading public and blurred oral and reading cultures."
+      },
+      {
+       "concept_tag": "religious-debates-reformation",
+       "learning_objective": "Explain the role of print in Martin Luther's challenge and the Protestant Reformation."
+      },
+      {
+       "concept_tag": "print-and-dissent",
+       "learning_objective": "Analyse why print was feared as a carrier of dissent and how the Church tried to control it."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH05-T4",
+     "topic_number": 4,
+     "title": "The Reading Mania and the French Revolution",
+     "ncert_sections": "4, 4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "reading-mania-popular-literature",
+       "learning_objective": "Describe the rise of literacy and new forms of popular literature in eighteenth-century Europe."
+      },
+      {
+       "concept_tag": "print-and-french-revolution",
+       "learning_objective": "Evaluate the arguments linking print culture with the Enlightenment and the French Revolution."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH05-T5",
+     "topic_number": 5,
+     "title": "The Nineteenth Century: New Readers and Innovations",
+     "ncert_sections": "5, 5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "children-women-workers-readers",
+       "learning_objective": "Explain how children, women and workers became important readers and writers in the nineteenth century."
+      },
+      {
+       "concept_tag": "printing-innovations",
+       "learning_objective": "Describe nineteenth- and twentieth-century innovations in printing technology and publishing strategies."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH05-T6",
+     "topic_number": 6,
+     "title": "India and the World of Print and Religious Debates",
+     "ncert_sections": "6, 6.1, 6.2, 7",
+     "concepts": [
+      {
+       "concept_tag": "manuscripts-in-india",
+       "learning_objective": "Describe India's manuscript tradition and its limits before print."
+      },
+      {
+       "concept_tag": "print-comes-to-india",
+       "learning_objective": "Trace how the printing press came to India and how early newspapers developed."
+      },
+      {
+       "concept_tag": "religious-reform-debates",
+       "learning_objective": "Explain how print shaped religious reform and public debates in nineteenth-century India."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH05-T7",
+     "topic_number": 7,
+     "title": "New Forms of Publication: Women and the Poor",
+     "ncert_sections": "8, 8.1, 8.2",
+     "concepts": [
+      {
+       "concept_tag": "new-literary-and-visual-forms",
+       "learning_objective": "Identify the new literary and visual forms, such as novels and mass-produced prints, that print made possible."
+      },
+      {
+       "concept_tag": "women-and-print",
+       "learning_objective": "Explain how print changed women's reading and writing and the anxieties this produced."
+      },
+      {
+       "concept_tag": "print-and-the-poor",
+       "learning_objective": "Analyse how print reached poor people and gave voice to protests against caste and class oppression."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS3-CH05-T8",
+     "topic_number": 8,
+     "title": "Print and Censorship in Colonial India",
+     "ncert_sections": "9",
+     "concepts": [
+      {
+       "concept_tag": "colonial-press-regulation",
+       "learning_objective": "Describe how the colonial state's control over the press changed before and after 1857."
+      },
+      {
+       "concept_tag": "vernacular-press-act-and-nationalism",
+       "learning_objective": "Analyse the Vernacular Press Act and the link between press repression and nationalist protest."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

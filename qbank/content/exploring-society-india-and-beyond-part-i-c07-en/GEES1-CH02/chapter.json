@@ -1,0 +1,140 @@
+{
+ "chapter_id": "GEES1-CH02",
+ "title": "Understanding the Weather",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEES1-CH02-T1",
+   "topic_number": 1,
+   "title": "Weather, the atmosphere and the elements of weather",
+   "ncert_sections": "Weather and its Elements",
+   "concepts": [
+    {
+     "concept_tag": "weather-and-atmosphere",
+     "learning_objective": "Define weather as the state of the atmosphere at a particular time and place and describe the atmosphere."
+    },
+    {
+     "concept_tag": "troposphere",
+     "learning_objective": "Describe the troposphere as the lowest layer of the atmosphere where almost all weather occurs and explain why its thickness varies."
+    },
+    {
+     "concept_tag": "elements-of-weather",
+     "learning_objective": "Identify the five elements of weather and explain why they must be measured using common standards."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES1-CH02-T2",
+   "topic_number": 2,
+   "title": "Reading Nature's clues and the science of meteorology",
+   "ncert_sections": "Weather and its Elements (Observing Nature's clues)",
+   "concepts": [
+    {
+     "concept_tag": "traditional-weather-signs",
+     "learning_objective": "Explain how traditional observations of plants and animals have been used to forecast rain and storms."
+    },
+    {
+     "concept_tag": "meteorology",
+     "learning_objective": "Describe meteorology as the systematic study of weather that forms the basis of forecasting."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES1-CH02-T3",
+   "topic_number": 3,
+   "title": "Measuring temperature",
+   "ncert_sections": "Weather Instruments: a) Temperature",
+   "concepts": [
+    {
+     "concept_tag": "thermometers-and-scales",
+     "learning_objective": "Describe how thermometers work and why digital thermometers are increasingly preferred."
+    },
+    {
+     "concept_tag": "temperature-statistics",
+     "learning_objective": "Calculate the range of temperature and the mean daily temperature from recorded data."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES1-CH02-T4",
+   "topic_number": 4,
+   "title": "Measuring precipitation",
+   "ncert_sections": "Weather Instruments: b) Precipitation",
+   "concepts": [
+    {
+     "concept_tag": "forms-of-precipitation",
+     "learning_objective": "Identify rain, snow, sleet and hail as forms of precipitation."
+    },
+    {
+     "concept_tag": "rain-gauge",
+     "learning_objective": "Explain how a rain gauge measures rainfall in millimetres and where it should be placed."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES1-CH02-T5",
+   "topic_number": 5,
+   "title": "Measuring atmospheric pressure",
+   "ncert_sections": "Weather Instruments: c) Atmospheric pressure",
+   "concepts": [
+    {
+     "concept_tag": "pressure-and-altitude",
+     "learning_objective": "Explain why atmospheric pressure and available oxygen decrease at higher altitudes."
+    },
+    {
+     "concept_tag": "barometer-and-depression",
+     "learning_objective": "Use barometer readings in millibars to recognise normal pressure and a depression."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES1-CH02-T6",
+   "topic_number": 6,
+   "title": "Measuring wind",
+   "ncert_sections": "Weather Instruments: d) Wind",
+   "concepts": [
+    {
+     "concept_tag": "wind-direction-and-speed",
+     "learning_objective": "Describe wind as air moving from high to low pressure and explain why its speed and direction matter."
+    },
+    {
+     "concept_tag": "wind-instruments",
+     "learning_objective": "Distinguish the uses of the wind vane, wind sock and anemometer."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES1-CH02-T7",
+   "topic_number": 7,
+   "title": "Measuring humidity",
+   "ncert_sections": "Weather Instruments: e) Humidity",
+   "concepts": [
+    {
+     "concept_tag": "relative-humidity",
+     "learning_objective": "Interpret relative humidity values and relate them to evaporation, drying and sweating."
+    },
+    {
+     "concept_tag": "hygrometer-and-uses",
+     "learning_objective": "Identify the hygrometer and explain why industries and museums monitor humidity."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEES1-CH02-T8",
+   "topic_number": 8,
+   "title": "Weather stations and predicting the weather",
+   "ncert_sections": "Weather Stations; Predicting the Weather",
+   "concepts": [
+    {
+     "concept_tag": "weather-stations",
+     "learning_objective": "Describe how weather stations and Automated Weather Stations bring instruments together to record weather data."
+    },
+    {
+     "concept_tag": "weather-prediction-and-warnings",
+     "learning_objective": "Explain how weather predictions and graded warnings help people and governments prepare for extreme weather."
+    }
+   ]
+  }
+ ]
+}

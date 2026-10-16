@@ -1,0 +1,164 @@
+{
+ "chapter_id": "HECU1-CH12",
+ "title": "How Nature Works in Harmony",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HECU1-CH12-T1",
+   "topic_number": 1,
+   "title": "Habitats and their biotic and abiotic components",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "habitat-meaning",
+     "learning_objective": "Define a habitat and recognise that habitats can be large or very small."
+    },
+    {
+     "concept_tag": "biotic-abiotic-components",
+     "learning_objective": "Distinguish the biotic and abiotic components of a habitat and the needs each meets."
+    },
+    {
+     "concept_tag": "coexistence-in-habitat",
+     "learning_objective": "Explain how different organisms coexist in one habitat by using it in different ways."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH12-T2",
+   "topic_number": 2,
+   "title": "Populations, communities and the role of every organism",
+   "ncert_sections": "12.2, 12.3",
+   "concepts": [
+    {
+     "concept_tag": "population",
+     "learning_objective": "Define a population as a group of the same kind of organisms in a habitat at a given time."
+    },
+    {
+     "concept_tag": "community",
+     "learning_objective": "Describe a community as different populations sharing the same habitat."
+    },
+    {
+     "concept_tag": "indirect-effects-in-community",
+     "learning_objective": "Interpret how fish in a pond indirectly affect seed production in nearby plants."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH12-T3",
+   "topic_number": 3,
+   "title": "Interactions in an ecosystem; producers and consumers",
+   "ncert_sections": "12.4",
+   "concepts": [
+    {
+     "concept_tag": "types-of-interactions",
+     "learning_objective": "Classify interactions as biotic-abiotic, abiotic-abiotic or among biotic components."
+    },
+    {
+     "concept_tag": "ecosystem-meaning-types",
+     "learning_objective": "Define an ecosystem and identify aquatic, terrestrial and human-made ecosystems."
+    },
+    {
+     "concept_tag": "producers-and-consumers",
+     "learning_objective": "Classify organisms as autotrophs or heterotrophs, and consumers as herbivores, carnivores or omnivores."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH12-T4",
+   "topic_number": 4,
+   "title": "Food chains, trophic levels and food webs",
+   "ncert_sections": "12.5",
+   "concepts": [
+    {
+     "concept_tag": "food-chain",
+     "learning_objective": "Represent and interpret who eats whom as a linear food chain."
+    },
+    {
+     "concept_tag": "trophic-levels",
+     "learning_objective": "Identify the trophic level occupied by an organism in a food chain."
+    },
+    {
+     "concept_tag": "food-web",
+     "learning_objective": "Explain how interlinked food chains form a food web."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH12-T5",
+   "topic_number": 5,
+   "title": "Decomposition and recycling of nutrients",
+   "ncert_sections": "12.6",
+   "concepts": [
+    {
+     "concept_tag": "decomposers-saprotrophs",
+     "learning_objective": "Identify decomposers (saprotrophs) such as fungi and bacteria and what they do."
+    },
+    {
+     "concept_tag": "nutrient-recycling",
+     "learning_objective": "Explain how decomposition returns nutrients to the soil so that nothing in nature is wasted."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH12-T6",
+   "topic_number": 6,
+   "title": "Changes, balance and relationships in ecosystems",
+   "ncert_sections": "12.7, 12.8",
+   "concepts": [
+    {
+     "concept_tag": "cascading-effects",
+     "learning_objective": "Trace how one change in an ecosystem leads to a chain of further changes."
+    },
+    {
+     "concept_tag": "competition-and-balance",
+     "learning_objective": "Explain how competition for resources controls population size and keeps an ecosystem balanced."
+    },
+    {
+     "concept_tag": "mutualism-commensalism-parasitism",
+     "learning_objective": "Distinguish mutualism, commensalism and parasitism with examples."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH12-T7",
+   "topic_number": 7,
+   "title": "Benefits of ecosystems, threats and human-made ecosystems",
+   "ncert_sections": "12.9, 12.9.1",
+   "concepts": [
+    {
+     "concept_tag": "ecosystem-services",
+     "learning_objective": "List the benefits humans obtain from forest and aquatic ecosystems."
+    },
+    {
+     "concept_tag": "threats-and-protection",
+     "learning_objective": "Identify human threats to ecosystems such as the Sundarbans and the role of protected areas."
+    },
+    {
+     "concept_tag": "human-made-ecosystems",
+     "learning_objective": "Describe human-made ecosystems and why they need human care and management."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH12-T8",
+   "topic_number": 8,
+   "title": "Healthy ecosystems and sustainable farming",
+   "ncert_sections": "12.9.2",
+   "concepts": [
+    {
+     "concept_tag": "green-revolution",
+     "learning_objective": "Describe the Green Revolution and why its methods are now considered unsustainable."
+    },
+    {
+     "concept_tag": "effects-of-chemical-farming",
+     "learning_objective": "Explain how overuse of synthetic chemicals and monoculture harm soil, pollinators and pest control."
+    },
+    {
+     "concept_tag": "sustainable-farming-practices",
+     "learning_objective": "Identify organic and traditional practices that support sustainable farming."
+    }
+   ]
+  }
+ ]
+}

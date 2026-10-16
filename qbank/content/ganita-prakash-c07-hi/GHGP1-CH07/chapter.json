@@ -1,0 +1,120 @@
+{
+ "chapter_id": "GHGP1-CH07",
+ "title": "तीन प्रतिच्छेदी रेखाओं की एक कथा",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHGP1-CH07-T1",
+   "topic_number": 1,
+   "title": "त्रिभुज के भाग और समबाहु त्रिभुज की रचना",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "tribhuj-ke-bhag",
+     "learning_objective": "विद्यार्थी त्रिभुज के शीर्ष, भुजाएँ और कोण पहचानकर उनका सही नामांकन कर सकेगा।"
+    },
+    {
+     "concept_tag": "samabahu-tribhuj-rachna",
+     "learning_objective": "विद्यार्थी परकार और मापक से दी गई भुजा वाले समबाहु त्रिभुज की रचना कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH07-T2",
+   "topic_number": 2,
+   "title": "तीन भुजाएँ दी होने पर त्रिभुज की रचना",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "teen-bhujaon-se-rachna",
+     "learning_objective": "विद्यार्थी दी गई तीन भुजाओं से परकार की सहायता से त्रिभुज की रचना के चरण समझा सकेगा।"
+    },
+    {
+     "concept_tag": "samadvibahu-tribhuj",
+     "learning_objective": "विद्यार्थी भुजाओं की लंबाइयों से समद्विबाहु त्रिभुज की पहचान कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH07-T3",
+   "topic_number": 3,
+   "title": "त्रिभुज असमिका",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "tribhuj-asamika",
+     "learning_objective": "विद्यार्थी त्रिभुज असमिका से जाँच सकेगा कि दी गई तीन लंबाइयों से त्रिभुज बन सकता है या नहीं।"
+    },
+    {
+     "concept_tag": "vritton-ki-sthiti",
+     "learning_objective": "विद्यार्थी त्रिज्याओं के योग और आधार की तुलना करके दो वृत्तों के मिलने, स्पर्श करने या न मिलने का निर्णय कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH07-T4",
+   "topic_number": 4,
+   "title": "दो भुजाएँ और कोण या दो कोण और भुजा से रचना",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "do-bhuja-antargat-kon",
+     "learning_objective": "विद्यार्थी दो भुजाओं और उनके अंतर्गत कोण से त्रिभुज की रचना कर सकेगा।"
+    },
+    {
+     "concept_tag": "do-kon-antargat-bhuja",
+     "learning_objective": "विद्यार्थी दो कोणों और अंतर्गत भुजा से रचना कर सकेगा तथा कोणों के योग से त्रिभुज बनने की संभावना जाँच सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH07-T5",
+   "topic_number": 5,
+   "title": "कोण योग गुण और बहिष्कोण",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "kon-yog-gun",
+     "learning_objective": "विद्यार्थी समांतर रेखा की सहायता से समझा सकेगा कि त्रिभुज के कोणों का योग 180° होता है और इससे अज्ञात कोण ज्ञात कर सकेगा।"
+    },
+    {
+     "concept_tag": "bahishkon",
+     "learning_objective": "विद्यार्थी त्रिभुज के बहिष्कोण को पहचानकर उसका माप ज्ञात कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH07-T6",
+   "topic_number": 6,
+   "title": "त्रिभुज के शीर्षलम्ब",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "shirshlamb",
+     "learning_objective": "विद्यार्थी शीर्षलम्ब को परिभाषित कर सकेगा और मापक तथा समकोणक से उसकी रचना कर सकेगा।"
+    },
+    {
+     "concept_tag": "samkon-tribhuj-shirshlamb",
+     "learning_objective": "विद्यार्थी पहचान सकेगा कि समकोण त्रिभुज में एक भुजा स्वयं शीर्षलम्ब होती है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH07-T7",
+   "topic_number": 7,
+   "title": "त्रिभुजों के प्रकार",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "bhujaon-se-vargikaran",
+     "learning_objective": "विद्यार्थी भुजाओं के आधार पर त्रिभुजों को समबाहु, समद्विबाहु और विषमबाहु में वर्गीकृत कर सकेगा।"
+    },
+    {
+     "concept_tag": "konon-se-vargikaran",
+     "learning_objective": "विद्यार्थी कोणों के आधार पर त्रिभुजों को न्यून कोण, समकोण और अधिक कोण त्रिभुज में वर्गीकृत कर सकेगा।"
+    }
+   ]
+  }
+ ]
+}

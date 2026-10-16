@@ -1,0 +1,104 @@
+{
+ "chapter_id": "IHSH1-CH11",
+ "title": "वर्णोच्चारण-शिक्षा २",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSH1-CH11-T1",
+   "topic_number": 1,
+   "title": "वर्णोत्पत्तेः त्रीणि तत्त्वानि आभ्यन्तर-प्रयत्नस्य परिभाषा च",
+   "ncert_sections": "प्रस्तावना, आभ्यन्तर-प्रयत्नः",
+   "concepts": [
+    {
+     "concept_tag": "trini-tattvani",
+     "learning_objective": "छात्रः वर्णोत्पत्त्यर्थं स्थानं करणम् आभ्यन्तर-प्रयत्नः च इति त्रीणि तत्त्वानि अभिजानाति।"
+    },
+    {
+     "concept_tag": "abhyantara-prayatna-paribhasha",
+     "learning_objective": "छात्रः आभ्यन्तर-प्रयत्नस्य परिभाषां तस्य पञ्चविधत्वं च व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH11-T2",
+   "topic_number": 2,
+   "title": "स्पृष्ट-प्रयत्नः ईषत्स्पृष्ट-प्रयत्नः च",
+   "ncert_sections": "आभ्यन्तर-प्रयत्नः (१), (२)",
+   "concepts": [
+    {
+     "concept_tag": "sprishta-prayatna",
+     "learning_objective": "छात्रः स्पृष्ट-प्रयत्नेन स्पर्श-व्यञ्जनानाम् उत्पत्तिं व्याख्याति।"
+    },
+    {
+     "concept_tag": "ishat-sprishta-prayatna",
+     "learning_objective": "छात्रः ईषत्स्पृष्ट-प्रयत्नेन अन्तःस्थ-व्यञ्जनानाम् उत्पत्तिं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH11-T3",
+   "topic_number": 3,
+   "title": "ईषद्विवृत-प्रयत्नः विवृत-प्रयत्नः च",
+   "ncert_sections": "आभ्यन्तर-प्रयत्नः (३), (४)",
+   "concepts": [
+    {
+     "concept_tag": "ishad-vivrita-prayatna",
+     "learning_objective": "छात्रः ईषद्विवृत-प्रयत्नेन ऊष्मणाम् अयोगवाहयोः च उत्पत्तिं व्याख्याति।"
+    },
+    {
+     "concept_tag": "vivrita-prayatna",
+     "learning_objective": "छात्रः विवृत-प्रयत्नेन अ-कारं विहाय सर्वेषां स्वराणाम् उच्चारणं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH11-T4",
+   "topic_number": 4,
+   "title": "संवृत-प्रयत्नः अ-कारश्च",
+   "ncert_sections": "आभ्यन्तर-प्रयत्नः (५)",
+   "concepts": [
+    {
+     "concept_tag": "samvrita-prayatna",
+     "learning_objective": "छात्रः ह्रस्व-अ-कारस्य उच्चारणे कण्ठस्य सङ्कोचरूपं संवृत-प्रयत्नं व्याख्याति।"
+    },
+    {
+     "concept_tag": "a-varna-upabheda",
+     "learning_objective": "छात्रः अ-वर्णस्य त्रयाणाम् उपभेदानां प्रयत्नभेदं विवेचयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH11-T5",
+   "topic_number": 5,
+   "title": "वर्णानां भेदोपभेदाः स्थानकरणसारणी च",
+   "ncert_sections": "वर्णमाला, भेद-उपभेदाः, स्थान-करण-सारणी",
+   "concepts": [
+    {
+     "concept_tag": "svara-vyanjana-bheda",
+     "learning_objective": "छात्रः स्वर-व्यञ्जनयोः भेदं स्वराणां समानाक्षर-सन्ध्यक्षर-भेदौ च विवेचयति।"
+    },
+    {
+     "concept_tag": "vyanjana-chatvaro-bhedah",
+     "learning_objective": "छात्रः व्यञ्जनानां चतुरः भेदान् तेषां वर्णसङ्ख्यां च अभिजानाति।"
+    },
+    {
+     "concept_tag": "sthana-karana-sarani",
+     "learning_objective": "छात्रः वर्णानां स्थानं करणं प्रयत्नं च सारण्याः आधारेण निर्धारयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH11-T6",
+   "topic_number": 6,
+   "title": "पाणिनीय-शिक्षा-सूत्राणि",
+   "ncert_sections": "पाणिनीय-शिक्षा-सूत्राणि",
+   "concepts": [
+    {
+     "concept_tag": "paniniya-shiksha-sutra",
+     "learning_objective": "छात्रः आभ्यन्तर-प्रयत्नसम्बद्धानि पाणिनीय-शिक्षा-सूत्राणि तेषाम् अर्थं च अवगच्छति।"
+    }
+   ]
+  }
+ ]
+}

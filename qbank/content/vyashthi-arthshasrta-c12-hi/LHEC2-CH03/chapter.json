@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LHEC2-CH03",
+ "title": "उत्पादन तथा लागत",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHEC2-CH03-T1",
+   "topic_number": 1,
+   "title": "उत्पादन फलन एवं समोत्पाद वक्र",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "utpadan-phalan",
+     "learning_objective": "विद्यार्थी उत्पादन फलन को आगतों और अधिकतम निर्गत के बीच तकनीकी संबंध के रूप में समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "samotpad-vakra",
+     "learning_objective": "विद्यार्थी समोत्पाद वक्र का अर्थ और उसकी विशेषताएँ बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH03-T2",
+   "topic_number": 2,
+   "title": "अल्पकाल और दीर्घकाल",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "alpkal",
+     "learning_objective": "विद्यार्थी अल्पकाल में स्थिर और परिवर्ती आगतों की पहचान कर सकेंगे।"
+    },
+    {
+     "concept_tag": "dirghkal",
+     "learning_objective": "विद्यार्थी दीर्घकाल को सभी आगतों के परिवर्तनीय होने की अवधि के रूप में समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH03-T3",
+   "topic_number": 3,
+   "title": "कुल उत्पाद, औसत उत्पाद और सीमांत उत्पाद",
+   "ncert_sections": "3.3, 3.3.1, 3.3.2, 3.3.3",
+   "concepts": [
+    {
+     "concept_tag": "kul-aur-ausat-utpad",
+     "learning_objective": "विद्यार्थी कुल उत्पाद से औसत उत्पाद की गणना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "seemant-utpad",
+     "learning_objective": "विद्यार्थी सीमांत उत्पाद की गणना कर उसका औसत उत्पाद से संबंध समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH03-T4",
+   "topic_number": 4,
+   "title": "ह्रासमान सीमांत उत्पाद का नियम तथा उत्पाद वक्रों के आकार",
+   "ncert_sections": "3.4, 3.5",
+   "concepts": [
+    {
+     "concept_tag": "hrasman-seemant-utpad-niyam",
+     "learning_objective": "विद्यार्थी ह्रासमान सीमांत उत्पाद अथवा परिवर्ती अनुपात के नियम और उसके कारण को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "utpad-vakron-ke-akar",
+     "learning_objective": "विद्यार्थी कुल, औसत और सीमांत उत्पाद वक्रों के आकार और उनके पारस्परिक संबंध का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH03-T5",
+   "topic_number": 5,
+   "title": "पैमाने का प्रतिफल",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "paimane-ka-pratiphal",
+     "learning_objective": "विद्यार्थी पैमाने के वर्धमान, स्थिर और ह्रासमान प्रतिफल में अंतर कर सकेंगे।"
+    },
+    {
+     "concept_tag": "cobb-douglas-phalan",
+     "learning_objective": "विद्यार्थी कॉब-डगलस उत्पादन फलन में घातांकों के योग से पैमाने के प्रतिफल की प्रकृति ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH03-T6",
+   "topic_number": 6,
+   "title": "अल्पकालीन लागतें",
+   "ncert_sections": "3.7, 3.7.1",
+   "concepts": [
+    {
+     "concept_tag": "sthir-aur-parivarti-lagat",
+     "learning_objective": "विद्यार्थी कुल स्थिर लागत, कुल परिवर्ती लागत और कुल लागत में अंतर कर सकेंगे।"
+    },
+    {
+     "concept_tag": "ausat-aur-seemant-lagat",
+     "learning_objective": "विद्यार्थी औसत और सीमांत लागतों की गणना कर उनके वक्रों के संबंध का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH03-T7",
+   "topic_number": 7,
+   "title": "दीर्घकालीन लागतें",
+   "ncert_sections": "3.7.2",
+   "concepts": [
+    {
+     "concept_tag": "dirghkalin-ausat-lagat",
+     "learning_objective": "विद्यार्थी दीर्घकालीन औसत लागत वक्र के आकार को पैमाने के प्रतिफल से जोड़ सकेंगे।"
+    },
+    {
+     "concept_tag": "dirghkalin-seemant-lagat",
+     "learning_objective": "विद्यार्थी दीर्घकालीन सीमांत लागत और दीर्घकालीन औसत लागत के संबंध को समझा सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

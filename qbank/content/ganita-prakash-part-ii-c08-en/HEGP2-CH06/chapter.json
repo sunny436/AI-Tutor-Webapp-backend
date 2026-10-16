@@ -1,0 +1,104 @@
+{
+ "chapter_id": "HEGP2-CH06",
+ "title": "Algebra Play",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP2-CH06-T1",
+   "topic_number": 1,
+   "title": "Thinking about 'Think of a Number' tricks",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "think-of-a-number-tricks",
+     "learning_objective": "Use letter-numbers to explain why a 'Think of a Number' trick always gives the same result."
+    },
+    {
+     "concept_tag": "date-decoding-trick",
+     "learning_objective": "Decode a chosen date from the final answer of a multi-step trick using an algebraic expression."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH06-T2",
+   "topic_number": 2,
+   "title": "Number pyramids",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "number-pyramid-rule",
+     "learning_objective": "Fill missing entries of a number pyramid by forming and solving equations."
+    },
+    {
+     "concept_tag": "pyramid-top-expression",
+     "learning_objective": "Express the top of a number pyramid in terms of its bottom row."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH06-T3",
+   "topic_number": 3,
+   "title": "Fun with grids",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "calendar-grid-sums",
+     "learning_objective": "Use algebra to find the numbers in a calendar grid from their sum."
+    },
+    {
+     "concept_tag": "algebra-grids-shapes",
+     "learning_objective": "Find the values of shapes in an algebra grid from row sums."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH06-T4",
+   "topic_number": 4,
+   "title": "The largest product",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "largest-product-arrangement",
+     "learning_objective": "Arrange three digits as a 2-digit by 1-digit product to make it as large as possible."
+    },
+    {
+     "concept_tag": "comparing-products-algebraically",
+     "learning_objective": "Justify the largest-product rule by expanding products in place-value form."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH06-T5",
+   "topic_number": 5,
+   "title": "Decoding divisibility tricks",
+   "ncert_sections": "6.6",
+   "concepts": [
+    {
+     "concept_tag": "reversed-digits-divisibility",
+     "learning_objective": "Explain using algebra why sums and differences of reversed 2-digit numbers have fixed divisors."
+    },
+    {
+     "concept_tag": "cyclic-and-repeated-digit-numbers",
+     "learning_objective": "Justify divisibility patterns of 3-digit numbers formed by cycling or repeating digits."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH06-T6",
+   "topic_number": 6,
+   "title": "Solving puzzles and word problems with algebra",
+   "ncert_sections": "6.6 (Figure it Out)",
+   "concepts": [
+    {
+     "concept_tag": "modelling-word-problems",
+     "learning_objective": "Model age, animal and cost problems with equations and solve them."
+    },
+    {
+     "concept_tag": "working-backwards-puzzles",
+     "learning_objective": "Solve doubling-and-giving puzzles by forming an equation or working backwards."
+    }
+   ]
+  }
+ ]
+}

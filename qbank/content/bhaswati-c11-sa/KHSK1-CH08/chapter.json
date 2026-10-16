@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KHSK1-CH08",
+ "title": "वस्त्रविक्रयः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHSK1-CH08-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः – स्रोतः, लेखकः, ऐतिहासिकः सन्दर्भः च",
+   "ncert_sections": "प्रस्तावना, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "srotah-lekhakah",
+     "learning_objective": "पाठः कस्मात् नाटकात् सङ्कलितः, तस्य प्रणेता कः इति जानीयात्।"
+    },
+    {
+     "concept_tag": "rajamudrankita-pramanapatram",
+     "learning_objective": "वैदेशिकः राजमुद्राङ्कितं प्रमाणपत्रं कथं किमर्थं च प्राप्तवान् इति वदेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH08-T2",
+   "topic_number": 2,
+   "title": "प्रथमतन्तुवायस्य पटविक्रयः",
+   "ncert_sections": "मूलपाठः (आरम्भः – 'त्वं जानीहि व्रजाधुना')",
+   "concepts": [
+    {
+     "concept_tag": "mulya-varta",
+     "learning_objective": "तन्तुवायस्य श्रेष्ठिनः गौराङ्गस्य च मूल्यवार्तां जानीयात्।"
+    },
+    {
+     "concept_tag": "tantuvayasya-parishramah",
+     "learning_objective": "तन्तुवायस्य परिश्रमं कुटुम्बचिन्तां च अवगच्छेत्।"
+    },
+    {
+     "concept_tag": "gaurangasya-balat-krayah",
+     "learning_objective": "गौराङ्गः प्रमाणपत्रबलेन अल्पमूल्येन पटं कथं गृह्णाति इति वदेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH08-T3",
+   "topic_number": 3,
+   "title": "द्वितीयतन्तुवायस्य प्रसङ्गः – न्यायान्यायविचारः",
+   "ncert_sections": "मूलपाठः ('श्रेष्ठिन्! गृहाण पटम्' – 'नातः परं पटं निर्मास्यावः')",
+   "concepts": [
+    {
+     "concept_tag": "shreshthinah-asamarthata",
+     "learning_objective": "श्रेष्ठी पटं क्रेतुं किमर्थम् असमर्थः इति जानीयात्।"
+    },
+    {
+     "concept_tag": "gauranga-anyayah",
+     "learning_objective": "गौराङ्गस्य स्वेच्छया मूल्यनिर्धारणम् अन्यायरूपेण विश्लेषयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH08-T4",
+   "topic_number": 4,
+   "title": "गौराङ्गस्य चिन्तनम् – सूक्ष्मपटसौन्दर्यं वाणिज्यचिन्ता च",
+   "ncert_sections": "मूलपाठः ('अनिर्वचनीयम् एतत्पटयोः सौन्दर्यम्' – श्लोकः)",
+   "concepts": [
+    {
+     "concept_tag": "sukshmapata-saundaryam",
+     "learning_objective": "भारतीयसूक्ष्मपटस्य सौन्दर्यवर्णनं जानीयात्।"
+    },
+    {
+     "concept_tag": "vanijya-chinta-shlokah",
+     "learning_objective": "श्लोके प्रकटितां गौराङ्गस्य वाणिज्यचिन्तां दुरभिसन्धिं च विश्लेषयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH08-T5",
+   "topic_number": 5,
+   "title": "तन्तुवायानाम् उत्पीडनं प्रतिरोधः च",
+   "ncert_sections": "मूलपाठः (दौवारिकप्रवेशः – अन्तः)",
+   "concepts": [
+    {
+     "concept_tag": "utpidanam-kasha",
+     "learning_objective": "गौराङ्गः तन्तुवायान् कथम् उत्पीडयति इति वदेत्।"
+    },
+    {
+     "concept_tag": "tantuvayanam-pratirodhah",
+     "learning_objective": "तन्तुवायानाम् अनुचितमूल्ये पटनिर्माणस्य निषेधम् अवगच्छेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK1-CH08-T6",
+   "topic_number": 6,
+   "title": "शब्दार्थाः व्याकरणं च",
+   "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः ४, ६",
+   "concepts": [
+    {
+     "concept_tag": "shabdarthah",
+     "learning_objective": "पाठस्य कठिनपदानाम् अर्थं जानीयात्।"
+    },
+    {
+     "concept_tag": "sandhi-vichchhedah",
+     "learning_objective": "पाठस्थपदानां सन्धिविच्छेदं सन्धिनाम च कुर्यात्।"
+    },
+    {
+     "concept_tag": "dhatu-pratyaya-rupani",
+     "learning_objective": "पाठस्थपदेषु धातुं प्रत्ययं लकारादिकं च पृथक् कुर्यात्।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "chapter_id": "HEGP1-CH03",
+ "title": "A Story of Numbers",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP1-CH03-T1",
+   "topic_number": 1,
+   "title": "Where our numerals came from",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "origin-of-indian-numerals",
+     "learning_objective": "Recall the Indian origin of number names based on powers of 10 and of writing numbers with ten digits including 0."
+    },
+    {
+     "concept_tag": "transmission-of-hindu-numerals",
+     "learning_objective": "Describe how the Indian numerals reached the Arab world and Europe, and why they came to be called by different names."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH03-T2",
+   "topic_number": 2,
+   "title": "The mechanism of counting",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "one-to-one-mapping",
+     "learning_objective": "Use one-to-one mapping between objects and a standard sequence to count and compare collections."
+    },
+    {
+     "concept_tag": "standard-sequence-number-system",
+     "learning_objective": "Explain what a number system is and compare the strengths and limits of counting with sticks, letters and symbols."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH03-T3",
+   "topic_number": 3,
+   "title": "Some early number systems",
+   "ncert_sections": "3.2 (I-III)",
+   "concepts": [
+    {
+     "concept_tag": "tally-marks",
+     "learning_objective": "Recall early tally-mark artefacts such as the Ishango and Lebombo bones and how tally marks represent numbers."
+    },
+    {
+     "concept_tag": "counting-in-groups",
+     "learning_objective": "Interpret number systems that count in groups of a fixed size, such as the Gumulgal system of counting in twos."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH03-T4",
+   "topic_number": 4,
+   "title": "The Roman numerals",
+   "ncert_sections": "3.2 (IV)",
+   "concepts": [
+    {
+     "concept_tag": "roman-landmark-numbers",
+     "learning_objective": "Write numbers in Roman numerals by grouping them into the landmark numbers I, V, X, L, C, D and M."
+    },
+    {
+     "concept_tag": "roman-arithmetic",
+     "learning_objective": "Add Roman numerals by regrouping and explain why multiplication is hard in the Roman system."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH03-T5",
+   "topic_number": 5,
+   "title": "The idea of a base",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "egyptian-number-system",
+     "learning_objective": "Represent numbers in the Egyptian system whose landmark numbers are the powers of 10."
+    },
+    {
+     "concept_tag": "base-n-landmark-numbers",
+     "learning_objective": "Find the landmark numbers of a base-n system and express numbers in it by grouping."
+    },
+    {
+     "concept_tag": "advantages-of-base",
+     "learning_objective": "Explain why a system whose landmark numbers are powers of one number makes addition and multiplication easier."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH03-T6",
+   "topic_number": 6,
+   "title": "Place value representation",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "mesopotamian-sexagesimal",
+     "learning_objective": "Represent numbers in the Mesopotamian base-60 place value system."
+    },
+    {
+     "concept_tag": "mayan-chinese-place-value",
+     "learning_objective": "Describe the place value features of the Mayan and Chinese rod numeral systems."
+    },
+    {
+     "concept_tag": "zero-as-placeholder-and-number",
+     "learning_objective": "Explain the role of zero as a placeholder and as a number in making the Hindu system unambiguous."
+    }
+   ]
+  }
+ ]
+}

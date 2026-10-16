@@ -1,0 +1,1173 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "business-studies-i-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "business_studies",
+  "language": "english",
+  "title": "Business Studies-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lebs1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEBS1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Nature and Significance of Management",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lebs101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEBS1-CH01-T1",
+     "topic_number": 1,
+     "title": "Concept of management: effectiveness and efficiency",
+     "ncert_sections": "Introduction; Concept; Effectiveness versus Efficiency",
+     "concepts": [
+      {
+       "concept_tag": "management-as-a-process",
+       "learning_objective": "Define management as a process of getting things done to achieve goals effectively and efficiently."
+      },
+      {
+       "concept_tag": "effectiveness-versus-efficiency",
+       "learning_objective": "Distinguish effectiveness (achieving goals) from efficiency (minimum cost of inputs) and explain why both must be balanced."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH01-T2",
+     "topic_number": 2,
+     "title": "Characteristics of management",
+     "ncert_sections": "Characteristics of Management",
+     "concepts": [
+      {
+       "concept_tag": "characteristics-of-management",
+       "learning_objective": "Identify management as goal-oriented, all pervasive, continuous and a group activity."
+      },
+      {
+       "concept_tag": "multidimensional-management",
+       "learning_objective": "Describe the three dimensions of management: work, people and operations."
+      },
+      {
+       "concept_tag": "dynamic-and-intangible-force",
+       "learning_objective": "Explain why management is a dynamic function and an intangible force."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH01-T3",
+     "topic_number": 3,
+     "title": "Objectives of management",
+     "ncert_sections": "Objectives of Management",
+     "concepts": [
+      {
+       "concept_tag": "organisational-objectives",
+       "learning_objective": "Explain survival, profit and growth as the organisational (economic) objectives of management."
+      },
+      {
+       "concept_tag": "social-and-personal-objectives",
+       "learning_objective": "Explain the social and personal objectives of management and the need to reconcile them with organisational goals."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH01-T4",
+     "topic_number": 4,
+     "title": "Importance of management",
+     "ncert_sections": "Importance of Management",
+     "concepts": [
+      {
+       "concept_tag": "importance-of-management",
+       "learning_objective": "Explain how management helps achieve group and personal goals, increases efficiency and develops society."
+      },
+      {
+       "concept_tag": "dynamic-organisation",
+       "learning_objective": "Explain how management helps people adapt to change so that the organisation stays competitive."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH01-T5",
+     "topic_number": 5,
+     "title": "Nature of management: art, science and profession",
+     "ncert_sections": "Nature of Management; Management as an Art; Management as a Science; Management as a Profession",
+     "concepts": [
+      {
+       "concept_tag": "management-as-art",
+       "learning_objective": "Explain how management satisfies the features of an art."
+      },
+      {
+       "concept_tag": "management-as-science",
+       "learning_objective": "Explain why management is an inexact science and how art and science complement each other."
+      },
+      {
+       "concept_tag": "management-as-profession",
+       "learning_objective": "Evaluate how far management meets the features of a profession."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH01-T6",
+     "topic_number": 6,
+     "title": "Levels of management",
+     "ncert_sections": "Levels of Management",
+     "concepts": [
+      {
+       "concept_tag": "top-management",
+       "learning_objective": "Describe the role and tasks of top management."
+      },
+      {
+       "concept_tag": "middle-management",
+       "learning_objective": "Describe the role of middle management as the link between top and supervisory levels."
+      },
+      {
+       "concept_tag": "supervisory-management",
+       "learning_objective": "Describe the role of supervisory or operational management in overseeing the workforce."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH01-T7",
+     "topic_number": 7,
+     "title": "Functions of management",
+     "ncert_sections": "Functions of Management",
+     "concepts": [
+      {
+       "concept_tag": "functions-of-management",
+       "learning_objective": "Identify planning, organising, staffing, directing and controlling from their descriptions."
+      },
+      {
+       "concept_tag": "interrelated-functions",
+       "learning_objective": "Explain why management functions are interrelated rather than performed in isolation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH01-T8",
+     "topic_number": 8,
+     "title": "Coordination: the essence of management",
+     "ncert_sections": "Coordination - The Essence of Management; Characteristics of Coordination; Importance of Coordination",
+     "concepts": [
+      {
+       "concept_tag": "coordination-essence",
+       "learning_objective": "Explain coordination as the force that binds all functions and the essence of management."
+      },
+      {
+       "concept_tag": "characteristics-of-coordination",
+       "learning_objective": "Describe the characteristics of coordination."
+      },
+      {
+       "concept_tag": "need-for-coordination",
+       "learning_objective": "Explain how growth in size, functional differentiation and specialisation create the need for coordination."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEBS1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Principles of Management",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lebs102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEBS1-CH02-T1",
+     "topic_number": 1,
+     "title": "Principles of Management: The Concept",
+     "ncert_sections": "Principles of Management: The Concept",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-management-principles",
+       "learning_objective": "Define a principle of management and explain why it is less rigid than a principle of pure science."
+      },
+      {
+       "concept_tag": "principles-techniques-and-values",
+       "learning_objective": "Distinguish principles of management from techniques of management and from values."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH02-T2",
+     "topic_number": 2,
+     "title": "Nature of Principles of Management",
+     "ncert_sections": "Nature of Principles of Management",
+     "concepts": [
+      {
+       "concept_tag": "universal-and-general-guidelines",
+       "learning_objective": "Explain the universal applicability of management principles and why they are only general guidelines."
+      },
+      {
+       "concept_tag": "flexible-contingent-behavioural",
+       "learning_objective": "Explain how management principles are flexible, contingent on the situation and mainly behavioural."
+      },
+      {
+       "concept_tag": "practice-and-cause-effect",
+       "learning_objective": "Explain that management principles are formed by practice and experimentation and show cause and effect relationships."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH02-T3",
+     "topic_number": 3,
+     "title": "Significance of Principles of Management",
+     "ncert_sections": "Significance of Principles of Management",
+     "concepts": [
+      {
+       "concept_tag": "insights-and-optimum-utilisation",
+       "learning_objective": "Explain how principles give managers insights into reality and help in optimum use of resources and effective administration."
+      },
+      {
+       "concept_tag": "scientific-decisions-and-change",
+       "learning_objective": "Explain how principles support scientific decisions and help managers meet a changing environment."
+      },
+      {
+       "concept_tag": "social-responsibility-and-training",
+       "learning_objective": "Explain the role of principles in fulfilling social responsibility and in management training, education and research."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH02-T4",
+     "topic_number": 4,
+     "title": "Taylor's Principles of Scientific Management",
+     "ncert_sections": "Taylor's Scientific Management; Principles of Scientific Management",
+     "concepts": [
+      {
+       "concept_tag": "science-not-rule-of-thumb",
+       "learning_objective": "Explain why Taylor replaced the rule of thumb with a scientifically developed one best method."
+      },
+      {
+       "concept_tag": "harmony-and-cooperation",
+       "learning_objective": "Explain the principles of harmony, not discord, and cooperation, not individualism."
+      },
+      {
+       "concept_tag": "development-of-workers",
+       "learning_objective": "Explain the principle of development of each and every person to his or her greatest efficiency and prosperity."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH02-T5",
+     "topic_number": 5,
+     "title": "Techniques of Scientific Management",
+     "ncert_sections": "Techniques of Scientific Management",
+     "concepts": [
+      {
+       "concept_tag": "functional-foremanship",
+       "learning_objective": "Describe functional foremanship and the roles of the eight specialist foremen."
+      },
+      {
+       "concept_tag": "standardisation-and-work-study",
+       "learning_objective": "Explain standardisation, simplification and the method, motion, time and fatigue studies."
+      },
+      {
+       "concept_tag": "differential-piece-wage",
+       "learning_objective": "Apply Taylor's differential piece wage system to compute and compare workers' earnings."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH02-T6",
+     "topic_number": 6,
+     "title": "Fayol's Principles: Division of Work to Remuneration",
+     "ncert_sections": "Fayol's Principles of Management (i) to (vii)",
+     "concepts": [
+      {
+       "concept_tag": "authority-discipline-division-of-work",
+       "learning_objective": "Explain division of work, authority and responsibility, and discipline as stated by Fayol."
+      },
+      {
+       "concept_tag": "unity-of-command-and-direction",
+       "learning_objective": "Distinguish between unity of command and unity of direction and identify their violation."
+      },
+      {
+       "concept_tag": "individual-interest-and-remuneration",
+       "learning_objective": "Apply the principles of subordination of individual interest to general interest and fair remuneration."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH02-T7",
+     "topic_number": 7,
+     "title": "Fayol's Principles: Centralisation to Esprit de Corps; Fayol versus Taylor",
+     "ncert_sections": "Fayol's Principles of Management (viii) to (xiv); Fayol Versus Taylor",
+     "concepts": [
+      {
+       "concept_tag": "centralisation-and-scalar-chain",
+       "learning_objective": "Explain centralisation and decentralisation, the scalar chain and the gang plank."
+      },
+      {
+       "concept_tag": "order-equity-stability-team-spirit",
+       "learning_objective": "Identify the principles of order, equity, stability of personnel, initiative and esprit de corps in situations."
+      },
+      {
+       "concept_tag": "fayol-versus-taylor",
+       "learning_objective": "Compare the contributions of Fayol and Taylor on the bases given in the chapter."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEBS1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Business Environment",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lebs103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEBS1-CH03-T1",
+     "topic_number": 1,
+     "title": "Meaning and features of business environment",
+     "ncert_sections": "Meaning of Business Environment; features (i)-(vii)",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-business-environment",
+       "learning_objective": "Define business environment as the sum total of external individuals, institutions and forces that may affect a firm's performance."
+      },
+      {
+       "concept_tag": "features-of-business-environment",
+       "learning_objective": "Identify the features of business environment such as inter-relatedness, dynamic nature, uncertainty, complexity and relativity."
+      },
+      {
+       "concept_tag": "specific-and-general-forces",
+       "learning_objective": "Distinguish specific forces that affect a firm directly from general forces that affect all firms."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH03-T2",
+     "topic_number": 2,
+     "title": "Importance of business environment",
+     "ncert_sections": "Importance of Business Environment (i)-(vi)",
+     "concepts": [
+      {
+       "concept_tag": "opportunities-and-threats",
+       "learning_objective": "Explain how understanding the environment helps a firm spot opportunities early and treat threats as warning signals."
+      },
+      {
+       "concept_tag": "importance-of-business-environment",
+       "learning_objective": "Explain how business environment helps in tapping resources, coping with change, planning and improving performance."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH03-T3",
+     "topic_number": 3,
+     "title": "Economic, social and technological environment",
+     "ncert_sections": "Dimensions of Business Environment (i)-(iii)",
+     "concepts": [
+      {
+       "concept_tag": "economic-environment",
+       "learning_objective": "Identify economic factors such as interest rates, inflation and disposable income and their effect on business."
+      },
+      {
+       "concept_tag": "social-environment",
+       "learning_objective": "Identify social forces such as customs, traditions, values and social trends and the opportunities they create."
+      },
+      {
+       "concept_tag": "technological-environment",
+       "learning_objective": "Explain how scientific improvements and innovations create new products and make old ones obsolete."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH03-T4",
+     "topic_number": 4,
+     "title": "Political and legal environment",
+     "ncert_sections": "Dimensions of Business Environment (iv)-(v)",
+     "concepts": [
+      {
+       "concept_tag": "political-environment",
+       "learning_objective": "Explain how political stability and the attitude of government towards business affect business confidence."
+      },
+      {
+       "concept_tag": "legal-environment",
+       "learning_objective": "Explain how laws, administrative orders and court judgments regulate business activities."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH03-T5",
+     "topic_number": 5,
+     "title": "Economic environment in India and the New Industrial Policy, 1991",
+     "ncert_sections": "Economic Environment in India; Crisis of June 1991",
+     "concepts": [
+      {
+       "concept_tag": "economic-environment-in-india",
+       "learning_objective": "Describe India's economic environment at Independence and the role given to the public and private sectors under planning."
+      },
+      {
+       "concept_tag": "new-industrial-policy-1991",
+       "learning_objective": "State the main features of the New Industrial Policy of July 1991 and the crisis that led to it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH03-T6",
+     "topic_number": 6,
+     "title": "Liberalisation, privatisation and globalisation",
+     "ncert_sections": "Liberalisation; Privatisation; Globalisation",
+     "concepts": [
+      {
+       "concept_tag": "liberalisation",
+       "learning_objective": "Explain liberalisation as freeing Indian industry from unnecessary controls and licensing."
+      },
+      {
+       "concept_tag": "privatisation",
+       "learning_objective": "Explain privatisation and disinvestment as giving a greater role to the private sector."
+      },
+      {
+       "concept_tag": "globalisation",
+       "learning_objective": "Explain globalisation as the integration of national economies into a cohesive global economy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH03-T7",
+     "topic_number": 7,
+     "title": "Demonetisation",
+     "ncert_sections": "Demonetisation; Features; Impact of Demonetisation",
+     "concepts": [
+      {
+       "concept_tag": "demonetisation-features",
+       "learning_objective": "State the meaning, aims and features of demonetisation announced in November 2016."
+      },
+      {
+       "concept_tag": "impact-of-demonetisation",
+       "learning_objective": "Interpret the impact of demonetisation on savings, private wealth, real estate and tax collection."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH03-T8",
+     "topic_number": 8,
+     "title": "Impact of government policy changes on business and industry",
+     "ncert_sections": "Impact of Government policy changes (Summary)",
+     "concepts": [
+      {
+       "concept_tag": "impact-of-policy-changes",
+       "learning_objective": "Analyse the impact of liberalisation, privatisation and globalisation on Indian business and industry."
+      },
+      {
+       "concept_tag": "market-orientation",
+       "learning_objective": "Explain market orientation as producing goods after studying market needs."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEBS1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Planning",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lebs104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEBS1-CH04-T1",
+     "topic_number": 1,
+     "title": "Concept of planning",
+     "ncert_sections": "Concept",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-planning",
+       "learning_objective": "State the meaning of planning as deciding in advance what to do and how to do it."
+      },
+      {
+       "concept_tag": "ends-and-means",
+       "learning_objective": "Explain that planning covers both ends (objectives) and means (courses of action) within a time frame."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH04-T2",
+     "topic_number": 2,
+     "title": "Importance of planning",
+     "ncert_sections": "Importance of Planning",
+     "concepts": [
+      {
+       "concept_tag": "importance-of-planning",
+       "learning_objective": "Describe how planning provides direction, reduces uncertainty and waste, promotes innovation and aids decision making."
+      },
+      {
+       "concept_tag": "planning-basis-of-control",
+       "learning_objective": "Explain why planning establishes the standards needed for controlling."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH04-T3",
+     "topic_number": 3,
+     "title": "Features of planning",
+     "ncert_sections": "Features of Planning",
+     "concepts": [
+      {
+       "concept_tag": "primacy-and-purpose",
+       "learning_objective": "Explain that planning is purposeful and is the primary function of management."
+      },
+      {
+       "concept_tag": "pervasive-and-continuous",
+       "learning_objective": "Explain that planning is pervasive across levels and departments and is a continuous process."
+      },
+      {
+       "concept_tag": "futuristic-decision-mental",
+       "learning_objective": "Explain that planning is futuristic, involves decision making and is a mental exercise."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH04-T4",
+     "topic_number": 4,
+     "title": "Limitations of planning",
+     "ncert_sections": "Limitations of Planning",
+     "concepts": [
+      {
+       "concept_tag": "rigidity-and-dynamic-environment",
+       "learning_objective": "Explain how rigidity and a dynamic environment limit the usefulness of plans."
+      },
+      {
+       "concept_tag": "creativity-cost-time",
+       "learning_objective": "Explain how planning may reduce creativity, involve huge costs and consume time."
+      },
+      {
+       "concept_tag": "no-guarantee-of-success",
+       "learning_objective": "Explain why planning does not guarantee success."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH04-T5",
+     "topic_number": 5,
+     "title": "Planning process",
+     "ncert_sections": "Planning Process (i)-(vii)",
+     "concepts": [
+      {
+       "concept_tag": "setting-objectives-and-premises",
+       "learning_objective": "Describe setting objectives and developing premises as the first steps of planning."
+      },
+      {
+       "concept_tag": "alternatives-evaluation-selection",
+       "learning_objective": "Distinguish identifying, evaluating and selecting alternative courses of action."
+      },
+      {
+       "concept_tag": "implementation-and-follow-up",
+       "learning_objective": "Describe implementing the plan and follow-up action."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH04-T6",
+     "topic_number": 6,
+     "title": "Single-use and standing plans",
+     "ncert_sections": "Types of Plans: Single-use and standing plans",
+     "concepts": [
+      {
+       "concept_tag": "single-use-plans",
+       "learning_objective": "Identify single-use plans as plans for one-time, non-recurring situations."
+      },
+      {
+       "concept_tag": "standing-plans",
+       "learning_objective": "Identify standing plans as plans for recurring activities, including policies, procedures, methods and rules."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH04-T7",
+     "topic_number": 7,
+     "title": "Objectives, strategy, policy, procedure, method, rule, programme and budget",
+     "ncert_sections": "Types of Plans: Objectives to Budget",
+     "concepts": [
+      {
+       "concept_tag": "objectives-and-strategy",
+       "learning_objective": "Distinguish objectives as desired end results from strategy as a comprehensive long-term plan."
+      },
+      {
+       "concept_tag": "policy-procedure-method-rule",
+       "learning_objective": "Distinguish policies, procedures, methods and rules as guides to action."
+      },
+      {
+       "concept_tag": "programme-and-budget",
+       "learning_objective": "Explain programmes as detailed project statements and budgets as numerical plans that also aid control."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEBS1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Organising",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lebs105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEBS1-CH05-T1",
+     "topic_number": 1,
+     "title": "Meaning and process of organising",
+     "ncert_sections": "Meaning; Steps in the process of organising",
+     "concepts": [
+      {
+       "concept_tag": "organising-meaning",
+       "learning_objective": "Explain organising as the process that implements plans by clarifying jobs, working relationships and resources."
+      },
+      {
+       "concept_tag": "steps-in-organising",
+       "learning_objective": "Sequence and identify the four steps in the process of organising."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH05-T2",
+     "topic_number": 2,
+     "title": "Importance of organising",
+     "ncert_sections": "Importance of organising",
+     "concepts": [
+      {
+       "concept_tag": "benefits-of-organising",
+       "learning_objective": "Explain how organising brings specialisation, clarity in relationships, optimum use of resources and effective administration."
+      },
+      {
+       "concept_tag": "organising-for-growth-and-change",
+       "learning_objective": "Explain how organising helps an enterprise adapt to change, develop personnel and grow."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH05-T3",
+     "topic_number": 3,
+     "title": "Organisation structure and span of management",
+     "ncert_sections": "Organisation structure",
+     "concepts": [
+      {
+       "concept_tag": "organisation-structure",
+       "learning_objective": "Define organisation structure and explain why it must be reviewed as an enterprise grows."
+      },
+      {
+       "concept_tag": "span-of-management",
+       "learning_objective": "Explain span of management and how it shapes the levels of management."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH05-T4",
+     "topic_number": 4,
+     "title": "Functional and divisional structures",
+     "ncert_sections": "Types of organisation structures: functional structure, divisional structure",
+     "concepts": [
+      {
+       "concept_tag": "functional-structure",
+       "learning_objective": "Describe the functional structure with its advantages, disadvantages and suitability."
+      },
+      {
+       "concept_tag": "divisional-structure",
+       "learning_objective": "Describe the divisional structure with its advantages, disadvantages and suitability."
+      },
+      {
+       "concept_tag": "choice-of-structure",
+       "learning_objective": "Choose between a functional and a divisional structure for a given business situation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH05-T5",
+     "topic_number": 5,
+     "title": "Formal and informal organisation",
+     "ncert_sections": "Formal and informal organisation",
+     "concepts": [
+      {
+       "concept_tag": "formal-organisation",
+       "learning_objective": "State the features, advantages and limitations of formal organisation."
+      },
+      {
+       "concept_tag": "informal-organisation",
+       "learning_objective": "State the features, merits and demerits of informal organisation and how management should treat it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH05-T6",
+     "topic_number": 6,
+     "title": "Delegation",
+     "ncert_sections": "Delegation; Elements of delegation; Importance of delegation",
+     "concepts": [
+      {
+       "concept_tag": "elements-of-delegation",
+       "learning_objective": "Distinguish authority, responsibility and accountability by meaning, origin, flow and delegability."
+      },
+      {
+       "concept_tag": "importance-of-delegation",
+       "learning_objective": "Explain the importance of delegation for managers, employees and the organisation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH05-T7",
+     "topic_number": 7,
+     "title": "Decentralisation",
+     "ncert_sections": "Decentralisation; Centralisation and decentralisation; Importance; Delegation and decentralisation",
+     "concepts": [
+      {
+       "concept_tag": "centralisation-and-decentralisation",
+       "learning_objective": "Explain decentralisation and why centralisation and decentralisation are relative terms."
+      },
+      {
+       "concept_tag": "importance-of-decentralisation",
+       "learning_objective": "Explain the importance of decentralisation and apply it to business situations."
+      },
+      {
+       "concept_tag": "delegation-vs-decentralisation",
+       "learning_objective": "Distinguish between delegation and decentralisation."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEBS1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Staffing",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lebs106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEBS1-CH06-T1",
+     "topic_number": 1,
+     "title": "Meaning and importance of staffing",
+     "ncert_sections": "Introduction, Meaning, Importance of Staffing",
+     "concepts": [
+      {
+       "concept_tag": "staffing-meaning",
+       "learning_objective": "Define staffing as the function of filling and keeping filled the positions in the organisation structure."
+      },
+      {
+       "concept_tag": "importance-of-staffing",
+       "learning_objective": "State the benefits that proper staffing brings to an organisation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH06-T2",
+     "topic_number": 2,
+     "title": "Staffing as part of Human Resource Management",
+     "ncert_sections": "Staffing as part of Human Resource Management, Evolution of Human Resource Management",
+     "concepts": [
+      {
+       "concept_tag": "hrm-specialised-activities",
+       "learning_objective": "Identify the specialised duties performed by human resource personnel."
+      },
+      {
+       "concept_tag": "evolution-of-hrm",
+       "learning_objective": "Trace the evolution from labour welfare officer to personnel manager to human resource manager."
+      },
+      {
+       "concept_tag": "staffing-line-and-staff",
+       "learning_objective": "Explain why staffing is both a line and a staff activity."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH06-T3",
+     "topic_number": 3,
+     "title": "Staffing process",
+     "ncert_sections": "Staffing Process (i)-(viii)",
+     "concepts": [
+      {
+       "concept_tag": "manpower-requirements",
+       "learning_objective": "Explain how workload and workforce analysis estimate manpower requirements."
+      },
+      {
+       "concept_tag": "staffing-process-steps",
+       "learning_objective": "Describe the steps of the staffing process from recruitment to placement and orientation."
+      },
+      {
+       "concept_tag": "compensation-plans",
+       "learning_objective": "Distinguish between time based, performance based and indirect compensation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH06-T4",
+     "topic_number": 4,
+     "title": "Recruitment and its sources",
+     "ncert_sections": "Recruitment, Sources of Recruitment, Internal Sources, External Sources",
+     "concepts": [
+      {
+       "concept_tag": "recruitment-meaning",
+       "learning_objective": "Define recruitment and distinguish it from selection."
+      },
+      {
+       "concept_tag": "internal-sources",
+       "learning_objective": "Explain transfers and promotions with the merits and limitations of internal sources."
+      },
+      {
+       "concept_tag": "external-sources",
+       "learning_objective": "Choose suitable external sources of recruitment and state their merits and limitations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH06-T5",
+     "topic_number": 5,
+     "title": "Selection process",
+     "ncert_sections": "Selection, Process of Selection",
+     "concepts": [
+      {
+       "concept_tag": "selection-tests",
+       "learning_objective": "Distinguish between intelligence, aptitude, personality, trade and interest tests."
+      },
+      {
+       "concept_tag": "selection-steps",
+       "learning_objective": "Describe the steps of the selection process in their proper order."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH06-T6",
+     "topic_number": 6,
+     "title": "Training and development",
+     "ncert_sections": "Training and Development, Importance of Training and Development, Training, Development and Education",
+     "concepts": [
+      {
+       "concept_tag": "training-development-education",
+       "learning_objective": "Distinguish between training, development and education."
+      },
+      {
+       "concept_tag": "benefits-of-training",
+       "learning_objective": "State the benefits of training to the organisation and to the employee."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH06-T7",
+     "topic_number": 7,
+     "title": "Training methods",
+     "ncert_sections": "Training Methods, On the Job Methods, Off the Job Methods",
+     "concepts": [
+      {
+       "concept_tag": "on-the-job-methods",
+       "learning_objective": "Explain apprenticeship, coaching, internship and job rotation as on-the-job methods."
+      },
+      {
+       "concept_tag": "off-the-job-methods",
+       "learning_objective": "Explain vestibule training, computer modelling and other off-the-job methods."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEBS1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Directing",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lebs107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEBS1-CH07-T1",
+     "topic_number": 1,
+     "title": "Meaning, Characteristics, Importance and Principles of Directing",
+     "ncert_sections": "Meaning; Importance of Directing; Principles of Directing",
+     "concepts": [
+      {
+       "concept_tag": "directing-characteristics",
+       "learning_objective": "Explain the meaning of directing and its characteristics: it initiates action, is continuous, takes place at every level and flows from top to bottom."
+      },
+      {
+       "concept_tag": "importance-of-directing",
+       "learning_objective": "Explain how directing initiates action, integrates efforts, realises potential, eases change and brings stability."
+      },
+      {
+       "concept_tag": "principles-of-directing",
+       "learning_objective": "Apply the principles of directing such as unity of command, harmony of objectives and appropriateness of direction technique."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH07-T2",
+     "topic_number": 2,
+     "title": "Elements of Directing and Supervision",
+     "ncert_sections": "Elements of Direction; Supervision; Importance of Supervision",
+     "concepts": [
+      {
+       "concept_tag": "elements-of-directing",
+       "learning_objective": "Identify supervision, motivation, leadership and communication as the four elements of directing."
+      },
+      {
+       "concept_tag": "supervision-meaning",
+       "learning_objective": "Distinguish supervision as an element of directing from supervision as the function of the supervisor at the operative level."
+      },
+      {
+       "concept_tag": "importance-of-supervision",
+       "learning_objective": "Explain the roles of a supervisor such as linking workers and management, maintaining group unity and training workers."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH07-T3",
+     "topic_number": 3,
+     "title": "Motivation: Concepts, Features, Process and Importance",
+     "ncert_sections": "Motivation; Features of Motivation; Motivation Process; Importance of Motivation",
+     "concepts": [
+      {
+       "concept_tag": "motive-motivation-motivator",
+       "learning_objective": "Distinguish between a motive, motivation and a motivator."
+      },
+      {
+       "concept_tag": "motivation-features-process",
+       "learning_objective": "Explain the features of motivation and the sequence of the motivation process from unsatisfied need to reduction of tension."
+      },
+      {
+       "concept_tag": "importance-of-motivation",
+       "learning_objective": "Explain how motivation improves performance, changes attitudes and reduces turnover, absenteeism and resistance to change."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH07-T4",
+     "topic_number": 4,
+     "title": "Maslow's Need Hierarchy Theory",
+     "ncert_sections": "Maslow's Need Hierarchy Theory of Motivation",
+     "concepts": [
+      {
+       "concept_tag": "maslow-need-levels",
+       "learning_objective": "Identify the five levels of needs in Maslow's hierarchy with their organisational examples."
+      },
+      {
+       "concept_tag": "maslow-assumptions",
+       "learning_objective": "Apply the assumptions of Maslow's theory to explain why a satisfied need no longer motivates."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH07-T5",
+     "topic_number": 5,
+     "title": "Financial and Non-Financial Incentives",
+     "ncert_sections": "Financial and Non-Financial Incentives",
+     "concepts": [
+      {
+       "concept_tag": "financial-incentives",
+       "learning_objective": "Identify financial incentives such as pay, bonus, profit sharing, stock options, retirement benefits and perquisites."
+      },
+      {
+       "concept_tag": "non-financial-incentives",
+       "learning_objective": "Identify non-financial incentives such as status, job enrichment, recognition, job security and empowerment, and explain their basis."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH07-T6",
+     "topic_number": 6,
+     "title": "Leadership",
+     "ncert_sections": "Leadership; Features and Importance of Leadership; Leadership Style",
+     "concepts": [
+      {
+       "concept_tag": "leadership-features-importance",
+       "learning_objective": "Explain the meaning, features and importance of leadership in an organisation."
+      },
+      {
+       "concept_tag": "leadership-styles",
+       "learning_objective": "Distinguish autocratic, democratic and laissez-faire leadership styles on the basis of the use of authority."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH07-T7",
+     "topic_number": 7,
+     "title": "Communication: Process, Formal and Informal Communication",
+     "ncert_sections": "Communication; Elements of Communication Process; Formal and Informal Communication",
+     "concepts": [
+      {
+       "concept_tag": "communication-process-elements",
+       "learning_objective": "Identify the elements of the communication process such as encoding, media, decoding, feedback and noise."
+      },
+      {
+       "concept_tag": "formal-communication-networks",
+       "learning_objective": "Classify formal communication as upward, downward or horizontal and identify formal communication networks."
+      },
+      {
+       "concept_tag": "grapevine-communication",
+       "learning_objective": "Explain the nature of informal (grapevine) communication and its networks."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH07-T8",
+     "topic_number": 8,
+     "title": "Barriers to Communication and Improving Communication Effectiveness",
+     "ncert_sections": "Barriers to Communication; Improving Communication Effectiveness",
+     "concepts": [
+      {
+       "concept_tag": "semantic-barriers",
+       "learning_objective": "Identify semantic barriers such as technical jargon, unclarified assumptions and faulty translations."
+      },
+      {
+       "concept_tag": "other-communication-barriers",
+       "learning_objective": "Classify psychological, organisational and personal barriers to communication."
+      },
+      {
+       "concept_tag": "improving-communication",
+       "learning_objective": "Suggest measures such as ensuring feedback to improve communication effectiveness."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEBS1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Controlling",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lebs108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEBS1-CH08-T1",
+     "topic_number": 1,
+     "title": "Meaning and nature of controlling",
+     "ncert_sections": "Meaning of Controlling",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-controlling",
+       "learning_objective": "State the meaning of controlling as ensuring that activities are performed as per plans."
+      },
+      {
+       "concept_tag": "goal-oriented-and-pervasive",
+       "learning_objective": "Explain why controlling is a goal-oriented and pervasive function of management."
+      },
+      {
+       "concept_tag": "controlling-not-the-last-function",
+       "learning_objective": "Explain why controlling completes one management cycle and improves planning in the next."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH08-T2",
+     "topic_number": 2,
+     "title": "Importance of controlling",
+     "ncert_sections": "Importance of Controlling",
+     "concepts": [
+      {
+       "concept_tag": "goals-standards-and-resources",
+       "learning_objective": "Explain how controlling helps accomplish goals, judge the accuracy of standards and use resources efficiently."
+      },
+      {
+       "concept_tag": "motivation-discipline-coordination",
+       "learning_objective": "Explain how controlling improves employee motivation, ensures order and discipline and facilitates coordination."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH08-T3",
+     "topic_number": 3,
+     "title": "Limitations of controlling",
+     "ncert_sections": "Limitations of Controlling",
+     "concepts": [
+      {
+       "concept_tag": "standards-and-external-factors",
+       "learning_objective": "Identify the difficulty of setting quantitative standards and the little control over external factors as limitations."
+      },
+      {
+       "concept_tag": "resistance-and-cost",
+       "learning_objective": "Explain resistance from employees and the cost of control systems as limitations of controlling."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH08-T4",
+     "topic_number": 4,
+     "title": "Relationship between planning and controlling",
+     "ncert_sections": "Relationship between Planning and Controlling",
+     "concepts": [
+      {
+       "concept_tag": "planning-basis-of-controlling",
+       "learning_objective": "Explain why planning is a prerequisite for controlling and controlling is blind without planning."
+      },
+      {
+       "concept_tag": "looking-ahead-and-looking-back",
+       "learning_objective": "Evaluate the statement that planning is looking ahead and controlling is looking back."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH08-T5",
+     "topic_number": 5,
+     "title": "Controlling process: setting, measuring and comparing",
+     "ncert_sections": "Controlling Process, Steps 1-3",
+     "concepts": [
+      {
+       "concept_tag": "steps-of-control-process",
+       "learning_objective": "State the five steps of the controlling process in their correct order."
+      },
+      {
+       "concept_tag": "setting-performance-standards",
+       "learning_objective": "Distinguish quantitative and qualitative standards and set standards in measurable terms."
+      },
+      {
+       "concept_tag": "measuring-and-comparing-performance",
+       "learning_objective": "Apply techniques of measuring actual performance and compare it with standards to find deviations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEBS1-CH08-T6",
+     "topic_number": 6,
+     "title": "Analysing deviations and taking corrective action",
+     "ncert_sections": "Controlling Process, Steps 4-5",
+     "concepts": [
+      {
+       "concept_tag": "critical-point-control",
+       "learning_objective": "Explain critical point control as focusing control on key result areas."
+      },
+      {
+       "concept_tag": "management-by-exception",
+       "learning_objective": "Apply management by exception to decide which deviations need managerial attention."
+      },
+      {
+       "concept_tag": "corrective-action",
+       "learning_objective": "Decide the corrective action needed when deviations go beyond the acceptable range."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

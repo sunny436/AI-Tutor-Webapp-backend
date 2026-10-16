@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KEMH1-CH08",
+ "title": "Sequences and Series",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH08-T1",
+   "topic_number": 1,
+   "title": "Sequences: terms, general term and recurrence",
+   "ncert_sections": "8.1, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "finite-and-infinite-sequences",
+     "learning_objective": "Distinguish finite and infinite sequences and identify a sequence as a function on natural numbers."
+    },
+    {
+     "concept_tag": "general-term-of-a-sequence",
+     "learning_objective": "Find terms of a sequence from a formula for its nth term."
+    },
+    {
+     "concept_tag": "recurrence-relation",
+     "learning_objective": "Generate terms of a sequence such as the Fibonacci sequence from a recurrence relation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH08-T2",
+   "topic_number": 2,
+   "title": "Series and sigma notation",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "series-of-a-sequence",
+     "learning_objective": "Form the series associated with a sequence and find its sum."
+    },
+    {
+     "concept_tag": "sigma-notation",
+     "learning_objective": "Write and evaluate finite sums using sigma notation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH08-T3",
+   "topic_number": 3,
+   "title": "Geometric progression and its general term",
+   "ncert_sections": "8.4, 8.4.1",
+   "concepts": [
+    {
+     "concept_tag": "common-ratio-of-gp",
+     "learning_objective": "Recognise a G.P. and find its common ratio."
+    },
+    {
+     "concept_tag": "nth-term-of-gp",
+     "learning_objective": "Use a_n = ar^(n-1) to find a term, the position of a term, or the G.P. itself."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH08-T4",
+   "topic_number": 4,
+   "title": "Sum to n terms of a G.P.",
+   "ncert_sections": "8.4.2",
+   "concepts": [
+    {
+     "concept_tag": "sum-of-n-terms-of-gp",
+     "learning_objective": "Apply S_n = a(r^n - 1)/(r - 1) for r not equal to 1 and S_n = na for r = 1."
+    },
+    {
+     "concept_tag": "applications-of-gp-sum",
+     "learning_objective": "Solve real-life and special-series problems using the sum of a G.P."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH08-T5",
+   "topic_number": 5,
+   "title": "Geometric mean",
+   "ncert_sections": "8.4.3",
+   "concepts": [
+    {
+     "concept_tag": "geometric-mean-of-two-numbers",
+     "learning_objective": "Find the geometric mean of two positive numbers as the square root of their product."
+    },
+    {
+     "concept_tag": "inserting-geometric-means",
+     "learning_objective": "Insert a given number of geometric means between two positive numbers."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH08-T6",
+   "topic_number": 6,
+   "title": "Relationship between A.M. and G.M.",
+   "ncert_sections": "8.5",
+   "concepts": [
+    {
+     "concept_tag": "am-gm-inequality",
+     "learning_objective": "Prove and apply A >= G for two positive numbers."
+    },
+    {
+     "concept_tag": "numbers-from-am-and-gm",
+     "learning_objective": "Find two positive numbers when their A.M. and G.M. are given."
+    }
+   ]
+  }
+ ]
+}

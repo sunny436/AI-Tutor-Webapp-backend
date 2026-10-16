@@ -1,0 +1,152 @@
+{
+ "chapter_id": "IESC1-CH08",
+ "title": "Journey Inside the Atom",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IESC1-CH08-T1",
+   "topic_number": 1,
+   "title": "Roots of atomic theory and Thomson's model",
+   "ncert_sections": "8.1, 8.2, 8.2.1",
+   "concepts": [
+    {
+     "concept_tag": "early-atomic-ideas",
+     "learning_objective": "Describe the ideas of Kanada, Democritus and Dalton about indivisible particles of matter."
+    },
+    {
+     "concept_tag": "cathode-rays-electron",
+     "learning_objective": "Explain how the study of cathode rays led to the discovery of the electron."
+    },
+    {
+     "concept_tag": "thomson-model",
+     "learning_objective": "Describe Thomson's plum pudding model of a neutral atom."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH08-T2",
+   "topic_number": 2,
+   "title": "Gold foil experiment and Rutherford's nuclear model",
+   "ncert_sections": "8.2.2 (A, C)",
+   "concepts": [
+    {
+     "concept_tag": "gold-foil-experiment",
+     "learning_objective": "Interpret the observations of the alpha particle scattering experiment."
+    },
+    {
+     "concept_tag": "rutherford-nuclear-model",
+     "learning_objective": "State the features of Rutherford's nuclear model and the relative sizes of atom and nucleus."
+    },
+    {
+     "concept_tag": "discovery-of-proton",
+     "learning_objective": "Describe the charge and mass of the proton and why atoms are electrically neutral."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH08-T3",
+   "topic_number": 3,
+   "title": "Limitations of Rutherford's model and Bohr's model",
+   "ncert_sections": "8.2.2 (B), 8.2.3",
+   "concepts": [
+    {
+     "concept_tag": "rutherford-model-instability",
+     "learning_objective": "Explain why Rutherford's model could not account for the stability of atoms."
+    },
+    {
+     "concept_tag": "bohr-postulates",
+     "learning_objective": "State Bohr's postulates of stationary states, shells and energy levels."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH08-T4",
+   "topic_number": 4,
+   "title": "Discovery of the neutron and symbols of elements",
+   "ncert_sections": "8.3, 8.4",
+   "concepts": [
+    {
+     "concept_tag": "discovery-of-neutron",
+     "learning_objective": "Explain how the neutron accounts for atomic mass and helps hold the nucleus together."
+    },
+    {
+     "concept_tag": "symbols-of-elements",
+     "learning_objective": "Apply IUPAC norms to write and interpret symbols of elements."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH08-T5",
+   "topic_number": 5,
+   "title": "Atomic number and mass number",
+   "ncert_sections": "8.5, 8.6",
+   "concepts": [
+    {
+     "concept_tag": "atomic-number",
+     "learning_objective": "Define atomic number and relate it to the identity of an element."
+    },
+    {
+     "concept_tag": "mass-number",
+     "learning_objective": "Calculate mass number and the number of neutrons from nucleon counts."
+    },
+    {
+     "concept_tag": "atomic-notation",
+     "learning_objective": "Interpret the standard notation showing symbol, atomic number and mass number."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH08-T6",
+   "topic_number": 6,
+   "title": "Distribution of electrons in energy levels",
+   "ncert_sections": "8.7, 8.7.1",
+   "concepts": [
+    {
+     "concept_tag": "bohr-bury-rules",
+     "learning_objective": "Apply the Bohr-Bury rules, including the 2n squared rule, to the filling of shells."
+    },
+    {
+     "concept_tag": "electronic-configuration",
+     "learning_objective": "Write the electronic configuration of the first eighteen elements."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH08-T7",
+   "topic_number": 7,
+   "title": "Valency: combining capacity of an atom",
+   "ncert_sections": "8.8",
+   "concepts": [
+    {
+     "concept_tag": "valence-electrons-octet",
+     "learning_objective": "Relate valence electrons and a complete octet to the reactivity of an atom."
+    },
+    {
+     "concept_tag": "valency",
+     "learning_objective": "Determine the valency of an element from its electronic configuration or formula."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH08-T8",
+   "topic_number": 8,
+   "title": "Isotopes, average atomic mass and isobars",
+   "ncert_sections": "8.9, 8.9.1, 8.9.2",
+   "concepts": [
+    {
+     "concept_tag": "isotopes",
+     "learning_objective": "Define isotopes and explain why they have similar chemical properties."
+    },
+    {
+     "concept_tag": "average-atomic-mass",
+     "learning_objective": "Calculate the weighted average atomic mass of an element from isotopic abundances."
+    },
+    {
+     "concept_tag": "isobars",
+     "learning_objective": "Identify isobars and distinguish them from isotopes."
+    }
+   ]
+  }
+ ]
+}

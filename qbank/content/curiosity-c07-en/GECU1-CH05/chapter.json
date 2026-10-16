@@ -1,0 +1,120 @@
+{
+ "chapter_id": "GECU1-CH05",
+ "title": "Changes Around Us: Physical and Chemical",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GECU1-CH05-T1",
+   "topic_number": 1,
+   "title": "A substance may change in appearance but remain the same",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "physical-change",
+     "learning_objective": "Identify a physical change as one in which only physical properties such as shape and size change and no new substance is formed."
+    },
+    {
+     "concept_tag": "change-of-state",
+     "learning_objective": "Explain why changes of state such as melting and boiling of water are physical changes."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH05-T2",
+   "topic_number": 2,
+   "title": "A substance may change in appearance and not remain the same",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "chemical-change",
+     "learning_objective": "Identify a chemical change as one in which one or more new substances are formed through a chemical reaction."
+    },
+    {
+     "concept_tag": "lime-water-test",
+     "learning_objective": "Use the turning of lime water milky as a test for carbon dioxide and interpret the reaction involved."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH05-T3",
+   "topic_number": 3,
+   "title": "Rusting and combustion",
+   "ncert_sections": "5.3, 5.3.1, 5.3.2",
+   "concepts": [
+    {
+     "concept_tag": "rusting",
+     "learning_objective": "Explain why rusting of iron is a chemical change that forms iron oxide."
+    },
+    {
+     "concept_tag": "combustion",
+     "learning_objective": "Describe combustion as a reaction with oxygen that gives out heat and/or light, and identify combustible substances."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH05-T4",
+   "topic_number": 4,
+   "title": "Conditions needed for combustion",
+   "ncert_sections": "5.3.2",
+   "concepts": [
+    {
+     "concept_tag": "ignition-temperature",
+     "learning_objective": "Define ignition temperature and use it to explain why a substance does or does not catch fire."
+    },
+    {
+     "concept_tag": "fire-triangle",
+     "learning_objective": "State the three requirements for combustion and apply them to putting out a fire."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH05-T5",
+   "topic_number": 5,
+   "title": "Physical and chemical changes in the same process",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "burning-candle",
+     "learning_objective": "Distinguish the physical and chemical changes that take place when a candle burns."
+    },
+    {
+     "concept_tag": "classifying-changes",
+     "learning_objective": "Classify everyday processes as physical, chemical, or involving both kinds of change."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH05-T6",
+   "topic_number": 6,
+   "title": "Reversible and desirable changes",
+   "ncert_sections": "5.5, 5.6",
+   "concepts": [
+    {
+     "concept_tag": "reversible-changes",
+     "learning_objective": "Distinguish changes that can be reversed from those that cannot be reversed."
+    },
+    {
+     "concept_tag": "desirable-undesirable-changes",
+     "learning_objective": "Evaluate whether a change is desirable or undesirable in a given situation, including its effect on the environment."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH05-T7",
+   "topic_number": 7,
+   "title": "Some slow natural changes",
+   "ncert_sections": "5.7, 5.7.1, 5.7.2",
+   "concepts": [
+    {
+     "concept_tag": "weathering",
+     "learning_objective": "Explain weathering of rocks as a combination of physical and chemical changes that leads to soil formation."
+    },
+    {
+     "concept_tag": "erosion",
+     "learning_objective": "Describe erosion as the movement of rock pieces, soil and sediments by wind and flowing water."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "chapter_id": "JHMH1-CH10",
+ "title": "वृत्त",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH10-T1",
+   "topic_number": 1,
+   "title": "वृत्त और रेखा की सापेक्ष स्थितियाँ",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "rekha-aur-vritt-ki-sthitiyan",
+     "learning_objective": "विद्यार्थी उभयनिष्ठ बिंदुओं की संख्या के आधार पर किसी रेखा को वृत्त के सापेक्ष अप्रतिच्छेदी, छेदक या स्पर्श रेखा के रूप में पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH10-T2",
+   "topic_number": 2,
+   "title": "वृत्त की स्पर्श रेखा का अर्थ और अस्तित्व",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "sparsh-rekha-ka-arth",
+     "learning_objective": "विद्यार्थी स्पर्श रेखा और स्पर्श बिंदु को परिभाषित कर सकेंगे तथा स्पर्श रेखा को छेदक रेखा की विशेष स्थिति के रूप में समझ सकेंगे।"
+    },
+    {
+     "concept_tag": "samantar-sparsh-rekhaen",
+     "learning_objective": "विद्यार्थी किसी दी गई रेखा के समांतर स्पर्श रेखाओं की अधिकतम संख्या और उनके गुण समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH10-T3",
+   "topic_number": 3,
+   "title": "स्पर्श रेखा और त्रिज्या की लंबता (प्रमेय 10.1)",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "sparsh-rekha-trijya-lamb",
+     "learning_objective": "विद्यार्थी यह कथन कर सकेंगे कि स्पर्श रेखा, स्पर्श बिंदु से होकर जाने वाली त्रिज्या पर लंब होती है।"
+    },
+    {
+     "concept_tag": "lamb-pramey-ke-anuprayog",
+     "learning_objective": "विद्यार्थी प्रमेय 10.1 और पाइथागोरस प्रमेय की सहायता से लंबाइयाँ और कोण ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH10-T4",
+   "topic_number": 4,
+   "title": "किसी बिंदु से स्पर्श रेखाओं की संख्या और स्पर्श रेखा की लंबाई",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "bindu-se-sparsh-rekhaon-ki-sankhya",
+     "learning_objective": "विद्यार्थी बिंदु के वृत्त के अंदर, वृत्त पर या वृत्त के बाहर होने के अनुसार स्पर्श रेखाओं की संख्या बता सकेंगे।"
+    },
+    {
+     "concept_tag": "sparsh-rekha-ki-lambai",
+     "learning_objective": "विद्यार्थी बाह्य बिंदु से खींची गई स्पर्श रेखा की लंबाई को परिभाषित कर उसकी गणना कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH10-T5",
+   "topic_number": 5,
+   "title": "बाह्य बिंदु से खींची गई स्पर्श रेखाओं की समानता (प्रमेय 10.2)",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "barabar-sparsh-rekhaen",
+     "learning_objective": "विद्यार्थी यह सिद्ध और प्रयोग कर सकेंगे कि बाह्य बिंदु से खींची गई दोनों स्पर्श रेखाएँ बराबर होती हैं।"
+    },
+    {
+     "concept_tag": "sparsh-rekhaon-ke-bich-kon",
+     "learning_objective": "विद्यार्थी स्पर्श रेखाओं के बीच के कोण और केंद्र पर बने कोण के संबंध का प्रयोग कर सकेंगे।"
+    },
+    {
+     "concept_tag": "sankendri-vritton-ki-jiva",
+     "learning_objective": "विद्यार्थी संकेंद्रीय वृत्तों में छोटे वृत्त को स्पर्श करने वाली बड़े वृत्त की जीवा की लंबाई ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH10-T6",
+   "topic_number": 6,
+   "title": "वृत्त के परिगत चतुर्भुज और त्रिभुज",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "parigat-chaturbhuj",
+     "learning_objective": "विद्यार्थी वृत्त के परिगत चतुर्भुज की भुजाओं के संबंध AB + CD = AD + BC का प्रयोग कर सकेंगे।"
+    },
+    {
+     "concept_tag": "parigat-tribhuj",
+     "learning_objective": "विद्यार्थी वृत्त के परिगत त्रिभुज में स्पर्श रेखाओं की समानता से भुजाएँ, परिमाप और त्रिज्या ज्ञात कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

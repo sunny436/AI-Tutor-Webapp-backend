@@ -1,0 +1,120 @@
+{
+ "chapter_id": "FEGP1-CH01",
+ "title": "Patterns in Mathematics",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FEGP1-CH01-T1",
+   "topic_number": 1,
+   "title": "What is Mathematics?",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "mathematics-as-search-for-patterns",
+     "learning_objective": "Describe mathematics as the search for patterns and for explanations of why they exist."
+    },
+    {
+     "concept_tag": "explanations-and-applications",
+     "learning_objective": "Explain why finding the reason behind a pattern matters and how it leads to applications."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH01-T2",
+   "topic_number": 2,
+   "title": "Patterns in Numbers",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "number-theory",
+     "learning_objective": "Identify number theory as the branch of mathematics that studies patterns in whole numbers."
+    },
+    {
+     "concept_tag": "rules-of-number-sequences",
+     "learning_objective": "Recognise the rule of each key number sequence and extend it."
+    },
+    {
+     "concept_tag": "virahanka-numbers",
+     "learning_objective": "Form Virahanka numbers by adding the two previous terms."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH01-T3",
+   "topic_number": 3,
+   "title": "Visualising Number Sequences",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "pictorial-representation-of-sequences",
+     "learning_objective": "Explain sequence names such as triangular, square and cube numbers using dot and block pictures."
+    },
+    {
+     "concept_tag": "hexagonal-numbers",
+     "learning_objective": "Recognise hexagonal numbers and find further terms."
+    },
+    {
+     "concept_tag": "same-number-different-pictures",
+     "learning_objective": "Show that one number can be arranged in more than one pictorial shape."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH01-T4",
+   "topic_number": 4,
+   "title": "Relations among Number Sequences",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "sum-of-odd-numbers-gives-squares",
+     "learning_objective": "Show that adding consecutive odd numbers from 1 gives square numbers and use this to find sums."
+    },
+    {
+     "concept_tag": "adding-up-and-down",
+     "learning_objective": "Use the pattern of adding counting numbers up and then down to obtain square numbers."
+    },
+    {
+     "concept_tag": "relations-among-sequences",
+     "learning_objective": "Find and use other relations among sequences, such as sums of triangular numbers and powers of 2."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH01-T5",
+   "topic_number": 5,
+   "title": "Patterns in Shapes",
+   "ncert_sections": "1.5",
+   "concepts": [
+    {
+     "concept_tag": "geometry-and-shape-patterns",
+     "learning_objective": "Identify geometry as the branch that studies patterns in shapes in one, two or three dimensions."
+    },
+    {
+     "concept_tag": "shape-sequences",
+     "learning_objective": "Recognise the rule of shape sequences such as regular polygons, stacked squares and the Koch snowflake."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH01-T6",
+   "topic_number": 6,
+   "title": "Relation to Number Sequences",
+   "ncert_sections": "1.6",
+   "concepts": [
+    {
+     "concept_tag": "regular-polygons-and-counting-numbers",
+     "learning_objective": "Relate the sides and corners of regular polygons to the counting numbers from 3, and explain the meaning of 'regular'."
+    },
+    {
+     "concept_tag": "complete-graphs-and-triangular-numbers",
+     "learning_objective": "Relate the number of lines in complete graphs to the triangular numbers."
+    },
+    {
+     "concept_tag": "stacked-shapes-and-koch-counts",
+     "learning_objective": "Count little squares, little triangles and Koch snowflake segments and name the number sequences they form."
+    }
+   ]
+  }
+ ]
+}

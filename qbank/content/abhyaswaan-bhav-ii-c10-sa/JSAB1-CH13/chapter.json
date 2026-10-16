@@ -1,0 +1,120 @@
+{
+ "chapter_id": "JSAB1-CH13",
+ "title": "मिश्रिताभ्यासः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JSAB1-CH13-T1",
+   "topic_number": 1,
+   "title": "अपठितगद्यांशः – सुवीरस्य परिवर्तनम्",
+   "ncert_sections": "अभ्यासः I – 1",
+   "concepts": [
+    {
+     "concept_tag": "suvira-gadyansha-bodha",
+     "learning_objective": "छात्रः सुवीरस्य पिपीलकस्य च गद्यांशं पठित्वा तस्य घटनाः सन्देशं च अवगमिष्यति।"
+    },
+    {
+     "concept_tag": "gadyansha-bhashika-karya",
+     "learning_objective": "छात्रः गद्यांशात् अव्ययपदं, समानार्थकपदं, कर्तृपदं विशेषणपदं च चेष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH13-T2",
+   "topic_number": 2,
+   "title": "अपठितगद्यांशः – मनसः प्रसन्नता",
+   "ncert_sections": "अभ्यासः II – 1",
+   "concepts": [
+    {
+     "concept_tag": "prasannata-gadyansha-bodha",
+     "learning_objective": "छात्रः प्रसन्नताविषयकं गद्यांशं पठित्वा प्रश्नानाम् उत्तराणि दास्यति।"
+    },
+    {
+     "concept_tag": "gadyansha-paryaya-vilom-shirshaka",
+     "learning_objective": "छात्रः गद्यांशात् पर्यायपदं विलोमपदं च चित्वा उचितं शीर्षकं निर्धारयिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH13-T3",
+   "topic_number": 3,
+   "title": "सन्धिः",
+   "ncert_sections": "अभ्यासः I – 4, अभ्यासः II – 4",
+   "concepts": [
+    {
+     "concept_tag": "visarga-sandhi",
+     "learning_objective": "छात्रः विसर्गसन्धेः उत्व-रुत्व-नियमान् प्रयुज्य सन्धिं विच्छेदं च करिष्यति।"
+    },
+    {
+     "concept_tag": "svara-sandhi",
+     "learning_objective": "छात्रः यण्-दीर्घ-आदीनां स्वरसन्धीनां पहचानं प्रयोगं च करिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH13-T4",
+   "topic_number": 4,
+   "title": "समासः",
+   "ncert_sections": "अभ्यासः I – 5, अभ्यासः II – 5",
+   "concepts": [
+    {
+     "concept_tag": "tatpurusha-karmadharaya",
+     "learning_objective": "छात्रः तत्पुरुष-कर्मधारयसमासयोः विग्रहं समस्तपदं च ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "bahuvrihi-dvandva",
+     "learning_objective": "छात्रः बहुव्रीहि-द्वन्द्वसमासयोः विग्रहं लक्षणं च अवगमिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH13-T5",
+   "topic_number": 5,
+   "title": "प्रत्ययाः",
+   "ncert_sections": "अभ्यासः I – 6, अभ्यासः II – 6",
+   "concepts": [
+    {
+     "concept_tag": "shanach-ktavatu-tumun",
+     "learning_objective": "छात्रः शानच्-क्तवतु-तुमुन्-प्रत्ययानां लिङ्गवचनानुसारं शुद्धं प्रयोगं करिष्यति।"
+    },
+    {
+     "concept_tag": "tavyat-lyap",
+     "learning_objective": "छात्रः तव्यत्-ल्यप्-प्रत्यययोः प्रयोगं वाच्यानुसारं करिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH13-T6",
+   "topic_number": 6,
+   "title": "वाच्यपरिवर्तनम्",
+   "ncert_sections": "अभ्यासः I – 7, अभ्यासः II – 7",
+   "concepts": [
+    {
+     "concept_tag": "kartri-karma-vachya",
+     "learning_objective": "छात्रः कर्तृवाच्यात् कर्मवाच्ये कर्मवाच्यात् च कर्तृवाच्ये वाक्यं परिवर्तयिष्यति।"
+    },
+    {
+     "concept_tag": "bhava-vachya",
+     "learning_objective": "छात्रः अकर्मकधातूनां वाक्यानि भाववाच्ये परिवर्तयिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH13-T7",
+   "topic_number": 7,
+   "title": "अनुवादः अशुद्धिसंशोधनं च",
+   "ncert_sections": "अभ्यासः I – 8, 9, अभ्यासः II – 8, 9",
+   "concepts": [
+    {
+     "concept_tag": "hindi-sanskrit-anuvada",
+     "learning_objective": "छात्रः हिन्दीवाक्यानां शुद्धं संस्कृतानुवादं करिष्यति।"
+    },
+    {
+     "concept_tag": "vakya-ashuddhi-shodhana",
+     "learning_objective": "छात्रः वाक्येषु कर्तृक्रियान्वितेः विभक्तेः च अशुद्धिं संशोधयिष्यति।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "chapter_id": "KHMH1-CH05",
+ "title": "रैखिक असमिकाएँ",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH05-T1",
+   "topic_number": 1,
+   "title": "असमिकाएँ: अर्थ और प्रकार",
+   "ncert_sections": "5.1, 5.2",
+   "concepts": [
+    {
+     "concept_tag": "asamika-paribhasha",
+     "learning_objective": "किसी स्थिति को असमिका के रूप में व्यक्त करना और असमिका को पहचानना।"
+    },
+    {
+     "concept_tag": "nirantar-aur-shithil-asamika",
+     "learning_objective": "निरंतर (<, >) और शिथिल (≤, ≥) असमिकाओं में अंतर करना।"
+    },
+    {
+     "concept_tag": "rekhik-asamika-pahchan",
+     "learning_objective": "एक और दो चरों वाली रैखिक असमिकाओं को अरैखिक असमिकाओं से अलग पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH05-T2",
+   "topic_number": 2,
+   "title": "असमिकाओं को हल करने के नियम",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "asamika-ke-niyam",
+     "learning_objective": "असमिका के दोनों पक्षों में जोड़ने, घटाने, गुणा करने और भाग देने के नियम बताना।"
+    },
+    {
+     "concept_tag": "rinatmak-gunan-chinh-parivartan",
+     "learning_objective": "ऋणात्मक संख्या से गुणा या भाग करने पर असमिका का चिह्न उलटने के नियम का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH05-T3",
+   "topic_number": 3,
+   "title": "प्राकृत संख्याओं, पूर्णांकों और वास्तविक संख्याओं में हल समुच्चय",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "hal-samuchchay",
+     "learning_objective": "चर के प्राकृत, पूर्णांक या वास्तविक होने पर रैखिक असमिका का हल समुच्चय ज्ञात करना।"
+    },
+    {
+     "concept_tag": "antaral-sanketan",
+     "learning_objective": "असमिका के वास्तविक हलों को अंतराल संकेतन में लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH05-T4",
+   "topic_number": 4,
+   "title": "संख्या रेखा पर आलेखीय निरूपण और युगपत् असमिकाएँ",
+   "ncert_sections": "5.3, विविध उदाहरण",
+   "concepts": [
+    {
+     "concept_tag": "sankhya-rekha-nirupan",
+     "learning_objective": "x < a, x > a, x ≤ a और x ≥ a को संख्या रेखा पर सही ढंग से निरूपित करना।"
+    },
+    {
+     "concept_tag": "yugpat-asamikaen",
+     "learning_objective": "दोहरी असमिका या असमिकाओं के निकाय को हल करके उभयनिष्ठ हल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH05-T5",
+   "topic_number": 5,
+   "title": "रैखिक असमिकाओं पर आधारित शाब्दिक प्रश्न",
+   "ncert_sections": "5.3 (उदाहरण 7, 8; प्रश्नावली 5.1), विविध उदाहरण",
+   "concepts": [
+    {
+     "concept_tag": "ausat-ank-prashn",
+     "learning_objective": "न्यूनतम आवश्यक अंक ज्ञात करने के लिए असमिका बनाना और हल करना।"
+    },
+    {
+     "concept_tag": "kramagat-sankhya-yugm",
+     "learning_objective": "दी गई शर्तों को संतुष्ट करने वाले क्रमागत विषम या सम संख्याओं के युग्म ज्ञात करना।"
+    },
+    {
+     "concept_tag": "vyavaharik-anuprayog",
+     "learning_objective": "तापमान रूपांतरण जैसी व्यावहारिक स्थितियों में दोहरी असमिका का प्रयोग करना।"
+    }
+   ]
+  }
+ ]
+}

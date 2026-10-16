@@ -1,0 +1,892 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "ganita-prakash-part-i-c08-en",
+  "curriculum": "cbse",
+  "class_level": 8,
+  "subject_code": "mathematics",
+  "language": "english",
+  "title": "Ganita Prakash Part-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "hegp1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "HEGP1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "A Square and A Cube",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP1-CH01-T1",
+     "topic_number": 1,
+     "title": "Square numbers and the locker puzzle",
+     "ncert_sections": "Introduction, 1.1",
+     "concepts": [
+      {
+       "concept_tag": "odd-number-of-factors",
+       "learning_objective": "Explain why only square numbers have an odd number of factors, using partner factors."
+      },
+      {
+       "concept_tag": "square-number-meaning",
+       "learning_objective": "Recognise a square number as a number multiplied by itself and as the area of a square."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH01-T2",
+     "topic_number": 2,
+     "title": "Patterns and properties of perfect squares",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "units-digit-of-squares",
+       "learning_objective": "Use the units digit to decide when a number cannot be a perfect square."
+      },
+      {
+       "concept_tag": "zeros-and-parity-of-squares",
+       "learning_objective": "Relate the trailing zeros and the parity of a number to those of its square."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH01-T3",
+     "topic_number": 3,
+     "title": "Perfect squares, odd numbers and triangular numbers",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "squares-as-sums-of-odd-numbers",
+       "learning_objective": "Use the fact that the sum of the first n odd numbers is n squared."
+      },
+      {
+       "concept_tag": "numbers-between-consecutive-squares",
+       "learning_objective": "Count the numbers lying between two consecutive perfect squares."
+      },
+      {
+       "concept_tag": "triangular-and-square-numbers",
+       "learning_objective": "Recognise that two consecutive triangular numbers add up to a square."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH01-T4",
+     "topic_number": 4,
+     "title": "Square roots",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "square-root-meaning",
+       "learning_objective": "State the square roots of a perfect square and find the side of a square from its area."
+      },
+      {
+       "concept_tag": "square-root-by-prime-factorisation",
+       "learning_objective": "Use prime factorisation to test for perfect squares and find square roots."
+      },
+      {
+       "concept_tag": "estimating-square-roots",
+       "learning_objective": "Estimate the square root of a number lying between two perfect squares."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH01-T5",
+     "topic_number": 5,
+     "title": "Cubic numbers",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "perfect-cube-meaning",
+       "learning_objective": "Recognise a perfect cube as a number multiplied by itself three times."
+      },
+      {
+       "concept_tag": "properties-of-cubes",
+       "learning_objective": "Evaluate statements about the units digits, parity, zeros and digit counts of cubes."
+      },
+      {
+       "concept_tag": "taxicab-and-odd-number-patterns",
+       "learning_objective": "Use taxicab numbers and the odd-number pattern for cubes."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH01-T6",
+     "topic_number": 6,
+     "title": "Cube roots, successive differences and history",
+     "ncert_sections": "1.2, 1.3",
+     "concepts": [
+      {
+       "concept_tag": "cube-root-by-prime-factorisation",
+       "learning_objective": "Find cube roots and make numbers perfect cubes using prime factorisation."
+      },
+      {
+       "concept_tag": "successive-differences",
+       "learning_objective": "Compute successive differences of squares and cubes and interpret the pattern."
+      },
+      {
+       "concept_tag": "history-of-squares-and-roots",
+       "learning_objective": "Recall the Babylonian and ancient Indian terms for squares, cubes and roots."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEGP1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Power Play",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP1-CH02-T1",
+     "topic_number": 1,
+     "title": "Experiencing the Power Play: folding paper",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "doubling-by-folding",
+       "learning_objective": "Calculate the thickness of a sheet of paper after a given number of folds when each fold doubles it."
+      },
+      {
+       "concept_tag": "multiplicative-growth",
+       "learning_objective": "Explain how repeated doubling makes a quantity grow by the same factor over equal numbers of steps."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH02-T2",
+     "topic_number": 2,
+     "title": "Exponential notation: base, exponent and prime factors",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "base-and-exponent",
+       "learning_objective": "Identify the base and exponent and write repeated products in exponential form."
+      },
+      {
+       "concept_tag": "prime-factorisation-exponential-form",
+       "learning_objective": "Express a number as a product of powers of its prime factors."
+      },
+      {
+       "concept_tag": "powers-of-negative-numbers",
+       "learning_objective": "Decide the sign and value of powers of negative numbers."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH02-T3",
+     "topic_number": 3,
+     "title": "Operations with exponents and counting combinations",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "product-and-power-of-power",
+       "learning_objective": "Use the rules n^a x n^b = n^(a+b) and (n^a)^b = n^(ab) to simplify expressions."
+      },
+      {
+       "concept_tag": "same-exponent-products",
+       "learning_objective": "Use m^a x n^a = (mn)^a to combine powers with the same exponent."
+      },
+      {
+       "concept_tag": "counting-combinations",
+       "learning_objective": "Count combinations and passwords by multiplying the number of choices at each step."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH02-T4",
+     "topic_number": 4,
+     "title": "The other side of powers: division, zero and negative exponents",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "quotient-of-powers",
+       "learning_objective": "Use n^a / n^b = n^(a-b) to divide powers with the same base."
+      },
+      {
+       "concept_tag": "zero-exponent",
+       "learning_objective": "Explain why n^0 = 1 for any non-zero n."
+      },
+      {
+       "concept_tag": "negative-exponents",
+       "learning_objective": "Interpret n^(-a) as 1/n^a and simplify expressions and power lines with negative exponents."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH02-T5",
+     "topic_number": 5,
+     "title": "Powers of 10 and scientific notation",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "expanded-form-powers-of-ten",
+       "learning_objective": "Write numbers, including decimals, in expanded form using powers of 10."
+      },
+      {
+       "concept_tag": "scientific-notation",
+       "learning_objective": "Express large numbers in the standard form x x 10^y with 1 <= x < 10."
+      },
+      {
+       "concept_tag": "comparing-with-exponents",
+       "learning_objective": "Compare quantities written in scientific notation using the exponent first."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH02-T6",
+     "topic_number": 6,
+     "title": "Did you ever wonder? Estimation, linear and exponential growth",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "estimation-with-assumptions",
+       "learning_objective": "Estimate quantities by describing relationships and making reasonable assumptions."
+      },
+      {
+       "concept_tag": "linear-vs-exponential-growth",
+       "learning_objective": "Distinguish additive (linear) growth from multiplicative (exponential) growth."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH02-T7",
+     "topic_number": 7,
+     "title": "Getting a sense for large numbers and a pinch of history",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "indian-and-international-number-names",
+       "learning_objective": "Relate lakh, crore, arab and kharab to million, billion and trillion as powers of 10."
+      },
+      {
+       "concept_tag": "comparing-large-quantities",
+       "learning_objective": "Compare large real-world quantities by dividing numbers written in scientific notation."
+      },
+      {
+       "concept_tag": "history-of-number-names",
+       "learning_objective": "Describe how Indian texts named large powers of ten and the pattern behind the names."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEGP1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "A Story of Numbers",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP1-CH03-T1",
+     "topic_number": 1,
+     "title": "Where our numerals came from",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "origin-of-indian-numerals",
+       "learning_objective": "Recall the Indian origin of number names based on powers of 10 and of writing numbers with ten digits including 0."
+      },
+      {
+       "concept_tag": "transmission-of-hindu-numerals",
+       "learning_objective": "Describe how the Indian numerals reached the Arab world and Europe, and why they came to be called by different names."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH03-T2",
+     "topic_number": 2,
+     "title": "The mechanism of counting",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "one-to-one-mapping",
+       "learning_objective": "Use one-to-one mapping between objects and a standard sequence to count and compare collections."
+      },
+      {
+       "concept_tag": "standard-sequence-number-system",
+       "learning_objective": "Explain what a number system is and compare the strengths and limits of counting with sticks, letters and symbols."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH03-T3",
+     "topic_number": 3,
+     "title": "Some early number systems",
+     "ncert_sections": "3.2 (I-III)",
+     "concepts": [
+      {
+       "concept_tag": "tally-marks",
+       "learning_objective": "Recall early tally-mark artefacts such as the Ishango and Lebombo bones and how tally marks represent numbers."
+      },
+      {
+       "concept_tag": "counting-in-groups",
+       "learning_objective": "Interpret number systems that count in groups of a fixed size, such as the Gumulgal system of counting in twos."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH03-T4",
+     "topic_number": 4,
+     "title": "The Roman numerals",
+     "ncert_sections": "3.2 (IV)",
+     "concepts": [
+      {
+       "concept_tag": "roman-landmark-numbers",
+       "learning_objective": "Write numbers in Roman numerals by grouping them into the landmark numbers I, V, X, L, C, D and M."
+      },
+      {
+       "concept_tag": "roman-arithmetic",
+       "learning_objective": "Add Roman numerals by regrouping and explain why multiplication is hard in the Roman system."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH03-T5",
+     "topic_number": 5,
+     "title": "The idea of a base",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "egyptian-number-system",
+       "learning_objective": "Represent numbers in the Egyptian system whose landmark numbers are the powers of 10."
+      },
+      {
+       "concept_tag": "base-n-landmark-numbers",
+       "learning_objective": "Find the landmark numbers of a base-n system and express numbers in it by grouping."
+      },
+      {
+       "concept_tag": "advantages-of-base",
+       "learning_objective": "Explain why a system whose landmark numbers are powers of one number makes addition and multiplication easier."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH03-T6",
+     "topic_number": 6,
+     "title": "Place value representation",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "mesopotamian-sexagesimal",
+       "learning_objective": "Represent numbers in the Mesopotamian base-60 place value system."
+      },
+      {
+       "concept_tag": "mayan-chinese-place-value",
+       "learning_objective": "Describe the place value features of the Mayan and Chinese rod numeral systems."
+      },
+      {
+       "concept_tag": "zero-as-placeholder-and-number",
+       "learning_objective": "Explain the role of zero as a placeholder and as a number in making the Hindu system unambiguous."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEGP1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Quadrilaterals",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP1-CH04-T1",
+     "topic_number": 1,
+     "title": "Rectangles and the Carpenter's Problem",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "rectangle-definition",
+       "learning_objective": "Define a rectangle as a quadrilateral whose angles are all 90 degrees and recognise equivalent definitions."
+      },
+      {
+       "concept_tag": "rectangle-diagonal-properties",
+       "learning_objective": "Use congruence to show that the diagonals of a rectangle are equal and bisect each other, and apply this to find lengths and angles."
+      },
+      {
+       "concept_tag": "deduction-versus-conjecture",
+       "learning_objective": "Distinguish a conjecture formed from measurement from a property justified by geometric deduction."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH04-T2",
+     "topic_number": 2,
+     "title": "Squares: A Special Rectangle",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "square-definition-and-hierarchy",
+       "learning_objective": "Define a square and explain why every square is a rectangle but not every rectangle is a square."
+      },
+      {
+       "concept_tag": "square-diagonal-properties",
+       "learning_objective": "Use the facts that the diagonals of a square are equal, bisect each other at 90 degrees and bisect its angles."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH04-T3",
+     "topic_number": 3,
+     "title": "Angles in a Quadrilateral",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "quadrilateral-angle-sum",
+       "learning_objective": "Apply the result that the angles of any quadrilateral add up to 360 degrees."
+      },
+      {
+       "concept_tag": "angle-sum-justification",
+       "learning_objective": "Justify the angle sum of a quadrilateral by dividing it into two triangles with a diagonal."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH04-T4",
+     "topic_number": 4,
+     "title": "Parallelograms",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "parallelogram-definition-and-angles",
+       "learning_objective": "Define a parallelogram and deduce that its adjacent angles are supplementary and its opposite angles are equal."
+      },
+      {
+       "concept_tag": "parallelogram-sides-and-diagonals",
+       "learning_objective": "Use the facts that the opposite sides of a parallelogram are equal and its diagonals bisect each other."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH04-T5",
+     "topic_number": 5,
+     "title": "Rhombus: Quadrilaterals with Equal Sidelengths",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "rhombus-definition-and-angles",
+       "learning_objective": "Define a rhombus and find its angles using the facts that it is a parallelogram whose diagonals bisect its angles."
+      },
+      {
+       "concept_tag": "rhombus-diagonals",
+       "learning_objective": "Use the facts that the diagonals of a rhombus bisect each other at right angles and bisect its angles."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH04-T6",
+     "topic_number": 6,
+     "title": "Playing with Quadrilaterals",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "quadrilateral-from-diagonals",
+       "learning_objective": "Identify the quadrilateral formed when diagonals with given lengths and angle are placed so their ends can be joined."
+      },
+      {
+       "concept_tag": "joining-triangles",
+       "learning_objective": "Identify and justify the quadrilaterals formed by joining two congruent triangles along a common side."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH04-T7",
+     "topic_number": 7,
+     "title": "Kite and Trapezium",
+     "ncert_sections": "4.6",
+     "concepts": [
+      {
+       "concept_tag": "kite-properties",
+       "learning_objective": "Define a kite and use the fact that one diagonal of a kite is the perpendicular bisector of the other."
+      },
+      {
+       "concept_tag": "trapezium-properties",
+       "learning_objective": "Define a trapezium and an isosceles trapezium and find unknown angles using parallel sides."
+      },
+      {
+       "concept_tag": "quadrilateral-classification",
+       "learning_objective": "Relate rectangles, squares, parallelograms, rhombuses, kites and trapeziums using set relationships."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEGP1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Number Play",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP1-CH05-T1",
+     "topic_number": 1,
+     "title": "Parity of sums and differences",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "parity-of-signed-sums",
+       "learning_objective": "Explain why all expressions a ± b ± c ± d formed from the same numbers have the same parity."
+      },
+      {
+       "concept_tag": "even-expressions-algebra",
+       "learning_objective": "Decide, using parity rules, whether an arithmetic or algebraic expression is always even."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH05-T2",
+     "topic_number": 2,
+     "title": "Pairs to make fours and Always, Sometimes, Never",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "even-numbers-remainder-mod-4",
+       "learning_objective": "Use the forms 4p and 4p + 2 to decide when the sum of two even numbers is a multiple of 4."
+      },
+      {
+       "concept_tag": "divisibility-properties",
+       "learning_objective": "Apply the properties of divisibility of sums, multiples, factors and LCM to judge statements as always, sometimes or never true."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH05-T3",
+     "topic_number": 3,
+     "title": "What remains? Remainders in algebraic form",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "remainder-algebraic-form",
+       "learning_objective": "Write all numbers with a given remainder on division as an algebraic expression such as 5k + 3."
+      },
+      {
+       "concept_tag": "remainders-of-sums-and-conditions",
+       "learning_objective": "Find remainders of sums and numbers satisfying several remainder conditions without long division."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH05-T4",
+     "topic_number": 4,
+     "title": "Divisibility shortcuts for 9 and 3",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "place-value-remainders",
+       "learning_objective": "Use the remainders of place values on division by 9 to find the remainder of a number."
+      },
+      {
+       "concept_tag": "divisibility-by-9-and-3",
+       "learning_objective": "Apply the digit-sum tests for divisibility by 9 and 3, including finding missing digits."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH05-T5",
+     "topic_number": 5,
+     "title": "Divisibility by 11 and combined tests",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "divisibility-by-11",
+       "learning_objective": "Use the alternating pattern of place values to test divisibility by 11 and find the remainder."
+      },
+      {
+       "concept_tag": "combined-divisibility-tests",
+       "learning_objective": "Choose factor tests based on prime factorisation to check divisibility by numbers such as 24 and 44."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH05-T6",
+     "topic_number": 6,
+     "title": "Digital roots",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "digital-root",
+       "learning_objective": "Compute the digital root of a number by repeatedly adding its digits."
+      },
+      {
+       "concept_tag": "digital-root-and-remainder",
+       "learning_objective": "Relate the digital root of a number to its remainder on division by 9."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH05-T7",
+     "topic_number": 7,
+     "title": "Digits in disguise: cryptarithms",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "cryptarithm-addition",
+       "learning_objective": "Solve addition cryptarithms using carries and place value reasoning."
+      },
+      {
+       "concept_tag": "cryptarithm-multiplication",
+       "learning_objective": "Solve multiplication cryptarithms using size limits and units-digit patterns."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEGP1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "We Distribute, Yet Things Multiply",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP1-CH06-T1",
+     "topic_number": 1,
+     "title": "Distributivity and increments in products",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "distributive-property",
+       "learning_objective": "State and use the distributive property a(b + c) = ab + ac and its form (a + b)c = ac + bc."
+      },
+      {
+       "concept_tag": "change-in-product",
+       "learning_objective": "Work out how a product ab changes when one or both numbers are increased or decreased."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH06-T2",
+     "topic_number": 2,
+     "title": "Expanding products of expressions",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "product-of-two-binomials",
+       "learning_objective": "Expand (a + m)(b + n) and its sign variants by multiplying each term of one bracket with each term of the other."
+      },
+      {
+       "concept_tag": "combining-like-terms",
+       "learning_objective": "Identify like terms and add them to simplify an expanded product."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH06-T3",
+     "topic_number": 3,
+     "title": "Fast multiplication using the distributive property",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "multiply-by-eleven",
+       "learning_objective": "Multiply any number by 11 in one line by adding neighbouring digits with carries."
+      },
+      {
+       "concept_tag": "multiply-by-101-1001-and-99",
+       "learning_objective": "Use 101 = 100 + 1, 1001 = 1000 + 1 and 99 = 100 - 1 to multiply quickly."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH06-T4",
+     "topic_number": 4,
+     "title": "Square of the sum and difference of two numbers",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "square-of-sum",
+       "learning_objective": "Use Identity 1A, (a + b)² = a² + 2ab + b², to expand and to compute squares."
+      },
+      {
+       "concept_tag": "square-of-difference",
+       "learning_objective": "Use Identity 1B, (a - b)² = a² - 2ab + b², to expand and to compute squares."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH06-T5",
+     "topic_number": 5,
+     "title": "Difference of squares and investigating patterns",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "difference-of-squares",
+       "learning_objective": "Use Identity 1C, (a + b)(a - b) = a² - b², for quick products and to express numbers as differences of squares."
+      },
+      {
+       "concept_tag": "sum-of-squares-pattern",
+       "learning_objective": "Explain the pattern 2(a² + b²) = (a + b)² + (a - b)² using identities."
+      },
+      {
+       "concept_tag": "sridharacharya-squaring",
+       "learning_objective": "Compute squares quickly using a² = (a + b)(a - b) + b²."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH06-T6",
+     "topic_number": 6,
+     "title": "Mind the mistake and many ways to a pattern",
+     "ncert_sections": "6.3, 6.4",
+     "concepts": [
+      {
+       "concept_tag": "spotting-algebra-errors",
+       "learning_objective": "Find and correct mistakes in expanding and simplifying algebraic expressions."
+      },
+      {
+       "concept_tag": "equivalent-expressions-for-patterns",
+       "learning_objective": "Show that different expressions found for the same pattern or area simplify to the same expression."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEGP1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Proportional Reasoning-1",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hegp107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEGP1-CH07-T1",
+     "topic_number": 1,
+     "title": "Observing Similarity in Change",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "scaling-by-same-factor",
+       "learning_objective": "Recognise that a figure keeps its shape when its width and height are multiplied by the same factor."
+      },
+      {
+       "concept_tag": "change-by-difference-distorts",
+       "learning_objective": "Explain why adding or subtracting the same amount to width and height distorts a figure."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH07-T2",
+     "topic_number": 2,
+     "title": "Ratios and their Simplest Form",
+     "ncert_sections": "7.2, 7.3",
+     "concepts": [
+      {
+       "concept_tag": "ratio-terms-meaning",
+       "learning_objective": "Interpret a ratio a : b as 'for every a units of the first quantity there are b units of the second' and identify its terms."
+      },
+      {
+       "concept_tag": "simplest-form-by-hcf",
+       "learning_objective": "Reduce a ratio to its simplest form by dividing both terms by their HCF, using the same units."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH07-T3",
+     "topic_number": 3,
+     "title": "Ratios in Proportion",
+     "ncert_sections": "7.3, 7.4",
+     "concepts": [
+      {
+       "concept_tag": "checking-proportionality",
+       "learning_objective": "Decide whether two ratios are proportional by comparing their simplest forms or the factor of change."
+      },
+      {
+       "concept_tag": "adding-changes-ratio",
+       "learning_objective": "Show that adding the same number to both terms of a ratio generally changes the ratio."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH07-T4",
+     "topic_number": 4,
+     "title": "Trairasika: The Rule of Three",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "cross-multiplication",
+       "learning_objective": "Use a : b :: c : d implies ad = bc to find an unknown fourth term."
+      },
+      {
+       "concept_tag": "rule-of-three-terms",
+       "learning_objective": "Identify pramana, phala, ichchha and ichchhaphala and apply the Rule of Three."
+      },
+      {
+       "concept_tag": "same-units-and-limits",
+       "learning_objective": "Use the same units in both ratios and recognise situations that are not direct proportion."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH07-T5",
+     "topic_number": 5,
+     "title": "Sharing, but Not Equally",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "dividing-in-a-ratio",
+       "learning_objective": "Divide a quantity x in the ratio m : n into parts m x/(m + n) and n x/(m + n)."
+      },
+      {
+       "concept_tag": "changing-mixture-ratio",
+       "learning_objective": "Find the new ratio, or the amount to add, when one component of a mixture is changed."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEGP1-CH07-T6",
+     "topic_number": 6,
+     "title": "Unit Conversions",
+     "ncert_sections": "7.6",
+     "concepts": [
+      {
+       "concept_tag": "unit-conversion-in-proportion",
+       "learning_objective": "Convert units of length, area and volume before solving proportion problems."
+      },
+      {
+       "concept_tag": "temperature-conversion",
+       "learning_objective": "Convert temperatures between Celsius and Fahrenheit using F = (9/5) C + 32."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

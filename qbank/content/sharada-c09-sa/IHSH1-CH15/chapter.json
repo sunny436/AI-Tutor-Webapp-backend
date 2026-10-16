@@ -1,0 +1,132 @@
+{
+ "chapter_id": "IHSH1-CH15",
+ "title": "शब्दरूपाणि",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSH1-CH15-T1",
+   "topic_number": 1,
+   "title": "नकारान्ताः पुंलिङ्गशब्दाः (ब्रह्मन्, गुणिन्, पथिन्)",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "brahman-rupani",
+     "learning_objective": "'ब्रह्मन्' शब्दस्य रूपाणि अभिजानाति।"
+    },
+    {
+     "concept_tag": "gunin-rupani",
+     "learning_objective": "'गुणिन्' शब्दस्य रूपाणि प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "pathin-rupani",
+     "learning_objective": "'पथिन्' शब्दस्य विशिष्टरूपाणि अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH15-T2",
+   "topic_number": 2,
+   "title": "सकारान्ताः पुंलिङ्गशब्दाः (विद्वस्, चन्द्रमस्, पुंस्, वेधस्)",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vidvas-rupani",
+     "learning_objective": "'विद्वस्' शब्दस्य रूपाणि अभिजानाति।"
+    },
+    {
+     "concept_tag": "chandramas-vedhas-rupani",
+     "learning_objective": "'चन्द्रमस्' 'वेधस्' शब्दयोः रूपपरिवर्तनं व्याख्याति।"
+    },
+    {
+     "concept_tag": "pums-rupani",
+     "learning_objective": "'पुंस्' शब्दस्य रूपाणि अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH15-T3",
+   "topic_number": 3,
+   "title": "दकारान्ताः जकारान्ताः च पुंलिङ्गशब्दाः (सुहृद्, वणिज्, भिषज्)",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "suhrid-rupani",
+     "learning_objective": "'सुहृद्' शब्दस्य रूपाणि अभिजानाति।"
+    },
+    {
+     "concept_tag": "vanij-bhishaj-rupani",
+     "learning_objective": "'वणिज्' 'भिषज्' शब्दयोः रूपाणि विश्लेषयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH15-T4",
+   "topic_number": 4,
+   "title": "हलन्ताः स्त्रीलिङ्गशब्दाः (वाच्, त्वच्, स्रज्, रुज्, सरित्, विद्युत्, दिव्, दिश्)",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "chakaranta-jakaranta-stri",
+     "learning_objective": "चकारान्त-जकारान्त-स्त्रीलिङ्गशब्दानां रूपाणि अभिजानाति।"
+    },
+    {
+     "concept_tag": "takaranta-stri",
+     "learning_objective": "'सरित्' 'विद्युत्' शब्दयोः रूपाणि प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "div-dish-rupani",
+     "learning_objective": "'दिव्' 'दिश्' शब्दयोः रूपाणि अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH15-T5",
+   "topic_number": 5,
+   "title": "तकारान्ताः नकारान्ताः च नपुंसकलिङ्गशब्दाः (जगत्, नामन्, कर्मन्, चर्मन्)",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "jagat-rupani",
+     "learning_objective": "'जगत्' शब्दस्य रूपाणि अभिजानाति।"
+    },
+    {
+     "concept_tag": "naman-karman-rupani",
+     "learning_objective": "'नामन्' 'कर्मन्' 'चर्मन्' शब्दानां रूपाणि विश्लेषयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH15-T6",
+   "topic_number": 6,
+   "title": "सकारान्ताः षकारान्ताः च नपुंसकलिङ्गशब्दाः (मनस्, तपस्, पयस्, शिरस्, छन्दस्, चक्षुस्)",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "manas-rupani",
+     "learning_objective": "'मनस्' आदीनां सकारान्तशब्दानां रूपाणि अभिजानाति।"
+    },
+    {
+     "concept_tag": "chakshus-rupani",
+     "learning_objective": "'चक्षुस्' शब्दस्य रूपाणि अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH15-T7",
+   "topic_number": 7,
+   "title": "सुप्-प्रत्ययाः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "sup-pratyaya-parichayah",
+     "learning_objective": "विभक्तिवचनानुसारं सुप्-प्रत्ययान् अभिजानाति।"
+    },
+    {
+     "concept_tag": "sup-pratyaya-prayogah",
+     "learning_objective": "रूपेषु प्रयुक्तं सुप्-प्रत्ययं विश्लेषयति।"
+    }
+   ]
+  }
+ ]
+}

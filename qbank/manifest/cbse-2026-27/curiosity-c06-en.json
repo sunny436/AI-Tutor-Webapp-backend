@@ -1,0 +1,1621 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "curiosity-c06-en",
+  "curriculum": "cbse",
+  "class_level": 6,
+  "subject_code": "science",
+  "language": "english",
+  "title": "Curiosity",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "fecu1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "FECU1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "The Wonderful World of Science",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fecu101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FECU1-CH01-T1",
+     "topic_number": 1,
+     "title": "What is science?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "science-as-way-of-understanding",
+       "learning_objective": "Describe science as a way of thinking, observing and doing things to understand the world, driven by curiosity."
+      },
+      {
+       "concept_tag": "science-is-everywhere",
+       "learning_objective": "Recognise that science is found everywhere, from the kitchen and playground to the ocean and outer space."
+      },
+      {
+       "concept_tag": "science-as-unending-puzzle",
+       "learning_objective": "Explain why science is compared to an unending jigsaw puzzle whose pieces can change with new discoveries."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH01-T2",
+     "topic_number": 2,
+     "title": "What will we explore with the help of this book?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "earth-and-living-things",
+       "learning_objective": "Identify Earth as the only known planet that supports life and the questions about how plants and animals grow."
+      },
+      {
+       "concept_tag": "materials-food-and-water",
+       "learning_objective": "Frame scientific questions about food, materials, water and hot and cold from everyday experience."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH01-T3",
+     "topic_number": 3,
+     "title": "How can we find answers to our questions on our own?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "steps-of-scientific-method",
+       "learning_objective": "State and order the steps of the scientific method: observe, question, guess, test and analyse."
+      },
+      {
+       "concept_tag": "testing-a-guess",
+       "learning_objective": "Apply the idea of testing a guess and making a new guess when the first one is not supported."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH01-T4",
+     "topic_number": 4,
+     "title": "We are all, in a way, scientists",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "scientific-method-in-daily-life",
+       "learning_objective": "Recognise the scientific method in daily-life situations such as cooking, repairing a tyre or fixing a bulb."
+      },
+      {
+       "concept_tag": "teamwork-in-science",
+       "learning_objective": "Explain that science is rarely done alone and that scientists often work together in teams."
+      },
+      {
+       "concept_tag": "curiosity-and-asking-why",
+       "learning_objective": "Explain why being curious and asking 'how' and 'why' is the first step to learning science."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FECU1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Diversity in the Living World",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fecu102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FECU1-CH02-T1",
+     "topic_number": 1,
+     "title": "Diversity in Plants and Animals Around Us",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "observing-plant-animal-features",
+       "learning_objective": "Observe and record the features of plants and animals around us without disturbing them."
+      },
+      {
+       "concept_tag": "biodiversity-and-interdependence",
+       "learning_objective": "Explain biodiversity as the variety of living things in a region and how plants and animals depend on each other."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH02-T2",
+     "topic_number": 2,
+     "title": "Grouping Plants and Animals",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "importance-of-grouping",
+       "learning_objective": "Explain why grouping living things by similarities and differences makes them easier to study."
+      },
+      {
+       "concept_tag": "basis-of-grouping",
+       "learning_objective": "Identify and apply a common feature as the basis for grouping plants and animals."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH02-T3",
+     "topic_number": 3,
+     "title": "Herbs, Shrubs, Trees, Climbers and Creepers",
+     "ncert_sections": "2.2.1",
+     "concepts": [
+      {
+       "concept_tag": "herbs-shrubs-trees",
+       "learning_objective": "Classify plants as herbs, shrubs or trees by height, nature of stem and branching."
+      },
+      {
+       "concept_tag": "climbers-creepers",
+       "learning_objective": "Distinguish climbers and creepers as plants with weak stems."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH02-T4",
+     "topic_number": 4,
+     "title": "Leaf Venation, Roots and Seeds",
+     "ncert_sections": "2.2.1",
+     "concepts": [
+      {
+       "concept_tag": "leaf-venation",
+       "learning_objective": "Distinguish reticulate and parallel venation in leaves."
+      },
+      {
+       "concept_tag": "taproot-fibrous-root",
+       "learning_objective": "Distinguish taproots and fibrous roots and relate them to leaf venation."
+      },
+      {
+       "concept_tag": "monocots-dicots",
+       "learning_objective": "Group plants as monocots or dicots by the number of cotyledons and relate this to roots and venation."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH02-T5",
+     "topic_number": 5,
+     "title": "Grouping Animals by Movement",
+     "ncert_sections": "2.2.2",
+     "concepts": [
+      {
+       "concept_tag": "animal-movement-body-parts",
+       "learning_objective": "Identify the types of movement in animals and the body parts they use."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH02-T6",
+     "topic_number": 6,
+     "title": "Plants and Animals in Different Surroundings: Adaptations",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "adaptations-plants",
+       "learning_objective": "Explain how features of desert and mountain plants help them survive their surroundings."
+      },
+      {
+       "concept_tag": "camel-adaptations",
+       "learning_objective": "Explain how the features of camels in hot and cold deserts help them survive."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH02-T7",
+     "topic_number": 7,
+     "title": "Habitats and Protecting Biodiversity",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "terrestrial-aquatic-habitats",
+       "learning_objective": "Define habitat and group living things as terrestrial, aquatic or amphibians."
+      },
+      {
+       "concept_tag": "habitat-loss-conservation",
+       "learning_objective": "Explain how habitat damage causes loss of biodiversity and how it can be protected."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FECU1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Mindful Eating: A Path to a Healthy Body",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fecu103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FECU1-CH03-T1",
+     "topic_number": 1,
+     "title": "Food diversity across regions of India",
+     "ncert_sections": "3.1, 3.1.1",
+     "concepts": [
+      {
+       "concept_tag": "food-variety-regions",
+       "learning_objective": "Explain why the food eaten by people varies across the regions of India."
+      },
+      {
+       "concept_tag": "local-crops-traditional-food",
+       "learning_objective": "Relate the traditional food of a state to the crops grown locally."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH03-T2",
+     "topic_number": 2,
+     "title": "Changing culinary practices",
+     "ncert_sections": "3.1.2",
+     "concepts": [
+      {
+       "concept_tag": "traditional-vs-modern-cooking",
+       "learning_objective": "Distinguish traditional cooking and grinding tools from their modern replacements."
+      },
+      {
+       "concept_tag": "causes-of-culinary-change",
+       "learning_objective": "Identify the factors that have changed cooking practices over time."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH03-T3",
+     "topic_number": 3,
+     "title": "Energy-giving and body-building foods",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "carbohydrates-energy",
+       "learning_objective": "Identify carbohydrates and their sources as primary energy-giving foods."
+      },
+      {
+       "concept_tag": "fats-stored-energy",
+       "learning_objective": "Recognise fats and their plant and animal sources as stored energy."
+      },
+      {
+       "concept_tag": "proteins-body-building",
+       "learning_objective": "Explain why proteins are called body-building foods and name their sources."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH03-T4",
+     "topic_number": 4,
+     "title": "Protective nutrients, roughage and water",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "vitamins-minerals-deficiency",
+       "learning_objective": "Match vitamins and minerals with their functions, sources and deficiency diseases."
+      },
+      {
+       "concept_tag": "roughage-and-water",
+       "learning_objective": "Explain the roles of dietary fibres and water in the body."
+      },
+      {
+       "concept_tag": "nutrient-loss-in-cooking",
+       "learning_objective": "Explain how cooking and washing cut vegetables can cause loss of some vitamins."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH03-T5",
+     "topic_number": 5,
+     "title": "Testing food for starch, fats and proteins",
+     "ncert_sections": "3.3, 3.3.1, 3.3.2, 3.3.3",
+     "concepts": [
+      {
+       "concept_tag": "starch-iodine-test",
+       "learning_objective": "Describe and interpret the iodine test for starch."
+      },
+      {
+       "concept_tag": "fat-paper-test",
+       "learning_objective": "Describe and interpret the oily-patch paper test for fats."
+      },
+      {
+       "concept_tag": "protein-test",
+       "learning_objective": "Describe and interpret the copper sulfate and caustic soda test for proteins."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH03-T6",
+     "topic_number": 6,
+     "title": "Balanced diet and junk food",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "balanced-diet",
+       "learning_objective": "Define a balanced diet and explain why nutritional needs vary between people."
+      },
+      {
+       "concept_tag": "junk-food",
+       "learning_objective": "Use nutritional information to identify junk food and explain why it is unhealthy."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH03-T7",
+     "topic_number": 7,
+     "title": "Millets and fortified foods",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "millets-nutri-cereals",
+       "learning_objective": "Explain why millets are called nutri-cereals and how they support a balanced diet."
+      },
+      {
+       "concept_tag": "food-fortification",
+       "learning_objective": "Explain what fortified foods are, with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH03-T8",
+     "topic_number": 8,
+     "title": "Food miles: from farm to our plate",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "food-miles",
+       "learning_objective": "Define food miles and explain the benefits of reducing them."
+      },
+      {
+       "concept_tag": "farm-to-plate-steps",
+       "learning_objective": "Sequence the steps by which food such as wheat reaches our plate."
+      },
+      {
+       "concept_tag": "food-wastage",
+       "learning_objective": "Explain why we should avoid wasting food."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FECU1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Exploring Magnets",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fecu104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FECU1-CH04-T1",
+     "topic_number": 1,
+     "title": "Magnets and magnetic materials",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "natural-and-artificial-magnets",
+       "learning_objective": "Distinguish naturally occurring magnets (lodestones) from the artificial magnets used in everyday objects."
+      },
+      {
+       "concept_tag": "magnetic-and-non-magnetic-materials",
+       "learning_objective": "Classify materials as magnetic or non-magnetic and name iron, nickel and cobalt as magnetic metals."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH04-T2",
+     "topic_number": 2,
+     "title": "Poles of a magnet",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "poles-of-a-magnet",
+       "learning_objective": "Identify the poles as the parts of a magnet where its attraction is strongest."
+      },
+      {
+       "concept_tag": "poles-exist-in-pairs",
+       "learning_objective": "Explain that North and South poles always occur in pairs, whatever the size or shape of the magnet."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH04-T3",
+     "topic_number": 3,
+     "title": "Finding directions with a magnet",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "freely-suspended-magnet",
+       "learning_objective": "Explain that a freely suspended magnet rests along the north-south direction and use this to tell a magnet from an iron bar."
+      },
+      {
+       "concept_tag": "magnetic-compass",
+       "learning_objective": "Describe the parts of a magnetic compass and how it is used to find directions."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH04-T4",
+     "topic_number": 4,
+     "title": "Making a magnet and a compass",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "magnetising-a-needle",
+       "learning_objective": "Describe how an iron needle is made into a magnet by stroking it with one pole of a magnet and how to test it."
+      },
+      {
+       "concept_tag": "floating-needle-compass",
+       "learning_objective": "Explain how a magnetised needle on a floating cork, or the matsya-yantra, works as a compass."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH04-T5",
+     "topic_number": 5,
+     "title": "Attraction and repulsion between magnets",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "like-and-unlike-poles",
+       "learning_objective": "State that unlike poles attract and like poles repel, and apply this to magnets and compass needles."
+      },
+      {
+       "concept_tag": "repulsion-identifies-magnet",
+       "learning_objective": "Use repulsion to tell a magnet from a piece of iron."
+      },
+      {
+       "concept_tag": "magnetic-effect-through-materials",
+       "learning_objective": "Recognise that the magnetic effect acts through non-magnetic materials such as wood, cardboard, plastic and glass."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH04-T6",
+     "topic_number": 6,
+     "title": "Fun with magnets and caring for magnets",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "uses-of-magnets",
+       "learning_objective": "Apply the properties of magnets to solve everyday problems and explain magnet-based toys."
+      },
+      {
+       "concept_tag": "caring-for-magnets",
+       "learning_objective": "State how magnets should be stored and handled so that they stay strong."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FECU1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Measurement of Length and Motion",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fecu105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FECU1-CH05-T1",
+     "topic_number": 1,
+     "title": "How do we Measure?",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "non-standard-body-units",
+       "learning_objective": "Explain why lengths measured with body parts such as the handspan or stride differ from person to person."
+      },
+      {
+       "concept_tag": "number-and-unit",
+       "learning_objective": "State that a measured length is expressed in two parts, a number and a unit."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH05-T2",
+     "topic_number": 2,
+     "title": "Standard Units",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "si-unit-of-length",
+       "learning_objective": "Identify the metre as the SI unit of length and distinguish standard from non-standard units."
+      },
+      {
+       "concept_tag": "conversion-of-length-units",
+       "learning_objective": "Convert lengths between kilometre, metre, centimetre and millimetre."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH05-T3",
+     "topic_number": 3,
+     "title": "Correct Way of Measuring Length",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "choosing-measuring-device",
+       "learning_objective": "Choose a suitable scale or tape for measuring a given length."
+      },
+      {
+       "concept_tag": "scale-placement-and-eye-position",
+       "learning_objective": "Describe the correct placement of a scale and the correct position of the eye while reading it."
+      },
+      {
+       "concept_tag": "broken-scale-measurement",
+       "learning_objective": "Measure a length with a scale whose ends are broken by subtracting the starting mark reading."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH05-T4",
+     "topic_number": 4,
+     "title": "Measuring the Length of a Curved Line",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "curved-line-measurement",
+       "learning_objective": "Measure the length of a curved line using a thread or flexible tape and apply it to find distances."
+      },
+      {
+       "concept_tag": "writing-units-correctly",
+       "learning_objective": "Write lengths with the correct unit symbols, spacing and lowercase letters."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH05-T5",
+     "topic_number": 5,
+     "title": "Describing Position",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "reference-point",
+       "learning_objective": "Define a reference point and identify it in everyday situations."
+      },
+      {
+       "concept_tag": "position-from-reference-point",
+       "learning_objective": "Interpret how the position of an object changes with respect to a reference point."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH05-T6",
+     "topic_number": 6,
+     "title": "Moving Things",
+     "ncert_sections": "5.6",
+     "concepts": [
+      {
+       "concept_tag": "rest-and-motion",
+       "learning_objective": "Decide whether an object is at rest or in motion from the change in its position with time."
+      },
+      {
+       "concept_tag": "motion-depends-on-reference-point",
+       "learning_objective": "Explain that the same object can be at rest or in motion depending on the chosen reference point."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH05-T7",
+     "topic_number": 7,
+     "title": "Types of Motion: Linear and Circular Motion",
+     "ncert_sections": "5.7",
+     "concepts": [
+      {
+       "concept_tag": "linear-motion",
+       "learning_objective": "Identify linear motion as motion along a straight line."
+      },
+      {
+       "concept_tag": "circular-motion",
+       "learning_objective": "Identify circular motion as motion along a circular path."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH05-T8",
+     "topic_number": 8,
+     "title": "Types of Motion: Oscillatory and Periodic Motion",
+     "ncert_sections": "5.7",
+     "concepts": [
+      {
+       "concept_tag": "oscillatory-motion",
+       "learning_objective": "Identify oscillatory motion as to-and-fro motion about a fixed position."
+      },
+      {
+       "concept_tag": "periodic-motion",
+       "learning_objective": "Explain that circular and oscillatory motions are periodic because the path repeats after a fixed interval of time."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FECU1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Materials Around Us",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fecu106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FECU1-CH06-T1",
+     "topic_number": 1,
+     "title": "Observing Objects Around Us",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "material-definition",
+       "learning_objective": "Define a material as any substance used to create an object."
+      },
+      {
+       "concept_tag": "objects-made-of-materials",
+       "learning_objective": "Recognise that objects are made of one or more materials and that one material can make many objects."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH06-T2",
+     "topic_number": 2,
+     "title": "How to Group Materials",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "classification",
+       "learning_objective": "Explain classification as arranging objects or materials into groups on the basis of a common property."
+      },
+      {
+       "concept_tag": "choosing-materials-by-purpose",
+       "learning_objective": "Explain that a material is chosen for an object according to its properties and the purpose of the object."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH06-T3",
+     "topic_number": 3,
+     "title": "Appearance and Hardness of Materials",
+     "ncert_sections": "6.3.1, 6.3.2",
+     "concepts": [
+      {
+       "concept_tag": "lustre",
+       "learning_objective": "Distinguish lustrous from non-lustrous materials and explain why some metals look dull."
+      },
+      {
+       "concept_tag": "hardness-and-softness",
+       "learning_objective": "Classify materials as hard or soft and recognise that hardness is a relative property."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH06-T4",
+     "topic_number": 4,
+     "title": "Transparent, Translucent and Opaque Materials",
+     "ncert_sections": "6.3.3",
+     "concepts": [
+      {
+       "concept_tag": "transparent-translucent-opaque",
+       "learning_objective": "Classify materials as transparent, translucent or opaque by how clearly objects can be seen through them."
+      },
+      {
+       "concept_tag": "uses-of-transparency",
+       "learning_objective": "Relate the transparency of a material to its everyday use."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH06-T5",
+     "topic_number": 5,
+     "title": "Soluble and Insoluble Materials",
+     "ncert_sections": "6.3.4",
+     "concepts": [
+      {
+       "concept_tag": "soluble-and-insoluble",
+       "learning_objective": "Classify solids as soluble or insoluble in water from observations of mixing."
+      },
+      {
+       "concept_tag": "liquids-and-gases-in-water",
+       "learning_objective": "Recognise that some liquids and gases mix or dissolve in water while others do not."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH06-T6",
+     "topic_number": 6,
+     "title": "Mass and Volume",
+     "ncert_sections": "6.3.5, 6.3.6",
+     "concepts": [
+      {
+       "concept_tag": "mass",
+       "learning_objective": "Describe mass as the property that tells how heavy or light an object is."
+      },
+      {
+       "concept_tag": "volume",
+       "learning_objective": "Describe volume as the space occupied by a substance."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH06-T7",
+     "topic_number": 7,
+     "title": "What is Matter?",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "matter-definition",
+       "learning_objective": "Define matter as anything that has mass and occupies space."
+      },
+      {
+       "concept_tag": "units-of-mass-and-volume",
+       "learning_objective": "Use and correctly write the units of mass and volume, including simple conversions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FECU1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Temperature and its Measurement",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fecu107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FECU1-CH07-T1",
+     "topic_number": 1,
+     "title": "Hot or Cold?",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "touch-unreliable-for-temperature",
+       "learning_objective": "Explain why our sense of touch cannot always correctly judge whether a body is hot or cold."
+      },
+      {
+       "concept_tag": "relative-feeling-of-hotness",
+       "learning_objective": "Predict how the same water feels to hands that were earlier kept in warm and in cold water."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH07-T2",
+     "topic_number": 2,
+     "title": "Temperature",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "temperature-measure-of-hotness",
+       "learning_objective": "State that temperature is a reliable measure of the hotness or coldness of a body and compare bodies by it."
+      },
+      {
+       "concept_tag": "kinds-of-thermometers",
+       "learning_objective": "Identify a thermometer as the device for measuring temperature and distinguish clinical from laboratory thermometers by use."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH07-T3",
+     "topic_number": 3,
+     "title": "Clinical thermometer and body temperature",
+     "ncert_sections": "7.3.1",
+     "concepts": [
+      {
+       "concept_tag": "digital-clinical-thermometer",
+       "learning_objective": "Describe the digital clinical thermometer and why it has replaced the mercury thermometer."
+      },
+      {
+       "concept_tag": "clinical-thermometer-precautions",
+       "learning_objective": "List the steps and precautions for measuring body temperature with a digital clinical thermometer."
+      },
+      {
+       "concept_tag": "normal-body-temperature",
+       "learning_objective": "Interpret normal body temperature as an average and relate armpit readings to actual body temperature."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH07-T4",
+     "topic_number": 4,
+     "title": "Scales and units of temperature",
+     "ncert_sections": "7.3.1",
+     "concepts": [
+      {
+       "concept_tag": "temperature-scales-and-units",
+       "learning_objective": "Name the Celsius, Fahrenheit and Kelvin scales, their units and the SI unit of temperature."
+      },
+      {
+       "concept_tag": "celsius-kelvin-conversion",
+       "learning_objective": "Convert a temperature from the Celsius scale to the Kelvin scale."
+      },
+      {
+       "concept_tag": "writing-temperature-units",
+       "learning_objective": "Write temperatures and their unit symbols correctly."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH07-T5",
+     "topic_number": 5,
+     "title": "Laboratory thermometer: range and smallest value",
+     "ncert_sections": "7.3.2",
+     "concepts": [
+      {
+       "concept_tag": "lab-thermometer-parts-and-range",
+       "learning_objective": "Describe the parts of a laboratory thermometer and its usual range."
+      },
+      {
+       "concept_tag": "smallest-division-value",
+       "learning_objective": "Calculate the smallest value a thermometer can read and use it to take a reading."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH07-T6",
+     "topic_number": 6,
+     "title": "Measuring temperature with a laboratory thermometer",
+     "ncert_sections": "7.3.2",
+     "concepts": [
+      {
+       "concept_tag": "lab-thermometer-correct-use",
+       "learning_objective": "Follow the correct way of measuring the temperature of water with a laboratory thermometer."
+      },
+      {
+       "concept_tag": "constant-temperature-boiling-melting",
+       "learning_objective": "Recognise that water stays at a constant temperature while boiling and ice while melting."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH07-T7",
+     "topic_number": 7,
+     "title": "Air temperature",
+     "ncert_sections": "7.3.3",
+     "concepts": [
+      {
+       "concept_tag": "air-temperature-weather-reports",
+       "learning_objective": "Interpret maximum and minimum air temperatures from weather reports and their use in forecasts."
+      },
+      {
+       "concept_tag": "anna-mani-weather-instruments",
+       "learning_objective": "Recall Anna Mani's contribution to weather measurement instruments in India."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FECU1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "A Journey through States of Water",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fecu108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FECU1-CH08-T1",
+     "topic_number": 1,
+     "title": "Ice, Water and Water's Disappearing Act",
+     "ncert_sections": "Introduction, 8.1",
+     "concepts": [
+      {
+       "concept_tag": "ice-and-water-same-substance",
+       "learning_objective": "Recognise that ice and water are two states of the same substance."
+      },
+      {
+       "concept_tag": "evaporation",
+       "learning_objective": "Define evaporation and identify everyday examples of water changing into water vapour."
+      },
+      {
+       "concept_tag": "water-vapour-and-steam",
+       "learning_objective": "Explain that water vapour is invisible and that steam is visible because of tiny water droplets."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH08-T2",
+     "topic_number": 2,
+     "title": "Another Mystery: Condensation",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "condensation",
+       "learning_objective": "Define condensation as the change of water vapour into liquid water on a cold surface."
+      },
+      {
+       "concept_tag": "evidence-for-condensation",
+       "learning_objective": "Use observations from the tumbler activities to show that outside droplets come from condensation, not seepage."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH08-T3",
+     "topic_number": 3,
+     "title": "The Different States of Water",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "properties-of-states",
+       "learning_objective": "Compare solid, liquid and gaseous states by shape, flow and spreading."
+      },
+      {
+       "concept_tag": "examples-of-states",
+       "learning_objective": "Classify common substances as solids, liquids or gases."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH08-T4",
+     "topic_number": 4,
+     "title": "Changing the States of Water",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "melting-and-freezing",
+       "learning_objective": "Define melting and freezing and give examples from daily life."
+      },
+      {
+       "concept_tag": "heating-and-cooling-change-state",
+       "learning_objective": "Explain that substances change state when they are heated or cooled."
+      },
+      {
+       "concept_tag": "connecting-the-states",
+       "learning_objective": "Link melting, freezing, evaporation and condensation to the states they connect."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH08-T5",
+     "topic_number": 5,
+     "title": "Making Water Evaporate Faster or Slower",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "exposed-area",
+       "learning_objective": "Explain how a larger exposed area makes water evaporate faster."
+      },
+      {
+       "concept_tag": "conditions-affecting-evaporation",
+       "learning_objective": "Describe how heat, air movement and humidity affect the rate of evaporation."
+      },
+      {
+       "concept_tag": "fair-test",
+       "learning_objective": "Identify the condition changed and the conditions kept the same in an evaporation investigation."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH08-T6",
+     "topic_number": 6,
+     "title": "Cooling Effect of Evaporation",
+     "ncert_sections": "8.6",
+     "concepts": [
+      {
+       "concept_tag": "evaporation-causes-cooling",
+       "learning_objective": "Explain that evaporation produces a cooling effect, with everyday examples."
+      },
+      {
+       "concept_tag": "earthen-pot-and-cooler",
+       "learning_objective": "Explain how an earthen pot and a pot-in-pot cooler keep things cool."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH08-T7",
+     "topic_number": 7,
+     "title": "Clouds, Rain and the Water Cycle",
+     "ncert_sections": "8.7",
+     "concepts": [
+      {
+       "concept_tag": "clouds-and-rain",
+       "learning_objective": "Explain how clouds and rain form through condensation of water vapour around dust particles."
+      },
+      {
+       "concept_tag": "water-cycle",
+       "learning_objective": "Describe the water cycle as the circulation of water between the Earth's surface and the atmosphere."
+      },
+      {
+       "concept_tag": "water-conservation",
+       "learning_objective": "Explain why only a small part of the Earth's water is usable and why water must be used wisely."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FECU1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Methods of Separation in Everyday Life",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fecu109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FECU1-CH09-T1",
+     "topic_number": 1,
+     "title": "Handpicking and threshing",
+     "ncert_sections": "Fig. 9.1, 9.2",
+     "concepts": [
+      {
+       "concept_tag": "handpicking",
+       "learning_objective": "Explain when and on what basis handpicking is used to separate a solid mixture."
+      },
+      {
+       "concept_tag": "threshing",
+       "learning_objective": "Describe threshing as beating stalks to separate grains and place it in the sequence of grain processing."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH09-T2",
+     "topic_number": 2,
+     "title": "Winnowing",
+     "ncert_sections": "Activity 9.1, Fig. 9.3, 9.4",
+     "concepts": [
+      {
+       "concept_tag": "winnowing",
+       "learning_objective": "Explain how wind or blown air separates heavier and lighter components of a mixture."
+      },
+      {
+       "concept_tag": "threshers",
+       "learning_objective": "State that threshers carry out threshing and winnowing together."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH09-T3",
+     "topic_number": 3,
+     "title": "Sieving",
+     "ncert_sections": "Fig. 9.5",
+     "concepts": [
+      {
+       "concept_tag": "sieving",
+       "learning_objective": "Explain that sieving separates solids whose particles differ in size."
+      },
+      {
+       "concept_tag": "sieve-hole-size",
+       "learning_objective": "Relate the size of the holes of a sieve to which particles pass through and which remain."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH09-T4",
+     "topic_number": 4,
+     "title": "Evaporation",
+     "ncert_sections": "Activity 9.2, 9.3, Fig. 9.6-9.8",
+     "concepts": [
+      {
+       "concept_tag": "evaporation",
+       "learning_objective": "Explain how evaporation separates a solid dissolved in a liquid."
+      },
+      {
+       "concept_tag": "salt-from-seawater",
+       "learning_objective": "Describe how common salt is obtained from seawater using sunlight and air."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH09-T5",
+     "topic_number": 5,
+     "title": "Sedimentation and decantation",
+     "ncert_sections": "Fig. 9.9",
+     "concepts": [
+      {
+       "concept_tag": "sedimentation",
+       "learning_objective": "Define sedimentation as the settling of a heavier insoluble component in a liquid."
+      },
+      {
+       "concept_tag": "decantation",
+       "learning_objective": "Explain decantation and its everyday uses and limits."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH09-T6",
+     "topic_number": 6,
+     "title": "Filtration",
+     "ncert_sections": "Activity 9.4, 9.5, Fig. 9.10, 9.11",
+     "concepts": [
+      {
+       "concept_tag": "filtration",
+       "learning_objective": "Explain how filtration separates insoluble solids from a liquid and name the residue and filtrate."
+      },
+      {
+       "concept_tag": "choice-of-filter",
+       "learning_objective": "Choose a suitable filter based on the size of its pores and of the particles to be removed."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH09-T7",
+     "topic_number": 7,
+     "title": "Churning and magnetic separation",
+     "ncert_sections": "Fig. 9.12",
+     "concepts": [
+      {
+       "concept_tag": "churning",
+       "learning_objective": "Explain how churning separates butter from curd or cream from milk."
+      },
+      {
+       "concept_tag": "magnetic-separation",
+       "learning_objective": "Use the magnetic nature of substances such as iron to separate them from a mixture."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH09-T8",
+     "topic_number": 8,
+     "title": "Choosing and combining methods",
+     "ncert_sections": "Activity 9.6, Summary",
+     "concepts": [
+      {
+       "concept_tag": "purpose-of-separation",
+       "learning_objective": "Distinguish separating two useful components from removing an unwanted one."
+      },
+      {
+       "concept_tag": "choosing-method",
+       "learning_objective": "Match a mixture to a suitable method of separation."
+      },
+      {
+       "concept_tag": "combining-methods",
+       "learning_objective": "Plan a sequence of methods to separate a mixture of more than two components."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FECU1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Living Creatures: Exploring their Characteristics",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fecu110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FECU1-CH10-T1",
+     "topic_number": 1,
+     "title": "What sets the living apart: movement, growth and respiration",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "movement-in-living-beings",
+       "learning_objective": "Explain how living beings, including plants such as Drosera and climbers, show movement and why movement alone does not make a thing living."
+      },
+      {
+       "concept_tag": "growth-and-nutrition",
+       "learning_objective": "State that living beings grow and need food (nutrition) for growth and development."
+      },
+      {
+       "concept_tag": "respiration-and-breathing",
+       "learning_objective": "Describe breathing as part of respiration in animals and the role of stomata in plants."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH10-T2",
+     "topic_number": 2,
+     "title": "Excretion, response to stimuli, reproduction and death",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "excretion",
+       "learning_objective": "Identify excretion as the removal of waste products in animals (sweat, urine) and in plants (droplets on leaves)."
+      },
+      {
+       "concept_tag": "response-to-stimuli",
+       "learning_objective": "Define a stimulus and give examples of responses to stimuli in animals and plants such as touch-me-not and amla."
+      },
+      {
+       "concept_tag": "reproduction-and-death",
+       "learning_objective": "Explain why reproduction is needed for the continuity of life and when a living being is said to be dead."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH10-T3",
+     "topic_number": 3,
+     "title": "Essential conditions for germination of a seed",
+     "ncert_sections": "10.2",
+     "concepts": [
+      {
+       "concept_tag": "germination-conditions-experiment",
+       "learning_objective": "Interpret the four-pot experiment to identify the conditions needed for bean seeds to germinate."
+      },
+      {
+       "concept_tag": "role-of-water-and-air",
+       "learning_objective": "Explain how water softens the seed coat and how air in soil spaces helps germination."
+      },
+      {
+       "concept_tag": "light-and-germination",
+       "learning_objective": "State that most seeds do not need light to germinate but seedlings need sunlight to grow further."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH10-T4",
+     "topic_number": 4,
+     "title": "Growth and movement in plants",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "direction-of-root-and-shoot-growth",
+       "learning_objective": "Predict that roots grow downwards and shoots grow upwards even when a seedling is inverted."
+      },
+      {
+       "concept_tag": "shoot-growth-towards-light",
+       "learning_objective": "Explain that a shoot bends towards light coming from one direction while the root keeps growing downwards."
+      },
+      {
+       "concept_tag": "jc-bose-crescograph",
+       "learning_objective": "Recall that J. C. Bose built the crescograph to record plant growth and responses to stimuli."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH10-T5",
+     "topic_number": 5,
+     "title": "Life cycle of a plant",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "stages-of-plant-life-cycle",
+       "learning_objective": "Arrange the stages in the life cycle of a bean plant from seed to fruit and death."
+      },
+      {
+       "concept_tag": "seed-to-next-generation",
+       "learning_objective": "Explain how seeds formed in the fruit start a new generation, making the process a cycle."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH10-T6",
+     "topic_number": 6,
+     "title": "Life cycle of a mosquito",
+     "ncert_sections": "10.5.1",
+     "concepts": [
+      {
+       "concept_tag": "mosquito-life-stages",
+       "learning_objective": "Sequence the egg, larva, pupa and adult stages of a mosquito and describe where each lives."
+      },
+      {
+       "concept_tag": "mosquito-breeding-control",
+       "learning_objective": "Explain how removing stagnant water or spraying kerosene disrupts the mosquito life cycle."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH10-T7",
+     "topic_number": 7,
+     "title": "Life cycle of a frog",
+     "ncert_sections": "10.5.2",
+     "concepts": [
+      {
+       "concept_tag": "frog-life-stages",
+       "learning_objective": "Sequence the spawn, embryo, tadpole, froglet and adult stages in the life cycle of a frog."
+      },
+      {
+       "concept_tag": "changes-and-habitat-in-frog-life-cycle",
+       "learning_objective": "Relate the changes in body features and habitat during a frog's life cycle to how each stage survives."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FECU1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "Nature’s Treasures",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fecu111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FECU1-CH11-T1",
+     "topic_number": 1,
+     "title": "Air",
+     "ncert_sections": "11.1",
+     "concepts": [
+      {
+       "concept_tag": "composition-of-air",
+       "learning_objective": "Recall the composition of air and the share of each gas in it."
+      },
+      {
+       "concept_tag": "oxygen-for-survival",
+       "learning_objective": "Explain why living beings need oxygen from air to survive."
+      },
+      {
+       "concept_tag": "wind-and-windmills",
+       "learning_objective": "Describe wind as moving air and how its energy is used in windmills."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH11-T2",
+     "topic_number": 2,
+     "title": "Water",
+     "ncert_sections": "11.2",
+     "concepts": [
+      {
+       "concept_tag": "availability-of-freshwater",
+       "learning_objective": "Explain why only a small fraction of Earth's water is usable freshwater."
+      },
+      {
+       "concept_tag": "saving-and-protecting-water",
+       "learning_objective": "Suggest ways to reduce wastage and pollution of water."
+      },
+      {
+       "concept_tag": "rainwater-harvesting",
+       "learning_objective": "Describe rainwater harvesting and traditional stepwells as ways to conserve water."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH11-T3",
+     "topic_number": 3,
+     "title": "Energy from the Sun",
+     "ncert_sections": "11.3",
+     "concepts": [
+      {
+       "concept_tag": "sun-main-source-of-energy",
+       "learning_objective": "Explain that the Sun is the main source of energy for all living beings."
+      },
+      {
+       "concept_tag": "uses-of-solar-energy",
+       "learning_objective": "Identify uses of the Sun's heat and light, including solar devices."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH11-T4",
+     "topic_number": 4,
+     "title": "Forests",
+     "ncert_sections": "11.4",
+     "concepts": [
+      {
+       "concept_tag": "importance-of-forests",
+       "learning_objective": "Explain how forests provide food, shelter and enrich the soil."
+      },
+      {
+       "concept_tag": "conserving-forests",
+       "learning_objective": "Describe efforts such as Van Mahotsav and the Chipko movement to protect forests."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH11-T5",
+     "topic_number": 5,
+     "title": "Soil, Rocks and Minerals",
+     "ncert_sections": "11.5",
+     "concepts": [
+      {
+       "concept_tag": "soil-formation-and-content",
+       "learning_objective": "Describe how soil is formed and what it contains."
+      },
+      {
+       "concept_tag": "rocks-and-their-uses",
+       "learning_objective": "Identify common rocks and their uses, and why rocks must be conserved."
+      },
+      {
+       "concept_tag": "minerals-and-metals",
+       "learning_objective": "State that rocks are made of minerals from which useful metals are extracted."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH11-T6",
+     "topic_number": 6,
+     "title": "Fossil Fuels",
+     "ncert_sections": "11.6",
+     "concepts": [
+      {
+       "concept_tag": "formation-of-fossil-fuels",
+       "learning_objective": "Explain how fossil fuels are formed and why their supply is limited."
+      },
+      {
+       "concept_tag": "uses-of-fossil-fuels",
+       "learning_objective": "Identify fossil fuels and their uses in transport, cooking and electricity."
+      },
+      {
+       "concept_tag": "conserving-fossil-fuels",
+       "learning_objective": "Suggest ways to reduce the use of fossil fuels and the air pollution they cause."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH11-T7",
+     "topic_number": 7,
+     "title": "Natural Resources: Renewable and Non-renewable",
+     "ncert_sections": "11.7",
+     "concepts": [
+      {
+       "concept_tag": "natural-and-human-made-resources",
+       "learning_objective": "Distinguish natural resources from human-made resources."
+      },
+      {
+       "concept_tag": "renewable-resources",
+       "learning_objective": "Classify resources that are replenished within a reasonable period as renewable."
+      },
+      {
+       "concept_tag": "non-renewable-resources",
+       "learning_objective": "Classify resources that are limited and not replenished as non-renewable."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH11-T8",
+     "topic_number": 8,
+     "title": "Resources We Use",
+     "ncert_sections": "11.8",
+     "concepts": [
+      {
+       "concept_tag": "reducing-air-pollution",
+       "learning_objective": "Suggest alternatives that reduce air pollution caused by fossil fuels."
+      },
+      {
+       "concept_tag": "responsible-use-of-resources",
+       "learning_objective": "Relate daily activities to natural resources and explain using them responsibly."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FECU1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Beyond Earth",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fecu112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FECU1-CH12-T1",
+     "topic_number": 1,
+     "title": "Stars and constellations",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "constellations",
+       "learning_objective": "Explain what constellations are and why recognising star patterns was useful for finding directions."
+      },
+      {
+       "concept_tag": "orion-sirius-taurus",
+       "learning_objective": "Identify Orion, Canis Major, Taurus and the star Sirius, and use Orion's belt to locate Sirius."
+      },
+      {
+       "concept_tag": "nakshatra",
+       "learning_objective": "Relate Indian names such as nakshatras, Ardra, Krittika and Rohini to stars and groups of stars."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH12-T2",
+     "topic_number": 2,
+     "title": "The Pole Star and night sky watching",
+     "ncert_sections": "12.1, 12.2",
+     "concepts": [
+      {
+       "concept_tag": "pole-star",
+       "learning_objective": "Use the Big Dipper to locate the Pole Star and explain how the Pole Star shows the North direction."
+      },
+      {
+       "concept_tag": "light-pollution",
+       "learning_objective": "Explain how light pollution, smoke, dust and obstacles reduce the number of stars we can see."
+      },
+      {
+       "concept_tag": "sky-watching-preparation",
+       "learning_objective": "Plan a safe and effective night sky watching session."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH12-T3",
+     "topic_number": 3,
+     "title": "The Sun: our nearest star",
+     "ncert_sections": "12.3",
+     "concepts": [
+      {
+       "concept_tag": "sun-as-a-star",
+       "learning_objective": "Describe the Sun as a star and the main source of heat and light on Earth, and explain why other stars are not seen by day."
+      },
+      {
+       "concept_tag": "sun-size-and-distance",
+       "learning_objective": "Interpret the size and distance of the Sun and use the astronomical unit to express distances."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH12-T4",
+     "topic_number": 4,
+     "title": "Planets of the Solar System",
+     "ncert_sections": "12.3",
+     "concepts": [
+      {
+       "concept_tag": "planets-and-revolution",
+       "learning_objective": "Define a planet and revolution, and explain why Pluto is now called a dwarf planet."
+      },
+      {
+       "concept_tag": "order-and-features-of-planets",
+       "learning_objective": "State the order of the eight planets and describe features of the inner and outer planets."
+      },
+      {
+       "concept_tag": "identifying-planets",
+       "learning_objective": "Distinguish planets from stars in the night sky and locate Venus at dawn or dusk."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH12-T5",
+     "topic_number": 5,
+     "title": "Moons, asteroids and comets",
+     "ncert_sections": "12.3",
+     "concepts": [
+      {
+       "concept_tag": "natural-satellites",
+       "learning_objective": "Describe natural satellites and features of the Moon, including its craters and India's Chandrayaan missions."
+      },
+      {
+       "concept_tag": "asteroids",
+       "learning_objective": "Describe asteroids and the location of the asteroid belt."
+      },
+      {
+       "concept_tag": "comets",
+       "learning_objective": "Explain how a comet's tail forms and why comets are seen only near the Sun."
+      }
+     ]
+    },
+    {
+     "topic_id": "FECU1-CH12-T6",
+     "topic_number": 6,
+     "title": "The Solar System, the Milky Way Galaxy and the Universe",
+     "ncert_sections": "12.3, 12.4, 12.5",
+     "concepts": [
+      {
+       "concept_tag": "solar-system-members",
+       "learning_objective": "Identify the members of the Solar System and explain why objects other than the Sun shine."
+      },
+      {
+       "concept_tag": "milky-way-galaxy",
+       "learning_objective": "Describe the Milky Way Galaxy as our home galaxy of which the Solar System is a part."
+      },
+      {
+       "concept_tag": "universe-and-exoplanets",
+       "learning_objective": "Explain what exoplanets are and describe the ongoing search for life in the Universe."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

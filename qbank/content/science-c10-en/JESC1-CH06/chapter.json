@@ -1,0 +1,124 @@
+{
+ "chapter_id": "JESC1-CH06",
+ "title": "Control and Coordination",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESC1-CH06-T1",
+   "topic_number": 1,
+   "title": "Nervous tissue: receptors, neurons and the synapse",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "receptors-and-neuron-structure",
+     "learning_objective": "Identify the role of receptors and the parts of a neuron through which information is acquired and conducted."
+    },
+    {
+     "concept_tag": "synaptic-transmission",
+     "learning_objective": "Explain how a nerve impulse is passed across a synapse to another neuron or to a muscle cell."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH06-T2",
+   "topic_number": 2,
+   "title": "Reflex actions and the reflex arc",
+   "ncert_sections": "6.1.1",
+   "concepts": [
+    {
+     "concept_tag": "reflex-action-nature",
+     "learning_objective": "Recognise reflex actions as quick, automatic responses and explain why they are needed."
+    },
+    {
+     "concept_tag": "reflex-arc-components",
+     "learning_objective": "Describe the pathway of a reflex arc and the role of the spinal cord in it."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH06-T3",
+   "topic_number": 3,
+   "title": "The human brain and the central nervous system",
+   "ncert_sections": "6.1.2",
+   "concepts": [
+    {
+     "concept_tag": "cns-and-pns",
+     "learning_objective": "Distinguish the central nervous system from the peripheral nervous system and describe how they communicate."
+    },
+    {
+     "concept_tag": "brain-regions-functions",
+     "learning_objective": "Relate the fore-brain, mid-brain and hind-brain (medulla, cerebellum) to the actions they control."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH06-T4",
+   "topic_number": 4,
+   "title": "Protection of nervous tissue and how muscles act",
+   "ncert_sections": "6.1.3, 6.1.4",
+   "concepts": [
+    {
+     "concept_tag": "protection-of-cns",
+     "learning_objective": "State how the brain and spinal cord are protected in the body."
+    },
+    {
+     "concept_tag": "muscle-contraction-mechanism",
+     "learning_objective": "Explain how nerve impulses cause muscle cells to change shape and produce movement."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH06-T5",
+   "topic_number": 5,
+   "title": "Movements in plants: immediate responses and tropisms",
+   "ncert_sections": "6.2, 6.2.1, 6.2.2",
+   "concepts": [
+    {
+     "concept_tag": "touch-response-sensitive-plant",
+     "learning_objective": "Explain how the sensitive plant responds to touch without nervous or muscle tissue."
+    },
+    {
+     "concept_tag": "tropic-movements",
+     "learning_objective": "Identify phototropism, geotropism, hydrotropism and chemotropism as growth movements towards or away from a stimulus."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH06-T6",
+   "topic_number": 6,
+   "title": "Chemical communication and plant hormones",
+   "ncert_sections": "6.2.2",
+   "concepts": [
+    {
+     "concept_tag": "electrical-vs-chemical-signalling",
+     "learning_objective": "Compare electrical impulses with chemical (hormonal) communication between cells."
+    },
+    {
+     "concept_tag": "plant-hormone-functions",
+     "learning_objective": "State the roles of auxin, gibberellins, cytokinins and abscisic acid in plant growth and responses."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH06-T7",
+   "topic_number": 7,
+   "title": "Hormones in animals and their regulation",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "adrenaline-emergency-response",
+     "learning_objective": "Explain how adrenaline prepares the body to deal with an emergency."
+    },
+    {
+     "concept_tag": "endocrine-glands-and-hormones",
+     "learning_objective": "Match endocrine glands with the hormones they secrete and the effects of their deficiency."
+    },
+    {
+     "concept_tag": "feedback-regulation",
+     "learning_objective": "Explain how feedback mechanisms and the hypothalamus regulate the timing and amount of hormone release."
+    }
+   ]
+  }
+ ]
+}

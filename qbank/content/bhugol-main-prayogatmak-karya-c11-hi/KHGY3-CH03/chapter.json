@@ -1,0 +1,84 @@
+{
+ "chapter_id": "KHGY3-CH03",
+ "title": "अक्षांश, देशांतर और समय",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHGY3-CH03-T1",
+   "topic_number": 1,
+   "title": "पृथ्वी की आकृति और भौगोलिक ग्रिड",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "prithvi-ki-akriti",
+     "learning_objective": "पृथ्वी की लध्वक्ष गोलाभ आकृति और संदर्भ बिंदुओं की आवश्यकता को समझना।"
+    },
+    {
+     "concept_tag": "bhaugolik-grid-nirdeshank",
+     "learning_objective": "अक्षांश और देशांतर को भौगोलिक निर्देशांक के रूप में पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH03-T2",
+   "topic_number": 2,
+   "title": "अक्षांश के समांतर",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "akshansh-samantar",
+     "learning_objective": "अक्षांश की परिभाषा, मान और समांतरों की विशेषताएँ बताना।"
+    },
+    {
+     "concept_tag": "akshansh-rekhan",
+     "learning_objective": "चाँदे की सहायता से अक्षांश के समांतर खींचने की विधि समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH03-T3",
+   "topic_number": 3,
+   "title": "देशांतर के याम्योत्तर",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "deshantar-yamyottar",
+     "learning_objective": "देशांतर, प्रधान याम्योत्तर और याम्योत्तरों की विशेषताएँ बताना।"
+    },
+    {
+     "concept_tag": "deshantar-tulna",
+     "learning_objective": "अक्षांश और देशांतर की विशेषताओं की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH03-T4",
+   "topic_number": 4,
+   "title": "देशांतर और समय",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "sthaniya-samay-ganana",
+     "learning_objective": "देशांतर के अंतर से स्थानीय समय की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH03-T5",
+   "topic_number": 5,
+   "title": "मानक समय और अंतर्राष्ट्रीय तिथि रेखा",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "manak-samay",
+     "learning_objective": "मानक याम्योत्तर, भारतीय मानक समय और समय कटिबंधों को समझना।"
+    },
+    {
+     "concept_tag": "antarrashtriya-tithi-rekha",
+     "learning_objective": "अंतर्राष्ट्रीय तिथि रेखा पार करने पर दिन में होने वाले परिवर्तन को समझना।"
+    }
+   ]
+  }
+ ]
+}

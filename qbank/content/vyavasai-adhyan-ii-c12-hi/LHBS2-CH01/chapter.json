@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LHBS2-CH01",
+ "title": "व्यावसायिक वित्त",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHBS2-CH01-T1",
+   "topic_number": 1,
+   "title": "व्यावसायिक वित्त और वित्तीय प्रबंध का अर्थ एवं भूमिका",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vyavasayik-vitt-arth",
+     "learning_objective": "व्यावसायिक वित्त का अर्थ और व्यवसाय के जीवनकाल में उसकी आवश्यकता समझाना।"
+    },
+    {
+     "concept_tag": "vittiya-prabandh-bhumika",
+     "learning_objective": "वित्तीय प्रबंध का अर्थ और वित्तीय विवरणों पर उसके प्रभाव को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS2-CH01-T2",
+   "topic_number": 2,
+   "title": "वित्तीय प्रबंध के उद्देश्य",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "dhan-adhiktamikaran",
+     "learning_objective": "अंशधारियों के धन के अधिकतमीकरण को वित्तीय प्रबंध के प्रमुख उद्देश्य के रूप में पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS2-CH01-T3",
+   "topic_number": 3,
+   "title": "वित्तीय निर्णय",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "nivesh-nirnay",
+     "learning_objective": "निवेश निर्णय, पूँजी बजटिंग और उसे प्रभावित करने वाले कारकों को समझाना।"
+    },
+    {
+     "concept_tag": "vittiyan-nirnay",
+     "learning_objective": "वित्तीयन निर्णय में ऋण और स्वामित्व कोषों के चुनाव के आधार समझाना।"
+    },
+    {
+     "concept_tag": "labhansh-nirnay",
+     "learning_objective": "लाभांश निर्णय और उसे प्रभावित करने वाले कारकों का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS2-CH01-T4",
+   "topic_number": 4,
+   "title": "वित्तीय नियोजन",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vittiya-niyojan-uddeshya",
+     "learning_objective": "वित्तीय नियोजन का अर्थ और उसके उद्देश्य बताना।"
+    },
+    {
+     "concept_tag": "vittiya-niyojan-mahatva",
+     "learning_objective": "वित्तीय नियोजन के महत्त्व का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS2-CH01-T5",
+   "topic_number": 5,
+   "title": "पूँजी संरचना",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vittiya-uttolak",
+     "learning_objective": "वित्तीय उत्तोलक और समता पर व्यापार की अवधारणा को गणना सहित समझाना।"
+    },
+    {
+     "concept_tag": "punji-sanrachna-karak",
+     "learning_objective": "पूँजी संरचना के चुनाव को प्रभावित करने वाले कारकों का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS2-CH01-T6",
+   "topic_number": 6,
+   "title": "स्थायी पूँजी",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "sthayi-punji-arth",
+     "learning_objective": "स्थायी पूँजी का अर्थ और उसके प्रबंध का महत्त्व समझाना।"
+    },
+    {
+     "concept_tag": "sthayi-punji-karak",
+     "learning_objective": "स्थायी पूँजी की आवश्यकता को प्रभावित करने वाले कारकों का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS2-CH01-T7",
+   "topic_number": 7,
+   "title": "कार्यशील पूँजी",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "karyashil-punji-arth",
+     "learning_objective": "सकल और शुद्ध कार्यशील पूँजी का अर्थ स्पष्ट करना।"
+    },
+    {
+     "concept_tag": "karyashil-punji-karak",
+     "learning_objective": "कार्यशील पूँजी की आवश्यकता को प्रभावित करने वाले कारकों का विश्लेषण करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "chapter_id": "IHSC1-CH05",
+ "title": "मिश्रण एवं उनके पृथक्करण का अन्वेषण",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSC1-CH05-T1",
+   "topic_number": 1,
+   "title": "मिश्रणों का वर्गीकरण",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "samangi-vishamangi-mishran",
+     "learning_objective": "समांगी और विषमांगी मिश्रणों में अंतर कर उनके उदाहरण पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH05-T2",
+   "topic_number": 2,
+   "title": "विलयन और उसकी सांद्रता",
+   "ncert_sections": "5.2, 5.2.1, 5.2.2",
+   "concepts": [
+    {
+     "concept_tag": "vilayan-sandrata",
+     "learning_objective": "विलेय, विलायक और विलयन की सांद्रता का अर्थ समझना।"
+    },
+    {
+     "concept_tag": "pratishat-sandrata",
+     "learning_objective": "द्रव्यमान/द्रव्यमान, द्रव्यमान/आयतन और आयतन/आयतन प्रतिशत की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH05-T3",
+   "topic_number": 3,
+   "title": "पदार्थों की विलेयता",
+   "ncert_sections": "5.2.3",
+   "concepts": [
+    {
+     "concept_tag": "vileyata-santript",
+     "learning_objective": "विलेयता और संतृप्त विलयन का अर्थ तथा उन पर ताप का प्रभाव समझना।"
+    },
+    {
+     "concept_tag": "vileyata-vakra",
+     "learning_objective": "विलेयता वक्र अथवा सारणी से आँकड़े पढ़कर निष्कर्ष निकालना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH05-T4",
+   "topic_number": 4,
+   "title": "समांगी मिश्रणों के पृथक्करण की विधियाँ",
+   "ncert_sections": "5.3, 5.3.1, 5.3.2, 5.3.3",
+   "concepts": [
+    {
+     "concept_tag": "kristalikaran",
+     "learning_objective": "क्रिस्टलीकरण द्वारा संतृप्त विलयन से शुद्ध ठोस प्राप्त करने की विधि समझना।"
+    },
+    {
+     "concept_tag": "aasavan",
+     "learning_objective": "क्वथनांकों के अंतर के आधार पर आसवन और प्रभाजी आसवन का चयन करना।"
+    },
+    {
+     "concept_tag": "kagaj-varnlekhiki",
+     "learning_objective": "कागज वर्णलेखिकी द्वारा रंगीन घटकों के पृथक्करण का सिद्धांत समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH05-T5",
+   "topic_number": 5,
+   "title": "विषमांगी मिश्रणों के घटकों का पृथक्करण",
+   "ncert_sections": "5.4, 5.4.1, 5.4.2",
+   "concepts": [
+    {
+     "concept_tag": "amishraniya-drav",
+     "learning_objective": "पृथक्कारी कीप द्वारा अमिश्रणीय द्रवों को घनत्व के आधार पर अलग करना।"
+    },
+    {
+     "concept_tag": "urdhvapatan",
+     "learning_objective": "ऊर्ध्वपातन और निक्षेपण द्वारा ऊर्ध्वपातित होने वाले ठोस को अलग करना।"
+    },
+    {
+     "concept_tag": "mishradhatu",
+     "learning_objective": "मिश्रधातु को समांगी मिश्रण के रूप में पहचानना और उसके उदाहरण जानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH05-T6",
+   "topic_number": 6,
+   "title": "निलंबन तथा अपकेंद्रण और स्कंदन",
+   "ncert_sections": "5.4.3",
+   "concepts": [
+    {
+     "concept_tag": "nilamban",
+     "learning_objective": "निलंबन के गुण और उसके कणों के आकार को पहचानना।"
+    },
+    {
+     "concept_tag": "apkendran",
+     "learning_objective": "अपकेंद्रण द्वारा भारी और हल्के घटकों के पृथक्करण को समझाना।"
+    },
+    {
+     "concept_tag": "skandan",
+     "learning_objective": "फिटकरी जैसे स्कंदक द्वारा स्कंदन की प्रक्रिया समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH05-T7",
+   "topic_number": 7,
+   "title": "कोलॉइड और टिंडल प्रभाव",
+   "ncert_sections": "5.4.4, 5.5",
+   "concepts": [
+    {
+     "concept_tag": "colloid",
+     "learning_objective": "विलयन, कोलॉइड और निलंबन की कण आकार के आधार पर तुलना करना।"
+    },
+    {
+     "concept_tag": "tyndall-prabhav",
+     "learning_objective": "टिंडल प्रभाव के आधार पर मिश्रणों के प्रकार का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "payas",
+     "learning_objective": "परिक्षिप्त प्रावस्था, परिक्षेपण माध्यम और पायस को पहचानना।"
+    }
+   ]
+  }
+ ]
+}

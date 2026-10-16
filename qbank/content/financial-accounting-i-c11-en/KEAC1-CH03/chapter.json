@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KEAC1-CH03",
+ "title": "Recording of Transactions - I",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEAC1-CH03-T1",
+   "topic_number": 1,
+   "title": "Business Transactions and Source Documents",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "business-transaction-dual-aspect",
+     "learning_objective": "Explain that a business transaction is an exchange of economic consideration with a give and a take aspect recorded in at least two accounts."
+    },
+    {
+     "concept_tag": "source-documents-vouchers",
+     "learning_objective": "Identify source documents such as cash memo, invoice, pay-in-slip and cheque as evidence on which all recording is based."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH03-T2",
+   "topic_number": 2,
+   "title": "Preparation of Accounting Vouchers",
+   "ncert_sections": "3.1.1",
+   "concepts": [
+    {
+     "concept_tag": "types-of-vouchers",
+     "learning_objective": "Distinguish transaction, debit, credit and journal (complex) vouchers by the number of debits and credits involved."
+    },
+    {
+     "concept_tag": "essential-elements-of-voucher",
+     "learning_objective": "State the essential elements an accounting voucher must contain and how long vouchers are preserved."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH03-T3",
+   "topic_number": 3,
+   "title": "Accounting Equation",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "accounting-equation-forms",
+     "learning_objective": "State the accounting equation A = L + C and use its derived forms to find a missing figure."
+    },
+    {
+     "concept_tag": "effect-of-transactions-on-equation",
+     "learning_objective": "Analyse the effect of transactions on assets, liabilities and capital and show that the equation stays balanced."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH03-T4",
+   "topic_number": 4,
+   "title": "Using Debit and Credit",
+   "ncert_sections": "3.3, 3.3.1",
+   "concepts": [
+    {
+     "concept_tag": "t-account-debit-credit",
+     "learning_objective": "Describe the T-account and explain that debit means the left side and credit the right side of an account."
+    },
+    {
+     "concept_tag": "rules-of-debit-and-credit",
+     "learning_objective": "Apply the rules of debit and credit to assets, liabilities, capital, expenses and revenues."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH03-T5",
+   "topic_number": 5,
+   "title": "Books of Original Entry and the Journal",
+   "ncert_sections": "3.4, 3.4.1",
+   "concepts": [
+    {
+     "concept_tag": "journal-and-journalising",
+     "learning_objective": "Explain the journal as the book of original entry and the purpose of its columns, narration and L.F."
+    },
+    {
+     "concept_tag": "simple-and-compound-entries",
+     "learning_objective": "Record simple and compound journal entries for transactions involving two or more accounts."
+    },
+    {
+     "concept_tag": "gst-journal-entries",
+     "learning_objective": "Record journal entries for purchases and sales under CGST, SGST and IGST and compute net GST payable after set-off."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH03-T6",
+   "topic_number": 6,
+   "title": "The Ledger and Posting from Journal",
+   "ncert_sections": "3.5, 3.5.1, 3.6",
+   "concepts": [
+    {
+     "concept_tag": "ledger-utility-and-format",
+     "learning_objective": "Explain the ledger as the principal book and distinguish it from the journal."
+    },
+    {
+     "concept_tag": "permanent-and-temporary-accounts",
+     "learning_objective": "Classify ledger accounts into permanent accounts and temporary accounts."
+    },
+    {
+     "concept_tag": "posting-from-journal",
+     "learning_objective": "Describe the steps of posting journal entries to the debit and credit sides of ledger accounts."
+    }
+   ]
+  }
+ ]
+}

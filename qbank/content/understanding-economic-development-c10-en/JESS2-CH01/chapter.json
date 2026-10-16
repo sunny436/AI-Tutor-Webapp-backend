@@ -1,0 +1,120 @@
+{
+ "chapter_id": "JESS2-CH01",
+ "title": "Development",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESS2-CH01-T1",
+   "topic_number": 1,
+   "title": "What development promises: different people, different goals",
+   "ncert_sections": "Different people, different goals",
+   "concepts": [
+    {
+     "concept_tag": "different-developmental-goals",
+     "learning_objective": "Explain why persons in different life situations have different developmental goals."
+    },
+    {
+     "concept_tag": "conflicting-developmental-goals",
+     "learning_objective": "Recognise that what is development for one person may be harmful for another."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS2-CH01-T2",
+   "topic_number": 2,
+   "title": "Income and other goals",
+   "ncert_sections": "Income and other goals",
+   "concepts": [
+    {
+     "concept_tag": "non-material-goals",
+     "learning_objective": "Identify non-material goals such as equal treatment, freedom, security and respect alongside income."
+    },
+    {
+     "concept_tag": "mix-of-goals",
+     "learning_objective": "Explain that people look at a mix of income and non-income goals when making choices."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS2-CH01-T3",
+   "topic_number": 3,
+   "title": "National development",
+   "ncert_sections": "National development",
+   "concepts": [
+    {
+     "concept_tag": "national-development-choices",
+     "learning_objective": "Explain that notions of national development differ and must be judged by fairness and how many people benefit."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS2-CH01-T4",
+   "topic_number": 4,
+   "title": "Comparing countries and states: per capita income and averages",
+   "ncert_sections": "How to compare different countries or states?; Average income",
+   "concepts": [
+    {
+     "concept_tag": "per-capita-income",
+     "learning_objective": "Define per capita income and explain why it is used to compare countries."
+    },
+    {
+     "concept_tag": "world-bank-classification",
+     "learning_objective": "State the World Bank's criterion for classifying countries."
+    },
+    {
+     "concept_tag": "averages-hide-disparities",
+     "learning_objective": "Calculate averages and explain why they can hide disparities in distribution."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS2-CH01-T5",
+   "topic_number": 5,
+   "title": "Income and other criteria; public facilities",
+   "ncert_sections": "Income and other criteria; Public facilities",
+   "concepts": [
+    {
+     "concept_tag": "health-education-indicators",
+     "learning_objective": "Interpret infant mortality rate, literacy rate and net attendance ratio to compare states."
+    },
+    {
+     "concept_tag": "public-facilities",
+     "learning_objective": "Explain why collective provision of health, education and PDS improves well-being."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS2-CH01-T6",
+   "topic_number": 6,
+   "title": "Human Development Report",
+   "ncert_sections": "Human Development Report",
+   "concepts": [
+    {
+     "concept_tag": "hdi-criteria",
+     "learning_objective": "State the criteria the UNDP's Human Development Report uses to compare countries."
+    },
+    {
+     "concept_tag": "india-and-neighbours",
+     "learning_objective": "Interpret Human Development Report data comparing India with its neighbours."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS2-CH01-T7",
+   "topic_number": 7,
+   "title": "Sustainability of development",
+   "ncert_sections": "Sustainability of development",
+   "concepts": [
+    {
+     "concept_tag": "renewable-nonrenewable-resources",
+     "learning_objective": "Distinguish renewable from non-renewable resources with examples such as groundwater and crude oil."
+    },
+    {
+     "concept_tag": "sustainable-development",
+     "learning_objective": "Explain why development must be sustainable for future generations."
+    }
+   ]
+  }
+ ]
+}

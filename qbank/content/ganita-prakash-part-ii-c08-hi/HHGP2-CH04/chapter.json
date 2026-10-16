@@ -1,0 +1,132 @@
+{
+ "chapter_id": "HHGP2-CH04",
+ "title": "कुछ ज्यामितीय संरचनाओं की खोज",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP2-CH04-T1",
+   "topic_number": 1,
+   "title": "खंडक: स्व-समरूपता, प्रकृति और कला",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "swa-samroopta",
+     "learning_objective": "खंडक को ऐसी स्व-समान आकृति के रूप में पहचानना जिसमें वही प्रतिरूप छोटे-छोटे मापों पर दोहराया जाता है।"
+    },
+    {
+     "concept_tag": "kala-mein-khandak",
+     "learning_objective": "मंदिरों, कपड़ों और चित्रकला में खंडक जैसे प्रतिरूपों के उदाहरण पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH04-T2",
+   "topic_number": 2,
+   "title": "सिएरपिंस्की चटाई और सिएरपिंस्की त्रिभुज",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "sierpinski-chatai",
+     "learning_objective": "सिएरपिंस्की चटाई के प्रत्येक चरण में शेष वर्गों, छिद्रों और क्षेत्रफल की गणना करना।"
+    },
+    {
+     "concept_tag": "sierpinski-tribhuj",
+     "learning_objective": "सिएरपिंस्की त्रिभुज के प्रत्येक चरण में शेष त्रिभुजों, छिद्रों और क्षेत्रफल की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH04-T3",
+   "topic_number": 3,
+   "title": "कोच हिमकण",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "koch-rachna",
+     "learning_objective": "कोच हिमकण की रचना के चरणों और भुजाओं की संख्या का प्रतिरूप समझना।"
+    },
+    {
+     "concept_tag": "koch-parimap",
+     "learning_objective": "कोच हिमकण के n-वें चरण का परिमाप ज्ञात करना और उसकी वृद्धि की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH04-T4",
+   "topic_number": 4,
+   "title": "ठोसों का दृश्यांकन: रूपरेखा, फलक, किनारे और शीर्ष",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "thos-ki-ruprekha",
+     "learning_objective": "किसी ठोस की विभिन्न दृष्टिकोणों से दिखने वाली रूपरेखाओं की कल्पना करना।"
+    },
+    {
+     "concept_tag": "prism-pyramid-ganana",
+     "learning_objective": "प्रिज़्म और पिरामिड के फलकों, किनारों तथा शीर्षों की संख्या ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH04-T5",
+   "topic_number": 5,
+   "title": "ठोसों के जाल",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "ghan-ka-jaal",
+     "learning_objective": "घन, चतुष्फलक, अष्टफलक आदि के जालों को पहचानना और उनकी संख्या जानना।"
+    },
+    {
+     "concept_tag": "belan-shanku-jaal",
+     "learning_objective": "बेलन और शंकु के जाल का आकार तथा उसकी मापें बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH04-T6",
+   "topic_number": 6,
+   "title": "घनाभ पर सबसे छोटा मार्ग",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "sabse-chhota-marg",
+     "learning_objective": "जाल की सहायता से घनाभ की सतह पर दो बिंदुओं के बीच सबसे छोटा मार्ग ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH04-T7",
+   "topic_number": 7,
+   "title": "प्रक्षेप, तीन दृश्य और छाया",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "prakshep",
+     "learning_objective": "किसी बिंदु और रेखा के प्रक्षेप को समझना तथा प्रक्षेपित लंबाई की तुलना वास्तविक लंबाई से करना।"
+    },
+    {
+     "concept_tag": "agra-urdhva-parshv-drishya",
+     "learning_objective": "किसी ठोस के अग्र दृश्य, ऊर्ध्व दृश्य और पार्श्व दृश्य पहचानना।"
+    },
+    {
+     "concept_tag": "chhaya-aur-samantar",
+     "learning_objective": "छाया और प्रक्षेप का संबंध तथा समांतर रेखाओं के प्रक्षेप का गुण समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP2-CH04-T8",
+   "topic_number": 8,
+   "title": "समदूरीक प्रक्षेप और समदूरीक ग्रिड",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "samdurik-prakshep",
+     "learning_objective": "घन के समदूरीक प्रक्षेप और समदूरीक ग्रिड पर ठोस बनाने की विधि समझना।"
+    }
+   ]
+  }
+ ]
+}

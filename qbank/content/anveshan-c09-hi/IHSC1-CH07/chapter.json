@@ -1,0 +1,140 @@
+{
+ "chapter_id": "IHSC1-CH07",
+ "title": "कार्य, ऊर्जा एवं सरल मशीनें",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSC1-CH07-T1",
+   "topic_number": 1,
+   "title": "नियत बल द्वारा किया गया कार्य",
+   "ncert_sections": "7.1, 7.1.1, 7.1.2",
+   "concepts": [
+    {
+     "concept_tag": "karya-ki-paribhasha",
+     "learning_objective": "नियत बल द्वारा किए गए कार्य को बल और बल की दिशा में विस्थापन के गुणनफल के रूप में परिभाषित कर जूल इकाई में गणना करना।"
+    },
+    {
+     "concept_tag": "shunya-karya",
+     "learning_objective": "पहचानना कि बल शून्य, विस्थापन शून्य या बल के लंबवत विस्थापन होने पर किया गया कार्य शून्य होता है।"
+    },
+    {
+     "concept_tag": "dhanatmak-rinatmak-karya",
+     "learning_objective": "बल और विस्थापन की आपेक्षिक दिशाओं के आधार पर धनात्मक और ऋणात्मक कार्य में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH07-T2",
+   "topic_number": 2,
+   "title": "कार्य-ऊर्जा प्रमेय और ऊर्जा के रूप",
+   "ncert_sections": "7.2, 7.3",
+   "concepts": [
+    {
+     "concept_tag": "karya-urja-pramey",
+     "learning_objective": "समझना कि किसी वस्तु पर किया गया कार्य उसकी ऊर्जा में परिवर्तन के बराबर होता है।"
+    },
+    {
+     "concept_tag": "urja-ke-roop",
+     "learning_objective": "ऊर्जा के विभिन्न रूपों को पहचानना और दैनिक उदाहरणों में ऊर्जा रूपांतरण बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH07-T3",
+   "topic_number": 3,
+   "title": "गतिज ऊर्जा",
+   "ncert_sections": "7.4, 7.4.1",
+   "concepts": [
+    {
+     "concept_tag": "gatij-urja",
+     "learning_objective": "गति के कारण वस्तु की ऊर्जा को गतिज ऊर्जा के रूप में पहचानकर K = ½mv² से गणना करना।"
+    },
+    {
+     "concept_tag": "gatij-urja-veg-sambandh",
+     "learning_objective": "गतिज ऊर्जा पर द्रव्यमान और वेग के परिवर्तन के प्रभाव का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH07-T4",
+   "topic_number": 4,
+   "title": "स्थितिज ऊर्जा",
+   "ncert_sections": "7.4.2",
+   "concepts": [
+    {
+     "concept_tag": "sthitij-urja-vinyas",
+     "learning_objective": "पहचानना कि विरूपण या निकाय में वस्तुओं की आपेक्षिक स्थितियों के कारण स्थितिज ऊर्जा संचित होती है।"
+    },
+    {
+     "concept_tag": "gurutviya-sthitij-urja",
+     "learning_objective": "पृथ्वी के पृष्ठ के निकट गुरुत्वीय स्थितिज ऊर्जा U = mgh की गणना और व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH07-T5",
+   "topic_number": 5,
+   "title": "यांत्रिक ऊर्जा का संरक्षण",
+   "ncert_sections": "7.4.3",
+   "concepts": [
+    {
+     "concept_tag": "yantrik-urja-sanrakshan",
+     "learning_objective": "गुरुत्वीय बल के अधीन गति में गतिज और स्थितिज ऊर्जा के योग के संरक्षण का उपयोग करना।"
+    },
+    {
+     "concept_tag": "sarl-lolak-urja",
+     "learning_objective": "सरल लोलक में ऊर्जा रूपांतरण और घर्षण के कारण उसके रुकने की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH07-T6",
+   "topic_number": 6,
+   "title": "शक्ति",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "shakti",
+     "learning_objective": "शक्ति को कार्य करने की दर के रूप में परिभाषित कर वाट इकाई में उसकी गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH07-T7",
+   "topic_number": 7,
+   "title": "सरल मशीनें: घिरनी और आनत तल",
+   "ncert_sections": "7.6, 7.6.1, 7.6.2",
+   "concepts": [
+    {
+     "concept_tag": "yantrik-labh",
+     "learning_objective": "यांत्रिक लाभ को भार और आयास के अनुपात के रूप में परिभाषित करना।"
+    },
+    {
+     "concept_tag": "ghirni",
+     "learning_objective": "स्थिर घिरनी और घिरनी निकाय द्वारा दी जाने वाली सुविधा और यांत्रिक लाभ को समझना।"
+    },
+    {
+     "concept_tag": "aanat-tal",
+     "learning_objective": "आनत तल के यांत्रिक लाभ L/h की गणना करना और समझना कि कुल कार्य कम नहीं होता।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH07-T8",
+   "topic_number": 8,
+   "title": "उत्तोलक",
+   "ncert_sections": "7.6.3",
+   "concepts": [
+    {
+     "concept_tag": "uttolak-santulan",
+     "learning_objective": "आयास × आयास भुजा = भार × भार भुजा का उपयोग कर उत्तोलक का संतुलन और यांत्रिक लाभ ज्ञात करना।"
+    },
+    {
+     "concept_tag": "uttolak-ke-varg",
+     "learning_objective": "आलंब, भार और आयास की स्थितियों के आधार पर उत्तोलकों के तीन वर्गों को पहचानना।"
+    }
+   ]
+  }
+ ]
+}

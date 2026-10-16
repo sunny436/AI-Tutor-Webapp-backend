@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LHCH1-CH01",
+ "title": "विलयन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHCH1-CH01-T1",
+   "topic_number": 1,
+   "title": "विलयनों के प्रकार",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "vilayan-ke-prakar",
+     "learning_objective": "विद्यार्थी विलेय और विलायक की भौतिक अवस्था के आधार पर विलयनों के प्रकार उदाहरण सहित पहचान सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH01-T2",
+   "topic_number": 2,
+   "title": "विलयनों की सांद्रता को व्यक्त करना",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "dravyaman-pratishat-ppm",
+     "learning_objective": "विद्यार्थी द्रव्यमान प्रतिशत तथा पार्ट्स पर मिलियन में सांद्रता व्यक्त करने का अर्थ समझा सकेगा।"
+    },
+    {
+     "concept_tag": "molarta-molalta",
+     "learning_objective": "विद्यार्थी मोलरता और मोललता का परिकलन कर सकेगा तथा उनकी ताप-निर्भरता में अंतर बता सकेगा।"
+    },
+    {
+     "concept_tag": "mol-ansh",
+     "learning_objective": "विद्यार्थी किसी विलयन में घटकों के मोल-अंश की गणना कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH01-T3",
+   "topic_number": 3,
+   "title": "विलेयता",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "thos-ki-vileyta",
+     "learning_objective": "विद्यार्थी द्रव में ठोस की विलेयता पर ताप और प्रकृति के प्रभाव को समझा सकेगा।"
+    },
+    {
+     "concept_tag": "henry-niyam",
+     "learning_objective": "विद्यार्थी हेनरी के नियम का कथन कर उसके आधार पर गैसों की विलेयता का परिकलन कर सकेगा।"
+    },
+    {
+     "concept_tag": "henry-niyam-anuprayog",
+     "learning_objective": "विद्यार्थी हेनरी के नियम के दैनिक जीवन के अनुप्रयोगों की व्याख्या कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH01-T4",
+   "topic_number": 4,
+   "title": "द्रवीय विलयनों का वाष्प दाब",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "raoult-niyam-vashpashil",
+     "learning_objective": "विद्यार्थी वाष्पशील द्रवों के विलयन के लिए राउल्ट नियम का उपयोग कर कुल वाष्प दाब और वाष्प-संघटन ज्ञात कर सकेगा।"
+    },
+    {
+     "concept_tag": "raoult-ajavashpashil-viley",
+     "learning_objective": "विद्यार्थी अवाष्पशील विलेय के कारण वाष्प दाब में आपेक्षिक अवनमन का परिकलन कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH01-T5",
+   "topic_number": 5,
+   "title": "आदर्श तथा अनादर्श विलयन",
+   "ncert_sections": "1.5",
+   "concepts": [
+    {
+     "concept_tag": "adarsh-vilayan",
+     "learning_objective": "विद्यार्थी आदर्श विलयन की शर्तें तथा उदाहरण बता सकेगा।"
+    },
+    {
+     "concept_tag": "raoult-vichalan",
+     "learning_objective": "विद्यार्थी अंतराआण्विक आकर्षणों के आधार पर राउल्ट नियम से धनात्मक और ऋणात्मक विचलन में अंतर कर सकेगा।"
+    },
+    {
+     "concept_tag": "sthirkvathi",
+     "learning_objective": "विद्यार्थी न्यूनतम और अधिकतम क्वथनांकी स्थिरक्वाथी मिश्रणों को उदाहरण सहित पहचान सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH01-T6",
+   "topic_number": 6,
+   "title": "अणुसंख्य गुणधर्म और मोलर द्रव्यमान का निर्धारण",
+   "ncert_sections": "1.6",
+   "concepts": [
+    {
+     "concept_tag": "kvathanank-unnayan",
+     "learning_objective": "विद्यार्थी क्वथनांक के उन्नयन का उपयोग कर विलयन का क्वथनांक ज्ञात कर सकेगा।"
+    },
+    {
+     "concept_tag": "himank-avnaman",
+     "learning_objective": "विद्यार्थी हिमांक के अवनमन से विलेय का मोलर द्रव्यमान परिकलित कर सकेगा।"
+    },
+    {
+     "concept_tag": "parasaran-dab",
+     "learning_objective": "विद्यार्थी परासरण, परासरण दाब, समपरासरी विलयन तथा प्रतिलोम परासरण की व्याख्या कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH01-T7",
+   "topic_number": 7,
+   "title": "असामान्य मोलर द्रव्यमान",
+   "ncert_sections": "1.7",
+   "concepts": [
+    {
+     "concept_tag": "vant-hoff-gunank",
+     "learning_objective": "विद्यार्थी वान्ट हॉफ़ गुणांक की परिभाषा देकर संशोधित अणुसंख्य गुणधर्म परिकलित कर सकेगा।"
+    },
+    {
+     "concept_tag": "viyojan-sanguman",
+     "learning_objective": "विद्यार्थी विलेय के वियोजन और संगुणन का प्रेक्षित मोलर द्रव्यमान पर प्रभाव विश्लेषित कर सकेगा।"
+    }
+   ]
+  }
+ ]
+}

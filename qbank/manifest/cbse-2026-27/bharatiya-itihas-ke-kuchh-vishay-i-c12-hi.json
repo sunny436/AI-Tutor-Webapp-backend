@@ -1,0 +1,585 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "bharatiya-itihas-ke-kuchh-vishay-i-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "history",
+  "language": "hindi",
+  "title": "Bharatiya Itihas ke kuchh Vishay-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhhs1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHHS1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "ईंटें, मनके तथा अस्थियाँ — हड़प्पा सभ्यता",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhhs101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHHS1-CH01-T1",
+     "topic_number": 1,
+     "title": "आरंभ, निर्वाह के तरीके और कृषि प्रौद्योगिकी",
+     "ncert_sections": "प्रस्तावना, 1, 2, 2.1",
+     "concepts": [
+      {
+       "concept_tag": "harappa-kaal-kram",
+       "learning_objective": "विद्यार्थी हड़प्पा सभ्यता के प्रारंभिक, परिपक्व और उत्तर चरणों का काल-क्रम पहचानता है।"
+      },
+      {
+       "concept_tag": "nirvah-ke-tarike",
+       "learning_objective": "विद्यार्थी जले अनाज, बीजों और हड्डियों से हड़प्पावासियों के आहार के पुनर्निर्माण को समझता है।"
+      },
+      {
+       "concept_tag": "krishi-praudyogiki",
+       "learning_objective": "विद्यार्थी हल, जुते खेत और सिंचाई के साक्ष्यों से कृषि तकनीकों का विश्लेषण करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH01-T2",
+     "topic_number": 2,
+     "title": "मोहनजोदड़ो: एक नियोजित शहरी केंद्र",
+     "ncert_sections": "3, 3.1, 3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "nagar-niyojan",
+       "learning_objective": "विद्यार्थी दुर्ग, निचले शहर, चबूतरों और मानक ईंटों को नगर-नियोजन के प्रमाण के रूप में पहचानता है।"
+      },
+      {
+       "concept_tag": "jal-nikas-pranali",
+       "learning_objective": "विद्यार्थी नालियों और गृह-स्थापत्य की विशेषताओं की व्याख्या करता है।"
+      },
+      {
+       "concept_tag": "durg-mahasnanagar",
+       "learning_objective": "विद्यार्थी दुर्ग पर स्थित मालगोदाम और विशाल स्नानागार के स्वरूप और उपयोग को समझता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH01-T3",
+     "topic_number": 3,
+     "title": "सामाजिक भिन्नताओं का अवलोकन",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "shavadhan",
+       "learning_objective": "विद्यार्थी शवाधानों के आधार पर सामाजिक भिन्नता के अनुमान की सीमाएँ समझता है।"
+      },
+      {
+       "concept_tag": "vilasita-vastuen",
+       "learning_objective": "विद्यार्थी उपयोगी और विलासिता की वस्तुओं के वर्गीकरण तथा उनके वितरण का विश्लेषण करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH01-T4",
+     "topic_number": 4,
+     "title": "शिल्प-उत्पादन और माल प्राप्त करने के तरीके",
+     "ncert_sections": "5, 5.1, 6, 6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "manke-nirman",
+       "learning_objective": "विद्यार्थी चन्हुदड़ो में मनके बनाने की सामग्री और तकनीकों का वर्णन करता है।"
+      },
+      {
+       "concept_tag": "utpadan-kendra-pehchan",
+       "learning_objective": "विद्यार्थी शिल्प-उत्पादन केंद्रों की पहचान के पुरातात्विक संकेतक बताता है।"
+      },
+      {
+       "concept_tag": "sudur-sampark",
+       "learning_objective": "विद्यार्थी उपमहाद्वीप के भीतर और ओमान, दिलमुन व मेसोपोटामिया से संपर्क के साक्ष्यों का विश्लेषण करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH01-T5",
+     "topic_number": 5,
+     "title": "मुहरें, लिपि तथा बाट",
+     "ncert_sections": "7.1, 7.2, 7.3",
+     "concepts": [
+      {
+       "concept_tag": "muhar-mudrankan",
+       "learning_objective": "विद्यार्थी लंबी दूरी के संपर्क में मुहरों और मुद्रांकनों की भूमिका समझाता है।"
+      },
+      {
+       "concept_tag": "rahasyamay-lipi",
+       "learning_objective": "विद्यार्थी हड़प्पा लिपि की विशेषताएँ बताता है।"
+      },
+      {
+       "concept_tag": "baat-pranali",
+       "learning_objective": "विद्यार्थी बाटों की द्विआधारी और दशमलव प्रणाली को पहचानता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH01-T6",
+     "topic_number": 6,
+     "title": "प्राचीन सत्ता और सभ्यता का अंत",
+     "ncert_sections": "8, 8.1, 9, स्रोत 3",
+     "concepts": [
+      {
+       "concept_tag": "prachin-satta",
+       "learning_objective": "विद्यार्थी हड़प्पा समाज में सत्ता के स्वरूप पर विद्वानों के मतों का मूल्यांकन करता है।"
+      },
+      {
+       "concept_tag": "sabhyata-ka-ant",
+       "learning_objective": "विद्यार्थी हड़प्पा सभ्यता के पतन के कारणों और उत्तर हड़प्पा संस्कृतियों का विश्लेषण करता है।"
+      },
+      {
+       "concept_tag": "rakhigarhi-anuvanshiki",
+       "learning_objective": "विद्यार्थी राखीगढ़ी के पुरा-आनुवंशिक शोध के निष्कर्ष समझता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH01-T7",
+     "topic_number": 7,
+     "title": "हड़प्पा सभ्यता की खोज और अतीत को जोड़ने की समस्याएँ",
+     "ncert_sections": "10, 10.1, 10.2, 10.3, 11, 11.1, 11.2",
+     "concepts": [
+      {
+       "concept_tag": "khoj-ka-itihas",
+       "learning_objective": "विद्यार्थी कनिंघम, मार्शल और व्हीलर के योगदान और कार्य-पद्धतियों की तुलना करता है।"
+      },
+      {
+       "concept_tag": "starikaran",
+       "learning_objective": "विद्यार्थी स्तरीकरण के सिद्धांत और खोजों के वर्गीकरण को समझता है।"
+      },
+      {
+       "concept_tag": "dharmik-vyakhya",
+       "learning_objective": "विद्यार्थी धार्मिक प्रथाओं की पुरातात्विक व्याख्या की समस्याओं का मूल्यांकन करता है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHHS1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "राजा, किसान और नगर: आरंभिक राज्य और अर्थव्यवस्थाएँ (लगभग 600 ई.पू.-600 ईसवी)",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhhs102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHHS1-CH02-T1",
+     "topic_number": 1,
+     "title": "प्रिंसेप और पियदस्सी: अभिलेखों का अध्ययन",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "prinsep-aur-piyadassi",
+       "learning_objective": "जेम्स प्रिंसेप द्वारा ब्राह्मी और खरोष्ठी लिपियों के अर्थ निकालने का महत्त्व समझना।"
+      },
+      {
+       "concept_tag": "abhilekh-ki-prakriti",
+       "learning_objective": "अभिलेखों की प्रकृति, भाषा और तिथि निर्धारण की विधि को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH02-T2",
+     "topic_number": 2,
+     "title": "प्रारंभिक राज्य: सोलह महाजनपद और मगध",
+     "ncert_sections": "2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "solah-mahajanapad",
+       "learning_objective": "महाजनपदों, गणों और संघों की प्रमुख विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "magadh-ka-utkarsh",
+       "learning_objective": "मगध के सबसे शक्तिशाली महाजनपद बनने के कारणों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH02-T3",
+     "topic_number": 3,
+     "title": "एक आरंभिक साम्राज्य: मौर्य",
+     "ncert_sections": "3.1, 3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "maurya-itihas-ke-srot",
+       "learning_objective": "मौर्य इतिहास के पुनर्निर्माण में प्रयुक्त स्रोतों की पहचान करना।"
+      },
+      {
+       "concept_tag": "maurya-prashasan",
+       "learning_objective": "मौर्य प्रशासन के राजनीतिक केंद्रों, सैनिक व्यवस्था और धम्म की भूमिका समझना।"
+      },
+      {
+       "concept_tag": "samrajya-ka-mahattva",
+       "learning_objective": "मौर्य साम्राज्य के ऐतिहासिक महत्त्व का संतुलित मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH02-T4",
+     "topic_number": 4,
+     "title": "राजत्व के नए सिद्धांत",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "dakshin-ke-sardar-aur-raja",
+       "learning_objective": "दक्षिण के सरदारों और सरदारी तंत्र की विशेषताओं को राजाओं से अलग पहचानना।"
+      },
+      {
+       "concept_tag": "daivik-rajatva",
+       "learning_objective": "कुषाण और गुप्त शासकों द्वारा उच्च या दैवी स्थिति के दावों के तरीकों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH02-T5",
+     "topic_number": 5,
+     "title": "बदलता हुआ देहात",
+     "ncert_sections": "5.1, 5.2, 5.3, 5.4",
+     "concepts": [
+      {
+       "concept_tag": "upaj-badhane-ke-tarike",
+       "learning_objective": "हल की खेती, धान रोपाई और सिंचाई जैसे उपज बढ़ाने के तरीकों को समझना।"
+      },
+      {
+       "concept_tag": "gramin-samaj-mein-vibhed",
+       "learning_objective": "जातक कथाओं और संगम ग्रंथों के आधार पर ग्रामीण समाज के विभेदों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "bhoomidan-aur-agrahar",
+       "learning_objective": "भूमिदान, अग्रहार और नए ग्रामीण अभिजात वर्ग के उदय का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH02-T6",
+     "topic_number": 6,
+     "title": "नगर और व्यापार",
+     "ncert_sections": "6.1, 6.2, 6.3, 6.4",
+     "concepts": [
+      {
+       "concept_tag": "naye-nagar-aur-shreni",
+       "learning_objective": "नए नगरों की अवस्थिति, नगरीय जनसंख्या और श्रेणियों की भूमिका बताना।"
+      },
+      {
+       "concept_tag": "upmahadweepiya-vyapar",
+       "learning_objective": "उपमहाद्वीप के भीतर और बाहर के व्यापार मार्गों तथा वस्तुओं को पहचानना।"
+      },
+      {
+       "concept_tag": "sikke-aur-raja",
+       "learning_objective": "आहत सिक्कों से गुप्त स्वर्ण सिक्कों तक सिक्कों के ऐतिहासिक साक्ष्य का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH02-T7",
+     "topic_number": 7,
+     "title": "अभिलेखों का अर्थ निकालना और उनकी सीमाएँ",
+     "ncert_sections": "7.1, 7.2, 7.3, 8",
+     "concepts": [
+      {
+       "concept_tag": "lipiyon-ka-arth-nikalna",
+       "learning_objective": "ब्राह्मी और खरोष्ठी लिपियों को पढ़ने की प्रक्रियाओं की तुलना करना।"
+      },
+      {
+       "concept_tag": "abhilekhiya-sakshya-ki-seemayen",
+       "learning_objective": "ऐतिहासिक साक्ष्य के रूप में अभिलेखों की सीमाओं का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHHS1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "बंधुत्व, जाति तथा वर्ग: आरंभिक समाज (लगभग 600 ई.पू. से 600 ईसवी)",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhhs103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHHS1-CH03-T1",
+     "topic_number": 1,
+     "title": "महाभारत का समालोचनात्मक संस्करण",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "samalochanatmak-sanskaran",
+       "learning_objective": "सुकथांकर के नेतृत्व में महाभारत के समालोचनात्मक संस्करण की परियोजना और उसकी पद्धति समझना।"
+      },
+      {
+       "concept_tag": "kshetriya-vibhinnata",
+       "learning_objective": "पांडुलिपियों की क्षेत्रीय विभिन्नताओं से सामाजिक इतिहास की जटिल प्रक्रियाओं का अनुमान लगाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH03-T2",
+     "topic_number": 2,
+     "title": "बंधुता एवं विवाह: अनेक नियम और व्यवहार की विभिन्नता",
+     "ncert_sections": "2.1, 2.2, 2.3, 2.4, 2.5",
+     "concepts": [
+      {
+       "concept_tag": "pitrivanshikta",
+       "learning_objective": "पितृवंशिकता और मातृवंशिकता का अर्थ तथा महाभारत में पितृवंशिक उत्तराधिकार का महत्त्व समझना।"
+      },
+      {
+       "concept_tag": "vivah-ke-niyam",
+       "learning_objective": "बहिर्विवाह, अंतर्विवाह, बहुपत्नी प्रथा, बहुपति प्रथा और विवाह के आठ प्रकारों में अंतर करना।"
+      },
+      {
+       "concept_tag": "gotra-satavahana",
+       "learning_objective": "गोत्र के नियमों और सातवाहन अभिलेखों के मातृनामों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH03-T3",
+     "topic_number": 3,
+     "title": "सामाजिक विषमताएँ: वर्ण व्यवस्था के दायरे में और उससे परे",
+     "ncert_sections": "3.1, 3.2, 3.3, 3.4, 3.5",
+     "concepts": [
+      {
+       "concept_tag": "varna-aur-jivika",
+       "learning_objective": "धर्मसूत्रों और धर्मशास्त्रों में चारों वर्णों के लिए निर्धारित जीविकाएँ पहचानना।"
+      },
+      {
+       "concept_tag": "akshatriya-raja-jati",
+       "learning_objective": "अक्षत्रिय राजाओं, जातियों और श्रेणियों के उदाहरणों से सामाजिक गतिशीलता समझना।"
+      },
+      {
+       "concept_tag": "chandal-asprishyata",
+       "learning_objective": "चांडालों की स्थिति, अस्पृश्यता की धारणा और उसके प्रतिरोध के साक्ष्य का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH03-T4",
+     "topic_number": 4,
+     "title": "जन्म के परे: संसाधन और प्रतिष्ठा",
+     "ncert_sections": "4.1, 4.2, 4.3",
+     "concepts": [
+      {
+       "concept_tag": "sampatti-stri-purush",
+       "learning_objective": "संपत्ति पर स्त्री और पुरुष के भिन्न अधिकारों तथा स्त्रीधन की अवधारणा समझना।"
+      },
+      {
+       "concept_tag": "varna-sampatti-bauddh",
+       "learning_objective": "वर्ण और संपत्ति के संबंध पर ब्राह्मणीय और बौद्ध दृष्टिकोणों की तुलना करना।"
+      },
+      {
+       "concept_tag": "tamilakam-dan",
+       "learning_objective": "प्राचीन तमिलकम में संसाधनों को बाँटने के सामाजिक मूल्य की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH03-T5",
+     "topic_number": 5,
+     "title": "सामाजिक विषमताओं की व्याख्या: एक सामाजिक अनुबंध",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "mahasammat",
+       "learning_objective": "सुत्तपिटक के महासम्मत मिथक के आधार पर राजत्व की बौद्ध व्याख्या समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH03-T6",
+     "topic_number": 6,
+     "title": "साहित्यिक स्रोतों का इस्तेमाल: इतिहासकार और महाभारत",
+     "ncert_sections": "6.1, 6.2, 6.3, 7",
+     "concepts": [
+      {
+       "concept_tag": "granth-vishleshan",
+       "learning_objective": "भाषा, विषयवस्तु, लेखक, श्रोता और काल के आधार पर ग्रंथ के विश्लेषण की विधि समझना।"
+      },
+      {
+       "concept_tag": "mahabharat-rachna-kal",
+       "learning_objective": "महाभारत की रचना के चरणों और हस्तिनापुर के उत्खनन से उसकी तुलना करना।"
+      },
+      {
+       "concept_tag": "gatisheel-granth",
+       "learning_objective": "महाभारत को एक गतिशील ग्रंथ के रूप में देखना और उसकी पुनर्व्याख्याओं को पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHHS1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "विचारक, विश्वास और इमारतें: सांस्कृतिक विकास (लगभग 600 ई.पू. से 600 ईसवी)",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhhs104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHHS1-CH04-T1",
+     "topic_number": 1,
+     "title": "साँची की एक झलक",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "sanchi-sanrakshan-begum",
+       "learning_objective": "साँची के स्तूप के संरक्षण में भोपाल की बेगमों की भूमिका बताना।"
+      },
+      {
+       "concept_tag": "sanchi-mahatva",
+       "learning_objective": "आरंभिक बौद्ध धर्म की समझ के लिए साँची के महत्त्व का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH04-T2",
+     "topic_number": 2,
+     "title": "पृष्ठभूमि: यज्ञ और वाद-विवाद",
+     "ncert_sections": "2, 2.1, 2.2, 2.3",
+     "concepts": [
+      {
+       "concept_tag": "yajna-parampara",
+       "learning_objective": "वैदिक यज्ञ परंपरा और उसके उद्देश्यों को समझना।"
+      },
+      {
+       "concept_tag": "upanishad-prashna",
+       "learning_objective": "उपनिषदों में उठाए गए नए दार्शनिक प्रश्नों को पहचानना।"
+      },
+      {
+       "concept_tag": "vad-vivad-sampraday",
+       "learning_objective": "विभिन्न संप्रदायों के बीच वाद-विवाद और नियतिवादी तथा भौतिकवादी विचारों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH04-T3",
+     "topic_number": 3,
+     "title": "महावीर का संदेश और जैन धर्म का प्रसार",
+     "ncert_sections": "3, 3.1",
+     "concepts": [
+      {
+       "concept_tag": "jain-siddhant",
+       "learning_objective": "जैन धर्म की केंद्रीय शिक्षाओं, अहिंसा और पाँच व्रतों को समझाना।"
+      },
+      {
+       "concept_tag": "jain-prasar",
+       "learning_objective": "जैन धर्म के प्रसार और उसके साहित्य के संरक्षण का वर्णन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH04-T4",
+     "topic_number": 4,
+     "title": "बुद्ध, उनकी शिक्षाएँ और अनुयायी",
+     "ncert_sections": "4, 5, 6",
+     "concepts": [
+      {
+       "concept_tag": "buddha-jeevan",
+       "learning_objective": "सिद्धार्थ के जीवन और ज्ञान-प्राप्ति की यात्रा को जानना।"
+      },
+      {
+       "concept_tag": "buddha-shiksha",
+       "learning_objective": "अनिच्च, अनत्त, दुक्ख और निब्बान जैसी बौद्ध अवधारणाओं की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "sangh",
+       "learning_objective": "बौद्ध संघ के संगठन, नियमों और उसमें स्त्रियों के प्रवेश का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH04-T5",
+     "topic_number": 5,
+     "title": "स्तूप: निर्माण, संरचना और खोज",
+     "ncert_sections": "7, 7.1, 7.2, 7.3, 8",
+     "concepts": [
+      {
+       "concept_tag": "stupa-uddeshya",
+       "learning_objective": "स्तूप बनाए जाने के कारणों और उनके निर्माण में दानदाताओं की भूमिका को समझना।"
+      },
+      {
+       "concept_tag": "stupa-sanrachna",
+       "learning_objective": "स्तूप के अंड, हर्मिका, यष्टि, छत्री और वेदिका जैसे भागों को पहचानना।"
+      },
+      {
+       "concept_tag": "stupa-khoj",
+       "learning_objective": "अमरावती और साँची के स्तूपों की खोज और उनके भिन्न भाग्य की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH04-T6",
+     "topic_number": 6,
+     "title": "मूर्तिकला: पत्थर में कथाएँ और प्रतीक",
+     "ncert_sections": "9, 9.1, 9.2, 9.3",
+     "concepts": [
+      {
+       "concept_tag": "pratik-murtikala",
+       "learning_objective": "बौद्ध मूर्तिकला में प्रयुक्त प्रतीकों और जातक कथाओं की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "lok-parampara",
+       "learning_objective": "साँची की मूर्तिकला में लोक परंपराओं के प्रभाव का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH04-T7",
+     "topic_number": 7,
+     "title": "नई धार्मिक परंपराएँ",
+     "ncert_sections": "10, 10.1, 10.2, 10.3",
+     "concepts": [
+      {
+       "concept_tag": "mahayana",
+       "learning_objective": "महायान बौद्ध धर्म की विशेषताओं को पहले की परंपरा से अलग करना।"
+      },
+      {
+       "concept_tag": "puranik-hindu",
+       "learning_objective": "वैष्णव और शैव परंपराओं तथा पुराणों की भूमिका को समझना।"
+      },
+      {
+       "concept_tag": "mandir-nirman",
+       "learning_objective": "आरंभिक मंदिरों और शैलकृत गुफाओं के विकास का वर्णन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHHS1-CH04-T8",
+     "topic_number": 8,
+     "title": "क्या हम सब कुछ देख सकते हैं?",
+     "ncert_sections": "11, 11.1, 11.2",
+     "concepts": [
+      {
+       "concept_tag": "aparichit-samajh",
+       "learning_objective": "उन्नीसवीं सदी के यूरोपीय विद्वानों द्वारा भारतीय मूर्तियों की व्याख्या की सीमाओं का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "path-chitra-asangati",
+       "learning_objective": "पाठ और चित्र के मेल न खाने पर व्याख्या की कठिनाइयों का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

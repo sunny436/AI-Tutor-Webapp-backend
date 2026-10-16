@@ -1,0 +1,108 @@
+{
+ "chapter_id": "IESC1-CH01",
+ "title": "Exploration: Entering the World of Secondary Science",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IESC1-CH01-T1",
+   "topic_number": 1,
+   "title": "Models: simplifying complex systems",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "scientific-models",
+     "learning_objective": "Explain that a scientific model is a simplified representation of a real system that keeps only what matters for a given question."
+    },
+    {
+     "concept_tag": "deliberate-assumptions",
+     "learning_objective": "Decide which details to keep and which to ignore when building a simple model for a stated question."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH01-T2",
+   "topic_number": 2,
+   "title": "The language of science: terms, symbols, units and mathematics",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "precise-terms-and-symbols",
+     "learning_objective": "Recognise that scientific words and symbols have precise, agreed meanings that allow clear communication."
+    },
+    {
+     "concept_tag": "standard-units",
+     "learning_objective": "Explain why agreed international (SI) units are needed for comparing results and avoiding errors."
+    },
+    {
+     "concept_tag": "mathematics-as-language",
+     "learning_objective": "Describe an equation as a compact statement of how quantities are related, used after understanding the situation."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH01-T3",
+   "topic_number": 3,
+   "title": "Laws, theories and principles",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "law-theory-principle",
+     "learning_objective": "Distinguish between a scientific law, a theory and a principle using examples."
+    },
+    {
+     "concept_tag": "theory-not-a-guess",
+     "learning_objective": "Explain that a scientific theory is a tested, evidence-based explanation that stays open to revision."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH01-T4",
+   "topic_number": 4,
+   "title": "Predictions, their limits and checking claims",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "scientific-prediction",
+     "learning_objective": "Explain how well-established laws, theories and models are used to make testable predictions."
+    },
+    {
+     "concept_tag": "self-correcting-science",
+     "learning_objective": "Evaluate claims using evidence and explain why failed predictions strengthen science."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH01-T5",
+   "topic_number": 5,
+   "title": "Estimation and approximate reasoning",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "order-of-magnitude-estimation",
+     "learning_objective": "Make a rough estimate by identifying the relevant quantities and multiplying reasonable values."
+    },
+    {
+     "concept_tag": "checking-reasonableness",
+     "learning_objective": "Use estimates to judge whether an answer is reasonable or impossible."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH01-T6",
+   "topic_number": 6,
+   "title": "Connected branches of science and science as a human activity",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "interdisciplinary-science",
+     "learning_objective": "Identify how several branches of science and mathematics combine to solve a real problem."
+    },
+    {
+     "concept_tag": "science-as-human-activity",
+     "learning_objective": "Describe science as a human, collaborative and self-correcting way of understanding the world."
+    }
+   ]
+  }
+ ]
+}

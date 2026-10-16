@@ -1,0 +1,695 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "vistas-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "english",
+  "language": "english",
+  "title": "Vistas",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "levt1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEVT1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "The Third Level",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/levt101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEVT1-CH01-T1",
+     "topic_number": 1,
+     "title": "Charley's claim and the psychiatrist's diagnosis",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "charleys-claim-of-a-third-level",
+       "learning_objective": "Recall Charley's claim that Grand Central has a third level and who denies it."
+      },
+      {
+       "concept_tag": "psychiatrists-diagnosis-of-escapism",
+       "learning_objective": "Explain the psychiatrist's view that the third level is a waking-dream wish fulfilment born of modern anxiety."
+      },
+      {
+       "concept_tag": "stamp-collecting-as-refuge",
+       "learning_objective": "Evaluate Charley's response to the idea that his stamp collecting is a refuge from reality."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH01-T2",
+     "topic_number": 2,
+     "title": "Lost in Grand Central: reaching the third level",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "getting-lost-in-grand-central",
+       "learning_objective": "Recall how Charley, heading for the subway, wandered into corridors that led to the third level."
+      },
+      {
+       "concept_tag": "grand-central-as-an-exit",
+       "learning_objective": "Interpret Charley's image of Grand Central growing like a tree and serving as a way of escape."
+      },
+      {
+       "concept_tag": "signs-of-1894",
+       "learning_objective": "Identify the details of dress, lighting and the newspaper that told Charley he was in 1894."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH01-T3",
+     "topic_number": 3,
+     "title": "The dream of Galesburg and the ticket window",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "galesburg-of-1894",
+       "learning_objective": "Explain why Charley longed to take Louisa to the peaceful Galesburg of 1894."
+      },
+      {
+       "concept_tag": "ticket-clerk-and-old-currency",
+       "learning_objective": "Explain why the clerk rejected Charley's money and what Charley did with old-style currency afterwards."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH01-T4",
+     "topic_number": 4,
+     "title": "The first-day cover and Sam's letter",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "first-day-cover",
+       "learning_objective": "Define a first-day cover and explain how its postmark dates Sam's letter."
+      },
+      {
+       "concept_tag": "sams-letter-and-disappearance",
+       "learning_objective": "Infer from Sam's letter what has happened to him and how it changes Charley and Louisa."
+      },
+      {
+       "concept_tag": "twist-sam-was-the-psychiatrist",
+       "learning_objective": "Analyse the effect of the final revelation that Sam was Charley's psychiatrist."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH01-T5",
+     "topic_number": 5,
+     "title": "Author, narration and themes: escape, time and fantasy",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "author-and-narration",
+       "learning_objective": "Identify the author of the story and its first-person narrator."
+      },
+      {
+       "concept_tag": "escapism-from-modern-stress",
+       "learning_objective": "Evaluate the story's treatment of the human wish to escape the stress of modern life."
+      },
+      {
+       "concept_tag": "fantasy-reality-time-and-space",
+       "learning_objective": "Analyse how the story interweaves fantasy and reality through an intersection of time and space."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEVT1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "The Tiger King",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/levt102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEVT1-CH02-T1",
+     "topic_number": 1,
+     "title": "The narrator, the royal titles and the prophecy at birth",
+     "ncert_sections": "Section I",
+     "concepts": [
+      {
+       "concept_tag": "narrator-tone-and-titles",
+       "learning_objective": "Explain how the narrator's mock-heroic tone and the king's string of grand titles set up the story's satire."
+      },
+      {
+       "concept_tag": "birth-prophecy",
+       "learning_objective": "Recall the astrologers' prediction about the prince's death and interpret the infant's reaction to it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH02-T2",
+     "topic_number": 2,
+     "title": "Upbringing, coming of age and the astrologer's warning",
+     "ncert_sections": "Section II",
+     "concepts": [
+      {
+       "concept_tag": "anglicised-upbringing",
+       "learning_objective": "Describe the crown prince's English upbringing and explain what it satirises."
+      },
+      {
+       "concept_tag": "hundredth-tiger-warning",
+       "learning_objective": "State the astrologer's warning about the hundredth tiger and explain how it shapes the Maharaja's mission."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH02-T3",
+     "topic_number": 3,
+     "title": "The ban on tiger hunting and the British officer",
+     "ncert_sections": "Section III",
+     "concepts": [
+      {
+       "concept_tag": "tiger-hunting-ban",
+       "learning_objective": "Explain why the Maharaja banned tiger hunting for everyone else and the irony in calling it a celebration for the tigers."
+      },
+      {
+       "concept_tag": "british-officer-episode",
+       "learning_objective": "Interpret the episode of the British officer and the diamond rings as a comment on power and bribery."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH02-T4",
+     "topic_number": 4,
+     "title": "Tigers run out and the Maharaja's marriage",
+     "ncert_sections": "Section IV",
+     "concepts": [
+      {
+       "concept_tag": "tiger-extinction",
+       "learning_objective": "Recall how the tiger population of Pratibandapuram ended and interpret the narrator's humour about it."
+      },
+      {
+       "concept_tag": "marriage-for-tigers",
+       "learning_objective": "Evaluate how the Maharaja turns his marriage into a means of reaching his tally of tigers."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH02-T5",
+     "topic_number": 5,
+     "title": "The hunt for the hundredth tiger",
+     "ncert_sections": "Section V",
+     "concepts": [
+      {
+       "concept_tag": "king-obsession-and-tyranny",
+       "learning_objective": "Analyse how the Maharaja's obsession with the hundredth tiger makes him harsh towards his officers and subjects."
+      },
+      {
+       "concept_tag": "dewan-tiger-plot",
+       "learning_objective": "Describe the dewan's plan to supply an old tiger and explain what it reveals about the hunt."
+      },
+      {
+       "concept_tag": "hunters-cover-up",
+       "learning_objective": "Explain why the hunters hid the Maharaja's missed shot and how this sets up the ending."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH02-T6",
+     "topic_number": 6,
+     "title": "The wooden tiger and the Maharaja's death",
+     "ncert_sections": "Section V",
+     "concepts": [
+      {
+       "concept_tag": "wooden-tiger-gift",
+       "learning_objective": "Recall the episode of the wooden tiger bought for the crown prince and explain the satire on autocratic rule in it."
+      },
+      {
+       "concept_tag": "death-by-hundredth-tiger",
+       "learning_objective": "Explain how the wooden tiger becomes the 'hundredth tiger' that fulfils the prophecy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH02-T7",
+     "topic_number": 7,
+     "title": "Satire, dramatic irony and the story's message",
+     "ncert_sections": "Reading with Insight",
+     "concepts": [
+      {
+       "concept_tag": "satire-on-power",
+       "learning_objective": "Evaluate the story as a satire on the conceit of those in power and on the fearful flattery of their followers."
+      },
+      {
+       "concept_tag": "dramatic-irony",
+       "learning_objective": "Identify instances of dramatic irony in the story and explain their effect."
+      },
+      {
+       "concept_tag": "attitude-to-wildlife",
+       "learning_objective": "Interpret the author's indirect comment on the cruelty of human beings towards wild animals."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEVT1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Journey to the end of the Earth",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/levt103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEVT1-CH03-T1",
+     "topic_number": 1,
+     "title": "The journey to Antarctica and first impressions",
+     "ncert_sections": "Opening section (before 'Part of history')",
+     "concepts": [
+      {
+       "concept_tag": "journey-to-antarctica",
+       "learning_objective": "Recall the vessel, route and duration of the writer's journey to Antarctica and what these details convey."
+      },
+      {
+       "concept_tag": "first-impressions-of-antarctica",
+       "learning_objective": "Explain the relief and wonder the writer felt on first facing Antarctica's landscape."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH03-T2",
+     "topic_number": 2,
+     "title": "Part of history: Gondwana and the shaping of the globe",
+     "ncert_sections": "Part of history",
+     "concepts": [
+      {
+       "concept_tag": "gondwana-supercontinent",
+       "learning_objective": "Describe the Gondwana supercontinent and how it broke up into the continents we know."
+      },
+      {
+       "concept_tag": "geological-phenomena",
+       "learning_objective": "Explain how geological events such as the forming of the Himalayas and the Drake Passage shaped the present globe."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH03-T3",
+     "topic_number": 3,
+     "title": "Human impact and the climate change debate",
+     "ncert_sections": "Human impact",
+     "concepts": [
+      {
+       "concept_tag": "human-impact-on-nature",
+       "learning_objective": "Explain how human populations and fossil-fuel burning have affected Nature and global temperature."
+      },
+      {
+       "concept_tag": "antarctica-in-climate-debate",
+       "learning_objective": "Explain why Antarctica is crucial to the study of climate change and the Earth's past and future."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH03-T4",
+     "topic_number": 4,
+     "title": "Students on Ice and the parable of the phytoplankton",
+     "ncert_sections": "Human impact (Students on Ice programme)",
+     "concepts": [
+      {
+       "concept_tag": "students-on-ice-programme",
+       "learning_objective": "State the aims of the Students on Ice programme and Geoff Green's reasons for taking high school students."
+      },
+      {
+       "concept_tag": "phytoplankton-parable",
+       "learning_objective": "Interpret the role of phytoplankton and the lesson 'take care of the small things and the big things will fall into place'."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH03-T5",
+     "topic_number": 5,
+     "title": "Walk on the ocean and the closing reflection",
+     "ncert_sections": "Walk on the ocean",
+     "concepts": [
+      {
+       "concept_tag": "walk-on-the-ocean",
+       "learning_objective": "Recall the walk on the ice pack and interpret the writer's realisation that everything connects."
+      },
+      {
+       "concept_tag": "balance-and-hope",
+       "learning_objective": "Interpret the writer's closing reflection on the balance of the planet and the hope offered by the young."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEVT1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "The Enemy",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/levt104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEVT1-CH04-T1",
+     "topic_number": 1,
+     "title": "Dr Sadao's background and the man from the sea",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sadao-background",
+       "learning_objective": "Students recall Dr Sadao's upbringing, education, marriage and why he was kept in Japan during the war."
+      },
+      {
+       "concept_tag": "discovery-on-the-beach",
+       "learning_objective": "Students describe how Sadao and Hana found the wounded man and identified him as an escaped American prisoner of war."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH04-T2",
+     "topic_number": 2,
+     "title": "The dilemma: doctor or patriot",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "doctor-patriot-dilemma",
+       "learning_objective": "Students explain the conflict between Sadao's duty as a doctor and his loyalty as a Japanese citizen."
+      },
+      {
+       "concept_tag": "servants-attitude",
+       "learning_objective": "Students interpret the servants' superstitious and patriotic reactions to the enemy in the house."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH04-T3",
+     "topic_number": 3,
+     "title": "The operation and Hana's role",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "hana-role",
+       "learning_objective": "Students explain how Hana overcame fear and dislike to wash the prisoner and give the anaesthetic."
+      },
+      {
+       "concept_tag": "surgeon-professionalism",
+       "learning_objective": "Students analyse how Sadao's training and absorption in surgery override his hostility to the patient."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH04-T4",
+     "topic_number": 4,
+     "title": "The household under pressure",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "social-pressure",
+       "learning_objective": "Students describe how the servants' disapproval and departure put pressure on Sadao and Hana."
+      },
+      {
+       "concept_tag": "inner-conflict",
+       "learning_objective": "Students analyse the uncertainty Sadao and Hana feel about what they ought to do with the prisoner."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH04-T5",
+     "topic_number": 5,
+     "title": "The General and the plan to kill the prisoner",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "general-self-interest",
+       "learning_objective": "Students evaluate the General's attitude to Sadao and the prisoner as one of self-absorption."
+      },
+      {
+       "concept_tag": "assassination-plan",
+       "learning_objective": "Students recall the General's offer of private assassins and how Sadao responded to it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH04-T6",
+     "topic_number": 6,
+     "title": "The escape and the meaning of the story",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "escape-plan",
+       "learning_objective": "Students recall how Sadao arranged the prisoner's escape and the signals he asked for."
+      },
+      {
+       "concept_tag": "theme-humanity",
+       "learning_objective": "Students evaluate how the ending shows humanity rising above hatred and prejudice."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEVT1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "On the Face of It",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/levt105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEVT1-CH05-T1",
+     "topic_number": 1,
+     "title": "Derry enters Mr Lamb's garden (Scene One, opening)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "derry-entry-into-garden",
+       "learning_objective": "Recall how and why Derry comes into Mr Lamb's garden and how the two first meet."
+      },
+      {
+       "concept_tag": "derry-self-consciousness",
+       "learning_objective": "Explain how Derry's acid-burned face has made him fearful, defensive and withdrawn."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH05-T2",
+     "topic_number": 2,
+     "title": "Mr Lamb's view of difference: weeds, the tin leg and Beauty and the Beast",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "weeds-and-flowers",
+       "learning_objective": "Interpret Mr Lamb's comparison of weeds and flowers as a lesson that all life has equal worth."
+      },
+      {
+       "concept_tag": "tin-leg-acceptance",
+       "learning_objective": "Describe how Mr Lamb lives calmly with his tin leg and the mockery it brings."
+      },
+      {
+       "concept_tag": "beauty-and-the-beast",
+       "learning_objective": "Analyse Derry's rejection of the Beauty and the Beast story and Mr Lamb's reply that the world has a whole face."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH05-T3",
+     "topic_number": 3,
+     "title": "Hurtful words, fear and hatred",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "hurtful-remarks",
+       "learning_objective": "Explain how Mr Lamb questions the power Derry gives to cruel remarks he has overheard."
+      },
+      {
+       "concept_tag": "man-in-the-locked-room",
+       "learning_objective": "Interpret the story of the man who locked himself away as a lesson about fear and isolation."
+      },
+      {
+       "concept_tag": "hatred-burns-inside",
+       "learning_objective": "Explain why Mr Lamb says hatred does more harm than acid."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH05-T4",
+     "topic_number": 4,
+     "title": "Friendship, the open gate and Mr Lamb's loneliness",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "open-gate-and-friendship",
+       "learning_objective": "Explain what the open gate, the curtainless windows and Mr Lamb's idea of friendship show about him."
+      },
+      {
+       "concept_tag": "mr-lamb-loneliness",
+       "learning_objective": "Identify the signs of loneliness and disappointment in Mr Lamb at the end of Scene One."
+      },
+      {
+       "concept_tag": "derry-change-of-heart",
+       "learning_objective": "Analyse how Derry's attitude towards Mr Lamb changes by the end of Scene One."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH05-T5",
+     "topic_number": 5,
+     "title": "Scene Two: Derry and his mother",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mother-overprotection",
+       "learning_objective": "Describe Derry's mother's fears and her attempt to keep him at home."
+      },
+      {
+       "concept_tag": "derry-resolve",
+       "learning_objective": "Explain Derry's new resolve to return to the garden and to the world."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH05-T6",
+     "topic_number": 6,
+     "title": "Scene Three: the ending and the meaning of the title",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ending-of-the-play",
+       "learning_objective": "Recall and interpret the events and the irony of the play's final scene."
+      },
+      {
+       "concept_tag": "title-and-theme",
+       "learning_objective": "Evaluate how the title and the bond between Derry and Mr Lamb express the play's theme."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEVT1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Memories of Childhood",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/levt106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEVT1-CH06-T1",
+     "topic_number": 1,
+     "title": "Introduction: the two writers and their works",
+     "ncert_sections": "Before you read",
+     "concepts": [
+      {
+       "concept_tag": "authors-and-backgrounds",
+       "learning_objective": "Identify the two writers, their communities and the focus of the unit."
+      },
+      {
+       "concept_tag": "karukku-title-meaning",
+       "learning_objective": "Explain the meaning and the pun in the title 'Karukku'."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH06-T2",
+     "topic_number": 2,
+     "title": "Zitkala-Sa: the first day at school",
+     "ncert_sections": "I. The Cutting of My Long Hair (the dining room)",
+     "concepts": [
+      {
+       "concept_tag": "alien-school-environment",
+       "learning_objective": "Describe how the strange school surroundings and dress affected Zitkala-Sa."
+      },
+      {
+       "concept_tag": "eating-by-formula",
+       "learning_objective": "Explain the bell-controlled breakfast and why she calls it 'eating by formula'."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH06-T3",
+     "topic_number": 3,
+     "title": "Zitkala-Sa: the cutting of her long hair",
+     "ncert_sections": "I. The Cutting of My Long Hair (the haircut)",
+     "concepts": [
+      {
+       "concept_tag": "hair-cultural-significance",
+       "learning_objective": "Explain what long and shingled hair meant among Zitkala-Sa's people."
+      },
+      {
+       "concept_tag": "resistance-and-humiliation",
+       "learning_objective": "Analyse Zitkala-Sa's resistance and her sense of humiliation when her hair is cut."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH06-T4",
+     "topic_number": 4,
+     "title": "Bama: the walk home and the elder with the vadais",
+     "ncert_sections": "II. We Too are Human Beings (the bazaar and the threshing floor)",
+     "concepts": [
+      {
+       "concept_tag": "bazaar-sights",
+       "learning_objective": "Recall the sights that delayed Bama and explain why she describes them so fully."
+      },
+      {
+       "concept_tag": "elder-and-vadai-incident",
+       "learning_objective": "Interpret the scene of the elder carrying the packet to the landlord."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH06-T5",
+     "topic_number": 5,
+     "title": "Bama: Annan's explanation and advice",
+     "ncert_sections": "II. We Too are Human Beings (Annan's words)",
+     "concepts": [
+      {
+       "concept_tag": "annan-explains-untouchability",
+       "learning_objective": "Explain how Annan reveals the practice of untouchability to Bama."
+      },
+      {
+       "concept_tag": "education-as-liberation",
+       "learning_objective": "Evaluate Annan's advice that study can help throw away indignities."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEVT1-CH06-T6",
+     "topic_number": 6,
+     "title": "Comparing the two accounts",
+     "ncert_sections": "Reading with Insight",
+     "concepts": [
+      {
+       "concept_tag": "common-theme-marginalisation",
+       "learning_objective": "Identify the common theme of the two accounts from distant cultures."
+      },
+      {
+       "concept_tag": "forms-of-discrimination-and-response",
+       "learning_objective": "Compare the kinds of discrimination the two girls face and their responses."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

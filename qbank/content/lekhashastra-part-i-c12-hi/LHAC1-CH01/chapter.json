@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LHAC1-CH01",
+ "title": "साझेदारी लेखांकन — आधारभूत अवधारणाएँ",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHAC1-CH01-T1",
+   "topic_number": 1,
+   "title": "साझेदारी की प्रकृति",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "sajhedari-ki-visheshtayen",
+     "learning_objective": "साझेदारी की परिभाषा और उसकी अनिवार्य विशेषताओं को पहचानना।"
+    },
+    {
+     "concept_tag": "paraspar-abhikaran",
+     "learning_objective": "साझेदारों के बीच पारस्परिक अभिकरण के संबंध और उसके प्रभाव को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH01-T2",
+   "topic_number": 2,
+   "title": "साझेदारी विलेख और अधिनियम के प्रावधान",
+   "ncert_sections": "1.2, 1.2.1",
+   "concepts": [
+    {
+     "concept_tag": "sajhedari-vilekh",
+     "learning_objective": "साझेदारी विलेख का अर्थ और उसकी विषय-वस्तु बताना।"
+    },
+    {
+     "concept_tag": "adhiniyam-ke-pravdhan",
+     "learning_objective": "विलेख मौन होने पर लेखांकन से जुड़े भारतीय साझेदारी अधिनियम 1932 के प्रावधान लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH01-T3",
+   "topic_number": 3,
+   "title": "साझेदारों के पूँजी खातों का रखरखाव",
+   "ncert_sections": "1.3, 1.4, 1.4.1",
+   "concepts": [
+    {
+     "concept_tag": "sthir-punji-paddhati",
+     "learning_objective": "स्थिर पूँजी पद्धति में पूँजी खाते और चालू खाते का अभिलेखन समझना।"
+    },
+    {
+     "concept_tag": "asthir-punji-paddhati",
+     "learning_objective": "अस्थिर पूँजी पद्धति को समझना और उसकी स्थिर पद्धति से तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH01-T4",
+   "topic_number": 4,
+   "title": "साझेदारों में लाभ का वितरण",
+   "ncert_sections": "1.5, 1.5.1",
+   "concepts": [
+    {
+     "concept_tag": "labh-hani-viniyojan-khata",
+     "learning_objective": "लाभ-हानि विनियोजन खाता बनाकर साझेदारों में विभाज्य लाभ का वितरण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH01-T5",
+   "topic_number": 5,
+   "title": "पूँजी पर ब्याज और आहरण पर ब्याज",
+   "ncert_sections": "1.5.2, 1.5.3",
+   "concepts": [
+    {
+     "concept_tag": "punji-par-byaj",
+     "learning_objective": "पूँजी में वृद्धि या कमी को ध्यान में रखकर पूँजी पर ब्याज की गणना करना।"
+    },
+    {
+     "concept_tag": "aharan-par-byaj",
+     "learning_objective": "औसत अवधि विधि से विभिन्न स्थितियों में आहरण पर ब्याज की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH01-T6",
+   "topic_number": 6,
+   "title": "साझेदार को लाभ की गारंटी",
+   "ncert_sections": "1.6",
+   "concepts": [
+    {
+     "concept_tag": "labh-ki-guarantee",
+     "learning_objective": "न्यूनतम लाभ की गारंटी से उत्पन्न कमी को गारंटी देने वाले साझेदारों में बाँटना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH01-T7",
+   "topic_number": 7,
+   "title": "पूर्व समायोजन",
+   "ncert_sections": "1.7",
+   "concepts": [
+    {
+     "concept_tag": "purv-samayojan",
+     "learning_objective": "पिछली चूकों के शुद्ध प्रभाव का विवरण बनाकर समायोजन प्रविष्टि निर्धारित करना।"
+    }
+   ]
+  }
+ ]
+}

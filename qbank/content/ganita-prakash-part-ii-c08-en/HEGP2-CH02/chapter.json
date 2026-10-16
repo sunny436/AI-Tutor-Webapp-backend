@@ -1,0 +1,132 @@
+{
+ "chapter_id": "HEGP2-CH02",
+ "title": "The Baudhāyana-Pythagoras Theorem",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP2-CH02-T1",
+   "topic_number": 1,
+   "title": "Doubling and halving a square",
+   "ncert_sections": "2.1, 2.2",
+   "concepts": [
+    {
+     "concept_tag": "doubling-a-square",
+     "learning_objective": "Explain why the square drawn on the diagonal of a given square has double its area."
+    },
+    {
+     "concept_tag": "halving-a-square",
+     "learning_objective": "Construct a square of half the area of a given square and explain why halving the side does not halve the area."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH02-T2",
+   "topic_number": 2,
+   "title": "Hypotenuse of an isosceles right triangle",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "isosceles-right-triangle-relation",
+     "learning_objective": "Use the relation c^2 = 2a^2 to find the hypotenuse of an isosceles right triangle."
+    },
+    {
+     "concept_tag": "equal-sides-from-hypotenuse",
+     "learning_objective": "Find the equal sides of an isosceles right triangle when its hypotenuse is known."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH02-T3",
+   "topic_number": 3,
+   "title": "The number root 2: bounds and decimal nature",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "root-two-bounds",
+     "learning_objective": "Find successively closer decimal bounds for root 2 by squaring trial values."
+    },
+    {
+     "concept_tag": "root-two-not-a-fraction",
+     "learning_objective": "Explain why root 2 is neither a terminating decimal nor a fraction m/n."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH02-T4",
+   "topic_number": 4,
+   "title": "Combining two squares: Baudhayana's theorem",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "combining-two-squares",
+     "learning_objective": "Describe Baudhayana's method of combining two different squares into one square."
+    },
+    {
+     "concept_tag": "baudhayana-theorem-statement",
+     "learning_objective": "State the Baudhayana-Pythagoras theorem a^2 + b^2 = c^2 for a right triangle."
+    },
+    {
+     "concept_tag": "finding-missing-side",
+     "learning_objective": "Use the theorem to find a missing side of a right triangle."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH02-T5",
+   "topic_number": 5,
+   "title": "Right triangles with integer sidelengths",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "identifying-baudhayana-triples",
+     "learning_objective": "Check whether a triple of positive integers is a Baudhayana triple."
+    },
+    {
+     "concept_tag": "primitive-and-scaled-triples",
+     "learning_objective": "Distinguish primitive Baudhayana triples from their scaled versions."
+    },
+    {
+     "concept_tag": "generating-triples-from-odd-squares",
+     "learning_objective": "Generate Baudhayana triples using (n - 1)^2 + (2n - 1) = n^2 when 2n - 1 is a square."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH02-T6",
+   "topic_number": 6,
+   "title": "A long-standing open problem: Fermat's Last Theorem",
+   "ncert_sections": "2.6",
+   "concepts": [
+    {
+     "concept_tag": "fermats-last-theorem",
+     "learning_objective": "State Fermat's Last Theorem and recognise which equations it rules out."
+    },
+    {
+     "concept_tag": "history-of-fermats-last-theorem",
+     "learning_objective": "Recall the history of Fermat's Last Theorem and its proof by Andrew Wiles."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH02-T7",
+   "topic_number": 7,
+   "title": "Further applications of the theorem",
+   "ncert_sections": "2.7",
+   "concepts": [
+    {
+     "concept_tag": "lotus-problem",
+     "learning_objective": "Form and solve an equation from a word problem such as the lotus problem of the Lilavati."
+    },
+    {
+     "concept_tag": "diagonals-of-squares-and-rectangles",
+     "learning_objective": "Find the diagonal of a square or a rectangle using the theorem."
+    },
+    {
+     "concept_tag": "rhombus-and-equilateral-triangle",
+     "learning_objective": "Apply the theorem to find the side of a rhombus or the height and area of an equilateral triangle."
+    }
+   ]
+  }
+ ]
+}

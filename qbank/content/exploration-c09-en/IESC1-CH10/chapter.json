@@ -1,0 +1,144 @@
+{
+ "chapter_id": "IESC1-CH10",
+ "title": "Sound Waves: Characteristics and Applications",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IESC1-CH10-T1",
+   "topic_number": 1,
+   "title": "Production of sound",
+   "ncert_sections": "10.1, 10.1.1",
+   "concepts": [
+    {
+     "concept_tag": "sound-from-vibrations",
+     "learning_objective": "Explain that sound is produced by vibrating objects such as strings, membranes and air columns."
+    },
+    {
+     "concept_tag": "vocal-cords-and-tuning-fork",
+     "learning_objective": "Identify how humans, animals and a tuning fork produce sound through vibration."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH10-T2",
+   "topic_number": 2,
+   "title": "Propagation of sound and the need for a medium",
+   "ncert_sections": "10.2, 10.2.1",
+   "concepts": [
+    {
+     "concept_tag": "sound-needs-medium",
+     "learning_objective": "Explain using the vacuum bell jar experiment that sound cannot travel through vacuum."
+    },
+    {
+     "concept_tag": "propagation-through-states",
+     "learning_objective": "State that sound travels through solids, liquids and gases."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH10-T3",
+   "topic_number": 3,
+   "title": "Sound waves: compressions, rarefactions and longitudinal waves",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "compressions-and-rarefactions",
+     "learning_objective": "Describe how a vibrating source produces alternate compressions and rarefactions in a medium."
+    },
+    {
+     "concept_tag": "longitudinal-mechanical-waves",
+     "learning_objective": "Distinguish longitudinal and transverse waves and identify sound as a longitudinal mechanical wave."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH10-T4",
+   "topic_number": 4,
+   "title": "Energy of sound waves and their graphical representation",
+   "ncert_sections": "10.4, 10.5",
+   "concepts": [
+    {
+     "concept_tag": "sound-energy-transfer",
+     "learning_objective": "Explain that a sound wave transfers energy, not particles, through a medium."
+    },
+    {
+     "concept_tag": "density-distance-graph",
+     "learning_objective": "Interpret crests, troughs and the average density on a density-distance graph of a sound wave."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH10-T5",
+   "topic_number": 5,
+   "title": "Wavelength, frequency, time period, amplitude, intensity and speed",
+   "ncert_sections": "10.6.1, 10.6.2, 10.6.3",
+   "concepts": [
+    {
+     "concept_tag": "frequency-and-time-period",
+     "learning_objective": "Calculate frequency and time period using the relation frequency = 1/T."
+    },
+    {
+     "concept_tag": "wave-speed-relation",
+     "learning_objective": "Apply v = wavelength x frequency and relate the speed of sound to the medium."
+    },
+    {
+     "concept_tag": "amplitude-and-intensity",
+     "learning_objective": "Relate amplitude to energy and explain why intensity decreases with distance."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH10-T6",
+   "topic_number": 6,
+   "title": "Human perception of sound",
+   "ncert_sections": "10.6.4",
+   "concepts": [
+    {
+     "concept_tag": "pitch-and-loudness",
+     "learning_objective": "Relate pitch to frequency and loudness to amplitude."
+    },
+    {
+     "concept_tag": "audible-range",
+     "learning_objective": "State the human audible range and classify infrasonic and ultrasonic waves."
+    },
+    {
+     "concept_tag": "tone-note-timbre",
+     "learning_objective": "Distinguish a tone, a musical note, timbre and an octave."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH10-T7",
+   "topic_number": 7,
+   "title": "Reflection of sound: echo and reverberation",
+   "ncert_sections": "10.7, 10.7.1, 10.7.2",
+   "concepts": [
+    {
+     "concept_tag": "echo-and-minimum-distance",
+     "learning_objective": "Calculate distances using echoes and the 0.1 s condition for hearing an echo."
+    },
+    {
+     "concept_tag": "reverberation",
+     "learning_objective": "Explain reverberation and how halls are designed to control it."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH10-T8",
+   "topic_number": 8,
+   "title": "Ultrasonic and infrasonic waves and their applications",
+   "ncert_sections": "10.8, 10.8.1",
+   "concepts": [
+    {
+     "concept_tag": "ultrasound-infrasound-uses",
+     "learning_objective": "Identify applications of ultrasonic and infrasonic waves in medicine, industry and detection."
+    },
+    {
+     "concept_tag": "echolocation-and-sonar",
+     "learning_objective": "Explain echolocation and calculate distances using sonar."
+    }
+   ]
+  }
+ ]
+}

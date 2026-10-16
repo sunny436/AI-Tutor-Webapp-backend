@@ -1,0 +1,80 @@
+{
+ "chapter_id": "FECU1-CH01",
+ "title": "The Wonderful World of Science",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FECU1-CH01-T1",
+   "topic_number": 1,
+   "title": "What is science?",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "science-as-way-of-understanding",
+     "learning_objective": "Describe science as a way of thinking, observing and doing things to understand the world, driven by curiosity."
+    },
+    {
+     "concept_tag": "science-is-everywhere",
+     "learning_objective": "Recognise that science is found everywhere, from the kitchen and playground to the ocean and outer space."
+    },
+    {
+     "concept_tag": "science-as-unending-puzzle",
+     "learning_objective": "Explain why science is compared to an unending jigsaw puzzle whose pieces can change with new discoveries."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH01-T2",
+   "topic_number": 2,
+   "title": "What will we explore with the help of this book?",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "earth-and-living-things",
+     "learning_objective": "Identify Earth as the only known planet that supports life and the questions about how plants and animals grow."
+    },
+    {
+     "concept_tag": "materials-food-and-water",
+     "learning_objective": "Frame scientific questions about food, materials, water and hot and cold from everyday experience."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH01-T3",
+   "topic_number": 3,
+   "title": "How can we find answers to our questions on our own?",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "steps-of-scientific-method",
+     "learning_objective": "State and order the steps of the scientific method: observe, question, guess, test and analyse."
+    },
+    {
+     "concept_tag": "testing-a-guess",
+     "learning_objective": "Apply the idea of testing a guess and making a new guess when the first one is not supported."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH01-T4",
+   "topic_number": 4,
+   "title": "We are all, in a way, scientists",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "scientific-method-in-daily-life",
+     "learning_objective": "Recognise the scientific method in daily-life situations such as cooking, repairing a tyre or fixing a bulb."
+    },
+    {
+     "concept_tag": "teamwork-in-science",
+     "learning_objective": "Explain that science is rarely done alone and that scientists often work together in teams."
+    },
+    {
+     "concept_tag": "curiosity-and-asking-why",
+     "learning_objective": "Explain why being curious and asking 'how' and 'why' is the first step to learning science."
+    }
+   ]
+  }
+ ]
+}

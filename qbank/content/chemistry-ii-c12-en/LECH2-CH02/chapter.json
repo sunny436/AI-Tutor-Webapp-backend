@@ -1,0 +1,144 @@
+{
+ "chapter_id": "LECH2-CH02",
+ "title": "Alcohols, Phenols and Ethers",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECH2-CH02-T1",
+   "topic_number": 1,
+   "title": "Classification and nomenclature of alcohols, phenols and ethers",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "classification-of-alcohols-phenols-ethers",
+     "learning_objective": "Classify alcohols, phenols and ethers by the number of -OH groups, the hybridisation of the carbon bearing -OH, and the groups on the ether oxygen."
+    },
+    {
+     "concept_tag": "iupac-nomenclature",
+     "learning_objective": "Name alcohols, phenols and ethers by common and IUPAC systems."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH02-T2",
+   "topic_number": 2,
+   "title": "Structures of functional groups",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "structure-of-alcohols-and-ethers",
+     "learning_objective": "Relate the bond angles at oxygen in alcohols and ethers to lone pair and bulky group repulsions."
+    },
+    {
+     "concept_tag": "carbon-oxygen-bond-in-phenol",
+     "learning_objective": "Explain why the C-O bond in phenol is shorter than in methanol."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH02-T3",
+   "topic_number": 3,
+   "title": "Preparation of alcohols and phenols",
+   "ncert_sections": "7.4.1, 7.4.2",
+   "concepts": [
+    {
+     "concept_tag": "preparation-of-alcohols",
+     "learning_objective": "Describe preparation of alcohols from alkenes and by reduction of carbonyl compounds and acids."
+    },
+    {
+     "concept_tag": "grignard-synthesis-of-alcohols",
+     "learning_objective": "Predict the class and structure of alcohols formed from Grignard reagents and carbonyl compounds."
+    },
+    {
+     "concept_tag": "preparation-of-phenols",
+     "learning_objective": "Describe preparation of phenol from haloarenes, sulphonic acids, diazonium salts and cumene."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH02-T4",
+   "topic_number": 4,
+   "title": "Physical properties of alcohols and phenols",
+   "ncert_sections": "7.4.3",
+   "concepts": [
+    {
+     "concept_tag": "boiling-points-and-hydrogen-bonding",
+     "learning_objective": "Explain trends in boiling points of alcohols in terms of hydrogen bonding, chain length and branching."
+    },
+    {
+     "concept_tag": "solubility-of-alcohols",
+     "learning_objective": "Explain the solubility of alcohols in water and its dependence on the size of the alkyl group."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH02-T5",
+   "topic_number": 5,
+   "title": "Acidity and esterification of alcohols and phenols",
+   "ncert_sections": "7.4.4",
+   "concepts": [
+    {
+     "concept_tag": "acidity-of-alcohols-and-phenols",
+     "learning_objective": "Compare the acid strength of alcohols, water and substituted phenols using inductive and resonance effects."
+    },
+    {
+     "concept_tag": "esterification-and-acetylation",
+     "learning_objective": "Describe esterification of alcohols and phenols and the role of the reagents used."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH02-T6",
+   "topic_number": 6,
+   "title": "Reactions of alcohols and commercially important alcohols",
+   "ncert_sections": "7.4.4, 7.5",
+   "concepts": [
+    {
+     "concept_tag": "lucas-test-and-dehydration",
+     "learning_objective": "Explain the Lucas test and the mechanism and ease of acid-catalysed dehydration of alcohols."
+    },
+    {
+     "concept_tag": "oxidation-of-alcohols",
+     "learning_objective": "Predict the oxidation and dehydrogenation products of primary, secondary and tertiary alcohols."
+    },
+    {
+     "concept_tag": "methanol-and-ethanol",
+     "learning_objective": "Describe the manufacture, uses and toxicity of methanol and ethanol."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH02-T7",
+   "topic_number": 7,
+   "title": "Reactions of phenols",
+   "ncert_sections": "7.4.4",
+   "concepts": [
+    {
+     "concept_tag": "electrophilic-substitution-in-phenol",
+     "learning_objective": "Explain nitration and halogenation of phenol in terms of the activating, ortho-para directing -OH group."
+    },
+    {
+     "concept_tag": "kolbe-and-reimer-tiemann-reactions",
+     "learning_objective": "Write the products of Kolbe's and Reimer-Tiemann reactions of phenol."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH2-CH02-T8",
+   "topic_number": 8,
+   "title": "Ethers",
+   "ncert_sections": "7.6",
+   "concepts": [
+    {
+     "concept_tag": "preparation-of-ethers",
+     "learning_objective": "Prepare ethers by dehydration of alcohols and Williamson synthesis and state their limitations."
+    },
+    {
+     "concept_tag": "properties-and-reactions-of-ethers",
+     "learning_objective": "Explain the physical properties of ethers and their cleavage by hydrogen halides and ring substitution."
+    }
+   ]
+  }
+ ]
+}

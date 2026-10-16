@@ -1,0 +1,136 @@
+{
+ "chapter_id": "JESC1-CH01",
+ "title": "Chemical Reactions and Equations",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESC1-CH01-T1",
+   "topic_number": 1,
+   "title": "Chemical reactions and chemical equations",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "signs-of-chemical-reaction",
+     "learning_objective": "Identify a chemical reaction from observations such as a change in state, change in colour, evolution of a gas or change in temperature."
+    },
+    {
+     "concept_tag": "word-equations-reactants-products",
+     "learning_objective": "Write a word-equation and identify the reactants and products and the direction of a reaction."
+    },
+    {
+     "concept_tag": "skeletal-chemical-equation",
+     "learning_objective": "Explain why an equation with unequal numbers of atoms on the two sides is a skeletal chemical equation."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH01-T2",
+   "topic_number": 2,
+   "title": "Balancing chemical equations",
+   "ncert_sections": "1.1.1, 1.1.2",
+   "concepts": [
+    {
+     "concept_tag": "conservation-of-mass-balancing",
+     "learning_objective": "Relate the law of conservation of mass to the need for balancing chemical equations without changing formulae."
+    },
+    {
+     "concept_tag": "hit-and-trial-balancing",
+     "learning_objective": "Balance chemical equations by the hit-and-trial method using the smallest whole-number coefficients."
+    },
+    {
+     "concept_tag": "state-symbols-and-conditions",
+     "learning_objective": "Interpret the state symbols (s), (l), (g), (aq) and the reaction conditions written on the arrow."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH01-T3",
+   "topic_number": 3,
+   "title": "Combination reactions and exothermic reactions",
+   "ncert_sections": "1.2.1",
+   "concepts": [
+    {
+     "concept_tag": "combination-reaction",
+     "learning_objective": "Identify combination reactions in which two or more substances form a single product."
+    },
+    {
+     "concept_tag": "exothermic-reaction",
+     "learning_objective": "Explain exothermic reactions using examples such as burning of natural gas, respiration and composting."
+    },
+    {
+     "concept_tag": "whitewashing-chemistry",
+     "learning_objective": "Explain the reactions of quick lime with water and of slaked lime with carbon dioxide in whitewashing."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH01-T4",
+   "topic_number": 4,
+   "title": "Decomposition reactions and endothermic reactions",
+   "ncert_sections": "1.2.2",
+   "concepts": [
+    {
+     "concept_tag": "thermal-decomposition",
+     "learning_objective": "Describe thermal decomposition of ferrous sulphate, calcium carbonate and lead nitrate and their products."
+    },
+    {
+     "concept_tag": "decomposition-by-electricity-and-light",
+     "learning_objective": "Explain decomposition of water by electricity and of silver chloride and silver bromide by sunlight."
+    },
+    {
+     "concept_tag": "endothermic-reaction",
+     "learning_objective": "Recognise that decomposition reactions absorb energy and are endothermic, unlike combination reactions."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH01-T5",
+   "topic_number": 5,
+   "title": "Displacement and double displacement reactions",
+   "ncert_sections": "1.2.3, 1.2.4",
+   "concepts": [
+    {
+     "concept_tag": "displacement-reaction",
+     "learning_objective": "Explain displacement of copper from its compounds by more reactive metals such as iron, zinc and lead."
+    },
+    {
+     "concept_tag": "double-displacement-and-precipitation",
+     "learning_objective": "Identify double displacement reactions as an exchange of ions and recognise precipitation reactions."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH01-T6",
+   "topic_number": 6,
+   "title": "Oxidation and reduction",
+   "ncert_sections": "1.2.5",
+   "concepts": [
+    {
+     "concept_tag": "oxidation-and-reduction",
+     "learning_objective": "Define oxidation and reduction in terms of gain or loss of oxygen or hydrogen."
+    },
+    {
+     "concept_tag": "redox-reactions",
+     "learning_objective": "Identify the substance oxidised and the substance reduced in a redox reaction."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH01-T7",
+   "topic_number": 7,
+   "title": "Effects of oxidation in everyday life: corrosion and rancidity",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "corrosion",
+     "learning_objective": "Describe corrosion of metals such as the rusting of iron and the coatings on copper and silver, and ways to prevent it."
+    },
+    {
+     "concept_tag": "rancidity",
+     "learning_objective": "Explain rancidity as the oxidation of fats and oils and the methods used to slow it down."
+    }
+   ]
+  }
+ ]
+}

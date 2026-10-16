@@ -1,0 +1,116 @@
+{
+ "chapter_id": "GSDE1-CH06",
+ "title": "क्रीडाम वयं श्लोकान्त्याक्षरीम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GSDE1-CH06-T1",
+   "topic_number": 1,
+   "title": "अन्त्याक्षरीक्रीडायाः परिचयः नियमाः च",
+   "ncert_sections": "संवादः, कार्यकलापः",
+   "concepts": [
+    {
+     "concept_tag": "antyakshari-krida-niyamah",
+     "learning_objective": "छात्रः अन्त्याक्षरीक्रीडायाः गणद्वयं नियमान् च वर्णयितुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "antima-vyanjana-varnah",
+     "learning_objective": "छात्रः पदस्य श्लोकस्य वा अन्तिमं व्यञ्जनवर्णं ज्ञात्वा अग्रिमं पदं श्लोकं वा चेतुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH06-T2",
+   "topic_number": 2,
+   "title": "विद्याहीनानां जनानां दशा",
+   "ncert_sections": "श्लोकौ १, ४",
+   "concepts": [
+    {
+     "concept_tag": "vidyahina-kimshuka-upama",
+     "learning_objective": "छात्रः विद्याहीनानां जनानां निर्गन्धकिंशुकैः सह उपमां व्याख्यातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "vidyahina-bharabhutah",
+     "learning_objective": "छात्रः विद्यादिगुणरहिताः जनाः भुवि भारभूताः कथं भवन्ति इति अवगच्छेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH06-T3",
+   "topic_number": 3,
+   "title": "धीमतां मूर्खाणां खलसाधूनां च भेदः",
+   "ncert_sections": "श्लोकौ २, ३",
+   "concepts": [
+    {
+     "concept_tag": "dhimatam-kalah",
+     "learning_objective": "छात्रः धीमतां मूर्खाणां च कालयापनस्य भेदं वर्णयितुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "khala-sadhu-viparitam",
+     "learning_objective": "छात्रः खलस्य साधोः च विद्याधनशक्तीनाम् उपयोगं तोलयितुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH06-T4",
+   "topic_number": 4,
+   "title": "विद्यायाः महिमा फलानि च",
+   "ncert_sections": "श्लोकाः ५, ६, ८",
+   "concepts": [
+    {
+     "concept_tag": "vidya-phalani",
+     "learning_objective": "छात्रः विद्यया प्राप्यमाणानि वृत्तिकीर्तिलक्ष्म्यादीनि फलानि अभिज्ञातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "vidya-nama-narasya-rupam",
+     "learning_objective": "छात्रः विद्या नरस्य रूपं धनं गुरुः बन्धुः देवता च कथम् इति व्याख्यातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "vidyabhyasa-dharmarthamoksha",
+     "learning_objective": "छात्रः धर्मार्थमोक्षेभ्यः विद्याभ्यासस्य आवश्यकताम् अवगच्छेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH06-T5",
+   "topic_number": 5,
+   "title": "शनैः शनैः साधनं विद्या भूषणं विद्याधनं च",
+   "ncert_sections": "श्लोकाः ७, ९, १०",
+   "concepts": [
+    {
+     "concept_tag": "shanaih-shanaih",
+     "learning_objective": "छात्रः शनैः शनैः साधनीयानि पञ्च कार्याणि तेषाम् आशयं च ज्ञातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "vidya-sarvasya-bhushanam",
+     "learning_objective": "छात्रः चन्द्रसुमराजदृष्टान्तैः विद्या सर्वस्य भूषणम् इति अवगच्छेत्।"
+    },
+    {
+     "concept_tag": "vidyadhanam-sarvadhana-pradhanam",
+     "learning_objective": "छात्रः विद्याधनं सर्वधनप्रधानं कथम् इति सामान्यधनेन सह तोलयितुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH06-T6",
+   "topic_number": 6,
+   "title": "शब्दार्थाः व्याकरणं च",
+   "ncert_sections": "शब्दार्थाः, अभ्यासः, योग्यताविस्तरः",
+   "concepts": [
+    {
+     "concept_tag": "shabdarthah",
+     "learning_objective": "छात्रः पाठस्थानां कठिनशब्दानाम् अर्थान् ज्ञातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "vibhakti-vachanam",
+     "learning_objective": "छात्रः पाठस्थपदानां विभक्तिं वचनं च अभिज्ञाय प्रश्ननिर्माणं कर्तुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "vidya-shabdarupani",
+     "learning_objective": "छात्रः आकारान्तस्त्रीलिङ्गस्य विद्या-शब्दस्य रूपाणि प्रयोक्तुं समर्थः भवेत्।"
+    }
+   ]
+  }
+ ]
+}

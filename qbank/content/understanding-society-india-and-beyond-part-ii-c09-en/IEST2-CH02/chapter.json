@@ -1,0 +1,140 @@
+{
+  "chapter_id": "IEST2-CH02",
+  "title": "Life on Earth",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "IEST2-CH02-T1",
+      "topic_number": 1,
+      "title": "Biomes: meaning and the factors that shape them",
+      "ncert_sections": "Introduction; Types of Biomes",
+      "concepts": [
+        {
+          "concept_tag": "meaning-of-biome",
+          "learning_objective": "Define a biome and distinguish it from an ecosystem."
+        },
+        {
+          "concept_tag": "factors-determining-biomes",
+          "learning_objective": "Identify the factors such as temperature and precipitation that decide which plants and animals a biome supports."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH02-T2",
+      "topic_number": 2,
+      "title": "Terrestrial biomes",
+      "ncert_sections": "Terrestrial Biomes: Forest, Grassland, Desert, Tundra",
+      "concepts": [
+        {
+          "concept_tag": "forest-biome",
+          "learning_objective": "Describe the location and importance of tropical rainforests as a gene bank."
+        },
+        {
+          "concept_tag": "grassland-and-desert-biomes",
+          "learning_objective": "Compare grasslands and deserts in rainfall, vegetation and adaptations of life."
+        },
+        {
+          "concept_tag": "tundra-biome",
+          "learning_objective": "Explain how permafrost and cold limit life in the tundra."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH02-T3",
+      "topic_number": 3,
+      "title": "Aquatic biomes and the biome pyramid",
+      "ncert_sections": "Aquatic Biomes; Biome Pyramid",
+      "concepts": [
+        {
+          "concept_tag": "aquatic-biomes",
+          "learning_objective": "Distinguish freshwater and marine biomes and state their importance."
+        },
+        {
+          "concept_tag": "biome-pyramid",
+          "learning_objective": "Explain why number, biomass and energy decrease up the levels of a biome pyramid."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH02-T4",
+      "topic_number": 4,
+      "title": "Biodiversity and its geographical conservation",
+      "ncert_sections": "Interconnectedness between Biomes and Living Beings; Maintaining Ecological Balance and Biodiversity",
+      "concepts": [
+        {
+          "concept_tag": "biodiversity-meaning",
+          "learning_objective": "Define biodiversity at the level of species, genes and ecosystems."
+        },
+        {
+          "concept_tag": "conservation-strategies",
+          "learning_objective": "Explain hotspots, protected areas, ecosystem-based conservation and wildlife corridors."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH02-T5",
+      "topic_number": 5,
+      "title": "Forest ecotourism and forests as livelihoods",
+      "ncert_sections": "Forest Ecotourism; Forests and Livelihoods; Forest Dwellers",
+      "concepts": [
+        {
+          "concept_tag": "forest-ecotourism",
+          "learning_objective": "Explain ecotourism and evaluate the Thenmala model of community-based tourism."
+        },
+        {
+          "concept_tag": "forest-livelihoods",
+          "learning_objective": "Describe how forest dwellers depend on and protect forests, including sacred groves and forest movements."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH02-T6",
+      "topic_number": 6,
+      "title": "Geographical Indication of forest products",
+      "ncert_sections": "Geographical Indication (GI); GI-tagged Forest Products in India",
+      "concepts": [
+        {
+          "concept_tag": "geographical-indication",
+          "learning_objective": "Explain what a GI tag is and how it benefits local communities."
+        },
+        {
+          "concept_tag": "gi-tagged-forest-products",
+          "learning_objective": "Match GI-tagged forest products of India with their regions and features."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH02-T7",
+      "topic_number": 7,
+      "title": "Challenges of forest dwellers and government efforts",
+      "ncert_sections": "Challenges Faced by People Living in Forests; Government Efforts to Support Forest Dwellers; Mendha Lekha",
+      "concepts": [
+        {
+          "concept_tag": "forest-dweller-challenges",
+          "learning_objective": "Identify the problems faced by forest dwellers, such as disasters, fires and human-wildlife conflict."
+        },
+        {
+          "concept_tag": "forest-rights-and-community-management",
+          "learning_objective": "Explain the Forest Rights Act, JFM and the Mendha Lekha model of community forest management."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH02-T8",
+      "topic_number": 8,
+      "title": "Ecological commons",
+      "ncert_sections": "Ecological Commons; Bihar fisheries; Water tanks",
+      "concepts": [
+        {
+          "concept_tag": "ecological-commons",
+          "learning_objective": "Define ecological commons and explain why they are shrinking."
+        },
+        {
+          "concept_tag": "commons-management-cases",
+          "learning_objective": "Analyse commons-based fisheries in Bihar and traditional water tanks as collective resource management."
+        }
+      ]
+    }
+  ]
+}

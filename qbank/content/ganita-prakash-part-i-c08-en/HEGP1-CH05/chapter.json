@@ -1,0 +1,120 @@
+{
+ "chapter_id": "HEGP1-CH05",
+ "title": "Number Play",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP1-CH05-T1",
+   "topic_number": 1,
+   "title": "Parity of sums and differences",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "parity-of-signed-sums",
+     "learning_objective": "Explain why all expressions a ± b ± c ± d formed from the same numbers have the same parity."
+    },
+    {
+     "concept_tag": "even-expressions-algebra",
+     "learning_objective": "Decide, using parity rules, whether an arithmetic or algebraic expression is always even."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH05-T2",
+   "topic_number": 2,
+   "title": "Pairs to make fours and Always, Sometimes, Never",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "even-numbers-remainder-mod-4",
+     "learning_objective": "Use the forms 4p and 4p + 2 to decide when the sum of two even numbers is a multiple of 4."
+    },
+    {
+     "concept_tag": "divisibility-properties",
+     "learning_objective": "Apply the properties of divisibility of sums, multiples, factors and LCM to judge statements as always, sometimes or never true."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH05-T3",
+   "topic_number": 3,
+   "title": "What remains? Remainders in algebraic form",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "remainder-algebraic-form",
+     "learning_objective": "Write all numbers with a given remainder on division as an algebraic expression such as 5k + 3."
+    },
+    {
+     "concept_tag": "remainders-of-sums-and-conditions",
+     "learning_objective": "Find remainders of sums and numbers satisfying several remainder conditions without long division."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH05-T4",
+   "topic_number": 4,
+   "title": "Divisibility shortcuts for 9 and 3",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "place-value-remainders",
+     "learning_objective": "Use the remainders of place values on division by 9 to find the remainder of a number."
+    },
+    {
+     "concept_tag": "divisibility-by-9-and-3",
+     "learning_objective": "Apply the digit-sum tests for divisibility by 9 and 3, including finding missing digits."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH05-T5",
+   "topic_number": 5,
+   "title": "Divisibility by 11 and combined tests",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "divisibility-by-11",
+     "learning_objective": "Use the alternating pattern of place values to test divisibility by 11 and find the remainder."
+    },
+    {
+     "concept_tag": "combined-divisibility-tests",
+     "learning_objective": "Choose factor tests based on prime factorisation to check divisibility by numbers such as 24 and 44."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH05-T6",
+   "topic_number": 6,
+   "title": "Digital roots",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "digital-root",
+     "learning_objective": "Compute the digital root of a number by repeatedly adding its digits."
+    },
+    {
+     "concept_tag": "digital-root-and-remainder",
+     "learning_objective": "Relate the digital root of a number to its remainder on division by 9."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH05-T7",
+   "topic_number": 7,
+   "title": "Digits in disguise: cryptarithms",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "cryptarithm-addition",
+     "learning_objective": "Solve addition cryptarithms using carries and place value reasoning."
+    },
+    {
+     "concept_tag": "cryptarithm-multiplication",
+     "learning_objective": "Solve multiplication cryptarithms using size limits and units-digit patterns."
+    }
+   ]
+  }
+ ]
+}

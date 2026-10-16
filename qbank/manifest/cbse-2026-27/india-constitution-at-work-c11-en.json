@@ -1,0 +1,1347 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "india-constitution-at-work-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "political_science",
+  "language": "english",
+  "title": "India Constitution at Work",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "keps2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEPS2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Constitution: Why and How?",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS2-CH01-T1",
+     "topic_number": 1,
+     "title": "Why a constitution: coordination and assurance",
+     "ncert_sections": "Why do we need a constitution?; Constitution allows coordination and assurance",
+     "concepts": [
+      {
+       "concept_tag": "coordination-and-assurance",
+       "learning_objective": "Explain why a diverse society needs publicly known and enforceable basic rules for coordination and assurance."
+      },
+      {
+       "concept_tag": "enforceability-of-rules",
+       "learning_objective": "Explain why basic rules must be legally enforceable to give citizens assurance that others will follow them."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH01-T2",
+     "topic_number": 2,
+     "title": "Decision-making powers and limits on government",
+     "ncert_sections": "Specification of decision making powers; Limitations on the powers of government",
+     "concepts": [
+      {
+       "concept_tag": "specification-of-decision-making-power",
+       "learning_objective": "Identify how a constitution specifies who has the power to make decisions and how government is constituted."
+      },
+      {
+       "concept_tag": "limits-on-government",
+       "learning_objective": "Explain how fundamental rights set limits on what a government can impose on its citizens."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH01-T3",
+     "topic_number": 3,
+     "title": "Aspirations of society and fundamental identity",
+     "ncert_sections": "Aspirations and goals of a society; Enabling provisions; Fundamental identity of a people",
+     "concepts": [
+      {
+       "concept_tag": "enabling-provisions",
+       "learning_objective": "Explain how a constitution enables the government to fulfil the aspirations of society and create conditions for a just society."
+      },
+      {
+       "concept_tag": "fundamental-identity",
+       "learning_objective": "Describe how a constitution expresses the political and moral identity of a people."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH01-T4",
+     "topic_number": 4,
+     "title": "The authority and effectiveness of a constitution",
+     "ncert_sections": "The authority of a constitution; Mode of promulgation; Substantive provisions; Balanced institutional design",
+     "concepts": [
+      {
+       "concept_tag": "mode-of-promulgation",
+       "learning_objective": "Explain how the way a constitution comes into being affects its authority."
+      },
+      {
+       "concept_tag": "substantive-provisions",
+       "learning_objective": "Explain why a successful constitution must give everyone in society a reason to go along with it."
+      },
+      {
+       "concept_tag": "balanced-institutional-design",
+       "learning_objective": "Analyse how fragmentation of power and a balance between rigidity and flexibility make a constitution durable."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH01-T5",
+     "topic_number": 5,
+     "title": "Making of the Indian Constitution: the Constituent Assembly",
+     "ncert_sections": "How was the Indian Constitution made?; Composition of the Constituent Assembly",
+     "concepts": [
+      {
+       "concept_tag": "constituent-assembly-composition",
+       "learning_objective": "Recall the composition, method of election and key dates of the Constituent Assembly."
+      },
+      {
+       "concept_tag": "representativeness-of-assembly",
+       "learning_objective": "Evaluate how far the Constituent Assembly was representative of Indian society."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH01-T6",
+     "topic_number": 6,
+     "title": "Deliberation, procedures and the nationalist inheritance",
+     "ncert_sections": "The principle of deliberation; Procedures; Inheritance of the nationalist movement; Objectives Resolution",
+     "concepts": [
+      {
+       "concept_tag": "public-reason-and-deliberation",
+       "learning_objective": "Explain how deliberation, public reason and open procedures gave the Constituent Assembly its authority."
+      },
+      {
+       "concept_tag": "objectives-resolution",
+       "learning_objective": "Identify the main principles of the Objectives Resolution and their link with the nationalist movement."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH01-T7",
+     "topic_number": 7,
+     "title": "Institutional arrangements and borrowed provisions",
+     "ncert_sections": "Institutional arrangements; Provisions adapted from constitutions of different countries",
+     "concepts": [
+      {
+       "concept_tag": "institutional-arrangements",
+       "learning_objective": "Explain why the framers adopted a balanced parliamentary and federal arrangement of institutions."
+      },
+      {
+       "concept_tag": "borrowed-provisions",
+       "learning_objective": "Match provisions of the Indian Constitution with the constitutions from which they were adapted."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Rights in the Indian Constitution",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS2-CH02-T1",
+     "topic_number": 1,
+     "title": "The importance of rights and the bill of rights",
+     "ncert_sections": "Introduction; The Importance of Rights; Bill of Rights",
+     "concepts": [
+      {
+       "concept_tag": "importance-of-rights-in-practice",
+       "learning_objective": "Explain, using the Asian Games workers and Machal Lalung cases, why rights must be implemented in practice."
+      },
+      {
+       "concept_tag": "bill-of-rights",
+       "learning_objective": "Define a bill of rights and identify from whom it protects individuals, with the South African example."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH02-T2",
+     "topic_number": 2,
+     "title": "Fundamental Rights in the Indian Constitution",
+     "ncert_sections": "Fundamental Rights in the Indian Constitution",
+     "concepts": [
+      {
+       "concept_tag": "fundamental-vs-ordinary-rights",
+       "learning_objective": "Distinguish Fundamental Rights from ordinary legal rights in the way they are protected and changed."
+      },
+      {
+       "concept_tag": "reasonable-restrictions",
+       "learning_objective": "Explain that Fundamental Rights are not absolute and that courts can strike down actions violating them."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH02-T3",
+     "topic_number": 3,
+     "title": "Right to Equality",
+     "ncert_sections": "Right to Equality",
+     "concepts": [
+      {
+       "concept_tag": "equality-provisions",
+       "learning_objective": "Identify the provisions of the right to equality, including equal access, abolition of untouchability and of titles."
+      },
+      {
+       "concept_tag": "equality-of-opportunity-reservations",
+       "learning_objective": "Explain why special measures such as reservations under Article 16(4) do not violate equality."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH02-T4",
+     "topic_number": 4,
+     "title": "Right to Freedom",
+     "ncert_sections": "Right to Freedom; Right to life and personal liberty; Preventive detention; Other freedoms; Rights of accused",
+     "concepts": [
+      {
+       "concept_tag": "right-to-life-and-liberty",
+       "learning_objective": "Describe the safeguards on arrest and the expanded meaning of the right to life under Article 21."
+      },
+      {
+       "concept_tag": "preventive-detention",
+       "learning_objective": "Explain preventive detention, its time limit and the tension it creates with personal liberty."
+      },
+      {
+       "concept_tag": "rights-of-accused",
+       "learning_objective": "Identify the constitutional protections that ensure a fair trial for an accused person."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH02-T5",
+     "topic_number": 5,
+     "title": "Right against Exploitation and Right to Freedom of Religion",
+     "ncert_sections": "Right against Exploitation; Right to Freedom of Religion",
+     "concepts": [
+      {
+       "concept_tag": "right-against-exploitation",
+       "learning_objective": "Identify the forms of exploitation, such as begar, trafficking and hazardous child labour, that the Constitution prohibits."
+      },
+      {
+       "concept_tag": "freedom-of-religion",
+       "learning_objective": "Explain the freedom of conscience, the right to propagate religion and the limits on religious freedom."
+      },
+      {
+       "concept_tag": "equality-of-religions",
+       "learning_objective": "Explain how equal treatment of all religions by the state sustains secularism."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH02-T6",
+     "topic_number": 6,
+     "title": "Cultural and Educational Rights and Right to Constitutional Remedies",
+     "ncert_sections": "Cultural and Educational Rights; Right to Constitutional Remedies; National Human Rights Commission",
+     "concepts": [
+      {
+       "concept_tag": "minority-rights",
+       "learning_objective": "Explain the rights of religious and linguistic minorities to conserve their culture and set up educational institutions."
+      },
+      {
+       "concept_tag": "writs",
+       "learning_objective": "Distinguish the five writs that courts can issue to enforce Fundamental Rights."
+      },
+      {
+       "concept_tag": "nhrc",
+       "learning_objective": "Describe the composition, functions and limits of the National Human Rights Commission."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH02-T7",
+     "topic_number": 7,
+     "title": "Directive Principles of State Policy and Fundamental Duties",
+     "ncert_sections": "Directive Principles of State Policy; Fundamental Duties of citizens",
+     "concepts": [
+      {
+       "concept_tag": "dpsp-nature-and-content",
+       "learning_objective": "Explain why Directive Principles are non-justiciable and classify them into goals, rights and policies."
+      },
+      {
+       "concept_tag": "dpsp-implementation",
+       "learning_objective": "Identify government measures that gave effect to the Directive Principles."
+      },
+      {
+       "concept_tag": "fundamental-duties",
+       "learning_objective": "State how the 42nd Amendment added Fundamental Duties and how they relate to rights."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH02-T8",
+     "topic_number": 8,
+     "title": "Relationship between Fundamental Rights and Directive Principles",
+     "ncert_sections": "Relationship between Fundamental Rights and Directive Principles; Right to Property; Conclusion",
+     "concepts": [
+      {
+       "concept_tag": "rights-dpsp-relationship",
+       "learning_objective": "Compare Fundamental Rights and Directive Principles as complementary and explain the conflict over zamindari abolition."
+      },
+      {
+       "concept_tag": "right-to-property-and-basic-structure",
+       "learning_objective": "Trace the change in status of the right to property and the significance of the Kesavananda Bharati case."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Election and Representation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS2-CH03-T1",
+     "topic_number": 1,
+     "title": "Elections and democracy",
+     "ncert_sections": "Elections and Democracy",
+     "concepts": [
+      {
+       "concept_tag": "direct-and-indirect-democracy",
+       "learning_objective": "Distinguish direct democracy from representative democracy and explain why large democracies elect representatives."
+      },
+      {
+       "concept_tag": "constitutional-rules-on-elections",
+       "learning_objective": "Identify the basic rules about elections that a democratic constitution lays down and why they are written into it."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH03-T2",
+     "topic_number": 2,
+     "title": "First Past the Post system",
+     "ncert_sections": "Election System in India; First Past the Post System",
+     "concepts": [
+      {
+       "concept_tag": "fptp-features",
+       "learning_objective": "Describe how a winner is decided under the First Past the Post (plurality) system."
+      },
+      {
+       "concept_tag": "vote-seat-disproportion",
+       "learning_objective": "Interpret election results to explain the gap between vote share and seat share under FPTP."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH03-T3",
+     "topic_number": 3,
+     "title": "Proportional Representation and the Rajya Sabha",
+     "ncert_sections": "Proportional Representation; How does PR work in Rajya Sabha elections",
+     "concepts": [
+      {
+       "concept_tag": "proportional-representation",
+       "learning_objective": "Explain the features and variations of the Proportional Representation system."
+      },
+      {
+       "concept_tag": "single-transferable-vote",
+       "learning_objective": "Apply the Single Transferable Vote method and quota formula used for Rajya Sabha elections."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH03-T4",
+     "topic_number": 4,
+     "title": "Why India adopted the FPTP system",
+     "ncert_sections": "Why did India adopt the FPTP system?",
+     "concepts": [
+      {
+       "concept_tag": "reasons-for-fptp",
+       "learning_objective": "Explain why the Constitution makers preferred FPTP for a large and diverse country."
+      },
+      {
+       "concept_tag": "fptp-and-party-system",
+       "learning_objective": "Analyse how FPTP has shaped India's party system in practice."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH03-T5",
+     "topic_number": 5,
+     "title": "Reservation of constituencies",
+     "ncert_sections": "Reservation of Constituencies",
+     "concepts": [
+      {
+       "concept_tag": "reserved-constituencies",
+       "learning_objective": "Distinguish reserved constituencies from separate electorates and explain why reservation is needed under FPTP."
+      },
+      {
+       "concept_tag": "delimitation-commission",
+       "learning_objective": "Describe how the Delimitation Commission decides which constituencies are reserved for SC and ST."
+      },
+      {
+       "concept_tag": "womens-reservation",
+       "learning_objective": "State the position on reservation of seats for women in local bodies and legislatures."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH03-T6",
+     "topic_number": 6,
+     "title": "Universal franchise and right to contest",
+     "ncert_sections": "Free and Fair Elections; Universal franchise and right to contest",
+     "concepts": [
+      {
+       "concept_tag": "universal-adult-franchise",
+       "learning_objective": "Explain universal adult franchise and its basis in equality."
+      },
+      {
+       "concept_tag": "right-to-contest",
+       "learning_objective": "Identify the conditions and restrictions on the right to contest elections."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH03-T7",
+     "topic_number": 7,
+     "title": "Independent Election Commission",
+     "ncert_sections": "Independent Election Commission",
+     "concepts": [
+      {
+       "concept_tag": "ec-composition-and-tenure",
+       "learning_objective": "Describe the constitutional basis, composition, tenure and removal of the Election Commission."
+      },
+      {
+       "concept_tag": "ec-functions-and-powers",
+       "learning_objective": "Explain the functions of the Election Commission and how it uses its powers to ensure free and fair polls."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH03-T8",
+     "topic_number": 8,
+     "title": "Electoral reforms and conclusion",
+     "ncert_sections": "Electoral Reforms; Conclusion",
+     "concepts": [
+      {
+       "concept_tag": "electoral-reform-proposals",
+       "learning_objective": "Identify and evaluate the main proposals for electoral reform and their limits."
+      },
+      {
+       "concept_tag": "success-of-indian-elections",
+       "learning_objective": "Assess the factors that show the success of India's election system."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Executive",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS2-CH04-T1",
+     "topic_number": 1,
+     "title": "What is an executive?",
+     "ncert_sections": "What is an Executive?",
+     "concepts": [
+      {
+       "concept_tag": "executive-meaning-functions",
+       "learning_objective": "Explain that the executive is the organ of government that implements laws and policies adopted by the legislature."
+      },
+      {
+       "concept_tag": "political-and-permanent-executive",
+       "learning_objective": "Distinguish between the political executive and the permanent executive."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH04-T2",
+     "topic_number": 2,
+     "title": "Types of executive",
+     "ncert_sections": "What are the different types of executive?",
+     "concepts": [
+      {
+       "concept_tag": "presidential-system",
+       "learning_objective": "Describe the presidential system in which the president is both head of state and head of government."
+      },
+      {
+       "concept_tag": "parliamentary-system",
+       "learning_objective": "Describe the parliamentary system in which a nominal head of state coexists with a prime minister who wields effective power."
+      },
+      {
+       "concept_tag": "semi-presidential-system",
+       "learning_objective": "Explain the semi-presidential system with examples such as France, Russia and Sri Lanka."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH04-T3",
+     "topic_number": 3,
+     "title": "Parliamentary executive in India and the President",
+     "ncert_sections": "Parliamentary Executive in India; Power and position of President",
+     "concepts": [
+      {
+       "concept_tag": "choice-of-parliamentary-executive",
+       "learning_objective": "Explain why the makers of the Constitution chose a parliamentary executive over a presidential one."
+      },
+      {
+       "concept_tag": "president-election-removal",
+       "learning_objective": "State how the President of India is elected and removed."
+      },
+      {
+       "concept_tag": "article-74-binding-advice",
+       "learning_objective": "Explain the effect of Article 74(1) on the advice of the Council of Ministers."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH04-T4",
+     "topic_number": 4,
+     "title": "Discretionary powers of the President and the Vice President",
+     "ncert_sections": "Discretionary Powers of the President; The Vice President of India",
+     "concepts": [
+      {
+       "concept_tag": "presidential-discretion",
+       "learning_objective": "Identify the situations in which the President can act on his or her own discretion."
+      },
+      {
+       "concept_tag": "pocket-veto",
+       "learning_objective": "Explain the suspensive veto and the informal pocket veto of the President."
+      },
+      {
+       "concept_tag": "vice-president",
+       "learning_objective": "State the method of election, removal and roles of the Vice President."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH04-T5",
+     "topic_number": 5,
+     "title": "Prime Minister and Council of Ministers",
+     "ncert_sections": "Prime Minister and Council of Ministers; Size of the Council of Ministers",
+     "concepts": [
+      {
+       "concept_tag": "council-of-ministers-composition",
+       "learning_objective": "Describe the appointment, size limit and ranks of the Council of Ministers."
+      },
+      {
+       "concept_tag": "collective-responsibility",
+       "learning_objective": "Explain the principle of collective responsibility to the Lok Sabha."
+      },
+      {
+       "concept_tag": "prime-minister-position-coalitions",
+       "learning_objective": "Analyse the sources of the Prime Minister's power and how coalition politics affects it."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH04-T6",
+     "topic_number": 6,
+     "title": "Permanent executive: bureaucracy",
+     "ncert_sections": "Permanent Executive: Bureaucracy",
+     "concepts": [
+      {
+       "concept_tag": "civil-service-neutrality",
+       "learning_objective": "Explain the role of the civil service and the need for political neutrality and political control."
+      },
+      {
+       "concept_tag": "recruitment-upsc-reservation",
+       "learning_objective": "Describe recruitment through Public Service Commissions and reservation in public services."
+      },
+      {
+       "concept_tag": "all-india-services-central-control",
+       "learning_objective": "Explain how the All India Services strengthen central control over State administration."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Legislature",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS2-CH05-T1",
+     "topic_number": 1,
+     "title": "Why do we need a Parliament?",
+     "ncert_sections": "Why do we need a Parliament?",
+     "concepts": [
+      {
+       "concept_tag": "legislature-democratic-centre",
+       "learning_objective": "Explain why the legislature, and not only law making, is the centre of the democratic process."
+      },
+      {
+       "concept_tag": "decline-of-parliament",
+       "learning_objective": "Evaluate the claim that Parliament has declined as the Cabinet has grown stronger."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH05-T2",
+     "topic_number": 2,
+     "title": "Bicameralism and the Rajya Sabha",
+     "ncert_sections": "Why do we need two Houses of Parliament?; Rajya Sabha",
+     "concepts": [
+      {
+       "concept_tag": "bicameral-legislature",
+       "learning_objective": "State the meaning and advantages of a bicameral legislature and identify States with two Houses."
+      },
+      {
+       "concept_tag": "rajya-sabha-composition",
+       "learning_objective": "Describe how the Rajya Sabha is elected, its term, its nominated members and its permanent character."
+      },
+      {
+       "concept_tag": "asymmetric-representation",
+       "learning_objective": "Distinguish the population-based representation of the Rajya Sabha from the equal representation of the US Senate."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH05-T3",
+     "topic_number": 3,
+     "title": "The Lok Sabha",
+     "ncert_sections": "Lok Sabha",
+     "concepts": [
+      {
+       "concept_tag": "lok-sabha-composition",
+       "learning_objective": "Describe the direct election, constituencies and term of the Lok Sabha and the conditions for its early dissolution."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH05-T4",
+     "topic_number": 4,
+     "title": "Functions of Parliament and powers of the two Houses",
+     "ncert_sections": "What does the Parliament do?; Powers of Rajya Sabha; Special Powers of Rajya Sabha",
+     "concepts": [
+      {
+       "concept_tag": "functions-of-parliament",
+       "learning_objective": "Identify the legislative, financial, constituent, electoral, judicial and other functions of Parliament."
+      },
+      {
+       "concept_tag": "powers-of-the-houses",
+       "learning_objective": "Compare the powers of the Lok Sabha and the Rajya Sabha, including the special power of the Rajya Sabha over the State List."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH05-T5",
+     "topic_number": 5,
+     "title": "How Parliament makes laws",
+     "ncert_sections": "How does the Parliament make laws?",
+     "concepts": [
+      {
+       "concept_tag": "types-of-bills",
+       "learning_objective": "Distinguish government bills, private member's bills, money bills and non-money bills."
+      },
+      {
+       "concept_tag": "stages-of-a-bill",
+       "learning_objective": "Trace the stages of a bill from Cabinet approval to the President's assent, including the joint session and the money bill rules."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH05-T6",
+     "topic_number": 6,
+     "title": "Parliamentary control of the executive",
+     "ncert_sections": "How does the Parliament control the executive?; Instruments of Parliamentary Control",
+     "concepts": [
+      {
+       "concept_tag": "parliamentary-privilege",
+       "learning_objective": "Explain parliamentary privilege and why it is needed for effective control of the executive."
+      },
+      {
+       "concept_tag": "instruments-of-control",
+       "learning_objective": "Explain deliberation, ratification of laws, financial control and the no-confidence motion as instruments of control."
+      },
+      {
+       "concept_tag": "limits-of-control",
+       "learning_objective": "Evaluate the conditions that make parliamentary control effective or weak."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH05-T7",
+     "topic_number": 7,
+     "title": "Parliamentary committees and self-regulation",
+     "ncert_sections": "What do the committees of Parliament do?; How does the Parliament regulate itself?",
+     "concepts": [
+      {
+       "concept_tag": "parliamentary-committees",
+       "learning_objective": "Describe the role of standing committees and Joint Parliamentary Committees."
+      },
+      {
+       "concept_tag": "presiding-officer-anti-defection",
+       "learning_objective": "Explain the role of the presiding officer and the meaning and effects of the anti-defection law."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Judiciary",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS2-CH06-T1",
+     "topic_number": 1,
+     "title": "Why we need an independent judiciary",
+     "ncert_sections": "Why do we need an independent judiciary?; Independence of Judiciary",
+     "concepts": [
+      {
+       "concept_tag": "rule-of-law",
+       "learning_objective": "Explain how the judiciary protects the rule of law and the supremacy of law."
+      },
+      {
+       "concept_tag": "meaning-of-judicial-independence",
+       "learning_objective": "State what independence of the judiciary means and why it does not imply absence of accountability."
+      },
+      {
+       "concept_tag": "constitutional-safeguards-of-independence",
+       "learning_objective": "Identify the constitutional provisions that protect the independence of judges."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH06-T2",
+     "topic_number": 2,
+     "title": "Appointment and removal of judges",
+     "ncert_sections": "Appointment of Judges; Removal of Judges",
+     "concepts": [
+      {
+       "concept_tag": "appointment-of-judges",
+       "learning_objective": "Describe how the Chief Justice and other judges are appointed and how the collegium principle developed."
+      },
+      {
+       "concept_tag": "removal-of-judges",
+       "learning_objective": "Explain the grounds and the special-majority procedure for removing a judge of the Supreme Court or a High Court."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH06-T3",
+     "topic_number": 3,
+     "title": "Structure of the judiciary and jurisdiction of the Supreme Court",
+     "ncert_sections": "Structure of the Judiciary; Jurisdiction of Supreme Court",
+     "concepts": [
+      {
+       "concept_tag": "integrated-judicial-structure",
+       "learning_objective": "Describe India's single integrated, pyramidal judicial system."
+      },
+      {
+       "concept_tag": "supreme-court-jurisdictions",
+       "learning_objective": "Distinguish between the original, writ, appellate and advisory jurisdiction of the Supreme Court."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH06-T4",
+     "topic_number": 4,
+     "title": "Judicial activism and public interest litigation",
+     "ncert_sections": "Judicial Activism",
+     "concepts": [
+      {
+       "concept_tag": "public-interest-litigation",
+       "learning_objective": "Explain how public interest litigation changed the rule that only an aggrieved person may approach the court."
+      },
+      {
+       "concept_tag": "impact-of-judicial-activism",
+       "learning_objective": "Evaluate the positive and negative effects of judicial activism on the political system."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH06-T5",
+     "topic_number": 5,
+     "title": "Judiciary and rights: judicial review",
+     "ncert_sections": "Judiciary and Rights",
+     "concepts": [
+      {
+       "concept_tag": "writs-and-rights",
+       "learning_objective": "Identify the two ways in which the Supreme Court remedies the violation of fundamental rights."
+      },
+      {
+       "concept_tag": "judicial-review",
+       "learning_objective": "Explain the meaning and grounds of judicial review of laws passed by legislatures."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH06-T6",
+     "topic_number": 6,
+     "title": "Judiciary and Parliament",
+     "ncert_sections": "Judiciary and Parliament; Conclusion",
+     "concepts": [
+      {
+       "concept_tag": "separation-of-powers",
+       "learning_objective": "Explain the principle of limited separation of powers and checks and balances among the three organs."
+      },
+      {
+       "concept_tag": "basic-structure-doctrine",
+       "learning_objective": "Analyse the significance of the Kesavananda Bharati case and the basic structure doctrine."
+      },
+      {
+       "concept_tag": "legislature-judiciary-tensions",
+       "learning_objective": "Identify the unresolved issues of conflict between the legislature and the judiciary."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Federalism",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS2-CH07-T1",
+     "topic_number": 1,
+     "title": "What is federalism",
+     "ncert_sections": "What is Federalism?; Federalism in West Indies; Federalism in Nigeria",
+     "concepts": [
+      {
+       "concept_tag": "features-of-federalism",
+       "learning_objective": "Identify the key features of a federal system such as two levels of government, a written constitution and an independent judiciary."
+      },
+      {
+       "concept_tag": "practice-of-federalism",
+       "learning_objective": "Explain, using the USSR, West Indies and Nigeria, why the culture and practice of federalism matter as much as a federal constitution."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH07-T2",
+     "topic_number": 2,
+     "title": "Federalism in the Indian Constitution and division of powers",
+     "ncert_sections": "Federalism in the Indian Constitution; Division of Powers",
+     "concepts": [
+      {
+       "concept_tag": "union-of-states",
+       "learning_objective": "Describe how the Constitution describes India as a Union of States and why it stressed unity and cooperation."
+      },
+      {
+       "concept_tag": "three-lists-and-residuary",
+       "learning_objective": "Classify subjects into the Union, State and Concurrent Lists and explain residuary powers."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH07-T3",
+     "topic_number": 3,
+     "title": "Federalism with a strong central government",
+     "ncert_sections": "Federalism with a Strong Central Government",
+     "concepts": [
+      {
+       "concept_tag": "reasons-for-strong-centre",
+       "learning_objective": "Explain why the makers of the Constitution created a strong central government."
+      },
+      {
+       "concept_tag": "unitary-provisions",
+       "learning_objective": "Identify the constitutional provisions that give the centre greater power than the States."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH07-T4",
+     "topic_number": 4,
+     "title": "Centre-State relations and demands for autonomy",
+     "ncert_sections": "Conflicts in India's Federal System; Centre-State Relations; Demands for Autonomy",
+     "concepts": [
+      {
+       "concept_tag": "phases-of-centre-state-relations",
+       "learning_objective": "Explain how changes in party politics shaped centre-State relations from the 1950s to the coalition era."
+      },
+      {
+       "concept_tag": "autonomy-demands",
+       "learning_objective": "Distinguish the political, financial, administrative and cultural dimensions of State demands for autonomy."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH07-T5",
+     "topic_number": 5,
+     "title": "Role of Governors and President's rule",
+     "ncert_sections": "Role of Governors and President's Rule",
+     "concepts": [
+      {
+       "concept_tag": "governor-controversy",
+       "learning_objective": "Explain why the office of the Governor has been controversial in centre-State relations."
+      },
+      {
+       "concept_tag": "article-356",
+       "learning_objective": "Evaluate the use of Article 356 and judicial review of President's rule."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH07-T6",
+     "topic_number": 6,
+     "title": "Demands for new States and interstate conflicts",
+     "ncert_sections": "Demands for New States; Interstate Conflicts",
+     "concepts": [
+      {
+       "concept_tag": "linguistic-reorganisation",
+       "learning_objective": "Trace the creation of linguistic and new States from 1956 onwards."
+      },
+      {
+       "concept_tag": "interstate-disputes",
+       "learning_objective": "Distinguish border disputes from river water disputes and explain why they need negotiation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH07-T7",
+     "topic_number": 7,
+     "title": "Special provisions and conclusion",
+     "ncert_sections": "Special Provisions; Jammu and Kashmir; Conclusion",
+     "concepts": [
+      {
+       "concept_tag": "asymmetric-federalism",
+       "learning_objective": "Explain why some States receive special provisions and differential treatment."
+      },
+      {
+       "concept_tag": "article-370-jk",
+       "learning_objective": "Describe the special status of Jammu and Kashmir under Article 370 and its end in 2019."
+      },
+      {
+       "concept_tag": "cooperative-federalism",
+       "learning_objective": "Assess the values needed for a cooperative federation that respects unity and diversity."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS2-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Local Governments",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps208.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS2-CH08-T1",
+     "topic_number": 1,
+     "title": "Why local governments?",
+     "ncert_sections": "Introduction; Why Local Governments?",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-local-government",
+       "learning_objective": "Explain local government as government at the village and district level, closest to the common people."
+      },
+      {
+       "concept_tag": "local-government-and-democracy",
+       "learning_objective": "Explain how strong local governments ensure participation and accountability and so strengthen democracy."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH08-T2",
+     "topic_number": 2,
+     "title": "Growth of local government in India",
+     "ncert_sections": "Growth of Local Government in India",
+     "concepts": [
+      {
+       "concept_tag": "historical-origins-local-bodies",
+       "learning_objective": "Trace local bodies from village sabhas to Lord Ripon's local boards and the Acts of 1919 and 1935."
+      },
+      {
+       "concept_tag": "gandhi-and-decentralisation",
+       "learning_objective": "Describe Mahatma Gandhi's idea of village republics and decentralisation of power."
+      },
+      {
+       "concept_tag": "constitution-and-local-government",
+       "learning_objective": "Explain why local government was placed in the Directive Principles and given limited importance in 1950."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH08-T3",
+     "topic_number": 3,
+     "title": "Local governments in independent India before 1992",
+     "ncert_sections": "Local Governments in Independent India",
+     "concepts": [
+      {
+       "concept_tag": "community-development-and-early-pris",
+       "learning_objective": "Describe the Community Development Programme of 1952 and early three-tier Panchayati Raj bodies."
+      },
+      {
+       "concept_tag": "weaknesses-before-amendments",
+       "learning_objective": "Identify the weaknesses of local bodies before 1992 and the P.K. Thungon Committee's recommendation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH08-T4",
+     "topic_number": 4,
+     "title": "73rd Amendment: structure, elections and reservations",
+     "ncert_sections": "73rd and 74th Amendments; 73rd Amendment: Three Tier Structure, Elections, Reservations",
+     "concepts": [
+      {
+       "concept_tag": "three-tier-structure-gram-sabha",
+       "learning_objective": "Describe the three-tier Panchayati Raj structure and the mandatory Gram Sabha."
+      },
+      {
+       "concept_tag": "panchayat-elections",
+       "learning_objective": "State the provisions for direct elections, a five-year term and elections within six months of dissolution."
+      },
+      {
+       "concept_tag": "reservations-in-panchayats",
+       "learning_objective": "Explain reservations for women, Scheduled Castes and Scheduled Tribes, including for chairpersons."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH08-T5",
+     "topic_number": 5,
+     "title": "73rd Amendment: subjects, PESA, State Election and Finance Commissions",
+     "ncert_sections": "Transfer of Subjects; State Election Commissioners; State Finance Commission",
+     "concepts": [
+      {
+       "concept_tag": "eleventh-schedule-subjects",
+       "learning_objective": "Explain the transfer of 29 subjects in the Eleventh Schedule and the role of State legislation."
+      },
+      {
+       "concept_tag": "pesa-adivasi-areas",
+       "learning_objective": "Explain the purpose of the 1996 Act extending the Panchayat system to Adivasi areas."
+      },
+      {
+       "concept_tag": "state-election-and-finance-commissions",
+       "learning_objective": "Distinguish the roles of the State Election Commissioner and the State Finance Commission."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH08-T6",
+     "topic_number": 6,
+     "title": "74th Amendment: urban local bodies",
+     "ncert_sections": "74th Amendment",
+     "concepts": [
+      {
+       "concept_tag": "urban-area-definition",
+       "learning_objective": "State the Census of India criteria for an urban area."
+      },
+      {
+       "concept_tag": "nagarpalikas-twelfth-schedule",
+       "learning_objective": "Compare the 74th Amendment with the 73rd and identify the Twelfth Schedule."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH08-T7",
+     "topic_number": 7,
+     "title": "Implementation of the 73rd and 74th Amendments",
+     "ncert_sections": "Implementation of 73rd and 74th Amendments; Conclusion",
+     "concepts": [
+      {
+       "concept_tag": "achievements-of-amendments",
+       "learning_objective": "Assess the achievements of the amendments in uniformity, women's representation and social profile."
+      },
+      {
+       "concept_tag": "limitations-autonomy-finance",
+       "learning_objective": "Evaluate limits on the autonomy and finances of local bodies and the gap between law and practice."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS2-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Constitution as a Living Document",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps209.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS2-CH09-T1",
+     "topic_number": 1,
+     "title": "Are constitutions static?",
+     "ncert_sections": "Introduction; Are Constitutions Static?",
+     "concepts": [
+      {
+       "concept_tag": "changing-constitutions-abroad",
+       "learning_objective": "Recall how countries such as the Soviet Union and France replaced their constitutions after political change."
+      },
+      {
+       "concept_tag": "sacred-yet-amendable",
+       "learning_objective": "Explain how the Indian Constitution balances being a respected, durable document with being an amendable instrument."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH09-T2",
+     "topic_number": 2,
+     "title": "How to amend the Constitution",
+     "ncert_sections": "How to Amend the Constitution? (Article 368)",
+     "concepts": [
+      {
+       "concept_tag": "flexible-and-rigid",
+       "learning_objective": "Distinguish flexible and rigid constitutions and explain why the Indian Constitution combines both."
+      },
+      {
+       "concept_tag": "methods-of-amendment",
+       "learning_objective": "Identify the three methods of amendment and the role of Parliament, States and the President in them."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH09-T3",
+     "topic_number": 3,
+     "title": "Special majority and ratification by States",
+     "ncert_sections": "Special Majority; Ratification by States",
+     "concepts": [
+      {
+       "concept_tag": "special-majority",
+       "learning_objective": "Apply the two conditions of special majority to calculate the votes needed to pass an amendment bill."
+      },
+      {
+       "concept_tag": "ratification-by-states",
+       "learning_objective": "Explain which amendments need ratification by half the State legislatures and why."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH09-T4",
+     "topic_number": 4,
+     "title": "Why have there been so many amendments?",
+     "ncert_sections": "Why Have There Been So Many Amendments?; Contents of Amendments; Differing Interpretations",
+     "concepts": [
+      {
+       "concept_tag": "pattern-of-amendments",
+       "learning_objective": "Interpret the pattern of amendments across periods of one-party dominance and coalition politics."
+      },
+      {
+       "concept_tag": "technical-amendments",
+       "learning_objective": "Classify amendments that are technical or administrative and those arising from differing interpretations."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH09-T5",
+     "topic_number": 5,
+     "title": "Consensus-based and controversial amendments",
+     "ncert_sections": "Amendments through Political Consensus; Controversial Amendments",
+     "concepts": [
+      {
+       "concept_tag": "consensus-amendments",
+       "learning_objective": "Identify amendments passed through political consensus, such as the 52nd, 61st, 73rd and 74th."
+      },
+      {
+       "concept_tag": "controversial-amendments",
+       "learning_objective": "Analyse why the 38th, 39th and 42nd amendments were controversial and how the 43rd and 44th restored balance."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH09-T6",
+     "topic_number": 6,
+     "title": "Basic structure and evolution of the Constitution",
+     "ncert_sections": "Basic Structure and Evolution of the Constitution; Review of the Constitution",
+     "concepts": [
+      {
+       "concept_tag": "basic-structure-doctrine",
+       "learning_objective": "Explain how the Kesavananda Bharati ruling limited Parliament's amending power and made the judiciary the final judge."
+      },
+      {
+       "concept_tag": "judicial-interpretation",
+       "learning_objective": "Give examples of how judicial rulings have informally changed the working of the Constitution."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH09-T7",
+     "topic_number": 7,
+     "title": "Constitution as a living document",
+     "ncert_sections": "Constitution as a Living Document; Contribution of the Judiciary; Maturity of the Political Leadership; Conclusion",
+     "concepts": [
+      {
+       "concept_tag": "living-document",
+       "learning_objective": "Explain why the Constitution is called a living document and how this explains its durability."
+      },
+      {
+       "concept_tag": "letter-and-spirit",
+       "learning_objective": "Evaluate the balance between the letter and the spirit of the Constitution and the role of political maturity."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPS2-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "The Philosophy of the Constitution",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keps210.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPS2-CH10-T1",
+     "topic_number": 1,
+     "title": "Meaning of the philosophy of the Constitution",
+     "ncert_sections": "What is meant by philosophy of the Constitution?",
+     "concepts": [
+      {
+       "concept_tag": "laws-and-moral-values",
+       "learning_objective": "Explain how many laws are connected to deeply held moral values such as equality."
+      },
+      {
+       "concept_tag": "political-philosophy-approach",
+       "learning_objective": "Identify the three elements of a political philosophy approach to the Constitution."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH10-T2",
+     "topic_number": 2,
+     "title": "Constitution as a means of democratic transformation",
+     "ncert_sections": "Constitution as means of democratic transformation; Why go back to the Constituent Assembly?",
+     "concepts": [
+      {
+       "concept_tag": "democratic-transformation",
+       "learning_objective": "Explain how constitutions both limit state power and empower the traditionally deprived."
+      },
+      {
+       "concept_tag": "relevance-of-assembly-debates",
+       "learning_objective": "Evaluate why the Constituent Assembly Debates remain relevant to present constitutional practice."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH10-T3",
+     "topic_number": 3,
+     "title": "Individual freedom, social justice and minority rights",
+     "ncert_sections": "What is the political philosophy of our Constitution?: Individual freedom; Social justice; Respect for diversity and minority rights",
+     "concepts": [
+      {
+       "concept_tag": "individual-freedom",
+       "learning_objective": "Trace the historical roots of the Constitution's commitment to individual freedom."
+      },
+      {
+       "concept_tag": "social-justice-liberalism",
+       "learning_objective": "Distinguish the liberalism of the Indian Constitution from classical liberalism through its link to social justice."
+      },
+      {
+       "concept_tag": "community-rights",
+       "learning_objective": "Explain why the Constitution recognises community-based rights."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH10-T4",
+     "topic_number": 4,
+     "title": "Secularism and principled distance",
+     "ncert_sections": "Secularism: Rights of religious groups; State's power of intervention",
+     "concepts": [
+      {
+       "concept_tag": "mutual-exclusion",
+       "learning_objective": "Describe the western conception of secularism as mutual exclusion of state and religion."
+      },
+      {
+       "concept_tag": "principled-distance",
+       "learning_objective": "Explain how Indian secularism departs from the western model through group rights and principled distance."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH10-T5",
+     "topic_number": 5,
+     "title": "Universal franchise, federalism and national identity",
+     "ncert_sections": "Universal franchise; Federalism; National identity",
+     "concepts": [
+      {
+       "concept_tag": "universal-franchise",
+       "learning_objective": "Trace the commitment to universal franchise in Indian nationalism."
+      },
+      {
+       "concept_tag": "asymmetric-federalism",
+       "learning_objective": "Explain asymmetric federalism with reference to Articles 371 and 371A."
+      },
+      {
+       "concept_tag": "national-identity",
+       "learning_objective": "Explain why separate electorates were rejected in favour of a common national identity."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH10-T6",
+     "topic_number": 6,
+     "title": "Procedural achievements",
+     "ncert_sections": "Procedural achievements",
+     "concepts": [
+      {
+       "concept_tag": "procedural-achievements",
+       "learning_objective": "Identify faith in political deliberation and the spirit of compromise and accommodation as procedural achievements."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPS2-CH10-T7",
+     "topic_number": 7,
+     "title": "Criticisms and limitations",
+     "ncert_sections": "Criticisms; Limitations; Conclusion",
+     "concepts": [
+      {
+       "concept_tag": "criticisms-of-constitution",
+       "learning_objective": "Evaluate the criticisms that the Constitution is unwieldy, unrepresentative and alien."
+      },
+      {
+       "concept_tag": "limitations-of-constitution",
+       "learning_objective": "Identify the limitations of the Constitution and why they do not jeopardise its philosophy."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "chapter_id": "HEGP1-CH07",
+ "title": "Proportional Reasoning-1",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP1-CH07-T1",
+   "topic_number": 1,
+   "title": "Observing Similarity in Change",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "scaling-by-same-factor",
+     "learning_objective": "Recognise that a figure keeps its shape when its width and height are multiplied by the same factor."
+    },
+    {
+     "concept_tag": "change-by-difference-distorts",
+     "learning_objective": "Explain why adding or subtracting the same amount to width and height distorts a figure."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH07-T2",
+   "topic_number": 2,
+   "title": "Ratios and their Simplest Form",
+   "ncert_sections": "7.2, 7.3",
+   "concepts": [
+    {
+     "concept_tag": "ratio-terms-meaning",
+     "learning_objective": "Interpret a ratio a : b as 'for every a units of the first quantity there are b units of the second' and identify its terms."
+    },
+    {
+     "concept_tag": "simplest-form-by-hcf",
+     "learning_objective": "Reduce a ratio to its simplest form by dividing both terms by their HCF, using the same units."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH07-T3",
+   "topic_number": 3,
+   "title": "Ratios in Proportion",
+   "ncert_sections": "7.3, 7.4",
+   "concepts": [
+    {
+     "concept_tag": "checking-proportionality",
+     "learning_objective": "Decide whether two ratios are proportional by comparing their simplest forms or the factor of change."
+    },
+    {
+     "concept_tag": "adding-changes-ratio",
+     "learning_objective": "Show that adding the same number to both terms of a ratio generally changes the ratio."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH07-T4",
+   "topic_number": 4,
+   "title": "Trairasika: The Rule of Three",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "cross-multiplication",
+     "learning_objective": "Use a : b :: c : d implies ad = bc to find an unknown fourth term."
+    },
+    {
+     "concept_tag": "rule-of-three-terms",
+     "learning_objective": "Identify pramana, phala, ichchha and ichchhaphala and apply the Rule of Three."
+    },
+    {
+     "concept_tag": "same-units-and-limits",
+     "learning_objective": "Use the same units in both ratios and recognise situations that are not direct proportion."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH07-T5",
+   "topic_number": 5,
+   "title": "Sharing, but Not Equally",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "dividing-in-a-ratio",
+     "learning_objective": "Divide a quantity x in the ratio m : n into parts m x/(m + n) and n x/(m + n)."
+    },
+    {
+     "concept_tag": "changing-mixture-ratio",
+     "learning_objective": "Find the new ratio, or the amount to add, when one component of a mixture is changed."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH07-T6",
+   "topic_number": 6,
+   "title": "Unit Conversions",
+   "ncert_sections": "7.6",
+   "concepts": [
+    {
+     "concept_tag": "unit-conversion-in-proportion",
+     "learning_objective": "Convert units of length, area and volume before solving proportion problems."
+    },
+    {
+     "concept_tag": "temperature-conversion",
+     "learning_objective": "Convert temperatures between Celsius and Fahrenheit using F = (9/5) C + 32."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "chapter_id": "GSDE1-CH01",
+ "title": "वन्दे भारतमातरम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GSDE1-CH01-T1",
+   "topic_number": 1,
+   "title": "'वन्दे मातरम्' गीतस्य परिचयः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vande-mataram-rachayita",
+     "learning_objective": "छात्रः 'वन्दे मातरम्' गीतस्य रचयितारं, उपन्यासं, रचनाकालं, रचनायाः कारणं च ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "vande-mataram-arthah",
+     "learning_objective": "छात्रः 'वन्दे मातरम्' इत्यस्य अर्थं, गीतस्य भाषाद्वयं, स्वतन्त्रता-आन्दोलने तस्य महत्त्वं च अवगमिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH01-T2",
+   "topic_number": 2,
+   "title": "भारतमातुः स्वरूपम् – पर्वताः, नद्यः, तीर्थक्षेत्राणि",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "himalaya-samudra-varnanam",
+     "learning_objective": "छात्रः भारतमातुः वर्णने हिमालयस्य समुद्रस्य च भूमिकां वक्तुं शक्ष्यति।"
+    },
+    {
+     "concept_tag": "nadyah-parvatah-tirthani",
+     "learning_objective": "छात्रः पाठे उक्तानां पवित्रनदीनां, श्रेष्ठपर्वतानां, तीर्थक्षेत्राणां च परिचयं प्राप्स्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH01-T3",
+   "topic_number": 3,
+   "title": "प्राचीनानि आधुनिकानि च भौगोलिकनामानि",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "nagara-namani",
+     "learning_objective": "छात्रः प्राचीननगराणां तीर्थक्षेत्राणां च आधुनिकनामानि मेलयितुं शक्ष्यति।"
+    },
+    {
+     "concept_tag": "nadi-parvata-namani",
+     "learning_objective": "छात्रः पवित्रनदीनां पर्वतमालानां च प्राचीनानि आधुनिकानि च नामानि ज्ञास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH01-T4",
+   "topic_number": 4,
+   "title": "त्रिवर्णध्वजस्य वर्णाः तेषां सन्देशः च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "keshara-varnah",
+     "learning_objective": "छात्रः केशरवर्णः त्यागस्य शौर्यस्य वीराणां बलिदानस्य च सूचकः इति अवगमिष्यति।"
+    },
+    {
+     "concept_tag": "harita-varnah",
+     "learning_objective": "छात्रः हरितवर्णः कृषकाणां परिश्रमस्य भारतस्य समृद्धेः च सूचकः इति ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "shveta-varnah",
+     "learning_objective": "छात्रः श्वेतवर्णः शान्तेः सत्यस्य वैज्ञानिकानां यशसः च द्योतकः इति वक्तुं शक्ष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH01-T5",
+   "topic_number": 5,
+   "title": "धर्मचक्रं तस्य सन्देशः च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "dharmachakra-swaroopam",
+     "learning_objective": "छात्रः धर्मचक्रस्य नाम, वर्णं, अराणां सङ्ख्यां च ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "dharmachakra-sandeshah",
+     "learning_objective": "छात्रः 'न विरम, सततं चल' इति धर्मचक्रस्य सन्देशं जीवने प्रयोक्तुं शक्ष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH01-T6",
+   "topic_number": 6,
+   "title": "शब्दार्थाः व्याकरणं च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "shabdarthah",
+     "learning_objective": "छात्रः पाठे प्रयुक्तानां कठिनशब्दानाम् अर्थान् ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "vibhakti-vachanam",
+     "learning_objective": "छात्रः पाठस्य पदेषु विभक्तिं वचनं च अभिज्ञास्यति, शब्दरूपाणि च लेखिष्यति।"
+    },
+    {
+     "concept_tag": "lat-lakarah",
+     "learning_objective": "छात्रः कर्तुः अनुसारं लट्-लकारस्य शुद्धं क्रियापदं प्रयोक्तुं शक्ष्यति।"
+    }
+   ]
+  }
+ ]
+}

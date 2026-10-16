@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KEBO1-CH12",
+ "title": "Respiration in Plants",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH12-T1",
+   "topic_number": 1,
+   "title": "Do plants breathe? Cellular respiration and gas exchange",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "respiration-and-respiratory-substrates",
+     "learning_objective": "Define cellular respiration and respiratory substrates and explain why energy is released stepwise and stored as ATP."
+    },
+    {
+     "concept_tag": "gas-exchange-in-plants",
+     "learning_objective": "Explain how plants meet their gas-exchange needs through stomata, lenticels and air spaces without respiratory organs."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH12-T2",
+   "topic_number": 2,
+   "title": "Glycolysis",
+   "ncert_sections": "12.2",
+   "concepts": [
+    {
+     "concept_tag": "glycolysis-steps",
+     "learning_objective": "Describe the site, discoverers and sequence of reactions of the EMP pathway."
+    },
+    {
+     "concept_tag": "glycolysis-atp-nadh-yield",
+     "learning_objective": "Identify the steps of glycolysis that use or form ATP and NADH + H+ and calculate its energy yield."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH12-T3",
+   "topic_number": 3,
+   "title": "Fermentation",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "alcoholic-and-lactic-fermentation",
+     "learning_objective": "Describe how pyruvic acid is converted to ethanol or lactic acid and the enzymes involved."
+    },
+    {
+     "concept_tag": "fermentation-limitations",
+     "learning_objective": "Explain the low energy yield and hazards of fermentation and their consequences."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH12-T4",
+   "topic_number": 4,
+   "title": "Aerobic respiration: link reaction, TCA cycle and ETS",
+   "ncert_sections": "12.4, 12.4.1, 12.4.2",
+   "concepts": [
+    {
+     "concept_tag": "pyruvate-oxidative-decarboxylation",
+     "learning_objective": "Describe the oxidative decarboxylation of pyruvate to acetyl CoA in the mitochondrial matrix."
+    },
+    {
+     "concept_tag": "tca-cycle",
+     "learning_objective": "Trace the reactions of the Krebs' cycle and the points where CO2, NADH, FADH2 and GTP are formed."
+    },
+    {
+     "concept_tag": "electron-transport-oxidative-phosphorylation",
+     "learning_objective": "Explain the electron transport system, the role of oxygen and ATP synthesis by ATP synthase."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH12-T5",
+   "topic_number": 5,
+   "title": "The respiratory balance sheet",
+   "ncert_sections": "12.5",
+   "concepts": [
+    {
+     "concept_tag": "atp-balance-sheet",
+     "learning_objective": "Calculate the theoretical net ATP gain per glucose and evaluate the assumptions behind it."
+    },
+    {
+     "concept_tag": "fermentation-vs-aerobic-respiration",
+     "learning_objective": "Compare fermentation and aerobic respiration in breakdown of glucose, ATP yield and NADH oxidation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH12-T6",
+   "topic_number": 6,
+   "title": "Amphibolic pathway",
+   "ncert_sections": "12.6",
+   "concepts": [
+    {
+     "concept_tag": "entry-of-respiratory-substrates",
+     "learning_objective": "Identify the points at which fats and proteins enter the respiratory pathway."
+    },
+    {
+     "concept_tag": "amphibolic-nature-of-respiration",
+     "learning_objective": "Explain why the respiratory pathway is considered amphibolic rather than catabolic."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH12-T7",
+   "topic_number": 7,
+   "title": "Respiratory quotient",
+   "ncert_sections": "12.7",
+   "concepts": [
+    {
+     "concept_tag": "rq-definition-and-values",
+     "learning_objective": "Define respiratory quotient and state its values for carbohydrates, fats and proteins."
+    },
+    {
+     "concept_tag": "rq-calculation",
+     "learning_objective": "Calculate RQ from a balanced equation or gas-exchange data and interpret the substrate used."
+    }
+   ]
+  }
+ ]
+}

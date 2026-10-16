@@ -1,0 +1,112 @@
+{
+ "chapter_id": "HHGP1-CH02",
+ "title": "घातों का खेल",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP1-CH02-T1",
+   "topic_number": 1,
+   "title": "घात के खेल का अनुभव",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "kagaz-modna-dugunaa",
+     "learning_objective": "कागज को बार-बार मोड़ने पर हर मोड़ के साथ मोटाई दोगुनी होने का प्रतिरूप पहचानना।"
+    },
+    {
+     "concept_tag": "charghataanki-vriddhi",
+     "learning_objective": "गुणनात्मक (चरघातांकी) वृद्धि की तीव्रता को समझना और उसका अनुमान लगाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH02-T2",
+   "topic_number": 2,
+   "title": "चरघातांकी संकेतन और संक्रियाएँ",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "ghaatank-sanketan",
+     "learning_objective": "किसी संख्या के बार-बार गुणन को आधार और घातांक के रूप में लिखना और पढ़ना।"
+    },
+    {
+     "concept_tag": "abhajya-gunankhand-ghaat-roop",
+     "learning_objective": "किसी संख्या के अभाज्य गुणनखंडों को घातांकीय रूप में व्यक्त करना।"
+    },
+    {
+     "concept_tag": "ghaat-niyam-gunan",
+     "learning_objective": "n^a × n^b = n^(a+b) और (n^a)^b = n^(ab) नियमों का उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH02-T3",
+   "topic_number": 3,
+   "title": "घातों का दूसरा पक्ष",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "ghaat-niyam-bhaag",
+     "learning_objective": "n^a ÷ n^b = n^(a−b) नियम से घातों का भाग करना।"
+    },
+    {
+     "concept_tag": "shoonya-rinaatmak-ghaatank",
+     "learning_objective": "शून्य और ऋणात्मक घातांक का अर्थ समझना और घात रेखा पर तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH02-T4",
+   "topic_number": 4,
+   "title": "10 की घातें",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "das-ki-ghaat-vistaarit-roop",
+     "learning_objective": "संख्याओं (दशमलव सहित) को 10 की घातों के प्रयोग से विस्तारित रूप में लिखना।"
+    },
+    {
+     "concept_tag": "vaigyaanik-sanketan",
+     "learning_objective": "बड़ी संख्याओं को मानक (वैज्ञानिक) रूप x × 10^y में लिखना और उनकी तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH02-T5",
+   "topic_number": 5,
+   "title": "क्या आपने कभी विचार किया है?",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "anumaan-aur-sannikatan",
+     "learning_objective": "उचित मान्यताओं और सन्निकटन से बड़ी राशियों का अनुमान लगाना।"
+    },
+    {
+     "concept_tag": "rekhik-banaam-charghaataanki-vriddhi",
+     "learning_objective": "योगात्मक (रैखिक) और गुणनात्मक (चरघातांकी) वृद्धि में अंतर करना।"
+    },
+    {
+     "concept_tag": "badi-sankhyaon-ki-samajh",
+     "learning_objective": "लाख, करोड़, अरब जैसी बड़ी संख्याओं को 10 की घातों से व्यक्त कर तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH02-T6",
+   "topic_number": 6,
+   "title": "इतिहास की एक झलक",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "bhaarateeya-sankhya-naam",
+     "learning_objective": "प्राचीन भारतीय ग्रंथों और आधुनिक भारतीय पद्धति में 10 की बड़ी घातों के नाम पहचानना।"
+    },
+    {
+     "concept_tag": "antarraashtreey-sankhya-naam",
+     "learning_objective": "अंतरराष्ट्रीय पद्धति के नामों और गूगोल जैसी बहुत बड़ी संख्याओं को 10 की घातों से जोड़ना।"
+    }
+   ]
+  }
+ ]
+}

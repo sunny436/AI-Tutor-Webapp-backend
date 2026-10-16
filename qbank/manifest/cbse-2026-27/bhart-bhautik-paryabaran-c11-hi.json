@@ -1,0 +1,751 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "bhart-bhautik-paryabaran-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "geography",
+  "language": "hindi",
+  "title": "Bhart Bhautik Paryabaran",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khgy1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHGY1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "भारत — स्थिति",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khgy101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHGY1-CH01-T1",
+     "topic_number": 1,
+     "title": "स्थिति: अक्षांशीय एवं देशांतरीय विस्तार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "akshanshiya-deshantariya-vistar",
+       "learning_objective": "भारत की मुख्य भूमि के अक्षांशीय और देशांतरीय विस्तार तथा सीमाओं को पहचानना।"
+      },
+      {
+       "concept_tag": "uttar-dakshin-poorv-pashchim-doori",
+       "learning_objective": "उत्तर-दक्षिण और पूर्व-पश्चिम दूरी में अंतर का कारण समझाना।"
+      },
+      {
+       "concept_tag": "akshanshiya-sthiti-ka-prabhav",
+       "learning_objective": "अक्षांशीय स्थिति का जलवायु, मृदा और वनस्पति की विविधता पर प्रभाव विश्लेषित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH01-T2",
+     "topic_number": 2,
+     "title": "देशांतरीय विस्तार और भारतीय मानक समय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "manak-yamyottar",
+       "learning_objective": "भारत के मानक याम्योत्तर और उसके चयन के आधार को समझना।"
+      },
+      {
+       "concept_tag": "samay-antar-ganana",
+       "learning_objective": "देशांतर के अंतर से स्थानीय समय के अंतर की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH01-T3",
+     "topic_number": 3,
+     "title": "भारत का आकार और भौतिक विविधता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kshetrafal-aur-aakar",
+       "learning_objective": "भारत के क्षेत्रफल, विश्व में उसके स्थान और तटरेखा की लंबाई को जानना।"
+      },
+      {
+       "concept_tag": "bharatiya-upmahadweep",
+       "learning_objective": "भारतीय उपमहाद्वीप की सीमाओं, देशों और दर्रों की भूमिका को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH01-T4",
+     "topic_number": 4,
+     "title": "भारत और उसके पड़ोसी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "padosi-desh",
+       "learning_objective": "भारत के स्थलीय और समुद्री पड़ोसी देशों की पहचान करना।"
+      },
+      {
+       "concept_tag": "samudri-sthiti-ka-mahatva",
+       "learning_objective": "हिंद महासागर में भारत की समुद्री स्थिति और प्रादेशिक सागर के महत्त्व का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHGY1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "संरचना तथा भूआकृति विज्ञान",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khgy102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHGY1-CH02-T1",
+     "topic_number": 1,
+     "title": "भारत की भूवैज्ञानिक संरचना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pryadvipiya-khand",
+       "learning_objective": "प्रायद्वीपीय खंड की सीमा, संरचना और स्थिरता को समझना।"
+      },
+      {
+       "concept_tag": "himalaya-navin-parvat",
+       "learning_objective": "हिमालय की नवीन, दुर्बल और लचीली संरचना की विशेषताएँ पहचानना।"
+      },
+      {
+       "concept_tag": "sindhu-ganga-maidan-utpatti",
+       "learning_objective": "सिंधु-गंगा-ब्रह्मपुत्र मैदान की भू-अभिनति से उत्पत्ति समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH02-T2",
+     "topic_number": 2,
+     "title": "उत्तर तथा उत्तर-पूर्वी पर्वतमाला",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "himalaya-shrenian-disha",
+       "learning_objective": "हिमालय की श्रेणियों की दिशा, लंबाई और चौड़ाई का वर्णन करना।"
+      },
+      {
+       "concept_tag": "himalaya-vibhajak",
+       "learning_objective": "हिमालय की भौतिक, जलवायु, अपवाह और सांस्कृतिक विभाजक के रूप में भूमिका समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH02-T3",
+     "topic_number": 3,
+     "title": "उत्तरी मैदान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhabar-tarai",
+       "learning_objective": "भाबर और तराई पेटियों की विशेषताएँ तथा अंतर बताना।"
+      },
+      {
+       "concept_tag": "khadar-bhangar",
+       "learning_objective": "खादर और बांगर तथा मैदान के नदीय स्थलरूपों को पहचानना।"
+      },
+      {
+       "concept_tag": "uttari-maidan-vistar",
+       "learning_objective": "उत्तरी मैदान के विस्तार, जल विभाजक और आर्थिक महत्त्व को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH02-T4",
+     "topic_number": 4,
+     "title": "प्रायद्वीपीय पठार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pathar-visheshtayen",
+       "learning_objective": "प्रायद्वीपीय पठार के विस्तार, ढाल और स्थलरूपों की पहचान करना।"
+      },
+      {
+       "concept_tag": "dakkan-ghat",
+       "learning_objective": "दक्कन पठार तथा पश्चिमी व पूर्वी घाटों की तुलना करना।"
+      },
+      {
+       "concept_tag": "madhya-uchchbhumi-poorvottar",
+       "learning_objective": "मध्य उच्चभूमि और उत्तर-पूर्वी पठार की विशेषताएँ समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH02-T5",
+     "topic_number": 5,
+     "title": "भारतीय मरुस्थल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "marusthal-sthalroop",
+       "learning_objective": "भारतीय मरुस्थल की जलवायु और पवन-निर्मित स्थलरूपों की पहचान करना।"
+      },
+      {
+       "concept_tag": "marusthal-bhugarbhik-itihas",
+       "learning_objective": "मरुस्थल के भूवैज्ञानिक इतिहास और आंतरिक अपवाह की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH02-T6",
+     "topic_number": 6,
+     "title": "तटीय मैदान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pashchimi-tat",
+       "learning_objective": "पश्चिमी तटीय मैदान को निमग्न तट के रूप में पहचानना और उसकी विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "poorvi-tat",
+       "learning_objective": "पूर्वी तटीय मैदान को उभरे तट के रूप में पश्चिमी तट से तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH02-T7",
+     "topic_number": 7,
+     "title": "द्वीप समूह",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "andaman-nicobar",
+       "learning_objective": "अंडमान-निकोबार द्वीप समूह की स्थिति, उत्पत्ति और विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "lakshadweep",
+       "learning_objective": "लक्षद्वीप द्वीप समूह की प्रवाल संरचना और विशेषताएँ समझाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHGY1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "अपवाह तंत्र",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khgy103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHGY1-CH03-T1",
+     "topic_number": 1,
+     "title": "अपवाह, अपवाह प्रतिरूप और अपवाह द्रोणी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "apvah-pratirup",
+       "learning_objective": "वृक्षाकार, अरीय, जालीनुमा और अभिकेंद्री अपवाह प्रतिरूपों को पहचानना।"
+      },
+      {
+       "concept_tag": "apvah-droni-jalsambhar",
+       "learning_objective": "अपवाह द्रोणी, नदी द्रोणी और जल-संभर में अंतर स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH03-T2",
+     "topic_number": 2,
+     "title": "भारतीय अपवाह का वर्गीकरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samudra-anusar-vargikaran",
+       "learning_objective": "समुद्र की ओर उन्मुखता के आधार पर अरब सागर और बंगाल की खाड़ी के अपवाह को समझना।"
+      },
+      {
+       "concept_tag": "droni-akar-vargikaran",
+       "learning_objective": "जलग्रहण क्षेत्र के आकार के आधार पर बड़ी, मध्यम और छोटी नदी द्रोणियों को वर्गीकृत करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH03-T3",
+     "topic_number": 3,
+     "title": "हिमालयी अपवाह और उसका विकास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "himalayi-apvah-visheshtaen",
+       "learning_objective": "हिमालयी नदियों की बारहमासी प्रकृति और अपरदनी व निक्षेपी स्थलरूपों को समझाना।"
+      },
+      {
+       "concept_tag": "indo-brahma-siddhant",
+       "learning_objective": "शिवालिक या इंडो-ब्रह्म नदी के विखंडन से हिमालयी अपवाह के विकास का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH03-T4",
+     "topic_number": 4,
+     "title": "हिमालयी अपवाह की नदी प्रणालियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sindhu-tantra",
+       "learning_objective": "सिंधु और उसकी सहायक नदियों के उद्गम व मार्ग को पहचानना।"
+      },
+      {
+       "concept_tag": "ganga-tantra",
+       "learning_objective": "गंगा और उसकी सहायक नदियों के उद्गम, संगम और विशेषताओं को समझना।"
+      },
+      {
+       "concept_tag": "brahmaputra-tantra",
+       "learning_objective": "ब्रह्मपुत्र के विभिन्न नामों, सहायक नदियों और बाढ़ की प्रवृत्ति को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH03-T5",
+     "topic_number": 5,
+     "title": "प्रायद्वीपीय अपवाह तंत्र",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prayadvipiya-visheshtaen",
+       "learning_objective": "प्रायद्वीपीय नदियों की विशेषताओं की हिमालयी नदियों से तुलना करना।"
+      },
+      {
+       "concept_tag": "prayadvipiya-vikas",
+       "learning_objective": "प्रायद्वीपीय अपवाह को आकार देने वाली तीन भूगर्भिक घटनाओं का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "prayadvipiya-nadi-tantra",
+       "learning_objective": "महानदी, गोदावरी, कृष्णा, कावेरी, नर्मदा, तापी और लूनी की विशेषताएँ पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH03-T6",
+     "topic_number": 6,
+     "title": "नदी जल की उपयोग क्षमता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nadi-jal-upyog",
+       "learning_objective": "नदी जल के असमान वितरण, नदी जोड़ योजनाओं और प्रदूषण की समस्याओं का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHGY1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "जलवायु",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khgy104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHGY1-CH04-T1",
+     "topic_number": 1,
+     "title": "मानसूनी जलवायु में एकता और विविधता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "monsoon-ekta-vividhta",
+       "learning_objective": "भारत की मानसूनी जलवायु की एकता और उसकी प्रादेशिक विविधताओं को पहचानना।"
+      },
+      {
+       "concept_tag": "tapman-varsha-antar",
+       "learning_objective": "तापमान और वर्षण के प्रादेशिक अंतरों के उदाहरणों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH04-T2",
+     "topic_number": 2,
+     "title": "भारत की जलवायु को निर्धारित करने वाले कारक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "akshansh-himalaya",
+       "learning_objective": "अक्षांश और हिमालय पर्वत के जलवायु पर प्रभाव को समझाना।"
+      },
+      {
+       "concept_tag": "jal-thal-vitran-samudra-doori",
+       "learning_objective": "स्थल-जल वितरण तथा समुद्र से दूरी के प्रभाव का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "oonchai-uchchavach",
+       "learning_objective": "ऊँचाई और उच्चावच के तापमान व वर्षा पर प्रभाव को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH04-T3",
+     "topic_number": 3,
+     "title": "भारतीय मानसून की प्रकृति",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "monsoon-aagman-itcz",
+       "learning_objective": "मानसून के आगमन में अंतः उष्ण कटिबंधीय अभिसरण क्षेत्र और जेट धाराओं की भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "monsoon-vichchhed",
+       "learning_objective": "मानसून में विच्छेद के कारणों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "el-nino",
+       "learning_objective": "एल-निनो और भारतीय मानसून के संबंध को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH04-T4",
+     "topic_number": 4,
+     "title": "शीत ऋतु और ग्रीष्म ऋतु",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sheet-ritu",
+       "learning_objective": "शीत ऋतु में तापमान, वायुदाब, पवनों और वर्षा की दशाओं की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "grishm-ritu-sthaniya-toofan",
+       "learning_objective": "ग्रीष्म ऋतु की दशाओं और प्रसिद्ध स्थानीय तूफ़ानों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH04-T5",
+     "topic_number": 5,
+     "title": "दक्षिण-पश्चिम मानसून और लौटता मानसून",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "arab-sagar-shakha",
+       "learning_objective": "अरब सागर शाखा और वृष्टि छाया क्षेत्र की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "bangal-khadi-shakha",
+       "learning_objective": "बंगाल की खाड़ी शाखा तथा तमिलनाडु तट के शुष्क रहने के कारण समझाना।"
+      },
+      {
+       "concept_tag": "lautta-monsoon",
+       "learning_objective": "लौटते मानसून की ऋतु की विशेषताओं का वर्णन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH04-T6",
+     "topic_number": 6,
+     "title": "वर्षा का वितरण, आर्थिक जीवन और भूमंडलीय तापन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "varsha-vitran",
+       "learning_objective": "भारत में वार्षिक वर्षा के स्थानिक वितरण को पहचानना।"
+      },
+      {
+       "concept_tag": "monsoon-arthik-jeevan",
+       "learning_objective": "मानसून और भारत के आर्थिक जीवन के संबंध का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "bhumandaliya-tapan",
+       "learning_objective": "भूमंडलीय तापन के कारणों और प्रभावों की व्याख्या करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHGY1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "प्राकृतिक वनस्पति",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khgy105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHGY1-CH05-T1",
+     "topic_number": 1,
+     "title": "प्राकृतिक वनस्पति तथा उष्णकटिबंधीय सदाबहार और अर्धसदाबहार वन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prakritik-vanaspati",
+       "learning_objective": "प्राकृतिक वनस्पति का अर्थ और भारत में वनस्पति की विविधता को समझना।"
+      },
+      {
+       "concept_tag": "sadabahar-van",
+       "learning_objective": "उष्णकटिबंधीय सदाबहार और अर्धसदाबहार वनों की जलवायु दशाएँ, क्षेत्र और विशेषताएँ पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH05-T2",
+     "topic_number": 2,
+     "title": "उष्णकटिबंधीय पर्णपाती और कंटीले वन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "parnpati-van",
+       "learning_objective": "आर्द्र और शुष्क पर्णपाती वनों में वर्षा, क्षेत्र और प्रजातियों के आधार पर अंतर करना।"
+      },
+      {
+       "concept_tag": "kantile-van",
+       "learning_objective": "उष्णकटिबंधीय कंटीले वनों की दशाएँ और प्रजातियाँ पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH05-T3",
+     "topic_number": 3,
+     "title": "पर्वतीय वन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "uttari-parvatiya-van",
+       "learning_objective": "हिमालय में ऊँचाई के साथ वनस्पति के क्रमिक परिवर्तन को समझना।"
+      },
+      {
+       "concept_tag": "dakshini-parvatiya-van",
+       "learning_objective": "प्रायद्वीपीय भारत के पर्वतीय वनों और शोला वनों की विशेषताएँ जानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH05-T4",
+     "topic_number": 4,
+     "title": "वेलांचली और अनूप वन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "aardrabhumi",
+       "learning_objective": "भारत की आर्द्रभूमियों और रामसर स्थलों की जानकारी प्राप्त करना।"
+      },
+      {
+       "concept_tag": "mangrove-van",
+       "learning_objective": "मैंग्रोव वनों के विस्तार, विशेषताओं और महत्त्व को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH05-T5",
+     "topic_number": 5,
+     "title": "वन संरक्षण और सामाजिक वानिकी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "van-niti",
+       "learning_objective": "राष्ट्रीय वन नीति के उद्देश्यों को जानना।"
+      },
+      {
+       "concept_tag": "samajik-vaniki",
+       "learning_objective": "सामाजिक वानिकी के नगर, ग्रामीण और फार्म वानिकी रूपों में अंतर करना।"
+      },
+      {
+       "concept_tag": "van-aur-janjati",
+       "learning_objective": "जनजातीय समुदायों और वनों के घनिष्ठ संबंध को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH05-T6",
+     "topic_number": 6,
+     "title": "वन्य जीवन, उसका संरक्षण और जीवमंडल निचय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vanya-jeevan-hras",
+       "learning_objective": "वन्य जीवन में कमी के कारणों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "vanya-jeev-sanrakshan",
+       "learning_objective": "वन्य जीवन अधिनियम 1972 और बाघ तथा हाथी परियोजनाओं के उद्देश्य जानना।"
+      },
+      {
+       "concept_tag": "jeevmandal-nichay",
+       "learning_objective": "जीवमंडल निचय की अवधारणा और भारत के प्रमुख जीवमंडल निचय पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHGY1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "प्राकृतिक संकट तथा आपदाएँ",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khgy106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHGY1-CH06-T1",
+     "topic_number": 1,
+     "title": "आपदा और प्राकृतिक संकट: अर्थ एवं वर्गीकरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "aapda-paribhasha",
+       "learning_objective": "आपदा की परिभाषा तथा प्रत्यक्ष और अप्रत्यक्ष मानवजनित आपदाओं को पहचानना।"
+      },
+      {
+       "concept_tag": "sankat-aur-aapda",
+       "learning_objective": "प्राकृतिक संकट और प्राकृतिक आपदा में अंतर तथा बढ़ती सुभेद्यता को समझना।"
+      },
+      {
+       "concept_tag": "aapda-vargikaran",
+       "learning_objective": "प्राकृतिक आपदाओं को वायुमंडलीय, स्थलीय, जलीय और जैविक श्रेणियों में वर्गीकृत करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH06-T2",
+     "topic_number": 2,
+     "title": "भूकंप",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhukamp-karan",
+       "learning_objective": "भारतीय और यूरेशियन प्लेटों की गति से हिमालयी क्षेत्र में भूकंपों के कारण समझना।"
+      },
+      {
+       "concept_tag": "bhukamp-kshetra",
+       "learning_objective": "भारत के पाँच भूकंप जोखिम क्षेत्रों और उनमें आने वाले प्रदेशों को पहचानना।"
+      },
+      {
+       "concept_tag": "bhukamp-shaman",
+       "learning_objective": "भूकंप के प्रभावों और शमन के उपायों को लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH06-T3",
+     "topic_number": 3,
+     "title": "सुनामी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sunami-utpatti",
+       "learning_objective": "सुनामी की उत्पत्ति तथा गहरे और उथले जल में उसके व्यवहार को समझना।"
+      },
+      {
+       "concept_tag": "sunami-prabhav-shaman",
+       "learning_objective": "सुनामी से तटीय क्षेत्रों में होने वाली हानि और अंतरराष्ट्रीय सहयोग की आवश्यकता को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH06-T4",
+     "topic_number": 4,
+     "title": "उष्णकटिबंधीय चक्रवात",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "chakravat-dashayen",
+       "learning_objective": "उष्णकटिबंधीय चक्रवात की उत्पत्ति की प्रारंभिक दशाओं को समझाना।"
+      },
+      {
+       "concept_tag": "chakravat-vitaran-prabhav",
+       "learning_objective": "भारत में चक्रवातों के वितरण, तूफ़ान महोर्मि और उनके परिणामों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH06-T5",
+     "topic_number": 5,
+     "title": "बाढ़",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "badh-karan",
+       "learning_objective": "बाढ़ के प्राकृतिक और मानवीय कारणों को समझना।"
+      },
+      {
+       "concept_tag": "badh-kshetra-niyantran",
+       "learning_objective": "भारत के बाढ़-प्रवण क्षेत्रों, बाढ़ के परिणामों और नियंत्रण के उपायों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH06-T6",
+     "topic_number": 6,
+     "title": "सूखा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sookha-prakar",
+       "learning_objective": "मौसम विज्ञान संबंधी, कृषि, जलविज्ञान संबंधी और पारिस्थितिक सूखे में अंतर करना।"
+      },
+      {
+       "concept_tag": "sookha-kshetra",
+       "learning_objective": "भारत के चरम, अधिक और मध्यम सूखा-प्रवण क्षेत्रों को पहचानना।"
+      },
+      {
+       "concept_tag": "sookha-shaman",
+       "learning_objective": "सूखे के परिणामों तथा तात्कालिक और दीर्घकालिक शमन उपायों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH06-T7",
+     "topic_number": 7,
+     "title": "भूस्खलन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhuskhalan-karak",
+       "learning_objective": "भूस्खलन को नियंत्रित करने वाले स्थानीय कारकों और उसके परिणामों को समझना।"
+      },
+      {
+       "concept_tag": "bhuskhalan-kshetra",
+       "learning_objective": "भारत के भूस्खलन सुभेद्यता क्षेत्रों को पहचानना।"
+      },
+      {
+       "concept_tag": "bhuskhalan-shaman",
+       "learning_objective": "भूस्खलन शमन के क्षेत्र-विशिष्ट उपायों को लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHGY1-CH06-T8",
+     "topic_number": 8,
+     "title": "आपदा प्रबंधन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "aapda-prabandhan-charan",
+       "learning_objective": "आपदा-पूर्व, आपदा के दौरान और आपदा-पश्चात प्रबंधन के चरणों को समझना।"
+      },
+      {
+       "concept_tag": "aapda-sansthagat",
+       "learning_objective": "योकोहामा रणनीति, आपदा प्रबंधन विधेयक 2005 और संस्थागत प्रयासों को पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

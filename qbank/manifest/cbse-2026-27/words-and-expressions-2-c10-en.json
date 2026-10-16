@@ -1,0 +1,1056 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "words-and-expressions-2-c10-en",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "english",
+  "language": "english",
+  "title": "Words and Expressions  2",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jewe2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JEWE2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "A Letter to God",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jewe201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEWE2-CH01-T1",
+     "topic_number": 1,
+     "title": "Let's Begin: recalling Lencho's story",
+     "ncert_sections": "Let's Begin",
+     "concepts": [
+      {
+       "concept_tag": "lencho-story-sequence",
+       "learning_objective": "Arrange the main events of 'A Letter to God' in their correct order."
+      },
+      {
+       "concept_tag": "lencho-faith-and-irony",
+       "learning_objective": "Evaluate Lencho's faith in God and the irony of his attitude towards the post office employees."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH01-T2",
+     "topic_number": 2,
+     "title": "Reading Comprehension: The Trader and the Tailor",
+     "ncert_sections": "Reading Comprehension, Text I",
+     "concepts": [
+      {
+       "concept_tag": "trader-tailor-plot",
+       "learning_objective": "Recall and interpret the events of Rumi's story 'The Trader and the Tailor'."
+      },
+      {
+       "concept_tag": "trader-tailor-theme",
+       "learning_objective": "Analyse the lesson of the story about pride, flattery and distraction."
+      },
+      {
+       "concept_tag": "words-in-context",
+       "learning_objective": "Infer the meaning of words such as 'cordiality' from their use in the story."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH01-T3",
+     "topic_number": 3,
+     "title": "Vocabulary: 'light' compounds and word forms",
+     "ncert_sections": "Vocabulary; Fun Facts",
+     "concepts": [
+      {
+       "concept_tag": "light-compound-words",
+       "learning_objective": "Use compounds such as light-fingered, light year, light-headed and light-hearted correctly in context."
+      },
+      {
+       "concept_tag": "same-word-different-use",
+       "learning_objective": "Identify how the same word works as different parts of speech, as in 'wound' and 'notice'."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH01-T4",
+     "topic_number": 4,
+     "title": "Grammar: relative clauses",
+     "ncert_sections": "Grammar",
+     "concepts": [
+      {
+       "concept_tag": "relative-pronoun-choice",
+       "learning_objective": "Choose the correct relative pronoun (who, which, whom, whose) for a person or a thing."
+      },
+      {
+       "concept_tag": "forming-relative-clauses",
+       "learning_objective": "Identify, form and punctuate relative clauses to combine and complete sentences."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH01-T5",
+     "topic_number": 5,
+     "title": "Editing: Lencho's thank-you letter",
+     "ncert_sections": "Editing; Fun Facts (proofreading marks)",
+     "concepts": [
+      {
+       "concept_tag": "editing-missing-words",
+       "learning_objective": "Supply the missing word in each line of a letter so that it is grammatically correct and complete."
+      },
+      {
+       "concept_tag": "proofreading-marks",
+       "learning_objective": "Recognise common proofreading marks that editors use to correct writing."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH01-T6",
+     "topic_number": 6,
+     "title": "Listening and Speaking: The Race and man versus nature",
+     "ncert_sections": "Listening; Speaking",
+     "concepts": [
+      {
+       "concept_tag": "the-race-story",
+       "learning_objective": "Recall and interpret the events of the listening story 'The Race'."
+      },
+      {
+       "concept_tag": "man-versus-nature-conflict",
+       "learning_objective": "Identify man versus nature as the conflict in Lencho's story."
+      },
+      {
+       "concept_tag": "man-vs-nature-poem",
+       "learning_objective": "Interpret the ideas of Norman Littleford's poem 'Man vs Nature'."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH01-T7",
+     "topic_number": 7,
+     "title": "Writing: character sketches and portraits",
+     "ncert_sections": "Writing 1, 2",
+     "concepts": [
+      {
+       "concept_tag": "character-sketch-contrast",
+       "learning_objective": "Compare the actions and qualities of Lencho and the tailor to write character sketches."
+      },
+      {
+       "concept_tag": "describing-a-person",
+       "learning_objective": "Select suitable details and adjectives to write a portrait of a person."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH01-T8",
+     "topic_number": 8,
+     "title": "The process approach to writing and project work",
+     "ncert_sections": "Writing: The Process Approach; Project",
+     "concepts": [
+      {
+       "concept_tag": "process-approach-stages",
+       "learning_objective": "State the stages of the process approach to writing and what each stage focuses on."
+      },
+      {
+       "concept_tag": "project-work-practices",
+       "learning_objective": "Distinguish good practices of collaborative project work in the language classroom."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEWE2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Nelson Mandela: Long Walk to Freedom",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jewe202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEWE2-CH02-T1",
+     "topic_number": 1,
+     "title": "Reading: Sardar Patel's convocation speech on hard-won freedom",
+     "ncert_sections": "Let's Begin; Reading Comprehension, Text I (paragraphs 1-3)",
+     "concepts": [
+      {
+       "concept_tag": "speech-occasion-and-purpose",
+       "learning_objective": "Identify the occasion of Sardar Patel's speech and the ideas he places before the graduates."
+      },
+      {
+       "concept_tag": "consolidating-freedom",
+       "learning_objective": "Explain why Patel says that freedom, once won, still has to be consolidated with responsibility."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH02-T2",
+     "topic_number": 2,
+     "title": "Reading: character, unity and the duty of the citizens of tomorrow",
+     "ncert_sections": "Reading Comprehension, Text I (paragraphs 4-10)",
+     "concepts": [
+      {
+       "concept_tag": "character-and-discipline",
+       "learning_objective": "Explain why Patel calls character the most essential requisite of university education."
+      },
+      {
+       "concept_tag": "unity-and-national-duty",
+       "learning_objective": "Interpret Patel's warning about disunity and his call to the young to work for a strong, united nation."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH02-T3",
+     "topic_number": 3,
+     "title": "Vocabulary: words and idioms from the speech",
+     "ncert_sections": "Look Up and Understand; Vocabulary; Fun Facts (Idiom)",
+     "concepts": [
+      {
+       "concept_tag": "word-meaning-in-context",
+       "learning_objective": "Infer and use the meanings of words such as conferring, precincts, unassailable and resurgence."
+      },
+      {
+       "concept_tag": "idioms-and-phrases",
+       "learning_objective": "Use the idiom 'break the ice' and similar phrases appropriately in context."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH02-T4",
+     "topic_number": 4,
+     "title": "Grammar: use of articles",
+     "ncert_sections": "Grammar: Use of Articles",
+     "concepts": [
+      {
+       "concept_tag": "definite-article-the",
+       "learning_objective": "Use 'the' for specific or already-mentioned nouns, including nouns made specific by a phrase or clause."
+      },
+      {
+       "concept_tag": "indefinite-articles-a-an",
+       "learning_objective": "Choose between 'a' and 'an' by the sound that follows and use them for non-specific nouns."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH02-T5",
+     "topic_number": 5,
+     "title": "Editing: finding and correcting errors in a passage",
+     "ncert_sections": "Editing",
+     "concepts": [
+      {
+       "concept_tag": "subject-verb-agreement",
+       "learning_objective": "Correct errors in which the verb does not agree with its subject in number."
+      },
+      {
+       "concept_tag": "verb-and-noun-forms",
+       "learning_objective": "Correct errors in verb forms, tense and noun number in a passage."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEWE2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Two Stories about Flying",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jewe203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEWE2-CH03-T1",
+     "topic_number": 1,
+     "title": "Let's Begin: revisiting 'His First Flight'",
+     "ncert_sections": "Let's Begin",
+     "concepts": [
+      {
+       "concept_tag": "seagull-fear-and-hunger",
+       "learning_objective": "Recall why the young seagull feared flying and how hunger finally made him fly."
+      },
+      {
+       "concept_tag": "family-taunts-and-encouragement",
+       "learning_objective": "Explain how the seagull's family taunted and then tempted him into his first flight."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH03-T2",
+     "topic_number": 2,
+     "title": "Reading: 'All about a Dog' - the quarrel on the bus",
+     "ncert_sections": "Reading Comprehension, Text I",
+     "concepts": [
+      {
+       "concept_tag": "bus-conflict-events",
+       "learning_objective": "Recall the sequence of events in the quarrel between the conductor and the passengers."
+      },
+      {
+       "concept_tag": "resentful-employee-character",
+       "learning_objective": "Interpret the narrator's portrait of the conductor as a 'Resentful Employee'."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH03-T3",
+     "topic_number": 3,
+     "title": "Reading: rules in the letter and in the spirit",
+     "ncert_sections": "Reading Comprehension, Text I",
+     "concepts": [
+      {
+       "concept_tag": "letter-versus-spirit-of-rules",
+       "learning_objective": "Distinguish rules that are hard and fast from rules meant for guidance and applied in their spirit."
+      },
+      {
+       "concept_tag": "narrator-and-resolution",
+       "learning_objective": "Evaluate the narrator's advice to the conductor and how the story ends."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH03-T4",
+     "topic_number": 4,
+     "title": "Vocabulary: adverbs, prefixes and word meanings",
+     "ncert_sections": "Vocabulary 1-3; Look Up and Understand",
+     "concepts": [
+      {
+       "concept_tag": "adverb-formation",
+       "learning_objective": "Form adverbs from adjectives and verbs with correct spelling."
+      },
+      {
+       "concept_tag": "negative-prefixes-im-il-in",
+       "learning_objective": "Form antonyms with the prefixes im-, il- and in-."
+      },
+      {
+       "concept_tag": "contextual-word-meaning",
+       "learning_objective": "Infer the meanings of words such as imperturbably and indignant from the story."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH03-T5",
+     "topic_number": 5,
+     "title": "Grammar: phrasal verbs and the passive",
+     "ncert_sections": "Grammar A, B",
+     "concepts": [
+      {
+       "concept_tag": "phrasal-verbs",
+       "learning_objective": "Identify and use phrasal verbs with walk, take, give and put."
+      },
+      {
+       "concept_tag": "passive-voice",
+       "learning_objective": "Change sentences into the passive in the required tense, with or without by + agent."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH03-T6",
+     "topic_number": 6,
+     "title": "Sentence building and editing",
+     "ncert_sections": "Grammar C; Editing; Fun Facts",
+     "concepts": [
+      {
+       "concept_tag": "sentence-reordering",
+       "learning_objective": "Unscramble jumbled words into meaningful, correctly ordered sentences."
+      },
+      {
+       "concept_tag": "punctuation-and-commas",
+       "learning_objective": "Use capital letters, commas and full stops correctly when editing a passage."
+      },
+      {
+       "concept_tag": "for-since-during",
+       "learning_objective": "Choose correctly among for, since and during."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH03-T7",
+     "topic_number": 7,
+     "title": "Listening and writing: riddles and rules in true spirit",
+     "ncert_sections": "Listening; Writing",
+     "concepts": [
+      {
+       "concept_tag": "think-aloud-riddles",
+       "learning_objective": "Solve river-crossing riddles by reasoning aloud step by step."
+      },
+      {
+       "concept_tag": "article-writing-on-rules",
+       "learning_objective": "Select ideas that show rules followed in the spirit for an article."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEWE2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "From the Diary of Anne Frank",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jewe204.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "JEWE2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Glimpses of India",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jewe205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEWE2-CH05-T1",
+     "topic_number": 1,
+     "title": "Text I: Nowrosji Kapadia and the Parsis of Delhi",
+     "ncert_sections": "Reading Comprehension, Text I (opening)",
+     "concepts": [
+      {
+       "concept_tag": "parsi-settlement-in-delhi",
+       "learning_objective": "Explain how Nowrosji Kapadia's welcome at the railway station began the Parsi community in Delhi."
+      },
+      {
+       "concept_tag": "text-one-vocabulary-in-context",
+       "learning_objective": "Infer the meaning of words such as cajole and overruled from their context in Text I."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH05-T2",
+     "topic_number": 2,
+     "title": "Text I: Parsi festive food and teatime traditions",
+     "ncert_sections": "Reading Comprehension, Text I (food and teatime)",
+     "concepts": [
+      {
+       "concept_tag": "parsi-delicacies",
+       "learning_objective": "Identify the Parsi dishes described in the passage and what each one is."
+      },
+      {
+       "concept_tag": "festive-cooking-traditions",
+       "learning_objective": "Interpret what the community's festive cooking reveals about its values."
+      },
+      {
+       "concept_tag": "writer-memories-and-tone",
+       "learning_objective": "Analyse the writer's nostalgic memories of her grandmother and of teatime."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH05-T3",
+     "topic_number": 3,
+     "title": "Text II: Coffee from Araku Valley",
+     "ncert_sections": "Reading Comprehension, Text II",
+     "concepts": [
+      {
+       "concept_tag": "araku-location-and-history",
+       "learning_objective": "Recall where Araku Valley is and how coffee came to it."
+      },
+      {
+       "concept_tag": "bio-dynamic-coffee-farming",
+       "learning_objective": "Explain how bio-dynamic farming and Adivasi ownership shape Araku coffee."
+      },
+      {
+       "concept_tag": "text-two-vocabulary",
+       "learning_objective": "Identify words from Text II that match given meanings."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH05-T4",
+     "topic_number": 4,
+     "title": "Vocabulary and Grammar: sound words and participial adjectives",
+     "ncert_sections": "Vocabulary; Grammar",
+     "concepts": [
+      {
+       "concept_tag": "sound-word-collocations",
+       "learning_objective": "Match sound words such as clanking and rustling with their sources."
+      },
+      {
+       "concept_tag": "participial-adjectives",
+       "learning_objective": "Use -ing and -ed participial adjectives correctly in sentences."
+      },
+      {
+       "concept_tag": "past-tense-transformation",
+       "learning_objective": "Rewrite present-tense sentences from the Coorg extract in the past tense."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH05-T5",
+     "topic_number": 5,
+     "title": "Editing: The Valley of Flowers",
+     "ncert_sections": "Editing; Fun Facts",
+     "concepts": [
+      {
+       "concept_tag": "spelling-correction",
+       "learning_objective": "Correct misspelt words in the paragraph on the Valley of Flowers."
+      },
+      {
+       "concept_tag": "commonly-confused-words",
+       "learning_objective": "Distinguish commonly confused words such as advice and advise."
+      },
+      {
+       "concept_tag": "valley-of-flowers-conservation",
+       "learning_objective": "Explain why trekking and grazing were banned in the Valley of Flowers."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH05-T6",
+     "topic_number": 6,
+     "title": "Listening, Writing and Project: the Goan baker, Kashmiri breads and the Frontier Mail",
+     "ncert_sections": "Listening; Writing; Project",
+     "concepts": [
+      {
+       "concept_tag": "goan-baker-listening",
+       "learning_objective": "Identify the main ideas of the listening passage on the Goan baker."
+      },
+      {
+       "concept_tag": "kashmiri-breads-kandur",
+       "learning_objective": "Recall the Kashmiri breads and the role of the Kandur shop."
+      },
+      {
+       "concept_tag": "frontier-mail-history",
+       "learning_objective": "Recall the key facts about the Frontier Mail given in the project."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEWE2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Mijbil the Otter",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jewe206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEWE2-CH06-T1",
+     "topic_number": 1,
+     "title": "Mijbil and the author's care for him",
+     "ncert_sections": "Let's Begin",
+     "concepts": [
+      {
+       "concept_tag": "mijbil-background",
+       "learning_objective": "Recall where otters like Mijbil come from and the setting of the author's home."
+      },
+      {
+       "concept_tag": "author-commitment-to-pet",
+       "learning_objective": "Identify the arrangements and care the author provided for his pet otter."
+      },
+      {
+       "concept_tag": "otter-emotions-and-behaviour",
+       "learning_objective": "Link Mijbil's actions to the emotions they show."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH06-T2",
+     "topic_number": 2,
+     "title": "Reading Text I: Baby Bhakat, the civet cat",
+     "ncert_sections": "Reading Comprehension, Text I",
+     "concepts": [
+      {
+       "concept_tag": "civet-cat-features",
+       "learning_objective": "Explain the features and habits of the civet cat described in the passage."
+      },
+      {
+       "concept_tag": "bhakat-home-and-family",
+       "learning_objective": "Recall details of Bhakat's rescue, home and human family."
+      },
+      {
+       "concept_tag": "balance-of-nature",
+       "learning_objective": "Infer how a wild animal helps maintain the balance of life in nature."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH06-T3",
+     "topic_number": 3,
+     "title": "Reading Text II: Human-wildlife conflict",
+     "ncert_sections": "Reading Comprehension, Text II",
+     "concepts": [
+      {
+       "concept_tag": "causes-of-conflict",
+       "learning_objective": "State why humans and wildlife increasingly come into conflict."
+      },
+      {
+       "concept_tag": "impacts-of-conflict",
+       "learning_objective": "Describe the impact of the conflict on people and animals."
+      },
+      {
+       "concept_tag": "coexistence-solutions",
+       "learning_objective": "Evaluate simple solutions that lead to mutually beneficial coexistence."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH06-T4",
+     "topic_number": 4,
+     "title": "Reading Text II: Animal rights",
+     "ncert_sections": "Reading Comprehension, Text II (Animal rights)",
+     "concepts": [
+      {
+       "concept_tag": "inherent-worth",
+       "learning_objective": "Explain what it means that animals have an inherent worth and can feel."
+      },
+      {
+       "concept_tag": "equal-consideration",
+       "learning_objective": "Distinguish equal consideration from equal treatment of animals."
+      },
+      {
+       "concept_tag": "cruelty-free-choices",
+       "learning_objective": "Interpret how everyday choices can work as non-violent protest."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH06-T5",
+     "topic_number": 5,
+     "title": "Vocabulary: synonyms and words used as nouns and verbs",
+     "ncert_sections": "Vocabulary",
+     "concepts": [
+      {
+       "concept_tag": "synonyms-odd-one-out",
+       "learning_objective": "Identify the word that is not a synonym in a group of words."
+      },
+      {
+       "concept_tag": "words-as-noun-and-verb",
+       "learning_objective": "Distinguish the use of the same word as a noun and as a verb."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH06-T6",
+     "topic_number": 6,
+     "title": "Grammar: noun modifiers, -ed/-ing adjectives, would and used to",
+     "ncert_sections": "Grammar",
+     "concepts": [
+      {
+       "concept_tag": "noun-modifiers-adjective-phrases",
+       "learning_objective": "Combine sentences using adjectives and adjective phrases as noun modifiers."
+      },
+      {
+       "concept_tag": "participial-adjectives",
+       "learning_objective": "Choose correctly between -ed and -ing forms of adjectives."
+      },
+      {
+       "concept_tag": "would-and-used-to",
+       "learning_objective": "Use 'would' and 'used to' correctly for repeated past actions and past states."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH06-T7",
+     "topic_number": 7,
+     "title": "Editing: punctuation and sentence reordering",
+     "ncert_sections": "Editing",
+     "concepts": [
+      {
+       "concept_tag": "punctuation-capitalisation",
+       "learning_objective": "Apply capital letters, commas, full stops and inverted commas correctly."
+      },
+      {
+       "concept_tag": "sentence-rearrangement",
+       "learning_objective": "Rearrange jumbled parts into a meaningful, punctuated sentence."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH06-T8",
+     "topic_number": 8,
+     "title": "Listening: Gangaram, the friendly crocodile",
+     "ncert_sections": "Listening",
+     "concepts": [
+      {
+       "concept_tag": "gangaram-facts",
+       "learning_objective": "Recall factual details from the listening text about Gangaram."
+      },
+      {
+       "concept_tag": "human-animal-coexistence",
+       "learning_objective": "Interpret the story as an example of humans and animals living together."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEWE2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Madam Rides the Bus",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jewe207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEWE2-CH07-T1",
+     "topic_number": 1,
+     "title": "Valli's bus journey and the way characters speak",
+     "ncert_sections": "Let's Begin; Speaking 1; Writing 1-2",
+     "concepts": [
+      {
+       "concept_tag": "valli-journey-recall",
+       "learning_objective": "Recall the main events of Valli's bus ride to town and back, and how her feelings changed."
+      },
+      {
+       "concept_tag": "manner-of-speaking-adverbs",
+       "learning_objective": "Explain how adverbs such as 'commandingly' and 'haughtily' reveal a speaker's mood and intention."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH07-T2",
+     "topic_number": 2,
+     "title": "Reading: Pedalling through the Golden Years",
+     "ncert_sections": "Reading Comprehension, Text I",
+     "concepts": [
+      {
+       "concept_tag": "cycling-couple-comprehension",
+       "learning_objective": "Understand the retired couple's cycling adventure in Uttarakhand and the reasons behind it."
+      },
+      {
+       "concept_tag": "vocabulary-in-context",
+       "learning_objective": "Infer the meaning of words such as 'acclimatised' and 'encapsulates' from their context."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH07-T3",
+     "topic_number": 3,
+     "title": "Poem: Going Down Hill on a Bicycle, A Boy's Song",
+     "ncert_sections": "Reading Comprehension, Text II",
+     "concepts": [
+      {
+       "concept_tag": "poem-theme-and-meaning",
+       "learning_objective": "Interpret the joy of the downhill ride and the message of the poem's closing lines."
+      },
+      {
+       "concept_tag": "poetic-devices",
+       "learning_objective": "Identify the comparisons and the address to the bird used in the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH07-T4",
+     "topic_number": 4,
+     "title": "Vocabulary and grammar: phrasal verbs and confusable words",
+     "ncert_sections": "Grammar 1; Fun Facts",
+     "concepts": [
+      {
+       "concept_tag": "phrasal-verbs",
+       "learning_objective": "Identify phrasal verbs and complete sentences with the correct verb-particle combination."
+      },
+      {
+       "concept_tag": "confusables-and-idioms",
+       "learning_objective": "Distinguish 'allusion' from 'illusion' and use the idiom 'turn a blind eye' correctly."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH07-T5",
+     "topic_number": 5,
+     "title": "Editing: the Sundarbans paragraph",
+     "ncert_sections": "Editing 1",
+     "concepts": [
+      {
+       "concept_tag": "capitalisation-and-punctuation",
+       "learning_objective": "Apply capital letters and full stops correctly to proper nouns and run-on sentences."
+      },
+      {
+       "concept_tag": "spelling-correction",
+       "learning_objective": "Correct misspelt words in a descriptive paragraph."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH07-T6",
+     "topic_number": 6,
+     "title": "Listening: Mizoram and its people",
+     "ncert_sections": "Listening 1",
+     "concepts": [
+      {
+       "concept_tag": "mizoram-land-and-name",
+       "learning_objective": "Recall the meaning of the name Mizoram and the features of its land."
+      },
+      {
+       "concept_tag": "mizo-festivals-and-dances",
+       "learning_objective": "Understand the link between Mizo festivals, farming and community dances."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH07-T7",
+     "topic_number": 7,
+     "title": "Speaking: offering help, asking for information and question tags",
+     "ncert_sections": "Speaking 2, Communicative Tasks I and II",
+     "concepts": [
+      {
+       "concept_tag": "offering-accepting-refusing-help",
+       "learning_objective": "Use polite expressions to offer, accept and refuse help."
+      },
+      {
+       "concept_tag": "asking-information-and-question-tags",
+       "learning_objective": "Form correct question tags and recognise polite indirect requests for information."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEWE2-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "The Sermon at Benaras",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jewe208.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEWE2-CH08-T1",
+     "topic_number": 1,
+     "title": "Let's Begin: 'Sermon' and 'Death Is Nothing At All'",
+     "ncert_sections": "Let's Begin 1, 2",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-sermon",
+       "learning_objective": "Distinguish the religious or moral sense of 'sermon' from its sense of a long, tiresome lecture."
+      },
+      {
+       "concept_tag": "death-is-nothing-at-all",
+       "learning_objective": "Interpret the consoling view of death in Canon Henry Scott Holland's 'Death Is Nothing At All' and compare it with the Buddha's sermon."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH08-T2",
+     "topic_number": 2,
+     "title": "Reading Comprehension: The Transformed Mind",
+     "ncert_sections": "Reading Comprehension, Text I",
+     "concepts": [
+      {
+       "concept_tag": "root-cause-in-the-mind",
+       "learning_objective": "Identify the Dalai Lama's view that the ultimate cause of human problems lies within the human mind."
+      },
+      {
+       "concept_tag": "compassion-and-spiritual-development",
+       "learning_objective": "Explain what the Dalai Lama means by spiritual development and what a compassionate heart brings."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH08-T3",
+     "topic_number": 3,
+     "title": "Reading Comprehension: The Ballad of Father Gilligan",
+     "ncert_sections": "Reading Comprehension, Text II",
+     "concepts": [
+      {
+       "concept_tag": "father-gilligan-story",
+       "learning_objective": "Recall the events of the ballad and explain the old priest's feelings and actions."
+      },
+      {
+       "concept_tag": "ballad-language-and-imagery",
+       "learning_objective": "Interpret the vocabulary and images of the ballad, such as 'flock' and the 'moth-hour'."
+      },
+      {
+       "concept_tag": "divine-compassion",
+       "learning_objective": "Analyse how the ballad shows God's care for a humble, tired servant."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH08-T4",
+     "topic_number": 4,
+     "title": "Vocabulary: Antonyms, Synonyms and Word Facts",
+     "ncert_sections": "Vocabulary 1, 2; Fun Facts",
+     "concepts": [
+      {
+       "concept_tag": "antonyms-from-the-sermon",
+       "learning_objective": "Find antonyms of given words in the text of 'The Sermon at Benaras'."
+      },
+      {
+       "concept_tag": "synonyms-with-a-dictionary",
+       "learning_objective": "Choose words nearest in meaning to words such as vow, preach, preserve, awaken and reign."
+      },
+      {
+       "concept_tag": "silent-letters-and-confusables",
+       "learning_objective": "Recognise the silent 'w' and distinguish commonly confused words such as allude and elude."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH08-T5",
+     "topic_number": 5,
+     "title": "Grammar: Reported Speech",
+     "ncert_sections": "Grammar: Reported Speech 1, 2",
+     "concepts": [
+      {
+       "concept_tag": "reporting-statements-and-questions",
+       "learning_objective": "Change statements and questions from direct to reported speech with correct changes of person, tense and reporting verb."
+      },
+      {
+       "concept_tag": "reporting-requests-and-commands",
+       "learning_objective": "Report requests and commands using verbs such as told and asked with a to-infinitive."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH08-T6",
+     "topic_number": 6,
+     "title": "Editing: The Wild Geese",
+     "ncert_sections": "Editing 1",
+     "concepts": [
+      {
+       "concept_tag": "prepositions-in-context",
+       "learning_objective": "Supply missing prepositions in a narrative paragraph."
+      },
+      {
+       "concept_tag": "articles-conjunctions-pronouns",
+       "learning_objective": "Supply missing articles, conjunctions and pronouns so that a paragraph reads correctly."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH08-T7",
+     "topic_number": 7,
+     "title": "Listening: The Sanchi Stupa",
+     "ncert_sections": "Listening 1",
+     "concepts": [
+      {
+       "concept_tag": "sanchi-stupa-history",
+       "learning_objective": "Recall the location, period, builder and later additions of the Sanchi Stupa."
+      },
+      {
+       "concept_tag": "sanchi-stupa-art",
+       "learning_objective": "Explain how the gateways of the Sanchi Stupa depict the Buddha's life symbolically."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEWE2-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "The Proposal",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jewe209.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEWE2-CH09-T1",
+     "topic_number": 1,
+     "title": "The story of the play: the proposal and the two quarrels",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "purpose-of-lomovs-visit",
+       "learning_objective": "Recall why Lomov visits Chubukov and how his proposal keeps getting delayed."
+      },
+      {
+       "concept_tag": "oxen-meadows-quarrel",
+       "learning_objective": "Explain how the dispute over the Oxen Meadows interrupts the proposal."
+      },
+      {
+       "concept_tag": "dogs-quarrel-and-ending",
+       "learning_objective": "Interpret the second quarrel, over the dogs Guess and Squeezer, and the way the play ends."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH09-T2",
+     "topic_number": 2,
+     "title": "The characters: Lomov, Natalya and Chubukov",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lomov-character",
+       "learning_objective": "Describe Lomov as a nervous, complaining hypochondriac who decides to marry for practical reasons."
+      },
+      {
+       "concept_tag": "natalya-character",
+       "learning_objective": "Describe Natalya as a strong-willed, quarrelsome young woman who cares about her family's property."
+      },
+      {
+       "concept_tag": "chubukov-character",
+       "learning_objective": "Analyse Chubukov's changing attitude towards Lomov and the self-interest behind it."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH09-T3",
+     "topic_number": 3,
+     "title": "Theme and form: satire, farce and irony",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "satire-on-marriage-of-convenience",
+       "learning_objective": "Explain how the play satirises the landowning class that treats marriage as a matter of property."
+      },
+      {
+       "concept_tag": "farce-and-irony",
+       "learning_objective": "Identify the play as a one-act farce and interpret its irony, especially in its ending."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH09-T4",
+     "topic_number": 4,
+     "title": "Words and expressions from the play",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "word-meaning-in-context",
+       "learning_objective": "Work out the meanings of words such as 'palpitations', 'impudence' and 'overshot' as used in the play."
+      },
+      {
+       "concept_tag": "expressions-and-tone",
+       "learning_objective": "Interpret how the characters' ways of speaking create humour and move the plot."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEWE2-CH09-T5",
+     "topic_number": 5,
+     "title": "Grammar: reporting the dialogue of the play",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "reported-speech-from-dialogue",
+       "learning_objective": "Change statements, questions and commands from the play's dialogue into reported speech."
+      },
+      {
+       "concept_tag": "sentence-types-in-dialogue",
+       "learning_objective": "Identify declarative, interrogative, imperative and exclamatory sentences in dramatic dialogue."
+      }
+     ]
+    }
+   ],
+   "content_source": "knowledge"
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "chapter_id": "LHPS1-CH05",
+ "title": "समकालीन विश्व में सुरक्षा",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHPS1-CH05-T1",
+   "topic_number": 1,
+   "title": "सुरक्षा क्या है?",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "suraksha-ka-arth",
+     "learning_objective": "सुरक्षा को खतरों से मुक्ति तथा केंद्रीय मूल्यों की रक्षा के रूप में समझाना।"
+    },
+    {
+     "concept_tag": "suraksha-ki-dharnayen",
+     "learning_objective": "सुरक्षा की धारणाओं के संदर्भ-सापेक्ष होने और उनके दो समूहों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPS1-CH05-T2",
+   "topic_number": 2,
+   "title": "पारंपरिक धारणा: बाहरी सुरक्षा",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "aparodh-aur-raksha",
+     "learning_objective": "युद्ध के खतरे के समय सरकार के विकल्पों तथा अपरोध और रक्षा में अंतर करना।"
+    },
+    {
+     "concept_tag": "shakti-santulan",
+     "learning_objective": "शक्ति-संतुलन की अवधारणा और उसे बनाए रखने के उपायों को लागू करना।"
+    },
+    {
+     "concept_tag": "gathbandhan",
+     "learning_objective": "गठबंधन के अर्थ, आधार और बदलते स्वरूप का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPS1-CH05-T3",
+   "topic_number": 3,
+   "title": "पारंपरिक धारणा: आंतरिक सुरक्षा",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "shitayuddh-aur-antarik-suraksha",
+     "learning_objective": "द्वितीय विश्वयुद्ध के बाद शक्तिशाली देशों द्वारा आंतरिक सुरक्षा को कम महत्त्व देने के कारण समझाना।"
+    },
+    {
+     "concept_tag": "navswatantra-deshon-ki-chunautiyan",
+     "learning_objective": "एशिया और अफ्रीका के नव-स्वतंत्र देशों की बाहरी और आंतरिक सुरक्षा चुनौतियों का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPS1-CH05-T4",
+   "topic_number": 4,
+   "title": "पारंपरिक सुरक्षा और सहयोग",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "yuddh-ki-maryadayen",
+     "learning_objective": "युद्ध के लक्ष्यों और साधनों पर लगी मर्यादाओं को पहचानना।"
+    },
+    {
+     "concept_tag": "nirastrikaran-aur-astra-niyantran",
+     "learning_objective": "निरस्त्रीकरण और अस्त्र-नियंत्रण में उदाहरणों सहित अंतर करना।"
+    },
+    {
+     "concept_tag": "vishwas-bahali",
+     "learning_objective": "विश्वास-बहाली की प्रक्रिया और उसके उद्देश्य को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPS1-CH05-T5",
+   "topic_number": 5,
+   "title": "सुरक्षा की अपारंपरिक धारणाएँ",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "manavta-ki-suraksha",
+     "learning_objective": "मानवता की सुरक्षा की संकीर्ण और व्यापक धारणाओं में अंतर करना।"
+    },
+    {
+     "concept_tag": "vaishvik-suraksha",
+     "learning_objective": "वैश्विक सुरक्षा के विचार के उभरने और अंतरराष्ट्रीय सहयोग की आवश्यकता का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPS1-CH05-T6",
+   "topic_number": 6,
+   "title": "खतरे के नए स्रोत और सहयोगमूलक सुरक्षा",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "atankvad",
+     "learning_objective": "आतंकवाद के अर्थ और उसके तरीकों की पहचान करना।"
+    },
+    {
+     "concept_tag": "sharanarthi-aur-apravasi",
+     "learning_objective": "शरणार्थी, आप्रवासी और आंतरिक रूप से विस्थापित जन में अंतर करना।"
+    },
+    {
+     "concept_tag": "sahyogmulak-suraksha",
+     "learning_objective": "अपारंपरिक खतरों से निपटने में सहयोगमूलक सुरक्षा की भूमिका का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPS1-CH05-T7",
+   "topic_number": 7,
+   "title": "भारत की सुरक्षा रणनीति",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "sainya-kshamata",
+     "learning_objective": "भारत की सैन्य क्षमता बढ़ाने की नीति और उसके कारणों को जानना।"
+    },
+    {
+     "concept_tag": "antarrashtriya-manadand",
+     "learning_objective": "अंतरराष्ट्रीय मानदंडों और संस्थाओं को मज़बूत करने के भारतीय प्रयासों को पहचानना।"
+    },
+    {
+     "concept_tag": "antarik-suraksha-aur-vikas",
+     "learning_objective": "आंतरिक सुरक्षा के लिए लोकतंत्र और आर्थिक विकास की भूमिका का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

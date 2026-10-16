@@ -1,0 +1,92 @@
+{
+ "chapter_id": "LEMH1-CH01",
+ "title": "Relations and Functions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEMH1-CH01-T1",
+   "topic_number": 1,
+   "title": "Relations as subsets; empty and universal relations",
+   "ncert_sections": "1.1, 1.2",
+   "concepts": [
+    {
+     "concept_tag": "relation-as-subset",
+     "learning_objective": "Describe a relation in a set A as a subset of A x A and count the relations on a finite set."
+    },
+    {
+     "concept_tag": "empty-universal-relation",
+     "learning_objective": "Identify empty and universal (trivial) relations in a given set."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH01-T2",
+   "topic_number": 2,
+   "title": "Reflexive, symmetric and transitive relations",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "reflexive-relation",
+     "learning_objective": "Test whether a given relation is reflexive."
+    },
+    {
+     "concept_tag": "symmetric-relation",
+     "learning_objective": "Test whether a given relation is symmetric."
+    },
+    {
+     "concept_tag": "transitive-relation",
+     "learning_objective": "Test whether a given relation is transitive and find pairs needed for transitivity."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH01-T3",
+   "topic_number": 3,
+   "title": "Equivalence relations and equivalence classes",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "equivalence-relation",
+     "learning_objective": "Decide whether a relation is an equivalence relation by checking all three properties."
+    },
+    {
+     "concept_tag": "equivalence-class",
+     "learning_objective": "Find the equivalence class of an element under a given equivalence relation."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH01-T4",
+   "topic_number": 4,
+   "title": "One-one and onto functions",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "one-one-function",
+     "learning_objective": "Determine whether a function is one-one (injective) or many-one."
+    },
+    {
+     "concept_tag": "onto-function",
+     "learning_objective": "Determine whether a function is onto (surjective) for a given co-domain."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH01-T5",
+   "topic_number": 5,
+   "title": "Bijective functions and functions on finite sets",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "bijective-function",
+     "learning_objective": "Prove that a function is bijective and count bijections between finite sets."
+    },
+    {
+     "concept_tag": "finite-set-property",
+     "learning_objective": "Use the fact that for a finite set X, f : X -> X is one-one if and only if it is onto."
+    }
+   ]
+  }
+ ]
+}

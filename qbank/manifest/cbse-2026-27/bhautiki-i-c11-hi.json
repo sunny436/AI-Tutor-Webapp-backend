@@ -1,0 +1,844 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "bhautiki-i-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "physics",
+  "language": "hindi",
+  "title": "Bhautiki-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khph1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHPH1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "मात्रक और मापन",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH1-CH01-T1",
+     "topic_number": 1,
+     "title": "भूमिका और मात्रकों की अंतर्राष्ट्रीय प्रणाली",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "mool-aur-vyutpann-matrak",
+       "learning_objective": "मूल राशियों, मूल मात्रकों और व्युत्पन्न मात्रकों में अंतर पहचानना।"
+      },
+      {
+       "concept_tag": "si-paddhati",
+       "learning_objective": "SI पद्धति के सात मूल मात्रकों तथा CGS, FPS और MKS पद्धतियों को पहचानना।"
+      },
+      {
+       "concept_tag": "samtal-aur-ghan-kon",
+       "learning_objective": "समतल कोण (रेडियन) और ठोस कोण (स्टेरेडियन) की परिभाषा का उपयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH01-T2",
+     "topic_number": 2,
+     "title": "सार्थक अंक और उन्हें गिनने के नियम",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "sarthak-ank-niyam",
+       "learning_objective": "किसी माप में सार्थक अंकों की संख्या निर्धारित करने के नियम लागू करना।"
+      },
+      {
+       "concept_tag": "vaigyanik-sanketan",
+       "learning_objective": "वैज्ञानिक संकेतन और मात्रक-परिवर्तन में सार्थक अंकों के व्यवहार को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH01-T3",
+     "topic_number": 3,
+     "title": "अंकगणितीय संक्रियाओं में सार्थक अंक और पूर्णांकन",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "ganitiya-sankriyaon-me-sarthak-ank",
+       "learning_objective": "गुणा, भाग, जोड़ और घटाव के परिणामों को उचित सार्थक अंकों में व्यक्त करना।"
+      },
+      {
+       "concept_tag": "purnankan-niyam",
+       "learning_objective": "अनिश्चित अंकों के पूर्णांकन के नियमों का प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH01-T4",
+     "topic_number": 4,
+     "title": "भौतिक राशियों की विमाएँ, विमीय सूत्र और विमीय समीकरण",
+     "ncert_sections": "1.4, 1.5",
+     "concepts": [
+      {
+       "concept_tag": "vimaen-aur-vimiya-sutra",
+       "learning_objective": "व्युत्पन्न राशियों के विमीय सूत्र मूल राशियों के पदों में लिखना।"
+      },
+      {
+       "concept_tag": "vimiya-samikaran",
+       "learning_objective": "विमाहीन राशियों और समान विमा वाली राशियों की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH01-T5",
+     "topic_number": 5,
+     "title": "विमीय विश्लेषण और इसके अनुप्रयोग",
+     "ncert_sections": "1.6",
+     "concepts": [
+      {
+       "concept_tag": "vimiya-sangati-jaanch",
+       "learning_objective": "विमाओं की सजातीयता के सिद्धांत से समीकरणों की विमीय संगति जाँचना।"
+      },
+      {
+       "concept_tag": "sambandh-vyutpann",
+       "learning_objective": "विमीय विश्लेषण द्वारा भौतिक राशियों के बीच संबंध व्युत्पन्न करना तथा इसकी सीमाएँ समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPH1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "सरल रेखा में गति",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH1-CH02-T1",
+     "topic_number": 1,
+     "title": "भूमिका: गति, बिंदु-वस्तु और शुद्धगतिकी",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "bindu-vastu",
+       "learning_objective": "समझना कि किसी गतिमान वस्तु को बिंदु-वस्तु कब माना जा सकता है।"
+      },
+      {
+       "concept_tag": "saral-rekhiy-gati",
+       "learning_objective": "सरल रेखीय गति के उदाहरणों को अन्य प्रकार की गतियों से अलग पहचानना।"
+      },
+      {
+       "concept_tag": "shuddhagatiki",
+       "learning_objective": "जानना कि शुद्धगतिकी में गति के कारणों पर विचार किए बिना गति का वर्णन किया जाता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH02-T2",
+     "topic_number": 2,
+     "title": "तात्क्षणिक वेग एवं चाल",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "tatkshanik-veg",
+       "learning_objective": "तात्क्षणिक वेग को सीमा और स्थिति-समय ग्राफ की स्पर्श-रेखा की प्रवणता के रूप में ज्ञात करना।"
+      },
+      {
+       "concept_tag": "chal-aur-veg",
+       "learning_objective": "चाल और वेग तथा औसत और तात्क्षणिक मानों के बीच अंतर स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH02-T3",
+     "topic_number": 3,
+     "title": "त्वरण",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "tvaran-paribhasha",
+       "learning_objective": "औसत और तात्क्षणिक त्वरण की परिभाषा, मात्रक और वेग-समय ग्राफ से उसका संबंध समझना।"
+      },
+      {
+       "concept_tag": "tvaran-chinh-aur-graph",
+       "learning_objective": "त्वरण के चिह्न, शून्य वेग पर त्वरण और स्थिति-समय ग्राफ की वक्रता की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH02-T4",
+     "topic_number": 4,
+     "title": "एकसमान त्वरण से गतिमान वस्तु के शुद्धगतिकीय समीकरण",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "gati-ke-samikaran",
+       "learning_objective": "एकसमान त्वरित सरल रेखीय गति के समीकरणों का प्रयोग करके संख्यात्मक प्रश्न हल करना।"
+      },
+      {
+       "concept_tag": "vt-graph-kshetrafal",
+       "learning_objective": "वेग-समय वक्र के नीचे के क्षेत्रफल को विस्थापन के रूप में प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH02-T5",
+     "topic_number": 5,
+     "title": "मुक्त पतन, विरामी दूरी और प्रतिक्रिया काल",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "mukt-patan",
+       "learning_objective": "मुक्त पतन को एकसमान त्वरित गति मानकर ऊर्ध्वाधर गति के प्रश्न हल करना।"
+      },
+      {
+       "concept_tag": "viraami-duri",
+       "learning_objective": "विरामी दूरी की प्रारंभिक वेग पर निर्भरता समझना।"
+      },
+      {
+       "concept_tag": "pratikriya-kaal",
+       "learning_objective": "मुक्त रूप से गिरते पैमाने की सहायता से प्रतिक्रिया काल का आकलन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPH1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "समतल में गति",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH1-CH03-T1",
+     "topic_number": 1,
+     "title": "अदिश और सदिश राशियाँ",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "adish-sadish-rashiyan",
+       "learning_objective": "अदिश और सदिश राशियों में अंतर करना और उदाहरण पहचानना।"
+      },
+      {
+       "concept_tag": "sthiti-visthapan-sadish",
+       "learning_objective": "स्थिति सदिश, विस्थापन सदिश और सदिशों की समता को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH03-T2",
+     "topic_number": 2,
+     "title": "सदिशों का वास्तविक संख्या से गुणन तथा योग-व्यवकलन",
+     "ncert_sections": "3.3, 3.4",
+     "concepts": [
+      {
+       "concept_tag": "sadish-guna-vastavik-sankhya",
+       "learning_objective": "किसी सदिश को वास्तविक संख्या से गुणा करने का परिमाण और दिशा पर प्रभाव समझाना।"
+      },
+      {
+       "concept_tag": "sadish-yog-grafiya-vidhi",
+       "learning_objective": "त्रिभुज और समांतर चतुर्भुज विधि से सदिशों का योग और व्यवकलन करना।"
+      },
+      {
+       "concept_tag": "shunya-sadish",
+       "learning_objective": "शून्य सदिश के गुणों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH03-T3",
+     "topic_number": 3,
+     "title": "सदिशों का वियोजन और विश्लेषणात्मक योग",
+     "ncert_sections": "3.5, 3.6",
+     "concepts": [
+      {
+       "concept_tag": "ekank-sadish-ghatak",
+       "learning_objective": "एकांक सदिशों की सहायता से सदिश को घटकों में वियोजित करना।"
+      },
+      {
+       "concept_tag": "vishleshnatmak-yog",
+       "learning_objective": "घटक विधि और कोज्या नियम से परिणामी सदिश का परिमाण और दिशा ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH03-T4",
+     "topic_number": 4,
+     "title": "समतल में गति तथा नियत त्वरण",
+     "ncert_sections": "3.7, 3.8",
+     "concepts": [
+      {
+       "concept_tag": "veg-tvaran-samtal",
+       "learning_objective": "समतल में स्थिति सदिश से वेग और त्वरण सदिश ज्ञात करना।"
+      },
+      {
+       "concept_tag": "niyat-tvaran-samikaran",
+       "learning_objective": "नियत त्वरण के लिए सदिश गति-समीकरणों का प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH03-T5",
+     "topic_number": 5,
+     "title": "प्रक्षेप्य गति",
+     "ncert_sections": "3.9",
+     "concepts": [
+      {
+       "concept_tag": "prakshepya-path",
+       "learning_objective": "प्रक्षेप्य के परवलयाकार पथ और स्वतंत्र क्षैतिज-ऊर्ध्वाधर गतियों को समझना।"
+      },
+      {
+       "concept_tag": "udan-kaal-unchai-paras",
+       "learning_objective": "उड्डयन काल, अधिकतम ऊँचाई और क्षैतिज परास की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH03-T6",
+     "topic_number": 6,
+     "title": "एकसमान वृत्तीय गति",
+     "ncert_sections": "3.10",
+     "concepts": [
+      {
+       "concept_tag": "abhikendra-tvaran",
+       "learning_objective": "एकसमान वृत्तीय गति में अभिकेंद्र त्वरण का परिमाण और दिशा बताना।"
+      },
+      {
+       "concept_tag": "kon-veg-avarta",
+       "learning_objective": "कोणीय चाल, आवर्तकाल और आवृत्ति के बीच संबंधों का प्रयोग करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPH1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "गति के नियम",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH1-CH04-T1",
+     "topic_number": 1,
+     "title": "अरस्तू की भ्रांति, जड़त्व का नियम और न्यूटन का गति का प्रथम नियम",
+     "ncert_sections": "4.2, 4.3, 4.4",
+     "concepts": [
+      {
+       "concept_tag": "arastu-ki-bhranti",
+       "learning_objective": "गति बनाए रखने के लिए बल की आवश्यकता संबंधी अरस्तू की धारणा की भ्रांति पहचानना।"
+      },
+      {
+       "concept_tag": "jadatva-ka-niyam",
+       "learning_objective": "गैलीलियो के नत समतल प्रयोगों से जड़त्व के नियम को समझाना।"
+      },
+      {
+       "concept_tag": "pratham-niyam",
+       "learning_objective": "न्यूटन के प्रथम नियम को दैनिक जीवन की स्थितियों पर लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH04-T2",
+     "topic_number": 2,
+     "title": "न्यूटन का गति का द्वितीय नियम, संवेग और आवेग",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "sanveg-dvitiya-niyam",
+       "learning_objective": "संवेग की परिभाषा देना और बल को संवेग परिवर्तन की दर के रूप में प्रयोग करना।"
+      },
+      {
+       "concept_tag": "aaveg",
+       "learning_objective": "आवेग को संवेग परिवर्तन के रूप में परिकलित करना और उसके व्यावहारिक उदाहरण समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH04-T3",
+     "topic_number": 3,
+     "title": "न्यूटन का गति का तृतीय नियम",
+     "ncert_sections": "4.6",
+     "concepts": [
+      {
+       "concept_tag": "kriya-pratikriya",
+       "learning_objective": "क्रिया-प्रतिक्रिया बलों की विशेषताएँ बताना और उन्हें सही पिंडों पर पहचानना।"
+      },
+      {
+       "concept_tag": "sampark-bal-tantra",
+       "learning_objective": "संपर्क में रखे पिंडों के तंत्र में पारस्परिक बल परिकलित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH04-T4",
+     "topic_number": 4,
+     "title": "संवेग संरक्षण",
+     "ncert_sections": "4.7",
+     "concepts": [
+      {
+       "concept_tag": "sanveg-sanrakshan",
+       "learning_objective": "विलगित तंत्र के लिए संवेग संरक्षण के नियम को प्रतिक्षेप, विस्फोट और टक्कर पर लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH04-T5",
+     "topic_number": 5,
+     "title": "कण का संतुलन और यांत्रिकी में समस्याएँ हल करना",
+     "ncert_sections": "4.8, 4.11",
+     "concepts": [
+      {
+       "concept_tag": "santulan-shart",
+       "learning_objective": "कण के संतुलन के लिए सभी बलों के सदिश योग के शून्य होने की शर्त लागू करना।"
+      },
+      {
+       "concept_tag": "mukt-pind-aarekh",
+       "learning_objective": "मुक्त-पिंड आरेख बनाकर लिफ़्ट जैसी स्थितियों में बल ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH04-T6",
+     "topic_number": 6,
+     "title": "यांत्रिकी में सामान्य बल: घर्षण",
+     "ncert_sections": "4.9",
+     "concepts": [
+      {
+       "concept_tag": "sthaitik-gatij-gharshan",
+       "learning_objective": "स्थैतिक और गतिज घर्षण के नियमों तथा सीमांत घर्षण को समझाना और लागू करना।"
+      },
+      {
+       "concept_tag": "lotanik-gharshan",
+       "learning_objective": "लोटनिक घर्षण तथा घर्षण घटाने के उपायों और घर्षण की उपयोगिता को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH04-T7",
+     "topic_number": 7,
+     "title": "वृत्तीय गति",
+     "ncert_sections": "4.10",
+     "concepts": [
+      {
+       "concept_tag": "abhikendra-bal",
+       "learning_objective": "वृत्तीय गति के लिए आवश्यक अभिकेंद्र बल और उसके स्रोत की पहचान करना।"
+      },
+      {
+       "concept_tag": "bankit-sadak",
+       "learning_objective": "समतल और बंकित सड़क पर वाहन की अधिकतम और इष्टतम चाल परिकलित करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPH1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "कार्य, ऊर्जा और शक्ति",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH1-CH05-T1",
+     "topic_number": 1,
+     "title": "कार्य और गतिज ऊर्जा की धारणाएँ तथा कार्य",
+     "ncert_sections": "5.1, 5.2, 5.3",
+     "concepts": [
+      {
+       "concept_tag": "adish-gunanphal",
+       "learning_objective": "दो सदिशों के अदिश गुणनफल की गणना करना।"
+      },
+      {
+       "concept_tag": "karya-paribhasha",
+       "learning_objective": "नियत बल द्वारा किए गए कार्य को बल और विस्थापन के अदिश गुणनफल के रूप में समझाना।"
+      },
+      {
+       "concept_tag": "dhanatmak-rinatmak-shunya-karya",
+       "learning_objective": "धनात्मक, ऋणात्मक और शून्य कार्य की स्थितियाँ पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH05-T2",
+     "topic_number": 2,
+     "title": "गतिज ऊर्जा",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "gatij-urja",
+       "learning_objective": "गतिज ऊर्जा की परिभाषा, सूत्र और प्रकृति बताना।"
+      },
+      {
+       "concept_tag": "gatij-urja-aur-sanveg",
+       "learning_objective": "गतिज ऊर्जा, द्रव्यमान, चाल और संवेग के संबंध का उपयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH05-T3",
+     "topic_number": 3,
+     "title": "परिवर्ती बल द्वारा कार्य और कार्य-ऊर्जा प्रमेय",
+     "ncert_sections": "5.5, 5.6",
+     "concepts": [
+      {
+       "concept_tag": "parivarti-bal-karya",
+       "learning_objective": "बल-विस्थापन ग्राफ के क्षेत्रफल से परिवर्ती बल द्वारा कार्य ज्ञात करना।"
+      },
+      {
+       "concept_tag": "karya-urja-pramey",
+       "learning_objective": "कार्य-ऊर्जा प्रमेय को लागू करके गति संबंधी प्रश्न हल करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH05-T4",
+     "topic_number": 4,
+     "title": "स्थितिज ऊर्जा और यांत्रिक ऊर्जा का संरक्षण",
+     "ncert_sections": "5.7, 5.8",
+     "concepts": [
+      {
+       "concept_tag": "sanrakshi-bal-sthitij-urja",
+       "learning_objective": "संरक्षी बल और स्थितिज ऊर्जा के संबंध को समझाना।"
+      },
+      {
+       "concept_tag": "yantrik-urja-sanrakshan",
+       "learning_objective": "यांत्रिक ऊर्जा के संरक्षण के सिद्धांत को लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH05-T5",
+     "topic_number": 5,
+     "title": "स्प्रिंग की स्थितिज ऊर्जा",
+     "ncert_sections": "5.9",
+     "concepts": [
+      {
+       "concept_tag": "spring-bal",
+       "learning_objective": "स्प्रिंग बल और स्प्रिंग नियतांक की प्रकृति बताना।"
+      },
+      {
+       "concept_tag": "spring-sthitij-urja",
+       "learning_objective": "स्प्रिंग में संचित प्रत्यास्थ स्थितिज ऊर्जा की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH05-T6",
+     "topic_number": 6,
+     "title": "शक्ति",
+     "ncert_sections": "5.10",
+     "concepts": [
+      {
+       "concept_tag": "shakti-paribhasha",
+       "learning_objective": "शक्ति को कार्य करने की दर तथा बल और वेग के अदिश गुणनफल के रूप में ज्ञात करना।"
+      },
+      {
+       "concept_tag": "shakti-matrak",
+       "learning_objective": "शक्ति और ऊर्जा के मात्रकों जैसे वाट, अश्व शक्ति और किलोवाट घंटा को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH05-T7",
+     "topic_number": 7,
+     "title": "संघट्ट",
+     "ncert_sections": "5.11",
+     "concepts": [
+      {
+       "concept_tag": "pratyasth-apratyasth-sanghatt",
+       "learning_objective": "प्रत्यास्थ और अप्रत्यास्थ संघट्टों में संरक्षित राशियों की पहचान करना।"
+      },
+      {
+       "concept_tag": "ek-vimiya-sanghatt",
+       "learning_objective": "एकविमीय संघट्टों में अंतिम वेग और गतिज ऊर्जा की हानि ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPH1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "कणों के निकाय तथा घूर्णी गति",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH1-CH06-T1",
+     "topic_number": 1,
+     "title": "दृढ़ पिंड और द्रव्यमान केंद्र",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "drudh-pind",
+       "learning_objective": "दृढ़ पिंड की परिभाषा तथा स्थानांतरीय और घूर्णी गति में अंतर समझना।"
+      },
+      {
+       "concept_tag": "dravyaman-kendra",
+       "learning_objective": "कणों के निकाय और समांग पिंडों के द्रव्यमान केंद्र की स्थिति ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH06-T2",
+     "topic_number": 2,
+     "title": "द्रव्यमान केंद्र की गति और निकाय का रेखीय संवेग",
+     "ncert_sections": "6.3, 6.4",
+     "concepts": [
+      {
+       "concept_tag": "dravyaman-kendra-gati",
+       "learning_objective": "यह समझना कि द्रव्यमान केंद्र केवल बाह्य बलों के प्रभाव में गति करता है।"
+      },
+      {
+       "concept_tag": "nikay-rekhiya-sanveg",
+       "learning_objective": "निकाय के कुल रेखीय संवेग और उसके संरक्षण का प्रयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH06-T3",
+     "topic_number": 3,
+     "title": "सदिश गुणनफल और कोणीय वेग",
+     "ncert_sections": "6.5, 6.6",
+     "concepts": [
+      {
+       "concept_tag": "sadish-gunanfal",
+       "learning_objective": "दो सदिशों के सदिश गुणनफल का परिमाण, दिशा और गुणधर्म ज्ञात करना।"
+      },
+      {
+       "concept_tag": "konia-veg",
+       "learning_objective": "कोणीय वेग और रेखीय वेग के संबंध को लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH06-T4",
+     "topic_number": 4,
+     "title": "बल आघूर्ण एवं कोणीय संवेग",
+     "ncert_sections": "6.7",
+     "concepts": [
+      {
+       "concept_tag": "bal-aghurn",
+       "learning_objective": "बल आघूर्ण की परिभाषा, मात्रक और परिकलन समझना।"
+      },
+      {
+       "concept_tag": "konia-sanveg",
+       "learning_objective": "कण के कोणीय संवेग तथा बल आघूर्ण से उसके संबंध को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH06-T5",
+     "topic_number": 5,
+     "title": "दृढ़ पिंड का संतुलन",
+     "ncert_sections": "6.8",
+     "concepts": [
+      {
+       "concept_tag": "santulan-shartein",
+       "learning_objective": "दृढ़ पिंड के स्थानांतरीय और घूर्णी संतुलन की शर्तें तथा बल युग्म समझना।"
+      },
+      {
+       "concept_tag": "aghurnon-ka-siddhant",
+       "learning_objective": "आघूर्णों के सिद्धांत से उत्तोलक की संतुलन स्थिति और यांत्रिक लाभ ज्ञात करना।"
+      },
+      {
+       "concept_tag": "gurutva-kendra",
+       "learning_objective": "गुरुत्व केंद्र और द्रव्यमान केंद्र के संबंध का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH06-T6",
+     "topic_number": 6,
+     "title": "जड़त्व आघूर्ण",
+     "ncert_sections": "6.9",
+     "concepts": [
+      {
+       "concept_tag": "jadatva-aaghurn",
+       "learning_objective": "सामान्य पिंडों का जड़त्व आघूर्ण और उसे प्रभावित करने वाले कारक समझना।"
+      },
+      {
+       "concept_tag": "ghurnan-trijya",
+       "learning_objective": "घूर्णन त्रिज्या की परिभाषा और परिकलन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH06-T7",
+     "topic_number": 7,
+     "title": "घूर्णी गति की शुद्धगतिकी, गतिकी और कोणीय संवेग संरक्षण",
+     "ncert_sections": "6.10, 6.11, 6.12",
+     "concepts": [
+      {
+       "concept_tag": "ghurni-shuddhgatiki",
+       "learning_objective": "नियत कोणीय त्वरण के समीकरणों का प्रयोग करना।"
+      },
+      {
+       "concept_tag": "ghurni-gatiki",
+       "learning_objective": "बल आघूर्ण, जड़त्व आघूर्ण और कोणीय त्वरण के संबंध को लागू करना।"
+      },
+      {
+       "concept_tag": "konia-sanveg-sanrakshan",
+       "learning_objective": "अचल अक्ष के परितः घूर्णन में कोणीय संवेग संरक्षण का प्रयोग करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHPH1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "गुरुत्वाकर्षण",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khph107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHPH1-CH07-T1",
+     "topic_number": 1,
+     "title": "केप्लर के नियम",
+     "ncert_sections": "7.1, 7.2",
+     "concepts": [
+      {
+       "concept_tag": "kepler-laws",
+       "learning_objective": "केप्लर के कक्षाओं और आवर्तकालों के नियमों को बताना और उनका उपयोग करना।"
+      },
+      {
+       "concept_tag": "areal-velocity",
+       "learning_objective": "क्षेत्रफलों के नियम को कोणीय संवेग संरक्षण से जोड़ना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH07-T2",
+     "topic_number": 2,
+     "title": "गुरुत्वाकर्षण का सार्वत्रिक नियम",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "universal-law",
+       "learning_objective": "दो कणों के बीच गुरुत्वाकर्षण बल को द्रव्यमानों और दूरी के पदों में ज्ञात करना।"
+      },
+      {
+       "concept_tag": "shell-theorem",
+       "learning_objective": "एकसमान गोलीय कोश द्वारा भीतर स्थित कण पर लगने वाले बल का निर्धारण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH07-T3",
+     "topic_number": 3,
+     "title": "गुरुत्वीय स्थिरांक और पृथ्वी के पृष्ठ पर गुरुत्वीय त्वरण",
+     "ncert_sections": "7.4, 7.5",
+     "concepts": [
+      {
+       "concept_tag": "cavendish-g",
+       "learning_objective": "कैवेंडिश के प्रयोग और पृथ्वी के द्रव्यमान के आकलन को समझना।"
+      },
+      {
+       "concept_tag": "g-mass-radius",
+       "learning_objective": "गुरुत्वीय त्वरण को ग्रह के द्रव्यमान और त्रिज्या से संबंधित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH07-T4",
+     "topic_number": 4,
+     "title": "ऊँचाई और गहराई के साथ गुरुत्वीय त्वरण में परिवर्तन",
+     "ncert_sections": "7.5, 7.6",
+     "concepts": [
+      {
+       "concept_tag": "g-at-height",
+       "learning_objective": "पृष्ठ से ऊपर ऊँचाई के साथ गुरुत्वीय त्वरण का परिवर्तन ज्ञात करना।"
+      },
+      {
+       "concept_tag": "g-at-depth",
+       "learning_objective": "पृष्ठ के नीचे गहराई के साथ गुरुत्वीय त्वरण का परिवर्तन ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH07-T5",
+     "topic_number": 5,
+     "title": "गुरुत्वीय स्थितिज ऊर्जा",
+     "ncert_sections": "7.7",
+     "concepts": [
+      {
+       "concept_tag": "gravitational-potential-energy",
+       "learning_objective": "कणों के निकाय की गुरुत्वीय स्थितिज ऊर्जा और किया गया कार्य परिकलित करना।"
+      },
+      {
+       "concept_tag": "gravitational-potential",
+       "learning_objective": "गुरुत्वीय विभव की परिभाषा और उसके चिह्न को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH07-T6",
+     "topic_number": 6,
+     "title": "पलायन चाल",
+     "ncert_sections": "7.8",
+     "concepts": [
+      {
+       "concept_tag": "escape-speed-expression",
+       "learning_objective": "पलायन चाल का व्यंजक व्युत्पन्न करना और उसका उपयोग करना।"
+      },
+      {
+       "concept_tag": "escape-speed-applications",
+       "learning_objective": "पलायन चाल के आधार पर वास्तविक परिघटनाओं की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHPH1-CH07-T7",
+     "topic_number": 7,
+     "title": "भू-उपग्रह और उनकी ऊर्जा",
+     "ncert_sections": "7.9, 7.10",
+     "concepts": [
+      {
+       "concept_tag": "orbital-speed-period",
+       "learning_objective": "उपग्रह की कक्षीय चाल और आवर्तकाल ज्ञात करना।"
+      },
+      {
+       "concept_tag": "satellite-energy",
+       "learning_objective": "कक्षा में परिक्रमा करते उपग्रह की कुल ऊर्जा और भारहीनता को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

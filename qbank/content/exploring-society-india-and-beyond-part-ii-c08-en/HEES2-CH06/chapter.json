@@ -1,0 +1,132 @@
+{
+ "chapter_id": "HEES2-CH06",
+ "title": "Dynamics of Population",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEES2-CH06-T1",
+   "topic_number": 1,
+   "title": "What Is Demography?",
+   "ncert_sections": "What Is Demography?; Don't Miss Out (census)",
+   "concepts": [
+    {
+     "concept_tag": "demography-meaning",
+     "learning_objective": "Define demography as the study of the size, structure and composition of a population and how it changes over time."
+    },
+    {
+     "concept_tag": "uses-of-demography",
+     "learning_objective": "Explain how governments and businesses use demographic information to plan services and allocate resources."
+    },
+    {
+     "concept_tag": "census",
+     "learning_objective": "Describe the census as the official count of a country's people and the information it collects."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEES2-CH06-T2",
+   "topic_number": 2,
+   "title": "Population at a Glance: India and the World",
+   "ncert_sections": "Population at a Glance",
+   "concepts": [
+    {
+     "concept_tag": "world-population-trends",
+     "learning_objective": "Describe the growth of world population since 1950 and the UN projection of its peak and decline."
+    },
+    {
+     "concept_tag": "india-most-populous",
+     "learning_objective": "State India's position as the most populous country and its share of the world population."
+    },
+    {
+     "concept_tag": "causes-of-rapid-growth",
+     "learning_objective": "Explain how medical advances and better sanitation caused rapid population growth after the 1950s."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEES2-CH06-T3",
+   "topic_number": 3,
+   "title": "Birth Rate and Fertility Rate",
+   "ncert_sections": "What Determines the Population of a Country?; Birth and fertility rates",
+   "concepts": [
+    {
+     "concept_tag": "birth-and-fertility-rate",
+     "learning_objective": "Distinguish between birth rate and fertility rate and how each affects population growth."
+    },
+    {
+     "concept_tag": "replacement-level-fertility",
+     "learning_objective": "Explain the replacement level fertility rate of 2.1 and what happens above and below it."
+    },
+    {
+     "concept_tag": "falling-fertility-factors",
+     "learning_objective": "Analyse why fertility rates fall, using China's One-Child Policy and the role of girls' education and urbanisation."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEES2-CH06-T4",
+   "topic_number": 4,
+   "title": "Mortality Rate and Migration",
+   "ncert_sections": "Death or mortality rate; Migration",
+   "concepts": [
+    {
+     "concept_tag": "mortality-and-life-expectancy",
+     "learning_objective": "Interpret mortality rate, child mortality and life expectancy as indicators of health and well-being."
+    },
+    {
+     "concept_tag": "migration",
+     "learning_objective": "Explain the causes of migration and its effects on the areas people move to and from."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEES2-CH06-T5",
+   "topic_number": 5,
+   "title": "Stages of Demographic Transition",
+   "ncert_sections": "How Do Countries Experience Population Change?",
+   "concepts": [
+    {
+     "concept_tag": "demographic-transition-stages",
+     "learning_objective": "Describe the three stages of demographic transition in terms of birth and death rates."
+    },
+    {
+     "concept_tag": "india-demographic-transition",
+     "learning_objective": "Relate phases of India's population history to the stages of demographic transition."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEES2-CH06-T6",
+   "topic_number": 6,
+   "title": "India's Population: Composition, Sex Ratio and Pyramids",
+   "ncert_sections": "India's Population: Composition and Trends; Improvement in India's sex ratio",
+   "concepts": [
+    {
+     "concept_tag": "sex-ratio",
+     "learning_objective": "Define sex ratio and interpret India's sex ratio figures from the Census."
+    },
+    {
+     "concept_tag": "population-pyramid",
+     "learning_objective": "Interpret the shape of a population structure diagram and how India's pyramid has changed since 1950."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEES2-CH06-T7",
+   "topic_number": 7,
+   "title": "Demographic Dividend and Population Ageing",
+   "ncert_sections": "India's Demographic Dividend - A Limited Window of Opportunity",
+   "concepts": [
+    {
+     "concept_tag": "demographic-dividend",
+     "learning_objective": "Explain the demographic dividend and youth bulge and why India's window of opportunity is limited."
+    },
+    {
+     "concept_tag": "population-ageing",
+     "learning_objective": "Analyse the challenges of an ageing population and the ways nations prepare for it."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "chapter_id": "IEMH2-CH03",
+ "title": "The World of Algorithms",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IEMH2-CH03-T1",
+   "topic_number": 1,
+   "title": "Adding numbers digit by digit",
+   "ncert_sections": "11.1, 11.1.1",
+   "concepts": [
+    {
+     "concept_tag": "what-is-an-algorithm",
+     "learning_objective": "Describe an algorithm as a precise step-by-step procedure built from basic steps."
+    },
+    {
+     "concept_tag": "column-addition-carry",
+     "learning_objective": "Execute and justify the right-to-left column addition algorithm with a carry."
+    },
+    {
+     "concept_tag": "addition-efficiency",
+     "learning_objective": "Compare the effort of counting dots with the effort of adding column by column."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH03-T2",
+   "topic_number": 2,
+   "title": "Computing the divisors of a number",
+   "ncert_sections": "11.2, 11.2.1",
+   "concepts": [
+    {
+     "concept_tag": "divisors-list-algorithm",
+     "learning_objective": "Execute the algorithm that builds the list of divisors of n by checking each j from 1 to n."
+    },
+    {
+     "concept_tag": "divisor-pairs",
+     "learning_objective": "Use the pairing of divisors to reduce the numbers that must be examined."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH03-T3",
+   "topic_number": 3,
+   "title": "Finding the gcd from common divisors",
+   "ncert_sections": "11.2.2, 11.2.3",
+   "concepts": [
+    {
+     "concept_tag": "common-divisors-list",
+     "learning_objective": "Build the list of common divisors of two numbers from their lists of divisors."
+    },
+    {
+     "concept_tag": "first-gcd-algorithm",
+     "learning_objective": "Explain why the rightmost element of the common-divisors list is the gcd."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH03-T4",
+   "topic_number": 4,
+   "title": "Data structures and improving the gcd algorithm",
+   "ncert_sections": "11.3, 11.3.1, 11.3.2",
+   "concepts": [
+    {
+     "concept_tag": "list-data-structure",
+     "learning_objective": "Recognise a list as a data structure that stores named intermediate values."
+    },
+    {
+     "concept_tag": "refining-gcd-algorithm",
+     "learning_objective": "Refine the gcd algorithm by combining scans, scanning up to min(m, n) and dropping lists."
+    },
+    {
+     "concept_tag": "gcd-scan-efficiency",
+     "learning_objective": "Analyse how the work of the scanning gcd algorithm grows with the size of the numbers."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH03-T5",
+   "topic_number": 5,
+   "title": "Euclid's subtraction algorithm",
+   "ncert_sections": "11.3.3",
+   "concepts": [
+    {
+     "concept_tag": "gcd-difference-property",
+     "learning_objective": "Justify that gcd(m, n) = gcd(n, m - n) when m is at least n."
+    },
+    {
+     "concept_tag": "euclid-subtraction-steps",
+     "learning_objective": "Execute Euclid's subtraction algorithm, including the reversal and stopping steps."
+    },
+    {
+     "concept_tag": "subtraction-efficiency",
+     "learning_objective": "Evaluate why the subtraction algorithm can need many steps for inputs like gcd(2k + 1, 2)."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH03-T6",
+   "topic_number": 6,
+   "title": "Aryabhata's division algorithm and the history of the word",
+   "ncert_sections": "11.3.4, A Pinch of History",
+   "concepts": [
+    {
+     "concept_tag": "gcd-mod-reduction",
+     "learning_objective": "Use the reduction gcd(m, n) = gcd(n, m mod n) to compute a gcd in few steps."
+    },
+    {
+     "concept_tag": "long-division-gcd",
+     "learning_objective": "Carry out the long-division layout for the gcd and read off the answer."
+    },
+    {
+     "concept_tag": "origin-of-word-algorithm",
+     "learning_objective": "Recall how the word algorithm arose from Al-Khwarizmi and Indian arithmetic."
+    }
+   ]
+  }
+ ]
+}

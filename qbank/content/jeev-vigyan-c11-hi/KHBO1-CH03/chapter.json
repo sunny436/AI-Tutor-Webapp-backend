@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KHBO1-CH03",
+ "title": "वनस्पति जगत",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHBO1-CH03-T1",
+   "topic_number": 1,
+   "title": "वनस्पति जगत में वर्गीकरण की पद्धतियाँ",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "kritrim-aur-prakritik-vargikaran",
+     "learning_objective": "कृत्रिम, प्राकृतिक और जातिवृत्तीय वर्गीकरण पद्धतियों में अंतर करना।"
+    },
+    {
+     "concept_tag": "sankhyatmak-aur-koshika-vargiki",
+     "learning_objective": "संख्यात्मक वर्गिकी, कोशिका वर्गिकी और रसायन वर्गिकी के आधार को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH03-T2",
+   "topic_number": 2,
+   "title": "शैवाल: सामान्य लक्षण, जनन और आर्थिक महत्व",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "shaival-ke-lakshan",
+     "learning_objective": "शैवालों के सामान्य लक्षण और आवास पहचानना।"
+    },
+    {
+     "concept_tag": "shaival-mein-janan",
+     "learning_objective": "शैवालों में समयुग्मकी, असमयुग्मकी और विषमयुग्मकी जनन में अंतर करना।"
+    },
+    {
+     "concept_tag": "shaival-ka-aarthik-mahatva",
+     "learning_objective": "शैवालों के आर्थिक और पारिस्थितिक महत्व की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH03-T3",
+   "topic_number": 3,
+   "title": "शैवाल के वर्ग: क्लोरोफाइसी, फियोफाइसी और रोडोफाइसी",
+   "ncert_sections": "3.1.1, 3.1.2, 3.1.3",
+   "concepts": [
+    {
+     "concept_tag": "harit-shaival",
+     "learning_objective": "हरे शैवालों के वर्णक, संचित भोजन और कोशिका भित्ति को जानना।"
+    },
+    {
+     "concept_tag": "bhoore-shaival",
+     "learning_objective": "भूरे शैवालों की संरचना, वर्णक और जनन को समझना।"
+    },
+    {
+     "concept_tag": "laal-shaival",
+     "learning_objective": "लाल शैवालों के वर्णक, संचित भोजन और आवास की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH03-T4",
+   "topic_number": 4,
+   "title": "ब्रायोफाइटा: लिवरवर्ट और मॉस",
+   "ncert_sections": "3.2, 3.2.1, 3.2.2",
+   "concepts": [
+    {
+     "concept_tag": "bryophyta-ke-lakshan",
+     "learning_objective": "ब्रायोफाइटा के लक्षण, जीवन चक्र और महत्व को समझना।"
+    },
+    {
+     "concept_tag": "livervort",
+     "learning_objective": "लिवरवर्ट के थैलस और अलैंगिक जनन को पहचानना।"
+    },
+    {
+     "concept_tag": "moss",
+     "learning_objective": "मॉस के युग्मकोद्भिद की प्रोटोनीमा अवस्था और पत्तीदार अवस्था में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH03-T5",
+   "topic_number": 5,
+   "title": "टेरिडोफाइटा",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "teridophyta-ke-lakshan",
+     "learning_objective": "टेरिडोफाइटा के बीजाणुद्भिद, संवहन ऊतक और युग्मकोद्भिद को समझना।"
+    },
+    {
+     "concept_tag": "samabeejaani-vishambeejaani",
+     "learning_objective": "समबीजाणुता और विषमबीजाणुता का अंतर तथा बीज-स्वभाव से संबंध समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH03-T6",
+   "topic_number": 6,
+   "title": "अनावृतबीजी और आवृतबीजी",
+   "ncert_sections": "3.4, 3.5",
+   "concepts": [
+    {
+     "concept_tag": "anavritbeeji-lakshan",
+     "learning_objective": "अनावृतबीजी पौधों की जड़, तना और पत्तियों के विशिष्ट लक्षण पहचानना।"
+    },
+    {
+     "concept_tag": "anavritbeeji-janan",
+     "learning_objective": "अनावृतबीजी में शंकु, परागकण और बीजांड के विकास को समझना।"
+    },
+    {
+     "concept_tag": "aavritbeeji",
+     "learning_objective": "आवृतबीजी पौधों के लक्षण और अनावृतबीजी से उनका अंतर बताना।"
+    }
+   ]
+  }
+ ]
+}

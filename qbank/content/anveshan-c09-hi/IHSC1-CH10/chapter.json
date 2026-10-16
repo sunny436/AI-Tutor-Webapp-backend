@@ -1,0 +1,144 @@
+{
+ "chapter_id": "IHSC1-CH10",
+ "title": "ध्वनि तरंगें — अभिलक्षण एवं अनुप्रयोग",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSC1-CH10-T1",
+   "topic_number": 1,
+   "title": "ध्वनि का उत्पादन और स्वरित्र द्विभुज",
+   "ncert_sections": "10.1, 10.1.1",
+   "concepts": [
+    {
+     "concept_tag": "dhvani-kampan-se-utpann",
+     "learning_objective": "समझना कि ध्वनि कंपन करती वस्तुओं द्वारा उत्पन्न होती है और मनुष्य वाक् तंतुओं के कंपन से ध्वनि उत्पन्न करते हैं।"
+    },
+    {
+     "concept_tag": "svaritra-dvibhuj",
+     "learning_objective": "स्वरित्र द्विभुज की बनावट और उससे कंपन व ध्वनि के संबंध को प्रदर्शित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH10-T2",
+   "topic_number": 2,
+   "title": "ध्वनि का संचरण और माध्यम की आवश्यकता",
+   "ncert_sections": "10.2, 10.2.1",
+   "concepts": [
+    {
+     "concept_tag": "madhyam-ki-avashyakta",
+     "learning_objective": "निर्वात बेलजार प्रयोग के आधार पर समझाना कि ध्वनि संचरण हेतु माध्यम आवश्यक है।"
+    },
+    {
+     "concept_tag": "thos-drav-gas-sancharan",
+     "learning_objective": "पहचानना कि ध्वनि ठोसों, द्रवों और गैसों से होकर संचरित हो सकती है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH10-T3",
+   "topic_number": 3,
+   "title": "ध्वनि तरंगें और उनकी ऊर्जा",
+   "ncert_sections": "10.3, 10.4",
+   "concepts": [
+    {
+     "concept_tag": "sampidan-viralan",
+     "learning_objective": "संपीडन और विरलन के बनने तथा माध्यम के कणों के माध्य स्थिति के इर्द-गिर्द कंपन को समझाना।"
+    },
+    {
+     "concept_tag": "anudairghya-yantrik-tarang",
+     "learning_objective": "अनुदैर्घ्य, अनुप्रस्थ और यांत्रिक तरंगों में अंतर करना।"
+    },
+    {
+     "concept_tag": "dhvani-urja",
+     "learning_objective": "समझना कि ध्वनि तरंगें माध्यम के कणों को नहीं, बल्कि ऊर्जा को स्थानांतरित करती हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH10-T4",
+   "topic_number": 4,
+   "title": "आलेखीय निरूपण: तरंगदैर्घ्य, आवृत्ति और आवर्तकाल",
+   "ncert_sections": "10.5, 10.6.1",
+   "concepts": [
+    {
+     "concept_tag": "ghanatva-aalekh",
+     "learning_objective": "घनत्व-दूरी आलेख में शृंग, गर्त और तरंगदैर्घ्य की पहचान करना।"
+    },
+    {
+     "concept_tag": "avritti-avartkal",
+     "learning_objective": "आवृत्ति और आवर्तकाल को परिभाषित कर उनके व्युत्क्रम संबंध से परिकलन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH10-T5",
+   "topic_number": 5,
+   "title": "आयाम, तीव्रता और ध्वनि की चाल",
+   "ncert_sections": "10.6.2, 10.6.3",
+   "concepts": [
+    {
+     "concept_tag": "ayam-tivrata",
+     "learning_objective": "आयाम, ऊर्जा और तीव्रता का संबंध तथा दूरी के साथ तीव्रता घटने का कारण समझाना।"
+    },
+    {
+     "concept_tag": "dhvani-ki-chal",
+     "learning_objective": "संबंध v = λν का उपयोग करना और विभिन्न माध्यमों में ध्वनि की चाल की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH10-T6",
+   "topic_number": 6,
+   "title": "मानव द्वारा ध्वनि-बोध",
+   "ncert_sections": "10.6.4",
+   "concepts": [
+    {
+     "concept_tag": "taratva-prabalta",
+     "learning_objective": "तारत्व को आवृत्ति से और प्रबलता को आयाम से जोड़ना।"
+    },
+    {
+     "concept_tag": "shravya-parisar",
+     "learning_objective": "मानव श्रव्य परिसर तथा अवश्रव्य और पराश्रव्य तरंगों की सीमाएँ पहचानना।"
+    },
+    {
+     "concept_tag": "dhvanigunta-ashtak",
+     "learning_objective": "मूल आवृत्ति, अधिस्वरक, ध्वनिगुणता और अष्टक की अवधारणाएँ समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH10-T7",
+   "topic_number": 7,
+   "title": "ध्वनि का परावर्तन: प्रतिध्वनि और अनुरणन",
+   "ncert_sections": "10.7, 10.7.1, 10.7.2",
+   "concepts": [
+    {
+     "concept_tag": "pratidhvani",
+     "learning_objective": "प्रतिध्वनि सुनने की शर्त और परावर्तक सतह की दूरी का परिकलन करना।"
+    },
+    {
+     "concept_tag": "anuranan",
+     "learning_objective": "अनुरणन का कारण और सभागारों में उसे नियंत्रित करने के उपाय समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH10-T8",
+   "topic_number": 8,
+   "title": "पराश्रव्य और अवश्रव्य तरंगें तथा उनके अनुप्रयोग",
+   "ncert_sections": "10.8, 10.8.1",
+   "concepts": [
+    {
+     "concept_tag": "parashravya-anuprayog",
+     "learning_objective": "पराश्रव्य और अवश्रव्य तरंगों के चिकित्सा, उद्योग और प्राकृतिक घटनाओं में अनुप्रयोग पहचानना।"
+    },
+    {
+     "concept_tag": "sonar-pratidhvani-sthan",
+     "learning_objective": "प्रतिध्वनि द्वारा स्थान निर्धारण और सोनार के सिद्धांत से दूरी का परिकलन करना।"
+    }
+   ]
+  }
+ ]
+}

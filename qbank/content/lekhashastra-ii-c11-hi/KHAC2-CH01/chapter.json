@@ -1,0 +1,116 @@
+{
+ "chapter_id": "KHAC2-CH01",
+ "title": "वित्तीय विवरण - 1",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHAC2-CH01-T1",
+   "topic_number": 1,
+   "title": "हितधारक और उनकी सूचना आवश्यकताएँ",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "hitdharak-upyogkarta",
+     "learning_objective": "आंतरिक और बाह्य उपयोगकर्ताओं तथा उनकी लेखांकन सूचना आवश्यकताओं को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC2-CH01-T2",
+   "topic_number": 2,
+   "title": "पूँजीगत और आगम मदों में अंतर",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "punjigat-agam-vyay",
+     "learning_objective": "पूँजीगत व्यय, आगम व्यय और आस्थगित आगम व्यय में अंतर करना।"
+    },
+    {
+     "concept_tag": "punjigat-agam-prapti",
+     "learning_objective": "पूँजीगत और आगम प्राप्तियों को पहचानना।"
+    },
+    {
+     "concept_tag": "vargikaran-ka-mahatva",
+     "learning_objective": "गलत वर्गीकरण का लाभ और परिसंपत्तियों पर प्रभाव समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC2-CH01-T3",
+   "topic_number": 3,
+   "title": "वित्तीय विवरण तथा व्यापारिक एवं लाभ-हानि खाता",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vittiya-vivaran-uddeshya",
+     "learning_objective": "वित्तीय विवरणों के उद्देश्य और प्रकार बताना।"
+    },
+    {
+     "concept_tag": "lekhe-ki-madein",
+     "learning_objective": "व्यापारिक एवं लाभ-हानि खाते के नाम और जमा पक्ष की मदें पहचानना।"
+    },
+    {
+     "concept_tag": "samapan-pravishtiyan",
+     "learning_objective": "आय और व्यय खातों की समापन प्रविष्टियाँ लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC2-CH01-T4",
+   "topic_number": 4,
+   "title": "सकल लाभ, शुद्ध लाभ और बेचे गए माल की लागत",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "sakal-shuddh-labh",
+     "learning_objective": "प्रत्यक्ष और अप्रत्यक्ष व्ययों के आधार पर सकल लाभ और शुद्ध लाभ की गणना करना।"
+    },
+    {
+     "concept_tag": "beche-gaye-mal-ki-lagat",
+     "learning_objective": "प्रारंभिक व अंतिम स्टॉक सहित बेचे गए माल की लागत ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC2-CH01-T5",
+   "topic_number": 5,
+   "title": "परिचालन लाभ",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "parichalan-labh",
+     "learning_objective": "गैर-परिचालन मदों को समायोजित कर परिचालन लाभ की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC2-CH01-T6",
+   "topic_number": 6,
+   "title": "तुलन पत्र, क्रमबद्धता और समूहन",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "tulan-patra-madein",
+     "learning_objective": "तुलन पत्र की चालू, स्थायी और अमूर्त परिसंपत्तियों व दायित्वों को पहचानना।"
+    },
+    {
+     "concept_tag": "kramabaddhata-samuhan",
+     "learning_objective": "तरलता और स्थायित्व के क्रम में क्रमबद्धता तथा समूहन को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC2-CH01-T7",
+   "topic_number": 7,
+   "title": "प्रारंभिक प्रविष्टि",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "prarambhik-pravishti",
+     "learning_objective": "तुलन पत्र के शेषों से अगले वर्ष की प्रारंभिक प्रविष्टि बनाना।"
+    }
+   ]
+  }
+ ]
+}

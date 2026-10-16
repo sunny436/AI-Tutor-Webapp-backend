@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KHST1-CH07",
+ "title": "सूचकांक",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHST1-CH07-T1",
+   "topic_number": 1,
+   "title": "सूचकांक का अर्थ और आधार अवधि",
+   "ncert_sections": "1, 2",
+   "concepts": [
+    {
+     "concept_tag": "suchkank-arth",
+     "learning_objective": "सूचकांक को संबंधित चरों के समूह में औसत परिवर्तन मापने वाले सांख्यिकीय साधन के रूप में समझना।"
+    },
+    {
+     "concept_tag": "aadhar-avadhi",
+     "learning_objective": "आधार अवधि का अर्थ और सूचकांक के मान की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH07-T2",
+   "topic_number": 2,
+   "title": "समूहित विधि से सूचकांक की रचना",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "saral-samuhit-suchkank",
+     "learning_objective": "सरल समूहित मूल्य सूचकांक की गणना करना और उसकी सीमाएँ समझना।"
+    },
+    {
+     "concept_tag": "laspeyre-paashe",
+     "learning_objective": "लास्पेयर और पाशे के भारित समूहित मूल्य सूचकांकों की गणना और व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH07-T3",
+   "topic_number": 3,
+   "title": "सापेक्षों का माध्य विधि",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "mulya-sapeksh",
+     "learning_objective": "मूल्य सापेक्ष तथा सापेक्षों के सरल माध्य से सूचकांक की गणना करना।"
+    },
+    {
+     "concept_tag": "bharit-sapeksh-suchkank",
+     "learning_objective": "व्यय-अंश भारों से भारित मूल्य सापेक्ष सूचकांक की गणना और व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH07-T4",
+   "topic_number": 4,
+   "title": "कुछ महत्वपूर्ण सूचकांक",
+   "ncert_sections": "4",
+   "concepts": [
+    {
+     "concept_tag": "upbhokta-mulya-suchkank",
+     "learning_objective": "उपभोक्ता मूल्य सूचकांक के अर्थ और उसके मान की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "thok-mulya-suchkank",
+     "learning_objective": "थोक मूल्य सूचकांक की विशेषताएँ और उसके मान की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "audyogik-utpadan-sensex",
+     "learning_objective": "औद्योगिक उत्पादन सूचकांक और सेंसेक्स की रचना तथा अर्थ समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH07-T5",
+   "topic_number": 5,
+   "title": "सूचकांक की रचना से जुड़े मुद्दे",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "aadhar-varsh-chayan",
+     "learning_objective": "उपयुक्त आधार वर्ष के चयन की शर्तों का मूल्यांकन करना।"
+    },
+    {
+     "concept_tag": "vastu-chayan-sutra",
+     "learning_objective": "प्रतिनिधि वस्तुओं, उपयुक्त सूत्र और विश्वसनीय आँकड़ों के चयन का महत्व समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH07-T6",
+   "topic_number": 6,
+   "title": "अर्थशास्त्र में सूचकांक",
+   "ncert_sections": "6, 7",
+   "concepts": [
+    {
+     "concept_tag": "kray-shakti-vastavik-majdoori",
+     "learning_objective": "मुद्रा की क्रय शक्ति और वास्तविक मज़दूरी की गणना करना।"
+    },
+    {
+     "concept_tag": "mudrasphiti-neeti",
+     "learning_objective": "मुद्रास्फीति मापने और आर्थिक नीति-निर्माण में सूचकांकों के उपयोग को समझना।"
+    }
+   ]
+  }
+ ]
+}

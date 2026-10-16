@@ -1,0 +1,1655 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "sparsh-c10-hi",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "hindi",
+  "language": "hindi",
+  "title": "Sparsh",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jhsp1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JHSP1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "साखी",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH01-T1",
+     "topic_number": 1,
+     "title": "कवि परिचय: कबीर का जीवन और काव्य",
+     "ncert_sections": "कवि परिचय",
+     "concepts": [
+      {
+       "concept_tag": "kabir-jeevan-parichay",
+       "learning_objective": "विद्यार्थी कबीर के जन्म, गुरु, आयु और जीवन के अंतिम वर्षों से जुड़े तथ्य बता सकेंगे।"
+      },
+      {
+       "concept_tag": "kabir-kavya-chetna",
+       "learning_objective": "विद्यार्थी कबीर की कविता की सामाजिक चेतना, आडंबर-विरोध और निर्गुण ईश्वर-भावना को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH01-T2",
+     "topic_number": 2,
+     "title": "साखी का अर्थ, छंद और कबीर की भाषा",
+     "ncert_sections": "पाठ प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "sakhi-ka-arth",
+       "learning_objective": "विद्यार्थी 'साखी' शब्द की व्युत्पत्ति और उसके अर्थ को स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "doha-chhand",
+       "learning_objective": "विद्यार्थी दोहा छंद के लक्षण पहचानकर साखी की मात्राएँ गिन सकेंगे।"
+      },
+      {
+       "concept_tag": "kabir-ki-bhasha",
+       "learning_objective": "विद्यार्थी कबीर की भाषा को 'पचमेल खिचड़ी' कहे जाने का कारण बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH01-T3",
+     "topic_number": 3,
+     "title": "मधुर वाणी और घट-घट में बसे राम",
+     "ncert_sections": "साखी 1-2",
+     "concepts": [
+      {
+       "concept_tag": "madhur-vani",
+       "learning_objective": "विद्यार्थी मीठी वाणी से अपने और दूसरों के सुख का संबंध समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "ishwar-sarvavyapakta",
+       "learning_objective": "विद्यार्थी कस्तूरी-मृग के उदाहरण से ईश्वर की सर्वव्यापकता का भाव स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH01-T4",
+     "topic_number": 4,
+     "title": "अहंकार-त्याग और ज्ञान का जागरण",
+     "ncert_sections": "साखी 3-4",
+     "concepts": [
+      {
+       "concept_tag": "ahankar-tyag",
+       "learning_objective": "विद्यार्थी 'मैं' और 'दीपक' जैसे प्रतीकों से अहंकार-त्याग और ज्ञान-प्राप्ति का भाव समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sukhiya-dukhiya",
+       "learning_objective": "विद्यार्थी 'सोना' और 'जागना' के प्रतीकों से संसार के सुख और कबीर के दुख का अंतर बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH01-T5",
+     "topic_number": 5,
+     "title": "विरह-वेदना और निंदक का महत्त्व",
+     "ncert_sections": "साखी 5-6",
+     "concepts": [
+      {
+       "concept_tag": "virah-vedana",
+       "learning_objective": "विद्यार्थी विरह को साँप के रूप में चित्रित करने का भाव स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "nindak-ka-mahatva",
+       "learning_objective": "विद्यार्थी निंदक को निकट रखने से स्वभाव निर्मल होने का तर्क समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH01-T6",
+     "topic_number": 6,
+     "title": "प्रेम का अक्षर और मोह-माया का त्याग",
+     "ncert_sections": "साखी 7-8",
+     "concepts": [
+      {
+       "concept_tag": "prem-ka-akshar",
+       "learning_objective": "विद्यार्थी पोथी-ज्ञान की तुलना में ईश्वर-प्रेम के महत्त्व का मूल्यांकन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "moh-maya-tyag",
+       "learning_objective": "विद्यार्थी 'घर जलाने' के प्रतीक से मोह-माया के त्याग का भाव स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH01-T7",
+     "topic_number": 7,
+     "title": "शब्दार्थ और शब्दों के प्रचलित रूप",
+     "ncert_sections": "शब्दार्थ और टिप्पणियाँ; भाषा अध्ययन",
+     "concepts": [
+      {
+       "concept_tag": "shabdarth",
+       "learning_objective": "विद्यार्थी साखियों में आए कठिन शब्दों के अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "prachlit-roop",
+       "learning_objective": "विद्यार्थी साखियों के शब्दों के प्रचलित (मानक) रूप पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "पद",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH02-T1",
+     "topic_number": 1,
+     "title": "कवयित्री-परिचय: मीराबाई का जीवन, भक्ति और भाषा",
+     "ncert_sections": "कवयित्री-परिचय",
+     "concepts": [
+      {
+       "concept_tag": "meera-jivan-parichay",
+       "learning_objective": "विद्यार्थी मीराबाई के जन्म, विवाह, पारिवारिक दुखों और वृंदावन-वास से जुड़े तथ्य बता सकेंगे।"
+      },
+      {
+       "concept_tag": "meera-bhakti-aur-bhasha",
+       "learning_objective": "विद्यार्थी मीरा की भक्ति के स्वरूप, भक्ति आंदोलन में उनके स्थान और उनकी भाषा की विशेषताएँ समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH02-T2",
+     "topic_number": 2,
+     "title": "पाठ-प्रवेश: मीरा के आराध्य और उनसे संबंध",
+     "ncert_sections": "पाठ-प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "aaradhya-ke-roop",
+       "learning_objective": "विद्यार्थी मीरा की रचनाओं में आराध्य के निर्गुण, सगुण और जोगी रूपों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "manuhar-aur-ulahna",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि मीरा अपने आराध्य से मनुहार, लाड़ और उलाहना किस प्रकार करती हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH02-T3",
+     "topic_number": 3,
+     "title": "पहला पद: भक्तों की पीड़ा हरने वाले हरि",
+     "ncert_sections": "पद (1)",
+     "concepts": [
+      {
+       "concept_tag": "draupadi-aur-narhari",
+       "learning_objective": "विद्यार्थी द्रौपदी की लाज बचाने और भक्त के लिए नरहरि रूप धारण करने के प्रसंग बता सकेंगे।"
+      },
+      {
+       "concept_tag": "gajraj-uddhar",
+       "learning_objective": "विद्यार्थी डूबते गजराज की रक्षा के प्रसंग का पद में अर्थ समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "vinti-ki-vidhi",
+       "learning_objective": "विद्यार्थी विश्लेषण कर सकेंगे कि मीरा हरि की पुरानी कृपाओं का स्मरण कराकर अपनी पीड़ा हरने की विनती कैसे करती हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH02-T4",
+     "topic_number": 4,
+     "title": "दूसरा पद: श्याम की चाकरी और दर्शन की व्याकुलता",
+     "ncert_sections": "पद (2)",
+     "concepts": [
+      {
+       "concept_tag": "chakri-ke-labh",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि मीरा श्याम की चाकरी क्यों करना चाहती हैं और उससे उन्हें क्या मिलेगा।"
+      },
+      {
+       "concept_tag": "krishna-roop-saundarya",
+       "learning_objective": "विद्यार्थी दूसरे पद में वर्णित श्रीकृष्ण के रूप-सौंदर्य का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "darshan-ki-vyakulta",
+       "learning_objective": "विद्यार्थी प्रभु-दर्शन के लिए मीरा की व्याकुलता और समर्पण का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH02-T5",
+     "topic_number": 5,
+     "title": "काव्य-सौंदर्य: अलंकार, रस और शैली",
+     "ncert_sections": "प्रश्न-अभ्यास (ख)",
+     "concepts": [
+      {
+       "concept_tag": "alankar-pahchan",
+       "learning_objective": "विद्यार्थी पदों में आए अनुप्रास, पुनरुक्ति प्रकाश जैसे अलंकारों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "bhasha-shaili",
+       "learning_objective": "विद्यार्थी पदों की भाषा, गेयता और भक्ति-भाव की विशेषताएँ स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH02-T6",
+     "topic_number": 6,
+     "title": "भाषा-अध्ययन: शब्दों के प्रचलित रूप और शब्दार्थ",
+     "ncert_sections": "भाषा-अध्ययन; शब्दार्थ और टिप्पणियाँ",
+     "concepts": [
+      {
+       "concept_tag": "prachalit-roop",
+       "learning_objective": "विद्यार्थी पदों में आए राजस्थानी-ब्रज शब्दों के प्रचलित हिंदी रूप लिख सकेंगे।"
+      },
+      {
+       "concept_tag": "shabdarth",
+       "learning_objective": "विद्यार्थी पाठ के कठिन शब्दों के अर्थ जानकर पंक्तियों का भाव समझ सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "मनुष्यता",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH03-T1",
+     "topic_number": 1,
+     "title": "कवि परिचय और पाठ प्रवेश",
+     "ncert_sections": "कवि परिचय, पाठ प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "kavi-parichay",
+       "learning_objective": "विद्यार्थी मैथिलीशरण गुप्त के जीवन, काव्य-भाषा और प्रमुख कृतियों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "manushya-ki-chetna",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि चेतना-शक्ति के कारण मनुष्य औरों के हित का भी ध्यान रखता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH03-T2",
+     "topic_number": 2,
+     "title": "सुमृत्यु और पशु-प्रवृत्ति",
+     "ncert_sections": "पद 1",
+     "concepts": [
+      {
+       "concept_tag": "sumrityu",
+       "learning_objective": "विद्यार्थी 'सुमृत्यु' की कवि द्वारा दी गई अवधारणा की व्याख्या कर सकेंगे।"
+      },
+      {
+       "concept_tag": "pashu-pravritti",
+       "learning_objective": "विद्यार्थी केवल अपने लिए जीने की पशु-प्रवृत्ति और मनुष्यता का अंतर बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH03-T3",
+     "topic_number": 3,
+     "title": "उदार व्यक्ति और पौराणिक दानवीर",
+     "ncert_sections": "पद 2, 3",
+     "concepts": [
+      {
+       "concept_tag": "udar-ki-pahchan",
+       "learning_objective": "विद्यार्थी कविता के आधार पर उदार व्यक्ति की पहचान बता सकेंगे।"
+      },
+      {
+       "concept_tag": "pauranik-daani",
+       "learning_objective": "विद्यार्थी रंतिदेव, दधीचि, उशीनर और कर्ण के त्याग से मिलने वाला संदेश समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH03-T4",
+     "topic_number": 4,
+     "title": "सहानुभूति और गर्व-रहित जीवन",
+     "ncert_sections": "पद 4, 5",
+     "concepts": [
+      {
+       "concept_tag": "sahanubhuti-mahavibhuti",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि कवि सहानुभूति और करुणा को सबसे बड़ी पूँजी क्यों मानता है।"
+      },
+      {
+       "concept_tag": "garv-rahit-jivan",
+       "learning_objective": "विद्यार्थी धन के घमंड से दूर, धैर्यपूर्ण और गर्व-रहित जीवन का संदेश स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH03-T5",
+     "topic_number": 5,
+     "title": "परस्पर सहयोग और मनुष्य मात्र बंधु",
+     "ncert_sections": "पद 6, 7",
+     "concepts": [
+      {
+       "concept_tag": "paraspar-sahyog",
+       "learning_objective": "विद्यार्थी एक-दूसरे का सहारा बनकर आगे बढ़ने के कवि के आह्वान की व्याख्या कर सकेंगे।"
+      },
+      {
+       "concept_tag": "manushya-matra-bandhu",
+       "learning_objective": "विद्यार्थी 'मनुष्य मात्र बंधु है' और आत्मा की एकता के विचार का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH03-T6",
+     "topic_number": 6,
+     "title": "एकता के साथ अभीष्ट मार्ग और शब्दार्थ",
+     "ncert_sections": "पद 8, शब्दार्थ और टिप्पणियाँ",
+     "concepts": [
+      {
+       "concept_tag": "ekta-aur-saahas",
+       "learning_objective": "विद्यार्थी मेल-जोल बनाए रखते हुए विघ्नों को पार करने के कवि के संदेश को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "shabdarth",
+       "learning_objective": "विद्यार्थी कविता के कठिन शब्दों और पदबंधों के अर्थ बता सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "पर्वत प्रदेश में पावस",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH04-T1",
+     "topic_number": 1,
+     "title": "कवि-परिचय और पाठ-प्रवेश",
+     "ncert_sections": "कवि-परिचय (सुमित्रानंदन पंत); पाठ प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "kavi-parichay-pant",
+       "learning_objective": "विद्यार्थी सुमित्रानंदन पंत के जीवन, प्रमुख कृतियों और सम्मानों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "chhayavad-aur-prakriti-prem",
+       "learning_objective": "विद्यार्थी पंत जी की छायावादी काव्य-चेतना, प्रकृति-प्रेम और उपमा-कौशल को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH04-T2",
+     "topic_number": 2,
+     "title": "पावस ऋतु और ताल-रूपी दर्पण में पर्वत",
+     "ncert_sections": "पहला अंश: 'पावस ऋतु थी, पर्वत प्रदेश' से 'दर्पण-सा फैला है विशाल' तक",
+     "concepts": [
+      {
+       "concept_tag": "pal-pal-parivartit-prakriti",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि पर्वतीय प्रदेश में वर्षा ऋतु के समय प्रकृति का रूप क्षण-क्षण कैसे बदलता है।"
+      },
+      {
+       "concept_tag": "parvat-aur-darpan-sa-taal",
+       "learning_objective": "विद्यार्थी मेखलाकार पर्वत, सहस्र दृग-सुमन और दर्पण-से ताल के बिंब की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH04-T3",
+     "topic_number": 3,
+     "title": "झरनों का गौरव-गान और उच्चाकांक्षी तरुवर",
+     "ncert_sections": "दूसरा और तीसरा अंश: 'गिरि का गौरव गाकर झर-झर' से 'अनिमेष, अटल, कुछ चिंतापर' तक",
+     "concepts": [
+      {
+       "concept_tag": "nirjhar-ka-gaurav-gaan",
+       "learning_objective": "विद्यार्थी झरनों के गौरव-गान और मोती की लड़ियों से उनकी तुलना का भाव स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "taruvar-ki-uchchakanksha",
+       "learning_objective": "विद्यार्थी पर्वत के हृदय से उठे तरुवरों को मानव की ऊँची आकांक्षाओं के प्रतीक के रूप में समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH04-T4",
+     "topic_number": 4,
+     "title": "बादलों का आकस्मिक घिरना और इंद्र का इंद्रजाल",
+     "ncert_sections": "अंतिम अंश: 'उड़ गया, अचानक लो, भूधर' से 'था इंद्र खेलता इंद्रजाल' तक",
+     "concepts": [
+      {
+       "concept_tag": "badalon-ka-akasmik-drishya",
+       "learning_objective": "विद्यार्थी बादलों के अचानक छा जाने से पर्वत, झरनों, शाल और ताल के बदले दृश्य की व्याख्या कर सकेंगे।"
+      },
+      {
+       "concept_tag": "indra-ka-indrajal",
+       "learning_objective": "विद्यार्थी जलद-यान में घूमते इंद्र के इंद्रजाल की कल्पना का अर्थ और सौंदर्य समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH04-T5",
+     "topic_number": 5,
+     "title": "कविता का सौंदर्य: अलंकार, चित्रात्मकता और शब्दार्थ",
+     "ncert_sections": "कविता का सौंदर्य; शब्दार्थ और टिप्पणियाँ",
+     "concepts": [
+      {
+       "concept_tag": "alankar-pahchan",
+       "learning_objective": "विद्यार्थी कविता में प्रयुक्त मानवीकरण, उपमा और रूपक अलंकारों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "chitratmak-shaili",
+       "learning_objective": "विद्यार्थी पहचान सकेंगे कि कवि ने चित्रात्मक शैली से पावस ऋतु का सजीव चित्र कैसे अंकित किया है।"
+      },
+      {
+       "concept_tag": "shabdarth-aur-arth",
+       "learning_objective": "विद्यार्थी कविता के कठिन शब्दों के सही अर्थ पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "तोप",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH05-T1",
+     "topic_number": 1,
+     "title": "कवि-परिचय: वीरेन डंगवाल",
+     "ncert_sections": "कवि-परिचय",
+     "concepts": [
+      {
+       "concept_tag": "kavi-parichay",
+       "learning_objective": "विद्यार्थी वीरेन डंगवाल के जीवन, कविता-संग्रहों और सम्मानों की जानकारी दे सकेंगे।"
+      },
+      {
+       "concept_tag": "kavya-visheshta",
+       "learning_objective": "विद्यार्थी वीरेन डंगवाल की कविता की विशेषता, अर्थात् अनदेखी चीज़ों को कविता का आधार बनाना, समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH05-T2",
+     "topic_number": 2,
+     "title": "पाठ-प्रवेश: प्रतीक, धरोहर और कंपनी की सत्ता",
+     "ncert_sections": "पाठ-प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "prateek-aur-dharohar",
+       "learning_objective": "विद्यार्थी दो किस्म के प्रतीकों और धरोहरों का अंतर बता सकेंगे।"
+      },
+      {
+       "concept_tag": "company-ki-satta",
+       "learning_objective": "विद्यार्थी ईस्ट इंडिया कंपनी के व्यापारी से शासक बनने और उसकी सत्ता के अंत का वर्णन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH05-T3",
+     "topic_number": 3,
+     "title": "कंपनी बाग में रखी 1857 की तोप और उसका अतीत",
+     "ncert_sections": "कविता, पंक्तियाँ 1-12",
+     "concepts": [
+      {
+       "concept_tag": "virasat-ki-samhal",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि विरासत में मिली चीज़ों की बड़ी सँभाल क्यों होती है।"
+      },
+      {
+       "concept_tag": "top-ka-ateet",
+       "learning_objective": "विद्यार्थी तोप द्वारा सैलानियों को बताए गए उसके अतीत के गर्व की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH05-T4",
+     "topic_number": 4,
+     "title": "तोप की वर्तमान दशा और कविता का संदेश",
+     "ncert_sections": "कविता, पंक्तियाँ 13-20",
+     "concepts": [
+      {
+       "concept_tag": "top-ki-vartaman-dasha",
+       "learning_objective": "विद्यार्थी बच्चों और चिड़ियों के प्रसंग से तोप की वर्तमान दशा का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kavita-ka-sandesh",
+       "learning_objective": "विद्यार्थी कविता के इस संदेश का मूल्यांकन कर सकेंगे कि दमनकारी शक्ति का अंत निश्चित है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH05-T5",
+     "topic_number": 5,
+     "title": "भाषा-अध्ययन और शब्दार्थ",
+     "ncert_sections": "भाषा-अध्ययन; शब्दार्थ और टिप्पणियाँ",
+     "concepts": [
+      {
+       "concept_tag": "shabdarth",
+       "learning_objective": "विद्यार्थी कविता में आए सैलानी, सूरमा, मुहाने, सम्हाल जैसे शब्दों के अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "dhar-shabd-ka-prayog",
+       "learning_objective": "विद्यार्थी देशज शब्द 'धर' के रखना, धरोहर और संचय जैसे अर्थों में प्रयोग को समझा सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "कर चले हम फ़िदा",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH06-T1",
+     "topic_number": 1,
+     "title": "कवि-परिचय और गीत की पृष्ठभूमि",
+     "ncert_sections": "कवि-परिचय; पाठ प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "kavi-parichay",
+       "learning_objective": "विद्यार्थी कैफ़ी आज़मी के जीवन, रचनाओं और काव्य-विशेषताओं की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "geet-ki-prishthbhumi",
+       "learning_objective": "विद्यार्थी गीत की ऐतिहासिक पृष्ठभूमि और सैनिक-जीवन के विषय में पाठ प्रवेश का भाव समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH06-T2",
+     "topic_number": 2,
+     "title": "पहला अंश: बलिदान का संकल्प और हिमालय का गौरव",
+     "ncert_sections": "पहला काव्यांश",
+     "concepts": [
+      {
+       "concept_tag": "balidan-ka-sankalp",
+       "learning_objective": "विद्यार्थी अंतिम साँस तक आगे बढ़ते रहने वाले सैनिकों के बलिदान-भाव की व्याख्या कर सकेंगे।"
+      },
+      {
+       "concept_tag": "himalaya-ka-prateek",
+       "learning_objective": "विद्यार्थी 'सर हिमालय का' जैसे प्रयोगों में निहित राष्ट्र-गौरव के प्रतीक को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH06-T3",
+     "topic_number": 3,
+     "title": "दूसरा अंश: जान देने की रुत और दुलहन बनी धरती",
+     "ncert_sections": "दूसरा काव्यांश",
+     "concepts": [
+      {
+       "concept_tag": "jaan-dene-ki-rut",
+       "learning_objective": "विद्यार्थी देश के लिए प्राण देने के दुर्लभ अवसर और सार्थक जवानी के विषय में कवि का मत स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "dharti-dulhan",
+       "learning_objective": "विद्यार्थी धरती को दुलहन कहे जाने के कारण और उसमें निहित भाव का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH06-T4",
+     "topic_number": 4,
+     "title": "तीसरा और चौथा अंश: देशवासियों से अपेक्षाएँ",
+     "ncert_sections": "तीसरा और चौथा काव्यांश",
+     "concepts": [
+      {
+       "concept_tag": "naye-kafile",
+       "learning_objective": "विद्यार्थी बलिदान की राह पर नए काफ़िले सजाते रहने की अपेक्षा का आशय समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "kafan-bandhna",
+       "learning_objective": "विद्यार्थी 'सर से कफ़न बाँधना' प्रयोग में निहित आत्म-बलिदान की तत्परता बता सकेंगे।"
+      },
+      {
+       "concept_tag": "ram-lakshman-sita-prateek",
+       "learning_objective": "विद्यार्थी राम, लक्ष्मण, सीता और रावण के पौराणिक प्रतीकों का गीत के संदर्भ में अर्थ स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH06-T5",
+     "topic_number": 5,
+     "title": "भाषा-अध्ययन: शब्दार्थ, विशिष्ट प्रयोग और संबोधन",
+     "ncert_sections": "भाषा-अध्ययन; शब्दार्थ और टिप्पणियाँ",
+     "concepts": [
+      {
+       "concept_tag": "shabdarth",
+       "learning_objective": "विद्यार्थी गीत में आए उर्दू शब्दों के अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "vishisht-prayog",
+       "learning_objective": "विद्यार्थी 'कट गए सर', 'हाथ उठने लगें' जैसे विशिष्ट प्रयोगों का आशय गीत के संदर्भ में स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sambodhan-bahuvachan",
+       "learning_objective": "विद्यार्थी संबोधन में बहुवचन शब्द-रूप पर अनुस्वार न लगाने का नियम लागू कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "आत्मत्राण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH07-T1",
+     "topic_number": 1,
+     "title": "कवि परिचय और पाठ प्रवेश",
+     "ncert_sections": "कवि परिचय, पाठ प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "ravindranath-kavi-parichay",
+       "learning_objective": "विद्यार्थी रवींद्रनाथ ठाकुर के जीवन, प्रमुख कृतियों और उपलब्धियों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "path-pravesh-swayam-sangharsh",
+       "learning_objective": "विद्यार्थी पाठ प्रवेश के उदाहरणों से स्वयं संघर्ष करने के भाव को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "anuvad-hazariprasad-dwivedi",
+       "learning_objective": "विद्यार्थी जान सकेंगे कि कविता बांग्ला से हिंदी में किसने अनूदित की।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH07-T2",
+     "topic_number": 2,
+     "title": "विपदा में निर्भयता और दुख पर विजय",
+     "ncert_sections": "पंक्ति 1-6",
+     "concepts": [
+      {
+       "concept_tag": "vipda-mein-nirbhayta",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि कवि विपदा से बचाव नहीं, उसमें निर्भय रहने की प्रार्थना करता है।"
+      },
+      {
+       "concept_tag": "dukh-par-vijay",
+       "learning_objective": "विद्यार्थी सांत्वना के बिना भी दुख पर विजय पाने के कवि के भाव की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH07-T3",
+     "topic_number": 3,
+     "title": "आत्मबल, पौरुष और हानि में अडिग मन",
+     "ncert_sections": "पंक्ति 7-10",
+     "concepts": [
+      {
+       "concept_tag": "atmabal-paurush",
+       "learning_objective": "विद्यार्थी सहायक न मिलने पर भी बल-पौरुष न डिगने की कामना को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "haani-mein-man-na-harna",
+       "learning_objective": "विद्यार्थी हानि और धोखे के बीच भी मन से हार न मानने के भाव की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH07-T4",
+     "topic_number": 4,
+     "title": "तरने की शक्ति और भार वहन का साहस",
+     "ncert_sections": "पंक्ति 11-16",
+     "concepts": [
+      {
+       "concept_tag": "tarne-ki-shakti",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि कवि रक्षा के स्थान पर संसार-सागर से तरने की शक्ति माँगता है।"
+      },
+      {
+       "concept_tag": "bhar-vahan-nirbhay",
+       "learning_objective": "विद्यार्थी जीवन के भार को निर्भय होकर वहन करने की कवि की कामना की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH07-T5",
+     "topic_number": 5,
+     "title": "सुख-दुख में ईश्वर पर अटूट आस्था",
+     "ncert_sections": "पंक्ति 17-21",
+     "concepts": [
+      {
+       "concept_tag": "sukh-mein-vinamrata",
+       "learning_objective": "विद्यार्थी सुख के दिनों में विनम्र होकर हर पल ईश्वर को स्मरण करने के भाव को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "dukh-mein-astha",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि पूरा संसार धोखा दे तब भी कवि ईश्वर पर संदेह नहीं करना चाहता।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH07-T6",
+     "topic_number": 6,
+     "title": "शीर्षक की सार्थकता और कविता की विशेषताएँ",
+     "ncert_sections": "प्रश्न-अभ्यास, योग्यता विस्तार, शब्दार्थ",
+     "concepts": [
+      {
+       "concept_tag": "shirshak-sarthakta",
+       "learning_objective": "विद्यार्थी 'आत्मत्राण' शीर्षक का अर्थ और उसकी सार्थकता स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "prarthna-geet-tulna",
+       "learning_objective": "विद्यार्थी इस कविता की तुलना अन्य प्रार्थना-गीतों से कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kavya-bhasha-shilp",
+       "learning_objective": "विद्यार्थी कविता की भाषा और शिल्प की विशेषताएँ पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "बड़े भाई साहब",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH08-T1",
+     "topic_number": 1,
+     "title": "लेखक-परिचय और पाठ-प्रवेश",
+     "ncert_sections": "लेखक-परिचय (प्रेमचंद); पाठ प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "premchand-parichay",
+       "learning_objective": "विद्यार्थी प्रेमचंद के जीवन, रचनाओं और हिंदी कथा-साहित्य में उनके योगदान की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "bada-hone-ki-apekshaen",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि घर के बड़े बच्चे से कैसी अपेक्षाएँ की जाती हैं और उनका उस पर क्या प्रभाव पड़ता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH08-T2",
+     "topic_number": 2,
+     "title": "बड़े भाई साहब का स्वभाव और पढ़ाई का ढंग",
+     "ncert_sections": "भाग 1: आरंभिक अंश (उम्र और दरजे का अंतर, बुनियाद का तर्क, कॉपी की इबारत)",
+     "concepts": [
+      {
+       "concept_tag": "bade-bhai-ka-swabhav",
+       "learning_objective": "विद्यार्थी बड़े भाई साहब की अध्ययनशीलता, अनुशासनप्रियता और उनके दिखावे की विशेषताएँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "buniyad-ka-tark",
+       "learning_objective": "विद्यार्थी 'बुनियाद पुख्ता करने' के तर्क का आशय और उसमें छिपे व्यंग्य को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH08-T3",
+     "topic_number": 3,
+     "title": "छोटे भाई की खेल-रुचि और टाइम-टेबिल",
+     "ncert_sections": "भाग 1: खेल-कूद, अंग्रेज़ी पर उपदेश, टाइम-टेबिल और उसकी अवहेलना",
+     "concepts": [
+      {
+       "concept_tag": "khel-ke-prati-ruchi",
+       "learning_objective": "विद्यार्थी छोटे भाई के खेल-प्रेम और डाँट के बाद भी उसके न छूटने के कारण बता सकेंगे।"
+      },
+      {
+       "concept_tag": "time-table-aur-palan",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि छोटे भाई ने टाइम-टेबिल कैसे बनाया और उसका पालन क्यों नहीं हो पाया।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH08-T4",
+     "topic_number": 4,
+     "title": "पहली सफलता, घमंड पर उपदेश और शिक्षा-प्रणाली पर व्यंग्य",
+     "ncert_sections": "भाग 2: सालाना इम्तिहान, रावण-शैतान के उदाहरण, परीक्षा और निबंध-लेखन पर टिप्पणी",
+     "concepts": [
+      {
+       "concept_tag": "abhiman-par-updesh",
+       "learning_objective": "विद्यार्थी घमंड के विरुद्ध भाई साहब के उपदेश और उनके दिए उदाहरणों का आशय स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "shiksha-pranali-par-vyangya",
+       "learning_objective": "विद्यार्थी पाठ में रटंत शिक्षा, परीक्षा-पद्धति और निबंध-लेखन पर किए गए व्यंग्य का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH08-T5",
+     "topic_number": 5,
+     "title": "पतंगबाज़ी, अनुभव का महत्त्व और भाई साहब के प्रति श्रद्धा",
+     "ncert_sections": "भाग 3: कनकौए का प्रसंग, अनुभव बनाम किताबी ज्ञान, कहानी का अंत",
+     "concepts": [
+      {
+       "concept_tag": "anubhav-banam-kitabi-gyan",
+       "learning_objective": "विद्यार्थी भाई साहब के इस मत का मूल्यांकन कर सकेंगे कि जीवन की समझ किताबों से नहीं, अनुभव से आती है।"
+      },
+      {
+       "concept_tag": "shraddha-aur-bhitar-ka-bachcha",
+       "learning_objective": "विद्यार्थी छोटे भाई के मन में श्रद्धा जागने के कारण और भाई साहब के भीतर छिपे बच्चे की पहचान कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH08-T6",
+     "topic_number": 6,
+     "title": "भाषा अध्ययन: शब्दार्थ, मुहावरे, क्रिया और प्रत्यय",
+     "ncert_sections": "शब्दार्थ एवं टिप्पणियाँ; भाषा अध्ययन 2, 4, 5",
+     "concepts": [
+      {
+       "concept_tag": "shabdarth",
+       "learning_objective": "विद्यार्थी पाठ में आए उर्दू-फ़ारसी और कठिन शब्दों के अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "muhavare",
+       "learning_objective": "विद्यार्थी पाठ में प्रयुक्त मुहावरों का अर्थ समझकर उनका उचित प्रयोग कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kriya-aur-pratyay",
+       "learning_objective": "विद्यार्थी सकर्मक-अकर्मक क्रिया पहचान सकेंगे और 'इक' प्रत्यय से सही शब्द बना सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "डायरी का एक पन्ना",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH09-T1",
+     "topic_number": 1,
+     "title": "लेखक परिचय और पाठ की पृष्ठभूमि",
+     "ncert_sections": "लेखक परिचय, पाठ प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "lekhak-parichay",
+       "learning_objective": "विद्यार्थी सीताराम सेकसरिया के जीवन, स्वाधीनता आंदोलन में योगदान और डायरी लेखन से परिचित हो सकेंगे।"
+      },
+      {
+       "concept_tag": "path-prishthbhumi",
+       "learning_objective": "विद्यार्थी 26 जनवरी 1931 के दिन के ऐतिहासिक महत्त्व और पाठ के संदेश को समझ सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH09-T2",
+     "topic_number": 2,
+     "title": "स्वतंत्रता दिवस की तैयारियाँ और पुलिस का प्रबंध",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "utsav-ki-taiyariyan",
+       "learning_objective": "विद्यार्थी कलकत्ता में 26 जनवरी 1931 के लिए की गई तैयारियों और सजावट का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "police-ka-pradarshan",
+       "learning_objective": "विद्यार्थी अंग्रेज़ सरकार द्वारा पुलिस की तैनाती और शक्ति-प्रदर्शन के उद्देश्य को समझ सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH09-T3",
+     "topic_number": 3,
+     "title": "झंडारोहण के प्रयास और नोटिसों का टकराव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jhandarohan-ke-prayas",
+       "learning_objective": "विद्यार्थी विभिन्न पार्कों में झंडा फहराने के प्रयासों तथा उनके परिणामों को बता सकेंगे।"
+      },
+      {
+       "concept_tag": "notice-aur-khula-challenge",
+       "learning_objective": "विद्यार्थी पुलिस कमिश्नर और कौंसिल के नोटिसों के अंतर तथा 'खुले चैलेंज' का अर्थ समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH09-T4",
+     "topic_number": 4,
+     "title": "सुभाष बाबू का जुलूस और स्त्री समाज की भूमिका",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "subhash-babu-ka-julus",
+       "learning_objective": "विद्यार्थी सुभाष बाबू के जुलूस, पुलिस के लाठीचार्ज और उनकी गिरफ़्तारी की घटनाओं का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "stri-samaj-ki-bhumika",
+       "learning_objective": "विद्यार्थी स्वतंत्रता दिवस के आयोजन में स्त्रियों के साहस और योगदान का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH09-T5",
+     "topic_number": 5,
+     "title": "घायल, गिरफ़्तारियाँ और दिन की अपूर्वता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ghayal-aur-giraftariyan",
+       "learning_objective": "विद्यार्थी घायलों और गिरफ़्तार लोगों से जुड़े तथ्यों तथा सेवा कार्य को बता सकेंगे।"
+      },
+      {
+       "concept_tag": "apoorv-din-kalank-dhulna",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि कष्टों के बावजूद लेखक ने उस दिन को अपूर्व क्यों कहा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH09-T6",
+     "topic_number": 6,
+     "title": "भाषा अध्ययन: वाक्य भेद, संधि और शब्दार्थ",
+     "ncert_sections": "भाषा अध्ययन, शब्दार्थ और टिप्पणियाँ",
+     "concepts": [
+      {
+       "concept_tag": "vakya-bhed-rachna",
+       "learning_objective": "विद्यार्थी रचना के आधार पर सरल, संयुक्त और मिश्र वाक्यों की पहचान और रूपांतरण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sandhi-aur-sandhi-vichhed",
+       "learning_objective": "विद्यार्थी पाठ में आए शब्दों की संधि और संधि-विच्छेद करके संधि का प्रकार बता सकेंगे।"
+      },
+      {
+       "concept_tag": "shabdarth-aur-tippani",
+       "learning_objective": "विद्यार्थी पाठ में प्रयुक्त कठिन शब्दों और टिप्पणियों के अर्थ समझ सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "तताँरा-वामीरो कथा",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH10-T1",
+     "topic_number": 1,
+     "title": "लेखक-परिचय और पाठ-प्रवेश",
+     "ncert_sections": "लेखक-परिचय; पाठ प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "lekhak-parichay",
+       "learning_objective": "विद्यार्थी लीलाधर मंडलोई के जीवन, लेखन और प्रमुख कृतियों की जानकारी दे सकेंगे।"
+      },
+      {
+       "concept_tag": "lokkatha-aur-path-ka-sandesh",
+       "learning_objective": "विद्यार्थी लोककथा के स्वरूप और पाठ-प्रवेश में बताए गए बलिदान के संदेश को समझ सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH10-T2",
+     "topic_number": 2,
+     "title": "द्वीपसमूह की पृष्ठभूमि और तताँरा का व्यक्तित्व",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dweep-ki-prishthbhoomi",
+       "learning_objective": "विद्यार्थी लिटिल अंदमान और कार-निकोबार की भौगोलिक स्थिति तथा उनसे जुड़े विश्वास को बता सकेंगे।"
+      },
+      {
+       "concept_tag": "tatanra-ka-vyaktitva",
+       "learning_objective": "विद्यार्थी तताँरा के गुणों और उसकी लकड़ी की तलवार से जुड़े रहस्य को स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH10-T3",
+     "topic_number": 3,
+     "title": "समुद्र-तट पर पहली भेंट",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samudri-sandhya-ka-saundarya",
+       "learning_objective": "विद्यार्थी समुद्र-तट की संध्या के प्राकृतिक सौंदर्य और उसके प्रभाव का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "pahli-bhent-ka-samvad",
+       "learning_objective": "विद्यार्थी तताँरा और वामीरो की पहली भेंट के संवाद से दोनों की मनोदशा समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH10-T4",
+     "topic_number": 4,
+     "title": "प्रतीक्षा, अंतर्द्वंद्व और गाँव की रीति",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vamiro-ka-antardwand",
+       "learning_objective": "विद्यार्थी वामीरो के मन के अंतर्द्वंद्व और तताँरा की प्रतीक्षा की व्याकुलता का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "gaon-ki-reeti",
+       "learning_objective": "विद्यार्थी विवाह-संबंधी गाँव की रीति और उसके कारण आई बाधा को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH10-T5",
+     "topic_number": 5,
+     "title": "पशु-पर्व, तताँरा का क्रोध और द्वीप का विभाजन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pashu-parv",
+       "learning_objective": "विद्यार्थी पशु-पर्व जैसे आयोजनों के स्वरूप और उद्देश्य का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "krodh-aur-dweep-ka-vibhajan",
+       "learning_objective": "विद्यार्थी तताँरा के क्रोध के कारणों और द्वीप के विभाजन की घटना का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH10-T6",
+     "topic_number": 6,
+     "title": "त्यागमयी मृत्यु और सामाजिक परिवर्तन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tyagmayi-mrityu",
+       "learning_objective": "विद्यार्थी विभाजन के बाद तताँरा और वामीरो की दशा तथा उनकी त्यागमयी मृत्यु का अर्थ समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "samajik-parivartan",
+       "learning_objective": "विद्यार्थी इस बलिदान से निकोबारी समाज में आए परिवर्तन और रूढ़ियों के टूटने का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH10-T7",
+     "topic_number": 7,
+     "title": "भाषा-अध्ययन : वाक्य, पदबंध, मुहावरे और शब्द-रचना",
+     "ncert_sections": "भाषा अध्ययन; शब्दार्थ और टिप्पणियाँ",
+     "concepts": [
+      {
+       "concept_tag": "vakya-bhed-aur-padbandh",
+       "learning_objective": "विद्यार्थी अर्थ और रचना के आधार पर वाक्य-भेद तथा पदबंध के प्रकार पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "muhavare",
+       "learning_objective": "विद्यार्थी पाठ में आए मुहावरों का अर्थ समझकर उनका उचित प्रयोग कर सकेंगे।"
+      },
+      {
+       "concept_tag": "shabd-rachna",
+       "learning_objective": "विद्यार्थी पाठ के शब्दों से मूल शब्द और प्रत्यय अलग कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "तीसरी कसम के शिल्पकार शैलेंद्र",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH11-T1",
+     "topic_number": 1,
+     "title": "लेखक-परिचय और पाठ-प्रवेश",
+     "ncert_sections": "लेखक-परिचय; पाठ-प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "lekhak-prahlad-agrawal",
+       "learning_objective": "विद्यार्थी लेखक प्रहलाद अग्रवाल के जीवन और उनके लेखन के मुख्य क्षेत्र की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "path-pravesh-sahityik-film",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि साहित्यिक कृति पर बनी सार्थक फ़िल्म यादगार क्यों बनती है और उसे बनाना जोखिम भरा क्यों है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH11-T2",
+     "topic_number": 2,
+     "title": "'तीसरी कसम' का निर्माण और सम्मान",
+     "ncert_sections": "'संगम' की सफलता से 'तीसरी कसम' के पुरस्कारों तक",
+     "concepts": [
+      {
+       "concept_tag": "film-ka-nirman",
+       "learning_objective": "विद्यार्थी 'मेरा नाम जोकर' के निर्माण-काल में 'तीसरी कसम' के बनने और उसे 'सेल्यूलाइड पर लिखी कविता' कहने का आशय समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "puraskar-aur-samman",
+       "learning_objective": "विद्यार्थी 'तीसरी कसम' को मिले पुरस्कारों और सम्मानों के बारे में बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH11-T3",
+     "topic_number": 3,
+     "title": "राजकपूर की मित्रता और निर्माता शैलेंद्र",
+     "ncert_sections": "पारिश्रमिक का प्रसंग; वितरक न मिलना",
+     "concepts": [
+      {
+       "concept_tag": "yarana-masti",
+       "learning_objective": "विद्यार्थी एक रुपये पारिश्रमिक वाले प्रसंग से राजकपूर और शैलेंद्र की मित्रता का भाव स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "nirmata-shailendra",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि आदर्शवादी भावुक कवि शैलेंद्र की फ़िल्म को खरीदार और प्रचार क्यों नहीं मिला।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH11-T4",
+     "topic_number": 4,
+     "title": "शैलेंद्र के गीत और कलाकार का कर्तव्य",
+     "ncert_sections": "'श्री 420' के गीत का प्रसंग; शैलेंद्र के गीतों की विशेषता",
+     "concepts": [
+      {
+       "concept_tag": "kalakar-ka-kartavya",
+       "learning_objective": "विद्यार्थी 'दसों दिशाओं' वाले प्रसंग के आधार पर कलाकार के कर्तव्य के बारे में शैलेंद्र का मंतव्य समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "geeton-ki-visheshta",
+       "learning_objective": "विद्यार्थी शैलेंद्र के गीतों की भाव-प्रवणता, सहजता और गहराई का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH11-T5",
+     "topic_number": 5,
+     "title": "साहित्य के साथ न्याय, लोक-तत्व और राजकपूर का अभिनय",
+     "ncert_sections": "हीरामन-हीराबाई; लोक-तत्व; अभिनय की दृष्टि से 'तीसरी कसम'",
+     "concepts": [
+      {
+       "concept_tag": "sahitya-ke-saath-nyay",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि 'तीसरी कसम' ने मूल कहानी के साथ शत-प्रतिशत न्याय कैसे किया।"
+      },
+      {
+       "concept_tag": "lok-tatva-aur-dukh",
+       "learning_objective": "विद्यार्थी हमारी फ़िल्मों में लोक-तत्व के अभाव और 'तीसरी कसम' में दुख के जीवन-सापेक्ष चित्रण की तुलना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "rajkapoor-ka-abhinay",
+       "learning_objective": "विद्यार्थी स्पष्ट कर सकेंगे कि राजकपूर का महिमामय व्यक्तित्व हीरामन की आत्मा में कैसे उतर गया।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH11-T6",
+     "topic_number": 6,
+     "title": "शब्दार्थ, मुहावरे, संधि और समास",
+     "ncert_sections": "शब्दार्थ और टिप्पणियाँ; भाषा-अध्ययन",
+     "concepts": [
+      {
+       "concept_tag": "shabdarth-aur-muhavare",
+       "learning_objective": "विद्यार्थी पाठ के कठिन शब्दों और मुहावरों का संदर्भ के अनुसार अर्थ पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "sandhi-aur-samas",
+       "learning_objective": "विद्यार्थी पाठ के शब्दों का संधि-विच्छेद और समास-विग्रह कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "अब कहाँ दूसरे के दुख से दुखी होने वाले",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH12-T1",
+     "topic_number": 1,
+     "title": "लेखक परिचय और पाठ प्रवेश",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lekhak-parichay",
+       "learning_objective": "विद्यार्थी निदा फ़ाज़ली के जीवन, रचनाओं और प्रस्तुत अंश के स्रोत को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "path-ka-sandesh",
+       "learning_objective": "विद्यार्थी पाठ प्रवेश और शीर्षक के माध्यम से मनुष्य की बढ़ती संवेदनहीनता का आशय समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH12-T2",
+     "topic_number": 2,
+     "title": "सुलेमान और शेख अयाज़ के पिता के प्रसंग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sulemaan-aur-cheentiyan",
+       "learning_objective": "विद्यार्थी सुलेमान और चींटियों के प्रसंग में निहित करुणा और रक्षा के भाव को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "shekh-ayaz-ke-pita",
+       "learning_objective": "विद्यार्थी शेख अयाज़ के पिता के व्यवहार से हर प्राणी के घर के प्रति सम्मान का भाव समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH12-T3",
+     "topic_number": 3,
+     "title": "नूह का प्रसंग और एकता का दोहा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nooh-aur-kutta",
+       "learning_objective": "विद्यार्थी नूह और घायल कुत्ते के प्रसंग तथा महाभारत के उल्लेख का संदेश समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "mitti-se-mitti-doha",
+       "learning_objective": "विद्यार्थी 'मट्टी से मट्टी मिले' दोहे के मूल भाव की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH12-T4",
+     "topic_number": 4,
+     "title": "धरती की साझेदारी और प्रकृति का असंतुलन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dharti-ki-hissedari",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि धरती पर सभी प्राणियों और प्रकृति की बराबर हिस्सेदारी है।"
+      },
+      {
+       "concept_tag": "prakriti-ka-asantulan",
+       "learning_objective": "विद्यार्थी बढ़ती आबादी और प्रदूषण से उत्पन्न प्राकृतिक असंतुलन के परिणाम पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "samudra-ka-gussa",
+       "learning_objective": "विद्यार्थी बंबई में समंदर के गुस्से के प्रसंग का कारण और प्रतीकार्थ विश्लेषित कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH12-T5",
+     "topic_number": 5,
+     "title": "लेखक की माँ की सीखें और ग्वालियर का कबूतर प्रसंग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "maan-ki-seekh",
+       "learning_objective": "विद्यार्थी लेखक की माँ की सीखों के पीछे छिपे प्रकृति-प्रेम और संवेदना को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "gwalior-kabootar-prasang",
+       "learning_objective": "विद्यार्थी ग्वालियर के कबूतर प्रसंग में माँ के पश्चात्ताप और करुणा को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH12-T6",
+     "topic_number": 6,
+     "title": "वर्सोवा का घर और बदलता समय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "varsova-badlav",
+       "learning_objective": "विद्यार्थी ग्वालियर से बंबई तक आए बदलावों और बस्तियों के विस्तार का प्रभाव बता सकेंगे।"
+      },
+      {
+       "concept_tag": "kabootar-aur-jaali",
+       "learning_objective": "विद्यार्थी वर्सोवा के कबूतर प्रसंग से आज के मनुष्य की संवेदनहीनता का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "samapan-doha",
+       "learning_objective": "विद्यार्थी पाठ के अंतिम दोहे में व्यक्त प्रकृति की व्यवस्था का भाव समझ सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH12-T7",
+     "topic_number": 7,
+     "title": "भाषा-अध्ययन: कारक, नुक्ता और शब्दार्थ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "karak-chihn",
+       "learning_objective": "विद्यार्थी पाठ के वाक्यों में कारक चिह्न पहचानकर उनके नाम बता सकेंगे।"
+      },
+      {
+       "concept_tag": "nukta-arth-bhed",
+       "learning_objective": "विद्यार्थी नुक्तायुक्त और नुक्तारहित शब्दों के अर्थगत अंतर के अनुसार उनका सही प्रयोग कर सकेंगे।"
+      },
+      {
+       "concept_tag": "shabdarth",
+       "learning_objective": "विद्यार्थी पाठ में आए उर्दू-फ़ारसी शब्दों के अर्थ पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "पतझर में टूटी पत्तियाँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH13-T1",
+     "topic_number": 1,
+     "title": "लेखक-परिचय और पाठ-प्रवेश",
+     "ncert_sections": "लेखक-परिचय; पाठ-प्रवेश",
+     "concepts": [
+      {
+       "concept_tag": "lekhak-parichay",
+       "learning_objective": "विद्यार्थी रवींद्र केलेकर के जीवन, भाषाओं और प्रमुख कृतियों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "path-pravesh-thode-mein-bahut",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि थोड़े शब्दों में बहुत कुछ कहने वाले इन प्रसंगों का उद्देश्य क्या है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH13-T2",
+     "topic_number": 2,
+     "title": "गिन्नी का सोना: शुद्ध सोना, ताँबा और प्रैक्टिकल आइडियलिस्ट",
+     "ncert_sections": "(I) गिन्नी का सोना - आरंभिक अंश",
+     "concepts": [
+      {
+       "concept_tag": "shuddh-aur-ginni-sona",
+       "learning_objective": "विद्यार्थी शुद्ध सोने और गिन्नी के सोने का अंतर तथा उनके प्रतीकार्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "practical-idealist",
+       "learning_objective": "विद्यार्थी 'प्रैक्टिकल आइडियलिस्ट' की अवधारणा और व्यावहारिकता के बखान के परिणाम का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH13-T3",
+     "topic_number": 3,
+     "title": "गिन्नी का सोना: गांधीजी, आदर्शवादी और व्यवहारवादी लोग",
+     "ncert_sections": "(I) गिन्नी का सोना - गांधीजी का प्रसंग और निष्कर्ष",
+     "concepts": [
+      {
+       "concept_tag": "gandhiji-ka-adarsh",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि गांधीजी व्यावहारिकता को आदर्शों के स्तर पर कैसे चढ़ाते थे।"
+      },
+      {
+       "concept_tag": "adarshvadi-vyavaharvadi",
+       "learning_objective": "विद्यार्थी आदर्शवादी और व्यवहारवादी लोगों के जीवन-दृष्टिकोण की तुलना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "shashvat-mulya",
+       "learning_objective": "विद्यार्थी शाश्वत मूल्यों का अर्थ और समाज को उनके देने वालों की भूमिका बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH13-T4",
+     "topic_number": 4,
+     "title": "झेन की देन: जीवन की रफ़्तार और मानसिक रोग",
+     "ncert_sections": "(II) झेन की देन - मित्र से बातचीत",
+     "concepts": [
+      {
+       "concept_tag": "manorugnata",
+       "learning_objective": "विद्यार्थी जापान में मनोरुग्णता की स्थिति और उससे जुड़े शब्दों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "dimag-ki-raftar",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि प्रतिस्पर्धा और दिमाग की बढ़ी रफ़्तार से मानसिक रोग कैसे बढ़ते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH13-T5",
+     "topic_number": 5,
+     "title": "झेन की देन: टी-सेरेमनी अर्थात् चा-नो-यू",
+     "ncert_sections": "(II) झेन की देन - टी-सेरेमनी का वर्णन",
+     "concepts": [
+      {
+       "concept_tag": "cha-no-yu-vidhi",
+       "learning_objective": "विद्यार्थी टी-सेरेमनी के स्थान, नियमों और उसमें शांति के महत्त्व का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "chajin-ki-garima",
+       "learning_objective": "विद्यार्थी चाजीन की गरिमापूर्ण क्रियाओं और उनके लिए दी गई उपमा का आशय समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH13-T6",
+     "topic_number": 6,
+     "title": "झेन की देन: वर्तमान क्षण ही सत्य",
+     "ncert_sections": "(II) झेन की देन - लेखक का अनुभव और निष्कर्ष",
+     "concepts": [
+      {
+       "concept_tag": "lekhak-ka-anubhav",
+       "learning_objective": "विद्यार्थी टी-सेरेमनी के बाद लेखक के मन में आए परिवर्तनों का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vartman-kshan-satya",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि लेखक भूत और भविष्य को मिथ्या तथा वर्तमान को सत्य क्यों मानता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH13-T7",
+     "topic_number": 7,
+     "title": "भाषा-अध्ययन: द्वंद्व समास और भाववाचक संज्ञा",
+     "ncert_sections": "भाषा-अध्ययन प्रश्न 2-3",
+     "concepts": [
+      {
+       "concept_tag": "dvandva-samas",
+       "learning_objective": "विद्यार्थी द्वंद्व समास की पहचान कर उसके पदों का सही विग्रह कर सकेंगे।"
+      },
+      {
+       "concept_tag": "bhavvachak-sangya",
+       "learning_objective": "विद्यार्थी पाठ के विशेषण शब्दों से सही भाववाचक संज्ञाएँ बना सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH13-T8",
+     "topic_number": 8,
+     "title": "भाषा-अध्ययन: अनेकार्थी शब्द, शब्दार्थ और वाक्य-रूपांतरण",
+     "ncert_sections": "भाषा-अध्ययन प्रश्न 4-6; शब्दार्थ और टिप्पणियाँ",
+     "concepts": [
+      {
+       "concept_tag": "anekarthi-shabd",
+       "learning_objective": "विद्यार्थी संदर्भ के अनुसार अनेकार्थी शब्दों के भिन्न अर्थ पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "shabdarth",
+       "learning_objective": "विद्यार्थी पाठ में आए कठिन शब्दों के अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "vakya-rupantaran",
+       "learning_objective": "विद्यार्थी सरल वाक्यों को संयुक्त और मिश्र वाक्यों में बदल सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSP1-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "कारतूस",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhsp114.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSP1-CH14-T1",
+     "topic_number": 1,
+     "title": "लेखक-परिचय: हबीब तनवीर का जीवन और रंगकर्म",
+     "ncert_sections": "लेखक-परिचय",
+     "concepts": [
+      {
+       "concept_tag": "habib-tanvir-jivan",
+       "learning_objective": "विद्यार्थी हबीब तनवीर के जन्म, शिक्षा और नाट्य-प्रशिक्षण से जुड़े तथ्य बता सकेंगे।"
+      },
+      {
+       "concept_tag": "habib-tanvir-natak",
+       "learning_objective": "विद्यार्थी हबीब तनवीर के प्रमुख नाटकों, रूपांतरों और लोकनाट्य में उनके योगदान की पहचान कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH14-T2",
+     "topic_number": 2,
+     "title": "पाठ-प्रवेश और एकांकी की पृष्ठभूमि",
+     "ncert_sections": "पाठ-प्रवेश; पात्र, अवधि, ज़माना, समय, स्थान",
+     "concepts": [
+      {
+       "concept_tag": "aitihasik-sandarbh",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि अंग्रेज़ व्यापारी के भेष में आकर किस प्रकार रियासतों पर कब्ज़ा करने लगे।"
+      },
+      {
+       "concept_tag": "ekanki-ki-sanrachna",
+       "learning_objective": "विद्यार्थी एकांकी के पात्र, अवधि, ज़माना, समय और स्थान की पहचान कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH14-T3",
+     "topic_number": 3,
+     "title": "वज़ीर अली, सआदत अली और अवध का तख्त",
+     "ncert_sections": "कर्नल और लेफ़्टिनेंट का संवाद (प्रारंभिक भाग)",
+     "concepts": [
+      {
+       "concept_tag": "wazir-ali-ki-hukumat",
+       "learning_objective": "विद्यार्थी वज़ीर अली की पाँच महीने की हुकूमत और उसकी अंग्रेज़-विरोधी भावना को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "saadat-ali-aur-company",
+       "learning_objective": "विद्यार्थी सआदत अली की वज़ीर अली से दुश्मनी और कंपनी द्वारा उसे तख्त पर बिठाने का मकसद बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH14-T4",
+     "topic_number": 4,
+     "title": "कंपनी के विरुद्ध लहर, वकील का कत्ल और वज़ीर अली की योजना",
+     "ncert_sections": "कर्नल और लेफ़्टिनेंट का संवाद (मध्य भाग)",
+     "concepts": [
+      {
+       "concept_tag": "company-virodhi-lahar",
+       "learning_objective": "विद्यार्थी टीपू सुल्तान, वज़ीर अली और शमसुद्दौला द्वारा अफ़गानिस्तान को दी गई दावत का अर्थ समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "vakil-ka-katl",
+       "learning_objective": "विद्यार्थी वज़ीर अली द्वारा कंपनी के वकील के कत्ल और उसके बाद उसकी हिफ़ाज़त का क्रम बता सकेंगे।"
+      },
+      {
+       "concept_tag": "wazir-ali-ki-yojana",
+       "learning_objective": "विद्यार्थी नेपाल पहुँचने से लेकर अंग्रेज़ों को निकालने तक वज़ीर अली की योजना का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH14-T5",
+     "topic_number": 5,
+     "title": "सवार का आगमन और कारतूस का प्रसंग",
+     "ncert_sections": "सवार और कर्नल का संवाद (अंतिम भाग)",
+     "concepts": [
+      {
+       "concept_tag": "savar-ka-aagman",
+       "learning_objective": "विद्यार्थी सवार के आने, तन्हाई की माँग और कारतूस माँगने की घटनाओं का क्रम बता सकेंगे।"
+      },
+      {
+       "concept_tag": "jaanbaaz-wazir-ali",
+       "learning_objective": "विद्यार्थी वज़ीर अली के साहस, सूझबूझ और जाँबाज़ी का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSP1-CH14-T6",
+     "topic_number": 6,
+     "title": "भाषा-अध्ययन: शब्दार्थ, मुहावरे, कारक और अन्विति",
+     "ncert_sections": "भाषा-अध्ययन; शब्दार्थ और टिप्पणियाँ",
+     "concepts": [
+      {
+       "concept_tag": "shabdarth-aur-paryay",
+       "learning_objective": "विद्यार्थी पाठ के उर्दू-फ़ारसी शब्दों के अर्थ और पर्याय बता सकेंगे।"
+      },
+      {
+       "concept_tag": "muhavare",
+       "learning_objective": "विद्यार्थी पाठ में आए मुहावरों का अर्थ समझकर उनका उचित प्रयोग कर सकेंगे।"
+      },
+      {
+       "concept_tag": "karak-aur-anviti",
+       "learning_objective": "विद्यार्थी वाक्यों में कारकों की पहचान कर सकेंगे और 'ने' लगने पर क्रिया की अन्विति समझा सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

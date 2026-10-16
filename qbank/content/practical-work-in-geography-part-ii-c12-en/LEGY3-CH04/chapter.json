@@ -1,0 +1,160 @@
+{
+ "chapter_id": "LEGY3-CH04",
+ "title": "Spatial Information Technology",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEGY3-CH04-T1",
+   "topic_number": 1,
+   "title": "Spatial Information Technology and GIS",
+   "ncert_sections": "What is Spatial Information Technology?; What is GIS?; Forms of Geographical Information",
+   "concepts": [
+    {
+     "concept_tag": "spatial-information-technology",
+     "learning_objective": "Explain the meaning of spatial information and the technologies that make up Spatial Information Technology."
+    },
+    {
+     "concept_tag": "gis-definition",
+     "learning_objective": "Define GIS and explain how it goes beyond database management and computer assisted cartography to support decisions."
+    },
+    {
+     "concept_tag": "spatial-non-spatial-data",
+     "learning_objective": "Distinguish spatial data (positional, linear and areal) from non-spatial or attribute data."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH04-T2",
+   "topic_number": 2,
+   "title": "Sources of Spatial Data and Advantages of GIS",
+   "ncert_sections": "Forms of Geographical Information; Advantages of GIS over Manual Methods",
+   "concepts": [
+    {
+     "concept_tag": "spatial-data-sources",
+     "learning_objective": "Identify the ways spatial data are built in a GIS core and the factors governing the choice of a data source."
+    },
+    {
+     "concept_tag": "map-characteristics",
+     "learning_objective": "State the characteristics of topographical and thematic maps that make them a source of spatial data."
+    },
+    {
+     "concept_tag": "gis-advantages",
+     "learning_objective": "Evaluate the advantages of GIS over manual methods of map making and analysis."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH04-T3",
+   "topic_number": 3,
+   "title": "Components of GIS",
+   "ncert_sections": "Components of GIS",
+   "concepts": [
+    {
+     "concept_tag": "gis-components",
+     "learning_objective": "Identify the five components of GIS and the role of each."
+    },
+    {
+     "concept_tag": "gis-software-modules",
+     "learning_objective": "Relate GIS operations to the functional modules of GIS application software."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH04-T4",
+   "topic_number": 4,
+   "title": "Spatial Data Formats: Raster and Vector",
+   "ncert_sections": "Spatial Data Formats; Box 4.2",
+   "concepts": [
+    {
+     "concept_tag": "raster-data-format",
+     "learning_objective": "Describe how raster data represent features as grid cells and how cell size affects resolution."
+    },
+    {
+     "concept_tag": "vector-data-format",
+     "learning_objective": "Describe how vector data represent features through coordinate pairs of points."
+    },
+    {
+     "concept_tag": "raster-vector-comparison",
+     "learning_objective": "Compare the advantages, disadvantages and typical uses of raster and vector formats."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH04-T5",
+   "topic_number": 5,
+   "title": "Sequence of GIS Activities and Spatial Data Input",
+   "ncert_sections": "Sequence of GIS Activities; Spatial Data Input; Scanners",
+   "concepts": [
+    {
+     "concept_tag": "gis-activity-sequence",
+     "learning_objective": "Arrange the activities involved in GIS-related work in their correct sequence."
+    },
+    {
+     "concept_tag": "data-supplier-compatibility",
+     "learning_objective": "Explain the compatibility checks needed when digital data sets from different suppliers are combined."
+    },
+    {
+     "concept_tag": "scanners",
+     "learning_objective": "Explain how scanners convert analogue maps into digital raster images."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH04-T6",
+   "topic_number": 6,
+   "title": "Attribute Data, Verification, Editing and Conversion",
+   "ncert_sections": "Entering the Attribute Data; Data Verification and Editing; Data Conversion",
+   "concepts": [
+    {
+     "concept_tag": "attribute-data",
+     "learning_objective": "Identify attribute data of spatial entities and the sources from which they are entered into GIS."
+    },
+    {
+     "concept_tag": "spatial-data-errors",
+     "learning_objective": "Identify common errors in captured spatial data and the methods used to verify and correct them."
+    },
+    {
+     "concept_tag": "data-conversion",
+     "learning_objective": "Explain why and how data are converted between vector and raster formats."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH04-T7",
+   "topic_number": 7,
+   "title": "Geographic Data: Linkages and Matching",
+   "ncert_sections": "Geographic Data: Linkages and Matching",
+   "concepts": [
+    {
+     "concept_tag": "data-linkage",
+     "learning_objective": "Explain why spatial and attribute data sets must be correctly linked in GIS."
+    },
+    {
+     "concept_tag": "exact-matching",
+     "learning_objective": "Explain exact matching of files through a common key."
+    },
+    {
+     "concept_tag": "hierarchical-fuzzy-matching",
+     "learning_objective": "Distinguish hierarchical matching from fuzzy matching and choose the right one for a given data set."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH04-T8",
+   "topic_number": 8,
+   "title": "Spatial Analysis: Overlay and Buffer Operations",
+   "ncert_sections": "Spatial Analysis; Overlay Analysis Operations; Buffer Operation",
+   "concepts": [
+    {
+     "concept_tag": "overlay-analysis",
+     "learning_objective": "Explain overlay analysis and its use in studying land use change and urban sprawl."
+    },
+    {
+     "concept_tag": "buffer-analysis",
+     "learning_objective": "Apply buffer operations to proximity analysis of facilities and pollution sources."
+    }
+   ]
+  }
+ ]
+}

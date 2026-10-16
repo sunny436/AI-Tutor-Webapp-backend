@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LEGY2-CH09",
+ "title": "Geographical Perspective on Selected Issues and Problems",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEGY2-CH09-T1",
+   "topic_number": 1,
+   "title": "Environmental Pollution and Water Pollution",
+   "ncert_sections": "Environmental Pollution; Water Pollution; Namami Gange Programme",
+   "concepts": [
+    {
+     "concept_tag": "pollution-classification",
+     "learning_objective": "Classify environmental pollution by the medium through which pollutants are transported and diffused."
+    },
+    {
+     "concept_tag": "water-pollution-sources",
+     "learning_objective": "Identify natural and human sources of water pollution in India and their effects on health."
+    },
+    {
+     "concept_tag": "namami-gange-programme",
+     "learning_objective": "Explain the objectives of the Namami Gange Programme for cleaning the Ganga."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH09-T2",
+   "topic_number": 2,
+   "title": "Air Pollution",
+   "ncert_sections": "Air Pollution",
+   "concepts": [
+    {
+     "concept_tag": "air-pollution-sources",
+     "learning_objective": "Identify the main sources and pollutants responsible for air pollution."
+    },
+    {
+     "concept_tag": "air-pollution-effects",
+     "learning_objective": "Explain the effects of air pollution such as disease, urban smog and acid rain."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH09-T3",
+   "topic_number": 3,
+   "title": "Noise Pollution",
+   "ncert_sections": "Noise Pollution",
+   "concepts": [
+    {
+     "concept_tag": "noise-pollution-sources",
+     "learning_objective": "Identify the main sources of noise pollution and why traffic noise is the biggest nuisance."
+    },
+    {
+     "concept_tag": "noise-measurement-and-location",
+     "learning_objective": "Explain how noise is measured and why noise pollution is location specific."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH09-T4",
+   "topic_number": 4,
+   "title": "Urban Waste Disposal",
+   "ncert_sections": "Urban Waste Disposal; Case Study: Daurala",
+   "concepts": [
+    {
+     "concept_tag": "solid-waste-sources",
+     "learning_objective": "Describe what solid waste is and the two sources from which it is disposed of."
+    },
+    {
+     "concept_tag": "urban-waste-management",
+     "learning_objective": "Explain the health hazards of uncollected urban waste and the idea of treating waste as a resource."
+    },
+    {
+     "concept_tag": "daurala-polluter-pays",
+     "learning_objective": "Analyse the Daurala case of industrial groundwater contamination and its restoration on the polluter pays principle."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH09-T5",
+   "topic_number": 5,
+   "title": "Rural-Urban Migration",
+   "ncert_sections": "Rural-Urban Migration; A Case Study",
+   "concepts": [
+    {
+     "concept_tag": "migration-causes",
+     "learning_objective": "Explain the push and pull factors behind rural-urban migration in India."
+    },
+    {
+     "concept_tag": "migration-impacts",
+     "learning_objective": "Analyse the economic and social effects of migration on migrants and their families."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH09-T6",
+   "topic_number": 6,
+   "title": "Problems of Slums",
+   "ncert_sections": "Problems of Slums; Dharavi",
+   "concepts": [
+    {
+     "concept_tag": "urban-differentiation",
+     "learning_objective": "Explain how Indian urban centres are socially and economically differentiated."
+    },
+    {
+     "concept_tag": "slum-conditions",
+     "learning_objective": "Describe living conditions and socio-economic problems of slum dwellers."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH09-T7",
+   "topic_number": 7,
+   "title": "Land Degradation",
+   "ncert_sections": "Land Degradation; A Case Study: Jhabua",
+   "concepts": [
+    {
+     "concept_tag": "land-degradation-processes",
+     "learning_objective": "Define land degradation and identify the processes that cause it."
+    },
+    {
+     "concept_tag": "wasteland-classification",
+     "learning_objective": "Classify wastelands according to natural and human-induced processes."
+    },
+    {
+     "concept_tag": "watershed-management-jhabua",
+     "learning_objective": "Evaluate community participation in watershed management in Jhabua district."
+    }
+   ]
+  }
+ ]
+}

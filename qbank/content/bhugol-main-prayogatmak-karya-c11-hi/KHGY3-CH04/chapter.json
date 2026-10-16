@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KHGY3-CH04",
+ "title": "मानचित्र प्रक्षेप",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHGY3-CH04-T1",
+   "topic_number": 1,
+   "title": "मानचित्र प्रक्षेप का अर्थ और आवश्यकता",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "graticule-aur-prakshep",
+     "learning_objective": "अक्षांश-देशांतर जाल (ग्रेटिक्यूल) और मानचित्र प्रक्षेप का अर्थ समझना।"
+    },
+    {
+     "concept_tag": "prakshep-ki-avashyakta",
+     "learning_objective": "ग्लोब की सीमाओं के आधार पर मानचित्र प्रक्षेप की आवश्यकता स्पष्ट करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH04-T2",
+   "topic_number": 2,
+   "title": "मानचित्र प्रक्षेप के तत्व",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "laghukrit-prithvi",
+     "learning_objective": "लघुकृत पृथ्वी तथा अक्षांश और देशांतर रेखाओं की विशेषताएँ बताना।"
+    },
+    {
+     "concept_tag": "bhumandaliya-gun",
+     "learning_objective": "मानचित्र में सुरक्षित रखे जाने वाले चार भूमंडलीय गुणों की पहचान करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH04-T3",
+   "topic_number": 3,
+   "title": "रचना विधि और विकासनीय पृष्ठ के आधार पर वर्गीकरण",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vikasniya-prishth",
+     "learning_objective": "विकासनीय और अविकासनीय पृष्ठ में अंतर कर बेलनाकार, शंक्वाकार और खमध्य प्रक्षेप पहचानना।"
+    },
+    {
+     "concept_tag": "rachna-vidhi",
+     "learning_objective": "संदर्श, असंदर्श और गणितीय प्रक्षेपों तथा सामान्य, तिर्यक और ध्रुवीय स्थितियों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH04-T4",
+   "topic_number": 4,
+   "title": "भूमंडलीय गुण और प्रकाश स्रोत के आधार पर वर्गीकरण",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "gun-adharit-vargikaran",
+     "learning_objective": "समक्षेत्र, शुद्ध आकृतिक, दिगंशीय और समदूरस्थ प्रक्षेपों की विशेषताएँ बताना।"
+    },
+    {
+     "concept_tag": "prakash-srot",
+     "learning_objective": "प्रकाश स्रोत की स्थिति के आधार पर नोमोनिक, त्रिविम और लंबकोणीय प्रक्षेप पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH04-T5",
+   "topic_number": 5,
+   "title": "एक मानक अक्षांश वाला शंक्वाकार प्रक्षेप",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "shankvakar-prakshep-rachna",
+     "learning_objective": "एक मानक अक्षांश वाले शंक्वाकार प्रक्षेप की गणना और रचना करना।"
+    },
+    {
+     "concept_tag": "shankvakar-gun-upyog",
+     "learning_objective": "शंक्वाकार प्रक्षेप के गुण, सीमाएँ और उपयोग समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH04-T6",
+   "topic_number": 6,
+   "title": "बेलनाकार समक्षेत्र प्रक्षेप",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "belnakar-samkshetra-ganana",
+     "learning_objective": "बेलनाकार समक्षेत्र प्रक्षेप के लिए लघुकृत पृथ्वी की त्रिज्या, विषुवत रेखा की लंबाई और अंतराल की गणना करना।"
+    },
+    {
+     "concept_tag": "belnakar-samkshetra-gun",
+     "learning_objective": "बेलनाकार समक्षेत्र प्रक्षेप के गुण, सीमाएँ और उपयोग बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH04-T7",
+   "topic_number": 7,
+   "title": "मर्केटर प्रक्षेप",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "merketar-gun",
+     "learning_objective": "मर्केटर प्रक्षेप के गुण और सीमाएँ समझाना।"
+    },
+    {
+     "concept_tag": "merketar-upyog-ganana",
+     "learning_objective": "मर्केटर प्रक्षेप की गणना और नौसंचालन में इसके उपयोग को स्पष्ट करना।"
+    }
+   ]
+  }
+ ]
+}

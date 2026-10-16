@@ -1,0 +1,1863 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "fundamental-of-physical-geography-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "geography",
+  "language": "english",
+  "title": "Fundamental of Physical Geography",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kegy2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEGY2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Geography as a Discipline",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH01-T1",
+     "topic_number": 1,
+     "title": "Why study geography and what geography is",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-geography",
+       "learning_objective": "State the origin and meaning of the term geography and who coined it."
+      },
+      {
+       "concept_tag": "physical-and-cultural-features",
+       "learning_objective": "Distinguish physical features of the earth's surface from cultural features created by human beings."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH01-T2",
+     "topic_number": 2,
+     "title": "Areal differentiation, causal relationships and nature-human interaction",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "areal-differentiation",
+       "learning_objective": "Explain geography as the study of areal differentiation and of the causes behind spatial variation."
+      },
+      {
+       "concept_tag": "nature-human-interaction",
+       "learning_objective": "Explain how human beings adapt to and modify nature, producing humanised nature and naturalised humans."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH01-T3",
+     "topic_number": 3,
+     "title": "The three questions of geography and spatial organisation",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "what-where-why-questions",
+       "learning_objective": "Identify the what, where and why questions and explain why the why question made geography scientific."
+      },
+      {
+       "concept_tag": "spatial-organisation",
+       "learning_objective": "Explain how links (routes) and nodes (settlements) organise and integrate space."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH01-T4",
+     "topic_number": 4,
+     "title": "Geography as an integrating discipline",
+     "ncert_sections": "Geography as an Integrating Discipline",
+     "concepts": [
+      {
+       "concept_tag": "spatial-synthesis",
+       "learning_objective": "Explain geography as a discipline of spatial synthesis compared with history's temporal synthesis."
+      },
+      {
+       "concept_tag": "geography-and-history",
+       "learning_objective": "Analyse how geographical factors such as distance, mountains and seas have shaped historical events."
+      },
+      {
+       "concept_tag": "time-as-fourth-dimension",
+       "learning_objective": "Explain how time and space can be converted into each other and why time is the fourth dimension."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH01-T5",
+     "topic_number": 5,
+     "title": "Branches of geography: approaches and sub-fields",
+     "ncert_sections": "Branches of Geography",
+     "concepts": [
+      {
+       "concept_tag": "systematic-and-regional-approach",
+       "learning_objective": "Distinguish the systematic approach of Humboldt from the regional approach of Ritter."
+      },
+      {
+       "concept_tag": "systematic-branches",
+       "learning_objective": "Classify sub-fields such as geomorphology, climatology, hydrology and political geography into physical, human and biogeography."
+      },
+      {
+       "concept_tag": "regional-branches-and-techniques",
+       "learning_objective": "Identify the branches based on the regional approach and the philosophy and methods common to all branches."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH01-T6",
+     "topic_number": 6,
+     "title": "Physical geography and its importance",
+     "ncert_sections": "Physical Geography and its Importance",
+     "concepts": [
+      {
+       "concept_tag": "components-of-physical-geography",
+       "learning_objective": "Identify the four realms studied in physical geography and what each includes."
+      },
+      {
+       "concept_tag": "importance-of-physical-geography",
+       "learning_objective": "Evaluate the importance of physical geography for resource management and sustainable development."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "The Origin and Evolution of the Earth",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH02-T1",
+     "topic_number": 1,
+     "title": "Early Theories: Origin of the Earth",
+     "ncert_sections": "Early Theories",
+     "concepts": [
+      {
+       "concept_tag": "nebular-hypothesis",
+       "learning_objective": "Describe the nebular hypothesis of Kant and Laplace and its revision by Otto Schmidt and Carl Weizascar."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH02-T2",
+     "topic_number": 2,
+     "title": "Origin of the Universe: the Big Bang Theory",
+     "ncert_sections": "Modern Theories",
+     "concepts": [
+      {
+       "concept_tag": "big-bang-stages",
+       "learning_objective": "Explain the stages in the development of the universe according to the Big Bang Theory."
+      },
+      {
+       "concept_tag": "expanding-universe",
+       "learning_objective": "Interpret the evidence for an expanding universe and contrast it with the steady state concept."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH02-T3",
+     "topic_number": 3,
+     "title": "The Star Formation",
+     "ncert_sections": "The Star Formation",
+     "concepts": [
+      {
+       "concept_tag": "galaxy-star-formation",
+       "learning_objective": "Explain how density differences in the early universe led to nebulae, galaxies and stars."
+      },
+      {
+       "concept_tag": "light-year",
+       "learning_objective": "Use the light year as a measure of distance in simple calculations."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH02-T4",
+     "topic_number": 4,
+     "title": "Formation of Planets",
+     "ncert_sections": "Formation of Planets",
+     "concepts": [
+      {
+       "concept_tag": "planetesimals-accretion",
+       "learning_objective": "Sequence the stages by which planetesimals accreted into planets."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH02-T5",
+     "topic_number": 5,
+     "title": "Evolution of the Earth and its Lithosphere",
+     "ncert_sections": "Evolution of the Earth; Evolution of Lithosphere",
+     "concepts": [
+      {
+       "concept_tag": "layered-structure",
+       "learning_objective": "Describe the layered structure of the earth and the change in density from crust to core."
+      },
+      {
+       "concept_tag": "differentiation",
+       "learning_objective": "Explain how differentiation separated earth material into layers."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH02-T6",
+     "topic_number": 6,
+     "title": "Evolution of Atmosphere and Hydrosphere",
+     "ncert_sections": "Evolution of Atmosphere and Hydrosphere",
+     "concepts": [
+      {
+       "concept_tag": "atmosphere-stages",
+       "learning_objective": "Identify the three stages in the evolution of the present atmosphere."
+      },
+      {
+       "concept_tag": "degassing-oceans",
+       "learning_objective": "Explain degassing and the formation of oceans and atmospheric oxygen."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH02-T7",
+     "topic_number": 7,
+     "title": "Origin of Life",
+     "ncert_sections": "Origin of Life",
+     "concepts": [
+      {
+       "concept_tag": "origin-of-life",
+       "learning_objective": "Explain the origin of life as a chemical process and the fossil evidence for its age."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Interior of the Earth",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH03-T1",
+     "topic_number": 1,
+     "title": "Sources of information about the interior",
+     "ncert_sections": "Sources of information about the interior: direct and indirect sources",
+     "concepts": [
+      {
+       "concept_tag": "direct-sources-of-information",
+       "learning_objective": "Identify mining, deep drilling and volcanic eruptions as direct sources of information about the earth's interior."
+      },
+      {
+       "concept_tag": "indirect-sources-of-information",
+       "learning_objective": "Explain how temperature, pressure, density, meteors, gravitation and magnetism give indirect evidence of the interior."
+      },
+      {
+       "concept_tag": "gravity-anomaly",
+       "learning_objective": "Interpret gravity anomalies as evidence of the distribution of mass in the crust."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH03-T2",
+     "topic_number": 2,
+     "title": "Earthquakes and earthquake waves",
+     "ncert_sections": "Earthquake; Why does the earth shake?; Earthquake waves; Propagation of earthquake waves",
+     "concepts": [
+      {
+       "concept_tag": "fault-focus-epicentre",
+       "learning_objective": "Describe how energy released along a fault produces an earthquake and define focus and epicentre."
+      },
+      {
+       "concept_tag": "body-and-surface-waves",
+       "learning_objective": "Distinguish P-waves, S-waves and surface waves by speed, medium and destructiveness."
+      },
+      {
+       "concept_tag": "wave-propagation",
+       "learning_objective": "Explain how P-waves and S-waves vibrate relative to the direction of propagation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH03-T3",
+     "topic_number": 3,
+     "title": "Emergence of shadow zone",
+     "ncert_sections": "Emergence of shadow zone",
+     "concepts": [
+      {
+       "concept_tag": "shadow-zone-p-s-waves",
+       "learning_objective": "Locate the shadow zones of P-waves and S-waves in terms of angular distance from the epicentre."
+      },
+      {
+       "concept_tag": "liquid-outer-core-inference",
+       "learning_objective": "Infer the liquid nature of the outer core from the absence of S-waves beyond 105 degrees."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH03-T4",
+     "topic_number": 4,
+     "title": "Types, measurement and effects of earthquakes",
+     "ncert_sections": "Types of earthquakes; Measuring earthquakes; Effects of earthquake; Frequency of earthquake occurrences",
+     "concepts": [
+      {
+       "concept_tag": "types-of-earthquakes",
+       "learning_objective": "Classify earthquakes as tectonic, volcanic, collapse, explosion and reservoir induced."
+      },
+      {
+       "concept_tag": "measuring-earthquakes",
+       "learning_objective": "Distinguish the Richter magnitude scale from the Mercalli intensity scale."
+      },
+      {
+       "concept_tag": "effects-of-earthquakes",
+       "learning_objective": "Identify the hazardous effects of earthquakes and the conditions for a tsunami."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH03-T5",
+     "topic_number": 5,
+     "title": "Structure of the earth",
+     "ncert_sections": "Structure of the earth: the crust, the mantle, the core",
+     "concepts": [
+      {
+       "concept_tag": "crust",
+       "learning_objective": "Describe the thickness and nature of the oceanic and continental crust."
+      },
+      {
+       "concept_tag": "mantle-and-asthenosphere",
+       "learning_objective": "Describe the extent of the mantle, the asthenosphere and the lithosphere."
+      },
+      {
+       "concept_tag": "core",
+       "learning_objective": "Describe the state and composition of the outer and inner core."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH03-T6",
+     "topic_number": 6,
+     "title": "Volcanoes",
+     "ncert_sections": "Volcanoes and volcanic landforms; Volcanoes (shield, composite, caldera, flood basalt, mid-ocean ridge)",
+     "concepts": [
+      {
+       "concept_tag": "magma-and-lava",
+       "learning_objective": "Distinguish magma from lava and name the materials a volcano releases."
+      },
+      {
+       "concept_tag": "types-of-volcanoes",
+       "learning_objective": "Compare shield, composite, caldera, flood basalt and mid-ocean ridge volcanoes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH03-T7",
+     "topic_number": 7,
+     "title": "Intrusive volcanic landforms",
+     "ncert_sections": "Volcanic landforms: intrusive forms (batholiths, lacoliths, lapolith, phacolith, sills, dykes)",
+     "concepts": [
+      {
+       "concept_tag": "volcanic-vs-plutonic-rocks",
+       "learning_objective": "Distinguish volcanic rocks from plutonic rocks by where the lava cools."
+      },
+      {
+       "concept_tag": "intrusive-landforms",
+       "learning_objective": "Identify batholiths, lacoliths, lapoliths, phacoliths, sills, sheets and dykes from their shape and position."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Distribution of Oceans and Continents",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH04-T1",
+     "topic_number": 1,
+     "title": "Continental drift theory and its driving forces",
+     "ncert_sections": "Continental Drift; Force for Drifting",
+     "concepts": [
+      {
+       "concept_tag": "continental-drift-pangaea",
+       "learning_objective": "Describe Wegener's continental drift theory, Pangaea, Panthalassa and the split into Laurasia and Gondwanaland."
+      },
+      {
+       "concept_tag": "wegener-drift-forces",
+       "learning_objective": "Explain the pole-fleeing and tidal forces proposed by Wegener and why they were rejected."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH04-T2",
+     "topic_number": 2,
+     "title": "Evidence in support of continental drift",
+     "ncert_sections": "Evidence in Support of the Continental Drift",
+     "concepts": [
+      {
+       "concept_tag": "jigsaw-fit-and-rock-age",
+       "learning_objective": "Explain how the jig-saw fit of coastlines and rocks of the same age across oceans support drift."
+      },
+      {
+       "concept_tag": "tillite-placer-fossil-evidence",
+       "learning_objective": "Interpret tillite, placer deposits and fossil distribution as evidence of continental drift."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH04-T3",
+     "topic_number": 3,
+     "title": "Post-drift studies and the ocean floor",
+     "ncert_sections": "Post-drift Studies; Convectional Current Theory; Mapping of the Ocean Floor; Ocean Floor Configuration; Distribution of Earthquakes and Volcanoes",
+     "concepts": [
+      {
+       "concept_tag": "convection-current-theory",
+       "learning_objective": "Explain Arthur Holmes's convection current theory and its role in answering the problem of force."
+      },
+      {
+       "concept_tag": "ocean-floor-configuration",
+       "learning_objective": "Identify the divisions of the ocean floor: continental margins, abyssal plains and mid-oceanic ridges."
+      },
+      {
+       "concept_tag": "earthquake-volcano-distribution",
+       "learning_objective": "Interpret the global distribution of earthquakes and volcanoes and their focal depths."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH04-T4",
+     "topic_number": 4,
+     "title": "Concept of sea floor spreading",
+     "ncert_sections": "Concept of Sea Floor Spreading",
+     "concepts": [
+      {
+       "concept_tag": "post-drift-ocean-floor-facts",
+       "learning_objective": "Recall the facts about ocean-floor rocks, sediments and magnetism revealed by post-drift studies."
+      },
+      {
+       "concept_tag": "hess-sea-floor-spreading",
+       "learning_objective": "Explain Hess's hypothesis of sea floor spreading and the consumption of crust at trenches."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH04-T5",
+     "topic_number": 5,
+     "title": "Plate tectonics and plate boundaries",
+     "ncert_sections": "Plate Tectonics; Divergent, Convergent and Transform Boundaries",
+     "concepts": [
+      {
+       "concept_tag": "tectonic-plates-major-minor",
+       "learning_objective": "Define a tectonic plate and identify the major and minor plates of the world."
+      },
+      {
+       "concept_tag": "plate-boundary-types",
+       "learning_objective": "Distinguish divergent, convergent and transform plate boundaries with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH04-T6",
+     "topic_number": 6,
+     "title": "Rate of plate movement and its driving force",
+     "ncert_sections": "Rates of Plate Movement; Force for the Plate Movement",
+     "concepts": [
+      {
+       "concept_tag": "rates-of-plate-movement",
+       "learning_objective": "Explain how magnetic stripes give the rates of plate movement and compare slow and fast ridges."
+      },
+      {
+       "concept_tag": "mantle-convection-driving-force",
+       "learning_objective": "Explain convection cells in the mantle as the force behind plate movement."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH04-T7",
+     "topic_number": 7,
+     "title": "Movement of the Indian plate",
+     "ncert_sections": "Movement of the Indian Plate",
+     "concepts": [
+      {
+       "concept_tag": "indian-plate-boundaries",
+       "learning_objective": "Identify the northern, eastern, western and southern boundaries of the Indian plate."
+      },
+      {
+       "concept_tag": "indian-plate-journey",
+       "learning_objective": "Describe India's northward journey, the Deccan Traps and the formation of the Himalayas."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Geomorphic Processes",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH05-T1",
+     "topic_number": 1,
+     "title": "Geomorphic processes and agents",
+     "ncert_sections": "Introduction; Geomorphic Processes",
+     "concepts": [
+      {
+       "concept_tag": "endogenic-exogenic-forces",
+       "learning_objective": "Distinguish land-building endogenic forces from land-wearing exogenic forces and explain why relief persists."
+      },
+      {
+       "concept_tag": "geomorphic-agents",
+       "learning_objective": "Define a geomorphic agent and distinguish it from a geomorphic process."
+      },
+      {
+       "concept_tag": "role-of-gravity",
+       "learning_objective": "Explain why gravity and gradients are essential for all surface movement of earth materials."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH05-T2",
+     "topic_number": 2,
+     "title": "Endogenic processes",
+     "ncert_sections": "Endogenic Processes; Diastrophism; Volcanism",
+     "concepts": [
+      {
+       "concept_tag": "sources-of-endogenic-energy",
+       "learning_objective": "Identify the sources of energy that drive endogenic processes."
+      },
+      {
+       "concept_tag": "diastrophism",
+       "learning_objective": "Describe orogenic, epeirogenic, earthquake and plate tectonic processes under diastrophism."
+      },
+      {
+       "concept_tag": "volcanism",
+       "learning_objective": "Explain what volcanism includes as an endogenic process."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH05-T3",
+     "topic_number": 3,
+     "title": "Exogenic processes and denudation",
+     "ncert_sections": "Exogenic Processes",
+     "concepts": [
+      {
+       "concept_tag": "stress-and-exogenic-energy",
+       "learning_objective": "Explain how solar energy, gravity and stresses drive exogenic processes."
+      },
+      {
+       "concept_tag": "denudation",
+       "learning_objective": "State the processes included under denudation."
+      },
+      {
+       "concept_tag": "climate-and-rock-structure",
+       "learning_objective": "Analyse how climate and rock type and structure control rates of exogenic processes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH05-T4",
+     "topic_number": 4,
+     "title": "Weathering",
+     "ncert_sections": "Weathering; Chemical, Physical and Biological Weathering; Special Effects; Significance",
+     "concepts": [
+      {
+       "concept_tag": "types-of-weathering",
+       "learning_objective": "Distinguish chemical, physical and biological weathering processes."
+      },
+      {
+       "concept_tag": "exfoliation",
+       "learning_objective": "Explain exfoliation as a result of unloading and thermal expansion."
+      },
+      {
+       "concept_tag": "significance-of-weathering",
+       "learning_objective": "Evaluate the role of weathering in soils, erosion, biodiversity and ore enrichment."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH05-T5",
+     "topic_number": 5,
+     "title": "Mass movements",
+     "ncert_sections": "Mass Movements; Landslides",
+     "concepts": [
+      {
+       "concept_tag": "nature-of-mass-movements",
+       "learning_objective": "Explain why mass movements are gravity-driven and not a form of erosion."
+      },
+      {
+       "concept_tag": "causes-of-mass-movements",
+       "learning_objective": "Identify the activating causes and favourable conditions for mass movements."
+      },
+      {
+       "concept_tag": "types-of-landslides",
+       "learning_objective": "Distinguish slump, debris slide, debris fall, rockslide and rock fall."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH05-T6",
+     "topic_number": 6,
+     "title": "Erosion and deposition",
+     "ncert_sections": "Erosion and Deposition",
+     "concepts": [
+      {
+       "concept_tag": "erosion-agents",
+       "learning_objective": "Explain erosion and compare climatically and non-climatically controlled agents."
+      },
+      {
+       "concept_tag": "deposition",
+       "learning_objective": "Explain deposition as a consequence of loss of energy of erosional agents."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH05-T7",
+     "topic_number": 7,
+     "title": "Soil formation",
+     "ncert_sections": "Soil Formation; Process of Soil Formation; Soil-forming Factors",
+     "concepts": [
+      {
+       "concept_tag": "pedogenesis",
+       "learning_objective": "Describe the stages of soil formation from the weathering mantle to mature soil."
+      },
+      {
+       "concept_tag": "passive-soil-factors",
+       "learning_objective": "Explain the role of parent material, topography and time as passive soil-forming factors."
+      },
+      {
+       "concept_tag": "active-soil-factors",
+       "learning_objective": "Explain how climate and biological activity act as active soil-forming factors."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Landforms and their Evolution",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH06-T1",
+     "topic_number": 1,
+     "title": "Running water and stages of landscape evolution",
+     "ncert_sections": "Introduction; Running Water (Youth, Mature, Old)",
+     "concepts": [
+      {
+       "concept_tag": "landform-landscape-evolution",
+       "learning_objective": "Distinguish a landform from a landscape and explain what evolution of landforms means."
+      },
+      {
+       "concept_tag": "fluvial-stages-youth-mature-old",
+       "learning_objective": "Describe the characteristics of youth, mature and old stages of landscapes shaped by running water."
+      },
+      {
+       "concept_tag": "peneplain-monadnock",
+       "learning_objective": "Explain how stream erosion reduces relief to a peneplain with monadnocks."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH06-T2",
+     "topic_number": 2,
+     "title": "Erosional landforms of running water",
+     "ncert_sections": "Erosional Landforms: Valleys, Potholes and Plunge Pools, Incised Meanders, River Terraces",
+     "concepts": [
+      {
+       "concept_tag": "valleys-gorge-canyon",
+       "learning_objective": "Distinguish between V-shaped valleys, gorges and canyons and relate them to rock type."
+      },
+      {
+       "concept_tag": "potholes-plunge-pools",
+       "learning_objective": "Explain the formation of potholes and plunge pools."
+      },
+      {
+       "concept_tag": "incised-meanders-terraces",
+       "learning_objective": "Explain incised meanders and river terraces as products of vertical erosion."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH06-T3",
+     "topic_number": 3,
+     "title": "Depositional landforms of running water",
+     "ncert_sections": "Depositional Landforms: Alluvial Fans, Deltas, Floodplains, Natural Levees, Point Bars, Meanders",
+     "concepts": [
+      {
+       "concept_tag": "alluvial-fans-deltas",
+       "learning_objective": "Compare alluvial fans and deltas in location and sorting of deposits."
+      },
+      {
+       "concept_tag": "floodplain-levee-point-bar",
+       "learning_objective": "Distinguish floodplains, natural levees and point bars."
+      },
+      {
+       "concept_tag": "meanders-oxbow-lakes",
+       "learning_objective": "Explain why meanders develop and how ox-bow lakes form."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH06-T4",
+     "topic_number": 4,
+     "title": "Groundwater and karst topography",
+     "ncert_sections": "Groundwater: Erosional and Depositional Landforms",
+     "concepts": [
+      {
+       "concept_tag": "karst-solution-process",
+       "learning_objective": "Explain why groundwater forms landforms mainly in limestone through solution and precipitation."
+      },
+      {
+       "concept_tag": "sinkholes-uvalas-lapies",
+       "learning_objective": "Describe swallow holes, sinkholes, uvalas, lapies and caves."
+      },
+      {
+       "concept_tag": "stalactites-stalagmites",
+       "learning_objective": "Explain the formation of stalactites, stalagmites and pillars."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH06-T5",
+     "topic_number": 5,
+     "title": "Glaciers and glacial landforms",
+     "ncert_sections": "Glaciers: Erosional and Depositional Landforms",
+     "concepts": [
+      {
+       "concept_tag": "glacial-erosion-cirque-horn",
+       "learning_objective": "Describe cirques, horns, aretes and glacial troughs formed by glacial erosion."
+      },
+      {
+       "concept_tag": "till-outwash-moraines",
+       "learning_objective": "Distinguish till from outwash deposits and identify types of moraines."
+      },
+      {
+       "concept_tag": "eskers-drumlins",
+       "learning_objective": "Explain the formation of eskers, outwash plains and drumlins."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH06-T6",
+     "topic_number": 6,
+     "title": "Waves and currents: coastal landforms",
+     "ncert_sections": "Waves and Currents: High Rocky Coasts, Low Sedimentary Coasts, Erosional and Depositional Landforms",
+     "concepts": [
+      {
+       "concept_tag": "rocky-vs-sedimentary-coasts",
+       "learning_objective": "Compare high rocky coasts and low sedimentary coasts in processes and landforms."
+      },
+      {
+       "concept_tag": "cliffs-terraces-stacks",
+       "learning_objective": "Explain the formation of sea cliffs, wave-cut terraces, sea caves and stacks."
+      },
+      {
+       "concept_tag": "bars-spits-lagoons",
+       "learning_objective": "Explain how beaches, bars, barriers, spits and lagoons develop."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH06-T7",
+     "topic_number": 7,
+     "title": "Winds and desert landforms",
+     "ncert_sections": "Winds: Erosional and Depositional Landforms",
+     "concepts": [
+      {
+       "concept_tag": "wind-erosion-processes",
+       "learning_objective": "Explain deflation, abrasion and impact and the role of sheet floods in deserts."
+      },
+      {
+       "concept_tag": "pediments-playas-mushroom",
+       "learning_objective": "Describe pediments, pediplains, playas, deflation hollows and mushroom rocks."
+      },
+      {
+       "concept_tag": "sand-dune-types",
+       "learning_objective": "Distinguish barchans, parabolic, seif, longitudinal and transverse dunes."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Composition and Structure of Atmosphere",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH07-T1",
+     "topic_number": 1,
+     "title": "Atmosphere and its gases",
+     "ncert_sections": "Introduction; Composition of the Atmosphere; Gases",
+     "concepts": [
+      {
+       "concept_tag": "atmosphere-meaning",
+       "learning_objective": "Describe the atmosphere as a mixture of gases enveloping the earth and state where most of its mass lies."
+      },
+      {
+       "concept_tag": "carbon-dioxide-greenhouse",
+       "learning_objective": "Explain why carbon dioxide is meteorologically important and how its rising volume affects air temperature."
+      },
+      {
+       "concept_tag": "ozone-filter",
+       "learning_objective": "Explain the role of ozone in absorbing ultra-violet rays."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH07-T2",
+     "topic_number": 2,
+     "title": "Water vapour and dust particles",
+     "ncert_sections": "Water Vapour; Dust Particles",
+     "concepts": [
+      {
+       "concept_tag": "water-vapour-variability",
+       "learning_objective": "Explain how water vapour varies with altitude and latitude and how it regulates the earth's temperature."
+      },
+      {
+       "concept_tag": "dust-particles-hygroscopic-nuclei",
+       "learning_objective": "Identify sources and distribution of dust particles and their role as hygroscopic nuclei."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH07-T3",
+     "topic_number": 3,
+     "title": "Troposphere and tropopause",
+     "ncert_sections": "Structure of the Atmosphere: troposphere, tropopause",
+     "concepts": [
+      {
+       "concept_tag": "atmospheric-layers-basis",
+       "learning_objective": "State the five layers of the atmosphere and the basis of the division."
+      },
+      {
+       "concept_tag": "troposphere-features",
+       "learning_objective": "Explain the thickness, rate of temperature decrease and importance of the troposphere."
+      },
+      {
+       "concept_tag": "tropopause",
+       "learning_objective": "Describe the temperature conditions at the tropopause."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH07-T4",
+     "topic_number": 4,
+     "title": "Upper layers of the atmosphere",
+     "ncert_sections": "Structure of the Atmosphere: stratosphere, mesosphere, ionosphere, exosphere",
+     "concepts": [
+      {
+       "concept_tag": "stratosphere-ozone-layer",
+       "learning_objective": "Describe the extent of the stratosphere and the importance of its ozone layer."
+      },
+      {
+       "concept_tag": "mesosphere-ionosphere",
+       "learning_objective": "Describe the temperature trend in the mesosphere and the features of the ionosphere."
+      },
+      {
+       "concept_tag": "exosphere",
+       "learning_objective": "Describe the nature of the exosphere."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH07-T5",
+     "topic_number": 5,
+     "title": "Elements of weather and climate",
+     "ncert_sections": "Elements of Weather and Climate",
+     "concepts": [
+      {
+       "concept_tag": "weather-climate-elements",
+       "learning_objective": "Identify the main elements of weather and climate that influence human life."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Solar Radiation, Heat Balance and Temperature",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy208.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH08-T1",
+     "topic_number": 1,
+     "title": "Solar radiation and insolation",
+     "ncert_sections": "Solar Radiation",
+     "concepts": [
+      {
+       "concept_tag": "insolation-definition",
+       "learning_objective": "Define insolation and state the average energy received at the top of the atmosphere."
+      },
+      {
+       "concept_tag": "aphelion-perihelion",
+       "learning_objective": "Explain how the changing earth-sun distance at aphelion and perihelion affects insolation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH08-T2",
+     "topic_number": 2,
+     "title": "Variability, passage and spatial distribution of insolation",
+     "ncert_sections": "Variability of Insolation; Passage of Solar Radiation; Spatial Distribution of Insolation",
+     "concepts": [
+      {
+       "concept_tag": "factors-of-insolation",
+       "learning_objective": "Identify the factors that cause variation in the amount and intensity of insolation."
+      },
+      {
+       "concept_tag": "scattering-and-absorption",
+       "learning_objective": "Describe what happens to solar radiation as it passes through the atmosphere."
+      },
+      {
+       "concept_tag": "spatial-distribution-insolation",
+       "learning_objective": "Explain the pattern of insolation received at the earth's surface across latitudes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH08-T3",
+     "topic_number": 3,
+     "title": "Heating and cooling of the atmosphere",
+     "ncert_sections": "Heating and Cooling of Atmosphere; Terrestrial Radiation",
+     "concepts": [
+      {
+       "concept_tag": "conduction",
+       "learning_objective": "Explain how conduction heats the lower layers of the atmosphere."
+      },
+      {
+       "concept_tag": "convection-advection",
+       "learning_objective": "Distinguish between vertical (convection) and horizontal (advection) transfer of heat."
+      },
+      {
+       "concept_tag": "terrestrial-radiation",
+       "learning_objective": "Explain why the atmosphere is heated indirectly by long wave terrestrial radiation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH08-T4",
+     "topic_number": 4,
+     "title": "Heat budget of the planet earth",
+     "ncert_sections": "Heat Budget of the Planet Earth; Variation in the Net Heat Budget",
+     "concepts": [
+      {
+       "concept_tag": "albedo",
+       "learning_objective": "State the share of insolation reflected back to space as the earth's albedo."
+      },
+      {
+       "concept_tag": "heat-budget-units",
+       "learning_objective": "Account for the units of energy absorbed and radiated in the earth's heat budget."
+      },
+      {
+       "concept_tag": "net-radiation-balance",
+       "learning_objective": "Explain the latitudinal surplus and deficit in net radiation and its redistribution."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH08-T5",
+     "topic_number": 5,
+     "title": "Temperature and factors controlling its distribution",
+     "ncert_sections": "Temperature; Factors Controlling Temperature Distribution",
+     "concepts": [
+      {
+       "concept_tag": "heat-vs-temperature",
+       "learning_objective": "Distinguish between heat and temperature."
+      },
+      {
+       "concept_tag": "normal-lapse-rate",
+       "learning_objective": "Apply the normal lapse rate to estimate temperature change with altitude."
+      },
+      {
+       "concept_tag": "continentality-ocean-currents",
+       "learning_objective": "Explain how distance from the sea, air masses and ocean currents affect temperature."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH08-T6",
+     "topic_number": 6,
+     "title": "Distribution of temperature",
+     "ncert_sections": "Distribution of Temperature",
+     "concepts": [
+      {
+       "concept_tag": "isotherms",
+       "learning_objective": "Define isotherms and relate their general trend to latitude."
+      },
+      {
+       "concept_tag": "january-july-distribution",
+       "learning_objective": "Compare the distribution of temperature in January and July in the two hemispheres."
+      },
+      {
+       "concept_tag": "annual-range-temperature",
+       "learning_objective": "Calculate and interpret the annual range of temperature."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH08-T7",
+     "topic_number": 7,
+     "title": "Inversion of temperature",
+     "ncert_sections": "Inversion of Temperature",
+     "concepts": [
+      {
+       "concept_tag": "temperature-inversion",
+       "learning_objective": "Explain the conditions and effects of temperature inversion."
+      },
+      {
+       "concept_tag": "air-drainage",
+       "learning_objective": "Explain air drainage and its effect in hills and valleys."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Atmospheric Circulation and Weather Systems",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy209.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH09-T1",
+     "topic_number": 1,
+     "title": "Atmospheric Pressure and its Distribution",
+     "ncert_sections": "Atmospheric Pressure; Vertical Variation of Pressure; Horizontal Distribution of Pressure; World Distribution of Sea Level Pressure",
+     "concepts": [
+      {
+       "concept_tag": "vertical-variation-of-pressure",
+       "learning_objective": "Explain how atmospheric pressure is measured and how it decreases with height."
+      },
+      {
+       "concept_tag": "isobars-and-pressure-belts",
+       "learning_objective": "Describe isobars and the world pattern of sea level pressure belts and their seasonal shift."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH09-T2",
+     "topic_number": 2,
+     "title": "Forces Affecting the Velocity and Direction of Wind",
+     "ncert_sections": "Forces Affecting the Velocity and Direction of Wind; Pressure Gradient Force; Frictional Force; Coriolis Force",
+     "concepts": [
+      {
+       "concept_tag": "pressure-gradient-and-friction",
+       "learning_objective": "Explain how the pressure gradient force and friction influence wind speed."
+      },
+      {
+       "concept_tag": "coriolis-force",
+       "learning_objective": "Explain how the Coriolis force deflects winds and why it varies with latitude."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH09-T3",
+     "topic_number": 3,
+     "title": "Pressure and Wind",
+     "ncert_sections": "Pressure and Wind",
+     "concepts": [
+      {
+       "concept_tag": "geostrophic-wind",
+       "learning_objective": "Describe the geostrophic wind as a balance of pressure gradient and Coriolis forces."
+      },
+      {
+       "concept_tag": "cyclonic-anticyclonic-circulation",
+       "learning_objective": "Distinguish cyclonic and anticyclonic circulation and the associated convergence and divergence."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH09-T4",
+     "topic_number": 4,
+     "title": "General Circulation of the Atmosphere",
+     "ncert_sections": "General circulation of the atmosphere; General Atmospheric Circulation and its Effects on Oceans",
+     "concepts": [
+      {
+       "concept_tag": "three-cell-circulation",
+       "learning_objective": "Describe the Hadley, Ferrel and polar cells and the planetary winds they produce."
+      },
+      {
+       "concept_tag": "enso",
+       "learning_objective": "Explain El Nino, the southern oscillation and the global effects of ENSO."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH09-T5",
+     "topic_number": 5,
+     "title": "Seasonal and Local Winds",
+     "ncert_sections": "Seasonal Wind; Local Winds; Land and Sea Breezes; Mountain and Valley Winds",
+     "concepts": [
+      {
+       "concept_tag": "land-and-sea-breezes",
+       "learning_objective": "Explain the daily reversal of land and sea breezes from differential heating."
+      },
+      {
+       "concept_tag": "mountain-and-valley-winds",
+       "learning_objective": "Explain valley breezes, mountain winds, katabatic winds and warm leeward winds."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH09-T6",
+     "topic_number": 6,
+     "title": "Air Masses and Fronts",
+     "ncert_sections": "Air Masses; Fronts",
+     "concepts": [
+      {
+       "concept_tag": "air-masses",
+       "learning_objective": "Define an air mass and classify air masses by their source regions."
+      },
+      {
+       "concept_tag": "fronts",
+       "learning_objective": "Identify the types of fronts and the weather they bring."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH09-T7",
+     "topic_number": 7,
+     "title": "Extra Tropical Cyclones",
+     "ncert_sections": "Extra Tropical Cyclones",
+     "concepts": [
+      {
+       "concept_tag": "extra-tropical-cyclone-development",
+       "learning_objective": "Describe the development and occlusion of an extra tropical cyclone along the polar front."
+      },
+      {
+       "concept_tag": "extra-tropical-vs-tropical",
+       "learning_objective": "Compare extra tropical cyclones with tropical cyclones."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH09-T8",
+     "topic_number": 8,
+     "title": "Tropical Cyclones, Thunderstorms and Tornadoes",
+     "ncert_sections": "Tropical Cyclones; Thunderstorms and Tornadoes",
+     "concepts": [
+      {
+       "concept_tag": "tropical-cyclone-formation",
+       "learning_objective": "State the conditions for the formation of tropical cyclones and the source of their energy."
+      },
+      {
+       "concept_tag": "tropical-cyclone-structure",
+       "learning_objective": "Describe the eye, eye wall and landfall of a mature tropical cyclone."
+      },
+      {
+       "concept_tag": "thunderstorms-and-tornadoes",
+       "learning_objective": "Explain how thunderstorms and tornadoes form."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Water in the Atmosphere",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy210.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH10-T1",
+     "topic_number": 1,
+     "title": "Humidity, saturation and dew point",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "absolute-humidity",
+       "learning_objective": "Define absolute humidity and state its unit."
+      },
+      {
+       "concept_tag": "relative-humidity",
+       "learning_objective": "Explain relative humidity and how it changes with temperature."
+      },
+      {
+       "concept_tag": "saturation-dew-point",
+       "learning_objective": "Explain saturated air and the dew point."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH10-T2",
+     "topic_number": 2,
+     "title": "Evaporation",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "evaporation-process",
+       "learning_objective": "Describe evaporation and the role of latent heat of vaporisation."
+      },
+      {
+       "concept_tag": "factors-of-evaporation",
+       "learning_objective": "Explain how temperature, dryness and air movement affect evaporation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH10-T3",
+     "topic_number": 3,
+     "title": "Condensation",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "condensation-process",
+       "learning_objective": "Explain condensation, condensation nuclei and its causes."
+      },
+      {
+       "concept_tag": "conditions-of-condensation",
+       "learning_objective": "Identify the conditions under which condensation takes place."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH10-T4",
+     "topic_number": 4,
+     "title": "Forms of condensation: dew, frost, fog and mist",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dew-and-frost",
+       "learning_objective": "Distinguish dew and frost and the conditions for their formation."
+      },
+      {
+       "concept_tag": "fog-mist-smog",
+       "learning_objective": "Distinguish fog, mist and smog by visibility, moisture and location."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH10-T5",
+     "topic_number": 5,
+     "title": "Clouds",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "cloud-types",
+       "learning_objective": "Identify cirrus, cumulus, stratus and nimbus clouds by height and appearance."
+      },
+      {
+       "concept_tag": "cloud-combinations",
+       "learning_objective": "Classify combined cloud types into high, middle, low and vertical-development groups."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH10-T6",
+     "topic_number": 6,
+     "title": "Precipitation and its forms",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "precipitation-process",
+       "learning_objective": "Explain how precipitation occurs and its liquid and solid forms."
+      },
+      {
+       "concept_tag": "sleet-and-hail",
+       "learning_objective": "Distinguish sleet and hailstones by their formation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH10-T7",
+     "topic_number": 7,
+     "title": "Types of rainfall",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "convectional-rain",
+       "learning_objective": "Explain the formation and distribution of convectional rain."
+      },
+      {
+       "concept_tag": "orographic-rain",
+       "learning_objective": "Explain orographic rain and the rain-shadow area."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH10-T8",
+     "topic_number": 8,
+     "title": "World distribution of rainfall",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rainfall-distribution-patterns",
+       "learning_objective": "Describe latitudinal, coastal and windward patterns of rainfall distribution."
+      },
+      {
+       "concept_tag": "precipitation-regimes",
+       "learning_objective": "Classify regions by annual precipitation regime."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "World Climate and Climate Change",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy211.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH11-T1",
+     "topic_number": 1,
+     "title": "Approaches to classification and Koeppen's scheme",
+     "ncert_sections": "Koeppen's Scheme of Classification of Climate",
+     "concepts": [
+      {
+       "concept_tag": "climate-classification-approaches",
+       "learning_objective": "Distinguish between empirical, genetic and applied approaches to classifying climate."
+      },
+      {
+       "concept_tag": "koeppen-groups-and-letters",
+       "learning_objective": "Explain how Koeppen used temperature, precipitation and letter codes to define climatic groups and types."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH11-T2",
+     "topic_number": 2,
+     "title": "Tropical humid climates (Group A)",
+     "ncert_sections": "Group A : Tropical Humid Climates",
+     "concepts": [
+      {
+       "concept_tag": "tropical-humid-climate-types",
+       "learning_objective": "Describe the location and features of the Af, Am and Aw climate types."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH11-T3",
+     "topic_number": 3,
+     "title": "Dry climates (Group B)",
+     "ncert_sections": "Dry Climates : B",
+     "concepts": [
+      {
+       "concept_tag": "dry-climate-distribution",
+       "learning_objective": "Explain where and why dry climates occur at low and middle latitudes."
+      },
+      {
+       "concept_tag": "steppe-and-desert",
+       "learning_objective": "Compare subtropical steppe and desert climates."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH11-T4",
+     "topic_number": 4,
+     "title": "Warm temperate (mid-latitude) climates (Group C)",
+     "ncert_sections": "Warm Temperate (Mid-Latitude) Climates-C",
+     "concepts": [
+      {
+       "concept_tag": "mediterranean-climate",
+       "learning_objective": "Explain the location and the hot dry summer and rainy winter of the Mediterranean climate."
+      },
+      {
+       "concept_tag": "humid-subtropical-and-marine-west-coast",
+       "learning_objective": "Describe the Cwa, Cfa and Cfb climate types and their locations."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH11-T5",
+     "topic_number": 5,
+     "title": "Cold snow forest and polar climates (Groups D and E)",
+     "ncert_sections": "Cold Snow Forest Climates (D); Polar Climates (E)",
+     "concepts": [
+      {
+       "concept_tag": "cold-snow-forest-climates",
+       "learning_objective": "Describe the distribution and features of the Df and Dw climate types."
+      },
+      {
+       "concept_tag": "tundra-climate",
+       "learning_objective": "Describe the tundra climate, permafrost and its vegetation."
+      },
+      {
+       "concept_tag": "ice-cap-climate",
+       "learning_objective": "Explain the features of the ice cap climate and how icebergs form."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH11-T6",
+     "topic_number": 6,
+     "title": "Climate change: evidence and the past",
+     "ncert_sections": "Climate Change; Climate in the recent past",
+     "concepts": [
+      {
+       "concept_tag": "evidence-of-climate-change",
+       "learning_objective": "Identify the geological, biological and historical evidence that climate changes naturally."
+      },
+      {
+       "concept_tag": "past-climate-episodes",
+       "learning_objective": "Recall major climatic episodes of the geological and recent past, including India."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH11-T7",
+     "topic_number": 7,
+     "title": "Causes of climate change",
+     "ncert_sections": "Causes of Climate Change",
+     "concepts": [
+      {
+       "concept_tag": "astronomical-causes",
+       "learning_objective": "Explain sunspots and Milankovitch oscillations as astronomical causes of climate change."
+      },
+      {
+       "concept_tag": "volcanism-and-human-causes",
+       "learning_objective": "Explain how volcanic aerosols and human greenhouse gas emissions change climate."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH11-T8",
+     "topic_number": 8,
+     "title": "Global warming and greenhouse gases",
+     "ncert_sections": "Global Warming; Greenhouse Gases (GHGs)",
+     "concepts": [
+      {
+       "concept_tag": "greenhouse-effect",
+       "learning_objective": "Explain the greenhouse effect using the analogy of a glasshouse."
+      },
+      {
+       "concept_tag": "greenhouse-gases",
+       "learning_objective": "Identify the main greenhouse gases, their sources and sinks, and what makes a GHG effective."
+      },
+      {
+       "concept_tag": "global-warming-trends-and-response",
+       "learning_objective": "Interpret the 20th-century temperature record, the impacts of warming and the Kyoto Protocol."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Water (Oceans)",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy212.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH12-T1",
+     "topic_number": 1,
+     "title": "Hydrological Cycle",
+     "ncert_sections": "Hydrological Cycle; Table 12.1",
+     "concepts": [
+      {
+       "concept_tag": "hydrological-cycle-processes",
+       "learning_objective": "Describe the hydrological cycle and identify its components and processes."
+      },
+      {
+       "concept_tag": "distribution-of-earth-water",
+       "learning_objective": "State how the earth's water is distributed and explain why water crisis arises."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH12-T2",
+     "topic_number": 2,
+     "title": "Relief of the Ocean Floor: Major Divisions",
+     "ncert_sections": "Relief of the Ocean Floor; Divisions of the Ocean Floors",
+     "concepts": [
+      {
+       "concept_tag": "continental-shelf-and-slope",
+       "learning_objective": "Describe the gradient, width, depth and significance of the continental shelf and slope."
+      },
+      {
+       "concept_tag": "deep-sea-plains-and-trenches",
+       "learning_objective": "Describe deep sea plains and oceanic deeps and their link with plate movements."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH12-T3",
+     "topic_number": 3,
+     "title": "Minor Relief Features of the Ocean Floor",
+     "ncert_sections": "Minor Relief Features",
+     "concepts": [
+      {
+       "concept_tag": "ridges-seamounts-guyots",
+       "learning_objective": "Distinguish mid-oceanic ridges, seamounts and guyots with examples."
+      },
+      {
+       "concept_tag": "canyons-and-atolls",
+       "learning_objective": "Describe submarine canyons and atolls with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH12-T4",
+     "topic_number": 4,
+     "title": "Factors Affecting Ocean Temperature",
+     "ncert_sections": "Temperature of Ocean Waters; Factors Affecting Temperature Distribution",
+     "concepts": [
+      {
+       "concept_tag": "factors-of-ocean-temperature",
+       "learning_objective": "Explain how latitude, land-water distribution, winds and currents affect ocean temperature."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH12-T5",
+     "topic_number": 5,
+     "title": "Horizontal and Vertical Distribution of Temperature",
+     "ncert_sections": "Horizontal and Vertical Distribution of Temperature",
+     "concepts": [
+      {
+       "concept_tag": "thermocline-and-thermal-layers",
+       "learning_objective": "Describe the three-layer thermal structure of oceans and the thermocline."
+      },
+      {
+       "concept_tag": "latitudinal-temperature-pattern",
+       "learning_objective": "Interpret the variation of surface temperature with latitude and hemisphere."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH12-T6",
+     "topic_number": 6,
+     "title": "Salinity and Factors Affecting It",
+     "ncert_sections": "Salinity of Ocean Waters",
+     "concepts": [
+      {
+       "concept_tag": "salinity-definition",
+       "learning_objective": "Define salinity and state how it is expressed."
+      },
+      {
+       "concept_tag": "factors-of-salinity",
+       "learning_objective": "Explain the factors that influence the salinity of ocean water."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH12-T7",
+     "topic_number": 7,
+     "title": "Horizontal and Vertical Distribution of Salinity",
+     "ncert_sections": "Horizontal Distribution of Salinity; Vertical Distribution of Salinity",
+     "concepts": [
+      {
+       "concept_tag": "regional-salinity-patterns",
+       "learning_objective": "Explain regional variations in salinity of oceans and seas."
+      },
+      {
+       "concept_tag": "halocline-and-stratification",
+       "learning_objective": "Describe the vertical variation of salinity, the halocline and stratification."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "Movements of Ocean Water",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy213.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH13-T1",
+     "topic_number": 1,
+     "title": "Horizontal and vertical motions of ocean water",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "horizontal-vertical-motion",
+       "learning_objective": "Distinguish between the horizontal (currents, waves) and vertical (tides, upwelling, sinking) motions of ocean water."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH13-T2",
+     "topic_number": 2,
+     "title": "Waves and their characteristics",
+     "ncert_sections": "Waves; Characteristics of Waves",
+     "concepts": [
+      {
+       "concept_tag": "wave-formation-energy",
+       "learning_objective": "Explain how wind gives energy to waves and why waves slow down and break near the shore."
+      },
+      {
+       "concept_tag": "wave-characteristics",
+       "learning_objective": "Define wave crest, trough, height, amplitude, period, wavelength, speed and frequency."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH13-T3",
+     "topic_number": 3,
+     "title": "Tides and their causes",
+     "ncert_sections": "Tides",
+     "concepts": [
+      {
+       "concept_tag": "tide-generating-force",
+       "learning_objective": "Explain how the moon's and sun's gravity and the centrifugal force produce two tidal bulges."
+      },
+      {
+       "concept_tag": "tidal-bulge-coastal-shape",
+       "learning_objective": "Explain how continental shelves, islands, bays and estuaries modify tides and how tides differ from surges."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH13-T4",
+     "topic_number": 4,
+     "title": "Types of tides",
+     "ncert_sections": "Types of Tides",
+     "concepts": [
+      {
+       "concept_tag": "tides-by-frequency",
+       "learning_objective": "Distinguish semi-diurnal, diurnal and mixed tides."
+      },
+      {
+       "concept_tag": "spring-neap-tides",
+       "learning_objective": "Explain spring and neap tides from the relative positions of the sun, moon and earth."
+      },
+      {
+       "concept_tag": "perigee-perihelion-ebb-flow",
+       "learning_objective": "Relate perigee, apogee, perihelion and aphelion to tidal range, and define ebb and flow."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH13-T5",
+     "topic_number": 5,
+     "title": "Importance of tides",
+     "ncert_sections": "Importance of Tides",
+     "concepts": [
+      {
+       "concept_tag": "importance-of-tides",
+       "learning_objective": "Explain the uses of tides in navigation, fishing, desilting and tidal power."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH13-T6",
+     "topic_number": 6,
+     "title": "Ocean currents and the forces behind them",
+     "ncert_sections": "Ocean Currents",
+     "concepts": [
+      {
+       "concept_tag": "primary-forces-currents",
+       "learning_objective": "Explain how solar heating, wind, gravity and the Coriolis force start and steer ocean currents."
+      },
+      {
+       "concept_tag": "density-vertical-circulation",
+       "learning_objective": "Explain how differences in temperature and salinity drive the sinking and rising of water."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH13-T7",
+     "topic_number": 7,
+     "title": "Types and major ocean currents",
+     "ncert_sections": "Types of Ocean Currents; Major Ocean Currents; Characteristics of Ocean Currents",
+     "concepts": [
+      {
+       "concept_tag": "types-of-currents",
+       "learning_objective": "Classify ocean currents by depth and by temperature and state where warm and cold currents usually flow."
+      },
+      {
+       "concept_tag": "current-circulation-drift",
+       "learning_objective": "Relate ocean circulation to atmospheric circulation and describe the drift (speed) of currents."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH13-T8",
+     "topic_number": 8,
+     "title": "Effects of ocean currents",
+     "ncert_sections": "Effects of Ocean Currents",
+     "concepts": [
+      {
+       "concept_tag": "currents-and-climate",
+       "learning_objective": "Explain how warm and cold currents affect the climate of coastal regions."
+      },
+      {
+       "concept_tag": "mixing-zones-fishing",
+       "learning_objective": "Explain why the mixing of warm and cold currents creates rich fishing grounds."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY2-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "Biodiversity and Conservation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy214.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY2-CH14-T1",
+     "topic_number": 1,
+     "title": "Meaning and distribution of biodiversity",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "biodiversity-meaning",
+       "learning_objective": "Define biodiversity as the number and variety of organisms, their genes and ecosystems in a region."
+      },
+      {
+       "concept_tag": "biodiversity-distribution",
+       "learning_objective": "Explain why biodiversity is uneven on the earth and richest in the tropics."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH14-T2",
+     "topic_number": 2,
+     "title": "Levels of biodiversity",
+     "ncert_sections": "Genetic, Species and Ecosystem Diversity",
+     "concepts": [
+      {
+       "concept_tag": "genetic-diversity",
+       "learning_objective": "Describe genetic diversity as variation of genes within a species."
+      },
+      {
+       "concept_tag": "species-diversity",
+       "learning_objective": "Explain species diversity and how it is measured."
+      },
+      {
+       "concept_tag": "ecosystem-diversity",
+       "learning_objective": "Explain ecosystem diversity and why ecosystem boundaries are hard to demarcate."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH14-T3",
+     "topic_number": 3,
+     "title": "Importance of biodiversity",
+     "ncert_sections": "Ecological, Economic and Scientific Role",
+     "concepts": [
+      {
+       "concept_tag": "ecological-role",
+       "learning_objective": "Explain how species diversity makes ecosystems stable and productive."
+      },
+      {
+       "concept_tag": "economic-role",
+       "learning_objective": "Identify the economic commodities and agro-biodiversity that biodiversity supplies."
+      },
+      {
+       "concept_tag": "scientific-ethical-role",
+       "learning_objective": "Explain the scientific and ethical value of every species."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH14-T4",
+     "topic_number": 4,
+     "title": "Loss of biodiversity",
+     "ncert_sections": "Loss of Biodiversity",
+     "concepts": [
+      {
+       "concept_tag": "causes-of-loss",
+       "learning_objective": "Analyse the human and natural causes of biodiversity loss, including exotic species."
+      },
+      {
+       "concept_tag": "iucn-threat-categories",
+       "learning_objective": "Distinguish between endangered, vulnerable and rare species as classified by IUCN."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY2-CH14-T5",
+     "topic_number": 5,
+     "title": "Conservation of biodiversity",
+     "ncert_sections": "Conservation of Biodiversity",
+     "concepts": [
+      {
+       "concept_tag": "conservation-strategy",
+       "learning_objective": "Describe the Earth Summit, the world conservation strategy and India's Wild Life (Protection) Act, 1972."
+      },
+      {
+       "concept_tag": "megadiversity-hotspots",
+       "learning_objective": "Explain mega diversity centres and biodiversity hotspots."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

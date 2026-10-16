@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KEST1-CH06",
+ "title": "Correlation",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEST1-CH06-T1",
+   "topic_number": 1,
+   "title": "Meaning of correlation and types of relationship",
+   "ncert_sections": "1, 2",
+   "concepts": [
+    {
+     "concept_tag": "correlation-not-causation",
+     "learning_objective": "Explain that correlation measures covariation between two variables and does not by itself imply cause and effect."
+    },
+    {
+     "concept_tag": "third-variable-and-coincidence",
+     "learning_objective": "Identify relationships that arise from pure coincidence or from the influence of a third variable."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH06-T2",
+   "topic_number": 2,
+   "title": "Positive and negative correlation",
+   "ncert_sections": "2 (Types of Correlation)",
+   "concepts": [
+    {
+     "concept_tag": "positive-negative-correlation",
+     "learning_objective": "Classify a relationship between two variables as positive or negative correlation from the direction of their movement."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH06-T3",
+   "topic_number": 3,
+   "title": "Scatter diagram",
+   "ncert_sections": "3 (Scatter Diagram)",
+   "concepts": [
+    {
+     "concept_tag": "scatter-diagram-reading",
+     "learning_objective": "Interpret the direction and closeness of points in a scatter diagram."
+    },
+    {
+     "concept_tag": "perfect-and-no-correlation",
+     "learning_objective": "Recognise perfect positive, perfect negative, no correlation and non-linear patterns in scatter diagrams."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH06-T4",
+   "topic_number": 4,
+   "title": "Karl Pearson's coefficient of correlation",
+   "ncert_sections": "3 (Karl Pearson's Coefficient of Correlation)",
+   "concepts": [
+    {
+     "concept_tag": "covariance-and-r",
+     "learning_objective": "Relate the covariance and standard deviations of X and Y to the coefficient of correlation r."
+    },
+    {
+     "concept_tag": "pearson-r-calculation",
+     "learning_objective": "Calculate Karl Pearson's coefficient of correlation from deviations about the mean."
+    },
+    {
+     "concept_tag": "linearity-requirement",
+     "learning_objective": "Explain why Karl Pearson's r should be used only for a linear relationship."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH06-T5",
+   "topic_number": 5,
+   "title": "Properties and interpretation of r",
+   "ncert_sections": "3 (Properties of Correlation Coefficient)",
+   "concepts": [
+    {
+     "concept_tag": "range-and-unit-of-r",
+     "learning_objective": "State that r is a pure number lying between -1 and +1."
+    },
+    {
+     "concept_tag": "interpreting-r-values",
+     "learning_objective": "Interpret the sign and magnitude of r, including the values 1, -1 and 0."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH06-T6",
+   "topic_number": 6,
+   "title": "Step deviation method",
+   "ncert_sections": "3 (Step deviation method)",
+   "concepts": [
+    {
+     "concept_tag": "origin-scale-independence",
+     "learning_objective": "Apply the property that r is independent of change of origin and scale."
+    },
+    {
+     "concept_tag": "step-deviation-calculation",
+     "learning_objective": "Calculate r using transformed variables U and V in the step deviation method."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH06-T7",
+   "topic_number": 7,
+   "title": "Spearman's rank correlation",
+   "ncert_sections": "3 (Spearman's rank correlation), 4",
+   "concepts": [
+    {
+     "concept_tag": "uses-of-rank-correlation",
+     "learning_objective": "Identify situations in which Spearman's rank correlation is preferred to Karl Pearson's coefficient."
+    },
+    {
+     "concept_tag": "rank-correlation-calculation",
+     "learning_objective": "Calculate the rank correlation coefficient when ranks are given or worked out from data."
+    },
+    {
+     "concept_tag": "repeated-ranks-correction",
+     "learning_objective": "Assign average ranks to repeated values and apply the correction factor."
+    }
+   ]
+  }
+ ]
+}

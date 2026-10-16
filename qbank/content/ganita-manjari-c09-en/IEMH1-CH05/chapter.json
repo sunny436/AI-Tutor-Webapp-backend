@@ -1,0 +1,120 @@
+{
+ "chapter_id": "IEMH1-CH05",
+ "title": "I’m Up and Down, and Round and Round",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IEMH1-CH05-T1",
+   "topic_number": 1,
+   "title": "Definitions and symmetries of a circle",
+   "ncert_sections": "5.1, 5.2",
+   "concepts": [
+    {
+     "concept_tag": "circle-as-locus",
+     "learning_objective": "Define a circle as the locus of points on a plane equidistant from a given point, and identify its centre and radius."
+    },
+    {
+     "concept_tag": "chord-and-diameter",
+     "learning_objective": "Identify chords and diameters and recognise the diameter as the longest chord."
+    },
+    {
+     "concept_tag": "symmetries-of-circle",
+     "learning_objective": "Describe the complete rotational symmetry of a circle and its lines of reflection symmetry."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH05-T2",
+   "topic_number": 2,
+   "title": "Circles through given points and the circumcircle",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "circles-through-two-points",
+     "learning_objective": "Explain why infinitely many circles pass through two points, with centres on the perpendicular bisector of the segment joining them."
+    },
+    {
+     "concept_tag": "circumcircle-of-triangle",
+     "learning_objective": "Explain why exactly one circle passes through three non-collinear points and locate the circumcentre of a triangle."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH05-T3",
+   "topic_number": 3,
+   "title": "Chords and the angles they subtend at the centre",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "equal-chords-equal-angles",
+     "learning_objective": "Use congruence to show that equal chords subtend equal angles at the centre, and conversely."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH05-T4",
+   "topic_number": 4,
+   "title": "Midpoints and perpendicular bisectors of chords",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "perpendicular-from-centre",
+     "learning_objective": "Apply the results that the line from the centre to the midpoint of a chord is perpendicular to it and the perpendicular from the centre bisects the chord."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH05-T5",
+   "topic_number": 5,
+   "title": "Distance of chords from the centre",
+   "ncert_sections": "5.6, 5.6.1",
+   "concepts": [
+    {
+     "concept_tag": "equal-chords-equidistant",
+     "learning_objective": "Apply the results that equal chords are equidistant from the centre and equidistant chords are equal."
+    },
+    {
+     "concept_tag": "longer-chord-nearer-centre",
+     "learning_objective": "Compare distances of unequal chords from the centre and compute chord lengths using the Baudhayana-Pythagoras theorem."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH05-T6",
+   "topic_number": 6,
+   "title": "Angles subtended by an arc",
+   "ncert_sections": "5.7, 5.7.1",
+   "concepts": [
+    {
+     "concept_tag": "major-and-minor-arcs",
+     "learning_objective": "Distinguish major and minor arcs by the angle they subtend at the centre."
+    },
+    {
+     "concept_tag": "central-angle-double",
+     "learning_objective": "Apply the theorem that the angle subtended by an arc at the centre is double the angle at any point on the circle outside the arc."
+    },
+    {
+     "concept_tag": "angle-in-semicircle",
+     "learning_objective": "Use the corollary that a diameter subtends a right angle at any point on the circle."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH05-T7",
+   "topic_number": 7,
+   "title": "Concyclic points and cyclic quadrilaterals",
+   "ncert_sections": "5.8",
+   "concepts": [
+    {
+     "concept_tag": "concyclic-points",
+     "learning_objective": "Determine when four points are concyclic using equal angles subtended by a segment."
+    },
+    {
+     "concept_tag": "cyclic-quadrilateral-angles",
+     "learning_objective": "Apply the result that opposite angles of a cyclic quadrilateral are supplementary, and its converse."
+    }
+   ]
+  }
+ ]
+}

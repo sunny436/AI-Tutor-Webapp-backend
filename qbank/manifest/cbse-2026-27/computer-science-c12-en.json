@@ -1,0 +1,1698 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "computer-science-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "computer_science",
+  "language": "english",
+  "title": "Computer Science",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lecs1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LECS1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Exception Handling in Python",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH01-T1",
+     "topic_number": 1,
+     "title": "Introduction and syntax errors",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "types-of-program-errors",
+       "learning_objective": "Distinguish syntax errors, runtime errors and logical errors in a Python program."
+      },
+      {
+       "concept_tag": "syntax-errors",
+       "learning_objective": "Explain how the interpreter detects and reports syntax (parsing) errors in shell and script mode."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH01-T2",
+     "topic_number": 2,
+     "title": "Exceptions and built-in exceptions",
+     "ncert_sections": "1.3, 1.4",
+     "concepts": [
+      {
+       "concept_tag": "exception-as-object",
+       "learning_objective": "Describe an exception as a Python object that represents an error raised during execution."
+      },
+      {
+       "concept_tag": "built-in-exceptions",
+       "learning_objective": "Identify the built-in exception raised by common erroneous statements."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH01-T3",
+     "topic_number": 3,
+     "title": "Raising exceptions: raise and assert",
+     "ncert_sections": "1.5, 1.5.1, 1.5.2",
+     "concepts": [
+      {
+       "concept_tag": "raise-statement",
+       "learning_objective": "Use the raise statement to throw a built-in exception with an optional message."
+      },
+      {
+       "concept_tag": "assert-statement",
+       "learning_objective": "Use the assert statement to test an expression and predict when AssertionError is raised."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH01-T4",
+     "topic_number": 4,
+     "title": "Need for and process of exception handling",
+     "ncert_sections": "1.6, 1.6.1, 1.6.2",
+     "concepts": [
+      {
+       "concept_tag": "need-for-exception-handling",
+       "learning_objective": "Explain why exception handling is needed and how it separates error code from main logic."
+      },
+      {
+       "concept_tag": "throwing-catching-call-stack",
+       "learning_objective": "Describe throwing and catching an exception and the reverse search of the call stack."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH01-T5",
+     "topic_number": 5,
+     "title": "Catching exceptions: try, except and else",
+     "ncert_sections": "1.6.3, 1.6.4",
+     "concepts": [
+      {
+       "concept_tag": "try-except-block",
+       "learning_objective": "Write and trace a try...except block that handles a specific exception."
+      },
+      {
+       "concept_tag": "multiple-except-clauses",
+       "learning_objective": "Trace programs with several except clauses, including a final except clause with no exception name."
+      },
+      {
+       "concept_tag": "else-clause",
+       "learning_objective": "Predict when the else clause of a try...except statement is executed."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH01-T6",
+     "topic_number": 6,
+     "title": "The finally clause",
+     "ncert_sections": "1.7, 1.7.1",
+     "concepts": [
+      {
+       "concept_tag": "finally-clause",
+       "learning_objective": "State the position and purpose of the finally clause and when it is executed."
+      },
+      {
+       "concept_tag": "unhandled-exception-with-finally",
+       "learning_objective": "Trace how an unhandled exception is re-raised after the finally block executes."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECS1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "File Handling in Python",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH02-T1",
+     "topic_number": 1,
+     "title": "Introduction to Files and Types of Files",
+     "ncert_sections": "2.1, 2.2, 2.2.1, 2.2.2",
+     "concepts": [
+      {
+       "concept_tag": "file-permanent-storage",
+       "learning_objective": "Explain what a file is and why data are stored permanently in files on secondary storage."
+      },
+      {
+       "concept_tag": "text-vs-binary-files",
+       "learning_objective": "Distinguish between text files and binary files and identify examples of each."
+      },
+      {
+       "concept_tag": "end-of-line-character",
+       "learning_objective": "Describe how lines in a text file are terminated by the End of Line (EOL) character."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH02-T2",
+     "topic_number": 2,
+     "title": "Opening and Closing a Text File",
+     "ncert_sections": "2.3, 2.3.1, 2.3.2, 2.3.3",
+     "concepts": [
+      {
+       "concept_tag": "open-function-access-modes",
+       "learning_objective": "Use open() with the correct access mode and state the file offset position for each mode."
+      },
+      {
+       "concept_tag": "file-object-attributes",
+       "learning_objective": "Identify the closed, mode and name attributes of a file object."
+      },
+      {
+       "concept_tag": "closing-and-with-clause",
+       "learning_objective": "Explain why files are closed and how the with clause closes a file automatically."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH02-T3",
+     "topic_number": 3,
+     "title": "Writing to a Text File",
+     "ncert_sections": "2.4, 2.4.1, 2.4.2",
+     "concepts": [
+      {
+       "concept_tag": "write-method",
+       "learning_objective": "Use write() to write a string to a text file and predict its return value."
+      },
+      {
+       "concept_tag": "writelines-method",
+       "learning_objective": "Use writelines() to write a sequence of strings to a text file."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH02-T4",
+     "topic_number": 4,
+     "title": "Reading from a Text File",
+     "ncert_sections": "2.5, 2.5.1, 2.5.2, 2.5.3",
+     "concepts": [
+      {
+       "concept_tag": "read-method",
+       "learning_objective": "Use read() and read(n) to read all or part of a text file."
+      },
+      {
+       "concept_tag": "readline-method",
+       "learning_objective": "Use readline() to read a file line by line and recognise the end of file."
+      },
+      {
+       "concept_tag": "readlines-and-split",
+       "learning_objective": "Use readlines() with split() and splitlines() to process the lines of a file."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH02-T5",
+     "topic_number": 5,
+     "title": "Setting Offsets in a File",
+     "ncert_sections": "2.6, 2.6.1, 2.6.2",
+     "concepts": [
+      {
+       "concept_tag": "tell-method",
+       "learning_objective": "Use tell() to find the current byte position of the file object."
+      },
+      {
+       "concept_tag": "seek-method",
+       "learning_objective": "Use seek() with an offset and a reference point to move the file object."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH02-T6",
+     "topic_number": 6,
+     "title": "Creating and Traversing a Text File",
+     "ncert_sections": "2.7, 2.7.1, 2.7.2",
+     "concepts": [
+      {
+       "concept_tag": "creating-file-write-append",
+       "learning_objective": "Predict how write and append modes treat a new or an existing file."
+      },
+      {
+       "concept_tag": "traversing-with-readline",
+       "learning_objective": "Trace a loop that traverses a text file and displays its contents."
+      },
+      {
+       "concept_tag": "read-write-single-object",
+       "learning_objective": "Perform reading and writing on one file object opened in w+ mode."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH02-T7",
+     "topic_number": 7,
+     "title": "The Pickle Module",
+     "ncert_sections": "2.8, 2.8.1, 2.8.2, 2.8.3",
+     "concepts": [
+      {
+       "concept_tag": "pickling-serialization",
+       "learning_objective": "Define pickling (serialization) and unpickling (de-serialization) of Python objects."
+      },
+      {
+       "concept_tag": "dump-and-load",
+       "learning_objective": "Use pickle.dump() and pickle.load() with binary files opened in the right mode."
+      },
+      {
+       "concept_tag": "reading-records-eoferror",
+       "learning_objective": "Read all records from a binary file using load() in a loop handled by try...except EOFError."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECS1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Stack",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH03-T1",
+     "topic_number": 1,
+     "title": "Data structures and the stack",
+     "ncert_sections": "3.1, 3.2",
+     "concepts": [
+      {
+       "concept_tag": "data-structure-basics",
+       "learning_objective": "Define a data structure and identify a stack as a linear data structure."
+      },
+      {
+       "concept_tag": "lifo-principle",
+       "learning_objective": "Explain the Last-In-First-Out principle and predict the order in which elements leave a stack."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH03-T2",
+     "topic_number": 2,
+     "title": "Applications of stack",
+     "ncert_sections": "3.2.1",
+     "concepts": [
+      {
+       "concept_tag": "stack-applications",
+       "learning_objective": "Identify real-life and programming situations, such as undo/redo, browser history and string reversal, that use a stack."
+      },
+      {
+       "concept_tag": "parenthesis-matching",
+       "learning_objective": "Explain how a stack is used to check that parentheses in an expression are matched and properly nested."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH03-T3",
+     "topic_number": 3,
+     "title": "PUSH and POP operations",
+     "ncert_sections": "3.3, 3.3.1",
+     "concepts": [
+      {
+       "concept_tag": "push-pop-operations",
+       "learning_objective": "Describe PUSH and POP and trace the contents of a stack after a sequence of these operations."
+      },
+      {
+       "concept_tag": "overflow-underflow",
+       "learning_objective": "Distinguish overflow from underflow and identify the operation that causes each."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH03-T4",
+     "topic_number": 4,
+     "title": "Implementation of stack in Python",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "list-as-stack",
+       "learning_objective": "Explain why a Python list with append() and pop() can implement a stack without an explicit TOP."
+      },
+      {
+       "concept_tag": "stack-functions-python",
+       "learning_objective": "Trace and reason about Python functions that push, pop, peek and display elements of a list-based stack."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH03-T5",
+     "topic_number": 5,
+     "title": "Notations for arithmetic expressions",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "notation-types",
+       "learning_objective": "Distinguish infix, prefix (Polish) and postfix (reverse Polish) notations and convert simple expressions between them."
+      },
+      {
+       "concept_tag": "parenthesis-free-notation",
+       "learning_objective": "Explain why prefix and postfix expressions need no parentheses to fix the order of evaluation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH03-T6",
+     "topic_number": 6,
+     "title": "Conversion from infix to postfix notation",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "infix-to-postfix-conversion",
+       "learning_objective": "Apply the stack-based algorithm to convert an infix expression to postfix, tracing the stack and output string."
+      },
+      {
+       "concept_tag": "operator-precedence",
+       "learning_objective": "Use operator precedence and left-to-right order to decide when operators are popped during conversion."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH03-T7",
+     "topic_number": 7,
+     "title": "Evaluation of postfix expression",
+     "ncert_sections": "3.7",
+     "concepts": [
+      {
+       "concept_tag": "postfix-evaluation",
+       "learning_objective": "Evaluate a postfix expression using a stack, tracing the stack after each symbol."
+      },
+      {
+       "concept_tag": "operand-order",
+       "learning_objective": "Apply popped operands in the correct order for non-commutative operators while evaluating postfix."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECS1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Queue",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH04-T1",
+     "topic_number": 1,
+     "title": "Introduction to Queue and the FIFO principle",
+     "ncert_sections": "4.1, 4.1.1",
+     "concepts": [
+      {
+       "concept_tag": "queue-fifo-principle",
+       "learning_objective": "Explain how a queue follows the First-In-First-Out (FIFO) principle and contrast it with a stack."
+      },
+      {
+       "concept_tag": "queue-front-rear",
+       "learning_objective": "Identify the FRONT (HEAD) and REAR (TAIL) ends of a queue and the operation performed at each."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH04-T2",
+     "topic_number": 2,
+     "title": "Applications of Queue",
+     "ncert_sections": "4.1.2",
+     "concepts": [
+      {
+       "concept_tag": "queue-real-life-applications",
+       "learning_objective": "Recognise real-life situations such as waiting lists and toll booths that follow a queue."
+      },
+      {
+       "concept_tag": "queue-computer-applications",
+       "learning_objective": "Explain why queues are used in computer science for web-server requests, OS job scheduling and print spooling."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH04-T3",
+     "topic_number": 3,
+     "title": "Operations on Queue",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "enqueue-dequeue",
+       "learning_objective": "Trace the effect of ENQUEUE and DEQUEUE operations on the contents of a queue."
+      },
+      {
+       "concept_tag": "overflow-underflow",
+       "learning_objective": "Distinguish between the Overflow and Underflow exceptions in a queue."
+      },
+      {
+       "concept_tag": "peek-isempty-isfull",
+       "learning_objective": "Explain the role of PEEK, IS EMPTY and IS FULL in supporting enqueue and dequeue."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH04-T4",
+     "topic_number": 4,
+     "title": "Implementation of Queue using Python",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "queue-python-list",
+       "learning_objective": "Implement a queue with a Python list using append() at the rear and pop(0) at the front."
+      },
+      {
+       "concept_tag": "queue-python-functions",
+       "learning_objective": "Predict the output of Python queue functions such as dequeue, size and peek, including on an empty queue."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH04-T5",
+     "topic_number": 5,
+     "title": "Introduction to Deque and its operations",
+     "ncert_sections": "4.4, 4.4.1, 4.4.2",
+     "concepts": [
+      {
+       "concept_tag": "deque-concept",
+       "learning_objective": "Describe a deque as a double-ended queue that can behave as a stack or a queue."
+      },
+      {
+       "concept_tag": "deque-applications",
+       "learning_objective": "Identify situations such as browser history and undo options where a deque is useful."
+      },
+      {
+       "concept_tag": "deque-operations",
+       "learning_objective": "Trace INSERTFRONT, INSERTREAR, DELETIONFRONT and DELETIONREAR operations on a deque."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH04-T6",
+     "topic_number": 6,
+     "title": "Implementation of Deque using Python and the palindrome check",
+     "ncert_sections": "4.4.2 (Algorithm 4.1), 4.5",
+     "concepts": [
+      {
+       "concept_tag": "deque-python-list",
+       "learning_objective": "Implement deque operations with Python list methods insert(0, x), append(), pop() and pop(0)."
+      },
+      {
+       "concept_tag": "deque-palindrome-check",
+       "learning_objective": "Apply the deque-based algorithm to decide whether a string is a palindrome."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECS1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Sorting",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH05-T1",
+     "topic_number": 1,
+     "title": "Introduction to sorting",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "sorting-definition",
+       "learning_objective": "Define sorting and identify the different orders in which numbers and strings can be arranged."
+      },
+      {
+       "concept_tag": "need-for-sorting",
+       "learning_objective": "Explain why the overhead of sorting is worthwhile for searching data efficiently."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH05-T2",
+     "topic_number": 2,
+     "title": "Bubble sort",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "bubble-sort-mechanism",
+       "learning_objective": "Describe how bubble sort compares and swaps adjacent elements over n-1 passes."
+      },
+      {
+       "concept_tag": "bubble-sort-trace",
+       "learning_objective": "Trace the state of a list after given passes of bubble sort, including an early-stopping version."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH05-T3",
+     "topic_number": 3,
+     "title": "Selection sort",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "selection-sort-mechanism",
+       "learning_objective": "Describe how selection sort selects the smallest unsorted element and swaps it into the sorted part."
+      },
+      {
+       "concept_tag": "selection-sort-trace",
+       "learning_objective": "Trace the partially sorted list produced by selection sort after given passes."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH05-T4",
+     "topic_number": 4,
+     "title": "Insertion sort",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "insertion-sort-mechanism",
+       "learning_objective": "Describe how insertion sort inserts each unsorted element into its position in the sorted part."
+      },
+      {
+       "concept_tag": "insertion-sort-trace",
+       "learning_objective": "Trace passes, shifts and comparisons of insertion sort on a given list."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH05-T5",
+     "topic_number": 5,
+     "title": "Time complexity of algorithms",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "time-complexity-meaning",
+       "learning_objective": "Explain time complexity and how running time grows as the input size increases."
+      },
+      {
+       "concept_tag": "complexity-estimation-rules",
+       "learning_objective": "Estimate constant, linear or quadratic time complexity from the loop structure of an algorithm."
+      },
+      {
+       "concept_tag": "sorting-algorithms-complexity",
+       "learning_objective": "State and justify the quadratic time complexity of bubble, selection and insertion sort."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECS1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Searching",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH06-T1",
+     "topic_number": 1,
+     "title": "Introduction to Searching",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "searching-meaning",
+       "learning_objective": "Explain what searching means and why it is an important technique in computer science."
+      },
+      {
+       "concept_tag": "search-key-and-result",
+       "learning_objective": "Describe the key being searched and the possible results of a search."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH06-T2",
+     "topic_number": 2,
+     "title": "Linear Search",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "linear-search-method",
+       "learning_objective": "Describe how linear (sequential) search compares each element with the key in order."
+      },
+      {
+       "concept_tag": "linear-search-comparisons",
+       "learning_objective": "Determine the number of comparisons linear search makes in the minimum and maximum work cases."
+      },
+      {
+       "concept_tag": "linear-search-program",
+       "learning_objective": "Trace the Python linear search function and interpret the position it returns."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH06-T3",
+     "topic_number": 3,
+     "title": "Binary Search: Principle and Algorithm",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "binary-search-precondition",
+       "learning_objective": "State that binary search works only on a list sorted in some order."
+      },
+      {
+       "concept_tag": "binary-search-mid-calculation",
+       "learning_objective": "Calculate the middle index using floor division of first and last."
+      },
+      {
+       "concept_tag": "binary-search-iterations",
+       "learning_objective": "Trace binary search to find the iterations and the final values of first and last."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH06-T4",
+     "topic_number": 4,
+     "title": "Binary Search: Program, Applications and Comparison",
+     "ncert_sections": "6.3, 6.3.1",
+     "concepts": [
+      {
+       "concept_tag": "binary-search-program",
+       "learning_objective": "Trace the Python binary search function, including its result when the key is absent."
+      },
+      {
+       "concept_tag": "binary-search-applications",
+       "learning_objective": "Identify applications of binary search and modified binary search."
+      },
+      {
+       "concept_tag": "linear-vs-binary-search",
+       "learning_objective": "Compare the work done by linear and binary search for different keys."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH06-T5",
+     "topic_number": 5,
+     "title": "Search by Hashing",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "hash-function-remainder-method",
+       "learning_objective": "Apply the remainder method to compute hash values and build a hash table."
+      },
+      {
+       "concept_tag": "hash-table-search",
+       "learning_objective": "Search a key in a hash table using the hash function with a single comparison."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH06-T6",
+     "topic_number": 6,
+     "title": "Collision and Perfect Hash Function",
+     "ncert_sections": "6.4.1",
+     "concepts": [
+      {
+       "concept_tag": "collision-in-hashing",
+       "learning_objective": "Identify a collision and explain the need for collision resolution."
+      },
+      {
+       "concept_tag": "perfect-hash-function",
+       "learning_objective": "Explain a perfect hash function and evaluate whether a hash function avoids collisions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECS1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Understanding Data",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH07-T1",
+     "topic_number": 1,
+     "title": "Introduction to Data and its Importance",
+     "ncert_sections": "7.1, 7.1.1",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-data",
+       "learning_objective": "Explain what data are and why raw data must be processed before decisions are made."
+      },
+      {
+       "concept_tag": "importance-of-data",
+       "learning_objective": "Describe how organisations use stored and analysed data for decision making."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH07-T2",
+     "topic_number": 2,
+     "title": "Types of Data",
+     "ncert_sections": "7.1.2",
+     "concepts": [
+      {
+       "concept_tag": "structured-data",
+       "learning_objective": "Identify structured data organised in rows (observations) and columns (attributes) and compute from it."
+      },
+      {
+       "concept_tag": "unstructured-data",
+       "learning_objective": "Recognise unstructured data that has no fixed row and column format."
+      },
+      {
+       "concept_tag": "metadata",
+       "learning_objective": "Explain metadata as data about data and identify metadata of files."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH07-T3",
+     "topic_number": 3,
+     "title": "Data Collection and Data Storage",
+     "ncert_sections": "7.2, 7.3",
+     "concepts": [
+      {
+       "concept_tag": "data-collection",
+       "learning_objective": "Describe how data are identified or gathered from appropriate sources and put into digital form."
+      },
+      {
+       "concept_tag": "data-storage",
+       "learning_objective": "Explain data storage, common storage devices and the limitations of file processing."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH07-T4",
+     "topic_number": 4,
+     "title": "Data Processing",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "data-processing-cycle",
+       "learning_objective": "Describe the input, processing and output stages of the data processing cycle."
+      },
+      {
+       "concept_tag": "processing-examples",
+       "learning_objective": "Classify the inputs, processing and outputs of real data-based tasks."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH07-T5",
+     "topic_number": 5,
+     "title": "Measures of Central Tendency",
+     "ncert_sections": "7.5.1",
+     "concepts": [
+      {
+       "concept_tag": "mean",
+       "learning_objective": "Calculate the mean and judge the effect of outliers on it."
+      },
+      {
+       "concept_tag": "median",
+       "learning_objective": "Find the median of an odd or even number of sorted values."
+      },
+      {
+       "concept_tag": "mode",
+       "learning_objective": "Find the mode of numeric or non-numeric data."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH07-T6",
+     "topic_number": 6,
+     "title": "Measures of Variability",
+     "ncert_sections": "7.5.2",
+     "concepts": [
+      {
+       "concept_tag": "range",
+       "learning_objective": "Calculate the range as the maximum minus the minimum value."
+      },
+      {
+       "concept_tag": "standard-deviation",
+       "learning_objective": "Compute and interpret the standard deviation as a measure of spread."
+      },
+      {
+       "concept_tag": "choosing-statistical-technique",
+       "learning_objective": "Select a suitable statistical technique for a given data problem."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECS1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Database Concepts",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH08-T1",
+     "topic_number": 1,
+     "title": "Introduction and the File System",
+     "ncert_sections": "8.1, 8.2",
+     "concepts": [
+      {
+       "concept_tag": "manual-record-keeping",
+       "learning_objective": "Identify the limitations of manual record keeping and the benefits of storing records in computer files."
+      },
+      {
+       "concept_tag": "computer-files",
+       "learning_objective": "Describe a file as a container of data and explain that application programs are needed to access file data."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH08-T2",
+     "topic_number": 2,
+     "title": "Limitations of a File System",
+     "ncert_sections": "8.2.1",
+     "concepts": [
+      {
+       "concept_tag": "redundancy-and-inconsistency",
+       "learning_objective": "Explain data redundancy and how it leads to data inconsistency in a file system."
+      },
+      {
+       "concept_tag": "isolation-and-dependence",
+       "learning_objective": "Explain data isolation and data dependence as limitations of a file system."
+      },
+      {
+       "concept_tag": "access-and-controlled-sharing",
+       "learning_objective": "Explain the difficulty of access and of controlled data sharing in a file system."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH08-T3",
+     "topic_number": 3,
+     "title": "Database Management System",
+     "ncert_sections": "8.3, 8.3.1",
+     "concepts": [
+      {
+       "concept_tag": "dbms-definition",
+       "learning_objective": "Define a DBMS, give examples and state what querying a database means."
+      },
+      {
+       "concept_tag": "file-system-to-dbms",
+       "learning_objective": "Explain how related files are redesigned into tables of a database to remove redundancy."
+      },
+      {
+       "concept_tag": "dbms-limitations",
+       "learning_objective": "State the costs and limitations of moving from a file system to a DBMS."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH08-T4",
+     "topic_number": 4,
+     "title": "Key Concepts in DBMS",
+     "ncert_sections": "8.3.2",
+     "concepts": [
+      {
+       "concept_tag": "schema-and-instance",
+       "learning_objective": "Distinguish a database schema from a database instance."
+      },
+      {
+       "concept_tag": "constraints-and-metadata",
+       "learning_objective": "Explain data constraints and meta-data stored in the database catalog."
+      },
+      {
+       "concept_tag": "query-and-data-manipulation",
+       "learning_objective": "Identify queries and the insertion, deletion and update operations on a database."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH08-T5",
+     "topic_number": 5,
+     "title": "Relational Data Model",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "data-models",
+       "learning_objective": "Identify the relational data model among the types of data models."
+      },
+      {
+       "concept_tag": "relational-terminology",
+       "learning_objective": "Define relation, attribute, tuple and domain in the relational data model."
+      },
+      {
+       "concept_tag": "degree-and-cardinality",
+       "learning_objective": "Find the degree and cardinality of a relation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH08-T6",
+     "topic_number": 6,
+     "title": "Three Important Properties of a Relation",
+     "ncert_sections": "8.4.1",
+     "concepts": [
+      {
+       "concept_tag": "attribute-and-tuple-rules",
+       "learning_objective": "Apply the rules on attribute names, distinct tuples and the order of tuples and attributes."
+      },
+      {
+       "concept_tag": "atomic-values-and-null",
+       "learning_objective": "Apply the rules on domains, atomic values and the use of NULL in a relation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH08-T7",
+     "topic_number": 7,
+     "title": "Keys in a Relational Database",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "candidate-primary-alternate-keys",
+       "learning_objective": "Identify candidate, primary and alternate keys of a relation."
+      },
+      {
+       "concept_tag": "composite-primary-key",
+       "learning_objective": "Explain when a composite primary key is needed and identify one."
+      },
+      {
+       "concept_tag": "foreign-key",
+       "learning_objective": "Explain how a foreign key relates two relations and restricts the values that can be stored."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECS1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Structured Query Language (SQL)",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH09-T1",
+     "topic_number": 1,
+     "title": "SQL, data types and constraints in MySQL",
+     "ncert_sections": "9.1, 9.2, 9.3",
+     "concepts": [
+      {
+       "concept_tag": "sql-basics",
+       "learning_objective": "Describe SQL as a declarative, case-insensitive query language and the rules for writing its statements."
+      },
+      {
+       "concept_tag": "mysql-data-types",
+       "learning_objective": "Choose suitable MySQL data types such as CHAR, VARCHAR, INT, FLOAT and DATE for attributes."
+      },
+      {
+       "concept_tag": "sql-constraints",
+       "learning_objective": "Identify the purpose of NOT NULL, UNIQUE, DEFAULT, PRIMARY KEY and FOREIGN KEY constraints."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH09-T2",
+     "topic_number": 2,
+     "title": "SQL for data definition: CREATE, DESCRIBE, ALTER and DROP",
+     "ncert_sections": "9.4",
+     "concepts": [
+      {
+       "concept_tag": "create-and-describe",
+       "learning_objective": "Create a database and a table and view the structure of a table with DESCRIBE."
+      },
+      {
+       "concept_tag": "alter-table",
+       "learning_objective": "Use ALTER TABLE to add or remove keys, attributes and constraints and to modify data types."
+      },
+      {
+       "concept_tag": "drop-statement",
+       "learning_objective": "Explain the effect of DROP TABLE and DROP DATABASE."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH09-T3",
+     "topic_number": 3,
+     "title": "SQL for data manipulation: inserting records",
+     "ncert_sections": "9.5",
+     "concepts": [
+      {
+       "concept_tag": "insert-all-columns",
+       "learning_objective": "Insert complete records with INSERT INTO ... VALUES, quoting text and date values correctly."
+      },
+      {
+       "concept_tag": "insert-selected-columns",
+       "learning_objective": "Insert values for only some attributes by naming the columns in the INSERT statement."
+      },
+      {
+       "concept_tag": "foreign-key-insert-order",
+       "learning_objective": "Explain why records of a referenced table must be inserted before the records that refer to them."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH09-T4",
+     "topic_number": 4,
+     "title": "SQL for data query: the SELECT statement",
+     "ncert_sections": "9.6",
+     "concepts": [
+      {
+       "concept_tag": "select-where-distinct",
+       "learning_objective": "Retrieve selected columns and rows with SELECT, WHERE, aliases and DISTINCT."
+      },
+      {
+       "concept_tag": "comparison-and-null-operators",
+       "learning_objective": "Apply relational and logical operators, BETWEEN, IN and IS NULL in conditions."
+      },
+      {
+       "concept_tag": "pattern-matching-and-ordering",
+       "learning_objective": "Use LIKE with the % and _ wildcards and sort results with ORDER BY."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH09-T5",
+     "topic_number": 5,
+     "title": "Data updation and deletion",
+     "ncert_sections": "9.7",
+     "concepts": [
+      {
+       "concept_tag": "update-statement",
+       "learning_objective": "Modify values of one or more columns of existing records with UPDATE ... SET ... WHERE."
+      },
+      {
+       "concept_tag": "delete-statement",
+       "learning_objective": "Remove selected records with DELETE and predict the effect of omitting the WHERE clause."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH09-T6",
+     "topic_number": 6,
+     "title": "Single row functions",
+     "ncert_sections": "9.8, 9.8.1",
+     "concepts": [
+      {
+       "concept_tag": "math-functions",
+       "learning_objective": "Predict the output of POWER, ROUND and MOD."
+      },
+      {
+       "concept_tag": "string-functions",
+       "learning_objective": "Predict the output of string functions such as MID, LEFT, RIGHT, INSTR, LENGTH and TRIM."
+      },
+      {
+       "concept_tag": "date-functions",
+       "learning_objective": "Use date functions such as NOW, DAY, MONTH, MONTHNAME, YEAR and DAYNAME."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH09-T7",
+     "topic_number": 7,
+     "title": "Aggregate functions and the GROUP BY clause",
+     "ncert_sections": "9.8.2, 9.9",
+     "concepts": [
+      {
+       "concept_tag": "aggregate-functions",
+       "learning_objective": "Distinguish multiple row (aggregate) functions from single row functions."
+      },
+      {
+       "concept_tag": "count-and-null",
+       "learning_objective": "Distinguish COUNT(*) from COUNT(column) when a column contains NULL values."
+      },
+      {
+       "concept_tag": "group-by-having",
+       "learning_objective": "Group rows with GROUP BY and filter the groups with HAVING."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH09-T8",
+     "topic_number": 8,
+     "title": "Operations on relations and using two relations in a query",
+     "ncert_sections": "9.10, 9.11",
+     "concepts": [
+      {
+       "concept_tag": "set-operations",
+       "learning_objective": "Apply UNION, INTERSECT and MINUS to two union-compatible relations."
+      },
+      {
+       "concept_tag": "cartesian-product",
+       "learning_objective": "Compute the degree and cardinality of the Cartesian product of two relations."
+      },
+      {
+       "concept_tag": "join-natural-join",
+       "learning_objective": "Combine related tuples of two tables with JOIN ... ON and NATURAL JOIN."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECS1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Computer Networks",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH10-T1",
+     "topic_number": 1,
+     "title": "Introduction to computer networks and evolution of networking",
+     "ncert_sections": "10.1, 10.2",
+     "concepts": [
+      {
+       "concept_tag": "computer-network-basics",
+       "learning_objective": "Define a computer network and state the advantages of sharing data and resources over it."
+      },
+      {
+       "concept_tag": "network-nodes-and-packets",
+       "learning_objective": "Explain what a node is and how data travels across a network as packets."
+      },
+      {
+       "concept_tag": "arpanet-evolution",
+       "learning_objective": "Describe the main milestones in the evolution of networking from ARPANET to Wi-Fi."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH10-T2",
+     "topic_number": 2,
+     "title": "Types of networks: PAN, LAN, MAN and WAN",
+     "ncert_sections": "10.3, 10.3.1, 10.3.2, 10.3.3, 10.3.4",
+     "concepts": [
+      {
+       "concept_tag": "pan-and-lan",
+       "learning_objective": "Distinguish a PAN and a LAN by range, media and data transfer rate."
+      },
+      {
+       "concept_tag": "man-and-wan",
+       "learning_objective": "Classify a given network as MAN or WAN from the geographical area it covers."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH10-T3",
+     "topic_number": 3,
+     "title": "Network devices: modem, Ethernet card, RJ45 and repeater",
+     "ncert_sections": "10.4.1, 10.4.2, 10.4.3, 10.4.4",
+     "concepts": [
+      {
+       "concept_tag": "modem",
+       "learning_objective": "Explain modulation and demodulation performed by modems at the sender's and receiver's ends."
+      },
+      {
+       "concept_tag": "nic-and-rj45",
+       "learning_objective": "Describe the role of the Ethernet card (NIC) and the RJ45 connector in a wired network."
+      },
+      {
+       "concept_tag": "repeater",
+       "learning_objective": "Explain why and where a repeater is needed to regenerate weakened signals."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH10-T4",
+     "topic_number": 4,
+     "title": "Network devices: hub, switch, router and gateway",
+     "ncert_sections": "10.4.5, 10.4.6, 10.4.7, 10.4.8",
+     "concepts": [
+      {
+       "concept_tag": "hub-vs-switch",
+       "learning_objective": "Compare how a hub and a switch forward incoming data."
+      },
+      {
+       "concept_tag": "router",
+       "learning_objective": "Explain how a router analyses, repackages and forwards data to other networks."
+      },
+      {
+       "concept_tag": "gateway",
+       "learning_objective": "Describe the gateway as the entry and exit point of a network and its link with the firewall."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH10-T5",
+     "topic_number": 5,
+     "title": "Networking topologies",
+     "ncert_sections": "10.5, 10.5.1, 10.5.2, 10.5.3, 10.5.4, 10.5.5",
+     "concepts": [
+      {
+       "concept_tag": "mesh-topology",
+       "learning_objective": "Describe mesh topology and calculate the number of links in a fully connected mesh."
+      },
+      {
+       "concept_tag": "ring-bus-topology",
+       "learning_objective": "Compare the direction of data flow, cost and reliability of ring and bus topologies."
+      },
+      {
+       "concept_tag": "star-tree-topology",
+       "learning_objective": "Identify star and tree (hybrid) topologies and the effect of a failure of the central device."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH10-T6",
+     "topic_number": 6,
+     "title": "Identifying nodes: MAC address and IP address",
+     "ncert_sections": "10.6, 10.6.1, 10.6.2",
+     "concepts": [
+      {
+       "concept_tag": "mac-address",
+       "learning_objective": "State the structure of a MAC address and why it is a permanent hardware address."
+      },
+      {
+       "concept_tag": "ip-address",
+       "learning_objective": "Distinguish IPv4 and IPv6 addresses and explain why an IP address can change."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH10-T7",
+     "topic_number": 7,
+     "title": "Internet, World Wide Web and Domain Name System",
+     "ncert_sections": "10.7, 10.7.1, 10.8, 10.8.1",
+     "concepts": [
+      {
+       "concept_tag": "internet-and-web",
+       "learning_objective": "Differentiate between the Internet and the World Wide Web."
+      },
+      {
+       "concept_tag": "www-technologies",
+       "learning_objective": "Identify the roles of HTML, URL and HTTP and the parts of a URL."
+      },
+      {
+       "concept_tag": "domain-name-system",
+       "learning_objective": "Explain domain name resolution and the hierarchical arrangement of DNS servers."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECS1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "Data Communication",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH11-T1",
+     "topic_number": 1,
+     "title": "Concept and components of data communication",
+     "ncert_sections": "11.1, 11.2",
+     "concepts": [
+      {
+       "concept_tag": "data-communication-concept",
+       "learning_objective": "Explain data communication as the exchange of data between networked devices over a medium."
+      },
+      {
+       "concept_tag": "components-of-data-communication",
+       "learning_objective": "Identify the sender, receiver, message, medium and protocol in a communication."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH11-T2",
+     "topic_number": 2,
+     "title": "Measuring capacity: bandwidth and data transfer rate",
+     "ncert_sections": "11.3",
+     "concepts": [
+      {
+       "concept_tag": "bandwidth",
+       "learning_objective": "Define bandwidth and calculate it from the frequency range of a signal."
+      },
+      {
+       "concept_tag": "data-transfer-rate",
+       "learning_objective": "Calculate data transfer rates and convert between bit-rate units."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH11-T3",
+     "topic_number": 3,
+     "title": "Types of data communication",
+     "ncert_sections": "11.4",
+     "concepts": [
+      {
+       "concept_tag": "simplex-communication",
+       "learning_objective": "Recognise one-way communication and its examples."
+      },
+      {
+       "concept_tag": "half-duplex-communication",
+       "learning_objective": "Explain two-way communication that happens in only one direction at a time."
+      },
+      {
+       "concept_tag": "full-duplex-communication",
+       "learning_objective": "Explain simultaneous two-way communication and how link capacity is shared."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH11-T4",
+     "topic_number": 4,
+     "title": "Switching techniques",
+     "ncert_sections": "11.5",
+     "concepts": [
+      {
+       "concept_tag": "circuit-switching",
+       "learning_objective": "Describe circuit switching with its dedicated path set up before communication."
+      },
+      {
+       "concept_tag": "packet-switching",
+       "learning_objective": "Describe how packet switching breaks messages into independently routed packets."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH11-T5",
+     "topic_number": 5,
+     "title": "Transmission media",
+     "ncert_sections": "11.6, 11.6.1, 11.6.2",
+     "concepts": [
+      {
+       "concept_tag": "guided-vs-unguided-media",
+       "learning_objective": "Classify transmission media as guided (wired) or unguided (wireless)."
+      },
+      {
+       "concept_tag": "wired-media-types",
+       "learning_objective": "Compare twisted pair, coaxial and optical fibre cables."
+      },
+      {
+       "concept_tag": "wireless-wave-types",
+       "learning_objective": "Compare radio waves, microwaves and infrared waves by frequency and properties."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH11-T6",
+     "topic_number": 6,
+     "title": "Wireless technologies and mobile telecommunication",
+     "ncert_sections": "11.6.3, 11.7",
+     "concepts": [
+      {
+       "concept_tag": "bluetooth-piconet",
+       "learning_objective": "Describe Bluetooth and the master-slave working of a piconet."
+      },
+      {
+       "concept_tag": "wireless-lan",
+       "learning_objective": "Explain how access points create a Wi-Fi (IEEE 802.11) wireless LAN."
+      },
+      {
+       "concept_tag": "mobile-generations",
+       "learning_objective": "Distinguish the features of 1G to 5G mobile network generations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH11-T7",
+     "topic_number": 7,
+     "title": "Protocols",
+     "ncert_sections": "11.8",
+     "concepts": [
+      {
+       "concept_tag": "need-for-protocols",
+       "learning_objective": "Explain why protocols are needed for flow control, access control and addressing."
+      },
+      {
+       "concept_tag": "http-and-ftp",
+       "learning_objective": "Describe the working of HTTP and FTP on a client-server model."
+      },
+      {
+       "concept_tag": "ppp-smtp-tcp-ip",
+       "learning_objective": "Describe the roles of PPP, SMTP and TCP/IP in communication."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECS1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Security Aspects",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH12-T1",
+     "topic_number": 1,
+     "title": "Threats and prevention; viruses, worms, ransomware and Trojans",
+     "ncert_sections": "12.1, 12.2, 12.2.1, 12.2.2, 12.2.3, 12.2.4",
+     "concepts": [
+      {
+       "concept_tag": "virus-and-worm",
+       "learning_objective": "Distinguish a virus from a worm by how each needs a host and how each replicates."
+      },
+      {
+       "concept_tag": "ransomware-and-trojan",
+       "learning_objective": "Explain how ransomware holds user data hostage and how a Trojan disguises itself as legitimate software."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH12-T2",
+     "topic_number": 2,
+     "title": "Spyware, adware and keyloggers",
+     "ncert_sections": "12.2.5, 12.2.6, 12.2.7",
+     "concepts": [
+      {
+       "concept_tag": "spyware-and-adware",
+       "learning_objective": "Describe how spyware collects user information secretly and how adware earns revenue through advertisements."
+      },
+      {
+       "concept_tag": "keyloggers-and-virtual-keyboards",
+       "learning_objective": "Explain the threat of keyloggers and why an online virtual keyboard resists them better than an on-screen keyboard."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH12-T3",
+     "topic_number": 3,
+     "title": "Modes of malware distribution and combating malware",
+     "ncert_sections": "12.2.8, 12.2.9",
+     "concepts": [
+      {
+       "concept_tag": "malware-distribution-modes",
+       "learning_objective": "Identify the common routes by which malware reaches a computer."
+      },
+      {
+       "concept_tag": "malware-signs-and-prevention",
+       "learning_objective": "Recognise signs of malware infection and choose suitable preventive measures."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH12-T4",
+     "topic_number": 4,
+     "title": "Antivirus and spam",
+     "ncert_sections": "12.3, 12.3.1, 12.4",
+     "concepts": [
+      {
+       "concept_tag": "antivirus-detection-methods",
+       "learning_objective": "Compare signature-based, sandbox, data mining, heuristic and real-time methods of malware identification."
+      },
+      {
+       "concept_tag": "email-spam",
+       "learning_objective": "Explain what email spam is and how spam filtering and user marking help."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH12-T5",
+     "topic_number": 5,
+     "title": "HTTP vs HTTPS and firewalls",
+     "ncert_sections": "12.5, 12.6, 12.6.1",
+     "concepts": [
+      {
+       "concept_tag": "http-vs-https",
+       "learning_objective": "Compare HTTP and HTTPS in terms of encryption and suitable uses."
+      },
+      {
+       "concept_tag": "firewall",
+       "learning_objective": "Explain how a firewall filters traffic using rules and distinguish network and host-based firewalls."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH12-T6",
+     "topic_number": 6,
+     "title": "Cookies and threats due to cookies",
+     "ncert_sections": "12.7, 12.7.1",
+     "concepts": [
+      {
+       "concept_tag": "cookie-types-and-uses",
+       "learning_objective": "Describe what a cookie is and the roles of session and authentication cookies."
+      },
+      {
+       "concept_tag": "cookie-threats",
+       "learning_objective": "Identify threats from supercookies, zombie cookies and third-party tracking cookies."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH12-T7",
+     "topic_number": 7,
+     "title": "Hackers and crackers",
+     "ncert_sections": "12.8, 12.8.1, 12.8.2, 12.8.3",
+     "concepts": [
+      {
+       "concept_tag": "ethical-hacking",
+       "learning_objective": "Explain the role of white hat (ethical) hackers in securing systems."
+      },
+      {
+       "concept_tag": "hacker-types",
+       "learning_objective": "Classify hackers as white, black or grey hats (and hacktivists) based on their intent."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH12-T8",
+     "topic_number": 8,
+     "title": "Network security threats",
+     "ncert_sections": "12.9, 12.9.1, 12.9.2, 12.9.3, 12.9.4",
+     "concepts": [
+      {
+       "concept_tag": "dos-and-ddos",
+       "learning_objective": "Explain DoS and DDoS attacks and why DDoS is harder to counter."
+      },
+      {
+       "concept_tag": "network-intrusion",
+       "learning_objective": "Identify intrusion attacks such as asymmetric routing, buffer overflow and traffic flooding."
+      },
+      {
+       "concept_tag": "snooping-and-eavesdropping",
+       "learning_objective": "Distinguish snooping from eavesdropping."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECS1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "Project Based Learning",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lecs113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECS1-CH13-T1",
+     "topic_number": 1,
+     "title": "Introduction to project based learning",
+     "ncert_sections": "13.1",
+     "concepts": [
+      {
+       "concept_tag": "pbl-skills-and-benefits",
+       "learning_objective": "Identify the skills and practical exposure students gain through project based learning."
+      },
+      {
+       "concept_tag": "pbl-problem-solving-process",
+       "learning_objective": "Describe how a project problem is analysed, broken into modules, solved and integrated, with data collected and reported in a set format."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH13-T2",
+     "topic_number": 2,
+     "title": "Approaches and steps for solving projects",
+     "ncert_sections": "13.2",
+     "concepts": [
+      {
+       "concept_tag": "modular-approach",
+       "learning_objective": "Explain how a modular approach divides a project into modules whose outputs are integrated."
+      },
+      {
+       "concept_tag": "steps-in-project-based-learning",
+       "learning_objective": "Sequence and describe the five steps of project based learning from identification to outcome."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH13-T3",
+     "topic_number": 3,
+     "title": "Teamwork and its components",
+     "ncert_sections": "13.3, 13.3.1",
+     "concepts": [
+      {
+       "concept_tag": "teamwork-meaning",
+       "learning_objective": "Define teamwork and explain why complex tasks need collective effort."
+      },
+      {
+       "concept_tag": "components-of-teamwork",
+       "learning_objective": "Recognise the components of teamwork such as communicating, listening, sharing, respecting, helping and participating."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH13-T4",
+     "topic_number": 4,
+     "title": "Project 1: Automation of order processing in a restaurant",
+     "ncert_sections": "13.4",
+     "concepts": [
+      {
+       "concept_tag": "restaurant-order-specifications",
+       "learning_objective": "Interpret the login, ordering and reporting requirements of the restaurant order processing project."
+      },
+      {
+       "concept_tag": "unique-bill-identification",
+       "learning_objective": "Explain why each bill needs a unique identification made from the date and the order number of the day."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECS1-CH13-T5",
+     "topic_number": 5,
+     "title": "Projects 2 and 3: Puzzle and educational game",
+     "ncert_sections": "13.4",
+     "concepts": [
+      {
+       "concept_tag": "bomb-puzzle-game",
+       "learning_objective": "Apply the rules and exception handling needs of the grid-based bomb puzzle project."
+      },
+      {
+       "concept_tag": "match-the-sum-game",
+       "learning_objective": "Apply the rules of the 'Match the Sum' educational game to given situations."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

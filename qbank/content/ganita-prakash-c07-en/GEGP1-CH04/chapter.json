@@ -1,0 +1,96 @@
+{
+ "chapter_id": "GEGP1-CH04",
+ "title": "Expressions using Letter-Numbers",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP1-CH04-T1",
+   "topic_number": 1,
+   "title": "The Notion of Letter-Numbers",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "letter-numbers-and-algebraic-expressions",
+     "learning_objective": "Use letters to stand for numbers and recognise expressions containing them as algebraic expressions."
+    },
+    {
+     "concept_tag": "expressions-from-situations",
+     "learning_objective": "Write an algebraic expression or formula that describes a relationship given in words or in a situation."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH04-T2",
+   "topic_number": 2,
+   "title": "Revisiting Arithmetic Expressions and Omitting the Multiplication Symbol",
+   "ncert_sections": "4.2, 4.3",
+   "concepts": [
+    {
+     "concept_tag": "evaluating-arithmetic-expressions",
+     "learning_objective": "Evaluate arithmetic expressions by writing them as sums of terms and handling brackets with a negative sign outside."
+    },
+    {
+     "concept_tag": "substituting-values-in-expressions",
+     "learning_objective": "Find the value of an algebraic expression such as 5m + 3 by replacing the letter-numbers with numbers."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH04-T3",
+   "topic_number": 3,
+   "title": "Simplification of Algebraic Expressions",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "like-and-unlike-terms",
+     "learning_objective": "Identify like and unlike terms and add like terms into a single term."
+    },
+    {
+     "concept_tag": "removing-brackets-and-simplifying",
+     "learning_objective": "Simplify expressions by removing brackets, using the distributive property and grouping like terms."
+    },
+    {
+     "concept_tag": "equality-of-expressions",
+     "learning_objective": "Decide whether two algebraic expressions are equal by comparing the values they take."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH04-T4",
+   "topic_number": 4,
+   "title": "Pick Patterns and Reveal Relationships",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "number-machine-formulas",
+     "learning_objective": "Find and apply the formula of a number machine from its inputs and outputs."
+    },
+    {
+     "concept_tag": "position-patterns",
+     "learning_objective": "Describe the positions of items in a repeating pattern with expressions such as 3n - 1."
+    },
+    {
+     "concept_tag": "calendar-patterns",
+     "learning_objective": "Use letter-numbers to prove that a calendar pattern always holds."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH04-T5",
+   "topic_number": 5,
+   "title": "Matchstick Patterns and Growing Patterns",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "matchstick-pattern-rule",
+     "learning_objective": "Find the general rule for the number of matchsticks at any step of a growing pattern."
+    },
+    {
+     "concept_tag": "modelling-situations-with-expressions",
+     "learning_objective": "Model real-life situations such as journeys and movement with algebraic expressions and interpret them."
+    }
+   ]
+  }
+ ]
+}

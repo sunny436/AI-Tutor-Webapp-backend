@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KECH2-CH03",
+ "title": "Hydrocarbons",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECH2-CH03-T1",
+   "topic_number": 1,
+   "title": "Classification of hydrocarbons and their uses",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "hydrocarbon-classification",
+     "learning_objective": "Classify hydrocarbons as open-chain saturated, unsaturated, alicyclic or aromatic from structure or formula."
+    },
+    {
+     "concept_tag": "hydrocarbon-fuels",
+     "learning_objective": "Relate common fuels such as LPG, CNG, LNG and coal gas to their sources."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH2-CH03-T2",
+   "topic_number": 2,
+   "title": "Alkanes: nomenclature, isomerism and preparation",
+   "ncert_sections": "9.2, 9.2.1, 9.2.2",
+   "concepts": [
+    {
+     "concept_tag": "alkane-isomerism",
+     "learning_objective": "Identify the structural isomers possible for a given alkane formula."
+    },
+    {
+     "concept_tag": "alkane-preparation",
+     "learning_objective": "Predict products of decarboxylation, Wurtz reaction and Kolbe's electrolysis."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH2-CH03-T3",
+   "topic_number": 3,
+   "title": "Alkanes: properties and conformations",
+   "ncert_sections": "9.2.3, 9.2.4",
+   "concepts": [
+    {
+     "concept_tag": "alkane-properties",
+     "learning_objective": "Explain physical properties and the substitution, oxidation and aromatisation reactions of alkanes."
+    },
+    {
+     "concept_tag": "ethane-conformations",
+     "learning_objective": "Compare the stability of staggered and eclipsed conformations of ethane."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH2-CH03-T4",
+   "topic_number": 4,
+   "title": "Alkenes",
+   "ncert_sections": "9.3",
+   "concepts": [
+    {
+     "concept_tag": "alkene-isomerism",
+     "learning_objective": "Identify alkenes that show geometrical isomerism and compare properties of cis and trans forms."
+    },
+    {
+     "concept_tag": "alkene-addition",
+     "learning_objective": "Predict products of addition of HBr to unsymmetrical alkenes with and without peroxide."
+    },
+    {
+     "concept_tag": "alkene-ozonolysis",
+     "learning_objective": "Deduce the structure of an alkene from its ozonolysis products."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH2-CH03-T5",
+   "topic_number": 5,
+   "title": "Alkynes",
+   "ncert_sections": "9.4",
+   "concepts": [
+    {
+     "concept_tag": "alkyne-structure-acidity",
+     "learning_objective": "Explain the linear structure of ethyne and the acidic character of terminal alkynes."
+    },
+    {
+     "concept_tag": "alkyne-preparation-reactions",
+     "learning_objective": "Describe preparation of ethyne from calcium carbide and the addition of water to alkynes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH2-CH03-T6",
+   "topic_number": 6,
+   "title": "Aromatic hydrocarbons: structure, aromaticity and preparation",
+   "ncert_sections": "9.5.1, 9.5.2, 9.5.3, 9.5.4",
+   "concepts": [
+    {
+     "concept_tag": "benzene-structure",
+     "learning_objective": "Explain the equal bond lengths and stability of benzene using resonance."
+    },
+    {
+     "concept_tag": "aromaticity-huckel",
+     "learning_objective": "Apply the conditions of aromaticity and Huckel's (4n + 2) rule."
+    },
+    {
+     "concept_tag": "benzene-preparation",
+     "learning_objective": "Recall laboratory methods of preparing benzene."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH2-CH03-T7",
+   "topic_number": 7,
+   "title": "Reactions of benzene, directive influence and carcinogenicity",
+   "ncert_sections": "9.5.5, 9.5.6, 9.6",
+   "concepts": [
+    {
+     "concept_tag": "electrophilic-substitution",
+     "learning_objective": "Identify electrophiles and products in electrophilic substitution of benzene."
+    },
+    {
+     "concept_tag": "directive-influence",
+     "learning_objective": "Predict the directive and activating or deactivating effect of substituents on a benzene ring."
+    },
+    {
+     "concept_tag": "carcinogenicity",
+     "learning_objective": "State the origin and harmful effects of carcinogenic polynuclear hydrocarbons."
+    }
+   ]
+  }
+ ]
+}

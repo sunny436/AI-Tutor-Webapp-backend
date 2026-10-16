@@ -1,0 +1,1101 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "politics-in-india-since-independence-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "political_science",
+  "language": "english",
+  "title": "Politics in India Since Independence",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "leps2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEPS2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Challenges of Nation Building",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS2-CH01-T1",
+     "topic_number": 1,
+     "title": "Challenges for the new nation-state",
+     "ncert_sections": "Challenges for the new nation-state; Three Challenges",
+     "concepts": [
+      {
+       "concept_tag": "context-of-independence",
+       "learning_objective": "Describe the circumstances in which India became independent and the two goals shared by the national movement."
+      },
+      {
+       "concept_tag": "three-challenges-of-nation-building",
+       "learning_objective": "Identify the three challenges of unity, democracy and development faced by independent India."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH01-T2",
+     "topic_number": 2,
+     "title": "Partition: the process",
+     "ncert_sections": "Partition: displacement and rehabilitation; Process of partition",
+     "concepts": [
+      {
+       "concept_tag": "two-nation-theory",
+       "learning_objective": "Explain the two-nation theory and the opposition to it."
+      },
+      {
+       "concept_tag": "principle-of-religious-majorities",
+       "learning_objective": "Analyse the difficulties in applying the principle of religious majorities to divide British India."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH01-T3",
+     "topic_number": 3,
+     "title": "Consequences of partition",
+     "ncert_sections": "Consequences of partition; Mahatma Gandhi's sacrifice",
+     "concepts": [
+      {
+       "concept_tag": "consequences-of-partition",
+       "learning_objective": "Describe the human, administrative and emotional consequences of partition."
+      },
+      {
+       "concept_tag": "gandhi-and-communal-harmony",
+       "learning_objective": "Explain Mahatma Gandhi's efforts to restore communal harmony after partition."
+      },
+      {
+       "concept_tag": "minorities-and-secularism",
+       "learning_objective": "Explain why India's leaders chose the ideal of a secular nation after partition."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH01-T4",
+     "topic_number": 4,
+     "title": "Integration of Princely States: the problem and the approach",
+     "ncert_sections": "Integration of Princely States; The problem; Government's approach",
+     "concepts": [
+      {
+       "concept_tag": "paramountcy-and-princely-states",
+       "learning_objective": "Explain how the lapse of British paramountcy created the problem of the princely states."
+      },
+      {
+       "concept_tag": "patel-and-instrument-of-accession",
+       "learning_objective": "Describe the government's approach, Sardar Patel's role and the Instrument of Accession."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH01-T5",
+     "topic_number": 5,
+     "title": "Hyderabad, Manipur and other difficult accessions",
+     "ncert_sections": "Hyderabad; Manipur",
+     "concepts": [
+      {
+       "concept_tag": "hyderabad-accession",
+       "learning_objective": "Trace the events that led to Hyderabad's accession to India."
+      },
+      {
+       "concept_tag": "manipur-and-junagadh",
+       "learning_objective": "Describe how Manipur and Junagadh became part of India."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH01-T6",
+     "topic_number": 6,
+     "title": "Reorganisation of States",
+     "ncert_sections": "Reorganisation of States",
+     "concepts": [
+      {
+       "concept_tag": "linguistic-principle",
+       "learning_objective": "Explain why the linguistic principle was promised, postponed and finally accepted."
+      },
+      {
+       "concept_tag": "andhra-movement",
+       "learning_objective": "Describe the Vishalandhra movement and the role of Potti Sriramulu."
+      },
+      {
+       "concept_tag": "states-reorganisation-commission",
+       "learning_objective": "State the work of the States Reorganisation Commission and evaluate the effects of linguistic states."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH01-T7",
+     "topic_number": 7,
+     "title": "Creation of new states",
+     "ncert_sections": "Fast Forward: Creation of new states",
+     "concepts": [
+      {
+       "concept_tag": "later-reorganisation-of-states",
+       "learning_objective": "Recall the creation of states after 1956 such as Maharashtra, Gujarat, Punjab and the north-eastern states."
+      },
+      {
+       "concept_tag": "new-bases-for-statehood",
+       "learning_objective": "Explain the non-linguistic bases of later demands for new states."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Era of one-party dominance",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS2-CH02-T1",
+     "topic_number": 1,
+     "title": "Challenge of building democracy",
+     "ncert_sections": "Challenge of building democracy",
+     "concepts": [
+      {
+       "concept_tag": "democratic-path-choice",
+       "learning_objective": "Explain why India's leaders chose the democratic path and how they viewed the purpose of politics."
+      },
+      {
+       "concept_tag": "election-commission-preparations",
+       "learning_objective": "Describe how the Election Commission prepared for the first general election, including delimitation and electoral rolls."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH02-T2",
+     "topic_number": 2,
+     "title": "The first general election and changing methods of voting",
+     "ncert_sections": "Challenge of building democracy; Changing methods of voting",
+     "concepts": [
+      {
+       "concept_tag": "first-general-election-significance",
+       "learning_objective": "Evaluate why the 1952 general election was a landmark in the history of democracy."
+      },
+      {
+       "concept_tag": "changing-methods-of-voting",
+       "learning_objective": "Trace the change from candidate-wise ballot boxes to stamped ballot papers and the EVM."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH02-T3",
+     "topic_number": 3,
+     "title": "Congress dominance in the first three general elections",
+     "ncert_sections": "Congress dominance in the first three general elections; Communist victory in Kerala",
+     "concepts": [
+      {
+       "concept_tag": "congress-electoral-dominance",
+       "learning_objective": "Recall the extent of Congress victories in the 1952, 1957 and 1962 elections."
+      },
+      {
+       "concept_tag": "first-past-the-post-effect",
+       "learning_objective": "Analyse how the first-past-the-post system magnified the Congress's seat share."
+      },
+      {
+       "concept_tag": "communist-victory-kerala",
+       "learning_objective": "Describe the Communist victory in Kerala in 1957 and its dismissal in 1959."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH02-T4",
+     "topic_number": 4,
+     "title": "Nature of Congress dominance",
+     "ncert_sections": "Nature of Congress dominance",
+     "concepts": [
+      {
+       "concept_tag": "dominance-under-democracy",
+       "learning_objective": "Distinguish the Congress's dominance under democratic conditions from one-party rule elsewhere."
+      },
+      {
+       "concept_tag": "roots-of-congress-dominance",
+       "learning_objective": "Explain the factors rooted in the freedom struggle that led to Congress dominance."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH02-T5",
+     "topic_number": 5,
+     "title": "Congress as social and ideological coalition; tolerance and management of factions",
+     "ncert_sections": "Congress as social and ideological coalition; Tolerance and management of factions",
+     "concepts": [
+      {
+       "concept_tag": "social-ideological-coalition",
+       "learning_objective": "Explain how the Congress became a broad social and ideological coalition."
+      },
+      {
+       "concept_tag": "factions-and-congress-system",
+       "learning_objective": "Analyse how factionalism worked within the Congress and why the period is called the 'Congress system'."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH02-T6",
+     "topic_number": 6,
+     "title": "Emergence of opposition parties",
+     "ncert_sections": "Emergence of opposition parties; Socialist Party; Communist Party of India; Bharatiya Jana Sangh",
+     "concepts": [
+      {
+       "concept_tag": "opposition-parties-profiles",
+       "learning_objective": "Identify the leaders, ideologies and positions of the Socialist Party, the CPI and the Bharatiya Jana Sangh."
+      },
+      {
+       "concept_tag": "role-of-opposition",
+       "learning_objective": "Evaluate the role opposition parties played in keeping the system democratic despite few seats."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Politics of Planned Development",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS2-CH03-T1",
+     "topic_number": 1,
+     "title": "Political contestation over development",
+     "ncert_sections": "Political contestation",
+     "concepts": [
+      {
+       "concept_tag": "development-as-political-decision",
+       "learning_objective": "Explain why major development choices must be political decisions taken or approved by the people's representatives."
+      },
+      {
+       "concept_tag": "competing-interests-in-development",
+       "learning_objective": "Identify the competing interests of different groups in a development project such as mining in Orissa."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH03-T2",
+     "topic_number": 2,
+     "title": "Ideas of development",
+     "ncert_sections": "Ideas of development",
+     "concepts": [
+      {
+       "concept_tag": "modernisation-and-western-model",
+       "learning_objective": "Describe how development was equated with Western-style modernisation after Independence."
+      },
+      {
+       "concept_tag": "two-models-of-development",
+       "learning_objective": "Distinguish the liberal-capitalist and socialist models of development available to India in 1947."
+      },
+      {
+       "concept_tag": "left-and-right-ideology",
+       "learning_objective": "State what the terms Left and Right mean regarding the role of the state in the economy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH03-T3",
+     "topic_number": 3,
+     "title": "Planning and the Planning Commission",
+     "ncert_sections": "Planning",
+     "concepts": [
+      {
+       "concept_tag": "planning-commission",
+       "learning_objective": "Describe how the Planning Commission was set up, its advisory role and its objectives."
+      },
+      {
+       "concept_tag": "bombay-plan",
+       "learning_objective": "Explain the significance of the Bombay Plan of 1944 drafted by big industrialists."
+      },
+      {
+       "concept_tag": "global-appeal-of-planning",
+       "learning_objective": "Identify the world experiences that built public support for planning in the 1940s and 1950s."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH03-T4",
+     "topic_number": 4,
+     "title": "The early initiatives and the First Five Year Plan",
+     "ncert_sections": "The Early Initiatives; The First Five Year Plan",
+     "concepts": [
+      {
+       "concept_tag": "five-year-plans",
+       "learning_objective": "Explain how five year plans and the plan and non-plan budgets worked, and why a plan holiday was taken in 1966."
+      },
+      {
+       "concept_tag": "first-five-year-plan",
+       "learning_objective": "Describe the agrarian focus of the First Five Year Plan and the idea of hastening slowly."
+      },
+      {
+       "concept_tag": "savings-and-national-income",
+       "learning_objective": "Explain why planners sought to raise savings in order to raise national income."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH03-T5",
+     "topic_number": 5,
+     "title": "Rapid industrialisation and the Second Plan",
+     "ncert_sections": "Rapid Industrialisation",
+     "concepts": [
+      {
+       "concept_tag": "second-plan-heavy-industry",
+       "learning_objective": "Describe the Second Plan's stress on heavy industry and the public sector under P.C. Mahalanobis."
+      },
+      {
+       "concept_tag": "socialist-pattern-of-society",
+       "learning_objective": "State the significance of the Avadi resolution on a socialist pattern of society."
+      },
+      {
+       "concept_tag": "criticisms-of-industrial-strategy",
+       "learning_objective": "Evaluate the problems and criticisms of the industry-first plan strategy."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "India’s external relations",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS2-CH04-T1",
+     "topic_number": 1,
+     "title": "International context of India's foreign policy",
+     "ncert_sections": "International context; The Constitutional principles",
+     "concepts": [
+      {
+       "concept_tag": "post-war-international-context",
+       "learning_objective": "Explain how the post-war world and India's own concerns shaped its early foreign policy."
+      },
+      {
+       "concept_tag": "foreign-relations-and-independence",
+       "learning_objective": "Interpret Nehru's view that the conduct of foreign relations is the test of independence."
+      },
+      {
+       "concept_tag": "article-51-directive-principles",
+       "learning_objective": "Identify the Directive Principles in Article 51 on promoting international peace and security."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH04-T2",
+     "topic_number": 2,
+     "title": "The policy of non-alignment and Nehru's role",
+     "ncert_sections": "The Policy of non-alignment; Nehru's role; Distance from two camps",
+     "concepts": [
+      {
+       "concept_tag": "nehru-foreign-policy-objectives",
+       "learning_objective": "State the objectives of Nehru's foreign policy and the domestic debate around it."
+      },
+      {
+       "concept_tag": "non-alignment-cold-war",
+       "learning_objective": "Analyse why India kept away from Cold War military blocs and how it balanced between them."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH04-T3",
+     "topic_number": 3,
+     "title": "Afro-Asian unity",
+     "ncert_sections": "Afro-Asian unity",
+     "concepts": [
+      {
+       "concept_tag": "afro-asian-solidarity",
+       "learning_objective": "Explain India's efforts for Asian unity, decolonisation and against racism."
+      },
+      {
+       "concept_tag": "bandung-and-nam",
+       "learning_objective": "Describe the significance of the Bandung Conference and the founding of the Non-Aligned Movement."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH04-T4",
+     "topic_number": 4,
+     "title": "Peace with China: Panchsheel and Tibet",
+     "ncert_sections": "Peace and conflict with China; Tibet",
+     "concepts": [
+      {
+       "concept_tag": "early-friendship-panchsheel",
+       "learning_objective": "Describe the friendly start of India-China relations and the Panchsheel principles of 1954."
+      },
+      {
+       "concept_tag": "tibet-issue",
+       "learning_objective": "Explain how the Tibet question caused tension between India and China."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH04-T5",
+     "topic_number": 5,
+     "title": "The Chinese invasion, 1962",
+     "ncert_sections": "The Chinese invasion, 1962",
+     "concepts": [
+      {
+       "concept_tag": "boundary-dispute-and-war",
+       "learning_objective": "Describe the India-China boundary dispute and the course of the 1962 war."
+      },
+      {
+       "concept_tag": "consequences-of-1962-war",
+       "learning_objective": "Evaluate the effects of the 1962 war on India's image, leadership and external ties."
+      },
+      {
+       "concept_tag": "political-changes-after-1962",
+       "learning_objective": "Explain the war's effect on the Communist Party of India and on the Northeast."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH04-T6",
+     "topic_number": 6,
+     "title": "Wars and peace with Pakistan",
+     "ncert_sections": "Wars and Peace with Pakistan",
+     "concepts": [
+      {
+       "concept_tag": "kashmir-and-cooperation",
+       "learning_objective": "Explain the Kashmir conflict of 1947 and the cooperation that continued, including the Indus Waters Treaty."
+      },
+      {
+       "concept_tag": "war-of-1965",
+       "learning_objective": "Describe the course and outcome of the 1965 war and the Tashkent Agreement."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH04-T7",
+     "topic_number": 7,
+     "title": "Bangladesh war, 1971 and the cost of conflict",
+     "ncert_sections": "Bangladesh war, 1971",
+     "concepts": [
+      {
+       "concept_tag": "bangladesh-liberation-war",
+       "learning_objective": "Describe the crisis in East Pakistan and the course and outcome of the 1971 war."
+      },
+      {
+       "concept_tag": "cold-war-realignment-1971",
+       "learning_objective": "Analyse the US-China-Pakistan axis and the Indo-Soviet Treaty of 1971."
+      },
+      {
+       "concept_tag": "war-and-development",
+       "learning_objective": "Explain how the wars with neighbours affected India's planning and defence spending."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH04-T8",
+     "topic_number": 8,
+     "title": "India's nuclear policy and shifting alliances",
+     "ncert_sections": "India's nuclear policy; Shifting alliances in world politics",
+     "concepts": [
+      {
+       "concept_tag": "nuclear-policy",
+       "learning_objective": "Explain India's nuclear programme, its 1974 test and its stand on the NPT."
+      },
+      {
+       "concept_tag": "shifting-alliances",
+       "learning_objective": "Describe the shifts in India's foreign policy after 1977 and after 1990."
+      },
+      {
+       "concept_tag": "foreign-policy-consensus",
+       "learning_objective": "Evaluate the broad consensus among Indian parties on foreign policy matters."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Challenges to and Restoration of the Congress System",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS2-CH05-T1",
+     "topic_number": 1,
+     "title": "Challenge of political succession: from Nehru to Shastri to Indira Gandhi",
+     "ncert_sections": "Challenge of Political Succession; From Nehru to Shastri; From Shastri to Indira Gandhi",
+     "concepts": [
+      {
+       "concept_tag": "succession-after-nehru",
+       "learning_objective": "Explain why the succession after Nehru raised doubts about India's democracy and how it was resolved."
+      },
+      {
+       "concept_tag": "shastri-prime-ministership",
+       "learning_objective": "Describe the challenges India faced during Lal Bahadur Shastri's Prime Ministership."
+      },
+      {
+       "concept_tag": "indira-gandhi-selection",
+       "learning_objective": "Explain how and why Indira Gandhi was chosen as Prime Minister in 1966."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH05-T2",
+     "topic_number": 2,
+     "title": "Fourth General Elections, 1967: context and non-Congressism",
+     "ncert_sections": "Fourth General Elections, 1967; Context of the elections; Non-Congressism",
+     "concepts": [
+      {
+       "concept_tag": "economic-crisis-1960s",
+       "learning_objective": "Describe the economic and social crisis that formed the background to the 1967 elections."
+      },
+      {
+       "concept_tag": "non-congressism",
+       "learning_objective": "Explain the strategy of non-Congressism and Ram Manohar Lohia's argument for it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH05-T3",
+     "topic_number": 3,
+     "title": "Electoral verdict of 1967, coalitions and defection",
+     "ncert_sections": "Electoral verdict; Coalitions; Defection",
+     "concepts": [
+      {
+       "concept_tag": "political-earthquake-1967",
+       "learning_objective": "Describe the results of the 1967 elections at the national and State levels."
+      },
+      {
+       "concept_tag": "svd-coalitions",
+       "learning_objective": "Explain the nature of the SVD coalition governments formed after 1967."
+      },
+      {
+       "concept_tag": "defection-aya-ram-gaya-ram",
+       "learning_objective": "Explain the meaning of defection and the 'Aya Ram, Gaya Ram' phenomenon."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH05-T4",
+     "topic_number": 4,
+     "title": "Split in the Congress: Indira Gandhi vs the Syndicate",
+     "ncert_sections": "Split in the Congress; Indira vs. the 'Syndicate'; Presidential election, 1969; Abolition of Privy Purse",
+     "concepts": [
+      {
+       "concept_tag": "syndicate",
+       "learning_objective": "Identify the Syndicate and analyse how Indira Gandhi turned her power struggle with it into an ideological one."
+      },
+      {
+       "concept_tag": "presidential-election-1969",
+       "learning_objective": "Explain how the 1969 Presidential election led to the formal split of the Congress."
+      },
+      {
+       "concept_tag": "privy-purse",
+       "learning_objective": "Explain what the privy purse was and how it came to be abolished."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH05-T5",
+     "topic_number": 5,
+     "title": "The 1971 election and restoration of Congress",
+     "ncert_sections": "The 1971 Election and Restoration of Congress; The contest; The outcome and after",
+     "concepts": [
+      {
+       "concept_tag": "grand-alliance",
+       "learning_objective": "Describe the composition and weakness of the Grand Alliance of 1971."
+      },
+      {
+       "concept_tag": "garibi-hatao",
+       "learning_objective": "Explain the purpose of the 'Garibi Hatao' slogan in Indira Gandhi's political strategy."
+      },
+      {
+       "concept_tag": "election-1971-results",
+       "learning_objective": "Interpret the results of the 1971 Lok Sabha election and their consequences."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH05-T6",
+     "topic_number": 6,
+     "title": "Restoration? The nature of the new Congress",
+     "ncert_sections": "Restoration?",
+     "concepts": [
+      {
+       "concept_tag": "new-congress-nature",
+       "learning_objective": "Compare the new Congress under Indira Gandhi with the old Congress system."
+      },
+      {
+       "concept_tag": "shrinking-democratic-space",
+       "learning_objective": "Analyse why democratic spaces shrank despite the consolidation of the Congress."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "The Crisis of Democratic Order",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS2-CH06-T1",
+     "topic_number": 1,
+     "title": "Background to Emergency and the economic context",
+     "ncert_sections": "Background to Emergency; Economic context",
+     "concepts": [
+      {
+       "concept_tag": "economic-discontent-1971-75",
+       "learning_objective": "Explain how the Bangladesh crisis, the stoppage of US aid, oil price rise, inflation and monsoon failure created discontent after 1971."
+      },
+      {
+       "concept_tag": "polarised-and-personalised-politics",
+       "learning_objective": "Describe the bitter party competition and the conflicting views of the Congress and the opposition about the judiciary and personal authority."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH06-T2",
+     "topic_number": 2,
+     "title": "Gujarat and Bihar movements and the Railway strike",
+     "ncert_sections": "Gujarat and Bihar movements; Railway Strike of 1974",
+     "concepts": [
+      {
+       "concept_tag": "gujarat-bihar-student-movements",
+       "learning_objective": "Describe the causes, course and outcomes of the student agitations in Gujarat and Bihar in 1974-75."
+      },
+      {
+       "concept_tag": "total-revolution-jp",
+       "learning_objective": "Explain Jayaprakash Narayan's leadership of the Bihar movement and his call for total revolution."
+      },
+      {
+       "concept_tag": "railway-strike-1974",
+       "learning_objective": "Describe the 1974 Railway strike led by George Fernandes and the government's response to it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH06-T3",
+     "topic_number": 3,
+     "title": "Conflict with the judiciary",
+     "ncert_sections": "Conflict with Judiciary",
+     "concepts": [
+      {
+       "concept_tag": "parliament-judiciary-amendment-conflict",
+       "learning_objective": "Identify the constitutional issues between Parliament and the Supreme Court that culminated in the Kesavananda Bharati case."
+      },
+      {
+       "concept_tag": "supersession-and-committed-judiciary",
+       "learning_objective": "Evaluate the 1973 supersession of judges and the idea of a 'committed' judiciary and bureaucracy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH06-T4",
+     "topic_number": 4,
+     "title": "Declaration of Emergency",
+     "ncert_sections": "Declaration of Emergency; Crisis and response",
+     "concepts": [
+      {
+       "concept_tag": "allahabad-verdict-1975",
+       "learning_objective": "Explain the Allahabad High Court verdict of 12 June 1975 and the Supreme Court's partial stay on it."
+      },
+      {
+       "concept_tag": "article-352-proclamation",
+       "learning_objective": "Explain how and on what grounds Emergency was proclaimed under Article 352 and what powers it gave the government."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH06-T5",
+     "topic_number": 5,
+     "title": "Consequences of the Emergency",
+     "ncert_sections": "Consequences",
+     "concepts": [
+      {
+       "concept_tag": "press-censorship-and-bans",
+       "learning_objective": "Describe press censorship, the bans on organisations and the acts of resistance during the Emergency."
+      },
+      {
+       "concept_tag": "preventive-detention-habeas-corpus",
+       "learning_objective": "Explain preventive detention and the significance of the April 1976 Supreme Court ruling on habeas corpus."
+      },
+      {
+       "concept_tag": "constitutional-changes-during-emergency",
+       "learning_objective": "Identify the constitutional amendments made during the Emergency, including the forty-second amendment."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH06-T6",
+     "topic_number": 6,
+     "title": "Lessons of the Emergency",
+     "ncert_sections": "Lessons of the Emergency",
+     "concepts": [
+      {
+       "concept_tag": "lessons-for-democracy",
+       "learning_objective": "Assess the strengths and weaknesses of Indian democracy that the Emergency revealed."
+      },
+      {
+       "concept_tag": "emergency-provision-reforms",
+       "learning_objective": "State the changes made to the Emergency provision after 1977, including armed rebellion and written Cabinet advice."
+      },
+      {
+       "concept_tag": "institutions-and-protest-tension",
+       "learning_objective": "Analyse the unresolved issues of the balance between protest and governance and the politicisation of the police and administration."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH06-T7",
+     "topic_number": 7,
+     "title": "Politics after Emergency: the Lok Sabha elections of 1977",
+     "ncert_sections": "Politics after Emergency; Lok Sabha Elections, 1977",
+     "concepts": [
+      {
+       "concept_tag": "janata-party-formation",
+       "learning_objective": "Explain how the Janata Party was formed and how it turned the 1977 election into a referendum on the Emergency."
+      },
+      {
+       "concept_tag": "election-1977-results",
+       "learning_objective": "Interpret the results of the 1977 Lok Sabha elections and their regional pattern."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH06-T8",
+     "topic_number": 8,
+     "title": "Janata Government and the legacy of the Emergency",
+     "ncert_sections": "Janata Government; Legacy",
+     "concepts": [
+      {
+       "concept_tag": "janata-government-instability",
+       "learning_objective": "Explain the factional struggle in the Janata government and the reasons for the mid-term elections of 1980."
+      },
+      {
+       "concept_tag": "party-system-change-after-1977",
+       "learning_objective": "Describe how non-Congressism and the politics of backward castes changed the party system after 1977."
+      },
+      {
+       "concept_tag": "constitutional-vs-political-crisis",
+       "learning_objective": "Evaluate why the Emergency period is seen as both a constitutional and a more serious political crisis."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Regional aspirations",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS2-CH07-T1",
+     "topic_number": 1,
+     "title": "Region and the nation: the Indian approach and areas of tension",
+     "ncert_sections": "Region and the Nation; Indian approach; Areas of tension",
+     "concepts": [
+      {
+       "concept_tag": "indian-approach-to-diversity",
+       "learning_objective": "Explain how the Indian approach balances unity and diversity and treats regional aspirations democratically."
+      },
+      {
+       "concept_tag": "areas-of-tension-after-independence",
+       "learning_objective": "Identify the major regional tensions India faced in the first decades after Independence."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH07-T2",
+     "topic_number": 2,
+     "title": "Jammu and Kashmir",
+     "ncert_sections": "Jammu and Kashmir; Roots of the Problem; External and internal disputes; Politics since 1948; Insurgency and After; 2002 and Beyond",
+     "concepts": [
+      {
+       "concept_tag": "kashmir-roots-and-accession",
+       "learning_objective": "Describe the circumstances of Jammu and Kashmir's accession and the idea of Kashmiriyat."
+      },
+      {
+       "concept_tag": "kashmir-special-status-debate",
+       "learning_objective": "Distinguish the opposite reactions to the special status of Jammu and Kashmir under Article 370."
+      },
+      {
+       "concept_tag": "kashmir-politics-and-insurgency",
+       "learning_objective": "Trace the political developments in Jammu and Kashmir from 1948 to 2019 and explain the rise of insurgency."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH07-T3",
+     "topic_number": 3,
+     "title": "The Dravidian movement",
+     "ncert_sections": "Dravidian movement (box)",
+     "concepts": [
+      {
+       "concept_tag": "dravidian-movement-methods",
+       "learning_objective": "Explain the aims and democratic methods of the Dravidian movement and the DMK's early agitations."
+      },
+      {
+       "concept_tag": "dravidian-parties-tamil-politics",
+       "learning_objective": "Evaluate how Dravidian parties show the compatibility of regionalism and nationalism."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH07-T4",
+     "topic_number": 4,
+     "title": "Punjab",
+     "ncert_sections": "Punjab; Political context; Cycle of violence; Road to peace",
+     "concepts": [
+      {
+       "concept_tag": "punjab-political-context-anandpur",
+       "learning_objective": "Explain the political context of Akali politics and the Anandpur Sahib Resolution."
+      },
+      {
+       "concept_tag": "punjab-cycle-of-violence",
+       "learning_objective": "Describe Operation Blue Star, the assassination of Indira Gandhi and the anti-Sikh violence of 1984."
+      },
+      {
+       "concept_tag": "punjab-accord-and-peace",
+       "learning_objective": "Identify the provisions of the Punjab Accord and analyse how peace returned to Punjab."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH07-T5",
+     "topic_number": 5,
+     "title": "The North-East: autonomy and secession",
+     "ncert_sections": "The North-East; Demands for autonomy; Secessionist movements",
+     "concepts": [
+      {
+       "concept_tag": "north-east-region-and-reorganisation",
+       "learning_objective": "Describe the features of the North-East region and its political reorganisation."
+      },
+      {
+       "concept_tag": "north-east-autonomy-demands",
+       "learning_objective": "Explain how autonomy demands in the North-East were accommodated within the constitutional framework."
+      },
+      {
+       "concept_tag": "mizoram-nagaland-secession",
+       "learning_objective": "Compare the secessionist movements in Mizoram and Nagaland and their outcomes."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH07-T6",
+     "topic_number": 6,
+     "title": "Movements against outsiders and the Assam Movement",
+     "ncert_sections": "Movements against outsiders",
+     "concepts": [
+      {
+       "concept_tag": "movements-against-outsiders",
+       "learning_objective": "Explain why migration into the North-East led to movements against 'outsiders'."
+      },
+      {
+       "concept_tag": "assam-movement-and-accord",
+       "learning_objective": "Analyse the causes, methods and outcome of the Assam Movement and the Assam Accord of 1985."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH07-T7",
+     "topic_number": 7,
+     "title": "Accommodation and national integration",
+     "ncert_sections": "Accommodation and National Integration; Sikkim's merger (box); Goa's liberation (box)",
+     "concepts": [
+      {
+       "concept_tag": "lessons-of-regional-accommodation",
+       "learning_objective": "Evaluate the lessons the chapter draws for accommodating regional aspirations in a democracy."
+      },
+      {
+       "concept_tag": "sikkim-and-goa-integration",
+       "learning_objective": "Describe how Sikkim and Goa became part of the Indian Union."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS2-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Recent Developments in Indian Politics",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps208.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS2-CH08-T1",
+     "topic_number": 1,
+     "title": "Context of the 1990s",
+     "ncert_sections": "Context of the 1990s",
+     "concepts": [
+      {
+       "concept_tag": "five-developments-late-1980s",
+       "learning_objective": "Identify the five developments of the late 1980s that had a long-lasting impact on Indian politics."
+      },
+      {
+       "concept_tag": "end-of-congress-system",
+       "learning_objective": "Explain why the 1989 elections are said to mark the end of the 'Congress system'."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH08-T2",
+     "topic_number": 2,
+     "title": "Era of Coalitions",
+     "ncert_sections": "Era of Coalitions; Decline of Congress; Alliance politics",
+     "concepts": [
+      {
+       "concept_tag": "national-front-outside-support",
+       "learning_objective": "Describe how the National Front government of 1989 was formed and supported."
+      },
+      {
+       "concept_tag": "coalition-era-multi-party",
+       "learning_objective": "Explain the emergence of a multi-party system and coalition governments at the Centre after 1989."
+      },
+      {
+       "concept_tag": "changing-alliance-equations",
+       "learning_objective": "Analyse the shifting political equations behind the United Front and NDA governments."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH08-T3",
+     "topic_number": 3,
+     "title": "Political Rise of Other Backward Classes and the Mandal Commission",
+     "ncert_sections": "Political Rise of Other Backward Classes; 'Mandal' implemented; The Mandal Commission",
+     "concepts": [
+      {
+       "concept_tag": "obc-category-meaning",
+       "learning_objective": "State the meaning of the administrative category 'Other Backward Classes'."
+      },
+      {
+       "concept_tag": "mandal-commission-recommendations",
+       "learning_objective": "Recall the setting up and main recommendations of the Mandal Commission."
+      },
+      {
+       "concept_tag": "indira-sawhney-case",
+       "learning_objective": "Describe the implementation of the Mandal recommendation in 1990 and the Supreme Court's ruling on it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH08-T4",
+     "topic_number": 4,
+     "title": "Political Fallouts: Dalit Politics and the BSP",
+     "ncert_sections": "Political fallouts",
+     "concepts": [
+      {
+       "concept_tag": "bamcef-to-bsp",
+       "learning_objective": "Trace the emergence of the Bahujan Samaj Party from BAMCEF under Kanshi Ram."
+      },
+      {
+       "concept_tag": "bahujan-politics",
+       "learning_objective": "Explain the idea of Bahujan empowerment and the political success of the BSP."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH08-T5",
+     "topic_number": 5,
+     "title": "Communalism, Secularism, Democracy: Rise of the BJP and the Shah Bano Case",
+     "ncert_sections": "Communalism, Secularism, Democracy",
+     "concepts": [
+      {
+       "concept_tag": "bjp-formation-and-hindutva",
+       "learning_objective": "Describe the formation of the BJP and its shift towards Hindutva and nationalism."
+      },
+      {
+       "concept_tag": "shah-bano-case",
+       "learning_objective": "Explain the Shah Bano case and the political debate that followed the 1986 Act."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH08-T6",
+     "topic_number": 6,
+     "title": "Ayodhya Issue and its Resolution",
+     "ncert_sections": "Ayodhya Issue; From Legal Proceedings to Amicable Acceptance",
+     "concepts": [
+      {
+       "concept_tag": "ayodhya-dispute-timeline",
+       "learning_objective": "Sequence the major events in the Ayodhya dispute from 1528 to 1992."
+      },
+      {
+       "concept_tag": "supreme-court-2019-verdict",
+       "learning_objective": "Explain the 2019 Supreme Court verdict and what it shows about resolving conflicts in a democracy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH08-T7",
+     "topic_number": 7,
+     "title": "Lok Sabha Elections (2004-2019)",
+     "ncert_sections": "Lok Sabha Elections (2004-2019)",
+     "concepts": [
+      {
+       "concept_tag": "upa-governments",
+       "learning_objective": "Describe the formation and functioning of the Congress-led UPA governments of 2004 and 2009."
+      },
+      {
+       "concept_tag": "bjp-majority-2014-2019",
+       "learning_objective": "Interpret the results of the 2014 and 2019 Lok Sabha elections and party-position data."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS2-CH08-T8",
+     "topic_number": 8,
+     "title": "Growing Consensus",
+     "ncert_sections": "Growing consensus",
+     "concepts": [
+      {
+       "concept_tag": "four-elements-of-consensus",
+       "learning_objective": "Identify the four elements of the consensus that has emerged among most political parties."
+      },
+      {
+       "concept_tag": "pragmatic-coalition-politics",
+       "learning_objective": "Evaluate how coalition politics and popular movements shape democratic politics within this consensus."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

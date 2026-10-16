@@ -1,0 +1,565 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "computerised-accounting-system-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "accountancy",
+  "language": "english",
+  "title": "Computerised Accounting System",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "leca1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LECA1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "OVERVIEW OF COMPUTERISED ACCOUNTING SYSTEM",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leca101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECA1-CH01-T1",
+     "topic_number": 1,
+     "title": "Computerised Accounting System: meaning, components, data and information",
+     "ncert_sections": "Introduction, 1.1",
+     "concepts": [
+      {
+       "concept_tag": "cas-components",
+       "learning_objective": "Identify the five components of CAS and the role each plays in processing accounting transactions."
+      },
+      {
+       "concept_tag": "data-and-information",
+       "learning_objective": "Distinguish data from information and recognise the data elements of an accounting transaction."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH01-T2",
+     "topic_number": 2,
+     "title": "Accounting cycle and salient features of CAS",
+     "ncert_sections": "1.2, 1.3",
+     "concepts": [
+      {
+       "concept_tag": "accounting-cycle-phases",
+       "learning_objective": "Sequence the phases of the accounting cycle that CAS processes."
+      },
+      {
+       "concept_tag": "salient-features-of-cas",
+       "learning_objective": "Recognise the salient features of CAS software: simple and integrated, transparency, accuracy and speed, scalability and reliability."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH01-T3",
+     "topic_number": 3,
+     "title": "Grouping of accounts and the accounting equation",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "accounting-equation",
+       "learning_objective": "Apply the expanded accounting equation Assets = Liabilities + Capital + (Revenues - Expenses)."
+      },
+      {
+       "concept_tag": "account-groups-classification",
+       "learning_objective": "Classify accounts into the groups and sub-groups used for the Balance Sheet and Statement of Profit and Loss."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH01-T4",
+     "topic_number": 4,
+     "title": "Codification of accounts and coding structure",
+     "ncert_sections": "1.4.1, 1.4.2",
+     "concepts": [
+      {
+       "concept_tag": "coding-methods",
+       "learning_objective": "Distinguish sequential, block and mnemonic codes and where each is used."
+      },
+      {
+       "concept_tag": "coding-structure-design",
+       "learning_objective": "Develop and interpret a hierarchical coding structure and allot codes from it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH01-T5",
+     "topic_number": 5,
+     "title": "Using CAS software: security, advantages and limitations",
+     "ncert_sections": "1.5, 1.6, 1.7",
+     "concepts": [
+      {
+       "concept_tag": "cas-software-activities",
+       "learning_objective": "Distinguish one-time activities from recurring activities in using CAS software."
+      },
+      {
+       "concept_tag": "security-features",
+       "learning_objective": "Explain password security, data audit and data vault (encryption) in CAS software."
+      },
+      {
+       "concept_tag": "advantages-limitations",
+       "learning_objective": "Evaluate the advantages and limitations of CAS."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH01-T6",
+     "topic_number": 6,
+     "title": "Accounting Information System and its sub-systems",
+     "ncert_sections": "1.8",
+     "concepts": [
+      {
+       "concept_tag": "ais-subsystems",
+       "learning_objective": "Identify the function and reports of each sub-system of the Accounting Information System."
+      },
+      {
+       "concept_tag": "management-information-system",
+       "learning_objective": "Explain the role of the Management Information System in managerial decision-making."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECA1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Spreadsheet",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leca102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECA1-CH02-T1",
+     "topic_number": 1,
+     "title": "Workbooks, worksheets, cells and cell references",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "workbook-worksheet-cell",
+       "learning_objective": "Identify a workbook, a worksheet, the active worksheet, a cell and a cell address in a spreadsheet."
+      },
+      {
+       "concept_tag": "cell-reference-types",
+       "learning_objective": "Distinguish relative, absolute and mixed cell references and predict how each changes when a formula is copied."
+      },
+      {
+       "concept_tag": "basic-and-derived-values",
+       "learning_objective": "Explain how derived values are calculated from basic values and support what-if analysis."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH02-T2",
+     "topic_number": 2,
+     "title": "Labels, formulas, order of operations and functions",
+     "ncert_sections": "2.1.1, 2.1.2, 2.1.3",
+     "concepts": [
+      {
+       "concept_tag": "labels-and-formulas",
+       "learning_objective": "Distinguish labels from formulas and explain how a formula's result can be kept as a fixed value."
+      },
+      {
+       "concept_tag": "order-of-operations",
+       "learning_objective": "Apply the order of mathematical operations that Excel follows when evaluating a formula."
+      },
+      {
+       "concept_tag": "functions-and-named-ranges",
+       "learning_objective": "Explain the structure of a function and use named ranges as function arguments."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH02-T3",
+     "topic_number": 3,
+     "title": "Logical functions: IF, nested IF, AND and OR",
+     "ncert_sections": "2.1.3, 2.1.4.4",
+     "concepts": [
+      {
+       "concept_tag": "if-function",
+       "learning_objective": "Evaluate the result of an IF function from its logical test and its true and false values."
+      },
+      {
+       "concept_tag": "nested-if",
+       "learning_objective": "Trace the result of nested IF functions that test several conditions in turn."
+      },
+      {
+       "concept_tag": "and-or-functions",
+       "learning_objective": "Use AND and OR to combine logical conditions, alone or inside IF."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH02-T4",
+     "topic_number": 4,
+     "title": "Date and time, mathematical and text functions",
+     "ncert_sections": "2.1.4.1, 2.1.4.2, 2.1.4.3",
+     "concepts": [
+      {
+       "concept_tag": "date-time-functions",
+       "learning_objective": "Use TODAY, NOW, DAY, MONTH, YEAR and DATEVALUE and interpret Excel's date serial numbers."
+      },
+      {
+       "concept_tag": "sumif-round-count",
+       "learning_objective": "Apply SUMIF, the rounding functions and the COUNT family of functions to business data."
+      },
+      {
+       "concept_tag": "text-functions",
+       "learning_objective": "Use TEXT and CONCATENATE to format numbers as text and join text strings."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH02-T5",
+     "topic_number": 5,
+     "title": "Lookup and reference functions",
+     "ncert_sections": "2.1.4.5",
+     "concepts": [
+      {
+       "concept_tag": "lookup-function",
+       "learning_objective": "Use the vector and array forms of LOOKUP and predict their results, including approximate matches."
+      },
+      {
+       "concept_tag": "vlookup-hlookup",
+       "learning_objective": "Use VLOOKUP and HLOOKUP with the correct arguments and explain their error values."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH02-T6",
+     "topic_number": 6,
+     "title": "Financial functions",
+     "ncert_sections": "2.1.2.6",
+     "concepts": [
+      {
+       "concept_tag": "pv-fv-pmt-functions",
+       "learning_objective": "Use PV, FV and PMT with consistent rate, nper, payment sign and type arguments."
+      },
+      {
+       "concept_tag": "npv-and-rate",
+       "learning_objective": "Explain how NPV and RATE work and how NPV differs from PV."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH02-T7",
+     "topic_number": 7,
+     "title": "Data entry, data validation and formatting",
+     "ncert_sections": "2.2, 2.3",
+     "concepts": [
+      {
+       "concept_tag": "data-entry-and-fill",
+       "learning_objective": "Describe default data alignment and use the fill handle and Fill Series for fast data entry."
+      },
+      {
+       "concept_tag": "data-validation",
+       "learning_objective": "Set data validation rules, input messages and error alerts to keep data accurate."
+      },
+      {
+       "concept_tag": "cell-formatting",
+       "learning_objective": "Apply number formats, merging of cells and other formatting tools to make a worksheet readable."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH02-T8",
+     "topic_number": 8,
+     "title": "Output reports, data tables, pivot tables and common errors",
+     "ncert_sections": "2.4, 2.5, 2.6",
+     "concepts": [
+      {
+       "concept_tag": "print-area",
+       "learning_objective": "Define, extend and clear a print area and print selected ranges of a worksheet."
+      },
+      {
+       "concept_tag": "data-and-pivot-tables",
+       "learning_objective": "Use one-variable and two-variable data tables and pivot tables to analyse and summarise data."
+      },
+      {
+       "concept_tag": "error-values",
+       "learning_objective": "Identify the causes of common error values such as #####, #DIV/0!, #N/A and #VALUE! and correct them."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECA1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Use of Spreadsheet in Business Applications",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leca103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECA1-CH03-T1",
+     "topic_number": 1,
+     "title": "Payroll accounting and payroll components",
+     "ncert_sections": "3.1, 3.1.1",
+     "concepts": [
+      {
+       "concept_tag": "payroll-process",
+       "learning_objective": "Describe what the preparation of a salary bill provides for, from payroll data to the advice to bank."
+      },
+      {
+       "concept_tag": "earnings-components",
+       "learning_objective": "Identify earning heads such as Basic Pay, Grade Pay, Dearness Pay, DA, HRA and Transport Allowance."
+      },
+      {
+       "concept_tag": "deductions-components",
+       "learning_objective": "Distinguish statutory deductions (PT, PF, TDS) from other deductions such as loan and advance recoveries."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH03-T2",
+     "topic_number": 2,
+     "title": "Elements used in payroll calculation",
+     "ncert_sections": "3.1.2",
+     "concepts": [
+      {
+       "concept_tag": "basic-pay-earned",
+       "learning_objective": "Compute the number of effective days present and the Basic Pay Earned for a month."
+      },
+      {
+       "concept_tag": "gross-and-net-salary",
+       "learning_objective": "Calculate total earnings, total deductions and net salary of an employee."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH03-T3",
+     "topic_number": 3,
+     "title": "Template design for a payroll spreadsheet",
+     "ncert_sections": "3.1.2.1",
+     "concepts": [
+      {
+       "concept_tag": "template-design",
+       "learning_objective": "Explain why a spreadsheet's layout and formula cells are planned as a template before data entry."
+      },
+      {
+       "concept_tag": "absolute-addressing",
+       "learning_objective": "Apply absolute cell addresses so that references to rate cells do not change when formulas are copied."
+      },
+      {
+       "concept_tag": "nested-if-function",
+       "learning_objective": "Interpret nested IF formulas that assign HRA and Transport Allowance by employee type."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH03-T4",
+     "topic_number": 4,
+     "title": "Asset accounting and depreciation",
+     "ncert_sections": "3.2, 3.2.1, 3.2.2",
+     "concepts": [
+      {
+       "concept_tag": "fixed-asset-classification",
+       "learning_objective": "Classify fixed assets as tangible or intangible and recognise the asset categories used in asset accounting."
+      },
+      {
+       "concept_tag": "depreciation-concept",
+       "learning_objective": "Explain why depreciation is charged on fixed assets and compute the total depreciation over an asset's life."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH03-T5",
+     "topic_number": 5,
+     "title": "Depreciation by SLM and WDV methods using SLN and DB",
+     "ncert_sections": "3.2.2.1, 3.2.2.2",
+     "concepts": [
+      {
+       "concept_tag": "sln-function",
+       "learning_objective": "Use the SLN function with cost to use, salvage value and life to compute straight line depreciation."
+      },
+      {
+       "concept_tag": "db-function",
+       "learning_objective": "Interpret the arguments of the DB function and the formulas used for period and months in the first year."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH03-T6",
+     "topic_number": 6,
+     "title": "Schedule forming part of the balance sheet",
+     "ncert_sections": "3.2.2.3",
+     "concepts": [
+      {
+       "concept_tag": "gross-block",
+       "learning_objective": "Compute the closing gross block and accumulated depreciation in a fixed asset schedule."
+      },
+      {
+       "concept_tag": "net-block",
+       "learning_objective": "Compute and interpret the net block as gross block less accumulated depreciation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH03-T7",
+     "topic_number": 7,
+     "title": "Loan repayment schedule using PMT",
+     "ncert_sections": "3.3, 3.3.1, 3.3.1.1",
+     "concepts": [
+      {
+       "concept_tag": "pmt-function-parameters",
+       "learning_objective": "State the meaning of the Rate, Nper, Pv, Fv and Type arguments of the PMT function."
+      },
+      {
+       "concept_tag": "loan-instalment-computation",
+       "learning_objective": "Write PMT formulas whose rate and number of periods match, to compute loan instalments."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECA1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Graphs and Charts for Business Data",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leca104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECA1-CH04-T1",
+     "topic_number": 1,
+     "title": "Graphs and charts: meaning and types",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "graph-dimensions-and-axes",
+       "learning_objective": "Explain that a graph is a pictorial representation of data with at least a two-dimensional relationship shown on X and Y axes."
+      },
+      {
+       "concept_tag": "pie-chart-and-bar-diagram",
+       "learning_objective": "Distinguish a pie chart, which shows sub-groups of a single variable, from a bar diagram, which compares values."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH04-T2",
+     "topic_number": 2,
+     "title": "Basic steps for preparing a chart in Excel",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "excel-chart-creation-steps",
+       "learning_objective": "Describe how a chart is created in MS Excel 2007 from worksheet data using the Insert tab and Charts group."
+      },
+      {
+       "concept_tag": "worksheet-data-for-charts",
+       "learning_objective": "Organise and interpret worksheet data, including row and column totals, before plotting it in a chart."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH04-T3",
+     "topic_number": 3,
+     "title": "Elements of a chart",
+     "ncert_sections": "4.2.1",
+     "concepts": [
+      {
+       "concept_tag": "chart-area-and-plot-area",
+       "learning_objective": "Differentiate the chart area from the plot area of 2-D and 3-D charts."
+      },
+      {
+       "concept_tag": "data-series-and-legend",
+       "learning_objective": "Explain data points, data markers, data series and the legend that identifies them."
+      },
+      {
+       "concept_tag": "titles-and-data-labels",
+       "learning_objective": "Identify the role of chart titles, axis titles and data labels."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH04-T4",
+     "topic_number": 4,
+     "title": "Formatting and resizing a chart",
+     "ncert_sections": "4.2.2, 4.2.4",
+     "concepts": [
+      {
+       "concept_tag": "chart-tools-design-layout-format",
+       "learning_objective": "Use the Design, Layout and Format tabs of Chart Tools to change the look of chart elements."
+      },
+      {
+       "concept_tag": "resizing-a-chart",
+       "learning_objective": "Describe how a chart is selected and resized by dragging its corners or borders."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH04-T5",
+     "topic_number": 5,
+     "title": "Changing the chart type and the pie chart",
+     "ncert_sections": "4.2.3",
+     "concepts": [
+      {
+       "concept_tag": "pie-chart-conditions",
+       "learning_objective": "State the conditions under which data can be plotted as a pie chart and what its slices represent."
+      },
+      {
+       "concept_tag": "pie-chart-creation-steps",
+       "learning_objective": "Follow the steps for creating and formatting a 3-D pie chart in Excel."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH04-T6",
+     "topic_number": 6,
+     "title": "2-D and 3-D charts, radar and doughnut charts",
+     "ncert_sections": "4.2.5",
+     "concepts": [
+      {
+       "concept_tag": "two-d-axes-and-origin",
+       "learning_objective": "Plot independent and dependent values, including negative values, on the X and Y axes around the origin."
+      },
+      {
+       "concept_tag": "three-d-depth-axis",
+       "learning_objective": "Explain the depth (series) axis or Z-axis used in 3-D charts."
+      },
+      {
+       "concept_tag": "radar-and-doughnut-charts",
+       "learning_objective": "Compare radar and doughnut charts with pie charts in terms of axes and data series."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECA1-CH04-T7",
+     "topic_number": 7,
+     "title": "Advantages of using graphs and charts",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "explore-present-convince",
+       "learning_objective": "Explain how graphs help to explore, present and convince."
+      },
+      {
+       "concept_tag": "visualising-trends",
+       "learning_objective": "Evaluate why charts make trends in data easier to grasp than text."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

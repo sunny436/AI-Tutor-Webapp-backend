@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KECS1-CH03",
+ "title": "Emerging Trends",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECS1-CH03-T1",
+   "topic_number": 1,
+   "title": "Artificial Intelligence, Machine Learning and NLP",
+   "ncert_sections": "3.1, 3.2, 3.2.1, 3.2.2",
+   "concepts": [
+    {
+     "concept_tag": "artificial-intelligence",
+     "learning_objective": "Describe AI as simulating human cognitive functions using a knowledge base."
+    },
+    {
+     "concept_tag": "machine-learning",
+     "learning_objective": "Explain how machine learning models are trained and tested on data to make predictions."
+    },
+    {
+     "concept_tag": "natural-language-processing",
+     "learning_objective": "Identify applications of NLP such as predictive typing, speech-to-text and machine translation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH03-T2",
+   "topic_number": 2,
+   "title": "Immersive Experiences and Robotics",
+   "ncert_sections": "3.2.3, 3.2.4",
+   "concepts": [
+    {
+     "concept_tag": "virtual-and-augmented-reality",
+     "learning_objective": "Distinguish virtual reality from augmented reality and give their applications."
+    },
+    {
+     "concept_tag": "robotics",
+     "learning_objective": "Describe robots, their types and applications such as rovers, humanoids and drones."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH03-T3",
+   "topic_number": 3,
+   "title": "Big Data and Data Analytics",
+   "ncert_sections": "3.3, 3.3.1, 3.3.2",
+   "concepts": [
+    {
+     "concept_tag": "big-data",
+     "learning_objective": "Explain what big data is and why traditional tools cannot process it."
+    },
+    {
+     "concept_tag": "characteristics-of-big-data",
+     "learning_objective": "Identify the five Vs of big data: volume, velocity, variety, veracity and value."
+    },
+    {
+     "concept_tag": "data-analytics",
+     "learning_objective": "Describe data analytics and its uses in business and science."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH03-T4",
+   "topic_number": 4,
+   "title": "Internet of Things, Web of Things, Sensors and Smart Cities",
+   "ncert_sections": "3.4, 3.4.1, 3.4.2, 3.4.3",
+   "concepts": [
+    {
+     "concept_tag": "internet-of-things",
+     "learning_objective": "Define IoT as a network of devices with embedded hardware and software that exchange data."
+    },
+    {
+     "concept_tag": "web-of-things",
+     "learning_objective": "Explain how WoT uses web services to connect IoT devices through one interface."
+    },
+    {
+     "concept_tag": "sensors-and-smart-cities",
+     "learning_objective": "Describe the role of sensors, including smart sensors, in IoT and smart cities."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH03-T5",
+   "topic_number": 5,
+   "title": "Cloud Computing and Cloud Services",
+   "ncert_sections": "3.5, 3.5.1",
+   "concepts": [
+    {
+     "concept_tag": "cloud-computing",
+     "learning_objective": "Explain cloud computing as on-demand, pay-per-use services delivered over the Internet."
+    },
+    {
+     "concept_tag": "cloud-service-models",
+     "learning_objective": "Distinguish IaaS, PaaS and SaaS with examples."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH03-T6",
+   "topic_number": 6,
+   "title": "Grid Computing",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "grid-computing",
+     "learning_objective": "Describe a grid as dispersed, heterogeneous nodes working together on a large task."
+    },
+    {
+     "concept_tag": "grid-types-and-middleware",
+     "learning_objective": "Identify data and CPU grids, middleware like Globus, and contrast grids with IaaS."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH03-T7",
+   "topic_number": 7,
+   "title": "Blockchains",
+   "ncert_sections": "3.7",
+   "concepts": [
+    {
+     "concept_tag": "blockchain-concept",
+     "learning_objective": "Explain blockchain as a decentralised, shared, append-only ledger kept by all nodes."
+    },
+    {
+     "concept_tag": "blockchain-applications",
+     "learning_objective": "Evaluate applications of blockchain in currency, healthcare, land records and voting."
+    }
+   ]
+  }
+ ]
+}

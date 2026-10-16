@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LHPH2-CH01",
+ "title": "किरण प्रकाशिकी एवं प्रकाशिक यंत्र",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHPH2-CH01-T1",
+   "topic_number": 1,
+   "title": "गोलीय दर्पणों द्वारा प्रकाश का परावर्तन",
+   "ncert_sections": "9.2, 9.2.1, 9.2.2, 9.2.3",
+   "concepts": [
+    {
+     "concept_tag": "chinh-paripati",
+     "learning_objective": "नव-कार्तीय चिह्न परिपाटी के अनुसार दूरियों के चिह्न निर्धारित करना।"
+    },
+    {
+     "concept_tag": "fokas-doori",
+     "learning_objective": "गोलीय दर्पण की फोकस दूरी और वक्रता त्रिज्या का संबंध समझना।"
+    },
+    {
+     "concept_tag": "darpan-sutra",
+     "learning_objective": "दर्पण सूत्र और आवर्धन का प्रयोग कर प्रतिबिंब की स्थिति और साइज़ ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH01-T2",
+   "topic_number": 2,
+   "title": "अपवर्तन",
+   "ncert_sections": "9.3",
+   "concepts": [
+    {
+     "concept_tag": "snell-niyam",
+     "learning_objective": "स्नेल के नियम और आपेक्षिक अपवर्तनांक को समझना और लागू करना।"
+    },
+    {
+     "concept_tag": "aabhasi-gahrai",
+     "learning_objective": "अपवर्तन के कारण आभासी गहराई और वायुमंडलीय अपवर्तन के प्रभावों की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH01-T3",
+   "topic_number": 3,
+   "title": "पूर्ण आंतरिक परावर्तन",
+   "ncert_sections": "9.4, 9.4.1",
+   "concepts": [
+    {
+     "concept_tag": "krantik-kon",
+     "learning_objective": "पूर्ण आंतरिक परावर्तन की शर्तें और क्रांतिक कोण का अपवर्तनांक से संबंध समझना।"
+    },
+    {
+     "concept_tag": "prakashik-tantu",
+     "learning_objective": "प्रकाशिक तंतु, प्रिज्म और प्रकृति में पूर्ण आंतरिक परावर्तन के उपयोग पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH01-T4",
+   "topic_number": 4,
+   "title": "गोलीय पृष्ठों और लेंसों द्वारा अपवर्तन",
+   "ncert_sections": "9.5, 9.5.1, 9.5.2, 9.5.3, 9.5.4",
+   "concepts": [
+    {
+     "concept_tag": "lens-sutra",
+     "learning_objective": "पतले लेंस के सूत्र और लेंस-निर्माता सूत्र का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "lens-kshamata",
+     "learning_objective": "लेंस की क्षमता तथा संपर्क में रखे पतले लेंसों के संयोजन की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH01-T5",
+   "topic_number": 5,
+   "title": "प्रिज्म से अपवर्तन",
+   "ncert_sections": "9.6",
+   "concepts": [
+    {
+     "concept_tag": "nyuntam-vichalan",
+     "learning_objective": "प्रिज्म में विचलन कोण और न्यूनतम विचलन की स्थिति का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "patla-prism",
+     "learning_objective": "पतले प्रिज्म के विचलन कोण का सूत्र लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH01-T6",
+   "topic_number": 6,
+   "title": "प्रकाशिक यंत्र",
+   "ncert_sections": "9.7, 9.7.1, 9.7.2",
+   "concepts": [
+    {
+     "concept_tag": "sukshmdarshi",
+     "learning_objective": "सरल और संयुक्त सूक्ष्मदर्शी की आवर्धन क्षमता समझना और ज्ञात करना।"
+    },
+    {
+     "concept_tag": "doordarshi",
+     "learning_objective": "अपवर्ती और परावर्ती दूरदर्शक की आवर्धन क्षमता तथा संरचना का विश्लेषण करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "chapter_id": "GECU1-CH01",
+ "title": "The Ever-Evolving World of Science",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GECU1-CH01-T1",
+   "topic_number": 1,
+   "title": "Science as a process of discovery",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "science-as-a-process",
+     "learning_objective": "Describe science as an ongoing process and a way of thinking that welcomes curiosity and questions."
+    },
+    {
+     "concept_tag": "learning-through-experiments",
+     "learning_objective": "Explain why activities, experiments and simple observations are central to learning science."
+    },
+    {
+     "concept_tag": "science-and-responsibility",
+     "learning_objective": "Relate human activities to the natural world and the role of science in building a sustainable world."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH01-T2",
+   "topic_number": 2,
+   "title": "Interconnected fields: materials, changes, heat and water",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "interconnected-fields-of-science",
+     "learning_objective": "Recognise that physics, chemistry, biology and earth sciences are interconnected."
+    },
+    {
+     "concept_tag": "properties-and-changes-of-materials",
+     "learning_objective": "Identify properties of materials and distinguish changes that can be reversed from those that cannot."
+    },
+    {
+     "concept_tag": "heat-and-water-movement",
+     "learning_objective": "Describe how heat flows and how water moves from the seas to rain and into the ground."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH01-T3",
+   "topic_number": 3,
+   "title": "Life processes, time, light and the sky",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "life-processes",
+     "learning_objective": "State that animals and plants carry out life processes such as getting food and breathing."
+    },
+    {
+     "concept_tag": "measuring-time-with-shadows",
+     "learning_objective": "Explain how early humans used the position of shadows to tell the time."
+    },
+    {
+     "concept_tag": "light-shadows-and-sky",
+     "learning_objective": "Relate day and night and eclipses to light, shadows and the movements of the Earth and the Moon."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH01-T4",
+   "topic_number": 4,
+   "title": "Happy Exploring: Question the Answer",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "asking-good-questions",
+     "learning_objective": "Explain why asking interesting questions is as important as finding answers in science."
+    },
+    {
+     "concept_tag": "many-questions-one-answer",
+     "learning_objective": "Recognise that a single answer can fit many very different questions."
+    },
+    {
+     "concept_tag": "experiments-lead-to-new-questions",
+     "learning_objective": "Evaluate how even confirming experiments can lead to further questions and experiments."
+    }
+   ]
+  }
+ ]
+}

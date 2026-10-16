@@ -1,0 +1,88 @@
+{
+ "chapter_id": "KHBO1-CH01",
+ "title": "जीव जगत",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHBO1-CH01-T1",
+   "topic_number": 1,
+   "title": "जीव जगत की विविधता, पहचान एवं नामपद्धति की आवश्यकता",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "jaiv-vividhata",
+     "learning_objective": "जैव विविधता का अर्थ तथा ज्ञात और वर्णित जातियों की लगभग संख्या बताना।"
+    },
+    {
+     "concept_tag": "pahchan-namapaddhati",
+     "learning_objective": "स्थानीय नामों से होने वाले भ्रम के कारण पहचान और मानक नामपद्धति की आवश्यकता समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH01-T2",
+   "topic_number": 2,
+   "title": "द्विनाम नामपद्धति एवं नामकरण के नियम",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "dvinam-namapaddhati",
+     "learning_objective": "लिनियस द्वारा दी गई द्विनाम नामपद्धति के दो घटकों—वंश नाम और जाति संकेत पद—को पहचानना।"
+    },
+    {
+     "concept_tag": "namakaran-niyam",
+     "learning_objective": "वैज्ञानिक नाम लिखने के सार्वभौमिक नियम तथा पादपों और जंतुओं के अंतरराष्ट्रीय नामकरण कोडों को लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH01-T3",
+   "topic_number": 3,
+   "title": "वर्गीकरण, वर्गक, वर्गिकी एवं वर्गीकरण पद्धति",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "vargikaran-vargak",
+     "learning_objective": "वर्गीकरण की प्रक्रिया तथा विभिन्न स्तरों के वर्गकों (टैक्सा) को उदाहरणों सहित समझना।"
+    },
+    {
+     "concept_tag": "vargiki-paddhati",
+     "learning_objective": "वर्गिकी के मूल प्रक्रमों तथा वर्गीकरण पद्धति (सिस्टमैटिक्स) के अर्थ और विस्तार में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH01-T4",
+   "topic_number": 4,
+   "title": "वर्गिकीय संवर्ग: जाति, वंश एवं कुल",
+   "ncert_sections": "1.2, 1.2.1, 1.2.2, 1.2.3",
+   "concepts": [
+    {
+     "concept_tag": "jati",
+     "learning_objective": "जाति को वर्गीकरण की सबसे निचली इकाई के रूप में और उसके उदाहरणों को पहचानना।"
+    },
+    {
+     "concept_tag": "vansh-kul",
+     "learning_objective": "वंश और कुल को संबंधित जातियों तथा संबंधित वंशों के समूह के रूप में उदाहरणों सहित स्पष्ट करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH01-T5",
+   "topic_number": 5,
+   "title": "गण, वर्ग, संघ, जगत एवं वर्गिकीय पदानुक्रम",
+   "ncert_sections": "1.2.4, 1.2.5, 1.2.6, 1.2.7",
+   "concepts": [
+    {
+     "concept_tag": "uchch-sanvarg",
+     "learning_objective": "गण, वर्ग, संघ (प्रभाग) तथा जगत संवर्गों को उनके उदाहरणों सहित पहचानना।"
+    },
+    {
+     "concept_tag": "vargikiy-padanukram",
+     "learning_objective": "जाति से जगत की ओर बढ़ने पर उभयनिष्ठ लक्षणों में होने वाले परिवर्तन का विश्लेषण करना।"
+    }
+   ]
+  }
+ ]
+}

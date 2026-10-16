@@ -1,0 +1,1794 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "curiosity-c08-en",
+  "curriculum": "cbse",
+  "class_level": 8,
+  "subject_code": "science",
+  "language": "english",
+  "title": "Curiosity",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "hecu1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "HECU1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Exploring the Investigative World of Science",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH01-T1",
+     "topic_number": 1,
+     "title": "From wonder to investigation: the root and the kite",
+     "ncert_sections": "Pages 1-2",
+     "concepts": [
+      {
+       "concept_tag": "science-as-investigation",
+       "learning_objective": "Explain that Grade 8 science aims at learning how to find new facts through focused questions, simple experiments and observation."
+      },
+      {
+       "concept_tag": "root-and-kite-balance",
+       "learning_objective": "Interpret the root and kite symbols as the balance between careful observation and creative thinking."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH01-T2",
+     "topic_number": 2,
+     "title": "The journey ahead: microbes, health, electricity, force and pressure",
+     "ncert_sections": "Pages 3-4",
+     "concepts": [
+      {
+       "concept_tag": "microbes-and-health",
+       "learning_objective": "Recognise that microorganisms can be helpful or harmful and that food, exercise, medicines and vaccines keep us healthy."
+      },
+      {
+       "concept_tag": "electric-current-effects",
+       "learning_objective": "Identify the heating and magnetic effects of electric current and their everyday uses."
+      },
+      {
+       "concept_tag": "force-pressure-and-weather",
+       "learning_objective": "Relate force and pressure to how air moves, from gentle breezes to cyclones."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH01-T3",
+     "topic_number": 3,
+     "title": "Particles, materials and light",
+     "ncert_sections": "Page 4",
+     "concepts": [
+      {
+       "concept_tag": "particles-and-materials",
+       "learning_objective": "Describe how particles move in solids and gases and classify materials as elements, compounds and mixtures."
+      },
+      {
+       "concept_tag": "reflection-and-bending-of-light",
+       "learning_objective": "Recognise that light reflects from mirrors and rough surfaces and bends when it passes through lenses."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH01-T4",
+     "topic_number": 4,
+     "title": "Moon, calendars, ecosystems and a planet just right for life",
+     "ncert_sections": "Pages 4-5",
+     "concepts": [
+      {
+       "concept_tag": "moon-phases-and-calendars",
+       "learning_objective": "Explain that the Moon's phases depend on the positions of the Earth, Moon and Sun and helped humans make calendars."
+      },
+      {
+       "concept_tag": "ecosystems-and-earth-for-life",
+       "learning_objective": "Describe how living beings depend on their surroundings and why Earth is suited to life."
+      },
+      {
+       "concept_tag": "human-impact-on-climate",
+       "learning_objective": "Evaluate the role of human activities and science in changing and protecting Earth's climate."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH01-T5",
+     "topic_number": 5,
+     "title": "Investigating like a scientist: why does a puri puff up?",
+     "ncert_sections": "Pages 6-7",
+     "concepts": [
+      {
+       "concept_tag": "controllable-factors",
+       "learning_objective": "Identify the factors that can be changed or controlled in a simple kitchen experiment."
+      },
+      {
+       "concept_tag": "observing-and-measuring",
+       "learning_objective": "Distinguish yes/no observations from measured quantities and value careful record-keeping."
+      },
+      {
+       "concept_tag": "fair-test-one-change",
+       "learning_objective": "Apply the rule of changing only one factor at a time while keeping other conditions the same."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HECU1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "The Invisible Living World: Beyond Our Naked Eye",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH02-T1",
+     "topic_number": 1,
+     "title": "Seeing the invisible: lenses and early microscopes",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lens-magnification",
+       "learning_objective": "Explain how a curved transparent lens or water-filled flask makes small things look bigger."
+      },
+      {
+       "concept_tag": "hooke-and-cells",
+       "learning_objective": "Describe Robert Hooke's observation of cork and his first use of the word cell."
+      },
+      {
+       "concept_tag": "leeuwenhoek-microbiology",
+       "learning_objective": "State why Antonie van Leeuwenhoek is called the Father of Microbiology."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH02-T2",
+     "topic_number": 2,
+     "title": "Basic structure of a cell",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "cell-observation-staining",
+       "learning_objective": "Describe how onion peel and cheek cells are stained and mounted for observation."
+      },
+      {
+       "concept_tag": "parts-of-a-cell",
+       "learning_objective": "Identify the cell membrane, cytoplasm and nucleus and state their functions."
+      },
+      {
+       "concept_tag": "plant-cell-structures",
+       "learning_objective": "Explain the roles of the cell wall, plastids and vacuole in plant cells."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH02-T3",
+     "topic_number": 3,
+     "title": "Variation in shape and structure of cells",
+     "ncert_sections": "2.1.1",
+     "concepts": [
+      {
+       "concept_tag": "cell-shape-function",
+       "learning_objective": "Relate the shape of muscle, nerve and cheek cells to the functions they perform."
+      },
+      {
+       "concept_tag": "cells-in-digestion",
+       "learning_objective": "Explain how different cell types in the food pipe and stomach work together in digestion."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH02-T4",
+     "topic_number": 4,
+     "title": "Levels of organisation in living organisms",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "levels-of-organisation",
+       "learning_objective": "Arrange cell, tissue, organ, organ system and organism in order and classify examples."
+      },
+      {
+       "concept_tag": "multicellular-development",
+       "learning_objective": "Explain that complex organisms begin as a single egg cell, using the ostrich egg as an example."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH02-T5",
+     "topic_number": 5,
+     "title": "Microorganisms and how we observe them",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "microorganism-types",
+       "learning_objective": "Classify microorganisms as protozoa, algae, fungi and bacteria and as unicellular or multicellular."
+      },
+      {
+       "concept_tag": "observing-microbes",
+       "learning_objective": "Interpret observations of pond water and soil suspension under a microscope."
+      },
+      {
+       "concept_tag": "viruses-acellular",
+       "learning_objective": "State why viruses differ from other microorganisms."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH02-T6",
+     "topic_number": 6,
+     "title": "Microbes around us and in cleaning the environment",
+     "ncert_sections": "2.4, 2.4.1",
+     "concepts": [
+      {
+       "concept_tag": "microbe-habitats",
+       "learning_objective": "Recognise that microbes live everywhere and explain why salt and sugar preserve food."
+      },
+      {
+       "concept_tag": "decomposition-manure",
+       "learning_objective": "Explain how bacteria and fungi decompose waste into nutrient-rich manure."
+      },
+      {
+       "concept_tag": "biogas-and-bioremediation",
+       "learning_objective": "Describe how microbes produce biogas and can be used to clean up pollution."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH02-T7",
+     "topic_number": 7,
+     "title": "Microorganisms in food, farming and water",
+     "ncert_sections": "2.4.2, 2.4.3",
+     "concepts": [
+      {
+       "concept_tag": "fermentation-yeast-lactobacillus",
+       "learning_objective": "Explain the roles of yeast and Lactobacillus in making bread, idli and curd."
+      },
+      {
+       "concept_tag": "rhizobium-nitrogen-fixation",
+       "learning_objective": "Explain how Rhizobium in root nodules of legumes enriches soil with nitrogen."
+      },
+      {
+       "concept_tag": "microalgae-uses",
+       "learning_objective": "Describe the importance of microalgae such as Spirulina for oxygen, food and medicine."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH02-T8",
+     "topic_number": 8,
+     "title": "The cell as the basic unit of life",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "unicellular-multicellular",
+       "learning_objective": "Distinguish unicellular from multicellular organisms with examples."
+      },
+      {
+       "concept_tag": "microbial-cell-features",
+       "learning_objective": "Compare cells of bacteria and fungi with plant and animal cells."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HECU1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Health: The Ultimate Treasure",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH03-T1",
+     "topic_number": 1,
+     "title": "Health: more than not falling sick",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "who-definition-of-health",
+       "learning_objective": "State the WHO definition of health as complete physical, mental and social well-being."
+      },
+      {
+       "concept_tag": "factors-affecting-well-being",
+       "learning_objective": "Explain how habits and surroundings affect a person's physical, mental and social well-being."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH03-T2",
+     "topic_number": 2,
+     "title": "Staying healthy: lifestyle and a clean environment",
+     "ncert_sections": "3.2, 3.2.1, 3.2.2",
+     "concepts": [
+      {
+       "concept_tag": "healthy-lifestyle-habits",
+       "learning_objective": "Distinguish healthy habits from unhealthy habits in daily life."
+      },
+      {
+       "concept_tag": "clean-environment-and-health",
+       "learning_objective": "Explain how clean surroundings, clean air and water, and good relationships support health."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH03-T3",
+     "topic_number": 3,
+     "title": "Knowing we are unwell: signs and symptoms",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "signs-versus-symptoms",
+       "learning_objective": "Distinguish a symptom (what we feel) from a sign (what can be seen or measured)."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH03-T4",
+     "topic_number": 4,
+     "title": "Diseases: causes and types",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "pathogens",
+       "learning_objective": "Identify pathogens such as bacteria, viruses, fungi, worms and protozoa as disease-causing organisms."
+      },
+      {
+       "concept_tag": "communicable-vs-non-communicable",
+       "learning_objective": "Classify diseases as communicable or non-communicable based on cause and spread."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH03-T5",
+     "topic_number": 5,
+     "title": "Spread and prevention of communicable diseases",
+     "ncert_sections": "3.4.1",
+     "concepts": [
+      {
+       "concept_tag": "modes-of-transmission",
+       "learning_objective": "Describe how communicable diseases spread through air, contact, food and water, and vectors."
+      },
+      {
+       "concept_tag": "prevention-of-communicable-diseases",
+       "learning_objective": "Choose suitable preventive measures for diseases listed in Table 3.1."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH03-T6",
+     "topic_number": 6,
+     "title": "Non-communicable diseases",
+     "ncert_sections": "3.4.2",
+     "concepts": [
+      {
+       "concept_tag": "deficiency-and-chronic-diseases",
+       "learning_objective": "Explain deficiency diseases and chronic diseases as types of non-communicable diseases."
+      },
+      {
+       "concept_tag": "lifestyle-diseases-diabetes",
+       "learning_objective": "Relate the causes, symptoms and prevention of lifestyle diseases such as diabetes and obesity."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH03-T7",
+     "topic_number": 7,
+     "title": "Prevention: immunity and vaccines",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "immunity-and-immune-system",
+       "learning_objective": "Define immunity and acquired immunity."
+      },
+      {
+       "concept_tag": "vaccines",
+       "learning_objective": "Explain how vaccines train the immune system and why they are preventive, not curative."
+      },
+      {
+       "concept_tag": "history-of-vaccination",
+       "learning_objective": "Describe Jenner's smallpox vaccine and the traditional Indian practice of variolation."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH03-T8",
+     "topic_number": 8,
+     "title": "Treatment of diseases and antibiotic resistance",
+     "ncert_sections": "3.5.1",
+     "concepts": [
+      {
+       "concept_tag": "antibiotics",
+       "learning_objective": "Explain that antibiotics act only against bacteria and recall the discovery of penicillin."
+      },
+      {
+       "concept_tag": "antibiotic-resistance",
+       "learning_objective": "Explain how antibiotic resistance develops and how wise use of antibiotics prevents it."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HECU1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Electricity: Magnetic and Heating Effects",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH04-T1",
+     "topic_number": 1,
+     "title": "Magnetic effect of electric current",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "magnetic-effect-of-current",
+       "learning_objective": "Explain that a current-carrying wire produces a magnetic field that deflects a nearby compass needle and disappears when the current stops."
+      },
+      {
+       "concept_tag": "oersted-discovery",
+       "learning_objective": "Recall Oersted's 1820 discovery that electricity and magnetism are linked."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH04-T2",
+     "topic_number": 2,
+     "title": "Electromagnets: construction, poles and strength",
+     "ncert_sections": "4.1.1",
+     "concepts": [
+      {
+       "concept_tag": "electromagnet-construction",
+       "learning_objective": "Describe an electromagnet as a current-carrying coil, usually with an iron core, that behaves as a magnet."
+      },
+      {
+       "concept_tag": "electromagnet-poles",
+       "learning_objective": "Identify the poles of an electromagnet using a compass and predict how reversing the current changes them."
+      },
+      {
+       "concept_tag": "electromagnet-strength",
+       "learning_objective": "Explain how the current and the number of turns of the coil change the strength of an electromagnet."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH04-T3",
+     "topic_number": 3,
+     "title": "Lifting electromagnets and Earth's magnetism",
+     "ncert_sections": "4.1.1, 4.1.2",
+     "concepts": [
+      {
+       "concept_tag": "lifting-electromagnet",
+       "learning_objective": "Explain how lifting electromagnets on cranes lift and release iron and steel objects by switching the current ON and OFF."
+      },
+      {
+       "concept_tag": "earth-magnetic-field",
+       "learning_objective": "Describe how currents in Earth's liquid iron core produce its magnetic field and why this field matters to living beings."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH04-T4",
+     "topic_number": 4,
+     "title": "Heating effect of electric current",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "heating-effect-and-resistance",
+       "learning_objective": "Explain that the resistance of a conductor converts some electrical energy into heat when current flows."
+      },
+      {
+       "concept_tag": "factors-affecting-heating",
+       "learning_objective": "Identify the factors on which the heat produced in a wire depends, such as current, material, thickness, length and time."
+      },
+      {
+       "concept_tag": "heating-appliances",
+       "learning_objective": "Identify appliances that use a heating element and the safety problems caused by overheating."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH04-T5",
+     "topic_number": 5,
+     "title": "Voltaic cell and the lemon cell",
+     "ncert_sections": "4.3, 4.3.1",
+     "concepts": [
+      {
+       "concept_tag": "voltaic-cell-parts",
+       "learning_objective": "Describe the electrodes and electrolyte of a Voltaic cell and how a chemical reaction produces electricity."
+      },
+      {
+       "concept_tag": "lemon-cell",
+       "learning_objective": "Construct and troubleshoot a lemon cell that lights an LED."
+      },
+      {
+       "concept_tag": "volta-galvani-history",
+       "learning_objective": "Explain how Volta's test showed that metals and a liquid, not the frog, produced the current."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH04-T6",
+     "topic_number": 6,
+     "title": "Dry cells and rechargeable batteries",
+     "ncert_sections": "4.3.2, 4.3.3",
+     "concepts": [
+      {
+       "concept_tag": "dry-cell-structure",
+       "learning_objective": "Describe the terminals and paste-like electrolyte of a dry cell and why it is single-use."
+      },
+      {
+       "concept_tag": "rechargeable-batteries",
+       "learning_objective": "Explain the uses and limits of rechargeable batteries such as Li-ion batteries."
+      },
+      {
+       "concept_tag": "battery-disposal",
+       "learning_objective": "Justify why used batteries should be sent for e-waste recycling."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HECU1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Exploring Forces",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH05-T1",
+     "topic_number": 1,
+     "title": "What is a force and what it can do",
+     "ncert_sections": "5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "force-as-push-or-pull",
+       "learning_objective": "Define force as a push or a pull applied on an object."
+      },
+      {
+       "concept_tag": "effects-of-force",
+       "learning_objective": "Identify how a force can start motion, change speed or direction, or change shape."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH05-T2",
+     "topic_number": 2,
+     "title": "Forces as an interaction between objects",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "force-interaction",
+       "learning_objective": "Explain that a force arises only when at least two objects interact, each feeling a force."
+      },
+      {
+       "concept_tag": "si-unit-of-force",
+       "learning_objective": "State and correctly write the SI unit of force, the newton (N)."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH05-T3",
+     "topic_number": 3,
+     "title": "Contact forces and muscular force",
+     "ncert_sections": "5.4.1",
+     "concepts": [
+      {
+       "concept_tag": "contact-force",
+       "learning_objective": "Recognise contact forces as those acting through direct or indirect physical contact."
+      },
+      {
+       "concept_tag": "muscular-force",
+       "learning_objective": "Describe muscular force and its use by humans and animals, inside and outside the body."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH05-T4",
+     "topic_number": 4,
+     "title": "Friction",
+     "ncert_sections": "5.4.1",
+     "concepts": [
+      {
+       "concept_tag": "friction-opposes-motion",
+       "learning_objective": "Explain that friction arises from surface irregularities and opposes motion or attempted motion."
+      },
+      {
+       "concept_tag": "friction-surfaces-and-fluids",
+       "learning_objective": "Relate the size of friction to the nature of surfaces and to motion through air and water."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH05-T5",
+     "topic_number": 5,
+     "title": "Non-contact forces: magnetic and electrostatic",
+     "ncert_sections": "5.4.2",
+     "concepts": [
+      {
+       "concept_tag": "magnetic-force",
+       "learning_objective": "Describe magnetic force as a non-contact force of attraction or repulsion between magnets."
+      },
+      {
+       "concept_tag": "electrostatic-force",
+       "learning_objective": "Explain electrostatic force between charged objects and the rule that like charges repel and unlike attract."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH05-T6",
+     "topic_number": 6,
+     "title": "Gravitational force and vertical motion",
+     "ncert_sections": "5.4.2",
+     "concepts": [
+      {
+       "concept_tag": "gravitational-force",
+       "learning_objective": "State that gravity is the Earth's always-attractive, non-contact pull on objects."
+      },
+      {
+       "concept_tag": "vertical-motion",
+       "learning_objective": "Describe how speed and direction change when an object moves up and down under gravity."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH05-T7",
+     "topic_number": 7,
+     "title": "Weight and its measurement",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "weight-and-spring-balance",
+       "learning_objective": "Define weight as a force and read a spring balance using its range and smallest division."
+      },
+      {
+       "concept_tag": "mass-versus-weight",
+       "learning_objective": "Distinguish mass, which stays the same, from weight, which depends on where the object is."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH05-T8",
+     "topic_number": 8,
+     "title": "Upthrust, floating and sinking",
+     "ncert_sections": "5.5, 5.6",
+     "concepts": [
+      {
+       "concept_tag": "buoyant-force",
+       "learning_objective": "Describe the buoyant force (upthrust) that a liquid applies upward on an object."
+      },
+      {
+       "concept_tag": "floating-and-sinking",
+       "learning_objective": "Predict floating or sinking by comparing the gravitational force with the buoyant force."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HECU1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Pressure, Winds, Storms, and Cyclones",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH06-T1",
+     "topic_number": 1,
+     "title": "Pressure as force per unit area",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "pressure-force-per-unit-area",
+       "learning_objective": "Define pressure as force per unit area, state its SI unit (pascal) and calculate it."
+      },
+      {
+       "concept_tag": "pressure-and-area-in-daily-life",
+       "learning_objective": "Explain everyday tasks by relating a smaller or larger contact area to higher or lower pressure."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH06-T2",
+     "topic_number": 2,
+     "title": "Pressure exerted by liquids",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "liquid-pressure-and-height",
+       "learning_objective": "Relate the pressure at the bottom of a liquid column to the height of the column, not its weight."
+      },
+      {
+       "concept_tag": "liquid-pressure-on-walls",
+       "learning_objective": "Show that liquids exert pressure on the sides of a container and in all directions."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH06-T3",
+     "topic_number": 3,
+     "title": "Pressure exerted by air",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "atmospheric-pressure",
+       "learning_objective": "Describe atmospheric pressure, its magnitude and its units, including millibar and hectopascal."
+      },
+      {
+       "concept_tag": "sucker-and-body-pressure-balance",
+       "learning_objective": "Explain a sucker and our safety under the atmosphere using a pressure difference or a pressure balance."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH06-T4",
+     "topic_number": 4,
+     "title": "Formation of wind",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "air-flows-high-to-low-pressure",
+       "learning_objective": "State that air moves from high to low pressure, faster when the pressure difference is larger."
+      },
+      {
+       "concept_tag": "sea-and-land-breeze",
+       "learning_objective": "Explain the sea breeze and the land breeze through pressure differences over land and sea."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH06-T5",
+     "topic_number": 5,
+     "title": "High-speed winds lower air pressure",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "high-speed-wind-low-pressure",
+       "learning_objective": "Infer from the two-balloon activity that high-speed winds are accompanied by reduced air pressure."
+      },
+      {
+       "concept_tag": "pressure-difference-on-structures",
+       "learning_objective": "Explain why roofs blow off in storms and how open doors, windows or holes reduce the pressure difference."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH06-T6",
+     "topic_number": 6,
+     "title": "Storms, thunderstorms and lightning",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "storm-formation",
+       "learning_objective": "Describe how rising warm, moist air, cooling and condensation lead to clouds, rain and storms."
+      },
+      {
+       "concept_tag": "charge-separation-and-lightning",
+       "learning_objective": "Explain charge separation in clouds and how the breakdown of air's insulation causes lightning and thunder."
+      },
+      {
+       "concept_tag": "lightning-safety",
+       "learning_objective": "Choose safe actions during lightning and explain how a lightning conductor protects a building."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH06-T7",
+     "topic_number": 7,
+     "title": "Cyclones",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "cyclone-formation",
+       "learning_objective": "Explain how heat released by condensation, inflowing air and Earth's rotation build a cyclone, and why it weakens over land."
+      },
+      {
+       "concept_tag": "eye-of-cyclone",
+       "learning_objective": "Describe the eye of a cyclone as the calm centre of lowest pressure surrounded by strong winds and rain."
+      },
+      {
+       "concept_tag": "cyclone-impact-and-safety",
+       "learning_objective": "Evaluate the damage caused by cyclones and the measures that reduce their impact."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HECU1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Particulate Nature of Matter",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH07-T1",
+     "topic_number": 1,
+     "title": "What matter is composed of",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "constituent-particles",
+       "learning_objective": "Explain that every substance is made up of a very large number of extremely small constituent particles."
+      },
+      {
+       "concept_tag": "kanad-parmanu",
+       "learning_objective": "Recall Acharya Kanad's ancient idea that matter is made of tiny, indivisible particles called Parmanu."
+      },
+      {
+       "concept_tag": "particles-in-solution",
+       "learning_objective": "Explain how dissolving sugar in water shows that a substance breaks into particles too small to see."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH07-T2",
+     "topic_number": 2,
+     "title": "Interparticle attractions and the solid state",
+     "ncert_sections": "7.2, 7.2.1",
+     "concepts": [
+      {
+       "concept_tag": "interparticle-attraction",
+       "learning_objective": "State that particles are held together by interparticle attractions whose strength decides the physical state."
+      },
+      {
+       "concept_tag": "solid-state",
+       "learning_objective": "Explain why solids have a definite shape and volume in terms of packing and movement of particles."
+      },
+      {
+       "concept_tag": "melting-point",
+       "learning_objective": "Relate the melting point of a solid to the strength of its interparticle forces of attraction."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH07-T3",
+     "topic_number": 3,
+     "title": "The liquid state",
+     "ncert_sections": "7.2.2",
+     "concepts": [
+      {
+       "concept_tag": "liquid-state",
+       "learning_objective": "Explain why liquids have a definite volume but no fixed shape, using the movement and attraction of particles."
+      },
+      {
+       "concept_tag": "boiling-and-evaporation",
+       "learning_objective": "Define boiling point and distinguish boiling from evaporation."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH07-T4",
+     "topic_number": 4,
+     "title": "The gaseous state",
+     "ncert_sections": "7.2.3",
+     "concepts": [
+      {
+       "concept_tag": "gaseous-state",
+       "learning_objective": "Explain why gases have neither a fixed shape nor a fixed volume, using the movement of their particles."
+      },
+      {
+       "concept_tag": "fluids",
+       "learning_objective": "Identify liquids and gases as fluids and compare their properties."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH07-T5",
+     "topic_number": 5,
+     "title": "Interparticle spacing in the three states",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "compressibility-of-gases",
+       "learning_objective": "Explain, using the syringe activity, that gases are easily compressed because their particles are far apart, while liquids are not."
+      },
+      {
+       "concept_tag": "interparticle-spaces",
+       "learning_objective": "Interpret volume changes on dissolving to infer that there are spaces between particles in liquids and solids."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH07-T6",
+     "topic_number": 6,
+     "title": "Movement of particles in different states",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "diffusion-in-liquids",
+       "learning_objective": "Explain how the constant motion of water particles spreads potassium permanganate and dissolves soluble substances."
+      },
+      {
+       "concept_tag": "diffusion-in-gases",
+       "learning_objective": "Explain how the constant motion of air particles spreads a fragrance through a room."
+      },
+      {
+       "concept_tag": "temperature-and-particle-motion",
+       "learning_objective": "Relate an increase in temperature or thermal energy to faster particle movement and to the state of matter."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HECU1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Nature of Matter: Elements, Compounds, and Mixtures",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH08-T1",
+     "topic_number": 1,
+     "title": "What Are Mixtures?",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "mixture-and-components",
+       "learning_objective": "Define a mixture and its components, and state that components keep their properties and do not react chemically."
+      },
+      {
+       "concept_tag": "uniform-and-non-uniform-mixtures",
+       "learning_objective": "Distinguish uniform mixtures from non-uniform mixtures using everyday examples."
+      },
+      {
+       "concept_tag": "alloys",
+       "learning_objective": "Recognise alloys such as stainless steel, brass and bronze as uniform mixtures of metals."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH08-T2",
+     "topic_number": 2,
+     "title": "Is Air a Mixture?",
+     "ncert_sections": "8.1.1",
+     "concepts": [
+      {
+       "concept_tag": "composition-of-air",
+       "learning_objective": "Describe air as a uniform mixture of nitrogen, oxygen, argon, carbon dioxide and water vapour."
+      },
+      {
+       "concept_tag": "lime-water-test",
+       "learning_objective": "Explain how lime water turning milky shows the presence of carbon dioxide in air."
+      },
+      {
+       "concept_tag": "dust-particles-in-air",
+       "learning_objective": "Explain that dust particles are suspended in air as pollutants and are not an integral part of it."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH08-T3",
+     "topic_number": 3,
+     "title": "Types of Mixtures and Pure Substances",
+     "ncert_sections": "8.1.2, 8.2",
+     "concepts": [
+      {
+       "concept_tag": "types-of-mixtures-by-state",
+       "learning_objective": "Classify mixtures by the physical states of their components and as uniform or non-uniform."
+      },
+      {
+       "concept_tag": "scientific-meaning-of-pure",
+       "learning_objective": "Contrast the everyday meaning of 'pure' with the scientific meaning of a pure substance."
+      },
+      {
+       "concept_tag": "adulteration",
+       "learning_objective": "Explain what adulteration is, why it is done and how it harms consumers."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH08-T4",
+     "topic_number": 4,
+     "title": "Elements",
+     "ncert_sections": "8.3, 8.3.1",
+     "concepts": [
+      {
+       "concept_tag": "electrolysis-of-water",
+       "learning_objective": "Interpret the electrolysis of water and the tests that identify hydrogen and oxygen."
+      },
+      {
+       "concept_tag": "elements-atoms-molecules",
+       "learning_objective": "Describe elements as made of identical atoms that often combine to form molecules."
+      },
+      {
+       "concept_tag": "states-of-elements",
+       "learning_objective": "Recall facts about the number of elements, their states at room temperature and their classification."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH08-T5",
+     "topic_number": 5,
+     "title": "Compounds",
+     "ncert_sections": "8.3.2",
+     "concepts": [
+      {
+       "concept_tag": "compound-fixed-ratio",
+       "learning_objective": "Explain that a compound is formed when elements combine in a fixed ratio and has new properties."
+      },
+      {
+       "concept_tag": "decomposition-of-sugar",
+       "learning_objective": "Infer from the heating of sugar that it is a compound of carbon, hydrogen and oxygen."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH08-T6",
+     "topic_number": 6,
+     "title": "Mixture and Compound of Iron and Sulfur",
+     "ncert_sections": "8.3.2 (Activity 8.5)",
+     "concepts": [
+      {
+       "concept_tag": "iron-sulfur-mixture-vs-compound",
+       "learning_objective": "Compare a mixture of iron and sulfur with the compound iron sulfide formed on heating."
+      },
+      {
+       "concept_tag": "gas-tests-with-acid",
+       "learning_objective": "Identify the gases given off when the mixture and the compound react with dilute hydrochloric acid."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH08-T7",
+     "topic_number": 7,
+     "title": "Uses of Elements, Compounds and Mixtures; Minerals",
+     "ncert_sections": "8.4, 8.5",
+     "concepts": [
+      {
+       "concept_tag": "uses-of-materials",
+       "learning_objective": "Relate the properties of elements, compounds and mixtures to their uses in daily life and technology."
+      },
+      {
+       "concept_tag": "minerals-and-native-minerals",
+       "learning_objective": "Describe minerals, including native minerals that are pure elements, and their uses."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HECU1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "The Amazing World of Solutes, Solvents, and Solutions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH09-T1",
+     "topic_number": 1,
+     "title": "Solute, solvent and solution",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "uniform-and-non-uniform-mixtures",
+       "learning_objective": "Distinguish uniform mixtures (solutions) from non-uniform mixtures using everyday examples."
+      },
+      {
+       "concept_tag": "solute-and-solvent",
+       "learning_objective": "Identify the solute and the solvent in solutions of a solid in a liquid and of two liquids."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH09-T2",
+     "topic_number": 2,
+     "title": "Saturated and unsaturated solutions, concentration and solubility",
+     "ncert_sections": "9.2",
+     "concepts": [
+      {
+       "concept_tag": "saturated-and-unsaturated-solutions",
+       "learning_objective": "Explain when a solution is saturated or unsaturated at a given temperature."
+      },
+      {
+       "concept_tag": "concentration-and-solubility",
+       "learning_objective": "Compare the concentration of solutions and state the meaning of solubility."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH09-T3",
+     "topic_number": 3,
+     "title": "Effect of temperature on solubility of solids and gases",
+     "ncert_sections": "9.2.1, 9.3",
+     "concepts": [
+      {
+       "concept_tag": "temperature-and-solubility-of-solids",
+       "learning_objective": "Describe how the solubility of most solids in water changes as temperature rises."
+      },
+      {
+       "concept_tag": "solubility-of-gases",
+       "learning_objective": "Explain how the solubility of gases such as oxygen in water changes with temperature and why it matters to aquatic life."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH09-T4",
+     "topic_number": 4,
+     "title": "Floating, sinking and density",
+     "ncert_sections": "9.4, 9.5",
+     "concepts": [
+      {
+       "concept_tag": "density-definition-and-calculation",
+       "learning_objective": "Define density as mass per unit volume and use it to compare substances and predict floating or sinking."
+      },
+      {
+       "concept_tag": "density-units-and-relative-density",
+       "learning_objective": "Use the units of density and calculate relative density with respect to water."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH09-T5",
+     "topic_number": 5,
+     "title": "Determination of density: measuring mass and volume",
+     "ncert_sections": "9.5.1",
+     "concepts": [
+      {
+       "concept_tag": "measuring-mass",
+       "learning_objective": "Measure mass correctly with a digital weighing balance using the tare button."
+      },
+      {
+       "concept_tag": "measuring-volume-of-liquids",
+       "learning_objective": "Read a measuring cylinder correctly and choose a suitable cylinder for a given volume."
+      },
+      {
+       "concept_tag": "volume-by-displacement",
+       "learning_objective": "Find the volume of an irregular solid by water displacement and use it to calculate density."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH09-T6",
+     "topic_number": 6,
+     "title": "Effect of temperature and pressure on density",
+     "ncert_sections": "9.5.2, 9.5.3",
+     "concepts": [
+      {
+       "concept_tag": "temperature-and-density",
+       "learning_objective": "Explain why density generally decreases on heating, using the particle nature of matter."
+      },
+      {
+       "concept_tag": "pressure-and-density",
+       "learning_objective": "Compare how pressure affects the density of gases, liquids and solids."
+      },
+      {
+       "concept_tag": "ice-floats-on-water",
+       "learning_objective": "Explain why ice floats on water and why this helps aquatic life in cold weather."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HECU1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Light: Mirrors and Lenses",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH10-T1",
+     "topic_number": 1,
+     "title": "What are spherical mirrors?",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "concave-and-convex-mirrors",
+       "learning_objective": "Define concave and convex mirrors and identify them from their reflecting surfaces."
+      },
+      {
+       "concept_tag": "making-spherical-mirrors",
+       "learning_objective": "Explain how spherical mirrors are made and how the coated side decides the mirror type."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH10-T2",
+     "topic_number": 2,
+     "title": "Images formed by spherical mirrors and their uses",
+     "ncert_sections": "10.2",
+     "concepts": [
+      {
+       "concept_tag": "concave-mirror-images",
+       "learning_objective": "Describe how the image in a concave mirror changes as the object moves away."
+      },
+      {
+       "concept_tag": "convex-mirror-images",
+       "learning_objective": "State that a convex mirror always forms an erect, diminished image."
+      },
+      {
+       "concept_tag": "uses-of-spherical-mirrors",
+       "learning_objective": "Relate the uses of concave and convex mirrors to the images they form."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH10-T3",
+     "topic_number": 3,
+     "title": "Laws of reflection",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "normal-and-angles",
+       "learning_objective": "Identify the incident ray, reflected ray, normal, angle of incidence and angle of reflection."
+      },
+      {
+       "concept_tag": "angle-of-incidence-equals-reflection",
+       "learning_objective": "Apply the law that the angle of incidence equals the angle of reflection."
+      },
+      {
+       "concept_tag": "rays-in-same-plane",
+       "learning_objective": "Explain the law that the incident ray, normal and reflected ray lie in one plane."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH10-T4",
+     "topic_number": 4,
+     "title": "Reflection of parallel beams by spherical mirrors",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "converging-and-diverging-mirrors",
+       "learning_objective": "Explain why a concave mirror converges and a convex mirror diverges parallel beams."
+      },
+      {
+       "concept_tag": "solar-concentrators",
+       "learning_objective": "Explain how concentrating sunlight with a concave mirror produces heat."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH10-T5",
+     "topic_number": 5,
+     "title": "What is a lens?",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "convex-and-concave-lenses",
+       "learning_objective": "Define a lens and distinguish convex and concave lenses by their shape."
+      },
+      {
+       "concept_tag": "images-through-lenses",
+       "learning_objective": "Describe how objects appear through convex and concave lenses at different distances."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH10-T6",
+     "topic_number": 6,
+     "title": "Converging and diverging lenses and their uses",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "converging-and-diverging-lenses",
+       "learning_objective": "Explain that a convex lens converges and a concave lens diverges light."
+      },
+      {
+       "concept_tag": "uses-of-lenses",
+       "learning_objective": "Identify everyday uses of lenses, including eyeglasses, cameras and the human eye."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HECU1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "Keeping Time with the Skies",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH11-T1",
+     "topic_number": 1,
+     "title": "Phases of the Moon: waxing and waning",
+     "ncert_sections": "11.1, 11.1.1",
+     "concepts": [
+      {
+       "concept_tag": "waxing-and-waning",
+       "learning_objective": "Describe how the bright portion of the Moon grows and shrinks over about a month, and name the waxing and waning periods."
+      },
+      {
+       "concept_tag": "moon-phase-names",
+       "learning_objective": "Identify the new Moon, crescent, half, gibbous and full Moon phases in their correct order."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH11-T2",
+     "topic_number": 2,
+     "title": "Locating the Moon in the sky",
+     "ncert_sections": "11.1.2",
+     "concepts": [
+      {
+       "concept_tag": "moon-position-and-phase",
+       "learning_objective": "Use the phase of the Moon to predict where and when it can be seen relative to the Sun."
+      },
+      {
+       "concept_tag": "moonrise-delay",
+       "learning_objective": "Explain why the Moon rises about 50 minutes later each day."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH11-T3",
+     "topic_number": 3,
+     "title": "Why the Moon shows phases",
+     "ncert_sections": "11.1.3",
+     "concepts": [
+      {
+       "concept_tag": "illuminated-half-geometry",
+       "learning_objective": "Explain phases as the changing fraction of the Moon's sunlit half that faces the Earth."
+      },
+      {
+       "concept_tag": "phases-not-shadow",
+       "learning_objective": "Distinguish the cause of the Moon's phases from the cause of eclipses."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH11-T4",
+     "topic_number": 4,
+     "title": "Natural units of time and lunar calendars",
+     "ncert_sections": "11.2, 11.2.1",
+     "concepts": [
+      {
+       "concept_tag": "units-of-time-from-sky",
+       "learning_objective": "Relate the day, month and year to the Earth's rotation, the Moon's phases and the cycle of seasons."
+      },
+      {
+       "concept_tag": "lunar-calendar",
+       "learning_objective": "Explain why a lunar calendar drifts out of step with the seasons."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH11-T5",
+     "topic_number": 5,
+     "title": "Solar, luni-solar and Indian National calendars",
+     "ncert_sections": "11.2.2, 11.2.3, 11.2.4",
+     "concepts": [
+      {
+       "concept_tag": "solar-calendar-leap-year",
+       "learning_objective": "Explain how solar calendars use leap years to stay in step with the seasons."
+      },
+      {
+       "concept_tag": "luni-solar-calendar",
+       "learning_objective": "Explain how an intercalary month keeps a luni-solar calendar in step with the solar year."
+      },
+      {
+       "concept_tag": "indian-national-calendar",
+       "learning_objective": "Describe the structure of the Indian National Calendar and how it handles leap years."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH11-T6",
+     "topic_number": 6,
+     "title": "Festivals and astronomical phenomena",
+     "ncert_sections": "11.3",
+     "concepts": [
+      {
+       "concept_tag": "festivals-and-moon-calendars",
+       "learning_objective": "Explain why festivals based on lunar and luni-solar calendars fall on different Gregorian dates each year."
+      },
+      {
+       "concept_tag": "solar-sidereal-festivals",
+       "learning_objective": "Explain why festivals based on a solar sidereal calendar fall on nearly the same date every year."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH11-T7",
+     "topic_number": 7,
+     "title": "Artificial satellites",
+     "ncert_sections": "11.4",
+     "concepts": [
+      {
+       "concept_tag": "satellite-orbit-and-spotting",
+       "learning_objective": "Describe the typical orbit of artificial satellites and how to spot them in the sky."
+      },
+      {
+       "concept_tag": "satellite-uses-and-missions",
+       "learning_objective": "Identify the uses of artificial satellites and India's major space missions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HECU1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "How Nature Works in Harmony",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH12-T1",
+     "topic_number": 1,
+     "title": "Habitats and their biotic and abiotic components",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "habitat-meaning",
+       "learning_objective": "Define a habitat and recognise that habitats can be large or very small."
+      },
+      {
+       "concept_tag": "biotic-abiotic-components",
+       "learning_objective": "Distinguish the biotic and abiotic components of a habitat and the needs each meets."
+      },
+      {
+       "concept_tag": "coexistence-in-habitat",
+       "learning_objective": "Explain how different organisms coexist in one habitat by using it in different ways."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH12-T2",
+     "topic_number": 2,
+     "title": "Populations, communities and the role of every organism",
+     "ncert_sections": "12.2, 12.3",
+     "concepts": [
+      {
+       "concept_tag": "population",
+       "learning_objective": "Define a population as a group of the same kind of organisms in a habitat at a given time."
+      },
+      {
+       "concept_tag": "community",
+       "learning_objective": "Describe a community as different populations sharing the same habitat."
+      },
+      {
+       "concept_tag": "indirect-effects-in-community",
+       "learning_objective": "Interpret how fish in a pond indirectly affect seed production in nearby plants."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH12-T3",
+     "topic_number": 3,
+     "title": "Interactions in an ecosystem; producers and consumers",
+     "ncert_sections": "12.4",
+     "concepts": [
+      {
+       "concept_tag": "types-of-interactions",
+       "learning_objective": "Classify interactions as biotic-abiotic, abiotic-abiotic or among biotic components."
+      },
+      {
+       "concept_tag": "ecosystem-meaning-types",
+       "learning_objective": "Define an ecosystem and identify aquatic, terrestrial and human-made ecosystems."
+      },
+      {
+       "concept_tag": "producers-and-consumers",
+       "learning_objective": "Classify organisms as autotrophs or heterotrophs, and consumers as herbivores, carnivores or omnivores."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH12-T4",
+     "topic_number": 4,
+     "title": "Food chains, trophic levels and food webs",
+     "ncert_sections": "12.5",
+     "concepts": [
+      {
+       "concept_tag": "food-chain",
+       "learning_objective": "Represent and interpret who eats whom as a linear food chain."
+      },
+      {
+       "concept_tag": "trophic-levels",
+       "learning_objective": "Identify the trophic level occupied by an organism in a food chain."
+      },
+      {
+       "concept_tag": "food-web",
+       "learning_objective": "Explain how interlinked food chains form a food web."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH12-T5",
+     "topic_number": 5,
+     "title": "Decomposition and recycling of nutrients",
+     "ncert_sections": "12.6",
+     "concepts": [
+      {
+       "concept_tag": "decomposers-saprotrophs",
+       "learning_objective": "Identify decomposers (saprotrophs) such as fungi and bacteria and what they do."
+      },
+      {
+       "concept_tag": "nutrient-recycling",
+       "learning_objective": "Explain how decomposition returns nutrients to the soil so that nothing in nature is wasted."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH12-T6",
+     "topic_number": 6,
+     "title": "Changes, balance and relationships in ecosystems",
+     "ncert_sections": "12.7, 12.8",
+     "concepts": [
+      {
+       "concept_tag": "cascading-effects",
+       "learning_objective": "Trace how one change in an ecosystem leads to a chain of further changes."
+      },
+      {
+       "concept_tag": "competition-and-balance",
+       "learning_objective": "Explain how competition for resources controls population size and keeps an ecosystem balanced."
+      },
+      {
+       "concept_tag": "mutualism-commensalism-parasitism",
+       "learning_objective": "Distinguish mutualism, commensalism and parasitism with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH12-T7",
+     "topic_number": 7,
+     "title": "Benefits of ecosystems, threats and human-made ecosystems",
+     "ncert_sections": "12.9, 12.9.1",
+     "concepts": [
+      {
+       "concept_tag": "ecosystem-services",
+       "learning_objective": "List the benefits humans obtain from forest and aquatic ecosystems."
+      },
+      {
+       "concept_tag": "threats-and-protection",
+       "learning_objective": "Identify human threats to ecosystems such as the Sundarbans and the role of protected areas."
+      },
+      {
+       "concept_tag": "human-made-ecosystems",
+       "learning_objective": "Describe human-made ecosystems and why they need human care and management."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH12-T8",
+     "topic_number": 8,
+     "title": "Healthy ecosystems and sustainable farming",
+     "ncert_sections": "12.9.2",
+     "concepts": [
+      {
+       "concept_tag": "green-revolution",
+       "learning_objective": "Describe the Green Revolution and why its methods are now considered unsustainable."
+      },
+      {
+       "concept_tag": "effects-of-chemical-farming",
+       "learning_objective": "Explain how overuse of synthetic chemicals and monoculture harm soil, pollinators and pest control."
+      },
+      {
+       "concept_tag": "sustainable-farming-practices",
+       "learning_objective": "Identify organic and traditional practices that support sustainable farming."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HECU1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "Our Home: Earth, a Unique Life Sustaining Planet",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hecu113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HECU1-CH13-T1",
+     "topic_number": 1,
+     "title": "Earth as a unique planet among the planets of the solar system",
+     "ncert_sections": "13.1, 13.2",
+     "concepts": [
+      {
+       "concept_tag": "life-in-thin-crust",
+       "learning_objective": "Describe how all life on Earth exists in a very thin layer at its surface."
+      },
+      {
+       "concept_tag": "rocky-and-gaseous-planets",
+       "learning_objective": "Classify the eight planets as small rocky planets or large planets made mostly of gases."
+      },
+      {
+       "concept_tag": "venus-greenhouse-effect",
+       "learning_objective": "Explain why Venus is the hottest planet and how the greenhouse effect differs from a plant greenhouse."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH13-T2",
+     "topic_number": 2,
+     "title": "Position of the Earth and the habitable zone",
+     "ncert_sections": "13.3.1",
+     "concepts": [
+      {
+       "concept_tag": "habitable-zone",
+       "learning_objective": "Explain why Earth's distance from the Sun lets water stay liquid and define the habitable zone."
+      },
+      {
+       "concept_tag": "blue-planet-water",
+       "learning_objective": "State why the Earth looks blue from space."
+      },
+      {
+       "concept_tag": "mars-habitability",
+       "learning_objective": "Describe what scientists know and think about the possibility of life on Mars."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH13-T3",
+     "topic_number": 3,
+     "title": "Size of the Earth, its orbit and the ozone layer",
+     "ncert_sections": "13.3.2",
+     "concepts": [
+      {
+       "concept_tag": "nearly-circular-orbit",
+       "learning_objective": "Explain how Earth's nearly circular orbit keeps sunlight and heat steady through the year."
+      },
+      {
+       "concept_tag": "size-gravity-atmosphere",
+       "learning_objective": "Explain how the Earth's size and gravity allow it to hold an atmosphere without crushing life."
+      },
+      {
+       "concept_tag": "ozone-layer-shield",
+       "learning_objective": "Describe how the ozone layer protects living cells from ultraviolet rays."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH13-T4",
+     "topic_number": 4,
+     "title": "Magnetic field of the Earth",
+     "ncert_sections": "13.3.3",
+     "concepts": [
+      {
+       "concept_tag": "earth-as-magnet",
+       "learning_objective": "State that the Earth behaves like a giant magnet with a magnetic field."
+      },
+      {
+       "concept_tag": "cosmic-rays-solar-wind",
+       "learning_objective": "Distinguish cosmic rays from the solar wind and explain why these particles are harmful."
+      },
+      {
+       "concept_tag": "magnetic-shield",
+       "learning_objective": "Explain how the magnetic field shields the atmosphere and life on Earth."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH13-T5",
+     "topic_number": 5,
+     "title": "Earth systems that sustain life and the importance of balance",
+     "ncert_sections": "13.4.1, 13.4.2, 13.4.3, 13.4.4",
+     "concepts": [
+      {
+       "concept_tag": "earth-spheres",
+       "learning_objective": "Identify the atmosphere, hydrosphere, geosphere and biosphere and what each contains."
+      },
+      {
+       "concept_tag": "geodiversity",
+       "learning_objective": "Define geodiversity and explain how it creates varied habitats."
+      },
+      {
+       "concept_tag": "balance-interdependence",
+       "learning_objective": "Analyse how a change in one part of the Earth system affects other parts."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH13-T6",
+     "topic_number": 6,
+     "title": "Continuity of life and asexual reproduction",
+     "ncert_sections": "13.5, 13.5.1",
+     "concepts": [
+      {
+       "concept_tag": "continuity-and-genes",
+       "learning_objective": "Explain how reproduction and genes keep each kind of organism continuing and allow change."
+      },
+      {
+       "concept_tag": "asexual-reproduction",
+       "learning_objective": "Describe asexual reproduction in microbes and simple animals and why offspring are copies."
+      },
+      {
+       "concept_tag": "vegetative-propagation",
+       "learning_objective": "Give examples of plants that grow from leaf, stem or root parts."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH13-T7",
+     "topic_number": 7,
+     "title": "Sexual reproduction in plants and animals",
+     "ncert_sections": "13.5.2",
+     "concepts": [
+      {
+       "concept_tag": "gametes-and-variation",
+       "learning_objective": "Explain the role of gametes and why offspring of two parents differ from each other."
+      },
+      {
+       "concept_tag": "plant-sexual-reproduction",
+       "learning_objective": "Describe pollination, fertilisation and the formation of seeds and fruits in flowering plants."
+      },
+      {
+       "concept_tag": "animal-fertilisation-development",
+       "learning_objective": "Compare fertilisation and embryo development in fish and frogs, birds and mammals."
+      }
+     ]
+    },
+    {
+     "topic_id": "HECU1-CH13-T8",
+     "topic_number": 8,
+     "title": "Threats to life on Earth",
+     "ncert_sections": "13.6",
+     "concepts": [
+      {
+       "concept_tag": "triple-planetary-crisis",
+       "learning_objective": "Name the three challenges that make up the triple planetary crisis."
+      },
+      {
+       "concept_tag": "climate-change-fossil-fuels",
+       "learning_objective": "Explain how burning fossil fuels causes global warming and climate change and its effects."
+      },
+      {
+       "concept_tag": "protecting-life-on-earth",
+       "learning_objective": "Describe global agreements and everyday actions that help protect the environment."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

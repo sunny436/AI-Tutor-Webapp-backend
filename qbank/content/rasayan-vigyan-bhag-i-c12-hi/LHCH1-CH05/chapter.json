@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LHCH1-CH05",
+ "title": "उपसहसंयोजन यौगिक",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHCH1-CH05-T1",
+   "topic_number": 1,
+   "title": "उपसहसंयोजन यौगिकों का वर्नर सिद्धांत",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "prathmik-dwitiyak-sanyojakta",
+     "learning_objective": "वर्नर के प्राथमिक और द्वितीयक संयोजकता के अभिगृहीतों को समझना और प्रयोगों से संकुल का सूत्र निकालना।"
+    },
+    {
+     "concept_tag": "dwik-lavan-aur-sankul",
+     "learning_objective": "द्विक लवणों और उपसहसंयोजन यौगिकों के बीच विलयन में व्यवहार के आधार पर अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH05-T2",
+   "topic_number": 2,
+   "title": "उपसहसंयोजन यौगिकों से संबंधित महत्वपूर्ण पद",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "ligand-ki-dantata",
+     "learning_objective": "लिगंडों को एकदंतुर, द्विदंतुर, बहुदंतुर और उभयदंती में वर्गीकृत करना।"
+    },
+    {
+     "concept_tag": "upsahsanyojan-sankhya-oxikaran-sankhya",
+     "learning_objective": "किसी संकुल में केंद्रीय परमाणु की उपसहसंयोजन संख्या और ऑक्सीकरण संख्या ज्ञात करना।"
+    },
+    {
+     "concept_tag": "samlignadi-vishamlignadi",
+     "learning_objective": "समलिगंडी और विषमलिगंडी संकुलों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH05-T3",
+   "topic_number": 3,
+   "title": "उपसहसंयोजन यौगिकों की नामपद्धति",
+   "ncert_sections": "5.3, 5.3.1, 5.3.2",
+   "concepts": [
+    {
+     "concept_tag": "sutra-lekhan",
+     "learning_objective": "एककेंद्रकीय उपसहसंयोजन यौगिकों के नाम से उनके सूत्र लिखना।"
+    },
+    {
+     "concept_tag": "iupac-namakaran",
+     "learning_objective": "नियमों के अनुसार उपसहसंयोजन यौगिकों के सुव्यवस्थित नाम लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH05-T4",
+   "topic_number": 4,
+   "title": "उपसहसंयोजन यौगिकों में समावयवता",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "jyamitiya-samavayavta",
+     "learning_objective": "समपक्ष-विपक्ष तथा फलकीय-याम्योत्तर ज्यामितीय समावयवों को पहचानना और गिनना।"
+    },
+    {
+     "concept_tag": "prakashik-samavayavta",
+     "learning_objective": "ध्रुवण घूर्णक (प्रकाशिक) समावयवता दर्शाने वाले संकुलों को पहचानना।"
+    },
+    {
+     "concept_tag": "sanrachnatmak-samavayavta",
+     "learning_objective": "बंधनी, आयनन, उपसहसंयोजन और विलायकयोजन समावयवता में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH05-T5",
+   "topic_number": 5,
+   "title": "संयोजकता आबंध सिद्धांत और चुंबकीय गुण",
+   "ncert_sections": "5.5.1, 5.5.2, 5.5.3",
+   "concepts": [
+    {
+     "concept_tag": "sankaran-aur-jyamiti",
+     "learning_objective": "संकुल में केंद्रीय परमाणु के संकरण से उसकी ज्यामिति और आंतरिक या बाह्य कक्षक प्रकृति बताना।"
+    },
+    {
+     "concept_tag": "chumbakiya-aghurn",
+     "learning_objective": "अयुग्मित इलेक्ट्रॉनों से संकुल की चुंबकीय प्रकृति और केवल-चक्रण आघूर्ण ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH05-T6",
+   "topic_number": 6,
+   "title": "क्रिस्टल क्षेत्र सिद्धांत और संकुलों का रंग",
+   "ncert_sections": "5.5.4, 5.5.5, 5.5.6",
+   "concepts": [
+    {
+     "concept_tag": "kristal-kshetra-vipatan",
+     "learning_objective": "अष्टफलकीय क्षेत्र में d कक्षकों के विपाटन और इलेक्ट्रॉन विन्यास को समझना।"
+    },
+    {
+     "concept_tag": "spectramrasayanik-shreni",
+     "learning_objective": "स्पेक्ट्रमरासायनिक श्रेणी के आधार पर दुर्बल और प्रबल क्षेत्र लिगंडों की तुलना करना।"
+    },
+    {
+     "concept_tag": "sankul-ka-rang",
+     "learning_objective": "d-d संक्रमण के आधार पर संकुलों के रंग की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH05-T7",
+   "topic_number": 7,
+   "title": "धातु कार्बोनिल तथा उपसहसंयोजन यौगिकों के अनुप्रयोग",
+   "ncert_sections": "5.6, 5.7",
+   "concepts": [
+    {
+     "concept_tag": "dhatu-carbonyl-bandhan",
+     "learning_objective": "धातु कार्बोनिलों की संरचना और उनमें सहक्रियाशील आबंधन को समझना।"
+    },
+    {
+     "concept_tag": "upsahsanyojan-anuprayog",
+     "learning_objective": "जैविक तंत्रों, विश्लेषण, उद्योग और चिकित्सा में उपसहसंयोजन यौगिकों के उपयोग बताना।"
+    }
+   ]
+  }
+ ]
+}

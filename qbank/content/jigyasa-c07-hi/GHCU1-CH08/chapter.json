@@ -1,0 +1,112 @@
+{
+ "chapter_id": "GHCU1-CH08",
+ "title": "समय एवं गति का मापन",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHCU1-CH08-T1",
+   "topic_number": 1,
+   "title": "समय मापन की प्राचीन युक्तियाँ",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "prachin-samay-mapan-yuktiyan",
+     "learning_objective": "धूप-घड़ी, जल-घड़ी, रेत-घड़ी और मोमबत्ती-घड़ी किस आधार पर समय मापती थीं, यह समझाना।"
+    },
+    {
+     "concept_tag": "ghatika-yantra",
+     "learning_objective": "प्लवमान पात्र प्रकार की जल-घड़ी (घटिका यंत्र) और घटी मात्रक को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH08-T2",
+   "topic_number": 2,
+   "title": "सरल लोलक और दोलनकाल",
+   "ncert_sections": "8.1.1",
+   "concepts": [
+    {
+     "concept_tag": "dolan-aur-dolankal",
+     "learning_objective": "सरल लोलक के एक दोलन और दोलनकाल को पहचानना तथा दोलनकाल का परिकलन करना।"
+    },
+    {
+     "concept_tag": "dolankal-ki-nirbharta",
+     "learning_objective": "यह जानना कि दोलनकाल डोरी की लंबाई पर निर्भर करता है, गोलक के द्रव्यमान पर नहीं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH08-T3",
+   "topic_number": 3,
+   "title": "समय का SI मात्रक और समय का सूक्ष्म मापन",
+   "ncert_sections": "8.1.2",
+   "concepts": [
+    {
+     "concept_tag": "samay-ka-si-matrak",
+     "learning_objective": "समय के SI मात्रक सेकंड तथा मिनट और घंटे के साथ उसके संबंध का उपयोग करना।"
+    },
+    {
+     "concept_tag": "matrak-lekhan-niyam",
+     "learning_objective": "समय के मात्रकों और प्रतीकों को लिखने के मानक नियम लागू करना।"
+    },
+    {
+     "concept_tag": "sukshma-samay-mapan",
+     "learning_objective": "दैनिक जीवन में सेकंड के सूक्ष्म अंशों के मापन का महत्व समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH08-T4",
+   "topic_number": 4,
+   "title": "धीमा या तेज और चाल",
+   "ncert_sections": "8.2, 8.3",
+   "concepts": [
+    {
+     "concept_tag": "tej-ya-dheema",
+     "learning_objective": "समान समय में चली गई दूरी या चाल की तुलना करके तेज और धीमी गति का निर्णय करना।"
+    },
+    {
+     "concept_tag": "chaal-paribhasha-matrak",
+     "learning_objective": "चाल की परिभाषा देना और उसका परिकलन m/s तथा km/h में करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH08-T5",
+   "topic_number": 5,
+   "title": "चाल, दूरी एवं समय में संबंध",
+   "ncert_sections": "8.3.1",
+   "concepts": [
+    {
+     "concept_tag": "doori-chaal-samay-sambandh",
+     "learning_objective": "चाल, दूरी और समय के संबंध से किसी एक अज्ञात राशि का परिकलन करना।"
+    },
+    {
+     "concept_tag": "ausat-chaal",
+     "learning_objective": "कुल दूरी को कुल समय से विभाजित करके औसत चाल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "chaalmapi-pathmapi",
+     "learning_objective": "वाहनों में चालमापी और पथमापी के कार्य को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH08-T6",
+   "topic_number": 6,
+   "title": "एकसमान एवं असमान रेखीय गति",
+   "ncert_sections": "8.4",
+   "concepts": [
+    {
+     "concept_tag": "eksaman-rekhiya-gati",
+     "learning_objective": "समान समय-अंतरालों में समान दूरी तय करने वाली एकसमान रेखीय गति को पहचानना।"
+    },
+    {
+     "concept_tag": "asaman-rekhiya-gati",
+     "learning_objective": "बदलती चाल वाली असमान रेखीय गति को आँकड़ों और उदाहरणों से पहचानना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "chapter_id": "JHMH1-CH09",
+ "title": "त्रिकोणमिति के कुछ अनुप्रयोग",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH09-T1",
+   "topic_number": 1,
+   "title": "दृष्टि रेखा, उन्नयन कोण और अवनमन कोण",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "drishti-rekha-unnayan-kon",
+     "learning_objective": "विद्यार्थी दृष्टि रेखा और उन्नयन कोण को परिभाषित कर सकेगा और स्थिति में उन्हें पहचान सकेगा।"
+    },
+    {
+     "concept_tag": "avnaman-kon",
+     "learning_objective": "विद्यार्थी अवनमन कोण को परिभाषित कर उसे उन्नयन कोण से अलग पहचान सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH09-T2",
+   "topic_number": 2,
+   "title": "एक समकोण त्रिभुज की सहायता से ऊँचाई और दूरी",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "ek-tribhuj-se-unchai",
+     "learning_objective": "विद्यार्थी एक समकोण त्रिभुज में उपयुक्त त्रिकोणमितीय अनुपात चुनकर ऊँचाई, लंबाई या दूरी ज्ञात कर सकेगा।"
+    },
+    {
+     "concept_tag": "prekshak-ki-unchai-jodna",
+     "learning_objective": "विद्यार्थी ऊँचाई ज्ञात करते समय प्रेक्षक की आँख की ऊँचाई को सही ढंग से जोड़ सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH09-T3",
+   "topic_number": 3,
+   "title": "दो उन्नयन कोणों और छाया पर आधारित प्रश्न",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "do-unnayan-kon",
+     "learning_objective": "विद्यार्थी दो समकोण त्रिभुजों के समीकरण बनाकर दो उन्नयन कोणों वाली समस्याएँ हल कर सकेगा।"
+    },
+    {
+     "concept_tag": "chhaya-aur-surya-ka-unnatansh",
+     "learning_objective": "विद्यार्थी सूर्य के उन्नतांश और छाया की लंबाई के संबंध से ऊँचाई ज्ञात कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH09-T4",
+   "topic_number": 4,
+   "title": "अवनमन कोणों की सहायता से ऊँचाई और दूरी",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "avnaman-kon-se-doori",
+     "learning_objective": "विद्यार्थी अवनमन कोणों का प्रयोग करके दो वस्तुओं के बीच की दूरी या ऊँचाई ज्ञात कर सकेगा।"
+    },
+    {
+     "concept_tag": "ekantar-kon-avnaman-unnayan",
+     "learning_objective": "विद्यार्थी एकांतर कोणों की सहायता से अवनमन कोण को संगत उन्नयन कोण के बराबर लेकर समस्या हल कर सकेगा।"
+    }
+   ]
+  }
+ ]
+}

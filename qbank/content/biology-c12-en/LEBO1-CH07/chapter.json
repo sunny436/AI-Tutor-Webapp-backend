@@ -1,0 +1,164 @@
+{
+ "chapter_id": "LEBO1-CH07",
+ "title": "Human Health and Disease",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBO1-CH07-T1",
+   "topic_number": 1,
+   "title": "Common diseases in humans and their prevention",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "bacterial-and-viral-diseases",
+     "learning_objective": "Identify the pathogens, symptoms, transmission and diagnosis of typhoid, pneumonia and the common cold."
+    },
+    {
+     "concept_tag": "malaria-plasmodium-life-cycle",
+     "learning_objective": "Describe the life cycle of Plasmodium in its two hosts and explain the cause of malarial fever."
+    },
+    {
+     "concept_tag": "helminth-fungal-diseases-and-control",
+     "learning_objective": "Relate amoebiasis, ascariasis, filariasis and ringworm to their pathogens and to measures of hygiene and vector control."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH07-T2",
+   "topic_number": 2,
+   "title": "Innate and acquired immunity",
+   "ncert_sections": "7.2, 7.2.1, 7.2.2",
+   "concepts": [
+    {
+     "concept_tag": "innate-immunity-barriers",
+     "learning_objective": "Classify the physical, physiological, cellular and cytokine barriers of innate immunity."
+    },
+    {
+     "concept_tag": "acquired-immunity-memory",
+     "learning_objective": "Distinguish the primary and secondary immune responses on the basis of immunological memory."
+    },
+    {
+     "concept_tag": "antibody-structure-humoral-cmi",
+     "learning_objective": "Describe the H2L2 structure of antibodies and distinguish humoral from cell-mediated immunity."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH07-T3",
+   "topic_number": 3,
+   "title": "Active and passive immunity; vaccination",
+   "ncert_sections": "7.2.3, 7.2.4",
+   "concepts": [
+    {
+     "concept_tag": "active-passive-immunity",
+     "learning_objective": "Distinguish active from passive immunity with natural and artificial examples."
+    },
+    {
+     "concept_tag": "vaccination-principle",
+     "learning_objective": "Explain how vaccines and antitoxins protect the body, using the memory of the immune system."
+    },
+    {
+     "concept_tag": "recombinant-vaccines",
+     "learning_objective": "State how recombinant DNA technology is used to produce vaccines such as the hepatitis B vaccine."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH07-T4",
+   "topic_number": 4,
+   "title": "Allergies, auto-immunity and the lymphoid organs",
+   "ncert_sections": "7.2.5, 7.2.6, 7.2.7",
+   "concepts": [
+    {
+     "concept_tag": "allergy-ige-mast-cells",
+     "learning_objective": "Explain allergy as an exaggerated IgE response with histamine release from mast cells."
+    },
+    {
+     "concept_tag": "autoimmunity",
+     "learning_objective": "Explain auto-immune disease as an immune attack on self-cells, with an example."
+    },
+    {
+     "concept_tag": "lymphoid-organs",
+     "learning_objective": "Distinguish primary from secondary lymphoid organs and state their roles."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH07-T5",
+   "topic_number": 5,
+   "title": "AIDS",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "hiv-transmission",
+     "learning_objective": "Identify the routes by which HIV is transmitted and the ways by which it is not."
+    },
+    {
+     "concept_tag": "hiv-replication-immunodeficiency",
+     "learning_objective": "Explain how HIV replicates in macrophages and helper T-lymphocytes and causes immunodeficiency."
+    },
+    {
+     "concept_tag": "aids-diagnosis-prevention",
+     "learning_objective": "State the diagnosis, treatment limits and preventive measures for AIDS."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH07-T6",
+   "topic_number": 6,
+   "title": "Cancer",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "tumors-metastasis",
+     "learning_objective": "Distinguish cancer cells from normal cells and benign from malignant tumors, and explain metastasis."
+    },
+    {
+     "concept_tag": "carcinogens-oncogenes",
+     "learning_objective": "Classify physical, chemical and biological carcinogens and explain the role of oncogenes."
+    },
+    {
+     "concept_tag": "cancer-detection-treatment",
+     "learning_objective": "Describe methods of detecting and treating cancer, including biological response modifiers."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH07-T7",
+   "topic_number": 7,
+   "title": "Commonly abused drugs and tobacco",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "commonly-abused-drugs",
+     "learning_objective": "Relate opioids, cannabinoids and coca alkaloids to their sources, receptors and effects."
+    },
+    {
+     "concept_tag": "tobacco-nicotine-effects",
+     "learning_objective": "Explain the physiological effects and health risks of nicotine and tobacco smoke."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH07-T8",
+   "topic_number": 8,
+   "title": "Adolescence, addiction and prevention of drug abuse",
+   "ncert_sections": "7.5.1, 7.5.2, 7.5.3, 7.5.4",
+   "concepts": [
+    {
+     "concept_tag": "addiction-dependence",
+     "learning_objective": "Distinguish addiction from dependence and explain the role of tolerance."
+    },
+    {
+     "concept_tag": "effects-of-drug-abuse",
+     "learning_objective": "Describe the short-term and long-term effects of drug, alcohol and steroid abuse."
+    },
+    {
+     "concept_tag": "prevention-control",
+     "learning_objective": "Suggest measures for preventing and controlling drug and alcohol abuse among adolescents."
+    }
+   ]
+  }
+ ]
+}

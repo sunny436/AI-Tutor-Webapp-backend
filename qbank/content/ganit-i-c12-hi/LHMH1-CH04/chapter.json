@@ -1,0 +1,88 @@
+{
+ "chapter_id": "LHMH1-CH04",
+ "title": "सारणिक",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH1-CH04-T1",
+   "topic_number": 1,
+   "title": "सारणिक और उसका मान",
+   "ncert_sections": "4.1, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "sarnik-ka-maan",
+     "learning_objective": "कोटि 1, 2 और 3 के वर्ग आव्यूह के सारणिक का मान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "sarnik-samikaran",
+     "learning_objective": "सारणिकों की समानता से अज्ञात राशि ज्ञात करना और |kA| = kⁿ|A| का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH04-T2",
+   "topic_number": 2,
+   "title": "त्रिभुज का क्षेत्रफल",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "tribhuj-kshetrafal",
+     "learning_objective": "शीर्षों के निर्देशांकों से सारणिक द्वारा त्रिभुज का क्षेत्रफल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "sanrekhata",
+     "learning_objective": "सारणिक के शून्य होने से बिंदुओं की संरेखता और रेखा का समीकरण ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH04-T3",
+   "topic_number": 3,
+   "title": "उपसारणिक और सहखंड",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "upsarnik-sahkhand",
+     "learning_objective": "किसी अवयव का उपसारणिक और सहखंड ज्ञात करना।"
+    },
+    {
+     "concept_tag": "sahkhand-prasar",
+     "learning_objective": "सहखंडों की सहायता से सारणिक का प्रसार और उसके परिणाम समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH04-T4",
+   "topic_number": 4,
+   "title": "सहखंडज और व्युत्क्रम",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "sahkhandaj",
+     "learning_objective": "वर्ग आव्यूह का सहखंडज ज्ञात करना।"
+    },
+    {
+     "concept_tag": "vyutkramaniya-avyuh",
+     "learning_objective": "अव्युत्क्रमणीय और व्युत्क्रमणीय आव्यूह पहचानकर व्युत्क्रम ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH04-T5",
+   "topic_number": 5,
+   "title": "सारणिकों और आव्यूहों के अनुप्रयोग",
+   "ncert_sections": "4.6",
+   "concepts": [
+    {
+     "concept_tag": "sangatata",
+     "learning_objective": "रैखिक समीकरण निकाय की संगतता और असंगतता की जाँच करना।"
+    },
+    {
+     "concept_tag": "avyuh-vidhi-hal",
+     "learning_objective": "आव्यूह विधि X = A⁻¹B से रैखिक समीकरण निकाय हल करना।"
+    }
+   ]
+  }
+ ]
+}

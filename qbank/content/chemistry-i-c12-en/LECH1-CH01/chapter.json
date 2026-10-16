@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LECH1-CH01",
+ "title": "Solutions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECH1-CH01-T1",
+   "topic_number": 1,
+   "title": "Types of solutions",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "types-of-solutions",
+     "learning_objective": "Classify solutions by the physical states of solute and solvent with examples."
+    },
+    {
+     "concept_tag": "solvent-decides-physical-state",
+     "learning_objective": "Identify the solvent of a solution and relate it to the physical state of the solution."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH01-T2",
+   "topic_number": 2,
+   "title": "Expressing concentration of solutions",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "mole-fraction-and-percentages",
+     "learning_objective": "Calculate mole fraction and mass percentage of components of a solution."
+    },
+    {
+     "concept_tag": "molarity-and-molality",
+     "learning_objective": "Calculate molarity and molality and explain their dependence on temperature."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH01-T3",
+   "topic_number": 3,
+   "title": "Solubility of solids and gases in liquids",
+   "ncert_sections": "1.3, 1.3.1, 1.3.2",
+   "concepts": [
+    {
+     "concept_tag": "solubility-of-solids-in-liquids",
+     "learning_objective": "Explain the solubility of solids in liquids using the like-dissolves-like principle."
+    },
+    {
+     "concept_tag": "henrys-law",
+     "learning_objective": "Apply Henry's law and the effect of temperature to the solubility of gases in liquids."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH01-T4",
+   "topic_number": 4,
+   "title": "Vapour pressure of liquid solutions",
+   "ncert_sections": "1.4, 1.4.1, 1.4.2, 1.4.3",
+   "concepts": [
+    {
+     "concept_tag": "raoults-law-volatile-liquids",
+     "learning_objective": "Apply Raoult's law to find the vapour pressure and vapour composition of a mixture of volatile liquids."
+    },
+    {
+     "concept_tag": "raoults-law-and-henrys-law",
+     "learning_objective": "Relate Raoult's law to Henry's law as a special case."
+    },
+    {
+     "concept_tag": "vapour-pressure-non-volatile-solute",
+     "learning_objective": "Explain why a non-volatile solute lowers the vapour pressure of a solvent."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH01-T5",
+   "topic_number": 5,
+   "title": "Ideal and non-ideal solutions",
+   "ncert_sections": "1.5, 1.5.1, 1.5.2",
+   "concepts": [
+    {
+     "concept_tag": "ideal-solutions",
+     "learning_objective": "State the characteristics of ideal solutions."
+    },
+    {
+     "concept_tag": "deviations-from-raoults-law",
+     "learning_objective": "Explain positive and negative deviations from Raoult's law in terms of intermolecular forces."
+    },
+    {
+     "concept_tag": "azeotropes",
+     "learning_objective": "Distinguish minimum and maximum boiling azeotropes and relate them to deviations."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH01-T6",
+   "topic_number": 6,
+   "title": "Colligative properties and determination of molar mass",
+   "ncert_sections": "1.6, 1.6.1, 1.6.2, 1.6.3, 1.6.4, 1.6.5",
+   "concepts": [
+    {
+     "concept_tag": "colligative-properties-and-vapour-pressure-lowering",
+     "learning_objective": "Define colligative properties and calculate the relative lowering of vapour pressure."
+    },
+    {
+     "concept_tag": "boiling-and-freezing-point-changes",
+     "learning_objective": "Calculate elevation of boiling point and depression of freezing point."
+    },
+    {
+     "concept_tag": "osmotic-pressure",
+     "learning_objective": "Use osmotic pressure to find molar mass and explain reverse osmosis."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH01-T7",
+   "topic_number": 7,
+   "title": "Abnormal molar masses",
+   "ncert_sections": "1.7",
+   "concepts": [
+    {
+     "concept_tag": "vant-hoff-factor",
+     "learning_objective": "Use the van't Hoff factor to modify colligative property calculations."
+    },
+    {
+     "concept_tag": "association-and-dissociation",
+     "learning_objective": "Relate association and dissociation of solutes to abnormal molar masses and degree of dissociation."
+    }
+   ]
+  }
+ ]
+}

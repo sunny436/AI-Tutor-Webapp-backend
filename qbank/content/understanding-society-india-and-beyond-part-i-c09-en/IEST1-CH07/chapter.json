@@ -1,0 +1,144 @@
+{
+ "chapter_id": "IEST1-CH07",
+ "title": "Elections",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IEST1-CH07-T1",
+   "topic_number": 1,
+   "title": "Why do elections matter?",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "direct-and-indirect-elections",
+     "learning_objective": "Distinguish between direct and indirect elections and identify offices filled by each in India."
+    },
+    {
+     "concept_tag": "periodic-elections-and-accountability",
+     "learning_objective": "Explain how regular, periodic and competitive elections keep representatives accountable to the people."
+    },
+    {
+     "concept_tag": "psephology",
+     "learning_objective": "State the meaning and origin of the term psephology."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH07-T2",
+   "topic_number": 2,
+   "title": "The electoral system",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "first-past-the-post",
+     "learning_objective": "Explain how the First-Past-The-Post system decides the winner in a constituency."
+    },
+    {
+     "concept_tag": "majority-and-proportional-systems",
+     "learning_objective": "Compare the majority (two-round) system and proportional representation with FPTP."
+    },
+    {
+     "concept_tag": "single-transferable-vote",
+     "learning_objective": "Apply the quota rule of the single transferable vote used for the Rajya Sabha, Vidhan Parishad, President and Vice President."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH07-T3",
+   "topic_number": 3,
+   "title": "The laws and the Delimitation Commission",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "representation-of-the-people-acts",
+     "learning_objective": "Distinguish between the subjects covered by the Representation of the People Acts of 1950 and 1951."
+    },
+    {
+     "concept_tag": "corrupt-practices",
+     "learning_objective": "Identify electoral offences and corrupt practices listed in the RPA, 1951."
+    },
+    {
+     "concept_tag": "delimitation",
+     "learning_objective": "Explain the purpose of delimitation in ensuring equal representation."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH07-T4",
+   "topic_number": 4,
+   "title": "Election Commission of India",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "eci-constitutional-status",
+     "learning_objective": "Describe the ECI as an autonomous, permanent constitutional body and the elections it conducts."
+    },
+    {
+     "concept_tag": "electoral-roll-and-sir",
+     "learning_objective": "Explain how the ECI prepares electoral rolls and why it conducts the Special Intensive Revision."
+    },
+    {
+     "concept_tag": "eci-functions",
+     "learning_objective": "Describe the ECI's functions of scheduling elections, registering parties and allotting symbols."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH07-T5",
+   "topic_number": 5,
+   "title": "Free, fair and inclusive elections: no voter to be left behind",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "inclusive-voting-measures",
+     "learning_objective": "Identify ECI measures that help senior citizens, PwDs and service voters cast their votes."
+    },
+    {
+     "concept_tag": "election-technology-apps",
+     "learning_objective": "Match ECI digital applications such as cVIGIL, Suvidha and Saksham to their uses."
+    },
+    {
+     "concept_tag": "meaning-of-free-and-fair-elections",
+     "learning_objective": "Evaluate why fairness, inclusion and trust are needed for elections to have democratic value."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH07-T6",
+   "topic_number": 6,
+   "title": "Political parties",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "role-of-political-parties",
+     "learning_objective": "Describe the roles political parties play in a multi-party democracy."
+    },
+    {
+     "concept_tag": "defection-and-anti-defection-law",
+     "learning_objective": "Explain defection and the provisions of the Anti-Defection Law of 1985."
+    },
+    {
+     "concept_tag": "party-recognition-criteria",
+     "learning_objective": "Apply the ECI criteria for recognising national and state parties."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH07-T7",
+   "topic_number": 7,
+   "title": "Challenges to free and fair elections",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "challenges-to-elections",
+     "learning_objective": "Identify challenges such as misinformation, fake news and intimidation and analyse their effect on democracy."
+    },
+    {
+     "concept_tag": "safeguards-for-fair-elections",
+     "learning_objective": "Explain safeguards such as the Model Code of Conduct, EVMs and VVPAT."
+    }
+   ]
+  }
+ ]
+}

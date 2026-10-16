@@ -1,0 +1,136 @@
+{
+ "chapter_id": "FECU1-CH08",
+ "title": "A Journey through States of Water",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FECU1-CH08-T1",
+   "topic_number": 1,
+   "title": "Ice, Water and Water's Disappearing Act",
+   "ncert_sections": "Introduction, 8.1",
+   "concepts": [
+    {
+     "concept_tag": "ice-and-water-same-substance",
+     "learning_objective": "Recognise that ice and water are two states of the same substance."
+    },
+    {
+     "concept_tag": "evaporation",
+     "learning_objective": "Define evaporation and identify everyday examples of water changing into water vapour."
+    },
+    {
+     "concept_tag": "water-vapour-and-steam",
+     "learning_objective": "Explain that water vapour is invisible and that steam is visible because of tiny water droplets."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH08-T2",
+   "topic_number": 2,
+   "title": "Another Mystery: Condensation",
+   "ncert_sections": "8.2",
+   "concepts": [
+    {
+     "concept_tag": "condensation",
+     "learning_objective": "Define condensation as the change of water vapour into liquid water on a cold surface."
+    },
+    {
+     "concept_tag": "evidence-for-condensation",
+     "learning_objective": "Use observations from the tumbler activities to show that outside droplets come from condensation, not seepage."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH08-T3",
+   "topic_number": 3,
+   "title": "The Different States of Water",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "properties-of-states",
+     "learning_objective": "Compare solid, liquid and gaseous states by shape, flow and spreading."
+    },
+    {
+     "concept_tag": "examples-of-states",
+     "learning_objective": "Classify common substances as solids, liquids or gases."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH08-T4",
+   "topic_number": 4,
+   "title": "Changing the States of Water",
+   "ncert_sections": "8.4",
+   "concepts": [
+    {
+     "concept_tag": "melting-and-freezing",
+     "learning_objective": "Define melting and freezing and give examples from daily life."
+    },
+    {
+     "concept_tag": "heating-and-cooling-change-state",
+     "learning_objective": "Explain that substances change state when they are heated or cooled."
+    },
+    {
+     "concept_tag": "connecting-the-states",
+     "learning_objective": "Link melting, freezing, evaporation and condensation to the states they connect."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH08-T5",
+   "topic_number": 5,
+   "title": "Making Water Evaporate Faster or Slower",
+   "ncert_sections": "8.5",
+   "concepts": [
+    {
+     "concept_tag": "exposed-area",
+     "learning_objective": "Explain how a larger exposed area makes water evaporate faster."
+    },
+    {
+     "concept_tag": "conditions-affecting-evaporation",
+     "learning_objective": "Describe how heat, air movement and humidity affect the rate of evaporation."
+    },
+    {
+     "concept_tag": "fair-test",
+     "learning_objective": "Identify the condition changed and the conditions kept the same in an evaporation investigation."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH08-T6",
+   "topic_number": 6,
+   "title": "Cooling Effect of Evaporation",
+   "ncert_sections": "8.6",
+   "concepts": [
+    {
+     "concept_tag": "evaporation-causes-cooling",
+     "learning_objective": "Explain that evaporation produces a cooling effect, with everyday examples."
+    },
+    {
+     "concept_tag": "earthen-pot-and-cooler",
+     "learning_objective": "Explain how an earthen pot and a pot-in-pot cooler keep things cool."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH08-T7",
+   "topic_number": 7,
+   "title": "Clouds, Rain and the Water Cycle",
+   "ncert_sections": "8.7",
+   "concepts": [
+    {
+     "concept_tag": "clouds-and-rain",
+     "learning_objective": "Explain how clouds and rain form through condensation of water vapour around dust particles."
+    },
+    {
+     "concept_tag": "water-cycle",
+     "learning_objective": "Describe the water cycle as the circulation of water between the Earth's surface and the atmosphere."
+    },
+    {
+     "concept_tag": "water-conservation",
+     "learning_objective": "Explain why only a small part of the Earth's water is usable and why water must be used wisely."
+    }
+   ]
+  }
+ ]
+}

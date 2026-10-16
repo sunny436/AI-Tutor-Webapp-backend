@@ -1,0 +1,152 @@
+{
+ "chapter_id": "KEPY1-CH04",
+ "title": "Sensory, Attentional and Perceptual Processes",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPY1-CH04-T1",
+   "topic_number": 1,
+   "title": "Knowing the world: stimuli, sense modalities and thresholds",
+   "ncert_sections": "Knowing the World; Nature and Varieties of Stimulus; Sense Modalities",
+   "concepts": [
+    {
+     "concept_tag": "sense-organs-and-modalities",
+     "learning_objective": "Identify the seven sense organs, including the two deep senses, and define sensation and sense modality."
+    },
+    {
+     "concept_tag": "absolute-threshold",
+     "learning_objective": "Explain the absolute threshold and why it is estimated over many trials."
+    },
+    {
+     "concept_tag": "difference-threshold",
+     "learning_objective": "Distinguish the difference threshold from the absolute threshold in a given situation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH04-T2",
+   "topic_number": 2,
+   "title": "Attention and selective attention",
+   "ncert_sections": "Attentional Processes; Selective Attention",
+   "concepts": [
+    {
+     "concept_tag": "properties-of-attention",
+     "learning_objective": "Describe alertness, concentration and search as properties of attention, and its focus and fringe."
+    },
+    {
+     "concept_tag": "factors-selective-attention",
+     "learning_objective": "Classify external and internal factors that determine selective attention."
+    },
+    {
+     "concept_tag": "theories-selective-attention",
+     "learning_objective": "Compare the filter, filter-attenuation and multimode theories of selective attention."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH04-T3",
+   "topic_number": 3,
+   "title": "Sustained attention, span of attention, divided attention and ADHD",
+   "ncert_sections": "Sustained Attention; Box 4.1; Box 4.2; Box 4.3",
+   "concepts": [
+    {
+     "concept_tag": "sustained-attention",
+     "learning_objective": "Explain vigilance and the factors that facilitate or inhibit sustained attention."
+    },
+    {
+     "concept_tag": "span-and-divided-attention",
+     "learning_objective": "State the span of attention and explain when attention can be divided."
+    },
+    {
+     "concept_tag": "adhd",
+     "learning_objective": "Describe the features, causes and management of attention deficit hyperactivity disorder."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH04-T4",
+   "topic_number": 4,
+   "title": "Perceptual processes and the perceiver",
+   "ncert_sections": "Perceptual Processes; Processing Approaches in Perception; The Perceiver",
+   "concepts": [
+    {
+     "concept_tag": "bottom-up-top-down",
+     "learning_objective": "Define perception and distinguish bottom-up from top-down processing."
+    },
+    {
+     "concept_tag": "perceiver-factors",
+     "learning_objective": "Explain how motivation, expectations and cultural experience shape perception."
+    },
+    {
+     "concept_tag": "cognitive-styles",
+     "learning_objective": "Distinguish field dependent and field independent cognitive styles."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH04-T5",
+   "topic_number": 5,
+   "title": "Principles of perceptual organisation",
+   "ncert_sections": "Principles of Perceptual Organisation",
+   "concepts": [
+    {
+     "concept_tag": "gestalt-and-figure-ground",
+     "learning_objective": "Explain the Gestalt view of form perception and the features of figure and ground."
+    },
+    {
+     "concept_tag": "gestalt-principles",
+     "learning_objective": "Apply the Gestalt principles of organisation to visual patterns."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH04-T6",
+   "topic_number": 6,
+   "title": "Perception of space, depth and distance",
+   "ncert_sections": "Perception of Space, Depth, and Distance; Monocular Cues and Binocular Cues",
+   "concepts": [
+    {
+     "concept_tag": "monocular-cues",
+     "learning_objective": "Identify monocular (pictorial and kinetic) cues to depth in given scenes."
+    },
+    {
+     "concept_tag": "binocular-cues",
+     "learning_objective": "Explain retinal disparity, convergence and accommodation as cues to depth."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH04-T7",
+   "topic_number": 7,
+   "title": "Perceptual constancies and illusions",
+   "ncert_sections": "Perceptual Constancies; Illusions",
+   "concepts": [
+    {
+     "concept_tag": "perceptual-constancies",
+     "learning_objective": "Distinguish size, shape and brightness constancy."
+    },
+    {
+     "concept_tag": "illusions",
+     "learning_objective": "Explain geometrical and apparent movement illusions and why illusions occur."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH04-T8",
+   "topic_number": 8,
+   "title": "Socio-cultural influences on perception",
+   "ncert_sections": "Socio-Cultural Influences on Perception",
+   "concepts": [
+    {
+     "concept_tag": "illusion-susceptibility-culture",
+     "learning_objective": "Interpret cross-cultural findings on susceptibility to visual illusions."
+    },
+    {
+     "concept_tag": "pictorial-perception-culture",
+     "learning_objective": "Explain how cultural exposure to pictures affects pictorial perception."
+    }
+   ]
+  }
+ ]
+}

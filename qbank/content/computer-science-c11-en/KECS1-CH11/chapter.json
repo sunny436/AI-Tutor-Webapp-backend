@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KECS1-CH11",
+ "title": "Societal Impact",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECS1-CH11-T1",
+   "topic_number": 1,
+   "title": "Digital Footprints",
+   "ncert_sections": "11.1, 11.2",
+   "concepts": [
+    {
+     "concept_tag": "active-and-passive-footprints",
+     "learning_objective": "Distinguish active digital footprints, submitted intentionally, from passive footprints left unintentionally."
+    },
+    {
+     "concept_tag": "permanence-of-digital-footprints",
+     "learning_objective": "Explain why digital footprints stored on servers cannot be guaranteed to be fully erased and can be used to trace a user."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH11-T2",
+   "topic_number": 2,
+   "title": "Digital Society, Netizen and Net Etiquettes",
+   "ncert_sections": "11.3, 11.3.1",
+   "concepts": [
+    {
+     "concept_tag": "netizen",
+     "learning_objective": "Define a netizen as anyone who uses digital technology with the Internet and state what being a good netizen means."
+    },
+    {
+     "concept_tag": "net-etiquettes",
+     "learning_objective": "Apply the net etiquettes of being ethical, respectful and responsible, including avoiding cyber bullying and not feeding trolls."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH11-T3",
+   "topic_number": 3,
+   "title": "Communication and Social Media Etiquettes",
+   "ncert_sections": "11.3.2, 11.3.3",
+   "concepts": [
+    {
+     "concept_tag": "communication-etiquettes",
+     "learning_objective": "Apply the communication etiquettes of being precise, polite and credible in digital communication."
+    },
+    {
+     "concept_tag": "social-media-etiquettes",
+     "learning_objective": "Apply social media etiquettes of being secure and reliable, such as choosing passwords wisely and thinking before uploading."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH11-T4",
+   "topic_number": 4,
+   "title": "Data Protection and Intellectual Property Rights",
+   "ncert_sections": "11.4, 11.4.1",
+   "concepts": [
+    {
+     "concept_tag": "sensitive-data-protection",
+     "learning_objective": "Identify sensitive data and the methods used to protect its privacy."
+    },
+    {
+     "concept_tag": "copyright-patent-trademark",
+     "learning_objective": "Distinguish copyright, patent and trademark as ways of protecting intellectual property."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH11-T5",
+   "topic_number": 5,
+   "title": "Violation of IPR, Public Access and Open Source Software",
+   "ncert_sections": "11.4.2, 11.4.3",
+   "concepts": [
+    {
+     "concept_tag": "plagiarism-and-infringement",
+     "learning_objective": "Distinguish plagiarism, copyright infringement and trademark infringement."
+    },
+    {
+     "concept_tag": "open-licences-and-foss",
+     "learning_objective": "Describe Creative Commons, GNU GPL and FOSS, and explain why software piracy is copyright infringement."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH11-T6",
+   "topic_number": 6,
+   "title": "Cyber Crime",
+   "ncert_sections": "11.5, 11.5.1, 11.5.2, 11.5.3, 11.5.4",
+   "concepts": [
+    {
+     "concept_tag": "hacking",
+     "learning_objective": "Distinguish ethical (white hat) hacking from non-ethical (black hat) hacking."
+    },
+    {
+     "concept_tag": "phishing-identity-theft-ransomware",
+     "learning_objective": "Identify phishing, identity theft and ransomware from their features."
+    },
+    {
+     "concept_tag": "preventing-cyber-crime",
+     "learning_objective": "Choose safety measures that reduce the risk of cyber crime."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH11-T7",
+   "topic_number": 7,
+   "title": "Indian IT Act and Impact on Health",
+   "ncert_sections": "11.6, 11.7",
+   "concepts": [
+    {
+     "concept_tag": "indian-it-act",
+     "learning_objective": "State the purpose and main provisions of the Information Technology Act, 2000, amended in 2008."
+    },
+    {
+     "concept_tag": "ergonomics-and-health",
+     "learning_objective": "Explain how ergonomics and healthy habits reduce the physical and mental effects of overusing digital devices."
+    }
+   ]
+  }
+ ]
+}

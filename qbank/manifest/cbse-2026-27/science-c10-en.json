@@ -1,0 +1,1797 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "science-c10-en",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "science",
+  "language": "english",
+  "title": "Science",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jesc1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JESC1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Chemical Reactions and Equations",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch01",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH01-T1",
+     "topic_number": 1,
+     "title": "Chemical reactions and chemical equations",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "signs-of-chemical-reaction",
+       "learning_objective": "Identify a chemical reaction from observations such as a change in state, change in colour, evolution of a gas or change in temperature."
+      },
+      {
+       "concept_tag": "word-equations-reactants-products",
+       "learning_objective": "Write a word-equation and identify the reactants and products and the direction of a reaction."
+      },
+      {
+       "concept_tag": "skeletal-chemical-equation",
+       "learning_objective": "Explain why an equation with unequal numbers of atoms on the two sides is a skeletal chemical equation."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH01-T2",
+     "topic_number": 2,
+     "title": "Balancing chemical equations",
+     "ncert_sections": "1.1.1, 1.1.2",
+     "concepts": [
+      {
+       "concept_tag": "conservation-of-mass-balancing",
+       "learning_objective": "Relate the law of conservation of mass to the need for balancing chemical equations without changing formulae."
+      },
+      {
+       "concept_tag": "hit-and-trial-balancing",
+       "learning_objective": "Balance chemical equations by the hit-and-trial method using the smallest whole-number coefficients."
+      },
+      {
+       "concept_tag": "state-symbols-and-conditions",
+       "learning_objective": "Interpret the state symbols (s), (l), (g), (aq) and the reaction conditions written on the arrow."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH01-T3",
+     "topic_number": 3,
+     "title": "Combination reactions and exothermic reactions",
+     "ncert_sections": "1.2.1",
+     "concepts": [
+      {
+       "concept_tag": "combination-reaction",
+       "learning_objective": "Identify combination reactions in which two or more substances form a single product."
+      },
+      {
+       "concept_tag": "exothermic-reaction",
+       "learning_objective": "Explain exothermic reactions using examples such as burning of natural gas, respiration and composting."
+      },
+      {
+       "concept_tag": "whitewashing-chemistry",
+       "learning_objective": "Explain the reactions of quick lime with water and of slaked lime with carbon dioxide in whitewashing."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH01-T4",
+     "topic_number": 4,
+     "title": "Decomposition reactions and endothermic reactions",
+     "ncert_sections": "1.2.2",
+     "concepts": [
+      {
+       "concept_tag": "thermal-decomposition",
+       "learning_objective": "Describe thermal decomposition of ferrous sulphate, calcium carbonate and lead nitrate and their products."
+      },
+      {
+       "concept_tag": "decomposition-by-electricity-and-light",
+       "learning_objective": "Explain decomposition of water by electricity and of silver chloride and silver bromide by sunlight."
+      },
+      {
+       "concept_tag": "endothermic-reaction",
+       "learning_objective": "Recognise that decomposition reactions absorb energy and are endothermic, unlike combination reactions."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH01-T5",
+     "topic_number": 5,
+     "title": "Displacement and double displacement reactions",
+     "ncert_sections": "1.2.3, 1.2.4",
+     "concepts": [
+      {
+       "concept_tag": "displacement-reaction",
+       "learning_objective": "Explain displacement of copper from its compounds by more reactive metals such as iron, zinc and lead."
+      },
+      {
+       "concept_tag": "double-displacement-and-precipitation",
+       "learning_objective": "Identify double displacement reactions as an exchange of ions and recognise precipitation reactions."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH01-T6",
+     "topic_number": 6,
+     "title": "Oxidation and reduction",
+     "ncert_sections": "1.2.5",
+     "concepts": [
+      {
+       "concept_tag": "oxidation-and-reduction",
+       "learning_objective": "Define oxidation and reduction in terms of gain or loss of oxygen or hydrogen."
+      },
+      {
+       "concept_tag": "redox-reactions",
+       "learning_objective": "Identify the substance oxidised and the substance reduced in a redox reaction."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH01-T7",
+     "topic_number": 7,
+     "title": "Effects of oxidation in everyday life: corrosion and rancidity",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "corrosion",
+       "learning_objective": "Describe corrosion of metals such as the rusting of iron and the coatings on copper and silver, and ways to prevent it."
+      },
+      {
+       "concept_tag": "rancidity",
+       "learning_objective": "Explain rancidity as the oxidation of fats and oils and the methods used to slow it down."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESC1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Acids, Bases and Salts",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch02",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH02-T1",
+     "topic_number": 1,
+     "title": "Acid-base indicators",
+     "ncert_sections": "2.1, 2.1.1",
+     "concepts": [
+      {
+       "concept_tag": "acid-base-indicators",
+       "learning_objective": "Identify natural and synthetic acid-base indicators and use their colour changes to tell acids from bases."
+      },
+      {
+       "concept_tag": "olfactory-indicators",
+       "learning_objective": "Explain how olfactory indicators such as vanilla, onion and clove oil show acids and bases by a change in odour."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH02-T2",
+     "topic_number": 2,
+     "title": "Chemical reactions of acids and bases",
+     "ncert_sections": "2.1.2, 2.1.3, 2.1.4, 2.1.5, 2.1.6",
+     "concepts": [
+      {
+       "concept_tag": "reactions-with-metals",
+       "learning_objective": "Describe the reactions of acids and of bases with metals, and the test for the hydrogen gas evolved."
+      },
+      {
+       "concept_tag": "carbonates-and-acids",
+       "learning_objective": "Predict the products when metal carbonates and hydrogencarbonates react with acids and test for carbon dioxide."
+      },
+      {
+       "concept_tag": "neutralisation-and-oxides",
+       "learning_objective": "Explain neutralisation and classify metallic oxides as basic and non-metallic oxides as acidic."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH02-T3",
+     "topic_number": 3,
+     "title": "What all acids and all bases have in common",
+     "ncert_sections": "2.2, 2.2.1",
+     "concepts": [
+      {
+       "concept_tag": "ions-in-solution",
+       "learning_objective": "Explain that acids produce H+(aq) ions only in water, which makes their solutions conduct electricity."
+      },
+      {
+       "concept_tag": "hydronium-and-alkalis",
+       "learning_objective": "Recognise that H+ ions exist as hydronium ions and that bases give OH- ions, soluble bases being alkalis."
+      },
+      {
+       "concept_tag": "dilution-safety",
+       "learning_objective": "Explain why dissolving acids or bases in water is exothermic and why acid must be added to water."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH02-T4",
+     "topic_number": 4,
+     "title": "Strength of acid and base solutions: the pH scale",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "ph-scale",
+       "learning_objective": "Relate the pH value of a solution to its hydrogen ion concentration and its acidic, neutral or basic nature."
+      },
+      {
+       "concept_tag": "strong-and-weak-acids",
+       "learning_objective": "Distinguish strong and weak acids by the amount of H+ ions they produce at the same concentration."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH02-T5",
+     "topic_number": 5,
+     "title": "Importance of pH in everyday life",
+     "ncert_sections": "2.3.1",
+     "concepts": [
+      {
+       "concept_tag": "ph-in-living-systems",
+       "learning_objective": "Explain the role of pH in the body, digestion, acid rain and soil for plant growth."
+      },
+      {
+       "concept_tag": "tooth-decay-and-stings",
+       "learning_objective": "Apply neutralisation to explain tooth decay prevention and remedies for bee and nettle stings."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH02-T6",
+     "topic_number": 6,
+     "title": "Salts: families, pH and chemicals from common salt",
+     "ncert_sections": "2.4.1, 2.4.2, 2.4.3",
+     "concepts": [
+      {
+       "concept_tag": "salt-families",
+       "learning_objective": "Group salts into families by their common positive or negative radicals."
+      },
+      {
+       "concept_tag": "ph-of-salts",
+       "learning_objective": "Predict whether a salt solution is acidic, basic or neutral from the strength of its parent acid and base."
+      },
+      {
+       "concept_tag": "chlor-alkali-and-bleaching-powder",
+       "learning_objective": "Describe the chlor-alkali process and the preparation and uses of bleaching powder."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH02-T7",
+     "topic_number": 7,
+     "title": "Baking soda, washing soda and water of crystallisation",
+     "ncert_sections": "2.4.3, 2.4.4",
+     "concepts": [
+      {
+       "concept_tag": "baking-and-washing-soda",
+       "learning_objective": "Describe the preparation, reactions and uses of baking soda and washing soda."
+      },
+      {
+       "concept_tag": "water-of-crystallisation",
+       "learning_objective": "Define water of crystallisation and explain the colour change of copper sulphate crystals on heating."
+      },
+      {
+       "concept_tag": "plaster-of-paris",
+       "learning_objective": "Explain the formation, setting and storage of Plaster of Paris from gypsum."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESC1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Metals and Non-metals",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch03",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH03-T1",
+     "topic_number": 1,
+     "title": "Physical properties of metals and non-metals",
+     "ncert_sections": "3.1, 3.1.1, 3.1.2",
+     "concepts": [
+      {
+       "concept_tag": "physical-properties-of-metals",
+       "learning_objective": "Describe lustre, hardness, malleability, ductility, conduction of heat and electricity and sonority of metals and relate them to uses."
+      },
+      {
+       "concept_tag": "non-metals-and-exceptions",
+       "learning_objective": "Identify the physical properties of non-metals and the exceptions that make physical properties alone insufficient for classification."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH03-T2",
+     "topic_number": 2,
+     "title": "Reactions of metals with oxygen, water and acids",
+     "ncert_sections": "3.2, 3.2.1, 3.2.2, 3.2.3",
+     "concepts": [
+      {
+       "concept_tag": "reaction-with-oxygen",
+       "learning_objective": "Explain how metals form oxides with oxygen, including basic and amphoteric oxides and protective oxide layers."
+      },
+      {
+       "concept_tag": "reaction-with-water",
+       "learning_objective": "Compare the reactions of metals with cold water, hot water and steam and write the products formed."
+      },
+      {
+       "concept_tag": "reaction-with-acids",
+       "learning_objective": "Explain the reactions of metals with dilute acids, including the special behaviour of nitric acid."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH03-T3",
+     "topic_number": 3,
+     "title": "Displacement reactions and the reactivity series",
+     "ncert_sections": "3.2.4, 3.2.5",
+     "concepts": [
+      {
+       "concept_tag": "displacement-reactions",
+       "learning_objective": "Predict whether a metal will displace another metal from its salt solution."
+      },
+      {
+       "concept_tag": "reactivity-series",
+       "learning_objective": "Use the reactivity series and displacement results to arrange metals in order of reactivity."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH03-T4",
+     "topic_number": 4,
+     "title": "Ionic compounds and their properties",
+     "ncert_sections": "3.3, 3.3.1",
+     "concepts": [
+      {
+       "concept_tag": "ionic-bond-formation",
+       "learning_objective": "Show the formation of ionic compounds by transfer of electrons from a metal to a non-metal."
+      },
+      {
+       "concept_tag": "properties-of-ionic-compounds",
+       "learning_objective": "Explain the physical nature, melting points, solubility and electrical conduction of ionic compounds."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH03-T5",
+     "topic_number": 5,
+     "title": "Occurrence and extraction of metals",
+     "ncert_sections": "3.4, 3.4.1, 3.4.2, 3.4.3, 3.4.4, 3.4.5",
+     "concepts": [
+      {
+       "concept_tag": "minerals-ores-gangue",
+       "learning_objective": "Define minerals, ores and gangue and relate the occurrence of metals to their reactivity."
+      },
+      {
+       "concept_tag": "roasting-and-calcination",
+       "learning_objective": "Distinguish roasting from calcination and outline how metals of medium reactivity are extracted."
+      },
+      {
+       "concept_tag": "reduction-methods",
+       "learning_objective": "Choose a suitable reduction method (heat, carbon, displacement or electrolysis) from a metal's place in the activity series."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH03-T6",
+     "topic_number": 6,
+     "title": "Refining of metals",
+     "ncert_sections": "3.4.6",
+     "concepts": [
+      {
+       "concept_tag": "electrolytic-refining",
+       "learning_objective": "Describe electrolytic refining, including the electrodes, the electrolyte and the fate of impurities."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH03-T7",
+     "topic_number": 7,
+     "title": "Corrosion and its prevention",
+     "ncert_sections": "3.5, 3.5.1",
+     "concepts": [
+      {
+       "concept_tag": "conditions-for-rusting",
+       "learning_objective": "Identify the conditions needed for iron to rust from an experiment."
+      },
+      {
+       "concept_tag": "prevention-of-corrosion",
+       "learning_objective": "Explain methods of preventing rusting, such as painting and galvanisation."
+      },
+      {
+       "concept_tag": "alloys",
+       "learning_objective": "Explain what alloys are and how alloying changes the properties of metals."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESC1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Carbon and its Compounds",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch04",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH04-T1",
+     "topic_number": 1,
+     "title": "Bonding in carbon: the covalent bond",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "covalent-bond-formation",
+       "learning_objective": "Explain why carbon forms covalent bonds by sharing electrons rather than forming C4+ or C4- ions."
+      },
+      {
+       "concept_tag": "single-double-triple-bonds",
+       "learning_objective": "Identify single, double and triple covalent bonds from electron dot structures of simple molecules."
+      },
+      {
+       "concept_tag": "properties-of-covalent-compounds",
+       "learning_objective": "Relate the low melting points, boiling points and poor conductivity of covalent compounds to their bonding."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH04-T2",
+     "topic_number": 2,
+     "title": "Versatile nature of carbon: catenation, tetravalency and saturation",
+     "ncert_sections": "4.2, 4.2.1",
+     "concepts": [
+      {
+       "concept_tag": "catenation-and-tetravalency",
+       "learning_objective": "Explain how catenation and tetravalency allow carbon to form a very large number of stable compounds."
+      },
+      {
+       "concept_tag": "saturated-unsaturated-compounds",
+       "learning_objective": "Distinguish saturated from unsaturated carbon compounds using their bonds and structures."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH04-T3",
+     "topic_number": 3,
+     "title": "Chains, branches and rings",
+     "ncert_sections": "4.2.2",
+     "concepts": [
+      {
+       "concept_tag": "structural-isomerism",
+       "learning_objective": "Recognise structural isomers as compounds with the same molecular formula but different structures."
+      },
+      {
+       "concept_tag": "hydrocarbon-classes",
+       "learning_objective": "Classify hydrocarbons as alkanes, alkenes or alkynes and as open-chain or cyclic compounds."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH04-T4",
+     "topic_number": 4,
+     "title": "Functional groups, homologous series and nomenclature",
+     "ncert_sections": "4.2.3, 4.2.4, 4.2.5",
+     "concepts": [
+      {
+       "concept_tag": "functional-groups",
+       "learning_objective": "Identify heteroatoms and functional groups and explain how they decide the properties of a compound."
+      },
+      {
+       "concept_tag": "homologous-series",
+       "learning_objective": "Describe a homologous series and the gradation of physical properties along it."
+      },
+      {
+       "concept_tag": "nomenclature-of-carbon-compounds",
+       "learning_objective": "Name simple carbon compounds using the correct prefix or suffix for the functional group."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH04-T5",
+     "topic_number": 5,
+     "title": "Chemical properties of carbon compounds",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "combustion-of-carbon-compounds",
+       "learning_objective": "Explain complete and incomplete combustion and the nature of the flames they produce."
+      },
+      {
+       "concept_tag": "oxidation-of-alcohols",
+       "learning_objective": "Explain the oxidation of alcohols to carboxylic acids by oxidising agents."
+      },
+      {
+       "concept_tag": "addition-and-substitution-reactions",
+       "learning_objective": "Distinguish addition reactions of unsaturated hydrocarbons from substitution reactions of saturated ones."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH04-T6",
+     "topic_number": 6,
+     "title": "Ethanol and ethanoic acid",
+     "ncert_sections": "4.4, 4.4.1, 4.4.2",
+     "concepts": [
+      {
+       "concept_tag": "properties-of-ethanol",
+       "learning_objective": "Describe the properties and reactions of ethanol with sodium and with hot concentrated sulphuric acid."
+      },
+      {
+       "concept_tag": "reactions-of-ethanoic-acid",
+       "learning_objective": "Describe the properties of ethanoic acid and its reactions with bases, carbonates and hydrogencarbonates."
+      },
+      {
+       "concept_tag": "esterification-and-saponification",
+       "learning_objective": "Explain the formation of esters and their conversion back by saponification."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH04-T7",
+     "topic_number": 7,
+     "title": "Soaps and detergents",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "micelles-and-cleansing-action",
+       "learning_objective": "Explain how soap molecules form micelles that remove oily dirt."
+      },
+      {
+       "concept_tag": "hard-water-and-detergents",
+       "learning_objective": "Explain why soap forms scum in hard water and why detergents remain effective in it."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESC1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": 6,
+   "title": "Life Processes",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch05",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH05-T1",
+     "topic_number": 1,
+     "title": "What are life processes?",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "life-processes-definition",
+       "learning_objective": "Define life processes as the maintenance functions of an organism and name nutrition, respiration, transportation and excretion."
+      },
+      {
+       "concept_tag": "molecular-movement-and-life",
+       "learning_objective": "Explain why invisible molecular movement is needed to repair and maintain living structures."
+      },
+      {
+       "concept_tag": "need-for-specialised-systems",
+       "learning_objective": "Explain why diffusion is insufficient for multicellular organisms and why specialised tissues and transport are needed."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH05-T2",
+     "topic_number": 2,
+     "title": "Autotrophic nutrition and photosynthesis",
+     "ncert_sections": "5.2, 5.2.1",
+     "concepts": [
+      {
+       "concept_tag": "photosynthesis-events",
+       "learning_objective": "Describe the raw materials, events and products of photosynthesis and how plants store unused carbohydrate."
+      },
+      {
+       "concept_tag": "photosynthesis-experiments",
+       "learning_objective": "Interpret the starch-test activities showing that chlorophyll and carbon dioxide are essential for photosynthesis."
+      },
+      {
+       "concept_tag": "stomata-and-raw-materials",
+       "learning_objective": "Explain how guard cells open and close stomata and how plants obtain water and minerals such as nitrogen."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH05-T3",
+     "topic_number": 3,
+     "title": "Heterotrophic nutrition and nutrition in single-celled organisms",
+     "ncert_sections": "5.2.2, 5.2.3",
+     "concepts": [
+      {
+       "concept_tag": "heterotrophic-strategies",
+       "learning_objective": "Distinguish between organisms that break down food outside the body, those that take in whole food, and parasites."
+      },
+      {
+       "concept_tag": "nutrition-in-unicellular-organisms",
+       "learning_objective": "Describe how Amoeba and Paramoecium take in and digest food."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH05-T4",
+     "topic_number": 4,
+     "title": "Nutrition in human beings",
+     "ncert_sections": "5.2.4",
+     "concepts": [
+      {
+       "concept_tag": "digestion-in-mouth-and-stomach",
+       "learning_objective": "Explain the roles of teeth, saliva, gastric glands, acid, pepsin and mucus in digestion."
+      },
+      {
+       "concept_tag": "digestion-in-small-intestine",
+       "learning_objective": "Explain how bile, pancreatic juice and intestinal juice complete the digestion of carbohydrates, proteins and fats."
+      },
+      {
+       "concept_tag": "absorption-by-villi",
+       "learning_objective": "Explain how villi absorb digested food and how the large intestine absorbs water."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH05-T5",
+     "topic_number": 5,
+     "title": "Respiration",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "aerobic-and-anaerobic-respiration",
+       "learning_objective": "Compare the pathways by which glucose is broken down in yeast, in muscle cells and in mitochondria."
+      },
+      {
+       "concept_tag": "atp-energy-currency",
+       "learning_objective": "Describe ATP as the energy currency of the cell and how it is made and used."
+      },
+      {
+       "concept_tag": "gas-exchange-in-organisms",
+       "learning_objective": "Explain gaseous exchange in plants, aquatic animals and the human respiratory system."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH05-T6",
+     "topic_number": 6,
+     "title": "Transportation in human beings",
+     "ncert_sections": "5.4.1",
+     "concepts": [
+      {
+       "concept_tag": "heart-and-double-circulation",
+       "learning_objective": "Trace the flow of blood through the four chambers of the heart and explain double circulation."
+      },
+      {
+       "concept_tag": "blood-vessels-and-blood-pressure",
+       "learning_objective": "Distinguish arteries, veins and capillaries and interpret systolic and diastolic blood pressure."
+      },
+      {
+       "concept_tag": "platelets-and-lymph",
+       "learning_objective": "Describe the roles of platelets in clotting and of lymph in transport."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH05-T7",
+     "topic_number": 7,
+     "title": "Transportation in plants",
+     "ncert_sections": "5.4.2",
+     "concepts": [
+      {
+       "concept_tag": "plant-transport-needs",
+       "learning_objective": "Explain why plants need a transport system and why it can be relatively slow."
+      },
+      {
+       "concept_tag": "water-transport-in-xylem",
+       "learning_objective": "Explain how root pressure and transpiration pull move water and minerals up the xylem."
+      },
+      {
+       "concept_tag": "translocation-in-phloem",
+       "learning_objective": "Describe translocation of food in phloem and how it uses energy from ATP."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH05-T8",
+     "topic_number": 8,
+     "title": "Excretion in human beings and plants",
+     "ncert_sections": "5.5, 5.5.1, 5.5.2",
+     "concepts": [
+      {
+       "concept_tag": "human-excretory-system",
+       "learning_objective": "Identify the organs of the human excretory system and the path of urine."
+      },
+      {
+       "concept_tag": "nephron-and-urine-formation",
+       "learning_objective": "Explain filtration and selective reabsorption in nephrons and compare the kidney with dialysis."
+      },
+      {
+       "concept_tag": "excretion-in-plants",
+       "learning_objective": "Describe the ways in which plants get rid of their waste products."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESC1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": 7,
+   "title": "Control and Coordination",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch06",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH06-T1",
+     "topic_number": 1,
+     "title": "Nervous tissue: receptors, neurons and the synapse",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "receptors-and-neuron-structure",
+       "learning_objective": "Identify the role of receptors and the parts of a neuron through which information is acquired and conducted."
+      },
+      {
+       "concept_tag": "synaptic-transmission",
+       "learning_objective": "Explain how a nerve impulse is passed across a synapse to another neuron or to a muscle cell."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH06-T2",
+     "topic_number": 2,
+     "title": "Reflex actions and the reflex arc",
+     "ncert_sections": "6.1.1",
+     "concepts": [
+      {
+       "concept_tag": "reflex-action-nature",
+       "learning_objective": "Recognise reflex actions as quick, automatic responses and explain why they are needed."
+      },
+      {
+       "concept_tag": "reflex-arc-components",
+       "learning_objective": "Describe the pathway of a reflex arc and the role of the spinal cord in it."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH06-T3",
+     "topic_number": 3,
+     "title": "The human brain and the central nervous system",
+     "ncert_sections": "6.1.2",
+     "concepts": [
+      {
+       "concept_tag": "cns-and-pns",
+       "learning_objective": "Distinguish the central nervous system from the peripheral nervous system and describe how they communicate."
+      },
+      {
+       "concept_tag": "brain-regions-functions",
+       "learning_objective": "Relate the fore-brain, mid-brain and hind-brain (medulla, cerebellum) to the actions they control."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH06-T4",
+     "topic_number": 4,
+     "title": "Protection of nervous tissue and how muscles act",
+     "ncert_sections": "6.1.3, 6.1.4",
+     "concepts": [
+      {
+       "concept_tag": "protection-of-cns",
+       "learning_objective": "State how the brain and spinal cord are protected in the body."
+      },
+      {
+       "concept_tag": "muscle-contraction-mechanism",
+       "learning_objective": "Explain how nerve impulses cause muscle cells to change shape and produce movement."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH06-T5",
+     "topic_number": 5,
+     "title": "Movements in plants: immediate responses and tropisms",
+     "ncert_sections": "6.2, 6.2.1, 6.2.2",
+     "concepts": [
+      {
+       "concept_tag": "touch-response-sensitive-plant",
+       "learning_objective": "Explain how the sensitive plant responds to touch without nervous or muscle tissue."
+      },
+      {
+       "concept_tag": "tropic-movements",
+       "learning_objective": "Identify phototropism, geotropism, hydrotropism and chemotropism as growth movements towards or away from a stimulus."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH06-T6",
+     "topic_number": 6,
+     "title": "Chemical communication and plant hormones",
+     "ncert_sections": "6.2.2",
+     "concepts": [
+      {
+       "concept_tag": "electrical-vs-chemical-signalling",
+       "learning_objective": "Compare electrical impulses with chemical (hormonal) communication between cells."
+      },
+      {
+       "concept_tag": "plant-hormone-functions",
+       "learning_objective": "State the roles of auxin, gibberellins, cytokinins and abscisic acid in plant growth and responses."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH06-T7",
+     "topic_number": 7,
+     "title": "Hormones in animals and their regulation",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "adrenaline-emergency-response",
+       "learning_objective": "Explain how adrenaline prepares the body to deal with an emergency."
+      },
+      {
+       "concept_tag": "endocrine-glands-and-hormones",
+       "learning_objective": "Match endocrine glands with the hormones they secrete and the effects of their deficiency."
+      },
+      {
+       "concept_tag": "feedback-regulation",
+       "learning_objective": "Explain how feedback mechanisms and the hypothalamus regulate the timing and amount of hormone release."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESC1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": 8,
+   "title": "How do Organisms Reproduce?",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch07",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH07-T1",
+     "topic_number": 1,
+     "title": "DNA copying and the importance of variation",
+     "ncert_sections": "7.1, 7.1.1",
+     "concepts": [
+      {
+       "concept_tag": "dna-copying",
+       "learning_objective": "Explain why the creation of a DNA copy along with additional cellular apparatus is a basic event in reproduction."
+      },
+      {
+       "concept_tag": "variation-in-copying",
+       "learning_objective": "Explain why DNA copies are similar but not always identical to the original."
+      },
+      {
+       "concept_tag": "importance-of-variation",
+       "learning_objective": "Evaluate how variation helps a species survive when its niche changes."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH07-T2",
+     "topic_number": 2,
+     "title": "Fission, fragmentation and regeneration",
+     "ncert_sections": "7.2, 7.2.1, 7.2.2, 7.2.3",
+     "concepts": [
+      {
+       "concept_tag": "binary-and-multiple-fission",
+       "learning_objective": "Distinguish binary fission in Amoeba and Leishmania from multiple fission in Plasmodium."
+      },
+      {
+       "concept_tag": "fragmentation",
+       "learning_objective": "Explain fragmentation in Spirogyra and why complex organisms cannot reproduce cell by cell."
+      },
+      {
+       "concept_tag": "regeneration",
+       "learning_objective": "Describe regeneration in Hydra and Planaria and why it differs from reproduction."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH07-T3",
+     "topic_number": 3,
+     "title": "Budding, vegetative propagation and spore formation",
+     "ncert_sections": "7.2.4, 7.2.5, 7.2.6",
+     "concepts": [
+      {
+       "concept_tag": "budding",
+       "learning_objective": "Describe budding in Hydra and yeast."
+      },
+      {
+       "concept_tag": "vegetative-propagation",
+       "learning_objective": "Explain vegetative propagation and tissue culture and their advantages."
+      },
+      {
+       "concept_tag": "spore-formation",
+       "learning_objective": "Describe spore formation in Rhizopus and how spores survive."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH07-T4",
+     "topic_number": 4,
+     "title": "Why the sexual mode of reproduction?",
+     "ncert_sections": "7.3, 7.3.1",
+     "concepts": [
+      {
+       "concept_tag": "why-sexual-reproduction",
+       "learning_objective": "Explain how combining DNA from two individuals generates more variation."
+      },
+      {
+       "concept_tag": "meiosis-and-gametes",
+       "learning_objective": "Explain why germ-cells carry half the DNA and how male and female gametes differ."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH07-T5",
+     "topic_number": 5,
+     "title": "Sexual reproduction in flowering plants",
+     "ncert_sections": "7.3.2",
+     "concepts": [
+      {
+       "concept_tag": "flower-parts",
+       "learning_objective": "Identify the reproductive parts of a flower and distinguish unisexual from bisexual flowers."
+      },
+      {
+       "concept_tag": "pollination-and-fertilisation",
+       "learning_objective": "Distinguish self- and cross-pollination and describe how fertilisation occurs."
+      },
+      {
+       "concept_tag": "seed-and-fruit-formation",
+       "learning_objective": "Describe how the ovule and ovary develop after fertilisation and how a seed germinates."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH07-T6",
+     "topic_number": 6,
+     "title": "Puberty and the male reproductive system",
+     "ncert_sections": "7.3.3, 7.3.3 (a)",
+     "concepts": [
+      {
+       "concept_tag": "puberty-changes",
+       "learning_objective": "Describe the changes at puberty and explain why they occur when body growth slows."
+      },
+      {
+       "concept_tag": "male-reproductive-system",
+       "learning_objective": "State the functions of the testes, vas deferens, urethra and accessory glands."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH07-T7",
+     "topic_number": 7,
+     "title": "Female reproductive system and menstruation",
+     "ncert_sections": "7.3.3 (b), 7.3.3 (c)",
+     "concepts": [
+      {
+       "concept_tag": "female-reproductive-organs",
+       "learning_objective": "Identify the organs of the female reproductive system and the site of fertilisation."
+      },
+      {
+       "concept_tag": "embryo-nourishment",
+       "learning_objective": "Explain how the placenta nourishes the embryo and removes its wastes."
+      },
+      {
+       "concept_tag": "menstruation",
+       "learning_objective": "Explain why menstruation occurs when the egg is not fertilised."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH07-T8",
+     "topic_number": 8,
+     "title": "Reproductive health",
+     "ncert_sections": "7.3.3 (d)",
+     "concepts": [
+      {
+       "concept_tag": "sexually-transmitted-diseases",
+       "learning_objective": "Identify bacterial and viral sexually transmitted diseases and how their spread can be reduced."
+      },
+      {
+       "concept_tag": "contraception-methods",
+       "learning_objective": "Distinguish barrier, hormonal, intrauterine and surgical methods of contraception."
+      },
+      {
+       "concept_tag": "population-and-sex-ratio",
+       "learning_objective": "Evaluate the importance of a healthy sex ratio and the issue of female foeticide."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESC1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": 9,
+   "title": "Heredity",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch08",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH08-T1",
+     "topic_number": 1,
+     "title": "Accumulation of variation during reproduction",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "variation-in-reproduction",
+       "learning_objective": "Explain how variations accumulate over generations and why sexual reproduction creates more diversity than asexual reproduction."
+      },
+      {
+       "concept_tag": "variation-and-survival",
+       "learning_objective": "Explain how environmental selection of variants helps some individuals survive better."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH08-T2",
+     "topic_number": 2,
+     "title": "Inherited traits and Mendel's monohybrid cross",
+     "ncert_sections": "8.2, 8.2.1, 8.2.2",
+     "concepts": [
+      {
+       "concept_tag": "inherited-traits",
+       "learning_objective": "Identify inherited traits and their variants, such as free and attached earlobes, in human populations."
+      },
+      {
+       "concept_tag": "monohybrid-cross",
+       "learning_objective": "Describe Mendel's cross between tall and short pea plants and predict F1 and F2 results."
+      },
+      {
+       "concept_tag": "dominant-recessive-traits",
+       "learning_objective": "Distinguish dominant and recessive traits and use them to interpret inheritance data."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH08-T3",
+     "topic_number": 3,
+     "title": "Inheritance of two traits: independent inheritance",
+     "ncert_sections": "8.2.2",
+     "concepts": [
+      {
+       "concept_tag": "dihybrid-cross",
+       "learning_objective": "Work out the F1 and F2 progeny of a cross involving two pairs of contrasting traits."
+      },
+      {
+       "concept_tag": "independent-inheritance",
+       "learning_objective": "Explain how new combinations of traits in the F2 generation show that traits are inherited independently."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH08-T4",
+     "topic_number": 4,
+     "title": "How traits are expressed: genes, proteins and chromosomes",
+     "ncert_sections": "8.2.3",
+     "concepts": [
+      {
+       "concept_tag": "genes-control-traits",
+       "learning_objective": "Explain how a gene controls a trait by providing information for a protein such as an enzyme."
+      },
+      {
+       "concept_tag": "chromosomes-and-germ-cells",
+       "learning_objective": "Explain how chromosomes and germ cells with a single gene set ensure equal contribution of both parents."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH08-T5",
+     "topic_number": 5,
+     "title": "Sex determination",
+     "ncert_sections": "8.2.4",
+     "concepts": [
+      {
+       "concept_tag": "sex-determination-strategies",
+       "learning_objective": "Describe the different ways in which sex is determined in different species."
+      },
+      {
+       "concept_tag": "human-sex-chromosomes",
+       "learning_objective": "Explain how the X and Y chromosomes determine the sex of a child in human beings."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESC1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": 10,
+   "title": "Light – Reflection and Refraction",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch09",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH09-T1",
+     "topic_number": 1,
+     "title": "Reflection of Light and Plane Mirrors",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "laws-of-reflection",
+       "learning_objective": "State and apply the two laws of reflection, measuring angles from the normal."
+      },
+      {
+       "concept_tag": "plane-mirror-image",
+       "learning_objective": "Describe the image formed by a plane mirror (virtual, erect, same size, laterally inverted, as far behind the mirror as the object is in front) and use it in everyday situations."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH09-T2",
+     "topic_number": 2,
+     "title": "Spherical Mirrors: Terms, Image Formation and Ray Diagrams",
+     "ncert_sections": "9.2, 9.2.1, 9.2.2",
+     "concepts": [
+      {
+       "concept_tag": "mirror-terms",
+       "learning_objective": "Define the pole, centre of curvature, principal axis, principal focus, focal length and aperture of a spherical mirror, and use R = 2f."
+      },
+      {
+       "concept_tag": "convex-image-formation",
+       "learning_objective": "Describe the image a convex mirror forms of a real object."
+      },
+      {
+       "concept_tag": "ray-rules",
+       "learning_objective": "Use the standard rays (parallel to the axis, through F, through C, at the pole) to draw ray diagrams for spherical mirrors."
+      },
+      {
+       "concept_tag": "concave-image-formation",
+       "learning_objective": "Predict the position, size and nature of the image a concave mirror forms for each position of the object."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH09-T3",
+     "topic_number": 3,
+     "title": "Uses of Spherical Mirrors, Sign Convention, Mirror Formula and Magnification",
+     "ncert_sections": "9.2.2, 9.2.3, 9.2.4",
+     "concepts": [
+      {
+       "concept_tag": "mirror-uses",
+       "learning_objective": "Explain the uses of concave and convex mirrors from the images they form."
+      },
+      {
+       "concept_tag": "sign-convention",
+       "learning_objective": "Apply the New Cartesian sign convention to distances and heights for spherical mirrors."
+      },
+      {
+       "concept_tag": "magnification",
+       "learning_objective": "Calculate and interpret the magnification m = h'/h = -v/u of a spherical mirror."
+      },
+      {
+       "concept_tag": "mirror-formula",
+       "learning_objective": "Use the mirror formula 1/v + 1/u = 1/f to find an unknown distance."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH09-T4",
+     "topic_number": 4,
+     "title": "Refraction of Light and the Rectangular Glass Slab",
+     "ncert_sections": "9.3, 9.3.1",
+     "concepts": [
+      {
+       "concept_tag": "refraction-basics",
+       "learning_objective": "Explain refraction as a change of direction caused by a change of speed at a boundary, and say when light bends towards or away from the normal."
+      },
+      {
+       "concept_tag": "glass-slab",
+       "learning_objective": "Trace a ray through a rectangular glass slab and explain the emergent ray and its lateral displacement."
+      },
+      {
+       "concept_tag": "apparent-depth",
+       "learning_objective": "Explain everyday effects of refraction such as a raised coin, a shallow-looking pool and a bent pencil."
+      },
+      {
+       "concept_tag": "snells-law",
+       "learning_objective": "State and apply the laws of refraction, including Snell's law."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH09-T5",
+     "topic_number": 5,
+     "title": "Refractive Index",
+     "ncert_sections": "9.3.2",
+     "concepts": [
+      {
+       "concept_tag": "ri-definition",
+       "learning_objective": "Define absolute and relative refractive index and interpret their values."
+      },
+      {
+       "concept_tag": "optical-density",
+       "learning_objective": "Compare media by optical density and distinguish it from mass density."
+      },
+      {
+       "concept_tag": "relative-ri",
+       "learning_objective": "Calculate the refractive index of one medium with respect to another and predict the direction of bending."
+      },
+      {
+       "concept_tag": "speed-of-light",
+       "learning_objective": "Relate refractive index to the speed of light in a medium (n = c/v) and calculate speeds and times."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH09-T6",
+     "topic_number": 6,
+     "title": "Spherical Lenses: Image Formation and Ray Diagrams",
+     "ncert_sections": "9.3.3, 9.3.4, 9.3.5",
+     "concepts": [
+      {
+       "concept_tag": "lens-terms",
+       "learning_objective": "Identify convex and concave lenses and define the optical centre, principal foci and focal length."
+      },
+      {
+       "concept_tag": "convex-lens-images",
+       "learning_objective": "Predict the position, size and nature of the image a convex lens forms for each position of the object, and relate them to its uses."
+      },
+      {
+       "concept_tag": "lens-ray-rules",
+       "learning_objective": "Use the standard rays (parallel to the axis, through a focus, through the optical centre) to draw ray diagrams for lenses."
+      },
+      {
+       "concept_tag": "concave-lens-images",
+       "learning_objective": "Describe the image a concave lens forms of a real object."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH09-T7",
+     "topic_number": 7,
+     "title": "Lens Formula, Magnification and Power of a Lens",
+     "ncert_sections": "9.3.6, 9.3.7, 9.3.8",
+     "concepts": [
+      {
+       "concept_tag": "power-of-lens",
+       "learning_objective": "Define the power of a lens, its unit (dioptre) and sign, and convert between power and focal length."
+      },
+      {
+       "concept_tag": "lens-combination",
+       "learning_objective": "Find the power of thin lenses in contact by adding their powers."
+      },
+      {
+       "concept_tag": "lens-formula",
+       "learning_objective": "Use the lens formula 1/v - 1/u = 1/f with the New Cartesian sign convention."
+      },
+      {
+       "concept_tag": "lens-magnification",
+       "learning_objective": "Calculate and interpret the magnification m = h'/h = v/u of a lens."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter_id": "JESC1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": 11,
+   "title": "The Human Eye and the Colourful World",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch10",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH10-T1",
+     "topic_number": 1,
+     "title": "The human eye: structure and image formation",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "eye-structure-and-parts",
+       "learning_objective": "Identify the parts of the human eye (cornea, iris, pupil, lens, retina) and state the function of each."
+      },
+      {
+       "concept_tag": "image-formation-on-retina",
+       "learning_objective": "Describe how a real, inverted image formed on the retina is converted into signals that the brain interprets."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH10-T2",
+     "topic_number": 2,
+     "title": "Power of accommodation",
+     "ncert_sections": "10.1.1",
+     "concepts": [
+      {
+       "concept_tag": "accommodation-ciliary-muscles",
+       "learning_objective": "Explain how the ciliary muscles change the curvature and focal length of the eye lens to focus near and distant objects."
+      },
+      {
+       "concept_tag": "near-point-and-far-point",
+       "learning_objective": "State the near point and far point of a normal eye and the range of distinct vision."
+      },
+      {
+       "concept_tag": "cataract",
+       "learning_objective": "State what cataract is and how vision can be restored."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH10-T3",
+     "topic_number": 3,
+     "title": "Defects of vision and their correction",
+     "ncert_sections": "10.2",
+     "concepts": [
+      {
+       "concept_tag": "myopia-and-its-correction",
+       "learning_objective": "Explain the causes of myopia and calculate the power of the concave lens that corrects it."
+      },
+      {
+       "concept_tag": "hypermetropia-and-its-correction",
+       "learning_objective": "Explain the causes of hypermetropia and calculate the power of the convex lens that corrects it."
+      },
+      {
+       "concept_tag": "presbyopia-and-bifocal-lenses",
+       "learning_objective": "Explain presbyopia and the use of bi-focal lenses for people with both near and distant vision defects."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH10-T4",
+     "topic_number": 4,
+     "title": "Refraction of light through a prism",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "refraction-path-in-prism",
+       "learning_objective": "Trace the incident, refracted and emergent rays through a triangular glass prism and the bending at each face."
+      },
+      {
+       "concept_tag": "angle-of-deviation",
+       "learning_objective": "Define the angle of the prism and the angle of deviation, and contrast a prism with a glass slab."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH10-T5",
+     "topic_number": 5,
+     "title": "Dispersion of white light and the rainbow",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "dispersion-and-spectrum",
+       "learning_objective": "Define dispersion and explain why different colours of white light bend through different angles in a prism."
+      },
+      {
+       "concept_tag": "recombination-of-spectrum",
+       "learning_objective": "Interpret Newton's experiment with two prisms as evidence that white light is made of seven colours."
+      },
+      {
+       "concept_tag": "rainbow-formation",
+       "learning_objective": "Explain how raindrops refract, disperse and internally reflect sunlight to form a rainbow opposite the Sun."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH10-T6",
+     "topic_number": 6,
+     "title": "Atmospheric refraction",
+     "ncert_sections": "10.5",
+     "concepts": [
+      {
+       "concept_tag": "twinkling-of-stars",
+       "learning_objective": "Explain why stars twinkle and planets do not, using atmospheric refraction."
+      },
+      {
+       "concept_tag": "advance-sunrise-delayed-sunset",
+       "learning_objective": "Explain advance sunrise, delayed sunset and the wavering of objects seen through hot air."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH10-T7",
+     "topic_number": 7,
+     "title": "Scattering of light",
+     "ncert_sections": "10.6, 10.6.1, 10.6.2",
+     "concepts": [
+      {
+       "concept_tag": "tyndall-effect",
+       "learning_objective": "Explain the Tyndall effect as scattering of light by colloidal particles and relate scattered colour to particle size."
+      },
+      {
+       "concept_tag": "blue-sky-and-red-signals",
+       "learning_objective": "Explain the blue colour of the sky, the dark sky at high altitudes and the use of red danger signals."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESC1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": 12,
+   "title": "Electricity",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch11",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH11-T1",
+     "topic_number": 1,
+     "title": "Electric current and circuit",
+     "ncert_sections": "11.1",
+     "concepts": [
+      {
+       "concept_tag": "electric-current-and-charge",
+       "learning_objective": "Define electric current as the rate of flow of charge, use I = Q/t and state the ampere and the conventional direction of current."
+      },
+      {
+       "concept_tag": "ammeter-and-closed-circuit",
+       "learning_objective": "Explain that current flows only in a closed circuit and that an ammeter is connected in series to measure it."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH11-T2",
+     "topic_number": 2,
+     "title": "Electric potential, potential difference and circuit diagrams",
+     "ncert_sections": "11.2, 11.3",
+     "concepts": [
+      {
+       "concept_tag": "potential-difference-and-volt",
+       "learning_objective": "Define potential difference as work done per unit charge, use V = W/Q and state the volt."
+      },
+      {
+       "concept_tag": "voltmeter-and-circuit-symbols",
+       "learning_objective": "Identify the voltmeter connection and the standard symbols used in circuit diagrams."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH11-T3",
+     "topic_number": 3,
+     "title": "Ohm's law",
+     "ncert_sections": "11.4",
+     "concepts": [
+      {
+       "concept_tag": "ohms-law-statement",
+       "learning_objective": "State Ohm's law and interpret the straight-line V-I graph of a metallic conductor at constant temperature."
+      },
+      {
+       "concept_tag": "resistance-and-current",
+       "learning_objective": "Use R = V/I and I = V/R to relate current to resistance and describe the role of a rheostat."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH11-T4",
+     "topic_number": 4,
+     "title": "Factors on which resistance depends; resistivity",
+     "ncert_sections": "11.5",
+     "concepts": [
+      {
+       "concept_tag": "resistance-length-area",
+       "learning_objective": "Apply R = rho l / A to predict how resistance changes with length and area of cross-section."
+      },
+      {
+       "concept_tag": "resistivity-of-materials",
+       "learning_objective": "Use resistivity to compare conductors, alloys and insulators and justify their uses."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH11-T5",
+     "topic_number": 5,
+     "title": "Resistance of a system of resistors",
+     "ncert_sections": "11.6, 11.6.1, 11.6.2",
+     "concepts": [
+      {
+       "concept_tag": "resistors-in-series",
+       "learning_objective": "Calculate equivalent resistance, current and potential differences for resistors in series."
+      },
+      {
+       "concept_tag": "resistors-in-parallel",
+       "learning_objective": "Calculate equivalent resistance and branch currents for resistors in parallel."
+      },
+      {
+       "concept_tag": "series-parallel-combinations",
+       "learning_objective": "Choose and analyse combinations of resistors to obtain a required resistance."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH11-T6",
+     "topic_number": 6,
+     "title": "Heating effect of electric current and its applications",
+     "ncert_sections": "11.7, 11.7.1",
+     "concepts": [
+      {
+       "concept_tag": "joules-law-of-heating",
+       "learning_objective": "Apply Joule's law H = I^2 R t to calculate and compare the heat produced in resistors."
+      },
+      {
+       "concept_tag": "applications-of-heating-effect",
+       "learning_objective": "Explain the working of electric bulbs, heating appliances and fuses using the heating effect."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH11-T7",
+     "topic_number": 7,
+     "title": "Electric power and commercial unit of energy",
+     "ncert_sections": "11.8",
+     "concepts": [
+      {
+       "concept_tag": "electric-power",
+       "learning_objective": "Use P = VI = I^2 R = V^2/R and the watt to calculate the power of electrical devices."
+      },
+      {
+       "concept_tag": "electrical-energy-kwh",
+       "learning_objective": "Calculate electrical energy in kW h and joules and estimate the cost of electricity used."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESC1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": 13,
+   "title": "Magnetic Effects of Electric Current",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch12",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH12-T1",
+     "topic_number": 1,
+     "title": "Magnetic field and field lines",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "magnetic-field-and-direction",
+       "learning_objective": "Describe a magnetic field and how its direction at a point is fixed using a compass needle."
+      },
+      {
+       "concept_tag": "field-line-properties",
+       "learning_objective": "State and apply the properties of magnetic field lines of a bar magnet."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH12-T2",
+     "topic_number": 2,
+     "title": "Magnetic field due to a current through a straight conductor",
+     "ncert_sections": "12.2, 12.2.1",
+     "concepts": [
+      {
+       "concept_tag": "field-around-straight-wire",
+       "learning_objective": "Recognise that a current-carrying straight wire produces a magnetic field of concentric circles around it."
+      },
+      {
+       "concept_tag": "factors-affecting-field-strength",
+       "learning_objective": "Explain how the field of a straight wire depends on the current and on the distance from the wire."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH12-T3",
+     "topic_number": 3,
+     "title": "Right-hand thumb rule",
+     "ncert_sections": "12.2.2",
+     "concepts": [
+      {
+       "concept_tag": "right-hand-thumb-rule",
+       "learning_objective": "Use the right-hand thumb rule to find the direction of the magnetic field around a current-carrying conductor."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH12-T4",
+     "topic_number": 4,
+     "title": "Magnetic field of a circular loop and a solenoid",
+     "ncert_sections": "12.2.3, 12.2.4",
+     "concepts": [
+      {
+       "concept_tag": "field-of-circular-loop",
+       "learning_objective": "Describe the magnetic field of a current-carrying circular loop and coil."
+      },
+      {
+       "concept_tag": "solenoid-field",
+       "learning_objective": "Describe the magnetic field inside and around a current-carrying solenoid."
+      },
+      {
+       "concept_tag": "electromagnet",
+       "learning_objective": "Explain how a solenoid is used to make an electromagnet."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH12-T5",
+     "topic_number": 5,
+     "title": "Force on a current-carrying conductor in a magnetic field",
+     "ncert_sections": "12.3",
+     "concepts": [
+      {
+       "concept_tag": "force-on-current-carrying-conductor",
+       "learning_objective": "Explain the factors that decide the direction and size of the force on a current-carrying conductor in a magnetic field."
+      },
+      {
+       "concept_tag": "flemings-left-hand-rule",
+       "learning_objective": "Apply Fleming's left-hand rule to find the direction of force on a conductor or moving charge."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH12-T6",
+     "topic_number": 6,
+     "title": "Domestic electric circuits",
+     "ncert_sections": "12.4",
+     "concepts": [
+      {
+       "concept_tag": "domestic-wiring",
+       "learning_objective": "Describe the wires, supply values and parallel connection used in domestic circuits."
+      },
+      {
+       "concept_tag": "earthing",
+       "learning_objective": "Explain the role of the earth wire as a safety measure."
+      },
+      {
+       "concept_tag": "fuse-short-circuit-overloading",
+       "learning_objective": "Explain short-circuiting and overloading and how a fuse protects a circuit."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESC1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": 15,
+   "title": "Our Environment",
+   "title_verified": true,
+   "ncert_chapter_id": "science-c10-en.ch13",
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jesc113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESC1-CH13-T1",
+     "topic_number": 1,
+     "title": "Ecosystem and its components",
+     "ncert_sections": "13.1",
+     "concepts": [
+      {
+       "concept_tag": "ecosystem-components",
+       "learning_objective": "Identify the biotic and abiotic components of an ecosystem and distinguish natural from human-made ecosystems."
+      },
+      {
+       "concept_tag": "producers-consumers-decomposers",
+       "learning_objective": "Explain the roles of producers, consumers and decomposers and how they depend on one another."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH13-T2",
+     "topic_number": 2,
+     "title": "Food chains, trophic levels and food webs",
+     "ncert_sections": "13.1.1",
+     "concepts": [
+      {
+       "concept_tag": "trophic-levels",
+       "learning_objective": "Place organisms of a food chain at the correct trophic level and consumer category."
+      },
+      {
+       "concept_tag": "food-webs",
+       "learning_objective": "Explain why feeding relationships form branching food webs rather than single straight chains."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH13-T3",
+     "topic_number": 3,
+     "title": "Flow of energy in an ecosystem",
+     "ncert_sections": "13.1.1",
+     "concepts": [
+      {
+       "concept_tag": "ten-percent-law",
+       "learning_objective": "Apply the 10 percent rule to calculate energy available at successive trophic levels."
+      },
+      {
+       "concept_tag": "unidirectional-energy-flow",
+       "learning_objective": "Explain why energy flow in an ecosystem is unidirectional and diminishes at each level."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH13-T4",
+     "topic_number": 4,
+     "title": "Biological magnification",
+     "ncert_sections": "13.1.1",
+     "concepts": [
+      {
+       "concept_tag": "biological-magnification",
+       "learning_objective": "Explain how non-degradable chemicals accumulate progressively along a food chain."
+      },
+      {
+       "concept_tag": "pesticide-entry-into-food-chain",
+       "learning_objective": "Describe how pesticides from fields enter food chains through soil and water."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH13-T5",
+     "topic_number": 5,
+     "title": "Ozone layer and its depletion",
+     "ncert_sections": "13.2, 13.2.1",
+     "concepts": [
+      {
+       "concept_tag": "ozone-formation-and-role",
+       "learning_objective": "Describe how ozone forms in the upper atmosphere and how it shields the Earth from UV radiation."
+      },
+      {
+       "concept_tag": "cfc-ozone-depletion",
+       "learning_objective": "Relate the drop in ozone to CFCs and evaluate steps taken to limit the damage."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESC1-CH13-T6",
+     "topic_number": 6,
+     "title": "Managing the garbage we produce",
+     "ncert_sections": "13.2.2",
+     "concepts": [
+      {
+       "concept_tag": "biodegradable-non-biodegradable",
+       "learning_objective": "Classify substances as biodegradable or non-biodegradable and explain the role of enzyme specificity."
+      },
+      {
+       "concept_tag": "waste-management",
+       "learning_objective": "Evaluate everyday practices and choices for reducing and disposing of waste."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

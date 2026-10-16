@@ -1,0 +1,120 @@
+{
+ "chapter_id": "FECU1-CH06",
+ "title": "Materials Around Us",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FECU1-CH06-T1",
+   "topic_number": 1,
+   "title": "Observing Objects Around Us",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "material-definition",
+     "learning_objective": "Define a material as any substance used to create an object."
+    },
+    {
+     "concept_tag": "objects-made-of-materials",
+     "learning_objective": "Recognise that objects are made of one or more materials and that one material can make many objects."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH06-T2",
+   "topic_number": 2,
+   "title": "How to Group Materials",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "classification",
+     "learning_objective": "Explain classification as arranging objects or materials into groups on the basis of a common property."
+    },
+    {
+     "concept_tag": "choosing-materials-by-purpose",
+     "learning_objective": "Explain that a material is chosen for an object according to its properties and the purpose of the object."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH06-T3",
+   "topic_number": 3,
+   "title": "Appearance and Hardness of Materials",
+   "ncert_sections": "6.3.1, 6.3.2",
+   "concepts": [
+    {
+     "concept_tag": "lustre",
+     "learning_objective": "Distinguish lustrous from non-lustrous materials and explain why some metals look dull."
+    },
+    {
+     "concept_tag": "hardness-and-softness",
+     "learning_objective": "Classify materials as hard or soft and recognise that hardness is a relative property."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH06-T4",
+   "topic_number": 4,
+   "title": "Transparent, Translucent and Opaque Materials",
+   "ncert_sections": "6.3.3",
+   "concepts": [
+    {
+     "concept_tag": "transparent-translucent-opaque",
+     "learning_objective": "Classify materials as transparent, translucent or opaque by how clearly objects can be seen through them."
+    },
+    {
+     "concept_tag": "uses-of-transparency",
+     "learning_objective": "Relate the transparency of a material to its everyday use."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH06-T5",
+   "topic_number": 5,
+   "title": "Soluble and Insoluble Materials",
+   "ncert_sections": "6.3.4",
+   "concepts": [
+    {
+     "concept_tag": "soluble-and-insoluble",
+     "learning_objective": "Classify solids as soluble or insoluble in water from observations of mixing."
+    },
+    {
+     "concept_tag": "liquids-and-gases-in-water",
+     "learning_objective": "Recognise that some liquids and gases mix or dissolve in water while others do not."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH06-T6",
+   "topic_number": 6,
+   "title": "Mass and Volume",
+   "ncert_sections": "6.3.5, 6.3.6",
+   "concepts": [
+    {
+     "concept_tag": "mass",
+     "learning_objective": "Describe mass as the property that tells how heavy or light an object is."
+    },
+    {
+     "concept_tag": "volume",
+     "learning_objective": "Describe volume as the space occupied by a substance."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH06-T7",
+   "topic_number": 7,
+   "title": "What is Matter?",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "matter-definition",
+     "learning_objective": "Define matter as anything that has mass and occupies space."
+    },
+    {
+     "concept_tag": "units-of-mass-and-volume",
+     "learning_objective": "Use and correctly write the units of mass and volume, including simple conversions."
+    }
+   ]
+  }
+ ]
+}

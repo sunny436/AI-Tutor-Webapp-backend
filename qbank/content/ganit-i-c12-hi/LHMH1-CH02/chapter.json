@@ -1,0 +1,92 @@
+{
+ "chapter_id": "LHMH1-CH02",
+ "title": "प्रतिलोम त्रिकोणमितीय फलन",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH1-CH02-T1",
+   "topic_number": 1,
+   "title": "प्रांत का प्रतिबंधन: sin⁻¹ और cos⁻¹ की मुख्य शाखाएँ",
+   "ncert_sections": "2.1, 2.2",
+   "concepts": [
+    {
+     "concept_tag": "pratibandhan-aur-vyutkramaniyata",
+     "learning_objective": "समझाना कि किसी त्रिकोणमितीय फलन का प्रतिलोम ज्ञात करने से पहले उसे ऐसे अंतराल पर सीमित करना क्यों आवश्यक है जहाँ वह एकैकी तथा आच्छादक हो।"
+    },
+    {
+     "concept_tag": "sin-pratilom-mukhya-shakha",
+     "learning_objective": "sin⁻¹ का प्रांत तथा मुख्य मान शाखा का परिसर बताना।"
+    },
+    {
+     "concept_tag": "cos-pratilom-mukhya-shakha",
+     "learning_objective": "cos⁻¹ का प्रांत तथा मुख्य मान शाखा का परिसर बताना और मान्य शाखाओं को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH02-T2",
+   "topic_number": 2,
+   "title": "cosec⁻¹, sec⁻¹, tan⁻¹ और cot⁻¹ की मुख्य शाखाएँ",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "cosec-sec-pratilom-shakhayen",
+     "learning_objective": "cosec⁻¹ और sec⁻¹ के प्रांत एवं मुख्य मान परिसर बताना तथा छोड़े गए मानों का कारण समझाना।"
+    },
+    {
+     "concept_tag": "tan-cot-pratilom-shakhayen",
+     "learning_objective": "tan⁻¹ और cot⁻¹ के प्रांत एवं मुख्य मान परिसर बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH02-T3",
+   "topic_number": 3,
+   "title": "मुख्य मान, संकेतन और आलेख",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "mukhya-maan-gyat-karna",
+     "learning_objective": "प्रतिलोम त्रिकोणमितीय फलनों के मुख्य मान ज्ञात करना और उनसे बने व्यंजकों का मान निकालना।"
+    },
+    {
+     "concept_tag": "sanketan-aur-alekh",
+     "learning_objective": "sin⁻¹ x और (sin x)⁻¹ में अंतर करना तथा रेखा y = x में दर्पण प्रतिबिंब द्वारा प्रतिलोम फलन का आलेख प्राप्त करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH02-T4",
+   "topic_number": 4,
+   "title": "प्रतिलोम त्रिकोणमितीय फलनों के संयोजन संबंधी गुणधर्म",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "sanyojan-sarvasamikayen",
+     "learning_objective": "sin(sin⁻¹ x) = x तथा sin⁻¹(sin x) = x का उनकी शर्तों सहित प्रयोग करना।"
+    },
+    {
+     "concept_tag": "mukhya-shakha-mein-lana",
+     "learning_objective": "जब θ मुख्य शाखा से बाहर हो तब sin⁻¹(sin θ) जैसे व्यंजकों का मान ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH02-T5",
+   "topic_number": 5,
+   "title": "प्रतिलोम त्रिकोणमितीय व्यंजकों को सरलतम रूप में लिखना",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "trikonmitiya-pratisthapan",
+     "learning_objective": "किसी व्यंजक को सरल करने के लिए x = sin θ, x = a sin θ या x = sec θ जैसा उपयुक्त प्रतिस्थापन चुनना।"
+    },
+    {
+     "concept_tag": "ardh-kon-saralikaran",
+     "learning_objective": "अर्ध-कोण सर्वसमिकाओं द्वारा cos x और sin x वाले व्यंजकों को tan⁻¹(tan θ) के रूप में लाकर सरल करना।"
+    }
+   ]
+  }
+ ]
+}

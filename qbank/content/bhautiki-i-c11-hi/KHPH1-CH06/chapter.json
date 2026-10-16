@@ -1,0 +1,128 @@
+{
+ "chapter_id": "KHPH1-CH06",
+ "title": "कणों के निकाय तथा घूर्णी गति",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH1-CH06-T1",
+   "topic_number": 1,
+   "title": "दृढ़ पिंड और द्रव्यमान केंद्र",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "drudh-pind",
+     "learning_objective": "दृढ़ पिंड की परिभाषा तथा स्थानांतरीय और घूर्णी गति में अंतर समझना।"
+    },
+    {
+     "concept_tag": "dravyaman-kendra",
+     "learning_objective": "कणों के निकाय और समांग पिंडों के द्रव्यमान केंद्र की स्थिति ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH06-T2",
+   "topic_number": 2,
+   "title": "द्रव्यमान केंद्र की गति और निकाय का रेखीय संवेग",
+   "ncert_sections": "6.3, 6.4",
+   "concepts": [
+    {
+     "concept_tag": "dravyaman-kendra-gati",
+     "learning_objective": "यह समझना कि द्रव्यमान केंद्र केवल बाह्य बलों के प्रभाव में गति करता है।"
+    },
+    {
+     "concept_tag": "nikay-rekhiya-sanveg",
+     "learning_objective": "निकाय के कुल रेखीय संवेग और उसके संरक्षण का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH06-T3",
+   "topic_number": 3,
+   "title": "सदिश गुणनफल और कोणीय वेग",
+   "ncert_sections": "6.5, 6.6",
+   "concepts": [
+    {
+     "concept_tag": "sadish-gunanfal",
+     "learning_objective": "दो सदिशों के सदिश गुणनफल का परिमाण, दिशा और गुणधर्म ज्ञात करना।"
+    },
+    {
+     "concept_tag": "konia-veg",
+     "learning_objective": "कोणीय वेग और रेखीय वेग के संबंध को लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH06-T4",
+   "topic_number": 4,
+   "title": "बल आघूर्ण एवं कोणीय संवेग",
+   "ncert_sections": "6.7",
+   "concepts": [
+    {
+     "concept_tag": "bal-aghurn",
+     "learning_objective": "बल आघूर्ण की परिभाषा, मात्रक और परिकलन समझना।"
+    },
+    {
+     "concept_tag": "konia-sanveg",
+     "learning_objective": "कण के कोणीय संवेग तथा बल आघूर्ण से उसके संबंध को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH06-T5",
+   "topic_number": 5,
+   "title": "दृढ़ पिंड का संतुलन",
+   "ncert_sections": "6.8",
+   "concepts": [
+    {
+     "concept_tag": "santulan-shartein",
+     "learning_objective": "दृढ़ पिंड के स्थानांतरीय और घूर्णी संतुलन की शर्तें तथा बल युग्म समझना।"
+    },
+    {
+     "concept_tag": "aghurnon-ka-siddhant",
+     "learning_objective": "आघूर्णों के सिद्धांत से उत्तोलक की संतुलन स्थिति और यांत्रिक लाभ ज्ञात करना।"
+    },
+    {
+     "concept_tag": "gurutva-kendra",
+     "learning_objective": "गुरुत्व केंद्र और द्रव्यमान केंद्र के संबंध का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH06-T6",
+   "topic_number": 6,
+   "title": "जड़त्व आघूर्ण",
+   "ncert_sections": "6.9",
+   "concepts": [
+    {
+     "concept_tag": "jadatva-aaghurn",
+     "learning_objective": "सामान्य पिंडों का जड़त्व आघूर्ण और उसे प्रभावित करने वाले कारक समझना।"
+    },
+    {
+     "concept_tag": "ghurnan-trijya",
+     "learning_objective": "घूर्णन त्रिज्या की परिभाषा और परिकलन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH06-T7",
+   "topic_number": 7,
+   "title": "घूर्णी गति की शुद्धगतिकी, गतिकी और कोणीय संवेग संरक्षण",
+   "ncert_sections": "6.10, 6.11, 6.12",
+   "concepts": [
+    {
+     "concept_tag": "ghurni-shuddhgatiki",
+     "learning_objective": "नियत कोणीय त्वरण के समीकरणों का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "ghurni-gatiki",
+     "learning_objective": "बल आघूर्ण, जड़त्व आघूर्ण और कोणीय त्वरण के संबंध को लागू करना।"
+    },
+    {
+     "concept_tag": "konia-sanveg-sanrakshan",
+     "learning_objective": "अचल अक्ष के परितः घूर्णन में कोणीय संवेग संरक्षण का प्रयोग करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "chapter_id": "KHPH1-CH02",
+ "title": "सरल रेखा में गति",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH1-CH02-T1",
+   "topic_number": 1,
+   "title": "भूमिका: गति, बिंदु-वस्तु और शुद्धगतिकी",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "bindu-vastu",
+     "learning_objective": "समझना कि किसी गतिमान वस्तु को बिंदु-वस्तु कब माना जा सकता है।"
+    },
+    {
+     "concept_tag": "saral-rekhiy-gati",
+     "learning_objective": "सरल रेखीय गति के उदाहरणों को अन्य प्रकार की गतियों से अलग पहचानना।"
+    },
+    {
+     "concept_tag": "shuddhagatiki",
+     "learning_objective": "जानना कि शुद्धगतिकी में गति के कारणों पर विचार किए बिना गति का वर्णन किया जाता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH02-T2",
+   "topic_number": 2,
+   "title": "तात्क्षणिक वेग एवं चाल",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "tatkshanik-veg",
+     "learning_objective": "तात्क्षणिक वेग को सीमा और स्थिति-समय ग्राफ की स्पर्श-रेखा की प्रवणता के रूप में ज्ञात करना।"
+    },
+    {
+     "concept_tag": "chal-aur-veg",
+     "learning_objective": "चाल और वेग तथा औसत और तात्क्षणिक मानों के बीच अंतर स्पष्ट करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH02-T3",
+   "topic_number": 3,
+   "title": "त्वरण",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "tvaran-paribhasha",
+     "learning_objective": "औसत और तात्क्षणिक त्वरण की परिभाषा, मात्रक और वेग-समय ग्राफ से उसका संबंध समझना।"
+    },
+    {
+     "concept_tag": "tvaran-chinh-aur-graph",
+     "learning_objective": "त्वरण के चिह्न, शून्य वेग पर त्वरण और स्थिति-समय ग्राफ की वक्रता की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH02-T4",
+   "topic_number": 4,
+   "title": "एकसमान त्वरण से गतिमान वस्तु के शुद्धगतिकीय समीकरण",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "gati-ke-samikaran",
+     "learning_objective": "एकसमान त्वरित सरल रेखीय गति के समीकरणों का प्रयोग करके संख्यात्मक प्रश्न हल करना।"
+    },
+    {
+     "concept_tag": "vt-graph-kshetrafal",
+     "learning_objective": "वेग-समय वक्र के नीचे के क्षेत्रफल को विस्थापन के रूप में प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH02-T5",
+   "topic_number": 5,
+   "title": "मुक्त पतन, विरामी दूरी और प्रतिक्रिया काल",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "mukt-patan",
+     "learning_objective": "मुक्त पतन को एकसमान त्वरित गति मानकर ऊर्ध्वाधर गति के प्रश्न हल करना।"
+    },
+    {
+     "concept_tag": "viraami-duri",
+     "learning_objective": "विरामी दूरी की प्रारंभिक वेग पर निर्भरता समझना।"
+    },
+    {
+     "concept_tag": "pratikriya-kaal",
+     "learning_objective": "मुक्त रूप से गिरते पैमाने की सहायता से प्रतिक्रिया काल का आकलन करना।"
+    }
+   ]
+  }
+ ]
+}

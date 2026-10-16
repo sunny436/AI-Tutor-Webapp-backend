@@ -1,0 +1,144 @@
+{
+  "chapter_id": "KEPY1-CH01",
+  "title": "What is Psychology?",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "KEPY1-CH01-T1",
+      "topic_number": 1,
+      "title": "Defining psychology: mental processes, experience and behaviour",
+      "ncert_sections": "Introduction",
+      "concepts": [
+        {
+          "concept_tag": "definition-of-psychology",
+          "learning_objective": "Students will state the formal definition of psychology and the origin of the term."
+        },
+        {
+          "concept_tag": "mental-processes-and-experience",
+          "learning_objective": "Students will distinguish mental processes from brain activity and explain why experiences are subjective."
+        },
+        {
+          "concept_tag": "overt-and-covert-behaviour",
+          "learning_objective": "Students will classify behaviours as overt or covert and relate them to stimulus and response."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPY1-CH01-T2",
+      "topic_number": 2,
+      "title": "Psychology as a discipline: natural science and social science",
+      "ncert_sections": "Psychology as a Discipline; Psychology as a Natural Science; Psychology as a Social Science",
+      "concepts": [
+        {
+          "concept_tag": "hypothetico-deductive-model",
+          "learning_objective": "Students will explain how the hypothetico-deductive model guides psychology as a natural science."
+        },
+        {
+          "concept_tag": "psychology-as-social-science",
+          "learning_objective": "Students will explain how psychology studies individuals in their socio-cultural context."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPY1-CH01-T3",
+      "topic_number": 3,
+      "title": "Understanding mind and behaviour",
+      "ncert_sections": "Understanding Mind and Behaviour",
+      "concepts": [
+        {
+          "concept_tag": "mind-and-brain",
+          "learning_objective": "Students will explain why the mind is considered distinct from, though dependent on, the brain."
+        },
+        {
+          "concept_tag": "mind-body-relationship",
+          "learning_objective": "Students will describe evidence from affective neuroscience that the mind influences bodily processes."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPY1-CH01-T4",
+      "topic_number": 4,
+      "title": "Popular notions about psychology",
+      "ncert_sections": "Popular Notions about the Discipline of Psychology",
+      "concepts": [
+        {
+          "concept_tag": "common-sense-and-hindsight",
+          "learning_objective": "Students will explain why common-sense explanations of behaviour rely on hindsight."
+        },
+        {
+          "concept_tag": "dweck-study",
+          "learning_objective": "Students will interpret Dweck's study as an example of scientific findings that run against common sense."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPY1-CH01-T5",
+      "topic_number": 5,
+      "title": "Evolution of psychology",
+      "ncert_sections": "Evolution of Psychology; Box 1.1",
+      "concepts": [
+        {
+          "concept_tag": "structuralism-and-functionalism",
+          "learning_objective": "Students will compare Wundt's structuralism with James's functionalism."
+        },
+        {
+          "concept_tag": "gestalt-and-behaviourism",
+          "learning_objective": "Students will describe Gestalt psychology and behaviourism as reactions to structuralism."
+        },
+        {
+          "concept_tag": "psychoanalysis-humanism-cognitive",
+          "learning_objective": "Students will distinguish psychoanalytic, humanistic, cognitive and constructivist perspectives."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPY1-CH01-T6",
+      "topic_number": 6,
+      "title": "Development of psychology in India",
+      "ncert_sections": "Development of Psychology in India",
+      "concepts": [
+        {
+          "concept_tag": "early-indian-psychology",
+          "learning_objective": "Students will identify the landmarks of the modern era of psychology in India."
+        },
+        {
+          "concept_tag": "phases-of-indian-psychology",
+          "learning_objective": "Students will sequence Durganand Sinha's four phases of psychology in India."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPY1-CH01-T7",
+      "topic_number": 7,
+      "title": "Branches of psychology",
+      "ncert_sections": "Branches of Psychology",
+      "concepts": [
+        {
+          "concept_tag": "fields-of-specialisation",
+          "learning_objective": "Students will match problems to the appropriate branch of psychology."
+        },
+        {
+          "concept_tag": "clinical-psychologist-vs-psychiatrist",
+          "learning_objective": "Students will distinguish a clinical psychologist from a psychiatrist."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEPY1-CH01-T8",
+      "topic_number": 8,
+      "title": "Psychology, other disciplines and everyday life",
+      "ncert_sections": "Psychology and Other Disciplines; Psychology in Everyday Life",
+      "concepts": [
+        {
+          "concept_tag": "interdisciplinary-links",
+          "learning_objective": "Students will explain how psychology contributes to and draws from other disciplines."
+        },
+        {
+          "concept_tag": "psychology-in-everyday-life",
+          "learning_objective": "Students will apply psychological understanding to personal and social problems in daily life."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+ "chapter_id": "IHSC1-CH06",
+ "title": "गति पर बलों का प्रभाव",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSC1-CH06-T1",
+   "topic_number": 1,
+   "title": "बल की अवधारणा और बल के परिमाण का मापन",
+   "ncert_sections": "6.1, 6.1.1",
+   "concepts": [
+    {
+     "concept_tag": "bal-ki-avdharana",
+     "learning_objective": "बल को परिमाण, मात्रक और दिशा वाली भौतिक राशि के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "bal-ka-maapan",
+     "learning_objective": "कमानीदार तुला से बल का परिमाण मापना और न्यूटन मात्रक का सही प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH06-T2",
+   "topic_number": 2,
+   "title": "संतुलित एवं असंतुलित बल",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "santulit-asantulit-bal",
+     "learning_objective": "संतुलित और असंतुलित बलों में अंतर स्पष्ट करना।"
+    },
+    {
+     "concept_tag": "parinami-bal",
+     "learning_objective": "एक ही रेखा में लगे बलों का परिणामी बल परिमाण और दिशा सहित ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH06-T3",
+   "topic_number": 3,
+   "title": "घर्षण बल— प्रायः अनदेखा परंतु सदैव विद्यमान बल",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "gharshan-bal-ki-disha",
+     "learning_objective": "घर्षण बल की दिशा तथा धकेली गई वस्तु पर लगने वाले अन्य बलों को पहचानना।"
+    },
+    {
+     "concept_tag": "satah-aur-gharshan",
+     "learning_objective": "संपर्क सतहों की प्रकृति के अनुसार घर्षण बल में अंतर का प्रयोगों से विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH06-T4",
+   "topic_number": 4,
+   "title": "न्यूटन का गति का प्रथम नियम",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "pratham-niyam",
+     "learning_objective": "परिणामी बल शून्य होने पर वस्तु की गति का वर्णन प्रथम नियम से करना।"
+    },
+    {
+     "concept_tag": "jadatva",
+     "learning_objective": "जड़त्व को वस्तु की अवस्था-परिवर्तन का विरोध करने की प्रवृत्ति के रूप में समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH06-T5",
+   "topic_number": 5,
+   "title": "न्यूटन का गति का द्वितीय नियम",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "dvitiya-niyam-f-ma",
+     "learning_objective": "संबंध F = ma का प्रयोग करके बल, द्रव्यमान और त्वरण की गणना करना।"
+    },
+    {
+     "concept_tag": "gurutvaj-tvaran",
+     "learning_objective": "गुरुत्वीय त्वरण g और भार F = mg को समझना।"
+    },
+    {
+     "concept_tag": "samay-badhakar-bal-kam",
+     "learning_objective": "रुकने का समय बढ़ाकर बल घटाने के दैनिक उदाहरणों की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH06-T6",
+   "topic_number": 6,
+   "title": "न्यूटन का गति का तृतीय नियम",
+   "ncert_sections": "6.6",
+   "concepts": [
+    {
+     "concept_tag": "bal-yugm",
+     "learning_objective": "समझना कि बल-युग्म के दोनों बल बराबर, विपरीत और भिन्न वस्तुओं पर लगते हैं।"
+    },
+    {
+     "concept_tag": "tritiya-niyam-anuprayog",
+     "learning_objective": "चलना, नाव खेना, रॉकेट और प्रतिक्षेप को तृतीय नियम से समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH06-T7",
+   "topic_number": 7,
+   "title": "वस्तुओं के निकाय पर लगने वाले बल",
+   "ncert_sections": "6.7",
+   "concepts": [
+    {
+     "concept_tag": "aantarik-bahya-bal",
+     "learning_objective": "किसी निकाय के आंतरिक और बाह्य बलों में अंतर करना।"
+    },
+    {
+     "concept_tag": "nikay-ka-tvaran",
+     "learning_objective": "जुड़ी हुई वस्तुओं के निकाय का त्वरण a = F/(m1 + m2) से ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

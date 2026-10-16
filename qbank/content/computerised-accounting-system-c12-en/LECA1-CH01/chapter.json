@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LECA1-CH01",
+ "title": "OVERVIEW OF COMPUTERISED ACCOUNTING SYSTEM",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECA1-CH01-T1",
+   "topic_number": 1,
+   "title": "Computerised Accounting System: meaning, components, data and information",
+   "ncert_sections": "Introduction, 1.1",
+   "concepts": [
+    {
+     "concept_tag": "cas-components",
+     "learning_objective": "Identify the five components of CAS and the role each plays in processing accounting transactions."
+    },
+    {
+     "concept_tag": "data-and-information",
+     "learning_objective": "Distinguish data from information and recognise the data elements of an accounting transaction."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH01-T2",
+   "topic_number": 2,
+   "title": "Accounting cycle and salient features of CAS",
+   "ncert_sections": "1.2, 1.3",
+   "concepts": [
+    {
+     "concept_tag": "accounting-cycle-phases",
+     "learning_objective": "Sequence the phases of the accounting cycle that CAS processes."
+    },
+    {
+     "concept_tag": "salient-features-of-cas",
+     "learning_objective": "Recognise the salient features of CAS software: simple and integrated, transparency, accuracy and speed, scalability and reliability."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH01-T3",
+   "topic_number": 3,
+   "title": "Grouping of accounts and the accounting equation",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "accounting-equation",
+     "learning_objective": "Apply the expanded accounting equation Assets = Liabilities + Capital + (Revenues - Expenses)."
+    },
+    {
+     "concept_tag": "account-groups-classification",
+     "learning_objective": "Classify accounts into the groups and sub-groups used for the Balance Sheet and Statement of Profit and Loss."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH01-T4",
+   "topic_number": 4,
+   "title": "Codification of accounts and coding structure",
+   "ncert_sections": "1.4.1, 1.4.2",
+   "concepts": [
+    {
+     "concept_tag": "coding-methods",
+     "learning_objective": "Distinguish sequential, block and mnemonic codes and where each is used."
+    },
+    {
+     "concept_tag": "coding-structure-design",
+     "learning_objective": "Develop and interpret a hierarchical coding structure and allot codes from it."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH01-T5",
+   "topic_number": 5,
+   "title": "Using CAS software: security, advantages and limitations",
+   "ncert_sections": "1.5, 1.6, 1.7",
+   "concepts": [
+    {
+     "concept_tag": "cas-software-activities",
+     "learning_objective": "Distinguish one-time activities from recurring activities in using CAS software."
+    },
+    {
+     "concept_tag": "security-features",
+     "learning_objective": "Explain password security, data audit and data vault (encryption) in CAS software."
+    },
+    {
+     "concept_tag": "advantages-limitations",
+     "learning_objective": "Evaluate the advantages and limitations of CAS."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH01-T6",
+   "topic_number": 6,
+   "title": "Accounting Information System and its sub-systems",
+   "ncert_sections": "1.8",
+   "concepts": [
+    {
+     "concept_tag": "ais-subsystems",
+     "learning_objective": "Identify the function and reports of each sub-system of the Accounting Information System."
+    },
+    {
+     "concept_tag": "management-information-system",
+     "learning_objective": "Explain the role of the Management Information System in managerial decision-making."
+    }
+   ]
+  }
+ ]
+}

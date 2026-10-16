@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KHBO1-CH13",
+ "title": "पादप वृद्धि एवं परिवर्धन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHBO1-CH13-T1",
+   "topic_number": 1,
+   "title": "वृद्धि: परिभाषा, अनिश्चित वृद्धि एवं वृद्धि का मापन",
+   "ncert_sections": "13.1, 13.1.1, 13.1.2",
+   "concepts": [
+    {
+     "concept_tag": "vriddhi-anishchit",
+     "learning_objective": "वृद्धि को अनुत्क्रमणीय स्थायी वृद्धि के रूप में परिभाषित करना और विभज्योतकों के कारण पादपों की खुली (अनिश्चित) वृद्धि समझाना।"
+    },
+    {
+     "concept_tag": "vriddhi-mapan",
+     "learning_objective": "वृद्धि मापने के विभिन्न प्राचलों—ताज़ा भार, शुष्क भार, लंबाई, क्षेत्रफल, आयतन, कोशिका संख्या—को उदाहरणों से जोड़ना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH13-T2",
+   "topic_number": 2,
+   "title": "वृद्धि की प्रावस्थाएँ",
+   "ncert_sections": "13.1.3",
+   "concepts": [
+    {
+     "concept_tag": "vriddhi-pravastha",
+     "learning_objective": "विभज्योतकी, दीर्घीकरण और परिपक्वन प्रावस्थाओं की कोशिकाओं के लक्षणों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH13-T3",
+   "topic_number": 3,
+   "title": "वृद्धि दर: अंकगणितीय, ज्यामितीय एवं सिग्माभ वृद्धि",
+   "ncert_sections": "13.1.4",
+   "concepts": [
+    {
+     "concept_tag": "ankganitiya-jyamitiya",
+     "learning_objective": "अंकगणितीय और ज्यामितीय वृद्धि के समीकरणों तथा सिग्माभ वक्र की प्रावस्थाओं का उपयोग करना।"
+    },
+    {
+     "concept_tag": "nirpeksh-sapeksh-dar",
+     "learning_objective": "निरपेक्ष और सापेक्ष वृद्धि दर की गणना और तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH13-T4",
+   "topic_number": 4,
+   "title": "वृद्धि की परिस्थितियाँ तथा विभेदन, निर्विभेदन एवं पुनर्विभेदन",
+   "ncert_sections": "13.1.5, 13.2",
+   "concepts": [
+    {
+     "concept_tag": "vriddhi-paristhitiyan",
+     "learning_objective": "वृद्धि के लिए जल, ऑक्सीजन, पोषक तत्व, ताप तथा प्रकाश और गुरुत्व की भूमिका बताना।"
+    },
+    {
+     "concept_tag": "vibhedan-nirvibhedan",
+     "learning_objective": "विभेदन, निर्विभेदन और पुनर्विभेदन में अंतर करना तथा खुले विभेदन को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH13-T5",
+   "topic_number": 5,
+   "title": "परिवर्धन एवं सुघट्यता",
+   "ncert_sections": "13.3",
+   "concepts": [
+    {
+     "concept_tag": "parivardhan-sughatyata",
+     "learning_objective": "परिवर्धन को वृद्धि और विभेदन का योग मानते हुए विषमपर्णता द्वारा सुघट्यता को समझाना।"
+    },
+    {
+     "concept_tag": "antarik-bahya-karak",
+     "learning_objective": "परिवर्धन को नियंत्रित करने वाले आंतरिक और बाह्य कारकों को वर्गीकृत करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH13-T6",
+   "topic_number": 6,
+   "title": "पादप वृद्धि नियामक: अभिलक्षण एवं खोज",
+   "ncert_sections": "13.4.1, 13.4.2",
+   "concepts": [
+    {
+     "concept_tag": "niyamak-abhilakshan",
+     "learning_objective": "पादप वृद्धि नियामकों की रासायनिक प्रकृति तथा वृद्धिवर्धक और वृद्धिरोधक समूहों को पहचानना।"
+    },
+    {
+     "concept_tag": "niyamak-khoj",
+     "learning_objective": "पाँच प्रमुख पादप वृद्धि नियामकों की खोज से जुड़े वैज्ञानिकों और प्रयोगों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH13-T7",
+   "topic_number": 7,
+   "title": "ऑक्सिन, जिबरेलिन एवं साइटोकाइनिन के कार्यिकीय प्रभाव",
+   "ncert_sections": "13.4.3.1, 13.4.3.2, 13.4.3.3",
+   "concepts": [
+    {
+     "concept_tag": "auxin",
+     "learning_objective": "ऑक्सिन के कार्य—जड़ निर्माण, शीर्ष प्रभाविता, अनिषेकफलन, खरपतवारनाशी उपयोग—को लागू करना।"
+    },
+    {
+     "concept_tag": "gibberellin-cytokinin",
+     "learning_objective": "जिबरेलिन और साइटोकाइनिन के कार्यिकीय प्रभावों तथा कृषि उपयोगों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH13-T8",
+   "topic_number": 8,
+   "title": "एथिलीन एवं एब्सिसिक अम्ल के कार्यिकीय प्रभाव",
+   "ncert_sections": "13.4.3.4, 13.4.3.5",
+   "concepts": [
+    {
+     "concept_tag": "ethylene",
+     "learning_objective": "एथिलीन तथा एथेफॉन के फल पकाने, विलगन और पुष्पन से जुड़े प्रभावों को समझाना।"
+    },
+    {
+     "concept_tag": "abscisic-amla",
+     "learning_objective": "एब्सिसिक अम्ल को प्रतिबल हॉर्मोन के रूप में तथा जिबरेलिन के विरोधी के रूप में समझाना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "chapter_id": "KEMH1-CH10",
+ "title": "Conic Sections",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH10-T1",
+   "topic_number": 1,
+   "title": "Sections of a cone and degenerate conics",
+   "ncert_sections": "10.1, 10.2",
+   "concepts": [
+    {
+     "concept_tag": "conic-type-by-plane-angle",
+     "learning_objective": "Identify the conic section formed from the angle beta between the cutting plane and the axis of a cone of semi-vertical angle alpha."
+    },
+    {
+     "concept_tag": "degenerate-conics",
+     "learning_objective": "Identify the degenerate sections obtained when the plane passes through the vertex of the cone."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH10-T2",
+   "topic_number": 2,
+   "title": "Circle",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "circle-standard-equation",
+     "learning_objective": "Write the equation of a circle from its centre and radius, or from given conditions."
+    },
+    {
+     "concept_tag": "circle-general-equation",
+     "learning_objective": "Find the centre and radius of a circle from its general second-degree equation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH10-T3",
+   "topic_number": 3,
+   "title": "Parabola",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "parabola-standard-forms",
+     "learning_objective": "Find the focus, directrix and equation of a parabola in one of its four standard forms."
+    },
+    {
+     "concept_tag": "parabola-latus-rectum",
+     "learning_objective": "Find the length of the latus rectum of a parabola."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH10-T4",
+   "topic_number": 4,
+   "title": "Ellipse: definition and eccentricity",
+   "ncert_sections": "10.5, 10.5.1, 10.5.2",
+   "concepts": [
+    {
+     "concept_tag": "ellipse-definition-and-axes",
+     "learning_objective": "Define an ellipse and use the relation c^2 = a^2 - b^2 between its semi-axes and focal distance."
+    },
+    {
+     "concept_tag": "ellipse-eccentricity",
+     "learning_objective": "Compute and interpret the eccentricity e = c/a of an ellipse."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH10-T5",
+   "topic_number": 5,
+   "title": "Ellipse: standard equations and latus rectum",
+   "ncert_sections": "10.5.3, 10.5.4",
+   "concepts": [
+    {
+     "concept_tag": "ellipse-standard-equation",
+     "learning_objective": "Find foci, vertices and the standard equation of an ellipse from given data."
+    },
+    {
+     "concept_tag": "ellipse-latus-rectum",
+     "learning_objective": "Use the length 2b^2/a of the latus rectum of an ellipse."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH10-T6",
+   "topic_number": 6,
+   "title": "Hyperbola",
+   "ncert_sections": "10.6",
+   "concepts": [
+    {
+     "concept_tag": "hyperbola-definition-eccentricity",
+     "learning_objective": "Define a hyperbola and use c^2 = a^2 + b^2 and e = c/a."
+    },
+    {
+     "concept_tag": "hyperbola-standard-equation",
+     "learning_objective": "Find foci, latus rectum and the standard equation of a hyperbola from given data."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KHCH2-CH02",
+ "title": "कार्बनिक रसायन : कुछ आधारभूत सिद्धांत तथा तकनीकें",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHCH2-CH02-T1",
+   "topic_number": 1,
+   "title": "कार्बन की चतुःसंयोजकता एवं संरचनात्मक निरूपण",
+   "ncert_sections": "8.1, 8.2, 8.3",
+   "concepts": [
+    {
+     "concept_tag": "chatuhsanyojakata-sankaran",
+     "learning_objective": "कार्बन के संकरण, आबंध की प्रकृति और अणु की आकृति में संबंध समझना।"
+    },
+    {
+     "concept_tag": "sanrachna-nirupan",
+     "learning_objective": "पूर्ण, संघनित और आबंध-रेखा संरचनाओं को पढ़ना और लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH02-T2",
+   "topic_number": 2,
+   "title": "कार्बनिक यौगिकों का वर्गीकरण एवं नामपद्धति",
+   "ncert_sections": "8.4, 8.5",
+   "concepts": [
+    {
+     "concept_tag": "vargikaran-samjatiya-shreni",
+     "learning_objective": "कार्बनिक यौगिकों का वर्गीकरण करना तथा समजातीय श्रेणी के लक्षण पहचानना।"
+    },
+    {
+     "concept_tag": "iupac-namapaddhati",
+     "learning_objective": "आईयूपीएसी नियमों से यौगिकों के नाम लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH02-T3",
+   "topic_number": 3,
+   "title": "समावयवता",
+   "ncert_sections": "8.6",
+   "concepts": [
+    {
+     "concept_tag": "sanrachnatmak-samavayavata",
+     "learning_objective": "संरचनात्मक समावयवता के प्रकार पहचानना और समावयवों की संख्या ज्ञात करना।"
+    },
+    {
+     "concept_tag": "trivim-samavayavata",
+     "learning_objective": "त्रिविम समावयवता का अर्थ और उसके प्रकार बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH02-T4",
+   "topic_number": 4,
+   "title": "कार्बनिक अभिक्रिया की क्रियाविधि : आबंध विदलन एवं अभिकर्मक",
+   "ncert_sections": "8.7.1, 8.7.2, 8.7.3",
+   "concepts": [
+    {
+     "concept_tag": "aabandh-vidalan",
+     "learning_objective": "समांश और विषमांश विदलन तथा बनने वाले मध्यवर्तियों का स्थायित्व समझना।"
+    },
+    {
+     "concept_tag": "nabhikragi-electronragi",
+     "learning_objective": "नाभिकरागी और इलेक्ट्रॉनरागी अभिकर्मकों में भेद करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH02-T5",
+   "topic_number": 5,
+   "title": "सहसंयोजी आबंध में इलेक्ट्रॉन विस्थापन प्रभाव",
+   "ncert_sections": "8.7.4 से 8.7.10",
+   "concepts": [
+    {
+     "concept_tag": "prerak-ilektromeri-prabhav",
+     "learning_objective": "प्रेरणिक और इलेक्ट्रोमेरी प्रभाव से अम्लता और अभिक्रियाशीलता की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "anunad-prabhav",
+     "learning_objective": "अनुनाद प्रभाव दर्शाने वाले समूहों को पहचानना।"
+    },
+    {
+     "concept_tag": "atisanyugman",
+     "learning_objective": "अतिसंयुग्मन द्वारा कार्बधनायनों के स्थायित्व की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH02-T6",
+   "topic_number": 6,
+   "title": "कार्बनिक यौगिकों के शोधन की विधियाँ",
+   "ncert_sections": "8.8",
+   "concepts": [
+    {
+     "concept_tag": "urdhvapatan-asavan",
+     "learning_objective": "ऊर्ध्वपातन, क्रिस्टलन और आसवन की विभिन्न विधियों का उचित चयन करना।"
+    },
+    {
+     "concept_tag": "varnalekhan",
+     "learning_objective": "वर्णलेखन का सिद्धांत समझना और मंदन गुणक की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH2-CH02-T7",
+   "topic_number": 7,
+   "title": "कार्बनिक यौगिकों का गुणात्मक एवं मात्रात्मक विश्लेषण",
+   "ncert_sections": "8.9, 8.10",
+   "concepts": [
+    {
+     "concept_tag": "lassaigne-parikshan",
+     "learning_objective": "लैसें परीक्षण द्वारा नाइट्रोजन, सल्फर और हैलोजन की पहचान करना।"
+    },
+    {
+     "concept_tag": "matrik-vishleshan",
+     "learning_objective": "कैल्डॉल और कैरिअस विधियों से तत्वों की प्रतिशतता ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

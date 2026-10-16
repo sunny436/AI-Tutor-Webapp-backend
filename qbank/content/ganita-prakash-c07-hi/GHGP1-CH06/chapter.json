@@ -1,0 +1,116 @@
+{
+ "chapter_id": "GHGP1-CH06",
+ "title": "संख्याओं का खेल",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHGP1-CH06-T1",
+   "topic_number": 1,
+   "title": "संख्याएँ हमें बताती हैं: लंबाई के आधार पर संख्याएँ",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "lambe-bachchon-ki-ginti",
+     "learning_objective": "विद्यार्थी पंक्ति में अपने आगे खड़े अधिक लंबे बच्चों की गिनती के नियम से संख्याएँ ज्ञात कर सकेगा।"
+    },
+    {
+     "concept_tag": "kathan-satya-asatya",
+     "learning_objective": "विद्यार्थी इस नियम से जुड़े कथनों को सदैव सत्य, कभी-कभी सत्य या सदैव असत्य के रूप में परख सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH06-T2",
+   "topic_number": 2,
+   "title": "समानता चयन: योग की समानता",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "yog-ki-samanata",
+     "learning_objective": "विद्यार्थी सम और विषम संख्याओं के योग की समानता ज्ञात करके पहेलियाँ हल कर सकेगा।"
+    },
+    {
+     "concept_tag": "kramagat-sankhyaon-ka-yog",
+     "learning_objective": "विद्यार्थी समझ सकेगा कि दो क्रमागत संख्याओं का योग सदैव विषम होता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH06-T3",
+   "topic_number": 3,
+   "title": "गुणनफल और व्यंजकों की समानता",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "nvi-sam-vishm-sankhya",
+     "learning_objective": "विद्यार्थी nवीं सम संख्या 2n और nवीं विषम संख्या 2n – 1 का उपयोग कर सकेगा।"
+    },
+    {
+     "concept_tag": "gunanphal-ki-samanata",
+     "learning_objective": "विद्यार्थी गुणा किए बिना ग्रिड में छोटे वर्गों की संख्या की समानता बता सकेगा।"
+    },
+    {
+     "concept_tag": "vyanjak-ki-samanata",
+     "learning_objective": "विद्यार्थी बीजीय व्यंजकों की समानता का विश्लेषण कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH06-T4",
+   "topic_number": 4,
+   "title": "जाल (ग्रिड) में कुछ खोज और जादुई वर्ग",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "grid-yog-ki-seema",
+     "learning_objective": "विद्यार्थी 1 से 9 तक की संख्याओं वाले ग्रिड में पंक्ति और स्तंभ के योग की सीमाएँ पहचान सकेगा।"
+    },
+    {
+     "concept_tag": "jadui-yog-aur-kendra",
+     "learning_objective": "विद्यार्थी 1 से 9 तक के जादुई वर्ग का जादुई योग और केंद्रीय संख्या बता सकेगा।"
+    },
+    {
+     "concept_tag": "jadui-varg-vyapakikaran",
+     "learning_objective": "विद्यार्थी केंद्रीय संख्या m वाले व्यापकीकृत रूप और संक्रियाओं से नए जादुई वर्ग बना सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH06-T5",
+   "topic_number": 5,
+   "title": "विरहांक-फिबोनाची संख्याएँ",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "virahank-anukram-niyam",
+     "learning_objective": "विद्यार्थी पिछली दो संख्याओं को जोड़कर विरहांक अनुक्रम के पद और उनकी समानता ज्ञात कर सकेगा।"
+    },
+    {
+     "concept_tag": "laghu-guru-lay-ginti",
+     "learning_objective": "विद्यार्थी लघु और गुरु शब्दांशों से बनी लयों की संख्या गिन सकेगा।"
+    },
+    {
+     "concept_tag": "virahank-itihas",
+     "learning_objective": "विद्यार्थी इन संख्याओं की खोज के भारतीय इतिहास को जान सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP1-CH06-T6",
+   "topic_number": 6,
+   "title": "अंक पहेली (क्रिप्टारिथम)",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "kriptarithm-ank-khoj",
+     "learning_objective": "विद्यार्थी अक्षरों से छिपाए गए अंकों वाले सरल योग में अक्षरों के अंक ज्ञात कर सकेगा।"
+    },
+    {
+     "concept_tag": "haasil-tark",
+     "learning_objective": "विद्यार्थी हासिल और अंकों की सीमा के तर्क से अक्षर पहेलियाँ हल कर सकेगा।"
+    }
+   ]
+  }
+ ]
+}

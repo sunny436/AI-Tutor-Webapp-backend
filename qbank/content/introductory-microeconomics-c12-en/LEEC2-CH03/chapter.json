@@ -1,0 +1,136 @@
+{
+ "chapter_id": "LEEC2-CH03",
+ "title": "Production and Costs",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEEC2-CH03-T1",
+   "topic_number": 1,
+   "title": "Production Function",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "production-function",
+     "learning_objective": "Define the production function as the maximum output obtainable from given inputs and use it to compute output."
+    },
+    {
+     "concept_tag": "technology-and-efficiency",
+     "learning_objective": "Explain that a production function assumes efficient use of inputs and is defined for a given technology."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH03-T2",
+   "topic_number": 2,
+   "title": "The Short Run, the Long Run and Isoquants",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "short-run-long-run",
+     "learning_objective": "Distinguish the short run from the long run by whether all inputs can be varied."
+    },
+    {
+     "concept_tag": "isoquant",
+     "learning_objective": "Explain an isoquant and why it slopes downward when marginal products are positive."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH03-T3",
+   "topic_number": 3,
+   "title": "Total Product, Average Product and Marginal Product",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "tp-ap-mp-definitions",
+     "learning_objective": "Define total, average and marginal product of a variable input."
+    },
+    {
+     "concept_tag": "product-schedule-calculation",
+     "learning_objective": "Calculate TP, AP and MP schedules from one another."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH03-T4",
+   "topic_number": 4,
+   "title": "Law of Variable Proportions and Shapes of Product Curves",
+   "ncert_sections": "3.4, 3.5",
+   "concepts": [
+    {
+     "concept_tag": "law-of-variable-proportions",
+     "learning_objective": "State and explain the law of variable proportions using changing factor proportions."
+    },
+    {
+     "concept_tag": "ap-mp-relationship",
+     "learning_objective": "Explain the shapes of the TP, AP and MP curves and the relationship between AP and MP."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH03-T5",
+   "topic_number": 5,
+   "title": "Returns to Scale",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "returns-to-scale",
+     "learning_objective": "Distinguish constant, increasing and decreasing returns to scale."
+    },
+    {
+     "concept_tag": "cobb-douglas-returns",
+     "learning_objective": "Identify returns to scale of a Cobb-Douglas production function from the sum of its exponents."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH03-T6",
+   "topic_number": 6,
+   "title": "Cost Function and Short Run Cost Concepts",
+   "ncert_sections": "3.7, 3.7.1",
+   "concepts": [
+    {
+     "concept_tag": "cost-function",
+     "learning_objective": "Explain the cost function as the least cost of producing each output level."
+    },
+    {
+     "concept_tag": "short-run-cost-concepts",
+     "learning_objective": "Calculate TFC, TVC, TC, AFC, AVC, SAC and SMC and relate them to one another."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH03-T7",
+   "topic_number": 7,
+   "title": "Shapes of the Short Run Cost Curves",
+   "ncert_sections": "3.7.1",
+   "concepts": [
+    {
+     "concept_tag": "afc-and-fixed-cost-curves",
+     "learning_objective": "Describe the shapes of the TFC and AFC curves and why AFC is a rectangular hyperbola."
+    },
+    {
+     "concept_tag": "u-shaped-cost-curves",
+     "learning_objective": "Explain why SMC, AVC and SAC are U-shaped and where SMC cuts AVC and SAC."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH03-T8",
+   "topic_number": 8,
+   "title": "Long Run Costs",
+   "ncert_sections": "3.7.2",
+   "concepts": [
+    {
+     "concept_tag": "long-run-cost-concepts",
+     "learning_objective": "Define long run average and marginal cost and explain why there is no fixed cost in the long run."
+    },
+    {
+     "concept_tag": "lrac-and-returns-to-scale",
+     "learning_objective": "Relate the U-shape of the LRAC curve to increasing, constant and decreasing returns to scale."
+    }
+   ]
+  }
+ ]
+}

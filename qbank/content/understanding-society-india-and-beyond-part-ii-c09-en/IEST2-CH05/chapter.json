@@ -1,0 +1,144 @@
+{
+  "chapter_id": "IEST2-CH05",
+  "title": "Managing Your Personal Finances",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "IEST2-CH05-T1",
+      "topic_number": 1,
+      "title": "Personal finance and its pillars: income",
+      "ncert_sections": "Introduction; Pillars of Personal Finance; Income (Earnings)",
+      "concepts": [
+        {
+          "concept_tag": "personal-finance-meaning",
+          "learning_objective": "Explain what personal finance means and why money must be managed efficiently."
+        },
+        {
+          "concept_tag": "pillars-of-personal-finance",
+          "learning_objective": "Identify the five pillars of personal finance and what each involves."
+        },
+        {
+          "concept_tag": "sources-of-income",
+          "learning_objective": "Recognise different forms of income such as salary, profit, rent, interest and dividends."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH05-T2",
+      "topic_number": 2,
+      "title": "Budgeting and saving",
+      "ncert_sections": "Budgeting (Planning Expenses); Steps in Budgeting; Saving",
+      "concepts": [
+        {
+          "concept_tag": "budgeting-meaning",
+          "learning_objective": "Explain budgeting as planning in advance how income will be spent to balance income and expenses."
+        },
+        {
+          "concept_tag": "steps-in-budgeting",
+          "learning_objective": "Apply the four steps of budgeting, including setting a savings goal."
+        },
+        {
+          "concept_tag": "saving-purpose",
+          "learning_objective": "Explain why people save a part of their income."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH05-T3",
+      "topic_number": 3,
+      "title": "Investing: inflation and the power of compounding",
+      "ncert_sections": "Investing (Growing Wealth); Power of Early Investments",
+      "concepts": [
+        {
+          "concept_tag": "investing-vs-saving",
+          "learning_objective": "Distinguish between keeping savings as cash and investing them in assets."
+        },
+        {
+          "concept_tag": "inflation-purchasing-power",
+          "learning_objective": "Explain how inflation reduces the purchasing power of money."
+        },
+        {
+          "concept_tag": "compounding-early-investment",
+          "learning_objective": "Analyse how compounding makes early investment more rewarding."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH05-T4",
+      "topic_number": 4,
+      "title": "Common investment options",
+      "ncert_sections": "Common Investment Options: Fixed Deposits, Bonds, Stocks, Mutual Funds",
+      "concepts": [
+        {
+          "concept_tag": "fixed-deposits-and-bonds",
+          "learning_objective": "Describe fixed deposits and bonds and calculate the interest earned on them."
+        },
+        {
+          "concept_tag": "stocks-equity",
+          "learning_objective": "Explain that shares represent ownership and carry higher risk and potential return."
+        },
+        {
+          "concept_tag": "mutual-funds-diversification",
+          "learning_objective": "Explain how mutual funds pool money and reduce risk through diversification."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH05-T5",
+      "topic_number": 5,
+      "title": "Protection: insurance, borrowing and credit",
+      "ncert_sections": "Protection and Risk Management; Insurance; Types of Insurance; Borrowing and Credit",
+      "concepts": [
+        {
+          "concept_tag": "insurance-risk-sharing",
+          "learning_objective": "Explain insurance as a contract based on premiums and risk sharing."
+        },
+        {
+          "concept_tag": "types-of-insurance",
+          "learning_objective": "Classify health, life and general insurance with examples."
+        },
+        {
+          "concept_tag": "responsible-borrowing-emi",
+          "learning_objective": "Evaluate responsible borrowing and the meaning of an EMI."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH05-T6",
+      "topic_number": 6,
+      "title": "Risk and return",
+      "ncert_sections": "Risk and Return; Risk/Return Trade-Off",
+      "concepts": [
+        {
+          "concept_tag": "investment-factors",
+          "learning_objective": "Identify risk, return, time horizon and liquidity as factors in investment decisions."
+        },
+        {
+          "concept_tag": "risk-return-tradeoff",
+          "learning_objective": "Analyse the trade-off between risk and return across investment options."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH05-T7",
+      "topic_number": 7,
+      "title": "Taxes and personal income tax",
+      "ncert_sections": "Taxes; Personal Income Tax; Tables 5.1 and 5.2",
+      "concepts": [
+        {
+          "concept_tag": "direct-indirect-taxes",
+          "learning_objective": "Distinguish between direct and indirect taxes with examples."
+        },
+        {
+          "concept_tag": "progressive-taxation",
+          "learning_objective": "Explain progressive taxation and the slab system."
+        },
+        {
+          "concept_tag": "income-tax-calculation",
+          "learning_objective": "Calculate income tax using the standard deduction and the tax slabs."
+        }
+      ]
+    }
+  ]
+}

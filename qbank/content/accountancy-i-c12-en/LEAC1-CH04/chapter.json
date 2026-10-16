@@ -1,0 +1,100 @@
+{
+ "chapter_id": "LEAC1-CH04",
+ "title": "Dissolution of Partnership Firm",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEAC1-CH04-T1",
+   "topic_number": 1,
+   "title": "Dissolution of partnership and dissolution of the firm",
+   "ncert_sections": "4.1, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "dissolution-of-partnership",
+     "learning_objective": "Identify the events that dissolve a partnership while the firm may continue its business."
+    },
+    {
+     "concept_tag": "partnership-vs-firm-dissolution",
+     "learning_objective": "Distinguish dissolution of partnership from dissolution of a firm on business, settlement, court role and books."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH04-T2",
+   "topic_number": 2,
+   "title": "Modes of dissolution of a firm",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "dissolution-by-agreement-and-contingencies",
+     "learning_objective": "Explain dissolution by agreement and on the happening of contingencies such as expiry of term or completion of a venture."
+    },
+    {
+     "concept_tag": "compulsory-dissolution",
+     "learning_objective": "State the cases in which a firm is compulsorily dissolved."
+    },
+    {
+     "concept_tag": "dissolution-by-notice-and-court",
+     "learning_objective": "Explain dissolution by notice in a partnership at will and the grounds on which a court may order dissolution."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH04-T3",
+   "topic_number": 3,
+   "title": "Settlement of accounts on dissolution",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "treatment-of-losses",
+     "learning_objective": "Apply the order in which losses and capital deficiencies are met, including the Garner vs. Murray rule."
+    },
+    {
+     "concept_tag": "application-of-assets",
+     "learning_objective": "Apply the Section 48 order of paying outside debts, partners' loans, capitals and the residue."
+    },
+    {
+     "concept_tag": "private-and-firm-debts",
+     "learning_objective": "Apply the Section 49 rules on firm's debts and partners' private debts."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH04-T4",
+   "topic_number": 4,
+   "title": "Realisation Account",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "realisation-account-transfers",
+     "learning_objective": "Identify which assets and liabilities are transferred to the Realisation Account and on which side."
+    },
+    {
+     "concept_tag": "realisation-profit-or-loss",
+     "learning_objective": "Compute profit or loss on realisation and its transfer to partners' capital accounts."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH04-T5",
+   "topic_number": 5,
+   "title": "Journal entries on dissolution",
+   "ncert_sections": "4.4.1",
+   "concepts": [
+    {
+     "concept_tag": "realisation-expenses-entries",
+     "learning_objective": "Record realisation expenses and remuneration under different arrangements with partners."
+    },
+    {
+     "concept_tag": "assets-and-liabilities-taken-over",
+     "learning_objective": "Record assets taken over and liabilities assumed by partners, and settlements with creditors."
+    },
+    {
+     "concept_tag": "settlement-of-partners-accounts",
+     "learning_objective": "Record the final settlement of partners' loans and capital accounts."
+    }
+   ]
+  }
+ ]
+}

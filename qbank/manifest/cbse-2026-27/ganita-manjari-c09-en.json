@@ -1,0 +1,1033 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "ganita-manjari-c09-en",
+  "curriculum": "cbse",
+  "class_level": 9,
+  "subject_code": "mathematics",
+  "language": "english",
+  "title": "Ganita Manjari",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "iemh1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "IEMH1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Orienting Yourself: The Use of Coordinates",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH1-CH01-T1",
+     "topic_number": 1,
+     "title": "The history of grid-based thinking and coordinates",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "grid-based-thinking-history",
+       "learning_objective": "Describe how early grid layouts and reference meridians worked as coordinate systems in practice."
+      },
+      {
+       "concept_tag": "contributors-to-coordinates",
+       "learning_objective": "Identify the contributions of Brahmagupta, Aryabhata, Descartes and others to the idea of coordinates."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH01-T2",
+     "topic_number": 2,
+     "title": "Coordinate axes, the origin and points on the axes",
+     "ncert_sections": "1.2, 1.3",
+     "concepts": [
+      {
+       "concept_tag": "axes-and-origin",
+       "learning_objective": "State the meaning of the x-axis, the y-axis and the origin, and the sign convention for distances from O."
+      },
+      {
+       "concept_tag": "points-on-axes",
+       "learning_objective": "Locate points of the form (x, 0) and (0, y) and find lengths along an axis on a scaled plan."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH01-T3",
+     "topic_number": 3,
+     "title": "Quadrants and the order of coordinates",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "quadrant-signs",
+       "learning_objective": "Identify the quadrant of a point from the signs of its coordinates."
+      },
+      {
+       "concept_tag": "ordered-pair-order",
+       "learning_objective": "Explain why (x, y) and (y, x) are the same point only when x = y."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH01-T4",
+     "topic_number": 4,
+     "title": "Distance between two points",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "distance-parallel-to-axes",
+       "learning_objective": "Find the distance between points on a line parallel to an axis and the distance of a point from an axis."
+      },
+      {
+       "concept_tag": "distance-formula",
+       "learning_objective": "Use the Baudhayana-Pythagoras theorem to find the distance between any two points in the plane."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH01-T5",
+     "topic_number": 5,
+     "title": "Reflection, midpoints and collinearity",
+     "ncert_sections": "1.4, End-of-Chapter Exercises",
+     "concepts": [
+      {
+       "concept_tag": "reflection-in-axis",
+       "learning_objective": "Find the image of a point reflected in an axis and explain why reflection preserves lengths."
+      },
+      {
+       "concept_tag": "midpoint-of-segment",
+       "learning_objective": "Find the midpoint of a segment, or an unknown endpoint, from the coordinates of the points."
+      },
+      {
+       "concept_tag": "collinearity-by-distance",
+       "learning_objective": "Check whether three points lie on one straight line using distances between them."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEMH1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Introduction to Linear Polynomials",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH1-CH02-T1",
+     "topic_number": 1,
+     "title": "Algebraic expressions and univariate polynomials",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "terms-variables-coefficients",
+       "learning_objective": "Identify the terms, variables, coefficients and constant term of an algebraic expression."
+      },
+      {
+       "concept_tag": "degree-of-polynomial",
+       "learning_objective": "Find the degree of a one-variable polynomial and classify it as constant, linear, quadratic or cubic."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH02-T2",
+     "topic_number": 2,
+     "title": "Linear polynomials, linear equations and input-output processes",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "value-of-polynomial",
+       "learning_objective": "Evaluate a polynomial by substituting a value of the variable, viewing it as an input-output process."
+      },
+      {
+       "concept_tag": "linear-equation-word-problems",
+       "learning_objective": "Form and solve a linear equation by equating a linear polynomial to a constant in a word problem."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH02-T3",
+     "topic_number": 3,
+     "title": "Exploring linear patterns",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "linear-pattern-constant-difference",
+       "learning_objective": "Recognise a linear pattern as a sequence whose consecutive terms have a constant difference."
+      },
+      {
+       "concept_tag": "nth-term-of-linear-pattern",
+       "learning_objective": "Find and use a linear expression in n for the nth term of a growing pattern."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH02-T4",
+     "topic_number": 4,
+     "title": "Linear growth and linear decay",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "linear-growth",
+       "learning_objective": "Model a quantity that increases by a fixed amount over equal intervals with a linear function."
+      },
+      {
+       "concept_tag": "linear-decay",
+       "learning_objective": "Model a quantity that decreases by a fixed amount over equal intervals with a linear function."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH02-T5",
+     "topic_number": 5,
+     "title": "Linear relationships y = ax + b",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "finding-a-and-b-from-data",
+       "learning_objective": "Find a and b in y = ax + b from two pairs of values of x and y."
+      },
+      {
+       "concept_tag": "interpreting-a-and-b",
+       "learning_objective": "Interpret a as the rate of change and b as the fixed starting value in a real-life linear relationship."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH02-T6",
+     "topic_number": 6,
+     "title": "Visualising linear relationships: slope and y-intercept",
+     "ncert_sections": "2.6",
+     "concepts": [
+      {
+       "concept_tag": "plotting-linear-equations",
+       "learning_objective": "Plot y = ax + b using two points and check whether a point lies on the line."
+      },
+      {
+       "concept_tag": "slope-and-y-intercept",
+       "learning_objective": "Identify the slope a and y-intercept b of y = ax + b and describe how they change the line."
+      },
+      {
+       "concept_tag": "parallel-lines",
+       "learning_objective": "Recognise that lines with equal slopes and different y-intercepts are parallel."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEMH1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "The World of Numbers",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH1-CH03-T1",
+     "topic_number": 1,
+     "title": "The need to count: natural numbers",
+     "ncert_sections": "3.1, 3.1.1, 3.1.2",
+     "concepts": [
+      {
+       "concept_tag": "one-to-one-correspondence",
+       "learning_objective": "Explain how one-to-one correspondence allowed early humans to count and record quantities."
+      },
+      {
+       "concept_tag": "early-number-records",
+       "learning_objective": "Identify early evidence of number use such as the Ishango bone and the Vedic names for powers of 10."
+      },
+      {
+       "concept_tag": "closure-of-natural-numbers",
+       "learning_objective": "Decide whether natural numbers are closed under a given operation, using counterexamples."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH03-T2",
+     "topic_number": 2,
+     "title": "Zero (Shunya) and Brahmagupta's rules",
+     "ncert_sections": "3.2, 3.2.1, 3.2.2",
+     "concepts": [
+      {
+       "concept_tag": "shunyata-to-zero",
+       "learning_objective": "Describe how the idea of shunyata and the Bakhshali manuscript led to zero as a number."
+      },
+      {
+       "concept_tag": "brahmagupta-rules-for-zero",
+       "learning_objective": "Apply Brahmagupta's rules for adding, subtracting and multiplying with zero."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH03-T3",
+     "topic_number": 3,
+     "title": "Integers: fortunes and debts",
+     "ncert_sections": "3.3, 3.3.1",
+     "concepts": [
+      {
+       "concept_tag": "dhana-rina-integers",
+       "learning_objective": "Describe integers as fortunes (dhana), debts (rina) and zero, and the symbol Z."
+      },
+      {
+       "concept_tag": "integer-operations",
+       "learning_objective": "Use Brahmagupta's rules of signs to add, subtract and multiply integers in real-life contexts."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH03-T4",
+     "topic_number": 4,
+     "title": "Fractions and rational numbers",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "definition-of-rational-numbers",
+       "learning_objective": "State the definition of a rational number p/q and explain why q must not be zero."
+      },
+      {
+       "concept_tag": "equivalent-rationals",
+       "learning_objective": "Test whether two rational numbers are equal using the rule ad = bc."
+      },
+      {
+       "concept_tag": "operations-on-rationals",
+       "learning_objective": "Add, subtract, multiply and divide rational numbers and use their closure properties."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH03-T5",
+     "topic_number": 5,
+     "title": "Rationals on the number line, absolute value and density",
+     "ncert_sections": "3.4.1, 3.4.2",
+     "concepts": [
+      {
+       "concept_tag": "rationals-on-number-line",
+       "learning_objective": "Locate rational numbers on the number line by dividing unit intervals into equal parts."
+      },
+      {
+       "concept_tag": "absolute-value-distance",
+       "learning_objective": "Find absolute values and the distance |a - b| between two rational numbers."
+      },
+      {
+       "concept_tag": "density-of-rationals",
+       "learning_objective": "Find rational numbers between two given rationals using averages and explain density."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH03-T6",
+     "topic_number": 6,
+     "title": "Irrational numbers",
+     "ncert_sections": "3.5, 3.5.1, 3.5.2, 3.5.3",
+     "concepts": [
+      {
+       "concept_tag": "irrationality-proof-by-contradiction",
+       "learning_objective": "Follow the proof by contradiction that the square root of 2 is irrational."
+      },
+      {
+       "concept_tag": "constructing-root-lengths",
+       "learning_objective": "Construct lengths such as the square roots of 2 and 3 on the number line using right triangles."
+      },
+      {
+       "concept_tag": "pi-and-madhava-series",
+       "learning_objective": "Describe pi as irrational and evaluate partial sums of Madhava's series."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH03-T7",
+     "topic_number": 7,
+     "title": "Real numbers and decimal expansions",
+     "ncert_sections": "3.6, 3.6.1, 3.6.2, 3.6.3, 3.7",
+     "concepts": [
+      {
+       "concept_tag": "terminating-and-repeating-decimals",
+       "learning_objective": "Predict from the denominator's prime factors whether a rational number's decimal terminates or repeats."
+      },
+      {
+       "concept_tag": "repeating-decimal-to-fraction",
+       "learning_objective": "Convert pure and general repeating decimals into the form p/q."
+      },
+      {
+       "concept_tag": "irrational-decimals-and-real-numbers",
+       "learning_objective": "Distinguish rational and irrational numbers by their decimal expansions and describe the real numbers."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEMH1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Exploring Algebraic Identities",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH1-CH04-T1",
+     "topic_number": 1,
+     "title": "Identities and visualising (a + b)²",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "identity-vs-equation",
+       "learning_objective": "Distinguish an algebraic identity, true for all values of its variables, from an equation."
+      },
+      {
+       "concept_tag": "square-of-sum-geometric",
+       "learning_objective": "Interpret (a + b)² = a² + 2ab + b² using a square of side (a + b) partitioned into squares and rectangles."
+      },
+      {
+       "concept_tag": "square-of-sum-application",
+       "learning_objective": "Use (a + b)² = a² + 2ab + b² to expand binomials and evaluate squares of numbers."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH04-T2",
+     "topic_number": 2,
+     "title": "Factorisation using identities and (a − b)²",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "factorise-perfect-square",
+       "learning_objective": "Factorise perfect-square trinomials, taking out a common factor first where needed."
+      },
+      {
+       "concept_tag": "square-of-difference",
+       "learning_objective": "Use (a − b)² = a² − 2ab + b² to factorise expressions and compute squares."
+      },
+      {
+       "concept_tag": "consecutive-squares-proof",
+       "learning_objective": "Use identities to prove patterns among squares of consecutive numbers."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH04-T3",
+     "topic_number": 3,
+     "title": "More identities: (a + b + c)² and a² − b²",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "square-of-trinomial",
+       "learning_objective": "Expand and apply (a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca."
+      },
+      {
+       "concept_tag": "difference-of-squares",
+       "learning_objective": "Apply a² − b² = (a + b)(a − b), and Shridharacharya's form a² = (a + b)(a − b) + b², to quick calculations."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH04-T4",
+     "topic_number": 4,
+     "title": "Factorisation with algebra tiles and by splitting the middle term",
+     "ncert_sections": "4.5, 4.6",
+     "concepts": [
+      {
+       "concept_tag": "algebra-tiles",
+       "learning_objective": "Represent products and factors of quadratic expressions with algebra tiles."
+      },
+      {
+       "concept_tag": "product-of-linear-factors",
+       "learning_objective": "State and use (x + a)(x + b) = x² + (a + b)x + ab."
+      },
+      {
+       "concept_tag": "splitting-middle-term",
+       "learning_objective": "Factorise quadratic expressions by splitting the middle term using a + b and ab."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH04-T5",
+     "topic_number": 5,
+     "title": "Finding new identities: cubes",
+     "ncert_sections": "4.7",
+     "concepts": [
+      {
+       "concept_tag": "cube-of-binomial",
+       "learning_objective": "Use (a + b)³ and (a − b)³ to expand and to recognise perfect cubes."
+      },
+      {
+       "concept_tag": "sum-difference-of-cubes",
+       "learning_objective": "Apply x³ − y³ = (x − y)(x² + xy + y²) and x³ + y³ = (x + y)(x² − xy + y²)."
+      },
+      {
+       "concept_tag": "sum-of-cubes-three-variables",
+       "learning_objective": "Use x³ + y³ + z³ − 3xyz = (x + y + z)(x² + y² + z² − xy − xz − yz) to evaluate expressions."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH04-T6",
+     "topic_number": 6,
+     "title": "Simplifying rational expressions and applications",
+     "ncert_sections": "4.8",
+     "concepts": [
+      {
+       "concept_tag": "simplify-rational-expressions",
+       "learning_objective": "Simplify rational algebraic expressions by factorising and cancelling non-zero common factors."
+      },
+      {
+       "concept_tag": "word-problems-factorisation",
+       "learning_objective": "Form and factorise quadratic expressions to solve area problems."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEMH1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "I’m Up and Down, and Round and Round",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH1-CH05-T1",
+     "topic_number": 1,
+     "title": "Definitions and symmetries of a circle",
+     "ncert_sections": "5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "circle-as-locus",
+       "learning_objective": "Define a circle as the locus of points on a plane equidistant from a given point, and identify its centre and radius."
+      },
+      {
+       "concept_tag": "chord-and-diameter",
+       "learning_objective": "Identify chords and diameters and recognise the diameter as the longest chord."
+      },
+      {
+       "concept_tag": "symmetries-of-circle",
+       "learning_objective": "Describe the complete rotational symmetry of a circle and its lines of reflection symmetry."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH05-T2",
+     "topic_number": 2,
+     "title": "Circles through given points and the circumcircle",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "circles-through-two-points",
+       "learning_objective": "Explain why infinitely many circles pass through two points, with centres on the perpendicular bisector of the segment joining them."
+      },
+      {
+       "concept_tag": "circumcircle-of-triangle",
+       "learning_objective": "Explain why exactly one circle passes through three non-collinear points and locate the circumcentre of a triangle."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH05-T3",
+     "topic_number": 3,
+     "title": "Chords and the angles they subtend at the centre",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "equal-chords-equal-angles",
+       "learning_objective": "Use congruence to show that equal chords subtend equal angles at the centre, and conversely."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH05-T4",
+     "topic_number": 4,
+     "title": "Midpoints and perpendicular bisectors of chords",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "perpendicular-from-centre",
+       "learning_objective": "Apply the results that the line from the centre to the midpoint of a chord is perpendicular to it and the perpendicular from the centre bisects the chord."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH05-T5",
+     "topic_number": 5,
+     "title": "Distance of chords from the centre",
+     "ncert_sections": "5.6, 5.6.1",
+     "concepts": [
+      {
+       "concept_tag": "equal-chords-equidistant",
+       "learning_objective": "Apply the results that equal chords are equidistant from the centre and equidistant chords are equal."
+      },
+      {
+       "concept_tag": "longer-chord-nearer-centre",
+       "learning_objective": "Compare distances of unequal chords from the centre and compute chord lengths using the Baudhayana-Pythagoras theorem."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH05-T6",
+     "topic_number": 6,
+     "title": "Angles subtended by an arc",
+     "ncert_sections": "5.7, 5.7.1",
+     "concepts": [
+      {
+       "concept_tag": "major-and-minor-arcs",
+       "learning_objective": "Distinguish major and minor arcs by the angle they subtend at the centre."
+      },
+      {
+       "concept_tag": "central-angle-double",
+       "learning_objective": "Apply the theorem that the angle subtended by an arc at the centre is double the angle at any point on the circle outside the arc."
+      },
+      {
+       "concept_tag": "angle-in-semicircle",
+       "learning_objective": "Use the corollary that a diameter subtends a right angle at any point on the circle."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH05-T7",
+     "topic_number": 7,
+     "title": "Concyclic points and cyclic quadrilaterals",
+     "ncert_sections": "5.8",
+     "concepts": [
+      {
+       "concept_tag": "concyclic-points",
+       "learning_objective": "Determine when four points are concyclic using equal angles subtended by a segment."
+      },
+      {
+       "concept_tag": "cyclic-quadrilateral-angles",
+       "learning_objective": "Apply the result that opposite angles of a cyclic quadrilateral are supplementary, and its converse."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEMH1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Measuring Space: Perimeter and Area",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH1-CH06-T1",
+     "topic_number": 1,
+     "title": "Perimeter of shapes and the C/D ratio",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "perimeter-of-polygons",
+       "learning_objective": "Find the perimeter of squares, rectangles and equilateral triangles and see that perimeter-to-side ratios are fixed."
+      },
+      {
+       "concept_tag": "cd-ratio-pi",
+       "learning_objective": "Explain that the ratio of circumference to diameter is the same for all circles and estimate it by measurement."
+      },
+      {
+       "concept_tag": "history-of-pi",
+       "learning_objective": "Describe how approximations of pi developed from ancient civilisations to Madhava's exact series."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH06-T2",
+     "topic_number": 2,
+     "title": "Pi is irrational",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "irrational-numbers",
+       "learning_objective": "Recognise that pi, like root 2, cannot be written as a ratio of two integers."
+      },
+      {
+       "concept_tag": "approximation-vs-equality",
+       "learning_objective": "Distinguish between a close rational approximation of pi and its exact value."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH06-T3",
+     "topic_number": 3,
+     "title": "Arc length and perimeter problems",
+     "ncert_sections": "6.4, 6.5",
+     "concepts": [
+      {
+       "concept_tag": "circumference-formula",
+       "learning_objective": "Use C = 2πr to find circumferences, including on an athletics track."
+      },
+      {
+       "concept_tag": "arc-length",
+       "learning_objective": "Find the length of an arc subtending θ° at the centre using 2πr × θ/360."
+      },
+      {
+       "concept_tag": "perimeter-puzzles",
+       "learning_objective": "Solve perimeter problems built from circular arcs and semicircles."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH06-T4",
+     "topic_number": 4,
+     "title": "Area of rectangle, parallelogram and triangle",
+     "ncert_sections": "6.6, 6.7, 6.8",
+     "concepts": [
+      {
+       "concept_tag": "area-parallelogram",
+       "learning_objective": "Find the area of a parallelogram as base × height."
+      },
+      {
+       "concept_tag": "area-triangle",
+       "learning_objective": "Find and apply the area of a triangle as half base × height."
+      },
+      {
+       "concept_tag": "median-equal-areas",
+       "learning_objective": "Use the theorem that a median divides a triangle into two triangles of equal area."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH06-T5",
+     "topic_number": 5,
+     "title": "Heron's formula",
+     "ncert_sections": "6.8.1",
+     "concepts": [
+      {
+       "concept_tag": "herons-formula",
+       "learning_objective": "Find the area of a triangle from its three sides using Heron's formula."
+      },
+      {
+       "concept_tag": "circumcircle-incircle-area",
+       "learning_objective": "Relate the area of a triangle to the radii of its incircle and circumcircle."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH06-T6",
+     "topic_number": 6,
+     "title": "Brahmagupta's formula and squaring a rectangle",
+     "ncert_sections": "6.8.1, 6.9",
+     "concepts": [
+      {
+       "concept_tag": "brahmaguptas-formula",
+       "learning_objective": "Find the area of a cyclic 4-gon from its sides using Brahmagupta's formula."
+      },
+      {
+       "concept_tag": "special-case-generalisation",
+       "learning_objective": "Explain how Heron's formula is a special case of Brahmagupta's formula."
+      },
+      {
+       "concept_tag": "squaring-a-rectangle",
+       "learning_objective": "Explain Baudhayana's construction of a square equal in area to a rectangle."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH06-T7",
+     "topic_number": 7,
+     "title": "Area of a circle and of a sector",
+     "ncert_sections": "6.10, 6.10.1",
+     "concepts": [
+      {
+       "concept_tag": "circle-area",
+       "learning_objective": "Find the area of a circle using A = πr² and explain why the formula holds."
+      },
+      {
+       "concept_tag": "sector-area",
+       "learning_objective": "Find the area of a sector as πr² × θ/360."
+      },
+      {
+       "concept_tag": "p2-to-area-ratio",
+       "learning_objective": "Explain that the ratio of perimeter squared to area depends only on shape, not size."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEMH1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "The Mathematics of Maybe: Introduction to Probability",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH1-CH07-T1",
+     "topic_number": 1,
+     "title": "Probability and randomness",
+     "ncert_sections": "7.1, 7.1.1",
+     "concepts": [
+      {
+       "concept_tag": "random-experiment",
+       "learning_objective": "Identify a random experiment as one whose possible outcomes are known but whose result in a single trial cannot be predicted."
+      },
+      {
+       "concept_tag": "probability-as-likelihood",
+       "learning_objective": "Explain probability as a measure of how likely an event is, distinguishing subjective judgement from objective estimates."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH07-T2",
+     "topic_number": 2,
+     "title": "The probability scale",
+     "ncert_sections": "7.1.2",
+     "concepts": [
+      {
+       "concept_tag": "probability-scale-range",
+       "learning_objective": "State that probability lies on a scale from 0 (impossible) to 1 (certain)."
+      },
+      {
+       "concept_tag": "describing-likelihood",
+       "learning_objective": "Describe and rank events as impossible, less likely, even chance, more likely or certain."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH07-T3",
+     "topic_number": 3,
+     "title": "Experimental probability",
+     "ncert_sections": "7.2, 7.2.1",
+     "concepts": [
+      {
+       "concept_tag": "experimental-probability-formula",
+       "learning_objective": "Calculate experimental probability as the number of times an event occurred divided by the total number of trials."
+      },
+      {
+       "concept_tag": "relative-frequency",
+       "learning_objective": "Distinguish the frequency of an event from its relative frequency in observed data."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH07-T4",
+     "topic_number": 4,
+     "title": "Theoretical probability",
+     "ncert_sections": "7.2.2",
+     "concepts": [
+      {
+       "concept_tag": "equally-likely-outcomes",
+       "learning_objective": "Decide whether the outcomes of an experiment are equally likely."
+      },
+      {
+       "concept_tag": "theoretical-probability-calculation",
+       "learning_objective": "Calculate theoretical probability as favourable outcomes divided by possible outcomes."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH07-T5",
+     "topic_number": 5,
+     "title": "Statistical data, sampling and the long run",
+     "ncert_sections": "7.2.3",
+     "concepts": [
+      {
+       "concept_tag": "statistical-probability-sampling",
+       "learning_objective": "Estimate probabilities from sample data and use them to make predictions for a population."
+      },
+      {
+       "concept_tag": "law-of-large-numbers",
+       "learning_objective": "Explain that experimental probability tends towards theoretical probability as the number of trials increases."
+      },
+      {
+       "concept_tag": "gamblers-fallacy",
+       "learning_objective": "Recognise that independent trials have no memory, so past results do not change the next probability."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH07-T6",
+     "topic_number": 6,
+     "title": "Sample spaces and events",
+     "ncert_sections": "7.3, 7.3.1, 7.3.2",
+     "concepts": [
+      {
+       "concept_tag": "sample-space",
+       "learning_objective": "Write the sample space of an experiment, listing every outcome exactly once, and find its size n(S)."
+      },
+      {
+       "concept_tag": "events-as-subsets",
+       "learning_objective": "Identify an event as a subset of the sample space and list its outcomes."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH07-T7",
+     "topic_number": 7,
+     "title": "Tree diagrams",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "tree-diagram-outcomes",
+       "learning_objective": "Use a tree diagram to list all outcomes of a multi-step experiment."
+      },
+      {
+       "concept_tag": "probability-from-tree",
+       "learning_objective": "Find probabilities of events in multi-step experiments using a tree diagram."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEMH1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Predicting What Comes Next: Exploring Sequences and Progressions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iemh108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEMH1-CH08-T1",
+     "topic_number": 1,
+     "title": "Introduction to sequences and their notation",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "sequence-terms-and-notation",
+       "learning_objective": "Identify the terms of a sequence using position notation such as t1, t2, ..., tn and distinguish finite from infinite sequences."
+      },
+      {
+       "concept_tag": "figurate-number-sequences",
+       "learning_objective": "Describe the patterns in triangular and square numbers as sums of natural numbers and odd numbers."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH08-T2",
+     "topic_number": 2,
+     "title": "Explicit rule for a sequence",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "explicit-formula",
+       "learning_objective": "Use an explicit formula in n to compute any term of a sequence directly."
+      },
+      {
+       "concept_tag": "checking-membership-of-a-term",
+       "learning_objective": "Decide whether a number is a term of a sequence by solving tn = k for a natural number n."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH08-T3",
+     "topic_number": 3,
+     "title": "Recursive rule for a sequence",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "recursive-formula",
+       "learning_objective": "Generate terms of a sequence from a recursive rule that relates each term to earlier terms."
+      },
+      {
+       "concept_tag": "virahanka-fibonacci-sequence",
+       "learning_objective": "Recognise the Virahanka-Fibonacci sequence, its rule Vn = Vn-1 + Vn-2 and its history."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH08-T4",
+     "topic_number": 4,
+     "title": "Arithmetic progressions",
+     "ncert_sections": "8.4, 8.4.1",
+     "concepts": [
+      {
+       "concept_tag": "ap-common-difference",
+       "learning_objective": "Identify an arithmetic progression and its common difference, including negative differences."
+      },
+      {
+       "concept_tag": "ap-nth-term",
+       "learning_objective": "Apply tn = a + (n - 1)d to find terms, positions and unknown first terms or differences of an AP."
+      },
+      {
+       "concept_tag": "ap-linear-graph",
+       "learning_objective": "Explain why the points (n, tn) of an AP lie on a straight line."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH08-T5",
+     "topic_number": 5,
+     "title": "Sum of the first n natural numbers",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "sum-first-n-natural-numbers",
+       "learning_objective": "Derive and use Sn = n(n + 1)/2 by pairing the sum with its reverse."
+      },
+      {
+       "concept_tag": "sum-of-consecutive-numbers",
+       "learning_objective": "Find the sum of a block of consecutive natural numbers as a difference of two such sums."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH08-T6",
+     "topic_number": 6,
+     "title": "Geometric progressions",
+     "ncert_sections": "8.6, 8.6.2",
+     "concepts": [
+      {
+       "concept_tag": "gp-common-ratio",
+       "learning_objective": "Identify a geometric progression by checking that the ratio of consecutive terms is constant."
+      },
+      {
+       "concept_tag": "gp-nth-term",
+       "learning_objective": "Apply tn = ar^(n-1) to find terms and positions of terms in a GP."
+      },
+      {
+       "concept_tag": "gp-growth-and-decay",
+       "learning_objective": "Model repeated multiplication, such as the heights of a bouncing ball, with a GP."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEMH1-CH08-T7",
+     "topic_number": 7,
+     "title": "Fun with fractals: the Sierpinski triangle and carpet",
+     "ncert_sections": "8.6.1",
+     "concepts": [
+      {
+       "concept_tag": "sierpinski-triangle-count",
+       "learning_objective": "Find the number of shaded pieces at each stage of a Sierpinski fractal as a GP."
+      },
+      {
+       "concept_tag": "fractal-area-decay",
+       "learning_objective": "Find the shaded area at each stage of a Sierpinski fractal and describe how it shrinks towards 0."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

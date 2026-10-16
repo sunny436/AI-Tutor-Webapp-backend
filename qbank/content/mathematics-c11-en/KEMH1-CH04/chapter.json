@@ -1,0 +1,108 @@
+{
+  "chapter_id": "KEMH1-CH04",
+  "title": "Complex Numbers and Quadratic Equations",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "KEMH1-CH04-T1",
+      "topic_number": 1,
+      "title": "The need for complex numbers and their definition",
+      "ncert_sections": "4.1, 4.2",
+      "concepts": [
+        {
+          "concept_tag": "iota-and-complex-number",
+          "learning_objective": "Explain why i = sqrt(-1) is introduced and identify the real and imaginary parts of a complex number."
+        },
+        {
+          "concept_tag": "equality-of-complex-numbers",
+          "learning_objective": "Use the equality of complex numbers to find unknown real values by equating real and imaginary parts."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEMH1-CH04-T2",
+      "topic_number": 2,
+      "title": "Addition, subtraction and multiplication of complex numbers",
+      "ncert_sections": "4.3.1, 4.3.2, 4.3.3",
+      "concepts": [
+        {
+          "concept_tag": "complex-addition-subtraction",
+          "learning_objective": "Add and subtract complex numbers and identify the additive identity and additive inverse."
+        },
+        {
+          "concept_tag": "complex-multiplication",
+          "learning_objective": "Multiply complex numbers using (a + ib)(c + id) = (ac − bd) + i(ad + bc) and its properties."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEMH1-CH04-T3",
+      "topic_number": 3,
+      "title": "Division of complex numbers and powers of i",
+      "ncert_sections": "4.3.4, 4.3.5",
+      "concepts": [
+        {
+          "concept_tag": "complex-division",
+          "learning_objective": "Divide one complex number by another by multiplying by the multiplicative inverse (or the conjugate of the denominator)."
+        },
+        {
+          "concept_tag": "powers-of-iota",
+          "learning_objective": "Evaluate integral powers of i using i^(4k) = 1, i^(4k+1) = i, i^(4k+2) = −1 and i^(4k+3) = −i."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEMH1-CH04-T4",
+      "topic_number": 4,
+      "title": "Square roots of negative real numbers and identities",
+      "ncert_sections": "4.3.6, 4.3.7",
+      "concepts": [
+        {
+          "concept_tag": "square-roots-of-negative-reals",
+          "learning_objective": "Find the square roots of a negative real number and recognise that sqrt(a) × sqrt(b) = sqrt(ab) fails when a and b are both negative."
+        },
+        {
+          "concept_tag": "complex-number-identities",
+          "learning_objective": "Apply algebraic identities such as (z₁ + z₂)³ and z₁² − z₂² = (z₁ + z₂)(z₁ − z₂) to complex numbers."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEMH1-CH04-T5",
+      "topic_number": 5,
+      "title": "Modulus and conjugate of a complex number",
+      "ncert_sections": "4.4",
+      "concepts": [
+        {
+          "concept_tag": "modulus-of-complex-number",
+          "learning_objective": "Find the modulus |z| = sqrt(a² + b²) and use |z₁z₂| = |z₁||z₂| and |z₁/z₂| = |z₁|/|z₂|."
+        },
+        {
+          "concept_tag": "conjugate-of-complex-number",
+          "learning_objective": "Find the conjugate of a complex number and use z·z̄ = |z|²."
+        },
+        {
+          "concept_tag": "multiplicative-inverse",
+          "learning_objective": "Find the multiplicative inverse of a non-zero complex number as z̄/|z|²."
+        }
+      ]
+    },
+    {
+      "topic_id": "KEMH1-CH04-T6",
+      "topic_number": 6,
+      "title": "Argand plane and representation of complex numbers",
+      "ncert_sections": "4.5",
+      "concepts": [
+        {
+          "concept_tag": "argand-plane-representation",
+          "learning_objective": "Represent a complex number x + iy as the point (x, y) in the Argand plane and interpret its modulus as distance from the origin."
+        },
+        {
+          "concept_tag": "conjugate-as-reflection",
+          "learning_objective": "Interpret the conjugate of a complex number as the mirror image of its point in the real axis."
+        }
+      ]
+    }
+  ]
+}

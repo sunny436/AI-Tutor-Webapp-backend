@@ -1,0 +1,128 @@
+{
+ "chapter_id": "LHAC2-CH03",
+ "title": "कंपनी के वित्तीय विवरण",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHAC2-CH03-T1",
+   "topic_number": 1,
+   "title": "वित्तीय विवरणों का अर्थ एवं प्रकृति",
+   "ncert_sections": "3.1, 3.2",
+   "concepts": [
+    {
+     "concept_tag": "vittiya-vivaran-arth",
+     "learning_objective": "वित्तीय विवरणों का अर्थ और उनमें सम्मिलित विवरणों को पहचानना।"
+    },
+    {
+     "concept_tag": "vittiya-vivaran-prakriti",
+     "learning_objective": "अभिलिखित तथ्य, लेखांकन परंपराएँ, अभिधारणाएँ और वैयक्तिक निर्णय वित्तीय विवरणों की प्रकृति कैसे तय करते हैं, यह समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH03-T2",
+   "topic_number": 2,
+   "title": "वित्तीय विवरणों के उद्देश्य",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "vittiya-vivaran-uddeshya",
+     "learning_objective": "वित्तीय विवरणों के प्राथमिक और विशिष्ट उद्देश्यों को स्थितियों से जोड़ना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH03-T3",
+   "topic_number": 3,
+   "title": "वित्तीय विवरणों के प्रकार एवं तुलन-पत्र का प्रारूप",
+   "ncert_sections": "3.4, 3.4.1",
+   "concepts": [
+    {
+     "concept_tag": "vittiya-vivaran-prakar",
+     "learning_objective": "कंपनी द्वारा तैयार किए जाने वाले वित्तीय विवरणों के प्रकार बताना।"
+    },
+    {
+     "concept_tag": "tulan-patra-prarup",
+     "learning_objective": "अनुसूची III के अनुसार तुलन-पत्र के मुख्य शीर्ष और उप-शीर्ष पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH03-T4",
+   "topic_number": 4,
+   "title": "प्रकटन की विशेषताएँ, अंशधारक निधि एवं चालू-गैर चालू वर्गीकरण",
+   "ncert_sections": "3.4.2, 3.4.3",
+   "concepts": [
+    {
+     "concept_tag": "anshdharak-nidhi",
+     "learning_objective": "अंश पूँजी तथा आरक्षितियाँ एवं अधिशेष को तुलन-पत्र और टिप्पणियों में सही ढंग से दर्शाना।"
+    },
+    {
+     "concept_tag": "chalu-gair-chalu-vargikaran",
+     "learning_objective": "बारह मास और प्रचालन चक्र के मानदंड से मदों को चालू या गैर-चालू में वर्गीकृत करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH03-T5",
+   "topic_number": 5,
+   "title": "ऋण, प्रावधान, प्रस्तावित लाभांश एवं प्रारंभिक व्यय का प्रस्तुतीकरण",
+   "ncert_sections": "3.4.3",
+   "concepts": [
+    {
+     "concept_tag": "rin-evam-pravdhan",
+     "learning_objective": "ऋणों और प्रावधानों को दीर्घकालिक, अल्पकालिक और अन्य चालू दायित्वों में बाँटना।"
+    },
+    {
+     "concept_tag": "prastavit-labhansh",
+     "learning_objective": "प्रस्तावित लाभांश को आकस्मिक देयता मानने का कारण समझाना।"
+    },
+    {
+     "concept_tag": "prarambhik-vyay",
+     "learning_objective": "प्रारंभिक व्यय को पहले प्रतिभूति प्रीमियम और फिर लाभ-हानि विवरण से अपलिखित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH03-T6",
+   "topic_number": 6,
+   "title": "लाभ व हानि विवरण का प्रारूप एवं विषय-सामग्री",
+   "ncert_sections": "3.4.2",
+   "concepts": [
+    {
+     "concept_tag": "prachalan-se-aagam",
+     "learning_objective": "प्रचालन से आगम और अन्य आय में अंतर करना।"
+    },
+    {
+     "concept_tag": "vyay-shirsh",
+     "learning_objective": "व्ययों को अनुसूची III के शीर्षों में रखकर कर से पूर्व लाभ ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH03-T7",
+   "topic_number": 7,
+   "title": "वित्तीय विवरणों की उपयोगिता एवं महत्त्व",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "upyogita-mahattva",
+     "learning_objective": "विभिन्न उपयोगकर्ताओं के लिए वित्तीय विवरणों का महत्त्व स्पष्ट करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH03-T8",
+   "topic_number": 8,
+   "title": "वित्तीय विवरणों की सीमाएँ",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "vittiya-vivaran-seemayen",
+     "learning_objective": "वित्तीय विवरणों की सीमाओं को व्यावहारिक स्थितियों में पहचानना।"
+    }
+   ]
+  }
+ ]
+}

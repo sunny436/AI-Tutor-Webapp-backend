@@ -1,0 +1,2696 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "biology-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "biology",
+  "language": "english",
+  "title": "Biology",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kebo1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEBO1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "The Living World",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH01-T1",
+     "topic_number": 1,
+     "title": "Diversity in the living world and biodiversity",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "biodiversity-and-species",
+       "learning_objective": "Explain biodiversity as the number and types of organisms on earth, each kind representing a species."
+      },
+      {
+       "concept_tag": "what-is-living",
+       "learning_objective": "Distinguish the technical question of what living is from the philosophical question of the purpose of life."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH01-T2",
+     "topic_number": 2,
+     "title": "Identification, nomenclature and binomial nomenclature",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "identification-and-nomenclature",
+       "learning_objective": "Explain why standard scientific names are needed and how naming depends on correct identification under ICBN and ICZN."
+      },
+      {
+       "concept_tag": "binomial-nomenclature-rules",
+       "learning_objective": "Apply the universal rules for writing a binomial scientific name, including the author's abbreviation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH01-T3",
+     "topic_number": 3,
+     "title": "Classification, taxa, taxonomy and systematics",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "taxa-and-classification",
+       "learning_objective": "Describe classification as grouping into convenient categories called taxa that exist at different levels."
+      },
+      {
+       "concept_tag": "taxonomy-and-systematics",
+       "learning_objective": "State the basic processes of taxonomy and explain the scope of systematics."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH01-T4",
+     "topic_number": 4,
+     "title": "Taxonomic categories: species, genus and family",
+     "ncert_sections": "1.2, 1.2.1, 1.2.2, 1.2.3",
+     "concepts": [
+      {
+       "concept_tag": "species-and-genus",
+       "learning_objective": "Identify species and genus as categories, using specific epithets and genera from common examples."
+      },
+      {
+       "concept_tag": "family-category",
+       "learning_objective": "Explain family as a group of related genera characterised by vegetative and reproductive features."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH01-T5",
+     "topic_number": 5,
+     "title": "Order, class, phylum, kingdom and the taxonomic hierarchy",
+     "ncert_sections": "1.2.4, 1.2.5, 1.2.6, 1.2.7",
+     "concepts": [
+      {
+       "concept_tag": "higher-categories",
+       "learning_objective": "Place organisms in order, class, phylum or division and kingdom using examples from the chapter and Table 1.1."
+      },
+      {
+       "concept_tag": "hierarchy-trends",
+       "learning_objective": "Interpret how shared characteristics change as one moves up the taxonomic hierarchy."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Biological Classification",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH02-T1",
+     "topic_number": 1,
+     "title": "Changing systems and the five kingdom classification",
+     "ncert_sections": "2 (introduction), Table 2.1",
+     "concepts": [
+      {
+       "concept_tag": "history-of-classification",
+       "learning_objective": "Trace how classification moved from Aristotle's and Linnaeus' systems to Whittaker's five kingdoms and why the two kingdom system was inadequate."
+      },
+      {
+       "concept_tag": "whittaker-five-kingdom-criteria",
+       "learning_objective": "State Whittaker's criteria and compare the five kingdoms on cell type, wall, body organisation and nutrition."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH02-T2",
+     "topic_number": 2,
+     "title": "Kingdom Monera",
+     "ncert_sections": "2.1, 2.1.1, 2.1.2",
+     "concepts": [
+      {
+       "concept_tag": "bacterial-shapes-and-nutrition",
+       "learning_objective": "Identify bacterial shapes and distinguish photosynthetic, chemosynthetic and heterotrophic bacteria."
+      },
+      {
+       "concept_tag": "archaebacteria",
+       "learning_objective": "Explain how archaebacteria survive extreme habitats and name halophiles, thermoacidophiles and methanogens."
+      },
+      {
+       "concept_tag": "eubacteria",
+       "learning_objective": "Describe eubacteria, cyanobacteria with heterocysts, mycoplasma and bacterial reproduction."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH02-T3",
+     "topic_number": 3,
+     "title": "Kingdom Protista",
+     "ncert_sections": "2.2, 2.2.1-2.2.5",
+     "concepts": [
+      {
+       "concept_tag": "chrysophytes-and-dinoflagellates",
+       "learning_objective": "Describe the walls and ecological roles of diatoms and dinoflagellates, including diatomaceous earth and red tides."
+      },
+      {
+       "concept_tag": "euglenoids-and-slime-moulds",
+       "learning_objective": "Explain the pellicle and mixed nutrition of euglenoids and the plasmodium and spores of slime moulds."
+      },
+      {
+       "concept_tag": "protozoans",
+       "learning_objective": "Distinguish the four groups of protozoans with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH02-T4",
+     "topic_number": 4,
+     "title": "Kingdom Fungi",
+     "ncert_sections": "2.3, 2.3.1-2.3.4",
+     "concepts": [
+      {
+       "concept_tag": "fungal-structure-and-nutrition",
+       "learning_objective": "Describe hyphae, mycelium, chitin walls and saprophytic, parasitic and symbiotic fungi."
+      },
+      {
+       "concept_tag": "sexual-reproduction-in-fungi",
+       "learning_objective": "Sequence plasmogamy, karyogamy, dikaryophase and meiosis in the fungal sexual cycle."
+      },
+      {
+       "concept_tag": "classes-of-fungi",
+       "learning_objective": "Compare phycomycetes, ascomycetes, basidiomycetes and deuteromycetes by mycelium, spores and examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH02-T5",
+     "topic_number": 5,
+     "title": "Kingdoms Plantae and Animalia",
+     "ncert_sections": "2.4, 2.5",
+     "concepts": [
+      {
+       "concept_tag": "plantae-features",
+       "learning_objective": "State the features of Kingdom Plantae, including partially heterotrophic plants and alternation of generations."
+      },
+      {
+       "concept_tag": "animalia-features",
+       "learning_objective": "State the features of Kingdom Animalia: wall-less cells, holozoic nutrition and food reserves."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH02-T6",
+     "topic_number": 6,
+     "title": "Viruses, viroids, prions and lichens",
+     "ncert_sections": "2.6",
+     "concepts": [
+      {
+       "concept_tag": "virus-structure-and-discovery",
+       "learning_objective": "Describe the discovery, structure and genetic material of viruses and the diseases they cause."
+      },
+      {
+       "concept_tag": "viroids-and-prions",
+       "learning_objective": "Distinguish viroids and prions from viruses."
+      },
+      {
+       "concept_tag": "lichens",
+       "learning_objective": "Explain lichens as a symbiosis of phycobiont and mycobiont and their use as pollution indicators."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Plant Kingdom",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH03-T1",
+     "topic_number": 1,
+     "title": "Systems of classification in the plant kingdom",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "artificial-and-natural-classification",
+       "learning_objective": "Distinguish artificial systems such as that of Linnaeus from natural systems such as that of Bentham and Hooker."
+      },
+      {
+       "concept_tag": "phylogenetic-classification",
+       "learning_objective": "Explain that phylogenetic systems are based on evolutionary relationships and assume a common ancestor for members of a taxon."
+      },
+      {
+       "concept_tag": "numerical-cyto-chemotaxonomy",
+       "learning_objective": "Identify numerical taxonomy, cytotaxonomy and chemotaxonomy as aids to classification."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH03-T2",
+     "topic_number": 2,
+     "title": "Algae: features, reproduction and uses",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "algae-characteristics",
+       "learning_objective": "Describe algae as chlorophyll-bearing, simple, thalloid, autotrophic, largely aquatic organisms of varied form."
+      },
+      {
+       "concept_tag": "reproduction-in-algae",
+       "learning_objective": "Distinguish vegetative, asexual and sexual reproduction in algae, including isogamy, anisogamy and oogamy."
+      },
+      {
+       "concept_tag": "economic-importance-of-algae",
+       "learning_objective": "State the ecological and commercial uses of algae such as agar, algin, carrageen and Chlorella."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH03-T3",
+     "topic_number": 3,
+     "title": "Classes of algae: Chlorophyceae, Phaeophyceae and Rhodophyceae",
+     "ncert_sections": "3.1.1, 3.1.2, 3.1.3",
+     "concepts": [
+      {
+       "concept_tag": "green-algae-chlorophyceae",
+       "learning_objective": "Describe the pigments, stored food, cell wall and flagella of green algae."
+      },
+      {
+       "concept_tag": "brown-algae-phaeophyceae",
+       "learning_objective": "Describe the pigments, stored food, body organisation and reproduction of brown algae."
+      },
+      {
+       "concept_tag": "red-algae-rhodophyceae",
+       "learning_objective": "Describe the pigments, stored food, habitat and reproduction of red algae."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH03-T4",
+     "topic_number": 4,
+     "title": "Bryophytes: liverworts and mosses",
+     "ncert_sections": "3.2, 3.2.1, 3.2.2",
+     "concepts": [
+      {
+       "concept_tag": "bryophyte-features-and-importance",
+       "learning_objective": "Explain why bryophytes are called amphibians of the plant kingdom and state their ecological importance."
+      },
+      {
+       "concept_tag": "bryophyte-gametophyte-sporophyte",
+       "learning_objective": "Explain the dominant haploid gametophyte and the dependent diploid sporophyte of bryophytes."
+      },
+      {
+       "concept_tag": "liverworts-and-mosses",
+       "learning_objective": "Compare the plant body and reproduction of liverworts and mosses, including gemmae and protonema."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH03-T5",
+     "topic_number": 5,
+     "title": "Pteridophytes",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "pteridophyte-life-cycle",
+       "learning_objective": "Describe the dominant vascular sporophyte and the free-living prothallus of pteridophytes."
+      },
+      {
+       "concept_tag": "heterospory-and-seed-habit",
+       "learning_objective": "Explain heterospory and why it is regarded as a precursor to the seed habit."
+      },
+      {
+       "concept_tag": "pteridophyte-classes",
+       "learning_objective": "Classify pteridophytes into Psilopsida, Lycopsida, Sphenopsida and Pteropsida with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH03-T6",
+     "topic_number": 6,
+     "title": "Gymnosperms",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "gymnosperm-vegetative-features",
+       "learning_objective": "Describe the roots, stems and leaves of gymnosperms and their adaptations."
+      },
+      {
+       "concept_tag": "gymnosperm-reproduction",
+       "learning_objective": "Explain heterospory, strobili, the reduced gametophytes and the formation of naked seeds in gymnosperms."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH03-T7",
+     "topic_number": 7,
+     "title": "Angiosperms",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "angiosperm-characteristics",
+       "learning_objective": "State the defining features, range of size and classes of angiosperms."
+      },
+      {
+       "concept_tag": "gymnosperms-versus-angiosperms",
+       "learning_objective": "Distinguish gymnosperms from angiosperms on the basis of ovules and seeds."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Animal Kingdom",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH04-T1",
+     "topic_number": 1,
+     "title": "Levels of organisation and symmetry",
+     "ncert_sections": "4.1, 4.1.1, 4.1.2",
+     "concepts": [
+      {
+       "concept_tag": "levels-of-organisation",
+       "learning_objective": "Identify cellular, tissue, organ and organ-system levels of organisation with examples."
+      },
+      {
+       "concept_tag": "digestive-and-circulatory-patterns",
+       "learning_objective": "Distinguish complete from incomplete digestive systems and open from closed circulatory systems."
+      },
+      {
+       "concept_tag": "body-symmetry",
+       "learning_objective": "Distinguish asymmetrical, radially symmetrical and bilaterally symmetrical body plans."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH04-T2",
+     "topic_number": 2,
+     "title": "Germ layers, coelom, segmentation and notochord",
+     "ncert_sections": "4.1.3, 4.1.4, 4.1.5, 4.1.6",
+     "concepts": [
+      {
+       "concept_tag": "germ-layers",
+       "learning_objective": "Distinguish diploblastic from triploblastic animals on the basis of embryonic layers."
+      },
+      {
+       "concept_tag": "coelom-types",
+       "learning_objective": "Classify animals as coelomates, pseudocoelomates or acoelomates from the nature of the body cavity."
+      },
+      {
+       "concept_tag": "segmentation-and-notochord",
+       "learning_objective": "Explain metameric segmentation and the notochord as bases of classification."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH04-T3",
+     "topic_number": 3,
+     "title": "Porifera, Coelenterata and Ctenophora",
+     "ncert_sections": "4.2.1, 4.2.2, 4.2.3",
+     "concepts": [
+      {
+       "concept_tag": "porifera-canal-system",
+       "learning_objective": "Describe the water canal system, skeleton and reproduction of sponges."
+      },
+      {
+       "concept_tag": "cnidaria-cnidoblasts-and-body-forms",
+       "learning_objective": "Explain cnidoblasts, polyp and medusa forms and metagenesis in cnidarians."
+      },
+      {
+       "concept_tag": "ctenophora-features",
+       "learning_objective": "Identify the distinctive features of ctenophores such as comb plates and bioluminescence."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH04-T4",
+     "topic_number": 4,
+     "title": "Platyhelminthes, Aschelminthes and Annelida",
+     "ncert_sections": "4.2.4, 4.2.5, 4.2.6",
+     "concepts": [
+      {
+       "concept_tag": "platyhelminthes-features",
+       "learning_objective": "Describe the features and parasitic adaptations of flatworms."
+      },
+      {
+       "concept_tag": "aschelminthes-features",
+       "learning_objective": "Describe the pseudocoelomate body plan and features of roundworms."
+      },
+      {
+       "concept_tag": "annelida-features",
+       "learning_objective": "Describe metamerism, circulation, excretion and reproduction in annelids."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH04-T5",
+     "topic_number": 5,
+     "title": "Arthropoda, Mollusca, Echinodermata and Hemichordata",
+     "ncert_sections": "4.2.7, 4.2.8, 4.2.9, 4.2.10",
+     "concepts": [
+      {
+       "concept_tag": "arthropoda-features",
+       "learning_objective": "Describe the features and economically important examples of arthropods."
+      },
+      {
+       "concept_tag": "mollusca-features",
+       "learning_objective": "Describe the body plan of molluscs including mantle, shell and radula."
+      },
+      {
+       "concept_tag": "echinodermata-hemichordata-features",
+       "learning_objective": "Describe the water vascular system of echinoderms and the body plan of hemichordates."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH04-T6",
+     "topic_number": 6,
+     "title": "Chordata, protochordates, Cyclostomata and fishes",
+     "ncert_sections": "4.2.11, 4.2.11.1, 4.2.11.2, 4.2.11.3",
+     "concepts": [
+      {
+       "concept_tag": "chordate-characters",
+       "learning_objective": "State the fundamental characters that distinguish chordates from non-chordates."
+      },
+      {
+       "concept_tag": "protochordates-and-vertebrates",
+       "learning_objective": "Compare urochordates, cephalochordates and vertebrates on the basis of the notochord."
+      },
+      {
+       "concept_tag": "cyclostomata-and-fishes",
+       "learning_objective": "Compare cyclostomes, cartilaginous fishes and bony fishes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH04-T7",
+     "topic_number": 7,
+     "title": "Tetrapoda: Amphibia, Reptilia, Aves and Mammalia",
+     "ncert_sections": "4.2.11.4, 4.2.11.5, 4.2.11.6, 4.2.11.7",
+     "concepts": [
+      {
+       "concept_tag": "amphibia-reptilia-features",
+       "learning_objective": "Describe the distinguishing features of amphibians and reptiles."
+      },
+      {
+       "concept_tag": "aves-flight-adaptations",
+       "learning_objective": "Describe the features of birds, including those that help in flight."
+      },
+      {
+       "concept_tag": "mammalia-features",
+       "learning_objective": "Identify the unique features of mammals and classify examples."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Morphology of Flowering Plants",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH05-T1",
+     "topic_number": 1,
+     "title": "The root and its regions",
+     "ncert_sections": "5.1, 5.1.1",
+     "concepts": [
+      {
+       "concept_tag": "root-systems",
+       "learning_objective": "Distinguish tap, fibrous and adventitious root systems with their origin and examples."
+      },
+      {
+       "concept_tag": "regions-of-root",
+       "learning_objective": "Identify the regions of a root tip and the function of each."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH05-T2",
+     "topic_number": 2,
+     "title": "The stem and the structure of a leaf",
+     "ncert_sections": "5.2, 5.3",
+     "concepts": [
+      {
+       "concept_tag": "stem-features",
+       "learning_objective": "State the origin, features and functions of the stem that distinguish it from the root."
+      },
+      {
+       "concept_tag": "parts-of-leaf",
+       "learning_objective": "Describe the leaf base, petiole and lamina and the role of each."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH05-T3",
+     "topic_number": 3,
+     "title": "Venation, types of leaves and phyllotaxy",
+     "ncert_sections": "5.3.1, 5.3.2, 5.3.3",
+     "concepts": [
+      {
+       "concept_tag": "venation",
+       "learning_objective": "Distinguish reticulate and parallel venation and relate them to dicots and monocots."
+      },
+      {
+       "concept_tag": "compound-leaves",
+       "learning_objective": "Distinguish simple, pinnately compound and palmately compound leaves."
+      },
+      {
+       "concept_tag": "phyllotaxy",
+       "learning_objective": "Identify alternate, opposite and whorled phyllotaxy with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH05-T4",
+     "topic_number": 4,
+     "title": "Inflorescence and the general features of a flower",
+     "ncert_sections": "5.4, 5.5",
+     "concepts": [
+      {
+       "concept_tag": "inflorescence-types",
+       "learning_objective": "Distinguish racemose and cymose inflorescences by growth of the axis and order of flowers."
+      },
+      {
+       "concept_tag": "floral-symmetry",
+       "learning_objective": "Classify flowers by symmetry and by the number of floral appendages."
+      },
+      {
+       "concept_tag": "ovary-position",
+       "learning_objective": "Classify flowers as hypogynous, perigynous or epigynous from the position of the ovary."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH05-T5",
+     "topic_number": 5,
+     "title": "Parts of a flower",
+     "ncert_sections": "5.5.1",
+     "concepts": [
+      {
+       "concept_tag": "aestivation",
+       "learning_objective": "Identify valvate, twisted, imbricate and vexillary aestivation with examples."
+      },
+      {
+       "concept_tag": "androecium",
+       "learning_objective": "Describe the stamen and the cohesion and adhesion of stamens."
+      },
+      {
+       "concept_tag": "gynoecium-placentation",
+       "learning_objective": "Describe the carpel, apocarpous and syncarpous ovaries and the types of placentation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH05-T6",
+     "topic_number": 6,
+     "title": "The fruit and the seed",
+     "ncert_sections": "5.6, 5.7",
+     "concepts": [
+      {
+       "concept_tag": "fruit-structure",
+       "learning_objective": "Describe the pericarp of a fruit, drupes and parthenocarpic fruits."
+      },
+      {
+       "concept_tag": "dicot-seed",
+       "learning_objective": "Describe the structure of a dicotyledonous seed and endospermic and non-endospermous seeds."
+      },
+      {
+       "concept_tag": "monocot-seed",
+       "learning_objective": "Describe the structure of a monocotyledonous seed such as maize."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH05-T7",
+     "topic_number": 7,
+     "title": "Semi-technical description and the family Solanaceae",
+     "ncert_sections": "5.8, 5.9",
+     "concepts": [
+      {
+       "concept_tag": "floral-formula",
+       "learning_objective": "Read and interpret the symbols of a floral formula and a floral diagram."
+      },
+      {
+       "concept_tag": "solanaceae",
+       "learning_objective": "Recognise the vegetative and floral characters and economic importance of Solanaceae."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Anatomy of Flowering Plants",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH06-T1",
+     "topic_number": 1,
+     "title": "The epidermal tissue system",
+     "ncert_sections": "6.1, 6.1.1",
+     "concepts": [
+      {
+       "concept_tag": "epidermis-and-cuticle",
+       "learning_objective": "Describe the structure of the epidermis and the role of the cuticle in preventing water loss."
+      },
+      {
+       "concept_tag": "stomatal-apparatus",
+       "learning_objective": "Describe the structure of stomata, guard cells and subsidiary cells that form the stomatal apparatus."
+      },
+      {
+       "concept_tag": "trichomes-and-root-hairs",
+       "learning_objective": "Distinguish unicellular root hairs from the usually multicellular trichomes of the shoot and state their roles."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH06-T2",
+     "topic_number": 2,
+     "title": "Ground and vascular tissue systems",
+     "ncert_sections": "6.1.2, 6.1.3",
+     "concepts": [
+      {
+       "concept_tag": "ground-tissue-system",
+       "learning_objective": "Identify the tissues and regions that make up the ground tissue system, including mesophyll in leaves."
+      },
+      {
+       "concept_tag": "vascular-bundle-types",
+       "learning_objective": "Classify vascular bundles as radial or conjoint and as open or closed on the basis of xylem-phloem arrangement and cambium."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH06-T3",
+     "topic_number": 3,
+     "title": "Dicotyledonous and monocotyledonous roots",
+     "ncert_sections": "6.2.1, 6.2.2",
+     "concepts": [
+      {
+       "concept_tag": "dicot-root-anatomy",
+       "learning_objective": "Describe the tissue layers of a dicot root from the epiblema to the stele, including endodermis and pericycle."
+      },
+      {
+       "concept_tag": "monocot-and-dicot-root-comparison",
+       "learning_objective": "Compare monocot and dicot roots in the number of xylem bundles, size of pith and secondary growth."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH06-T4",
+     "topic_number": 4,
+     "title": "Dicotyledonous and monocotyledonous stems",
+     "ncert_sections": "6.2.3, 6.2.4",
+     "concepts": [
+      {
+       "concept_tag": "dicot-stem-anatomy",
+       "learning_objective": "Describe the hypodermis, cortex, endodermis, pericycle, vascular bundles and pith of a young dicot stem."
+      },
+      {
+       "concept_tag": "monocot-stem-anatomy",
+       "learning_objective": "Identify the features of a monocot stem and use them to tell it apart from a dicot stem."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH06-T5",
+     "topic_number": 5,
+     "title": "Dorsiventral and isobilateral leaves",
+     "ncert_sections": "6.2.5, 6.2.6",
+     "concepts": [
+      {
+       "concept_tag": "dorsiventral-leaf",
+       "learning_objective": "Describe the epidermis, palisade and spongy mesophyll and vascular system of a dorsiventral (dicot) leaf."
+      },
+      {
+       "concept_tag": "isobilateral-leaf",
+       "learning_objective": "State how an isobilateral (monocot) leaf differs from a dorsiventral leaf in stomata, mesophyll and vascular bundles."
+      },
+      {
+       "concept_tag": "bulliform-cells",
+       "learning_objective": "Explain how bulliform cells in grass leaves help reduce water loss under water stress."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Structural Organisation in Animals",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH07-T1",
+     "topic_number": 1,
+     "title": "Tissues, organs and organ systems",
+     "ncert_sections": "Introduction, 7.1",
+     "concepts": [
+      {
+       "concept_tag": "tissue-definition",
+       "learning_objective": "Define a tissue and recall that complex animals have only four basic tissue types."
+      },
+      {
+       "concept_tag": "organ-and-organ-system",
+       "learning_objective": "Explain how tissues form organs and organs form organ systems, showing division of labour."
+      },
+      {
+       "concept_tag": "morphology-and-anatomy",
+       "learning_objective": "Distinguish morphology (external form) from anatomy (internal organs) in animals."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH07-T2",
+     "topic_number": 2,
+     "title": "Frogs: classification and adaptations",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "frog-classification",
+       "learning_objective": "Identify the class, phylum and common Indian species of frog."
+      },
+      {
+       "concept_tag": "poikilothermy",
+       "learning_objective": "Explain why frogs are called cold-blooded or poikilotherms."
+      },
+      {
+       "concept_tag": "aestivation-hibernation",
+       "learning_objective": "Describe camouflage, aestivation and hibernation as adaptations of frogs."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH07-T3",
+     "topic_number": 3,
+     "title": "Morphology of frog",
+     "ncert_sections": "7.2.1",
+     "concepts": [
+      {
+       "concept_tag": "frog-skin",
+       "learning_objective": "Describe the moist, mucus-covered skin of the frog and its role in water uptake."
+      },
+      {
+       "concept_tag": "frog-external-features",
+       "learning_objective": "Identify the external features of the frog's head, trunk and limbs."
+      },
+      {
+       "concept_tag": "sexual-dimorphism",
+       "learning_objective": "Distinguish male and female frogs by vocal sacs and copulatory pads."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH07-T4",
+     "topic_number": 4,
+     "title": "Digestive and respiratory systems of frog",
+     "ncert_sections": "7.2.2",
+     "concepts": [
+      {
+       "concept_tag": "frog-digestive-system",
+       "learning_objective": "Trace the parts of the frog's alimentary canal and relate its length to diet."
+      },
+      {
+       "concept_tag": "digestion-process",
+       "learning_objective": "Explain the roles of HCl, gastric juice, bile and pancreatic juice in digestion."
+      },
+      {
+       "concept_tag": "frog-respiration",
+       "learning_objective": "Compare cutaneous and pulmonary respiration in the frog."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH07-T5",
+     "topic_number": 5,
+     "title": "Circulatory and excretory systems of frog",
+     "ncert_sections": "7.2.2",
+     "concepts": [
+      {
+       "concept_tag": "frog-circulation",
+       "learning_objective": "Describe the frog's three-chambered heart, closed circulation and portal systems."
+      },
+      {
+       "concept_tag": "frog-blood-lymph",
+       "learning_objective": "Distinguish blood from lymph and recall that frog RBCs are nucleated."
+      },
+      {
+       "concept_tag": "frog-excretion",
+       "learning_objective": "Describe the frog's excretory organs and explain why it is ureotelic."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH07-T6",
+     "topic_number": 6,
+     "title": "Control and coordination in frog",
+     "ncert_sections": "7.2.2",
+     "concepts": [
+      {
+       "concept_tag": "frog-nervous-system",
+       "learning_objective": "Classify parts of the frog's nervous system into central, peripheral and autonomic divisions."
+      },
+      {
+       "concept_tag": "frog-brain",
+       "learning_objective": "Identify the parts of the fore-brain, mid-brain and hind-brain of the frog."
+      },
+      {
+       "concept_tag": "frog-sense-organs",
+       "learning_objective": "Identify the frog's sense organs and distinguish well-organised ones from cellular aggregations."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH07-T7",
+     "topic_number": 7,
+     "title": "Reproduction in frog and its importance",
+     "ncert_sections": "7.2.2",
+     "concepts": [
+      {
+       "concept_tag": "male-reproductive-system",
+       "learning_objective": "Trace the path of sperms through the male reproductive system of the frog."
+      },
+      {
+       "concept_tag": "female-reproduction-development",
+       "learning_objective": "Describe the female reproductive system, external fertilisation and tadpole development."
+      },
+      {
+       "concept_tag": "frog-importance",
+       "learning_objective": "Explain the ecological and economic importance of frogs."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Cell : The Unit of Life",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH08-T1",
+     "topic_number": 1,
+     "title": "What is a Cell? and Cell Theory",
+     "ncert_sections": "8.1, 8.2",
+     "concepts": [
+      {
+       "concept_tag": "cell-basic-unit",
+       "learning_objective": "Explain why the cell is regarded as the fundamental structural and functional unit of life."
+      },
+      {
+       "concept_tag": "cell-theory-history",
+       "learning_objective": "Describe the contributions of Leeuwenhoek, Brown, Schleiden, Schwann and Virchow to cell theory."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH08-T2",
+     "topic_number": 2,
+     "title": "An Overview of Cell",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "prokaryotic-eukaryotic-overview",
+       "learning_objective": "Distinguish prokaryotic from eukaryotic cells on the basis of a membrane-bound nucleus and organelles."
+      },
+      {
+       "concept_tag": "membrane-and-non-membrane-organelles",
+       "learning_objective": "Identify membrane-bound and non-membrane-bound organelles and where ribosomes occur in a cell."
+      },
+      {
+       "concept_tag": "cell-size-and-shape",
+       "learning_objective": "Compare the sizes and shapes of different cells and relate shape to function."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH08-T3",
+     "topic_number": 3,
+     "title": "Prokaryotic Cells",
+     "ncert_sections": "8.4, 8.4.1, 8.4.2",
+     "concepts": [
+      {
+       "concept_tag": "prokaryote-general-features",
+       "learning_objective": "State the general features of prokaryotic cells, including the nucleoid, plasmids and mycoplasma."
+      },
+      {
+       "concept_tag": "cell-envelope-and-surface-structures",
+       "learning_objective": "Describe the bacterial cell envelope, mesosomes, flagella, pili and fimbriae."
+      },
+      {
+       "concept_tag": "prokaryotic-ribosomes-and-inclusions",
+       "learning_objective": "Describe 70S prokaryotic ribosomes, polysomes and inclusion bodies."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH08-T4",
+     "topic_number": 4,
+     "title": "Cell Membrane and Cell Wall",
+     "ncert_sections": "8.5, 8.5.1, 8.5.2",
+     "concepts": [
+      {
+       "concept_tag": "fluid-mosaic-model",
+       "learning_objective": "Explain the composition of the plasma membrane and the fluid mosaic model."
+      },
+      {
+       "concept_tag": "membrane-transport",
+       "learning_objective": "Distinguish simple diffusion, osmosis, carrier-mediated passive transport and active transport."
+      },
+      {
+       "concept_tag": "cell-wall-structure",
+       "learning_objective": "Describe the composition of the cell wall, primary and secondary walls, middle lamella and plasmodesmata."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH08-T5",
+     "topic_number": 5,
+     "title": "Endomembrane System",
+     "ncert_sections": "8.5.3",
+     "concepts": [
+      {
+       "concept_tag": "endomembrane-components",
+       "learning_objective": "Identify the organelles that make up the endomembrane system and those that do not."
+      },
+      {
+       "concept_tag": "er-and-golgi",
+       "learning_objective": "Describe the structure and functions of the rough and smooth ER and the Golgi apparatus."
+      },
+      {
+       "concept_tag": "lysosomes-and-vacuoles",
+       "learning_objective": "Describe the structure and functions of lysosomes and vacuoles, including the tonoplast."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH08-T6",
+     "topic_number": 6,
+     "title": "Mitochondria, Plastids and Ribosomes",
+     "ncert_sections": "8.5.4, 8.5.5, 8.5.6",
+     "concepts": [
+      {
+       "concept_tag": "mitochondria-structure-function",
+       "learning_objective": "Describe the double-membrane structure of mitochondria and relate it to aerobic respiration."
+      },
+      {
+       "concept_tag": "plastid-types",
+       "learning_objective": "Classify plastids into chloroplasts, chromoplasts and leucoplasts and state their roles."
+      },
+      {
+       "concept_tag": "ribosome-types",
+       "learning_objective": "Compare 70S and 80S ribosomes and explain the meaning of the Svedberg unit."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH08-T7",
+     "topic_number": 7,
+     "title": "Cytoskeleton, Cilia, Flagella and Centrosome",
+     "ncert_sections": "8.5.7, 8.5.8, 8.5.9",
+     "concepts": [
+      {
+       "concept_tag": "cytoskeleton-functions",
+       "learning_objective": "State the components and functions of the cytoskeleton."
+      },
+      {
+       "concept_tag": "cilia-flagella-structure",
+       "learning_objective": "Describe the 9+2 axoneme of eukaryotic cilia and flagella."
+      },
+      {
+       "concept_tag": "centrosome-centrioles",
+       "learning_objective": "Describe the cartwheel structure of centrioles and their role in basal bodies and spindle formation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH08-T8",
+     "topic_number": 8,
+     "title": "Nucleus and Chromosomes",
+     "ncert_sections": "8.5.10, 8.5.11",
+     "concepts": [
+      {
+       "concept_tag": "nuclear-envelope-and-nucleolus",
+       "learning_objective": "Describe the nuclear envelope, nuclear pores and the nucleolus."
+      },
+      {
+       "concept_tag": "chromatin-and-chromosomes",
+       "learning_objective": "Describe the composition of chromatin and the DNA content of human chromosomes."
+      },
+      {
+       "concept_tag": "chromosome-types-by-centromere",
+       "learning_objective": "Classify chromosomes by the position of the centromere."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Biomolecules",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH09-T1",
+     "topic_number": 1,
+     "title": "How to analyse chemical composition",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "acid-soluble-and-insoluble-fractions",
+       "learning_objective": "Describe how grinding tissue in trichloroacetic acid separates an acid-soluble pool from an acid-insoluble fraction."
+      },
+      {
+       "concept_tag": "elemental-composition-and-ash",
+       "learning_objective": "Compare the elemental composition of living tissue and earth's crust and explain what wet weight, dry weight and ash reveal."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH09-T2",
+     "topic_number": 2,
+     "title": "Small biomolecules: amino acids, lipids and nucleotides",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "amino-acid-structure",
+       "learning_objective": "Identify the substituent groups of an alpha-amino acid and classify amino acids by their R groups."
+      },
+      {
+       "concept_tag": "lipids-and-glycerides",
+       "learning_objective": "Distinguish fatty acids, glycerides and phospholipids and relate saturation and melting point to fats and oils."
+      },
+      {
+       "concept_tag": "nucleosides-and-nucleotides",
+       "learning_objective": "Distinguish nitrogen bases, nucleosides and nucleotides with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH09-T3",
+     "topic_number": 3,
+     "title": "Primary and secondary metabolites; biomacromolecules",
+     "ncert_sections": "9.2, 9.3",
+     "concepts": [
+      {
+       "concept_tag": "primary-secondary-metabolites",
+       "learning_objective": "Distinguish primary from secondary metabolites and give examples of secondary metabolites."
+      },
+      {
+       "concept_tag": "micro-and-macromolecules",
+       "learning_objective": "Explain the molecular-weight basis of micromolecules and macromolecules and why lipids appear in the acid-insoluble fraction."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH09-T4",
+     "topic_number": 4,
+     "title": "Proteins and polysaccharides",
+     "ncert_sections": "9.4, 9.5",
+     "concepts": [
+      {
+       "concept_tag": "protein-heteropolymer-functions",
+       "learning_objective": "Explain why proteins are heteropolymers and relate examples of proteins to their functions."
+      },
+      {
+       "concept_tag": "polysaccharide-types",
+       "learning_objective": "Compare cellulose, starch, glycogen, inulin and chitin in composition, structure and role."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH09-T5",
+     "topic_number": 5,
+     "title": "Nucleic acids and structure of proteins",
+     "ncert_sections": "9.6, 9.7",
+     "concepts": [
+      {
+       "concept_tag": "nucleotide-components",
+       "learning_objective": "Identify the components of a nucleotide and distinguish DNA from RNA by their sugar and bases."
+      },
+      {
+       "concept_tag": "protein-structure-levels",
+       "learning_objective": "Describe the primary, secondary, tertiary and quaternary levels of protein structure."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH09-T6",
+     "topic_number": 6,
+     "title": "Enzymes: chemical reactions and how enzymes act",
+     "ncert_sections": "9.8, 9.8.1, 9.8.2, 9.8.3",
+     "concepts": [
+      {
+       "concept_tag": "enzyme-nature-and-active-site",
+       "learning_objective": "State the nature of enzymes and ribozymes and the role of the active site."
+      },
+      {
+       "concept_tag": "reaction-rate-and-metabolic-pathway",
+       "learning_objective": "Interpret reaction rates, enzyme-catalysed acceleration and the idea of a metabolic pathway."
+      },
+      {
+       "concept_tag": "activation-energy-and-es-complex",
+       "learning_objective": "Explain how enzymes lower activation energy through formation of the enzyme-substrate complex."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH09-T7",
+     "topic_number": 7,
+     "title": "Factors affecting enzyme activity",
+     "ncert_sections": "9.8.4",
+     "concepts": [
+      {
+       "concept_tag": "temperature-and-ph",
+       "learning_objective": "Explain the effect of temperature and pH on enzyme activity, including optimum values and denaturation."
+      },
+      {
+       "concept_tag": "substrate-concentration-vmax",
+       "learning_objective": "Interpret how reaction velocity changes with substrate concentration up to Vmax."
+      },
+      {
+       "concept_tag": "competitive-inhibition",
+       "learning_objective": "Explain competitive inhibition using the example of malonate and succinic dehydrogenase."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH09-T8",
+     "topic_number": 8,
+     "title": "Classification of enzymes and co-factors",
+     "ncert_sections": "9.8.5, 9.8.6",
+     "concepts": [
+      {
+       "concept_tag": "enzyme-classes",
+       "learning_objective": "Classify enzymes into the six classes based on the reactions they catalyse."
+      },
+      {
+       "concept_tag": "cofactor-types",
+       "learning_objective": "Distinguish apoenzyme, prosthetic groups, co-enzymes and metal ion cofactors with examples."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Cell Cycle and Cell Division",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH10-T1",
+     "topic_number": 1,
+     "title": "Cell cycle and its phases",
+     "ncert_sections": "10.1, 10.1.1",
+     "concepts": [
+      {
+       "concept_tag": "cell-cycle-duration-and-phases",
+       "learning_objective": "Describe the cell cycle as interphase and M phase and state their relative durations."
+      },
+      {
+       "concept_tag": "interphase-subphases",
+       "learning_objective": "Explain the events of G1, S and G2 phases and the change in DNA content and chromosome number."
+      },
+      {
+       "concept_tag": "g0-quiescent-stage",
+       "learning_objective": "Explain the quiescent stage (G0) and identify cells that enter it."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH10-T2",
+     "topic_number": 2,
+     "title": "Karyokinesis: stages of mitosis",
+     "ncert_sections": "10.2, 10.2.1, 10.2.2, 10.2.3, 10.2.4",
+     "concepts": [
+      {
+       "concept_tag": "prophase-and-metaphase",
+       "learning_objective": "Identify the key events of prophase and metaphase of mitosis."
+      },
+      {
+       "concept_tag": "anaphase-and-telophase",
+       "learning_objective": "Identify the key events of anaphase and telophase of mitosis."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH10-T3",
+     "topic_number": 3,
+     "title": "Cytokinesis",
+     "ncert_sections": "10.2.5",
+     "concepts": [
+      {
+       "concept_tag": "cytokinesis-animal-vs-plant",
+       "learning_objective": "Distinguish cytokinesis in animal cells from that in plant cells."
+      },
+      {
+       "concept_tag": "syncytium-formation",
+       "learning_objective": "Explain how a multinucleate syncytium arises when karyokinesis is not followed by cytokinesis."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH10-T4",
+     "topic_number": 4,
+     "title": "Significance of mitosis",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "significance-of-mitosis",
+       "learning_objective": "State the roles of mitosis in growth, repair and continuous plant growth."
+      },
+      {
+       "concept_tag": "nucleo-cytoplasmic-ratio",
+       "learning_objective": "Explain why cell growth makes division necessary to restore the nucleo-cytoplasmic ratio."
+      },
+      {
+       "concept_tag": "mitosis-in-haploid-cells",
+       "learning_objective": "Identify organisms and stages in which haploid cells divide by mitosis."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH10-T5",
+     "topic_number": 5,
+     "title": "Meiosis and meiosis I",
+     "ncert_sections": "10.4, 10.4.1",
+     "concepts": [
+      {
+       "concept_tag": "meiosis-key-features",
+       "learning_objective": "State the key features of meiosis as a reduction division."
+      },
+      {
+       "concept_tag": "prophase-i-substages",
+       "learning_objective": "Describe the events of leptotene, zygotene, pachytene, diplotene and diakinesis."
+      },
+      {
+       "concept_tag": "metaphase-to-telophase-i",
+       "learning_objective": "Describe metaphase I, anaphase I and telophase I and their outcome."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH10-T6",
+     "topic_number": 6,
+     "title": "Meiosis II and significance of meiosis",
+     "ncert_sections": "10.4.2, 10.5",
+     "concepts": [
+      {
+       "concept_tag": "meiosis-ii-events",
+       "learning_objective": "Describe interkinesis and the stages of meiosis II."
+      },
+      {
+       "concept_tag": "mitosis-vs-meiosis",
+       "learning_objective": "Distinguish the events of mitosis from those of meiosis."
+      },
+      {
+       "concept_tag": "significance-of-meiosis",
+       "learning_objective": "Explain how meiosis conserves chromosome number and increases genetic variability."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "Photosynthesis in Higher Plants",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH11-T1",
+     "topic_number": 1,
+     "title": "What we know and early experiments",
+     "ncert_sections": "11.1, 11.2",
+     "concepts": [
+      {
+       "concept_tag": "early-experiments",
+       "learning_objective": "Describe the classic experiments of Priestley, Ingenhousz, Sachs and Engelmann and what each revealed about photosynthesis."
+      },
+      {
+       "concept_tag": "source-of-oxygen",
+       "learning_objective": "Explain van Niel's inference that the oxygen released by green plants comes from water and use the balanced equation of photosynthesis."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH11-T2",
+     "topic_number": 2,
+     "title": "Where photosynthesis takes place",
+     "ncert_sections": "11.3",
+     "concepts": [
+      {
+       "concept_tag": "chloroplast-division-of-labour",
+       "learning_objective": "Relate the membrane system and the stroma of the chloroplast to the reactions that occur in each."
+      },
+      {
+       "concept_tag": "light-and-dark-reactions",
+       "learning_objective": "Distinguish light reactions from the carbon (dark) reactions and explain why the term dark reaction is a misnomer."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH11-T3",
+     "topic_number": 3,
+     "title": "Photosynthetic pigments",
+     "ncert_sections": "11.4",
+     "concepts": [
+      {
+       "concept_tag": "leaf-pigments-chromatography",
+       "learning_objective": "Identify the four leaf pigments separated by paper chromatography by their colours."
+      },
+      {
+       "concept_tag": "absorption-and-action-spectra",
+       "learning_objective": "Interpret the absorption spectrum of chlorophyll a against the action spectrum of photosynthesis."
+      },
+      {
+       "concept_tag": "accessory-pigments",
+       "learning_objective": "Explain the roles of accessory pigments and why chlorophyll a is the chief pigment."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH11-T4",
+     "topic_number": 4,
+     "title": "Light reaction and electron transport",
+     "ncert_sections": "11.5, 11.6, 11.6.1",
+     "concepts": [
+      {
+       "concept_tag": "photosystems-reaction-centres",
+       "learning_objective": "Describe the light harvesting complexes and the reaction centres P700 and P680 of PS I and PS II."
+      },
+      {
+       "concept_tag": "z-scheme",
+       "learning_objective": "Trace the path of electrons from PS II to NADP+ in the Z scheme."
+      },
+      {
+       "concept_tag": "water-splitting",
+       "learning_objective": "Explain how splitting of water associated with PS II replaces electrons and releases oxygen and protons."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH11-T5",
+     "topic_number": 5,
+     "title": "Photophosphorylation and chemiosmosis",
+     "ncert_sections": "11.6.2, 11.6.3",
+     "concepts": [
+      {
+       "concept_tag": "cyclic-and-non-cyclic-photophosphorylation",
+       "learning_objective": "Compare cyclic and non-cyclic photophosphorylation in terms of photosystems involved and products formed."
+      },
+      {
+       "concept_tag": "chemiosmotic-atp-synthesis",
+       "learning_objective": "Explain how a proton gradient across the thylakoid membrane drives ATP synthesis through ATP synthase."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH11-T6",
+     "topic_number": 6,
+     "title": "Use of ATP and NADPH: the Calvin cycle",
+     "ncert_sections": "11.7, 11.7.1, 11.7.2",
+     "concepts": [
+      {
+       "concept_tag": "co2-acceptor-and-first-product",
+       "learning_objective": "Identify RuBP as the CO2 acceptor and 3-PGA as the first stable product of the C3 pathway."
+      },
+      {
+       "concept_tag": "calvin-cycle-stages",
+       "learning_objective": "Describe carboxylation, reduction and regeneration as the three stages of the Calvin cycle."
+      },
+      {
+       "concept_tag": "calvin-cycle-energy-budget",
+       "learning_objective": "Calculate the ATP and NADPH used by the Calvin cycle for CO2 fixed and glucose formed."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH11-T7",
+     "topic_number": 7,
+     "title": "The C4 pathway and photorespiration",
+     "ncert_sections": "11.8, 11.9",
+     "concepts": [
+      {
+       "concept_tag": "kranz-anatomy",
+       "learning_objective": "Describe the Kranz anatomy of C4 leaves and the features of bundle sheath cells."
+      },
+      {
+       "concept_tag": "hatch-and-slack-pathway",
+       "learning_objective": "Trace the steps of the Hatch and Slack pathway between mesophyll and bundle sheath cells."
+      },
+      {
+       "concept_tag": "photorespiration",
+       "learning_objective": "Explain photorespiration in C3 plants and why it is absent in C4 plants."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH11-T8",
+     "topic_number": 8,
+     "title": "Factors affecting photosynthesis",
+     "ncert_sections": "11.10",
+     "concepts": [
+      {
+       "concept_tag": "law-of-limiting-factors",
+       "learning_objective": "State Blackman's law of limiting factors and apply it to a given situation."
+      },
+      {
+       "concept_tag": "light-and-co2-as-factors",
+       "learning_objective": "Analyse how light intensity and CO2 concentration affect the rate of photosynthesis in C3 and C4 plants."
+      },
+      {
+       "concept_tag": "temperature-and-water-as-factors",
+       "learning_objective": "Explain how temperature and water stress influence the rate of photosynthesis."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Respiration in Plants",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH12-T1",
+     "topic_number": 1,
+     "title": "Do plants breathe? Cellular respiration and gas exchange",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "respiration-and-respiratory-substrates",
+       "learning_objective": "Define cellular respiration and respiratory substrates and explain why energy is released stepwise and stored as ATP."
+      },
+      {
+       "concept_tag": "gas-exchange-in-plants",
+       "learning_objective": "Explain how plants meet their gas-exchange needs through stomata, lenticels and air spaces without respiratory organs."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH12-T2",
+     "topic_number": 2,
+     "title": "Glycolysis",
+     "ncert_sections": "12.2",
+     "concepts": [
+      {
+       "concept_tag": "glycolysis-steps",
+       "learning_objective": "Describe the site, discoverers and sequence of reactions of the EMP pathway."
+      },
+      {
+       "concept_tag": "glycolysis-atp-nadh-yield",
+       "learning_objective": "Identify the steps of glycolysis that use or form ATP and NADH + H+ and calculate its energy yield."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH12-T3",
+     "topic_number": 3,
+     "title": "Fermentation",
+     "ncert_sections": "12.3",
+     "concepts": [
+      {
+       "concept_tag": "alcoholic-and-lactic-fermentation",
+       "learning_objective": "Describe how pyruvic acid is converted to ethanol or lactic acid and the enzymes involved."
+      },
+      {
+       "concept_tag": "fermentation-limitations",
+       "learning_objective": "Explain the low energy yield and hazards of fermentation and their consequences."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH12-T4",
+     "topic_number": 4,
+     "title": "Aerobic respiration: link reaction, TCA cycle and ETS",
+     "ncert_sections": "12.4, 12.4.1, 12.4.2",
+     "concepts": [
+      {
+       "concept_tag": "pyruvate-oxidative-decarboxylation",
+       "learning_objective": "Describe the oxidative decarboxylation of pyruvate to acetyl CoA in the mitochondrial matrix."
+      },
+      {
+       "concept_tag": "tca-cycle",
+       "learning_objective": "Trace the reactions of the Krebs' cycle and the points where CO2, NADH, FADH2 and GTP are formed."
+      },
+      {
+       "concept_tag": "electron-transport-oxidative-phosphorylation",
+       "learning_objective": "Explain the electron transport system, the role of oxygen and ATP synthesis by ATP synthase."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH12-T5",
+     "topic_number": 5,
+     "title": "The respiratory balance sheet",
+     "ncert_sections": "12.5",
+     "concepts": [
+      {
+       "concept_tag": "atp-balance-sheet",
+       "learning_objective": "Calculate the theoretical net ATP gain per glucose and evaluate the assumptions behind it."
+      },
+      {
+       "concept_tag": "fermentation-vs-aerobic-respiration",
+       "learning_objective": "Compare fermentation and aerobic respiration in breakdown of glucose, ATP yield and NADH oxidation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH12-T6",
+     "topic_number": 6,
+     "title": "Amphibolic pathway",
+     "ncert_sections": "12.6",
+     "concepts": [
+      {
+       "concept_tag": "entry-of-respiratory-substrates",
+       "learning_objective": "Identify the points at which fats and proteins enter the respiratory pathway."
+      },
+      {
+       "concept_tag": "amphibolic-nature-of-respiration",
+       "learning_objective": "Explain why the respiratory pathway is considered amphibolic rather than catabolic."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH12-T7",
+     "topic_number": 7,
+     "title": "Respiratory quotient",
+     "ncert_sections": "12.7",
+     "concepts": [
+      {
+       "concept_tag": "rq-definition-and-values",
+       "learning_objective": "Define respiratory quotient and state its values for carbohydrates, fats and proteins."
+      },
+      {
+       "concept_tag": "rq-calculation",
+       "learning_objective": "Calculate RQ from a balanced equation or gas-exchange data and interpret the substrate used."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "Plant Growth and Development",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH13-T1",
+     "topic_number": 1,
+     "title": "Growth: definition, open growth and measurement",
+     "ncert_sections": "13.1, 13.1.1, 13.1.2",
+     "concepts": [
+      {
+       "concept_tag": "growth-definition",
+       "learning_objective": "Define growth as an irreversible permanent increase in size accompanied by metabolism."
+      },
+      {
+       "concept_tag": "open-form-of-growth",
+       "learning_objective": "Explain how meristems give plants an open, indeterminate form of growth with primary and secondary growth."
+      },
+      {
+       "concept_tag": "growth-measurement",
+       "learning_objective": "Identify the parameters used to measure growth in different plant parts."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH13-T2",
+     "topic_number": 2,
+     "title": "Phases of growth and growth rates",
+     "ncert_sections": "13.1.3, 13.1.4",
+     "concepts": [
+      {
+       "concept_tag": "phases-of-growth",
+       "learning_objective": "Describe the meristematic, elongation and maturation phases of growth."
+      },
+      {
+       "concept_tag": "arithmetic-geometric-growth",
+       "learning_objective": "Distinguish arithmetic and geometric growth and use their equations and curves."
+      },
+      {
+       "concept_tag": "absolute-relative-growth-rate",
+       "learning_objective": "Compare absolute and relative growth rates of growing systems."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH13-T3",
+     "topic_number": 3,
+     "title": "Conditions for growth",
+     "ncert_sections": "13.1.5",
+     "concepts": [
+      {
+       "concept_tag": "water-oxygen-nutrients",
+       "learning_objective": "Explain the roles of water, oxygen and nutrients in plant growth."
+      },
+      {
+       "concept_tag": "temperature-light-gravity",
+       "learning_objective": "Explain how temperature and environmental signals such as light and gravity affect growth."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH13-T4",
+     "topic_number": 4,
+     "title": "Differentiation, dedifferentiation and redifferentiation",
+     "ncert_sections": "13.2",
+     "concepts": [
+      {
+       "concept_tag": "differentiation",
+       "learning_objective": "Describe differentiation and the structural changes cells undergo while maturing."
+      },
+      {
+       "concept_tag": "dedifferentiation-redifferentiation",
+       "learning_objective": "Distinguish dedifferentiation and redifferentiation with examples."
+      },
+      {
+       "concept_tag": "open-differentiation",
+       "learning_objective": "Explain why differentiation in plants is open and depends on the position of a cell."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH13-T5",
+     "topic_number": 5,
+     "title": "Development and plasticity",
+     "ncert_sections": "13.3",
+     "concepts": [
+      {
+       "concept_tag": "development-sequence",
+       "learning_objective": "Describe development as the sum of growth and differentiation and its sequence in a plant cell."
+      },
+      {
+       "concept_tag": "plasticity-heterophylly",
+       "learning_objective": "Explain plasticity using examples of heterophylly."
+      },
+      {
+       "concept_tag": "intrinsic-extrinsic-factors",
+       "learning_objective": "Classify the intrinsic and extrinsic factors that control plant development."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH13-T6",
+     "topic_number": 6,
+     "title": "Plant growth regulators: characteristics and discovery",
+     "ncert_sections": "13.4.1, 13.4.2",
+     "concepts": [
+      {
+       "concept_tag": "pgr-chemical-nature",
+       "learning_objective": "Identify the chemical nature of the major plant growth regulators."
+      },
+      {
+       "concept_tag": "pgr-promoters-inhibitors",
+       "learning_objective": "Classify plant growth regulators as growth promoters or growth inhibitors."
+      },
+      {
+       "concept_tag": "pgr-discovery",
+       "learning_objective": "Recall how each major group of plant growth regulators was discovered."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH13-T7",
+     "topic_number": 7,
+     "title": "Auxins, gibberellins and cytokinins",
+     "ncert_sections": "13.4.3.1, 13.4.3.2, 13.4.3.3",
+     "concepts": [
+      {
+       "concept_tag": "auxin-effects",
+       "learning_objective": "Describe the physiological effects and applications of auxins."
+      },
+      {
+       "concept_tag": "gibberellin-effects",
+       "learning_objective": "Describe the physiological effects and applications of gibberellins."
+      },
+      {
+       "concept_tag": "cytokinin-effects",
+       "learning_objective": "Describe the physiological effects and applications of cytokinins."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH13-T8",
+     "topic_number": 8,
+     "title": "Ethylene, abscisic acid and interaction of PGRs",
+     "ncert_sections": "13.4.3.4, 13.4.3.5",
+     "concepts": [
+      {
+       "concept_tag": "ethylene-effects",
+       "learning_objective": "Describe the physiological effects and agricultural uses of ethylene."
+      },
+      {
+       "concept_tag": "abscisic-acid-effects",
+       "learning_objective": "Explain why abscisic acid is called the stress hormone and list its effects."
+      },
+      {
+       "concept_tag": "pgr-interactions",
+       "learning_objective": "Evaluate how PGRs act synergistically or antagonistically in plant events."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "Breathing and Exchange of Gases",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo114.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH14-T1",
+     "topic_number": 1,
+     "title": "Respiratory organs in different animals",
+     "ncert_sections": "14.1",
+     "concepts": [
+      {
+       "concept_tag": "diffusion-and-tracheal-respiration",
+       "learning_objective": "Identify animals that exchange gases by diffusion over the body surface, a moist cuticle or tracheal tubes."
+      },
+      {
+       "concept_tag": "branchial-pulmonary-cutaneous-respiration",
+       "learning_objective": "Distinguish branchial, pulmonary and cutaneous respiration with examples from invertebrates and vertebrates."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH14-T2",
+     "topic_number": 2,
+     "title": "Human respiratory system",
+     "ncert_sections": "14.1.1",
+     "concepts": [
+      {
+       "concept_tag": "air-passage-and-lungs",
+       "learning_objective": "Trace the path of air from the external nostrils to the alveoli and describe the lungs and pleura."
+      },
+      {
+       "concept_tag": "conducting-and-exchange-parts",
+       "learning_objective": "Distinguish the conducting part from the respiratory or exchange part and state their functions."
+      },
+      {
+       "concept_tag": "thoracic-chamber-and-steps",
+       "learning_objective": "Explain why the air-tight thoracic chamber is essential for breathing and list the steps of respiration."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH14-T3",
+     "topic_number": 3,
+     "title": "Mechanism of breathing",
+     "ncert_sections": "14.2",
+     "concepts": [
+      {
+       "concept_tag": "pressure-gradient-breathing",
+       "learning_objective": "Explain inspiration and expiration in terms of intra-pulmonary and atmospheric pressure."
+      },
+      {
+       "concept_tag": "muscles-of-breathing",
+       "learning_objective": "Describe the roles of the diaphragm, intercostal and abdominal muscles in changing thoracic volume."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH14-T4",
+     "topic_number": 4,
+     "title": "Respiratory volumes and capacities",
+     "ncert_sections": "14.2.1",
+     "concepts": [
+      {
+       "concept_tag": "respiratory-volumes",
+       "learning_objective": "Define TV, IRV, ERV and RV and use their average values in calculations."
+      },
+      {
+       "concept_tag": "pulmonary-capacities",
+       "learning_objective": "Derive IC, EC, FRC, VC and TLC by adding the appropriate respiratory volumes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH14-T5",
+     "topic_number": 5,
+     "title": "Exchange of gases",
+     "ncert_sections": "14.3",
+     "concepts": [
+      {
+       "concept_tag": "partial-pressure-gradients",
+       "learning_objective": "Interpret the partial pressures of O2 and CO2 at different sites to predict the direction of diffusion."
+      },
+      {
+       "concept_tag": "diffusion-membrane-factors",
+       "learning_objective": "Explain how solubility and the thin three-layered diffusion membrane favour gas exchange at the alveoli."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH14-T6",
+     "topic_number": 6,
+     "title": "Transport of gases",
+     "ncert_sections": "14.4",
+     "concepts": [
+      {
+       "concept_tag": "oxygen-transport-haemoglobin",
+       "learning_objective": "Describe how O2 is carried by haemoglobin and plasma and how much O2 blood delivers to tissues."
+      },
+      {
+       "concept_tag": "oxygen-dissociation-curve",
+       "learning_objective": "Interpret the sigmoid oxygen dissociation curve and the factors that favour binding or release of O2."
+      },
+      {
+       "concept_tag": "carbon-dioxide-transport",
+       "learning_objective": "Explain the transport of CO2 as bicarbonate, carbamino-haemoglobin and dissolved CO2, with the role of carbonic anhydrase."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH14-T7",
+     "topic_number": 7,
+     "title": "Regulation of respiration and respiratory disorders",
+     "ncert_sections": "14.5, 14.6",
+     "concepts": [
+      {
+       "concept_tag": "respiratory-centres",
+       "learning_objective": "Describe the roles of the respiratory rhythm centre in the medulla and the pneumotaxic centre in the pons."
+      },
+      {
+       "concept_tag": "chemoreceptor-control",
+       "learning_objective": "Explain how the chemosensitive area and receptors of the aortic arch and carotid artery respond to CO2 and H+."
+      },
+      {
+       "concept_tag": "respiratory-disorders",
+       "learning_objective": "Identify asthma, emphysema and occupational respiratory disorders from their causes and effects."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH15",
+   "chapter_number": 15,
+   "old_chapter_number": null,
+   "title": "Body Fluids and Circulation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo115.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH15-T1",
+     "topic_number": 1,
+     "title": "Blood: plasma and formed elements",
+     "ncert_sections": "15.1, 15.1.1, 15.1.2",
+     "concepts": [
+      {
+       "concept_tag": "plasma-composition",
+       "learning_objective": "Describe the composition of plasma and the roles of its major proteins, and distinguish plasma from serum."
+      },
+      {
+       "concept_tag": "formed-elements",
+       "learning_objective": "Describe the types, numbers and functions of erythrocytes, leucocytes and platelets."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH15-T2",
+     "topic_number": 2,
+     "title": "Blood groups: ABO and Rh",
+     "ncert_sections": "15.1.3",
+     "concepts": [
+      {
+       "concept_tag": "abo-grouping",
+       "learning_objective": "Relate the antigens and antibodies of the ABO groups to donor compatibility in transfusion."
+      },
+      {
+       "concept_tag": "rh-incompatibility",
+       "learning_objective": "Explain Rh grouping and how Rh incompatibility causes erythroblastosis foetalis and can be prevented."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH15-T3",
+     "topic_number": 3,
+     "title": "Coagulation of blood",
+     "ncert_sections": "15.1.4",
+     "concepts": [
+      {
+       "concept_tag": "clotting-cascade",
+       "learning_objective": "Describe the sequence of reactions by which fibrinogen is converted to a fibrin clot."
+      },
+      {
+       "concept_tag": "platelets-calcium-clotting",
+       "learning_objective": "Explain the roles of platelets, tissue factors and calcium ions in initiating and supporting clotting."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH15-T4",
+     "topic_number": 4,
+     "title": "Lymph (tissue fluid)",
+     "ncert_sections": "15.2",
+     "concepts": [
+      {
+       "concept_tag": "tissue-fluid-formation",
+       "learning_objective": "Explain how interstitial fluid forms from blood and how it differs from plasma."
+      },
+      {
+       "concept_tag": "lymph-functions",
+       "learning_objective": "State the functions of lymph and the lymphatic system, including fat absorption through lacteals."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH15-T5",
+     "topic_number": 5,
+     "title": "Circulatory pathways and the human heart",
+     "ncert_sections": "15.3, 15.3.1",
+     "concepts": [
+      {
+       "concept_tag": "open-closed-circulation",
+       "learning_objective": "Distinguish open and closed circulatory systems with examples."
+      },
+      {
+       "concept_tag": "vertebrate-heart-evolution",
+       "learning_objective": "Compare the hearts and circulation of fishes, amphibians, reptiles, birds and mammals."
+      },
+      {
+       "concept_tag": "human-heart-structure",
+       "learning_objective": "Describe the chambers, septa, valves and nodal tissue of the human heart."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH15-T6",
+     "topic_number": 6,
+     "title": "Cardiac cycle and electrocardiogram",
+     "ncert_sections": "15.3.2, 15.3.3",
+     "concepts": [
+      {
+       "concept_tag": "cardiac-cycle-events",
+       "learning_objective": "Describe the sequence of systole, diastole, valve movements and heart sounds in a cardiac cycle."
+      },
+      {
+       "concept_tag": "cardiac-output",
+       "learning_objective": "Calculate cardiac output and cardiac cycle duration from stroke volume and heart rate."
+      },
+      {
+       "concept_tag": "ecg-waves",
+       "learning_objective": "Interpret the P-wave, QRS complex and T-wave of a standard ECG and use it to find heart rate."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH15-T7",
+     "topic_number": 7,
+     "title": "Double circulation and regulation of cardiac activity",
+     "ncert_sections": "15.4, 15.5",
+     "concepts": [
+      {
+       "concept_tag": "double-circulation-pathways",
+       "learning_objective": "Trace the pulmonary and systemic circulations and the hepatic portal and coronary systems."
+      },
+      {
+       "concept_tag": "cardiac-regulation",
+       "learning_objective": "Explain why the heart is myogenic and how neural and hormonal signals moderate cardiac output."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH15-T8",
+     "topic_number": 8,
+     "title": "Disorders of circulatory system",
+     "ncert_sections": "15.6",
+     "concepts": [
+      {
+       "concept_tag": "hypertension",
+       "learning_objective": "Interpret blood pressure readings and identify hypertension and its effects."
+      },
+      {
+       "concept_tag": "coronary-artery-disease-angina",
+       "learning_objective": "Explain the cause of coronary artery disease and the symptom of angina."
+      },
+      {
+       "concept_tag": "heart-failure",
+       "learning_objective": "Distinguish heart failure from cardiac arrest and heart attack."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH16",
+   "chapter_number": 16,
+   "old_chapter_number": null,
+   "title": "Excretory Products and their Elimination",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo116.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH16-T1",
+     "topic_number": 1,
+     "title": "Nitrogenous wastes and excretory structures in animals",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "modes-of-nitrogenous-excretion",
+       "learning_objective": "Classify animals as ammonotelic, ureotelic or uricotelic and relate each mode to the toxicity of the waste and water availability."
+      },
+      {
+       "concept_tag": "excretory-structures-in-animals",
+       "learning_objective": "Identify protonephridia, nephridia, Malpighian tubules, green glands and kidneys with the animal groups that have them."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH16-T2",
+     "topic_number": 2,
+     "title": "Human excretory system",
+     "ncert_sections": "16.1",
+     "concepts": [
+      {
+       "concept_tag": "kidney-structure",
+       "learning_objective": "Describe the position and internal structure of the human kidney, including hilum, pelvis, calyces, cortex, medulla and columns of Bertini."
+      },
+      {
+       "concept_tag": "nephron-structure",
+       "learning_objective": "Describe the parts of a nephron and the order in which filtrate passes through them."
+      },
+      {
+       "concept_tag": "cortical-and-juxtamedullary-nephrons",
+       "learning_objective": "Distinguish cortical and juxtamedullary nephrons by the length of the loop of Henle and the vasa recta."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH16-T3",
+     "topic_number": 3,
+     "title": "Urine formation",
+     "ncert_sections": "16.2",
+     "concepts": [
+      {
+       "concept_tag": "glomerular-filtration",
+       "learning_objective": "Explain ultrafiltration across the three layers of the glomerular filter and the role of podocytes."
+      },
+      {
+       "concept_tag": "gfr-and-reabsorption",
+       "learning_objective": "State the normal GFR and use filtrate and urine volumes to show that about 99 per cent of the filtrate is reabsorbed."
+      },
+      {
+       "concept_tag": "tubular-secretion",
+       "learning_objective": "Explain how tubular secretion of H+, K+ and ammonia maintains ionic and acid-base balance."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH16-T4",
+     "topic_number": 4,
+     "title": "Function of the tubules",
+     "ncert_sections": "16.3",
+     "concepts": [
+      {
+       "concept_tag": "pct-function",
+       "learning_objective": "Describe reabsorption and selective secretion in the proximal convoluted tubule."
+      },
+      {
+       "concept_tag": "henle-loop-function",
+       "learning_objective": "Explain how the permeability of the two limbs of Henle's loop concentrates and then dilutes the filtrate."
+      },
+      {
+       "concept_tag": "dct-and-collecting-duct",
+       "learning_objective": "Describe the roles of the distal convoluted tubule and collecting duct in water, ion and pH balance."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH16-T5",
+     "topic_number": 5,
+     "title": "Mechanism of concentration of the filtrate",
+     "ncert_sections": "16.4",
+     "concepts": [
+      {
+       "concept_tag": "counter-current-mechanism",
+       "learning_objective": "Explain the counter current mechanism operating between Henle's loop and the vasa recta."
+      },
+      {
+       "concept_tag": "medullary-osmotic-gradient",
+       "learning_objective": "Describe the medullary osmotic gradient, the solutes that cause it and its role in concentrating urine."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH16-T6",
+     "topic_number": 6,
+     "title": "Regulation of kidney function",
+     "ncert_sections": "16.5",
+     "concepts": [
+      {
+       "concept_tag": "adh-regulation",
+       "learning_objective": "Explain how osmoreceptors, the hypothalamus and ADH regulate water reabsorption."
+      },
+      {
+       "concept_tag": "renin-angiotensin-mechanism",
+       "learning_objective": "Trace the renin-angiotensin-aldosterone sequence and its effect on blood pressure and GFR."
+      },
+      {
+       "concept_tag": "anf-check",
+       "learning_objective": "Explain how atrial natriuretic factor acts as a check on the renin-angiotensin mechanism."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH16-T7",
+     "topic_number": 7,
+     "title": "Micturition and role of other organs in excretion",
+     "ncert_sections": "16.6, 16.7",
+     "concepts": [
+      {
+       "concept_tag": "micturition-reflex",
+       "learning_objective": "Describe the micturition reflex from bladder stretch to the release of urine."
+      },
+      {
+       "concept_tag": "urine-characteristics",
+       "learning_objective": "State the normal characteristics of human urine and interpret abnormal constituents such as glucose and ketone bodies."
+      },
+      {
+       "concept_tag": "other-excretory-organs",
+       "learning_objective": "Describe the excretory roles of the lungs, liver, sweat glands and sebaceous glands."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH16-T8",
+     "topic_number": 8,
+     "title": "Disorders of the excretory system",
+     "ncert_sections": "16.8",
+     "concepts": [
+      {
+       "concept_tag": "uremia-and-hemodialysis",
+       "learning_objective": "Explain uremia and the working of haemodialysis using an artificial kidney."
+      },
+      {
+       "concept_tag": "kidney-transplantation",
+       "learning_objective": "Evaluate kidney transplantation as the ultimate correction of kidney failure and why a related donor is preferred."
+      },
+      {
+       "concept_tag": "renal-disorders",
+       "learning_objective": "Identify renal calculi and glomerulonephritis from their descriptions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH17",
+   "chapter_number": 17,
+   "old_chapter_number": null,
+   "title": "Locomotion and Movement",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo117.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH17-T1",
+     "topic_number": 1,
+     "title": "Movement, locomotion and types of cellular movement",
+     "ncert_sections": "Introduction, 17.1",
+     "concepts": [
+      {
+       "concept_tag": "movement-and-locomotion",
+       "learning_objective": "Distinguish movement from locomotion and give the purposes of locomotion."
+      },
+      {
+       "concept_tag": "cellular-movement-types",
+       "learning_objective": "Identify amoeboid, ciliary and muscular movements shown by human cells."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH17-T2",
+     "topic_number": 2,
+     "title": "Muscle: properties and types",
+     "ncert_sections": "17.2",
+     "concepts": [
+      {
+       "concept_tag": "muscle-properties",
+       "learning_objective": "State the origin and the special properties of muscle tissue."
+      },
+      {
+       "concept_tag": "muscle-types",
+       "learning_objective": "Compare skeletal, visceral and cardiac muscles by location, appearance and control."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH17-T3",
+     "topic_number": 3,
+     "title": "Structure of skeletal muscle and contractile proteins",
+     "ncert_sections": "17.2, 17.2.1",
+     "concepts": [
+      {
+       "concept_tag": "muscle-fibre-organisation",
+       "learning_objective": "Describe the organisation of a skeletal muscle into fascicles, fibres and myofibrils."
+      },
+      {
+       "concept_tag": "sarcomere-bands",
+       "learning_objective": "Identify the A band, I band, Z line, M line and H zone of a sarcomere."
+      },
+      {
+       "concept_tag": "contractile-protein-structure",
+       "learning_objective": "Describe the structure of actin and myosin filaments and their regulatory proteins."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH17-T4",
+     "topic_number": 4,
+     "title": "Mechanism of muscle contraction",
+     "ncert_sections": "17.2.2",
+     "concepts": [
+      {
+       "concept_tag": "excitation-contraction-coupling",
+       "learning_objective": "Explain the sequence of events from a neural signal to cross bridge formation."
+      },
+      {
+       "concept_tag": "sliding-filament-theory",
+       "learning_objective": "Explain contraction as sliding of thin filaments and its effect on the bands."
+      },
+      {
+       "concept_tag": "red-and-white-fibres",
+       "learning_objective": "Distinguish red and white muscle fibres and explain muscle fatigue."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH17-T5",
+     "topic_number": 5,
+     "title": "Skeletal system",
+     "ncert_sections": "17.3",
+     "concepts": [
+      {
+       "concept_tag": "skeleton-organisation",
+       "learning_objective": "State the composition and the axial and appendicular divisions of the human skeleton."
+      },
+      {
+       "concept_tag": "vertebral-column-and-ribs",
+       "learning_objective": "Describe the vertebral column, sternum and the types of ribs."
+      },
+      {
+       "concept_tag": "appendicular-skeleton",
+       "learning_objective": "Identify the bones of the limbs and the pectoral and pelvic girdles."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH17-T6",
+     "topic_number": 6,
+     "title": "Joints",
+     "ncert_sections": "17.4",
+     "concepts": [
+      {
+       "concept_tag": "joint-classification",
+       "learning_objective": "Classify joints as fibrous, cartilaginous and synovial with examples."
+      },
+      {
+       "concept_tag": "synovial-joint-types",
+       "learning_objective": "Match types of synovial joints with their locations in the body."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH17-T7",
+     "topic_number": 7,
+     "title": "Disorders of muscular and skeletal system",
+     "ncert_sections": "17.5",
+     "concepts": [
+      {
+       "concept_tag": "muscular-disorders",
+       "learning_objective": "Identify the causes and features of myasthenia gravis, muscular dystrophy and tetany."
+      },
+      {
+       "concept_tag": "skeletal-joint-disorders",
+       "learning_objective": "Identify the causes and features of arthritis, osteoporosis and gout."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH18",
+   "chapter_number": 18,
+   "old_chapter_number": null,
+   "title": "Neural Control and Coordination",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo118.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH18-T1",
+     "topic_number": 1,
+     "title": "Neural system and the human neural system",
+     "ncert_sections": "18.1, 18.2",
+     "concepts": [
+      {
+       "concept_tag": "neural-organisation-in-animals",
+       "learning_objective": "Describe how the organisation of the neural system differs among Hydra, insects and vertebrates."
+      },
+      {
+       "concept_tag": "cns-and-pns",
+       "learning_objective": "Distinguish the central and peripheral neural systems and afferent and efferent nerve fibres."
+      },
+      {
+       "concept_tag": "somatic-and-autonomic-divisions",
+       "learning_objective": "Distinguish the somatic and autonomic divisions of the peripheral neural system by the organs they serve."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH18-T2",
+     "topic_number": 2,
+     "title": "Neuron: structure and types",
+     "ncert_sections": "18.3",
+     "concepts": [
+      {
+       "concept_tag": "neuron-structure",
+       "learning_objective": "Identify the cell body, dendrites, axon and synaptic knobs of a neuron and their roles."
+      },
+      {
+       "concept_tag": "neuron-types",
+       "learning_objective": "Classify neurons as multipolar, bipolar or unipolar and state where each is found."
+      },
+      {
+       "concept_tag": "myelinated-and-unmyelinated-fibres",
+       "learning_objective": "Distinguish myelinated and non-myelinated nerve fibres and state where each occurs."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH18-T3",
+     "topic_number": 3,
+     "title": "Generation and conduction of nerve impulse",
+     "ncert_sections": "18.3.1",
+     "concepts": [
+      {
+       "concept_tag": "resting-potential",
+       "learning_objective": "Explain how ion permeability and the sodium-potassium pump polarise the resting axonal membrane."
+      },
+      {
+       "concept_tag": "action-potential",
+       "learning_objective": "Explain depolarisation by Na+ influx and repolarisation by K+ efflux during an action potential."
+      },
+      {
+       "concept_tag": "impulse-conduction-along-axon",
+       "learning_objective": "Explain how local current flow conducts an action potential along an axon."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH18-T4",
+     "topic_number": 4,
+     "title": "Transmission of impulses across synapses",
+     "ncert_sections": "18.3.2",
+     "concepts": [
+      {
+       "concept_tag": "electrical-synapse",
+       "learning_objective": "Describe the structure and speed of impulse transmission at electrical synapses."
+      },
+      {
+       "concept_tag": "chemical-synapse",
+       "learning_objective": "Explain the sequence of events in impulse transmission across a chemical synapse."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH18-T5",
+     "topic_number": 5,
+     "title": "Central neural system: brain protection and forebrain",
+     "ncert_sections": "18.4, 18.4.1",
+     "concepts": [
+      {
+       "concept_tag": "brain-functions-and-meninges",
+       "learning_objective": "State the functions of the brain and name the cranial meninges in order."
+      },
+      {
+       "concept_tag": "cerebrum",
+       "learning_objective": "Describe the cerebral hemispheres, corpus callosum, cerebral cortex and white matter."
+      },
+      {
+       "concept_tag": "thalamus-hypothalamus-limbic-system",
+       "learning_objective": "State the functions of the thalamus, hypothalamus and limbic system."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH18-T6",
+     "topic_number": 6,
+     "title": "Midbrain and hindbrain",
+     "ncert_sections": "18.4.2, 18.4.3",
+     "concepts": [
+      {
+       "concept_tag": "midbrain",
+       "learning_objective": "Describe the location of the midbrain, the cerebral aqueduct and the corpora quadrigemina."
+      },
+      {
+       "concept_tag": "hindbrain",
+       "learning_objective": "State the structure and functions of the pons, cerebellum and medulla oblongata."
+      },
+      {
+       "concept_tag": "brain-stem",
+       "learning_objective": "Identify the parts of the brain stem and predict the effects of damage to it."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEBO1-CH19",
+   "chapter_number": 19,
+   "old_chapter_number": null,
+   "title": "Chemical Coordination and Integration",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kebo119.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEBO1-CH19-T1",
+     "topic_number": 1,
+     "title": "Endocrine glands, hormones and the hypothalamus",
+     "ncert_sections": "19.1, 19.2.1",
+     "concepts": [
+      {
+       "concept_tag": "hormone-definition",
+       "learning_objective": "Define endocrine glands and hormones using the current scientific definition of a hormone."
+      },
+      {
+       "concept_tag": "hypothalamic-regulation",
+       "learning_objective": "Explain how hypothalamic releasing and inhibiting hormones control the pituitary gland."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH19-T2",
+     "topic_number": 2,
+     "title": "The pituitary and pineal glands",
+     "ncert_sections": "19.2.2, 19.2.3",
+     "concepts": [
+      {
+       "concept_tag": "pituitary-hormones",
+       "learning_objective": "Identify the hormones of the pars distalis, pars intermedia and pars nervosa and their actions."
+      },
+      {
+       "concept_tag": "pituitary-disorders",
+       "learning_objective": "Relate gigantism, dwarfism, acromegaly and diabetes insipidus to faulty pituitary hormone secretion."
+      },
+      {
+       "concept_tag": "melatonin-diurnal-rhythm",
+       "learning_objective": "State the role of pineal melatonin in regulating 24-hour body rhythms."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH19-T3",
+     "topic_number": 3,
+     "title": "Thyroid, parathyroid and thymus",
+     "ncert_sections": "19.2.4, 19.2.5, 19.2.6",
+     "concepts": [
+      {
+       "concept_tag": "thyroid-hormones-disorders",
+       "learning_objective": "Describe the functions of thyroid hormones and the disorders caused by their under- or over-secretion."
+      },
+      {
+       "concept_tag": "calcium-homeostasis",
+       "learning_objective": "Explain how PTH and thyrocalcitonin together regulate blood calcium levels."
+      },
+      {
+       "concept_tag": "thymosins-immunity",
+       "learning_objective": "State the role of thymosins in cell-mediated and humoral immunity."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH19-T4",
+     "topic_number": 4,
+     "title": "Adrenal gland and pancreas",
+     "ncert_sections": "19.2.7, 19.2.8",
+     "concepts": [
+      {
+       "concept_tag": "adrenal-medulla-catecholamines",
+       "learning_objective": "Describe the emergency actions of adrenaline and noradrenaline."
+      },
+      {
+       "concept_tag": "adrenal-cortex-corticoids",
+       "learning_objective": "Distinguish glucocorticoids and mineralocorticoids by their main examples and actions."
+      },
+      {
+       "concept_tag": "glucose-homeostasis",
+       "learning_objective": "Explain how insulin and glucagon jointly maintain blood glucose and what goes wrong in diabetes mellitus."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH19-T5",
+     "topic_number": 5,
+     "title": "Testis and ovary",
+     "ncert_sections": "19.2.9, 19.2.10",
+     "concepts": [
+      {
+       "concept_tag": "testis-androgens",
+       "learning_objective": "Describe the source and functions of androgens secreted by the testis."
+      },
+      {
+       "concept_tag": "ovarian-hormones",
+       "learning_objective": "Describe the sources and functions of estrogen and progesterone."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH19-T6",
+     "topic_number": 6,
+     "title": "Hormones of heart, kidney and gastrointestinal tract",
+     "ncert_sections": "19.3",
+     "concepts": [
+      {
+       "concept_tag": "heart-kidney-hormones",
+       "learning_objective": "State the source and action of atrial natriuretic factor and erythropoietin."
+      },
+      {
+       "concept_tag": "gastrointestinal-hormones",
+       "learning_objective": "Match gastrin, secretin, CCK and GIP with their targets and actions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEBO1-CH19-T7",
+     "topic_number": 7,
+     "title": "Mechanism of hormone action",
+     "ncert_sections": "19.4",
+     "concepts": [
+      {
+       "concept_tag": "hormone-receptors",
+       "learning_objective": "Explain the specificity of hormone receptors and the difference between membrane-bound and intracellular receptors."
+      },
+      {
+       "concept_tag": "hormone-chemical-nature",
+       "learning_objective": "Classify hormones by chemical nature and relate each class to its mode of action."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

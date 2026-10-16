@@ -1,0 +1,92 @@
+{
+ "chapter_id": "IHSH1-CH01",
+ "title": "सत्यं शिवं सुन्दरं संस्कृतम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSH1-CH01-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः कविपरिचयश्च",
+   "ncert_sections": "प्रस्तावना, कविकाव्यपरिचयः",
+   "concepts": [
+    {
+     "concept_tag": "kavi-parichaya",
+     "learning_objective": "छात्रः गीतस्य रचयितारं वासुदेवशास्त्रिद्विवेदिनं तस्य कार्यं कृतीः च अभिजानाति।"
+    },
+    {
+     "concept_tag": "path-vishaya",
+     "learning_objective": "छात्रः संस्कृतं भारतस्य सम्पत् इति पाठस्य मूलभावं शीर्षकस्य आशयं च अवगच्छति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH01-T2",
+   "topic_number": 2,
+   "title": "ऐक्यं ज्ञानं संस्कारश्च",
+   "ncert_sections": "पद्ये 1-2",
+   "concepts": [
+    {
+     "concept_tag": "ekata-jnana-prabha",
+     "learning_objective": "छात्रः संस्कृतं भारतीयैकतासाधकं ज्ञानपुञ्जप्रभादर्शकम् आनन्दप्रदं च इति व्याख्याति।"
+    },
+    {
+     "concept_tag": "samskara-satpatha",
+     "learning_objective": "छात्रः संस्कृतस्य मस्तिष्कसंस्कारकत्वं वाणीपरिष्कारकत्वं सत्पथप्रेरकत्वं च विवेचयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH01-T3",
+   "topic_number": 3,
+   "title": "विश्वबन्धुत्वं शान्तिः पञ्चशीलं च",
+   "ncert_sections": "पद्ये 3-4, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "vishvabandhutva-shanti",
+     "learning_objective": "छात्रः संस्कृतस्य विश्वबन्धुत्वविस्तारकत्वं शान्तिसंस्थापकत्वं सेवाव्रतं च वर्णयति।"
+    },
+    {
+     "concept_tag": "panchashila",
+     "learning_objective": "छात्रः बौद्धधर्मे परिगणितानि पञ्चशीलानि अभिजानाति।"
+    },
+    {
+     "concept_tag": "jnana-vijnana-sammelana",
+     "learning_objective": "छात्रः ज्ञानविज्ञानसम्मेलनस्य भुक्तिमुक्तिद्वयोद्वेलनस्य च भावं स्पष्टीकरोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH01-T4",
+   "topic_number": 4,
+   "title": "पुरुषार्थाः माधुर्यं यशश्च",
+   "ncert_sections": "पद्ये 5-6",
+   "concepts": [
+    {
+     "concept_tag": "purushartha-utkarsha",
+     "learning_objective": "छात्रः संस्कृतं धर्मकामार्थमोक्षप्रदम् ऐहिकामुष्मिकोत्कर्षदं च इति व्याख्याति।"
+    },
+    {
+     "concept_tag": "madhurya-yashas",
+     "learning_objective": "छात्रः संस्कृतस्य शब्दलालित्यं माधुर्यं पूर्वजानां यशःस्मारकत्वं च विश्लेषयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH01-T5",
+   "topic_number": 5,
+   "title": "शब्दार्थाः समासविग्रहश्च",
+   "ncert_sections": "शब्दार्थाः, अभ्यासः",
+   "concepts": [
+    {
+     "concept_tag": "shabdartha-paryaya",
+     "learning_objective": "छात्रः पाठगतानां पदानाम् अर्थान् पर्यायान् प्रकृतिप्रत्ययौ च अभिजानाति।"
+    },
+    {
+     "concept_tag": "samasa-vigraha",
+     "learning_objective": "छात्रः पाठगतानां समस्तपदानां विग्रहं करोति।"
+    }
+   ]
+  }
+ ]
+}

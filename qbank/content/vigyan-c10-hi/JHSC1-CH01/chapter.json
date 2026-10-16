@@ -1,0 +1,120 @@
+{
+ "chapter_id": "JHSC1-CH01",
+ "title": "रासायनिक अभिक्रियाएँ एवं समीकरण",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSC1-CH01-T1",
+   "topic_number": 1,
+   "title": "रासायनिक अभिक्रिया की पहचान एवं रासायनिक समीकरण लिखना",
+   "ncert_sections": "1.1, 1.1.1",
+   "concepts": [
+    {
+     "concept_tag": "abhikriya-ke-lakshan",
+     "learning_objective": "अवस्था, रंग, गैस-उत्सर्जन तथा ताप में परिवर्तन जैसे प्रेक्षणों से पहचानना कि रासायनिक अभिक्रिया हुई है।"
+    },
+    {
+     "concept_tag": "samikaran-lekhan",
+     "learning_objective": "शब्द-समीकरण को भौतिक अवस्थाओं के संकेतों सहित रासायनिक समीकरण के रूप में लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH01-T2",
+   "topic_number": 2,
+   "title": "संतुलित रासायनिक समीकरण",
+   "ncert_sections": "1.1.2",
+   "concepts": [
+    {
+     "concept_tag": "dravyaman-sanrakshan-niyam",
+     "learning_objective": "द्रव्यमान संरक्षण नियम के आधार पर समझाना कि रासायनिक समीकरण को संतुलित करना क्यों आवश्यक है।"
+    },
+    {
+     "concept_tag": "samikaran-santulan",
+     "learning_objective": "ढाँचा रासायनिक समीकरण को चरणबद्ध विधि से संतुलित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH01-T3",
+   "topic_number": 3,
+   "title": "संयोजन अभिक्रिया तथा ऊष्माक्षेपी अभिक्रिया",
+   "ncert_sections": "1.2, 1.2.1",
+   "concepts": [
+    {
+     "concept_tag": "sanyojan-abhikriya",
+     "learning_objective": "उन अभिक्रियाओं को पहचानना जिनमें दो या अधिक अभिकारक मिलकर एकल उत्पाद बनाते हैं।"
+    },
+    {
+     "concept_tag": "ushmakshepi-abhikriya",
+     "learning_objective": "ऊष्मा मुक्त करने वाली अभिक्रियाओं को पहचानना और उनके दैनिक जीवन के उदाहरण देना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH01-T4",
+   "topic_number": 4,
+   "title": "वियोजन अभिक्रिया तथा ऊष्माशोषी अभिक्रिया",
+   "ncert_sections": "1.2.2",
+   "concepts": [
+    {
+     "concept_tag": "viyojan-ke-prakar",
+     "learning_objective": "ऊष्मीय, विद्युत तथा प्रकाशीय वियोजन अभिक्रियाओं को पहचानना और उनके उदाहरण समझना।"
+    },
+    {
+     "concept_tag": "ushmashoshi-abhikriya",
+     "learning_objective": "समझाना कि वियोजन अभिक्रियाओं में ऊर्जा अवशोषित होने के कारण वे ऊष्माशोषी होती हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH01-T5",
+   "topic_number": 5,
+   "title": "विस्थापन तथा द्विविस्थापन अभिक्रिया",
+   "ncert_sections": "1.2.3, 1.2.4",
+   "concepts": [
+    {
+     "concept_tag": "visthapan-abhikriya",
+     "learning_objective": "अधिक क्रियाशील धातु द्वारा कम क्रियाशील धातु के विस्थापन को पहचानना और समझाना।"
+    },
+    {
+     "concept_tag": "dvivisthapan-abhikriya",
+     "learning_objective": "आयनों के आदान-प्रदान वाली द्विविस्थापन (अवक्षेपण) अभिक्रियाओं को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH01-T6",
+   "topic_number": 6,
+   "title": "उपचयन एवं अपचयन",
+   "ncert_sections": "1.2.5",
+   "concepts": [
+    {
+     "concept_tag": "upachayan-apachayan-paribhasha",
+     "learning_objective": "ऑक्सीजन या हाइड्रोजन की वृद्धि अथवा ह्रास के आधार पर उपचयन और अपचयन को परिभाषित करना।"
+    },
+    {
+     "concept_tag": "redox-pahchan",
+     "learning_objective": "किसी रेडॉक्स अभिक्रिया में उपचयित तथा अपचयित पदार्थों की पहचान करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH01-T7",
+   "topic_number": 7,
+   "title": "दैनिक जीवन में उपचयन अभिक्रियाओं के प्रभाव",
+   "ncert_sections": "1.3, 1.3.1, 1.3.2",
+   "concepts": [
+    {
+     "concept_tag": "sankshaaran",
+     "learning_objective": "संक्षारण को उपचयन के प्रभाव के रूप में समझाना और उसके उदाहरण पहचानना।"
+    },
+    {
+     "concept_tag": "vikritgandhita",
+     "learning_objective": "विकृतगंधिता का कारण समझाना और उसे रोकने के उपाय बताना।"
+    }
+   ]
+  }
+ ]
+}

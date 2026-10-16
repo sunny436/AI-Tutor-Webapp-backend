@@ -1,0 +1,132 @@
+{
+ "chapter_id": "JESC1-CH10",
+ "title": "The Human Eye and the Colourful World",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESC1-CH10-T1",
+   "topic_number": 1,
+   "title": "The human eye: structure and image formation",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "eye-structure-and-parts",
+     "learning_objective": "Identify the parts of the human eye (cornea, iris, pupil, lens, retina) and state the function of each."
+    },
+    {
+     "concept_tag": "image-formation-on-retina",
+     "learning_objective": "Describe how a real, inverted image formed on the retina is converted into signals that the brain interprets."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH10-T2",
+   "topic_number": 2,
+   "title": "Power of accommodation",
+   "ncert_sections": "10.1.1",
+   "concepts": [
+    {
+     "concept_tag": "accommodation-ciliary-muscles",
+     "learning_objective": "Explain how the ciliary muscles change the curvature and focal length of the eye lens to focus near and distant objects."
+    },
+    {
+     "concept_tag": "near-point-and-far-point",
+     "learning_objective": "State the near point and far point of a normal eye and the range of distinct vision."
+    },
+    {
+     "concept_tag": "cataract",
+     "learning_objective": "State what cataract is and how vision can be restored."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH10-T3",
+   "topic_number": 3,
+   "title": "Defects of vision and their correction",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "myopia-and-its-correction",
+     "learning_objective": "Explain the causes of myopia and calculate the power of the concave lens that corrects it."
+    },
+    {
+     "concept_tag": "hypermetropia-and-its-correction",
+     "learning_objective": "Explain the causes of hypermetropia and calculate the power of the convex lens that corrects it."
+    },
+    {
+     "concept_tag": "presbyopia-and-bifocal-lenses",
+     "learning_objective": "Explain presbyopia and the use of bi-focal lenses for people with both near and distant vision defects."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH10-T4",
+   "topic_number": 4,
+   "title": "Refraction of light through a prism",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "refraction-path-in-prism",
+     "learning_objective": "Trace the incident, refracted and emergent rays through a triangular glass prism and the bending at each face."
+    },
+    {
+     "concept_tag": "angle-of-deviation",
+     "learning_objective": "Define the angle of the prism and the angle of deviation, and contrast a prism with a glass slab."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH10-T5",
+   "topic_number": 5,
+   "title": "Dispersion of white light and the rainbow",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "dispersion-and-spectrum",
+     "learning_objective": "Define dispersion and explain why different colours of white light bend through different angles in a prism."
+    },
+    {
+     "concept_tag": "recombination-of-spectrum",
+     "learning_objective": "Interpret Newton's experiment with two prisms as evidence that white light is made of seven colours."
+    },
+    {
+     "concept_tag": "rainbow-formation",
+     "learning_objective": "Explain how raindrops refract, disperse and internally reflect sunlight to form a rainbow opposite the Sun."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH10-T6",
+   "topic_number": 6,
+   "title": "Atmospheric refraction",
+   "ncert_sections": "10.5",
+   "concepts": [
+    {
+     "concept_tag": "twinkling-of-stars",
+     "learning_objective": "Explain why stars twinkle and planets do not, using atmospheric refraction."
+    },
+    {
+     "concept_tag": "advance-sunrise-delayed-sunset",
+     "learning_objective": "Explain advance sunrise, delayed sunset and the wavering of objects seen through hot air."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH10-T7",
+   "topic_number": 7,
+   "title": "Scattering of light",
+   "ncert_sections": "10.6, 10.6.1, 10.6.2",
+   "concepts": [
+    {
+     "concept_tag": "tyndall-effect",
+     "learning_objective": "Explain the Tyndall effect as scattering of light by colloidal particles and relate scattered colour to particle size."
+    },
+    {
+     "concept_tag": "blue-sky-and-red-signals",
+     "learning_objective": "Explain the blue colour of the sky, the dark sky at high altitudes and the use of red danger signals."
+    }
+   ]
+  }
+ ]
+}

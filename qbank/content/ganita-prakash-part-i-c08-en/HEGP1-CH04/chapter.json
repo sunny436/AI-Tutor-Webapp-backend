@@ -1,0 +1,128 @@
+{
+ "chapter_id": "HEGP1-CH04",
+ "title": "Quadrilaterals",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP1-CH04-T1",
+   "topic_number": 1,
+   "title": "Rectangles and the Carpenter's Problem",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "rectangle-definition",
+     "learning_objective": "Define a rectangle as a quadrilateral whose angles are all 90 degrees and recognise equivalent definitions."
+    },
+    {
+     "concept_tag": "rectangle-diagonal-properties",
+     "learning_objective": "Use congruence to show that the diagonals of a rectangle are equal and bisect each other, and apply this to find lengths and angles."
+    },
+    {
+     "concept_tag": "deduction-versus-conjecture",
+     "learning_objective": "Distinguish a conjecture formed from measurement from a property justified by geometric deduction."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH04-T2",
+   "topic_number": 2,
+   "title": "Squares: A Special Rectangle",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "square-definition-and-hierarchy",
+     "learning_objective": "Define a square and explain why every square is a rectangle but not every rectangle is a square."
+    },
+    {
+     "concept_tag": "square-diagonal-properties",
+     "learning_objective": "Use the facts that the diagonals of a square are equal, bisect each other at 90 degrees and bisect its angles."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH04-T3",
+   "topic_number": 3,
+   "title": "Angles in a Quadrilateral",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "quadrilateral-angle-sum",
+     "learning_objective": "Apply the result that the angles of any quadrilateral add up to 360 degrees."
+    },
+    {
+     "concept_tag": "angle-sum-justification",
+     "learning_objective": "Justify the angle sum of a quadrilateral by dividing it into two triangles with a diagonal."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH04-T4",
+   "topic_number": 4,
+   "title": "Parallelograms",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "parallelogram-definition-and-angles",
+     "learning_objective": "Define a parallelogram and deduce that its adjacent angles are supplementary and its opposite angles are equal."
+    },
+    {
+     "concept_tag": "parallelogram-sides-and-diagonals",
+     "learning_objective": "Use the facts that the opposite sides of a parallelogram are equal and its diagonals bisect each other."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH04-T5",
+   "topic_number": 5,
+   "title": "Rhombus: Quadrilaterals with Equal Sidelengths",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "rhombus-definition-and-angles",
+     "learning_objective": "Define a rhombus and find its angles using the facts that it is a parallelogram whose diagonals bisect its angles."
+    },
+    {
+     "concept_tag": "rhombus-diagonals",
+     "learning_objective": "Use the facts that the diagonals of a rhombus bisect each other at right angles and bisect its angles."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH04-T6",
+   "topic_number": 6,
+   "title": "Playing with Quadrilaterals",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "quadrilateral-from-diagonals",
+     "learning_objective": "Identify the quadrilateral formed when diagonals with given lengths and angle are placed so their ends can be joined."
+    },
+    {
+     "concept_tag": "joining-triangles",
+     "learning_objective": "Identify and justify the quadrilaterals formed by joining two congruent triangles along a common side."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH04-T7",
+   "topic_number": 7,
+   "title": "Kite and Trapezium",
+   "ncert_sections": "4.6",
+   "concepts": [
+    {
+     "concept_tag": "kite-properties",
+     "learning_objective": "Define a kite and use the fact that one diagonal of a kite is the perpendicular bisector of the other."
+    },
+    {
+     "concept_tag": "trapezium-properties",
+     "learning_objective": "Define a trapezium and an isosceles trapezium and find unknown angles using parallel sides."
+    },
+    {
+     "concept_tag": "quadrilateral-classification",
+     "learning_objective": "Relate rectangles, squares, parallelograms, rhombuses, kites and trapeziums using set relationships."
+    }
+   ]
+  }
+ ]
+}

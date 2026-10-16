@@ -1,0 +1,144 @@
+{
+ "chapter_id": "GHES2-CH01",
+ "title": "भारत में कृषि की यात्रा",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHES2-CH01-T1",
+   "topic_number": 1,
+   "title": "भारत का कृषि परिदृश्य",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "krishi-ka-arth-aur-kshetra",
+     "learning_objective": "विद्यार्थी कृषि का अर्थ और उसमें सम्मिलित सहायक गतिविधियों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "krishi-ka-arthik-mahatva",
+     "learning_objective": "विद्यार्थी भारत की अर्थव्यवस्था और आजीविका में कृषि के महत्व को आँकड़ों के आधार पर समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH01-T2",
+   "topic_number": 2,
+   "title": "अतीत की गूँज: भारतीय कृषि का इतिहास",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "pragaitihasik-krishi",
+     "learning_objective": "विद्यार्थी प्रागैतिहासिक और हड़प्पा काल की फसलों तथा कृषि प्रथाओं को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "prachin-krishi-granth",
+     "learning_objective": "विद्यार्थी कृषि से संबंधित प्राचीन ग्रंथों और उनमें वर्णित विधियों को बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH01-T3",
+   "topic_number": 3,
+   "title": "जलवायु, ऋतुएँ तथा फसलें",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "krishi-jalvayu-kshetra",
+     "learning_objective": "विद्यार्थी भारत की जलवायु विविधता और कृषि जलवायु क्षेत्रों का उद्देश्य समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "mansoon-aur-krishi",
+     "learning_objective": "विद्यार्थी दोनों मानसूनों का भारत के विभिन्न क्षेत्रों की खेती पर प्रभाव स्पष्ट कर सकेंगे।"
+    },
+    {
+     "concept_tag": "kharif-rabi-zayad",
+     "learning_objective": "विद्यार्थी खरीफ, रबी और जायद फसलों को उनकी ऋतु और उदाहरणों सहित वर्गीकृत कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH01-T4",
+   "topic_number": 4,
+   "title": "मृदा: निर्माण और प्रकार",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "mrida-nirman",
+     "learning_objective": "विद्यार्थी आधार शैल, अपक्षय और ह्यूमस की सहायता से मृदा निर्माण की प्रक्रिया समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "mrida-ke-prakar",
+     "learning_objective": "विद्यार्थी भारत की छह प्रमुख मृदाओं की विशेषताएँ और उनसे जुड़ी फसलें पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH01-T5",
+   "topic_number": 5,
+   "title": "मृदा की देखभाल",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "paramparik-mrida-sanrakshan",
+     "learning_objective": "विद्यार्थी फसल चक्र, बहुफसली पद्धति और समोच्च जुताई जैसी पारंपरिक विधियों के लाभ बता सकेंगे।"
+    },
+    {
+     "concept_tag": "adhunik-mrida-sanrakshan",
+     "learning_objective": "विद्यार्थी सीढ़ीदार खेती, वनीकरण और मल्चिंग जैसी विधियों से मृदा संरक्षण समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH01-T6",
+   "topic_number": 6,
+   "title": "जल: वर्षा-आधारित और सिंचित कृषि",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "varsha-adharit-krishi",
+     "learning_objective": "विद्यार्थी वर्षा-आधारित कृषि का अर्थ और उसकी कठिनाइयों से निपटने के उपाय बता सकेंगे।"
+    },
+    {
+     "concept_tag": "sinchai-pranaliyan",
+     "learning_objective": "विद्यार्थी पारंपरिक और आधुनिक सिंचाई प्रणालियों में अंतर स्पष्ट कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH01-T7",
+   "topic_number": 7,
+   "title": "बीज तथा कृषि पद्धतियाँ",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "beej-sanrakshan",
+     "learning_objective": "विद्यार्थी बीजों के पारंपरिक संरक्षण, उपचार और कंपनियों पर निर्भरता के प्रश्न को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "paramparik-krishi-pranali",
+     "learning_objective": "विद्यार्थी कुलागर और गोकृषि जैसी पारंपरिक कृषि प्रणालियों की विशेषताएँ बता सकेंगे।"
+    },
+    {
+     "concept_tag": "harit-kranti-aur-sandharniya-krishi",
+     "learning_objective": "विद्यार्थी हरित क्रांति के लाभ-हानि का मूल्यांकन कर संधारणीय कृषि की आवश्यकता समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH01-T8",
+   "topic_number": 8,
+   "title": "सरकार की भूमिका और कृषकों की चुनौतियाँ",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "sarkar-ki-bhumika",
+     "learning_objective": "विद्यार्थी कृषकों की सहायता हेतु सरकार द्वारा किए गए उपायों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "krishakon-ki-chunautiyan",
+     "learning_objective": "विद्यार्थी छोटी भू-जोत, जलवायु परिवर्तन और ऋण जैसी चुनौतियों का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

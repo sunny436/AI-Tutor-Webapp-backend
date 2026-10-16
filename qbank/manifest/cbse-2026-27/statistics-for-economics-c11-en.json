@@ -1,0 +1,1077 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "statistics-for-economics-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "economics",
+  "language": "english",
+  "title": "Statistics for Economics",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kest1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEST1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Introduction",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kest101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEST1-CH01-T1",
+     "topic_number": 1,
+     "title": "Why Economics? Economic activities and economic agents",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "economic-activity",
+       "learning_objective": "Identify economic activities as those undertaken for monetary gain, the 'ordinary business of life'."
+      },
+      {
+       "concept_tag": "economic-agents",
+       "learning_objective": "Distinguish consumer, seller, producer, employee and employer by the role a person plays."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH01-T2",
+     "topic_number": 2,
+     "title": "Scarcity, alternative uses and the problem of choice",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "scarcity",
+       "learning_objective": "Explain scarcity of resources relative to unlimited wants as the root of all economic problems."
+      },
+      {
+       "concept_tag": "alternative-uses-and-choice",
+       "learning_objective": "Explain how alternative uses of limited resources give rise to the problem of choice."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH01-T3",
+     "topic_number": 3,
+     "title": "Consumption, production, distribution and the scope of economics",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "consumption-production-distribution",
+       "learning_objective": "Classify an economic question as a study of consumption, production or distribution."
+      },
+      {
+       "concept_tag": "scope-of-modern-economics",
+       "learning_objective": "Explain why modern economics includes special studies such as poverty and disparity, which need statistics."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH01-T4",
+     "topic_number": 4,
+     "title": "Statistics in economics: data, analysis and policies",
+     "ncert_sections": "2",
+     "concepts": [
+      {
+       "concept_tag": "economic-data",
+       "learning_objective": "Recognise economic facts as economic data needed to analyse economic problems."
+      },
+      {
+       "concept_tag": "analysis-and-policy",
+       "learning_objective": "Relate the analysis of causes of an economic problem to the formulation of policies."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH01-T5",
+     "topic_number": 5,
+     "title": "What is statistics? Quantitative and qualitative data",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-statistics",
+       "learning_objective": "State the meaning of statistics and the stages of a statistical study."
+      },
+      {
+       "concept_tag": "quantitative-qualitative-data",
+       "learning_objective": "Distinguish quantitative data from qualitative data (attributes)."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH01-T6",
+     "topic_number": 6,
+     "title": "What statistics does: functions and limits",
+     "ncert_sections": "4, 5",
+     "concepts": [
+      {
+       "concept_tag": "functions-of-statistics",
+       "learning_objective": "Explain how statistics makes facts precise and condenses mass data into summary measures."
+      },
+      {
+       "concept_tag": "relationships-and-prediction",
+       "learning_objective": "Explain the use of statistics in finding economic relationships, predicting trends and framing policy."
+      },
+      {
+       "concept_tag": "statistics-and-common-sense",
+       "learning_objective": "Evaluate the misuse of statistical measures and why they are no substitute for common sense."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEST1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Collection of Data",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kest102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEST1-CH02-T1",
+     "topic_number": 1,
+     "title": "Data, variables and observations",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "data-and-variables",
+       "learning_objective": "Explain what a variable, an observation and data are, using the example of food grain production."
+      },
+      {
+       "concept_tag": "purpose-of-data-collection",
+       "learning_objective": "State the purpose of collecting data in economics."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH02-T2",
+     "topic_number": 2,
+     "title": "Sources of data: primary and secondary",
+     "ncert_sections": "2",
+     "concepts": [
+      {
+       "concept_tag": "primary-data",
+       "learning_objective": "Identify primary data as first-hand information collected by the investigator through an enquiry."
+      },
+      {
+       "concept_tag": "secondary-data",
+       "learning_objective": "Identify secondary data as data collected and processed by another agency and state its advantages."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH02-T3",
+     "topic_number": 3,
+     "title": "Preparing the questionnaire",
+     "ncert_sections": "3 (Preparation of Instrument)",
+     "concepts": [
+      {
+       "concept_tag": "questionnaire-design-rules",
+       "learning_objective": "Apply the rules for framing good questions: brief, clear, general to specific, no leading or double-negative questions."
+      },
+      {
+       "concept_tag": "open-and-closed-questions",
+       "learning_objective": "Distinguish open-ended questions from closed-ended two-way and multiple-choice questions, with their merits and limits."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH02-T4",
+     "topic_number": 4,
+     "title": "Modes of data collection and pilot survey",
+     "ncert_sections": "3 (Mode of Data Collection, Pilot Survey)",
+     "concepts": [
+      {
+       "concept_tag": "modes-of-survey",
+       "learning_objective": "Compare personal interviews, mailed questionnaires and telephone interviews by their merits and demerits."
+      },
+      {
+       "concept_tag": "pilot-survey",
+       "learning_objective": "Explain the purpose of a pilot survey (pre-testing of the questionnaire)."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH02-T5",
+     "topic_number": 5,
+     "title": "Census and sample surveys",
+     "ncert_sections": "4 (Census, Population and Sample)",
+     "concepts": [
+      {
+       "concept_tag": "census-method",
+       "learning_objective": "Describe the census or complete enumeration method and the Indian Census."
+      },
+      {
+       "concept_tag": "population-and-sample",
+       "learning_objective": "Identify the population and a representative sample for a given study and state why sample surveys are preferred."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH02-T6",
+     "topic_number": 6,
+     "title": "Random and non-random sampling",
+     "ncert_sections": "4 (Random Sampling, Non-Random Sampling)",
+     "concepts": [
+      {
+       "concept_tag": "random-sampling",
+       "learning_objective": "Explain random sampling, the lottery method and random number tables."
+      },
+      {
+       "concept_tag": "non-random-sampling",
+       "learning_objective": "Explain non-random sampling based on judgement, purpose, convenience or quota."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH02-T7",
+     "topic_number": 7,
+     "title": "Sampling and non-sampling errors",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "sampling-error",
+       "learning_objective": "Calculate the sampling error as the difference between a population parameter and its sample estimate."
+      },
+      {
+       "concept_tag": "non-sampling-errors",
+       "learning_objective": "Identify non-sampling errors (sampling bias, non-response, errors in data acquisition) and explain why they are more serious."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH02-T8",
+     "topic_number": 8,
+     "title": "Census of India and NSSO",
+     "ncert_sections": "6, 7",
+     "concepts": [
+      {
+       "concept_tag": "census-of-india",
+       "learning_objective": "State the main facts about the Census of India as a source of demographic data."
+      },
+      {
+       "concept_tag": "nss-surveys",
+       "learning_objective": "Describe the role of the National Sample Survey and its publication Sarvekshana."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEST1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Organisation of Data",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kest103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEST1-CH03-T1",
+     "topic_number": 1,
+     "title": "Raw data and the need for classification",
+     "ncert_sections": "1, 2",
+     "concepts": [
+      {
+       "concept_tag": "raw-data",
+       "learning_objective": "Recognise raw data and explain why large raw data are difficult to analyse."
+      },
+      {
+       "concept_tag": "purpose-of-classification",
+       "learning_objective": "Explain classification as grouping things on the basis of some criteria and state its advantages."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH03-T2",
+     "topic_number": 2,
+     "title": "Types of classification",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "chronological-spatial-classification",
+       "learning_objective": "Distinguish chronological (time-based) and spatial (location-based) classification of data."
+      },
+      {
+       "concept_tag": "qualitative-classification",
+       "learning_objective": "Classify data on attributes on the basis of the presence or absence of a quality."
+      },
+      {
+       "concept_tag": "quantitative-classification",
+       "learning_objective": "Identify quantitative classification of measurable characteristics into classes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH03-T3",
+     "topic_number": 3,
+     "title": "Continuous and discrete variables",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "continuous-variable",
+       "learning_objective": "Identify a continuous variable as one that can take any value, including fractions, within a range."
+      },
+      {
+       "concept_tag": "discrete-variable",
+       "learning_objective": "Identify a discrete variable as one that changes only by finite jumps, even when its values are fractions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH03-T4",
+     "topic_number": 4,
+     "title": "Frequency distribution: class limits, class interval and class mark",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "class-limits-interval",
+       "learning_objective": "Identify lower and upper class limits and compute the class interval of a class."
+      },
+      {
+       "concept_tag": "class-mark",
+       "learning_objective": "Calculate the class mark of a class and use class marks to draw a frequency curve."
+      },
+      {
+       "concept_tag": "class-frequency",
+       "learning_objective": "Interpret class frequencies and relative frequencies in a frequency distribution."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH03-T5",
+     "topic_number": 5,
+     "title": "Number and size of classes; equal and unequal intervals",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "number-of-classes",
+       "learning_objective": "Compute the range and relate it to the number of classes and the size of the class interval."
+      },
+      {
+       "concept_tag": "unequal-class-intervals",
+       "learning_objective": "Explain the situations in which unequal class intervals are preferred."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH03-T6",
+     "topic_number": 6,
+     "title": "Class limits: inclusive and exclusive methods and adjustment",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "inclusive-exclusive",
+       "learning_objective": "Distinguish inclusive and exclusive class intervals and place values that equal a class limit."
+      },
+      {
+       "concept_tag": "class-adjustment",
+       "learning_objective": "Adjust inclusive class limits to restore continuity and find adjusted limits and class marks."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH03-T7",
+     "topic_number": 7,
+     "title": "Tally marking, loss of information, unequal classes and frequency array",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "tally-marking",
+       "learning_objective": "Use tally marks, grouped in fives, to find class frequencies."
+      },
+      {
+       "concept_tag": "loss-of-information",
+       "learning_objective": "Explain the loss of information in grouped data and why unequal classes can make class marks more representative."
+      },
+      {
+       "concept_tag": "frequency-array",
+       "learning_objective": "Prepare and interpret a frequency array for a discrete variable."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH03-T8",
+     "topic_number": 8,
+     "title": "Bivariate frequency distribution",
+     "ncert_sections": "6",
+     "concepts": [
+      {
+       "concept_tag": "bivariate-distribution",
+       "learning_objective": "Define a bivariate frequency distribution and read the frequency in a cell of a bivariate table."
+      },
+      {
+       "concept_tag": "univariate-vs-bivariate",
+       "learning_objective": "Distinguish univariate from bivariate data and interpret row and column totals."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEST1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Presentation of Data",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kest104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEST1-CH04-T1",
+     "topic_number": 1,
+     "title": "Forms of Presentation and Textual Presentation",
+     "ncert_sections": "1, 2",
+     "concepts": [
+      {
+       "concept_tag": "forms-of-presentation",
+       "learning_objective": "Name the three forms of presenting data: textual, tabular and diagrammatic."
+      },
+      {
+       "concept_tag": "textual-presentation",
+       "learning_objective": "Explain when textual presentation is suitable and state its main drawback."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH04-T2",
+     "topic_number": 2,
+     "title": "Tabular Presentation and Classification",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "tabular-presentation",
+       "learning_objective": "Describe how a table arranges data in rows, columns and cells."
+      },
+      {
+       "concept_tag": "kinds-of-classification",
+       "learning_objective": "Distinguish qualitative, quantitative, temporal and spatial classification of data."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH04-T3",
+     "topic_number": 3,
+     "title": "Parts of a Statistical Table",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "parts-of-table",
+       "learning_objective": "Identify the table number, title, captions, stubs, body, unit, source and note of a table."
+      },
+      {
+       "concept_tag": "reading-a-table",
+       "learning_objective": "Locate and interpret a figure in the body of a table from its row and column."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH04-T4",
+     "topic_number": 4,
+     "title": "Bar Diagrams",
+     "ncert_sections": "5 (Geometric diagram: bar diagram)",
+     "concepts": [
+      {
+       "concept_tag": "simple-bar-diagram",
+       "learning_objective": "Describe the construction and use of a simple bar diagram."
+      },
+      {
+       "concept_tag": "multiple-component-bar",
+       "learning_objective": "Choose between multiple and component bar diagrams for a given comparison."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH04-T5",
+     "topic_number": 5,
+     "title": "Pie Diagram",
+     "ncert_sections": "5 (Geometric diagram: pie diagram)",
+     "concepts": [
+      {
+       "concept_tag": "pie-diagram-angles",
+       "learning_objective": "Convert component percentages into angles at the centre by multiplying by 3.6 degrees."
+      },
+      {
+       "concept_tag": "pie-diagram-use",
+       "learning_objective": "Explain when a pie diagram is appropriate and how it relates to a component bar diagram."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH04-T6",
+     "topic_number": 6,
+     "title": "Histogram, Frequency Polygon and Frequency Curve",
+     "ncert_sections": "5 (Frequency diagram)",
+     "concepts": [
+      {
+       "concept_tag": "histogram",
+       "learning_objective": "Construct a histogram, using frequency density for unequal class intervals, and read the mode from it."
+      },
+      {
+       "concept_tag": "histogram-vs-bar",
+       "learning_objective": "Distinguish a histogram from a bar diagram."
+      },
+      {
+       "concept_tag": "frequency-polygon-curve",
+       "learning_objective": "Describe how a frequency polygon and a frequency curve are drawn and used."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH04-T7",
+     "topic_number": 7,
+     "title": "Ogives and Arithmetic Line Graph",
+     "ncert_sections": "5 (Ogive; Arithmetic line graph)",
+     "concepts": [
+      {
+       "concept_tag": "ogive",
+       "learning_objective": "Draw less than and more than ogives and locate the median at their intersection."
+      },
+      {
+       "concept_tag": "arithmetic-line-graph",
+       "learning_objective": "Use an arithmetic line graph to study trend in time series data."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEST1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Measures of Central Tendency",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kest105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEST1-CH05-T1",
+     "topic_number": 1,
+     "title": "Need for averages and types of central tendency",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "summarising-data-single-value",
+       "learning_objective": "Explain why a large data set is summarised by a single representative value."
+      },
+      {
+       "concept_tag": "types-of-averages",
+       "learning_objective": "Identify the arithmetic mean, median and mode as the common averages and what each conveys."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH05-T2",
+     "topic_number": 2,
+     "title": "Arithmetic mean of ungrouped data",
+     "ncert_sections": "2",
+     "concepts": [
+      {
+       "concept_tag": "am-direct-method",
+       "learning_objective": "Compute the arithmetic mean of individual observations by the direct method."
+      },
+      {
+       "concept_tag": "assumed-mean-method",
+       "learning_objective": "Compute the mean using the assumed mean and step deviation methods."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH05-T3",
+     "topic_number": 3,
+     "title": "Arithmetic mean of grouped data, its properties and weighted mean",
+     "ncert_sections": "2",
+     "concepts": [
+      {
+       "concept_tag": "am-grouped-data",
+       "learning_objective": "Compute the mean of discrete and continuous series using frequencies and mid-points."
+      },
+      {
+       "concept_tag": "properties-of-mean",
+       "learning_objective": "State that deviations from the mean sum to zero and that the mean is affected by extreme values."
+      },
+      {
+       "concept_tag": "weighted-arithmetic-mean",
+       "learning_objective": "Compute a weighted arithmetic mean when items differ in importance."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH05-T4",
+     "topic_number": 4,
+     "title": "Median",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "median-individual-discrete",
+       "learning_objective": "Locate the median of individual and discrete series using the (N+1)/2th item."
+      },
+      {
+       "concept_tag": "median-continuous-series",
+       "learning_objective": "Compute the median of a continuous series using the median class formula."
+      },
+      {
+       "concept_tag": "median-and-extreme-values",
+       "learning_objective": "Evaluate why the median is not affected by extreme values."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH05-T5",
+     "topic_number": 5,
+     "title": "Quartiles and percentiles",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "quartiles",
+       "learning_objective": "Define and compute the lower and upper quartiles of a series."
+      },
+      {
+       "concept_tag": "percentiles",
+       "learning_objective": "Interpret percentiles and relate P50 to the median."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH05-T6",
+     "topic_number": 6,
+     "title": "Mode",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "mode-discrete-series",
+       "learning_objective": "Identify the mode of a discrete series and recognise unimodal and bimodal data."
+      },
+      {
+       "concept_tag": "mode-continuous-series",
+       "learning_objective": "Compute the mode of a continuous series using the modal class formula."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH05-T7",
+     "topic_number": 7,
+     "title": "Relative position of mean, median and mode and choice of average",
+     "ncert_sections": "6, 7",
+     "concepts": [
+      {
+       "concept_tag": "relative-position-averages",
+       "learning_objective": "State that the median lies between the mean and the mode."
+      },
+      {
+       "concept_tag": "choosing-appropriate-average",
+       "learning_objective": "Select the most appropriate average for a given purpose and distribution."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEST1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Correlation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kest106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEST1-CH06-T1",
+     "topic_number": 1,
+     "title": "Meaning of correlation and types of relationship",
+     "ncert_sections": "1, 2",
+     "concepts": [
+      {
+       "concept_tag": "correlation-not-causation",
+       "learning_objective": "Explain that correlation measures covariation between two variables and does not by itself imply cause and effect."
+      },
+      {
+       "concept_tag": "third-variable-and-coincidence",
+       "learning_objective": "Identify relationships that arise from pure coincidence or from the influence of a third variable."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH06-T2",
+     "topic_number": 2,
+     "title": "Positive and negative correlation",
+     "ncert_sections": "2 (Types of Correlation)",
+     "concepts": [
+      {
+       "concept_tag": "positive-negative-correlation",
+       "learning_objective": "Classify a relationship between two variables as positive or negative correlation from the direction of their movement."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH06-T3",
+     "topic_number": 3,
+     "title": "Scatter diagram",
+     "ncert_sections": "3 (Scatter Diagram)",
+     "concepts": [
+      {
+       "concept_tag": "scatter-diagram-reading",
+       "learning_objective": "Interpret the direction and closeness of points in a scatter diagram."
+      },
+      {
+       "concept_tag": "perfect-and-no-correlation",
+       "learning_objective": "Recognise perfect positive, perfect negative, no correlation and non-linear patterns in scatter diagrams."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH06-T4",
+     "topic_number": 4,
+     "title": "Karl Pearson's coefficient of correlation",
+     "ncert_sections": "3 (Karl Pearson's Coefficient of Correlation)",
+     "concepts": [
+      {
+       "concept_tag": "covariance-and-r",
+       "learning_objective": "Relate the covariance and standard deviations of X and Y to the coefficient of correlation r."
+      },
+      {
+       "concept_tag": "pearson-r-calculation",
+       "learning_objective": "Calculate Karl Pearson's coefficient of correlation from deviations about the mean."
+      },
+      {
+       "concept_tag": "linearity-requirement",
+       "learning_objective": "Explain why Karl Pearson's r should be used only for a linear relationship."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH06-T5",
+     "topic_number": 5,
+     "title": "Properties and interpretation of r",
+     "ncert_sections": "3 (Properties of Correlation Coefficient)",
+     "concepts": [
+      {
+       "concept_tag": "range-and-unit-of-r",
+       "learning_objective": "State that r is a pure number lying between -1 and +1."
+      },
+      {
+       "concept_tag": "interpreting-r-values",
+       "learning_objective": "Interpret the sign and magnitude of r, including the values 1, -1 and 0."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH06-T6",
+     "topic_number": 6,
+     "title": "Step deviation method",
+     "ncert_sections": "3 (Step deviation method)",
+     "concepts": [
+      {
+       "concept_tag": "origin-scale-independence",
+       "learning_objective": "Apply the property that r is independent of change of origin and scale."
+      },
+      {
+       "concept_tag": "step-deviation-calculation",
+       "learning_objective": "Calculate r using transformed variables U and V in the step deviation method."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH06-T7",
+     "topic_number": 7,
+     "title": "Spearman's rank correlation",
+     "ncert_sections": "3 (Spearman's rank correlation), 4",
+     "concepts": [
+      {
+       "concept_tag": "uses-of-rank-correlation",
+       "learning_objective": "Identify situations in which Spearman's rank correlation is preferred to Karl Pearson's coefficient."
+      },
+      {
+       "concept_tag": "rank-correlation-calculation",
+       "learning_objective": "Calculate the rank correlation coefficient when ranks are given or worked out from data."
+      },
+      {
+       "concept_tag": "repeated-ranks-correction",
+       "learning_objective": "Assign average ranks to repeated values and apply the correction factor."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEST1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Index Numbers",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kest107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEST1-CH07-T1",
+     "topic_number": 1,
+     "title": "Meaning of an index number",
+     "ncert_sections": "1, 2",
+     "concepts": [
+      {
+       "concept_tag": "index-number-meaning",
+       "learning_objective": "Explain an index number as a statistical device measuring the average change in a group of related variables."
+      },
+      {
+       "concept_tag": "base-period",
+       "learning_objective": "Interpret index values relative to a base period whose value is set at 100."
+      },
+      {
+       "concept_tag": "price-and-quantity-index",
+       "learning_objective": "Distinguish between price index numbers and quantity index numbers."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH07-T2",
+     "topic_number": 2,
+     "title": "Construction by the aggregative method",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "simple-aggregative-index",
+       "learning_objective": "Calculate a simple aggregative price index and state its limitations."
+      },
+      {
+       "concept_tag": "laspeyres-index",
+       "learning_objective": "Calculate and interpret Laspeyre's price index using base-period quantity weights."
+      },
+      {
+       "concept_tag": "paasche-index",
+       "learning_objective": "Calculate and interpret Paasche's price index using current-period quantity weights."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH07-T3",
+     "topic_number": 3,
+     "title": "Construction by the method of averaging relatives",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "price-relative",
+       "learning_objective": "Compute price relatives and the simple average of price relatives."
+      },
+      {
+       "concept_tag": "weighted-price-relatives",
+       "learning_objective": "Compute a weighted index of price relatives and explain the role of weights."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH07-T4",
+     "topic_number": 4,
+     "title": "Consumer Price Index and Wholesale Price Index",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "consumer-price-index",
+       "learning_objective": "Construct and interpret a consumer price index from weights and price relatives."
+      },
+      {
+       "concept_tag": "wholesale-price-index",
+       "learning_objective": "Describe the coverage, base and uses of the Wholesale Price Index."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH07-T5",
+     "topic_number": 5,
+     "title": "Index of Industrial Production and Sensex",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "index-of-industrial-production",
+       "learning_objective": "Explain how the Index of Industrial Production weights quantity relatives and why its base is revised."
+      },
+      {
+       "concept_tag": "sensex",
+       "learning_objective": "Describe the composition, base and significance of the Sensex."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH07-T6",
+     "topic_number": 6,
+     "title": "Issues in the construction of an index number",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "purpose-and-selection-of-items",
+       "learning_objective": "Explain why the purpose of an index and a representative choice of items matter."
+      },
+      {
+       "concept_tag": "choice-of-base-year",
+       "learning_objective": "Identify the desirable properties of a base year."
+      },
+      {
+       "concept_tag": "choice-of-formula-and-data",
+       "learning_objective": "Recognise that the formula and data source must suit the question being studied."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH07-T7",
+     "topic_number": 7,
+     "title": "Index numbers in economics",
+     "ncert_sections": "6, 7",
+     "concepts": [
+      {
+       "concept_tag": "uses-of-index-numbers",
+       "learning_objective": "State the uses of CPI, WPI, IIP and Sensex in economic policy."
+      },
+      {
+       "concept_tag": "inflation-rate",
+       "learning_objective": "Calculate the rate of inflation from successive values of a price index."
+      },
+      {
+       "concept_tag": "purchasing-power-and-real-wage",
+       "learning_objective": "Calculate the purchasing power of money, real wage and the salary needed to maintain living standards."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEST1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Use of Statistical Tools",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kest108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEST1-CH08-T1",
+     "topic_number": 1,
+     "title": "Introduction: identifying the problem and the target group",
+     "ncert_sections": "1; Steps towards making a project (identifying a problem, choice of target group)",
+     "concepts": [
+      {
+       "concept_tag": "identifying-the-problem",
+       "learning_objective": "Explain why a project must begin with a clearly identified problem or area of study."
+      },
+      {
+       "concept_tag": "choice-of-target-group",
+       "learning_objective": "Choose a suitable target group for a project and explain its role in framing questions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH08-T2",
+     "topic_number": 2,
+     "title": "Collection of data for a project",
+     "ncert_sections": "Steps towards making a project (collection of data)",
+     "concepts": [
+      {
+       "concept_tag": "primary-or-secondary-data",
+       "learning_objective": "Decide, from the objective of the survey, whether primary data, secondary data or both are needed."
+      },
+      {
+       "concept_tag": "questionnaire-and-sampling",
+       "learning_objective": "State the requirements of a postal questionnaire and of a suitable sampling method."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH08-T3",
+     "topic_number": 3,
+     "title": "Organisation, analysis, conclusion and bibliography",
+     "ncert_sections": "Steps towards making a project (organisation and presentation, analysis and interpretation, conclusion, bibliography)",
+     "concepts": [
+      {
+       "concept_tag": "organisation-and-presentation",
+       "learning_objective": "Identify tabulation and diagrams as the tools for organising and presenting collected data."
+      },
+      {
+       "concept_tag": "statistical-analysis-tools",
+       "learning_objective": "Select the measure of central tendency, dispersion or correlation suited to a given analytical need."
+      },
+      {
+       "concept_tag": "conclusion-and-bibliography",
+       "learning_objective": "Describe the role of the conclusion and the bibliography in a project report."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH08-T4",
+     "topic_number": 4,
+     "title": "Suggested list of projects",
+     "ncert_sections": "2",
+     "concepts": [
+      {
+       "concept_tag": "choosing-a-project-topic",
+       "learning_objective": "Recognise that a project may take up any topic dealing with an economic issue."
+      },
+      {
+       "concept_tag": "planning-data-for-a-project",
+       "learning_objective": "Identify the data needed for a suggested project such as a savings survey or a loan proposal."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH08-T5",
+     "topic_number": 5,
+     "title": "Sample project: information needs and the questionnaire",
+     "ncert_sections": "3 (sample project, example of questionnaire)",
+     "concepts": [
+      {
+       "concept_tag": "information-requirements",
+       "learning_objective": "List the information the toothpaste project needs and relate it to the study's objective."
+      },
+      {
+       "concept_tag": "questionnaire-design",
+       "learning_objective": "Explain how the questionnaire is designed to generate the required information."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEST1-CH08-T6",
+     "topic_number": 6,
+     "title": "Sample project: data analysis, interpretation and concluding note",
+     "ncert_sections": "3 (data analysis and interpretation, simplified project report)",
+     "concepts": [
+      {
+       "concept_tag": "step-deviation-mean-and-sd",
+       "learning_objective": "Calculate the mean and standard deviation of a grouped distribution by the step-deviation method."
+      },
+      {
+       "concept_tag": "interpreting-observations",
+       "learning_objective": "Interpret the tables of the sample report to draw observations."
+      },
+      {
+       "concept_tag": "concluding-note",
+       "learning_objective": "Summarise the main findings stated in the concluding note of the sample report."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

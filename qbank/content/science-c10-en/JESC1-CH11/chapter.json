@@ -1,0 +1,124 @@
+{
+ "chapter_id": "JESC1-CH11",
+ "title": "Electricity",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESC1-CH11-T1",
+   "topic_number": 1,
+   "title": "Electric current and circuit",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "electric-current-and-charge",
+     "learning_objective": "Define electric current as the rate of flow of charge, use I = Q/t and state the ampere and the conventional direction of current."
+    },
+    {
+     "concept_tag": "ammeter-and-closed-circuit",
+     "learning_objective": "Explain that current flows only in a closed circuit and that an ammeter is connected in series to measure it."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH11-T2",
+   "topic_number": 2,
+   "title": "Electric potential, potential difference and circuit diagrams",
+   "ncert_sections": "11.2, 11.3",
+   "concepts": [
+    {
+     "concept_tag": "potential-difference-and-volt",
+     "learning_objective": "Define potential difference as work done per unit charge, use V = W/Q and state the volt."
+    },
+    {
+     "concept_tag": "voltmeter-and-circuit-symbols",
+     "learning_objective": "Identify the voltmeter connection and the standard symbols used in circuit diagrams."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH11-T3",
+   "topic_number": 3,
+   "title": "Ohm's law",
+   "ncert_sections": "11.4",
+   "concepts": [
+    {
+     "concept_tag": "ohms-law-statement",
+     "learning_objective": "State Ohm's law and interpret the straight-line V-I graph of a metallic conductor at constant temperature."
+    },
+    {
+     "concept_tag": "resistance-and-current",
+     "learning_objective": "Use R = V/I and I = V/R to relate current to resistance and describe the role of a rheostat."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH11-T4",
+   "topic_number": 4,
+   "title": "Factors on which resistance depends; resistivity",
+   "ncert_sections": "11.5",
+   "concepts": [
+    {
+     "concept_tag": "resistance-length-area",
+     "learning_objective": "Apply R = rho l / A to predict how resistance changes with length and area of cross-section."
+    },
+    {
+     "concept_tag": "resistivity-of-materials",
+     "learning_objective": "Use resistivity to compare conductors, alloys and insulators and justify their uses."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH11-T5",
+   "topic_number": 5,
+   "title": "Resistance of a system of resistors",
+   "ncert_sections": "11.6, 11.6.1, 11.6.2",
+   "concepts": [
+    {
+     "concept_tag": "resistors-in-series",
+     "learning_objective": "Calculate equivalent resistance, current and potential differences for resistors in series."
+    },
+    {
+     "concept_tag": "resistors-in-parallel",
+     "learning_objective": "Calculate equivalent resistance and branch currents for resistors in parallel."
+    },
+    {
+     "concept_tag": "series-parallel-combinations",
+     "learning_objective": "Choose and analyse combinations of resistors to obtain a required resistance."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH11-T6",
+   "topic_number": 6,
+   "title": "Heating effect of electric current and its applications",
+   "ncert_sections": "11.7, 11.7.1",
+   "concepts": [
+    {
+     "concept_tag": "joules-law-of-heating",
+     "learning_objective": "Apply Joule's law H = I^2 R t to calculate and compare the heat produced in resistors."
+    },
+    {
+     "concept_tag": "applications-of-heating-effect",
+     "learning_objective": "Explain the working of electric bulbs, heating appliances and fuses using the heating effect."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH11-T7",
+   "topic_number": 7,
+   "title": "Electric power and commercial unit of energy",
+   "ncert_sections": "11.8",
+   "concepts": [
+    {
+     "concept_tag": "electric-power",
+     "learning_objective": "Use P = VI = I^2 R = V^2/R and the watt to calculate the power of electrical devices."
+    },
+    {
+     "concept_tag": "electrical-energy-kwh",
+     "learning_objective": "Calculate electrical energy in kW h and joules and estimate the cost of electricity used."
+    }
+   ]
+  }
+ ]
+}

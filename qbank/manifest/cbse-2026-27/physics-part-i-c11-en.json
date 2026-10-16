@@ -1,0 +1,888 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "physics-part-i-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "physics",
+  "language": "english",
+  "title": "Physics Part-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "keph1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEPH1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Units and Measurement",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH1-CH01-T1",
+     "topic_number": 1,
+     "title": "Units and the International System of Units",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "base-and-derived-units",
+       "learning_objective": "Distinguish base units from derived units and express a derived unit in SI base units."
+      },
+      {
+       "concept_tag": "si-base-units",
+       "learning_objective": "Identify the seven SI base quantities and their units."
+      },
+      {
+       "concept_tag": "plane-and-solid-angle",
+       "learning_objective": "Define plane angle and solid angle and state their units, radian and steradian."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH01-T2",
+     "topic_number": 2,
+     "title": "Significant figures",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "significant-figure-rules",
+       "learning_objective": "Apply the rules to count the significant figures in a reported measurement."
+      },
+      {
+       "concept_tag": "scientific-notation-and-order-of-magnitude",
+       "learning_objective": "Write a measurement in scientific notation and find its order of magnitude."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH01-T3",
+     "topic_number": 3,
+     "title": "Arithmetic with significant figures, rounding off and uncertainty",
+     "ncert_sections": "1.3.1, 1.3.2, 1.3.3",
+     "concepts": [
+      {
+       "concept_tag": "significant-figures-in-arithmetic",
+       "learning_objective": "Report the result of addition, subtraction, multiplication or division with the correct precision."
+      },
+      {
+       "concept_tag": "rounding-off",
+       "learning_objective": "Round off uncertain digits using the conventions given in the chapter."
+      },
+      {
+       "concept_tag": "uncertainty-in-results",
+       "learning_objective": "Estimate the uncertainty of a result calculated from measured values."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH01-T4",
+     "topic_number": 4,
+     "title": "Dimensions, dimensional formulae and dimensional equations",
+     "ncert_sections": "1.4, 1.5",
+     "concepts": [
+      {
+       "concept_tag": "dimensions-of-physical-quantities",
+       "learning_objective": "State the dimensions of a physical quantity in terms of the base quantities."
+      },
+      {
+       "concept_tag": "dimensional-formula",
+       "learning_objective": "Write and interpret the dimensional formula and dimensional equation of a quantity."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH01-T5",
+     "topic_number": 5,
+     "title": "Dimensional analysis and its applications",
+     "ncert_sections": "1.6, 1.6.1, 1.6.2",
+     "concepts": [
+      {
+       "concept_tag": "principle-of-homogeneity",
+       "learning_objective": "Use the principle of homogeneity of dimensions to check the consistency of an equation."
+      },
+      {
+       "concept_tag": "deducing-relations",
+       "learning_objective": "Deduce the relation among physical quantities by dimensional analysis."
+      },
+      {
+       "concept_tag": "limitations-of-dimensional-analysis",
+       "learning_objective": "Explain why a dimensionally consistent equation need not be correct."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPH1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Motion in a Straight Line",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH1-CH02-T1",
+     "topic_number": 1,
+     "title": "Describing motion: position, point objects and average velocity",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "point-object-and-kinematics",
+       "learning_objective": "Explain when a moving body can be treated as a point object and what kinematics studies."
+      },
+      {
+       "concept_tag": "average-speed-vs-average-velocity",
+       "learning_objective": "Distinguish average speed from average velocity and compare their magnitudes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH02-T2",
+     "topic_number": 2,
+     "title": "Instantaneous velocity and speed",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "instantaneous-velocity-as-derivative",
+       "learning_objective": "Find instantaneous velocity as the limit of average velocity, v = dx/dt."
+      },
+      {
+       "concept_tag": "slope-of-position-time-graph",
+       "learning_objective": "Interpret instantaneous velocity as the slope of the tangent to the x-t graph."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH02-T3",
+     "topic_number": 3,
+     "title": "Acceleration and velocity-time graphs",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "average-and-instantaneous-acceleration",
+       "learning_objective": "Define average and instantaneous acceleration and relate their sign to the chosen axis."
+      },
+      {
+       "concept_tag": "velocity-time-graph-interpretation",
+       "learning_objective": "Use the slope and area of a v-t graph to obtain acceleration and displacement."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH02-T4",
+     "topic_number": 4,
+     "title": "Kinematic equations for uniformly accelerated motion",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "equations-of-motion",
+       "learning_objective": "Apply v = v0 + at, x = v0t + at^2/2 and v^2 = v0^2 + 2ax with proper signs."
+      },
+      {
+       "concept_tag": "validity-of-kinematic-equations",
+       "learning_objective": "State the conditions under which the kinematic equations are valid."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH02-T5",
+     "topic_number": 5,
+     "title": "Applications: free fall, Galileo's law, stopping distance and reaction time",
+     "ncert_sections": "2.4 (Examples 2.5-2.7)",
+     "concepts": [
+      {
+       "concept_tag": "free-fall",
+       "learning_objective": "Analyse vertical motion under gravity, including the top of the path."
+      },
+      {
+       "concept_tag": "stopping-distance-and-reaction-time",
+       "learning_objective": "Use kinematics to estimate stopping distance and reaction time."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPH1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Motion in a Plane",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH1-CH03-T1",
+     "topic_number": 1,
+     "title": "Scalars and vectors",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "scalars-and-vectors",
+       "learning_objective": "Distinguish scalar quantities from vector quantities with examples."
+      },
+      {
+       "concept_tag": "position-and-displacement-vectors",
+       "learning_objective": "Describe position and displacement vectors and the equality of vectors."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH03-T2",
+     "topic_number": 2,
+     "title": "Multiplication by real numbers; addition and subtraction of vectors",
+     "ncert_sections": "3.3, 3.4",
+     "concepts": [
+      {
+       "concept_tag": "multiplication-by-real-number",
+       "learning_objective": "Explain the effect of multiplying a vector by a real number."
+      },
+      {
+       "concept_tag": "graphical-vector-addition",
+       "learning_objective": "Add and subtract vectors graphically using the triangle and parallelogram methods and identify the null vector."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH03-T3",
+     "topic_number": 3,
+     "title": "Resolution of vectors and analytical addition",
+     "ncert_sections": "3.5, 3.6",
+     "concepts": [
+      {
+       "concept_tag": "resolution-into-components",
+       "learning_objective": "Resolve a vector into rectangular components using unit vectors."
+      },
+      {
+       "concept_tag": "analytical-addition",
+       "learning_objective": "Find the magnitude and direction of a resultant analytically, including the law of cosines."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH03-T4",
+     "topic_number": 4,
+     "title": "Position, velocity and acceleration in a plane",
+     "ncert_sections": "3.7",
+     "concepts": [
+      {
+       "concept_tag": "velocity-in-a-plane",
+       "learning_objective": "Define average and instantaneous velocity in a plane and relate velocity to the tangent to the path."
+      },
+      {
+       "concept_tag": "acceleration-in-a-plane",
+       "learning_objective": "Define average and instantaneous acceleration in a plane in component form."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH03-T5",
+     "topic_number": 5,
+     "title": "Motion in a plane with constant acceleration",
+     "ncert_sections": "3.8",
+     "concepts": [
+      {
+       "concept_tag": "constant-acceleration-vector-equations",
+       "learning_objective": "Apply the vector equations of motion for constant acceleration as two independent one-dimensional motions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH03-T6",
+     "topic_number": 6,
+     "title": "Projectile motion",
+     "ncert_sections": "3.9",
+     "concepts": [
+      {
+       "concept_tag": "projectile-trajectory",
+       "learning_objective": "Show that the path of a projectile is a parabola and analyse its components of motion."
+      },
+      {
+       "concept_tag": "projectile-range-height-time",
+       "learning_objective": "Calculate time of flight, maximum height and horizontal range of a projectile."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH03-T7",
+     "topic_number": 7,
+     "title": "Uniform circular motion",
+     "ncert_sections": "3.10",
+     "concepts": [
+      {
+       "concept_tag": "centripetal-acceleration",
+       "learning_objective": "Derive and apply the expression for centripetal acceleration in uniform circular motion."
+      },
+      {
+       "concept_tag": "angular-speed-period-frequency",
+       "learning_objective": "Relate angular speed, time period, frequency and linear speed."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPH1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Laws of Motion",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH1-CH04-T1",
+     "topic_number": 1,
+     "title": "Aristotle's fallacy and the law of inertia",
+     "ncert_sections": "4.2, 4.3",
+     "concepts": [
+      {
+       "concept_tag": "aristotle-fallacy",
+       "learning_objective": "Explain why Aristotle's view that a force is needed to keep a body moving uniformly is wrong."
+      },
+      {
+       "concept_tag": "galileo-inclined-plane",
+       "learning_objective": "Interpret Galileo's inclined-plane experiments that led to the law of inertia."
+      },
+      {
+       "concept_tag": "inertia",
+       "learning_objective": "Define inertia as the resistance of a body to a change in its state of rest or uniform motion."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH04-T2",
+     "topic_number": 2,
+     "title": "Newton's first law of motion",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "first-law-statement",
+       "learning_objective": "State Newton's first law and relate zero net external force to zero acceleration."
+      },
+      {
+       "concept_tag": "first-law-applications",
+       "learning_objective": "Explain everyday and space situations using Newton's first law."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH04-T3",
+     "topic_number": 3,
+     "title": "Newton's second law of motion and impulse",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "second-law-momentum",
+       "learning_objective": "Apply F = dp/dt = ma to calculate forces and accelerations, including apparent weight."
+      },
+      {
+       "concept_tag": "impulse",
+       "learning_objective": "Relate impulse to change in momentum and explain how stretching the impact time reduces force."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH04-T4",
+     "topic_number": 4,
+     "title": "Newton's third law of motion",
+     "ncert_sections": "4.6",
+     "concepts": [
+      {
+       "concept_tag": "action-reaction-pairs",
+       "learning_objective": "Identify action-reaction pairs and recognise that they act on different bodies."
+      },
+      {
+       "concept_tag": "contact-forces-between-bodies",
+       "learning_objective": "Calculate the mutual contact force between bodies accelerated together."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH04-T5",
+     "topic_number": 5,
+     "title": "Conservation of momentum",
+     "ncert_sections": "4.7",
+     "concepts": [
+      {
+       "concept_tag": "momentum-conservation",
+       "learning_objective": "State the law of conservation of momentum for an isolated system."
+      },
+      {
+       "concept_tag": "recoil-and-collisions",
+       "learning_objective": "Apply momentum conservation to recoil, explosions and sticking collisions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH04-T6",
+     "topic_number": 6,
+     "title": "Equilibrium of a particle",
+     "ncert_sections": "4.8",
+     "concepts": [
+      {
+       "concept_tag": "concurrent-force-equilibrium",
+       "learning_objective": "Apply the condition that the vector sum of concurrent forces is zero for equilibrium."
+      },
+      {
+       "concept_tag": "resolving-forces",
+       "learning_objective": "Resolve forces into components to find unknown tensions in equilibrium."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH04-T7",
+     "topic_number": 7,
+     "title": "Common forces in mechanics: friction",
+     "ncert_sections": "4.9",
+     "concepts": [
+      {
+       "concept_tag": "static-friction",
+       "learning_objective": "Explain the self-adjusting nature of static friction and the limiting value mu_s N."
+      },
+      {
+       "concept_tag": "kinetic-and-rolling-friction",
+       "learning_objective": "Compare kinetic, static and rolling friction and use the angle of repose."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH04-T8",
+     "topic_number": 8,
+     "title": "Circular motion and solving problems in mechanics",
+     "ncert_sections": "4.10, 4.11",
+     "concepts": [
+      {
+       "concept_tag": "centripetal-force-roads",
+       "learning_objective": "Identify the force supplying centripetal force for vehicles on level and banked roads."
+      },
+      {
+       "concept_tag": "free-body-problem-solving",
+       "learning_objective": "Use free-body diagrams to solve connected-body and circular-motion problems."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPH1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Work, Energy and Power",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH1-CH05-T1",
+     "topic_number": 1,
+     "title": "Scalar product and work",
+     "ncert_sections": "5.1, 5.2, 5.3",
+     "concepts": [
+      {
+       "concept_tag": "scalar-product",
+       "learning_objective": "Compute the scalar product of two vectors and use it to find the angle between them."
+      },
+      {
+       "concept_tag": "work-by-constant-force",
+       "learning_objective": "Calculate the work done by a constant force as W = F.d and interpret its sign."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH05-T2",
+     "topic_number": 2,
+     "title": "Kinetic energy, work by a variable force and the work-energy theorem",
+     "ncert_sections": "5.4, 5.5, 5.6",
+     "concepts": [
+      {
+       "concept_tag": "kinetic-energy",
+       "learning_objective": "Relate kinetic energy to mass, speed and linear momentum."
+      },
+      {
+       "concept_tag": "work-by-variable-force",
+       "learning_objective": "Find the work done by a variable force as the area under the force-displacement graph."
+      },
+      {
+       "concept_tag": "work-energy-theorem",
+       "learning_objective": "Apply the work-energy theorem: the change in kinetic energy equals the work done by the net force."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH05-T3",
+     "topic_number": 3,
+     "title": "Potential energy and conservation of mechanical energy",
+     "ncert_sections": "5.7, 5.8",
+     "concepts": [
+      {
+       "concept_tag": "conservative-force-potential-energy",
+       "learning_objective": "Distinguish conservative and non-conservative forces and relate force to potential energy."
+      },
+      {
+       "concept_tag": "conservation-of-mechanical-energy",
+       "learning_objective": "Apply conservation of mechanical energy to falling bodies and a pendulum in a vertical circle."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH05-T4",
+     "topic_number": 4,
+     "title": "The potential energy of a spring",
+     "ncert_sections": "5.9",
+     "concepts": [
+      {
+       "concept_tag": "spring-force-hookes-law",
+       "learning_objective": "Describe the restoring spring force F = -kx for an ideal spring."
+      },
+      {
+       "concept_tag": "spring-potential-energy",
+       "learning_objective": "Calculate the elastic potential energy (1/2)kx^2 and use it in energy conservation problems."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH05-T5",
+     "topic_number": 5,
+     "title": "Power",
+     "ncert_sections": "5.10",
+     "concepts": [
+      {
+       "concept_tag": "average-instantaneous-power",
+       "learning_objective": "Define average and instantaneous power and state their units."
+      },
+      {
+       "concept_tag": "power-calculation",
+       "learning_objective": "Calculate power from P = F.v and relate energy to the kilowatt hour."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH05-T6",
+     "topic_number": 6,
+     "title": "Collisions",
+     "ncert_sections": "5.11",
+     "concepts": [
+      {
+       "concept_tag": "elastic-inelastic-collisions",
+       "learning_objective": "Distinguish elastic and inelastic collisions by what is conserved."
+      },
+      {
+       "concept_tag": "one-dimensional-collisions",
+       "learning_objective": "Find final velocities and kinetic energy loss in one-dimensional collisions."
+      },
+      {
+       "concept_tag": "two-dimensional-collisions",
+       "learning_objective": "Analyse an elastic collision in two dimensions using momentum and energy conservation."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPH1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Systems of Particles and Rotational Motion",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH1-CH06-T1",
+     "topic_number": 1,
+     "title": "Rigid bodies and the centre of mass",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "rigid-body-motion",
+       "learning_objective": "Distinguish pure translation from rotation and identify the motion possible for a rigid body fixed along a line."
+      },
+      {
+       "concept_tag": "centre-of-mass-location",
+       "learning_objective": "Locate the centre of mass of a system of particles and of symmetric bodies."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH06-T2",
+     "topic_number": 2,
+     "title": "Motion of the centre of mass and linear momentum of a system",
+     "ncert_sections": "6.3, 6.4",
+     "concepts": [
+      {
+       "concept_tag": "motion-of-centre-of-mass",
+       "learning_objective": "Explain that the centre of mass moves as if all mass were concentrated there and all external forces acted on it."
+      },
+      {
+       "concept_tag": "linear-momentum-of-system",
+       "learning_objective": "Relate the total linear momentum of a system to its mass and the velocity of its centre of mass."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH06-T3",
+     "topic_number": 3,
+     "title": "Vector product of two vectors",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "vector-product-properties",
+       "learning_objective": "State the magnitude, direction and properties of the vector product."
+      },
+      {
+       "concept_tag": "vector-product-components",
+       "learning_objective": "Evaluate vector products using unit vectors and use them to find areas."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH06-T4",
+     "topic_number": 4,
+     "title": "Angular velocity, torque and angular momentum",
+     "ncert_sections": "6.6, 6.7",
+     "concepts": [
+      {
+       "concept_tag": "angular-velocity-relation",
+       "learning_objective": "Use v = omega x r to relate linear and angular velocity."
+      },
+      {
+       "concept_tag": "torque-moment-of-force",
+       "learning_objective": "Calculate torque as the moment of a force, r x F."
+      },
+      {
+       "concept_tag": "angular-momentum-of-particle",
+       "learning_objective": "Define the angular momentum of a particle and relate its rate of change to torque."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH06-T5",
+     "topic_number": 5,
+     "title": "Equilibrium of a rigid body",
+     "ncert_sections": "6.8",
+     "concepts": [
+      {
+       "concept_tag": "conditions-of-equilibrium",
+       "learning_objective": "State the conditions for translational and rotational equilibrium and the effect of a couple."
+      },
+      {
+       "concept_tag": "principle-of-moments",
+       "learning_objective": "Apply the principle of moments to levers and balanced rods."
+      },
+      {
+       "concept_tag": "centre-of-gravity",
+       "learning_objective": "Explain when the centre of gravity coincides with the centre of mass."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH06-T6",
+     "topic_number": 6,
+     "title": "Moment of inertia",
+     "ncert_sections": "6.9",
+     "concepts": [
+      {
+       "concept_tag": "moment-of-inertia",
+       "learning_objective": "Define moment of inertia and identify the factors on which it depends."
+      },
+      {
+       "concept_tag": "radius-of-gyration",
+       "learning_objective": "Define and calculate the radius of gyration of a body."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH06-T7",
+     "topic_number": 7,
+     "title": "Kinematics and dynamics of rotational motion about a fixed axis",
+     "ncert_sections": "6.10, 6.11",
+     "concepts": [
+      {
+       "concept_tag": "rotational-kinematics",
+       "learning_objective": "Use the equations of uniformly accelerated rotational motion."
+      },
+      {
+       "concept_tag": "torque-angular-acceleration",
+       "learning_objective": "Apply tau = I alpha to bodies rotating about a fixed axis."
+      },
+      {
+       "concept_tag": "rotational-work-power",
+       "learning_objective": "Calculate work and power in rotational motion."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH06-T8",
+     "topic_number": 8,
+     "title": "Angular momentum for rotation about a fixed axis",
+     "ncert_sections": "6.12",
+     "concepts": [
+      {
+       "concept_tag": "conservation-of-angular-momentum",
+       "learning_objective": "Apply conservation of angular momentum, I omega = constant, when external torque is zero."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPH1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Gravitation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH1-CH07-T1",
+     "topic_number": 1,
+     "title": "Kepler's laws of planetary motion",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "kepler-law-of-orbits",
+       "learning_objective": "State Kepler's law of orbits and locate the Sun relative to a planet's elliptical orbit."
+      },
+      {
+       "concept_tag": "kepler-law-of-areas",
+       "learning_objective": "Relate Kepler's law of areas to conservation of angular momentum under a central force."
+      },
+      {
+       "concept_tag": "kepler-law-of-periods",
+       "learning_objective": "Use T^2 proportional to a^3 to compare the periods of planets or satellites."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH07-T2",
+     "topic_number": 2,
+     "title": "Universal law of gravitation and the gravitational constant",
+     "ncert_sections": "7.3, 7.4",
+     "concepts": [
+      {
+       "concept_tag": "inverse-square-law",
+       "learning_objective": "Apply Newton's law F = G m1 m2 / r^2 to find the force between two masses."
+      },
+      {
+       "concept_tag": "shell-theorem",
+       "learning_objective": "State the force exerted by a uniform spherical shell on a point mass outside and inside it."
+      },
+      {
+       "concept_tag": "cavendish-gravitational-constant",
+       "learning_objective": "Describe how G was measured by Cavendish and state its value and SI unit."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH07-T3",
+     "topic_number": 3,
+     "title": "Acceleration due to gravity of the earth",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "g-from-mass-radius",
+       "learning_objective": "Express g at the earth's surface as G M_E / R_E^2 and use it to compare g on different bodies."
+      },
+      {
+       "concept_tag": "mass-of-earth",
+       "learning_objective": "Use g, R_E and G to determine the mass of the earth."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH07-T4",
+     "topic_number": 4,
+     "title": "Acceleration due to gravity below and above the surface",
+     "ncert_sections": "7.6",
+     "concepts": [
+      {
+       "concept_tag": "g-at-height",
+       "learning_objective": "Find the variation of g with height above the earth's surface, exactly and for h much less than R_E."
+      },
+      {
+       "concept_tag": "g-at-depth",
+       "learning_objective": "Find the variation of g with depth below the earth's surface using g(d) = g(1 - d/R_E)."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH07-T5",
+     "topic_number": 5,
+     "title": "Gravitational potential energy",
+     "ncert_sections": "7.7",
+     "concepts": [
+      {
+       "concept_tag": "gravitational-potential-energy",
+       "learning_objective": "Calculate the gravitational potential energy of a system of masses with zero at infinity."
+      },
+      {
+       "concept_tag": "gravitational-potential",
+       "learning_objective": "Define gravitational potential as potential energy per unit mass."
+      },
+      {
+       "concept_tag": "mgh-approximation",
+       "learning_objective": "Explain mgh as an approximation to the change in gravitational potential energy for small heights."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH07-T6",
+     "topic_number": 6,
+     "title": "Escape speed",
+     "ncert_sections": "7.8",
+     "concepts": [
+      {
+       "concept_tag": "escape-speed-expression",
+       "learning_objective": "Derive and use the escape speed v_e = sqrt(2 g R_E) = sqrt(2 G M_E / R_E)."
+      },
+      {
+       "concept_tag": "escape-speed-applications",
+       "learning_objective": "Apply energy conservation to bodies launched at or above escape speed and explain why the moon has no atmosphere."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH1-CH07-T7",
+     "topic_number": 7,
+     "title": "Earth satellites and their energy",
+     "ncert_sections": "7.9, 7.10",
+     "concepts": [
+      {
+       "concept_tag": "orbital-speed-and-period",
+       "learning_objective": "Find the orbital speed and period of a satellite in a circular orbit around the earth."
+      },
+      {
+       "concept_tag": "satellite-energy",
+       "learning_objective": "Find the kinetic, potential and total energy of an orbiting satellite and explain weightlessness."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

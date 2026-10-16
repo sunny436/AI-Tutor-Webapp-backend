@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LEGY3-CH03",
+ "title": "Graphical Representation of Data",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEGY3-CH03-T1",
+   "topic_number": 1,
+   "title": "Representation of data and general rules for drawing graphs, diagrams and maps",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "representation-of-data",
+     "learning_objective": "Explain what representation of data means and why graphic methods aid understanding and comparison."
+    },
+    {
+     "concept_tag": "selection-of-method-and-scale",
+     "learning_objective": "Select a suitable graphical method and scale for a given type of data."
+    },
+    {
+     "concept_tag": "cartographic-design-components",
+     "learning_objective": "Identify the title, legend and direction as components of cartographic design and their usual placement."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH03-T2",
+   "topic_number": 2,
+   "title": "Line graph and polygraph",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "line-graph-construction",
+     "learning_objective": "Construct and interpret a line graph of time series data, including negative values."
+    },
+    {
+     "concept_tag": "polygraph",
+     "learning_objective": "Use a polygraph to compare two or more variables with distinct line patterns."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH03-T3",
+   "topic_number": 3,
+   "title": "Bar diagrams: simple, line and bar, multiple and compound",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "simple-bar-diagram",
+     "learning_objective": "State the rules for constructing a simple bar diagram."
+    },
+    {
+     "concept_tag": "line-and-bar-graph",
+     "learning_objective": "Combine a line graph and a bar diagram to show temperature and rainfall on one diagram."
+    },
+    {
+     "concept_tag": "multiple-and-compound-bar-diagram",
+     "learning_objective": "Distinguish multiple and compound bar diagrams and choose the right one for given data."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH03-T4",
+   "topic_number": 4,
+   "title": "Pie diagram",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "pie-angle-calculation",
+     "learning_objective": "Calculate the angles of the sectors of a pie diagram from absolute or percentage data."
+    },
+    {
+     "concept_tag": "pie-diagram-construction",
+     "learning_objective": "Describe the steps and precautions in constructing a pie diagram."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH03-T5",
+   "topic_number": 5,
+   "title": "Flow maps and charts",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "flow-map-features",
+     "learning_objective": "Describe the features of and requirements for a flow map."
+    },
+    {
+     "concept_tag": "flow-map-scale",
+     "learning_objective": "Apply a scale to convert flow data into strips of proportional width."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH03-T6",
+   "topic_number": 6,
+   "title": "Thematic maps: dot maps and choropleth maps",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "thematic-map-classification",
+     "learning_objective": "Distinguish quantitative and non-quantitative thematic maps."
+    },
+    {
+     "concept_tag": "dot-map",
+     "learning_objective": "State the requirements and precautions of a dot map and calculate the number of dots."
+    },
+    {
+     "concept_tag": "choropleth-map",
+     "learning_objective": "Group data into categories and prepare a choropleth map for administrative units."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH03-T7",
+   "topic_number": 7,
+   "title": "Isopleth maps and interpolation",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "isopleth-types",
+     "learning_objective": "Identify types of isopleths and the kind of data they represent."
+    },
+    {
+     "concept_tag": "interpolation",
+     "learning_objective": "Locate the exact point of an isopleth between two stations by interpolation."
+    }
+   ]
+  }
+ ]
+}

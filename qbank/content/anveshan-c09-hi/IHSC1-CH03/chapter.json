@@ -1,0 +1,124 @@
+{
+ "chapter_id": "IHSC1-CH03",
+ "title": "क्रियाशील ऊतक",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSC1-CH03-T1",
+   "topic_number": 1,
+   "title": "ऊतक, संगठन के स्तर और पादप-जंतु ऊतकों में अंतर",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "utak-aur-sangathan",
+     "learning_objective": "ऊतक की परिभाषा, संगठन के स्तरों और श्रम विभाजन को समझना।"
+    },
+    {
+     "concept_tag": "padap-jantu-utak-antar",
+     "learning_objective": "पादप और जंतु ऊतकों में अंतर के कारणों की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH03-T2",
+   "topic_number": 2,
+   "title": "पादपों में वृद्धि के ऊतक: विभज्योतक",
+   "ncert_sections": "3.2, 3.2.1, 3.2.2, 3.2.3",
+   "concepts": [
+    {
+     "concept_tag": "vibhajyotak-prakar",
+     "learning_objective": "शीर्षस्थ, पार्श्व और अंतर्वेशी विभज्योतक की स्थिति और कार्य पहचानना।"
+    },
+    {
+     "concept_tag": "vibhajyotak-lakshan",
+     "learning_objective": "विभज्योतक कोशिकाओं के लक्षणों और विभेदन की प्रक्रिया को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH03-T3",
+   "topic_number": 3,
+   "title": "स्थायी ऊतक और ऊतक तंत्र",
+   "ncert_sections": "3.2.4",
+   "concepts": [
+    {
+     "concept_tag": "bahyatvacha-suraksha",
+     "learning_objective": "बाह्यत्वचा, उपत्वचा, मूलरोम और रंध्रों के सुरक्षात्मक कार्यों की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "saral-sthayi-utak",
+     "learning_objective": "मृदूतक, श्लेषोतक और दृढ़ोतक की संरचना को उनके कार्य से जोड़ना।"
+    },
+    {
+     "concept_tag": "jatil-sthayi-utak",
+     "learning_objective": "जाइलम और फ्लोएम के घटकों और उनके कार्यों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH03-T4",
+   "topic_number": 4,
+   "title": "उपकला और संयोजी ऊतक",
+   "ncert_sections": "3.3, 3.3.1, 3.3.2",
+   "concepts": [
+    {
+     "concept_tag": "upakala-utak",
+     "learning_objective": "विभिन्न उपकला ऊतकों की संरचना को उनके कार्य और स्थान से जोड़ना।"
+    },
+    {
+     "concept_tag": "sanyoji-utak",
+     "learning_objective": "रक्त, अस्थि, उपास्थि, कंडरा और स्नायु के कार्यों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH03-T5",
+   "topic_number": 5,
+   "title": "पेशी ऊतक और तंत्रिका ऊतक",
+   "ncert_sections": "3.3.3, 3.3.4",
+   "concepts": [
+    {
+     "concept_tag": "peshi-utak-prakar",
+     "learning_objective": "कंकाल, चिकनी और हृदय पेशियों की संरचना और कार्य की तुलना करना।"
+    },
+    {
+     "concept_tag": "tantrika-utak",
+     "learning_objective": "न्यूरॉन के भागों और तंत्रिका ऊतक द्वारा नियंत्रण को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH03-T6",
+   "topic_number": 6,
+   "title": "पेशी-कंकाल तंत्र और संधियों के प्रकार",
+   "ncert_sections": "3.4, 3.4.1, 3.5",
+   "concepts": [
+    {
+     "concept_tag": "peshi-kankal-tantra",
+     "learning_objective": "पेशी-कंकाल तंत्र के घटकों और गति उत्पन्न होने की प्रक्रिया को समझना।"
+    },
+    {
+     "concept_tag": "sandhi-prakar",
+     "learning_objective": "कंदुक-खल्लिका, कोर, धुराग्र और अचल संधियों द्वारा संभव गतियों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH03-T7",
+   "topic_number": 7,
+   "title": "कंकाल तंत्र और पूर्णशक्तता",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "kankal-tantra",
+     "learning_objective": "मेरुदंड, उपास्थि चक्रिका और पसली पिंजर के कार्यों की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "purnashaktata",
+     "learning_objective": "गाजर की फ्लोएम कोशिकाओं के प्रयोग से पूर्णशक्तता की अवधारणा समझना।"
+    }
+   ]
+  }
+ ]
+}

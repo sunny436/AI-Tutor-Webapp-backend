@@ -1,0 +1,88 @@
+{
+ "chapter_id": "JHMH1-CH08",
+ "title": "त्रिकोणमिति का परिचय",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH08-T1",
+   "topic_number": 1,
+   "title": "त्रिकोणमितीय अनुपात और उनकी परिभाषाएँ",
+   "ncert_sections": "8.1, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "trikonmitiya-anupat-paribhasha",
+     "learning_objective": "समकोण त्रिभुज की भुजाओं के पदों में किसी न्यून कोण के छह त्रिकोणमितीय अनुपात परिभाषित करना और उनके व्युत्क्रम संबंध पहचानना।"
+    },
+    {
+     "concept_tag": "anupat-ki-sthirata",
+     "learning_objective": "समझना कि कोण वही रहने पर त्रिकोणमितीय अनुपातों के मान त्रिभुज की भुजाओं की लंबाइयों पर निर्भर नहीं करते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH08-T2",
+   "topic_number": 2,
+   "title": "एक अनुपात ज्ञात होने पर अन्य त्रिकोणमितीय अनुपात",
+   "ncert_sections": "8.2",
+   "concepts": [
+    {
+     "concept_tag": "pythagoras-se-anya-anupat",
+     "learning_objective": "एक त्रिकोणमितीय अनुपात दिया होने पर पाइथागोरस प्रमेय की सहायता से शेष अनुपात ज्ञात करना।"
+    },
+    {
+     "concept_tag": "anupaton-ki-seema",
+     "learning_objective": "जानना कि न्यून कोण के लिए साइन और कोसाइन का मान 1 से अधिक नहीं होता तथा सीकेंट और कोसीकेंट का मान 1 से कम नहीं होता।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH08-T3",
+   "topic_number": 3,
+   "title": "कुछ विशिष्ट कोणों के त्रिकोणमितीय अनुपात",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "vishisht-konon-ke-maan",
+     "learning_objective": "30°, 45° और 60° के त्रिकोणमितीय अनुपातों के मान जानना और उनसे व्यंजकों का मान निकालना।"
+    },
+    {
+     "concept_tag": "shunya-aur-samkon-ke-anupat",
+     "learning_objective": "0° और 90° के त्रिकोणमितीय अनुपात, अपरिभाषित अनुपात तथा कोण बढ़ने पर साइन और कोसाइन के मानों में परिवर्तन समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH08-T4",
+   "topic_number": 4,
+   "title": "विशिष्ट कोणों की सहायता से समकोण त्रिभुज की भुजाएँ और कोण ज्ञात करना",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "bhuja-gyat-karna",
+     "learning_objective": "एक भुजा और एक न्यून कोण ज्ञात होने पर उपयुक्त त्रिकोणमितीय अनुपात चुनकर समकोण त्रिभुज की शेष भुजाएँ ज्ञात करना।"
+    },
+    {
+     "concept_tag": "kon-gyat-karna",
+     "learning_objective": "भुजाओं के अनुपात या दिए गए त्रिकोणमितीय मानों से अज्ञात कोण ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH08-T5",
+   "topic_number": 5,
+   "title": "त्रिकोणमितीय सर्वसमिकाएँ",
+   "ncert_sections": "8.4",
+   "concepts": [
+    {
+     "concept_tag": "mool-sarvasamikayen",
+     "learning_objective": "तीन मूल त्रिकोणमितीय सर्वसमिकाओं और उनके वैध होने के कोण-परिसर को पहचानना।"
+    },
+    {
+     "concept_tag": "sarvasamika-ka-prayog",
+     "learning_objective": "सर्वसमिकाओं का प्रयोग करके व्यंजकों को सरल करना और एक अनुपात को दूसरे अनुपात के पदों में व्यक्त करना।"
+    }
+   ]
+  }
+ ]
+}

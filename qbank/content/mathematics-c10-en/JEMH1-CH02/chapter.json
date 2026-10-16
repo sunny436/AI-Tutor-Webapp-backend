@@ -1,0 +1,88 @@
+{
+ "chapter_id": "JEMH1-CH02",
+ "title": "Polynomials",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH02-T1",
+   "topic_number": 1,
+   "title": "Polynomials, their degree, value and zeroes",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "degree-and-types-of-polynomials",
+     "learning_objective": "Identify polynomials and classify them as linear, quadratic or cubic by their degree."
+    },
+    {
+     "concept_tag": "value-and-zero-of-polynomial",
+     "learning_objective": "Find the value p(k) of a polynomial and decide whether k is a zero of p(x)."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH02-T2",
+   "topic_number": 2,
+   "title": "Geometrical meaning of the zeroes of a polynomial",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "zeroes-as-x-intercepts",
+     "learning_objective": "Interpret the zeroes of p(x) as the x-coordinates of the points where the graph of y = p(x) meets the x-axis."
+    },
+    {
+     "concept_tag": "number-of-zeroes-from-graph",
+     "learning_objective": "Determine the number of zeroes of a polynomial from its graph and relate it to the degree."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH02-T3",
+   "topic_number": 3,
+   "title": "Zeroes and coefficients of a quadratic polynomial",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "finding-zeroes-by-factorisation",
+     "learning_objective": "Find the zeroes of a quadratic polynomial by splitting the middle term or using identities."
+    },
+    {
+     "concept_tag": "sum-and-product-of-zeroes-quadratic",
+     "learning_objective": "Use the relations sum of zeroes = -b/a and product of zeroes = c/a for ax^2 + bx + c."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH02-T4",
+   "topic_number": 4,
+   "title": "Forming a quadratic polynomial and expressions in its zeroes",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "forming-quadratic-from-zeroes",
+     "learning_objective": "Write a quadratic polynomial as k[x^2 - (sum of zeroes)x + (product of zeroes)]."
+    },
+    {
+     "concept_tag": "expressions-in-zeroes",
+     "learning_objective": "Evaluate expressions such as alpha^2 + beta^2 and 1/alpha + 1/beta using the sum and product of zeroes."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH02-T5",
+   "topic_number": 5,
+   "title": "Zeroes and coefficients of a cubic polynomial",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "sum-and-product-of-zeroes-cubic",
+     "learning_objective": "Use alpha + beta + gamma = -b/a and alpha*beta*gamma = -d/a for ax^3 + bx^2 + cx + d."
+    },
+    {
+     "concept_tag": "pairwise-products-of-zeroes-cubic",
+     "learning_objective": "Use alpha*beta + beta*gamma + gamma*alpha = c/a for a cubic polynomial."
+    }
+   ]
+  }
+ ]
+}

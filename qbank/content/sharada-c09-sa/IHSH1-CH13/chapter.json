@@ -1,0 +1,124 @@
+{
+ "chapter_id": "IHSH1-CH13",
+ "title": "समासः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSH1-CH13-T1",
+   "topic_number": 1,
+   "title": "समासस्य स्वरूपं पूर्वपदम् उत्तरपदं च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "samasa-paribhasha",
+     "learning_objective": "समसनं सङ्क्षेपणम् इति समासस्य परिभाषां परस्परान्वयस्य आवश्यकतां च वक्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "purvapada-uttarapada",
+     "learning_objective": "समस्तपदे पूर्वपदम् उत्तरपदं विभक्तियोजनं च अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH13-T2",
+   "topic_number": 2,
+   "title": "विग्रहवाक्यं तस्य भेदौ च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vigraha-vakyam",
+     "learning_objective": "विग्रहवाक्यस्य परिभाषां जानाति।"
+    },
+    {
+     "concept_tag": "svapada-asvapada-vigrahah",
+     "learning_objective": "स्वपदविग्रहम् अस्वपदविग्रहं च भेदयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH13-T3",
+   "topic_number": 3,
+   "title": "समासभेदाः प्राधान्यनिर्णयश्च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "kevala-vishesha-samasa",
+     "learning_objective": "केवलसमासं विशेषसमासस्य चतुरः भेदान् च जानाति।"
+    },
+    {
+     "concept_tag": "pradhanya-nirnayah",
+     "learning_objective": "क्रियापदेन सह अन्वयेन कस्य पदार्थस्य प्राधान्यम् इति निर्णयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH13-T4",
+   "topic_number": 4,
+   "title": "तत्पुरुषसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vibhakti-tatpurushah",
+     "learning_objective": "विभक्तितत्पुरुषस्य षड् भेदान् विग्रहैः सह अभिजानाति।"
+    },
+    {
+     "concept_tag": "karmadharaya-dvigu",
+     "learning_objective": "कर्मधारयस्य द्विगोः च भेदान् भेदयति।"
+    },
+    {
+     "concept_tag": "nan-upapada-tatpurushah",
+     "learning_objective": "नञ्-प्रभृतितत्पुरुषस्य भेदान् अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH13-T5",
+   "topic_number": 5,
+   "title": "द्वन्द्वसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "itaretara-dvandvah",
+     "learning_objective": "इतरेतरद्वन्द्वस्य द्विपद-बहुपदभेदौ जानाति।"
+    },
+    {
+     "concept_tag": "samahara-dvandvah",
+     "learning_objective": "समाहारद्वन्द्वं तस्य नपुंसकैकवचनरूपं च अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH13-T6",
+   "topic_number": 6,
+   "title": "बहुव्रीहिसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "samanya-bahuvrihih",
+     "learning_objective": "सामान्यबहुव्रीहेः षड् भेदान् विग्रहैः सह अभिजानाति।"
+    },
+    {
+     "concept_tag": "vishesha-bahuvrihih",
+     "learning_objective": "विशेषबहुव्रीहेः भेदान् अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSH1-CH13-T7",
+   "topic_number": 7,
+   "title": "अव्ययीभावसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "avyayibhava-svarupam",
+     "learning_objective": "अव्ययीभावस्य पूर्वपदार्थप्राधान्यं स्वरूपं च जानाति।"
+    },
+    {
+     "concept_tag": "avyayibhava-arthah",
+     "learning_objective": "अव्ययीभावस्य विविधार्थान् उदाहरणैः भेदयति।"
+    }
+   ]
+  }
+ ]
+}

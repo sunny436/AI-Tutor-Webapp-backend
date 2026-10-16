@@ -1,0 +1,120 @@
+{
+  "chapter_id": "IEST1-CH08",
+  "title": "Building Blocks in Economics: The Problem of Choice",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "IEST1-CH08-T1",
+      "topic_number": 1,
+      "title": "Needs, wants and economic choices",
+      "ncert_sections": "The Big Questions",
+      "concepts": [
+        {
+          "concept_tag": "needs-and-wants",
+          "learning_objective": "Distinguish needs (essentials) from wants (non-essential desires) and classify everyday purchases."
+        },
+        {
+          "concept_tag": "unlimited-wants",
+          "learning_objective": "Explain that human wants are unlimited and keep changing, which makes choice necessary."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST1-CH08-T2",
+      "topic_number": 2,
+      "title": "Limited resources, opportunity cost and the PPC",
+      "ncert_sections": "Choices and Limited Resources",
+      "concepts": [
+        {
+          "concept_tag": "scarcity-and-alternative-uses",
+          "learning_objective": "Explain that resources are limited and have alternative uses, so choosing one use means giving up another."
+        },
+        {
+          "concept_tag": "opportunity-cost",
+          "learning_objective": "Define opportunity cost as the value of the next alternative given up."
+        },
+        {
+          "concept_tag": "production-possibility-curve",
+          "learning_objective": "Interpret a production possibility schedule and curve to find trade-offs and judge efficient output."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST1-CH08-T3",
+      "topic_number": 3,
+      "title": "What economics deals with",
+      "ncert_sections": "What does Economics Deal with?; Economic Survey",
+      "concepts": [
+        {
+          "concept_tag": "meaning-of-economics",
+          "learning_objective": "State the origin and meaning of the word economics and what the discipline studies."
+        },
+        {
+          "concept_tag": "economic-entities",
+          "learning_objective": "Identify economic entities such as consumers, producers, governments and financial institutions."
+        },
+        {
+          "concept_tag": "role-of-economists",
+          "learning_objective": "Describe how economists use data, surveys and analysis of alternatives to guide decisions."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST1-CH08-T4",
+      "topic_number": 4,
+      "title": "Key questions: what to produce and for whom",
+      "ncert_sections": "Key Questions in Economics; What to Produce and for Whom?",
+      "concepts": [
+        {
+          "concept_tag": "central-problems",
+          "learning_objective": "Explain how scarcity gives rise to the three key questions of economics."
+        },
+        {
+          "concept_tag": "what-to-produce",
+          "learning_objective": "Analyse trade-offs in deciding which goods to produce, such as water-intensive versus drought-resistant crops."
+        },
+        {
+          "concept_tag": "for-whom-to-produce",
+          "learning_objective": "Explain how producers choose which group of consumers to serve based on needs and purchasing power."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST1-CH08-T5",
+      "topic_number": 5,
+      "title": "How to produce",
+      "ncert_sections": "How to Produce?",
+      "concepts": [
+        {
+          "concept_tag": "labour-vs-capital-intensive",
+          "learning_objective": "Distinguish labour-intensive and capital-intensive techniques of production."
+        },
+        {
+          "concept_tag": "choice-of-technique",
+          "learning_objective": "Analyse the factors that decide the choice of production technique."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST1-CH08-T6",
+      "topic_number": 6,
+      "title": "Economic systems",
+      "ncert_sections": "Economic Systems and How Choices are Made; Planned, Market and Mixed Economy",
+      "concepts": [
+        {
+          "concept_tag": "planned-economy",
+          "learning_objective": "Describe how a planned economy answers the key questions through a central authority."
+        },
+        {
+          "concept_tag": "market-economy",
+          "learning_objective": "Describe how a market economy relies on demand and supply with limited government role."
+        },
+        {
+          "concept_tag": "mixed-economy",
+          "learning_objective": "Explain the features of a mixed economy and India's shift after 1991."
+        }
+      ]
+    }
+  ]
+}

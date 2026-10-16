@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LHSK1-CH10",
+ "title": "विद्यास्थानानि",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHSK1-CH10-T1",
+   "topic_number": 1,
+   "title": "वाङ्मयस्य भेदाः – शास्त्रं काव्यं च, श्रुतेः स्वरूपम्",
+   "ncert_sections": "पाठस्य आरम्भः (इह हि वाङ्मयम् … ब्राह्मणम्)",
+   "concepts": [
+    {
+     "concept_tag": "vangmaya-bhedah",
+     "learning_objective": "छात्रः वाङ्मयस्य शास्त्रकाव्यरूपौ भेदौ शास्त्रस्य च अपौरुषेयपौरुषेयरूपौ भेदौ वर्णयितुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "shruti-mantra-brahmana",
+     "learning_objective": "छात्रः श्रुतेः मन्त्रब्राह्मणरूपौ भेदौ तयोः लक्षणं च व्याख्यातुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH10-T2",
+   "topic_number": 2,
+   "title": "चत्वारः वेदाः उपवेदाः च",
+   "ncert_sections": "ऋग्यजुःसामवेदाः … पञ्चमो गेयवेदः",
+   "concepts": [
+    {
+     "concept_tag": "veda-svarupam",
+     "learning_objective": "छात्रः चतुर्णां वेदानां नामानि ऋचां यजुषां साम्नां च लक्षणानि ज्ञातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "upaveda-gevaveda",
+     "learning_objective": "छात्रः चतुरः उपवेदान् द्रौहिणिमतेन गेयवेदं च अभिज्ञातुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH10-T3",
+   "topic_number": 3,
+   "title": "षडङ्गानि अलङ्कारः च",
+   "ncert_sections": "शिक्षा … ज्योतिषम्; द्वा सुपर्णा … मन्त्रः",
+   "concepts": [
+    {
+     "concept_tag": "vedanga-namani",
+     "learning_objective": "छात्रः षण्णां वेदाङ्गानां नामानि अलङ्कारस्य सप्तमाङ्गत्वविषये यायावरीयस्य मतं च ज्ञातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "vedanga-lakshanani",
+     "learning_objective": "छात्रः शिक्षाकल्पादीनां वेदाङ्गानां लक्षणानि परस्परं भेदयितुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH10-T4",
+   "topic_number": 4,
+   "title": "पौरुषेयशास्त्राणि – पुराणम् इतिहासः च",
+   "ncert_sections": "पौरुषेयं तु पुराणम् … रामायणं भारतं चोदाहरणे",
+   "concepts": [
+    {
+     "concept_tag": "purana-lakshanam",
+     "learning_objective": "छात्रः पौरुषेयाणि चत्वारि शास्त्राणि पुराणस्य च पञ्च लक्षणानि वर्णयितुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "itihasa-bhedah",
+     "learning_objective": "छात्रः इतिहासस्य परिक्रियापुराकल्परूपौ भेदौ सोदाहरणं भेदयितुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH10-T5",
+   "topic_number": 5,
+   "title": "मीमांसा स्मृतयः चतुर्दश विद्यास्थानानि च",
+   "ncert_sections": "निगमवाक्यानां … इत्याचार्याः",
+   "concepts": [
+    {
+     "concept_tag": "mimamsa-smriti",
+     "learning_objective": "छात्रः मीमांसायाः लक्षणं द्वैविध्यं च, स्मृतीनां सङ्ख्यां च ज्ञातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "chaturdasha-vidyasthanani",
+     "learning_objective": "छात्रः चतुर्दश विद्यास्थानानि वेदाङ्गशास्त्रवर्गेषु विभज्य गणयितुं समर्थः भवेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH10-T6",
+   "topic_number": 6,
+   "title": "शब्दार्थाः व्याकरणं च",
+   "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः",
+   "concepts": [
+    {
+     "concept_tag": "shabdartha",
+     "learning_objective": "छात्रः पाठगतानां कठिनपदानां अर्थान् विपरीतार्थकपदानि च अभिज्ञातुं समर्थः भवेत्।"
+    },
+    {
+     "concept_tag": "sandhi-sankhya-avyaya",
+     "learning_objective": "छात्रः पाठगतेषु पदेषु सन्धिं, सङ्ख्यावाचकप्रयोगम्, अव्ययपदानि च अभिज्ञातुं समर्थः भवेत्।"
+    }
+   ]
+  }
+ ]
+}

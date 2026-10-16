@@ -1,0 +1,116 @@
+{
+ "chapter_id": "KHEC1-CH07",
+ "title": "पर्यावरण और धारणीय विकास",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHEC1-CH07-T1",
+   "topic_number": 1,
+   "title": "पर्यावरण: परिभाषा और कार्य",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "paryavaran-paribhasha",
+     "learning_objective": "पर्यावरण को समस्त ग्रहीय विरासत तथा जैविक और अजैविक घटकों के समग्र रूप में परिभाषित करना।"
+    },
+    {
+     "concept_tag": "paryavaran-ke-karya",
+     "learning_objective": "पर्यावरण के चार प्रमुख कार्यों तथा नवीकरणीय और गैर-नवीकरणीय संसाधनों में अंतर को समझना।"
+    },
+    {
+     "concept_tag": "dharan-kshamta",
+     "learning_objective": "धारण क्षमता और अवशोषी क्षमता की सीमा पार होने से पर्यावरण संकट के उत्पन्न होने को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHEC1-CH07-T2",
+   "topic_number": 2,
+   "title": "पर्यावरण संकट और वैश्विक पर्यावरणीय समस्याएँ",
+   "ncert_sections": "7.2, बॉक्स 7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "mang-purti-ulat",
+     "learning_objective": "पर्यावरणीय गुणवत्ता के माँग-पूर्ति संबंध के उलटने और उसकी अवसर लागत का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "vaishvik-tapan",
+     "learning_objective": "वैश्विक तापन के कारणों, परिणामों और क्योटो सम्मेलन को समझना।"
+    },
+    {
+     "concept_tag": "ozone-kshay",
+     "learning_objective": "ओज़ोन क्षय के कारणों, प्रभावों और मॉन्ट्रियल प्रोटोकॉल को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHEC1-CH07-T3",
+   "topic_number": 3,
+   "title": "भारत के पर्यावरण की स्थिति",
+   "ncert_sections": "7.3, बॉक्स 7.3, 7.4",
+   "concepts": [
+    {
+     "concept_tag": "bharat-sansadhan-chunauti",
+     "learning_objective": "भारत के प्राकृतिक संसाधनों और निर्धनता तथा समृद्धि से उपजे पर्यावरणीय खतरों के द्विभाजन को समझना।"
+    },
+    {
+     "concept_tag": "bhumi-nimnikaran",
+     "learning_objective": "भूमि निम्नीकरण के कारकों और भूमि पर जनसंख्या दबाव का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "pradushan-niyantran",
+     "learning_objective": "वाहन प्रदूषण, प्रदूषण नियंत्रण बोर्डों और अप्पिको जैसे जन-आंदोलनों की भूमिका समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHEC1-CH07-T4",
+   "topic_number": 4,
+   "title": "धारणीय विकास",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "dharniya-vikas-avdharna",
+     "learning_objective": "धारणीय विकास की परिभाषा और उसमें 'आवश्यकता' तथा 'भावी पीढ़ी' के अर्थ को समझना।"
+    },
+    {
+     "concept_tag": "herman-daly-sujhav",
+     "learning_objective": "धारणीय विकास के लिए हरमन डेली के सुझावों को लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHEC1-CH07-T5",
+   "topic_number": 5,
+   "title": "धारणीय विकास की रणनीतियाँ: स्वच्छ ऊर्जा",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "gair-paramparagat-urja",
+     "learning_objective": "ताप और जल विद्युत के दुष्प्रभावों तथा पवन, सौर और लघु जलविद्युत जैसे विकल्पों को समझना।"
+    },
+    {
+     "concept_tag": "swachh-indhan",
+     "learning_objective": "ग्रामीण क्षेत्रों में एलपीजी और गोबर गैस तथा शहरी क्षेत्रों में सीएनजी के लाभ समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHEC1-CH07-T6",
+   "topic_number": 6,
+   "title": "धारणीय विकास की रणनीतियाँ: पारंपरिक ज्ञान और जैविक उपाय",
+   "ncert_sections": "7.5, 7.6",
+   "concepts": [
+    {
+     "concept_tag": "paramparik-gyan",
+     "learning_objective": "पारंपरिक ज्ञान और चिकित्सा पद्धतियों की पर्यावरण-अनुकूलता को समझना।"
+    },
+    {
+     "concept_tag": "jaivik-khad-keet-niyantran",
+     "learning_objective": "जैविक खाद और जैविक कीट नियंत्रण के लाभों का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

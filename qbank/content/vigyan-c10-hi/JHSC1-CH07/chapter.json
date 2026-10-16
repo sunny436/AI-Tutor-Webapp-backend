@@ -1,0 +1,140 @@
+{
+ "chapter_id": "JHSC1-CH07",
+ "title": "जीव जनन कैसे करते हैं",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSC1-CH07-T1",
+   "topic_number": 1,
+   "title": "जनन में डी.एन.ए. प्रतिकृति और विभिन्नता का महत्व",
+   "ncert_sections": "7.1, 7.1.1",
+   "concepts": [
+    {
+     "concept_tag": "dna-pratikriti-ka-mahatva",
+     "learning_objective": "यह समझना कि जनन की मूल घटना डी.एन.ए. की प्रतिकृति बनाना है और इससे शारीरिक अभिकल्प बना रहता है।"
+    },
+    {
+     "concept_tag": "vibhinnata-ka-mahatva",
+     "learning_objective": "यह समझाना कि प्रतिकृति की छोटी त्रुटियों से उत्पन्न विभिन्नता स्पीशीज़ की उत्तरजीविता में कैसे सहायक है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH07-T2",
+   "topic_number": 2,
+   "title": "एकल जीवों में जनन: विखंडन, खंडन, पुनरुद्भवन और मुकुलन",
+   "ncert_sections": "7.2, 7.2.1, 7.2.2, 7.2.3, 7.2.4",
+   "concepts": [
+    {
+     "concept_tag": "vikhandan",
+     "learning_objective": "एककोशिक जीवों में द्विखंडन और बहुखंडन की विधियों को उदाहरण सहित पहचानना।"
+    },
+    {
+     "concept_tag": "khandan-punarudbhavan",
+     "learning_objective": "बहुकोशिक जीवों में खंडन और पुनरुद्भवन को पहचानना तथा इनकी सीमाएँ समझना।"
+    },
+    {
+     "concept_tag": "mukulan",
+     "learning_objective": "हाइड्रा और यीस्ट में मुकुलन द्वारा नए जीव बनने की प्रक्रिया का वर्णन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH07-T3",
+   "topic_number": 3,
+   "title": "कायिक प्रवर्धन, बीजाणु समासंघ और ऊतक संवर्धन",
+   "ncert_sections": "7.2.5, 7.2.6",
+   "concepts": [
+    {
+     "concept_tag": "kayik-pravardhan",
+     "learning_objective": "कायिक प्रवर्धन के उदाहरण और कृषि में इसके लाभ बताना।"
+    },
+    {
+     "concept_tag": "beejanu-samasangh",
+     "learning_objective": "राइजोपस में बीजाणुधानी और बीजाणुओं द्वारा जनन तथा मोटी भित्ति का महत्व समझना।"
+    },
+    {
+     "concept_tag": "utak-samvardhan",
+     "learning_objective": "ऊतक संवर्धन के चरणों का क्रम और इसके उपयोग तथा सीमाएँ समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH07-T4",
+   "topic_number": 4,
+   "title": "लैंगिक जनन प्रणाली की आवश्यकता",
+   "ncert_sections": "7.3, 7.3.1",
+   "concepts": [
+    {
+     "concept_tag": "laingik-janan-vibhinnata",
+     "learning_objective": "यह समझाना कि लैंगिक जनन दो जीवों के डी.एन.ए. के संयोजन से अधिक विभिन्नता क्यों उत्पन्न करता है।"
+    },
+    {
+     "concept_tag": "ardhsutri-vibhajan-yugmak",
+     "learning_objective": "अर्द्धसूत्री विभाजन से युग्मकों में गुणसूत्रों की आधी संख्या तथा नर और मादा युग्मक के लक्षण समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH07-T5",
+   "topic_number": 5,
+   "title": "पुष्पी पौधों में लैंगिक जनन",
+   "ncert_sections": "7.3.2",
+   "concepts": [
+    {
+     "concept_tag": "pushp-ke-janan-ang",
+     "learning_objective": "पुष्प के जनन भागों, एकलिंगी और उभयलिंगी पुष्पों तथा स्त्रीकेसर के भागों को पहचानना।"
+    },
+    {
+     "concept_tag": "paragan-nishechan",
+     "learning_objective": "स्वपरागण, परपरागण और निषेचन में अंतर करना तथा पराग नलिका की भूमिका समझना।"
+    },
+    {
+     "concept_tag": "beej-phal-ankuran",
+     "learning_objective": "निषेचन के बाद बीज और फल बनने तथा बीज के अंकुरण के भागों को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH07-T6",
+   "topic_number": 6,
+   "title": "मानव में लैंगिक जनन: यौवनारंभ, नर और मादा जनन तंत्र",
+   "ncert_sections": "7.3.3, 7.3.3(a), 7.3.3(b)",
+   "concepts": [
+    {
+     "concept_tag": "yauvanarambh",
+     "learning_objective": "यौवनारंभ में होने वाले परिवर्तनों और जनन ऊतकों के परिपक्व होने के समय को समझना।"
+    },
+    {
+     "concept_tag": "nar-janan-tantra",
+     "learning_objective": "नर जनन तंत्र के अंगों, वृषण की स्थिति और ग्रंथियों के स्राव के कार्य बताना।"
+    },
+    {
+     "concept_tag": "mada-janan-tantra",
+     "learning_objective": "मादा जनन तंत्र के अंगों, निषेचन के स्थान और प्लैसेंटा के कार्य को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH07-T7",
+   "topic_number": 7,
+   "title": "निषेचन न होने पर परिवर्तन और जनन स्वास्थ्य",
+   "ncert_sections": "7.3.3(c), 7.3.3(d)",
+   "concepts": [
+    {
+     "concept_tag": "rajodharm",
+     "learning_objective": "अंड का निषेचन न होने पर गर्भाशय की परत के निष्कासन, अर्थात रजोधर्म को समझना।"
+    },
+    {
+     "concept_tag": "garbhnirodhak-vidhiyan",
+     "learning_objective": "गर्भनिरोध की यांत्रिक, हार्मोनी और शल्य विधियों की कार्यप्रणाली तथा सीमाओं का मूल्यांकन करना।"
+    },
+    {
+     "concept_tag": "laingik-sancharit-rog",
+     "learning_objective": "जीवाणु और वाइरस जनित लैंगिक संचरित रोगों को पहचानना तथा उनसे बचाव के उपाय जानना।"
+    }
+   ]
+  }
+ ]
+}

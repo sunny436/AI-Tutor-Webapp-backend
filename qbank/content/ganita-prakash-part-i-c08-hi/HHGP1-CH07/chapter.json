@@ -1,0 +1,104 @@
+{
+ "chapter_id": "HHGP1-CH07",
+ "title": "समानुपातिक तर्कण-1",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP1-CH07-T1",
+   "topic_number": 1,
+   "title": "परिवर्तन में समानता का अवलोकन",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "samaan-gunak-parivartan",
+     "learning_objective": "चौड़ाई और ऊँचाई के एक ही गुणक से बदलने पर चित्र के समान दिखने को पहचानना।"
+    },
+    {
+     "concept_tag": "yog-banam-gunan-parivartan",
+     "learning_objective": "समान संख्या जोड़ने-घटाने और समान गुणक से बदलने के अंतर को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH07-T2",
+   "topic_number": 2,
+   "title": "अनुपात",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "anupat-ke-pad",
+     "learning_objective": "अनुपात a : b के पदों और उसके अर्थ को समझना।"
+    },
+    {
+     "concept_tag": "anupat-gunak",
+     "learning_objective": "किसी अनुपात के दोनों पदों को एक ही गुणक से बदलकर समानुपातिक अनुपात प्राप्त करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH07-T3",
+   "topic_number": 3,
+   "title": "अपने सरलतम रूप में अनुपात",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "saraltam-roop",
+     "learning_objective": "महत्तम समापवर्तक से भाग देकर अनुपात का सरलतम रूप ज्ञात करना।"
+    },
+    {
+     "concept_tag": "samanupat-jaanch",
+     "learning_objective": "सरलतम रूप की तुलना करके जाँचना कि दो अनुपात समानुपातिक हैं या नहीं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH07-T4",
+   "topic_number": 4,
+   "title": "समानुपातिक तर्क के साथ समस्या समाधान",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "lupt-pad-gyat-karna",
+     "learning_objective": "परिवर्तन का गुणक ज्ञात करके समानुपात का अज्ञात पद निकालना।"
+    },
+    {
+     "concept_tag": "ikai-dar-tulna",
+     "learning_objective": "प्रति इकाई मूल्य या चाल की सहायता से समस्याएँ हल करना और तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH07-T5",
+   "topic_number": 5,
+   "title": "साझा कीजिए परंतु समान रूप से नहीं!",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "anupat-mein-vibhajan",
+     "learning_objective": "किसी राशि को दिए गए अनुपात m : n में बाँटना।"
+    },
+    {
+     "concept_tag": "mishran-anupat-badalna",
+     "learning_objective": "मिश्रण में कोई घटक मिलाकर उसका अनुपात बदलने की समस्याएँ हल करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH07-T6",
+   "topic_number": 6,
+   "title": "इकाई रूपांतरण",
+   "ncert_sections": "7.6",
+   "concepts": [
+    {
+     "concept_tag": "ikai-roopantaran",
+     "learning_objective": "लंबाई, क्षेत्रफल और आयतन की इकाइयों का रूपांतरण समानुपात से करना।"
+    },
+    {
+     "concept_tag": "taapman-roopantaran",
+     "learning_objective": "सेल्सियस और फ़ारेनहाइट के बीच तापमान का रूपांतरण करना।"
+    }
+   ]
+  }
+ ]
+}

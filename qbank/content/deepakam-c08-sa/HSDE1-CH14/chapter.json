@@ -1,0 +1,124 @@
+{
+ "chapter_id": "HSDE1-CH14",
+ "title": "व्याकरणम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HSDE1-CH14-T1",
+   "topic_number": 1,
+   "title": "उपसर्गाः",
+   "ncert_sections": "उपसर्गः",
+   "concepts": [
+    {
+     "concept_tag": "upasargah",
+     "learning_objective": "द्वाविंशतिः उपसर्गान् तेषां धातोः पूर्वं प्रयोगं च अभिजानाति।"
+    },
+    {
+     "concept_tag": "upasarga-arthaparivartanam",
+     "learning_objective": "उपसर्गेण धात्वर्थस्य पदस्य च परिवर्तनं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH14-T2",
+   "topic_number": 2,
+   "title": "कृत्प्रत्ययाः — क्त्वा, ल्यप्, तुमुन्",
+   "ncert_sections": "प्रत्ययाः (क्त्वा, ल्यप्, तुमुन्)",
+   "concepts": [
+    {
+     "concept_tag": "ktva-lyap",
+     "learning_objective": "पूर्वकालिकक्रियायां क्त्वा-ल्यप्-प्रत्ययोः प्रयोगं भेदं च जानाति।"
+    },
+    {
+     "concept_tag": "tumun",
+     "learning_objective": "निमित्तार्थे तुमुन्-प्रत्ययस्य प्रयोगं करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH14-T3",
+   "topic_number": 3,
+   "title": "क्तवतु-प्रत्ययः धातुरूपतालिका च",
+   "ncert_sections": "प्रत्ययाः (क्तवतु), धातुतालिका",
+   "concepts": [
+    {
+     "concept_tag": "ktavatu",
+     "learning_objective": "भूतकाले क्तवतु-प्रत्ययान्तपदानां त्रिषु लिङ्गेषु रूपाणि प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "pratyaya-talika",
+     "learning_objective": "धातुतालिकातः प्रत्ययान्तरूपाणि अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH14-T4",
+   "topic_number": 4,
+   "title": "कारक-विभक्तिः",
+   "ncert_sections": "विभक्तिः (क) कारक-विभक्तिः",
+   "concepts": [
+    {
+     "concept_tag": "karakani",
+     "learning_objective": "षट् कारकाणि तेषां लक्षणानि च जानाति।"
+    },
+    {
+     "concept_tag": "karaka-vibhaktih",
+     "learning_objective": "प्रत्येकं कारके प्रयुक्तां विभक्तिं वाक्ये निर्धारयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH14-T5",
+   "topic_number": 5,
+   "title": "सम्बन्ध-सम्बोधन-उपपद-विभक्तयः",
+   "ncert_sections": "विभक्तिः (ख), (ग), (घ)",
+   "concepts": [
+    {
+     "concept_tag": "sambandha-sambodhana",
+     "learning_objective": "षष्ठीं सम्बन्धे सम्बोधनविभक्तिं च अवगच्छति।"
+    },
+    {
+     "concept_tag": "upapada-vibhaktih",
+     "learning_objective": "परितः, सह, नमः, बहिः, उपरि इत्यादिपदयोगे उपपदविभक्तिं प्रयुङ्क्ते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH14-T6",
+   "topic_number": 6,
+   "title": "स्वर-सन्धिः — अयादिः पूर्वरूपं च",
+   "ncert_sections": "सन्धिः (क) स्वर-सन्धिः",
+   "concepts": [
+    {
+     "concept_tag": "ayadi-sandhih",
+     "learning_objective": "ए, ऐ, ओ, औ इत्येषां स्थाने अय्, आय्, अव्, आव् इति आदेशं करोति।"
+    },
+    {
+     "concept_tag": "purvarupa-sandhih",
+     "learning_objective": "पदान्त-ए/ओ-अनन्तरम् अकारे पूर्वरूपसन्धिं करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH14-T7",
+   "topic_number": 7,
+   "title": "व्यञ्जन-सन्धिः णत्वविधानं च",
+   "ncert_sections": "सन्धिः (ख) व्यञ्जन-सन्धिः",
+   "concepts": [
+    {
+     "concept_tag": "shchutva-jashtva",
+     "learning_objective": "श्चुत्व-जश्त्व-सन्ध्योः नियमान् प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "anusvara-parasavarna",
+     "learning_objective": "अनुस्वार-परसवर्ण-सन्ध्योः नियमान् प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "natva-vidhanam",
+     "learning_objective": "ऋ, र, ष अनन्तरं नकारस्य णकारं जानाति।"
+    }
+   ]
+  }
+ ]
+}

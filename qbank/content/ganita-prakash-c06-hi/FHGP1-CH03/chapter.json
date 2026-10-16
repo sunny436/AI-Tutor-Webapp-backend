@@ -1,0 +1,128 @@
+{
+ "chapter_id": "FHGP1-CH03",
+ "title": "संख्याओं का खेल",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHGP1-CH03-T1",
+   "topic_number": 1,
+   "title": "संख्याएँ हमें कुछ बता सकती हैं: लंबे पड़ोसियों की गिनती",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "lambe-padosiyon-ki-ginti",
+     "learning_objective": "पंक्ति में खड़ा प्रत्येक बच्चा अपने से लंबे पड़ोसियों की संख्या बताता है, इस नियम को समझकर लागू करना।"
+    },
+    {
+     "concept_tag": "vyavastha-ka-tark",
+     "learning_objective": "दिए गए संख्या-अनुक्रम के लिए बच्चों की संभव व्यवस्था पर तर्क करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH03-T2",
+   "topic_number": 2,
+   "title": "महाकोष्ठ",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "mahakoshth-ki-pehchan",
+     "learning_objective": "समीपवर्ती कोष्ठों से तुलना करके महाकोष्ठ की पहचान करना।"
+    },
+    {
+     "concept_tag": "mahakoshth-ke-pattern",
+     "learning_objective": "सारणी में महाकोष्ठों की अधिकतम संख्या और सबसे बड़ी या सबसे छोटी संख्या वाले कोष्ठ पर तर्क करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH03-T3",
+   "topic_number": 3,
+   "title": "संख्या रेखा पर पैटर्न और अंकों के साथ खेल",
+   "ncert_sections": "3.3, 3.4",
+   "concepts": [
+    {
+     "concept_tag": "sankhya-rekha-par-kram",
+     "learning_objective": "संख्याओं को संख्या रेखा पर उनके उचित स्थान और क्रम में रखना।"
+    },
+    {
+     "concept_tag": "ankon-wali-sankhyaon-ki-ginti",
+     "learning_objective": "निश्चित अंकों वाली संख्याओं और किसी अंक के आने की बारंबारता की गिनती करना।"
+    },
+    {
+     "concept_tag": "ankon-ka-yog",
+     "learning_objective": "दिए गए अंकों के योग वाली सबसे छोटी और सबसे बड़ी संख्याएँ ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH03-T4",
+   "topic_number": 4,
+   "title": "विलोमाक्षर (पैलिंड्रोम) पैटर्न और कापरेकर की जादुई संख्या",
+   "ncert_sections": "3.5, 3.6",
+   "concepts": [
+    {
+     "concept_tag": "vilomakshar-sankhya",
+     "learning_objective": "पैलिंड्रोम संख्याओं को पहचानना और 'पलटें और जोड़ें' प्रक्रिया लागू करना।"
+    },
+    {
+     "concept_tag": "kaprekar-sthirank",
+     "learning_objective": "4 अंकों की संख्या पर कापरेकर प्रक्रिया लागू करके स्थिरांक 6174 तक पहुँचना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH03-T5",
+   "topic_number": 5,
+   "title": "घड़ी और कैलेंडर की संख्याएँ, मानसिक गणित",
+   "ncert_sections": "3.7, 3.8",
+   "concepts": [
+    {
+     "concept_tag": "ghadi-calendar-pattern",
+     "learning_objective": "घड़ी के समय और तिथियों में पैलिंड्रोम जैसे पैटर्न पहचानना।"
+    },
+    {
+     "concept_tag": "mansik-ganit",
+     "learning_objective": "दी गई संख्याओं को जोड़-घटाकर मन ही मन वांछित योग बनाना।"
+    },
+    {
+     "concept_tag": "ank-aur-sankriyaen",
+     "learning_objective": "जोड़ और घटाव के परिणाम के अंकों की संख्या के बारे में हमेशा, कभी-कभी या कभी नहीं का निर्णय करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH03-T6",
+   "topic_number": 6,
+   "title": "संख्या पैटर्न और कोलाट्ज़ अनुमान",
+   "ncert_sections": "3.9, 3.10",
+   "concepts": [
+    {
+     "concept_tag": "sankhya-pattern-yog",
+     "learning_objective": "व्यवस्थित संख्या पैटर्न का योग एक-एक जोड़ने की बजाय गुणा जैसी शीघ्र विधि से ज्ञात करना।"
+    },
+    {
+     "concept_tag": "kolatz-anuman",
+     "learning_objective": "कोलाट्ज़ अनुक्रम का नियम लागू करना और इस अनसुलझे अनुमान के बारे में तर्क करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH03-T7",
+   "topic_number": 7,
+   "title": "सरल आकलन तथा खेल और जीतने की युक्तियाँ",
+   "ncert_sections": "3.11, 3.12",
+   "concepts": [
+    {
+     "concept_tag": "saral-aaklan",
+     "learning_objective": "जहाँ सही संख्या आवश्यक न हो वहाँ तर्कसंगत आकलन करना।"
+    },
+    {
+     "concept_tag": "jeetne-ki-yukti",
+     "learning_objective": "जोड़ने वाले संख्या-खेलों में जीतने वाली संख्याओं का पैटर्न पहचानना।"
+    }
+   ]
+  }
+ ]
+}

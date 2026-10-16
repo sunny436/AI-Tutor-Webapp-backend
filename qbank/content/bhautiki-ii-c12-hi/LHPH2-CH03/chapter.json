@@ -1,0 +1,100 @@
+{
+ "chapter_id": "LHPH2-CH03",
+ "title": "विकिरण तथा द्रव्य की द्वैत प्रकृति",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHPH2-CH03-T1",
+   "topic_number": 1,
+   "title": "इलेक्ट्रॉन उत्सर्जन और कार्य फलन",
+   "ncert_sections": "11.1, 11.2",
+   "concepts": [
+    {
+     "concept_tag": "karya-phalan",
+     "learning_objective": "कार्य फलन का अर्थ समझना और उसे धातु की प्रकृति से जोड़ना।"
+    },
+    {
+     "concept_tag": "electron-utsarjan-ke-prakar",
+     "learning_objective": "तापायनिक, क्षेत्र और प्रकाश-विद्युत उत्सर्जन में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH03-T2",
+   "topic_number": 2,
+   "title": "प्रकाश-विद्युत प्रभाव का प्रायोगिक अध्ययन",
+   "ncert_sections": "11.3, 11.4",
+   "concepts": [
+    {
+     "concept_tag": "deheli-avriti",
+     "learning_objective": "देहली आवृत्ति की संकल्पना और उत्सर्जन की शर्त समझना।"
+    },
+    {
+     "concept_tag": "tivrata-aur-vibhav-ka-prabhav",
+     "learning_objective": "प्रकाश-धारा पर तीव्रता तथा विभव के प्रभाव और निरोधी विभव की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH03-T3",
+   "topic_number": 3,
+   "title": "प्रकाश-विद्युत प्रभाव और तरंग सिद्धांत",
+   "ncert_sections": "11.5",
+   "concepts": [
+    {
+     "concept_tag": "tarang-siddhant-ki-asafalta",
+     "learning_objective": "यह समझाना कि प्रकाश का तरंग सिद्धांत प्रकाश-विद्युत प्रभाव के प्रेक्षणों की व्याख्या क्यों नहीं कर पाता।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH03-T4",
+   "topic_number": 4,
+   "title": "आइंस्टाइन का प्रकाश-विद्युत समीकरण",
+   "ncert_sections": "11.6",
+   "concepts": [
+    {
+     "concept_tag": "einstein-samikaran",
+     "learning_objective": "आइंस्टाइन के समीकरण से अधिकतम गतिज ऊर्जा और निरोधी विभव की गणना करना।"
+    },
+    {
+     "concept_tag": "nirodhi-vibhav-graph",
+     "learning_objective": "निरोधी विभव और आवृत्ति के ग्राफ की ढाल और अंतःखंड की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH03-T5",
+   "topic_number": 5,
+   "title": "प्रकाश की कण प्रकृति: फोटॉन",
+   "ncert_sections": "11.7",
+   "concepts": [
+    {
+     "concept_tag": "photon-ki-urja-sanveg",
+     "learning_objective": "फोटॉन की ऊर्जा और संवेग की गणना करना।"
+    },
+    {
+     "concept_tag": "photon-ke-gun",
+     "learning_objective": "फोटॉन के मूल गुणों को पहचानना और फोटॉन-संख्या का अनुमान लगाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH03-T6",
+   "topic_number": 6,
+   "title": "द्रव्य की तरंग प्रकृति",
+   "ncert_sections": "11.8",
+   "concepts": [
+    {
+     "concept_tag": "de-broglie-tarangdairghya",
+     "learning_objective": "द्रव्य-कणों के दे ब्रॉग्ली तरंगदैर्घ्य की गणना और तुलना करना।"
+    },
+    {
+     "concept_tag": "dvait-prakriti",
+     "learning_objective": "विकिरण और द्रव्य की द्वैत प्रकृति के महत्त्व का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

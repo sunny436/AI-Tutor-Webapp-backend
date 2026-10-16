@@ -1,0 +1,1229 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "exploring-society-india-and-beyond-part-ii-c08-en",
+  "curriculum": "cbse",
+  "class_level": 8,
+  "subject_code": "social_science",
+  "language": "english",
+  "title": "Exploring Society India and Beyond Part-II",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "hees2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "HEES2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "World Geography: Some Glimpses",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES2-CH01-T1",
+     "topic_number": 1,
+     "title": "Mapping the Earth: projections and physical maps",
+     "ncert_sections": "The Complexity of Mapping the Earth",
+     "concepts": [
+      {
+       "concept_tag": "map-projection-distortion",
+       "learning_objective": "Explain why every map projection of the Earth shows some distortion."
+      },
+      {
+       "concept_tag": "mercator-and-robinson-projections",
+       "learning_objective": "Compare what the Mercator and Robinson projections preserve and distort."
+      },
+      {
+       "concept_tag": "physical-map-colours",
+       "learning_objective": "Identify the landforms and water bodies shown by each colour on a physical map."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH01-T2",
+     "topic_number": 2,
+     "title": "The oceans of the blue planet",
+     "ncert_sections": "The Blue of the Blue Planet, the Oceans; Ocean currents; Ocean trenches",
+     "concepts": [
+      {
+       "concept_tag": "oceans-and-climate",
+       "learning_objective": "Describe how oceans cover the Earth, support life and regulate climate."
+      },
+      {
+       "concept_tag": "ocean-currents",
+       "learning_objective": "Explain how warm and cold ocean currents affect the climate of coastal areas."
+      },
+      {
+       "concept_tag": "ocean-trenches",
+       "learning_objective": "Describe ocean trenches such as the Mariana Trench and how life survives there."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH01-T3",
+     "topic_number": 3,
+     "title": "Coral reefs and smaller water bodies",
+     "ncert_sections": "The Great Barrier Reef; Smaller water bodies and waterways",
+     "concepts": [
+      {
+       "concept_tag": "coral-reefs-great-barrier-reef",
+       "learning_objective": "Explain why coral reefs such as the Great Barrier Reef matter and what threatens them."
+      },
+      {
+       "concept_tag": "seas-gulfs-bays-straits-canals",
+       "learning_objective": "Distinguish seas, gulfs, bays, straits and canals and their role in trade."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH01-T4",
+     "topic_number": 4,
+     "title": "Asia: Tibetan Plateau, Gobi, Steppes and Urals",
+     "ncert_sections": "Asia",
+     "concepts": [
+      {
+       "concept_tag": "tibetan-plateau",
+       "learning_objective": "Describe the formation and importance of the Tibetan Plateau, the 'Third Pole'."
+      },
+      {
+       "concept_tag": "gobi-desert-and-steppes",
+       "learning_objective": "Describe the Gobi Desert and the Eurasian Steppes and their role in nature."
+      },
+      {
+       "concept_tag": "ural-mountains",
+       "learning_objective": "Explain the importance of the Ural Mountains and the tundra and taiga around them."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH01-T5",
+     "topic_number": 5,
+     "title": "Europe and Africa: plains, the Alps, deserts and the Nile",
+     "ncert_sections": "Europe; Africa",
+     "concepts": [
+      {
+       "concept_tag": "european-plain-and-alps",
+       "learning_objective": "Explain how the European Plain and the Alps support agriculture, water supply and settlement."
+      },
+      {
+       "concept_tag": "sahara-and-savannah",
+       "learning_objective": "Describe the Sahara Desert and the African savannah and how life adapts to them."
+      },
+      {
+       "concept_tag": "river-nile",
+       "learning_objective": "Explain the importance of the River Nile for people in Africa."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH01-T6",
+     "topic_number": 6,
+     "title": "The Americas: Andes, Amazon, Atacama and North American landforms",
+     "ncert_sections": "South America; North America",
+     "concepts": [
+      {
+       "concept_tag": "andes-and-amazon",
+       "learning_objective": "Describe the Andes and the Amazon and why they are important for the planet."
+      },
+      {
+       "concept_tag": "atacama-desert",
+       "learning_objective": "Describe the Atacama Desert and the environmental problem it faces."
+      },
+      {
+       "concept_tag": "north-american-landforms",
+       "learning_objective": "Describe the Colorado Plateau, the Rockies, the Appalachians and the Great Lakes."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH01-T7",
+     "topic_number": 7,
+     "title": "Australia, cold deserts and caring for the Earth",
+     "ncert_sections": "The Australian Continent; Before we move on",
+     "concepts": [
+      {
+       "concept_tag": "australian-desert",
+       "learning_objective": "Describe the Great Australian Desert, its wildlife and its people."
+      },
+      {
+       "concept_tag": "cold-deserts",
+       "learning_objective": "Recognise that deserts can be cold, with Antarctica as the largest desert on Earth."
+      },
+      {
+       "concept_tag": "human-impact-on-geography",
+       "learning_objective": "Evaluate how human actions disturb natural features and why sustainable use is needed."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "India’s Long Road to Independence",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES2-CH02-T1",
+     "topic_number": 1,
+     "title": "Crown Rule and the Royal Proclamation of 1858",
+     "ncert_sections": "A Royal Proclamation",
+     "concepts": [
+      {
+       "concept_tag": "crown-rule-and-proclamation-1858",
+       "learning_objective": "Explain how India was governed after 1858 and why the proclamation's promises were not kept."
+      },
+      {
+       "concept_tag": "colonial-racial-discrimination",
+       "learning_objective": "Identify the forms of racial discrimination and repressive laws Indians faced under colonial rule."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH02-T2",
+     "topic_number": 2,
+     "title": "Reform Movements and Other Influences",
+     "ncert_sections": "Reform Movements; Other Influences",
+     "concepts": [
+      {
+       "concept_tag": "social-reform-movements",
+       "learning_objective": "Identify the founders, places and key ideas of the major 19th-century reform movements."
+      },
+      {
+       "concept_tag": "bankim-and-vande-mataram",
+       "learning_objective": "Describe how Bankim Chandra's Anandamath and Bande Mataram fed nationalist feeling."
+      },
+      {
+       "concept_tag": "vivekananda-national-regeneration",
+       "learning_objective": "Explain Swami Vivekananda's ideas on self-confidence, science and India's spiritual roots."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH02-T3",
+     "topic_number": 3,
+     "title": "The Rise of the Congress and Growing Discontent",
+     "ncert_sections": "The Rise of the Indian National Congress; Growing Discontent",
+     "concepts": [
+      {
+       "concept_tag": "early-indian-national-congress",
+       "learning_objective": "Describe the founding of the Indian National Congress and the aims of its early phase."
+      },
+      {
+       "concept_tag": "kuka-namdhari-movement",
+       "learning_objective": "Explain the reforms and anti-colonial methods of the Kuka (Namdhari) Movement."
+      },
+      {
+       "concept_tag": "tilak-birsa-and-regional-resistance",
+       "learning_objective": "Describe the resistance led by Tilak, the Chapekar brothers and Birsa Munda."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH02-T4",
+     "topic_number": 4,
+     "title": "The 1905 Partition of Bengal and the Nationalist Agenda",
+     "ncert_sections": "The 1905 Partition of Bengal and National Awakening; The Nationalist Agenda; The All-India Muslim League; The 1907 Surat Split",
+     "concepts": [
+      {
+       "concept_tag": "partition-of-bengal-1905",
+       "learning_objective": "Explain the real motive behind the 1905 partition of Bengal and the popular response to it."
+      },
+      {
+       "concept_tag": "swadeshi-boycott-national-education",
+       "learning_objective": "Explain the Swadeshi, boycott and National Education programmes and the demand for Swaraj."
+      },
+      {
+       "concept_tag": "moderates-nationalists-surat-split",
+       "learning_objective": "Distinguish between the Moderates and the Nationalists and explain the 1907 Surat split."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH02-T5",
+     "topic_number": 5,
+     "title": "The Revolutionaries, Home Rule and the Lucknow Pact",
+     "ncert_sections": "The Revolutionaries; Home Rule Movement and the Lucknow Pact",
+     "concepts": [
+      {
+       "concept_tag": "revolutionary-actions-1908-1915",
+       "learning_objective": "Describe the main revolutionary actions from the Alipore Bomb Case to the Ghadar Movement."
+      },
+      {
+       "concept_tag": "home-rule-and-lucknow-pact",
+       "learning_objective": "Explain the aims of the Home Rule Movement and the terms of the Lucknow Pact of 1916."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH02-T6",
+     "topic_number": 6,
+     "title": "Gandhi, Non-Cooperation, Jallianwala Bagh and Khilafat",
+     "ncert_sections": "Gandhi and the Non-Cooperation Movement; The Jallianwala Bagh Massacre and its Aftermath; The Khilafat Movement and its Aftermath",
+     "concepts": [
+      {
+       "concept_tag": "satyagraha-and-non-cooperation",
+       "learning_objective": "Explain Gandhi's method of satyagraha and the course of the Non-Cooperation Movement."
+      },
+      {
+       "concept_tag": "jallianwala-bagh-massacre",
+       "learning_objective": "Describe the Jallianwala Bagh massacre and its impact on Indian opinion."
+      },
+      {
+       "concept_tag": "khilafat-movement",
+       "learning_objective": "Evaluate the aims, support and consequences of the Khilafat Movement."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH02-T7",
+     "topic_number": 7,
+     "title": "Protests, Purna Swaraj and Civil Disobedience",
+     "ncert_sections": "Protests, Repression and Revenge; Purna Swaraj and Civil Disobedience; The Gandhi-Irwin Pact; The Idea of Separate Nations",
+     "concepts": [
+      {
+       "concept_tag": "simon-commission-and-revolutionaries",
+       "learning_objective": "Explain the protests against the Simon Commission and the revolutionary actions that followed."
+      },
+      {
+       "concept_tag": "purna-swaraj-civil-disobedience",
+       "learning_objective": "Explain the Purna Swaraj resolution and how the Salt March launched Civil Disobedience."
+      },
+      {
+       "concept_tag": "separate-electorates-and-separate-nations",
+       "learning_objective": "Describe the Poona Pact and the rise of the idea of separate nations."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH02-T8",
+     "topic_number": 8,
+     "title": "World War II, Quit India, Partition and Independence",
+     "ncert_sections": "World War II and the Indian National Army; The Quit India Movement; Partition, Turmoil, and Independence",
+     "concepts": [
+      {
+       "concept_tag": "wwii-and-indian-national-army",
+       "learning_objective": "Explain the impact of World War II on India and the role of Subhas Chandra Bose's INA."
+      },
+      {
+       "concept_tag": "quit-india-movement",
+       "learning_objective": "Describe the Quit India Movement and why it worried the British."
+      },
+      {
+       "concept_tag": "partition-and-independence",
+       "learning_objective": "Explain the events leading to Partition and the factors behind Britain's exit from India."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "A Journey Through Indian Architecture",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES2-CH03-T1",
+     "topic_number": 1,
+     "title": "Harappan Urban Architecture",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "harappan-urban-planning",
+       "learning_objective": "Describe the planned streets, drains and fortified areas of Harappan cities such as Mohenjo-daro and Dholavira."
+      },
+      {
+       "concept_tag": "harappan-building-materials",
+       "learning_objective": "Explain why Harappan builders chose bricks or stone depending on what was locally available."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH03-T2",
+     "topic_number": 2,
+     "title": "Stupas and Rock-Cut Architecture",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "stupa-architecture",
+       "learning_objective": "Describe the form and features of stupas such as those at Sanchi and Bharhut and how the Buddha was represented."
+      },
+      {
+       "concept_tag": "rock-cut-caves",
+       "learning_objective": "Explain how rock-cut caves such as Udayagiri-Khandagiri and Ellora were carved and used."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH03-T3",
+     "topic_number": 3,
+     "title": "Water Structures",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "water-harvesting-traditions",
+       "learning_objective": "Explain how Harappan wells, Shringaverpur's reservoirs and other structures harvested and stored water."
+      },
+      {
+       "concept_tag": "stepwells-and-pushkarinis",
+       "learning_objective": "Describe the engineering, artistic and social role of stepwells and temple tanks."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH03-T4",
+     "topic_number": 4,
+     "title": "Classical Temple Architecture",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "temple-plan-elements",
+       "learning_objective": "Identify the main elements of a classical temple such as the gopuram, mandapa, garbhagriha and shikhara or vimana."
+      },
+      {
+       "concept_tag": "temple-symbolism",
+       "learning_objective": "Explain the temple as a representation of Purusha and worship as a journey from the outer to the inner world."
+      },
+      {
+       "concept_tag": "regional-temple-examples",
+       "learning_objective": "Compare regional temples such as Brihadishvara, Lingaraja, Dilwara and Bishnupur by builder and material."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH03-T5",
+     "topic_number": 5,
+     "title": "The Architecture of Mosques",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mosque-features",
+       "learning_objective": "Identify the main features of a mosque such as the prayer hall facing Mecca, domes, minarets and the mihrab."
+      },
+      {
+       "concept_tag": "indo-islamic-architecture",
+       "learning_objective": "Explain how Indo-Islamic architecture blended Islamic building traditions with Indian craftsmanship."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH03-T6",
+     "topic_number": 6,
+     "title": "Forts and Palaces",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "fort-functions-and-design",
+       "learning_objective": "Explain why forts were located strategically and how they were planned and supplied."
+      },
+      {
+       "concept_tag": "palace-architecture",
+       "learning_objective": "Describe palaces such as those at Agra, Orchha and Mysuru and the styles they reflect."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH03-T7",
+     "topic_number": 7,
+     "title": "Tombs and Mausoleums",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mausoleums-and-cenotaphs",
+       "learning_objective": "Distinguish mausoleums from cenotaphs and explain why tombs belong mainly to faiths that bury the dead."
+      },
+      {
+       "concept_tag": "mughal-tomb-features",
+       "learning_objective": "Describe the features of Humayun's Tomb and the Taj Mahal and the cultures they blend."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH03-T8",
+     "topic_number": 8,
+     "title": "Traditional Houses, Churches and Colonial Architecture",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "courtyard-houses",
+       "learning_objective": "Explain the central-courtyard design of havelis and Chettinadu houses and what they reveal about their owners."
+      },
+      {
+       "concept_tag": "churches-in-india",
+       "learning_objective": "Describe how churches in India, especially in Kerala, adopted local architectural traditions."
+      },
+      {
+       "concept_tag": "indo-saracenic-style",
+       "learning_objective": "Identify Indo-Saracenic architecture as a colonial style blending Islamic, Hindu and Gothic elements."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "The Role of the Judiciary in Our Society",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES2-CH04-T1",
+     "topic_number": 1,
+     "title": "Justice, Law and the Role of the Judiciary",
+     "ncert_sections": "Introduction; The Connection Between Law and Justice",
+     "concepts": [
+      {
+       "concept_tag": "role-of-judiciary",
+       "learning_objective": "Explain how the judiciary ensures fair adjudication and keeps laws and executive action within the Constitution."
+      },
+      {
+       "concept_tag": "laws-and-consequences",
+       "learning_objective": "Define laws as general rules made by the government that carry consequences when they are not followed."
+      },
+      {
+       "concept_tag": "repeal-of-unjust-laws",
+       "learning_objective": "Identify examples of unjust laws in India and elsewhere and explain why they were repealed."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH04-T2",
+     "topic_number": 2,
+     "title": "Substantive and Procedural Justice",
+     "ncert_sections": "The Connection Between Law and Justice (aspects of justice)",
+     "concepts": [
+      {
+       "concept_tag": "substantive-justice",
+       "learning_objective": "Describe substantive justice as concern with whether the final decision is fair, just and reasonable."
+      },
+      {
+       "concept_tag": "procedural-justice",
+       "learning_objective": "Explain procedural justice as a full hearing for every party and the presumption of innocence."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH04-T3",
+     "topic_number": 3,
+     "title": "The Judicial System and the Supreme Court of India",
+     "ncert_sections": "The Judicial System in India; The Supreme Court of India",
+     "concepts": [
+      {
+       "concept_tag": "judicial-hierarchy",
+       "learning_objective": "Describe the unified hierarchy of courts with the Supreme Court at the apex, High Courts and District Courts."
+      },
+      {
+       "concept_tag": "supreme-court-establishment",
+       "learning_objective": "Recall when and under which Article the Supreme Court was established and its role as final interpreter."
+      },
+      {
+       "concept_tag": "supreme-court-judges",
+       "learning_objective": "State how Supreme Court judges are appointed, their qualifications, strength and retirement age."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH04-T4",
+     "topic_number": 4,
+     "title": "Jurisdiction of the Supreme Court",
+     "ncert_sections": "Writ Jurisdiction; Public Interest Litigation; Original, Appellate and Advisory Jurisdiction; Special Leave Petitions",
+     "concepts": [
+      {
+       "concept_tag": "writ-jurisdiction",
+       "learning_objective": "Explain how citizens can enforce Fundamental Rights through writ petitions under Articles 32 and 226."
+      },
+      {
+       "concept_tag": "public-interest-litigation",
+       "learning_objective": "Explain how Public Interest Litigation lets people raise issues of public concern before the courts."
+      },
+      {
+       "concept_tag": "original-appellate-advisory-jurisdiction",
+       "learning_objective": "Distinguish the original, appellate, advisory and special leave jurisdiction of the Supreme Court."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH04-T5",
+     "topic_number": 5,
+     "title": "High Courts, Subordinate Courts and Tribunals",
+     "ncert_sections": "High Court; Jurisdiction of the High Courts; Subordinate Courts; Tribunals",
+     "concepts": [
+      {
+       "concept_tag": "high-courts",
+       "learning_objective": "Describe the appointment, qualifications, retirement and writ and supervisory powers of High Courts."
+      },
+      {
+       "concept_tag": "subordinate-courts",
+       "learning_objective": "Explain the place of subordinate courts in the judicial system and how District Judges are appointed."
+      },
+      {
+       "concept_tag": "tribunals",
+       "learning_objective": "Identify specialised tribunals and the categories of disputes each one decides."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH04-T6",
+     "topic_number": 6,
+     "title": "New Criminal Laws and Digital Technology in the Judicial System",
+     "ncert_sections": "Digital Technology and Judicial System; Digital Initiatives",
+     "concepts": [
+      {
+       "concept_tag": "new-criminal-laws",
+       "learning_objective": "Match the colonial-era criminal laws with the new laws of 2023 that replaced them."
+      },
+      {
+       "concept_tag": "digital-initiatives",
+       "learning_objective": "Explain how digital initiatives make the judicial system more accessible and transparent."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH04-T7",
+     "topic_number": 7,
+     "title": "Alternate Modes of Dispute Resolution",
+     "ncert_sections": "Alternate Modes of Dispute Resolution",
+     "concepts": [
+      {
+       "concept_tag": "arbitration",
+       "learning_objective": "Describe arbitration and how a binding award differs from other modes of settlement."
+      },
+      {
+       "concept_tag": "mediation",
+       "learning_objective": "Explain mediation as assisted mutual settlement in which the mediator imposes no decision."
+      },
+      {
+       "concept_tag": "lok-adalats-and-gram-nyayalayas",
+       "learning_objective": "Describe the purpose and legal basis of Lok Adalats and Gram Nyayalayas."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Citizenship: Rights and Duties",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES2-CH05-T1",
+     "topic_number": 1,
+     "title": "Who Is a Citizen?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "citizen-vs-resident",
+       "learning_objective": "Distinguish a citizen, who legally belongs to a country, from a resident who only lives there."
+      },
+      {
+       "concept_tag": "citizenship-legal-and-social",
+       "learning_objective": "Explain citizenship as both a legal identity and a social responsibility involving active participation."
+      },
+      {
+       "concept_tag": "citizenship-laws-india",
+       "learning_objective": "Identify the laws that set the rules for gaining or losing Indian citizenship."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH05-T2",
+     "topic_number": 2,
+     "title": "What Are Rights? Fundamental Rights and the Right to Equality",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rights-as-justified-claims",
+       "learning_objective": "Explain why only claims that support the wellbeing and dignity of all count as rights."
+      },
+      {
+       "concept_tag": "six-fundamental-rights",
+       "learning_objective": "Identify the six categories of Fundamental Rights and that they can be enforced in courts."
+      },
+      {
+       "concept_tag": "equality-and-equity",
+       "learning_objective": "Distinguish equality from equity and relate the right to equality to non-discrimination."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH05-T3",
+     "topic_number": 3,
+     "title": "Right to Freedom, Right to Life and Right against Exploitation",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "freedom-reasonable-restrictions",
+       "learning_objective": "Explain why the right to freedom comes with reasonable restrictions."
+      },
+      {
+       "concept_tag": "right-to-life-dignity",
+       "learning_objective": "Describe the right to life as the right to live with dignity, including livelihood, health and a clean environment."
+      },
+      {
+       "concept_tag": "right-against-exploitation",
+       "learning_objective": "Apply the protections against child labour, forced labour and trafficking to real situations."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH05-T4",
+     "topic_number": 4,
+     "title": "Freedom of Religion, Cultural and Educational Rights and Constitutional Remedies",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "freedom-of-religion",
+       "learning_objective": "Explain the freedom to choose, practise and share religion and the neutrality of state-run schools."
+      },
+      {
+       "concept_tag": "cultural-educational-rights",
+       "learning_objective": "Describe how cultural and educational rights protect minorities' language, script and institutions."
+      },
+      {
+       "concept_tag": "constitutional-remedies",
+       "learning_objective": "Evaluate why the right to constitutional remedies is called the heart and soul of the Constitution."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH05-T5",
+     "topic_number": 5,
+     "title": "Duties: Fundamental Duties and Their Link with Rights",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "fundamental-duties-origin",
+       "learning_objective": "Recall when and how Fundamental Duties were added to the Constitution."
+      },
+      {
+       "concept_tag": "article-51a-duties",
+       "learning_objective": "Identify the Fundamental Duties in Article 51A from everyday examples."
+      },
+      {
+       "concept_tag": "rights-duties-linked",
+       "learning_objective": "Explain why rights and duties are two sides of the same coin and how they differ in enforcement."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH05-T6",
+     "topic_number": 6,
+     "title": "Discrimination",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-discrimination",
+       "learning_objective": "Define discrimination and explain how it harms individuals and society."
+      },
+      {
+       "concept_tag": "visible-invisible-discrimination",
+       "learning_objective": "Distinguish visible from invisible discrimination and explain why the latter is hard to penalise."
+      },
+      {
+       "concept_tag": "reformers-against-discrimination",
+       "learning_objective": "Recognise how Savitribai Phule and Anandibai Joshi fought discrimination."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH05-T7",
+     "topic_number": 7,
+     "title": "Inclusion",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-inclusion",
+       "learning_objective": "Explain inclusion as making everyone feel welcomed, respected and given equal access."
+      },
+      {
+       "concept_tag": "inclusive-practices",
+       "learning_objective": "Suggest practical steps that remove barriers to participation in school and society."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Dynamics of Population",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES2-CH06-T1",
+     "topic_number": 1,
+     "title": "What Is Demography?",
+     "ncert_sections": "What Is Demography?; Don't Miss Out (census)",
+     "concepts": [
+      {
+       "concept_tag": "demography-meaning",
+       "learning_objective": "Define demography as the study of the size, structure and composition of a population and how it changes over time."
+      },
+      {
+       "concept_tag": "uses-of-demography",
+       "learning_objective": "Explain how governments and businesses use demographic information to plan services and allocate resources."
+      },
+      {
+       "concept_tag": "census",
+       "learning_objective": "Describe the census as the official count of a country's people and the information it collects."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH06-T2",
+     "topic_number": 2,
+     "title": "Population at a Glance: India and the World",
+     "ncert_sections": "Population at a Glance",
+     "concepts": [
+      {
+       "concept_tag": "world-population-trends",
+       "learning_objective": "Describe the growth of world population since 1950 and the UN projection of its peak and decline."
+      },
+      {
+       "concept_tag": "india-most-populous",
+       "learning_objective": "State India's position as the most populous country and its share of the world population."
+      },
+      {
+       "concept_tag": "causes-of-rapid-growth",
+       "learning_objective": "Explain how medical advances and better sanitation caused rapid population growth after the 1950s."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH06-T3",
+     "topic_number": 3,
+     "title": "Birth Rate and Fertility Rate",
+     "ncert_sections": "What Determines the Population of a Country?; Birth and fertility rates",
+     "concepts": [
+      {
+       "concept_tag": "birth-and-fertility-rate",
+       "learning_objective": "Distinguish between birth rate and fertility rate and how each affects population growth."
+      },
+      {
+       "concept_tag": "replacement-level-fertility",
+       "learning_objective": "Explain the replacement level fertility rate of 2.1 and what happens above and below it."
+      },
+      {
+       "concept_tag": "falling-fertility-factors",
+       "learning_objective": "Analyse why fertility rates fall, using China's One-Child Policy and the role of girls' education and urbanisation."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH06-T4",
+     "topic_number": 4,
+     "title": "Mortality Rate and Migration",
+     "ncert_sections": "Death or mortality rate; Migration",
+     "concepts": [
+      {
+       "concept_tag": "mortality-and-life-expectancy",
+       "learning_objective": "Interpret mortality rate, child mortality and life expectancy as indicators of health and well-being."
+      },
+      {
+       "concept_tag": "migration",
+       "learning_objective": "Explain the causes of migration and its effects on the areas people move to and from."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH06-T5",
+     "topic_number": 5,
+     "title": "Stages of Demographic Transition",
+     "ncert_sections": "How Do Countries Experience Population Change?",
+     "concepts": [
+      {
+       "concept_tag": "demographic-transition-stages",
+       "learning_objective": "Describe the three stages of demographic transition in terms of birth and death rates."
+      },
+      {
+       "concept_tag": "india-demographic-transition",
+       "learning_objective": "Relate phases of India's population history to the stages of demographic transition."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH06-T6",
+     "topic_number": 6,
+     "title": "India's Population: Composition, Sex Ratio and Pyramids",
+     "ncert_sections": "India's Population: Composition and Trends; Improvement in India's sex ratio",
+     "concepts": [
+      {
+       "concept_tag": "sex-ratio",
+       "learning_objective": "Define sex ratio and interpret India's sex ratio figures from the Census."
+      },
+      {
+       "concept_tag": "population-pyramid",
+       "learning_objective": "Interpret the shape of a population structure diagram and how India's pyramid has changed since 1950."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH06-T7",
+     "topic_number": 7,
+     "title": "Demographic Dividend and Population Ageing",
+     "ncert_sections": "India's Demographic Dividend - A Limited Window of Opportunity",
+     "concepts": [
+      {
+       "concept_tag": "demographic-dividend",
+       "learning_objective": "Explain the demographic dividend and youth bulge and why India's window of opportunity is limited."
+      },
+      {
+       "concept_tag": "population-ageing",
+       "learning_objective": "Analyse the challenges of an ageing population and the ways nations prepare for it."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "India’s Urban Landscape",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES2-CH07-T1",
+     "topic_number": 1,
+     "title": "Urban and rural areas, and population density",
+     "ncert_sections": "Introduction; Population Density in Cities",
+     "concepts": [
+      {
+       "concept_tag": "urban-rural-distinction",
+       "learning_objective": "Distinguish urban areas from rural areas by population, occupations, infrastructure and local governing bodies."
+      },
+      {
+       "concept_tag": "population-density",
+       "learning_objective": "Calculate and compare population density as the number of people per square kilometre."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH07-T2",
+     "topic_number": 2,
+     "title": "How cities become centres of economic activity",
+     "ncert_sections": "How do Cities Become Centres of Economic Activities?; What Leads to Urbanisation?",
+     "concepts": [
+      {
+       "concept_tag": "locational-advantage",
+       "learning_objective": "Explain how location near rivers, coasts, trade routes or raw materials helps a place grow into a city, as in Jamshedpur."
+      },
+      {
+       "concept_tag": "urbanisation-process",
+       "learning_objective": "Describe urbanisation and the stages by which a rural area turns into a metropolitan area."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH07-T3",
+     "topic_number": 3,
+     "title": "Economic hubs and specialised cities",
+     "ncert_sections": "Mumbai, Bengaluru, smaller urban centres, Agra, Varanasi and Delhi",
+     "concepts": [
+      {
+       "concept_tag": "economic-clusters",
+       "learning_objective": "Explain how institutions, clusters of industries and education helped cities like Mumbai and Bengaluru become hubs."
+      },
+      {
+       "concept_tag": "specialised-urban-centres",
+       "learning_objective": "Identify smaller urban centres known for particular industries and why firms locate in growing cities."
+      },
+      {
+       "concept_tag": "tourism-and-pilgrimage-economy",
+       "learning_objective": "Analyse how historical, cultural and pilgrimage sites drive economic activity and livelihoods in cities."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH07-T4",
+     "topic_number": 4,
+     "title": "Cities as cultural hubs",
+     "ncert_sections": "Cities as Cultural Hubs",
+     "concepts": [
+      {
+       "concept_tag": "cultural-blending",
+       "learning_objective": "Explain how cities mix cultures, food and festivals, using examples such as vada pav and Kolkata's Durga Puja."
+      },
+      {
+       "concept_tag": "cultural-spaces",
+       "learning_objective": "Describe how cultural centres, museums, libraries and stadiums help city residents interact and form networks."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH07-T5",
+     "topic_number": 5,
+     "title": "Challenges faced by cities",
+     "ncert_sections": "Challenges Faced by Cities",
+     "concepts": [
+      {
+       "concept_tag": "urban-infrastructure-pressure",
+       "learning_objective": "Identify the pressures that growing populations put on city infrastructure, air quality and safety."
+      },
+      {
+       "concept_tag": "urban-slums",
+       "learning_objective": "Explain why slums grow in cities, how slum dwellers support the city, and how housing schemes respond."
+      },
+      {
+       "concept_tag": "lake-revival-collective-action",
+       "learning_objective": "Evaluate how collective action revived Bengaluru's lakes and eased its water crisis."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH07-T6",
+     "topic_number": 6,
+     "title": "Planning our cities: the Pink City of Jaipur",
+     "ncert_sections": "Planning Our Cities; India's 'Pink City'",
+     "concepts": [
+      {
+       "concept_tag": "urban-planning-factors",
+       "learning_objective": "Identify the factors urban planners must consider, such as jobs, transport, land use and public safety."
+      },
+      {
+       "concept_tag": "jaipur-planned-city",
+       "learning_objective": "Describe the planning features of Jaipur and how they suited security, trade, aesthetics and the dry climate."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH07-T7",
+     "topic_number": 7,
+     "title": "Dynamic urban planning of Singapore",
+     "ncert_sections": "Dynamic urban planning of Singapore",
+     "concepts": [
+      {
+       "concept_tag": "singapore-planning-system",
+       "learning_objective": "Explain how Singapore's Concept Plan and Master Plan make its long-term planning flexible."
+      },
+      {
+       "concept_tag": "mixed-use-green-design",
+       "learning_objective": "Analyse how mixed-use spaces, public transport and vertical gardens give dense Singapore a good quality of life."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH07-T8",
+     "topic_number": 8,
+     "title": "Urban redevelopment and sustainable cities of tomorrow",
+     "ncert_sections": "Urban redevelopment in India; concluding section",
+     "concepts": [
+      {
+       "concept_tag": "urban-redevelopment-india",
+       "learning_objective": "Describe Indian redevelopment projects such as the Sabarmati Riverfront and Gangtok's M.G. Road."
+      },
+      {
+       "concept_tag": "sustainable-cities",
+       "learning_objective": "Evaluate how technology and sustainable planning can balance city growth with care for people and Nature."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES2-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Cultural Currents: 13th to 17th Centuries",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees208.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES2-CH08-T1",
+     "topic_number": 1,
+     "title": "Belief systems and the power of the bhakti tradition",
+     "ncert_sections": "Belief Systems; The power of the bhakti tradition; Regional saints and their messages",
+     "concepts": [
+      {
+       "concept_tag": "bhakti-marga",
+       "learning_objective": "Explain the bhakti marga as a path to moksha and why it united people during political instability."
+      },
+      {
+       "concept_tag": "regional-bhakti-saints",
+       "learning_objective": "Identify bhakti saints of different regions and the messages of equality and oneness they spread."
+      },
+      {
+       "concept_tag": "cultural-continuity-patterns",
+       "learning_objective": "Recognise the common patterns of continuity, patronage and participation seen in the 13th to 17th centuries."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH08-T2",
+     "topic_number": 2,
+     "title": "Sufism and its meeting with bhakti",
+     "ncert_sections": "Sufism",
+     "concepts": [
+      {
+       "concept_tag": "sufi-devotion-music",
+       "learning_objective": "Describe Sufism as a devotional path of Islam and the role of music such as qawwali in it."
+      },
+      {
+       "concept_tag": "bhakti-sufi-convergence",
+       "learning_objective": "Explain how Bhakti and Sufi traditions overlapped, including the work of Dara Shikoh."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH08-T3",
+     "topic_number": 3,
+     "title": "Musical traditions: continuation and evolution",
+     "ncert_sections": "Musical Traditions - Continuation and Evolution",
+     "concepts": [
+      {
+       "concept_tag": "storytelling-traditions",
+       "learning_objective": "Describe regional storytelling traditions such as puppetry and pattachitra."
+      },
+      {
+       "concept_tag": "classical-music-streams",
+       "learning_objective": "Distinguish the Hindustani and Carnatic streams and the growth of dhrupad."
+      },
+      {
+       "concept_tag": "instruments-evolution",
+       "learning_objective": "Explain how instruments like the sitar and tabla evolved while drawing on older Indian traditions."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH08-T4",
+     "topic_number": 4,
+     "title": "Miniature paintings and gardens",
+     "ncert_sections": "From Walls to Paper - Miniature Paintings; Changing Landscapes - Gardens",
+     "concepts": [
+      {
+       "concept_tag": "rajput-mughal-miniatures",
+       "learning_objective": "Compare Rajput and Mughal miniature painting and the exchanges between them."
+      },
+      {
+       "concept_tag": "gardens-charbagh",
+       "learning_objective": "Describe the charbagh design of Mughal gardens and how later gardens borrowed from it."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH08-T5",
+     "topic_number": 5,
+     "title": "Women in society: contextual variations in role and status",
+     "ncert_sections": "Women in Society - Contextual Variations in Their Role and Status",
+     "concepts": [
+      {
+       "concept_tag": "purdah-regional-variation",
+       "learning_objective": "Explain why practices like purdah spread in some regions and not in others."
+      },
+      {
+       "concept_tag": "notable-women-rulers",
+       "learning_objective": "Identify the roles of women such as Razia Sultan and Nur Jahan in governance."
+      },
+      {
+       "concept_tag": "women-south-india",
+       "learning_objective": "Interpret evidence of women's roles in public life in south India, especially Vijayanagara."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH08-T6",
+     "topic_number": 6,
+     "title": "Education, knowledge traditions and vocational learning",
+     "ncert_sections": "Education and Knowledge Traditions; Institutions of learning; Vocational education and knowledge sharing",
+     "concepts": [
+      {
+       "concept_tag": "institutions-of-learning",
+       "learning_objective": "Identify the institutions of learning of the period, from gurukulas and mathas to madrasas."
+      },
+      {
+       "concept_tag": "decentralised-education",
+       "learning_objective": "Explain why decentralised systems of learning survived political turmoil."
+      },
+      {
+       "concept_tag": "textile-apprenticeship",
+       "learning_objective": "Describe how textile skills were passed on and enriched, as in Banarasi saris and pashmina shawls."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH08-T7",
+     "topic_number": 7,
+     "title": "Growth of literature and language",
+     "ncert_sections": "Growth of Literature and Language; The development of Urdu",
+     "concepts": [
+      {
+       "concept_tag": "regional-literature",
+       "learning_objective": "Describe the growth of literature in regional languages under bhakti saints and royal patrons."
+      },
+      {
+       "concept_tag": "persian-sanskrit-translation",
+       "learning_objective": "Identify translations between Sanskrit and Persian and their role in preserving knowledge."
+      },
+      {
+       "concept_tag": "urdu-development",
+       "learning_objective": "Explain how Urdu and Dakhini developed by blending Indian and Persian-Arabic elements."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES2-CH08-T8",
+     "topic_number": 8,
+     "title": "Science, architecture and cultural exchange in daily life",
+     "ncert_sections": "Developments in Science and Technology; Regional Architectural Developments; Cultural Exchange in Daily Life",
+     "concepts": [
+      {
+       "concept_tag": "science-technology-advances",
+       "learning_objective": "Identify advances in mathematics, astronomy and applied chemistry made in this period."
+      },
+      {
+       "concept_tag": "temple-building-resilience",
+       "learning_objective": "Explain how temple building and reconstruction showed cultural resilience."
+      },
+      {
+       "concept_tag": "food-clothing-exchange",
+       "learning_objective": "Distinguish adoption from adaptation of foreign influences in food and clothing."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

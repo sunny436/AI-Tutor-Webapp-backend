@@ -1,0 +1,1452 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "vyavsay-adhyanan-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "business_studies",
+  "language": "hindi",
+  "title": "Vyavsay Adhyanan",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khbs1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHBS1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "व्यवसाय, व्यापार और वाणिज्य",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khbs101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHBS1-CH01-T1",
+     "topic_number": 1,
+     "title": "व्यवसाय की भूमिका और भारत में व्यापार का इतिहास",
+     "ncert_sections": "1.1, 1.1.1",
+     "concepts": [
+      {
+       "concept_tag": "bhartiya-vyapar-itihas",
+       "learning_objective": "प्राचीन भारत के व्यापारिक मार्गों, केंद्रों और स्वदेशी बैंकिंग की भूमिका समझना।"
+      },
+      {
+       "concept_tag": "arthvyavastha-mein-vyavsay",
+       "learning_objective": "अर्थव्यवस्था के विकास में व्यवसाय के योगदान और औपनिवेशिक प्रभाव का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH01-T2",
+     "topic_number": 2,
+     "title": "व्यवसाय की अवधारणा और विशेषताएँ",
+     "ncert_sections": "1.6, 1.6.1",
+     "concepts": [
+      {
+       "concept_tag": "vyavsay-avdharna",
+       "learning_objective": "व्यवसाय को एक आर्थिक क्रिया के रूप में परिभाषित करना।"
+      },
+      {
+       "concept_tag": "vyavsay-visheshtayen",
+       "learning_objective": "व्यावसायिक क्रियाओं की विशेषताओं को पहचानना और लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH01-T3",
+     "topic_number": 3,
+     "title": "व्यवसाय, पेशा तथा रोज़गार में तुलना",
+     "ncert_sections": "1.6.2",
+     "concepts": [
+      {
+       "concept_tag": "vyavsay-pesha-rozgar",
+       "learning_objective": "व्यवसाय, पेशा और रोज़गार में स्थापना, योग्यता, प्रतिफल और जोखिम के आधार पर अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH01-T4",
+     "topic_number": 4,
+     "title": "व्यावसायिक क्रियाओं का वर्गीकरण: उद्योग",
+     "ncert_sections": "1.7, 1.7.1",
+     "concepts": [
+      {
+       "concept_tag": "prathmik-udyog",
+       "learning_objective": "प्राथमिक उद्योग के निष्कर्षण और जननिक प्रकारों को पहचानना।"
+      },
+      {
+       "concept_tag": "dwitiyak-tritiyak-udyog",
+       "learning_objective": "विनिर्माण, निर्माण और तृतीयक उद्योगों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH01-T5",
+     "topic_number": 5,
+     "title": "वाणिज्य, व्यापार और व्यापार के सहायक",
+     "ncert_sections": "1.7.2, 1.7.3, 1.7.4",
+     "concepts": [
+      {
+       "concept_tag": "vyapar-prakar",
+       "learning_objective": "आंतरिक और बाह्य व्यापार तथा थोक और फुटकर व्यापार में अंतर करना।"
+      },
+      {
+       "concept_tag": "vyapar-sahayak",
+       "learning_objective": "व्यापार के सहायकों द्वारा दूर की जाने वाली बाधाओं को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH01-T6",
+     "topic_number": 6,
+     "title": "व्यवसाय के उद्देश्य",
+     "ncert_sections": "1.8",
+     "concepts": [
+      {
+       "concept_tag": "vyavsay-uddeshya",
+       "learning_objective": "व्यवसाय के आर्थिक और सामाजिक उद्देश्यों तथा लाभ की भूमिका को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH01-T7",
+     "topic_number": 7,
+     "title": "व्यावसायिक जोखिम",
+     "ncert_sections": "1.9, 1.9.1, 1.9.2",
+     "concepts": [
+      {
+       "concept_tag": "jokhim-prakriti",
+       "learning_objective": "व्यावसायिक जोखिमों की प्रकृति और लाभ को जोखिम के पुरस्कार के रूप में समझना।"
+      },
+      {
+       "concept_tag": "jokhim-karan",
+       "learning_objective": "व्यावसायिक जोखिमों के प्राकृतिक, मानवीय, आर्थिक और अन्य कारणों को वर्गीकृत करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH01-T8",
+     "topic_number": 8,
+     "title": "व्यवसाय शुरू करना — मूल कारक",
+     "ncert_sections": "1.10",
+     "concepts": [
+      {
+       "concept_tag": "vyavsay-arambh-karak",
+       "learning_objective": "व्यवसाय शुरू करने के मूल कारकों और उनके क्रम को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHBS1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "व्यावसायिक संगठन के स्वरूप",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khbs102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHBS1-CH02-T1",
+     "topic_number": 1,
+     "title": "एकल स्वामित्व",
+     "ncert_sections": "2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "ekal-swamitva-lakshan",
+       "learning_objective": "विद्यार्थी एकल स्वामित्व के अर्थ और लक्षणों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "ekal-swamitva-gun-seemayen",
+       "learning_objective": "विद्यार्थी एकल स्वामित्व के गुणों और सीमाओं का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH02-T2",
+     "topic_number": 2,
+     "title": "संयुक्त हिंदू परिवार व्यवसाय",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "hindu-parivar-vyavsay-lakshan",
+       "learning_objective": "विद्यार्थी संयुक्त हिंदू परिवार व्यवसाय में कर्ता की भूमिका और सदस्यता के आधार को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "hindu-parivar-gun-seemayen",
+       "learning_objective": "विद्यार्थी संयुक्त हिंदू परिवार व्यवसाय के गुणों और सीमाओं का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH02-T3",
+     "topic_number": 3,
+     "title": "साझेदारी: अर्थ, लक्षण, गुण और सीमाएँ",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "sajhedari-lakshan",
+       "learning_objective": "विद्यार्थी भारतीय साझेदारी अधिनियम 1932 के अनुसार साझेदारी के लक्षण बता सकेंगे।"
+      },
+      {
+       "concept_tag": "sajhedari-gun-seemayen",
+       "learning_objective": "विद्यार्थी साझेदारी के गुणों और सीमाओं की तुलना कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH02-T4",
+     "topic_number": 4,
+     "title": "साझेदारों और साझेदारी के प्रकार, संलेख तथा पंजीकरण",
+     "ncert_sections": "2.4.1, 2.4.2, 2.4.3, 2.4.4",
+     "concepts": [
+      {
+       "concept_tag": "sajhedaron-ke-prakar",
+       "learning_objective": "विद्यार्थी सक्रिय, सुप्त, गुप्त, नाममात्र और विबंधन द्वारा साझेदार में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sajhedari-ke-prakar",
+       "learning_objective": "विद्यार्थी ऐच्छिक, विशिष्ट, सामान्य और सीमित साझेदारी को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "sanlekh-aur-panjikaran",
+       "learning_objective": "विद्यार्थी साझेदारी संलेख और पंजीकरण न कराने के परिणाम समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH02-T5",
+     "topic_number": 5,
+     "title": "सहकारी समिति",
+     "ncert_sections": "2.5, 2.5.1",
+     "concepts": [
+      {
+       "concept_tag": "sahkari-samiti-lakshan",
+       "learning_objective": "विद्यार्थी सहकारी समिति के लक्षण, गुण और सीमाएँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "sahkari-samiti-prakar",
+       "learning_objective": "विद्यार्थी उद्देश्य के आधार पर सहकारी समितियों के प्रकार पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH02-T6",
+     "topic_number": 6,
+     "title": "संयुक्त पूँजी कंपनी और उसके प्रकार",
+     "ncert_sections": "2.6, 2.6.1",
+     "concepts": [
+      {
+       "concept_tag": "company-lakshan",
+       "learning_objective": "विद्यार्थी कंपनी के कृत्रिम व्यक्ति, पृथक वैधानिक अस्तित्व और शाश्वत उत्तराधिकार जैसे लक्षण समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "niji-sarvajanik-company",
+       "learning_objective": "विद्यार्थी निजी और सार्वजनिक कंपनी में अंतर कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH02-T7",
+     "topic_number": 7,
+     "title": "व्यावसायिक संगठन के स्वरूप का चयन",
+     "ncert_sections": "2.7",
+     "concepts": [
+      {
+       "concept_tag": "swaroop-chayan-ghatak",
+       "learning_objective": "विद्यार्थी संगठन के उपयुक्त स्वरूप के चयन के निर्धारक तत्वों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHBS1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "निजी, सार्वजनिक एवं भूमंडलीय उपक्रम",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khbs103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHBS1-CH03-T1",
+     "topic_number": 1,
+     "title": "निजी क्षेत्र एवं सार्वजनिक क्षेत्र",
+     "ncert_sections": "3.1, 3.2",
+     "concepts": [
+      {
+       "concept_tag": "niji-kshetra",
+       "learning_objective": "विद्यार्थी निजी क्षेत्र के संगठनों के स्वामित्व और स्वरूपों को पहचान सकेगा।"
+      },
+      {
+       "concept_tag": "sarvajanik-kshetra",
+       "learning_objective": "विद्यार्थी सार्वजनिक क्षेत्र के उपक्रमों के स्वामित्व और जवाबदेही को समझ सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH03-T2",
+     "topic_number": 2,
+     "title": "विभागीय उपक्रम",
+     "ncert_sections": "3.3, 3.3.1",
+     "concepts": [
+      {
+       "concept_tag": "vibhagiya-upakram-visheshtayen",
+       "learning_objective": "विद्यार्थी विभागीय उपक्रमों की विशेषताएँ बता सकेगा।"
+      },
+      {
+       "concept_tag": "vibhagiya-upakram-gun-seemayen",
+       "learning_objective": "विद्यार्थी विभागीय उपक्रमों के गुणों और सीमाओं का मूल्यांकन कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH03-T3",
+     "topic_number": 3,
+     "title": "सांविधिक निगम",
+     "ncert_sections": "3.3.2",
+     "concepts": [
+      {
+       "concept_tag": "sanvidhik-nigam-visheshtayen",
+       "learning_objective": "विद्यार्थी सांविधिक निगमों की स्थापना और विशेषताएँ समझ सकेगा।"
+      },
+      {
+       "concept_tag": "sanvidhik-nigam-gun-seemayen",
+       "learning_objective": "विद्यार्थी सांविधिक निगमों के गुणों और सीमाओं की तुलना कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH03-T4",
+     "topic_number": 4,
+     "title": "सरकारी कंपनी",
+     "ncert_sections": "3.3.3",
+     "concepts": [
+      {
+       "concept_tag": "sarkari-company-visheshtayen",
+       "learning_objective": "विद्यार्थी सरकारी कंपनी की परिभाषा और विशेषताएँ बता सकेगा।"
+      },
+      {
+       "concept_tag": "sarkari-company-gun-seemayen",
+       "learning_objective": "विद्यार्थी सरकारी कंपनी के गुणों और सीमाओं का विश्लेषण कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH03-T5",
+     "topic_number": 5,
+     "title": "सार्वजनिक क्षेत्र की बदलती भूमिका",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "sarvajanik-kshetra-bhumika",
+       "learning_objective": "विद्यार्थी अर्थव्यवस्था में सार्वजनिक क्षेत्र की भूमिका समझा सकेगा।"
+      },
+      {
+       "concept_tag": "audyogik-niti-1991",
+       "learning_objective": "विद्यार्थी 1991 की औद्योगिक नीति के सार्वजनिक क्षेत्र संबंधी प्रावधानों की समीक्षा कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH03-T6",
+     "topic_number": 6,
+     "title": "भूमंडलीय उपक्रम",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "bhumandaliya-upakram-visheshtayen",
+       "learning_objective": "विद्यार्थी भूमंडलीय उपक्रमों (बहुराष्ट्रीय निगमों) की विशेषताएँ बता सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH03-T7",
+     "topic_number": 7,
+     "title": "संयुक्त उपक्रम एवं सार्वजनिक निजी भागीदारी",
+     "ncert_sections": "3.6, 3.6.1, 3.7",
+     "concepts": [
+      {
+       "concept_tag": "sanyukt-upakram-prakar",
+       "learning_objective": "विद्यार्थी अनुबंधीय और समता आधारित संयुक्त उपक्रमों में अंतर कर सकेगा।"
+      },
+      {
+       "concept_tag": "sanyukt-upakram-labh",
+       "learning_objective": "विद्यार्थी संयुक्त उपक्रमों के लाभ समझा सकेगा।"
+      },
+      {
+       "concept_tag": "sarvajanik-niji-bhagidari",
+       "learning_objective": "विद्यार्थी सार्वजनिक निजी भागीदारी के स्वरूप और भागीदारों की भूमिका समझ सकेगा।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHBS1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "व्यावसायिक सेवाएँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khbs104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHBS1-CH04-T1",
+     "topic_number": 1,
+     "title": "सेवाओं की प्रकृति और वस्तुओं से अंतर",
+     "ncert_sections": "4.1, 4.2, 4.2.1",
+     "concepts": [
+      {
+       "concept_tag": "sevaon-ki-visheshtayen",
+       "learning_objective": "विद्यार्थी सेवाओं की पाँच विशेषताओं (अमूर्तता, असंगतता, अभिन्नता, इन्वेन्ट्री का अभाव, संबद्धता) को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "seva-aur-vastu-mein-antar",
+       "learning_objective": "विद्यार्थी उदाहरणों के आधार पर सेवाओं और वस्तुओं में अंतर कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH04-T2",
+     "topic_number": 2,
+     "title": "सेवाओं के प्रकार",
+     "ncert_sections": "4.3, 4.3.1",
+     "concepts": [
+      {
+       "concept_tag": "sevaon-ka-vargikaran",
+       "learning_objective": "विद्यार्थी व्यावसायिक, सामाजिक और व्यक्तिगत सेवाओं में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vyavsayik-sevaon-ke-udaharan",
+       "learning_objective": "विद्यार्थी व्यावसायिक इकाइयों द्वारा प्रयुक्त बैंकिंग, बीमा, परिवहन और संप्रेषण सेवाओं की पहचान कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH04-T3",
+     "topic_number": 3,
+     "title": "बैंकिंग: बैंकों के प्रकार और वाणिज्यिक बैंक के कार्य",
+     "ncert_sections": "4.4, 4.4.1, 4.4.2",
+     "concepts": [
+      {
+       "concept_tag": "bankon-ke-prakar",
+       "learning_objective": "विद्यार्थी वाणिज्यिक, सहकारी, विशिष्ट और केंद्रीय बैंक की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vanijyik-bank-ke-karya",
+       "learning_objective": "विद्यार्थी जमा स्वीकार करना, ऋण देना, चेक सुविधा और धन हस्तांतरण जैसे कार्यों को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "check-ke-prakar",
+       "learning_objective": "विद्यार्थी वाहक चेक और रेखांकित चेक में अंतर कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH04-T4",
+     "topic_number": 4,
+     "title": "ई-बैंकिंग",
+     "ncert_sections": "4.4.3",
+     "concepts": [
+      {
+       "concept_tag": "e-banking-ki-sevayen",
+       "learning_objective": "विद्यार्थी ई-बैंकिंग का अर्थ तथा ए.टी.एम., एन.ई.एफ़.टी. और आर.टी.जी.एस. जैसी सेवाओं को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "e-banking-ke-labh",
+       "learning_objective": "विद्यार्थी ग्राहकों और बैंकों के लिए ई-बैंकिंग के लाभों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH04-T5",
+     "topic_number": 5,
+     "title": "बीमा: अर्थ, कार्य और सिद्धांत",
+     "ncert_sections": "4.5, 4.5.1, 4.5.2, 4.5.3",
+     "concepts": [
+      {
+       "concept_tag": "bima-ka-arth-aur-karya",
+       "learning_objective": "विद्यार्थी बीमा के आधारभूत सिद्धांत (जोखिम का बँटवारा) और उसके कार्यों को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "bima-ke-siddhant",
+       "learning_objective": "विद्यार्थी पूर्ण सद्विश्वास, बीमायोग्य हित, क्षतिपूर्ति, निकटतम कारण, अधिकार समर्पण, योगदान और हानि कम करने के सिद्धांतों को लागू कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH04-T6",
+     "topic_number": 6,
+     "title": "बीमा के प्रकार",
+     "ncert_sections": "4.5.4",
+     "concepts": [
+      {
+       "concept_tag": "jivan-bima",
+       "learning_objective": "विद्यार्थी जीवन बीमा की विशेषताओं और आजीवन, बंदोबस्ती, संयुक्त जीवन तथा वार्षिकवृत्ति पॉलिसियों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "agni-aur-samudri-bima",
+       "learning_objective": "विद्यार्थी अग्नि बीमा और समुद्री बीमा (जहाज़, माल, भाड़ा) की विशेषताओं की तुलना कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH04-T7",
+     "topic_number": 7,
+     "title": "संप्रेषण सेवाएँ और परिवहन",
+     "ncert_sections": "4.6, 4.7",
+     "concepts": [
+      {
+       "concept_tag": "dak-sevayen",
+       "learning_objective": "विद्यार्थी भारतीय डाक विभाग की वित्तीय और डाक सुविधाओं तथा स्पीड पोस्ट जैसी सेवाओं को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "doorsanchar-sevayen",
+       "learning_objective": "विद्यार्थी सेल्युलर मोबाइल, स्थायी लाइन, केबल, वी.एस.ए.टी. और डी.टी.एच. सेवाओं में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "parivahan-seva",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि परिवहन स्थान संबंधी बाधा को कैसे दूर करता है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHBS1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "व्यवसाय की उभरती पद्धतियाँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khbs105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHBS1-CH05-T1",
+     "topic_number": 1,
+     "title": "परिचय: व्यवसाय की उभरती पद्धतियाँ",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "ubharti-paddhati-arth",
+       "learning_objective": "व्यवसाय पद्धति और 'उभरती' शब्द का अर्थ समझना।"
+      },
+      {
+       "concept_tag": "vyavsay-ke-teen-rujhan",
+       "learning_objective": "व्यवसाय को आकार देने वाले तीन प्रमुख रुझानों की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH05-T2",
+     "topic_number": 2,
+     "title": "ई-व्यवसाय और ई-कॉमर्स",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "e-vyavsay-arth",
+       "learning_objective": "ई-व्यवसाय को कंप्यूटर नेटवर्क द्वारा व्यवसाय संचालन के रूप में परिभाषित करना।"
+      },
+      {
+       "concept_tag": "e-vyavsay-banam-e-commerce",
+       "learning_objective": "ई-व्यवसाय और ई-कॉमर्स के बीच अंतर स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH05-T3",
+     "topic_number": 3,
+     "title": "ई-व्यवसाय का कार्यक्षेत्र",
+     "ncert_sections": "5.2.1",
+     "concepts": [
+      {
+       "concept_tag": "farm-se-farm",
+       "learning_objective": "फर्म से फर्म लेन-देन और उसके अनुप्रयोगों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "farm-se-grahak",
+       "learning_objective": "फर्म से ग्राहक और अंतः बी लेन-देन को पहचानना।"
+      },
+      {
+       "concept_tag": "grahak-se-grahak",
+       "learning_objective": "ग्राहक से ग्राहक कॉमर्स की विशेषताएँ समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH05-T4",
+     "topic_number": 4,
+     "title": "ई-व्यवसाय के लाभ",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "e-vyavsay-labh",
+       "learning_objective": "ई-व्यवसाय के प्रमुख लाभों को पहचानना और उनका विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH05-T5",
+     "topic_number": 5,
+     "title": "ई-व्यवसाय की सीमाएँ",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "e-vyavsay-seemayen",
+       "learning_objective": "ई-व्यवसाय की सीमाओं को पहचानना और उनके कारण समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH05-T6",
+     "topic_number": 6,
+     "title": "ऑनलाइन लेन-देन",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "online-len-den-charan",
+       "learning_objective": "ऑनलाइन खरीददारी के चरणों का क्रम समझना।"
+      },
+      {
+       "concept_tag": "bhugtan-vidhiyan",
+       "learning_objective": "ऑनलाइन भुगतान की विभिन्न विधियों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH05-T7",
+     "topic_number": 7,
+     "title": "ई-लेन-देनों की सुरक्षा एवं बचाव",
+     "ncert_sections": "5.6",
+     "concepts": [
+      {
+       "concept_tag": "len-den-jokhim",
+       "learning_objective": "आदेश, सुपुर्दगी और भुगतान संबंधी चूक के जोखिम पहचानना।"
+      },
+      {
+       "concept_tag": "data-jokhim",
+       "learning_objective": "डाटा संग्रहण एवं प्रसारण जोखिम तथा उनसे बचाव के उपाय समझना।"
+      },
+      {
+       "concept_tag": "niji-sampada-jokhim",
+       "learning_objective": "बौद्धिक संपदा और निजता पर खतरे को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH05-T8",
+     "topic_number": 8,
+     "title": "सफल ई-व्यवसाय कार्यान्वयन के लिए आवश्यक संसाधन",
+     "ncert_sections": "5.7",
+     "concepts": [
+      {
+       "concept_tag": "e-vyavsay-sansadhan",
+       "learning_objective": "ई-व्यवसाय के लिए आवश्यक संसाधनों और वेबसाइट का अर्थ समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHBS1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "व्यवसाय का सामाजिक उत्तरदायित्व एवं व्यावसायिक नैतिकता",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khbs106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHBS1-CH06-T1",
+     "topic_number": 1,
+     "title": "सामाजिक उत्तरदायित्व की अवधारणा",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "samajik-uttardayitva-arth",
+       "learning_objective": "व्यवसाय के सामाजिक उत्तरदायित्व का अर्थ स्पष्ट कर सकें।"
+      },
+      {
+       "concept_tag": "kanuni-aur-samajik-uttardayitva",
+       "learning_objective": "सामाजिक उत्तरदायित्व और कानूनी उत्तरदायित्व में अंतर कर सकें।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH06-T2",
+     "topic_number": 2,
+     "title": "सामाजिक उत्तरदायित्व की आवश्यकता: पक्ष एवं विपक्ष में तर्क",
+     "ncert_sections": "6.3, 6.3.1, 6.3.2",
+     "concepts": [
+      {
+       "concept_tag": "paksh-ke-tark",
+       "learning_objective": "सामाजिक उत्तरदायित्व के पक्ष में दिए गए तर्कों की पहचान कर सकें।"
+      },
+      {
+       "concept_tag": "vipaksh-ke-tark",
+       "learning_objective": "सामाजिक उत्तरदायित्व के विपक्ष में दिए गए तर्कों को समझ सकें।"
+      },
+      {
+       "concept_tag": "csr-kampani-adhiniyam-2013",
+       "learning_objective": "कंपनी अधिनियम, 2013 के निगमित सामाजिक उत्तरदायित्व संबंधी प्रावधानों को लागू कर सकें।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH06-T3",
+     "topic_number": 3,
+     "title": "सामाजिक उत्तरदायित्व की यथार्थवादिता",
+     "ncert_sections": "6.3.3",
+     "concepts": [
+      {
+       "concept_tag": "bahya-shaktiyan",
+       "learning_objective": "उन शक्तियों को पहचान सकें जो व्यवसाय को सामाजिक रूप से उत्तरदायी बनने के लिए बाध्य करती हैं।"
+      },
+      {
+       "concept_tag": "naitik-avdharna-uttardayitva",
+       "learning_objective": "सामाजिक उत्तरदायित्व को नीतिशास्त्र संबंधी अवधारणा के रूप में समझ सकें।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH06-T4",
+     "topic_number": 4,
+     "title": "सामाजिक उत्तरदायित्व के प्रकार एवं विभिन्न वर्गों के प्रति उत्तरदायित्व",
+     "ncert_sections": "6.4, 6.5",
+     "concepts": [
+      {
+       "concept_tag": "uttardayitva-ke-prakar",
+       "learning_objective": "आर्थिक, कानूनी, नैतिक और विवेकशील उत्तरदायित्व में अंतर कर सकें।"
+      },
+      {
+       "concept_tag": "sambandhit-vargon-ke-prati",
+       "learning_objective": "अंशधारियों, कर्मचारियों, उपभोक्ताओं, सरकार और समाज के प्रति व्यवसाय के उत्तरदायित्व बता सकें।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH06-T5",
+     "topic_number": 5,
+     "title": "व्यवसाय तथा पर्यावरण संरक्षण",
+     "ncert_sections": "6.6, 6.6.1, 6.6.2, 6.6.3",
+     "concepts": [
+      {
+       "concept_tag": "pradushan-ke-karan",
+       "learning_objective": "पर्यावरण का अर्थ और प्रदूषण के कारण बता सकें।"
+      },
+      {
+       "concept_tag": "pradushan-niyantran-avashyakta",
+       "learning_objective": "प्रदूषण नियंत्रण की आवश्यकता के कारणों की व्याख्या कर सकें।"
+      },
+      {
+       "concept_tag": "paryavaran-sanrakshan-vyavsay-bhumika",
+       "learning_objective": "पर्यावरण संरक्षण में व्यवसाय द्वारा उठाए जा सकने वाले कदमों को पहचान सकें।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH06-T6",
+     "topic_number": 6,
+     "title": "व्यावसायिक नैतिकता",
+     "ncert_sections": "6.7, 6.7.1, 6.7.2",
+     "concepts": [
+      {
+       "concept_tag": "naitikta-ki-avdharna",
+       "learning_objective": "व्यावसायिक नैतिकता की अवधारणा को परिभाषित कर सकें।"
+      },
+      {
+       "concept_tag": "naitikta-ke-tatva",
+       "learning_objective": "व्यावसायिक नैतिकता के मूल तत्वों को पहचानकर लागू कर सकें।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHBS1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "कंपनी निर्माण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khbs107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHBS1-CH07-T1",
+     "topic_number": 1,
+     "title": "कंपनी निर्माण का परिचय एवं इसकी स्थितियाँ",
+     "ncert_sections": "7.1, 7.2",
+     "concepts": [
+      {
+       "concept_tag": "company-nirman-sthitiyan",
+       "learning_objective": "कंपनी निर्माण की तीन स्थितियों (प्रवर्तन, समामेलन, पूँजी अभिदान) का क्रम पहचानना।"
+      },
+      {
+       "concept_tag": "niji-sarvajanik-antar",
+       "learning_objective": "निजी एवं सार्वजनिक कंपनी के निर्माण की स्थितियों में अंतर समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH07-T2",
+     "topic_number": 2,
+     "title": "प्रवर्तन: प्रवर्तक एवं उसके कार्य",
+     "ncert_sections": "7.2.1",
+     "concepts": [
+      {
+       "concept_tag": "pravartak-arth",
+       "learning_objective": "प्रवर्तक का अर्थ एवं उसकी पहचान समझना।"
+      },
+      {
+       "concept_tag": "sambhavyata-adhyayan",
+       "learning_objective": "तकनीकी, वित्तीय एवं आर्थिक संभाव्यता अध्ययन में अंतर करना।"
+      },
+      {
+       "concept_tag": "naam-anumodan",
+       "learning_objective": "कंपनी के नाम के अनुमोदन की प्रक्रिया समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH07-T3",
+     "topic_number": 3,
+     "title": "प्रवर्तन के आवश्यक प्रलेख",
+     "ncert_sections": "7.2.1",
+     "concepts": [
+      {
+       "concept_tag": "parshad-seema-niyam",
+       "learning_objective": "पार्षद सीमा नियम की धाराओं को पहचानना।"
+      },
+      {
+       "concept_tag": "parshad-antarniyam",
+       "learning_objective": "पार्षद अंतर्नियम एवं अन्य प्रलेखों की भूमिका समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH07-T4",
+     "topic_number": 4,
+     "title": "प्रवर्तकों की वैधानिक स्थिति एवं प्रारंभिक अनुबंध",
+     "ncert_sections": "7.2.1",
+     "concepts": [
+      {
+       "concept_tag": "pravartak-sthiti",
+       "learning_objective": "प्रवर्तक की वैधानिक (विश्‍वासाश्रित) स्थिति समझना।"
+      },
+      {
+       "concept_tag": "prarambhik-anubandh",
+       "learning_objective": "प्रारंभिक अनुबंधों के लिए प्रवर्तकों के दायित्व का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH07-T5",
+     "topic_number": 5,
+     "title": "समामेलन",
+     "ncert_sections": "7.2.2",
+     "concepts": [
+      {
+       "concept_tag": "samamelan-pralekh",
+       "learning_objective": "समामेलन हेतु रजिस्ट्रार के पास जमा किए जाने वाले प्रलेख पहचानना।"
+      },
+      {
+       "concept_tag": "samamelan-praman-patra",
+       "learning_objective": "समामेलन प्रमाण पत्र के निर्णायक प्रभाव का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH07-T6",
+     "topic_number": 6,
+     "title": "पूँजी अभिदान",
+     "ncert_sections": "7.2.3",
+     "concepts": [
+      {
+       "concept_tag": "punji-abhidan-charan",
+       "learning_objective": "पूँजी अभिदान के चरणों का क्रम समझना।"
+      },
+      {
+       "concept_tag": "nyuntam-abhidan",
+       "learning_objective": "न्यूनतम अभिदान एवं शेयर बाज़ार में आवेदन के नियम लागू करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHBS1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "व्यावसायिक वित्त के स्त्रोत",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khbs108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHBS1-CH08-T1",
+     "topic_number": 1,
+     "title": "व्यावसायिक वित्त का अर्थ, प्रकृति एवं महत्व",
+     "ncert_sections": "8.1, 8.2",
+     "concepts": [
+      {
+       "concept_tag": "vyavsayik-vitt-arth",
+       "learning_objective": "व्यावसायिक वित्त का अर्थ और व्यवसाय में उसका महत्व बताना।"
+      },
+      {
+       "concept_tag": "sthayi-poonji-avashyakta",
+       "learning_objective": "स्थायी पूँजी की आवश्यकता और उसे प्रभावित करने वाले व्यवसाय के स्वरूप को समझना।"
+      },
+      {
+       "concept_tag": "karyasheel-poonji-avashyakta",
+       "learning_objective": "दिन-प्रतिदिन के कार्यों हेतु कार्यशील पूँजी की आवश्यकता की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH08-T2",
+     "topic_number": 2,
+     "title": "वित्त के स्त्रोतों का वर्गीकरण",
+     "ncert_sections": "8.3, 8.3.1, 8.3.2, 8.3.3",
+     "concepts": [
+      {
+       "concept_tag": "avadhi-adhar-vargikaran",
+       "learning_objective": "अवधि के आधार पर दीर्घ, मध्य और अल्प अवधि स्त्रोतों में अंतर करना।"
+      },
+      {
+       "concept_tag": "swamitva-adhar-vargikaran",
+       "learning_objective": "स्वामित्व कोष और ऋणगत कोष की विशेषताओं की तुलना करना।"
+      },
+      {
+       "concept_tag": "antarik-bahya-srot",
+       "learning_objective": "आंतरिक और बाह्य स्त्रोतों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH08-T3",
+     "topic_number": 3,
+     "title": "संचित आय, व्यापारिक साख एवं आढ़त",
+     "ncert_sections": "8.4.1, 8.4.2, 8.4.3",
+     "concepts": [
+      {
+       "concept_tag": "sanchit-aay",
+       "learning_objective": "संचित आय के गुण और सीमाओं का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "vyaparik-sakh",
+       "learning_objective": "व्यापारिक साख की प्रकृति समझना।"
+      },
+      {
+       "concept_tag": "aadhat",
+       "learning_objective": "आढ़त की सेवाओं तथा आलंबन सहित और आलंबन रहित आढ़त में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH08-T4",
+     "topic_number": 4,
+     "title": "लीज वित्तीयन, सार्वजनिक जमा एवं वाणिज्यिक पत्र",
+     "ncert_sections": "8.4.4, 8.4.5, 8.4.6",
+     "concepts": [
+      {
+       "concept_tag": "leej-vittiyan",
+       "learning_objective": "लीज वित्तीयन में पट्टाकार और पट्टाधारी की भूमिका तथा उसके गुण समझना।"
+      },
+      {
+       "concept_tag": "sarvajanik-jama",
+       "learning_objective": "सार्वजनिक जमा के गुण, सीमाएँ और नियमन बताना।"
+      },
+      {
+       "concept_tag": "vanijyik-patra",
+       "learning_objective": "वाणिज्यिक पत्र की प्रकृति पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH08-T5",
+     "topic_number": 5,
+     "title": "अंशों एवं ऋण-पत्रों का निर्गमन",
+     "ncert_sections": "8.4.7, 8.4.8",
+     "concepts": [
+      {
+       "concept_tag": "samta-ansh",
+       "learning_objective": "समता अंशों और समता अंशधारकों की स्थिति समझना।"
+      },
+      {
+       "concept_tag": "purvadhikar-ansh",
+       "learning_objective": "पूर्वाधिकार अंशों के अधिकार और प्रकार बताना।"
+      },
+      {
+       "concept_tag": "rin-patra",
+       "learning_objective": "ऋण-पत्रों की प्रकृति और उनके प्रकारों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH08-T6",
+     "topic_number": 6,
+     "title": "वाणिज्यिक बैंक एवं वित्तीय संस्थान",
+     "ncert_sections": "8.4.9, 8.4.10",
+     "concepts": [
+      {
+       "concept_tag": "vanijyik-bank-rin",
+       "learning_objective": "वाणिज्यिक बैंकों से ऋण के गुण और सीमाएँ समझना।"
+      },
+      {
+       "concept_tag": "vittiya-sansthan",
+       "learning_objective": "विकास बैंकों के रूप में वित्तीय संस्थानों की भूमिका पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH08-T7",
+     "topic_number": 7,
+     "title": "कोषों के स्त्रोत के चयन को प्रभावित करने वाले तत्व",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "lagat-jokhim",
+       "learning_objective": "लागत, वित्तीय शक्ति और जोखिम के आधार पर स्त्रोतों का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "niyantran-tatva",
+       "learning_objective": "स्त्रोत के चयन का प्रबंध पर नियंत्रण पर प्रभाव समझना।"
+      },
+      {
+       "concept_tag": "uddeshya-avadhi",
+       "learning_objective": "आवश्यकता की अवधि और उद्देश्य के अनुसार स्त्रोत का मिलान करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHBS1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "सूक्ष्म, लघु तथा मध्यम उद्यम और व्यावसायिक उद्यमिता",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khbs109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHBS1-CH09-T1",
+     "topic_number": 1,
+     "title": "सूक्ष्म, लघु तथा मध्यम उद्यम: अर्थ और परिभाषा",
+     "ncert_sections": "9.1, 9.2",
+     "concepts": [
+      {
+       "concept_tag": "msme-paribhasha-mandand",
+       "learning_objective": "सरकार द्वारा सूक्ष्म, लघु तथा मध्यम उद्यमों के वर्गीकरण के मापदंड और सीमाएँ पहचानना।"
+      },
+      {
+       "concept_tag": "msmed-adhiniyam-2006",
+       "learning_objective": "सूक्ष्म, लघु तथा मध्यम उद्यम विकास अधिनियम, 2006 के उद्देश्य समझना।"
+      },
+      {
+       "concept_tag": "gramin-kutir-udyog",
+       "learning_objective": "ग्रामीण उद्योग और कुटीर उद्योग में अंतर स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH09-T2",
+     "topic_number": 2,
+     "title": "सूक्ष्म, लघु तथा मध्यम उद्यमों की भूमिका",
+     "ncert_sections": "9.3",
+     "concepts": [
+      {
+       "concept_tag": "santulit-kshetriya-vikas",
+       "learning_objective": "संतुलित क्षेत्रीय विकास में इन उद्यमों के योगदान की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "rozgar-shram-pradhan",
+       "learning_objective": "रोज़गार सृजन और श्रम-प्रधान स्वरूप का महत्व समझना।"
+      },
+      {
+       "concept_tag": "kam-lagat-shighra-nirnay",
+       "learning_objective": "कम उत्पादन लागत और शीघ्र निर्णय जैसी प्रतिस्पर्धी शक्तियों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH09-T3",
+     "topic_number": 3,
+     "title": "सूक्ष्म, लघु तथा मध्यम उद्यमों से जुड़ी समस्याएँ",
+     "ncert_sections": "9.4",
+     "concepts": [
+      {
+       "concept_tag": "vitt-kachcha-maal",
+       "learning_objective": "वित्त और कच्चे माल की समस्याओं के कारण पहचानना।"
+      },
+      {
+       "concept_tag": "prabandhan-vipanan-gunvatta",
+       "learning_objective": "प्रबंधकीय कौशल, विपणन और गुणवत्ता की कमियों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "kshamta-vaishvik-pratispardha",
+       "learning_objective": "क्षमता के कम उपयोग और वैश्विक प्रतिस्पर्धा के प्रभाव का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH09-T4",
+     "topic_number": 4,
+     "title": "सूक्ष्म, लघु तथा मध्यम उद्यम और उद्यमिता विकास",
+     "ncert_sections": "9.5",
+     "concepts": [
+      {
+       "concept_tag": "udyamita-arth",
+       "learning_objective": "उद्यमिता, उद्यमी और उद्यम का अर्थ तथा आर्थिक विकास में उद्यमिता की आवश्यकता समझना।"
+      },
+      {
+       "concept_tag": "udyamita-visheshtayen",
+       "learning_objective": "उद्यमिता की विशेषताएँ — व्यवस्थित, वैध, नवप्रवर्तन और उत्पादन का संगठन — पहचानना।"
+      },
+      {
+       "concept_tag": "parikalit-jokhim",
+       "learning_objective": "उद्यमी द्वारा उठाए जाने वाले परिकलित जोखिम की प्रकृति का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH09-T5",
+     "topic_number": 5,
+     "title": "बौद्धिक संपदा अधिकार: अर्थ और महत्व",
+     "ncert_sections": "9.6, 9.6.1",
+     "concepts": [
+      {
+       "concept_tag": "baudhik-sampada-arth",
+       "learning_objective": "बौद्धिक संपदा का अर्थ, अमूर्त स्वरूप और दो व्यापक श्रेणियाँ समझना।"
+      },
+      {
+       "concept_tag": "paramparik-gyan-vyapar-rahasya",
+       "learning_objective": "पारंपरिक ज्ञान, पारंपरिक ज्ञान डिजिटल पुस्तकालय और व्यापार रहस्य को पहचानना।"
+      },
+      {
+       "concept_tag": "ipr-mahatva",
+       "learning_objective": "उद्यमियों के लिए बौद्धिक संपदा अधिकार के महत्व की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH09-T6",
+     "topic_number": 6,
+     "title": "बौद्धिक संपदा अधिकार के प्रकार",
+     "ncert_sections": "9.6.2",
+     "concepts": [
+      {
+       "concept_tag": "copyright-trademark",
+       "learning_objective": "कॉपीराइट और ट्रेडमार्क की विशेषताओं में अंतर करना।"
+      },
+      {
+       "concept_tag": "bhaugolik-sanket",
+       "learning_objective": "भौगोलिक संकेत की पहचान और उसके उदाहरण समझना।"
+      },
+      {
+       "concept_tag": "patent-design-paudha-kism",
+       "learning_objective": "पेटेंट और डिज़ाइन संरक्षण की शर्तें और अवधि लागू करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHBS1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "आंतरिक व्यापार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khbs110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHBS1-CH10-T1",
+     "topic_number": 1,
+     "title": "आंतरिक व्यापार का अर्थ और प्रकार",
+     "ncert_sections": "10.1, 10.2",
+     "concepts": [
+      {
+       "concept_tag": "antarik-vyapar-arth",
+       "learning_objective": "विद्यार्थी आंतरिक और बाह्य व्यापार का अंतर बता सकेंगे।"
+      },
+      {
+       "concept_tag": "thok-phutkar-vibhajan",
+       "learning_objective": "विद्यार्थी आंतरिक व्यापार के थोक और फुटकर प्रकारों को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH10-T2",
+     "topic_number": 2,
+     "title": "थोक व्यापारी की सेवाएँ",
+     "ncert_sections": "10.3, 10.3.1, 10.3.2",
+     "concepts": [
+      {
+       "concept_tag": "thok-vikreta-nirmata-sevayen",
+       "learning_objective": "विद्यार्थी विनिर्माताओं को थोक विक्रेता की सेवाओं की व्याख्या कर सकेंगे।"
+      },
+      {
+       "concept_tag": "thok-vikreta-phutkar-sevayen",
+       "learning_objective": "विद्यार्थी फुटकर विक्रेताओं को थोक विक्रेता की सेवाओं की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH10-T3",
+     "topic_number": 3,
+     "title": "फुटकर व्यापारी की सेवाएँ",
+     "ncert_sections": "10.4, 10.4.1, 10.4.2",
+     "concepts": [
+      {
+       "concept_tag": "phutkar-utpadak-sevayen",
+       "learning_objective": "विद्यार्थी उत्पादकों और थोक विक्रेताओं को फुटकर विक्रेता की सेवाएँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "phutkar-upbhokta-sevayen",
+       "learning_objective": "विद्यार्थी उपभोक्ताओं को फुटकर विक्रेता की सेवाओं की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH10-T4",
+     "topic_number": 4,
+     "title": "माल एवं सेवा कर",
+     "ncert_sections": "10.5",
+     "concepts": [
+      {
+       "concept_tag": "jst-arth-uddeshya",
+       "learning_objective": "विद्यार्थी 'एक देश एक कर' के सिद्धांत पर आधारित जी.एस.टी. का अर्थ और उद्देश्य बता सकेंगे।"
+      },
+      {
+       "concept_tag": "jst-ghatak-visheshtayen",
+       "learning_objective": "विद्यार्थी केंद्रीय, राज्य और एकीकृत जी.एस.टी. तथा इसकी प्रमुख विशेषताओं में अंतर कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH10-T5",
+     "topic_number": 5,
+     "title": "भ्रमणशील फुटकर विक्रेता",
+     "ncert_sections": "10.6, 10.6.1",
+     "concepts": [
+      {
+       "concept_tag": "bhramanshil-vikreta-prakar",
+       "learning_objective": "विद्यार्थी फेरीवाले, बाज़ार व्यापारी, पटरी विक्रेता और सस्ते दर की दुकान में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "bhramanshil-visheshtayen",
+       "learning_objective": "विद्यार्थी भ्रमणशील फुटकर विक्रेताओं की विशेषताएँ बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH10-T6",
+     "topic_number": 6,
+     "title": "छोटे पैमाने के स्थायी दुकानदार",
+     "ncert_sections": "10.6.2",
+     "concepts": [
+      {
+       "concept_tag": "chhote-sthayi-dukandar",
+       "learning_objective": "विद्यार्थी सामान्य दुकान, विशिष्ट वस्तु भंडार, गली की स्टाल, पुरानी वस्तुओं की दुकान और एक वस्तु भंडार को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "sthayi-dukan-visheshtayen",
+       "learning_objective": "विद्यार्थी स्थायी दुकानदारों और भ्रमणशील विक्रेताओं की तुलना कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH10-T7",
+     "topic_number": 7,
+     "title": "बड़े पैमाने के फुटकर विक्रेता",
+     "ncert_sections": "10.6.2",
+     "concepts": [
+      {
+       "concept_tag": "vibhagiya-bhandar",
+       "learning_objective": "विद्यार्थी विभागीय भंडार की विशेषताएँ, लाभ और सीमाएँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "shrinkhala-bhandar",
+       "learning_objective": "विद्यार्थी बहुसंख्यक दुकानों (श्रृंखला भंडार) की विशेषताओं की तुलना विभागीय भंडार से कर सकेंगे।"
+      },
+      {
+       "concept_tag": "dak-sahkari-swachalit",
+       "learning_objective": "विद्यार्थी डाक आदेश गृह, उपभोक्ता सहकारी भंडार, सुपर बाज़ार और स्वचालित विक्रय मशीन की विशेषताएँ बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH10-T8",
+     "topic_number": 8,
+     "title": "आंतरिक व्यापार के संवर्धन में वाणिज्यिक एवं उद्योग संघों की भूमिका",
+     "ncert_sections": "10.7",
+     "concepts": [
+      {
+       "concept_tag": "vanijya-sangh-arth",
+       "learning_objective": "विद्यार्थी वाणिज्यिक एवं उद्योग संघों के उद्देश्य और उदाहरण बता सकेंगे।"
+      },
+      {
+       "concept_tag": "vanijya-sangh-hastakshep-kshetra",
+       "learning_objective": "विद्यार्थी उन क्षेत्रों का विश्लेषण कर सकेंगे जिनमें ये संघ आंतरिक व्यापार को बढ़ावा देते हैं।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHBS1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "अंतर्राष्ट्रीय व्यापार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khbs111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHBS1-CH11-T1",
+     "topic_number": 1,
+     "title": "अंतर्राष्ट्रीय व्यवसाय का अर्थ एवं कारण",
+     "ncert_sections": "11.1, 11.1.1, 11.1.2",
+     "concepts": [
+      {
+       "concept_tag": "antarrashtriya-vyavsay-arth",
+       "learning_objective": "अंतर्राष्ट्रीय व्यवसाय और अंतर्राष्ट्रीय व्यापार के अर्थ में अंतर समझना।"
+      },
+      {
+       "concept_tag": "vyavsay-ke-karan",
+       "learning_objective": "संसाधनों के असमान वितरण और भौगोलिक विशिष्टीकरण को अंतर्राष्ट्रीय व्यवसाय के कारण के रूप में समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH11-T2",
+     "topic_number": 2,
+     "title": "अंतर्राष्ट्रीय व्यवसाय बनाम घरेलू व्यवसाय",
+     "ncert_sections": "11.1.3",
+     "concepts": [
+      {
+       "concept_tag": "gharelu-antarrashtriya-antar",
+       "learning_objective": "घरेलू और अंतर्राष्ट्रीय व्यवसाय के बीच अंतर के आधारों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH11-T3",
+     "topic_number": 3,
+     "title": "अंतर्राष्ट्रीय व्यवसाय का क्षेत्र एवं लाभ",
+     "ncert_sections": "11.1.4, 11.1.5",
+     "concepts": [
+      {
+       "concept_tag": "vyavsay-ka-kshetra",
+       "learning_objective": "वस्तु व्यापार, सेवा व्यापार, अनुज्ञप्ति एवं विदेशी निवेश को अंतर्राष्ट्रीय व्यवसाय के क्षेत्र में पहचानना।"
+      },
+      {
+       "concept_tag": "rashtron-firmon-ko-labh",
+       "learning_objective": "राष्ट्रों एवं फर्मों को अंतर्राष्ट्रीय व्यवसाय से मिलने वाले लाभों का वर्णन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH11-T4",
+     "topic_number": 4,
+     "title": "प्रवेश की विधियाँ: आयात-निर्यात, संविदा विनिर्माण एवं अनुज्ञप्ति",
+     "ncert_sections": "11.2, 11.2.1, 11.2.2, 11.2.3",
+     "concepts": [
+      {
+       "concept_tag": "aayat-niryat-vidhi",
+       "learning_objective": "प्रत्यक्ष एवं अप्रत्यक्ष आयात-निर्यात के लाभ और सीमाएँ बताना।"
+      },
+      {
+       "concept_tag": "samvida-vinirman",
+       "learning_objective": "संविदा विनिर्माण के स्वरूप, लाभ और सीमाओं को समझाना।"
+      },
+      {
+       "concept_tag": "anugyapti-franchising",
+       "learning_objective": "अनुज्ञप्ति और फ्रैंचाइज़िंग में अंतर तथा इनके लाभ-सीमाएँ समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH11-T5",
+     "topic_number": 5,
+     "title": "संयुक्त उपक्रम एवं पूर्ण स्वामित्व वाली सहायक कंपनी",
+     "ncert_sections": "11.2.4, 11.2.5",
+     "concepts": [
+      {
+       "concept_tag": "sanyukt-upakram",
+       "learning_objective": "संयुक्त उपक्रम बनाने के तरीके, लाभ और सीमाएँ बताना।"
+      },
+      {
+       "concept_tag": "purna-swamitva-sahayak",
+       "learning_objective": "पूर्ण स्वामित्व वाली सहायक कंपनी के लाभ और सीमाओं का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH11-T6",
+     "topic_number": 6,
+     "title": "निर्यात प्रक्रिया एवं प्रलेख",
+     "ncert_sections": "11.3, 11.3.1",
+     "concepts": [
+      {
+       "concept_tag": "niryat-prakriya-charan",
+       "learning_objective": "निर्यात सौदे के क्रियान्वयन के चरणों को सही क्रम में समझाना।"
+      },
+      {
+       "concept_tag": "niryat-pralekh",
+       "learning_objective": "जहाज़ी बिल, मेट्स रसीद, जहाज़ी बिल्टी, साख पत्र जैसे निर्यात प्रलेखों के उद्देश्य पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHBS1-CH11-T7",
+     "topic_number": 7,
+     "title": "आयात प्रक्रिया एवं प्रलेख",
+     "ncert_sections": "11.3.2",
+     "concepts": [
+      {
+       "concept_tag": "aayat-prakriya-charan",
+       "learning_objective": "आयात सौदे के चरणों को सही क्रम में समझाना।"
+      },
+      {
+       "concept_tag": "aayat-pralekh",
+       "learning_objective": "प्रवेश बिल, डॉक चालान और विनिमय विपत्र के प्रकारों का उपयोग समझाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

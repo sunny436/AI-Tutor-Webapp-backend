@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KHAC1-CH07",
+ "title": "ह्रास, प्रावधान एवं संचय",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHAC1-CH07-T1",
+   "topic_number": 1,
+   "title": "ह्रास का अर्थ, विशेषताएँ तथा रिक्तीकरण एवं परिशोधन",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "hras-ka-arth",
+     "learning_objective": "ह्रास को स्थायी परिसंपत्ति के पुस्तक मूल्य में स्थायी, निरंतर एवं क्रमिक कमी के रूप में समझाना।"
+    },
+    {
+     "concept_tag": "riktikaran-parishodhan",
+     "learning_objective": "ह्रास को रिक्तीकरण और परिशोधन से अलग पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH07-T2",
+   "topic_number": 2,
+   "title": "ह्रास के कारण एवं आवश्यकता",
+   "ncert_sections": "7.3, 7.4",
+   "concepts": [
+    {
+     "concept_tag": "hras-ke-karan",
+     "learning_objective": "टूट-फूट, वैधानिक अधिकारों की समाप्ति, अप्रचलन और असामान्य कारकों को ह्रास के कारणों के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "hras-ki-avashyakta",
+     "learning_objective": "आगम-व्यय मिलान, कर, सही वित्तीय स्थिति और कानूनी अनुपालन के आधार पर ह्रास लगाने की आवश्यकता बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH07-T3",
+   "topic_number": 3,
+   "title": "ह्रास की राशि को प्रभावित करने वाले कारक",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "hras-rashi-ke-karak",
+     "learning_objective": "परिसंपत्ति की लागत, अनुमानित शुद्ध अवशेष मूल्य, ह्रास योग्य लागत और उपयोगी जीवन को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH07-T4",
+   "topic_number": 4,
+   "title": "ह्रास की गणना की विधियाँ",
+   "ncert_sections": "7.6, 7.7",
+   "concepts": [
+    {
+     "concept_tag": "seedhi-rekha-paddhati",
+     "learning_objective": "सीधी रेखा पद्धति से वार्षिक ह्रास की गणना करना।"
+    },
+    {
+     "concept_tag": "kramagat-hras-paddhati",
+     "learning_objective": "क्रमागत ह्रास (अपलिखित मूल्य) पद्धति से ह्रास की गणना करना।"
+    },
+    {
+     "concept_tag": "paddhatiyon-ki-tulna",
+     "learning_objective": "दोनों पद्धतियों की आधार, वार्षिक भार और उपयुक्तता के आधार पर तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH07-T5",
+   "topic_number": 5,
+   "title": "ह्रास का अभिलेखन एवं परिसंपत्ति का निपटान",
+   "ncert_sections": "7.8, 7.9, 7.10",
+   "concepts": [
+    {
+     "concept_tag": "hras-ka-abhilekhan",
+     "learning_objective": "ह्रास को परिसंपत्ति खाते में डालने और ह्रास प्रावधान खाता बनाने की विधियों में अंतर करना।"
+    },
+    {
+     "concept_tag": "parisampatti-ka-niptan",
+     "learning_objective": "परिसंपत्ति की बिक्री पर लाभ या हानि की गणना करना तथा परिसंपत्ति निपटान खाते का उपयोग समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH07-T6",
+   "topic_number": 6,
+   "title": "प्रावधान",
+   "ncert_sections": "7.11",
+   "concepts": [
+    {
+     "concept_tag": "pravdhan-ka-arth",
+     "learning_objective": "प्रावधान का अर्थ, उदाहरण तथा रूढ़िवादिता की अवधारणा से उसका संबंध समझाना।"
+    },
+    {
+     "concept_tag": "pravdhan-ka-lekhankan",
+     "learning_objective": "प्रावधान के सृजन और तुलन-पत्र में उसके प्रदर्शन का लेखांकन व्यवहार समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH07-T7",
+   "topic_number": 7,
+   "title": "संचय एवं गुप्त संचय",
+   "ncert_sections": "7.12, 7.13",
+   "concepts": [
+    {
+     "concept_tag": "sanchay-aur-pravdhan",
+     "learning_objective": "संचय का अर्थ समझाना और उसे प्रावधान से अलग करना।"
+    },
+    {
+     "concept_tag": "sanchay-ke-prakar",
+     "learning_objective": "सामान्य, विशिष्ट, आगम और पूँजी संचयों को उदाहरणों सहित वर्गीकृत करना।"
+    },
+    {
+     "concept_tag": "gupt-sanchay",
+     "learning_objective": "गुप्त संचय का अर्थ और उसके सृजन के तरीकों का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

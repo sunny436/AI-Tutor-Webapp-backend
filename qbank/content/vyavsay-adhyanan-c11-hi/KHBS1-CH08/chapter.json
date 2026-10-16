@@ -1,0 +1,144 @@
+{
+ "chapter_id": "KHBS1-CH08",
+ "title": "व्यावसायिक वित्त के स्त्रोत",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHBS1-CH08-T1",
+   "topic_number": 1,
+   "title": "व्यावसायिक वित्त का अर्थ, प्रकृति एवं महत्व",
+   "ncert_sections": "8.1, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "vyavsayik-vitt-arth",
+     "learning_objective": "व्यावसायिक वित्त का अर्थ और व्यवसाय में उसका महत्व बताना।"
+    },
+    {
+     "concept_tag": "sthayi-poonji-avashyakta",
+     "learning_objective": "स्थायी पूँजी की आवश्यकता और उसे प्रभावित करने वाले व्यवसाय के स्वरूप को समझना।"
+    },
+    {
+     "concept_tag": "karyasheel-poonji-avashyakta",
+     "learning_objective": "दिन-प्रतिदिन के कार्यों हेतु कार्यशील पूँजी की आवश्यकता की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH08-T2",
+   "topic_number": 2,
+   "title": "वित्त के स्त्रोतों का वर्गीकरण",
+   "ncert_sections": "8.3, 8.3.1, 8.3.2, 8.3.3",
+   "concepts": [
+    {
+     "concept_tag": "avadhi-adhar-vargikaran",
+     "learning_objective": "अवधि के आधार पर दीर्घ, मध्य और अल्प अवधि स्त्रोतों में अंतर करना।"
+    },
+    {
+     "concept_tag": "swamitva-adhar-vargikaran",
+     "learning_objective": "स्वामित्व कोष और ऋणगत कोष की विशेषताओं की तुलना करना।"
+    },
+    {
+     "concept_tag": "antarik-bahya-srot",
+     "learning_objective": "आंतरिक और बाह्य स्त्रोतों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH08-T3",
+   "topic_number": 3,
+   "title": "संचित आय, व्यापारिक साख एवं आढ़त",
+   "ncert_sections": "8.4.1, 8.4.2, 8.4.3",
+   "concepts": [
+    {
+     "concept_tag": "sanchit-aay",
+     "learning_objective": "संचित आय के गुण और सीमाओं का मूल्यांकन करना।"
+    },
+    {
+     "concept_tag": "vyaparik-sakh",
+     "learning_objective": "व्यापारिक साख की प्रकृति समझना।"
+    },
+    {
+     "concept_tag": "aadhat",
+     "learning_objective": "आढ़त की सेवाओं तथा आलंबन सहित और आलंबन रहित आढ़त में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH08-T4",
+   "topic_number": 4,
+   "title": "लीज वित्तीयन, सार्वजनिक जमा एवं वाणिज्यिक पत्र",
+   "ncert_sections": "8.4.4, 8.4.5, 8.4.6",
+   "concepts": [
+    {
+     "concept_tag": "leej-vittiyan",
+     "learning_objective": "लीज वित्तीयन में पट्टाकार और पट्टाधारी की भूमिका तथा उसके गुण समझना।"
+    },
+    {
+     "concept_tag": "sarvajanik-jama",
+     "learning_objective": "सार्वजनिक जमा के गुण, सीमाएँ और नियमन बताना।"
+    },
+    {
+     "concept_tag": "vanijyik-patra",
+     "learning_objective": "वाणिज्यिक पत्र की प्रकृति पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH08-T5",
+   "topic_number": 5,
+   "title": "अंशों एवं ऋण-पत्रों का निर्गमन",
+   "ncert_sections": "8.4.7, 8.4.8",
+   "concepts": [
+    {
+     "concept_tag": "samta-ansh",
+     "learning_objective": "समता अंशों और समता अंशधारकों की स्थिति समझना।"
+    },
+    {
+     "concept_tag": "purvadhikar-ansh",
+     "learning_objective": "पूर्वाधिकार अंशों के अधिकार और प्रकार बताना।"
+    },
+    {
+     "concept_tag": "rin-patra",
+     "learning_objective": "ऋण-पत्रों की प्रकृति और उनके प्रकारों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH08-T6",
+   "topic_number": 6,
+   "title": "वाणिज्यिक बैंक एवं वित्तीय संस्थान",
+   "ncert_sections": "8.4.9, 8.4.10",
+   "concepts": [
+    {
+     "concept_tag": "vanijyik-bank-rin",
+     "learning_objective": "वाणिज्यिक बैंकों से ऋण के गुण और सीमाएँ समझना।"
+    },
+    {
+     "concept_tag": "vittiya-sansthan",
+     "learning_objective": "विकास बैंकों के रूप में वित्तीय संस्थानों की भूमिका पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH08-T7",
+   "topic_number": 7,
+   "title": "कोषों के स्त्रोत के चयन को प्रभावित करने वाले तत्व",
+   "ncert_sections": "8.5",
+   "concepts": [
+    {
+     "concept_tag": "lagat-jokhim",
+     "learning_objective": "लागत, वित्तीय शक्ति और जोखिम के आधार पर स्त्रोतों का मूल्यांकन करना।"
+    },
+    {
+     "concept_tag": "niyantran-tatva",
+     "learning_objective": "स्त्रोत के चयन का प्रबंध पर नियंत्रण पर प्रभाव समझना।"
+    },
+    {
+     "concept_tag": "uddeshya-avadhi",
+     "learning_objective": "आवश्यकता की अवधि और उद्देश्य के अनुसार स्त्रोत का मिलान करना।"
+    }
+   ]
+  }
+ ]
+}

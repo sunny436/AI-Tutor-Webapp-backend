@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LEAC2-CH06",
+ "title": "Cash Flow Statement",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEAC2-CH06-T1",
+   "topic_number": 1,
+   "title": "Objectives and benefits of the cash flow statement",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "cfs-objective",
+     "learning_objective": "State the objective of a cash flow statement prepared under AS-3 and its place among the financial statements."
+    },
+    {
+     "concept_tag": "cfs-benefits",
+     "learning_objective": "Explain how a cash flow statement helps users assess liquidity, solvency and comparability."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH06-T2",
+   "topic_number": 2,
+   "title": "Cash, cash equivalents and cash flows",
+   "ncert_sections": "6.3, 6.4",
+   "concepts": [
+    {
+     "concept_tag": "cash-equivalents",
+     "learning_objective": "Identify items that qualify as cash and cash equivalents as per AS-3."
+    },
+    {
+     "concept_tag": "cash-flow-meaning",
+     "learning_objective": "Distinguish transactions that are cash flows from movements within cash and cash equivalents."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH06-T3",
+   "topic_number": 3,
+   "title": "Classification into operating, investing and financing activities",
+   "ncert_sections": "6.5, 6.5.1, 6.5.2, 6.5.3",
+   "concepts": [
+    {
+     "concept_tag": "operating-activities",
+     "learning_objective": "Identify cash flows arising from the principal revenue-generating activities of an enterprise."
+    },
+    {
+     "concept_tag": "investing-activities",
+     "learning_objective": "Classify cash flows from acquisition and disposal of long-term assets and investments."
+    },
+    {
+     "concept_tag": "financing-activities",
+     "learning_objective": "Classify cash flows that change the size and composition of owners' capital and borrowings."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH06-T4",
+   "topic_number": 4,
+   "title": "Treatment of some peculiar items",
+   "ncert_sections": "6.5.4",
+   "concepts": [
+    {
+     "concept_tag": "interest-dividend-treatment",
+     "learning_objective": "Classify interest and dividend paid and received for financial and non-financial enterprises."
+    },
+    {
+     "concept_tag": "tax-and-extraordinary-items",
+     "learning_objective": "Classify income taxes and extraordinary items in a cash flow statement."
+    },
+    {
+     "concept_tag": "non-cash-transactions",
+     "learning_objective": "Recognise investing and financing transactions that are excluded because they involve no cash."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH06-T5",
+   "topic_number": 5,
+   "title": "Cash flow from operating activities: indirect method",
+   "ncert_sections": "6.6, 6.6.1",
+   "concepts": [
+    {
+     "concept_tag": "net-profit-before-tax",
+     "learning_objective": "Work out net profit before tax and extraordinary items from given balances."
+    },
+    {
+     "concept_tag": "non-cash-non-operating-adjustments",
+     "learning_objective": "Adjust net profit for non-cash and non-operating items to find operating profit before working capital changes."
+    },
+    {
+     "concept_tag": "working-capital-changes",
+     "learning_objective": "Adjust for changes in current assets and current liabilities to arrive at cash generated from operations."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH06-T6",
+   "topic_number": 6,
+   "title": "Investing and financing cash flows and preparing the statement",
+   "ncert_sections": "6.7, 6.8",
+   "concepts": [
+    {
+     "concept_tag": "investing-cash-flow-computation",
+     "learning_objective": "Compute cash flows from investing activities using asset accounts and additional information."
+    },
+    {
+     "concept_tag": "financing-cash-flow-computation",
+     "learning_objective": "Compute cash flows from financing activities from changes in capital and borrowings."
+    },
+    {
+     "concept_tag": "cfs-format",
+     "learning_objective": "Prepare the cash flow statement format and reconcile opening and closing cash and cash equivalents."
+    }
+   ]
+  }
+ ]
+}

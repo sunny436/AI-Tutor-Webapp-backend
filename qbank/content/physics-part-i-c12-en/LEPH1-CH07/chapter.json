@@ -1,0 +1,124 @@
+{
+ "chapter_id": "LEPH1-CH07",
+ "title": "Alternating Current",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEPH1-CH07-T1",
+   "topic_number": 1,
+   "title": "AC voltage applied to a resistor",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "resistor-ac-phase",
+     "learning_objective": "Describe the phase relation between current and voltage in a resistor and why it heats up although the average current is zero."
+    },
+    {
+     "concept_tag": "rms-values",
+     "learning_objective": "Relate rms and peak values of alternating current and voltage and use them to find average power in a resistor."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH07-T2",
+   "topic_number": 2,
+   "title": "Representation of ac current and voltage by phasors",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "phasor-representation",
+     "learning_objective": "Interpret a phasor as a rotating vector whose length is the amplitude and whose vertical projection is the instantaneous value."
+    },
+    {
+     "concept_tag": "phasor-addition",
+     "learning_objective": "Explain why voltages that are out of phase must be combined using phasors rather than added algebraically."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH07-T3",
+   "topic_number": 3,
+   "title": "AC voltage applied to an inductor",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "inductive-reactance",
+     "learning_objective": "Use X_L = omega L to find the current through a pure inductor and predict how it changes with frequency."
+    },
+    {
+     "concept_tag": "inductor-phase-and-power",
+     "learning_objective": "State that current lags voltage by pi/2 in a pure inductor and explain why the average power over a cycle is zero."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH07-T4",
+   "topic_number": 4,
+   "title": "AC voltage applied to a capacitor",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "capacitive-reactance",
+     "learning_objective": "Use X_C = 1/(omega C) to find the current through a capacitor and predict how it changes with frequency."
+    },
+    {
+     "concept_tag": "capacitor-phase-and-power",
+     "learning_objective": "State that current leads voltage by pi/2 in a capacitor and that no average power is consumed by it."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH07-T5",
+   "topic_number": 5,
+   "title": "AC voltage applied to a series LCR circuit and resonance",
+   "ncert_sections": "7.6, 7.6.1, 7.6.2",
+   "concepts": [
+    {
+     "concept_tag": "lcr-impedance",
+     "learning_objective": "Calculate the impedance and current of a series LCR circuit using the phasor (impedance) diagram."
+    },
+    {
+     "concept_tag": "series-resonance",
+     "learning_objective": "Find the resonant frequency of a series LCR circuit and analyse the current and voltages at resonance."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH07-T6",
+   "topic_number": 6,
+   "title": "Power in ac circuit: the power factor",
+   "ncert_sections": "7.7",
+   "concepts": [
+    {
+     "concept_tag": "average-power-power-factor",
+     "learning_objective": "Calculate average power as P = V I cos(phi) and explain the effect of power factor on transmission losses."
+    },
+    {
+     "concept_tag": "wattless-current",
+     "learning_objective": "Explain wattless current and how a capacitor improves the power factor of an inductive load."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEPH1-CH07-T7",
+   "topic_number": 7,
+   "title": "Transformers",
+   "ncert_sections": "7.8",
+   "concepts": [
+    {
+     "concept_tag": "transformer-principle",
+     "learning_objective": "State that a transformer works on mutual induction and needs a changing magnetic flux."
+    },
+    {
+     "concept_tag": "transformer-ratios",
+     "learning_objective": "Apply V_s/V_p = N_s/N_p and I_s/I_p = N_p/N_s and explain why power is transmitted at high voltage."
+    },
+    {
+     "concept_tag": "transformer-losses",
+     "learning_objective": "Identify the energy losses in a real transformer and how each is reduced."
+    }
+   ]
+  }
+ ]
+}

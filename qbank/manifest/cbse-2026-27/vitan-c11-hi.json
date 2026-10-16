@@ -1,0 +1,536 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "vitan-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "hindi",
+  "language": "hindi",
+  "title": "Vitan",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khvt1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHVT1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "भारतीय गायिकाओं में बेजोड़ : लता मंगेशकर",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khvt101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHVT1-CH01-T1",
+     "topic_number": 1,
+     "title": "लता के स्वर से लेखक का पहला परिचय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pehla-parichay",
+       "learning_objective": "रेडियो पर लता का स्वर पहली बार सुनने के लेखक के अनुभव और उसकी तुलनाओं को समझना।"
+      },
+      {
+       "concept_tag": "lekhak-aur-path",
+       "learning_objective": "पाठ के लेखक कुमार गंधर्व और पाठ की विधा को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH01-T2",
+     "topic_number": 2,
+     "title": "चित्रपट संगीत और जन-रुचि पर लता का प्रभाव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jan-ruchi-prabhav",
+       "learning_objective": "लता के कारण सामान्य लोगों और नई पीढ़ी की संगीत-रुचि में आए बदलाव को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH01-T3",
+     "topic_number": 3,
+     "title": "गानपन : लता की लोकप्रियता का मर्म",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gaanpan",
+       "learning_objective": "गानपन का अर्थ और लता की लोकप्रियता में उसकी भूमिका स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "raag-taal-shabdavali",
+       "learning_objective": "पाठ में आए संगीत-शब्दों (मालकौंस, त्रिताल, लय, ध्वनिमुद्रिका) के अर्थ जानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH01-T4",
+     "topic_number": 4,
+     "title": "लता की गायकी की विशेषताएँ और सीमाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "swar-nirmalta",
+       "learning_objective": "लता के स्वरों की निर्मलता, कोमलता और नादमय उच्चार की विशेषता समझना।"
+      },
+      {
+       "concept_tag": "gayaki-seemayen",
+       "learning_objective": "करुण रस और ऊँची पट्टी के संबंध में लेखक की आलोचनात्मक दृष्टि का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH01-T5",
+     "topic_number": 5,
+     "title": "शास्त्रीय संगीत और चित्रपट संगीत",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shastriya-chitrapat-antar",
+       "learning_objective": "शास्त्रीय और चित्रपट संगीत के गुणधर्म, ताल और लय के अंतर पहचानना।"
+      },
+      {
+       "concept_tag": "ranjakta-kasauti",
+       "learning_objective": "रंजकता को संगीत के मूल्यांकन की कसौटी मानने वाले लेखक के तर्क का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH01-T6",
+     "topic_number": 6,
+     "title": "चित्रपट संगीत का विस्तार और लता की अद्वितीयता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lokgeet-navnirmiti",
+       "learning_objective": "चित्रपट संगीत की लचकदारी और लोकगीतों के उपयोग को समझना।"
+      },
+      {
+       "concept_tag": "lata-advitiyata",
+       "learning_objective": "लता को चित्रपट संगीत की अनभिषिक्त सम्राज्ञी कहने का आशय समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHVT1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "राजस्थान की रजत बूँदें",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khvt102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHVT1-CH02-T1",
+     "topic_number": 1,
+     "title": "चेलवांजी और कुंई की खुदाई",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "basauli-aur-khudai",
+       "learning_objective": "संकरी कुंई की खुदाई में बसौली के प्रयोग और चेलवांजी (चेजारो) के काम को समझना।"
+      },
+      {
+       "concept_tag": "garmi-se-bachav",
+       "learning_objective": "कुंई के भीतर की गर्मी कम करने और सिर बचाने के उपायों का कारण समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH02-T2",
+     "topic_number": 2,
+     "title": "कुंई और कुआँ: खड़िया पत्थर की पट्टी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kuin-kuan-antar",
+       "learning_objective": "कुंई और कुएँ के आकार तथा जल-स्रोत के अंतर को पहचानना।"
+      },
+      {
+       "concept_tag": "khadiya-patti",
+       "learning_objective": "खड़िया पत्थर की पट्टी की भूमिका और उसकी पहचान के तरीके समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH02-T3",
+     "topic_number": 3,
+     "title": "रेत के कण और नमी का संरक्षण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ret-ke-kan-nami",
+       "learning_objective": "मरुभूमि की रेत के बिखरे कणों द्वारा नमी बचाए रखने की प्रक्रिया का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH02-T4",
+     "topic_number": 4,
+     "title": "पानी के तीन रूप: पालरपानी, पातालपानी, रेजाणीपानी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pani-ke-teen-roop",
+       "learning_objective": "पालरपानी, पातालपानी और रेजाणीपानी में अंतर करना।"
+      },
+      {
+       "concept_tag": "reja-maap",
+       "learning_objective": "वर्षा नापने की इकाई रेजा का अर्थ और प्रयोग समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH02-T5",
+     "topic_number": 5,
+     "title": "चिनाई की विधियाँ: चेजो, खींप का रस्सा और लट्ठे",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "chejo-chinai",
+       "learning_objective": "चेजो (चिनाई) को कुंई का प्राण मानने का कारण समझाना।"
+      },
+      {
+       "concept_tag": "khinp-rassa-sanpani",
+       "learning_objective": "खींप के रस्से और लकड़ी के लट्ठों से कुंई बाँधने की विधि समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH02-T6",
+     "topic_number": 6,
+     "title": "कुंई का छोटा मुँह और पानी निकालना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kuin-ka-munh",
+       "learning_objective": "कुंई का मुँह छोटा रखने के कारणों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "chadas-ghirni-dhakkan",
+       "learning_objective": "चड़स, घिरनी, ओड़ाक और ढक्कन के उपयोग को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH02-T7",
+     "topic_number": 7,
+     "title": "कुंई और ग्राम समाज",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "chejaro-samman",
+       "learning_objective": "चेजारो के प्रति समाज के पुराने और आज के व्यवहार की तुलना करना।"
+      },
+      {
+       "concept_tag": "niji-sarvajanik-ankush",
+       "learning_objective": "निजी होते हुए भी कुंइयों पर ग्राम समाज के अंकुश का औचित्य समझना।"
+      },
+      {
+       "concept_tag": "kuin-ke-kshetra",
+       "learning_objective": "कुंइयों वाले क्षेत्रों और खड़िया पट्टी के स्थानीय नामों को पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHVT1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "आलो-आँधारि",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khvt103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHVT1-CH03-T1",
+     "topic_number": 1,
+     "title": "नई बस्ती में काम और घर की खोज",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kaam-ki-khoj",
+       "learning_objective": "काम और किराये के घर के लिए बेबी के आरंभिक संघर्ष को समझना।"
+      },
+      {
+       "concept_tag": "akeli-stri-aur-samaj",
+       "learning_objective": "पति से अलग रह रही अकेली स्त्री के प्रति समाज की दृष्टि को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH03-T2",
+     "topic_number": 2,
+     "title": "तातुश का स्नेह और नया परिवार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tatush-ka-sneh",
+       "learning_objective": "तातुश के आत्मीय और संवेदनशील व्यवहार का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "bachchon-ki-shiksha",
+       "learning_objective": "बेबी के बच्चों की शिक्षा के लिए किए गए प्रयासों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH03-T3",
+     "topic_number": 3,
+     "title": "पढ़ने-लिखने की ओर पहला कदम",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "padhne-ki-ruchi",
+       "learning_objective": "बेबी की पढ़ने की रुचि और तातुश द्वारा उसे पहचाने जाने को समझना।"
+      },
+      {
+       "concept_tag": "lekhan-ki-shuruat",
+       "learning_objective": "कॉपी-पेन मिलने से बेबी के आत्मकथात्मक लेखन के आरंभ को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH03-T4",
+     "topic_number": 4,
+     "title": "बस्ती का जीवन और बेघर होना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "basti-ki-asuvidhayen",
+       "learning_objective": "किराये की बस्ती की असुविधाओं और लोगों के व्यवहार को पहचानना।"
+      },
+      {
+       "concept_tag": "ghar-tootna",
+       "learning_objective": "घर टूटने की घटना से अकेली स्त्री की असहायता और रिश्तों की सच्चाई समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH03-T5",
+     "topic_number": 5,
+     "title": "बड़ा बेटा और बाल-श्रम का प्रश्न",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bete-se-milan",
+       "learning_objective": "बड़े बेटे से बिछोह और पुनर्मिलन की घटनाओं को समझना।"
+      },
+      {
+       "concept_tag": "baal-shram",
+       "learning_objective": "बाल-श्रम के प्रति तातुश की सोच और उसके महत्त्व का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH03-T6",
+     "topic_number": 6,
+     "title": "लेखन को मिला प्रोत्साहन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jethu-ke-patra",
+       "learning_objective": "जेठू के पत्रों और संबोधन के माध्यम से मिले स्नेह को समझना।"
+      },
+      {
+       "concept_tag": "ashapurna-devi-ki-prerna",
+       "learning_objective": "आशापूर्णा देवी के उदाहरण से रचना-संसार के सत्य को समझना।"
+      },
+      {
+       "concept_tag": "lekhan-ka-protsahan",
+       "learning_objective": "शर्मिला दी और आनंद बाबू जैसे लोगों से मिले प्रोत्साहन का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH03-T7",
+     "topic_number": 7,
+     "title": "माँ की मृत्यु और बाबा का आगमन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "maa-ki-mrityu",
+       "learning_objective": "माँ की मृत्यु का समाचार मिलने की घटना को समझना।"
+      },
+      {
+       "concept_tag": "rishton-ki-sachchai",
+       "learning_objective": "बाबा और भाइयों के व्यवहार से पारिवारिक रिश्तों की सच्चाई का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "atmanirbharta",
+       "learning_objective": "स्त्री की आत्मनिर्भरता के बारे में बेबी की नई समझ का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH03-T8",
+     "topic_number": 8,
+     "title": "रचना का प्रकाशन और शीर्षक की सार्थकता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rachna-ka-prakashan",
+       "learning_objective": "पत्रिका में रचना छपने पर बेबी की भावनाओं को समझना।"
+      },
+      {
+       "concept_tag": "shirshak-ki-sarthakta",
+       "learning_objective": "'आलो-आँधारि' शीर्षक के अर्थ और उसकी सार्थकता का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHVT1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "भारतीय कलाएँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khvt104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHVT1-CH04-T1",
+     "topic_number": 1,
+     "title": "कलाएँ: अभिव्यक्ति, उत्सव और परंपरा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kala-abhivyakti-madhyam",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि चित्र, संगीत और नृत्य भी भाषा की तरह मनुष्य की अभिव्यक्ति के माध्यम हैं।"
+      },
+      {
+       "concept_tag": "kala-aur-utsav-jeevan",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि पर्व-त्योहारों, फसलों और जीवन-संस्कारों से जुड़ाव भारतीय कलाओं को कैसे जीवंत रखता है।"
+      },
+      {
+       "concept_tag": "lok-se-shastriya-vikas",
+       "learning_objective": "विद्यार्थी लोक और जनजातीय कलाओं से शास्त्रीय कलाओं के विकास का क्रम समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH04-T2",
+     "topic_number": 2,
+     "title": "चित्रकला: शैल चित्र और गुफा कला",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shail-chitra",
+       "learning_objective": "विद्यार्थी शैल चित्रों और भीमबेटका की गुफाओं की विशेषताएँ पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "ajanta-ellora-gufa-kala",
+       "learning_objective": "विद्यार्थी अजंता, एलोरा और गुप्त काल की कला-उपलब्धियों का वर्णन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH04-T3",
+     "topic_number": 3,
+     "title": "लघुचित्र, लोक चित्र-शैलियाँ और कला का विस्तार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "laghu-chitra-shailiyan",
+       "learning_objective": "विद्यार्थी किवाड़ चित्रकारी, पटचित्र, मधुबनी आदि शैलियों को उनके क्षेत्र से जोड़ सकेंगे।"
+      },
+      {
+       "concept_tag": "asthayi-lok-kala",
+       "learning_objective": "विद्यार्थी ऐपण, रंगोली, कोलम जैसी अस्थायी कलाओं के क्षेत्रीय नामों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "bharatiya-kala-ka-vistar",
+       "learning_objective": "विद्यार्थी विश्लेषण कर सकेंगे कि भारतीय कला को पूरी तरह समझने के लिए उसके विदेशों में हुए विस्तार को देखना क्यों आवश्यक है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH04-T4",
+     "topic_number": 4,
+     "title": "संगीत कला",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "margi-desi-sangeet",
+       "learning_objective": "विद्यार्थी वैदिक काल के मार्गी और देसी संगीत का अंतर बता सकेंगे।"
+      },
+      {
+       "concept_tag": "raag-aur-samay",
+       "learning_objective": "विद्यार्थी रागों और दिन के समय के संबंध को उदाहरण सहित समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "lok-sangeet-aur-vadya",
+       "learning_objective": "विद्यार्थी पारंपरिक वाद्यों और गायन-परंपरा में भारतीय संगीत की सहजता और प्रकृति से जुड़ाव पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH04-T5",
+     "topic_number": 5,
+     "title": "नृत्य कला: अभिनय और लोक नृत्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nritya-aur-abhinay",
+       "learning_objective": "विद्यार्थी नाट्यशास्त्र के आधार पर नृत्य में अभिनय के महत्त्व को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "lok-nritya-vividhata",
+       "learning_objective": "विद्यार्थी विभिन्न राज्यों के लोक नृत्यों और उनकी समानताओं को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHVT1-CH04-T6",
+     "topic_number": 6,
+     "title": "शास्त्रीय नृत्य और कलाओं का अंतर्संबंध",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shastriya-nritya-roop",
+       "learning_objective": "विद्यार्थी प्रमुख शास्त्रीय नृत्यों, उनके राज्यों और हस्त-मुद्राओं के महत्त्व को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "kalaon-ka-antarsambandh",
+       "learning_objective": "विद्यार्थी लोक और शास्त्रीय कलाओं के बीच निरंतर संवाद का मूल्यांकन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kala-aur-manushyata",
+       "learning_objective": "विद्यार्थी भर्तृहरि के कथन के आधार पर मनुष्य के जीवन में कला के महत्त्व की व्याख्या कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHVT1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Chapter 5 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khvt105.pdf",
+   "max_questions": 1000,
+   "topics": []
+  }
+ ]
+}

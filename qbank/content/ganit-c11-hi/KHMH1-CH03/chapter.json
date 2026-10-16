@@ -1,0 +1,92 @@
+{
+ "chapter_id": "KHMH1-CH03",
+ "title": "त्रिकोणमितीय फलन",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH03-T1",
+   "topic_number": 1,
+   "title": "कोण तथा उनका अंश माप और रेडियन माप",
+   "ncert_sections": "3.2, 3.2.1, 3.2.2",
+   "concepts": [
+    {
+     "concept_tag": "kon-ka-maap",
+     "learning_objective": "कोण को किरण के घूर्णन के माप के रूप में समझना तथा अंश, मिनट और सेकंड की इकाइयाँ पहचानना।"
+    },
+    {
+     "concept_tag": "radian-maap",
+     "learning_objective": "रेडियन माप की परिभाषा और चाप, त्रिज्या व कोण के संबंध l = rθ का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH03-T2",
+   "topic_number": 2,
+   "title": "रेडियन और अंश माप में संबंध",
+   "ncert_sections": "3.2.3, 3.2.4",
+   "concepts": [
+    {
+     "concept_tag": "radian-vastavik-sankhya",
+     "learning_objective": "इकाई वृत्त पर रेडियन माप और वास्तविक संख्याओं के संगतता संबंध को समझना।"
+    },
+    {
+     "concept_tag": "ansh-radian-sambandh",
+     "learning_objective": "संबंध π रेडियन = 180° द्वारा अंश माप और रेडियन माप का परस्पर रूपांतरण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH03-T3",
+   "topic_number": 3,
+   "title": "त्रिकोणमितीय फलन और उनके चिह्न",
+   "ncert_sections": "3.3, 3.3.1",
+   "concepts": [
+    {
+     "concept_tag": "ekak-vritt-paribhasha",
+     "learning_objective": "इकाई वृत्त की सहायता से किसी भी कोण के त्रिकोणमितीय फलनों को परिभाषित करना और उनके मान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "chaturthansh-chihn",
+     "learning_objective": "विभिन्न चतुर्थांशों में त्रिकोणमितीय फलनों के चिह्न निर्धारित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH03-T4",
+   "topic_number": 4,
+   "title": "त्रिकोणमितीय फलनों के प्रांत, परिसर और आवर्तिता",
+   "ncert_sections": "3.3.2",
+   "concepts": [
+    {
+     "concept_tag": "prant-parisar",
+     "learning_objective": "त्रिकोणमितीय फलनों के प्रांत और परिसर बताना।"
+    },
+    {
+     "concept_tag": "avartita",
+     "learning_objective": "आवर्तिता का प्रयोग करके बड़े कोणों के त्रिकोणमितीय मान ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH03-T5",
+   "topic_number": 5,
+   "title": "दो कोणों के योग और अंतर के त्रिकोणमितीय फलन",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "yog-antar-sutra",
+     "learning_objective": "योग और अंतर के सूत्रों से संबद्ध कोणों के मान और सर्वसमिकाएँ प्राप्त करना।"
+    },
+    {
+     "concept_tag": "dvigun-kon-sutra",
+     "learning_objective": "द्विगुण कोण के सूत्रों का प्रयोग करके त्रिकोणमितीय मान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "yog-gunanfal-roopantaran",
+     "learning_objective": "योग या अंतर को गुणनफल के रूप में बदलने वाले सूत्रों का प्रयोग करना।"
+    }
+   ]
+  }
+ ]
+}

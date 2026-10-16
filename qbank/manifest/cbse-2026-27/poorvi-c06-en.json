@@ -1,0 +1,698 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "poorvi-c06-en",
+  "curriculum": "cbse",
+  "class_level": 6,
+  "subject_code": "english",
+  "language": "english",
+  "title": "Poorvi",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "fepr1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "FEPR1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Fables and Folk Tales",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fepr101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEPR1-CH01-T1",
+     "topic_number": 1,
+     "title": "A Bottle of Dew: the story and its events",
+     "ncert_sections": "A Bottle of Dew: Let us read I and II",
+     "concepts": [
+      {
+       "concept_tag": "bottle-of-dew-story-events",
+       "learning_objective": "Recall the main events of 'A Bottle of Dew' and put them in the correct order."
+      },
+      {
+       "concept_tag": "sage-task-of-collecting-dew",
+       "learning_objective": "Explain what sage Mahipati asked Rama Natha to do and the real purpose behind the task."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH01-T2",
+     "topic_number": 2,
+     "title": "A Bottle of Dew: characters and message",
+     "ncert_sections": "A Bottle of Dew: Let us read II; Let us think and reflect",
+     "concepts": [
+      {
+       "concept_tag": "hard-work-creates-wealth",
+       "learning_objective": "State the message of the story that wealth is created by hard work, not by magic."
+      },
+      {
+       "concept_tag": "bottle-of-dew-character-traits",
+       "learning_objective": "Describe the qualities of Rama Natha, Madhumati and sage Mahipati from what they say and do."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH01-T3",
+     "topic_number": 3,
+     "title": "A Bottle of Dew: words, homophones and connecting words",
+     "ncert_sections": "A Bottle of Dew: Let us learn",
+     "concepts": [
+      {
+       "concept_tag": "story-word-meanings",
+       "learning_objective": "Give the meanings of words and phrases from the story such as tended, give up and precious."
+      },
+      {
+       "concept_tag": "homophones",
+       "learning_objective": "Identify homophones such as dew-due and son-sun and use them correctly in sentences."
+      },
+      {
+       "concept_tag": "connecting-words",
+       "learning_objective": "Join ideas with suitable connecting words such as because, before and as soon as."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH01-T4",
+     "topic_number": 4,
+     "title": "The Raven and the Fox: the poem and its lesson",
+     "ncert_sections": "The Raven and the Fox: Let us read; Let us think and reflect",
+     "concepts": [
+      {
+       "concept_tag": "raven-and-fox-poem-events",
+       "learning_objective": "Recall the characters and events of the poem 'The Raven and the Fox' by Jean de La Fontaine."
+      },
+      {
+       "concept_tag": "flattery-and-pride",
+       "learning_objective": "Explain how the Fox used flattery and the Raven's pride, and the lesson the poem teaches."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH01-T5",
+     "topic_number": 5,
+     "title": "The Raven and the Fox: rhyme, alliteration and vocabulary",
+     "ncert_sections": "The Raven and the Fox: Let us learn",
+     "concepts": [
+      {
+       "concept_tag": "rhyming-words-and-rhyme-scheme",
+       "learning_objective": "Identify rhyming words and the rhyme pattern of the stanzas of the poem."
+      },
+      {
+       "concept_tag": "alliteration",
+       "learning_objective": "Recognise alliteration as the repetition of the same consonant sound at the start of nearby words."
+      },
+      {
+       "concept_tag": "poem-vocabulary-and-opposites",
+       "learning_objective": "Give the meanings and opposites of words from the poem such as limb, perched and pride."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH01-T6",
+     "topic_number": 6,
+     "title": "Rama to the Rescue: the story",
+     "ncert_sections": "Rama to the Rescue: Let us read; Let us think and reflect",
+     "concepts": [
+      {
+       "concept_tag": "rama-to-the-rescue-plot",
+       "learning_objective": "Recall the characters, problem and events of the story 'Rama to the Rescue'."
+      },
+      {
+       "concept_tag": "cleverness-in-a-crisis",
+       "learning_objective": "Explain how the couple used a clever plan and presence of mind to get help from the kotwal."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH01-T7",
+     "topic_number": 7,
+     "title": "Contractions and the present progressive tense",
+     "ncert_sections": "Rama to the Rescue: Let us learn I-IV",
+     "concepts": [
+      {
+       "concept_tag": "contractions-with-apostrophe",
+       "learning_objective": "Expand contracted words such as they're, I'm and won't and explain the use of the apostrophe."
+      },
+      {
+       "concept_tag": "present-progressive-tense",
+       "learning_objective": "Form and use the present progressive tense (am/is/are + verb + ing) for actions happening now."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH01-T8",
+     "topic_number": 8,
+     "title": "Adverbs, exclamatory and interrogative sentences",
+     "ncert_sections": "Rama to the Rescue: Let us learn VI-X",
+     "concepts": [
+      {
+       "concept_tag": "adverbs",
+       "learning_objective": "Identify adverbs that tell how an action is done and choose suitable adverbs for sentences."
+      },
+      {
+       "concept_tag": "exclamatory-and-interrogative-sentences",
+       "learning_objective": "Distinguish exclamatory and interrogative sentences and punctuate them correctly."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEPR1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Friendship",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fepr102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEPR1-CH02-T1",
+     "topic_number": 1,
+     "title": "The Unlikely Best Friends (Part I): Gajaraj meets Buntee",
+     "ncert_sections": "Story: The Unlikely Best Friends, Part I",
+     "concepts": [
+      {
+       "concept_tag": "gajaraj-loneliness",
+       "learning_objective": "Explain why Gajaraj was sad in spite of royal comforts and how a caretaker differs from a friend."
+      },
+      {
+       "concept_tag": "friendship-begins",
+       "learning_objective": "Describe how the friendship between Gajaraj and the stray dog began and grew."
+      },
+      {
+       "concept_tag": "story-vocabulary",
+       "learning_objective": "Infer the meanings of words such as 'strayed', 'accompanied' and 'yelped' from the story."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH02-T2",
+     "topic_number": 2,
+     "title": "The Unlikely Best Friends (Part II): separation and reunion",
+     "ncert_sections": "Story: The Unlikely Best Friends, Part II",
+     "concepts": [
+      {
+       "concept_tag": "separation-and-longing",
+       "learning_objective": "Explain how Gajaraj and Buntee showed that they missed each other after being separated."
+      },
+      {
+       "concept_tag": "farmer-kindness-reunion",
+       "learning_objective": "Describe how the farmer's kindness reunited the friends and created a new friendship."
+      },
+      {
+       "concept_tag": "theme-unlikely-friendship",
+       "learning_objective": "Evaluate what makes the friendship of Gajaraj and Buntee 'unlikely'."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH02-T3",
+     "topic_number": 3,
+     "title": "Language from 'The Unlikely Best Friends': opposites, past tense and neither-nor",
+     "ncert_sections": "Let us learn (The Unlikely Best Friends)",
+     "concepts": [
+      {
+       "concept_tag": "opposites-with-prefixes",
+       "learning_objective": "Form opposites by adding prefixes such as un-, dis-, in- and mis- to words."
+      },
+      {
+       "concept_tag": "past-tense-forms",
+       "learning_objective": "Distinguish the simple past, past progressive and past perfect forms of verbs."
+      },
+      {
+       "concept_tag": "neither-nor-either-or",
+       "learning_objective": "Use 'neither ... nor' and 'either ... or' correctly to join two choices."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH02-T4",
+     "topic_number": 4,
+     "title": "A Friend's Prayer (poem)",
+     "ncert_sections": "Poem: A Friend's Prayer",
+     "concepts": [
+      {
+       "concept_tag": "poem-meaning",
+       "learning_objective": "Interpret the main ideas and lines of the poem 'A Friend's Prayer'."
+      },
+      {
+       "concept_tag": "poem-speaker-qualities",
+       "learning_objective": "Identify the qualities of the speaker as shown in the poem."
+      },
+      {
+       "concept_tag": "friendship-vocabulary",
+       "learning_objective": "Understand words related to friendship such as 'blessed' and qualities of a good friend."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH02-T5",
+     "topic_number": 5,
+     "title": "The Chair: Mario and the magic chair test",
+     "ncert_sections": "Story: The Chair, Parts I and II",
+     "concepts": [
+      {
+       "concept_tag": "mario-and-the-bet",
+       "learning_objective": "Recall the bet between Mario and his grandfather and describe Mario's character."
+      },
+      {
+       "concept_tag": "invisible-chair-test",
+       "learning_objective": "Explain how the invisible chair test worked at school."
+      },
+      {
+       "concept_tag": "true-friends-message",
+       "learning_objective": "Evaluate the story's message about who our true friends are."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH02-T6",
+     "topic_number": 6,
+     "title": "Language from 'The Chair': suffixes and adjectives",
+     "ncert_sections": "Let us learn (The Chair)",
+     "concepts": [
+      {
+       "concept_tag": "root-words-suffixes",
+       "learning_objective": "Divide words into root words and suffixes and form new words with suffixes."
+      },
+      {
+       "concept_tag": "adjectives-and-nouns",
+       "learning_objective": "Identify adjectives and pair them with suitable nouns."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEPR1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Nurturing Nature",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fepr103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEPR1-CH03-T1",
+     "topic_number": 1,
+     "title": "Neem Baba: the tree's origin, spread and names",
+     "ncert_sections": "Neem Baba, Part I; Let us explore",
+     "concepts": [
+      {
+       "concept_tag": "neem-origin-and-spread",
+       "learning_objective": "Recall where the neem tree was born and where it is found today, as told by Neem Baba."
+      },
+      {
+       "concept_tag": "names-of-neem",
+       "learning_objective": "Explain the different names of neem and the reasons behind them."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH03-T2",
+     "topic_number": 2,
+     "title": "Neem Baba: uses of neem in medicine, farming and daily life",
+     "ncert_sections": "Neem Baba, Part II",
+     "concepts": [
+      {
+       "concept_tag": "medicinal-uses-of-neem",
+       "learning_objective": "Describe how different parts of neem are used to treat illnesses and why such remedies need trained people."
+      },
+      {
+       "concept_tag": "neem-in-farming-and-daily-life",
+       "learning_objective": "Explain how neem protects crops, stored grains, homes and the air."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH03-T3",
+     "topic_number": 3,
+     "title": "Neem Baba: compound words, past forms of verbs and personification",
+     "ncert_sections": "Neem Baba: Let us learn I-III",
+     "concepts": [
+      {
+       "concept_tag": "compound-words",
+       "learning_objective": "Identify and classify open, closed and hyphenated compound words."
+      },
+      {
+       "concept_tag": "past-forms-of-verbs",
+       "learning_objective": "Match verbs showing action in the present with their past forms."
+      },
+      {
+       "concept_tag": "personification",
+       "learning_objective": "Recognise personification, where a non-human thing is given human qualities."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH03-T4",
+     "topic_number": 4,
+     "title": "What a Bird Thought: the bird's changing idea of the world",
+     "ncert_sections": "What a Bird Thought, poem and Let us discuss",
+     "concepts": [
+      {
+       "concept_tag": "bird-changing-view-of-world",
+       "learning_objective": "Trace how the bird's idea of the world changes as it grows."
+      },
+      {
+       "concept_tag": "stanza-main-ideas",
+       "learning_objective": "Identify the main idea of each stanza and the central message of the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH03-T5",
+     "topic_number": 5,
+     "title": "What a Bird Thought: vocabulary, rhyme and describing words",
+     "ncert_sections": "What a Bird Thought: Let us do, Let us learn I-II",
+     "concepts": [
+      {
+       "concept_tag": "poem-vocabulary",
+       "learning_objective": "Understand the meaning of words like 'pale', 'fluttered', 'nestled', 'at length' and 'labours' in the poem."
+      },
+      {
+       "concept_tag": "rhyming-words",
+       "learning_objective": "Identify rhyming words and the rhyme pattern of the poem."
+      },
+      {
+       "concept_tag": "describing-words",
+       "learning_objective": "Identify describing words used for the bird's homes."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH03-T6",
+     "topic_number": 6,
+     "title": "Spices that Heal Us: Daadi's letter on spices",
+     "ncert_sections": "Spices that Heal Us, letter and Let us think and reflect",
+     "concepts": [
+      {
+       "concept_tag": "spices-and-their-benefits",
+       "learning_objective": "Recall the health benefits of common kitchen spices described in Daadi's letter."
+      },
+      {
+       "concept_tag": "letter-message-and-tradition",
+       "learning_objective": "Understand who writes the letter, why, and how home remedies pass between generations."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH03-T7",
+     "topic_number": 7,
+     "title": "Spices that Heal Us: modal verbs",
+     "ncert_sections": "Spices that Heal Us: Let us learn II",
+     "concepts": [
+      {
+       "concept_tag": "modal-verbs-functions",
+       "learning_objective": "Identify the function of modals such as may, should, can, must, need to and used to."
+      },
+      {
+       "concept_tag": "using-modals-in-context",
+       "learning_objective": "Choose and use the right modal correctly in a sentence."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEPR1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Sports and Wellness",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fepr104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEPR1-CH04-T1",
+     "topic_number": 1,
+     "title": "Change of Heart: Prabhat and the Friendly Match",
+     "ncert_sections": "Change of Heart, Part I",
+     "concepts": [
+      {
+       "concept_tag": "prabhat-fear-of-losing",
+       "learning_objective": "Explain how Prabhat's fear of losing shaped the way he chose and played games."
+      },
+      {
+       "concept_tag": "friendly-match-and-cheating",
+       "learning_objective": "Recall the events of the friendly badminton match and how Prabhat won it unfairly."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH04-T2",
+     "topic_number": 2,
+     "title": "Change of Heart: Surya's Attitude and Sporting Spirit",
+     "ncert_sections": "Change of Heart, Part II",
+     "concepts": [
+      {
+       "concept_tag": "surya-attitude-to-games",
+       "learning_objective": "Describe how Surya enjoyed games whether he won or lost."
+      },
+      {
+       "concept_tag": "sporting-spirit-change-of-heart",
+       "learning_objective": "Analyse how Prabhat changed and why sporting spirit matters."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH04-T3",
+     "topic_number": 3,
+     "title": "Change of Heart: Vocabulary, Past Perfect and Polite Expressions",
+     "ncert_sections": "Change of Heart: Let us learn, Let us speak",
+     "concepts": [
+      {
+       "concept_tag": "story-vocabulary",
+       "learning_objective": "Give the meanings of words used in the story, such as phenomenon and opponent."
+      },
+      {
+       "concept_tag": "past-perfect-tense",
+       "learning_objective": "Use the past perfect tense to show which of two past actions happened first."
+      },
+      {
+       "concept_tag": "polite-expressions",
+       "learning_objective": "Choose suitable expressions with please, thank you and sorry for different situations."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH04-T4",
+     "topic_number": 4,
+     "title": "The Winner (poem by Georgia Heard)",
+     "ncert_sections": "The Winner",
+     "concepts": [
+      {
+       "concept_tag": "poem-meaning-and-imagery",
+       "learning_objective": "Explain the setting, events and meaning of the poem 'The Winner'."
+      },
+      {
+       "concept_tag": "personification-and-pattern",
+       "learning_objective": "Identify personification and the effect of the word pattern used in the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH04-T5",
+     "topic_number": 5,
+     "title": "Yoga - A Way of Life: Meaning, Origin and Recognition",
+     "ncert_sections": "Yoga - A Way of Life (Let us read, Let us explore)",
+     "concepts": [
+      {
+       "concept_tag": "meaning-and-origin-of-yoga",
+       "learning_objective": "State the meaning and origin of the word yoga and the role of Sage Patanjali."
+      },
+      {
+       "concept_tag": "worldwide-recognition-of-yoga",
+       "learning_objective": "Explain how yoga has come to be recognised across the world."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH04-T6",
+     "topic_number": 6,
+     "title": "Yoga - A Way of Life: Benefits; Practice and Practise",
+     "ncert_sections": "Yoga - A Way of Life (Let us read, Let us learn)",
+     "concepts": [
+      {
+       "concept_tag": "benefits-of-yoga",
+       "learning_objective": "Describe the physical and mental benefits of yoga given in the chapter."
+      },
+      {
+       "concept_tag": "practice-practise-advice-advise",
+       "learning_objective": "Use the noun forms practice and advice and the verb forms practise and advise correctly."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEPR1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Culture and Tradition",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fepr105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEPR1-CH05-T1",
+     "topic_number": 1,
+     "title": "Hamara Bharat and the Ek Bharat, Shreshtha Bharat programme",
+     "ncert_sections": "Hamara Bharat - Incredible India!; Kalakritiyon ka Bharat, Part I; Let us explore 2",
+     "concepts": [
+      {
+       "concept_tag": "unity-in-diversity",
+       "learning_objective": "Explain how Bharat's people, culture and nature show unity in diversity and why citizens must help the country prosper."
+      },
+      {
+       "concept_tag": "ek-bharat-shreshtha-bharat",
+       "learning_objective": "Describe the aim of the Ek Bharat, Shreshtha Bharat programme and how state pairing builds mutual understanding."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH05-T2",
+     "topic_number": 2,
+     "title": "Folk arts and crafts of Bharat",
+     "ncert_sections": "Kalakritiyon ka Bharat, Part II",
+     "concepts": [
+      {
+       "concept_tag": "aipan-folk-art",
+       "learning_objective": "Identify the features of Aipan, the folk art of Uttarakhand."
+      },
+      {
+       "concept_tag": "dhokra-metal-craft",
+       "learning_objective": "Describe the materials and the sequence of steps used to make Dhokra metal craft."
+      },
+      {
+       "concept_tag": "coconut-shell-and-kondapalli-crafts",
+       "learning_objective": "Compare coconut shell craft of Kerala and Kondapalli toys of Andhra Pradesh."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH05-T3",
+     "topic_number": 3,
+     "title": "Sequence words, simple present tense and gakkad bharta",
+     "ncert_sections": "Kalakritiyon ka Bharat: Let us learn, Let us listen",
+     "concepts": [
+      {
+       "concept_tag": "sequence-words",
+       "learning_objective": "Use sequence words such as first, next, then and finally to show the order of steps."
+      },
+      {
+       "concept_tag": "simple-present-tense",
+       "learning_objective": "Use the simple present tense, adding -s/-es with he, she and it."
+      },
+      {
+       "concept_tag": "gakkad-bharta-listening",
+       "learning_objective": "Recall and interpret details from Sushil's description of gakkad bharta."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH05-T4",
+     "topic_number": 4,
+     "title": "The Kites: understanding the poem",
+     "ncert_sections": "The Kites (poem); Let us discuss; Let us think and reflect",
+     "concepts": [
+      {
+       "concept_tag": "kites-poem-comprehension",
+       "learning_objective": "Understand what the child sees, wishes and imagines in the poem 'The Kites'."
+      },
+      {
+       "concept_tag": "kites-poem-feelings",
+       "learning_objective": "Interpret the feelings of the child and of the people below in the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH05-T5",
+     "topic_number": 5,
+     "title": "The Kites: poetic devices, kite words and the Kite Festival",
+     "ncert_sections": "The Kites: Let us discuss II-V; Let us learn; Let us listen",
+     "concepts": [
+      {
+       "concept_tag": "simile-and-alliteration",
+       "learning_objective": "Identify simile, alliteration and repetition in the poem."
+      },
+      {
+       "concept_tag": "kite-parts-and-cinquain",
+       "learning_objective": "Name the parts of a kite and describe the structure of a cinquain poem."
+      },
+      {
+       "concept_tag": "kite-festival-facts",
+       "learning_objective": "Recall facts about the Kite Festival from the listening text."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH05-T6",
+     "topic_number": 6,
+     "title": "Ila Sachani: Embroidering Dreams with her Feet",
+     "ncert_sections": "Ila Sachani, paragraphs 1-9; Let us think and reflect",
+     "concepts": [
+      {
+       "concept_tag": "ila-challenges-and-support",
+       "learning_objective": "Describe Ila's early challenges and how her family helped her overcome them."
+      },
+      {
+       "concept_tag": "ila-recognition-and-independence",
+       "learning_objective": "Explain how recognition and independence changed Ila's life and what her story teaches."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH05-T7",
+     "topic_number": 7,
+     "title": "Ila Sachani: vocabulary, words of quantity and Kathiawar embroidery",
+     "ncert_sections": "Ila Sachani: Let us learn I-III; Let us listen",
+     "concepts": [
+      {
+       "concept_tag": "synonyms-and-antonyms",
+       "learning_objective": "Identify synonyms and antonyms of words from the lesson."
+      },
+      {
+       "concept_tag": "words-of-quantity",
+       "learning_objective": "Use words of quantity correctly with countable and uncountable nouns."
+      },
+      {
+       "concept_tag": "kathiawar-embroidery-features",
+       "learning_objective": "Recall the features of Kathiawar embroidery from the listening text."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEPR1-CH05-T8",
+     "topic_number": 8,
+     "title": "National War Memorial",
+     "ncert_sections": "National War Memorial (poem and note)",
+     "concepts": [
+      {
+       "concept_tag": "national-war-memorial",
+       "learning_objective": "Understand the purpose of the National War Memorial and the meaning of the poem about it."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

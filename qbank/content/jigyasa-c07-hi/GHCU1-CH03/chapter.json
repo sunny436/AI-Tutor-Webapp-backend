@@ -1,0 +1,124 @@
+{
+ "chapter_id": "GHCU1-CH03",
+ "title": "विद्युत — परिपथ एवं उनके घटक",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHCU1-CH03-T1",
+   "topic_number": 1,
+   "title": "टॉर्च-लाइट और विद्युत सेल",
+   "ncert_sections": "3.1, 3.2.1",
+   "concepts": [
+    {
+     "concept_tag": "torch-switch-ki-sthiti",
+     "learning_objective": "विद्यार्थी टॉर्च के स्विच की ऑन और ऑफ स्थिति को लैंप के दीप्त होने से जोड़ सकेंगे।"
+    },
+    {
+     "concept_tag": "vidyut-sel-ke-terminal",
+     "learning_objective": "विद्यार्थी विद्युत सेल के धन और ऋण टर्मिनल पहचान सकेंगे और सेल को सुवाह्य ऊर्जा स्रोत के रूप में समझेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH03-T2",
+   "topic_number": 2,
+   "title": "बैटरी",
+   "ncert_sections": "3.2.2",
+   "concepts": [
+    {
+     "concept_tag": "baitari-mein-sel-ka-sanyojan",
+     "learning_objective": "विद्यार्थी समझेंगे कि एक सेल का धन सिरा अगले सेल के ऋण सिरे से जोड़कर बैटरी बनती है।"
+    },
+    {
+     "concept_tag": "anek-selon-ka-labh",
+     "learning_objective": "विद्यार्थी एक से अधिक सेल जोड़ने के लाभ और गलत क्रम के प्रभाव को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH03-T3",
+   "topic_number": 3,
+   "title": "विद्युत लैंप: तापदीप्त लैंप और एल.ई.डी.",
+   "ncert_sections": "3.2.3",
+   "concepts": [
+    {
+     "concept_tag": "tapdipt-lamp-ka-tantu",
+     "learning_objective": "विद्यार्थी तापदीप्त लैंप के तंतु, मोटे तारों और दोनों टर्मिनलों की भूमिका बता सकेंगे।"
+    },
+    {
+     "concept_tag": "led-ke-terminal",
+     "learning_objective": "विद्यार्थी एल.ई.डी. के धन और ऋण टर्मिनल पहचान सकेंगे और इसे तापदीप्त लैंप से अलग कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH03-T4",
+   "topic_number": 4,
+   "title": "विद्युत परिपथ",
+   "ncert_sections": "3.2.4, 3.2.5",
+   "concepts": [
+    {
+     "concept_tag": "sampoorn-paripath",
+     "learning_objective": "विद्यार्थी समझेंगे कि लैंप तभी दीप्त होता है जब सेल और लैंप से होकर धारा के लिए संपूर्ण पथ बने।"
+    },
+    {
+     "concept_tag": "dhara-ki-disha",
+     "learning_objective": "विद्यार्थी बंद परिपथ में धारा की दिशा बता सकेंगे।"
+    },
+    {
+     "concept_tag": "led-mein-ek-dishiya-dhara",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि एल.ई.डी. में धारा एक ही दिशा में बहती है, इसलिए उसे सही प्रकार जोड़ना आवश्यक है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH03-T5",
+   "topic_number": 5,
+   "title": "विद्युत स्विच",
+   "ncert_sections": "3.2.6",
+   "concepts": [
+    {
+     "concept_tag": "switch-ka-karya",
+     "learning_objective": "विद्यार्थी बता सकेंगे कि स्विच परिपथ को पूर्ण या भंग करने वाली सरल युक्ति है और इसे परिपथ में कहीं भी लगाया जा सकता है।"
+    },
+    {
+     "concept_tag": "khula-aur-band-paripath",
+     "learning_objective": "विद्यार्थी ऑन और ऑफ स्थिति को बंद और खुले परिपथ से जोड़कर धारा-प्रवाह का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH03-T6",
+   "topic_number": 6,
+   "title": "परिपथ आरेख",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "paripath-ke-pratik",
+     "learning_objective": "विद्यार्थी सेल, बैटरी, लैंप, एल.ई.डी., स्विच और तार के प्रतीक पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "paripath-aarekh",
+     "learning_objective": "विद्यार्थी परिपथ आरेख का अर्थ समझेंगे और उससे परिपथ के व्यवहार का अनुमान लगा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHCU1-CH03-T7",
+   "topic_number": 7,
+   "title": "विद्युत चालक एवं विद्युतरोधी",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "chalak-aur-vidyutrodhi",
+     "learning_objective": "विद्यार्थी परीक्षण-यंत्र की सहायता से पदार्थों को विद्युत चालक और विद्युतरोधी में वर्गीकृत कर सकेंगे।"
+    },
+    {
+     "concept_tag": "chalak-aur-rodhi-ka-upyog",
+     "learning_objective": "विद्यार्थी तारों में ताँबे और आवरण में प्लास्टिक या रबर के उपयोग तथा विद्युत सुरक्षा के कारण समझा सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LHSK2-CH01",
+ "title": "विद्ययाऽमृतमश्नुते",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHSK2-CH01-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः – ईशावास्योपनिषद् उपनिषदः च",
+   "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "ishavasya-parichayah",
+     "learning_objective": "ईशावास्योपनिषदः स्रोतं, नामकारणं, मन्त्रसङ्ख्यां च वदेत्।"
+    },
+    {
+     "concept_tag": "upanishad-svaroopam",
+     "learning_objective": "उपनिषत्-शब्दस्य व्युत्पत्तिं, नामान्तराणि, प्रमुखोपनिषदः च जानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH01-T2",
+   "topic_number": 2,
+   "title": "त्यागपूर्वकः भोगः निष्कामकर्म च (मन्त्रौ १-२)",
+   "ncert_sections": "मन्त्रौ १-२",
+   "concepts": [
+    {
+     "concept_tag": "tyaga-bhogah",
+     "learning_objective": "'तेन त्यक्तेन भुञ्जीथाः, मा गृधः' इति उपदेशस्य आशयं व्याख्यायेत्।"
+    },
+    {
+     "concept_tag": "nishkama-karma",
+     "learning_objective": "कर्म कुर्वन् शतं समाः जिजीविषेत् इति मन्त्रस्य तात्पर्यं विवेचयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH01-T3",
+   "topic_number": 3,
+   "title": "आत्महनः जनाः आत्मस्वरूपं च (मन्त्रौ ३-४)",
+   "ncert_sections": "मन्त्रौ ३-४",
+   "concepts": [
+    {
+     "concept_tag": "atmahano-janah",
+     "learning_objective": "असुर्याः लोकाः आत्महनः जनाः च के इति स्पष्टीकुर्यात्।"
+    },
+    {
+     "concept_tag": "atma-svaroopam",
+     "learning_objective": "अनेजत्, मनसः जवीयः इत्यादिभिः विशेषणैः आत्मतत्त्वस्य स्वरूपं विश्लेषयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH01-T4",
+   "topic_number": 4,
+   "title": "विद्या अविद्या च तयोः समन्वयः (मन्त्राः ५-७)",
+   "ncert_sections": "मन्त्राः ५-७",
+   "concepts": [
+    {
+     "concept_tag": "vidya-avidya",
+     "learning_objective": "पाठानुसारं विद्या-अविद्या-शब्दयोः अर्थं भेदं च वदेत्।"
+    },
+    {
+     "concept_tag": "vidya-avidya-samanvayah",
+     "learning_objective": "अविद्यया मृत्युं तीर्त्वा विद्यया अमृतम् अश्नुते इति समन्वयं मूल्याङ्कयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH01-T5",
+   "topic_number": 5,
+   "title": "व्याकरणम् – शब्दार्थाः प्रकृतिप्रत्ययौ सन्धिः च",
+   "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः (प्रश्नाः ८, ९, ११)",
+   "concepts": [
+    {
+     "concept_tag": "prakriti-pratyayah",
+     "learning_objective": "पाठगतपदेषु प्रकृतिं प्रत्ययं च पृथक् कुर्यात्।"
+    },
+    {
+     "concept_tag": "lakara-rupani",
+     "learning_objective": "पाठगतक्रियापदानां धातुं लकारं पुरुषं वचनं च अभिजानीयात्।"
+    },
+    {
+     "concept_tag": "sandhi",
+     "learning_objective": "पाठगतपदेषु सन्धिं सन्धिविच्छेदं च कुर्यात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH01-T6",
+   "topic_number": 6,
+   "title": "योग्यताविस्तारः – श्रेयः प्रेयः वैदिकस्वराः च",
+   "ncert_sections": "योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "shreyah-preyah",
+     "learning_objective": "कठोपनिषदि प्रतिपादितं श्रेयः-प्रेयसोः भेदं पाठसन्देशेन सह तोलयेत्।"
+    },
+    {
+     "concept_tag": "vaidika-svarah",
+     "learning_objective": "उदात्त-अनुदात्त-स्वरितानां लक्षणं चिह्नानि महत्त्वं च वदेत्।"
+    }
+   ]
+  }
+ ]
+}

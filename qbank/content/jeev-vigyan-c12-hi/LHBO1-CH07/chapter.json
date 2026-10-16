@@ -1,0 +1,144 @@
+{
+ "chapter_id": "LHBO1-CH07",
+ "title": "मानव स्वास्थ्य तथा रोग",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHBO1-CH07-T1",
+   "topic_number": 1,
+   "title": "मानव में सामान्य रोग तथा उनका नियंत्रण",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "rogjanak-aur-rog",
+     "learning_objective": "जीवाणु, विषाणु, प्रोटोजोआ, कृमि और कवक से होने वाले प्रमुख मानव रोगों तथा उनके लक्षणों को पहचानना।"
+    },
+    {
+     "concept_tag": "plasmodium-jeevan-chakra",
+     "learning_objective": "मलेरिया परजीवी प्लाज्मोडियम के जीवन चक्र और उसके दो पोषकों की भूमिका को समझना।"
+    },
+    {
+     "concept_tag": "rog-niyantran",
+     "learning_objective": "स्वच्छता और रोगवाहक नियंत्रण द्वारा संक्रामक रोगों की रोकथाम के उपाय समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH07-T2",
+   "topic_number": 2,
+   "title": "प्रतिरक्षा: सहज तथा उपार्जित प्रतिरक्षा",
+   "ncert_sections": "7.2, 7.2.1, 7.2.2",
+   "concepts": [
+    {
+     "concept_tag": "sahaj-pratiraksha",
+     "learning_objective": "सहज प्रतिरक्षा के चार प्रकार के रोधों को उदाहरण सहित पहचानना।"
+    },
+    {
+     "concept_tag": "upaarjit-pratiraksha",
+     "learning_objective": "उपार्जित प्रतिरक्षा की स्मृति, प्राथमिक और द्वितीयक अनुक्रिया को समझाना।"
+    },
+    {
+     "concept_tag": "antibody-sanrachna",
+     "learning_objective": "प्रतिरक्षी की संरचना, तरल और कोशिका-माध्यित प्रतिरक्षा में अंतर बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH07-T3",
+   "topic_number": 3,
+   "title": "सक्रिय-निष्क्रिय प्रतिरक्षा, टीकाकरण, एलर्जी तथा स्वप्रतिरक्षा",
+   "ncert_sections": "7.2.3, 7.2.4, 7.2.5, 7.2.6",
+   "concepts": [
+    {
+     "concept_tag": "sakriya-nishkriya-pratiraksha",
+     "learning_objective": "सक्रिय और निष्क्रिय प्रतिरक्षा में अंतर कर उनके उदाहरण पहचानना।"
+    },
+    {
+     "concept_tag": "tikakaran",
+     "learning_objective": "टीकाकरण के स्मृति-आधारित सिद्धांत और निष्क्रिय प्रतिरक्षीकरण के उपयोग को समझाना।"
+    },
+    {
+     "concept_tag": "allergy-swapratiraksha",
+     "learning_objective": "एलर्जी और स्वप्रतिरक्षा रोगों के कारण तथा लक्षण समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH07-T4",
+   "topic_number": 4,
+   "title": "शरीर में प्रतिरक्षा तंत्र: लसीकाभ अंग",
+   "ncert_sections": "7.2.7",
+   "concepts": [
+    {
+     "concept_tag": "prathamik-lasikabh-ang",
+     "learning_objective": "प्राथमिक लसीकाभ अंगों, अस्थि मज्जा और थाइमस, की भूमिका बताना।"
+    },
+    {
+     "concept_tag": "dwitiyak-lasikabh-ang",
+     "learning_objective": "प्लीहा, लसिका पर्व और श्लेष्मा-संबद्ध लसीकाभ ऊतक के कार्य समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH07-T5",
+   "topic_number": 5,
+   "title": "एड्स",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "hiv-sancharan",
+     "learning_objective": "एचआईवी के संचरण के तरीकों और उच्च जोखिम वाले समूहों को पहचानना।"
+    },
+    {
+     "concept_tag": "hiv-pratikritiyan",
+     "learning_objective": "शरीर में एचआईवी की प्रतिकृति तथा सहायक टी-लसीकाणुओं पर उसके प्रभाव को समझाना।"
+    },
+    {
+     "concept_tag": "aids-roktham",
+     "learning_objective": "एड्स के निदान, उपचार की सीमा और रोकथाम के उपाय बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH07-T6",
+   "topic_number": 6,
+   "title": "कैंसर",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "cancer-koshika-gun",
+     "learning_objective": "संपर्क संदमन की हानि, सुदम और दुर्दम अर्बुद तथा मेटास्टेसिस को समझाना।"
+    },
+    {
+     "concept_tag": "carcinogen",
+     "learning_objective": "भौतिक, रासायनिक और जैविक कैंसरजनों तथा ओंकोजीन की भूमिका पहचानना।"
+    },
+    {
+     "concept_tag": "cancer-nidan-upchar",
+     "learning_objective": "कैंसर के संसूचन और उपचार की विधियों की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH07-T7",
+   "topic_number": 7,
+   "title": "ड्रग्स तथा ऐल्कोहॉल का कुप्रयोग",
+   "ncert_sections": "7.5, 7.5.1, 7.5.2, 7.5.3, 7.5.4",
+   "concepts": [
+    {
+     "concept_tag": "drug-prakar",
+     "learning_objective": "ओपिऑइड, कैनेबिनॉइड और कोका ऐल्कलॉइड के स्रोत और प्रभाव पहचानना।"
+    },
+    {
+     "concept_tag": "vyasan-nirbharta",
+     "learning_objective": "व्यसन, निर्भरता और विनिवर्तन लक्षणों में अंतर समझाना।"
+    },
+    {
+     "concept_tag": "kupryog-prabhav-roktham",
+     "learning_objective": "किशोरों में ड्रग्स और ऐल्कोहॉल के कुप्रयोग के प्रभाव तथा रोकथाम के उपायों का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

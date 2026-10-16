@@ -1,0 +1,160 @@
+{
+ "chapter_id": "KEGY1-CH06",
+ "title": "Natural Hazards and Disasters",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY1-CH06-T1",
+   "topic_number": 1,
+   "title": "Disasters and natural hazards: meaning and changing perception",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "disaster-definition",
+     "learning_objective": "State the meaning of a disaster and identify disasters caused directly or indirectly by human actions."
+    },
+    {
+     "concept_tag": "hazard-vs-disaster",
+     "learning_objective": "Distinguish a natural hazard from a natural disaster and explain when a hazard becomes a disaster."
+    },
+    {
+     "concept_tag": "changing-perception-vulnerability",
+     "learning_objective": "Explain how intensified human activity in hazard-prone areas has increased vulnerability."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY1-CH06-T2",
+   "topic_number": 2,
+   "title": "Classification of natural disasters and international efforts",
+   "ncert_sections": "Table 6.1",
+   "concepts": [
+    {
+     "concept_tag": "classification-of-disasters",
+     "learning_objective": "Classify natural disasters as atmospheric, terrestrial, aquatic or biological."
+    },
+    {
+     "concept_tag": "yokohama-strategy-idndr",
+     "learning_objective": "Describe the Yokohama Strategy (1994) and the International Decade for Natural Disaster Reduction."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY1-CH06-T3",
+   "topic_number": 3,
+   "title": "Earthquakes in India",
+   "ncert_sections": "Table 6.2, Figure 6.2",
+   "concepts": [
+    {
+     "concept_tag": "earthquake-causes-india",
+     "learning_objective": "Explain why the Himalayan arc and parts of the Peninsula experience earthquakes."
+    },
+    {
+     "concept_tag": "earthquake-hazard-zones",
+     "learning_objective": "Identify the earthquake damage risk zones of India and the regions in them."
+    },
+    {
+     "concept_tag": "earthquake-effects-mitigation",
+     "learning_objective": "Describe the effects of earthquakes and the preparedness measures to mitigate them."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY1-CH06-T4",
+   "topic_number": 4,
+   "title": "Tsunami",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "tsunami-mechanism",
+     "learning_objective": "Explain how tsunamis form and why their height increases in shallow coastal water."
+    },
+    {
+     "concept_tag": "tsunami-impact-mitigation",
+     "learning_objective": "Explain why tsunami losses are large and why mitigation needs international cooperation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY1-CH06-T5",
+   "topic_number": 5,
+   "title": "Tropical cyclones",
+   "ncert_sections": "Figure 6.4",
+   "concepts": [
+    {
+     "concept_tag": "cyclone-formation-conditions",
+     "learning_objective": "State the initial conditions needed for the formation of a tropical cyclone."
+    },
+    {
+     "concept_tag": "cyclone-distribution-india",
+     "learning_objective": "Describe where and when tropical cyclones originate around India."
+    },
+    {
+     "concept_tag": "cyclone-consequences-storm-surge",
+     "learning_objective": "Explain the consequences of tropical cyclones, including storm surge."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY1-CH06-T6",
+   "topic_number": 6,
+   "title": "Floods",
+   "ncert_sections": "Figure 6.6",
+   "concepts": [
+    {
+     "concept_tag": "flood-causes",
+     "learning_objective": "Explain the natural and human causes of floods."
+    },
+    {
+     "concept_tag": "flood-prone-areas",
+     "learning_objective": "Identify the flood-prone states of India and the types of flooding they face."
+    },
+    {
+     "concept_tag": "flood-consequences-control",
+     "learning_objective": "Evaluate the consequences of floods and the measures to control them."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY1-CH06-T7",
+   "topic_number": 7,
+   "title": "Droughts",
+   "ncert_sections": "Figure 6.7",
+   "concepts": [
+    {
+     "concept_tag": "types-of-drought",
+     "learning_objective": "Distinguish meteorological, agricultural, hydrological and ecological droughts."
+    },
+    {
+     "concept_tag": "drought-prone-areas",
+     "learning_objective": "Identify the extreme, severe and moderate drought-affected areas of India."
+    },
+    {
+     "concept_tag": "drought-consequences-mitigation",
+     "learning_objective": "Explain the consequences of drought and its immediate and long-term mitigation measures."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY1-CH06-T8",
+   "topic_number": 8,
+   "title": "Landslides and disaster management",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "landslide-vulnerability-zones",
+     "learning_objective": "Identify the landslide vulnerability zones of India and the factors controlling landslides."
+    },
+    {
+     "concept_tag": "landslide-consequences-mitigation",
+     "learning_objective": "Explain the consequences of landslides and area-specific mitigation measures."
+    },
+    {
+     "concept_tag": "disaster-management-stages",
+     "learning_objective": "Describe pre-disaster, during-disaster and post-disaster management stages."
+    }
+   ]
+  }
+ ]
+}

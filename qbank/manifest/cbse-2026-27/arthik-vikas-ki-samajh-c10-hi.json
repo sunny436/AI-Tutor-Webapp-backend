@@ -1,0 +1,710 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "arthik-vikas-ki-samajh-c10-hi",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "social_science",
+  "language": "hindi",
+  "title": "Arthik Vikas ki Samajh",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jhss2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JHSS2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "विकास",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS2-CH01-T1",
+     "topic_number": 1,
+     "title": "विकास से क्या अपेक्षाएँ — भिन्न लोग, भिन्न लक्ष्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhinn-log-bhinn-lakshya",
+       "learning_objective": "समझना कि जीवन-परिस्थितियाँ भिन्न होने से अलग-अलग लोगों के विकास-लक्ष्य अलग होते हैं।"
+      },
+      {
+       "concept_tag": "parasparvirodhi-vikas-lakshya",
+       "learning_objective": "पहचानना कि एक के लिए जो विकास है, वह दूसरे के लिए विनाशकारी भी हो सकता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH01-T2",
+     "topic_number": 2,
+     "title": "आय और अन्य लक्ष्य तथा राष्ट्रीय विकास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "aay-aur-gair-bhautik-lakshya",
+       "learning_objective": "समझना कि लोग अधिक आय के साथ-साथ सुरक्षा, स्वतंत्रता, समानता और सम्मान जैसे लक्ष्य भी चाहते हैं।"
+      },
+      {
+       "concept_tag": "rashtriya-vikas-ki-dharana",
+       "learning_objective": "राष्ट्रीय विकास के बारे में निष्पक्षता और व्यापक जन-लाभ के प्रश्नों पर विचार करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH01-T3",
+     "topic_number": 3,
+     "title": "विभिन्न देशों या राज्यों की तुलना कैसे करें — औसत आय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prati-vyakti-aay",
+       "learning_objective": "प्रति व्यक्ति (औसत) आय का अर्थ समझना और उसकी गणना करना।"
+      },
+      {
+       "concept_tag": "vishwa-bank-vargikaran",
+       "learning_objective": "जानना कि विश्व बैंक प्रति व्यक्ति आय के आधार पर देशों का वर्गीकरण करता है।"
+      },
+      {
+       "concept_tag": "ausat-aay-ki-seema",
+       "learning_objective": "समझना कि औसत आय यह नहीं बताती कि आय लोगों में कैसे वितरित है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH01-T4",
+     "topic_number": 4,
+     "title": "आय और अन्य मापदंड तथा सार्वजनिक सुविधाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "swasthya-shiksha-suchak",
+       "learning_objective": "शिशु मृत्यु दर, साक्षरता दर और निवल उपस्थिति अनुपात का अर्थ जानना और उनसे राज्यों की तुलना करना।"
+      },
+      {
+       "concept_tag": "sarvajanik-suvidhaen",
+       "learning_objective": "समझना कि अनेक आवश्यक वस्तुएँ और सेवाएँ सामूहिक रूप से उपलब्ध कराना सबसे अच्छा और सस्ता तरीका है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH01-T5",
+     "topic_number": 5,
+     "title": "मानव विकास रिपोर्ट",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "manav-vikas-suchkank",
+       "learning_objective": "जानना कि मानव विकास रिपोर्ट शिक्षा, स्वास्थ्य और प्रति व्यक्ति आय के आधार पर देशों की तुलना करती है।"
+      },
+      {
+       "concept_tag": "manav-vikas-tulna",
+       "learning_objective": "तालिका के आँकड़ों से भारत और उसके पड़ोसी देशों की तुलना करना।"
+      },
+      {
+       "concept_tag": "sharir-dravyaman-suchkank",
+       "learning_objective": "शरीर द्रव्यमान सूचकांक की गणना करना और पोषण-स्तर से उसका संबंध समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH01-T6",
+     "topic_number": 6,
+     "title": "विकास की धारणीयता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "navikaraniya-sansadhan",
+       "learning_objective": "समझना कि भौम जल जैसे नवीकरणीय संसाधनों का भी अति-उपयोग हो सकता है।"
+      },
+      {
+       "concept_tag": "anavikaraniya-sansadhan",
+       "learning_objective": "अनवीकरणीय संसाधनों की सीमितता और कच्चे तेल के भंडार के आँकड़ों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "dharniyata-ka-mahatva",
+       "learning_objective": "विकास में धारणीयता के महत्व और आने वाली पीढ़ियों के प्रति दायित्व का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "JHSS2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "भारतीय अर्थव्यवस्था के क्षेत्रक",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS2-CH02-T1",
+     "topic_number": 1,
+     "title": "आर्थिक गतिविधियों के क्षेत्रक",
+     "ncert_sections": "आर्थिक गतिविधियों के क्षेत्रक; तालिका 2.1",
+     "concepts": [
+      {
+       "concept_tag": "prathamik-dwitiyak-tritiyak-kshetrak",
+       "learning_objective": "विद्यार्थी गतिविधि की प्रकृति के आधार पर किसी व्यवसाय को प्राथमिक, द्वितीयक या तृतीयक क्षेत्रक में वर्गीकृत कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kshetrakon-ki-paraspar-nirbharta",
+       "learning_objective": "विद्यार्थी उदाहरणों द्वारा समझा सकेंगे कि तीनों क्षेत्रक एक-दूसरे पर निर्भर हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH02-T2",
+     "topic_number": 2,
+     "title": "तीनों क्षेत्रकों की तुलना: सकल घरेलू उत्पाद",
+     "ncert_sections": "तीनों क्षेत्रकों की तुलना",
+     "concepts": [
+      {
+       "concept_tag": "antim-aur-madhyavarti-vastuen",
+       "learning_objective": "विद्यार्थी अंतिम और मध्यवर्ती वस्तुओं में अंतर करके दोहरी गणना की समस्या समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sakal-gharelu-utpad",
+       "learning_objective": "विद्यार्थी सकल घरेलू उत्पाद का अर्थ बताकर वस्तुओं के मूल्य से कुल उत्पादन की गणना कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH02-T3",
+     "topic_number": 3,
+     "title": "क्षेत्रकों में ऐतिहासिक परिवर्तन और तृतीयक क्षेत्रक का बढ़ता महत्त्व",
+     "ncert_sections": "क्षेत्रकों में ऐतिहासिक परिवर्तन; उत्पादन में तृतीयक क्षेत्रक का बढ़ता महत्त्व",
+     "concepts": [
+      {
+       "concept_tag": "kshetrakon-mein-aitihasik-badlav",
+       "learning_objective": "विद्यार्थी विकसित देशों में क्षेत्रकों के महत्त्व में आए क्रमिक बदलाव का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "tritiyak-kshetrak-ka-badhta-mahattva",
+       "learning_objective": "विद्यार्थी भारत में तृतीयक क्षेत्रक के बढ़ते महत्त्व के कारणों और उसकी असमान वृद्धि का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH02-T4",
+     "topic_number": 4,
+     "title": "अधिकांश लोग कहाँ नियोजित हैं: अल्प बेरोज़गारी",
+     "ncert_sections": "अधिकांश लोग कहाँ नियोजित हैं?",
+     "concepts": [
+      {
+       "concept_tag": "rozgar-mein-badlav-ka-abhav",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि उत्पादन की तरह रोज़गार प्राथमिक क्षेत्रक से बाहर क्यों नहीं खिसका।"
+      },
+      {
+       "concept_tag": "alp-aur-pracchann-berozgari",
+       "learning_objective": "विद्यार्थी अल्प बेरोज़गारी और प्रच्छन्न बेरोज़गारी को उदाहरण सहित पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH02-T5",
+     "topic_number": 5,
+     "title": "अधिक रोज़गार का सृजन कैसे हो?",
+     "ncert_sections": "अधिक रोज़गार का सृजन कैसे हो?",
+     "concepts": [
+      {
+       "concept_tag": "rozgar-srijan-ke-upay",
+       "learning_objective": "विद्यार्थी सिंचाई, ऋण, परिवहन और ग्रामीण उद्योगों द्वारा रोज़गार बढ़ाने के उपाय सुझा सकेंगे।"
+      },
+      {
+       "concept_tag": "kaam-ka-adhikar",
+       "learning_objective": "विद्यार्थी मनरेगा 2005 के प्रावधानों और उसे 'काम का अधिकार' कहे जाने का कारण बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH02-T6",
+     "topic_number": 6,
+     "title": "संगठित और असंगठित क्षेत्रक",
+     "ncert_sections": "संगठित और असंगठित क्षेत्रकों में विभाजन",
+     "concepts": [
+      {
+       "concept_tag": "sangathit-kshetrak",
+       "learning_objective": "विद्यार्थी संगठित क्षेत्रक की विशेषताएँ और उसके श्रमिकों को मिलने वाले लाभ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "asangathit-kshetrak",
+       "learning_objective": "विद्यार्थी असंगठित क्षेत्रक की कार्य-स्थितियों की पहचान और उसके श्रमिकों के अनुपात की गणना कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH02-T7",
+     "topic_number": 7,
+     "title": "असंगठित क्षेत्रक के श्रमिकों का संरक्षण",
+     "ncert_sections": "असंगठित क्षेत्रक के श्रमिकों का संरक्षण कैसे हो?",
+     "concepts": [
+      {
+       "concept_tag": "asurakshit-shramik-varg",
+       "learning_objective": "विद्यार्थी ग्रामीण और शहरी क्षेत्रों के उन श्रमिक वर्गों की पहचान कर सकेंगे जिन्हें संरक्षण की आवश्यकता है।"
+      },
+      {
+       "concept_tag": "sanrakshan-ke-upay",
+       "learning_objective": "विद्यार्थी असंगठित क्षेत्रक के श्रमिकों और लघु उद्योगों के लिए सहायता के उपाय बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH02-T8",
+     "topic_number": 8,
+     "title": "स्वामित्व के आधार पर क्षेत्रक: सार्वजनिक और निजी",
+     "ncert_sections": "स्वामित्व आधारित क्षेत्रक: सार्वजनिक और निजी क्षेत्रक",
+     "concepts": [
+      {
+       "concept_tag": "swamitva-adharit-vargikaran",
+       "learning_objective": "विद्यार्थी स्वामित्व के आधार पर उद्यमों को सार्वजनिक या निजी क्षेत्रक में वर्गीकृत कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sarkar-ki-bhumika",
+       "learning_objective": "विद्यार्थी मूल्यांकन कर सकेंगे कि सरकार कुछ गतिविधियों पर खर्च क्यों करती है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "JHSS2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "मुद्रा और साख",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS2-CH03-T1",
+     "topic_number": 1,
+     "title": "विनिमय के माध्यम के रूप में मुद्रा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vastu-vinimay-dohra-sanyog",
+       "learning_objective": "वस्तु विनिमय प्रणाली में आवश्यकताओं के दोहरे संयोग की अनिवार्यता और उससे जुड़ी कठिनाई को समझना।"
+      },
+      {
+       "concept_tag": "mudra-vinimay-madhyam",
+       "learning_objective": "यह समझाना कि मुद्रा विनिमय प्रक्रिया में मध्यस्थ बनकर दोहरे संयोग की आवश्यकता कैसे समाप्त करती है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH03-T2",
+     "topic_number": 2,
+     "title": "मुद्रा के आधुनिक रूप",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "karensi-adhikrit-mudra",
+       "learning_objective": "यह समझना कि आधुनिक करेंसी सरकार द्वारा अधिकृत होने के कारण विनिमय के माध्यम के रूप में स्वीकार की जाती है।"
+      },
+      {
+       "concept_tag": "maang-jama",
+       "learning_objective": "बैंकों में माँग जमा की प्रकृति और उसे मुद्रा माने जाने का कारण समझाना।"
+      },
+      {
+       "concept_tag": "chek-bhugtan",
+       "learning_objective": "चेक द्वारा भुगतान की प्रक्रिया और उसका खातों पर प्रभाव समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH03-T3",
+     "topic_number": 3,
+     "title": "बैंकों की ऋण संबंधी गतिविधियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bank-nakad-arakshit",
+       "learning_objective": "यह समझना कि बैंक जमाओं का छोटा अंश नकद रखकर शेष का उपयोग ऋण देने में करते हैं।"
+      },
+      {
+       "concept_tag": "bank-madhyasthata",
+       "learning_objective": "जमाकर्ताओं और कर्ज़दारों के बीच बैंकों की मध्यस्थता तथा उनकी आय के स्रोत को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH03-T4",
+     "topic_number": 4,
+     "title": "साख की दो विभिन्न स्थितियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sakh-sakaratmak-bhumika",
+       "learning_objective": "साख का अर्थ और उत्पादन की कार्यशील पूँजी की पूर्ति में उसकी सकारात्मक भूमिका समझना।"
+      },
+      {
+       "concept_tag": "karz-jaal",
+       "learning_objective": "यह पहचानना कि कर्ज़-जाल की स्थिति कैसे बनती है और कर्ज़दार को कैसे प्रभावित करती है।"
+      },
+      {
+       "concept_tag": "sakh-jokhim",
+       "learning_objective": "यह विश्लेषण करना कि साख की उपयोगिता स्थिति के जोखिम और हानि में सहारे पर निर्भर करती है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH03-T5",
+     "topic_number": 5,
+     "title": "ऋण की शर्तें",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rin-ki-sharten",
+       "learning_objective": "ब्याज दर, ऋणाधार, कागज़ात और भुगतान के तरीके को ऋण की शर्तों के रूप में पहचानना।"
+      },
+      {
+       "concept_tag": "samarthak-rinadhar",
+       "learning_objective": "समर्थक ऋणाधार का अर्थ और ऋण पाने में उसकी भूमिका का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH03-T6",
+     "topic_number": 6,
+     "title": "भारत में विभिन्न ऋण व्यवस्थाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sonpur-rin-vyavastha",
+       "learning_objective": "सोनपुर गाँव के उदाहरण से विभिन्न कर्ज़दारों की ऋण शर्तों की तुलना करना।"
+      },
+      {
+       "concept_tag": "sahkari-samiti-rin",
+       "learning_objective": "यह समझना कि सहकारी समितियाँ अपने सदस्यों को सस्ता ऋण कैसे उपलब्ध कराती हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH03-T7",
+     "topic_number": 7,
+     "title": "भारत में औपचारिक क्षेत्रक में साख",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "aupcharik-anaupcharik-srot",
+       "learning_objective": "ऋण के औपचारिक और अनौपचारिक स्रोतों में अंतर करना और उनके हिस्से की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "rbi-paryavekshan",
+       "learning_objective": "औपचारिक ऋण स्रोतों के कामकाज पर भारतीय रिज़र्व बैंक के पर्यवेक्षण को समझना।"
+      },
+      {
+       "concept_tag": "sasti-sakh-aur-vikas",
+       "learning_objective": "सस्ती और समान रूप से वितरित साख के विकास में महत्त्व का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH03-T8",
+     "topic_number": 8,
+     "title": "गरीबों के लिए स्वयं सहायता समूह",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "svayam-sahayata-samooh",
+       "learning_objective": "स्वयं सहायता समूहों की संरचना, कार्यप्रणाली और ऋणाधार की समस्या दूर करने में उनकी भूमिका समझना।"
+      },
+      {
+       "concept_tag": "grameen-bank",
+       "learning_objective": "बांग्लादेश के ग्रामीण बैंक को गरीबों तक साख पहुँचाने के सफल उदाहरण के रूप में जानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "JHSS2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "वैश्वीकरण और भारतीय अर्थव्यवस्था",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS2-CH04-T1",
+     "topic_number": 1,
+     "title": "विभिन्न देशों के बीच उत्पादन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bahurashtriya-company",
+       "learning_objective": "बहुराष्ट्रीय कंपनी का अर्थ बताना और उसे अन्य कंपनियों से अलग पहचानना।"
+      },
+      {
+       "concept_tag": "utpadan-ka-vaishvik-prasar",
+       "learning_objective": "समझाना कि बहुराष्ट्रीय कंपनियाँ कम लागत के लिए उत्पादन को विभिन्न देशों में कैसे फैलाती हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH04-T2",
+     "topic_number": 2,
+     "title": "विभिन्न देशों के बीच उत्पादन को जोड़ना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "videshi-nivesh",
+       "learning_objective": "निवेश और विदेशी निवेश का अर्थ स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "nivesh-ke-tarike",
+       "learning_objective": "बहुराष्ट्रीय कंपनियों द्वारा स्थानीय कंपनियों के साथ साझेदारी और उन्हें खरीदने के तरीकों की पहचान करना।"
+      },
+      {
+       "concept_tag": "chhote-utpadakon-par-niyantran",
+       "learning_objective": "विश्लेषण करना कि बहुराष्ट्रीय कंपनियाँ छोटे उत्पादकों को ऑर्डर देकर उत्पादन को कैसे नियंत्रित करती हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH04-T3",
+     "topic_number": 3,
+     "title": "विदेश व्यापार और बाज़ारों का एकीकरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "videsh-vyapar-ka-karya",
+       "learning_objective": "विदेश व्यापार के मूल कार्य और उसके उत्पादकों व खरीदारों पर प्रभाव को समझना।"
+      },
+      {
+       "concept_tag": "bazaron-ka-ekikaran",
+       "learning_objective": "समझाना कि विदेश व्यापार से विभिन्न देशों के बाज़ार कैसे जुड़ते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH04-T4",
+     "topic_number": 4,
+     "title": "वैश्वीकरण क्या है?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vaishvikaran-ki-paribhasha",
+       "learning_objective": "वैश्वीकरण को देशों के बीच तीव्र एकीकरण की प्रक्रिया के रूप में परिभाषित करना।"
+      },
+      {
+       "concept_tag": "deshon-ko-jodne-ke-madhyam",
+       "learning_objective": "वस्तुओं, सेवाओं, निवेश, प्रौद्योगिकी और लोगों के आवागमन द्वारा देशों के जुड़ने के माध्यम पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH04-T5",
+     "topic_number": 5,
+     "title": "वैश्वीकरण को संभव बनाने वाले कारक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "praudyogiki",
+       "learning_objective": "परिवहन तथा सूचना और संचार प्रौद्योगिकी की वैश्वीकरण में भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "vyapar-avrodhak",
+       "learning_objective": "आयात कर और कोटा जैसे व्यापार अवरोधकों तथा स्वतंत्रता के बाद उनके उपयोग के कारणों को समझना।"
+      },
+      {
+       "concept_tag": "udarikaran",
+       "learning_objective": "उदारीकरण का अर्थ और 1991 के बाद की नीतिगत बदलाव को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH04-T6",
+     "topic_number": 6,
+     "title": "विश्व व्यापार संगठन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vishv-vyapar-sangathan-uddeshya",
+       "learning_objective": "विश्व व्यापार संगठन के उद्देश्य और कार्य बताना।"
+      },
+      {
+       "concept_tag": "asaman-vyapar-niyam",
+       "learning_objective": "विकसित और विकासशील देशों के बीच व्यापार नियमों के असमान व्यवहार का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH04-T7",
+     "topic_number": 7,
+     "title": "भारत में वैश्वीकरण का प्रभाव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "upbhokta-aur-badi-companiyan",
+       "learning_objective": "उपभोक्ताओं और बड़ी भारतीय कंपनियों पर वैश्वीकरण के प्रभाव की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "videshi-nivesh-akarshan",
+       "learning_objective": "विशेष आर्थिक क्षेत्र और श्रम कानूनों में लचीलेपन जैसे कदमों को समझना।"
+      },
+      {
+       "concept_tag": "chhote-utpadak",
+       "learning_objective": "छोटे उत्पादकों पर बढ़ती प्रतियोगिता के प्रभाव का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH04-T8",
+     "topic_number": 8,
+     "title": "अनिश्चित रोज़गार और न्यायसंगत वैश्वीकरण के लिए संघर्ष",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "anishchit-rozgar",
+       "learning_objective": "प्रतियोगिता के कारण श्रमिकों के रोज़गार के अनिश्चित होने की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "nyayasangat-vaishvikaran",
+       "learning_objective": "न्यायसंगत वैश्वीकरण का अर्थ और उसमें जन संगठनों की भूमिका समझना।"
+      },
+      {
+       "concept_tag": "sarkar-ki-bhumika",
+       "learning_objective": "न्यायसंगत वैश्वीकरण के लिए सरकार द्वारा उठाए जा सकने वाले कदमों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "JHSS2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "उपभोक्ता अधिकार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS2-CH05-T1",
+     "topic_number": 1,
+     "title": "बाज़ार में उपभोक्ता और नियमों की आवश्यकता",
+     "ncert_sections": "बाज़ार में उपभोक्ता",
+     "concepts": [
+      {
+       "concept_tag": "bazar-mein-shoshan",
+       "learning_objective": "विद्यार्थी बाज़ार में उपभोक्ताओं के शोषण के विभिन्न तरीकों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "niyam-viniyam-avashyakta",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि बाज़ार में उपभोक्ता की रक्षा के लिए नियम-विनियम क्यों आवश्यक हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH05-T2",
+     "topic_number": 2,
+     "title": "उपभोक्ता आंदोलन",
+     "ncert_sections": "उपभोक्ता आंदोलन; उपभोक्ता इंटरनेशनल",
+     "concepts": [
+      {
+       "concept_tag": "andolan-utpatti",
+       "learning_objective": "विद्यार्थी भारत में उपभोक्ता आंदोलन के उद्भव के कारणों और उसके विकास का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "copra-adhiniyam",
+       "learning_objective": "विद्यार्थी उपभोक्ता संरक्षण अधिनियम, 1986 (कोपरा) के पारित होने का वर्ष और महत्त्व बता सकेंगे।"
+      },
+      {
+       "concept_tag": "antarrashtriya-upbhokta-sanrakshan",
+       "learning_objective": "विद्यार्थी संयुक्त राष्ट्र के 1985 के दिशा-निर्देशों और उपभोक्ता इंटरनेशनल की भूमिका समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH05-T3",
+     "topic_number": 3,
+     "title": "सुरक्षा का अधिकार और सूचना का अधिकार",
+     "ncert_sections": "उपभोक्ता अधिकार: सुरक्षा; वस्तुओं और सेवाओं के बारे में सूचना",
+     "concepts": [
+      {
+       "concept_tag": "suraksha-adhikar",
+       "learning_objective": "विद्यार्थी सुरक्षा के अधिकार को उदाहरणों सहित समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "suchna-adhikar",
+       "learning_objective": "विद्यार्थी पैकेट पर दी गई जानकारी, अधिकतम खुदरा मूल्य और सूचना का अधिकार अधिनियम का महत्त्व बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH05-T4",
+     "topic_number": 4,
+     "title": "चुनने का अधिकार और निवारण का अधिकार",
+     "ncert_sections": "जब चुनने का अधिकार न मिले; उपभोक्ता न्याय के लिए कहाँ जाएँ",
+     "concepts": [
+      {
+       "concept_tag": "chunne-ka-adhikar",
+       "learning_objective": "विद्यार्थी उन स्थितियों को पहचान सकेंगे जिनमें उपभोक्ता के चुनने के अधिकार का उल्लंघन होता है।"
+      },
+      {
+       "concept_tag": "nivaran-adhikar",
+       "learning_objective": "विद्यार्थी अनुचित व्यापार व्यवहार के विरुद्ध क्षतिपूर्ति माँगने के अधिकार को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH05-T5",
+     "topic_number": 5,
+     "title": "उपभोक्ता विवाद निवारण की व्यवस्था",
+     "ncert_sections": "उपभोक्ता न्याय की प्रक्रिया; त्रिस्तरीय अर्ध-न्यायिक तंत्र",
+     "concepts": [
+      {
+       "concept_tag": "tri-stariya-ayog",
+       "learning_objective": "विद्यार्थी ज़िला, राज्य और राष्ट्रीय उपभोक्ता आयोगों के अधिकार-क्षेत्र में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "upbhokta-sanrakshan-parishad",
+       "learning_objective": "विद्यार्थी उपभोक्ता संरक्षण परिषदों और उपभोक्ता आयोगों की भूमिका में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "shikayat-prakriya",
+       "learning_objective": "विद्यार्थी उपभोक्ता द्वारा आयोग में शिकायत दर्ज करने की प्रक्रिया का वर्णन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS2-CH05-T6",
+     "topic_number": 6,
+     "title": "जागरूक उपभोक्ता बनना और आंदोलन को आगे ले जाना",
+     "ncert_sections": "जानकार उपभोक्ता बनना; आई.एस.आई. और एगमार्क; उपभोक्ता आंदोलन को आगे ले जाना",
+     "concepts": [
+      {
+       "concept_tag": "manak-pramanan-chinh",
+       "learning_objective": "विद्यार्थी आई.एस.आई., एगमार्क, हॉलमार्क जैसे गुणवत्ता चिह्नों का उद्देश्य और अनिवार्यता समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "andolan-pragati-chunautiyan",
+       "learning_objective": "विद्यार्थी भारत में उपभोक्ता आंदोलन की प्रगति, 2019 के संशोधन और चुनौतियों का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

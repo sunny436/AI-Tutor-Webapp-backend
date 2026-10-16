@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KHSK2-CH08",
+ "title": "कन्थामाणिक्यम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHSK2-CH08-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः – रचनाकारः शीर्षकं च",
+   "ncert_sections": "पाठपरिचयः",
+   "concepts": [
+    {
+     "concept_tag": "rachanakara-parichaya",
+     "learning_objective": "छात्रः पाठस्य मूलग्रन्थं रचनाकारं च अभिज्ञास्यति।"
+    },
+    {
+     "concept_tag": "shirshaka-artha",
+     "learning_objective": "छात्रः 'कन्थामाणिक्यम्' इति शीर्षकस्य अर्थं सार्थकतां च व्याख्यास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH08-T2",
+   "topic_number": 2,
+   "title": "प्रथमं दृश्यम् – भवानीदत्तस्य रोषः सेवकौ च",
+   "ncert_sections": "प्रथमं दृश्यम् (आरम्भः)",
+   "concepts": [
+    {
+     "concept_tag": "bhavanidatta-svabhava",
+     "learning_objective": "छात्रः भवानीदत्तस्य स्वभावं संवादेभ्यः निर्धारयिष्यति।"
+    },
+    {
+     "concept_tag": "sevaka-samvada",
+     "learning_objective": "छात्रः रामदत्तहरणयोः संवादानां भावं ज्ञास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH08-T3",
+   "topic_number": 3,
+   "title": "प्रथमं दृश्यम् – सिन्धुसोमधरयोः मैत्री रत्नायाः विचारः च",
+   "ncert_sections": "प्रथमं दृश्यम् (उत्तरभागः)",
+   "concepts": [
+    {
+     "concept_tag": "sindhu-somadhara-maitri",
+     "learning_objective": "छात्रः सिन्धुसोमधरयोः मैत्र्याः कारणानि वर्णयिष्यति।"
+    },
+    {
+     "concept_tag": "ratna-gunavichara",
+     "learning_objective": "छात्रः 'यो गुणवान् स एव सभ्यः' इति रत्नायाः विचारं मूल्याङ्कयिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH08-T4",
+   "topic_number": 4,
+   "title": "द्वितीयं दृश्यम् – चिन्ता दुर्घटना च",
+   "ncert_sections": "द्वितीयं दृश्यम् (आरम्भः)",
+   "concepts": [
+    {
+     "concept_tag": "ratna-chinta",
+     "learning_objective": "छात्रः सिन्धोः विलम्बेन जातां परिवारस्य चिन्तां वर्णयिष्यति।"
+    },
+    {
+     "concept_tag": "durghatana-vrittanta",
+     "learning_objective": "छात्रः दुर्घटनायाः सोमधरकृतस्य साहाय्यस्य च वृत्तान्तं क्रमेण ज्ञास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH08-T5",
+   "topic_number": 5,
+   "title": "द्वितीयं दृश्यम् – सोमधरस्य सद्व्यवहारः भवानीदत्तस्य परिवर्तनं च",
+   "ncert_sections": "द्वितीयं दृश्यम् (उत्तरभागः)",
+   "concepts": [
+    {
+     "concept_tag": "somadhara-charitra",
+     "learning_objective": "छात्रः सोमधरस्य चारित्रिकगुणान् सोदाहरणं विश्लेषयिष्यति।"
+    },
+    {
+     "concept_tag": "hridaya-parivartana",
+     "learning_objective": "छात्रः भवानीदत्तस्य हृदयपरिवर्तनस्य कारणं परिणामं च व्याख्यास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH08-T6",
+   "topic_number": 6,
+   "title": "शब्दार्थाः व्याकरणं सूक्तयः च",
+   "ncert_sections": "शब्दार्थाः टिप्पण्यः, अभ्यासः, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "shabdartha",
+     "learning_objective": "छात्रः पाठगतानां कठिनशब्दानाम् अर्थान् ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "sandhi-pratyaya",
+     "learning_objective": "छात्रः पाठगतपदेषु सन्धिं प्रत्ययं च अभिज्ञास्यति।"
+    },
+    {
+     "concept_tag": "mitra-suktayah",
+     "learning_objective": "छात्रः मित्रतासम्बद्धाः सूक्तीः पाठस्य आशयेन योजयिष्यति।"
+    }
+   ]
+  }
+ ]
+}

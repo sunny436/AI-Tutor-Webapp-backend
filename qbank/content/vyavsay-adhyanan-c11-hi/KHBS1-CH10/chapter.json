@@ -1,0 +1,140 @@
+{
+ "chapter_id": "KHBS1-CH10",
+ "title": "आंतरिक व्यापार",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHBS1-CH10-T1",
+   "topic_number": 1,
+   "title": "आंतरिक व्यापार का अर्थ और प्रकार",
+   "ncert_sections": "10.1, 10.2",
+   "concepts": [
+    {
+     "concept_tag": "antarik-vyapar-arth",
+     "learning_objective": "विद्यार्थी आंतरिक और बाह्य व्यापार का अंतर बता सकेंगे।"
+    },
+    {
+     "concept_tag": "thok-phutkar-vibhajan",
+     "learning_objective": "विद्यार्थी आंतरिक व्यापार के थोक और फुटकर प्रकारों को पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH10-T2",
+   "topic_number": 2,
+   "title": "थोक व्यापारी की सेवाएँ",
+   "ncert_sections": "10.3, 10.3.1, 10.3.2",
+   "concepts": [
+    {
+     "concept_tag": "thok-vikreta-nirmata-sevayen",
+     "learning_objective": "विद्यार्थी विनिर्माताओं को थोक विक्रेता की सेवाओं की व्याख्या कर सकेंगे।"
+    },
+    {
+     "concept_tag": "thok-vikreta-phutkar-sevayen",
+     "learning_objective": "विद्यार्थी फुटकर विक्रेताओं को थोक विक्रेता की सेवाओं की व्याख्या कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH10-T3",
+   "topic_number": 3,
+   "title": "फुटकर व्यापारी की सेवाएँ",
+   "ncert_sections": "10.4, 10.4.1, 10.4.2",
+   "concepts": [
+    {
+     "concept_tag": "phutkar-utpadak-sevayen",
+     "learning_objective": "विद्यार्थी उत्पादकों और थोक विक्रेताओं को फुटकर विक्रेता की सेवाएँ बता सकेंगे।"
+    },
+    {
+     "concept_tag": "phutkar-upbhokta-sevayen",
+     "learning_objective": "विद्यार्थी उपभोक्ताओं को फुटकर विक्रेता की सेवाओं की व्याख्या कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH10-T4",
+   "topic_number": 4,
+   "title": "माल एवं सेवा कर",
+   "ncert_sections": "10.5",
+   "concepts": [
+    {
+     "concept_tag": "jst-arth-uddeshya",
+     "learning_objective": "विद्यार्थी 'एक देश एक कर' के सिद्धांत पर आधारित जी.एस.टी. का अर्थ और उद्देश्य बता सकेंगे।"
+    },
+    {
+     "concept_tag": "jst-ghatak-visheshtayen",
+     "learning_objective": "विद्यार्थी केंद्रीय, राज्य और एकीकृत जी.एस.टी. तथा इसकी प्रमुख विशेषताओं में अंतर कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH10-T5",
+   "topic_number": 5,
+   "title": "भ्रमणशील फुटकर विक्रेता",
+   "ncert_sections": "10.6, 10.6.1",
+   "concepts": [
+    {
+     "concept_tag": "bhramanshil-vikreta-prakar",
+     "learning_objective": "विद्यार्थी फेरीवाले, बाज़ार व्यापारी, पटरी विक्रेता और सस्ते दर की दुकान में अंतर कर सकेंगे।"
+    },
+    {
+     "concept_tag": "bhramanshil-visheshtayen",
+     "learning_objective": "विद्यार्थी भ्रमणशील फुटकर विक्रेताओं की विशेषताएँ बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH10-T6",
+   "topic_number": 6,
+   "title": "छोटे पैमाने के स्थायी दुकानदार",
+   "ncert_sections": "10.6.2",
+   "concepts": [
+    {
+     "concept_tag": "chhote-sthayi-dukandar",
+     "learning_objective": "विद्यार्थी सामान्य दुकान, विशिष्ट वस्तु भंडार, गली की स्टाल, पुरानी वस्तुओं की दुकान और एक वस्तु भंडार को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "sthayi-dukan-visheshtayen",
+     "learning_objective": "विद्यार्थी स्थायी दुकानदारों और भ्रमणशील विक्रेताओं की तुलना कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH10-T7",
+   "topic_number": 7,
+   "title": "बड़े पैमाने के फुटकर विक्रेता",
+   "ncert_sections": "10.6.2",
+   "concepts": [
+    {
+     "concept_tag": "vibhagiya-bhandar",
+     "learning_objective": "विद्यार्थी विभागीय भंडार की विशेषताएँ, लाभ और सीमाएँ बता सकेंगे।"
+    },
+    {
+     "concept_tag": "shrinkhala-bhandar",
+     "learning_objective": "विद्यार्थी बहुसंख्यक दुकानों (श्रृंखला भंडार) की विशेषताओं की तुलना विभागीय भंडार से कर सकेंगे।"
+    },
+    {
+     "concept_tag": "dak-sahkari-swachalit",
+     "learning_objective": "विद्यार्थी डाक आदेश गृह, उपभोक्ता सहकारी भंडार, सुपर बाज़ार और स्वचालित विक्रय मशीन की विशेषताएँ बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH10-T8",
+   "topic_number": 8,
+   "title": "आंतरिक व्यापार के संवर्धन में वाणिज्यिक एवं उद्योग संघों की भूमिका",
+   "ncert_sections": "10.7",
+   "concepts": [
+    {
+     "concept_tag": "vanijya-sangh-arth",
+     "learning_objective": "विद्यार्थी वाणिज्यिक एवं उद्योग संघों के उद्देश्य और उदाहरण बता सकेंगे।"
+    },
+    {
+     "concept_tag": "vanijya-sangh-hastakshep-kshetra",
+     "learning_objective": "विद्यार्थी उन क्षेत्रों का विश्लेषण कर सकेंगे जिनमें ये संघ आंतरिक व्यापार को बढ़ावा देते हैं।"
+    }
+   ]
+  }
+ ]
+}

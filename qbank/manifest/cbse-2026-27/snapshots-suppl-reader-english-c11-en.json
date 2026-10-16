@@ -1,0 +1,542 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "snapshots-suppl-reader-english-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "english",
+  "language": "english",
+  "title": "Snapshots Suppl.Reader English",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kesp1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KESP1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "The Summer of the Beautiful White Horse",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kesp101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KESP1-CH01-T1",
+     "topic_number": 1,
+     "title": "Mourad arrives with the white horse: poverty and the family's honesty",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "opening-situation",
+       "learning_objective": "Recall how the story opens, with Mourad waking nine-year-old Aram at dawn on a white horse."
+      },
+      {
+       "concept_tag": "poverty-and-honesty",
+       "learning_objective": "Explain why the family's poverty and famous honesty made Aram doubt what he saw."
+      },
+      {
+       "concept_tag": "aram-rationalisation",
+       "learning_objective": "Analyse how Aram persuades himself that riding the horse is not stealing."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH01-T2",
+     "topic_number": 2,
+     "title": "The dawn ride and the crazy streak in the tribe",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mourad-character",
+       "learning_objective": "Describe Mourad as the natural descendant of the crazy streak in the Garoghlanian tribe."
+      },
+      {
+       "concept_tag": "uncle-khosrove",
+       "learning_objective": "Explain what Uncle Khosrove's behaviour and refrain reveal about his character."
+      },
+      {
+       "concept_tag": "spirit-inheritance",
+       "learning_objective": "Interpret the idea that a father of the flesh need not be the father of the spirit."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH01-T3",
+     "topic_number": 3,
+     "title": "Aram's turn to ride and hiding the horse",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "aram-ride",
+       "learning_objective": "Recall what happened when Aram tried to ride the horse alone."
+      },
+      {
+       "concept_tag": "hiding-the-horse",
+       "learning_objective": "Explain where and why the boys hid the horse and what Mourad told Aram to say."
+      },
+      {
+       "concept_tag": "mourad-way-with-horses",
+       "learning_objective": "Evaluate Mourad's claim of a simple and honest understanding with horses."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH01-T4",
+     "topic_number": 4,
+     "title": "John Byro's visit and Mourad's promise",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "john-byro-loss",
+       "learning_objective": "Describe John Byro and the loss of his horse as told at Aram's house."
+      },
+      {
+       "concept_tag": "khosrove-homesickness",
+       "learning_objective": "Explain Uncle Khosrove's outburst and the mother's explanation of it."
+      },
+      {
+       "concept_tag": "mourad-conscience",
+       "learning_objective": "Interpret Mourad's reaction to keeping the horse and the episode of the robin."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH01-T5",
+     "topic_number": 5,
+     "title": "The meeting with John Byro and the return of the horse",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "byro-trust",
+       "learning_objective": "Analyse how John Byro's faith in the family's honesty shapes the meeting on the road."
+      },
+      {
+       "concept_tag": "return-of-horse",
+       "learning_objective": "Recall how the horse was returned and how John Byro found it."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH01-T6",
+     "topic_number": 6,
+     "title": "Theme, narration and humour",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nostalgia-narration",
+       "learning_objective": "Identify the author, narrator and nostalgic first-person narration of the story."
+      },
+      {
+       "concept_tag": "honesty-theme",
+       "learning_objective": "Evaluate whether the boys returned the horse out of conscience or out of fear."
+      },
+      {
+       "concept_tag": "humour-irony",
+       "learning_objective": "Explain how the story draws its interest from humour, irony and character rather than action."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KESP1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "The Address",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kesp102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KESP1-CH02-T1",
+     "topic_number": 1,
+     "title": "The first visit to Number 46",
+     "ncert_sections": "Opening: the first visit",
+     "concepts": [
+      {
+       "concept_tag": "first-visit-cold-reception",
+       "learning_objective": "Describe Mrs Dorling's cold, evasive reception of the narrator on her first visit."
+      },
+      {
+       "concept_tag": "green-cardigan-recognition",
+       "learning_objective": "Explain how the green knitted cardigan confirms the narrator's identification of the woman."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH02-T2",
+     "topic_number": 2,
+     "title": "The mother and Mrs Dorling during the War",
+     "ncert_sections": "Flashback: the first half of the War",
+     "concepts": [
+      {
+       "concept_tag": "mrs-dorling-takes-belongings",
+       "learning_objective": "Recall how Mrs Dorling carried away the family's possessions and the reason she gave."
+      },
+      {
+       "concept_tag": "mothers-trust-narrators-doubt",
+       "learning_objective": "Contrast the mother's trust in Mrs Dorling with the narrator's doubt."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH02-T3",
+     "topic_number": 3,
+     "title": "Fear of memories and the return of normal life",
+     "ncert_sections": "After the Liberation",
+     "concepts": [
+      {
+       "concept_tag": "fear-of-the-stored-things",
+       "learning_objective": "Explain why the narrator delayed going to the address after the Liberation."
+      },
+      {
+       "concept_tag": "return-to-normalcy",
+       "learning_objective": "Interpret the images that show life slowly becoming normal and reviving the narrator's curiosity."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH02-T4",
+     "topic_number": 4,
+     "title": "The second visit: familiar things in a strange room",
+     "ncert_sections": "The second visit",
+     "concepts": [
+      {
+       "concept_tag": "recognising-the-objects",
+       "learning_objective": "Identify the objects the narrator recognises in Mrs Dorling's living-room and the memories they carry."
+      },
+      {
+       "concept_tag": "girl-and-the-silver",
+       "learning_objective": "Interpret the episode of the silver cutlery and the girl's ignorance of its worth."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH02-T5",
+     "topic_number": 5,
+     "title": "The decision to forget and the story's theme",
+     "ncert_sections": "Ending and Understanding the Text",
+     "concepts": [
+      {
+       "concept_tag": "decision-to-forget",
+       "learning_objective": "Explain why the narrator resolves to forget the address and leave the objects behind."
+      },
+      {
+       "concept_tag": "human-predicament-of-war",
+       "learning_objective": "Evaluate the story as an account of the human predicament that follows war."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KESP1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Mother's Day",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kesp103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KESP1-CH03-T1",
+     "topic_number": 1,
+     "title": "The setting and the neighbours' conversation",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "setting-and-characters",
+       "learning_objective": "Identify the setting, time and principal characters of the play."
+      },
+      {
+       "concept_tag": "mrs-fitzgerald-advice",
+       "learning_objective": "Explain Mrs Fitzgerald's advice that Mrs Pearson should assert herself in her own home."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH03-T2",
+     "topic_number": 2,
+     "title": "The magical exchange of personalities",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "personality-swap",
+       "learning_objective": "Describe how and why the two women exchange personalities."
+      },
+      {
+       "concept_tag": "stage-directions-voice",
+       "learning_objective": "Interpret the stage directions that contrast the two women's voices and manners."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH03-T3",
+     "topic_number": 3,
+     "title": "Mrs Pearson confronts Doris and Cyril",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "doris-confrontation",
+       "learning_objective": "Analyse how the transformed Mrs Pearson deals with Doris's demands."
+      },
+      {
+       "concept_tag": "cyril-forty-hour-week",
+       "learning_objective": "Explain Mrs Pearson's argument about the forty-hour week and trade-union methods."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH03-T4",
+     "topic_number": 4,
+     "title": "George Pearson and the club",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "george-pompous-character",
+       "learning_objective": "Analyse George's character and his reaction to the truth about the club."
+      },
+      {
+       "concept_tag": "manners-and-respect",
+       "learning_objective": "Evaluate how Mrs Pearson insists on decent manners towards a neighbour."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH03-T5",
+     "topic_number": 5,
+     "title": "Changing back and the resolution",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "changing-back",
+       "learning_objective": "Explain why the women change back and what Mrs Fitzgerald advises afterwards."
+      },
+      {
+       "concept_tag": "family-resolution",
+       "learning_objective": "Interpret the final scene and the changed behaviour of the family."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH03-T6",
+     "topic_number": 6,
+     "title": "Themes, humour and satire",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "status-of-mother",
+       "learning_objective": "Evaluate the play's satirical portrayal of the status of the mother in a family."
+      },
+      {
+       "concept_tag": "drama-and-humour",
+       "learning_objective": "Analyse how fantasy, humour and dramatic devices convey the play's social message."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KESP1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Birth",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kesp104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KESP1-CH04-T1",
+     "topic_number": 1,
+     "title": "The night call to Blaina Terrace",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "setting-and-characters",
+       "learning_objective": "Identify the setting, the characters and the situation that open the story."
+      },
+      {
+       "concept_tag": "joe-morgan-anxiety",
+       "learning_objective": "Interpret Joe Morgan's anxiety and trust as he brings Andrew to his wife."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH04-T2",
+     "topic_number": 2,
+     "title": "Waiting through the night",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "andrew-state-of-mind",
+       "learning_objective": "Analyse Andrew's troubled thoughts about marriage and his decision to stay."
+      },
+      {
+       "concept_tag": "old-woman-and-family-hopes",
+       "learning_objective": "Explain the hopes and fears of Susan Morgan and her mother about the child."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH04-T3",
+     "topic_number": 3,
+     "title": "The delivery and Andrew's dilemma",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mother-versus-child-dilemma",
+       "learning_objective": "Analyse the dilemma Andrew faces when the child is born lifeless."
+      },
+      {
+       "concept_tag": "saving-the-mother",
+       "learning_objective": "Describe how Andrew saves the collapsing mother first."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH04-T4",
+     "topic_number": 4,
+     "title": "Bringing the stillborn child to life",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "asphyxia-pallida-treatment",
+       "learning_objective": "Explain how Andrew recognises asphyxia pallida and the method he uses."
+      },
+      {
+       "concept_tag": "perseverance-and-miracle",
+       "learning_objective": "Evaluate the role of Andrew's persistence in the child's revival."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH04-T5",
+     "topic_number": 5,
+     "title": "Something real at last: meaning and language",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "andrew-realisation",
+       "learning_objective": "Interpret the meaning of Andrew's realisation at the end of the story."
+      },
+      {
+       "concept_tag": "textbook-versus-practice",
+       "learning_objective": "Evaluate the difference between textbook medicine and real practice."
+      },
+      {
+       "concept_tag": "vocabulary-and-imagery",
+       "learning_objective": "Interpret the vocabulary, similes and imagery used in the story."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KESP1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "The Tale of Melon City",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kesp105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KESP1-CH05-T1",
+     "topic_number": 1,
+     "title": "The King's arch and the lost crown",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "arch-proclamation",
+       "learning_objective": "Recall why the King ordered the arch and how its low height cost him his crown."
+      },
+      {
+       "concept_tag": "just-and-placid-king",
+       "learning_objective": "Explain the irony in the poet calling the King 'just and placid'."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH05-T2",
+     "topic_number": 2,
+     "title": "The chain of blame",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shifting-blame",
+       "learning_objective": "Trace how the blame passed from the chief of builders to the workmen, masons and architect."
+      },
+      {
+       "concept_tag": "kings-notion-of-justice",
+       "learning_objective": "Evaluate the King's hasty and literal idea of justice in ordering hangings."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH05-T3",
+     "topic_number": 3,
+     "title": "The wise man's verdict and the King's hanging",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "wisest-man-counsel",
+       "learning_objective": "Interpret the wisest man's verdict that the arch itself must be hanged."
+      },
+      {
+       "concept_tag": "mob-demands-hanging",
+       "learning_objective": "Analyse how the restless crowd led the King to want any hanging and how he was hanged by his own decree."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH05-T4",
+     "topic_number": 4,
+     "title": "The Melon becomes King",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "custom-of-city-gate",
+       "learning_objective": "Recall the custom by which the ministers chose the next ruler at the City Gate."
+      },
+      {
+       "concept_tag": "melon-king-and-laissez-faire",
+       "learning_objective": "Explain the people's attitude to the Melon King and the meaning of laissez faire."
+      }
+     ]
+    },
+    {
+     "topic_id": "KESP1-CH05-T5",
+     "topic_number": 5,
+     "title": "Humour, irony and form of the poem",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "humour-and-irony",
+       "learning_objective": "Identify instances of humour and irony that satirise rulers and the state."
+      },
+      {
+       "concept_tag": "verse-narrative-form",
+       "learning_objective": "Identify the poet, source and narrative verse form of the poem, including its rhyming couplets."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

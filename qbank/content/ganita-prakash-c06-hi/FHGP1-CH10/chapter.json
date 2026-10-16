@@ -1,0 +1,140 @@
+{
+ "chapter_id": "FHGP1-CH10",
+ "title": "शून्य के दूसरी ओर",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHGP1-CH10-T1",
+   "topic_number": 1,
+   "title": "बेला की मजेदार इमारत: धनात्मक और ऋणात्मक संख्याएँ",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "dhanatmak-rinatmak-sankhya",
+     "learning_objective": "भूतल को 0 मानकर ऊपर के तलों को धनात्मक और नीचे के तलों को ऋणात्मक संख्याओं से पहचानना।"
+    },
+    {
+     "concept_tag": "lift-gati-yog",
+     "learning_objective": "प्रारंभिक तल + गति = लक्षित तल के रूप में पूर्णांकों का योग करना।"
+    },
+    {
+     "concept_tag": "yojya-pratilom",
+     "learning_objective": "किसी संख्या का योज्य प्रतिलोम ज्ञात करना जिसे जोड़ने पर शून्य प्राप्त होता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH10-T2",
+   "topic_number": 2,
+   "title": "तलों की तुलना और घटाव से आवश्यक गति",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "purnank-tulna",
+     "learning_objective": "तलों के आधार पर पूर्णांकों की तुलना करके < या > चिह्न लगाना।"
+    },
+    {
+     "concept_tag": "ghatav-avashyak-gati",
+     "learning_objective": "लक्षित तल – प्रारंभिक तल = आवश्यक गति के रूप में घटाव को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH10-T3",
+   "topic_number": 3,
+   "title": "पूर्णांक, बड़ी संख्याएँ और संख्या रेखा",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "purnank-aur-badi-sankhyaen",
+     "learning_objective": "धनात्मक, ऋणात्मक संख्याओं और शून्य को पूर्णांक के रूप में पहचानना और बड़े पूर्णांकों को जोड़ना-घटाना।"
+    },
+    {
+     "concept_tag": "sankhya-rekha",
+     "learning_objective": "संख्या रेखा पर पूर्णांकों की स्थिति और उन पर आगे-पीछे की गति को समझना।"
+    },
+    {
+     "concept_tag": "ghatav-ko-jod-mein-badalna",
+     "learning_objective": "किसी पूर्णांक के घटाव को उसके योज्य प्रतिलोम के जोड़ में बदलना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH10-T4",
+   "topic_number": 4,
+   "title": "टोकन मॉडल",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "shunya-joda",
+     "learning_objective": "धनात्मक और ऋणात्मक टोकन के शून्य जोड़े हटाकर पूर्णांकों का योग करना।"
+    },
+    {
+     "concept_tag": "token-se-ghatav",
+     "learning_objective": "आवश्यकतानुसार शून्य जोड़े रखकर टोकन से पूर्णांकों का घटाव करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH10-T5",
+   "topic_number": 5,
+   "title": "अन्य स्थानों पर पूर्णांक",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "bank-jama-nikasi",
+     "learning_objective": "बैंक खाते में जमा को धनात्मक और निकासी को ऋणात्मक मानकर शेष राशि ज्ञात करना।"
+    },
+    {
+     "concept_tag": "samudra-tal-unchai",
+     "learning_objective": "समुद्र तल को 0 मानकर ऊँचाई और गहराई को पूर्णांकों से दर्शाना।"
+    },
+    {
+     "concept_tag": "tapman",
+     "learning_objective": "शून्य से कम तापमान को ऋणात्मक संख्याओं से दर्शाना और तापमान परिवर्तन ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH10-T6",
+   "topic_number": 6,
+   "title": "पूर्णांकों के साथ अन्वेषण",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "seema-yog-grid",
+     "learning_objective": "ग्रिड की सीमा पंक्तियों और स्तंभों का योग (सीमा योग) ज्ञात करना और ग्रिड पूर्ण करना।"
+    },
+    {
+     "concept_tag": "purnank-anukram",
+     "learning_objective": "पूर्णांकों के अनुक्रम का नियम पहचानकर अगले पद ज्ञात करना।"
+    },
+    {
+     "concept_tag": "chinh-vyavhar",
+     "learning_objective": "धनात्मक और ऋणात्मक पूर्णांकों के योग और अंतर के चिह्न के बारे में निष्कर्ष निकालना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH10-T7",
+   "topic_number": 7,
+   "title": "एक चुटकी इतिहास: ब्रह्मगुप्त के नियम",
+   "ncert_sections": "10.5",
+   "concepts": [
+    {
+     "concept_tag": "rinatmak-sankhya-itihas",
+     "learning_objective": "ऋणात्मक संख्याओं और शून्य के उपयोग के इतिहास में भारत और ब्रह्मगुप्त के योगदान को जानना।"
+    },
+    {
+     "concept_tag": "brahmagupta-yog-niyam",
+     "learning_objective": "ब्रह्मगुप्त के योग के नियमों से पूर्णांकों का योग करना।"
+    },
+    {
+     "concept_tag": "brahmagupta-ghatav-niyam",
+     "learning_objective": "ब्रह्मगुप्त के घटाव के नियमों को लागू करके त्रुटियाँ पहचानना।"
+    }
+   ]
+  }
+ ]
+}

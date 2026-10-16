@@ -1,0 +1,136 @@
+{
+ "chapter_id": "FHCU1-CH12",
+ "title": "पृथ्वी से परे",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHCU1-CH12-T1",
+   "topic_number": 1,
+   "title": "तारे और तारा-मंडल",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "tara-mandal",
+     "learning_objective": "तारा-मंडल का प्राचीन और आधुनिक अर्थ तथा तारों के पैटर्न की उपयोगिता समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "orayan-aur-lubdhak",
+     "learning_objective": "ओरायन तारा-मंडल, शिकारी की पेटी और लुब्धक तारे को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "saptarshi-aur-dhruv-tara",
+     "learning_objective": "सप्तर्षि, ध्रुव तारा और उनसे जुड़ी विभिन्न समुदायों की कल्पनाओं को समझ सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH12-T2",
+   "topic_number": 2,
+   "title": "रात्रि-आकाश का अवलोकन",
+   "ncert_sections": "12.2",
+   "concepts": [
+    {
+     "concept_tag": "prakash-pradushan",
+     "learning_objective": "प्रकाश प्रदूषण का अर्थ और तारों के दिखाई देने पर उसका प्रभाव समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "avlokan-ki-taiyari",
+     "learning_objective": "रात्रि-आकाश के अवलोकन की तैयारी और सावधानियाँ बता सकेंगे।"
+    },
+    {
+     "concept_tag": "dhruv-tara-khojna",
+     "learning_objective": "सप्तर्षि की सहायता से ध्रुव तारे को खोजने की विधि का उपयोग कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH12-T3",
+   "topic_number": 3,
+   "title": "सूर्य: हमारा निकटतम तारा",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "surya-ek-tara",
+     "learning_objective": "सूर्य को एक तारे के रूप में और पृथ्वी पर ऊर्जा के प्रमुख स्रोत के रूप में समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "khagoliya-matrak",
+     "learning_objective": "खगोलीय मात्रक का अर्थ बताकर उससे दूरियों की तुलना कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH12-T4",
+   "topic_number": 4,
+   "title": "ग्रह",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "grahon-ka-kram",
+     "learning_objective": "सूर्य से बढ़ती दूरी के क्रम में आठ ग्रहों के नाम बता सकेंगे।"
+    },
+    {
+     "concept_tag": "grahon-ki-visheshtayen",
+     "learning_objective": "आंतरिक और बाहरी ग्रहों की विशेषताएँ तथा उनके ताप के कारण समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "grah-aur-tare-mein-bhed",
+     "learning_objective": "रात्रि-आकाश में ग्रहों और तारों में भेद कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH12-T5",
+   "topic_number": 5,
+   "title": "प्राकृतिक उपग्रह और चंद्रमा",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "upagrah",
+     "learning_objective": "उपग्रह का अर्थ बताकर ग्रहों के प्राकृतिक उपग्रहों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "chandrama",
+     "learning_objective": "चंद्रमा की परिक्रमा, आकार, गर्तों और चंद्रयान अभियानों के बारे में बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH12-T6",
+   "topic_number": 6,
+   "title": "क्षुद्रग्रह, धूमकेतु और सौर परिवार",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "kshudragrah",
+     "learning_objective": "क्षुद्रग्रहों और क्षुद्रग्रह पट्टी की स्थिति का वर्णन कर सकेंगे।"
+    },
+    {
+     "concept_tag": "dhoomketu",
+     "learning_objective": "धूमकेतु की रचना और उसकी पूँछ बनने का कारण समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "saur-parivar",
+     "learning_objective": "सौर परिवार के सदस्यों को पहचानकर उनकी चमक का कारण बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH12-T7",
+   "topic_number": 7,
+   "title": "मंदाकिनी आकाश गंगा और ब्रह्माण्ड",
+   "ncert_sections": "12.4, 12.5",
+   "concepts": [
+    {
+     "concept_tag": "mandakini-akashganga",
+     "learning_objective": "मंदाकिनी का अर्थ और आकाश गंगा में हमारे सौर परिवार की स्थिति बता सकेंगे।"
+    },
+    {
+     "concept_tag": "brahmand",
+     "learning_objective": "ब्रह्माण्ड में पृथ्वी, सौर परिवार और मंदाकिनी के स्थान की तुलना कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

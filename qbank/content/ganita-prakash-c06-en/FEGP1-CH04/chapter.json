@@ -1,0 +1,112 @@
+{
+  "chapter_id": "FEGP1-CH04",
+  "title": "Data Handling and Presentation",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "FEGP1-CH04-T1",
+      "topic_number": 1,
+      "title": "What is data and why we collect it",
+      "ncert_sections": "4.1",
+      "concepts": [
+        {
+          "concept_tag": "meaning-of-data",
+          "learning_objective": "Define data as a collection of facts, numbers, measures or observations that convey information."
+        },
+        {
+          "concept_tag": "purpose-of-data-collection",
+          "learning_objective": "Decide when a question needs data to be collected and use collected data to answer it."
+        }
+      ]
+    },
+    {
+      "topic_id": "FEGP1-CH04-T2",
+      "topic_number": 2,
+      "title": "Organising data: tally marks and frequency tables",
+      "ncert_sections": "4.1",
+      "concepts": [
+        {
+          "concept_tag": "tally-marks",
+          "learning_objective": "Record and read counts using tally marks grouped in fives."
+        },
+        {
+          "concept_tag": "frequency-table",
+          "learning_objective": "Prepare and interpret a frequency table, including totals found from it."
+        },
+        {
+          "concept_tag": "arranging-data-in-order",
+          "learning_objective": "Arrange raw data in ascending order to find the largest, smallest and counts of values."
+        }
+      ]
+    },
+    {
+      "topic_id": "FEGP1-CH04-T3",
+      "topic_number": 3,
+      "title": "Pictographs",
+      "ncert_sections": "4.2",
+      "concepts": [
+        {
+          "concept_tag": "reading-pictographs",
+          "learning_objective": "Read a pictograph, including half symbols, to find and compare frequencies."
+        },
+        {
+          "concept_tag": "pictograph-scale-key",
+          "learning_objective": "Choose and use a suitable scale or key so that each symbol stands for one or many units."
+        }
+      ]
+    },
+    {
+      "topic_id": "FEGP1-CH04-T4",
+      "topic_number": 4,
+      "title": "Reading and interpreting bar graphs",
+      "ncert_sections": "4.3",
+      "concepts": [
+        {
+          "concept_tag": "reading-bar-graphs",
+          "learning_objective": "Read the value shown by each bar and compare categories in a bar graph."
+        },
+        {
+          "concept_tag": "interpreting-scaled-bar-graphs",
+          "learning_objective": "Use the scale of a bar graph to convert bar lengths to values and draw inferences."
+        }
+      ]
+    },
+    {
+      "topic_id": "FEGP1-CH04-T5",
+      "topic_number": 5,
+      "title": "Drawing a bar graph",
+      "ncert_sections": "4.4",
+      "concepts": [
+        {
+          "concept_tag": "features-of-bar-graphs",
+          "learning_objective": "State the rules for drawing a bar graph: equal widths, equal gaps and markings starting from zero."
+        },
+        {
+          "concept_tag": "calculating-bar-heights",
+          "learning_objective": "Calculate the height of each bar by dividing the value by the chosen scale."
+        },
+        {
+          "concept_tag": "choosing-a-scale",
+          "learning_objective": "Choose a scale for a bar graph that fits the space and suits the smallest and largest values."
+        }
+      ]
+    },
+    {
+      "topic_id": "FEGP1-CH04-T6",
+      "topic_number": 6,
+      "title": "Artistic and aesthetic considerations; infographics",
+      "ncert_sections": "4.5",
+      "concepts": [
+        {
+          "concept_tag": "column-graphs-and-orientation",
+          "learning_objective": "Choose vertical bars (column graphs) or horizontal bars to suit the kind of quantity shown."
+        },
+        {
+          "concept_tag": "misleading-infographics",
+          "learning_objective": "Evaluate whether an infographic presents data accurately or could mislead its audience."
+        }
+      ]
+    }
+  ]
+}

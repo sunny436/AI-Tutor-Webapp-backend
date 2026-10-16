@@ -1,0 +1,104 @@
+{
+ "chapter_id": "JEMH1-CH04",
+ "title": "Quadratic Equations",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH04-T1",
+   "topic_number": 1,
+   "title": "Quadratic equations and the standard form",
+   "ncert_sections": "4.1, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "quadratic-equation-standard-form",
+     "learning_objective": "State the standard form ax² + bx + c = 0 (a ≠ 0) and identify its coefficients a, b and c."
+    },
+    {
+     "concept_tag": "checking-quadratic-equations",
+     "learning_objective": "Simplify a given equation to decide whether or not it is a quadratic equation."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH04-T2",
+   "topic_number": 2,
+   "title": "Representing situations as quadratic equations",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "forming-equations-from-situations",
+     "learning_objective": "Translate area, number and age situations into a quadratic equation in one variable."
+    },
+    {
+     "concept_tag": "speed-time-equations",
+     "learning_objective": "Form a quadratic equation from a uniform speed, distance and time situation."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH04-T3",
+   "topic_number": 3,
+   "title": "Roots and solution by factorisation",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "root-of-quadratic-equation",
+     "learning_objective": "Explain when a real number is a root of a quadratic equation and how many roots it can have."
+    },
+    {
+     "concept_tag": "splitting-the-middle-term",
+     "learning_objective": "Find the roots of a quadratic equation by splitting the middle term and equating each factor to zero."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH04-T4",
+   "topic_number": 4,
+   "title": "Word problems solved by factorisation",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "solving-word-problems-by-factorisation",
+     "learning_objective": "Solve number, geometry and cost problems by forming and factorising a quadratic equation."
+    },
+    {
+     "concept_tag": "rejecting-inadmissible-roots",
+     "learning_objective": "Decide which root of an equation fits the situation and reject the inadmissible one."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH04-T5",
+   "topic_number": 5,
+   "title": "Discriminant, nature of roots and the quadratic formula",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "discriminant-and-nature-of-roots",
+     "learning_objective": "Use the discriminant b² − 4ac to decide whether the roots are distinct, equal or not real."
+    },
+    {
+     "concept_tag": "quadratic-formula",
+     "learning_objective": "Find the roots of a quadratic equation using the quadratic formula."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH04-T6",
+   "topic_number": 6,
+   "title": "Equal roots and feasibility of situations",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "condition-for-equal-roots",
+     "learning_objective": "Find the value of an unknown coefficient for which a quadratic equation has equal roots."
+    },
+    {
+     "concept_tag": "feasibility-of-situations",
+     "learning_objective": "Use the discriminant to decide whether a real-life situation is possible and find its values."
+    }
+   ]
+  }
+ ]
+}

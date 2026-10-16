@@ -1,0 +1,1298 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "understanding-society-india-and-beyond-part-i-c09-en",
+  "curriculum": "cbse",
+  "class_level": 9,
+  "subject_code": "social_science",
+  "language": "english",
+  "title": "Understanding Society India and Beyond PART-I",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "iest1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "IEST1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Understanding Social Science",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST1-CH01-T1",
+     "topic_number": 1,
+     "title": "What Social Science Is and Its Place in Everyday Life",
+     "ncert_sections": "Introduction; Social Science in Everyday Life",
+     "concepts": [
+      {
+       "concept_tag": "social-science-definition",
+       "learning_objective": "Describe Social Science as the systematic study of human society and how it differs from the natural sciences."
+      },
+      {
+       "concept_tag": "social-science-in-daily-life",
+       "learning_objective": "Explain how ordinary daily activities depend on wider systems of governance, economy, society and environment."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH01-T2",
+     "topic_number": 2,
+     "title": "Understanding Society through Time and Traditions",
+     "ncert_sections": "Understanding Society through Time and Traditions",
+     "concepts": [
+      {
+       "concept_tag": "society-change-over-time",
+       "learning_objective": "Trace how human societies changed from early communities to villages, towns and cities."
+      },
+      {
+       "concept_tag": "indian-knowledge-traditions",
+       "learning_objective": "Explain how ideas such as the Panchamahabhutas, vasudhaiva kutumbakam and the Arthashastra reflect early inquiry into society."
+      },
+      {
+       "concept_tag": "social-science-methods",
+       "learning_objective": "Identify the methods social scientists use to gather evidence and build explanations."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH01-T3",
+     "topic_number": 3,
+     "title": "Social Science as a Study of Disciplines",
+     "ncert_sections": "Social Science as a Study of Disciplines",
+     "concepts": [
+      {
+       "concept_tag": "need-for-multiple-disciplines",
+       "learning_objective": "Explain why a complex society must be studied from the perspectives of several related disciplines."
+      },
+      {
+       "concept_tag": "core-disciplines",
+       "learning_objective": "Identify the four core disciplines of Grades 9-10 Social Science and the wider Social Science family."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH01-T4",
+     "topic_number": 4,
+     "title": "Geography",
+     "ncert_sections": "Geography",
+     "concepts": [
+      {
+       "concept_tag": "geography-scope",
+       "learning_objective": "Describe what Geography studies, including location, distribution and human-environment relationships."
+      },
+      {
+       "concept_tag": "spatial-temporal-perspectives",
+       "learning_objective": "Explain how Geography combines spatial and temporal perspectives in a holistic approach."
+      },
+      {
+       "concept_tag": "geographical-tools",
+       "learning_objective": "Identify the tools Geography uses, such as maps, globes, atlases and GIS."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH01-T5",
+     "topic_number": 5,
+     "title": "History",
+     "ncert_sections": "History",
+     "concepts": [
+      {
+       "concept_tag": "itihasa-purana-tradition",
+       "learning_objective": "Explain the role of the itihasa-purana tradition in preserving cultural memory in Bharat."
+      },
+      {
+       "concept_tag": "modern-historiography",
+       "learning_objective": "Describe how modern historiography uses empirical evidence and scientific tools."
+      },
+      {
+       "concept_tag": "historical-sources",
+       "learning_objective": "Classify sources of history as literary, archaeological, epigraphic or numismatic."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH01-T6",
+     "topic_number": 6,
+     "title": "Political Science",
+     "ncert_sections": "Political Science",
+     "concepts": [
+      {
+       "concept_tag": "political-science-scope",
+       "learning_objective": "Describe Political Science as the study of governance, power, constitutions and institutions."
+      },
+      {
+       "concept_tag": "indian-political-thought",
+       "learning_objective": "Explain how early Indian political thought linked politics with dharma, artha and rajadharma."
+      },
+      {
+       "concept_tag": "panchayati-raj-grassroots",
+       "learning_objective": "Explain how the Panchayati Raj system shows grassroots democracy and local participation."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH01-T7",
+     "topic_number": 7,
+     "title": "Economics",
+     "ncert_sections": "Economics",
+     "concepts": [
+      {
+       "concept_tag": "economics-scarcity-choice",
+       "learning_objective": "Explain how Economics studies the use of limited resources and decisions by consumers, producers and governments."
+      },
+      {
+       "concept_tag": "indian-economic-history",
+       "learning_objective": "Describe India's economic journey from a leading economy through colonial disruption to rebuilding after independence."
+      },
+      {
+       "concept_tag": "sustainable-development",
+       "learning_objective": "Explain sustainable growth as meeting present needs without harming future generations."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH01-T8",
+     "topic_number": 8,
+     "title": "Why Study Social Science and Its Future",
+     "ncert_sections": "Why Should We Study Social Science?; The Future of Social Science; Secondary-Stage Social Science",
+     "concepts": [
+      {
+       "concept_tag": "civic-participation",
+       "learning_objective": "Explain how understanding government and shared challenges prepares students for responsible civic life."
+      },
+      {
+       "concept_tag": "unity-in-diversity",
+       "learning_objective": "Explain how Social Science accounts for diversity and the underlying unity of Indian society."
+      },
+      {
+       "concept_tag": "future-of-social-science",
+       "learning_objective": "Describe the growing role of Social Science in addressing future challenges and linking past, present and future."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Shaping of the Earth’s Surface",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST1-CH02-T1",
+     "topic_number": 1,
+     "title": "Plate tectonics and the Earth's interior",
+     "ncert_sections": "Plate Tectonics",
+     "concepts": [
+      {
+       "concept_tag": "earth-interior-layers",
+       "learning_objective": "Describe the crust, mantle, core, lithosphere and asthenosphere and their key features."
+      },
+      {
+       "concept_tag": "tectonic-plates-types",
+       "learning_objective": "Identify the types of tectonic plates and the major plates of the world."
+      },
+      {
+       "concept_tag": "convection-currents",
+       "learning_objective": "Explain how convection currents in the mantle drive plate movement."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH02-T2",
+     "topic_number": 2,
+     "title": "Plate boundaries and their effects",
+     "ncert_sections": "Plate Tectonics (plate boundaries)",
+     "concepts": [
+      {
+       "concept_tag": "plate-boundaries",
+       "learning_objective": "Distinguish convergent, divergent and transform boundaries and the features each produces."
+      },
+      {
+       "concept_tag": "earthquakes-volcanoes-distribution",
+       "learning_objective": "Relate the distribution of earthquakes and volcanoes, including the Ring of Fire, to plate boundaries."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH02-T3",
+     "topic_number": 3,
+     "title": "Weathering and erosion",
+     "ncert_sections": "Process of Weathering and Erosion",
+     "concepts": [
+      {
+       "concept_tag": "weathering-types",
+       "learning_objective": "Differentiate physical, chemical and biological weathering."
+      },
+      {
+       "concept_tag": "erosion-and-livelihoods",
+       "learning_objective": "Explain how erosion differs from weathering and how it affects human livelihoods."
+      },
+      {
+       "concept_tag": "soil-conservation-practices",
+       "learning_objective": "Describe soil conservation practices such as contouring, bunding, terracing and the Zabo system."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH02-T4",
+     "topic_number": 4,
+     "title": "Running water and its landforms",
+     "ncert_sections": "Agents of Gradation; Running Water",
+     "concepts": [
+      {
+       "concept_tag": "agents-of-gradation",
+       "learning_objective": "Name the agents of gradation and state how they level the Earth's surface."
+      },
+      {
+       "concept_tag": "river-course-landforms",
+       "learning_objective": "Explain the formation and human uses of waterfalls, meanders, oxbow lakes and deltas."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH02-T5",
+     "topic_number": 5,
+     "title": "Landforms of waves, glaciers, wind and underground water",
+     "ncert_sections": "Waves and Currents; Glaciers; Wind; Underground Water",
+     "concepts": [
+      {
+       "concept_tag": "coastal-landforms",
+       "learning_objective": "Explain how waves form beaches, cliffs, caves, arches and stacks."
+      },
+      {
+       "concept_tag": "glacial-landforms",
+       "learning_objective": "Identify glacial landforms such as U-shaped valleys, cirques, aretes, fjords and moraines."
+      },
+      {
+       "concept_tag": "wind-and-karst-landforms",
+       "learning_objective": "Identify landforms made by wind and by underground water in limestone areas."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH02-T6",
+     "topic_number": 6,
+     "title": "Landforms and disasters",
+     "ncert_sections": "Landforms and Disasters",
+     "concepts": [
+      {
+       "concept_tag": "landslides-avalanches",
+       "learning_objective": "Explain the natural and human causes of landslides and avalanches."
+      },
+      {
+       "concept_tag": "glofs-dust-storms",
+       "learning_objective": "Explain the causes of glacial lake outburst floods and dust storms."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Atmosphere and Climate",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST1-CH03-T1",
+     "topic_number": 1,
+     "title": "Composition of the Atmosphere",
+     "ncert_sections": "Composition of the Atmosphere",
+     "concepts": [
+      {
+       "concept_tag": "atmospheric-gases",
+       "learning_objective": "Identify the main gases of the atmosphere and their approximate shares."
+      },
+      {
+       "concept_tag": "water-vapour-and-dust",
+       "learning_objective": "Explain the varying share of water vapour and its role in clouds and precipitation."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH03-T2",
+     "topic_number": 2,
+     "title": "Structure of the Atmosphere",
+     "ncert_sections": "Structure of the Atmosphere",
+     "concepts": [
+      {
+       "concept_tag": "layer-basis-and-order",
+       "learning_objective": "Describe how the layers of the atmosphere are defined and how temperature changes through them."
+      },
+      {
+       "concept_tag": "troposphere-stratosphere",
+       "learning_objective": "Distinguish the troposphere from the stratosphere by their features and uses."
+      },
+      {
+       "concept_tag": "upper-layers",
+       "learning_objective": "Describe the mesosphere, thermosphere and exosphere and the phenomena linked to them."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH03-T3",
+     "topic_number": 3,
+     "title": "Weather, Climate and Their Elements",
+     "ncert_sections": "Weather and Climate; Elements of Weather and Climate (temperature, humidity, precipitation)",
+     "concepts": [
+      {
+       "concept_tag": "weather-vs-climate",
+       "learning_objective": "Distinguish weather from climate."
+      },
+      {
+       "concept_tag": "insolation-and-temperature",
+       "learning_objective": "Explain why temperature decreases from the equator towards the poles."
+      },
+      {
+       "concept_tag": "humidity-and-precipitation",
+       "learning_objective": "Explain humidity and the forms and causes of precipitation."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH03-T4",
+     "topic_number": 4,
+     "title": "Air Pressure, Wind and Local Winds",
+     "ncert_sections": "Atmospheric pressure; Wind; Land breeze and sea breeze",
+     "concepts": [
+      {
+       "concept_tag": "air-pressure",
+       "learning_objective": "Explain how air pressure varies with altitude and temperature."
+      },
+      {
+       "concept_tag": "wind-and-naming",
+       "learning_objective": "Define wind and name winds by the direction they blow from."
+      },
+      {
+       "concept_tag": "land-and-sea-breeze",
+       "learning_objective": "Explain the formation of land and sea breezes."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH03-T5",
+     "topic_number": 5,
+     "title": "Seasons in India",
+     "ncert_sections": "Seasons in India; traditional Indian seasons (Table 3.2)",
+     "concepts": [
+      {
+       "concept_tag": "imd-seasons",
+       "learning_objective": "Describe the four seasons recognised by the IMD and their months."
+      },
+      {
+       "concept_tag": "traditional-seasons",
+       "learning_objective": "Relate the six traditional Indian seasons to the Gregorian months."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH03-T6",
+     "topic_number": 6,
+     "title": "Monsoon",
+     "ncert_sections": "Monsoon",
+     "concepts": [
+      {
+       "concept_tag": "monsoon-mechanism",
+       "learning_objective": "Explain the origin of the word monsoon and the mechanism of the south-west monsoon."
+      },
+      {
+       "concept_tag": "northeast-monsoon",
+       "learning_objective": "Explain the north-east monsoon and its rainfall on the south-eastern coast."
+      },
+      {
+       "concept_tag": "monsoon-and-life",
+       "learning_objective": "Assess the role of the monsoon in the economy and life of India."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH03-T7",
+     "topic_number": 7,
+     "title": "Climate Change and Carbon Footprint",
+     "ncert_sections": "Climate Change; Let's Explore: My Carbon Footprint",
+     "concepts": [
+      {
+       "concept_tag": "climate-change-causes",
+       "learning_objective": "Explain the human causes and effects of climate change."
+      },
+      {
+       "concept_tag": "carbon-footprint",
+       "learning_objective": "Define carbon footprint and suggest ways to reduce it."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH03-T8",
+     "topic_number": 8,
+     "title": "Punjab Floods 2025: A Case Study",
+     "ncert_sections": "Punjab Floods 2025: A Case Study",
+     "concepts": [
+      {
+       "concept_tag": "flood-causes",
+       "learning_objective": "Distinguish the natural and human-made causes of the 2025 Punjab floods."
+      },
+      {
+       "concept_tag": "flood-effects-preparedness",
+       "learning_objective": "Analyse the effects of floods and measures to reduce flood damage."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Early Humans and Beginning of Civilisation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST1-CH04-T1",
+     "topic_number": 1,
+     "title": "The Invention of Writing: Before and After",
+     "ncert_sections": "The Invention of Writing: Before and After",
+     "concepts": [
+      {
+       "concept_tag": "early-writing-systems",
+       "learning_objective": "Identify the earliest writing systems, including the undeciphered Harappan script, cuneiform, hieroglyphs and Brahmi."
+      },
+      {
+       "concept_tag": "prehistory-vs-history-sources",
+       "learning_objective": "Distinguish the periods before and after writing by their sources, share of human history and accuracy of dating."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH04-T2",
+     "topic_number": 2,
+     "title": "Early Human Evolution and Migration",
+     "ncert_sections": "Why Should We Study Early Human History?",
+     "concepts": [
+      {
+       "concept_tag": "biological-cultural-evolution",
+       "learning_objective": "Explain biological and cultural evolution and how surplus production laid the basis of civilisation."
+      },
+      {
+       "concept_tag": "out-of-africa-dispersal",
+       "learning_objective": "Describe the dispersal of Homo erectus and Homo sapiens out of Africa."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH04-T3",
+     "topic_number": 3,
+     "title": "Our Human Ancestors and the Evidence",
+     "ncert_sections": "Who Were Our Human Ancestors?",
+     "concepts": [
+      {
+       "concept_tag": "hominins-tool-makers",
+       "learning_objective": "Explain why tool making marks human behaviour and identify the major human ancestors and their tools."
+      },
+      {
+       "concept_tag": "fossils-archaeological-evidence",
+       "learning_objective": "Explain how fossils, tools and experiments help archaeologists reconstruct the human past."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH04-T4",
+     "topic_number": 4,
+     "title": "Periods of Early History and Palaeolithic Hunter-Gatherers",
+     "ncert_sections": "Periods in Early Human History; Palaeolithic Hunter-Gatherers",
+     "concepts": [
+      {
+       "concept_tag": "periods-early-human-history",
+       "learning_objective": "Arrange the periods of early human history and identify the technology that defines each."
+      },
+      {
+       "concept_tag": "palaeolithic-india-sites-tools",
+       "learning_objective": "Describe Palaeolithic sites in India and the progression of tools from handaxes to blades and microblades."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH04-T5",
+     "topic_number": 5,
+     "title": "Mesolithic Hunter-Gatherers and the Neolithic Revolution",
+     "ncert_sections": "Mesolithic Hunter-Gatherers; The Neolithic Revolution; Neolithic Period in Indian Subcontinent",
+     "concepts": [
+      {
+       "concept_tag": "mesolithic-changes",
+       "learning_objective": "Explain how a warmer climate shaped Mesolithic life, microlithic tools and art such as at Bhimbetka."
+      },
+      {
+       "concept_tag": "neolithic-revolution",
+       "learning_objective": "Explain the Neolithic revolution as a shift to food production through domestication."
+      },
+      {
+       "concept_tag": "mehrgarh-neolithic-india",
+       "learning_objective": "Describe Mehrgarh and the spread of Neolithic communities in the Indian subcontinent."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH04-T6",
+     "topic_number": 6,
+     "title": "Sindhu-Sarasvati Civilisation: The Early Harappan Stage",
+     "ncert_sections": "Sindhu-Sarasvati Civilisation",
+     "concepts": [
+      {
+       "concept_tag": "early-harappan-continuity",
+       "learning_objective": "Explain the continuity of crafts and practices from the Early Harappan to the Mature Harappan stage."
+      },
+      {
+       "concept_tag": "harappan-technology-standards",
+       "learning_objective": "Describe Harappan agricultural practices, water management and standard weights."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH04-T7",
+     "topic_number": 7,
+     "title": "Bronze Age Civilisations Outside India: Mesopotamia",
+     "ncert_sections": "Bronze Age Civilisations Outside India; Mesopotamian Civilisation",
+     "concepts": [
+      {
+       "concept_tag": "river-valley-civilisations",
+       "learning_objective": "Identify the four river-valley civilisations and explain the contacts between Mesopotamia and the Harappans."
+      },
+      {
+       "concept_tag": "sumerian-achievements",
+       "learning_objective": "Describe the Sumerian ziggurat, cuneiform writing and other inventions."
+      },
+      {
+       "concept_tag": "akkad-assyria-babylon",
+       "learning_objective": "Trace the sequence of Akkadian, Assyrian and Babylonian power and the Code of Hammurabi."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH04-T8",
+     "topic_number": 8,
+     "title": "Egyptian and Chinese Civilisations",
+     "ncert_sections": "Egyptian Civilisation; The Chinese Civilisation",
+     "concepts": [
+      {
+       "concept_tag": "egyptian-civilisation",
+       "learning_objective": "Describe the role of the Nile, pyramids, papyrus and the Rosetta Stone in Egyptian civilisation."
+      },
+      {
+       "concept_tag": "chinese-civilisation",
+       "learning_objective": "Describe Chinese dynasties, oracle bones, crafts, the Great Wall and the Silk Route."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "State and Society up to 1000 CE",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST1-CH05-T1",
+     "topic_number": 1,
+     "title": "The Vedic period: sources and political institutions",
+     "ncert_sections": "The Beginnings; State and Administration: The Vedic Period; Political Institutions in the Vedic Period",
+     "concepts": [
+      {
+       "concept_tag": "vedic-texts-as-sources",
+       "learning_objective": "Identify the four Vedas and the parts of Vedic texts and explain why historians use them as sources."
+      },
+      {
+       "concept_tag": "vedic-polity-assemblies",
+       "learning_objective": "Describe the role of the raja, the janas and the assemblies sabha, samiti and vidhata in early Vedic polity."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH05-T2",
+     "topic_number": 2,
+     "title": "Janapadas, mahajanapadas and early kingdoms",
+     "ncert_sections": "Let's Analyse; Early Kingdoms and Republics",
+     "concepts": [
+      {
+       "concept_tag": "janapada-to-mahajanapada",
+       "learning_objective": "Explain the shift from kin-based janas to territorial janapadas and mahajanapadas, and the forms of polity that followed."
+      },
+      {
+       "concept_tag": "iron-and-nbpw-material-culture",
+       "learning_objective": "Relate iron tools, wider crop variety and NBPW pottery to the growth of the Ganga plains."
+      },
+      {
+       "concept_tag": "early-southern-kingdoms",
+       "learning_objective": "Identify the early kingdoms of Tamilakam and their emblems."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH05-T3",
+     "topic_number": 3,
+     "title": "Duties and ideals of the king and the council of ministers",
+     "ncert_sections": "Duties and Ideals of the King; Council of Ministers",
+     "concepts": [
+      {
+       "concept_tag": "kingship-and-pan-indian-ideal",
+       "learning_objective": "Explain the limits on royal authority and the ideal of authority over the whole subcontinent (chakravarti kshetra)."
+      },
+      {
+       "concept_tag": "saptanga-and-mantri-parishad",
+       "learning_objective": "Describe Kautilya's seven constituents of the state and why they must work together."
+      },
+      {
+       "concept_tag": "inscriptions-as-sources",
+       "learning_objective": "Evaluate how inscriptions such as the Junagadh rock record help historians study administration."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH05-T4",
+     "topic_number": 4,
+     "title": "How were empires administered?",
+     "ncert_sections": "How Were Empires Administered?",
+     "concepts": [
+      {
+       "concept_tag": "administrative-divisions",
+       "learning_objective": "Identify the provincial, district and village units used in northern and southern kingdoms."
+      },
+      {
+       "concept_tag": "gupta-district-administration",
+       "learning_objective": "Describe the composition of the Gupta district office."
+      },
+      {
+       "concept_tag": "village-assemblies",
+       "learning_objective": "Explain how village assemblies, variyams and the Kudavolai system made villages self-reliant."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH05-T5",
+     "topic_number": 5,
+     "title": "Ethics: the foundation of law and life",
+     "ncert_sections": "Ethics: The Foundation of Law and Life",
+     "concepts": [
+      {
+       "concept_tag": "samatva-and-rita",
+       "learning_objective": "Explain the principles of samatva and rita as described in early Indian texts."
+      },
+      {
+       "concept_tag": "dharma-and-governance",
+       "learning_objective": "Explain the meaning of dharma and how ethics guided governance from the Mauryas to the Cholas."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH05-T6",
+     "topic_number": 6,
+     "title": "Varna, jati and social mobility",
+     "ncert_sections": "Social Structures and Everyday Life: Varna and Jati; Social Mobility",
+     "concepts": [
+      {
+       "concept_tag": "varna-as-functional-division",
+       "learning_objective": "Explain the origin of the varna idea and why early occupations are described as flexible."
+      },
+      {
+       "concept_tag": "jati-formation",
+       "learning_objective": "Distinguish jati from varna and identify the factors that led to the growth of jatis."
+      },
+      {
+       "concept_tag": "social-mobility",
+       "learning_objective": "Use inscriptions as evidence of social and occupational mobility."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH05-T7",
+     "topic_number": 7,
+     "title": "Family, women, religious life and education",
+     "ncert_sections": "Family and Society; Role of Women; Religious Life and the Emergence of Bhakti; The Quest for Knowledge",
+     "concepts": [
+      {
+       "concept_tag": "family-ashrama-purushartha",
+       "learning_objective": "Describe the four ashramas and the four purusharthas."
+      },
+      {
+       "concept_tag": "role-of-women",
+       "learning_objective": "Describe the roles of women in Vedic, Gupta-Vakataka, Sangam and Chola times."
+      },
+      {
+       "concept_tag": "bhakti-and-education",
+       "learning_objective": "Explain the rise of Bhakti in the Tamil region and its open, ritual-free path."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH05-T8",
+     "topic_number": 8,
+     "title": "Economy: agriculture, irrigation, trade and guilds",
+     "ncert_sections": "Economy: Agriculture and Land Revenue; Irrigation; Trade: Trade Routes and Ports; Guilds",
+     "concepts": [
+      {
+       "concept_tag": "agriculture-and-irrigation",
+       "learning_objective": "Explain land revenue and the state's role in building irrigation works."
+      },
+      {
+       "concept_tag": "trade-routes-and-ports",
+       "learning_objective": "Identify the major land routes and ports that linked early Indian trade."
+      },
+      {
+       "concept_tag": "guilds-shrenis",
+       "learning_objective": "Analyse the economic and banking role of guilds using inscriptional evidence."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Democracy",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST1-CH06-T1",
+     "topic_number": 1,
+     "title": "Tracing Democratic Traditions from Early Times",
+     "ncert_sections": "Tracing Democratic Traditions from Early Times",
+     "concepts": [
+      {
+       "concept_tag": "ancient-democratic-traditions",
+       "learning_objective": "Identify early Indian institutions such as the Sabha, Samiti, ganas and Bauddha Samghas that reflected collective decision-making."
+      },
+      {
+       "concept_tag": "constituent-assembly-and-amendment",
+       "learning_objective": "Explain how the Constituent Assembly framed a flexible Constitution that can be amended under Article 368."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH06-T2",
+     "topic_number": 2,
+     "title": "Principles of Democracy: Popular Sovereignty, Rule of Law and Fundamental Rights",
+     "ncert_sections": "Principles of Democracy",
+     "concepts": [
+      {
+       "concept_tag": "popular-sovereignty",
+       "learning_objective": "Explain popular sovereignty and the Universal Adult Franchise as the basis of a government's authority."
+      },
+      {
+       "concept_tag": "rule-of-law",
+       "learning_objective": "Describe equality before law, equal protection of law and procedure established by law."
+      },
+      {
+       "concept_tag": "fundamental-rights",
+       "learning_objective": "Identify the six Fundamental Rights, their Articles and the remedies under Articles 32 and 226."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH06-T3",
+     "topic_number": 3,
+     "title": "Separation of Powers, Accountability, Parties and Democratic Institutions",
+     "ncert_sections": "Principles of Democracy; Role of Media in Democracy",
+     "concepts": [
+      {
+       "concept_tag": "separation-of-powers",
+       "learning_objective": "Explain how the separation of powers among the three organs creates checks and balances."
+      },
+      {
+       "concept_tag": "accountability-and-multi-party-system",
+       "learning_objective": "Describe how accountability mechanisms and a multi-party system make government answerable to people."
+      },
+      {
+       "concept_tag": "institutions-and-media",
+       "learning_objective": "Match democratic processes with the institutions that support them, including the media as the fourth pillar."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH06-T4",
+     "topic_number": 4,
+     "title": "Types of Democracy around the World",
+     "ncert_sections": "Types of Democracy",
+     "concepts": [
+      {
+       "concept_tag": "direct-and-representative-democracy",
+       "learning_objective": "Distinguish direct democracy from representative democracy with examples."
+      },
+      {
+       "concept_tag": "parliamentary-and-presidential-democracy",
+       "learning_objective": "Compare parliamentary and presidential systems using India, Canada, the UK, Switzerland and the USA."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH06-T5",
+     "topic_number": 5,
+     "title": "Democracy in Practice: India's Living Democracy",
+     "ncert_sections": "Democracy in Practice: India's Living Democracy",
+     "concepts": [
+      {
+       "concept_tag": "scale-of-indian-democracy",
+       "learning_objective": "Interpret facts that show the scale and inclusiveness of Indian elections."
+      },
+      {
+       "concept_tag": "grassroots-democracy",
+       "learning_objective": "Explain how Panchayats, ADCs and the PESA Act enable participation at the grassroots."
+      },
+      {
+       "concept_tag": "women-and-participation",
+       "learning_objective": "Describe women's voting rights and reservation for women in local bodies."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH06-T6",
+     "topic_number": 6,
+     "title": "Challenges to Democratic Practices and Democracy and You",
+     "ncert_sections": "Challenges to Democratic Practices in India; Democracy and You",
+     "concepts": [
+      {
+       "concept_tag": "challenges-to-democracy",
+       "learning_objective": "Analyse challenges such as misinformation, inequality and the Emergency of 1975-77."
+      },
+      {
+       "concept_tag": "civic-responsibility",
+       "learning_objective": "Explain how informed and responsible citizens strengthen democracy."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Elections",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST1-CH07-T1",
+     "topic_number": 1,
+     "title": "Why do elections matter?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "direct-and-indirect-elections",
+       "learning_objective": "Distinguish between direct and indirect elections and identify offices filled by each in India."
+      },
+      {
+       "concept_tag": "periodic-elections-and-accountability",
+       "learning_objective": "Explain how regular, periodic and competitive elections keep representatives accountable to the people."
+      },
+      {
+       "concept_tag": "psephology",
+       "learning_objective": "State the meaning and origin of the term psephology."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH07-T2",
+     "topic_number": 2,
+     "title": "The electoral system",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "first-past-the-post",
+       "learning_objective": "Explain how the First-Past-The-Post system decides the winner in a constituency."
+      },
+      {
+       "concept_tag": "majority-and-proportional-systems",
+       "learning_objective": "Compare the majority (two-round) system and proportional representation with FPTP."
+      },
+      {
+       "concept_tag": "single-transferable-vote",
+       "learning_objective": "Apply the quota rule of the single transferable vote used for the Rajya Sabha, Vidhan Parishad, President and Vice President."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH07-T3",
+     "topic_number": 3,
+     "title": "The laws and the Delimitation Commission",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "representation-of-the-people-acts",
+       "learning_objective": "Distinguish between the subjects covered by the Representation of the People Acts of 1950 and 1951."
+      },
+      {
+       "concept_tag": "corrupt-practices",
+       "learning_objective": "Identify electoral offences and corrupt practices listed in the RPA, 1951."
+      },
+      {
+       "concept_tag": "delimitation",
+       "learning_objective": "Explain the purpose of delimitation in ensuring equal representation."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH07-T4",
+     "topic_number": 4,
+     "title": "Election Commission of India",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "eci-constitutional-status",
+       "learning_objective": "Describe the ECI as an autonomous, permanent constitutional body and the elections it conducts."
+      },
+      {
+       "concept_tag": "electoral-roll-and-sir",
+       "learning_objective": "Explain how the ECI prepares electoral rolls and why it conducts the Special Intensive Revision."
+      },
+      {
+       "concept_tag": "eci-functions",
+       "learning_objective": "Describe the ECI's functions of scheduling elections, registering parties and allotting symbols."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH07-T5",
+     "topic_number": 5,
+     "title": "Free, fair and inclusive elections: no voter to be left behind",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "inclusive-voting-measures",
+       "learning_objective": "Identify ECI measures that help senior citizens, PwDs and service voters cast their votes."
+      },
+      {
+       "concept_tag": "election-technology-apps",
+       "learning_objective": "Match ECI digital applications such as cVIGIL, Suvidha and Saksham to their uses."
+      },
+      {
+       "concept_tag": "meaning-of-free-and-fair-elections",
+       "learning_objective": "Evaluate why fairness, inclusion and trust are needed for elections to have democratic value."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH07-T6",
+     "topic_number": 6,
+     "title": "Political parties",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "role-of-political-parties",
+       "learning_objective": "Describe the roles political parties play in a multi-party democracy."
+      },
+      {
+       "concept_tag": "defection-and-anti-defection-law",
+       "learning_objective": "Explain defection and the provisions of the Anti-Defection Law of 1985."
+      },
+      {
+       "concept_tag": "party-recognition-criteria",
+       "learning_objective": "Apply the ECI criteria for recognising national and state parties."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH07-T7",
+     "topic_number": 7,
+     "title": "Challenges to free and fair elections",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "challenges-to-elections",
+       "learning_objective": "Identify challenges such as misinformation, fake news and intimidation and analyse their effect on democracy."
+      },
+      {
+       "concept_tag": "safeguards-for-fair-elections",
+       "learning_objective": "Explain safeguards such as the Model Code of Conduct, EVMs and VVPAT."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Building Blocks in Economics: The Problem of Choice",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST1-CH08-T1",
+     "topic_number": 1,
+     "title": "Needs, wants and economic choices",
+     "ncert_sections": "The Big Questions",
+     "concepts": [
+      {
+       "concept_tag": "needs-and-wants",
+       "learning_objective": "Distinguish needs (essentials) from wants (non-essential desires) and classify everyday purchases."
+      },
+      {
+       "concept_tag": "unlimited-wants",
+       "learning_objective": "Explain that human wants are unlimited and keep changing, which makes choice necessary."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH08-T2",
+     "topic_number": 2,
+     "title": "Limited resources, opportunity cost and the PPC",
+     "ncert_sections": "Choices and Limited Resources",
+     "concepts": [
+      {
+       "concept_tag": "scarcity-and-alternative-uses",
+       "learning_objective": "Explain that resources are limited and have alternative uses, so choosing one use means giving up another."
+      },
+      {
+       "concept_tag": "opportunity-cost",
+       "learning_objective": "Define opportunity cost as the value of the next alternative given up."
+      },
+      {
+       "concept_tag": "production-possibility-curve",
+       "learning_objective": "Interpret a production possibility schedule and curve to find trade-offs and judge efficient output."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH08-T3",
+     "topic_number": 3,
+     "title": "What economics deals with",
+     "ncert_sections": "What does Economics Deal with?; Economic Survey",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-economics",
+       "learning_objective": "State the origin and meaning of the word economics and what the discipline studies."
+      },
+      {
+       "concept_tag": "economic-entities",
+       "learning_objective": "Identify economic entities such as consumers, producers, governments and financial institutions."
+      },
+      {
+       "concept_tag": "role-of-economists",
+       "learning_objective": "Describe how economists use data, surveys and analysis of alternatives to guide decisions."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH08-T4",
+     "topic_number": 4,
+     "title": "Key questions: what to produce and for whom",
+     "ncert_sections": "Key Questions in Economics; What to Produce and for Whom?",
+     "concepts": [
+      {
+       "concept_tag": "central-problems",
+       "learning_objective": "Explain how scarcity gives rise to the three key questions of economics."
+      },
+      {
+       "concept_tag": "what-to-produce",
+       "learning_objective": "Analyse trade-offs in deciding which goods to produce, such as water-intensive versus drought-resistant crops."
+      },
+      {
+       "concept_tag": "for-whom-to-produce",
+       "learning_objective": "Explain how producers choose which group of consumers to serve based on needs and purchasing power."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH08-T5",
+     "topic_number": 5,
+     "title": "How to produce",
+     "ncert_sections": "How to Produce?",
+     "concepts": [
+      {
+       "concept_tag": "labour-vs-capital-intensive",
+       "learning_objective": "Distinguish labour-intensive and capital-intensive techniques of production."
+      },
+      {
+       "concept_tag": "choice-of-technique",
+       "learning_objective": "Analyse the factors that decide the choice of production technique."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH08-T6",
+     "topic_number": 6,
+     "title": "Economic systems",
+     "ncert_sections": "Economic Systems and How Choices are Made; Planned, Market and Mixed Economy",
+     "concepts": [
+      {
+       "concept_tag": "planned-economy",
+       "learning_objective": "Describe how a planned economy answers the key questions through a central authority."
+      },
+      {
+       "concept_tag": "market-economy",
+       "learning_objective": "Describe how a market economy relies on demand and supply with limited government role."
+      },
+      {
+       "concept_tag": "mixed-economy",
+       "learning_objective": "Explain the features of a mixed economy and India's shift after 1991."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "The Price Puzzle: What Drives the Market",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST1-CH09-T1",
+     "topic_number": 1,
+     "title": "Demand and the Law of Demand",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "demand-and-law-of-demand",
+       "learning_objective": "Define demand as willingness backed by ability to pay and state the inverse price-quantity relationship."
+      },
+      {
+       "concept_tag": "individual-and-market-demand",
+       "learning_objective": "Derive market demand by adding individual demand schedules and interpret the demand curve."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH09-T2",
+     "topic_number": 2,
+     "title": "Other Determinants of Demand",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "substitute-and-complementary-goods",
+       "learning_objective": "Explain how price changes of substitutes and complements affect the demand for a good."
+      },
+      {
+       "concept_tag": "income-tastes-population-seasonality",
+       "learning_objective": "Explain how income, tastes, population, seasonality and diminishing marginal utility shape demand."
+      },
+      {
+       "concept_tag": "future-price-expectations-demand",
+       "learning_objective": "Explain how expected future prices change present demand."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH09-T3",
+     "topic_number": 3,
+     "title": "Supply and the Law of Supply",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "law-of-supply",
+       "learning_objective": "State the direct relationship between price and quantity supplied and the reason behind it."
+      },
+      {
+       "concept_tag": "individual-and-market-supply",
+       "learning_objective": "Derive market supply by adding individual supplies and read the upward-sloping supply curve."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH09-T4",
+     "topic_number": 4,
+     "title": "Other Determinants of Supply",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "related-goods-and-number-of-sellers",
+       "learning_objective": "Explain how prices of alternative products and the number of sellers affect supply."
+      },
+      {
+       "concept_tag": "technology-and-expectations-supply",
+       "learning_objective": "Explain how technology and producers' future expectations change supply."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH09-T5",
+     "topic_number": 5,
+     "title": "Market Equilibrium and Dynamic Markets",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "market-equilibrium",
+       "learning_objective": "Identify equilibrium price and quantity and distinguish excess demand from excess supply."
+      },
+      {
+       "concept_tag": "dynamic-real-world-markets",
+       "learning_objective": "Explain why real-world equilibrium keeps shifting, using examples like masks and hotel tariffs."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH09-T6",
+     "topic_number": 6,
+     "title": "Role of Government in the Economy",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "price-ceiling-floor-regulation",
+       "learning_objective": "Explain price ceilings, price floors, monopoly regulation and the role of regulators."
+      },
+      {
+       "concept_tag": "public-goods",
+       "learning_objective": "Explain why public goods are provided by the government rather than private firms."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST1-CH09-T7",
+     "topic_number": 7,
+     "title": "Limitations of Government Intervention",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "limits-of-intervention",
+       "learning_objective": "Evaluate how price distortions, compliance burdens and heavy regulation can harm markets."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

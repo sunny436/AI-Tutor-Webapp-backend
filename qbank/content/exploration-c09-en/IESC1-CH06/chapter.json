@@ -1,0 +1,136 @@
+{
+ "chapter_id": "IESC1-CH06",
+ "title": "How Forces Affect Motion",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IESC1-CH06-T1",
+   "topic_number": 1,
+   "title": "The Concept of Force",
+   "ncert_sections": "6.1, 6.1.1",
+   "concepts": [
+    {
+     "concept_tag": "force-magnitude-and-direction",
+     "learning_objective": "Recognise force as a quantity that needs both magnitude and direction, measured in newtons (N)."
+    },
+    {
+     "concept_tag": "measuring-force-spring-balance",
+     "learning_objective": "Explain how a spring balance measures the magnitude of a force and the range of forces we meet."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH06-T2",
+   "topic_number": 2,
+   "title": "Balanced and Unbalanced Forces",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "balanced-unbalanced-forces",
+     "learning_objective": "Distinguish balanced from unbalanced forces and predict whether an object will move."
+    },
+    {
+     "concept_tag": "net-force-calculation",
+     "learning_objective": "Calculate the magnitude and direction of the net force when forces act along the same line."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH06-T3",
+   "topic_number": 3,
+   "title": "The Force of Friction",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "friction-opposes-motion",
+     "learning_objective": "Describe how friction acts opposite to motion and brings moving objects to rest."
+    },
+    {
+     "concept_tag": "friction-depends-on-surfaces",
+     "learning_objective": "Relate the distance travelled and spring balance readings to the friction offered by different surfaces."
+    },
+    {
+     "concept_tag": "normal-force-and-weight",
+     "learning_objective": "Identify the normal force and weight acting on an object on a surface and how they balance."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH06-T4",
+   "topic_number": 4,
+   "title": "Newton's First Law of Motion",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "newtons-first-law",
+     "learning_objective": "State Newton's first law and apply it to objects with zero net force."
+    },
+    {
+     "concept_tag": "inertia-and-galileo",
+     "learning_objective": "Explain inertia and Galileo's argument that no force is needed to maintain uniform motion."
+    },
+    {
+     "concept_tag": "zero-net-force-graphs",
+     "learning_objective": "Interpret position-time and velocity-time graphs of objects with no net force."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH06-T5",
+   "topic_number": 5,
+   "title": "Newton's Second Law of Motion",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "newtons-second-law",
+     "learning_objective": "Apply F = ma to find force, acceleration or displacement of an object."
+    },
+    {
+     "concept_tag": "newton-unit-and-weight",
+     "learning_objective": "Define one newton and calculate weight using F = mg."
+    },
+    {
+     "concept_tag": "stopping-time-and-force",
+     "learning_objective": "Explain why increasing the stopping time reduces the force, as in catching a ball or airbags."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH06-T6",
+   "topic_number": 6,
+   "title": "Newton's Third Law of Motion",
+   "ncert_sections": "6.6",
+   "concepts": [
+    {
+     "concept_tag": "action-reaction-pairs",
+     "learning_objective": "State Newton's third law and explain that the paired forces act on different objects."
+    },
+    {
+     "concept_tag": "third-law-everyday-applications",
+     "learning_objective": "Explain walking, rowing and recoil using Newton's third law."
+    },
+    {
+     "concept_tag": "rocket-propulsion",
+     "learning_objective": "Explain rocket lift-off and slowing down in space using Newton's third law."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH06-T7",
+   "topic_number": 7,
+   "title": "Forces Acting on a System of Objects",
+   "ncert_sections": "6.7",
+   "concepts": [
+    {
+     "concept_tag": "internal-external-forces",
+     "learning_objective": "Distinguish internal forces from external forces for a system of connected objects."
+    },
+    {
+     "concept_tag": "system-acceleration",
+     "learning_objective": "Calculate the acceleration of connected objects treated as a single system."
+    }
+   ]
+  }
+ ]
+}

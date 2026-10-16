@@ -1,0 +1,140 @@
+{
+ "chapter_id": "FECU1-CH09",
+ "title": "Methods of Separation in Everyday Life",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FECU1-CH09-T1",
+   "topic_number": 1,
+   "title": "Handpicking and threshing",
+   "ncert_sections": "Fig. 9.1, 9.2",
+   "concepts": [
+    {
+     "concept_tag": "handpicking",
+     "learning_objective": "Explain when and on what basis handpicking is used to separate a solid mixture."
+    },
+    {
+     "concept_tag": "threshing",
+     "learning_objective": "Describe threshing as beating stalks to separate grains and place it in the sequence of grain processing."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH09-T2",
+   "topic_number": 2,
+   "title": "Winnowing",
+   "ncert_sections": "Activity 9.1, Fig. 9.3, 9.4",
+   "concepts": [
+    {
+     "concept_tag": "winnowing",
+     "learning_objective": "Explain how wind or blown air separates heavier and lighter components of a mixture."
+    },
+    {
+     "concept_tag": "threshers",
+     "learning_objective": "State that threshers carry out threshing and winnowing together."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH09-T3",
+   "topic_number": 3,
+   "title": "Sieving",
+   "ncert_sections": "Fig. 9.5",
+   "concepts": [
+    {
+     "concept_tag": "sieving",
+     "learning_objective": "Explain that sieving separates solids whose particles differ in size."
+    },
+    {
+     "concept_tag": "sieve-hole-size",
+     "learning_objective": "Relate the size of the holes of a sieve to which particles pass through and which remain."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH09-T4",
+   "topic_number": 4,
+   "title": "Evaporation",
+   "ncert_sections": "Activity 9.2, 9.3, Fig. 9.6-9.8",
+   "concepts": [
+    {
+     "concept_tag": "evaporation",
+     "learning_objective": "Explain how evaporation separates a solid dissolved in a liquid."
+    },
+    {
+     "concept_tag": "salt-from-seawater",
+     "learning_objective": "Describe how common salt is obtained from seawater using sunlight and air."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH09-T5",
+   "topic_number": 5,
+   "title": "Sedimentation and decantation",
+   "ncert_sections": "Fig. 9.9",
+   "concepts": [
+    {
+     "concept_tag": "sedimentation",
+     "learning_objective": "Define sedimentation as the settling of a heavier insoluble component in a liquid."
+    },
+    {
+     "concept_tag": "decantation",
+     "learning_objective": "Explain decantation and its everyday uses and limits."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH09-T6",
+   "topic_number": 6,
+   "title": "Filtration",
+   "ncert_sections": "Activity 9.4, 9.5, Fig. 9.10, 9.11",
+   "concepts": [
+    {
+     "concept_tag": "filtration",
+     "learning_objective": "Explain how filtration separates insoluble solids from a liquid and name the residue and filtrate."
+    },
+    {
+     "concept_tag": "choice-of-filter",
+     "learning_objective": "Choose a suitable filter based on the size of its pores and of the particles to be removed."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH09-T7",
+   "topic_number": 7,
+   "title": "Churning and magnetic separation",
+   "ncert_sections": "Fig. 9.12",
+   "concepts": [
+    {
+     "concept_tag": "churning",
+     "learning_objective": "Explain how churning separates butter from curd or cream from milk."
+    },
+    {
+     "concept_tag": "magnetic-separation",
+     "learning_objective": "Use the magnetic nature of substances such as iron to separate them from a mixture."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH09-T8",
+   "topic_number": 8,
+   "title": "Choosing and combining methods",
+   "ncert_sections": "Activity 9.6, Summary",
+   "concepts": [
+    {
+     "concept_tag": "purpose-of-separation",
+     "learning_objective": "Distinguish separating two useful components from removing an unwanted one."
+    },
+    {
+     "concept_tag": "choosing-method",
+     "learning_objective": "Match a mixture to a suitable method of separation."
+    },
+    {
+     "concept_tag": "combining-methods",
+     "learning_objective": "Plan a sequence of methods to separate a mixture of more than two components."
+    }
+   ]
+  }
+ ]
+}

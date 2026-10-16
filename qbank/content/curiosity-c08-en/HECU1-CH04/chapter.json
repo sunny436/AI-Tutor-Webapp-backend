@@ -1,0 +1,120 @@
+{
+ "chapter_id": "HECU1-CH04",
+ "title": "Electricity: Magnetic and Heating Effects",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HECU1-CH04-T1",
+   "topic_number": 1,
+   "title": "Magnetic effect of electric current",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "magnetic-effect-of-current",
+     "learning_objective": "Explain that a current-carrying wire produces a magnetic field that deflects a nearby compass needle and disappears when the current stops."
+    },
+    {
+     "concept_tag": "oersted-discovery",
+     "learning_objective": "Recall Oersted's 1820 discovery that electricity and magnetism are linked."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH04-T2",
+   "topic_number": 2,
+   "title": "Electromagnets: construction, poles and strength",
+   "ncert_sections": "4.1.1",
+   "concepts": [
+    {
+     "concept_tag": "electromagnet-construction",
+     "learning_objective": "Describe an electromagnet as a current-carrying coil, usually with an iron core, that behaves as a magnet."
+    },
+    {
+     "concept_tag": "electromagnet-poles",
+     "learning_objective": "Identify the poles of an electromagnet using a compass and predict how reversing the current changes them."
+    },
+    {
+     "concept_tag": "electromagnet-strength",
+     "learning_objective": "Explain how the current and the number of turns of the coil change the strength of an electromagnet."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH04-T3",
+   "topic_number": 3,
+   "title": "Lifting electromagnets and Earth's magnetism",
+   "ncert_sections": "4.1.1, 4.1.2",
+   "concepts": [
+    {
+     "concept_tag": "lifting-electromagnet",
+     "learning_objective": "Explain how lifting electromagnets on cranes lift and release iron and steel objects by switching the current ON and OFF."
+    },
+    {
+     "concept_tag": "earth-magnetic-field",
+     "learning_objective": "Describe how currents in Earth's liquid iron core produce its magnetic field and why this field matters to living beings."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH04-T4",
+   "topic_number": 4,
+   "title": "Heating effect of electric current",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "heating-effect-and-resistance",
+     "learning_objective": "Explain that the resistance of a conductor converts some electrical energy into heat when current flows."
+    },
+    {
+     "concept_tag": "factors-affecting-heating",
+     "learning_objective": "Identify the factors on which the heat produced in a wire depends, such as current, material, thickness, length and time."
+    },
+    {
+     "concept_tag": "heating-appliances",
+     "learning_objective": "Identify appliances that use a heating element and the safety problems caused by overheating."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH04-T5",
+   "topic_number": 5,
+   "title": "Voltaic cell and the lemon cell",
+   "ncert_sections": "4.3, 4.3.1",
+   "concepts": [
+    {
+     "concept_tag": "voltaic-cell-parts",
+     "learning_objective": "Describe the electrodes and electrolyte of a Voltaic cell and how a chemical reaction produces electricity."
+    },
+    {
+     "concept_tag": "lemon-cell",
+     "learning_objective": "Construct and troubleshoot a lemon cell that lights an LED."
+    },
+    {
+     "concept_tag": "volta-galvani-history",
+     "learning_objective": "Explain how Volta's test showed that metals and a liquid, not the frog, produced the current."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH04-T6",
+   "topic_number": 6,
+   "title": "Dry cells and rechargeable batteries",
+   "ncert_sections": "4.3.2, 4.3.3",
+   "concepts": [
+    {
+     "concept_tag": "dry-cell-structure",
+     "learning_objective": "Describe the terminals and paste-like electrolyte of a dry cell and why it is single-use."
+    },
+    {
+     "concept_tag": "rechargeable-batteries",
+     "learning_objective": "Explain the uses and limits of rechargeable batteries such as Li-ion batteries."
+    },
+    {
+     "concept_tag": "battery-disposal",
+     "learning_objective": "Justify why used batteries should be sent for e-waste recycling."
+    }
+   ]
+  }
+ ]
+}

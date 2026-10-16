@@ -1,0 +1,549 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "accountancy-i-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "accountancy",
+  "language": "english",
+  "title": "Accountancy-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "leac1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEAC1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Accounting for Partnership: Basic Concepts",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leac101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEAC1-CH01-T1",
+     "topic_number": 1,
+     "title": "Nature and essential features of partnership",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "partnership-essential-features",
+       "learning_objective": "State the definition of partnership under Section 4 of the Indian Partnership Act 1932 and identify its essential features."
+      },
+      {
+       "concept_tag": "mutual-agency-and-liability",
+       "learning_objective": "Explain mutual agency and the unlimited, joint and several liability of partners."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH01-T2",
+     "topic_number": 2,
+     "title": "Partnership deed and provisions of the Partnership Act",
+     "ncert_sections": "1.2, 1.2.1",
+     "concepts": [
+      {
+       "concept_tag": "partnership-deed",
+       "learning_objective": "Identify the nature and usual contents of a partnership deed."
+      },
+      {
+       "concept_tag": "provisions-in-absence-of-deed",
+       "learning_objective": "Apply the provisions of the Indian Partnership Act 1932 that govern accounts when the deed is silent."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH01-T3",
+     "topic_number": 3,
+     "title": "Maintenance of partners' capital accounts",
+     "ncert_sections": "1.3, 1.4, 1.4.1",
+     "concepts": [
+      {
+       "concept_tag": "fixed-capital-method",
+       "learning_objective": "Prepare partners' capital and current accounts under the fixed capital method."
+      },
+      {
+       "concept_tag": "fluctuating-capital-method",
+       "learning_objective": "Prepare partners' capital accounts under the fluctuating capital method and distinguish it from the fixed capital method."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH01-T4",
+     "topic_number": 4,
+     "title": "Profit and Loss Appropriation Account",
+     "ncert_sections": "1.5, 1.5.1",
+     "concepts": [
+      {
+       "concept_tag": "appropriation-account-items",
+       "learning_objective": "Identify the items shown in the Profit and Loss Appropriation Account and compute the divisible profit."
+      },
+      {
+       "concept_tag": "appropriation-journal-entries",
+       "learning_objective": "Record the journal entries for appropriations of profit among partners."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH01-T5",
+     "topic_number": 5,
+     "title": "Interest on capital",
+     "ncert_sections": "1.5.2",
+     "concepts": [
+      {
+       "concept_tag": "interest-on-capital-calculation",
+       "learning_objective": "Calculate interest on capital allowing for additions to and withdrawals of capital during the year."
+      },
+      {
+       "concept_tag": "interest-on-capital-limited-to-profit",
+       "learning_objective": "Explain how interest on capital is treated when the firm earns insufficient profit or incurs a loss."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH01-T6",
+     "topic_number": 6,
+     "title": "Interest on drawings",
+     "ncert_sections": "1.5.3",
+     "concepts": [
+      {
+       "concept_tag": "interest-on-drawings-average-period",
+       "learning_objective": "Calculate interest on fixed drawings made monthly or quarterly using the average period."
+      },
+      {
+       "concept_tag": "interest-on-drawings-product-method",
+       "learning_objective": "Calculate interest on varying drawings using the product method."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH01-T7",
+     "topic_number": 7,
+     "title": "Guarantee of profit to a partner",
+     "ncert_sections": "1.6",
+     "concepts": [
+      {
+       "concept_tag": "guarantee-by-all-partners",
+       "learning_objective": "Distribute profit when a minimum profit guaranteed to a partner is borne by the other partners in an agreed ratio."
+      },
+      {
+       "concept_tag": "guarantee-by-one-partner",
+       "learning_objective": "Distribute profit when the guarantee of minimum profit is given by one partner alone."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH01-T8",
+     "topic_number": 8,
+     "title": "Past adjustments",
+     "ncert_sections": "1.7",
+     "concepts": [
+      {
+       "concept_tag": "past-adjustment-methods",
+       "learning_objective": "Identify omissions that need past adjustments and the ways of rectifying them."
+      },
+      {
+       "concept_tag": "past-adjustment-net-effect",
+       "learning_objective": "Prepare a statement of net effect and pass a single adjustment entry in partners' capital accounts."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEAC1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Reconstitution of a Partnership Firm – Admission",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leac102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEAC1-CH02-T1",
+     "topic_number": 1,
+     "title": "Reconstitution of a firm and admission of a new partner",
+     "ncert_sections": "2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "modes-of-reconstitution",
+       "learning_objective": "Identify the events that reconstitute a partnership firm and explain that the firm continues after reconstitution."
+      },
+      {
+       "concept_tag": "admission-of-new-partner",
+       "learning_objective": "Explain the consent required, the rights acquired and the matters to be adjusted when a new partner is admitted."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH02-T2",
+     "topic_number": 2,
+     "title": "New profit sharing ratio and sacrificing ratio",
+     "ncert_sections": "2.3, 2.4",
+     "concepts": [
+      {
+       "concept_tag": "new-profit-sharing-ratio",
+       "learning_objective": "Calculate the new profit sharing ratio when a new partner acquires his share from the old partners in different ways."
+      },
+      {
+       "concept_tag": "sacrificing-ratio",
+       "learning_objective": "Calculate the sacrificing ratio, and any gain by an old partner, as old share minus new share."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH02-T3",
+     "topic_number": 3,
+     "title": "Goodwill: meaning, factors affecting it and need for valuation",
+     "ncert_sections": "2.5.1, 2.5.2, 2.5.3",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-goodwill",
+       "learning_objective": "Define goodwill as an intangible asset arising from the firm's ability to earn super profits."
+      },
+      {
+       "concept_tag": "factors-affecting-goodwill",
+       "learning_objective": "Explain how nature of business, location, management, market situation and special advantages affect goodwill."
+      },
+      {
+       "concept_tag": "need-for-valuation-of-goodwill",
+       "learning_objective": "Identify the situations in which a partnership firm needs to value its goodwill."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH02-T4",
+     "topic_number": 4,
+     "title": "Methods of valuation of goodwill",
+     "ncert_sections": "2.5.4",
+     "concepts": [
+      {
+       "concept_tag": "average-profits-method",
+       "learning_objective": "Value goodwill as an agreed number of years' purchase of simple average profits."
+      },
+      {
+       "concept_tag": "super-profits-method",
+       "learning_objective": "Value goodwill by multiplying super profits (average profit minus normal profit) by the years' purchase."
+      },
+      {
+       "concept_tag": "capitalisation-method",
+       "learning_objective": "Value goodwill by capitalising average profits or super profits at the normal rate of return."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH02-T5",
+     "topic_number": 5,
+     "title": "Treatment of goodwill on admission",
+     "ncert_sections": "2.5.5",
+     "concepts": [
+      {
+       "concept_tag": "premium-for-goodwill",
+       "learning_objective": "Record premium for goodwill brought in, or not brought in, by the new partner and share it in the sacrificing ratio."
+      },
+      {
+       "concept_tag": "existing-goodwill-and-as-26",
+       "learning_objective": "Explain the writing off of existing goodwill and the requirements of AS 26 for goodwill."
+      },
+      {
+       "concept_tag": "hidden-goodwill",
+       "learning_objective": "Infer hidden goodwill from the new partner's capital and share in profits."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH02-T6",
+     "topic_number": 6,
+     "title": "Accumulated profits and losses; revaluation of assets and liabilities",
+     "ncert_sections": "2.6, 2.7",
+     "concepts": [
+      {
+       "concept_tag": "accumulated-profits-and-losses",
+       "learning_objective": "Transfer reserves, accumulated profits and accumulated losses to the old partners in the old ratio."
+      },
+      {
+       "concept_tag": "revaluation-account",
+       "learning_objective": "Prepare the Revaluation Account and distribute its balance among the old partners in the old ratio."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH02-T7",
+     "topic_number": 7,
+     "title": "Adjustment of capitals and change in profit sharing ratio",
+     "ncert_sections": "2.8, 2.9",
+     "concepts": [
+      {
+       "concept_tag": "adjustment-of-capitals",
+       "learning_objective": "Determine capitals proportionate to the new profit sharing ratio and the surplus or deficiency of each partner."
+      },
+      {
+       "concept_tag": "change-in-profit-sharing-ratio",
+       "learning_objective": "Calculate sacrifice and gain on a change in profit sharing ratio and adjust goodwill between partners."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEAC1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Reconstitution of a Partnership Firm – Retirement/Death of a Partner",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leac103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEAC1-CH03-T1",
+     "topic_number": 1,
+     "title": "Amount due to a retiring or deceased partner",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "claims-of-outgoing-partner",
+       "learning_objective": "Identify the items that are credited to a retiring or deceased partner when ascertaining the amount due."
+      },
+      {
+       "concept_tag": "deductions-from-outgoing-partner-claim",
+       "learning_objective": "Identify the items deducted from the claim of a retiring or deceased partner and compute the net amount due."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH03-T2",
+     "topic_number": 2,
+     "title": "New profit sharing ratio and gaining ratio",
+     "ncert_sections": "3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "new-profit-sharing-ratio",
+       "learning_objective": "Calculate the new profit sharing ratio of continuing partners after retirement or death of a partner."
+      },
+      {
+       "concept_tag": "gaining-ratio",
+       "learning_objective": "Calculate the gaining ratio as new share minus old share and interpret a gain or sacrifice."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH03-T3",
+     "topic_number": 3,
+     "title": "Treatment of goodwill",
+     "ncert_sections": "3.4, 3.4.1, 3.4.2",
+     "concepts": [
+      {
+       "concept_tag": "goodwill-adjustment-gaining-ratio",
+       "learning_objective": "Adjust the retiring partner's share of goodwill through the gaining partners' capital accounts."
+      },
+      {
+       "concept_tag": "existing-goodwill-write-off",
+       "learning_objective": "Write off goodwill already appearing in the books among all partners in the old ratio."
+      },
+      {
+       "concept_tag": "hidden-goodwill",
+       "learning_objective": "Compute hidden goodwill when a lump sum paid exceeds the amount due to the outgoing partner."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH03-T4",
+     "topic_number": 4,
+     "title": "Revaluation of assets and liabilities and accumulated profits and losses",
+     "ncert_sections": "3.5, 3.6",
+     "concepts": [
+      {
+       "concept_tag": "revaluation-account",
+       "learning_objective": "Prepare the Revaluation Account and distribute the gain or loss among all partners in the old ratio."
+      },
+      {
+       "concept_tag": "accumulated-profits-and-losses",
+       "learning_objective": "Transfer reserves and accumulated losses to all partners' capital accounts in the old ratio."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH03-T5",
+     "topic_number": 5,
+     "title": "Share of profit up to the date of retirement or death",
+     "ncert_sections": "3.6, 3.9",
+     "concepts": [
+      {
+       "concept_tag": "intervening-period-profit",
+       "learning_objective": "Calculate an outgoing partner's share of profit for the intervening period on time, average-profit or sales basis."
+      },
+      {
+       "concept_tag": "profit-and-loss-suspense",
+       "learning_objective": "Record the outgoing partner's share of profit through Profit and Loss Suspense Account and close it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH03-T6",
+     "topic_number": 6,
+     "title": "Disposal of amount due to retiring partner",
+     "ncert_sections": "3.7",
+     "concepts": [
+      {
+       "concept_tag": "section-37-entitlement",
+       "learning_objective": "State the outgoing partner's entitlement under Section 37 of the Indian Partnership Act, 1932."
+      },
+      {
+       "concept_tag": "retiring-partner-loan-account",
+       "learning_objective": "Prepare the retiring partner's loan account for payment in instalments with interest."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH03-T7",
+     "topic_number": 7,
+     "title": "Adjustment of partners' capitals",
+     "ncert_sections": "3.8",
+     "concepts": [
+      {
+       "concept_tag": "new-capital-in-profit-ratio",
+       "learning_objective": "Determine the new capital of each continuing partner in the new profit sharing ratio."
+      },
+      {
+       "concept_tag": "cash-brought-in-or-withdrawn",
+       "learning_objective": "Compute and record the cash to be brought in or withdrawn by continuing partners."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH03-T8",
+     "topic_number": 8,
+     "title": "Death of a partner and the executors' account",
+     "ncert_sections": "3.9",
+     "concepts": [
+      {
+       "concept_tag": "deceased-partner-claim",
+       "learning_objective": "Compute the components of a deceased partner's claim up to the date of death."
+      },
+      {
+       "concept_tag": "executors-account",
+       "learning_objective": "Transfer the deceased partner's claim to the executors' account and settle it."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEAC1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Dissolution of Partnership Firm",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leac104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEAC1-CH04-T1",
+     "topic_number": 1,
+     "title": "Dissolution of partnership and dissolution of the firm",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "dissolution-of-partnership",
+       "learning_objective": "Identify the events that dissolve a partnership while the firm may continue its business."
+      },
+      {
+       "concept_tag": "partnership-vs-firm-dissolution",
+       "learning_objective": "Distinguish dissolution of partnership from dissolution of a firm on business, settlement, court role and books."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH04-T2",
+     "topic_number": 2,
+     "title": "Modes of dissolution of a firm",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "dissolution-by-agreement-and-contingencies",
+       "learning_objective": "Explain dissolution by agreement and on the happening of contingencies such as expiry of term or completion of a venture."
+      },
+      {
+       "concept_tag": "compulsory-dissolution",
+       "learning_objective": "State the cases in which a firm is compulsorily dissolved."
+      },
+      {
+       "concept_tag": "dissolution-by-notice-and-court",
+       "learning_objective": "Explain dissolution by notice in a partnership at will and the grounds on which a court may order dissolution."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH04-T3",
+     "topic_number": 3,
+     "title": "Settlement of accounts on dissolution",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "treatment-of-losses",
+       "learning_objective": "Apply the order in which losses and capital deficiencies are met, including the Garner vs. Murray rule."
+      },
+      {
+       "concept_tag": "application-of-assets",
+       "learning_objective": "Apply the Section 48 order of paying outside debts, partners' loans, capitals and the residue."
+      },
+      {
+       "concept_tag": "private-and-firm-debts",
+       "learning_objective": "Apply the Section 49 rules on firm's debts and partners' private debts."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH04-T4",
+     "topic_number": 4,
+     "title": "Realisation Account",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "realisation-account-transfers",
+       "learning_objective": "Identify which assets and liabilities are transferred to the Realisation Account and on which side."
+      },
+      {
+       "concept_tag": "realisation-profit-or-loss",
+       "learning_objective": "Compute profit or loss on realisation and its transfer to partners' capital accounts."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEAC1-CH04-T5",
+     "topic_number": 5,
+     "title": "Journal entries on dissolution",
+     "ncert_sections": "4.4.1",
+     "concepts": [
+      {
+       "concept_tag": "realisation-expenses-entries",
+       "learning_objective": "Record realisation expenses and remuneration under different arrangements with partners."
+      },
+      {
+       "concept_tag": "assets-and-liabilities-taken-over",
+       "learning_objective": "Record assets taken over and liabilities assumed by partners, and settlements with creditors."
+      },
+      {
+       "concept_tag": "settlement-of-partners-accounts",
+       "learning_objective": "Record the final settlement of partners' loans and capital accounts."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

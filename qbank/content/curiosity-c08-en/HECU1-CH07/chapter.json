@@ -1,0 +1,116 @@
+{
+ "chapter_id": "HECU1-CH07",
+ "title": "Particulate Nature of Matter",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HECU1-CH07-T1",
+   "topic_number": 1,
+   "title": "What matter is composed of",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "constituent-particles",
+     "learning_objective": "Explain that every substance is made up of a very large number of extremely small constituent particles."
+    },
+    {
+     "concept_tag": "kanad-parmanu",
+     "learning_objective": "Recall Acharya Kanad's ancient idea that matter is made of tiny, indivisible particles called Parmanu."
+    },
+    {
+     "concept_tag": "particles-in-solution",
+     "learning_objective": "Explain how dissolving sugar in water shows that a substance breaks into particles too small to see."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH07-T2",
+   "topic_number": 2,
+   "title": "Interparticle attractions and the solid state",
+   "ncert_sections": "7.2, 7.2.1",
+   "concepts": [
+    {
+     "concept_tag": "interparticle-attraction",
+     "learning_objective": "State that particles are held together by interparticle attractions whose strength decides the physical state."
+    },
+    {
+     "concept_tag": "solid-state",
+     "learning_objective": "Explain why solids have a definite shape and volume in terms of packing and movement of particles."
+    },
+    {
+     "concept_tag": "melting-point",
+     "learning_objective": "Relate the melting point of a solid to the strength of its interparticle forces of attraction."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH07-T3",
+   "topic_number": 3,
+   "title": "The liquid state",
+   "ncert_sections": "7.2.2",
+   "concepts": [
+    {
+     "concept_tag": "liquid-state",
+     "learning_objective": "Explain why liquids have a definite volume but no fixed shape, using the movement and attraction of particles."
+    },
+    {
+     "concept_tag": "boiling-and-evaporation",
+     "learning_objective": "Define boiling point and distinguish boiling from evaporation."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH07-T4",
+   "topic_number": 4,
+   "title": "The gaseous state",
+   "ncert_sections": "7.2.3",
+   "concepts": [
+    {
+     "concept_tag": "gaseous-state",
+     "learning_objective": "Explain why gases have neither a fixed shape nor a fixed volume, using the movement of their particles."
+    },
+    {
+     "concept_tag": "fluids",
+     "learning_objective": "Identify liquids and gases as fluids and compare their properties."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH07-T5",
+   "topic_number": 5,
+   "title": "Interparticle spacing in the three states",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "compressibility-of-gases",
+     "learning_objective": "Explain, using the syringe activity, that gases are easily compressed because their particles are far apart, while liquids are not."
+    },
+    {
+     "concept_tag": "interparticle-spaces",
+     "learning_objective": "Interpret volume changes on dissolving to infer that there are spaces between particles in liquids and solids."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH07-T6",
+   "topic_number": 6,
+   "title": "Movement of particles in different states",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "diffusion-in-liquids",
+     "learning_objective": "Explain how the constant motion of water particles spreads potassium permanganate and dissolves soluble substances."
+    },
+    {
+     "concept_tag": "diffusion-in-gases",
+     "learning_objective": "Explain how the constant motion of air particles spreads a fragrance through a room."
+    },
+    {
+     "concept_tag": "temperature-and-particle-motion",
+     "learning_objective": "Relate an increase in temperature or thermal energy to faster particle movement and to the state of matter."
+    }
+   ]
+  }
+ ]
+}

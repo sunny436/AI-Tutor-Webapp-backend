@@ -1,0 +1,831 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "physics-part-ii-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "physics",
+  "language": "english",
+  "title": "Physics Part-II",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "leph2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEPH2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Ray Optics and Optical Instruments",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH2-CH01-T1",
+     "topic_number": 1,
+     "title": "Reflection of light by spherical mirrors",
+     "ncert_sections": "9.2, 9.2.1, 9.2.2, 9.2.3",
+     "concepts": [
+      {
+       "concept_tag": "cartesian-sign-convention",
+       "learning_objective": "Apply the Cartesian sign convention to distances and heights for mirrors and lenses."
+      },
+      {
+       "concept_tag": "mirror-focal-length",
+       "learning_objective": "Relate the focal length of a spherical mirror to its radius of curvature for paraxial rays."
+      },
+      {
+       "concept_tag": "mirror-equation",
+       "learning_objective": "Use the mirror equation and magnification to locate and describe images formed by spherical mirrors."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH01-T2",
+     "topic_number": 2,
+     "title": "Refraction of light",
+     "ncert_sections": "9.3",
+     "concepts": [
+      {
+       "concept_tag": "snells-law-refractive-index",
+       "learning_objective": "Apply Snell's law and the properties of relative refractive index to the bending of light."
+      },
+      {
+       "concept_tag": "slab-and-apparent-depth",
+       "learning_objective": "Explain lateral shift in a glass slab and calculate the apparent depth of an object under a liquid."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH01-T3",
+     "topic_number": 3,
+     "title": "Total internal reflection and its applications",
+     "ncert_sections": "9.4, 9.4.1",
+     "concepts": [
+      {
+       "concept_tag": "critical-angle",
+       "learning_objective": "State the conditions for total internal reflection and relate the critical angle to refractive index."
+      },
+      {
+       "concept_tag": "tir-applications",
+       "learning_objective": "Explain how totally reflecting prisms and optical fibres use total internal reflection."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH01-T4",
+     "topic_number": 4,
+     "title": "Refraction at spherical surfaces and by lenses",
+     "ncert_sections": "9.5, 9.5.1, 9.5.2",
+     "concepts": [
+      {
+       "concept_tag": "spherical-surface-refraction",
+       "learning_objective": "Use the relation for refraction at a single spherical surface between two media."
+      },
+      {
+       "concept_tag": "lens-maker-formula",
+       "learning_objective": "Use the lens maker's formula to relate focal length to radii of curvature and refractive index."
+      },
+      {
+       "concept_tag": "thin-lens-formula",
+       "learning_objective": "Apply the thin lens formula and magnification to locate and describe images formed by lenses."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH01-T5",
+     "topic_number": 5,
+     "title": "Power of a lens and combination of thin lenses",
+     "ncert_sections": "9.5.3, 9.5.4",
+     "concepts": [
+      {
+       "concept_tag": "lens-power",
+       "learning_objective": "Define the power of a lens in dioptres and relate its sign to the type of lens."
+      },
+      {
+       "concept_tag": "lens-combination",
+       "learning_objective": "Find the effective power, focal length and magnification of thin lenses in contact."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH01-T6",
+     "topic_number": 6,
+     "title": "Refraction through a prism",
+     "ncert_sections": "9.6",
+     "concepts": [
+      {
+       "concept_tag": "prism-deviation",
+       "learning_objective": "Relate the angle of deviation of a prism to the angles of incidence, emergence and the prism angle."
+      },
+      {
+       "concept_tag": "minimum-deviation",
+       "learning_objective": "Use the minimum deviation condition to find the refractive index of a prism, including a thin prism."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH01-T7",
+     "topic_number": 7,
+     "title": "Optical instruments: the microscope",
+     "ncert_sections": "9.7, 9.7.1",
+     "concepts": [
+      {
+       "concept_tag": "simple-microscope",
+       "learning_objective": "Explain how a simple microscope magnifies and calculate its magnifying power."
+      },
+      {
+       "concept_tag": "compound-microscope",
+       "learning_objective": "Describe image formation in a compound microscope and calculate its magnifying power."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH01-T8",
+     "topic_number": 8,
+     "title": "Optical instruments: the telescope",
+     "ncert_sections": "9.7.2",
+     "concepts": [
+      {
+       "concept_tag": "telescope-magnification",
+       "learning_objective": "Calculate the magnifying power and tube length of a refracting telescope in normal adjustment."
+      },
+      {
+       "concept_tag": "telescope-design",
+       "learning_objective": "Evaluate how objective size and mirror objectives improve light gathering, resolution and image quality."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPH2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Wave Optics",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH2-CH02-T1",
+     "topic_number": 1,
+     "title": "Introduction: corpuscular and wave models of light",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "corpuscular-vs-wave-model",
+       "learning_objective": "Compare the predictions of the corpuscular and wave models of light for refraction and identify which experiment settled the question."
+      },
+      {
+       "concept_tag": "light-as-electromagnetic-wave",
+       "learning_objective": "Explain how Maxwell's electromagnetic theory resolved the difficulty of light travelling through vacuum."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH02-T2",
+     "topic_number": 2,
+     "title": "Huygens principle and wavefronts",
+     "ncert_sections": "10.2",
+     "concepts": [
+      {
+       "concept_tag": "wavefront-definition",
+       "learning_objective": "Define a wavefront and identify spherical and plane wavefronts and their relation to rays."
+      },
+      {
+       "concept_tag": "huygens-secondary-wavelets",
+       "learning_objective": "Use Huygens' construction of secondary wavelets to find the position of a wavefront at a later time."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH02-T3",
+     "topic_number": 3,
+     "title": "Refraction and reflection of plane waves using Huygens principle",
+     "ncert_sections": "10.3, 10.3.1, 10.3.2, 10.3.3",
+     "concepts": [
+      {
+       "concept_tag": "snells-law-from-huygens",
+       "learning_objective": "Derive Snell's law and the law of reflection using Huygens' construction."
+      },
+      {
+       "concept_tag": "frequency-wavelength-in-media",
+       "learning_objective": "Explain why frequency stays constant while speed and wavelength change on refraction."
+      },
+      {
+       "concept_tag": "wavefronts-through-optical-devices",
+       "learning_objective": "Describe how wavefronts change on passing through prisms and lenses and on reflection from mirrors."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH02-T4",
+     "topic_number": 4,
+     "title": "Coherent and incoherent addition of waves",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "coherent-sources",
+       "learning_objective": "Distinguish coherent and incoherent sources and the resulting intensity patterns."
+      },
+      {
+       "concept_tag": "interference-conditions",
+       "learning_objective": "State the path and phase difference conditions for constructive and destructive interference."
+      },
+      {
+       "concept_tag": "resultant-intensity",
+       "learning_objective": "Apply I = 4 I0 cos^2(phi/2) to find the intensity at a point in an interference pattern."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH02-T5",
+     "topic_number": 5,
+     "title": "Interference of light waves and Young's experiment",
+     "ncert_sections": "10.5",
+     "concepts": [
+      {
+       "concept_tag": "youngs-coherent-sources",
+       "learning_objective": "Explain how Young's arrangement produces two coherent sources from a single source."
+      },
+      {
+       "concept_tag": "fringe-position-and-width",
+       "learning_objective": "Calculate positions of bright and dark fringes and the fringe width in Young's double-slit experiment."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH02-T6",
+     "topic_number": 6,
+     "title": "Diffraction at a single slit",
+     "ncert_sections": "10.6, 10.6.1, 10.6.2",
+     "concepts": [
+      {
+       "concept_tag": "single-slit-diffraction-pattern",
+       "learning_objective": "Describe the single-slit diffraction pattern and locate its minima at angles n(lambda)/a."
+      },
+      {
+       "concept_tag": "interference-vs-diffraction",
+       "learning_objective": "Compare interference and diffraction and relate the double-slit pattern to both."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH02-T7",
+     "topic_number": 7,
+     "title": "Polarisation",
+     "ncert_sections": "10.7",
+     "concepts": [
+      {
+       "concept_tag": "transverse-waves-polarisation",
+       "learning_objective": "Explain polarisation as a property of transverse waves and describe linearly polarised and unpolarised light."
+      },
+      {
+       "concept_tag": "polaroids-malus-law",
+       "learning_objective": "Apply Malus' law to find the intensity of light transmitted through combinations of polaroids."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPH2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Dual Nature of Radiation and Matter",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH2-CH03-T1",
+     "topic_number": 1,
+     "title": "Electron emission and the work function",
+     "ncert_sections": "11.1, 11.2",
+     "concepts": [
+      {
+       "concept_tag": "cathode-ray-particles",
+       "learning_objective": "Explain how the measurements of e/m by Thomson and of e by Millikan established the electron as a universal particle of known mass."
+      },
+      {
+       "concept_tag": "work-function-and-electron-volt",
+       "learning_objective": "Define the work function of a metal and use the electron volt as a unit of energy."
+      },
+      {
+       "concept_tag": "electron-emission-processes",
+       "learning_objective": "Distinguish thermionic, field and photoelectric emission by the way energy is supplied to free electrons."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH03-T2",
+     "topic_number": 2,
+     "title": "Discovery of the photoelectric effect",
+     "ncert_sections": "11.3",
+     "concepts": [
+      {
+       "concept_tag": "early-photoelectric-observations",
+       "learning_objective": "Describe the observations of Hertz, Hallwachs and Lenard that revealed photoelectric emission."
+      },
+      {
+       "concept_tag": "threshold-frequency-and-photosensitivity",
+       "learning_objective": "Explain why different metals need light above different threshold frequencies to emit electrons."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH03-T3",
+     "topic_number": 3,
+     "title": "Experimental study of the photoelectric effect",
+     "ncert_sections": "11.4",
+     "concepts": [
+      {
+       "concept_tag": "photocurrent-and-intensity",
+       "learning_objective": "Relate the photocurrent and the saturation current to the intensity of the incident light."
+      },
+      {
+       "concept_tag": "stopping-potential-and-saturation-current",
+       "learning_objective": "Define the stopping potential and relate it to the maximum kinetic energy of photoelectrons."
+      },
+      {
+       "concept_tag": "frequency-dependence-of-stopping-potential",
+       "learning_objective": "Interpret photocurrent versus collector potential curves for light of different frequencies."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH03-T4",
+     "topic_number": 4,
+     "title": "Photoelectric effect and the wave theory of light",
+     "ncert_sections": "11.5",
+     "concepts": [
+      {
+       "concept_tag": "wave-theory-predictions",
+       "learning_objective": "State what the classical wave picture of light predicts for photoelectric emission."
+      },
+      {
+       "concept_tag": "failure-of-wave-picture",
+       "learning_objective": "Explain which observations of the photoelectric effect the wave picture fails to explain and why."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH03-T5",
+     "topic_number": 5,
+     "title": "Einstein's photoelectric equation",
+     "ncert_sections": "11.6",
+     "concepts": [
+      {
+       "concept_tag": "einstein-photoelectric-equation",
+       "learning_objective": "Apply Einstein's equation Kmax = h nu - phi0 to calculate kinetic energies and stopping potentials."
+      },
+      {
+       "concept_tag": "threshold-frequency-relation",
+       "learning_objective": "Calculate the threshold frequency of a metal from its work function using nu0 = phi0/h."
+      },
+      {
+       "concept_tag": "stopping-potential-frequency-graph",
+       "learning_objective": "Interpret the straight-line graph of stopping potential against frequency to obtain h/e and the threshold frequency."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH03-T6",
+     "topic_number": 6,
+     "title": "Particle nature of light: the photon",
+     "ncert_sections": "11.7",
+     "concepts": [
+      {
+       "concept_tag": "photon-energy-and-momentum",
+       "learning_objective": "Calculate the energy and momentum of a photon and the photon flux of a monochromatic source."
+      },
+      {
+       "concept_tag": "photon-properties",
+       "learning_objective": "State the properties of photons, including their neutrality and behaviour in collisions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH03-T7",
+     "topic_number": 7,
+     "title": "Wave nature of matter",
+     "ncert_sections": "11.8",
+     "concepts": [
+      {
+       "concept_tag": "de-broglie-relation",
+       "learning_objective": "Apply the de Broglie relation lambda = h/p to material particles and photons."
+      },
+      {
+       "concept_tag": "matter-wave-observability",
+       "learning_objective": "Explain why matter waves are significant for sub-atomic particles but not for everyday objects."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPH2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Atoms",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH2-CH04-T1",
+     "topic_number": 1,
+     "title": "Early ideas: Thomson's model and line spectra",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "thomson-plum-pudding-model",
+       "learning_objective": "Describe Thomson's plum pudding model and compare it with Rutherford's nuclear model."
+      },
+      {
+       "concept_tag": "continuous-and-line-spectra",
+       "learning_objective": "Distinguish the continuous spectrum of dense matter from the line spectrum of a rarefied gas."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH04-T2",
+     "topic_number": 2,
+     "title": "Alpha-particle scattering and Rutherford's nuclear model",
+     "ncert_sections": "12.2, 12.2.1",
+     "concepts": [
+      {
+       "concept_tag": "geiger-marsden-observations",
+       "learning_objective": "Interpret the observations of the Geiger-Marsden experiment and the assumptions used to analyse them."
+      },
+      {
+       "concept_tag": "impact-parameter",
+       "learning_objective": "Relate the impact parameter of an alpha particle to its angle of scattering."
+      },
+      {
+       "concept_tag": "distance-of-closest-approach",
+       "learning_objective": "Calculate the distance of closest approach of an alpha particle using energy conservation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH04-T3",
+     "topic_number": 3,
+     "title": "Electron orbits in Rutherford's model",
+     "ncert_sections": "12.2.2",
+     "concepts": [
+      {
+       "concept_tag": "electrostatic-centripetal-force",
+       "learning_objective": "Use the balance of electrostatic and centripetal force to relate orbit radius and electron speed."
+      },
+      {
+       "concept_tag": "negative-total-energy",
+       "learning_objective": "Relate the kinetic, potential and total energy of an orbiting electron and interpret the negative total energy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH04-T4",
+     "topic_number": 4,
+     "title": "Atomic spectra",
+     "ncert_sections": "12.3",
+     "concepts": [
+      {
+       "concept_tag": "emission-line-spectrum",
+       "learning_objective": "Explain why an emission line spectrum acts as a fingerprint of an element."
+      },
+      {
+       "concept_tag": "absorption-spectrum",
+       "learning_objective": "Explain how an absorption spectrum forms and how it relates to the emission spectrum of the same gas."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH04-T5",
+     "topic_number": 5,
+     "title": "Bohr model of the hydrogen atom and energy levels",
+     "ncert_sections": "12.4, 12.4.1",
+     "concepts": [
+      {
+       "concept_tag": "classical-instability",
+       "learning_objective": "Explain why classical electromagnetic theory predicts that Rutherford's atom is unstable."
+      },
+      {
+       "concept_tag": "bohr-postulates",
+       "learning_objective": "State Bohr's three postulates, including the quantisation of angular momentum."
+      },
+      {
+       "concept_tag": "hydrogen-energy-levels",
+       "learning_objective": "Use E = -13.6/n^2 eV to find excitation and ionisation energies of hydrogen."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH04-T6",
+     "topic_number": 6,
+     "title": "The line spectra of the hydrogen atom",
+     "ncert_sections": "12.5",
+     "concepts": [
+      {
+       "concept_tag": "photon-emission-transition",
+       "learning_objective": "Calculate the frequency or wavelength of the photon emitted in a transition between two levels."
+      },
+      {
+       "concept_tag": "photon-absorption-transition",
+       "learning_objective": "Decide which photons a hydrogen atom can absorb from the energy gaps between its levels."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH04-T7",
+     "topic_number": 7,
+     "title": "de Broglie's explanation of Bohr's second postulate and limitations of the model",
+     "ncert_sections": "12.6",
+     "concepts": [
+      {
+       "concept_tag": "de-broglie-standing-waves",
+       "learning_objective": "Explain quantised orbits as circular standing de Broglie waves with 2 pi r = n lambda."
+      },
+      {
+       "concept_tag": "limitations-of-bohr-model",
+       "learning_objective": "State the limitations of Bohr's model for multi-electron atoms and line intensities."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPH2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Nuclei",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH2-CH05-T1",
+     "topic_number": 1,
+     "title": "Atomic masses and composition of the nucleus",
+     "ncert_sections": "13.1, 13.2",
+     "concepts": [
+      {
+       "concept_tag": "atomic-mass-unit-and-isotopic-mass",
+       "learning_objective": "Define the atomic mass unit and calculate the average atomic mass of an element from its isotopic abundances."
+      },
+      {
+       "concept_tag": "nuclear-composition-and-notation",
+       "learning_objective": "Describe the nucleus in terms of Z, N and A and explain how the neutron was discovered."
+      },
+      {
+       "concept_tag": "isotopes-isobars-isotones",
+       "learning_objective": "Classify nuclides as isotopes, isobars or isotones from their Z, N and A."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH05-T2",
+     "topic_number": 2,
+     "title": "Size of the nucleus",
+     "ncert_sections": "13.3",
+     "concepts": [
+      {
+       "concept_tag": "nuclear-radius-formula",
+       "learning_objective": "Use R = R0 A^(1/3) to find and compare nuclear radii."
+      },
+      {
+       "concept_tag": "nuclear-density",
+       "learning_objective": "Explain why nuclear density is independent of mass number and compare it with ordinary matter."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH05-T3",
+     "topic_number": 3,
+     "title": "Mass-energy and nuclear binding energy",
+     "ncert_sections": "13.4, 13.4.1, 13.4.2",
+     "concepts": [
+      {
+       "concept_tag": "mass-energy-equivalence",
+       "learning_objective": "Apply E = mc^2 and the relation 1 u = 931.5 MeV/c^2."
+      },
+      {
+       "concept_tag": "mass-defect-and-binding-energy",
+       "learning_objective": "Calculate mass defect, binding energy and binding energy per nucleon of a nucleus."
+      },
+      {
+       "concept_tag": "binding-energy-per-nucleon-curve",
+       "learning_objective": "Interpret the binding energy per nucleon curve to compare the stability of nuclei."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH05-T4",
+     "topic_number": 4,
+     "title": "Nuclear force",
+     "ncert_sections": "13.5",
+     "concepts": [
+      {
+       "concept_tag": "nuclear-force-properties",
+       "learning_objective": "State the properties of the nuclear force: strong, short-ranged and charge independent."
+      },
+      {
+       "concept_tag": "nucleon-potential-energy",
+       "learning_objective": "Interpret the potential energy curve of a pair of nucleons as a function of separation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH05-T5",
+     "topic_number": 5,
+     "title": "Radioactivity",
+     "ncert_sections": "13.6",
+     "concepts": [
+      {
+       "concept_tag": "discovery-of-radioactivity",
+       "learning_objective": "Recall Becquerel's discovery of radioactivity and that it is a nuclear phenomenon."
+      },
+      {
+       "concept_tag": "types-of-radioactive-decay",
+       "learning_objective": "Identify alpha, beta and gamma decay and the changes they produce in a nucleus."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH05-T6",
+     "topic_number": 6,
+     "title": "Nuclear energy and fission",
+     "ncert_sections": "13.7, 13.7.1",
+     "concepts": [
+      {
+       "concept_tag": "nuclear-versus-chemical-energy",
+       "learning_objective": "Compare the energy released in nuclear and chemical processes and explain mass-energy interconversion in both."
+      },
+      {
+       "concept_tag": "nuclear-fission",
+       "learning_objective": "Balance fission reactions and estimate the energy released in fission."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH05-T7",
+     "topic_number": 7,
+     "title": "Nuclear fusion in stars and controlled fusion",
+     "ncert_sections": "13.7.2, 13.7.3",
+     "concepts": [
+      {
+       "concept_tag": "coulomb-barrier-and-thermonuclear-fusion",
+       "learning_objective": "Explain why fusion needs very high temperatures to overcome the Coulomb barrier."
+      },
+      {
+       "concept_tag": "proton-proton-cycle",
+       "learning_objective": "Describe the proton-proton cycle by which hydrogen fuses into helium in the sun."
+      },
+      {
+       "concept_tag": "controlled-thermonuclear-fusion",
+       "learning_objective": "State the main challenge of controlled thermonuclear fusion in a reactor."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPH2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leph206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPH2-CH06-T1",
+     "topic_number": 1,
+     "title": "Classification of metals, insulators and semiconductors",
+     "ncert_sections": "14.1, 14.2",
+     "concepts": [
+      {
+       "concept_tag": "conductivity-classification",
+       "learning_objective": "Classify solids as metals, semiconductors or insulators from their resistivity and conductivity."
+      },
+      {
+       "concept_tag": "energy-band-gap",
+       "learning_objective": "Use the energy band gap between valence and conduction bands to explain conduction in metals, insulators and semiconductors."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH06-T2",
+     "topic_number": 2,
+     "title": "Intrinsic semiconductors",
+     "ncert_sections": "14.3",
+     "concepts": [
+      {
+       "concept_tag": "intrinsic-carriers",
+       "learning_objective": "Explain the thermal generation of electron-hole pairs in pure Si and Ge and the relation ne = nh = ni."
+      },
+      {
+       "concept_tag": "hole-motion-current",
+       "learning_objective": "Describe the apparent motion of holes and the total current as the sum of electron and hole currents."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH06-T3",
+     "topic_number": 3,
+     "title": "Extrinsic semiconductors: n-type and p-type",
+     "ncert_sections": "14.4",
+     "concepts": [
+      {
+       "concept_tag": "n-type-p-type-doping",
+       "learning_objective": "Identify donor and acceptor dopants and the majority and minority carriers in n-type and p-type semiconductors."
+      },
+      {
+       "concept_tag": "mass-action-law",
+       "learning_objective": "Apply ne nh = ni^2 to find carrier concentrations in a doped semiconductor."
+      },
+      {
+       "concept_tag": "donor-acceptor-levels",
+       "learning_objective": "Locate donor and acceptor energy levels in the energy band diagram of doped semiconductors."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH06-T4",
+     "topic_number": 4,
+     "title": "Formation of a p-n junction",
+     "ncert_sections": "14.5, 14.5.1",
+     "concepts": [
+      {
+       "concept_tag": "junction-formation",
+       "learning_objective": "Explain the roles of diffusion and drift in forming a p-n junction and reaching equilibrium."
+      },
+      {
+       "concept_tag": "depletion-region-barrier",
+       "learning_objective": "Describe the depletion region, its immobile charges, its electric field and the barrier potential."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH06-T5",
+     "topic_number": 5,
+     "title": "Semiconductor diode under bias and its V-I characteristics",
+     "ncert_sections": "14.6, 14.6.1, 14.6.2",
+     "concepts": [
+      {
+       "concept_tag": "forward-bias",
+       "learning_objective": "Explain how forward bias lowers the barrier and causes minority carrier injection and a large current."
+      },
+      {
+       "concept_tag": "reverse-bias",
+       "learning_objective": "Explain how reverse bias raises the barrier, widens the depletion region and gives a small saturation current."
+      },
+      {
+       "concept_tag": "vi-characteristics",
+       "learning_objective": "Interpret the V-I characteristic of a diode, including cut-in voltage and dynamic resistance."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPH2-CH06-T6",
+     "topic_number": 6,
+     "title": "Junction diode as a rectifier",
+     "ncert_sections": "14.7",
+     "concepts": [
+      {
+       "concept_tag": "half-wave-rectifier",
+       "learning_objective": "Explain the working and output of a half-wave rectifier."
+      },
+      {
+       "concept_tag": "full-wave-rectifier",
+       "learning_objective": "Explain how a centre-tap full-wave rectifier uses two diodes to rectify both half cycles."
+      },
+      {
+       "concept_tag": "capacitor-filter",
+       "learning_objective": "Explain how a capacitor input filter smooths the pulsating output of a rectifier."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "chapter_id": "KHMH1-CH10",
+ "title": "शंकु परिच्छेद",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH10-T1",
+   "topic_number": 1,
+   "title": "शंकु के परिच्छेद और अपभ्रष्ट शंकु परिच्छेद",
+   "ncert_sections": "10.1, 10.2",
+   "concepts": [
+    {
+     "concept_tag": "shanku-parichhed-prakar",
+     "learning_objective": "विद्यार्थी तल और शंकु के अक्ष के बीच के कोण के आधार पर वृत्त, दीर्घवृत्त, परवलय और अतिपरवलय को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "apbhrasht-shanku-parichhed",
+     "learning_objective": "विद्यार्थी शीर्ष से होकर जाने वाले तल द्वारा बने अपभ्रष्ट शंकु परिच्छेदों (बिंदु, रेखा, रेखा-युग्म) को पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH10-T2",
+   "topic_number": 2,
+   "title": "वृत्त",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "vritt-manak-samikaran",
+     "learning_objective": "विद्यार्थी दिए गए केंद्र और त्रिज्या से वृत्त का समीकरण (x − h)² + (y − k)² = r² लिख सकेंगे।"
+    },
+    {
+     "concept_tag": "vritt-kendra-trijya",
+     "learning_objective": "विद्यार्थी वृत्त के व्यापक समीकरण से उसका केंद्र और त्रिज्या ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH10-T3",
+   "topic_number": 3,
+   "title": "परवलय",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "parvalay-manak-roop",
+     "learning_objective": "विद्यार्थी परवलय के मानक समीकरणों से नाभि और नियता ज्ञात कर सकेंगे तथा नाभि और नियता से समीकरण बना सकेंगे।"
+    },
+    {
+     "concept_tag": "parvalay-nabhilamb-jiva",
+     "learning_objective": "विद्यार्थी परवलय की नाभिलंब जीवा की लंबाई 4a ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH10-T4",
+   "topic_number": 4,
+   "title": "दीर्घवृत्त",
+   "ncert_sections": "10.5",
+   "concepts": [
+    {
+     "concept_tag": "dirghvritt-aksh-nabhi",
+     "learning_objective": "विद्यार्थी दीर्घवृत्त के दीर्घ अक्ष, लघु अक्ष, शीर्ष और नाभियाँ c² = a² − b² की सहायता से ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "dirghvritt-utkendrata",
+     "learning_objective": "विद्यार्थी दीर्घवृत्त की उत्केंद्रता e = c/a ज्ञात कर सकेंगे और समझ सकेंगे कि 0 < e < 1।"
+    },
+    {
+     "concept_tag": "dirghvritt-nabhilamb-jiva",
+     "learning_objective": "विद्यार्थी दीर्घवृत्त की नाभिलंब जीवा की लंबाई 2b²/a ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH10-T5",
+   "topic_number": 5,
+   "title": "अतिपरवलय",
+   "ncert_sections": "10.6",
+   "concepts": [
+    {
+     "concept_tag": "atiparvalay-paribhasha-samikaran",
+     "learning_objective": "विद्यार्थी अतिपरवलय की परिभाषा जानकर c² = a² + b² से उसकी नाभियाँ और समीकरण ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "atiparvalay-utkendrata",
+     "learning_objective": "विद्यार्थी अतिपरवलय की उत्केंद्रता ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "atiparvalay-nabhilamb-jiva",
+     "learning_objective": "विद्यार्थी अतिपरवलय की नाभिलंब जीवा की लंबाई 2b²/a ज्ञात कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

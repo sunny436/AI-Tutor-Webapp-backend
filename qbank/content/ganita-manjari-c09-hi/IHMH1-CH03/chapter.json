@@ -1,0 +1,140 @@
+{
+ "chapter_id": "IHMH1-CH03",
+ "title": "संख्याओं का संसार",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHMH1-CH03-T1",
+   "topic_number": 1,
+   "title": "गणित का उदय: गिनती की आवश्यकता और प्राकृत संख्याएँ",
+   "ncert_sections": "3.1, 3.1.1, 3.1.2",
+   "concepts": [
+    {
+     "concept_tag": "ekaiki-sangatata",
+     "learning_objective": "समझाना कि एकैकी-संगतता से आदिमानव ने गिनती और मात्राओं का लेखा कैसे रखा।"
+    },
+    {
+     "concept_tag": "asthiyon-par-ganana",
+     "learning_objective": "इशांगो और लेबोम्बो अस्थियों तथा वेदों में 10 के घातांकों के नामों जैसे संख्या-प्रयोग के प्रारंभिक साक्ष्य पहचानना।"
+    },
+    {
+     "concept_tag": "prakrit-sankhyaon-ki-sanvritata",
+     "learning_objective": "प्रति-उदाहरण द्वारा निर्णय करना कि प्राकृत संख्याएँ किसी संक्रिया के अंतर्गत संवृत हैं या नहीं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH03-T2",
+   "topic_number": 2,
+   "title": "शून्य की क्रांति और ब्रह्मगुप्त के नियम",
+   "ncert_sections": "3.2, 3.2.1, 3.2.2",
+   "concepts": [
+    {
+     "concept_tag": "shunyata-se-shunya",
+     "learning_objective": "वर्णन करना कि शून्यता की संकल्पना और बख्शाली पांडुलिपि से शून्य एक संख्या कैसे बना।"
+    },
+    {
+     "concept_tag": "brahmagupt-ke-shunya-niyam",
+     "learning_objective": "शून्य के साथ योग, व्यवकलन और गुणन के ब्रह्मगुप्त के नियमों का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH03-T3",
+   "topic_number": 3,
+   "title": "पूर्णांक: धन और ऋण",
+   "ncert_sections": "3.3, 3.3.1",
+   "concepts": [
+    {
+     "concept_tag": "dhan-rin-purnank",
+     "learning_objective": "पूर्णांकों को धन-संपत्ति, ऋणभार और शून्य के रूप में तथा प्रतीक Z का वर्णन करना।"
+    },
+    {
+     "concept_tag": "purnankon-ka-ankganit",
+     "learning_objective": "दैनिक जीवन की स्थितियों में पूर्णांकों के योग, व्यवकलन और गुणन के लिए चिह्न-नियमों का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH03-T4",
+   "topic_number": 4,
+   "title": "भिन्न और परिमेय संख्याएँ",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "parimey-sankhya-ki-paribhasha",
+     "learning_objective": "परिमेय संख्या p/q की परिभाषा बताना और समझाना कि q शून्य क्यों नहीं हो सकता।"
+    },
+    {
+     "concept_tag": "samtulya-parimey-sankhyaen",
+     "learning_objective": "नियम ad = bc से जाँचना कि दो परिमेय संख्याएँ बराबर हैं या नहीं।"
+    },
+    {
+     "concept_tag": "parimey-sankhyaon-par-sankriyaen",
+     "learning_objective": "परिमेय संख्याओं का योग, व्यवकलन, गुणन और भाग करना तथा उनके संवृत गुणों का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH03-T5",
+   "topic_number": 5,
+   "title": "संख्या रेखा, निरपेक्ष मान और परिमेय संख्याओं का घनत्व",
+   "ncert_sections": "3.4.1, 3.4.2",
+   "concepts": [
+    {
+     "concept_tag": "sankhya-rekha-par-parimey",
+     "learning_objective": "इकाई अंतरालों को बराबर भागों में बाँटकर संख्या रेखा पर परिमेय संख्याएँ निरूपित करना।"
+    },
+    {
+     "concept_tag": "nirpeksh-maan-doori",
+     "learning_objective": "निरपेक्ष मान तथा दो परिमेय संख्याओं के बीच की दूरी |a − b| ज्ञात करना।"
+    },
+    {
+     "concept_tag": "parimey-sankhyaon-ka-ghanatva",
+     "learning_objective": "औसत द्वारा दो परिमेय संख्याओं के बीच परिमेय संख्याएँ ज्ञात करना और घनत्व समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH03-T6",
+   "topic_number": 6,
+   "title": "अपरिमेय संख्याएँ",
+   "ncert_sections": "3.5, 3.5.1, 3.5.2, 3.5.3",
+   "concepts": [
+    {
+     "concept_tag": "virodhabhas-dwara-upapatti",
+     "learning_objective": "विरोधाभास द्वारा उपपत्ति के चरणों से समझना कि √2 अपरिमेय है।"
+    },
+    {
+     "concept_tag": "vargmool-lambaiyon-ki-rachna",
+     "learning_objective": "समकोण त्रिभुजों की सहायता से संख्या रेखा पर √2 और √3 जैसी लंबाइयाँ बनाना।"
+    },
+    {
+     "concept_tag": "pai-aur-madhav-shreni",
+     "learning_objective": "π को अपरिमेय संख्या के रूप में पहचानना और माधव की श्रेणी के आंशिक योग ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH03-T7",
+   "topic_number": 7,
+   "title": "वास्तविक संख्याएँ और दशमलव प्रसार",
+   "ncert_sections": "3.6, 3.6.1, 3.6.2, 3.6.3, 3.7",
+   "concepts": [
+    {
+     "concept_tag": "sant-aur-aavarti-dashmalav",
+     "learning_objective": "हर के अभाज्य गुणनखंडों से अनुमान लगाना कि परिमेय संख्या का दशमलव प्रसार सांत होगा या आवर्ती।"
+    },
+    {
+     "concept_tag": "aavarti-dashmalav-se-bhinn",
+     "learning_objective": "शुद्ध और मिश्रित आवर्ती दशमलवों को p/q के रूप में बदलना।"
+    },
+    {
+     "concept_tag": "aparimey-dashmalav-vastavik-sankhyaen",
+     "learning_objective": "दशमलव प्रसार के आधार पर परिमेय और अपरिमेय संख्याओं में अंतर करना और वास्तविक संख्याओं का वर्णन करना।"
+    }
+   ]
+  }
+ ]
+}

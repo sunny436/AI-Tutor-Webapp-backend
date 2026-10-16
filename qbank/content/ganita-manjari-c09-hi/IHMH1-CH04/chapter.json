@@ -1,0 +1,124 @@
+{
+ "chapter_id": "IHMH1-CH04",
+ "title": "बीजीय सर्वसमिकाओं का अन्वेषण",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHMH1-CH04-T1",
+   "topic_number": 1,
+   "title": "भूमिका और सर्वसमिकाओं का दृश्यांकन",
+   "ncert_sections": "4.1, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "varg-sarvasamika-drishyankan",
+     "learning_objective": "वर्ग और आयतों के क्षेत्रफल से (a + b)² = a² + 2ab + b² को समझना और प्रयोग करना।"
+    },
+    {
+     "concept_tag": "sarvasamika-aur-samikaran",
+     "learning_objective": "सर्वसमिका और समीकरण के अंतर को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH04-T2",
+   "topic_number": 2,
+   "title": "सर्वसमिकाओं का उपयोग करके गुणनखंडन",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "purn-varg-gunankhandan",
+     "learning_objective": "पूर्ण वर्ग व्यंजकों का (a + b)² के रूप में गुणनखंडन करना।"
+    },
+    {
+     "concept_tag": "ghata-varg-sarvasamika",
+     "learning_objective": "(a − b)² = a² − 2ab + b² का प्रयोग संख्याओं के वर्ग और प्रतिरूपों की व्याख्या में करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH04-T3",
+   "topic_number": 3,
+   "title": "कुछ अन्य सर्वसमिकाएँ",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "teen-padon-ka-varg",
+     "learning_objective": "(a + b + c)² की सर्वसमिका से प्रसार और संख्याओं के वर्ग ज्ञात करना।"
+    },
+    {
+     "concept_tag": "shridharacharya-sarvasamika",
+     "learning_objective": "श्रीधराचार्य की सर्वसमिका a² = (a + b)(a − b) + b² से वर्ग ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH04-T4",
+   "topic_number": 4,
+   "title": "बीजीय टाइलों का उपयोग करके गुणनखंडन",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "beejiya-tile-gunanfal",
+     "learning_objective": "बीजीय टाइलों से रैखिक व्यंजकों के गुणनफल को निरूपित करना।"
+    },
+    {
+     "concept_tag": "tile-aayat-vinyas",
+     "learning_objective": "टाइलों को आयत के रूप में सजाकर द्विघात व्यंजक के गुणनखंड ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH04-T5",
+   "topic_number": 5,
+   "title": "बीजीय टाइलों के उपयोग के बिना गुणनखंडन",
+   "ncert_sections": "4.6",
+   "concepts": [
+    {
+     "concept_tag": "madhya-pad-vibhajan",
+     "learning_objective": "a + b और ab की शर्तों से मध्य पद को विभाजित कर गुणनखंडन करना।"
+    },
+    {
+     "concept_tag": "rinatmak-gunank-gunankhandan",
+     "learning_objective": "ऋणात्मक गुणांकों या अचर पदों वाले द्विघात व्यंजकों का गुणनखंडन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH04-T6",
+   "topic_number": 6,
+   "title": "नई सर्वसमिकाएँ ज्ञात करना",
+   "ncert_sections": "4.7",
+   "concepts": [
+    {
+     "concept_tag": "ghan-sarvasamika",
+     "learning_objective": "(a + b)³ और (a − b)³ की सर्वसमिकाओं को समझना और प्रयोग करना।"
+    },
+    {
+     "concept_tag": "ghan-yog-antar",
+     "learning_objective": "x³ − y³ और x³ + y³ के गुणनखंड संबंधी सर्वसमिकाओं को पहचानना।"
+    },
+    {
+     "concept_tag": "teen-ghan-sarvasamika",
+     "learning_objective": "x³ + y³ + z³ − 3xyz वाली सर्वसमिका का समस्याओं में प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH04-T7",
+   "topic_number": 7,
+   "title": "परिमेय व्यंजकों का सरलीकरण",
+   "ncert_sections": "4.8",
+   "concepts": [
+    {
+     "concept_tag": "parimey-vyanjak-saralikaran",
+     "learning_objective": "गुणनखंडन द्वारा अंश और हर के उभयनिष्ठ गुणनखंड हटाकर परिमेय व्यंजक सरल करना।"
+    },
+    {
+     "concept_tag": "gunankhand-se-samasya",
+     "learning_objective": "गुणनखंडन से क्षेत्रफल संबंधी व्यावहारिक समस्याएँ हल करना।"
+    }
+   ]
+  }
+ ]
+}

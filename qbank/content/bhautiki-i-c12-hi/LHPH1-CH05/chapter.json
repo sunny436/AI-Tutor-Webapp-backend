@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LHPH1-CH05",
+ "title": "चुंबकत्व एवं द्रव्य",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHPH1-CH05-T1",
+   "topic_number": 1,
+   "title": "छड़ चुंबक और चुंबकीय क्षेत्र रेखाएँ",
+   "ncert_sections": "5.1, 5.2, 5.2.1, 5.2.2",
+   "concepts": [
+    {
+     "concept_tag": "chumbakiya-kshetra-rekhayen",
+     "learning_objective": "चुंबकीय क्षेत्र रेखाओं के गुण बताना और उनसे क्षेत्र की दिशा व प्रबलता की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "chhad-chumbak-tulya-parinalika",
+     "learning_objective": "छड़ चुंबक को तुल्य धारावाही परिनालिका के रूप में समझना और परिनालिका का चुंबकीय आघूर्ण ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH05-T2",
+   "topic_number": 2,
+   "title": "एकसमान चुंबकीय क्षेत्र में द्विध्रुव",
+   "ncert_sections": "5.2.3",
+   "concepts": [
+    {
+     "concept_tag": "dvidhruv-par-bal-aaghurn",
+     "learning_objective": "एकसमान चुंबकीय क्षेत्र में चुंबकीय द्विध्रुव पर लगने वाले बल-आघूर्ण की गणना करना।"
+    },
+    {
+     "concept_tag": "chumbakiya-sthitij-urja",
+     "learning_objective": "चुंबकीय द्विध्रुव की स्थितिज ऊर्जा तथा स्थायी और अस्थायी संतुलन की स्थितियाँ समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH05-T3",
+   "topic_number": 3,
+   "title": "स्थिरवैद्युत अनुरूपता",
+   "ncert_sections": "5.2.4",
+   "concepts": [
+    {
+     "concept_tag": "sthirvaidyut-anurupata",
+     "learning_objective": "विद्युत द्विध्रुव से अनुरूपता द्वारा छड़ चुंबक के अक्षीय और विषुवतीय क्षेत्र ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH05-T4",
+   "topic_number": 4,
+   "title": "चुंबकत्व और गाउस का नियम",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "gauss-niyam-chumbakatva",
+     "learning_objective": "किसी बंद पृष्ठ से नेट चुंबकीय फ्लक्स शून्य होने के नियम को समझना और लागू करना।"
+    },
+    {
+     "concept_tag": "ekal-dhruv-anupasthiti",
+     "learning_objective": "पृथक्कृत चुंबकीय ध्रुवों की अनुपस्थिति और गाउस नियम से उसके संबंध की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH05-T5",
+   "topic_number": 5,
+   "title": "चुंबकन और चुंबकीय तीव्रता",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "chumbakan-aur-tivrata",
+     "learning_objective": "चुंबकन, चुंबकीय तीव्रता और कुल चुंबकीय क्षेत्र के संबंधों को लागू करना।"
+    },
+    {
+     "concept_tag": "pravrittita-aur-permeabilita",
+     "learning_objective": "चुंबकीय प्रवृत्ति, आपेक्षिक चुंबकशीलता और चुंबकशीलता के अंतर्संबंध का उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH05-T6",
+   "topic_number": 6,
+   "title": "पदार्थों के चुंबकीय गुण",
+   "ncert_sections": "5.5, 5.5.1, 5.5.2, 5.5.3",
+   "concepts": [
+    {
+     "concept_tag": "pratichumbakatva",
+     "learning_objective": "प्रतिचुंबकीय पदार्थों और अतिचालकों के व्यवहार को पहचानना।"
+    },
+    {
+     "concept_tag": "anuchumbakatva",
+     "learning_objective": "अनुचुंबकीय पदार्थों का बाह्य चुंबकीय क्षेत्र में व्यवहार समझाना।"
+    },
+    {
+     "concept_tag": "lauhchumbakatva",
+     "learning_objective": "लौहचुंबकीय पदार्थों के डोमेन तथा कठोर और नर्म लौहचुंबकों के गुणों का विश्लेषण करना।"
+    }
+   ]
+  }
+ ]
+}

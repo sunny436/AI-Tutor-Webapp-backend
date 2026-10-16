@@ -1,0 +1,344 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "vitan-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "hindi",
+  "language": "hindi",
+  "title": "Vitan",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhvt1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHVT1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "सिल्वर वैडिंग",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhvt101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHVT1-CH01-T1",
+     "topic_number": 1,
+     "title": "दफ़्तर का दृश्य और सिल्वर वैडिंग की सूचना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "daftar-ka-drishya",
+       "learning_objective": "विद्यार्थी दफ़्तर में यशोधर बाबू के पद, व्यवहार और चड्ढा के साथ हुई बातचीत को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "silver-wedding-suchna",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि दफ़्तर में सिल्वर वैडिंग की बात कैसे उठी और यशोधर बाबू ने उस पर क्या प्रतिक्रिया दी।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH01-T2",
+     "topic_number": 2,
+     "title": "किशनदा: यशोधर बाबू के आदर्श",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kishanda-margdarshan",
+       "learning_objective": "विद्यार्थी जान सकेंगे कि किशनदा ने यशोधर बाबू को आश्रय, नौकरी और मार्गदर्शन कैसे दिया।"
+      },
+      {
+       "concept_tag": "jo-hua-hoga",
+       "learning_objective": "विद्यार्थी किशनदा के अकेले बुढ़ापे और 'जो हुआ होगा' वाक्य के अर्थ-संकेत समझ सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH01-T3",
+     "topic_number": 3,
+     "title": "घर-परिवार और पीढ़ियों का अंतराल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "peedhi-antaral",
+       "learning_objective": "विद्यार्थी यशोधर बाबू और उनके बच्चों के बीच के मतभेदों का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "patni-ka-badlav",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि यशोधर बाबू की पत्नी समय के साथ क्यों और कैसे बदल गई।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH01-T4",
+     "topic_number": 4,
+     "title": "सिल्वर वैडिंग की पार्टी और ड्रेसिंग गाउन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "party-prasang",
+       "learning_objective": "विद्यार्थी घर पर हुई पार्टी में यशोधर बाबू के आचरण और उसके कारणों को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "dressing-gown-pratik",
+       "learning_objective": "विद्यार्थी कहानी के अंत में ड्रेसिंग गाउन के प्रसंग का प्रतीकात्मक अर्थ स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH01-T5",
+     "topic_number": 5,
+     "title": "लेखक, भाषा-शैली और चरित्र-चित्रण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lekhak-aur-bhasha",
+       "learning_objective": "विद्यार्थी लेखक को पहचान सकेंगे और कहानी की भाषा में बोलियों और अंग्रेज़ी शब्दों के प्रयोग को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "samhau-improper",
+       "learning_objective": "विद्यार्थी 'समहाउ इंप्रॉपर' जैसे तकिया-कलाम से प्रकट यशोधर बाबू की मनःस्थिति समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "yashodhar-charitra",
+       "learning_objective": "विद्यार्थी यशोधर बाबू के चरित्र और कहानी की मूल संवेदना का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHVT1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "जूझ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhvt102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHVT1-CH02-T1",
+     "topic_number": 1,
+     "title": "पढ़ने की ललक और दादा की खेती-संबंधी सोच",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "padhne-ki-lalak",
+       "learning_objective": "पाठशाला जाने के लिए लेखक की तड़प और पढ़ाई से जुड़ी उसकी आकांक्षाओं को समझना।"
+      },
+      {
+       "concept_tag": "dada-ki-kheti-soch",
+       "learning_objective": "कोल्हू जल्दी चलाने के पीछे दादा की सोच और अन्य किसानों के मत की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH02-T2",
+     "topic_number": 2,
+     "title": "माँ की सहायता और दत्ता जी राव का हस्तक्षेप",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "maan-ki-bhumika",
+       "learning_objective": "लेखक की पढ़ाई के लिए माँ की भूमिका और उसकी विवशता को समझना।"
+      },
+      {
+       "concept_tag": "datta-ji-rao-ka-hastakshep",
+       "learning_objective": "दत्ता जी राव देसाई द्वारा दादा को समझाने की घटना का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH02-T3",
+     "topic_number": 3,
+     "title": "दादा की शर्तें और पाठशाला में वापसी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dada-ki-sharten",
+       "learning_objective": "पाठशाला भेजने के लिए दादा द्वारा रखी गई शर्तों और लेखक की मनःस्थिति को समझना।"
+      },
+      {
+       "concept_tag": "pathshala-mein-ajnabipan",
+       "learning_objective": "पाँचवीं कक्षा में दोबारा बैठने पर लेखक के अजनबीपन और अपमान के अनुभव की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH02-T4",
+     "topic_number": 4,
+     "title": "मंत्री मास्टर, वसंत पाटील और बढ़ता आत्मविश्वास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mantri-master",
+       "learning_objective": "मंत्री मास्टर के अनुशासन और पढ़ाने के ढंग के प्रभाव को समझना।"
+      },
+      {
+       "concept_tag": "vasant-patil-aur-atmavishwas",
+       "learning_objective": "वसंत पाटील से होड़ और दोस्ती के कारण लेखक में आए परिवर्तन का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH02-T5",
+     "topic_number": 5,
+     "title": "सौंदलगेकर मास्टर और कविता के प्रति लगाव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "saundalgekar-ki-adhyapan-shaili",
+       "learning_objective": "सौंदलगेकर मास्टर की अध्यापन-शैली की उन विशेषताओं को पहचानना जिनसे लेखक में कविता के प्रति रुचि जगी।"
+      },
+      {
+       "concept_tag": "akelepan-mein-badlav",
+       "learning_objective": "कविता से लगाव से पहले और बाद में अकेलेपन के प्रति लेखक की धारणा की तुलना करना।"
+      },
+      {
+       "concept_tag": "kavita-rachna-ka-atmavishwas",
+       "learning_objective": "स्वयं कविता रचने का आत्मविश्वास लेखक में कैसे पैदा हुआ, यह समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH02-T6",
+     "topic_number": 6,
+     "title": "शीर्षक, भाषा और शब्द-संपदा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shirshak-ka-auchitya",
+       "learning_objective": "'जूझ' शीर्षक के औचित्य और कथानायक की संघर्षशीलता का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "bhasha-aur-shabd-arth",
+       "learning_objective": "पाठ में आए शब्दों, मुहावरों और कथनों का प्रसंगानुसार अर्थ स्पष्ट करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHVT1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "अतीत में दबे पाँव",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhvt103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHVT1-CH03-T1",
+     "topic_number": 1,
+     "title": "मुअनजो-दड़ो का परिचय और उसकी खोज",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "muanjodado-parichay",
+       "learning_objective": "मुअनजो-दड़ो की स्थिति, आकार, आबादी और नाम का अर्थ बताना।"
+      },
+      {
+       "concept_tag": "khoj-aur-stoop",
+       "learning_objective": "बौद्ध स्तूप, राखालदास बनर्जी और जॉन मार्शल के माध्यम से इस खोज का महत्त्व समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH03-T2",
+     "topic_number": 2,
+     "title": "खंडहरों को देखने का अनुभव और लेखक की दृष्टि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dekhne-ka-anubhav",
+       "learning_objective": "अधूरी सीढ़ियों और खंडहरों के माध्यम से लेखक के इतिहास-बोध को समझना।"
+      },
+      {
+       "concept_tag": "sindh-rajasthan-tulna",
+       "learning_objective": "सिंध और राजस्थान के परिवेश, धूप तथा कुलधरा गाँव की तुलना का आशय समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH03-T3",
+     "topic_number": 3,
+     "title": "गढ़, महाकुंड और कोठार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gadh-aur-mahakund",
+       "learning_objective": "गढ़ और महाकुंड की बनावट तथा उसकी विशेषताओं का वर्णन करना।"
+      },
+      {
+       "concept_tag": "kothar-aur-imarten",
+       "learning_objective": "कोठार और गढ़ की अन्य इमारतों के संभावित उपयोग को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH03-T4",
+     "topic_number": 4,
+     "title": "नगर-नियोजन, बस्तियाँ और जल-प्रबंध",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nagar-niyojan",
+       "learning_objective": "ग्रिड योजना, मुख्य सड़क और घरों की बनावट से नगर-नियोजन की विशेषताएँ समझना।"
+      },
+      {
+       "concept_tag": "jal-sanskriti",
+       "learning_objective": "कुओं, ढकी नालियों और स्नानघरों के आधार पर जल-प्रबंध का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "halke-aur-avshesh",
+       "learning_objective": "डीके, एचआर और वीएस हलकों से मिले प्रमुख अवशेषों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH03-T5",
+     "topic_number": 5,
+     "title": "खेती, व्यापार और शिल्प-कौशल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kheti-vyapar",
+       "learning_objective": "सिंधु घाटी की फ़सलों, कपास और व्यापार-संबंधों के प्रमाण बताना।"
+      },
+      {
+       "concept_tag": "shilp-kaushal",
+       "learning_objective": "सुइयों, कशीदाकारी और रंगाई से जुड़े शिल्प-कौशल को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHVT1-CH03-T6",
+     "topic_number": 6,
+     "title": "अजायबघर, अनुशासन और लघुता में महत्ता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ajayabghar",
+       "learning_objective": "अजायबघर में प्रदर्शित वस्तुओं और हथियारों के अभाव का अर्थ समझना।"
+      },
+      {
+       "concept_tag": "anushasan-saundaryabodh",
+       "learning_objective": "समाज-पोषित सौंदर्य-बोध और आडंबरहीन अनुशासन का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

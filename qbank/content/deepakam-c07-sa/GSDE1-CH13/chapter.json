@@ -1,0 +1,116 @@
+{
+ "chapter_id": "GSDE1-CH13",
+ "title": "वर्णमात्रा-परिचयः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GSDE1-CH13-T1",
+   "topic_number": 1,
+   "title": "स्वराणां त्रिविधाः मात्राः – ह्रस्वः, दीर्घः, प्लुतः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "hrasva-dirgha-pluta-svarah",
+     "learning_objective": "छात्रः स्वराणां ह्रस्व-दीर्घ-प्लुत-भेदान् तेषां मात्राः च अभिज्ञास्यति।"
+    },
+    {
+     "concept_tag": "dvavimshatih-svarah",
+     "learning_objective": "छात्रः समानाक्षर-सन्ध्यक्षर-भेदेन संस्कृतस्य द्वाविंशतिः स्वरान् गणयिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH13-T2",
+   "topic_number": 2,
+   "title": "प्लुत-स्वराणां प्रयोगः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "pluta-prayogah-ahvane",
+     "learning_objective": "छात्रः दूरात् आह्वाने प्लुतस्वरस्य प्रयोगं ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "pluta-prayogah-omkare",
+     "learning_objective": "छात्रः वेदमन्त्राणां प्रारम्भे ओ३म् इति प्लुतोच्चारणं ज्ञास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH13-T3",
+   "topic_number": 3,
+   "title": "व्यञ्जनानाम् अर्धमात्रा, चतुर्विधाः मात्राः च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vyanjanam-ardhamatrikam",
+     "learning_objective": "छात्रः व्यञ्जनानाम् अयोगवाहयोः च अर्धमात्रां ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "chaturvidhah-matrah",
+     "learning_objective": "छात्रः संस्कृतवर्णानां चतुर्विधाः मात्राः वर्णयिष्यति।"
+    },
+    {
+     "concept_tag": "yajnavalkya-shiksha-shlokah",
+     "learning_objective": "छात्रः याज्ञवल्क्य-शिक्षायाः मात्राविषयकं श्लोकम् अवगमिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH13-T4",
+   "topic_number": 4,
+   "title": "प्रकृतौ ध्वनिषु मात्राः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "kukkuta-dhvanih",
+     "learning_objective": "छात्रः कुक्कुटध्वनौ ह्रस्व-दीर्घ-प्लुत-मात्राः अभिज्ञास्यति।"
+    },
+    {
+     "concept_tag": "paniniya-shiksha-shlokah",
+     "learning_objective": "छात्रः पाणिनीय-शिक्षायाः श्लोकानुसारं पशुपक्षिणां ध्वनिमात्राः ज्ञास्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH13-T5",
+   "topic_number": 5,
+   "title": "मात्रा-गणना-क्रीडा",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "matra-ganana-sarala",
+     "learning_objective": "छात्रः सरलशब्दानां वर्णविच्छेदं कृत्वा मात्राः गणयिष्यति।"
+    },
+    {
+     "concept_tag": "matra-ganana-samyukta",
+     "learning_objective": "छात्रः संयुक्तव्यञ्जनयुक्तानां शब्दानां मात्राः गणयिष्यति।"
+    },
+    {
+     "concept_tag": "matra-ganana-pluta-anunasika",
+     "learning_objective": "छात्रः प्लुतस्वरयुक्तानां शब्दानां मात्राः गणयिष्यति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH13-T6",
+   "topic_number": 6,
+   "title": "मात्राणां महत्त्वं विशेषचिह्नानि च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "matranam-mahattvam",
+     "learning_objective": "छात्रः उच्चारणे श्लोकरचनायां च मात्राणां महत्त्वं ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "omkara-chihnam",
+     "learning_objective": "छात्रः ॐ इति पवित्रचिह्नस्य प्रयोगं ज्ञास्यति।"
+    },
+    {
+     "concept_tag": "avagrahah",
+     "learning_objective": "छात्रः अवग्रहचिह्नस्य (ऽ) प्रयोगं तस्य उच्चारणाभावं च ज्ञास्यति।"
+    }
+   ]
+  }
+ ]
+}

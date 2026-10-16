@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KHMH1-CH08",
+ "title": "अनुक्रम तथा श्रेणी",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH08-T1",
+   "topic_number": 1,
+   "title": "अनुक्रम: परिभाषा, व्यापक पद और पुनरावृत्ति संबंध",
+   "ncert_sections": "8.1, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "anukram-paribhasha",
+     "learning_objective": "अनुक्रम को प्राकृत संख्याओं पर परिभाषित फलन के रूप में समझना तथा परिमित और अनंत अनुक्रम में भेद करना।"
+    },
+    {
+     "concept_tag": "anukram-vyapak-pad",
+     "learning_objective": "दिए गए व्यापक पद aₙ से अनुक्रम के पद ज्ञात करना।"
+    },
+    {
+     "concept_tag": "punaravritti-sambandh",
+     "learning_objective": "पुनरावृत्ति संबंध (जैसे फिबोनाकी अनुक्रम) से अनुक्रम के पद प्राप्त करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH08-T2",
+   "topic_number": 2,
+   "title": "श्रेणी और सिग्मा संकेतन",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "shreni-paribhasha",
+     "learning_objective": "अनुक्रम से संबद्ध श्रेणी को पहचानना तथा परिमित और अनंत श्रेणी में भेद करना।"
+    },
+    {
+     "concept_tag": "sigma-sanketan",
+     "learning_objective": "सिग्मा संकेतन ∑ में लिखी श्रेणी का विस्तार करके उसका योग ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH08-T3",
+   "topic_number": 3,
+   "title": "गुणोत्तर श्रेढ़ी और उसका व्यापक पद",
+   "ncert_sections": "8.4, 8.4.1",
+   "concepts": [
+    {
+     "concept_tag": "gunottar-shredhi-paribhasha",
+     "learning_objective": "सार्व अनुपात के आधार पर गुणोत्तर श्रेढ़ी को पहचानना।"
+    },
+    {
+     "concept_tag": "gunottar-vyapak-pad",
+     "learning_objective": "सूत्र aₙ = arⁿ⁻¹ से गुणोत्तर श्रेढ़ी का कोई पद ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH08-T4",
+   "topic_number": 4,
+   "title": "गुणोत्तर श्रेढ़ी के n पदों का योग",
+   "ncert_sections": "8.4.2",
+   "concepts": [
+    {
+     "concept_tag": "gunottar-yog-sutra",
+     "learning_objective": "गुणोत्तर श्रेढ़ी के प्रथम n पदों के योग का सूत्र बताना।"
+    },
+    {
+     "concept_tag": "gunottar-yog-anuprayog",
+     "learning_objective": "योग सूत्र का प्रयोग करके योग या पदों की संख्या ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH08-T5",
+   "topic_number": 5,
+   "title": "गुणोत्तर माध्य",
+   "ncert_sections": "8.4.3",
+   "concepts": [
+    {
+     "concept_tag": "gunottar-madhya",
+     "learning_objective": "दो धनात्मक संख्याओं का गुणोत्तर माध्य ज्ञात करना।"
+    },
+    {
+     "concept_tag": "madhya-sthapan",
+     "learning_objective": "दो संख्याओं के बीच संख्याएँ रखकर गुणोत्तर श्रेढ़ी बनाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH08-T6",
+   "topic_number": 6,
+   "title": "समांतर माध्य और गुणोत्तर माध्य में संबंध",
+   "ncert_sections": "8.5",
+   "concepts": [
+    {
+     "concept_tag": "am-gm-sambandh",
+     "learning_objective": "समांतर माध्य A और गुणोत्तर माध्य G के बीच संबंध A ≥ G को सिद्ध करना और समझना।"
+    },
+    {
+     "concept_tag": "am-gm-anuprayog",
+     "learning_objective": "A और G के मान से संख्याएँ ज्ञात करना तथा A ≥ G का अनुप्रयोग करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "chapter_id": "LHCH2-CH01",
+ "title": "हैलोऐल्केन तथा हैलोऐरीन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHCH2-CH01-T1",
+   "topic_number": 1,
+   "title": "वर्गीकरण एवं नामपद्धति",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "vargikaran",
+     "learning_objective": "विद्यार्थी हैलोजन से जुड़े कार्बन की प्रकृति के आधार पर हैलोऐल्केनों और हैलोऐरीनों का वर्गीकरण कर सकेंगे।"
+    },
+    {
+     "concept_tag": "namapaddhati",
+     "learning_objective": "विद्यार्थी हैलोजन यौगिकों के सामान्य एवं आईयूपीएसी नाम लिख सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH01-T2",
+   "topic_number": 2,
+   "title": "कार्बन-हैलोजन आबंध की प्रकृति एवं भौतिक गुण",
+   "ncert_sections": "6.3, 6.6",
+   "concepts": [
+    {
+     "concept_tag": "c-x-abandh-prakriti",
+     "learning_objective": "विद्यार्थी कार्बन-हैलोजन आबंध की ध्रुवता और आबंध लंबाई की प्रवृत्ति समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "bhautik-gun",
+     "learning_objective": "विद्यार्थी हैलोजन यौगिकों के क्वथनांक, गलनांक, घनत्व और विलेयता की तुलना कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH01-T3",
+   "topic_number": 3,
+   "title": "हैलोऐल्केनों एवं हैलोऐरीनों का विरचन",
+   "ncert_sections": "6.4, 6.5",
+   "concepts": [
+    {
+     "concept_tag": "alcohol-se-virachan",
+     "learning_objective": "विद्यार्थी ऐल्कोहॉलों और हाइड्रोकार्बनों से हैलोऐल्केन बनाने की विधियाँ बता सकेंगे।"
+    },
+    {
+     "concept_tag": "halogen-vinimay",
+     "learning_objective": "विद्यार्थी फिंकेल्स्टाइन और स्वार्ट्स अभिक्रियाओं द्वारा हैलोजन विनिमय समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "haloarene-virachan",
+     "learning_objective": "विद्यार्थी इलेक्ट्रॉनरागी प्रतिस्थापन और सैन्डमेयर अभिक्रिया द्वारा हैलोऐरीन बनाना समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH01-T4",
+   "topic_number": 4,
+   "title": "हैलोऐल्केनों की नाभिकरागी प्रतिस्थापन अभिक्रियाएँ",
+   "ncert_sections": "6.7.1",
+   "concepts": [
+    {
+     "concept_tag": "sn2-kriyavidhi",
+     "learning_objective": "विद्यार्थी द्वि-अणुक नाभिकरागी प्रतिस्थापन की क्रियाविधि और क्रियाशीलता क्रम समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "sn1-kriyavidhi",
+     "learning_objective": "विद्यार्थी एकाणुक नाभिकरागी प्रतिस्थापन में कार्बधनायन की भूमिका बता सकेंगे।"
+    },
+    {
+     "concept_tag": "trivim-rasayan",
+     "learning_objective": "विद्यार्थी प्रतिस्थापन अभिक्रियाओं में विन्यास के प्रतिलोमन और रेसिमीकरण का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH01-T5",
+   "topic_number": 5,
+   "title": "विलोपन अभिक्रियाएँ एवं धातुओं से अभिक्रिया",
+   "ncert_sections": "6.7.1",
+   "concepts": [
+    {
+     "concept_tag": "vilopan",
+     "learning_objective": "विद्यार्थी विहाइड्रोहैलोजनन और ज़ाइटसेफ नियम का प्रयोग कर मुख्य ऐल्कीन ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "dhatu-abhikriya",
+     "learning_objective": "विद्यार्थी ग्रिन्यार अभिकर्मक तथा वुर्ट्ज़ अभिक्रिया के उत्पाद बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH01-T6",
+   "topic_number": 6,
+   "title": "हैलोऐरीनों की अभिक्रियाएँ",
+   "ncert_sections": "6.7.2",
+   "concepts": [
+    {
+     "concept_tag": "haloarene-nabhikragi",
+     "learning_objective": "विद्यार्थी हैलोऐरीनों की नाभिकरागी प्रतिस्थापन के प्रति कम क्रियाशीलता के कारण समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "haloarene-electronragi",
+     "learning_objective": "विद्यार्थी हैलोऐरीनों में इलेक्ट्रॉनरागी प्रतिस्थापन के उत्पाद और निर्देशन प्रभाव बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH01-T7",
+   "topic_number": 7,
+   "title": "पॉलिहैलोजन यौगिक",
+   "ncert_sections": "6.8",
+   "concepts": [
+    {
+     "concept_tag": "chloroform-iodoform",
+     "learning_objective": "विद्यार्थी क्लोरोफॉर्म, आयोडोफॉर्म और कार्बन टेट्राक्लोराइड के उपयोग एवं सावधानियाँ बता सकेंगे।"
+    },
+    {
+     "concept_tag": "freon-ddt",
+     "learning_objective": "विद्यार्थी फ्रेऑन और डीडीटी के उपयोग तथा पर्यावरणीय प्रभाव का मूल्यांकन कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

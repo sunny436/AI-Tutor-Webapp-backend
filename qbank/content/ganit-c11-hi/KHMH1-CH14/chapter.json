@@ -1,0 +1,100 @@
+{
+ "chapter_id": "KHMH1-CH14",
+ "title": "प्रायिकता",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH14-T1",
+   "topic_number": 1,
+   "title": "घटना, घटना का घटित होना और घटनाओं के प्रकार",
+   "ncert_sections": "14.1, 14.1.1, 14.1.2",
+   "concepts": [
+    {
+     "concept_tag": "ghatna-ki-paribhasha",
+     "learning_objective": "विद्यार्थी प्रतिदर्श समष्टि के उपसमुच्चय के रूप में घटना को लिख सकेंगे और बता सकेंगे कि घटना कब घटित हुई।"
+    },
+    {
+     "concept_tag": "asambhav-nishchit-ghatna",
+     "learning_objective": "विद्यार्थी असंभव घटना और निश्चित घटना को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "saral-mishra-ghatna",
+     "learning_objective": "विद्यार्थी सरल घटना और मिश्र घटना में अंतर कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH14-T2",
+   "topic_number": 2,
+   "title": "घटनाओं का बीजगणित",
+   "ncert_sections": "14.1.3",
+   "concepts": [
+    {
+     "concept_tag": "purak-ghatna",
+     "learning_objective": "विद्यार्थी किसी घटना की पूरक घटना ('A-नहीं') ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "ya-tatha-ghatna",
+     "learning_objective": "विद्यार्थी 'A या B' तथा 'A और B' घटनाओं को सम्मिलन और सर्वनिष्ठ के रूप में लिख सकेंगे।"
+    },
+    {
+     "concept_tag": "a-parantu-b-nahin",
+     "learning_objective": "विद्यार्थी 'A परंतु B नहीं' घटना को A − B के रूप में ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH14-T3",
+   "topic_number": 3,
+   "title": "परस्पर अपवर्जी और निःशेष घटनाएँ",
+   "ncert_sections": "14.1.4, 14.1.5",
+   "concepts": [
+    {
+     "concept_tag": "paraspar-apvarji-ghatna",
+     "learning_objective": "विद्यार्थी जाँच सकेंगे कि दी गई घटनाएँ परस्पर अपवर्जी हैं या नहीं।"
+    },
+    {
+     "concept_tag": "nihshesh-ghatna",
+     "learning_objective": "विद्यार्थी जाँच सकेंगे कि दी गई घटनाएँ निःशेष हैं या नहीं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH14-T4",
+   "topic_number": 4,
+   "title": "प्रायिकता का अभिगृहीतीय दृष्टिकोण",
+   "ncert_sections": "14.2, 14.2.1, 14.2.2",
+   "concepts": [
+    {
+     "concept_tag": "abhigrihit-drishtikon",
+     "learning_objective": "विद्यार्थी प्रायिकता के अभिगृहीतों से जाँच सकेंगे कि कोई प्रायिकता निर्धारण मान्य है या नहीं।"
+    },
+    {
+     "concept_tag": "ghatna-ki-prayikta",
+     "learning_objective": "विद्यार्थी किसी घटना की प्रायिकता उसके प्रतिदर्श बिंदुओं की प्रायिकताओं के योग से ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "samsambhavi-parinam",
+     "learning_objective": "विद्यार्थी समसंभावी परिणामों वाले प्रयोग में P(E) = n(E)/n(S) का प्रयोग कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH14-T5",
+   "topic_number": 5,
+   "title": "'A या B' तथा 'A-नहीं' घटना की प्रायिकता",
+   "ncert_sections": "14.2.3, 14.2.4",
+   "concepts": [
+    {
+     "concept_tag": "ya-ghatna-ki-prayikta",
+     "learning_objective": "विद्यार्थी सूत्र P(A ∪ B) = P(A) + P(B) − P(A ∩ B) का प्रयोग कर सकेंगे।"
+    },
+    {
+     "concept_tag": "nahin-ghatna-ki-prayikta",
+     "learning_objective": "विद्यार्थी P(A′) = 1 − P(A) का प्रयोग करके पूरक घटना की प्रायिकता ज्ञात कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

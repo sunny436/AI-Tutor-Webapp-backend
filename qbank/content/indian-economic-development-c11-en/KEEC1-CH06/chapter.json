@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KEEC1-CH06",
+ "title": "Employment: Growth, Informalisation and Other Issues",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEEC1-CH06-T1",
+   "topic_number": 1,
+   "title": "Workers, Economic Activity and Employment",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "economic-activity-gnp",
+     "learning_objective": "Explain economic activities as those activities that contribute to the gross national product."
+    },
+    {
+     "concept_tag": "definition-of-worker",
+     "learning_objective": "Identify who counts as a worker, including the self-employed, helpers and those temporarily absent from work."
+    },
+    {
+     "concept_tag": "unpaid-work-of-women",
+     "learning_objective": "Evaluate why unpaid household and farm work of women leads to under-estimation of women workers."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEEC1-CH06-T2",
+   "topic_number": 2,
+   "title": "Participation of People in Employment",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "worker-population-ratio",
+     "learning_objective": "Define and calculate the worker-population ratio."
+    },
+    {
+     "concept_tag": "rural-urban-gender-participation",
+     "learning_objective": "Interpret differences in worker-population ratio between rural and urban areas and between men and women."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEEC1-CH06-T3",
+   "topic_number": 3,
+   "title": "Self-employed and Hired Workers",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "status-of-workers",
+     "learning_objective": "Distinguish self-employed workers, casual wage labourers and regular salaried employees."
+    },
+    {
+     "concept_tag": "employment-status-distribution",
+     "learning_objective": "Interpret the distribution of workers by status across gender and region."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEEC1-CH06-T4",
+   "topic_number": 4,
+   "title": "Employment in Firms, Factories and Offices",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "sectors-of-economy",
+     "learning_objective": "Classify the eight industrial divisions into the primary, secondary and service sectors."
+    },
+    {
+     "concept_tag": "sectoral-distribution-of-workforce",
+     "learning_objective": "Interpret the distribution of the workforce across sectors by region and sex."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEEC1-CH06-T5",
+   "topic_number": 5,
+   "title": "Growth and Changing Structure of Employment",
+   "ncert_sections": "6.6",
+   "concepts": [
+    {
+     "concept_tag": "jobless-growth",
+     "learning_objective": "Explain jobless growth as a widening gap between GDP growth and employment growth."
+    },
+    {
+     "concept_tag": "structural-shift-of-workforce",
+     "learning_objective": "Analyse the shift of the workforce from farm to non-farm work over five decades."
+    },
+    {
+     "concept_tag": "casualisation",
+     "learning_objective": "Explain casualisation of the workforce and why it makes workers vulnerable."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEEC1-CH06-T6",
+   "topic_number": 6,
+   "title": "Informalisation of Indian Workforce",
+   "ncert_sections": "6.7",
+   "concepts": [
+    {
+     "concept_tag": "formal-informal-sector",
+     "learning_objective": "Classify establishments and workers into the formal and informal sectors."
+    },
+    {
+     "concept_tag": "features-of-informal-sector",
+     "learning_objective": "Describe the conditions of informal sector workers and the effects of informalisation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEEC1-CH06-T7",
+   "topic_number": 7,
+   "title": "Unemployment and Government Employment Generation",
+   "ncert_sections": "6.8, 6.9, 6.10",
+   "concepts": [
+    {
+     "concept_tag": "types-of-unemployment",
+     "learning_objective": "Distinguish open, disguised and seasonal unemployment."
+    },
+    {
+     "concept_tag": "measuring-unemployment",
+     "learning_objective": "Identify how unemployment is defined and the sources of unemployment data in India."
+    },
+    {
+     "concept_tag": "government-employment-generation",
+     "learning_objective": "Distinguish direct and indirect employment generation by the government, including MGNREGA."
+    }
+   ]
+  }
+ ]
+}

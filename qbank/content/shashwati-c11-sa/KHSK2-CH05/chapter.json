@@ -1,0 +1,92 @@
+{
+ "chapter_id": "KHSK2-CH05",
+ "title": "आहारविचारः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHSK2-CH05-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः उष्णाशनं च",
+   "ncert_sections": "पाठपरिचयः, उष्णमश्नीयात्",
+   "concepts": [
+    {
+     "concept_tag": "path-srota-charakasamhita",
+     "learning_objective": "छात्रः पाठस्य स्रोतं चरकसंहितायाः विमानस्थानस्य रसविमानाध्यायं तस्य विषयं च अभिजानाति।"
+    },
+    {
+     "concept_tag": "ushna-ahara",
+     "learning_objective": "छात्रः उष्णभोजनस्य गुणान् जठराग्नेः उदीरणं वातानुलोमनं श्लेष्मह्रासं च व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH05-T2",
+   "topic_number": 2,
+   "title": "स्निग्धं मात्रावत् च भोजनम्",
+   "ncert_sections": "स्निग्धमश्नीयात्, मात्रावदश्नीयात्",
+   "concepts": [
+    {
+     "concept_tag": "snigdha-ahara",
+     "learning_objective": "छात्रः स्निग्धभोजनस्य शरीरोपचय-इन्द्रियदार्ढ्य-बलवर्णप्रसादरूपान् गुणान् वर्णयति।"
+    },
+    {
+     "concept_tag": "matravat-ahara",
+     "learning_objective": "छात्रः उचितमात्रया भुक्तस्य आहारस्य आयुर्वर्धनं सुखपरिपाकं च व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH05-T3",
+   "topic_number": 3,
+   "title": "जीर्णेऽशनं वीर्याविरुद्धं च भोजनम्",
+   "ncert_sections": "जीर्णेऽश्नीयात्, वीर्याविरुद्धमश्नीयात्",
+   "concepts": [
+    {
+     "concept_tag": "jirne-ashana",
+     "learning_objective": "छात्रः अजीर्णे भोजनस्य दोषान् जीर्णस्य आहारस्य लक्षणानि च विश्लेषयति।"
+    },
+    {
+     "concept_tag": "viryaviruddha-ahara",
+     "learning_objective": "छात्रः विरुद्धवीर्याहारेण जायमानान् विकारान् अविरुद्धवीर्यभोजनस्य महत्त्वं च अवगच्छति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH05-T4",
+   "topic_number": 4,
+   "title": "भोजनस्य देशः वेगः मनश्च",
+   "ncert_sections": "इष्टे देशे, नातिद्रुतं, नातिविलम्बितम्, अजल्पन्नहसन्",
+   "concepts": [
+    {
+     "concept_tag": "ishta-desha-upakarana",
+     "learning_objective": "छात्रः इष्टे देशे इष्टोपकरणैः सह भोजनेन मनोविघातस्य निवारणं व्याख्याति।"
+    },
+    {
+     "concept_tag": "natidruta-nativilambita",
+     "learning_objective": "छात्रः अतिद्रुतस्य अतिविलम्बितस्य च भोजनस्य दोषान् तुलयति।"
+    },
+    {
+     "concept_tag": "ajalpan-ahasan-tanmana",
+     "learning_objective": "छात्रः अजल्पन् अहसन् तन्मनाः भूत्वा भोजनस्य कारणं निर्दिशति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH05-T5",
+   "topic_number": 5,
+   "title": "शब्दार्थाः व्याकरणं च",
+   "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः",
+   "concepts": [
+    {
+     "concept_tag": "prakriti-pratyaya",
+     "learning_objective": "छात्रः पाठगतपदेषु प्रकृतिं प्रत्ययं लकारं च अभिजानाति।"
+    },
+    {
+     "concept_tag": "sandhi-viloma-vibhakti",
+     "learning_objective": "छात्रः पाठगतपदानां सन्धिच्छेदं विलोमशब्दान् च निर्धारयति।"
+    }
+   ]
+  }
+ ]
+}

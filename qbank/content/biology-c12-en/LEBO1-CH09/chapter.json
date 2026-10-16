@@ -1,0 +1,136 @@
+{
+ "chapter_id": "LEBO1-CH09",
+ "title": "Biotechnology : Principles and Processes",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBO1-CH09-T1",
+   "topic_number": 1,
+   "title": "Principles of biotechnology and the first recombinant DNA",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "genetic-and-bioprocess-engineering",
+     "learning_objective": "Describe genetic engineering and bioprocess engineering as the two core techniques of modern biotechnology."
+    },
+    {
+     "concept_tag": "origin-of-replication-and-cloning",
+     "learning_objective": "Explain why an alien piece of DNA must be linked to an origin of replication to multiply in a host."
+    },
+    {
+     "concept_tag": "first-recombinant-dna",
+     "learning_objective": "Describe how Cohen and Boyer constructed and cloned the first recombinant DNA."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH09-T2",
+   "topic_number": 2,
+   "title": "Restriction enzymes",
+   "ncert_sections": "9.2.1",
+   "concepts": [
+    {
+     "concept_tag": "restriction-enzyme-naming-and-types",
+     "learning_objective": "Explain the naming convention of restriction enzymes and distinguish endonucleases from exonucleases."
+    },
+    {
+     "concept_tag": "palindromes-and-sticky-ends",
+     "learning_objective": "Explain how restriction enzymes recognise palindromic sequences and produce sticky ends."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH09-T3",
+   "topic_number": 3,
+   "title": "Separation and isolation of DNA fragments by gel electrophoresis",
+   "ncert_sections": "9.2.1, 9.3.2",
+   "concepts": [
+    {
+     "concept_tag": "gel-electrophoresis-principle",
+     "learning_objective": "Explain how agarose gel electrophoresis separates DNA fragments according to size."
+    },
+    {
+     "concept_tag": "visualisation-and-elution",
+     "learning_objective": "Describe how separated DNA bands are visualised and recovered from the gel."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH09-T4",
+   "topic_number": 4,
+   "title": "Cloning vectors",
+   "ncert_sections": "9.2.2",
+   "concepts": [
+    {
+     "concept_tag": "vector-features",
+     "learning_objective": "Describe the role of the origin of replication, selectable marker and cloning sites in a vector."
+    },
+    {
+     "concept_tag": "insertional-inactivation",
+     "learning_objective": "Explain how insertional inactivation is used to select recombinants from non-recombinants."
+    },
+    {
+     "concept_tag": "vectors-for-plants-and-animals",
+     "learning_objective": "Explain how disarmed Ti plasmids and retroviruses are used as vectors in plants and animals."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH09-T5",
+   "topic_number": 5,
+   "title": "Competent host and introducing recombinant DNA into host cells",
+   "ncert_sections": "9.2.3, 9.3.4",
+   "concepts": [
+    {
+     "concept_tag": "competent-host",
+     "learning_objective": "Explain how bacterial cells are made competent to take up recombinant DNA."
+    },
+    {
+     "concept_tag": "gene-transfer-methods",
+     "learning_objective": "Distinguish micro-injection, biolistics and disarmed pathogen vectors as methods of gene transfer."
+    },
+    {
+     "concept_tag": "selection-of-transformants",
+     "learning_objective": "Explain how a selectable marker allows only transformed cells to grow."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH09-T6",
+   "topic_number": 6,
+   "title": "Isolating and cutting DNA, and amplification by PCR",
+   "ncert_sections": "9.3.1, 9.3.2, 9.3.3",
+   "concepts": [
+    {
+     "concept_tag": "dna-isolation",
+     "learning_objective": "Describe the steps used to isolate pure DNA from cells."
+    },
+    {
+     "concept_tag": "pcr",
+     "learning_objective": "Explain the steps of PCR and the role of primers and thermostable DNA polymerase."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH09-T7",
+   "topic_number": 7,
+   "title": "Obtaining the foreign gene product and downstream processing",
+   "ncert_sections": "9.3.5, 9.3.6",
+   "concepts": [
+    {
+     "concept_tag": "recombinant-protein-expression",
+     "learning_objective": "Define a recombinant protein and explain why continuous culture improves yield."
+    },
+    {
+     "concept_tag": "bioreactors",
+     "learning_objective": "Describe the features and advantages of stirred-tank bioreactors for large-scale production."
+    },
+    {
+     "concept_tag": "downstream-processing",
+     "learning_objective": "Describe the steps of downstream processing before a product is marketed."
+    }
+   ]
+  }
+ ]
+}

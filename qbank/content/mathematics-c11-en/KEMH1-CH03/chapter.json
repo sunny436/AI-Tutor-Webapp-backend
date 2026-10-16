@@ -1,0 +1,88 @@
+{
+ "chapter_id": "KEMH1-CH03",
+ "title": "Trigonometric Functions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH03-T1",
+   "topic_number": 1,
+   "title": "Angles: degree and radian measure",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "degree-radian-conversion",
+     "learning_objective": "Convert angles between degree and radian measure using pi radians = 180 degrees."
+    },
+    {
+     "concept_tag": "arc-length-radian",
+     "learning_objective": "Use l = r theta to relate arc length, radius and the angle in radians."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH03-T2",
+   "topic_number": 2,
+   "title": "Trigonometric functions on the unit circle",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "unit-circle-definition",
+     "learning_objective": "Define sin x and cos x as coordinates of a point on the unit circle and find their zeros."
+    },
+    {
+     "concept_tag": "pythagorean-identities",
+     "learning_objective": "Use sin^2 x + cos^2 x = 1 and related identities to find the other functions from one value."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH03-T3",
+   "topic_number": 3,
+   "title": "Signs, domain, range and periodicity",
+   "ncert_sections": "3.3.1, 3.3.2",
+   "concepts": [
+    {
+     "concept_tag": "signs-in-quadrants",
+     "learning_objective": "Determine the sign of each trigonometric function in the four quadrants."
+    },
+    {
+     "concept_tag": "domain-range-periodicity",
+     "learning_objective": "State domains and ranges of trigonometric functions and use their periodicity to evaluate values."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH03-T4",
+   "topic_number": 4,
+   "title": "Sum and difference of two angles",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "compound-angle-formulas",
+     "learning_objective": "Apply the formulas for sin, cos and tan of (x + y) and (x - y)."
+    },
+    {
+     "concept_tag": "allied-angle-identities",
+     "learning_objective": "Simplify trigonometric functions of allied angles such as pi/2 + x and pi - x."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH03-T5",
+   "topic_number": 5,
+   "title": "Multiple angles and sum-product formulas",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "multiple-angle-formulas",
+     "learning_objective": "Use the double- and triple-angle formulas for sin, cos and tan."
+    },
+    {
+     "concept_tag": "sum-product-transformation",
+     "learning_objective": "Convert sums of sines and cosines into products and simplify expressions."
+    }
+   ]
+  }
+ ]
+}

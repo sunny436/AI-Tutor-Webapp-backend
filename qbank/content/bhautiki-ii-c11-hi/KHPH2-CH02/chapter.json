@@ -1,0 +1,116 @@
+{
+ "chapter_id": "KHPH2-CH02",
+ "title": "तरलों के यांत्रिकी गुण",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH2-CH02-T1",
+   "topic_number": 1,
+   "title": "दाब, पास्कल का नियम तथा गहराई के साथ दाब में परिवर्तन",
+   "ncert_sections": "9.1, 9.2, 9.2.1, 9.2.2",
+   "concepts": [
+    {
+     "concept_tag": "dab-ki-paribhasha",
+     "learning_objective": "दाब को एकांक क्षेत्रफल पर लगने वाले अभिलंब बल के रूप में परिभाषित कर उसके मात्रक और विमाएँ बताना।"
+    },
+    {
+     "concept_tag": "pascal-ka-niyam",
+     "learning_objective": "स्थिर तरल में दाब के सभी दिशाओं में समान होने तथा तरल बल के सतह के लंबवत होने को समझाना।"
+    },
+    {
+     "concept_tag": "gahrai-ke-sath-dab",
+     "learning_objective": "सूत्र P = Pa + ρgh द्वारा किसी गहराई पर दाब ज्ञात करना और द्रवस्थैतिक विरोधाभास को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH02-T2",
+   "topic_number": 2,
+   "title": "वायुमंडलीय दाब, प्रमापी दाब तथा द्रवचालित मशीनें",
+   "ncert_sections": "9.2.3, 9.2.4",
+   "concepts": [
+    {
+     "concept_tag": "vayumandaliya-aur-pramapi-dab",
+     "learning_objective": "पारद दाबमापी तथा खुली नली मैनोमीटर द्वारा वायुमंडलीय और प्रमापी दाब को समझना।"
+    },
+    {
+     "concept_tag": "dravchalit-mashin",
+     "learning_objective": "पास्कल के नियम के आधार पर द्रवचालित उत्थापक और ब्रेक की कार्यविधि तथा यांत्रिक लाभ ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH02-T3",
+   "topic_number": 3,
+   "title": "धारारेखी प्रवाह तथा सांतत्य समीकरण",
+   "ncert_sections": "9.3",
+   "concepts": [
+    {
+     "concept_tag": "dhararekhi-pravah",
+     "learning_objective": "स्थायी प्रवाह, धारारेखा तथा विक्षुब्ध प्रवाह के अर्थ को समझाना।"
+    },
+    {
+     "concept_tag": "santatya-samikaran",
+     "learning_objective": "सांतत्य समीकरण Av = नियतांक का उपयोग कर प्रवाह की चाल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH02-T4",
+   "topic_number": 4,
+   "title": "बर्नूली का सिद्धांत और उसके अनुप्रयोग",
+   "ncert_sections": "9.4, 9.4.1, 9.4.2",
+   "concepts": [
+    {
+     "concept_tag": "bernoulli-samikaran",
+     "learning_objective": "बर्नूली समीकरण को ऊर्जा संरक्षण से जोड़ना और उसकी सीमाएँ पहचानना।"
+    },
+    {
+     "concept_tag": "bahisrav-ki-chal",
+     "learning_objective": "टॉरिसेली के नियम द्वारा बहिःस्राव की चाल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "gatik-utthapak",
+     "learning_objective": "वायुयान के पंख तथा घूमती गेंद पर गतिक उत्थापक को बर्नूली सिद्धांत से समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH02-T5",
+   "topic_number": 5,
+   "title": "श्यानता तथा स्टोक्स का नियम",
+   "ncert_sections": "9.5, 9.5.1",
+   "concepts": [
+    {
+     "concept_tag": "shyanta-gunank",
+     "learning_objective": "श्यानता गुणांक के अर्थ, मात्रक तथा ताप पर उसकी निर्भरता को समझना।"
+    },
+    {
+     "concept_tag": "stokes-niyam-sima-veg",
+     "learning_objective": "स्टोक्स के नियम से श्यान बल और सीमांत वेग ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH02-T6",
+   "topic_number": 6,
+   "title": "पृष्ठ तनाव, संपर्क कोण, बूँदें-बुलबुले तथा केशिकीय उन्नयन",
+   "ncert_sections": "9.6, 9.6.1, 9.6.2, 9.6.3, 9.6.4, 9.6.5",
+   "concepts": [
+    {
+     "concept_tag": "prishth-tanav",
+     "learning_objective": "पृष्ठ तनाव को एकांक लंबाई पर बल तथा पृष्ठ ऊर्जा के रूप में समझना।"
+    },
+    {
+     "concept_tag": "boond-bulbule-adhik-dab",
+     "learning_objective": "बूँद तथा साबुन के बुलबुले के भीतर अधिक दाब की गणना करना।"
+    },
+    {
+     "concept_tag": "keshikiya-unnayan",
+     "learning_objective": "संपर्क कोण के आधार पर केशिकीय उन्नयन या अवनमन को समझाना और उसकी ऊँचाई ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

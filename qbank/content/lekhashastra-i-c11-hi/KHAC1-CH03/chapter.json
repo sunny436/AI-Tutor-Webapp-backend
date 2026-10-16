@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KHAC1-CH03",
+ "title": "लेनदेनों का अभिलेखन – I",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHAC1-CH03-T1",
+   "topic_number": 1,
+   "title": "व्यावसायिक लेनदेन और स्रोत प्रलेख",
+   "ncert_sections": "3.1, 3.1.1",
+   "concepts": [
+    {
+     "concept_tag": "srot-pralekh",
+     "learning_objective": "व्यावसायिक लेनदेन की प्रकृति और स्रोत प्रलेख के महत्त्व को समझना।"
+    },
+    {
+     "concept_tag": "lekhankan-pramanak",
+     "learning_objective": "सरल, नाम, जमा और जर्नल प्रमाणकों में अंतर करना तथा प्रमाणक के आवश्यक तत्त्व पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH03-T2",
+   "topic_number": 2,
+   "title": "लेखांकन समीकरण",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "lekhankan-samikaran",
+     "learning_objective": "लेखांकन समीकरण परिसंपत्तियाँ = देयताएँ + पूँजी का अर्थ बताना।"
+    },
+    {
+     "concept_tag": "lendenon-ka-prabhav",
+     "learning_objective": "विभिन्न लेनदेनों का लेखांकन समीकरण पर प्रभाव विश्लेषित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH03-T3",
+   "topic_number": 3,
+   "title": "नाम और जमा का प्रयोग",
+   "ncert_sections": "3.3, 3.3.1",
+   "concepts": [
+    {
+     "concept_tag": "t-khata",
+     "learning_objective": "टी-खाते के नाम और जमा पक्षों की पहचान करना।"
+    },
+    {
+     "concept_tag": "naam-jama-ke-niyam",
+     "learning_objective": "पाँच प्रकार के खातों पर नाम और जमा के नियम लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH03-T4",
+   "topic_number": 4,
+   "title": "प्रारंभिक प्रविष्टि की पुस्तकें और रोज़नामचा",
+   "ncert_sections": "3.4, 3.4.1",
+   "concepts": [
+    {
+     "concept_tag": "prarambhik-pravishti-pustak",
+     "learning_objective": "रोज़नामचे को प्रारंभिक प्रविष्टि की पुस्तक के रूप में समझना।"
+    },
+    {
+     "concept_tag": "rojnamcha-praroop",
+     "learning_objective": "रोज़नामचे के प्रारूप के स्तंभों और विवरण लिखने की विधि समझाना।"
+    },
+    {
+     "concept_tag": "saral-sanyukt-pravishti",
+     "learning_objective": "सरल और संयुक्त रोज़नामचा प्रविष्टियाँ अभिलिखित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH03-T5",
+   "topic_number": 5,
+   "title": "खाता बही",
+   "ncert_sections": "3.5, 3.5.1",
+   "concepts": [
+    {
+     "concept_tag": "khata-bahi-upyogita",
+     "learning_objective": "खाता बही की उपयोगिता और उसके प्रारूप को समझना।"
+    },
+    {
+     "concept_tag": "rojnamcha-khatabahi-antar",
+     "learning_objective": "रोज़नामचा और खाता बही में अंतर स्पष्ट करना।"
+    },
+    {
+     "concept_tag": "sthayi-asthayi-khate",
+     "learning_objective": "खाता बही के खातों को स्थायी और अस्थायी खातों में वर्गीकृत करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH03-T6",
+   "topic_number": 6,
+   "title": "रोज़नामचे से खतौनी",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "khatauni-prakriya",
+     "learning_objective": "रोज़नामचा प्रविष्टियों की खाता बही में खतौनी की प्रक्रिया लागू करना।"
+    }
+   ]
+  }
+ ]
+}

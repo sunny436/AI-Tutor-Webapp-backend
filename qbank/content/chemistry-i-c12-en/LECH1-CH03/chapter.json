@@ -1,0 +1,136 @@
+{
+ "chapter_id": "LECH1-CH03",
+ "title": "Chemical Kinetics",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECH1-CH03-T1",
+   "topic_number": 1,
+   "title": "Rate of a chemical reaction",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "average-and-instantaneous-rate",
+     "learning_objective": "Distinguish average rate from instantaneous rate and obtain each from concentration-time data."
+    },
+    {
+     "concept_tag": "rate-and-stoichiometry",
+     "learning_objective": "Express the rate of a reaction in terms of any reactant or product using stoichiometric coefficients."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH03-T2",
+   "topic_number": 2,
+   "title": "Dependence of rate on concentration: rate expression and rate constant",
+   "ncert_sections": "3.2, 3.2.1, 3.2.2",
+   "concepts": [
+    {
+     "concept_tag": "rate-law",
+     "learning_objective": "Write and use a rate law, recognising that its exponents are found by experiment."
+    },
+    {
+     "concept_tag": "rate-constant",
+     "learning_objective": "Interpret the rate constant as the rate when every reactant concentration is unity."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH03-T3",
+   "topic_number": 3,
+   "title": "Order of a reaction",
+   "ncert_sections": "3.2.3",
+   "concepts": [
+    {
+     "concept_tag": "order-of-reaction",
+     "learning_objective": "Determine the order of a reaction from its rate law or from experimental rate data."
+    },
+    {
+     "concept_tag": "units-of-rate-constant",
+     "learning_objective": "Relate the units of the rate constant to the order of the reaction."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH03-T4",
+   "topic_number": 4,
+   "title": "Molecularity and mechanism of a reaction",
+   "ncert_sections": "3.2.4",
+   "concepts": [
+    {
+     "concept_tag": "molecularity",
+     "learning_objective": "Define molecularity and distinguish it from order for elementary and complex reactions."
+    },
+    {
+     "concept_tag": "rate-determining-step",
+     "learning_objective": "Deduce the rate law of a complex reaction from its slowest step and identify intermediates."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH03-T5",
+   "topic_number": 5,
+   "title": "Integrated rate equations for zero and first order reactions",
+   "ncert_sections": "3.3, 3.3.1, 3.3.2",
+   "concepts": [
+    {
+     "concept_tag": "zero-order-reactions",
+     "learning_objective": "Apply the integrated rate equation of a zero order reaction and explain why surface reactions can be zero order."
+    },
+    {
+     "concept_tag": "first-order-integrated-equation",
+     "learning_objective": "Use the integrated rate equation of a first order reaction to calculate k, time or concentration."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH03-T6",
+   "topic_number": 6,
+   "title": "Half-life and pseudo first order reactions",
+   "ncert_sections": "3.3.3",
+   "concepts": [
+    {
+     "concept_tag": "half-life",
+     "learning_objective": "Calculate and compare the half-lives of zero and first order reactions."
+    },
+    {
+     "concept_tag": "pseudo-first-order",
+     "learning_objective": "Explain why some higher order reactions behave as pseudo first order reactions."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH03-T7",
+   "topic_number": 7,
+   "title": "Temperature dependence of rate and effect of catalyst",
+   "ncert_sections": "3.4, 3.4.1",
+   "concepts": [
+    {
+     "concept_tag": "arrhenius-equation",
+     "learning_objective": "Use the Arrhenius equation to relate rate constant, temperature and activation energy."
+    },
+    {
+     "concept_tag": "effect-of-catalyst",
+     "learning_objective": "Explain how a catalyst changes the rate of a reaction without changing its thermodynamics."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH03-T8",
+   "topic_number": 8,
+   "title": "Collision theory of chemical reactions",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "collision-frequency",
+     "learning_objective": "Relate collision frequency and activation energy to the rate of a bimolecular reaction."
+    },
+    {
+     "concept_tag": "effective-collisions",
+     "learning_objective": "Explain effective collisions in terms of threshold energy, orientation and the steric factor."
+    }
+   ]
+  }
+ ]
+}

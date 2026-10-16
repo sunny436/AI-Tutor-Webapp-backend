@@ -1,0 +1,156 @@
+{
+ "chapter_id": "KECS1-CH05",
+ "title": "Getting Started with Python",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECS1-CH05-T1",
+   "topic_number": 1,
+   "title": "Introduction to Python: features, interpreter and execution modes",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "python-features",
+     "learning_objective": "Identify the main features of Python such as being high level, open source, portable and case-sensitive."
+    },
+    {
+     "concept_tag": "interpreter-vs-compiler",
+     "learning_objective": "Explain how an interpreter executes a program statement by statement, unlike a compiler."
+    },
+    {
+     "concept_tag": "execution-modes",
+     "learning_objective": "Distinguish between the interactive mode and the script mode of the Python interpreter."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH05-T2",
+   "topic_number": 2,
+   "title": "Keywords, identifiers, variables and comments",
+   "ncert_sections": "5.2, 5.3, 5.4, 5.5",
+   "concepts": [
+    {
+     "concept_tag": "python-keywords",
+     "learning_objective": "Recognise Python keywords as reserved words that cannot be used as identifiers."
+    },
+    {
+     "concept_tag": "identifier-naming-rules",
+     "learning_objective": "Apply the rules for naming identifiers to decide whether a name is valid."
+    },
+    {
+     "concept_tag": "variables-and-comments",
+     "learning_objective": "Explain implicit variable creation by assignment and the use of # comments."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH05-T3",
+   "topic_number": 3,
+   "title": "Everything is an object and Python data types",
+   "ncert_sections": "5.6, 5.7.1, 5.7.2, 5.7.3, 5.7.4, 5.7.5",
+   "concepts": [
+    {
+     "concept_tag": "object-identity",
+     "learning_objective": "Explain that every Python value is an object with a unique identity returned by id()."
+    },
+    {
+     "concept_tag": "number-types",
+     "learning_objective": "Identify the numeric types int, float, complex and bool from given values."
+    },
+    {
+     "concept_tag": "collection-types",
+     "learning_objective": "Describe strings, lists, tuples, sets, None and dictionaries and how they are written."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH05-T4",
+   "topic_number": 4,
+   "title": "Mutable and immutable data types and choosing a data type",
+   "ncert_sections": "5.7.6, 5.7.7",
+   "concepts": [
+    {
+     "concept_tag": "mutable-vs-immutable",
+     "learning_objective": "Classify data types as mutable or immutable and trace what happens when a variable is updated."
+    },
+    {
+     "concept_tag": "choosing-data-types",
+     "learning_objective": "Choose a suitable data type (list, tuple, set or dictionary) for a given situation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH05-T5",
+   "topic_number": 5,
+   "title": "Operators",
+   "ncert_sections": "5.8",
+   "concepts": [
+    {
+     "concept_tag": "arithmetic-and-assignment-operators",
+     "learning_objective": "Evaluate arithmetic and augmented assignment operators including %, // and **."
+    },
+    {
+     "concept_tag": "relational-and-logical-operators",
+     "learning_objective": "Evaluate relational comparisons, including string comparison, and logical operators."
+    },
+    {
+     "concept_tag": "identity-and-membership-operators",
+     "learning_objective": "Use the identity operators is, is not and the membership operators in, not in."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH05-T6",
+   "topic_number": 6,
+   "title": "Expressions, precedence of operators and statements",
+   "ncert_sections": "5.9, 5.10",
+   "concepts": [
+    {
+     "concept_tag": "expressions-and-statements",
+     "learning_objective": "Identify valid expressions and statements in Python."
+    },
+    {
+     "concept_tag": "operator-precedence",
+     "learning_objective": "Evaluate expressions using operator precedence and left-to-right evaluation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH05-T7",
+   "topic_number": 7,
+   "title": "Input, output and type conversion",
+   "ncert_sections": "5.11, 5.12",
+   "concepts": [
+    {
+     "concept_tag": "input-and-print",
+     "learning_objective": "Use input() and print() with its sep and end parameters, knowing that input() returns a string."
+    },
+    {
+     "concept_tag": "explicit-conversion",
+     "learning_objective": "Apply explicit type conversion with int(), float() and str() and predict its result."
+    },
+    {
+     "concept_tag": "implicit-conversion",
+     "learning_objective": "Explain implicit conversion (coercion) and type promotion from int to float."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH05-T8",
+   "topic_number": 8,
+   "title": "Debugging: syntax, logical and runtime errors",
+   "ncert_sections": "5.13",
+   "concepts": [
+    {
+     "concept_tag": "debugging-process",
+     "learning_objective": "Define debugging as the process of identifying and removing errors from a program."
+    },
+    {
+     "concept_tag": "error-types",
+     "learning_objective": "Distinguish syntax errors, logical errors and runtime errors with examples."
+    }
+   ]
+  }
+ ]
+}

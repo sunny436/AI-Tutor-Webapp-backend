@@ -1,0 +1,92 @@
+{
+ "chapter_id": "KHPH1-CH01",
+ "title": "मात्रक और मापन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH1-CH01-T1",
+   "topic_number": 1,
+   "title": "भूमिका और मात्रकों की अंतर्राष्ट्रीय प्रणाली",
+   "ncert_sections": "1.1, 1.2",
+   "concepts": [
+    {
+     "concept_tag": "mool-aur-vyutpann-matrak",
+     "learning_objective": "मूल राशियों, मूल मात्रकों और व्युत्पन्न मात्रकों में अंतर पहचानना।"
+    },
+    {
+     "concept_tag": "si-paddhati",
+     "learning_objective": "SI पद्धति के सात मूल मात्रकों तथा CGS, FPS और MKS पद्धतियों को पहचानना।"
+    },
+    {
+     "concept_tag": "samtal-aur-ghan-kon",
+     "learning_objective": "समतल कोण (रेडियन) और ठोस कोण (स्टेरेडियन) की परिभाषा का उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH01-T2",
+   "topic_number": 2,
+   "title": "सार्थक अंक और उन्हें गिनने के नियम",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "sarthak-ank-niyam",
+     "learning_objective": "किसी माप में सार्थक अंकों की संख्या निर्धारित करने के नियम लागू करना।"
+    },
+    {
+     "concept_tag": "vaigyanik-sanketan",
+     "learning_objective": "वैज्ञानिक संकेतन और मात्रक-परिवर्तन में सार्थक अंकों के व्यवहार को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH01-T3",
+   "topic_number": 3,
+   "title": "अंकगणितीय संक्रियाओं में सार्थक अंक और पूर्णांकन",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "ganitiya-sankriyaon-me-sarthak-ank",
+     "learning_objective": "गुणा, भाग, जोड़ और घटाव के परिणामों को उचित सार्थक अंकों में व्यक्त करना।"
+    },
+    {
+     "concept_tag": "purnankan-niyam",
+     "learning_objective": "अनिश्चित अंकों के पूर्णांकन के नियमों का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH01-T4",
+   "topic_number": 4,
+   "title": "भौतिक राशियों की विमाएँ, विमीय सूत्र और विमीय समीकरण",
+   "ncert_sections": "1.4, 1.5",
+   "concepts": [
+    {
+     "concept_tag": "vimaen-aur-vimiya-sutra",
+     "learning_objective": "व्युत्पन्न राशियों के विमीय सूत्र मूल राशियों के पदों में लिखना।"
+    },
+    {
+     "concept_tag": "vimiya-samikaran",
+     "learning_objective": "विमाहीन राशियों और समान विमा वाली राशियों की पहचान करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH01-T5",
+   "topic_number": 5,
+   "title": "विमीय विश्लेषण और इसके अनुप्रयोग",
+   "ncert_sections": "1.6",
+   "concepts": [
+    {
+     "concept_tag": "vimiya-sangati-jaanch",
+     "learning_objective": "विमाओं की सजातीयता के सिद्धांत से समीकरणों की विमीय संगति जाँचना।"
+    },
+    {
+     "concept_tag": "sambandh-vyutpann",
+     "learning_objective": "विमीय विश्लेषण द्वारा भौतिक राशियों के बीच संबंध व्युत्पन्न करना तथा इसकी सीमाएँ समझना।"
+    }
+   ]
+  }
+ ]
+}

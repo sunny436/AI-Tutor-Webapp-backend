@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LHBS1-CH08",
+ "title": "नियंत्रण",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHBS1-CH08-T1",
+   "topic_number": 1,
+   "title": "नियंत्रण का अर्थ और प्रकृति",
+   "ncert_sections": "नियंत्रण का अर्थ",
+   "concepts": [
+    {
+     "concept_tag": "niyantran-arth",
+     "learning_objective": "नियंत्रण को योजना के अनुसार कार्य होने का आश्वासन देने वाले लक्ष्योन्मुखी कार्य के रूप में समझाना।"
+    },
+    {
+     "concept_tag": "niyantran-vyapakta",
+     "learning_objective": "नियंत्रण के सर्वव्यापी स्वरूप और प्रबंध चक्र में उसकी भूमिका को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS1-CH08-T2",
+   "topic_number": 2,
+   "title": "नियंत्रण का महत्त्व",
+   "ncert_sections": "नियंत्रण का महत्त्व",
+   "concepts": [
+    {
+     "concept_tag": "niyantran-mahattva-lakshya",
+     "learning_objective": "संगठनात्मक लक्ष्यों की प्राप्ति, मानकों की यथार्थता और संसाधनों के कुशल उपयोग में नियंत्रण का योगदान समझाना।"
+    },
+    {
+     "concept_tag": "niyantran-mahattva-karmchari",
+     "learning_objective": "कर्मचारी अभिप्रेरणा, व्यवस्था-अनुशासन और समन्वय में नियंत्रण की भूमिका पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS1-CH08-T3",
+   "topic_number": 3,
+   "title": "नियंत्रण की सीमाएँ",
+   "ncert_sections": "नियंत्रण की सीमाएँ",
+   "concepts": [
+    {
+     "concept_tag": "niyantran-seemaen",
+     "learning_objective": "मात्रात्मक मानकों की कठिनाई, बाह्य घटकों, कर्मचारी विरोध और लागत जैसी सीमाओं को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS1-CH08-T4",
+   "topic_number": 4,
+   "title": "नियोजन और नियंत्रण में संबंध",
+   "ncert_sections": "नियोजन एवं नियंत्रण में संबंध",
+   "concepts": [
+    {
+     "concept_tag": "niyojan-niyantran-sambandh",
+     "learning_objective": "नियोजन और नियंत्रण की परस्पर निर्भरता को समझाना।"
+    },
+    {
+     "concept_tag": "aage-peeche-dekhna",
+     "learning_objective": "नियोजन और नियंत्रण दोनों के आगे देखने तथा पीछे देखने वाले कार्य होने का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS1-CH08-T5",
+   "topic_number": 5,
+   "title": "नियंत्रण प्रक्रिया: मानक निर्धारण, मापन और तुलना",
+   "ncert_sections": "नियंत्रण प्रक्रिया: चरण 1 से 3",
+   "concepts": [
+    {
+     "concept_tag": "maanak-nirdharan",
+     "learning_objective": "मात्रात्मक और गुणात्मक निष्पादन मानकों के निर्धारण को समझाना।"
+    },
+    {
+     "concept_tag": "vastavik-nishpadan-maapan",
+     "learning_objective": "वास्तविक निष्पादन के मापन की विधियों और मानकों से तुलना को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS1-CH08-T6",
+   "topic_number": 6,
+   "title": "विचलनों का विश्लेषण और सुधारात्मक कार्यवाही",
+   "ncert_sections": "नियंत्रण प्रक्रिया: चरण 4 और 5",
+   "concepts": [
+    {
+     "concept_tag": "mahattvapurna-bindu-niyantran",
+     "learning_objective": "महत्त्वपूर्ण बिंदु नियंत्रण और अपवाद द्वारा प्रबंध के सिद्धांत को लागू करना।"
+    },
+    {
+     "concept_tag": "vichalan-karan",
+     "learning_objective": "विचलनों के कारणों की पहचान करना।"
+    },
+    {
+     "concept_tag": "sudharatmak-karyavahi",
+     "learning_objective": "विचलन के अनुसार उचित सुधारात्मक कार्यवाही चुनना।"
+    }
+   ]
+  }
+ ]
+}

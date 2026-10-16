@@ -1,0 +1,84 @@
+{
+ "chapter_id": "KHGY2-CH12",
+ "title": "महासागरीय जल",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHGY2-CH12-T1",
+   "topic_number": 1,
+   "title": "जलीय चक्र",
+   "ncert_sections": "जलीय चक्र",
+   "concepts": [
+    {
+     "concept_tag": "jaliya-chakra",
+     "learning_objective": "जलीय चक्र के घटकों और प्रक्रियाओं के परस्पर संबंध को समझना।"
+    },
+    {
+     "concept_tag": "jal-vitaran",
+     "learning_objective": "पृथ्वी पर जल के वितरण और जल संकट के कारणों को जानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH12-T2",
+   "topic_number": 2,
+   "title": "महासागरीय अधस्तल के प्रमुख विभाग",
+   "ncert_sections": "महासागरीय अधस्तल का उच्चावच; महासागरीय अधस्तल के विभाग",
+   "concepts": [
+    {
+     "concept_tag": "mahadvipiya-magntat",
+     "learning_objective": "महाद्वीपीय मग्नतट और महाद्वीपीय ढाल की विशेषताएँ बताना।"
+    },
+    {
+     "concept_tag": "gahan-sagariya-maidan-garta",
+     "learning_objective": "गहरे सागरीय मैदान और महासागरीय गर्तों की विशेषताएँ पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH12-T3",
+   "topic_number": 3,
+   "title": "लघु उच्चावच आकृतियाँ",
+   "ncert_sections": "लघु उच्चावच आकृतियाँ",
+   "concepts": [
+    {
+     "concept_tag": "laghu-uchchavach",
+     "learning_objective": "मध्य-महासागरीय कटक, समुद्री टीला, निमग्न कैनियन, गुयॉट और प्रवाल द्वीप में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH12-T4",
+   "topic_number": 4,
+   "title": "महासागरीय जल का तापमान",
+   "ncert_sections": "महासागरीय जल का तापमान; तापमान वितरण को प्रभावित करने वाले कारक; तापमान का क्षैतिज और ऊर्ध्वाधर वितरण",
+   "concepts": [
+    {
+     "concept_tag": "tapman-karak",
+     "learning_objective": "महासागरीय जल के तापमान वितरण को प्रभावित करने वाले कारकों की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "tap-pravanata-parat",
+     "learning_objective": "तापमान के ऊर्ध्वाधर वितरण और ताप-प्रवणता परत को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY2-CH12-T5",
+   "topic_number": 5,
+   "title": "महासागरीय जल की लवणता",
+   "ncert_sections": "महासागरीय जल की लवणता; लवणता का क्षैतिज और ऊर्ध्वाधर वितरण",
+   "concepts": [
+    {
+     "concept_tag": "lavanta-karak",
+     "learning_objective": "लवणता की परिभाषा और उसे प्रभावित करने वाले कारक बताना।"
+    },
+    {
+     "concept_tag": "lavanta-vitaran",
+     "learning_objective": "लवणता के क्षैतिज और ऊर्ध्वाधर वितरण की व्याख्या करना।"
+    }
+   ]
+  }
+ ]
+}

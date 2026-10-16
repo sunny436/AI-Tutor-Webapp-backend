@@ -1,0 +1,144 @@
+{
+ "chapter_id": "LECH1-CH04",
+ "title": "The d-and f-Block Elements",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECH1-CH04-T1",
+   "topic_number": 1,
+   "title": "Position and electronic configurations of the d-block elements",
+   "ncert_sections": "4.1, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "d-block-position-and-definition",
+     "learning_objective": "Identify transition elements using the IUPAC definition based on an incomplete d subshell in the atom or its ions."
+    },
+    {
+     "concept_tag": "d-block-electronic-configuration",
+     "learning_objective": "Write and explain the (n-1)d ns configurations of d-block elements, including the exceptions Cr, Cu and Pd."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH04-T2",
+   "topic_number": 2,
+   "title": "Physical properties, atomic sizes and ionisation enthalpies",
+   "ncert_sections": "4.3.1, 4.3.2, 4.3.3",
+   "concepts": [
+    {
+     "concept_tag": "enthalpy-of-atomisation",
+     "learning_objective": "Relate high melting points and enthalpies of atomisation to the number of unpaired (n-1)d and ns electrons in metallic bonding."
+    },
+    {
+     "concept_tag": "atomic-ionic-radii-trends",
+     "learning_objective": "Explain the trends in atomic and ionic radii and density across a transition series and between series."
+    },
+    {
+     "concept_tag": "ionisation-enthalpy-trends",
+     "learning_objective": "Interpret irregularities in successive ionisation enthalpies of the 3d series using the stability of d5 and d10 configurations."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH04-T3",
+   "topic_number": 3,
+   "title": "Oxidation states and electrode potentials",
+   "ncert_sections": "4.3.4, 4.3.5, 4.3.6, 4.3.7, 4.3.8",
+   "concepts": [
+    {
+     "concept_tag": "variable-oxidation-states",
+     "learning_objective": "Explain the variety of oxidation states of transition metals and their trends along a series and down a group."
+    },
+    {
+     "concept_tag": "standard-electrode-potentials",
+     "learning_objective": "Use E values of M2+/M and M3+/M2+ couples to judge reducing and oxidising behaviour of transition metal ions."
+    },
+    {
+     "concept_tag": "stability-of-higher-oxidation-states",
+     "learning_objective": "Explain why oxygen and fluorine stabilise the highest oxidation states of transition metals."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH04-T4",
+   "topic_number": 4,
+   "title": "Magnetic properties, colour, complexes, catalysis, interstitial compounds and alloys",
+   "ncert_sections": "4.3.9 to 4.3.14",
+   "concepts": [
+    {
+     "concept_tag": "spin-only-magnetic-moment",
+     "learning_objective": "Calculate the spin-only magnetic moment of a transition metal ion from its number of unpaired electrons."
+    },
+    {
+     "concept_tag": "coloured-ions",
+     "learning_objective": "Explain the colour of transition metal ions in terms of d-d transitions and identify colourless ions."
+    },
+    {
+     "concept_tag": "catalysis-interstitial-alloys",
+     "learning_objective": "Describe the catalytic behaviour, interstitial compounds and alloys of transition metals and the reasons for them."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH04-T5",
+   "topic_number": 5,
+   "title": "Some important compounds: oxides, potassium dichromate and potassium permanganate",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "oxides-and-oxoanions",
+     "learning_objective": "Relate the oxidation state of a transition metal in its oxide to the ionic, acidic or basic character of the oxide."
+    },
+    {
+     "concept_tag": "potassium-dichromate",
+     "learning_objective": "Describe the preparation, structure and oxidising reactions of potassium dichromate, including redox stoichiometry."
+    },
+    {
+     "concept_tag": "potassium-permanganate",
+     "learning_objective": "Describe the preparation, magnetic behaviour and oxidising reactions of potassium permanganate in different media."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH04-T6",
+   "topic_number": 6,
+   "title": "The lanthanoids",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "lanthanoid-configuration-oxidation-states",
+     "learning_objective": "Relate the oxidation states and magnetic behaviour of lanthanoids to the stability of 4f0, 4f7 and 4f14 configurations."
+    },
+    {
+     "concept_tag": "lanthanoid-contraction",
+     "learning_objective": "Explain the cause of lanthanoid contraction and its consequences for the third transition series."
+    },
+    {
+     "concept_tag": "lanthanoid-properties-uses",
+     "learning_objective": "Recall the general properties, reactions and uses of lanthanoids such as mischmetall."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECH1-CH04-T7",
+   "topic_number": 7,
+   "title": "The actinoids and applications of d- and f-block elements",
+   "ncert_sections": "4.6, 4.7",
+   "concepts": [
+    {
+     "concept_tag": "actinoid-characteristics",
+     "learning_objective": "Describe the electronic configurations, oxidation states and radioactivity of the actinoids."
+    },
+    {
+     "concept_tag": "actinoid-lanthanoid-comparison",
+     "learning_objective": "Compare actinoids with lanthanoids in configuration, contraction, oxidation states and reactivity."
+    },
+    {
+     "concept_tag": "applications-of-d-and-f-block",
+     "learning_objective": "Recall industrial applications of d- and f-block elements and their compounds, especially as catalysts."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "chapter_id": "JHVA1-CH09",
+ "title": "समास परिचय",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHVA1-CH09-T1",
+   "topic_number": 1,
+   "title": "समासस्य परिचयः भेदाः च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "samasa-sankshepa",
+     "learning_objective": "छात्रः समासं पदानां संक्षेपणरूपेण विभक्ति-'च'-आदीनां लोपेन एकपदनिर्माणरूपेण च अवगच्छति।"
+    },
+    {
+     "concept_tag": "samasa-bheda",
+     "learning_objective": "छात्रः पदप्रधानताम् आधृत्य समासस्य चतुरः मुख्यभेदान् षड् सामान्यभेदान् च निर्दिशति।"
+    },
+    {
+     "concept_tag": "aluk-samasa",
+     "learning_objective": "छात्रः यत्र विभक्तेः लोपः न भवति तम् अलुक्समासम् उदाहरणैः अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH09-T2",
+   "topic_number": 2,
+   "title": "अव्ययीभावसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "avyayibhava-lakshana",
+     "learning_objective": "छात्रः अव्ययीभावे पूर्वपदस्य अव्ययत्वं प्राधान्यं समस्तपदस्य अव्ययत्वं नपुंसकत्वं च वदति।"
+    },
+    {
+     "concept_tag": "avyayibhava-vigraha",
+     "learning_objective": "छात्रः उपगङ्गम्, निर्मक्षिकम्, अनुरूपम् इत्यादीनां पदानां विग्रहं समासं च करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH09-T3",
+   "topic_number": 3,
+   "title": "तत्पुरुषसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "tatpurusha-vibhakti",
+     "learning_objective": "छात्रः द्वितीयातः सप्तमीपर्यन्तं विभक्तिलोपेन निर्मितानां तत्पुरुषपदानां भेदं निर्धारयति।"
+    },
+    {
+     "concept_tag": "nan-tatpurusha",
+     "learning_objective": "छात्रः 'न' इत्यनेन सह निर्मितं नञ्तत्पुरुषं तस्य 'अ'-'अन्'-रूपे च अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH09-T4",
+   "topic_number": 4,
+   "title": "कर्मधारयसमासः द्विगुसमासः च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "karmadharaya-svarupa",
+     "learning_objective": "छात्रः कर्मधारयस्य विशेषण-विशेष्य, उपमान-उपमेय, उभयपदविशेषण इति त्रीणि स्वरूपाणि भेदयति।"
+    },
+    {
+     "concept_tag": "dvigu-samahara",
+     "learning_objective": "छात्रः संख्यावाचिपूर्वपदं समाहारार्थं द्विगुं तस्य लिङ्गवचननियमं च प्रयुङ्क्ते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH09-T5",
+   "topic_number": 5,
+   "title": "द्वन्द्वसमासः",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "itaretara-dvandva",
+     "learning_objective": "छात्रः इतरेतरद्वन्द्वे संख्यानुसारं वचनं परवर्तिपदानुसारं लिङ्गं च निर्धारयति।"
+    },
+    {
+     "concept_tag": "samahara-dvandva",
+     "learning_objective": "छात्रः समूहप्रधाने समाहारद्वन्द्वे नपुंसकैकवचनरूपं समस्तपदं रचयति।"
+    },
+    {
+     "concept_tag": "purvanipata-niyama",
+     "learning_objective": "छात्रः द्वन्द्वे कस्य पदस्य पूर्वप्रयोगः भवति इति नियमान् प्रयुङ्क्ते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH09-T6",
+   "topic_number": 6,
+   "title": "बहुव्रीहिसमासः एकशेषः च",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "bahuvrihi-anyapada",
+     "learning_objective": "छात्रः बहुव्रीहौ अन्यपदप्राधान्यं 'यस्य सः' इति विग्रहं समस्तपदस्य बोध्यार्थं च निर्दिशति।"
+    },
+    {
+     "concept_tag": "ekashesha",
+     "learning_objective": "छात्रः एकशेषं समासात् भिन्नां वृत्तिं पुंलिङ्गपदशेषनियमं च अवगच्छति।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,702 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "poorvi-c08-en",
+  "curriculum": "cbse",
+  "class_level": 8,
+  "subject_code": "english",
+  "language": "english",
+  "title": "Poorvi",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "hepr1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "HEPR1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Wit and Wisdom",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hepr101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEPR1-CH01-T1",
+     "topic_number": 1,
+     "title": "The Wit that Won Hearts: the story",
+     "ncert_sections": "The Wit that Won Hearts: Let us read, Let us discuss, Let us think and reflect",
+     "concepts": [
+      {
+       "concept_tag": "vijayanagara-court-context",
+       "learning_objective": "Students will recall the setting of the story, the court of Krishnadeva Raya and Tenali Ramakrishna's place in it."
+      },
+      {
+       "concept_tag": "tenali-rama-strategy",
+       "learning_objective": "Students will explain how Tenali Rama used wit to make the king see his mistake and end the quarrel."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH01-T2",
+     "topic_number": 2,
+     "title": "The Wit that Won Hearts: words and expressions",
+     "ncert_sections": "The Wit that Won Hearts: Let us learn I-III",
+     "concepts": [
+      {
+       "concept_tag": "story-vocabulary",
+       "learning_objective": "Students will interpret the meanings of words and expressions from the story in context."
+      },
+      {
+       "concept_tag": "compound-words",
+       "learning_objective": "Students will identify closed, hyphenated and open compound words and form new ones."
+      },
+      {
+       "concept_tag": "sound-words",
+       "learning_objective": "Students will choose suitable sound words to complete sentences."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH01-T3",
+     "topic_number": 3,
+     "title": "Conditional sentences (if clauses)",
+     "ncert_sections": "The Wit that Won Hearts: Let us learn IV-VI",
+     "concepts": [
+      {
+       "concept_tag": "main-and-if-clauses",
+       "learning_objective": "Students will identify the subordinate (if) clause and the main clause in a sentence."
+      },
+      {
+       "concept_tag": "types-of-conditionals",
+       "learning_objective": "Students will distinguish possible, hypothetical and past unreal conditions and use the right verb forms."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH01-T4",
+     "topic_number": 4,
+     "title": "A Concrete Example: the poem",
+     "ncert_sections": "A Concrete Example: Let us read, Let us discuss, Let us think and reflect",
+     "concepts": [
+      {
+       "concept_tag": "poem-comprehension",
+       "learning_objective": "Students will understand what the poem says about Mrs. Jones and her garden of stones."
+      },
+      {
+       "concept_tag": "poetic-devices",
+       "learning_objective": "Students will identify refrain, rhyme scheme, situational irony and pun in the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH01-T5",
+     "topic_number": 5,
+     "title": "A Concrete Example: vocabulary",
+     "ncert_sections": "A Concrete Example: Let us learn I-III",
+     "concepts": [
+      {
+       "concept_tag": "synonyms-in-context",
+       "learning_objective": "Students will choose the word that best replaces a word from the poem in context."
+      },
+      {
+       "concept_tag": "instrument-words",
+       "learning_objective": "Students will distinguish implement, tool, equipment, appliance and gadget."
+      },
+      {
+       "concept_tag": "word-formation",
+       "learning_objective": "Students will form new words by replacing the first letter of a given word."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH01-T6",
+     "topic_number": 6,
+     "title": "Wisdom Paves the Way: the play",
+     "ncert_sections": "Wisdom Paves the Way: Scene I, Scene II, Let us discuss, Let us think and reflect",
+     "concepts": [
+      {
+       "concept_tag": "deduction-from-observation",
+       "learning_objective": "Students will explain how each young man deduced a fact about the camel from its tracks and surroundings."
+      },
+      {
+       "concept_tag": "characters-and-theme",
+       "learning_objective": "Students will analyse the merchant's and the King's reactions and the play's message about wisdom."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH01-T7",
+     "topic_number": 7,
+     "title": "Wisdom Paves the Way: language",
+     "ncert_sections": "Wisdom Paves the Way: Let us learn I-VI",
+     "concepts": [
+      {
+       "concept_tag": "noun-forms",
+       "learning_objective": "Students will form nouns from verbs used in the play."
+      },
+      {
+       "concept_tag": "idiomatic-expressions",
+       "learning_objective": "Students will understand expressions such as 'taken aback' and 'more than meets the eye'."
+      },
+      {
+       "concept_tag": "modal-verbs",
+       "learning_objective": "Students will identify the function of modal verbs and use them correctly."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEPR1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Values and Dispositions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hepr102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEPR1-CH02-T1",
+     "topic_number": 1,
+     "title": "A Tale of Valour: the Battle of Badgam",
+     "ncert_sections": "A Tale of Valour (main text, the events of 3 November 1947)",
+     "concepts": [
+      {
+       "concept_tag": "battle-of-badgam-events",
+       "learning_objective": "Recall and sequence the events that led to and made up the Battle of Badgam."
+      },
+      {
+       "concept_tag": "leadership-under-fire",
+       "learning_objective": "Interpret how Major Somnath Sharma's actions and words show leadership and duty."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH02-T2",
+     "topic_number": 2,
+     "title": "A Tale of Valour: life, legacy and language",
+     "ncert_sections": "A Tale of Valour (early life, Param Vir Chakra, Let us learn)",
+     "concepts": [
+      {
+       "concept_tag": "somnath-sharma-life-legacy",
+       "learning_objective": "Recall facts about Major Somnath Sharma's early life, honours and legacy."
+      },
+      {
+       "concept_tag": "military-vocabulary-collective-nouns",
+       "learning_objective": "Use the chapter's vocabulary, noun/verb spelling pairs and collective nouns for armed forces correctly."
+      },
+      {
+       "concept_tag": "subject-verb-agreement",
+       "learning_objective": "Choose verbs that agree with their subjects, including collective nouns."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH02-T3",
+     "topic_number": 3,
+     "title": "Somebody's Mother: story and theme",
+     "ncert_sections": "Somebody's Mother (poem, Let us discuss, Let us think and reflect)",
+     "concepts": [
+      {
+       "concept_tag": "poem-narrative-sequence",
+       "learning_objective": "Recall what happens in the poem and in what order."
+      },
+      {
+       "concept_tag": "theme-empathy-kindness",
+       "learning_objective": "Analyse the poem's message of empathy and the boy's motive for helping."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH02-T4",
+     "topic_number": 4,
+     "title": "Somebody's Mother: poetic devices and vocabulary",
+     "ncert_sections": "Somebody's Mother (poetic devices, Let us learn)",
+     "concepts": [
+      {
+       "concept_tag": "poetic-devices-rhyme",
+       "learning_objective": "Identify simile, contrast and the rhyme scheme in the poem."
+      },
+      {
+       "concept_tag": "idioms-and-word-meanings",
+       "learning_objective": "Use the 'hand' idioms and the conjunction 'lest' correctly."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH02-T5",
+     "topic_number": 5,
+     "title": "Verghese Kurien - I Too Had A Dream: the letter and its values",
+     "ncert_sections": "Verghese Kurien - I Too Had A Dream (letter to his grandson)",
+     "concepts": [
+      {
+       "concept_tag": "kurien-letter-content",
+       "learning_objective": "Recall the content and purpose of Dr Kurien's letter to Siddharth."
+      },
+      {
+       "concept_tag": "kurien-values-integrity",
+       "learning_objective": "Evaluate the values of integrity, effort and service the letter promotes."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH02-T6",
+     "topic_number": 6,
+     "title": "Verghese Kurien - I Too Had A Dream: language study",
+     "ncert_sections": "Verghese Kurien - I Too Had A Dream (Let us discuss, Let us learn, Let us speak)",
+     "concepts": [
+      {
+       "concept_tag": "fact-and-opinion",
+       "learning_objective": "Distinguish facts from opinions in sentences from the letter."
+      },
+      {
+       "concept_tag": "dashes-and-homophones",
+       "learning_objective": "Use the en dash, the em dash and its/it's, your/you're, their/they're correctly."
+      },
+      {
+       "concept_tag": "synonyms-and-word-stress",
+       "learning_objective": "Match words from the letter with synonyms and apply noun/verb stress patterns."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEPR1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Mystery and Magic",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hepr103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEPR1-CH03-T1",
+     "topic_number": 1,
+     "title": "The Case of the Fifth Word: the story and its characters",
+     "ncert_sections": "The Case of the Fifth Word, Part I",
+     "concepts": [
+      {
+       "concept_tag": "encyclopedia-brown-character",
+       "learning_objective": "Describe Leroy (Encyclopedia) Brown's traits and his role in solving his father's cases."
+      },
+      {
+       "concept_tag": "jewellery-robbery-facts",
+       "learning_objective": "Recall the facts of the Diamond Mart hold-up and the suspicion against Nolan and Davenport."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH03-T2",
+     "topic_number": 2,
+     "title": "The Case of the Fifth Word: the coded message",
+     "ncert_sections": "The Case of the Fifth Word, Part II",
+     "concepts": [
+      {
+       "concept_tag": "four-word-code",
+       "learning_objective": "Explain how Nolan's four-word code stood for days of the week and pointed to the fir tree."
+      },
+      {
+       "concept_tag": "fact-and-opinion",
+       "learning_objective": "Distinguish statements of fact from statements of opinion in the story."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH03-T3",
+     "topic_number": 3,
+     "title": "The Case of the Fifth Word: language and grammar",
+     "ncert_sections": "The Case of the Fifth Word, Let us learn",
+     "concepts": [
+      {
+       "concept_tag": "phrasal-verbs",
+       "learning_objective": "Use the phrasal verbs from the story according to their meanings."
+      },
+      {
+       "concept_tag": "homophones-and-spoonerisms",
+       "learning_objective": "Identify homophone pairs and correct spoonerisms."
+      },
+      {
+       "concept_tag": "reported-speech-questions",
+       "learning_objective": "Change Wh- and Yes/No questions from direct into reported speech."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH03-T4",
+     "topic_number": 4,
+     "title": "The Magic Brush of Dreams: story, theme and symbols",
+     "ncert_sections": "The Magic Brush of Dreams (poem)",
+     "concepts": [
+      {
+       "concept_tag": "gopi-and-the-zamindar",
+       "learning_objective": "Recall the events of the poem and contrast Gopi's and the Zamindar's aims."
+      },
+      {
+       "concept_tag": "poem-symbolism-and-tone",
+       "learning_objective": "Interpret the symbols and the changing tone of the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH03-T5",
+     "topic_number": 5,
+     "title": "The Magic Brush of Dreams: poetic form and language",
+     "ncert_sections": "The Magic Brush of Dreams, Let us learn and Let us speak",
+     "concepts": [
+      {
+       "concept_tag": "narrative-poem-form",
+       "learning_objective": "Identify the poem's genre, rhyme scheme and use of repetition."
+      },
+      {
+       "concept_tag": "interjections-and-draw",
+       "learning_objective": "Match interjections to emotions and the verb 'draw' to its meanings in context."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH03-T6",
+     "topic_number": 6,
+     "title": "Spectacular Wonders: India's natural phenomena",
+     "ncert_sections": "Spectacular Wonders",
+     "concepts": [
+      {
+       "concept_tag": "natural-wonders-of-india",
+       "learning_objective": "Recall the location and unique feature of each natural wonder described."
+      },
+      {
+       "concept_tag": "science-behind-wonders",
+       "learning_objective": "Explain the scientific causes behind the phenomena described."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH03-T7",
+     "topic_number": 7,
+     "title": "Spectacular Wonders: vocabulary and grammar",
+     "ncert_sections": "Spectacular Wonders, Let us learn",
+     "concepts": [
+      {
+       "concept_tag": "binomials-and-synonyms",
+       "learning_objective": "Use binomials and synonyms of words from the text correctly."
+      },
+      {
+       "concept_tag": "participles-and-gerunds",
+       "learning_objective": "Distinguish participles used as adjectives from gerunds used as nouns."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEPR1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Environment",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hepr104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEPR1-CH04-T1",
+     "topic_number": 1,
+     "title": "The Cherry Tree, Part I: Planting the Seed",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rakesh-and-his-setting",
+       "learning_objective": "Describe Rakesh's life with his grandfather in the Himalayan foothills near Mussoorie."
+      },
+      {
+       "concept_tag": "planting-the-cherry-seed",
+       "learning_objective": "Explain how and why Rakesh planted the cherry seed on Grandfather's advice."
+      },
+      {
+       "concept_tag": "early-growth-of-the-tree",
+       "learning_objective": "Interpret Rakesh's care for the young cherry tree and its first setbacks."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH04-T2",
+     "topic_number": 2,
+     "title": "The Cherry Tree, Part II: The Tree Grows and Blossoms",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "survival-of-the-tree",
+       "learning_objective": "Trace how the cherry tree survives damage and grows alongside Rakesh."
+      },
+      {
+       "concept_tag": "visitors-of-the-tree",
+       "learning_objective": "Identify the creatures that visit the tree and what Rakesh's response shows about him."
+      },
+      {
+       "concept_tag": "bond-with-nature",
+       "learning_objective": "Evaluate what the story says about the bond between people and the nature they nurture."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH04-T3",
+     "topic_number": 3,
+     "title": "The Cherry Tree: Vocabulary and Grammar",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "words-from-the-cherry-tree",
+       "learning_objective": "Use the meanings, synonyms and antonyms of words from the story."
+      },
+      {
+       "concept_tag": "past-tense-forms",
+       "learning_objective": "Distinguish and use the Simple Past, Past Progressive and Past Perfect tenses."
+      },
+      {
+       "concept_tag": "punctuation-marks",
+       "learning_objective": "Identify the use of common punctuation marks such as the colon and semicolon."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH04-T4",
+     "topic_number": 4,
+     "title": "Harvest Hymn: Meaning, Structure and Poetic Devices",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "deities-and-gratitude",
+       "learning_objective": "Explain whom the farmers praise in the hymn and why they offer thanks."
+      },
+      {
+       "concept_tag": "poetic-devices-in-the-hymn",
+       "learning_objective": "Identify alliteration, personification and metaphor in lines of the poem."
+      },
+      {
+       "concept_tag": "structure-and-tone",
+       "learning_objective": "Analyse why the poem is a hymn sung in the voices of men, women and all."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH04-T5",
+     "topic_number": 5,
+     "title": "Harvest Hymn: Archaic Words and Vocabulary",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "archaic-words",
+       "learning_objective": "Give the modern meanings of archaic words such as thou, thee, thy, thine and art."
+      },
+      {
+       "concept_tag": "vocabulary-of-the-hymn",
+       "learning_objective": "Infer the meanings of words such as munificent, succour, counsel and ineffable."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH04-T6",
+     "topic_number": 6,
+     "title": "Waiting for the Rain: Velu and the Drought",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "velu-and-the-drought",
+       "learning_objective": "Describe Velu's life as a farmer and his response to the failed rains."
+      },
+      {
+       "concept_tag": "old-womans-wisdom",
+       "learning_objective": "Interpret the old woman's advice that the land, like people, needs rest."
+      },
+      {
+       "concept_tag": "rest-for-the-land",
+       "learning_objective": "Relate the story's idea of resting land to the practice of fallowing."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH04-T7",
+     "topic_number": 7,
+     "title": "Waiting for the Rain: Vocabulary and Grammar",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "homophones",
+       "learning_objective": "Identify and use homophones such as weather and whether, piece and peace."
+      },
+      {
+       "concept_tag": "present-tense-forms",
+       "learning_objective": "Distinguish and use the Simple Present, Present Progressive and Present Perfect tenses."
+      },
+      {
+       "concept_tag": "word-meanings-in-context",
+       "learning_objective": "Infer the meanings of words such as forlorn, dejected and muttered from context."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEPR1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Science and Curiosity",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hepr105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEPR1-CH05-T1",
+     "topic_number": 1,
+     "title": "Feathered Friend: Claribel aboard the space station",
+     "ncert_sections": "Feathered Friend, Part I",
+     "concepts": [
+      {
+       "concept_tag": "claribel-aboard",
+       "learning_objective": "Explain how Claribel came to the space station and adapted to weightlessness."
+      },
+      {
+       "concept_tag": "work-in-zero-gravity",
+       "learning_objective": "Interpret the narrator's description of construction work and life in free fall."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH05-T2",
+     "topic_number": 2,
+     "title": "Feathered Friend: the warning that saved the crew",
+     "ncert_sections": "Feathered Friend, Part II",
+     "concepts": [
+      {
+       "concept_tag": "canary-as-warning",
+       "learning_objective": "Explain how Claribel's collapse revealed the danger in the station's air."
+      },
+      {
+       "concept_tag": "alarm-failure-and-humour",
+       "learning_objective": "Identify why the alarm failed and interpret the humour of the ending."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH05-T3",
+     "topic_number": 3,
+     "title": "Feathered Friend: merged words and future time",
+     "ncert_sections": "Feathered Friend, Let us learn",
+     "concepts": [
+      {
+       "concept_tag": "merged-words",
+       "learning_objective": "Form merged words and state their source words."
+      },
+      {
+       "concept_tag": "future-time-reference",
+       "learning_objective": "Choose the verb form that expresses future time correctly in context."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH05-T4",
+     "topic_number": 4,
+     "title": "Magnifying Glass: theme, imagery and form",
+     "ncert_sections": "Magnifying Glass (poem)",
+     "concepts": [
+      {
+       "concept_tag": "poem-theme-imagery",
+       "learning_objective": "Interpret how the poem shows ordinary things becoming wonderful under a lens."
+      },
+      {
+       "concept_tag": "poetic-devices-form",
+       "learning_objective": "Identify the poem's devices, stanza form and rhyme scheme."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH05-T5",
+     "topic_number": 5,
+     "title": "Magnifying Glass: collective nouns, idioms and suffix -ish",
+     "ncert_sections": "Magnifying Glass, Let us learn",
+     "concepts": [
+      {
+       "concept_tag": "collective-nouns",
+       "learning_objective": "Match collective nouns with the groups they name."
+      },
+      {
+       "concept_tag": "eye-idioms",
+       "learning_objective": "Use idioms with 'eye' correctly in context."
+      },
+      {
+       "concept_tag": "suffix-ish",
+       "learning_objective": "Form adjectives by adding the suffix -ish to suitable nouns."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH05-T6",
+     "topic_number": 6,
+     "title": "Bibha Chowdhuri: a pioneer of physics",
+     "ncert_sections": "Bibha Chowdhuri, Let us read (opening to Breaking Boundaries)",
+     "concepts": [
+      {
+       "concept_tag": "bibha-early-career",
+       "learning_objective": "Recall the main events of Bibha Chowdhuri's career in order."
+      },
+      {
+       "concept_tag": "bibha-research",
+       "learning_objective": "Explain the importance of Bibha Chowdhuri's research on cosmic rays."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH05-T7",
+     "topic_number": 7,
+     "title": "Bibha Chowdhuri: legacy and women in Indian science",
+     "ncert_sections": "Bibha Chowdhuri, The Legacy and From Shadows to the Stars",
+     "concepts": [
+      {
+       "concept_tag": "bibha-legacy",
+       "learning_objective": "Explain how Bibha Chowdhuri's work was finally honoured."
+      },
+      {
+       "concept_tag": "women-in-stem",
+       "learning_objective": "Evaluate how the text links her struggle to women scientists today."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEPR1-CH05-T8",
+     "topic_number": 8,
+     "title": "Bibha Chowdhuri: suffixes, clipping and passive voice",
+     "ncert_sections": "Bibha Chowdhuri, Let us learn",
+     "concepts": [
+      {
+       "concept_tag": "suffixes-ship-ment-hood",
+       "learning_objective": "Form nouns by adding the suffixes -ship, -ment and -hood."
+      },
+      {
+       "concept_tag": "clipping",
+       "learning_objective": "Identify back, front and middle clipping in shortened words."
+      },
+      {
+       "concept_tag": "passive-voice",
+       "learning_objective": "Use the passive voice correctly and explain when it is preferred."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

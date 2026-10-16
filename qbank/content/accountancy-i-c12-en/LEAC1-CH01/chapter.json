@@ -1,0 +1,136 @@
+{
+ "chapter_id": "LEAC1-CH01",
+ "title": "Accounting for Partnership: Basic Concepts",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEAC1-CH01-T1",
+   "topic_number": 1,
+   "title": "Nature and essential features of partnership",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "partnership-essential-features",
+     "learning_objective": "State the definition of partnership under Section 4 of the Indian Partnership Act 1932 and identify its essential features."
+    },
+    {
+     "concept_tag": "mutual-agency-and-liability",
+     "learning_objective": "Explain mutual agency and the unlimited, joint and several liability of partners."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH01-T2",
+   "topic_number": 2,
+   "title": "Partnership deed and provisions of the Partnership Act",
+   "ncert_sections": "1.2, 1.2.1",
+   "concepts": [
+    {
+     "concept_tag": "partnership-deed",
+     "learning_objective": "Identify the nature and usual contents of a partnership deed."
+    },
+    {
+     "concept_tag": "provisions-in-absence-of-deed",
+     "learning_objective": "Apply the provisions of the Indian Partnership Act 1932 that govern accounts when the deed is silent."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH01-T3",
+   "topic_number": 3,
+   "title": "Maintenance of partners' capital accounts",
+   "ncert_sections": "1.3, 1.4, 1.4.1",
+   "concepts": [
+    {
+     "concept_tag": "fixed-capital-method",
+     "learning_objective": "Prepare partners' capital and current accounts under the fixed capital method."
+    },
+    {
+     "concept_tag": "fluctuating-capital-method",
+     "learning_objective": "Prepare partners' capital accounts under the fluctuating capital method and distinguish it from the fixed capital method."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH01-T4",
+   "topic_number": 4,
+   "title": "Profit and Loss Appropriation Account",
+   "ncert_sections": "1.5, 1.5.1",
+   "concepts": [
+    {
+     "concept_tag": "appropriation-account-items",
+     "learning_objective": "Identify the items shown in the Profit and Loss Appropriation Account and compute the divisible profit."
+    },
+    {
+     "concept_tag": "appropriation-journal-entries",
+     "learning_objective": "Record the journal entries for appropriations of profit among partners."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH01-T5",
+   "topic_number": 5,
+   "title": "Interest on capital",
+   "ncert_sections": "1.5.2",
+   "concepts": [
+    {
+     "concept_tag": "interest-on-capital-calculation",
+     "learning_objective": "Calculate interest on capital allowing for additions to and withdrawals of capital during the year."
+    },
+    {
+     "concept_tag": "interest-on-capital-limited-to-profit",
+     "learning_objective": "Explain how interest on capital is treated when the firm earns insufficient profit or incurs a loss."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH01-T6",
+   "topic_number": 6,
+   "title": "Interest on drawings",
+   "ncert_sections": "1.5.3",
+   "concepts": [
+    {
+     "concept_tag": "interest-on-drawings-average-period",
+     "learning_objective": "Calculate interest on fixed drawings made monthly or quarterly using the average period."
+    },
+    {
+     "concept_tag": "interest-on-drawings-product-method",
+     "learning_objective": "Calculate interest on varying drawings using the product method."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH01-T7",
+   "topic_number": 7,
+   "title": "Guarantee of profit to a partner",
+   "ncert_sections": "1.6",
+   "concepts": [
+    {
+     "concept_tag": "guarantee-by-all-partners",
+     "learning_objective": "Distribute profit when a minimum profit guaranteed to a partner is borne by the other partners in an agreed ratio."
+    },
+    {
+     "concept_tag": "guarantee-by-one-partner",
+     "learning_objective": "Distribute profit when the guarantee of minimum profit is given by one partner alone."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH01-T8",
+   "topic_number": 8,
+   "title": "Past adjustments",
+   "ncert_sections": "1.7",
+   "concepts": [
+    {
+     "concept_tag": "past-adjustment-methods",
+     "learning_objective": "Identify omissions that need past adjustments and the ways of rectifying them."
+    },
+    {
+     "concept_tag": "past-adjustment-net-effect",
+     "learning_objective": "Prepare a statement of net effect and pass a single adjustment entry in partners' capital accounts."
+    }
+   ]
+  }
+ ]
+}

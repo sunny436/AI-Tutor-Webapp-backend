@@ -1,0 +1,144 @@
+{
+ "chapter_id": "KECH1-CH04",
+ "title": "Chemical Bonding and Molecular Structure",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECH1-CH04-T1",
+   "topic_number": 1,
+   "title": "Kossel-Lewis approach, octet rule, Lewis structures and formal charge",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "lewis-symbols-octet-rule",
+     "learning_objective": "Represent valence electrons with Lewis symbols and apply the octet rule to simple molecules."
+    },
+    {
+     "concept_tag": "formal-charge",
+     "learning_objective": "Calculate the formal charge on atoms in a Lewis structure and use it to judge structures."
+    },
+    {
+     "concept_tag": "octet-rule-limitations",
+     "learning_objective": "Identify incomplete octets, odd-electron molecules and expanded octets as exceptions to the octet rule."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH04-T2",
+   "topic_number": 2,
+   "title": "Ionic or electrovalent bond and lattice enthalpy",
+   "ncert_sections": "4.2, 4.2.1",
+   "concepts": [
+    {
+     "concept_tag": "ionic-bond-formation",
+     "learning_objective": "Explain the conditions that favour the formation of an ionic bond."
+    },
+    {
+     "concept_tag": "lattice-enthalpy",
+     "learning_objective": "Define lattice enthalpy and explain its role in the stability of ionic solids."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH04-T3",
+   "topic_number": 3,
+   "title": "Bond parameters: bond length, bond angle, bond enthalpy, bond order, resonance and polarity",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "bond-length-angle-enthalpy",
+     "learning_objective": "Define bond length, covalent radius, bond angle and bond enthalpy and use them in simple calculations."
+    },
+    {
+     "concept_tag": "bond-order-resonance",
+     "learning_objective": "Determine bond order and explain resonance using resonance structures."
+    },
+    {
+     "concept_tag": "bond-polarity-dipole-moment",
+     "learning_objective": "Relate bond polarity and molecular geometry to the dipole moment of a molecule."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH04-T4",
+   "topic_number": 4,
+   "title": "The VSEPR theory and shapes of molecules",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "vsepr-postulates",
+     "learning_objective": "State the postulates of VSEPR theory and the order of electron-pair repulsions."
+    },
+    {
+     "concept_tag": "shapes-with-lone-pairs",
+     "learning_objective": "Predict shapes and bond angles of molecules whose central atom has lone pairs."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH04-T5",
+   "topic_number": 5,
+   "title": "Valence bond theory, orbital overlap and sigma and pi bonds",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "orbital-overlap",
+     "learning_objective": "Describe covalent bond formation in H2 in terms of potential energy and orbital overlap."
+    },
+    {
+     "concept_tag": "sigma-pi-bonds",
+     "learning_objective": "Distinguish sigma and pi bonds by the type of overlap and count them in molecules."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH04-T6",
+   "topic_number": 6,
+   "title": "Hybridisation",
+   "ncert_sections": "4.6",
+   "concepts": [
+    {
+     "concept_tag": "hybridisation-sp-sp2-sp3",
+     "learning_objective": "Identify sp, sp2 and sp3 hybridisation and relate it to shape and s-character."
+    },
+    {
+     "concept_tag": "hybridisation-d-orbitals",
+     "learning_objective": "Explain sp3d and sp3d2 hybridisation in molecules such as PCl5 and SF6."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH04-T7",
+   "topic_number": 7,
+   "title": "Molecular orbital theory and bonding in homonuclear diatomic molecules",
+   "ncert_sections": "4.7, 4.8",
+   "concepts": [
+    {
+     "concept_tag": "lcao-molecular-orbitals",
+     "learning_objective": "Explain the formation of bonding and antibonding molecular orbitals by LCAO and the conditions for combination."
+    },
+    {
+     "concept_tag": "mo-bond-order-magnetism",
+     "learning_objective": "Use molecular orbital configurations to find bond order, stability and magnetic nature."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH04-T8",
+   "topic_number": 8,
+   "title": "Hydrogen bonding",
+   "ncert_sections": "4.9",
+   "concepts": [
+    {
+     "concept_tag": "hydrogen-bond-cause",
+     "learning_objective": "Explain the cause of hydrogen bond formation and its effect on physical properties."
+    },
+    {
+     "concept_tag": "inter-intra-hydrogen-bond",
+     "learning_objective": "Distinguish intermolecular and intramolecular hydrogen bonds with examples."
+    }
+   ]
+  }
+ ]
+}

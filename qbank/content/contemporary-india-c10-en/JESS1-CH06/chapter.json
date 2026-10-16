@@ -1,0 +1,156 @@
+{
+ "chapter_id": "JESS1-CH06",
+ "title": "Manufacturing Industries",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESS1-CH06-T1",
+   "topic_number": 1,
+   "title": "Manufacturing and its importance",
+   "ncert_sections": "Introduction; Importance of Manufacturing",
+   "concepts": [
+    {
+     "concept_tag": "manufacturing-and-secondary-sector",
+     "learning_objective": "Define manufacturing and place manufacturing workers in the secondary sector."
+    },
+    {
+     "concept_tag": "importance-of-manufacturing",
+     "learning_objective": "Explain why manufacturing is the backbone of economic development."
+    },
+    {
+     "concept_tag": "agriculture-industry-interdependence",
+     "learning_objective": "Explain how agriculture and industry move hand in hand."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH06-T2",
+   "topic_number": 2,
+   "title": "Classification of industries",
+   "ncert_sections": "Classification of Industries",
+   "concepts": [
+    {
+     "concept_tag": "classification-by-raw-material-and-role",
+     "learning_objective": "Classify industries by source of raw material and by their main role."
+    },
+    {
+     "concept_tag": "classification-by-ownership",
+     "learning_objective": "Distinguish public, private, joint and cooperative sector industries."
+    },
+    {
+     "concept_tag": "classification-by-bulk-and-capital",
+     "learning_objective": "Classify industries by bulk of materials and by capital investment."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH06-T3",
+   "topic_number": 3,
+   "title": "Agro-based industries: textiles and sugar",
+   "ncert_sections": "Agro-based Industries; Textile Industry; Cotton Textiles; Jute Textiles; Sugar Industry",
+   "concepts": [
+    {
+     "concept_tag": "cotton-textile-industry",
+     "learning_objective": "Describe the importance and organisation of the cotton textile industry."
+    },
+    {
+     "concept_tag": "jute-textile-industry",
+     "learning_objective": "Explain the history and location factors of the jute industry in the Hugli basin."
+    },
+    {
+     "concept_tag": "sugar-industry-location",
+     "learning_objective": "Explain the location and recent shift of the sugar industry."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH06-T4",
+   "topic_number": 4,
+   "title": "Mineral-based industries: iron and steel, aluminium",
+   "ncert_sections": "Mineral-based Industries; Iron and Steel Industry; Aluminium Smelting",
+   "concepts": [
+    {
+     "concept_tag": "iron-and-steel-industry",
+     "learning_objective": "Explain the raw materials and location of the iron and steel industry."
+    },
+    {
+     "concept_tag": "aluminium-smelting",
+     "learning_objective": "Describe the properties of aluminium and the location factors of smelters."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH06-T5",
+   "topic_number": 5,
+   "title": "Chemical, fertilizer and cement industries",
+   "ncert_sections": "Chemical Industries; Fertilizer Industry; Cement Industry",
+   "concepts": [
+    {
+     "concept_tag": "chemical-industry",
+     "learning_objective": "Distinguish inorganic and organic chemical industries and their location."
+    },
+    {
+     "concept_tag": "fertilizer-industry",
+     "learning_objective": "Describe the types of fertilizers produced and the spread of the industry."
+    },
+    {
+     "concept_tag": "cement-industry",
+     "learning_objective": "State the raw materials, uses and location of the cement industry."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH06-T6",
+   "topic_number": 6,
+   "title": "Automobile and IT-electronics industries",
+   "ncert_sections": "Automobile Industry; Information Technology and Electronics Industry",
+   "concepts": [
+    {
+     "concept_tag": "automobile-industry",
+     "learning_objective": "Describe the growth and centres of the automobile industry."
+    },
+    {
+     "concept_tag": "it-electronics-industry",
+     "learning_objective": "Identify the centres and impact of the IT and electronics industry."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH06-T7",
+   "topic_number": 7,
+   "title": "Industrial pollution and environmental degradation",
+   "ncert_sections": "Industrial Pollution and Environmental Degradation",
+   "concepts": [
+    {
+     "concept_tag": "air-and-noise-pollution",
+     "learning_objective": "Explain the causes and effects of industrial air and noise pollution."
+    },
+    {
+     "concept_tag": "water-and-land-pollution",
+     "learning_objective": "Explain how industries pollute water and land, including thermal pollution."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESS1-CH06-T8",
+   "topic_number": 8,
+   "title": "Control of environmental degradation",
+   "ncert_sections": "Control of Environmental Degradation; NTPC shows the way",
+   "concepts": [
+    {
+     "concept_tag": "water-conservation-and-effluent-treatment",
+     "learning_objective": "Describe ways to reduce industrial pollution of fresh water."
+    },
+    {
+     "concept_tag": "air-and-noise-control",
+     "learning_objective": "Identify measures to control industrial air and noise pollution."
+    },
+    {
+     "concept_tag": "sustainable-development-ntpc",
+     "learning_objective": "Evaluate measures that integrate economic development with environmental concerns."
+    }
+   ]
+  }
+ ]
+}

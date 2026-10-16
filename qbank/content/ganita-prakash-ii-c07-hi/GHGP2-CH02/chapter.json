@@ -1,0 +1,120 @@
+{
+ "chapter_id": "GHGP2-CH02",
+ "title": "पूर्णांकों के साथ संक्रियाएँ",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHGP2-CH02-T1",
+   "topic_number": 1,
+   "title": "पूर्णांकों का त्वरित पुनरावलोकन",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "yogphal-antar-paheli",
+     "learning_objective": "विद्यार्थी दिए गए योगफल और अंतर से दो पूर्णांक ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "sankhya-rekha-visthapan",
+     "learning_objective": "विद्यार्थी संख्या रेखा पर धनात्मक और ऋणात्मक विस्थापनों को जोड़कर अंतिम स्थिति ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "yojya-vyutkram-ghatav",
+     "learning_objective": "विद्यार्थी टोकन निदर्श और योज्य व्युत्क्रम की सहायता से पूर्णांकों का घटाव कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH02-T2",
+   "topic_number": 2,
+   "title": "टोकन निदर्श से पूर्णांकों का गुणन और गुणन के प्रतिरूप",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "token-nidarsh-gunan",
+     "learning_objective": "विद्यार्थी थैले में टोकन रखने और निकालने की क्रिया से पूर्णांकों का गुणन दर्शा सकेंगे।"
+    },
+    {
+     "concept_tag": "gunan-pratirup",
+     "learning_objective": "विद्यार्थी गुणन के प्रतिरूपों को ऋणात्मक गुणकों तक बढ़ाकर गुणनफल ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH02-T3",
+   "topic_number": 3,
+   "title": "गुणन के चिह्न नियम, क्रमविनिमेयता और ब्रह्मगुप्त के नियम",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "gunan-chihn-niyam",
+     "learning_objective": "विद्यार्थी गुणक और गुण्य के चिह्नों से गुणनफल का चिह्न और मान ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "kramvinimey-gunan",
+     "learning_objective": "विद्यार्थी समझ सकेंगे कि पूर्णांकों के लिए a × b = b × a होता है।"
+    },
+    {
+     "concept_tag": "brahmagupt-niyam",
+     "learning_objective": "विद्यार्थी धन और ऋण के गुणन तथा भाग के लिए ब्रह्मगुप्त के नियम पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH02-T4",
+   "topic_number": 4,
+   "title": "पूर्णांकों का विभाजन",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "vibhajan-gunan-sambandh",
+     "learning_objective": "विद्यार्थी भाग को गुणन के प्रश्न में बदलकर पूर्णांकों का भागफल ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "vibhajan-chihn-niyam",
+     "learning_objective": "विद्यार्थी भाज्य और भाजक के चिह्नों से भागफल का चिह्न निर्धारित कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH02-T5",
+   "topic_number": 5,
+   "title": "पूर्णांकों के प्रयोग से व्यंजक और गुणन के गुणधर्म",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "sahacharya-gunan",
+     "learning_objective": "विद्यार्थी तीन पूर्णांकों के गुणन में साहचर्य नियम का प्रयोग कर सकेंगे।"
+    },
+    {
+     "concept_tag": "anek-gunanfal-chihn",
+     "learning_objective": "विद्यार्थी ऋणात्मक गुणनखंडों की संख्या से अनेक पूर्णांकों के गुणनफल का चिह्न बता सकेंगे।"
+    },
+    {
+     "concept_tag": "bantan-gunan",
+     "learning_objective": "विद्यार्थी पूर्णांकों के लिए बंटन गुणधर्म a × (b + c) = a × b + a × c का प्रयोग कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH02-T6",
+   "topic_number": 6,
+   "title": "दैनिक जीवन में पूर्णांकों का प्रयोग",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "pariksha-ank-yojna",
+     "learning_objective": "विद्यार्थी सही और गलत उत्तरों के अंकों को पूर्णांकों से व्यक्त कर कुल अंक ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "sthiti-parivartan-dar",
+     "learning_objective": "विद्यार्थी लिफ्ट की स्थिति या तापमान में नियत दर से परिवर्तन को पूर्णांकों के गुणन से ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "labh-hani-purnank",
+     "learning_objective": "विद्यार्थी लाभ को धनात्मक और हानि को ऋणात्मक पूर्णांक मानकर कुल परिणाम ज्ञात कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

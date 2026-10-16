@@ -1,0 +1,915 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "chemistry-part-i-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "chemistry",
+  "language": "english",
+  "title": "Chemistry Part-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kech1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KECH1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Some Basic Concepts of Chemistry",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kech101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECH1-CH01-T1",
+     "topic_number": 1,
+     "title": "Importance of chemistry and nature of matter",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "role-of-chemistry",
+       "learning_objective": "Describe how chemistry contributes to health, industry and the environment."
+      },
+      {
+       "concept_tag": "states-of-matter",
+       "learning_objective": "Explain the solid, liquid and gaseous states in terms of particle arrangement and motion."
+      },
+      {
+       "concept_tag": "classification-of-matter",
+       "learning_objective": "Classify matter into mixtures, elements and compounds."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH01-T2",
+     "topic_number": 2,
+     "title": "Properties of matter and their measurement",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "si-units-prefixes",
+       "learning_objective": "Identify the SI base units and the quantities they measure."
+      },
+      {
+       "concept_tag": "mass-weight-volume",
+       "learning_objective": "Distinguish mass from weight and convert between units of volume."
+      },
+      {
+       "concept_tag": "density-temperature",
+       "learning_objective": "Calculate density and convert temperatures between the Celsius, Fahrenheit and Kelvin scales."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH01-T3",
+     "topic_number": 3,
+     "title": "Uncertainty in measurement",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "significant-figures",
+       "learning_objective": "Apply the rules of significant figures and scientific notation to measured quantities and results."
+      },
+      {
+       "concept_tag": "precision-accuracy",
+       "learning_objective": "Distinguish precision from accuracy using sets of measurements."
+      },
+      {
+       "concept_tag": "dimensional-analysis",
+       "learning_objective": "Convert units using the unit factor method."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH01-T4",
+     "topic_number": 4,
+     "title": "Laws of chemical combinations",
+     "ncert_sections": "1.5",
+     "concepts": [
+      {
+       "concept_tag": "conservation-of-mass",
+       "learning_objective": "State the law of conservation of mass and its significance."
+      },
+      {
+       "concept_tag": "definite-and-multiple-proportions",
+       "learning_objective": "Apply the laws of definite and multiple proportions to mass data."
+      },
+      {
+       "concept_tag": "gay-lussac-and-avogadro",
+       "learning_objective": "Apply Gay Lussac's law of gaseous volumes and Avogadro's law."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH01-T5",
+     "topic_number": 5,
+     "title": "Dalton's atomic theory and atomic and molecular masses",
+     "ncert_sections": "1.6, 1.7",
+     "concepts": [
+      {
+       "concept_tag": "daltons-atomic-theory",
+       "learning_objective": "State the postulates of Dalton's atomic theory."
+      },
+      {
+       "concept_tag": "average-atomic-mass",
+       "learning_objective": "Define the atomic mass unit and calculate average atomic mass from isotopic data."
+      },
+      {
+       "concept_tag": "molecular-and-formula-mass",
+       "learning_objective": "Calculate molecular mass and explain when formula mass is used."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH01-T6",
+     "topic_number": 6,
+     "title": "Mole concept, percentage composition and empirical formula",
+     "ncert_sections": "1.8, 1.9, 1.9.1",
+     "concepts": [
+      {
+       "concept_tag": "mole-and-avogadro-number",
+       "learning_objective": "Relate mass, moles and number of particles using molar mass and the Avogadro constant."
+      },
+      {
+       "concept_tag": "percentage-composition",
+       "learning_objective": "Calculate the mass per cent of an element in a compound."
+      },
+      {
+       "concept_tag": "empirical-molecular-formula",
+       "learning_objective": "Derive empirical and molecular formulas from percentage composition and molar mass."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH01-T7",
+     "topic_number": 7,
+     "title": "Stoichiometry, limiting reagent and reactions in solutions",
+     "ncert_sections": "1.10, 1.10.1, 1.10.2",
+     "concepts": [
+      {
+       "concept_tag": "stoichiometric-calculations",
+       "learning_objective": "Use a balanced equation to calculate masses of reactants and products."
+      },
+      {
+       "concept_tag": "limiting-reagent",
+       "learning_objective": "Identify the limiting reagent and the amount of product it allows."
+      },
+      {
+       "concept_tag": "concentration-of-solutions",
+       "learning_objective": "Express and calculate concentration as molarity and related terms."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECH1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Structure of Atom",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kech102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECH1-CH02-T1",
+     "topic_number": 1,
+     "title": "Discovery of Sub-atomic Particles",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "cathode-ray-electrons",
+       "learning_objective": "Describe the properties of cathode rays and how they established the electron."
+      },
+      {
+       "concept_tag": "charge-mass-of-electron",
+       "learning_objective": "Use Thomson's e/m ratio and Millikan's charge to obtain the mass of the electron."
+      },
+      {
+       "concept_tag": "protons-and-neutrons",
+       "learning_objective": "Recall how protons and neutrons were discovered and their properties."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH02-T2",
+     "topic_number": 2,
+     "title": "Atomic Models, Atomic Number and Isotopes",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "thomson-rutherford-models",
+       "learning_objective": "Compare the Thomson and Rutherford models and interpret the alpha-scattering results."
+      },
+      {
+       "concept_tag": "atomic-mass-number",
+       "learning_objective": "Calculate protons, neutrons and electrons from atomic number and mass number."
+      },
+      {
+       "concept_tag": "isotopes-isobars",
+       "learning_objective": "Distinguish isotopes from isobars."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH02-T3",
+     "topic_number": 3,
+     "title": "Wave and Particle Nature of Electromagnetic Radiation",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "em-wave-relations",
+       "learning_objective": "Relate frequency, wavelength and wavenumber of electromagnetic radiation."
+      },
+      {
+       "concept_tag": "photoelectric-effect",
+       "learning_objective": "Apply Planck's quantum theory to the photoelectric effect."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH02-T4",
+     "topic_number": 4,
+     "title": "Bohr's Model for Hydrogen Atom",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "bohr-postulates",
+       "learning_objective": "State Bohr's postulates, including quantised angular momentum and energy."
+      },
+      {
+       "concept_tag": "hydrogen-spectrum-calculations",
+       "learning_objective": "Calculate energies and wavelengths of transitions in the hydrogen atom."
+      },
+      {
+       "concept_tag": "bohr-limitations",
+       "learning_objective": "Identify the limitations of Bohr's model."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH02-T5",
+     "topic_number": 5,
+     "title": "Towards Quantum Mechanical Model: Dual Behaviour and Uncertainty",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "de-broglie-wavelength",
+       "learning_objective": "Apply the de Broglie relation to microscopic and macroscopic particles."
+      },
+      {
+       "concept_tag": "uncertainty-principle",
+       "learning_objective": "Explain Heisenberg's uncertainty principle and its consequences."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH02-T6",
+     "topic_number": 6,
+     "title": "Orbitals, Quantum Numbers and Shapes of Orbitals",
+     "ncert_sections": "2.6.1, 2.6.2",
+     "concepts": [
+      {
+       "concept_tag": "quantum-numbers",
+       "learning_objective": "Assign allowed values of n, l, ml and ms to electrons in orbitals."
+      },
+      {
+       "concept_tag": "orbital-shapes-nodes",
+       "learning_objective": "Determine the number of radial and angular nodes of orbitals."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH02-T7",
+     "topic_number": 7,
+     "title": "Energies of Orbitals and Electronic Configuration",
+     "ncert_sections": "2.6.3, 2.6.4, 2.6.5, 2.6.6",
+     "concepts": [
+      {
+       "concept_tag": "aufbau-n-plus-l",
+       "learning_objective": "Order orbital energies using the (n + l) rule and the aufbau principle."
+      },
+      {
+       "concept_tag": "pauli-hund-rules",
+       "learning_objective": "State and apply the Pauli exclusion principle and Hund's rule."
+      },
+      {
+       "concept_tag": "configuration-stability",
+       "learning_objective": "Explain the extra stability of half-filled and completely filled subshells."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECH1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Classification of Elements and Periodicity in Properties",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kech103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECH1-CH03-T1",
+     "topic_number": 1,
+     "title": "Need for classification and genesis of periodic classification",
+     "ncert_sections": "3.1, 3.2",
+     "concepts": [
+      {
+       "concept_tag": "early-classification-attempts",
+       "learning_objective": "Describe Dobereiner's triads and Newlands' law of octaves and state their limitations."
+      },
+      {
+       "concept_tag": "mendeleev-periodic-table",
+       "learning_objective": "Explain Mendeleev's periodic law, his placement of elements and his predictions of undiscovered elements."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH03-T2",
+     "topic_number": 2,
+     "title": "Modern periodic law and the present form of the Periodic Table",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "modern-periodic-law",
+       "learning_objective": "State the modern periodic law and explain why atomic number replaced atomic mass as its basis."
+      },
+      {
+       "concept_tag": "long-form-periodic-table",
+       "learning_objective": "Describe the periods and groups of the long form of the Periodic Table and the number of elements in each period."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH03-T3",
+     "topic_number": 3,
+     "title": "Nomenclature of elements with atomic numbers greater than 100",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "iupac-systematic-name",
+       "learning_objective": "Derive the IUPAC temporary name and symbol of an element from its atomic number."
+      },
+      {
+       "concept_tag": "naming-new-elements",
+       "learning_objective": "Explain why IUPAC uses temporary names and how permanent names are given."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH03-T4",
+     "topic_number": 4,
+     "title": "Electronic configurations of elements and the Periodic Table",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "period-electronic-configuration",
+       "learning_objective": "Relate the number of elements in a period to the orbitals filled in that period."
+      },
+      {
+       "concept_tag": "group-electronic-configuration",
+       "learning_objective": "Recognise that elements of a group share the same valence shell configuration."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH03-T5",
+     "topic_number": 5,
+     "title": "s-, p-, d- and f-block elements; metals, non-metals and metalloids",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "block-classification",
+       "learning_objective": "Classify elements into s-, p-, d- and f-blocks from their outer electronic configurations and locate them in the table."
+      },
+      {
+       "concept_tag": "metals-nonmetals-metalloids",
+       "learning_objective": "Distinguish metals, non-metals and metalloids and predict trends in metallic character."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH03-T6",
+     "topic_number": 6,
+     "title": "Periodic trends in atomic and ionic radii",
+     "ncert_sections": "3.7.1 (a), (b)",
+     "concepts": [
+      {
+       "concept_tag": "atomic-radius",
+       "learning_objective": "Define covalent and metallic radius and explain the trends in atomic radius across a period and down a group."
+      },
+      {
+       "concept_tag": "ionic-radius-isoelectronic",
+       "learning_objective": "Compare the sizes of ions with their parent atoms and of isoelectronic species."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH03-T7",
+     "topic_number": 7,
+     "title": "Ionization enthalpy, electron gain enthalpy and electronegativity",
+     "ncert_sections": "3.7.1 (c), (d), (e)",
+     "concepts": [
+      {
+       "concept_tag": "ionization-enthalpy",
+       "learning_objective": "Define ionization enthalpy and explain its periodic trends and exceptions."
+      },
+      {
+       "concept_tag": "electron-gain-enthalpy",
+       "learning_objective": "Define electron gain enthalpy and explain its trends, including the exceptions of O and F."
+      },
+      {
+       "concept_tag": "electronegativity",
+       "learning_objective": "Describe electronegativity, the Pauling scale and its periodic trends."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH03-T8",
+     "topic_number": 8,
+     "title": "Periodic trends in chemical properties and chemical reactivity",
+     "ncert_sections": "3.7.2, 3.7.3",
+     "concepts": [
+      {
+       "concept_tag": "valence-oxidation-state",
+       "learning_objective": "Predict valence, formulas of compounds and oxidation states from the position of elements."
+      },
+      {
+       "concept_tag": "anomalous-second-period",
+       "learning_objective": "Explain the anomalous behaviour of second period elements and the diagonal relationship."
+      },
+      {
+       "concept_tag": "reactivity-and-oxides",
+       "learning_objective": "Relate chemical reactivity across a period to the acidic, basic, amphoteric or neutral nature of oxides."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECH1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Chemical Bonding and Molecular Structure",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kech104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECH1-CH04-T1",
+     "topic_number": 1,
+     "title": "Kossel-Lewis approach, octet rule, Lewis structures and formal charge",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "lewis-symbols-octet-rule",
+       "learning_objective": "Represent valence electrons with Lewis symbols and apply the octet rule to simple molecules."
+      },
+      {
+       "concept_tag": "formal-charge",
+       "learning_objective": "Calculate the formal charge on atoms in a Lewis structure and use it to judge structures."
+      },
+      {
+       "concept_tag": "octet-rule-limitations",
+       "learning_objective": "Identify incomplete octets, odd-electron molecules and expanded octets as exceptions to the octet rule."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH04-T2",
+     "topic_number": 2,
+     "title": "Ionic or electrovalent bond and lattice enthalpy",
+     "ncert_sections": "4.2, 4.2.1",
+     "concepts": [
+      {
+       "concept_tag": "ionic-bond-formation",
+       "learning_objective": "Explain the conditions that favour the formation of an ionic bond."
+      },
+      {
+       "concept_tag": "lattice-enthalpy",
+       "learning_objective": "Define lattice enthalpy and explain its role in the stability of ionic solids."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH04-T3",
+     "topic_number": 3,
+     "title": "Bond parameters: bond length, bond angle, bond enthalpy, bond order, resonance and polarity",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "bond-length-angle-enthalpy",
+       "learning_objective": "Define bond length, covalent radius, bond angle and bond enthalpy and use them in simple calculations."
+      },
+      {
+       "concept_tag": "bond-order-resonance",
+       "learning_objective": "Determine bond order and explain resonance using resonance structures."
+      },
+      {
+       "concept_tag": "bond-polarity-dipole-moment",
+       "learning_objective": "Relate bond polarity and molecular geometry to the dipole moment of a molecule."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH04-T4",
+     "topic_number": 4,
+     "title": "The VSEPR theory and shapes of molecules",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "vsepr-postulates",
+       "learning_objective": "State the postulates of VSEPR theory and the order of electron-pair repulsions."
+      },
+      {
+       "concept_tag": "shapes-with-lone-pairs",
+       "learning_objective": "Predict shapes and bond angles of molecules whose central atom has lone pairs."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH04-T5",
+     "topic_number": 5,
+     "title": "Valence bond theory, orbital overlap and sigma and pi bonds",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "orbital-overlap",
+       "learning_objective": "Describe covalent bond formation in H2 in terms of potential energy and orbital overlap."
+      },
+      {
+       "concept_tag": "sigma-pi-bonds",
+       "learning_objective": "Distinguish sigma and pi bonds by the type of overlap and count them in molecules."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH04-T6",
+     "topic_number": 6,
+     "title": "Hybridisation",
+     "ncert_sections": "4.6",
+     "concepts": [
+      {
+       "concept_tag": "hybridisation-sp-sp2-sp3",
+       "learning_objective": "Identify sp, sp2 and sp3 hybridisation and relate it to shape and s-character."
+      },
+      {
+       "concept_tag": "hybridisation-d-orbitals",
+       "learning_objective": "Explain sp3d and sp3d2 hybridisation in molecules such as PCl5 and SF6."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH04-T7",
+     "topic_number": 7,
+     "title": "Molecular orbital theory and bonding in homonuclear diatomic molecules",
+     "ncert_sections": "4.7, 4.8",
+     "concepts": [
+      {
+       "concept_tag": "lcao-molecular-orbitals",
+       "learning_objective": "Explain the formation of bonding and antibonding molecular orbitals by LCAO and the conditions for combination."
+      },
+      {
+       "concept_tag": "mo-bond-order-magnetism",
+       "learning_objective": "Use molecular orbital configurations to find bond order, stability and magnetic nature."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH04-T8",
+     "topic_number": 8,
+     "title": "Hydrogen bonding",
+     "ncert_sections": "4.9",
+     "concepts": [
+      {
+       "concept_tag": "hydrogen-bond-cause",
+       "learning_objective": "Explain the cause of hydrogen bond formation and its effect on physical properties."
+      },
+      {
+       "concept_tag": "inter-intra-hydrogen-bond",
+       "learning_objective": "Distinguish intermolecular and intramolecular hydrogen bonds with examples."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECH1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Thermodynamics",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kech105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECH1-CH05-T1",
+     "topic_number": 1,
+     "title": "Thermodynamic terms: system, state and internal energy",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "system-and-surroundings",
+       "learning_objective": "Classify a system as open, closed or isolated from its exchange of energy and matter."
+      },
+      {
+       "concept_tag": "state-functions",
+       "learning_objective": "Distinguish state functions from path-dependent quantities such as heat and work."
+      },
+      {
+       "concept_tag": "first-law-internal-energy",
+       "learning_objective": "Apply the first law, delta U = q + w, with the IUPAC sign convention."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH05-T2",
+     "topic_number": 2,
+     "title": "Applications: work, enthalpy and heat capacity",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "pressure-volume-work",
+       "learning_objective": "Calculate pressure-volume work for expansion against a constant external pressure and for free expansion."
+      },
+      {
+       "concept_tag": "enthalpy-and-delta-ng",
+       "learning_objective": "Relate delta H and delta U through delta H = delta U + delta n(g) RT."
+      },
+      {
+       "concept_tag": "extensive-intensive-heat-capacity",
+       "learning_objective": "Distinguish extensive and intensive properties and use heat capacities, including Cp - Cv = R."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH05-T3",
+     "topic_number": 3,
+     "title": "Measurement of delta U and delta H: calorimetry",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "bomb-calorimeter-delta-u",
+       "learning_objective": "Explain why a bomb calorimeter measures delta U and calculate it from a temperature rise."
+      },
+      {
+       "concept_tag": "constant-pressure-calorimetry",
+       "learning_objective": "Explain that heat measured at constant pressure equals delta H and relate delta H to delta U for combustion."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH05-T4",
+     "topic_number": 4,
+     "title": "Enthalpy change of a reaction and Hess's law",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "standard-enthalpy-of-formation",
+       "learning_objective": "Identify formation reactions and calculate reaction enthalpy from standard enthalpies of formation."
+      },
+      {
+       "concept_tag": "phase-transformation-enthalpy",
+       "learning_objective": "Interpret enthalpies of fusion and vaporisation and use them in enthalpy calculations."
+      },
+      {
+       "concept_tag": "hess-law",
+       "learning_objective": "Apply Hess's law by adding, reversing and scaling thermochemical equations."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH05-T5",
+     "topic_number": 5,
+     "title": "Enthalpies for different types of reactions",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "bond-enthalpy",
+       "learning_objective": "Use bond and atomization enthalpies to estimate reaction enthalpies for gaseous reactions."
+      },
+      {
+       "concept_tag": "lattice-enthalpy-born-haber",
+       "learning_objective": "Define lattice enthalpy and calculate it from a Born-Haber cycle."
+      },
+      {
+       "concept_tag": "enthalpy-of-solution",
+       "learning_objective": "Relate enthalpy of solution to lattice enthalpy and enthalpy of hydration."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH05-T6",
+     "topic_number": 6,
+     "title": "Spontaneity: entropy and Gibbs energy",
+     "ncert_sections": "5.6",
+     "concepts": [
+      {
+       "concept_tag": "entropy-and-second-law",
+       "learning_objective": "Use the entropy criterion of spontaneity and calculate the entropy change of the surroundings."
+      },
+      {
+       "concept_tag": "gibbs-energy-spontaneity",
+       "learning_objective": "Predict spontaneity from delta G = delta H - T delta S and the effect of temperature."
+      },
+      {
+       "concept_tag": "third-law-absolute-entropy",
+       "learning_objective": "State the third law of thermodynamics and its use for absolute entropies."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH05-T7",
+     "topic_number": 7,
+     "title": "Gibbs energy change and equilibrium",
+     "ncert_sections": "5.7",
+     "concepts": [
+      {
+       "concept_tag": "equilibrium-criterion",
+       "learning_objective": "State that delta r G = 0 at equilibrium and distinguish delta r G from the standard value."
+      },
+      {
+       "concept_tag": "standard-gibbs-energy-and-k",
+       "learning_objective": "Use delta r G standard = -2.303 RT log K to relate standard Gibbs energy and the equilibrium constant."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECH1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Equilibrium",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kech106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECH1-CH06-T1",
+     "topic_number": 1,
+     "title": "Equilibrium in Physical Processes",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "physical-dynamic-equilibrium",
+       "learning_objective": "Explain the dynamic nature of solid-liquid and liquid-vapour equilibria."
+      },
+      {
+       "concept_tag": "vapour-pressure-equilibrium",
+       "learning_objective": "Relate equilibrium vapour pressure to the nature of a liquid and to temperature."
+      },
+      {
+       "concept_tag": "henrys-law-dissolution",
+       "learning_objective": "Apply Henry's law to equilibria involving dissolution of gases in liquids."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH06-T2",
+     "topic_number": 2,
+     "title": "Equilibrium in Chemical Processes and the Law of Chemical Equilibrium",
+     "ncert_sections": "6.2, 6.3",
+     "concepts": [
+      {
+       "concept_tag": "dynamic-chemical-equilibrium",
+       "learning_objective": "Describe chemical equilibrium as dynamic and attainable from either direction."
+      },
+      {
+       "concept_tag": "equilibrium-constant-expression",
+       "learning_objective": "Write Kc expressions and relate Kc values for reactions written differently."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH06-T3",
+     "topic_number": 3,
+     "title": "Homogeneous and Heterogeneous Equilibria",
+     "ncert_sections": "6.4, 6.5",
+     "concepts": [
+      {
+       "concept_tag": "kp-kc-relation",
+       "learning_objective": "Use Kp = Kc(RT)^delta-n for gaseous equilibria."
+      },
+      {
+       "concept_tag": "heterogeneous-equilibrium-expression",
+       "learning_objective": "Write equilibrium constants for heterogeneous systems omitting pure solids and liquids."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH06-T4",
+     "topic_number": 4,
+     "title": "Applications of Equilibrium Constants and Relation with Gibbs Energy",
+     "ncert_sections": "6.6, 6.7",
+     "concepts": [
+      {
+       "concept_tag": "extent-of-reaction-from-k",
+       "learning_objective": "Predict the extent of a reaction from the magnitude of K."
+      },
+      {
+       "concept_tag": "reaction-quotient-direction",
+       "learning_objective": "Predict the direction of a reaction by comparing Qc with Kc."
+      },
+      {
+       "concept_tag": "gibbs-energy-and-k",
+       "learning_objective": "Use the relation delta-G standard = -RT ln K."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH06-T5",
+     "topic_number": 5,
+     "title": "Factors Affecting Equilibria",
+     "ncert_sections": "6.8",
+     "concepts": [
+      {
+       "concept_tag": "le-chatelier-concentration-pressure",
+       "learning_objective": "Apply Le Chatelier's principle to changes in concentration and pressure."
+      },
+      {
+       "concept_tag": "temperature-effect-on-k",
+       "learning_objective": "Predict how temperature changes K for exothermic and endothermic reactions."
+      },
+      {
+       "concept_tag": "catalyst-inert-gas-effect",
+       "learning_objective": "Explain why a catalyst and an inert gas at constant volume do not shift equilibrium."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH06-T6",
+     "topic_number": 6,
+     "title": "Acids, Bases and Their Ionization",
+     "ncert_sections": "6.9, 6.10, 6.11",
+     "concepts": [
+      {
+       "concept_tag": "acid-base-concepts",
+       "learning_objective": "Identify Arrhenius, Bronsted-Lowry and Lewis acids and bases."
+      },
+      {
+       "concept_tag": "ph-and-kw",
+       "learning_objective": "Calculate pH using the ionic product of water."
+      },
+      {
+       "concept_tag": "weak-acid-ionization",
+       "learning_objective": "Calculate the degree of ionization and pH of weak acids."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH06-T7",
+     "topic_number": 7,
+     "title": "Hydrolysis of Salts and Buffer Solutions",
+     "ncert_sections": "6.11.9, 6.12",
+     "concepts": [
+      {
+       "concept_tag": "salt-hydrolysis",
+       "learning_objective": "Predict the pH of salt solutions from hydrolysis of their ions."
+      },
+      {
+       "concept_tag": "buffer-solutions",
+       "learning_objective": "Describe buffers and calculate their pH with the Henderson-Hasselbalch equation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH1-CH06-T8",
+     "topic_number": 8,
+     "title": "Solubility Equilibria of Sparingly Soluble Salts",
+     "ncert_sections": "6.13",
+     "concepts": [
+      {
+       "concept_tag": "solubility-product",
+       "learning_objective": "Relate Ksp to molar solubility and predict precipitation."
+      },
+      {
+       "concept_tag": "common-ion-solubility",
+       "learning_objective": "Explain and calculate the common ion effect on solubility."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

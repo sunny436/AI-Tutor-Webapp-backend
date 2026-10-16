@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KHBS1-CH02",
+ "title": "व्यावसायिक संगठन के स्वरूप",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHBS1-CH02-T1",
+   "topic_number": 1,
+   "title": "एकल स्वामित्व",
+   "ncert_sections": "2.1, 2.2",
+   "concepts": [
+    {
+     "concept_tag": "ekal-swamitva-lakshan",
+     "learning_objective": "विद्यार्थी एकल स्वामित्व के अर्थ और लक्षणों की पहचान कर सकेंगे।"
+    },
+    {
+     "concept_tag": "ekal-swamitva-gun-seemayen",
+     "learning_objective": "विद्यार्थी एकल स्वामित्व के गुणों और सीमाओं का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH02-T2",
+   "topic_number": 2,
+   "title": "संयुक्त हिंदू परिवार व्यवसाय",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "hindu-parivar-vyavsay-lakshan",
+     "learning_objective": "विद्यार्थी संयुक्त हिंदू परिवार व्यवसाय में कर्ता की भूमिका और सदस्यता के आधार को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "hindu-parivar-gun-seemayen",
+     "learning_objective": "विद्यार्थी संयुक्त हिंदू परिवार व्यवसाय के गुणों और सीमाओं का मूल्यांकन कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH02-T3",
+   "topic_number": 3,
+   "title": "साझेदारी: अर्थ, लक्षण, गुण और सीमाएँ",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "sajhedari-lakshan",
+     "learning_objective": "विद्यार्थी भारतीय साझेदारी अधिनियम 1932 के अनुसार साझेदारी के लक्षण बता सकेंगे।"
+    },
+    {
+     "concept_tag": "sajhedari-gun-seemayen",
+     "learning_objective": "विद्यार्थी साझेदारी के गुणों और सीमाओं की तुलना कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH02-T4",
+   "topic_number": 4,
+   "title": "साझेदारों और साझेदारी के प्रकार, संलेख तथा पंजीकरण",
+   "ncert_sections": "2.4.1, 2.4.2, 2.4.3, 2.4.4",
+   "concepts": [
+    {
+     "concept_tag": "sajhedaron-ke-prakar",
+     "learning_objective": "विद्यार्थी सक्रिय, सुप्त, गुप्त, नाममात्र और विबंधन द्वारा साझेदार में अंतर कर सकेंगे।"
+    },
+    {
+     "concept_tag": "sajhedari-ke-prakar",
+     "learning_objective": "विद्यार्थी ऐच्छिक, विशिष्ट, सामान्य और सीमित साझेदारी को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "sanlekh-aur-panjikaran",
+     "learning_objective": "विद्यार्थी साझेदारी संलेख और पंजीकरण न कराने के परिणाम समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH02-T5",
+   "topic_number": 5,
+   "title": "सहकारी समिति",
+   "ncert_sections": "2.5, 2.5.1",
+   "concepts": [
+    {
+     "concept_tag": "sahkari-samiti-lakshan",
+     "learning_objective": "विद्यार्थी सहकारी समिति के लक्षण, गुण और सीमाएँ बता सकेंगे।"
+    },
+    {
+     "concept_tag": "sahkari-samiti-prakar",
+     "learning_objective": "विद्यार्थी उद्देश्य के आधार पर सहकारी समितियों के प्रकार पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH02-T6",
+   "topic_number": 6,
+   "title": "संयुक्त पूँजी कंपनी और उसके प्रकार",
+   "ncert_sections": "2.6, 2.6.1",
+   "concepts": [
+    {
+     "concept_tag": "company-lakshan",
+     "learning_objective": "विद्यार्थी कंपनी के कृत्रिम व्यक्ति, पृथक वैधानिक अस्तित्व और शाश्वत उत्तराधिकार जैसे लक्षण समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "niji-sarvajanik-company",
+     "learning_objective": "विद्यार्थी निजी और सार्वजनिक कंपनी में अंतर कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH02-T7",
+   "topic_number": 7,
+   "title": "व्यावसायिक संगठन के स्वरूप का चयन",
+   "ncert_sections": "2.7",
+   "concepts": [
+    {
+     "concept_tag": "swaroop-chayan-ghatak",
+     "learning_objective": "विद्यार्थी संगठन के उपयुक्त स्वरूप के चयन के निर्धारक तत्वों का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

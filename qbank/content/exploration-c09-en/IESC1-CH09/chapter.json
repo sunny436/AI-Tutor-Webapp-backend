@@ -1,0 +1,144 @@
+{
+ "chapter_id": "IESC1-CH09",
+ "title": "Atomic Foundations of Matter",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IESC1-CH09-T1",
+   "topic_number": 1,
+   "title": "Law of Conservation of Mass",
+   "ncert_sections": "9.1",
+   "concepts": [
+    {
+     "concept_tag": "conservation-of-mass",
+     "learning_objective": "State the Law of Conservation of Mass and verify it from given masses of reactants and products."
+    },
+    {
+     "concept_tag": "closed-and-open-systems",
+     "learning_objective": "Explain why a reaction that releases a gas must be done in a closed system to show that mass is conserved."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH09-T2",
+   "topic_number": 2,
+   "title": "Law of Constant Proportions",
+   "ncert_sections": "9.2",
+   "concepts": [
+    {
+     "concept_tag": "constant-proportions",
+     "learning_objective": "State the Law of Constant (Definite) Proportions and use a fixed mass ratio to find unknown masses."
+    },
+    {
+     "concept_tag": "compounds-versus-mixtures",
+     "learning_objective": "Explain why the law applies to compounds and not to mixtures."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH09-T3",
+   "topic_number": 3,
+   "title": "Dalton's Atomic Theory",
+   "ncert_sections": "9.3",
+   "concepts": [
+    {
+     "concept_tag": "dalton-postulates",
+     "learning_objective": "Recall the postulates of Dalton's Atomic Theory."
+    },
+    {
+     "concept_tag": "postulates-explain-laws",
+     "learning_objective": "Use Dalton's postulates to explain the laws of conservation of mass and constant proportions."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH09-T4",
+   "topic_number": 4,
+   "title": "Covalent bonding and naming covalent compounds",
+   "ncert_sections": "9.4, 9.4.1",
+   "concepts": [
+    {
+     "concept_tag": "molecules-and-chemical-bond",
+     "learning_objective": "Define a molecule and a chemical bond, and explain why atoms combine to become stable."
+    },
+    {
+     "concept_tag": "covalent-bond",
+     "learning_objective": "Explain single, double and triple covalent bonds through sharing of electron pairs in molecules such as H2, Cl2, O2, HCl and H2O."
+    },
+    {
+     "concept_tag": "naming-covalent-compounds",
+     "learning_objective": "Name binary covalent compounds using the prefix system."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH09-T5",
+   "topic_number": 5,
+   "title": "Ionic bonding and naming ionic compounds",
+   "ncert_sections": "9.4.2",
+   "concepts": [
+    {
+     "concept_tag": "ion-formation",
+     "learning_objective": "Explain how atoms form cations and anions by losing or gaining electrons."
+    },
+    {
+     "concept_tag": "ionic-bond",
+     "learning_objective": "Describe the ionic bond and the crystal structure of sodium chloride."
+    },
+    {
+     "concept_tag": "naming-ionic-compounds",
+     "learning_objective": "Name ionic compounds and recognise common monoatomic and polyatomic ions."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH09-T6",
+   "topic_number": 6,
+   "title": "Writing chemical formulae",
+   "ncert_sections": "9.5",
+   "concepts": [
+    {
+     "concept_tag": "criss-cross-method",
+     "learning_objective": "Write formulae of covalent and ionic compounds by criss-crossing valencies and reducing to the simplest ratio."
+    },
+    {
+     "concept_tag": "polyatomic-ion-formulae",
+     "learning_objective": "Write formulae containing polyatomic ions, using brackets where needed."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH09-T7",
+   "topic_number": 7,
+   "title": "Properties of ionic and covalent compounds",
+   "ncert_sections": "9.6",
+   "concepts": [
+    {
+     "concept_tag": "solubility-of-compounds",
+     "learning_objective": "Compare the solubility of ionic and covalent compounds in water, kerosene and petrol."
+    },
+    {
+     "concept_tag": "electrical-conductivity-and-melting-point",
+     "learning_objective": "Explain the electrical conductivity and melting points of ionic and covalent compounds."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH09-T8",
+   "topic_number": 8,
+   "title": "Molecular mass and formula unit mass",
+   "ncert_sections": "9.7, 9.8",
+   "concepts": [
+    {
+     "concept_tag": "molecular-mass",
+     "learning_objective": "Calculate the molecular mass of a covalent compound from atomic masses."
+    },
+    {
+     "concept_tag": "formula-unit-mass",
+     "learning_objective": "Calculate the formula unit mass of an ionic compound and explain why ionic compounds have formula units."
+    }
+   ]
+  }
+ ]
+}

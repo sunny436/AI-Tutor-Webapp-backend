@@ -1,0 +1,144 @@
+{
+ "chapter_id": "KEGY2-CH05",
+ "title": "Geomorphic Processes",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH05-T1",
+   "topic_number": 1,
+   "title": "Geomorphic processes and agents",
+   "ncert_sections": "Introduction; Geomorphic Processes",
+   "concepts": [
+    {
+     "concept_tag": "endogenic-exogenic-forces",
+     "learning_objective": "Distinguish land-building endogenic forces from land-wearing exogenic forces and explain why relief persists."
+    },
+    {
+     "concept_tag": "geomorphic-agents",
+     "learning_objective": "Define a geomorphic agent and distinguish it from a geomorphic process."
+    },
+    {
+     "concept_tag": "role-of-gravity",
+     "learning_objective": "Explain why gravity and gradients are essential for all surface movement of earth materials."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH05-T2",
+   "topic_number": 2,
+   "title": "Endogenic processes",
+   "ncert_sections": "Endogenic Processes; Diastrophism; Volcanism",
+   "concepts": [
+    {
+     "concept_tag": "sources-of-endogenic-energy",
+     "learning_objective": "Identify the sources of energy that drive endogenic processes."
+    },
+    {
+     "concept_tag": "diastrophism",
+     "learning_objective": "Describe orogenic, epeirogenic, earthquake and plate tectonic processes under diastrophism."
+    },
+    {
+     "concept_tag": "volcanism",
+     "learning_objective": "Explain what volcanism includes as an endogenic process."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH05-T3",
+   "topic_number": 3,
+   "title": "Exogenic processes and denudation",
+   "ncert_sections": "Exogenic Processes",
+   "concepts": [
+    {
+     "concept_tag": "stress-and-exogenic-energy",
+     "learning_objective": "Explain how solar energy, gravity and stresses drive exogenic processes."
+    },
+    {
+     "concept_tag": "denudation",
+     "learning_objective": "State the processes included under denudation."
+    },
+    {
+     "concept_tag": "climate-and-rock-structure",
+     "learning_objective": "Analyse how climate and rock type and structure control rates of exogenic processes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH05-T4",
+   "topic_number": 4,
+   "title": "Weathering",
+   "ncert_sections": "Weathering; Chemical, Physical and Biological Weathering; Special Effects; Significance",
+   "concepts": [
+    {
+     "concept_tag": "types-of-weathering",
+     "learning_objective": "Distinguish chemical, physical and biological weathering processes."
+    },
+    {
+     "concept_tag": "exfoliation",
+     "learning_objective": "Explain exfoliation as a result of unloading and thermal expansion."
+    },
+    {
+     "concept_tag": "significance-of-weathering",
+     "learning_objective": "Evaluate the role of weathering in soils, erosion, biodiversity and ore enrichment."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH05-T5",
+   "topic_number": 5,
+   "title": "Mass movements",
+   "ncert_sections": "Mass Movements; Landslides",
+   "concepts": [
+    {
+     "concept_tag": "nature-of-mass-movements",
+     "learning_objective": "Explain why mass movements are gravity-driven and not a form of erosion."
+    },
+    {
+     "concept_tag": "causes-of-mass-movements",
+     "learning_objective": "Identify the activating causes and favourable conditions for mass movements."
+    },
+    {
+     "concept_tag": "types-of-landslides",
+     "learning_objective": "Distinguish slump, debris slide, debris fall, rockslide and rock fall."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH05-T6",
+   "topic_number": 6,
+   "title": "Erosion and deposition",
+   "ncert_sections": "Erosion and Deposition",
+   "concepts": [
+    {
+     "concept_tag": "erosion-agents",
+     "learning_objective": "Explain erosion and compare climatically and non-climatically controlled agents."
+    },
+    {
+     "concept_tag": "deposition",
+     "learning_objective": "Explain deposition as a consequence of loss of energy of erosional agents."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH05-T7",
+   "topic_number": 7,
+   "title": "Soil formation",
+   "ncert_sections": "Soil Formation; Process of Soil Formation; Soil-forming Factors",
+   "concepts": [
+    {
+     "concept_tag": "pedogenesis",
+     "learning_objective": "Describe the stages of soil formation from the weathering mantle to mature soil."
+    },
+    {
+     "concept_tag": "passive-soil-factors",
+     "learning_objective": "Explain the role of parent material, topography and time as passive soil-forming factors."
+    },
+    {
+     "concept_tag": "active-soil-factors",
+     "learning_objective": "Explain how climate and biological activity act as active soil-forming factors."
+    }
+   ]
+  }
+ ]
+}

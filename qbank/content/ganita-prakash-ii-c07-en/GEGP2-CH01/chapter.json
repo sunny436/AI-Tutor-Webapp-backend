@@ -1,0 +1,108 @@
+{
+ "chapter_id": "GEGP2-CH01",
+ "title": "Geometric Twins",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP2-CH01-T1",
+   "topic_number": 1,
+   "title": "Congruent figures: geometric twins",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "congruent-figures-superimposition",
+     "learning_objective": "Students will define congruent figures as figures of the same shape and size that can be superimposed exactly, allowing rotation or flipping."
+    },
+    {
+     "concept_tag": "measurements-to-replicate-figures",
+     "learning_objective": "Students will identify which measurements fix the shape and size of a figure such as a two-arm symbol, a circle or a rectangle."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH01-T2",
+   "topic_number": 2,
+   "title": "The SSS condition and the convention for writing congruence",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "sss-condition",
+     "learning_objective": "Students will use the SSS condition to decide whether two triangles are congruent."
+    },
+    {
+     "concept_tag": "congruence-notation-correspondence",
+     "learning_objective": "Students will write a congruence statement so that corresponding vertices, sides and angles appear in matching order."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH01-T3",
+   "topic_number": 3,
+   "title": "Equal angles, the SAS condition and the SSA case",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "equal-angles-not-sufficient",
+     "learning_objective": "Students will explain why triangles with the same three angles have the same shape but need not be congruent."
+    },
+    {
+     "concept_tag": "sas-condition",
+     "learning_objective": "Students will apply the SAS condition, including in figures with vertically opposite angles."
+    },
+    {
+     "concept_tag": "ssa-not-sufficient",
+     "learning_objective": "Students will show by construction that two sides and a non-included angle need not give congruent triangles."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH01-T4",
+   "topic_number": 4,
+   "title": "The ASA and AAS conditions",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "asa-condition",
+     "learning_objective": "Students will apply the ASA condition using given or alternate angles and an included side."
+    },
+    {
+     "concept_tag": "aas-condition",
+     "learning_objective": "Students will use the angle sum of a triangle to reduce the AAS case to ASA and conclude congruence."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH01-T5",
+   "topic_number": 5,
+   "title": "The RHS condition and choosing a congruence condition",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "rhs-condition",
+     "learning_objective": "Students will apply the RHS condition to right-angled triangles with equal hypotenuses and one other equal side."
+    },
+    {
+     "concept_tag": "choosing-congruence-condition",
+     "learning_objective": "Students will decide which sets of equal measurements (SSS, SAS, ASA, AAS, RHS) guarantee congruence and which do not."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH01-T6",
+   "topic_number": 6,
+   "title": "Angles of isosceles and equilateral triangles",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "isosceles-base-angles",
+     "learning_objective": "Students will use congruence to show that angles opposite equal sides are equal and find unknown angles of isosceles triangles."
+    },
+    {
+     "concept_tag": "equilateral-angles",
+     "learning_objective": "Students will deduce that every angle of an equilateral triangle measures 60 degrees."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KECS1-CH04",
+ "title": "Introduction to Problem Solving",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECS1-CH04-T1",
+   "topic_number": 1,
+   "title": "Problem solving and its steps",
+   "ncert_sections": "4.1, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "problem-solving-steps",
+     "learning_objective": "Identify the key steps of problem solving with a computer and their order."
+    },
+    {
+     "concept_tag": "testing-and-debugging",
+     "learning_objective": "Explain the role of testing, debugging and maintenance, including syntax versus logical errors."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH04-T2",
+   "topic_number": 2,
+   "title": "Algorithm and its characteristics",
+   "ncert_sections": "4.3, 4.3.1",
+   "concepts": [
+    {
+     "concept_tag": "algorithm-definition",
+     "learning_objective": "Define an algorithm as a finite sequence of precise steps that produces the desired output."
+    },
+    {
+     "concept_tag": "characteristics-of-algorithm",
+     "learning_objective": "Describe precision, uniqueness, finiteness, input and output as characteristics of a good algorithm."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH04-T3",
+   "topic_number": 3,
+   "title": "Representation of algorithms",
+   "ncert_sections": "4.4, 4.4.1, 4.4.2",
+   "concepts": [
+    {
+     "concept_tag": "flowchart-symbols",
+     "learning_objective": "Identify standard flowchart symbols and their functions."
+    },
+    {
+     "concept_tag": "pseudocode",
+     "learning_objective": "Explain pseudocode, its keywords and its benefits."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH04-T4",
+   "topic_number": 4,
+   "title": "Flow of control",
+   "ncert_sections": "4.5, 4.5.1, 4.5.2, 4.5.3",
+   "concepts": [
+    {
+     "concept_tag": "sequence-and-selection",
+     "learning_objective": "Trace algorithms that execute in sequence or choose a branch based on a condition."
+    },
+    {
+     "concept_tag": "repetition-loops",
+     "learning_objective": "Trace loops with a counter and loops that repeat until a condition becomes false."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH04-T5",
+   "topic_number": 5,
+   "title": "Verifying algorithms",
+   "ncert_sections": "4.6",
+   "concepts": [
+    {
+     "concept_tag": "dry-run",
+     "learning_objective": "Use a dry run with suitable inputs to find incorrect or missing steps in an algorithm."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH04-T6",
+   "topic_number": 6,
+   "title": "Comparison of algorithms",
+   "ncert_sections": "4.7",
+   "concepts": [
+    {
+     "concept_tag": "time-space-complexity",
+     "learning_objective": "Compare algorithms for the same problem on processing time and memory used."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH04-T7",
+   "topic_number": 7,
+   "title": "Coding and decomposition",
+   "ncert_sections": "4.8, 4.9",
+   "concepts": [
+    {
+     "concept_tag": "coding-languages",
+     "learning_objective": "Distinguish high-level and low-level languages and the factors in choosing a language."
+    },
+    {
+     "concept_tag": "decomposition",
+     "learning_objective": "Explain how decomposition breaks a complex problem into sub-problems that are solved and integrated."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "chapter_id": "FEES1-CH01",
+ "title": "Locating Places on the Earth",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FEES1-CH01-T1",
+   "topic_number": 1,
+   "title": "Maps and their kinds",
+   "ncert_sections": "A Map and Its Components",
+   "concepts": [
+    {
+     "concept_tag": "map-as-representation",
+     "learning_objective": "Explain that a map is a top-view drawing of an area, small or large."
+    },
+    {
+     "concept_tag": "kinds-of-maps",
+     "learning_objective": "Distinguish physical, political and thematic maps and define an atlas."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEES1-CH01-T2",
+   "topic_number": 2,
+   "title": "Distance and the scale of a map",
+   "ncert_sections": "A Map and Its Components (distance)",
+   "concepts": [
+    {
+     "concept_tag": "map-scale-meaning",
+     "learning_objective": "State what a map's scale tells us about map and ground distances."
+    },
+    {
+     "concept_tag": "distance-using-scale",
+     "learning_objective": "Calculate real distances from map measurements using a given scale."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEES1-CH01-T3",
+   "topic_number": 3,
+   "title": "Direction and symbols on maps",
+   "ncert_sections": "A Map and Its Components (direction, symbols)",
+   "concepts": [
+    {
+     "concept_tag": "cardinal-and-intermediate-directions",
+     "learning_objective": "Identify the cardinal and intermediate directions and use them on a map."
+    },
+    {
+     "concept_tag": "map-symbols",
+     "learning_objective": "Explain why maps use standard symbols and who fixes them for India."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEES1-CH01-T4",
+   "topic_number": 4,
+   "title": "Mapping the Earth: the globe and coordinates",
+   "ncert_sections": "Mapping the Earth; a) Understanding coordinates",
+   "concepts": [
+    {
+     "concept_tag": "earth-shape-and-globe",
+     "learning_objective": "Explain why a globe represents the nearly spherical Earth better than a flat map."
+    },
+    {
+     "concept_tag": "system-of-coordinates",
+     "learning_objective": "Explain how two coordinates together fix a location precisely."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEES1-CH01-T5",
+   "topic_number": 5,
+   "title": "Latitudes",
+   "ncert_sections": "b) Latitudes",
+   "concepts": [
+    {
+     "concept_tag": "parallels-of-latitude",
+     "learning_objective": "Describe parallels of latitude, the Equator and the poles and their values."
+    },
+    {
+     "concept_tag": "latitude-and-climate",
+     "learning_objective": "Relate latitude to torrid, temperate and frigid climates."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEES1-CH01-T6",
+   "topic_number": 6,
+   "title": "Longitudes and the Prime Meridian",
+   "ncert_sections": "c) Longitudes",
+   "concepts": [
+    {
+     "concept_tag": "meridians-of-longitude",
+     "learning_objective": "Describe meridians of longitude and how longitude is measured east and west."
+    },
+    {
+     "concept_tag": "prime-meridian",
+     "learning_objective": "Identify the Greenwich Prime Meridian as the 0 degree reference for longitude."
+    },
+    {
+     "concept_tag": "ujjayini-prime-meridian",
+     "learning_objective": "Describe the ancient Indian prime meridian through Ujjayini."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEES1-CH01-T7",
+   "topic_number": 7,
+   "title": "Local time and longitude",
+   "ncert_sections": "Understanding Time Zones",
+   "concepts": [
+    {
+     "concept_tag": "earth-rotation-and-local-time",
+     "learning_objective": "Relate the Earth's rotation of 15 degrees per hour to local time."
+    },
+    {
+     "concept_tag": "local-time-calculation",
+     "learning_objective": "Calculate differences in local time from differences in longitude."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEES1-CH01-T8",
+   "topic_number": 8,
+   "title": "Standard time, time zones and the International Date Line",
+   "ncert_sections": "Understanding Time Zones",
+   "concepts": [
+    {
+     "concept_tag": "standard-time",
+     "learning_objective": "Explain standard time and Indian Standard Time relative to GMT."
+    },
+    {
+     "concept_tag": "time-zones",
+     "learning_objective": "Explain why time zones follow borders and why large countries have several."
+    },
+    {
+     "concept_tag": "international-date-line",
+     "learning_objective": "Explain the International Date Line and the change of date on crossing it."
+    }
+   ]
+  }
+ ]
+}

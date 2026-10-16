@@ -1,0 +1,557 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "lekhashastra-part-i-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "accountancy",
+  "language": "hindi",
+  "title": "Lekhashastra Part-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhac1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHAC1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "साझेदारी लेखांकन — आधारभूत अवधारणाएँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhac101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHAC1-CH01-T1",
+     "topic_number": 1,
+     "title": "साझेदारी की प्रकृति",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "sajhedari-ki-visheshtayen",
+       "learning_objective": "साझेदारी की परिभाषा और उसकी अनिवार्य विशेषताओं को पहचानना।"
+      },
+      {
+       "concept_tag": "paraspar-abhikaran",
+       "learning_objective": "साझेदारों के बीच पारस्परिक अभिकरण के संबंध और उसके प्रभाव को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH01-T2",
+     "topic_number": 2,
+     "title": "साझेदारी विलेख और अधिनियम के प्रावधान",
+     "ncert_sections": "1.2, 1.2.1",
+     "concepts": [
+      {
+       "concept_tag": "sajhedari-vilekh",
+       "learning_objective": "साझेदारी विलेख का अर्थ और उसकी विषय-वस्तु बताना।"
+      },
+      {
+       "concept_tag": "adhiniyam-ke-pravdhan",
+       "learning_objective": "विलेख मौन होने पर लेखांकन से जुड़े भारतीय साझेदारी अधिनियम 1932 के प्रावधान लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH01-T3",
+     "topic_number": 3,
+     "title": "साझेदारों के पूँजी खातों का रखरखाव",
+     "ncert_sections": "1.3, 1.4, 1.4.1",
+     "concepts": [
+      {
+       "concept_tag": "sthir-punji-paddhati",
+       "learning_objective": "स्थिर पूँजी पद्धति में पूँजी खाते और चालू खाते का अभिलेखन समझना।"
+      },
+      {
+       "concept_tag": "asthir-punji-paddhati",
+       "learning_objective": "अस्थिर पूँजी पद्धति को समझना और उसकी स्थिर पद्धति से तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH01-T4",
+     "topic_number": 4,
+     "title": "साझेदारों में लाभ का वितरण",
+     "ncert_sections": "1.5, 1.5.1",
+     "concepts": [
+      {
+       "concept_tag": "labh-hani-viniyojan-khata",
+       "learning_objective": "लाभ-हानि विनियोजन खाता बनाकर साझेदारों में विभाज्य लाभ का वितरण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH01-T5",
+     "topic_number": 5,
+     "title": "पूँजी पर ब्याज और आहरण पर ब्याज",
+     "ncert_sections": "1.5.2, 1.5.3",
+     "concepts": [
+      {
+       "concept_tag": "punji-par-byaj",
+       "learning_objective": "पूँजी में वृद्धि या कमी को ध्यान में रखकर पूँजी पर ब्याज की गणना करना।"
+      },
+      {
+       "concept_tag": "aharan-par-byaj",
+       "learning_objective": "औसत अवधि विधि से विभिन्न स्थितियों में आहरण पर ब्याज की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH01-T6",
+     "topic_number": 6,
+     "title": "साझेदार को लाभ की गारंटी",
+     "ncert_sections": "1.6",
+     "concepts": [
+      {
+       "concept_tag": "labh-ki-guarantee",
+       "learning_objective": "न्यूनतम लाभ की गारंटी से उत्पन्न कमी को गारंटी देने वाले साझेदारों में बाँटना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH01-T7",
+     "topic_number": 7,
+     "title": "पूर्व समायोजन",
+     "ncert_sections": "1.7",
+     "concepts": [
+      {
+       "concept_tag": "purv-samayojan",
+       "learning_objective": "पिछली चूकों के शुद्ध प्रभाव का विवरण बनाकर समायोजन प्रविष्टि निर्धारित करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHAC1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "साझेदारी फर्म का पुनर्गठन : साझेदार का प्रवेश",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhac102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHAC1-CH02-T1",
+     "topic_number": 1,
+     "title": "पुनर्गठन के तरीके और नए साझेदार का प्रवेश",
+     "ncert_sections": "2.1, 2.2",
+     "concepts": [
+      {
+       "concept_tag": "punargathan-ke-tarike",
+       "learning_objective": "विद्यार्थी साझेदारी फर्म के पुनर्गठन का अर्थ और उसके विभिन्न तरीके पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "naye-sajhedar-ke-adhikar",
+       "learning_objective": "विद्यार्थी नए साझेदार के अधिकार और उसके द्वारा पूँजी तथा प्रीमियम लाने का कारण समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "pravesh-par-samayojan",
+       "learning_objective": "विद्यार्थी नए साझेदार के प्रवेश पर आवश्यक समायोजनों की पहचान कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH02-T2",
+     "topic_number": 2,
+     "title": "नया लाभ विभाजन अनुपात और त्याग अनुपात",
+     "ncert_sections": "2.3, 2.4",
+     "concepts": [
+      {
+       "concept_tag": "naya-labh-vibhajan-anupat",
+       "learning_objective": "विद्यार्थी विभिन्न स्थितियों में नया लाभ विभाजन अनुपात ज्ञात कर सकेंगे।"
+      },
+      {
+       "concept_tag": "tyag-anupat",
+       "learning_objective": "विद्यार्थी त्याग अनुपात की गणना कर उसका उपयोग समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH02-T3",
+     "topic_number": 3,
+     "title": "ख्याति का अर्थ, प्रभावित करने वाले कारक और मूल्यांकन की आवश्यकता",
+     "ncert_sections": "2.5, 2.5.1, 2.5.2, 2.5.3",
+     "concepts": [
+      {
+       "concept_tag": "khyati-ka-arth",
+       "learning_objective": "विद्यार्थी ख्याति को अमूर्त संपत्ति के रूप में परिभाषित कर अधिलाभ से उसका संबंध बता सकेंगे।"
+      },
+      {
+       "concept_tag": "khyati-ke-prabhavi-karak",
+       "learning_objective": "विद्यार्थी ख्याति के मूल्य को प्रभावित करने वाले कारकों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "khyati-mulyankan-ki-avashyakta",
+       "learning_objective": "विद्यार्थी उन परिस्थितियों को पहचान सकेंगे जिनमें ख्याति का मूल्यांकन आवश्यक होता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH02-T4",
+     "topic_number": 4,
+     "title": "ख्याति के मूल्यांकन की विधियाँ",
+     "ncert_sections": "2.5.4",
+     "concepts": [
+      {
+       "concept_tag": "ausat-labh-vidhi",
+       "learning_objective": "विद्यार्थी साधारण और भारित औसत लाभ विधि से ख्याति की गणना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "adhilabh-vidhi",
+       "learning_objective": "विद्यार्थी सामान्य लाभ और अधिलाभ ज्ञात कर अधिलाभ विधि से ख्याति निकाल सकेंगे।"
+      },
+      {
+       "concept_tag": "punjikaran-vidhi",
+       "learning_objective": "विद्यार्थी औसत लाभ और अधिलाभ के पूँजीकरण से ख्याति की गणना कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH02-T5",
+     "topic_number": 5,
+     "title": "नए साझेदार के प्रवेश पर ख्याति का लेखांकन व्यवहार",
+     "ncert_sections": "2.5.5, 2.5.5.1, 2.5.5.2",
+     "concepts": [
+      {
+       "concept_tag": "premium-nakad-me-lana",
+       "learning_objective": "विद्यार्थी नकद लाए गए ख्याति प्रीमियम के वितरण और निकासी की प्रविष्टियाँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "premium-na-lana-aur-vidyaman-khyati",
+       "learning_objective": "विद्यार्थी प्रीमियम न लाने और पुस्तकों में विद्यमान ख्याति को अपलिखित करने का व्यवहार समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "chhipi-khyati",
+       "learning_objective": "विद्यार्थी पूँजी और लाभ अंश के आधार पर छिपी ख्याति का अनुमान लगा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH02-T6",
+     "topic_number": 6,
+     "title": "संचित लाभ-हानि तथा संपत्तियों और देयताओं का पुनर्मूल्यांकन",
+     "ncert_sections": "2.6, 2.7",
+     "concepts": [
+      {
+       "concept_tag": "sanchit-labh-hani",
+       "learning_objective": "विद्यार्थी संचित लाभ और हानियों को पुराने साझेदारों में बाँटने की विधि समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "punarmulyankan-khata",
+       "learning_objective": "विद्यार्थी पुनर्मूल्यांकन खाता बनाकर उसका शेष पुराने साझेदारों में बाँट सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH02-T7",
+     "topic_number": 7,
+     "title": "साझेदारों की पूँजी का समायोजन",
+     "ncert_sections": "2.8",
+     "concepts": [
+      {
+       "concept_tag": "naye-sajhedar-ki-punji-ka-adhar",
+       "learning_objective": "विद्यार्थी किसी एक साझेदार की पूँजी के आधार पर अन्य साझेदारों की आवश्यक पूँजी ज्ञात कर सकेंगे।"
+      },
+      {
+       "concept_tag": "punji-ki-kami-adhikya",
+       "learning_objective": "विद्यार्थी पूँजी की कमी लाने और अधिकता निकालने का समायोजन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH02-T8",
+     "topic_number": 8,
+     "title": "विद्यमान साझेदारों के लाभ विभाजन अनुपात में परिवर्तन",
+     "ncert_sections": "2.9",
+     "concepts": [
+      {
+       "concept_tag": "abhilabh-anupat",
+       "learning_objective": "विद्यार्थी लाभ अनुपात बदलने पर त्याग करने वाले और लाभ पाने वाले साझेदारों का अंश ज्ञात कर सकेंगे।"
+      },
+      {
+       "concept_tag": "anupat-parivartan-par-khyati",
+       "learning_objective": "विद्यार्थी लाभ अनुपात में परिवर्तन पर ख्याति के समायोजन की प्रविष्टि बता सकेंगे।"
+      },
+      {
+       "concept_tag": "anupat-parivartan-par-sanchay",
+       "learning_objective": "विद्यार्थी अनुपात परिवर्तन पर संचयों और पुनर्मूल्यांकन के व्यवहार का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHAC1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "साझेदारी फर्म का पुनर्गठन — साझेदार की सेवानिवृत्ति/मृत्यु",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhac103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHAC1-CH03-T1",
+     "topic_number": 1,
+     "title": "सेवानिवृत्त/मृत साझेदार को देय राशि का निर्धारण",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "dey-rashi-ke-ghatak",
+       "learning_objective": "सेवानिवृत्त या मृत साझेदार की देय राशि में जुड़ने वाली मदों को पहचानना।"
+      },
+      {
+       "concept_tag": "dey-rashi-se-katautiyan",
+       "learning_objective": "देय राशि से घटाई जाने वाली मदों को पहचानकर शुद्ध देय राशि ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH03-T2",
+     "topic_number": 2,
+     "title": "नया लाभ विभाजन अनुपात और अभिलाभ अनुपात",
+     "ncert_sections": "3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "naya-labh-vibhajan-anupat",
+       "learning_objective": "सेवानिवृत्ति या मृत्यु के बाद शेष साझेदारों का नया लाभ विभाजन अनुपात ज्ञात करना।"
+      },
+      {
+       "concept_tag": "abhilabh-anupat",
+       "learning_objective": "नए भाग में से पुराना भाग घटाकर शेष साझेदारों का अभिलाभ अनुपात ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH03-T3",
+     "topic_number": 3,
+     "title": "ख्याति का व्यवहार और प्रच्छन्न ख्याति",
+     "ncert_sections": "3.4, 3.4.1, 3.4.2",
+     "concepts": [
+      {
+       "concept_tag": "khyati-abhilabh-anupat-samayojan",
+       "learning_objective": "सेवानिवृत्त साझेदार के ख्याति के भाग को अभिलाभी साझेदारों के पूँजी खातों से समायोजित करना।"
+      },
+      {
+       "concept_tag": "vidyaman-khyati-apalikhan",
+       "learning_objective": "पुस्तकों में पहले से विद्यमान ख्याति को पुराने अनुपात में अपलिखित करने का नियम समझना।"
+      },
+      {
+       "concept_tag": "prachhann-khyati",
+       "learning_objective": "एकमुश्त भुगतान की स्थिति में प्रच्छन्न ख्याति की गणना और उसका समायोजन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH03-T4",
+     "topic_number": 4,
+     "title": "परिसंपत्तियों और दायित्वों का पुनर्मूल्यांकन",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "punarmulyankan-labh-hani-vitran",
+       "learning_objective": "पुनर्मूल्यांकन के शुद्ध लाभ या हानि को सभी साझेदारों में पुराने अनुपात में बाँटना।"
+      },
+      {
+       "concept_tag": "punarmulyankan-pravishtiyan",
+       "learning_objective": "पुनर्मूल्यांकन खाते की प्रविष्टियों से परिसंपत्तियों के मूल्य परिवर्तन का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH03-T5",
+     "topic_number": 5,
+     "title": "संचित लाभों और हानियों का समायोजन",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "sanchit-labh-vitran",
+       "learning_objective": "संचय और अवितरित लाभों को सभी साझेदारों में पुराने अनुपात में बाँटना।"
+      },
+      {
+       "concept_tag": "sanchit-hani-samayojan",
+       "learning_objective": "संचित हानियों को साझेदारों के पूँजी खातों में नाम करके समायोजित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH03-T6",
+     "topic_number": 6,
+     "title": "सेवानिवृत्त साझेदार को देय राशि का निपटारा",
+     "ncert_sections": "3.7",
+     "concepts": [
+      {
+       "concept_tag": "dhara-37-vikalp",
+       "learning_objective": "समझौते के अभाव में भारतीय साझेदारी अधिनियम की धारा 37 के अंतर्गत बाहर जाने वाले साझेदार के अधिकार समझना।"
+      },
+      {
+       "concept_tag": "sevanivritt-sajhedar-rin-khata",
+       "learning_objective": "किस्तों में भुगतान की स्थिति में सेवानिवृत्त साझेदार का ऋण खाता और ब्याज की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH03-T7",
+     "topic_number": 7,
+     "title": "शेष साझेदारों की पूँजी का समायोजन",
+     "ncert_sections": "3.8",
+     "concepts": [
+      {
+       "concept_tag": "punji-samayojan-ganana",
+       "learning_objective": "नई फर्म की कुल पूँजी को नए अनुपात में बाँटकर पूँजी की अधिकता या कमी ज्ञात करना।"
+      },
+      {
+       "concept_tag": "punji-samayojan-pravishtiyan",
+       "learning_objective": "अधिक पूँजी निकालने और कम पूँजी लाने की रोजनामचा प्रविष्टियाँ पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH03-T8",
+     "topic_number": 8,
+     "title": "साझेदार की मृत्यु",
+     "ncert_sections": "3.9",
+     "concepts": [
+      {
+       "concept_tag": "mrityu-tak-labh-ganana",
+       "learning_objective": "पिछले वर्ष के लाभ, औसत लाभ या विक्रय के आधार पर मृत्यु की तिथि तक मृत साझेदार का लाभ भाग ज्ञात करना।"
+      },
+      {
+       "concept_tag": "nishpadak-khata-aur-uchant",
+       "learning_objective": "मृत साझेदार के लाभ भाग की प्रविष्टि और निष्पादक खाते में देय राशि के हस्तांतरण को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHAC1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "साझेदारी फर्म का विघटन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhac104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHAC1-CH04-T1",
+     "topic_number": 1,
+     "title": "साझेदारी का विघटन",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "sajhedari-vighatan-arth",
+       "learning_objective": "साझेदारी के विघटन और फर्म के विघटन का अर्थ (धारा 39 के अनुसार) समझना।"
+      },
+      {
+       "concept_tag": "sajhedari-vighatan-ke-tarike",
+       "learning_objective": "उन परिस्थितियों को पहचानना जिनमें साझेदारी का विघटन होता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH04-T2",
+     "topic_number": 2,
+     "title": "फर्म का विघटन",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "farm-vighatan-ki-vidhiyan",
+       "learning_objective": "समझौते, अनिवार्य, आकस्मिक घटनाओं और सूचना द्वारा फर्म के विघटन की विधियों का वर्णन करना।"
+      },
+      {
+       "concept_tag": "nyayalay-dwara-vighatan",
+       "learning_objective": "उन आधारों को पहचानना जिन पर न्यायालय फर्म के विघटन का आदेश दे सकता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH04-T3",
+     "topic_number": 3,
+     "title": "साझेदारी के विघटन और फर्म के विघटन में अंतर",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "vyavsay-aur-pustakon-par-prabhav",
+       "learning_objective": "विघटन के दोनों रूपों में व्यवसाय, परिसंपत्तियों-दायित्वों और लेखा पुस्तकों पर प्रभाव की तुलना करना।"
+      },
+      {
+       "concept_tag": "aarthik-sambandh-aur-nyayalay-hastakshep",
+       "learning_objective": "विघटन के दोनों रूपों में साझेदारों के आर्थिक संबंध और न्यायालय के हस्तक्षेप में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH04-T4",
+     "topic_number": 4,
+     "title": "खातों का निपटान",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "dhara-48-hani-aur-parisampatti-upyog",
+       "learning_objective": "धारा 48 के अनुसार हानियों के वहन और परिसंपत्तियों से भुगतान के क्रम को लागू करना।"
+      },
+      {
+       "concept_tag": "dhara-49-niji-aur-farm-rin",
+       "learning_objective": "धारा 49 के अनुसार फर्म के ऋणों और साझेदार के निजी ऋणों के निपटान में अंतर करना।"
+      },
+      {
+       "concept_tag": "garner-banam-murray-niyam",
+       "learning_objective": "दिवालिया साझेदार की कमी के वहन संबंधी गार्नर बनाम मरे नियम को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH04-T5",
+     "topic_number": 5,
+     "title": "वसूली खाता",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "vasooli-khate-mein-hastantaran",
+       "learning_objective": "वसूली खाते में हस्तांतरित होने वाली परिसंपत्तियों और दायित्वों को पहचानना।"
+      },
+      {
+       "concept_tag": "vasooli-labh-hani-nirdharan",
+       "learning_objective": "वसूली खाता बनाकर वसूली पर लाभ या हानि की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHAC1-CH04-T6",
+     "topic_number": 6,
+     "title": "विघटन पर रोज़नामचा प्रविष्टियाँ",
+     "ncert_sections": "4.4.1",
+     "concepts": [
+      {
+       "concept_tag": "parisampatti-aur-dayitva-ka-nipatan",
+       "learning_objective": "साझेदार द्वारा परिसंपत्ति लेने और लेनदारों के निपटान की प्रविष्टियाँ करना।"
+      },
+      {
+       "concept_tag": "vasooli-vyay-aur-parishramik",
+       "learning_objective": "वसूली व्यय और साझेदार को दिए गए पारिश्रमिक की प्रविष्टियाँ करना।"
+      },
+      {
+       "concept_tag": "sajhedaron-ke-khaton-ka-samapan",
+       "learning_objective": "साझेदारों के ऋण और पूँजी खातों को बंद करने की प्रविष्टियाँ करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

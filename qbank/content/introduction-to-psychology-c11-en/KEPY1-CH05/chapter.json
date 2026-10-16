@@ -1,0 +1,164 @@
+{
+ "chapter_id": "KEPY1-CH05",
+ "title": "Learning",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPY1-CH05-T1",
+   "topic_number": 1,
+   "title": "Nature of Learning",
+   "ncert_sections": "Nature of Learning",
+   "concepts": [
+    {
+     "concept_tag": "learning-definition",
+     "learning_objective": "Define learning as a relatively permanent change in behaviour or behavioural potential produced by experience."
+    },
+    {
+     "concept_tag": "non-learning-changes",
+     "learning_objective": "Distinguish learning from temporary changes due to fatigue, habituation and drugs."
+    },
+    {
+     "concept_tag": "learning-vs-performance",
+     "learning_objective": "Explain that learning is an inferred process, different from observed performance."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH05-T2",
+   "topic_number": 2,
+   "title": "Classical Conditioning",
+   "ncert_sections": "Classical Conditioning; Determinants of Classical Conditioning",
+   "concepts": [
+    {
+     "concept_tag": "pavlov-experiment",
+     "learning_objective": "Identify the US, UR, CS and CR in Pavlov's experiment and everyday examples."
+    },
+    {
+     "concept_tag": "cs-us-time-relations",
+     "learning_objective": "Compare simultaneous, delayed, trace and backward conditioning procedures."
+    },
+    {
+     "concept_tag": "type-intensity-of-stimuli",
+     "learning_objective": "Explain how appetitive or aversive US and the intensity of the CS affect conditioning."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH05-T3",
+   "topic_number": 3,
+   "title": "Operant/Instrumental Conditioning",
+   "ncert_sections": "Operant/Instrumental Conditioning; Determinants of Operant Conditioning; Box 5.1",
+   "concepts": [
+    {
+     "concept_tag": "skinner-operant",
+     "learning_objective": "Describe Skinner's operant conditioning and the nature of operants."
+    },
+    {
+     "concept_tag": "positive-negative-reinforcement",
+     "learning_objective": "Distinguish positive reinforcement, negative reinforcement and punishment."
+    },
+    {
+     "concept_tag": "reinforcement-features",
+     "learning_objective": "Explain how number, amount, quality, schedule and delay of reinforcement influence operant learning."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH05-T4",
+   "topic_number": 4,
+   "title": "Key Learning Processes",
+   "ncert_sections": "Key Learning Processes; Box 5.2",
+   "concepts": [
+    {
+     "concept_tag": "primary-secondary-reinforcer",
+     "learning_objective": "Distinguish primary and secondary reinforcers."
+    },
+    {
+     "concept_tag": "extinction-spontaneous-recovery",
+     "learning_objective": "Explain extinction, resistance to extinction and spontaneous recovery."
+    },
+    {
+     "concept_tag": "generalisation-discrimination",
+     "learning_objective": "Differentiate generalisation from discrimination and explain learned helplessness."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH05-T5",
+   "topic_number": 5,
+   "title": "Observational and Cognitive Learning",
+   "ncert_sections": "Observational Learning; Cognitive Learning",
+   "concepts": [
+    {
+     "concept_tag": "observational-learning",
+     "learning_objective": "Explain observational learning using Bandura's Bobo doll study."
+    },
+    {
+     "concept_tag": "insight-learning",
+     "learning_objective": "Describe Kohler's insight learning in chimpanzees."
+    },
+    {
+     "concept_tag": "latent-learning",
+     "learning_objective": "Explain Tolman's latent learning and the idea of a cognitive map."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH05-T6",
+   "topic_number": 6,
+   "title": "Verbal Learning",
+   "ncert_sections": "Verbal Learning",
+   "concepts": [
+    {
+     "concept_tag": "verbal-learning-methods",
+     "learning_objective": "Describe paired-associates learning, serial learning and free recall."
+    },
+    {
+     "concept_tag": "verbal-learning-determinants",
+     "learning_objective": "Explain the determinants of verbal learning, including meaningfulness and the total time principle."
+    },
+    {
+     "concept_tag": "category-clustering",
+     "learning_objective": "Explain category clustering and subjective organisation in free recall."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH05-T7",
+   "topic_number": 7,
+   "title": "Skill Learning and Factors Facilitating Learning",
+   "ncert_sections": "Skill Learning; Factors Facilitating Learning",
+   "concepts": [
+    {
+     "concept_tag": "skill-phases",
+     "learning_objective": "Identify Fitts' cognitive, associative and autonomous phases of skill acquisition."
+    },
+    {
+     "concept_tag": "partial-reinforcement-effect",
+     "learning_objective": "Explain the partial reinforcement effect and the role of motivation in learning."
+    },
+    {
+     "concept_tag": "preparedness",
+     "learning_objective": "Explain preparedness for learning as a continuum set by biological constraints."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH05-T8",
+   "topic_number": 8,
+   "title": "Learning Disabilities",
+   "ncert_sections": "Learning Disabilities",
+   "concepts": [
+    {
+     "concept_tag": "learning-disability-nature",
+     "learning_objective": "Describe the nature and origin of learning disabilities."
+    },
+    {
+     "concept_tag": "learning-disability-symptoms",
+     "learning_objective": "Identify the major symptoms of learning disabilities, including dyslexia."
+    }
+   ]
+  }
+ ]
+}

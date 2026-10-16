@@ -1,0 +1,132 @@
+{
+ "chapter_id": "GHGP2-CH06",
+ "title": "रचना और टाइलिंग",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHGP2-CH06-T1",
+   "topic_number": 1,
+   "title": "लंब समद्विभाजक और उसकी रचना",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "lamb-samdvibhajak",
+     "learning_objective": "विद्यार्थी लंब समद्विभाजक को परिभाषित कर सकेंगे और जान सकेंगे कि रेखाखंड के सिरों से समान दूरी वाला हर बिंदु उस पर स्थित होता है।"
+    },
+    {
+     "concept_tag": "lamb-samdvibhajak-rachna",
+     "learning_objective": "विद्यार्थी मापक और परकार से समान त्रिज्या के चापों द्वारा लंब समद्विभाजक की रचना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "sarvangsamata-praman",
+     "learning_objective": "विद्यार्थी त्रिभुजों की सर्वांगसमता से सिद्ध कर सकेंगे कि रचित रेखा सचमुच लंब समद्विभाजक है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH06-T2",
+   "topic_number": 2,
+   "title": "दिए गए बिंदु पर 90° का कोण और शुल्ब-सूत्र",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "bindu-par-samkon",
+     "learning_objective": "विद्यार्थी लंब समद्विभाजक की विधि को बढ़ाकर रेखा के किसी बिंदु पर या बाहर के बिंदु से लंब खींच सकेंगे।"
+    },
+    {
+     "concept_tag": "shulb-sutra-rassi",
+     "learning_objective": "विद्यार्थी शुल्ब-सूत्रों में रस्सी से लंब समद्विभाजक बनाने की प्राचीन भारतीय विधि को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH06-T3",
+   "topic_number": 3,
+   "title": "कोण का समद्विभाजन",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "kon-samdvibhajan-charan",
+     "learning_objective": "विद्यार्थी मापक और परकार से किसी कोण को समद्विभाजित करने के चरण और उनका औचित्य बता सकेंगे।"
+    },
+    {
+     "concept_tag": "kon-samdvibhajan-upyog",
+     "learning_objective": "विद्यार्थी समद्विभाजन से 45° जैसे कोण बनाकर अभिकल्पनाएँ रच सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH06-T4",
+   "topic_number": 4,
+   "title": "कोण की प्रतिलिपि और समानांतर रेखाएँ",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "kon-pratilipi",
+     "learning_objective": "विद्यार्थी केवल मापक और परकार से किसी कोण की सटीक प्रतिलिपि बना सकेंगे।"
+    },
+    {
+     "concept_tag": "samantar-rekha-rachna",
+     "learning_objective": "विद्यार्थी समान संगत कोण बनाकर दी गई रेखा के समानांतर रेखा की रचना कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH06-T5",
+   "topic_number": 5,
+   "title": "मेहराब, 60° का कोण और सम-षट्भुज",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "mehrab-rachna",
+     "learning_objective": "विद्यार्थी सममित मेहराब बनाने के लिए आवश्यक सहायक रेखाओं की शर्तें पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "saath-ansh-kon",
+     "learning_objective": "विद्यार्थी समबाहु त्रिभुज बनाकर 60° का कोण रच सकेंगे।"
+    },
+    {
+     "concept_tag": "sam-shatbhuj",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि छह समबाहु त्रिभुज एक बिंदु के चारों ओर मिलकर सम-षट्भुज क्यों बनाते हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH06-T6",
+   "topic_number": 6,
+   "title": "टैनग्राम और जाल पर टाइल लगाना",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "tangram",
+     "learning_objective": "विद्यार्थी टैनग्राम पहेली और उसके टुकड़ों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "jaal-tiling",
+     "learning_objective": "विद्यार्थी टाइलिंग का अर्थ समझकर बता सकेंगे कि 2 × 1 टाइलों से कौन-से जाल भरे जा सकते हैं।"
+    },
+    {
+     "concept_tag": "kala-safed-vidhi",
+     "learning_objective": "विद्यार्थी काले-सफ़ेद रंग की विधि से सिद्ध कर सकेंगे कि कोई क्षेत्र टाइल से नहीं ढका जा सकता।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHGP2-CH06-T7",
+   "topic_number": 7,
+   "title": "पूरी सतह की टाइलिंग",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "sam-bahubhuj-tiling",
+     "learning_objective": "विद्यार्थी पहचान सकेंगे कि किन सम-बहुभुजों से पूरी सतह ढकी जा सकती है और एक शीर्ष के कोणों से इसका कारण बता सकेंगे।"
+    },
+    {
+     "concept_tag": "tiling-jeevan-mein",
+     "learning_objective": "विद्यार्थी कला, भवनों और प्रकृति में टाइलिंग के उदाहरण पहचान सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

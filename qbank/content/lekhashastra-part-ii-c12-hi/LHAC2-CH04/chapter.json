@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LHAC2-CH04",
+ "title": "लेखांकन अनुपात",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHAC2-CH04-T1",
+   "topic_number": 1,
+   "title": "लेखांकन अनुपात का अर्थ, अनुपात विश्लेषण के उद्देश्य एवं लाभ",
+   "ncert_sections": "4.1, 4.2, 4.3",
+   "concepts": [
+    {
+     "concept_tag": "lekhankan-anupat-arth",
+     "learning_objective": "लेखांकन अनुपात का अर्थ समझाना और किसी अनुपात के मान की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "anupat-vishleshan-uddeshya",
+     "learning_objective": "अनुपात विश्लेषण के उद्देश्यों की पहचान करना।"
+    },
+    {
+     "concept_tag": "anupat-vishleshan-labh",
+     "learning_objective": "अनुपात विश्लेषण से होने वाले लाभों की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH04-T2",
+   "topic_number": 2,
+   "title": "अनुपात विश्लेषण की सीमाएँ एवं अनुपातों के प्रकार",
+   "ncert_sections": "4.4, 4.5",
+   "concepts": [
+    {
+     "concept_tag": "anupat-vishleshan-seemayen",
+     "learning_objective": "अनुपात विश्लेषण की सीमाओं को पहचानना और उनका मूल्यांकन करना।"
+    },
+    {
+     "concept_tag": "anupaton-ke-prakar",
+     "learning_objective": "अनुपातों के परंपरागत एवं कार्यात्मक वर्गीकरण में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH04-T3",
+   "topic_number": 3,
+   "title": "द्रवता अनुपात",
+   "ncert_sections": "4.6",
+   "concepts": [
+    {
+     "concept_tag": "chalu-anupat",
+     "learning_objective": "चालू अनुपात का परिकलन करना और लेन-देनों के उस पर प्रभाव का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "taral-anupat",
+     "learning_objective": "तरल परिसंपत्तियाँ ज्ञात करके तरल (त्वरित) अनुपात का परिकलन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH04-T4",
+   "topic_number": 4,
+   "title": "ऋण शोधन क्षमता अनुपात",
+   "ncert_sections": "4.7",
+   "concepts": [
+    {
+     "concept_tag": "rin-samta-anupat",
+     "learning_objective": "ऋण-समता अनुपात का परिकलन करना और उसकी व्याख्या करना।"
+    },
+    {
+     "concept_tag": "swamitva-evam-niyojit-punji-anupat",
+     "learning_objective": "स्वामित्व अनुपात तथा ऋण पर नियोजित पूँजी अनुपात का परिकलन करना।"
+    },
+    {
+     "concept_tag": "byaj-vyapti-anupat",
+     "learning_objective": "ब्याज व्याप्ति अनुपात का परिकलन करना और उसका महत्त्व समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH04-T5",
+   "topic_number": 5,
+   "title": "क्रियाशीलता (आवर्त) अनुपात",
+   "ncert_sections": "4.8",
+   "concepts": [
+    {
+     "concept_tag": "rahatiya-avart-anupat",
+     "learning_objective": "रहतिया आवर्त अनुपात का परिकलन करना और उसकी व्याख्या करना।"
+    },
+    {
+     "concept_tag": "vyaparik-prapya-deya-avart",
+     "learning_objective": "व्यापारिक प्राप्य एवं देय आवर्त अनुपात तथा औसत संग्रह अवधि ज्ञात करना।"
+    },
+    {
+     "concept_tag": "niyojit-punji-avart",
+     "learning_objective": "निवल परिसंपत्तियाँ, स्थायी परिसंपत्ति एवं कार्यशील पूँजी आवर्त अनुपातों का परिकलन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH04-T6",
+   "topic_number": 6,
+   "title": "लाभप्रदता अनुपात",
+   "ncert_sections": "4.9",
+   "concepts": [
+    {
+     "concept_tag": "sakal-labh-evam-prachalan-anupat",
+     "learning_objective": "सकल लाभ, प्रचालन तथा प्रचालन लाभ अनुपातों का परिकलन करना।"
+    },
+    {
+     "concept_tag": "niyojit-punji-par-pratyay",
+     "learning_objective": "निवेश (नियोजित पूँजी) पर प्रत्याय ज्ञात करके उसका मूल्यांकन करना।"
+    },
+    {
+     "concept_tag": "prati-ansh-arjan-evam-mulya-arjan",
+     "learning_objective": "प्रति अंश अर्जन, लाभांश भुगतान तथा मूल्य-अर्जन अनुपात का परिकलन करना।"
+    }
+   ]
+  }
+ ]
+}

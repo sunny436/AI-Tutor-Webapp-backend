@@ -1,0 +1,144 @@
+{
+ "chapter_id": "KECH1-CH03",
+ "title": "Classification of Elements and Periodicity in Properties",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECH1-CH03-T1",
+   "topic_number": 1,
+   "title": "Need for classification and genesis of periodic classification",
+   "ncert_sections": "3.1, 3.2",
+   "concepts": [
+    {
+     "concept_tag": "early-classification-attempts",
+     "learning_objective": "Describe Dobereiner's triads and Newlands' law of octaves and state their limitations."
+    },
+    {
+     "concept_tag": "mendeleev-periodic-table",
+     "learning_objective": "Explain Mendeleev's periodic law, his placement of elements and his predictions of undiscovered elements."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH03-T2",
+   "topic_number": 2,
+   "title": "Modern periodic law and the present form of the Periodic Table",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "modern-periodic-law",
+     "learning_objective": "State the modern periodic law and explain why atomic number replaced atomic mass as its basis."
+    },
+    {
+     "concept_tag": "long-form-periodic-table",
+     "learning_objective": "Describe the periods and groups of the long form of the Periodic Table and the number of elements in each period."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH03-T3",
+   "topic_number": 3,
+   "title": "Nomenclature of elements with atomic numbers greater than 100",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "iupac-systematic-name",
+     "learning_objective": "Derive the IUPAC temporary name and symbol of an element from its atomic number."
+    },
+    {
+     "concept_tag": "naming-new-elements",
+     "learning_objective": "Explain why IUPAC uses temporary names and how permanent names are given."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH03-T4",
+   "topic_number": 4,
+   "title": "Electronic configurations of elements and the Periodic Table",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "period-electronic-configuration",
+     "learning_objective": "Relate the number of elements in a period to the orbitals filled in that period."
+    },
+    {
+     "concept_tag": "group-electronic-configuration",
+     "learning_objective": "Recognise that elements of a group share the same valence shell configuration."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH03-T5",
+   "topic_number": 5,
+   "title": "s-, p-, d- and f-block elements; metals, non-metals and metalloids",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "block-classification",
+     "learning_objective": "Classify elements into s-, p-, d- and f-blocks from their outer electronic configurations and locate them in the table."
+    },
+    {
+     "concept_tag": "metals-nonmetals-metalloids",
+     "learning_objective": "Distinguish metals, non-metals and metalloids and predict trends in metallic character."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH03-T6",
+   "topic_number": 6,
+   "title": "Periodic trends in atomic and ionic radii",
+   "ncert_sections": "3.7.1 (a), (b)",
+   "concepts": [
+    {
+     "concept_tag": "atomic-radius",
+     "learning_objective": "Define covalent and metallic radius and explain the trends in atomic radius across a period and down a group."
+    },
+    {
+     "concept_tag": "ionic-radius-isoelectronic",
+     "learning_objective": "Compare the sizes of ions with their parent atoms and of isoelectronic species."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH03-T7",
+   "topic_number": 7,
+   "title": "Ionization enthalpy, electron gain enthalpy and electronegativity",
+   "ncert_sections": "3.7.1 (c), (d), (e)",
+   "concepts": [
+    {
+     "concept_tag": "ionization-enthalpy",
+     "learning_objective": "Define ionization enthalpy and explain its periodic trends and exceptions."
+    },
+    {
+     "concept_tag": "electron-gain-enthalpy",
+     "learning_objective": "Define electron gain enthalpy and explain its trends, including the exceptions of O and F."
+    },
+    {
+     "concept_tag": "electronegativity",
+     "learning_objective": "Describe electronegativity, the Pauling scale and its periodic trends."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECH1-CH03-T8",
+   "topic_number": 8,
+   "title": "Periodic trends in chemical properties and chemical reactivity",
+   "ncert_sections": "3.7.2, 3.7.3",
+   "concepts": [
+    {
+     "concept_tag": "valence-oxidation-state",
+     "learning_objective": "Predict valence, formulas of compounds and oxidation states from the position of elements."
+    },
+    {
+     "concept_tag": "anomalous-second-period",
+     "learning_objective": "Explain the anomalous behaviour of second period elements and the diagonal relationship."
+    },
+    {
+     "concept_tag": "reactivity-and-oxides",
+     "learning_objective": "Relate chemical reactivity across a period to the acidic, basic, amphoteric or neutral nature of oxides."
+    }
+   ]
+  }
+ ]
+}

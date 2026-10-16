@@ -1,0 +1,116 @@
+{
+ "chapter_id": "HHCU1-CH05",
+ "title": "बलों को जानें",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHCU1-CH05-T1",
+   "topic_number": 1,
+   "title": "बल क्या है: धक्का, खिंचाव और पारस्परिक क्रिया",
+   "ncert_sections": "5.1, 5.3",
+   "concepts": [
+    {
+     "concept_tag": "bal-dhakka-khinchav",
+     "learning_objective": "विद्यार्थी बल को किसी वस्तु पर लगने वाले धक्के या खिंचाव के रूप में पहचानता है।"
+    },
+    {
+     "concept_tag": "paraspar-kriya-matrak",
+     "learning_objective": "विद्यार्थी समझाता है कि बल दो वस्तुओं की पारस्परिक क्रिया से उत्पन्न होता है और उसका SI मात्रक न्यूटन है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH05-T2",
+   "topic_number": 2,
+   "title": "किसी वस्तु पर बल के प्रभाव",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "bal-ke-prabhav",
+     "learning_objective": "विद्यार्थी बल द्वारा चाल, गति की दिशा और आकार में होने वाले परिवर्तनों को पहचानता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH05-T3",
+   "topic_number": 3,
+   "title": "संपर्क बल: पेशीय बल और घर्षण",
+   "ncert_sections": "5.4.1",
+   "concepts": [
+    {
+     "concept_tag": "peshiya-bal",
+     "learning_objective": "विद्यार्थी पेशीय बल को माँसपेशियों की क्रिया से उत्पन्न संपर्क बल के रूप में समझता है।"
+    },
+    {
+     "concept_tag": "gharshan-bal",
+     "learning_objective": "विद्यार्थी घर्षण की दिशा, कारण और सतह की प्रकृति पर उसकी निर्भरता समझाता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH05-T4",
+   "topic_number": 4,
+   "title": "असंपर्क बल: चुंबकीय और स्थिरवैद्युत बल",
+   "ncert_sections": "5.4.2",
+   "concepts": [
+    {
+     "concept_tag": "chumbakiya-bal",
+     "learning_objective": "विद्यार्थी चुंबकीय बल को दूर से लगने वाले आकर्षी या प्रतिकर्षी बल के रूप में पहचानता है।"
+    },
+    {
+     "concept_tag": "sthirvaidyut-bal",
+     "learning_objective": "विद्यार्थी रगड़ से उत्पन्न आवेशों और उनके बीच लगने वाले स्थिरवैद्युत बल को समझाता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH05-T5",
+   "topic_number": 5,
+   "title": "गुरुत्वाकर्षण बल और ऊर्ध्वाधर गति",
+   "ncert_sections": "5.4.2",
+   "concepts": [
+    {
+     "concept_tag": "gurutvakarshan-bal",
+     "learning_objective": "विद्यार्थी गुरुत्वाकर्षण को सदैव आकर्षी असंपर्क बल के रूप में पहचानता है।"
+    },
+    {
+     "concept_tag": "urdhvadhar-gati",
+     "learning_objective": "विद्यार्थी ऊपर फेंकी गई वस्तु की चाल और दिशा में होने वाले परिवर्तन की व्याख्या करता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH05-T6",
+   "topic_number": 6,
+   "title": "भार और उसका मापन",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "bhar-aur-dravyaman",
+     "learning_objective": "विद्यार्थी भार और द्रव्यमान में अंतर स्पष्ट करता है।"
+    },
+    {
+     "concept_tag": "kamanidar-tula",
+     "learning_objective": "विद्यार्थी कमानीदार तुला का परास और सबसे छोटा पाठ्यांक ज्ञात करता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH05-T7",
+   "topic_number": 7,
+   "title": "उत्प्लावन बल: तैरना और डूबना",
+   "ncert_sections": "5.6",
+   "concepts": [
+    {
+     "concept_tag": "utplavan-bal",
+     "learning_objective": "विद्यार्थी द्रव द्वारा वस्तु पर ऊपर की ओर लगाए गए उत्प्लावन बल को पहचानता है।"
+    },
+    {
+     "concept_tag": "tairna-doobna",
+     "learning_objective": "विद्यार्थी गुरुत्वाकर्षण और उत्प्लावन बल की तुलना से तैरने और डूबने की व्याख्या करता है।"
+    }
+   ]
+  }
+ ]
+}

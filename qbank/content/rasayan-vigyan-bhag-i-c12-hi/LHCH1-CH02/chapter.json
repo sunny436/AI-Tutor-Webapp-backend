@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LHCH1-CH02",
+ "title": "वैद्युतरसायन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHCH1-CH02-T1",
+   "topic_number": 1,
+   "title": "विद्युतरासायनिक सेल और गैल्वैनी सेल",
+   "ncert_sections": "2.1, 2.2",
+   "concepts": [
+    {
+     "concept_tag": "galvani-sel-sanrachna",
+     "learning_objective": "डेनियल सेल जैसे गैल्वैनी सेल में ऐनोड, कैथोड और लवण सेतु की भूमिका पहचानना।"
+    },
+    {
+     "concept_tag": "maanak-electrode-vibhav",
+     "learning_objective": "मानक इलेक्ट्रोड विभवों की सहायता से सेल विभव की गणना करना और अभिक्रिया की संभाव्यता बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH02-T2",
+   "topic_number": 2,
+   "title": "नेर्न्स्ट समीकरण",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "nernst-samikaran",
+     "learning_objective": "नेर्न्स्ट समीकरण से किसी इलेक्ट्रोड या सेल का विभव सांद्रता के अनुसार ज्ञात करना।"
+    },
+    {
+     "concept_tag": "gibbs-urja-saamyavastha-sthirank",
+     "learning_objective": "सेल विभव का गिब्स ऊर्जा और साम्यावस्था स्थिरांक से संबंध लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH02-T3",
+   "topic_number": 3,
+   "title": "वैद्युतअपघटनी विलयनों का चालकत्व",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "chalkta-molar-chalkta",
+     "learning_objective": "चालकता और मोलर चालकता को परिभाषित करना तथा उनकी गणना करना।"
+    },
+    {
+     "concept_tag": "molar-chalkta-tanuta",
+     "learning_objective": "तनुता के साथ चालकता और मोलर चालकता में परिवर्तन का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "kohlrausch-niyam",
+     "learning_objective": "कोलराउश नियम से सीमांत मोलर चालकता और वियोजन मात्रा ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH02-T4",
+   "topic_number": 4,
+   "title": "वैद्युतअपघटनी सेल और वैद्युतअपघटन",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "faraday-niyam",
+     "learning_objective": "फैराडे के वैद्युतअपघटन नियमों से आवेश और पदार्थ की मात्रा की गणना करना।"
+    },
+    {
+     "concept_tag": "vidyut-apghatan-utpad",
+     "learning_objective": "विभिन्न इलेक्ट्रोडों और विलयनों के वैद्युतअपघटन के उत्पाद बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH02-T5",
+   "topic_number": 5,
+   "title": "बैटरियाँ और ईंधन सेल",
+   "ncert_sections": "2.6, 2.7",
+   "concepts": [
+    {
+     "concept_tag": "prathmik-dvitiyak-baitri",
+     "learning_objective": "प्राथमिक और द्वितीयक बैटरियों की अभिक्रियाओं और विशेषताओं में अंतर करना।"
+    },
+    {
+     "concept_tag": "indhan-sel",
+     "learning_objective": "हाइड्रोजन-ऑक्सीजन ईंधन सेल की कार्यविधि और लाभ समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH1-CH02-T6",
+   "topic_number": 6,
+   "title": "संक्षारण",
+   "ncert_sections": "2.8",
+   "concepts": [
+    {
+     "concept_tag": "sankshran-kriyavidhi",
+     "learning_objective": "लोहे पर जंग लगने को विद्युतरासायनिक सेल के रूप में समझाना।"
+    },
+    {
+     "concept_tag": "sankshran-rokthaam",
+     "learning_objective": "संक्षारण से बचाव की विधियों, विशेषकर बलिदानी संरक्षण, का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

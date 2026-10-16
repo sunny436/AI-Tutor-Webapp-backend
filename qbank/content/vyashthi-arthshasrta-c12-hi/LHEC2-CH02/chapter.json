@@ -1,0 +1,124 @@
+{
+ "chapter_id": "LHEC2-CH02",
+ "title": "उपभोक्ता के व्यवहार का सिद्धांत",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHEC2-CH02-T1",
+   "topic_number": 1,
+   "title": "उपयोगिता और गणनावाचक उपयोगिता विश्लेषण",
+   "ncert_sections": "2.1, 2.1.1",
+   "concepts": [
+    {
+     "concept_tag": "kul-aur-seemant-upyogita",
+     "learning_objective": "कुल उपयोगिता और सीमांत उपयोगिता को परिभाषित कर उनका संबंध ज्ञात करना।"
+    },
+    {
+     "concept_tag": "hrasmaan-seemant-upyogita-niyam",
+     "learning_objective": "ह्रासमान सीमांत उपयोगिता के नियम से माँग वक्र के ऋणात्मक ढलान की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH02-T2",
+   "topic_number": 2,
+   "title": "क्रमवाचक उपयोगिता विश्लेषण",
+   "ncert_sections": "2.1.2",
+   "concepts": [
+    {
+     "concept_tag": "anadhimaan-vakra",
+     "learning_objective": "अनधिमान वक्र, अनधिमान मानचित्र और उनकी विशेषताओं को समझना।"
+    },
+    {
+     "concept_tag": "pratisthapan-ki-seemant-dar",
+     "learning_objective": "प्रतिस्थापन की सीमांत दर ज्ञात करना और उसके ह्रास से वक्र की उत्तलता समझाना।"
+    },
+    {
+     "concept_tag": "ekdishta-adhimaan",
+     "learning_objective": "एकदिष्ट अधिमान की मान्यता और उसके परिणामों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH02-T3",
+   "topic_number": 3,
+   "title": "उपभोक्ता का बजट",
+   "ncert_sections": "2.2, 2.2.1, 2.2.2",
+   "concepts": [
+    {
+     "concept_tag": "bajat-rekha",
+     "learning_objective": "बजट समुच्चय और बजट रेखा का समीकरण, अंतःखंड तथा ढलान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "bajat-samuchchay-mein-parivartan",
+     "learning_objective": "आय और कीमतों में परिवर्तन से बजट रेखा के खिसकाव या घूर्णन की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH02-T4",
+   "topic_number": 4,
+   "title": "उपभोक्ता का इष्टतम चयन",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "upbhokta-santulan",
+     "learning_objective": "बजट रेखा और अनधिमान वक्र के स्पर्श बिंदु पर उपभोक्ता के इष्टतम बंडल की पहचान करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH02-T5",
+   "topic_number": 5,
+   "title": "माँग",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "mang-ka-niyam-aur-khisakav",
+     "learning_objective": "माँग के नियम तथा माँग वक्र पर संचलन और माँग वक्र के खिसकाव में अंतर करना।"
+    },
+    {
+     "concept_tag": "samanya-aur-nimnstariya-vastuen",
+     "learning_objective": "आय में परिवर्तन के प्रभाव के आधार पर सामान्य और निम्नस्तरीय वस्तुओं में अंतर करना।"
+    },
+    {
+     "concept_tag": "sthanapann-aur-poorak-vastuen",
+     "learning_objective": "संबंधित वस्तु की कीमत बदलने पर स्थानापन्न और पूरक वस्तुओं की माँग पर प्रभाव समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH02-T6",
+   "topic_number": 6,
+   "title": "बाज़ार माँग",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "bazar-mang",
+     "learning_objective": "व्यक्तिगत माँग वक्रों के क्षैतिज योग से बाज़ार माँग ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHEC2-CH02-T7",
+   "topic_number": 7,
+   "title": "माँग की लोच",
+   "ncert_sections": "2.6, 2.6.1, 2.6.2, 2.6.3",
+   "concepts": [
+    {
+     "concept_tag": "mang-ki-kimat-loch",
+     "learning_objective": "माँग की कीमत लोच को परिभाषित कर स्थिर लोच वाले माँग वक्रों को पहचानना।"
+    },
+    {
+     "concept_tag": "rekhiya-mang-vakra-par-loch",
+     "learning_objective": "रेखीय माँग वक्र के विभिन्न बिंदुओं पर लोच की गणना करना।"
+    },
+    {
+     "concept_tag": "loch-aur-vyay",
+     "learning_objective": "कीमत परिवर्तन पर वस्तु पर कुल व्यय में परिवर्तन को लोच से जोड़ना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "chapter_id": "HHCU1-CH04",
+ "title": "विद्युत: चुंबकीय एवं तापीय प्रभाव",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHCU1-CH04-T1",
+   "topic_number": 1,
+   "title": "विद्युत धारा का चुंबकीय प्रभाव",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "chumbakiya-prabhav",
+     "learning_objective": "धारावाही तार के पास दिक्सूचक सुई के विक्षेपण से विद्युत धारा के चुंबकीय प्रभाव को समझना।"
+    },
+    {
+     "concept_tag": "chumbakiya-kshetra",
+     "learning_objective": "चुंबकीय क्षेत्र का अर्थ और धारा रुकने पर उसके लुप्त होने को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH04-T2",
+   "topic_number": 2,
+   "title": "विद्युत-चुंबक",
+   "ncert_sections": "4.1.1",
+   "concepts": [
+    {
+     "concept_tag": "vidyut-chumbak-rachna",
+     "learning_objective": "विद्युत-चुंबक की संरचना और उसमें लोहे के क्रोड की भूमिका समझना।"
+    },
+    {
+     "concept_tag": "vidyut-chumbak-prabalta",
+     "learning_objective": "धारा और फेरों की संख्या से विद्युत-चुंबक की प्रबलता तथा धारा की दिशा से ध्रुवों के बदलने को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH04-T3",
+   "topic_number": 3,
+   "title": "उत्थापक विद्युत-चुंबक",
+   "ncert_sections": "4.1.2",
+   "concepts": [
+    {
+     "concept_tag": "utthapak-vidyut-chumbak",
+     "learning_objective": "क्रेन में लगे उत्थापक विद्युत-चुंबक की कार्यविधि और उपयोग समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH04-T4",
+   "topic_number": 4,
+   "title": "विद्युत धारा का तापीय प्रभाव",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "tapiya-prabhav",
+     "learning_objective": "चालक में प्रतिरोध के कारण विद्युत ऊर्जा के ऊष्मा में बदलने को समझना।"
+    },
+    {
+     "concept_tag": "ushma-ke-karak",
+     "learning_objective": "उत्पन्न ऊष्मा को प्रभावित करने वाले कारकों का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "tapan-avayav",
+     "learning_objective": "तापन अवयव वाले उपकरणों तथा अति-तापन से होने वाली हानियों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH04-T5",
+   "topic_number": 5,
+   "title": "वोल्टीय सेल",
+   "ncert_sections": "4.3, 4.3.1",
+   "concepts": [
+    {
+     "concept_tag": "voltiya-cell",
+     "learning_objective": "वोल्टीय सेल के इलेक्ट्रोड, विद्युत अपघट्य और कार्यविधि को समझना।"
+    },
+    {
+     "concept_tag": "nimbu-cell",
+     "learning_objective": "नींबू से बने सेल में इलेक्ट्रोड, विद्युत अपघट्य और एलईडी के संयोजन को लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH04-T6",
+   "topic_number": 6,
+   "title": "शुष्क सेल और पुनः आवेशनीय बैटरियाँ",
+   "ncert_sections": "4.3.2, 4.3.3",
+   "concepts": [
+    {
+     "concept_tag": "shushk-cell",
+     "learning_objective": "शुष्क सेल की संरचना और उसके एक बार उपयोग वाले स्वरूप को पहचानना।"
+    },
+    {
+     "concept_tag": "punah-aaveshniya-battery",
+     "learning_objective": "पुनः आवेशनीय बैटरियों के लाभ, सीमाएँ और उपयोग समझना।"
+    }
+   ]
+  }
+ ]
+}

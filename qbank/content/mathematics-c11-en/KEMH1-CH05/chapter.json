@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KEMH1-CH05",
+ "title": "Linear Inequalities",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH05-T1",
+   "topic_number": 1,
+   "title": "Inequalities: meaning and types",
+   "ncert_sections": "5.1, 5.2",
+   "concepts": [
+    {
+     "concept_tag": "inequality-definition",
+     "learning_objective": "Recognise an inequality and model a simple situation by one."
+    },
+    {
+     "concept_tag": "strict-and-slack-inequalities",
+     "learning_objective": "Distinguish strict inequalities (<, >) from slack inequalities (<=, >=)."
+    },
+    {
+     "concept_tag": "linear-inequality-identification",
+     "learning_objective": "Identify linear inequalities in one and two variables and tell them apart from non-linear ones."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH05-T2",
+   "topic_number": 2,
+   "title": "Rules for solving linear inequalities",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "rules-of-inequality",
+     "learning_objective": "State the rules for adding, subtracting, multiplying and dividing both sides of an inequality."
+    },
+    {
+     "concept_tag": "sign-reversal-negative-multiplier",
+     "learning_objective": "Apply the reversal of the inequality sign when multiplying or dividing by a negative number."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH05-T3",
+   "topic_number": 3,
+   "title": "Solution sets in N, Z and R; interval notation",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "solution-set-number-system",
+     "learning_objective": "Find the solution set of a linear inequality when the variable is natural, integer or real."
+    },
+    {
+     "concept_tag": "interval-notation",
+     "learning_objective": "Write the real solutions of an inequality in interval notation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH05-T4",
+   "topic_number": 4,
+   "title": "Graphical representation on the number line",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "number-line-representation",
+     "learning_objective": "Represent x < a, x > a, x <= a and x >= a correctly on a number line."
+    },
+    {
+     "concept_tag": "solve-and-graph",
+     "learning_objective": "Solve a linear inequality and choose the correct number-line graph of its solutions."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH05-T5",
+   "topic_number": 5,
+   "title": "Word problems on linear inequalities",
+   "ncert_sections": "5.3 (Examples 7, 8; Exercise 5.1)",
+   "concepts": [
+    {
+     "concept_tag": "average-marks-problems",
+     "learning_objective": "Form and solve inequalities for minimum marks needed to reach an average."
+    },
+    {
+     "concept_tag": "consecutive-integer-pairs",
+     "learning_objective": "Find pairs of consecutive odd or even integers satisfying given conditions."
+    },
+    {
+     "concept_tag": "length-and-perimeter-problems",
+     "learning_objective": "Form and solve inequalities for lengths and perimeters."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH05-T6",
+   "topic_number": 6,
+   "title": "Double inequalities and systems of inequalities",
+   "ncert_sections": "Miscellaneous Examples 9-11",
+   "concepts": [
+    {
+     "concept_tag": "double-inequalities",
+     "learning_objective": "Solve double inequalities by operating on all three parts together."
+    },
+    {
+     "concept_tag": "system-of-linear-inequalities",
+     "learning_objective": "Solve a system of linear inequalities in one variable as the common part of the solutions."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH05-T7",
+   "topic_number": 7,
+   "title": "Applications: temperature, mixtures and formulas",
+   "ncert_sections": "Miscellaneous Examples 12, 13; Miscellaneous Exercise",
+   "concepts": [
+    {
+     "concept_tag": "temperature-range-conversion",
+     "learning_objective": "Convert a temperature range between Celsius and Fahrenheit using a double inequality."
+    },
+    {
+     "concept_tag": "mixture-concentration-problems",
+     "learning_objective": "Form and solve inequalities for the concentration of a mixture of solutions."
+    },
+    {
+     "concept_tag": "formula-based-range",
+     "learning_objective": "Find the range of a quantity from a formula and a given range of another quantity."
+    }
+   ]
+  }
+ ]
+}

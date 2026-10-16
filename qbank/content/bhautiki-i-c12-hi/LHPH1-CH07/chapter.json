@@ -1,0 +1,128 @@
+{
+ "chapter_id": "LHPH1-CH07",
+ "title": "प्रत्यावर्ती धारा",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHPH1-CH07-T1",
+   "topic_number": 1,
+   "title": "प्रतिरोधक पर लगाई गई ac वोल्टता",
+   "ncert_sections": "7.1, 7.2",
+   "concepts": [
+    {
+     "concept_tag": "varg-madhya-mool-maan",
+     "learning_objective": "ac वोल्टता और धारा के वर्ग-माध्य-मूल (प्रभावी) मान तथा शिखर मान का संबंध समझना।"
+    },
+    {
+     "concept_tag": "pratirodhak-ac-dhara",
+     "learning_objective": "प्रतिरोधक में ac धारा और वोल्टता के समान कला में होने को पहचानना।"
+    },
+    {
+     "concept_tag": "ausat-shakti-pratirodhak",
+     "learning_objective": "प्रतिरोधक में एक चक्र में क्षयित औसत शक्ति की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH07-T2",
+   "topic_number": 2,
+   "title": "ac धारा और वोल्टता का कलासमंजक निरूपण",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "phasor-arth",
+     "learning_objective": "कलासमंजक (फेजर) के अर्थ और उसके प्रक्षेप से तात्क्षणिक मान प्राप्त करना समझना।"
+    },
+    {
+     "concept_tag": "phasor-kalantar",
+     "learning_objective": "कलासमंजक आरेख से धारा और वोल्टता के बीच कलांतर की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH07-T3",
+   "topic_number": 3,
+   "title": "प्रेरक पर लगाई गई ac वोल्टता",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "prerakiya-pratighat",
+     "learning_objective": "प्रेरकीय प्रतिघात का सूत्र और उसकी आवृत्ति पर निर्भरता समझना।"
+    },
+    {
+     "concept_tag": "prerak-kala-pashchata",
+     "learning_objective": "प्रेरक में धारा के वोल्टता से π/2 पीछे रहने और शून्य औसत शक्ति को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH07-T4",
+   "topic_number": 4,
+   "title": "संधारित्र पर लगाई गई ac वोल्टता",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "dharitiya-pratighat",
+     "learning_objective": "धारितीय प्रतिघात का सूत्र और उसकी आवृत्ति पर निर्भरता समझना।"
+    },
+    {
+     "concept_tag": "sandharitra-kala-agrata",
+     "learning_objective": "संधारित्र में धारा के वोल्टता से π/2 आगे रहने को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH07-T5",
+   "topic_number": 5,
+   "title": "श्रेणी LCR परिपथ पर लगाई गई ac वोल्टता",
+   "ncert_sections": "7.6",
+   "concepts": [
+    {
+     "concept_tag": "pratibadha",
+     "learning_objective": "श्रेणी LCR परिपथ की प्रतिबाधा और कलांतर की गणना करना।"
+    },
+    {
+     "concept_tag": "anunad",
+     "learning_objective": "अनुनाद की शर्त, अनुनादी आवृत्ति और परिपथ की प्रकृति का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH07-T6",
+   "topic_number": 6,
+   "title": "ac परिपथ में शक्ति: शक्ति गुणांक",
+   "ncert_sections": "7.7",
+   "concepts": [
+    {
+     "concept_tag": "shakti-gunank",
+     "learning_objective": "ac परिपथ में औसत शक्ति और शक्ति गुणांक की गणना करना।"
+    },
+    {
+     "concept_tag": "wattheen-dhara",
+     "learning_objective": "शुद्ध प्रेरक या संधारित्र वाले परिपथ में वाटहीन धारा की अवधारणा समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH07-T7",
+   "topic_number": 7,
+   "title": "ट्रांसफ़ॉर्मर",
+   "ncert_sections": "7.8",
+   "concepts": [
+    {
+     "concept_tag": "transformer-siddhant",
+     "learning_objective": "ट्रांसफ़ॉर्मर के कार्य-सिद्धांत अन्योन्य प्रेरण को समझना।"
+    },
+    {
+     "concept_tag": "parivartan-anupat",
+     "learning_objective": "फेरों के अनुपात से द्वितीयक वोल्टता और धारा की गणना करना।"
+    },
+    {
+     "concept_tag": "urja-sancharan",
+     "learning_objective": "उच्च वोल्टता पर विद्युत शक्ति के संचरण से होने वाली हानि में कमी का विश्लेषण करना।"
+    }
+   ]
+  }
+ ]
+}

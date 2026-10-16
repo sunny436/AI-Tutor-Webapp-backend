@@ -1,0 +1,92 @@
+{
+ "chapter_id": "KEMH1-CH06",
+ "title": "Permutations and Combinations",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH06-T1",
+   "topic_number": 1,
+   "title": "Fundamental Principle of Counting",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "multiplication-principle",
+     "learning_objective": "Apply the fundamental principle of counting to events occurring in succession."
+    },
+    {
+     "concept_tag": "counting-with-restrictions",
+     "learning_objective": "Count arrangements when repetition is or is not allowed and when positions carry conditions."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH06-T2",
+   "topic_number": 2,
+   "title": "Permutations of Distinct Objects and Factorial Notation",
+   "ncert_sections": "6.3.1, 6.3.2",
+   "concepts": [
+    {
+     "concept_tag": "factorial-notation",
+     "learning_objective": "Evaluate and simplify expressions written in factorial notation."
+    },
+    {
+     "concept_tag": "arrangements-of-distinct-objects",
+     "learning_objective": "Count arrangements of distinct objects, including when some objects must stay together."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH06-T3",
+   "topic_number": 3,
+   "title": "Formula for nPr",
+   "ncert_sections": "6.3.3",
+   "concepts": [
+    {
+     "concept_tag": "npr-formula",
+     "learning_objective": "Use the formula nPr = n!/(n - r)! to evaluate permutations and solve equations in n."
+    },
+    {
+     "concept_tag": "permutations-with-repetition",
+     "learning_objective": "Distinguish counts with and without repetition of objects."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH06-T4",
+   "topic_number": 4,
+   "title": "Permutations when Objects are not Distinct",
+   "ncert_sections": "6.3.4",
+   "concepts": [
+    {
+     "concept_tag": "repeated-objects-formula",
+     "learning_objective": "State the number of permutations of n objects when some of them are alike."
+    },
+    {
+     "concept_tag": "word-arrangements",
+     "learning_objective": "Count arrangements of the letters of a word with repeated letters, with or without conditions."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH06-T5",
+   "topic_number": 5,
+   "title": "Combinations",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "ncr-formula",
+     "learning_objective": "Relate nCr to nPr and evaluate combinations."
+    },
+    {
+     "concept_tag": "ncr-properties",
+     "learning_objective": "Use the property nCr = nC(n - r) to solve problems."
+    },
+    {
+     "concept_tag": "selection-problems",
+     "learning_objective": "Count selections of committees and groups under given conditions."
+    }
+   ]
+  }
+ ]
+}

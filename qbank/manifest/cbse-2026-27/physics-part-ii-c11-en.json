@@ -1,0 +1,896 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "physics-part-ii-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "physics",
+  "language": "english",
+  "title": "Physics Part-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "keph2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEPH2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Mechanical Properties of Solids",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH2-CH01-T1",
+     "topic_number": 1,
+     "title": "Elasticity, plasticity, stress and strain",
+     "ncert_sections": "8.1, 8.2",
+     "concepts": [
+      {
+       "concept_tag": "elasticity-and-plasticity",
+       "learning_objective": "Distinguish elastic from plastic behaviour of bodies under deforming forces."
+      },
+      {
+       "concept_tag": "stress-and-strain-types",
+       "learning_objective": "Define stress and the longitudinal, shearing and volume strains and compute simple strains."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH01-T2",
+     "topic_number": 2,
+     "title": "Hooke's law and the stress-strain curve",
+     "ncert_sections": "8.3, 8.4",
+     "concepts": [
+      {
+       "concept_tag": "hookes-law",
+       "learning_objective": "State Hooke's law and the region of the stress-strain curve in which it holds."
+      },
+      {
+       "concept_tag": "stress-strain-curve",
+       "learning_objective": "Interpret the elastic limit, yield point, permanent set and fracture on a stress-strain curve."
+      },
+      {
+       "concept_tag": "ductile-brittle-elastomers",
+       "learning_objective": "Classify materials as ductile, brittle or elastomers from their stress-strain behaviour."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH01-T3",
+     "topic_number": 3,
+     "title": "Young's modulus",
+     "ncert_sections": "8.5, 8.5.1",
+     "concepts": [
+      {
+       "concept_tag": "youngs-modulus",
+       "learning_objective": "Define Young's modulus and identify the states of matter for which it is meaningful."
+      },
+      {
+       "concept_tag": "extension-of-wire",
+       "learning_objective": "Use F/A = Y(Delta L/L) to calculate and compare extensions of wires."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH01-T4",
+     "topic_number": 4,
+     "title": "Shear modulus and bulk modulus",
+     "ncert_sections": "8.5.2, 8.5.3",
+     "concepts": [
+      {
+       "concept_tag": "shear-modulus",
+       "learning_objective": "Define the shear modulus and use it to find the displacement under a tangential force."
+      },
+      {
+       "concept_tag": "bulk-modulus",
+       "learning_objective": "Define the bulk modulus and calculate the fractional change in volume under hydraulic pressure."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH01-T5",
+     "topic_number": 5,
+     "title": "Poisson's ratio and elastic potential energy",
+     "ncert_sections": "8.5.4, 8.5.5",
+     "concepts": [
+      {
+       "concept_tag": "poissons-ratio",
+       "learning_objective": "Define Poisson's ratio and calculate it from lateral and longitudinal strains."
+      },
+      {
+       "concept_tag": "elastic-potential-energy",
+       "learning_objective": "Calculate the elastic potential energy stored in a stretched wire."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH01-T6",
+     "topic_number": 6,
+     "title": "Applications of elastic behaviour of materials",
+     "ncert_sections": "8.6",
+     "concepts": [
+      {
+       "concept_tag": "crane-rope-design",
+       "learning_objective": "Estimate the minimum cross-section of a crane rope from the yield strength."
+      },
+      {
+       "concept_tag": "beam-bending",
+       "learning_objective": "Use the sag relation for a centrally loaded beam to explain beam design."
+      },
+      {
+       "concept_tag": "mountain-height",
+       "learning_objective": "Estimate the maximum height of a mountain from the elastic limit of rock."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPH2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Mechanical Properties of Fluids",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH2-CH02-T1",
+     "topic_number": 1,
+     "title": "Pressure, Pascal's law and hydraulic machines",
+     "ncert_sections": "9.1, 9.2, 9.2.1, 9.2.4",
+     "concepts": [
+      {
+       "concept_tag": "pressure-and-pascals-law",
+       "learning_objective": "Define pressure and state Pascal's law for an enclosed fluid at rest."
+      },
+      {
+       "concept_tag": "hydraulic-machines",
+       "learning_objective": "Apply Pascal's law to find the force multiplication in a hydraulic lift or brake."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH02-T2",
+     "topic_number": 2,
+     "title": "Variation of pressure with depth, atmospheric and gauge pressure",
+     "ncert_sections": "9.2.2, 9.2.3",
+     "concepts": [
+      {
+       "concept_tag": "pressure-with-depth",
+       "learning_objective": "Use P = Pa + rho g h to find absolute and gauge pressure at a depth in a liquid."
+      },
+      {
+       "concept_tag": "atmospheric-pressure-barometer",
+       "learning_objective": "Explain how a barometer or manometer measures atmospheric and gauge pressure."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH02-T3",
+     "topic_number": 3,
+     "title": "Streamline flow and the equation of continuity",
+     "ncert_sections": "9.3",
+     "concepts": [
+      {
+       "concept_tag": "streamline-flow",
+       "learning_objective": "Describe steady (streamline) flow and the properties of streamlines."
+      },
+      {
+       "concept_tag": "equation-of-continuity",
+       "learning_objective": "Apply Av = constant to relate flow speed and cross-sectional area."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH02-T4",
+     "topic_number": 4,
+     "title": "Bernoulli's principle and its applications",
+     "ncert_sections": "9.4, 9.4.1, 9.4.2",
+     "concepts": [
+      {
+       "concept_tag": "bernoullis-principle",
+       "learning_objective": "State Bernoulli's principle and relate it to conservation of energy and dynamic lift."
+      },
+      {
+       "concept_tag": "torricellis-law",
+       "learning_objective": "Use Torricelli's law and Bernoulli's equation to calculate speed of efflux and lift."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH02-T5",
+     "topic_number": 5,
+     "title": "Viscosity and Stokes' law",
+     "ncert_sections": "9.5, 9.5.1",
+     "concepts": [
+      {
+       "concept_tag": "coefficient-of-viscosity",
+       "learning_objective": "Define the coefficient of viscosity and describe how it varies with temperature."
+      },
+      {
+       "concept_tag": "stokes-law-terminal-velocity",
+       "learning_objective": "Use Stokes' law to find the viscous drag and terminal velocity of a sphere."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH02-T6",
+     "topic_number": 6,
+     "title": "Surface tension, surface energy and angle of contact",
+     "ncert_sections": "9.6, 9.6.1, 9.6.2, 9.6.3",
+     "concepts": [
+      {
+       "concept_tag": "surface-energy-tension",
+       "learning_objective": "Relate surface tension to surface energy and calculate work done in stretching a film."
+      },
+      {
+       "concept_tag": "angle-of-contact",
+       "learning_objective": "Explain wetting and non-wetting using the angle of contact."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH02-T7",
+     "topic_number": 7,
+     "title": "Drops, bubbles and capillary rise",
+     "ncert_sections": "9.6.4, 9.6.5",
+     "concepts": [
+      {
+       "concept_tag": "excess-pressure-drops-bubbles",
+       "learning_objective": "Calculate the excess pressure inside a liquid drop and a soap bubble."
+      },
+      {
+       "concept_tag": "capillary-rise",
+       "learning_objective": "Use h = 2S cos(theta)/(rho g a) to explain and calculate capillary rise."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPH2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Thermal Properties of Matter",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH2-CH03-T1",
+     "topic_number": 1,
+     "title": "Temperature, heat and measurement of temperature",
+     "ncert_sections": "10.2, 10.3",
+     "concepts": [
+      {
+       "concept_tag": "temperature-and-heat",
+       "learning_objective": "Distinguish temperature as a measure of hotness from heat as energy transferred due to a temperature difference."
+      },
+      {
+       "concept_tag": "temperature-scales",
+       "learning_objective": "Convert temperatures between the Celsius, Fahrenheit and arbitrary linear scales using fixed points."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH03-T2",
+     "topic_number": 2,
+     "title": "Ideal-gas equation and absolute temperature",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "ideal-gas-equation",
+       "learning_objective": "Apply the ideal-gas equation PV = muRT to a sample of low-density gas."
+      },
+      {
+       "concept_tag": "gas-thermometer-absolute-zero",
+       "learning_objective": "Explain how a constant-volume gas thermometer leads to absolute zero and the Kelvin scale."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH03-T3",
+     "topic_number": 3,
+     "title": "Thermal expansion",
+     "ncert_sections": "10.5",
+     "concepts": [
+      {
+       "concept_tag": "thermal-expansion-coefficients",
+       "learning_objective": "Use the coefficients of linear and volume expansion and the relation between them."
+      },
+      {
+       "concept_tag": "anomalous-expansion-of-water",
+       "learning_objective": "Describe the anomalous expansion of water and its consequence for aquatic life."
+      },
+      {
+       "concept_tag": "thermal-stress",
+       "learning_objective": "Calculate the thermal stress in a rod whose expansion is prevented."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH03-T4",
+     "topic_number": 4,
+     "title": "Specific heat capacity and calorimetry",
+     "ncert_sections": "10.6, 10.7",
+     "concepts": [
+      {
+       "concept_tag": "specific-heat-capacity",
+       "learning_objective": "Define specific heat capacity and use Q = ms(delta T)."
+      },
+      {
+       "concept_tag": "principle-of-calorimetry",
+       "learning_objective": "Apply the principle that heat lost equals heat gained in an isolated system."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH03-T5",
+     "topic_number": 5,
+     "title": "Change of state and latent heat",
+     "ncert_sections": "10.8",
+     "concepts": [
+      {
+       "concept_tag": "change-of-state",
+       "learning_objective": "Describe melting, boiling, sublimation and the effect of pressure on the boiling point."
+      },
+      {
+       "concept_tag": "latent-heat",
+       "learning_objective": "Use Q = mL for latent heats of fusion and vaporisation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH03-T6",
+     "topic_number": 6,
+     "title": "Heat transfer: conduction and convection",
+     "ncert_sections": "10.9.1, 10.9.2",
+     "concepts": [
+      {
+       "concept_tag": "thermal-conduction",
+       "learning_objective": "Use H = KA(TC - TD)/L for steady-state conduction through a rod."
+      },
+      {
+       "concept_tag": "convection",
+       "learning_objective": "Explain natural and forced convection with everyday examples such as sea breeze."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH03-T7",
+     "topic_number": 7,
+     "title": "Radiation, blackbody radiation and Newton's law of cooling",
+     "ncert_sections": "10.9.3, 10.9.4, 10.10",
+     "concepts": [
+      {
+       "concept_tag": "blackbody-radiation-laws",
+       "learning_objective": "Apply Wien's displacement law and the Stefan-Boltzmann law."
+      },
+      {
+       "concept_tag": "newtons-law-of-cooling",
+       "learning_objective": "Apply Newton's law of cooling to estimate cooling times for small temperature differences."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPH2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Thermodynamics",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH2-CH04-T1",
+     "topic_number": 1,
+     "title": "Thermal equilibrium and the Zeroth Law",
+     "ncert_sections": "11.2, 11.3",
+     "concepts": [
+      {
+       "concept_tag": "thermal-equilibrium",
+       "learning_objective": "Explain thermal equilibrium as the state in which macroscopic variables of systems in thermal contact stop changing."
+      },
+      {
+       "concept_tag": "zeroth-law",
+       "learning_objective": "State the Zeroth Law of Thermodynamics and explain how it leads to the concept of temperature."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH04-T2",
+     "topic_number": 2,
+     "title": "Heat, internal energy and work",
+     "ncert_sections": "11.4",
+     "concepts": [
+      {
+       "concept_tag": "internal-energy",
+       "learning_objective": "Describe internal energy as the sum of molecular kinetic and potential energies and as a state variable."
+      },
+      {
+       "concept_tag": "heat-and-work",
+       "learning_objective": "Distinguish heat and work as modes of energy transfer that are not state variables."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH04-T3",
+     "topic_number": 3,
+     "title": "First Law of Thermodynamics",
+     "ncert_sections": "11.5",
+     "concepts": [
+      {
+       "concept_tag": "first-law-statement",
+       "learning_objective": "State the First Law as dQ = dU + dW and apply its sign conventions."
+      },
+      {
+       "concept_tag": "first-law-applications",
+       "learning_objective": "Apply the First Law to calculate changes in internal energy, heat or work."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH04-T4",
+     "topic_number": 4,
+     "title": "Specific heat capacity",
+     "ncert_sections": "11.6",
+     "concepts": [
+      {
+       "concept_tag": "specific-and-molar-heat",
+       "learning_objective": "Define specific and molar heat capacity and use them to compute heat exchanged."
+      },
+      {
+       "concept_tag": "cp-cv-relation",
+       "learning_objective": "Use the relation Cp - Cv = R for an ideal gas and the 3R value for solids."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH04-T5",
+     "topic_number": 5,
+     "title": "Thermodynamic state variables and equation of state",
+     "ncert_sections": "11.7",
+     "concepts": [
+      {
+       "concept_tag": "state-variables",
+       "learning_objective": "Identify state variables and recognise that they describe only equilibrium states."
+      },
+      {
+       "concept_tag": "extensive-intensive",
+       "learning_objective": "Classify thermodynamic variables as extensive or intensive."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH04-T6",
+     "topic_number": 6,
+     "title": "Thermodynamic processes",
+     "ncert_sections": "11.8",
+     "concepts": [
+      {
+       "concept_tag": "quasi-static-isothermal",
+       "learning_objective": "Describe quasi-static and isothermal processes and compute work in an isothermal change."
+      },
+      {
+       "concept_tag": "adiabatic-process",
+       "learning_objective": "Apply PV^gamma = constant to adiabatic processes of an ideal gas."
+      },
+      {
+       "concept_tag": "isochoric-isobaric-cyclic",
+       "learning_objective": "Apply the First Law to isochoric, isobaric and cyclic processes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH04-T7",
+     "topic_number": 7,
+     "title": "Second Law; reversible and irreversible processes",
+     "ncert_sections": "11.9, 11.10",
+     "concepts": [
+      {
+       "concept_tag": "second-law-statements",
+       "learning_objective": "State the Kelvin-Planck and Clausius statements of the Second Law."
+      },
+      {
+       "concept_tag": "reversibility",
+       "learning_objective": "Explain the conditions for reversibility and the causes of irreversibility."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH04-T8",
+     "topic_number": 8,
+     "title": "Carnot engine",
+     "ncert_sections": "11.11",
+     "concepts": [
+      {
+       "concept_tag": "carnot-cycle",
+       "learning_objective": "Describe the four steps of the Carnot cycle and why they are chosen."
+      },
+      {
+       "concept_tag": "carnot-efficiency",
+       "learning_objective": "Calculate the efficiency of a Carnot engine using 1 - T2/T1."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPH2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Kinetic Theory",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH2-CH05-T1",
+     "topic_number": 1,
+     "title": "Molecular nature of matter",
+     "ncert_sections": "12.1, 12.2",
+     "concepts": [
+      {
+       "concept_tag": "atomic-hypothesis-and-gas-laws",
+       "learning_objective": "Relate Dalton's atomic theory, Gay Lussac's law and Avogadro's law to the molecular picture of matter."
+      },
+      {
+       "concept_tag": "interatomic-spacing-in-states",
+       "learning_objective": "Compare atomic size, interatomic spacing and mean free path in solids, liquids and gases."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH05-T2",
+     "topic_number": 2,
+     "title": "Behaviour of gases",
+     "ncert_sections": "12.3",
+     "concepts": [
+      {
+       "concept_tag": "ideal-gas-equation",
+       "learning_objective": "Use the ideal gas equation in its forms PV = muRT, P = n kB T and P = rho RT/M0."
+      },
+      {
+       "concept_tag": "gas-laws-partial-pressure",
+       "learning_objective": "Apply Boyle's law, Charles' law and Dalton's law of partial pressures to gas samples."
+      },
+      {
+       "concept_tag": "real-gas-deviation",
+       "learning_objective": "Explain when real gases approach ideal gas behaviour and interpret PV/T versus P plots."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH05-T3",
+     "topic_number": 3,
+     "title": "Kinetic theory of an ideal gas: pressure",
+     "ncert_sections": "12.4, 12.4.1",
+     "concepts": [
+      {
+       "concept_tag": "kinetic-theory-assumptions",
+       "learning_objective": "State the assumptions of the kinetic model of an ideal gas."
+      },
+      {
+       "concept_tag": "pressure-from-molecular-motion",
+       "learning_objective": "Derive and apply P = (1/3) n m <v^2> and PV = (2/3) E."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH05-T4",
+     "topic_number": 4,
+     "title": "Kinetic interpretation of temperature",
+     "ncert_sections": "12.4.2",
+     "concepts": [
+      {
+       "concept_tag": "average-kinetic-energy-temperature",
+       "learning_objective": "Relate the average translational kinetic energy of a molecule to absolute temperature."
+      },
+      {
+       "concept_tag": "rms-speed",
+       "learning_objective": "Calculate and compare root mean square speeds of gas molecules."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH05-T5",
+     "topic_number": 5,
+     "title": "Law of equipartition of energy",
+     "ncert_sections": "12.5",
+     "concepts": [
+      {
+       "concept_tag": "degrees-of-freedom",
+       "learning_objective": "Count translational, rotational and vibrational degrees of freedom of molecules."
+      },
+      {
+       "concept_tag": "equipartition-energy",
+       "learning_objective": "Apply the law of equipartition to find the average energy of molecules and gas samples."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH05-T6",
+     "topic_number": 6,
+     "title": "Specific heat capacity",
+     "ncert_sections": "12.6",
+     "concepts": [
+      {
+       "concept_tag": "specific-heat-gases",
+       "learning_objective": "Predict Cv, Cp and gamma for monatomic, diatomic and polyatomic gases using equipartition."
+      },
+      {
+       "concept_tag": "specific-heat-solids",
+       "learning_objective": "Explain why the molar specific heat of most solids is close to 3R."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH05-T7",
+     "topic_number": 7,
+     "title": "Mean free path",
+     "ncert_sections": "12.7",
+     "concepts": [
+      {
+       "concept_tag": "mean-free-path-formula",
+       "learning_objective": "State and apply the expression for mean free path l = 1/(sqrt2 n pi d^2)."
+      },
+      {
+       "concept_tag": "collision-frequency",
+       "learning_objective": "Relate mean free path, average speed and collision frequency, and explain slow diffusion of gases."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPH2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Oscillations",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH2-CH06-T1",
+     "topic_number": 1,
+     "title": "Periodic and oscillatory motions: period, frequency and displacement",
+     "ncert_sections": "13.2",
+     "concepts": [
+      {
+       "concept_tag": "periodic-vs-oscillatory-motion",
+       "learning_objective": "Distinguish periodic motion from oscillatory motion with everyday examples."
+      },
+      {
+       "concept_tag": "period-and-frequency",
+       "learning_objective": "Relate period and frequency and use the hertz as the unit of frequency."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH06-T2",
+     "topic_number": 2,
+     "title": "Simple harmonic motion: amplitude, phase and angular frequency",
+     "ncert_sections": "13.3",
+     "concepts": [
+      {
+       "concept_tag": "shm-displacement-equation",
+       "learning_objective": "Identify amplitude, phase and phase constant in x(t) = A cos(omega t + phi)."
+      },
+      {
+       "concept_tag": "angular-frequency",
+       "learning_objective": "Use omega = 2 pi / T to relate angular frequency and period."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH06-T3",
+     "topic_number": 3,
+     "title": "Simple harmonic motion and uniform circular motion",
+     "ncert_sections": "13.4",
+     "concepts": [
+      {
+       "concept_tag": "reference-circle-projection",
+       "learning_objective": "Explain SHM as the projection of uniform circular motion on a diameter."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH06-T4",
+     "topic_number": 4,
+     "title": "Velocity, acceleration and the force law in SHM",
+     "ncert_sections": "13.5, 13.6",
+     "concepts": [
+      {
+       "concept_tag": "velocity-and-acceleration-in-shm",
+       "learning_objective": "Obtain v = -omega A sin(omega t + phi) and a = -omega^2 x and their maximum values."
+      },
+      {
+       "concept_tag": "restoring-force-law",
+       "learning_objective": "Apply F = -kx and omega = sqrt(k/m) to a linear oscillator such as a spring-mass system."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH06-T5",
+     "topic_number": 5,
+     "title": "Energy in simple harmonic motion",
+     "ncert_sections": "13.7",
+     "concepts": [
+      {
+       "concept_tag": "kinetic-and-potential-energy-in-shm",
+       "learning_objective": "Express K and U of an oscillator as functions of displacement and time."
+      },
+      {
+       "concept_tag": "conservation-of-mechanical-energy",
+       "learning_objective": "Use the constancy of E = (1/2)kA^2 to find speeds and energy shares."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH06-T6",
+     "topic_number": 6,
+     "title": "The simple pendulum",
+     "ncert_sections": "13.8",
+     "concepts": [
+      {
+       "concept_tag": "pendulum-period",
+       "learning_objective": "Use T = 2 pi sqrt(L/g) and its independence from mass and amplitude."
+      },
+      {
+       "concept_tag": "small-angle-approximation",
+       "learning_objective": "Explain why a pendulum is simple harmonic only for small angular displacements."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPH2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Waves",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/keph207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPH2-CH07-T1",
+     "topic_number": 1,
+     "title": "Mechanical waves; transverse and longitudinal waves",
+     "ncert_sections": "14.1, 14.2",
+     "concepts": [
+      {
+       "concept_tag": "mechanical-waves",
+       "learning_objective": "Explain that a mechanical wave transfers a disturbance and energy through an elastic medium without bulk flow of matter."
+      },
+      {
+       "concept_tag": "transverse-and-longitudinal",
+       "learning_objective": "Distinguish transverse and longitudinal waves and identify the media that can support each."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH07-T2",
+     "topic_number": 2,
+     "title": "Displacement relation in a progressive wave",
+     "ncert_sections": "14.3",
+     "concepts": [
+      {
+       "concept_tag": "wave-function-parameters",
+       "learning_objective": "Identify amplitude, phase, angular wave number and angular frequency in y = a sin(kx - wt + phi)."
+      },
+      {
+       "concept_tag": "wavelength-period-frequency",
+       "learning_objective": "Relate wavelength to k and period and frequency to w, and find phase differences between points."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH07-T3",
+     "topic_number": 3,
+     "title": "Speed of a travelling wave and waves on a string",
+     "ncert_sections": "14.4, 14.4.1",
+     "concepts": [
+      {
+       "concept_tag": "wave-speed-relation",
+       "learning_objective": "Apply v = w/k = lambda nu and recognise that the medium fixes speed while the source fixes frequency."
+      },
+      {
+       "concept_tag": "speed-on-stretched-string",
+       "learning_objective": "Calculate the speed of a transverse wave on a string from its tension and linear mass density."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH07-T4",
+     "topic_number": 4,
+     "title": "Speed of sound",
+     "ncert_sections": "14.4.2",
+     "concepts": [
+      {
+       "concept_tag": "speed-of-longitudinal-waves",
+       "learning_objective": "Use v = sqrt(B/rho) and v = sqrt(Y/rho) to explain the speed of longitudinal waves in fluids and solids."
+      },
+      {
+       "concept_tag": "newton-laplace-correction",
+       "learning_objective": "Explain Newton's formula for the speed of sound in a gas and the Laplace correction."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH07-T5",
+     "topic_number": 5,
+     "title": "Principle of superposition of waves",
+     "ncert_sections": "14.5",
+     "concepts": [
+      {
+       "concept_tag": "superposition-principle",
+       "learning_objective": "State the principle of superposition for overlapping waves and pulses."
+      },
+      {
+       "concept_tag": "interference-of-waves",
+       "learning_objective": "Find the resultant amplitude 2a cos(phi/2) of two identical waves differing in phase."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH07-T6",
+     "topic_number": 6,
+     "title": "Reflection of waves, standing waves and normal modes",
+     "ncert_sections": "14.6, 14.6.1",
+     "concepts": [
+      {
+       "concept_tag": "reflection-phase-change",
+       "learning_objective": "Describe the phase change on reflection at rigid and open boundaries."
+      },
+      {
+       "concept_tag": "standing-waves-string",
+       "learning_objective": "Locate nodes and antinodes and find the normal modes of a string fixed at both ends."
+      },
+      {
+       "concept_tag": "air-column-modes",
+       "learning_objective": "Find the normal modes of air columns closed at one end and open at both ends."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPH2-CH07-T7",
+     "topic_number": 7,
+     "title": "Beats",
+     "ncert_sections": "14.7",
+     "concepts": [
+      {
+       "concept_tag": "beat-frequency",
+       "learning_objective": "Explain the formation of beats and calculate beat frequency and unknown frequencies from beat data."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

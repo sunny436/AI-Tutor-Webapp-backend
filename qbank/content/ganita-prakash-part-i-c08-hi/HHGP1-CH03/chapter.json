@@ -1,0 +1,132 @@
+{
+ "chapter_id": "HHGP1-CH03",
+ "title": "संख्याओं की कहानी",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP1-CH03-T1",
+   "topic_number": 1,
+   "title": "रीमा की जिज्ञासा: भारतीय अंकों की यात्रा",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "bharatiya-ankon-ka-itihas",
+     "learning_objective": "भारतीय दस-अंकीय पद्धति और शून्य के प्रारंभिक प्रमाणों तथा गणितज्ञों को पहचानना।"
+    },
+    {
+     "concept_tag": "ankon-ka-vaishvik-prasar",
+     "learning_objective": "भारतीय अंकों के अरब जगत और यूरोप तक पहुँचने के क्रम को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH03-T2",
+   "topic_number": 2,
+   "title": "गिनने की क्रियाविधि",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "ekaiki-pratichitran",
+     "learning_objective": "गिनती को वस्तुओं और मानक अनुक्रम के बीच एकैकी प्रतिचित्रण के रूप में समझाना।"
+    },
+    {
+     "concept_tag": "sankhya-paddhati-aur-sankhyank",
+     "learning_objective": "संख्या पद्धति और संख्यांक की परिभाषा देना तथा विभिन्न गिनती विधियों की सीमाएँ पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH03-T3",
+   "topic_number": 3,
+   "title": "कुछ प्रारंभिक संख्या पद्धतियाँ: मिलान चिह्न और दो-दो की गिनती",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "milan-chihn",
+     "learning_objective": "हड्डियों पर बने मिलान चिह्नों को संख्या निरूपण की प्राचीन विधि के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "do-do-ki-ginti",
+     "learning_objective": "गुमुलगल पद्धति में दो-दो के समूह से संख्या नाम बनाना और उन पर संक्रियाएँ करना।"
+    },
+    {
+     "concept_tag": "samooh-aakar-aur-bodh-seema",
+     "learning_objective": "एक नज़र में गिनने की सीमा और समूह में गिनने के विचार का संबंध समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH03-T4",
+   "topic_number": 4,
+   "title": "रोमन संख्यांक",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "roman-ankan",
+     "learning_objective": "रोमन पद्धति की सांकेतिक संख्याओं से संख्याएँ लिखना और पढ़ना।"
+    },
+    {
+     "concept_tag": "roman-ganana-ki-kathinai",
+     "learning_objective": "रोमन संख्यांकों में योग और गुणा करना तथा उनकी कठिनाई समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH03-T5",
+   "topic_number": 5,
+   "title": "आधार की अवधारणा: मिस्री पद्धति और आधार-n पद्धति",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "misri-sankhya-paddhati",
+     "learning_objective": "मिस्री पद्धति की 10 की घातों वाली सांकेतिक संख्याओं से संख्याएँ निरूपित करना।"
+    },
+    {
+     "concept_tag": "aadhar-n-paddhati",
+     "learning_objective": "आधार-n पद्धति की परिभाषा देना और उसकी सांकेतिक संख्याएँ ज्ञात करना।"
+    },
+    {
+     "concept_tag": "aadhar-ke-labh",
+     "learning_objective": "आधार वाली पद्धति में सांकेतिक संख्याओं के गुणनफल से गणना की सरलता का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH03-T6",
+   "topic_number": 6,
+   "title": "स्थानीय मान निरूपण: मेसोपोटामिया की षाष्टिक पद्धति",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "shashtik-paddhati",
+     "learning_objective": "मेसोपोटामिया की आधार-60 पद्धति में संख्याओं को 60 की घातों में समूहित करना।"
+    },
+    {
+     "concept_tag": "sthaniya-maan-aur-sthanadharak",
+     "learning_objective": "स्थानीय मान पद्धति में खाली स्थान से होने वाली अस्पष्टता और स्थानधारक शून्य की भूमिका समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH03-T7",
+   "topic_number": 7,
+   "title": "माया, चीनी और हिंदू संख्या पद्धतियाँ",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "maya-paddhati",
+     "learning_objective": "माया पद्धति की सांकेतिक संख्याओं और ऊर्ध्वाधर लेखन से संख्याएँ निरूपित करना।"
+    },
+    {
+     "concept_tag": "chini-chhad-sankhyank",
+     "learning_objective": "चीनी छड़ संख्यांकों में ज़ोंग और हेंग के प्रयोग का कारण समझाना।"
+    },
+    {
+     "concept_tag": "hindu-paddhati-aur-shoonya",
+     "learning_objective": "हिंदू संख्या पद्धति में शून्य को अंक और संख्या मानने के महत्व को पहचानना।"
+    }
+   ]
+  }
+ ]
+}

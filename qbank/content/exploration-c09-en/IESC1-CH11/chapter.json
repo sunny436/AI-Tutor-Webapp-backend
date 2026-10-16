@@ -1,0 +1,136 @@
+{
+ "chapter_id": "IESC1-CH11",
+ "title": "Reproduction: How Life Continues",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IESC1-CH11-T1",
+   "topic_number": 1,
+   "title": "Vegetative propagation and its use in agriculture",
+   "ncert_sections": "11.1, 11.1.1",
+   "concepts": [
+    {
+     "concept_tag": "vegetative-propagation",
+     "learning_objective": "Explain that vegetative propagation produces new plants from vegetative parts of a single parent, giving genetically identical plants."
+    },
+    {
+     "concept_tag": "cutting-grafting-layering",
+     "learning_objective": "Describe cutting, grafting, layering and tissue culture and explain how they help farmers grow desirable crops on a large scale."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH11-T2",
+   "topic_number": 2,
+   "title": "Budding, spore formation and mitosis",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "budding",
+     "learning_objective": "Describe budding in yeast and hydra as the growth and separation of an outgrowth from the parent."
+    },
+    {
+     "concept_tag": "spore-formation",
+     "learning_objective": "Explain how moulds spread by large numbers of light, air-borne spores that germinate in warm, moist conditions."
+    },
+    {
+     "concept_tag": "mitosis-and-clones",
+     "learning_objective": "Explain that mitosis makes asexually produced offspring genetically identical clones of the parent."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH11-T3",
+   "topic_number": 3,
+   "title": "Meiosis and variation in sexual reproduction",
+   "ncert_sections": "11.2, 11.2.1",
+   "concepts": [
+    {
+     "concept_tag": "meiosis-and-gametes",
+     "learning_objective": "Explain that meiosis halves the chromosome number to form haploid gametes so that the number stays constant across generations."
+    },
+    {
+     "concept_tag": "variation-from-meiosis",
+     "learning_objective": "Explain how the random sorting of chromosome pairs into gametes produces many combinations and variation among offspring."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH11-T4",
+   "topic_number": 4,
+   "title": "Flowers, pollination and fertilisation in plants",
+   "ncert_sections": "11.2.2, 11.2.3, 11.2.4, 11.2.5",
+   "concepts": [
+    {
+     "concept_tag": "parts-of-a-flower",
+     "learning_objective": "Identify the sepals, petals, stamen and pistil of a flower and state their roles in reproduction."
+    },
+    {
+     "concept_tag": "pollination-types-and-agents",
+     "learning_objective": "Distinguish self- and cross-pollination and relate flower features to wind, water, insect and bird pollination."
+    },
+    {
+     "concept_tag": "fertilisation-and-seed-formation",
+     "learning_objective": "Describe the growth of the pollen tube, fertilisation and the development of the ovule into seed and the ovary into fruit."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH11-T5",
+   "topic_number": 5,
+   "title": "Sexual reproduction and its variations in animals",
+   "ncert_sections": "11.3, 11.4",
+   "concepts": [
+    {
+     "concept_tag": "external-and-internal-fertilisation",
+     "learning_objective": "Compare external and internal fertilisation in terms of number of eggs and survival of young ones."
+    },
+    {
+     "concept_tag": "larval-strategy-and-parental-care",
+     "learning_objective": "Explain the role of yolk, larval feeding stages and post-birth care in the development of young animals."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH11-T6",
+   "topic_number": 6,
+   "title": "Human reproductive organs and gametes",
+   "ncert_sections": "11.5.1, 11.5.2, 11.5.3, 11.5.4",
+   "concepts": [
+    {
+     "concept_tag": "male-reproductive-system",
+     "learning_objective": "Identify the parts of the male reproductive system and state their functions."
+    },
+    {
+     "concept_tag": "female-reproductive-system",
+     "learning_objective": "Identify the parts of the female reproductive system and state their functions."
+    },
+    {
+     "concept_tag": "gametogenesis",
+     "learning_objective": "Explain gametogenesis and the differences in size, number, nutrients and motility of sperm and egg."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH11-T7",
+   "topic_number": 7,
+   "title": "Fertilisation, menstrual cycle, pregnancy and reproductive health",
+   "ncert_sections": "11.5.5, 11.5.6, 11.5.7, 11.5.8, 11.5.9, 11.5.10",
+   "concepts": [
+    {
+     "concept_tag": "ovulation-and-menstrual-cycle",
+     "learning_objective": "Relate ovulation, fertilisation, implantation and menstruation to the stages of the menstrual cycle."
+    },
+    {
+     "concept_tag": "pregnancy-and-sex-determination",
+     "learning_objective": "Describe the stages of pregnancy and explain how the sex chromosome from the father decides the biological sex of a baby."
+    },
+    {
+     "concept_tag": "contraception-and-sti-prevention",
+     "learning_objective": "Distinguish barrier, hormonal, IUD and surgical methods of contraception and explain how STIs can be prevented."
+    }
+   ]
+  }
+ ]
+}

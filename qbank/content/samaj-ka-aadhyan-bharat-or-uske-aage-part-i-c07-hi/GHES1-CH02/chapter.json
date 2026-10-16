@@ -1,0 +1,148 @@
+{
+ "chapter_id": "GHES1-CH02",
+ "title": "मौसम को समझना",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHES1-CH02-T1",
+   "topic_number": 1,
+   "title": "मौसम और वायुमंडल",
+   "ncert_sections": "मौसम और इसके तत्व; मौसम क्या है?",
+   "concepts": [
+    {
+     "concept_tag": "mausam-ki-paribhasha",
+     "learning_objective": "छात्र मौसम को किसी समय और स्थान विशेष की वायुमंडलीय दशा के रूप में पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "kshobhmandal",
+     "learning_objective": "छात्र क्षोभमंडल की स्थिति, विस्तार और मौसम से उसके संबंध को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH02-T2",
+   "topic_number": 2,
+   "title": "मौसम के तत्व और प्रकृति के संकेत",
+   "ncert_sections": "मौसम के तत्व; प्रकृति के संकेतों का अवलोकन",
+   "concepts": [
+    {
+     "concept_tag": "mausam-ke-tatva",
+     "learning_objective": "छात्र मौसम के पाँच तत्वों — तापमान, वर्षण, वायुमंडलीय दाब, पवन और आर्द्रता — को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "manak-maapan-ki-avashyakta",
+     "learning_objective": "छात्र समझा सकेंगे कि मौसम के वर्णन के लिए सर्वमान्य मापन साधन क्यों आवश्यक हैं।"
+    },
+    {
+     "concept_tag": "prakriti-ke-sanket",
+     "learning_objective": "छात्र मौसम के पारंपरिक पूर्वानुमान में प्रयुक्त प्रकृति के संकेतों की व्याख्या कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH02-T3",
+   "topic_number": 3,
+   "title": "तापमान और उसका मापन",
+   "ncert_sections": "मौसम मापन के उपकरण — (क) तापमान",
+   "concepts": [
+    {
+     "concept_tag": "taapmapi-aur-paimane",
+     "learning_objective": "छात्र तापमापी के प्रकार तथा सेल्सियस और फॉरेनहाइट पैमानों को समझ सकेंगे।"
+    },
+    {
+     "concept_tag": "taap-seema-aur-ausat-taapman",
+     "learning_objective": "छात्र अधिकतम और न्यूनतम तापमान से ताप सीमा तथा औसत दैनिक तापमान की गणना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "bharat-mausam-vigyan-vibhag",
+     "learning_objective": "छात्र भारत मौसम विज्ञान विभाग की स्थापना और उसके आदर्श वाक्य को जान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH02-T4",
+   "topic_number": 4,
+   "title": "वर्षण और वर्षामापी",
+   "ncert_sections": "मौसम मापन के उपकरण — (ख) वर्षण",
+   "concepts": [
+    {
+     "concept_tag": "varshamapi",
+     "learning_objective": "छात्र वर्षामापी की बनावट, कार्य और वर्षा के मापन की इकाई को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "varshamapi-ki-sthapna",
+     "learning_objective": "छात्र वर्षामापी लगाने के लिए उपयुक्त स्थान का चयन कारण सहित कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH02-T5",
+   "topic_number": 5,
+   "title": "वायुमंडलीय दाब",
+   "ncert_sections": "मौसम मापन के उपकरण — (ग) वायुमंडलीय दाब",
+   "concepts": [
+    {
+     "concept_tag": "vayudab-aur-unchai",
+     "learning_objective": "छात्र ऊँचाई बढ़ने पर वायुदाब और ऑक्सीजन के घटने के प्रभाव समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "vayudabmapi-aur-nimn-dab",
+     "learning_objective": "छात्र वायुदाबमापी, मिलीबार इकाई और निम्न दाब तंत्र के अर्थ की व्याख्या कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH02-T6",
+   "topic_number": 6,
+   "title": "पवन",
+   "ncert_sections": "मौसम मापन के उपकरण — (घ) पवन",
+   "concepts": [
+    {
+     "concept_tag": "pavan-ki-paribhasha",
+     "learning_objective": "छात्र पवन की परिभाषा तथा कृषि, उड़ान और नौकायन के लिए उसके महत्व को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "vaat-dikssuchak-aur-pavan-vegmapi",
+     "learning_objective": "छात्र वात दिक्सूचक, वात शंकु और पवन वेगमापी के कार्य में अंतर कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH02-T7",
+   "topic_number": 7,
+   "title": "आर्द्रता",
+   "ncert_sections": "मौसम मापन के उपकरण — (ङ) आर्द्रता",
+   "concepts": [
+    {
+     "concept_tag": "sapekshik-aardrata",
+     "learning_objective": "छात्र सापेक्षिक आर्द्रता के अर्थ और दैनिक जीवन पर उसके प्रभाव की व्याख्या कर सकेंगे।"
+    },
+    {
+     "concept_tag": "aardratamapi",
+     "learning_objective": "छात्र आर्द्रतामापी के उपयोग और आर्द्रता की निगरानी के महत्व को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH02-T8",
+   "topic_number": 8,
+   "title": "मौसम केंद्र और मौसम का पूर्वानुमान",
+   "ncert_sections": "मौसम केंद्र; स्वचालित मौसम केंद्र; मौसम का पूर्वानुमान",
+   "concepts": [
+    {
+     "concept_tag": "mausam-kendra",
+     "learning_objective": "छात्र मौसम केंद्र की भूमिका को मौसम के मानचित्रण और पूर्वानुमान से जोड़ सकेंगे।"
+    },
+    {
+     "concept_tag": "svachalit-mausam-kendra",
+     "learning_objective": "छात्र स्वचालित मौसम केंद्र के कार्य और उसके लाभ बता सकेंगे।"
+    },
+    {
+     "concept_tag": "purvanuman-aur-chetavani",
+     "learning_objective": "छात्र मौसम के पूर्वानुमान और चेतावनियों के आधार पर उचित तैयारी का मूल्यांकन कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

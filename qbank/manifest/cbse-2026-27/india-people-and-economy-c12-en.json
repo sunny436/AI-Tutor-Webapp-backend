@@ -1,0 +1,1226 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "india-people-and-economy-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "geography",
+  "language": "english",
+  "title": "India -People And Economy",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "legy2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEGY2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Population: Distribution, Density, Growth and Composition",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY2-CH01-T1",
+     "topic_number": 1,
+     "title": "Sources and distribution of population",
+     "ncert_sections": "Sources of Population Data; Distribution of Population",
+     "concepts": [
+      {
+       "concept_tag": "census-data-sources",
+       "learning_objective": "Recall how and since when population data are collected in India through the Census."
+      },
+      {
+       "concept_tag": "uneven-distribution-pattern",
+       "learning_objective": "Describe the uneven spatial distribution of India's population among states."
+      },
+      {
+       "concept_tag": "factors-of-distribution",
+       "learning_objective": "Explain the physical, socio-economic and historical factors that shape population distribution."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH01-T2",
+     "topic_number": 2,
+     "title": "Density of population",
+     "ncert_sections": "Density of Population",
+     "concepts": [
+      {
+       "concept_tag": "population-density",
+       "learning_objective": "State the meaning and spatial variation of population density in India."
+      },
+      {
+       "concept_tag": "physiological-and-agricultural-density",
+       "learning_objective": "Calculate and interpret physiological and agricultural densities."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH01-T3",
+     "topic_number": 3,
+     "title": "Growth of population and its measurement",
+     "ncert_sections": "Growth of Population; Population Doubling Time; Table 1.1",
+     "concepts": [
+      {
+       "concept_tag": "population-growth-components",
+       "learning_objective": "Distinguish between natural and induced components of population growth."
+      },
+      {
+       "concept_tag": "decadal-growth-rate",
+       "learning_objective": "Calculate and interpret decadal growth rates of population."
+      },
+      {
+       "concept_tag": "doubling-time",
+       "learning_objective": "Define population doubling time."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH01-T4",
+     "topic_number": 4,
+     "title": "Phases of population growth, 1901-2011",
+     "ncert_sections": "Phases I-IV of growth",
+     "concepts": [
+      {
+       "concept_tag": "growth-phases",
+       "learning_objective": "Identify the four phases of India's population growth and their causes."
+      },
+      {
+       "concept_tag": "population-explosion",
+       "learning_objective": "Analyse the role of birth and death rates in the population explosion of 1951-1981."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH01-T5",
+     "topic_number": 5,
+     "title": "Regional variation in growth and the adolescent population",
+     "ncert_sections": "Regional Variation in Population Growth; adolescents; NYP-2014",
+     "concepts": [
+      {
+       "concept_tag": "regional-growth-variation",
+       "learning_objective": "Compare the population growth rates of different groups of states."
+      },
+      {
+       "concept_tag": "adolescent-youth-population",
+       "learning_objective": "Explain the potential and vulnerabilities of India's adolescent and youth population and related policies."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH01-T6",
+     "topic_number": 6,
+     "title": "Rural-urban composition",
+     "ncert_sections": "Population Composition; Rural-Urban Composition",
+     "concepts": [
+      {
+       "concept_tag": "rural-population-distribution",
+       "learning_objective": "Describe the distribution of rural population and the variation in village size."
+      },
+      {
+       "concept_tag": "urbanisation-trends",
+       "learning_objective": "Explain the growth and regional pattern of urban population in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH01-T7",
+     "topic_number": 7,
+     "title": "Linguistic and religious composition",
+     "ncert_sections": "Linguistic Composition; Linguistic Classification; Religious Composition",
+     "concepts": [
+      {
+       "concept_tag": "linguistic-composition",
+       "learning_objective": "Describe India's linguistic diversity and the classification of languages into families."
+      },
+      {
+       "concept_tag": "religious-composition",
+       "learning_objective": "Describe the spatial distribution of religious communities in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH01-T8",
+     "topic_number": 8,
+     "title": "Composition of working population",
+     "ncert_sections": "Composition of Working Population; Occupational Categories",
+     "concepts": [
+      {
+       "concept_tag": "worker-categories",
+       "learning_objective": "Distinguish between main workers, marginal workers and non-workers as defined by the Census."
+      },
+      {
+       "concept_tag": "work-participation-rate",
+       "learning_objective": "Explain the spatial variation in work participation rate."
+      },
+      {
+       "concept_tag": "occupational-structure",
+       "learning_objective": "Interpret India's occupational structure and the sectoral shift of workers."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Human Settlements",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY2-CH02-T1",
+     "topic_number": 1,
+     "title": "Meaning of human settlements and rural-urban differences",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "settlement-meaning",
+       "learning_objective": "Define a human settlement and explain how settling involves grouping people and apportioning territory."
+      },
+      {
+       "concept_tag": "rural-urban-differences",
+       "learning_objective": "Distinguish rural and urban settlements by economic base, functional links and social relations."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH02-T2",
+     "topic_number": 2,
+     "title": "Types of rural settlements",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rural-settlement-factors",
+       "learning_objective": "Identify the physical, cultural-ethnic and security factors that shape rural settlement types in India."
+      },
+      {
+       "concept_tag": "clustered-and-semi-clustered",
+       "learning_objective": "Describe clustered and semi-clustered settlements and the regions where they occur."
+      },
+      {
+       "concept_tag": "hamleted-and-dispersed",
+       "learning_objective": "Describe hamleted and dispersed settlements, their causes and their regions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH02-T3",
+     "topic_number": 3,
+     "title": "Urban settlements and evolution of towns in India",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "census-definition-of-urban",
+       "learning_objective": "State the Census of India 1991 criteria for classifying a place as urban."
+      },
+      {
+       "concept_tag": "evolution-of-towns",
+       "learning_objective": "Classify Indian towns as ancient, medieval or modern and give examples of each."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH02-T4",
+     "topic_number": 4,
+     "title": "Urbanisation in India",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "level-of-urbanisation",
+       "learning_objective": "Explain how the level of urbanisation is measured and state India's level in 2011."
+      },
+      {
+       "concept_tag": "urbanisation-trends",
+       "learning_objective": "Interpret the trends of urbanisation in India from 1901 to 2011 using Table 2.1."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH02-T5",
+     "topic_number": 5,
+     "title": "Functional classification of towns",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "functional-classes-of-towns",
+       "learning_objective": "Classify Indian towns by their dominant function with suitable examples."
+      },
+      {
+       "concept_tag": "multifunctional-cities",
+       "learning_objective": "Explain why growing cities become multifunctional and resist a single functional class."
+      },
+      {
+       "concept_tag": "smart-cities-mission",
+       "learning_objective": "State the objective and key features of the Smart Cities Mission."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Land Resources and Agriculture",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY2-CH03-T1",
+     "topic_number": 1,
+     "title": "Land-use Categories",
+     "ncert_sections": "Land Use Categories",
+     "concepts": [
+      {
+       "concept_tag": "reporting-and-geographical-area",
+       "learning_objective": "Distinguish reporting area recorded by land revenue records from geographical area measured by the Survey of India."
+      },
+      {
+       "concept_tag": "land-use-categories",
+       "learning_objective": "Identify the nine land-use categories maintained in the land revenue records."
+      },
+      {
+       "concept_tag": "fallow-land-classification",
+       "learning_objective": "Classify uncultivated land as current fallow, fallow other than current fallow or culturable wasteland by duration."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH03-T2",
+     "topic_number": 2,
+     "title": "Land-use Changes in India",
+     "ncert_sections": "Land-use Changes in India",
+     "concepts": [
+      {
+       "concept_tag": "economic-change-and-land-use",
+       "learning_objective": "Explain how growth and changing composition of the economy affect land-use."
+      },
+      {
+       "concept_tag": "land-use-trends",
+       "learning_objective": "Interpret the increases and declines in land-use categories between 1950-51 and 2019-20."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH03-T3",
+     "topic_number": 3,
+     "title": "Common Property Resources",
+     "ncert_sections": "Common Property Resources",
+     "concepts": [
+      {
+       "concept_tag": "cpr-meaning",
+       "learning_objective": "Define common property resources and distinguish them from private land."
+      },
+      {
+       "concept_tag": "cpr-livelihood-role",
+       "learning_objective": "Explain the importance of CPRs for landless and marginal farmers and rural women."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH03-T4",
+     "topic_number": 4,
+     "title": "Agricultural Land Use and Cropping Intensity",
+     "ncert_sections": "Agricultural Land Use in India",
+     "concepts": [
+      {
+       "concept_tag": "land-and-rural-livelihood",
+       "learning_objective": "Explain why land is more crucial to livelihoods dependent on agriculture than to other sectors."
+      },
+      {
+       "concept_tag": "total-cultivable-land",
+       "learning_objective": "Compute and interpret the total stock of cultivable land using Table 3.1."
+      },
+      {
+       "concept_tag": "cropping-intensity",
+       "learning_objective": "Calculate cropping intensity and explain why a high cropping intensity suits India."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH03-T5",
+     "topic_number": 5,
+     "title": "Cropping Seasons and Types of Farming",
+     "ncert_sections": "Cropping Seasons in India; Types of Farming",
+     "concepts": [
+      {
+       "concept_tag": "cropping-seasons",
+       "learning_objective": "Describe the kharif, rabi and zaid seasons and why they are not distinct in southern India."
+      },
+      {
+       "concept_tag": "irrigated-farming",
+       "learning_objective": "Distinguish protective irrigation from productive irrigation."
+      },
+      {
+       "concept_tag": "rainfed-farming",
+       "learning_objective": "Differentiate dryland farming from wetland farming by rainfall and crops."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH03-T6",
+     "topic_number": 6,
+     "title": "Foodgrains: Cereals and Pulses",
+     "ncert_sections": "Foodgrains; Cereals; Pulses",
+     "concepts": [
+      {
+       "concept_tag": "cereals",
+       "learning_objective": "Describe the distribution, conditions and yield patterns of rice, wheat and coarse cereals."
+      },
+      {
+       "concept_tag": "pulses",
+       "learning_objective": "Explain the characteristics and distribution of pulses such as gram and tur."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH03-T7",
+     "topic_number": 7,
+     "title": "Oilseeds, Fibre Crops and Other Crops",
+     "ncert_sections": "Oilseeds; Fibre Crops; Other Crops",
+     "concepts": [
+      {
+       "concept_tag": "oilseeds",
+       "learning_objective": "Identify the main oilseed crops, their growing regions and leading states."
+      },
+      {
+       "concept_tag": "fibre-crops",
+       "learning_objective": "Describe the conditions and distribution of cotton and jute."
+      },
+      {
+       "concept_tag": "sugarcane-tea-coffee",
+       "learning_objective": "Explain the growing conditions and distribution of sugarcane, tea and coffee."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH03-T8",
+     "topic_number": 8,
+     "title": "Agricultural Development and Problems",
+     "ncert_sections": "Agricultural Development in India; Problems of Indian Agriculture",
+     "concepts": [
+      {
+       "concept_tag": "green-revolution-and-planning",
+       "learning_objective": "Explain the Green Revolution strategy and later agricultural planning in India."
+      },
+      {
+       "concept_tag": "problems-of-agriculture",
+       "learning_objective": "Analyse problems such as erratic monsoon, low productivity, indebtedness and underemployment."
+      },
+      {
+       "concept_tag": "land-degradation",
+       "learning_objective": "Explain how faulty irrigation and farming practices degrade cultivable land."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Water Resources",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY2-CH04-T1",
+     "topic_number": 1,
+     "title": "Water resources of India and surface water",
+     "ncert_sections": "Water Resources of India; Surface Water Resources",
+     "concepts": [
+      {
+       "concept_tag": "india-water-availability",
+       "learning_objective": "Recall and calculate India's total, available and utilisable water resources."
+      },
+      {
+       "concept_tag": "surface-water-distribution",
+       "learning_objective": "Explain the uneven spatial distribution and limited utilisation of surface water across river basins."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH04-T2",
+     "topic_number": 2,
+     "title": "Groundwater resources, lagoons and backwaters",
+     "ncert_sections": "Groundwater Resources; Lagoons and Backwaters",
+     "concepts": [
+      {
+       "concept_tag": "groundwater-utilisation-pattern",
+       "learning_objective": "Compare the levels of groundwater utilisation among Indian states."
+      },
+      {
+       "concept_tag": "lagoons-backwaters",
+       "learning_objective": "Describe the coastal lagoons and backwaters as a surface water resource and their uses."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH04-T3",
+     "topic_number": 3,
+     "title": "Water demand, utilisation and irrigation",
+     "ncert_sections": "Water Demand and Utilisation; Demand of Water for Irrigation; PMKSY",
+     "concepts": [
+      {
+       "concept_tag": "sectoral-water-utilisation",
+       "learning_objective": "Compare the shares of agriculture, industry and domestic sectors in surface and groundwater use."
+      },
+      {
+       "concept_tag": "irrigation-need",
+       "learning_objective": "Explain why irrigation is needed in India and analyse the effects of its intensive use on groundwater."
+      },
+      {
+       "concept_tag": "pmksy",
+       "learning_objective": "State the vision and objectives of the Pradhan Mantri Krishi Sinchayee Yojana."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH04-T4",
+     "topic_number": 4,
+     "title": "Emerging water problems and prevention of water pollution",
+     "ncert_sections": "Emerging Water Problems; Deterioration of Water Quality; Prevention of Water Pollution",
+     "concepts": [
+      {
+       "concept_tag": "water-quality-deterioration",
+       "learning_objective": "Explain what water quality means and how pollutants deteriorate it."
+      },
+      {
+       "concept_tag": "river-pollution-control",
+       "learning_objective": "Identify severely polluted rivers and evaluate legal and public measures to control water pollution."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH04-T5",
+     "topic_number": 5,
+     "title": "Water conservation, recycling and watershed management",
+     "ncert_sections": "Water Conservation and Management; Recycle and Reuse of Water; Watershed Management",
+     "concepts": [
+      {
+       "concept_tag": "recycle-reuse-water",
+       "learning_objective": "Give examples of how water of lesser quality can be recycled and reused."
+      },
+      {
+       "concept_tag": "watershed-management",
+       "learning_objective": "Explain the meaning and aims of watershed management."
+      },
+      {
+       "concept_tag": "community-watershed-programmes",
+       "learning_objective": "Analyse community-based watershed programmes such as Haryali, Neeru-Meeru and Ralegan Siddhi."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH04-T6",
+     "topic_number": 6,
+     "title": "Rainwater harvesting and national water initiatives",
+     "ncert_sections": "Rainwater Harvesting; National Water Policy 2012; Jal Kranti Abhiyan",
+     "concepts": [
+      {
+       "concept_tag": "rainwater-harvesting",
+       "learning_objective": "Describe methods and benefits of rainwater harvesting."
+      },
+      {
+       "concept_tag": "national-water-policy-2012",
+       "learning_objective": "Interpret the salient features of India's National Water Policy, 2012."
+      },
+      {
+       "concept_tag": "jal-kranti-abhiyan",
+       "learning_objective": "State the aims and proposed activities of the Jal Kranti Abhiyan."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Mineral and Energy Resources",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY2-CH05-T1",
+     "topic_number": 1,
+     "title": "Types and characteristics of minerals",
+     "ncert_sections": "Introduction; Types of Mineral Resources",
+     "concepts": [
+      {
+       "concept_tag": "mineral-classification",
+       "learning_objective": "Classify minerals into metallic (ferrous, non-ferrous) and non-metallic (organic, inorganic) groups with examples."
+      },
+      {
+       "concept_tag": "mineral-characteristics",
+       "learning_objective": "Explain the uneven distribution, inverse quality-quantity relationship and exhaustibility of minerals."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH05-T2",
+     "topic_number": 2,
+     "title": "Distribution of minerals and mineral belts of India",
+     "ncert_sections": "Distribution of Minerals in India",
+     "concepts": [
+      {
+       "concept_tag": "mineral-belts",
+       "learning_objective": "Identify the three broad mineral belts of India and the minerals found in each."
+      },
+      {
+       "concept_tag": "geology-and-minerals",
+       "learning_objective": "Relate the location of India's minerals to the geological structure of the peninsula."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH05-T3",
+     "topic_number": 3,
+     "title": "Ferrous minerals: iron ore and manganese",
+     "ncert_sections": "Ferrous Minerals",
+     "concepts": [
+      {
+       "concept_tag": "iron-ore",
+       "learning_objective": "Describe the types and the distribution of iron ore and its important mines in India."
+      },
+      {
+       "concept_tag": "manganese",
+       "learning_objective": "State the uses of manganese and the distribution of its main producing areas."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH05-T4",
+     "topic_number": 4,
+     "title": "Non-ferrous and non-metallic minerals",
+     "ncert_sections": "Non-Ferrous Minerals; Non-metallic Minerals",
+     "concepts": [
+      {
+       "concept_tag": "bauxite",
+       "learning_objective": "Describe the occurrence of bauxite and its leading producing areas."
+      },
+      {
+       "concept_tag": "copper",
+       "learning_objective": "State the uses of copper and locate its main deposits in India."
+      },
+      {
+       "concept_tag": "mica",
+       "learning_objective": "State the properties and uses of mica and its producing areas."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH05-T5",
+     "topic_number": 5,
+     "title": "Conventional energy: coal, petroleum and natural gas",
+     "ncert_sections": "Energy Resources; Coal; Petroleum; Natural Gas",
+     "concepts": [
+      {
+       "concept_tag": "coal",
+       "learning_objective": "Describe the geological ages, types and major fields of coal in India."
+      },
+      {
+       "concept_tag": "petroleum",
+       "learning_objective": "Explain the occurrence, oilfields and types of refineries of petroleum in India."
+      },
+      {
+       "concept_tag": "natural-gas",
+       "learning_objective": "Describe the uses and the main reserves of natural gas in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH05-T6",
+     "topic_number": 6,
+     "title": "Nuclear energy resources",
+     "ncert_sections": "Nuclear Energy Resources",
+     "concepts": [
+      {
+       "concept_tag": "nuclear-minerals",
+       "learning_objective": "Identify uranium and thorium and the areas where they occur in India."
+      },
+      {
+       "concept_tag": "nuclear-power-projects",
+       "learning_objective": "Trace the growth of India's nuclear programme and locate its important power projects."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH05-T7",
+     "topic_number": 7,
+     "title": "Non-conventional energy sources",
+     "ncert_sections": "Non-Conventional Energy Sources; Solar; Wind; Tidal and Wave; Geothermal; Bio-energy",
+     "concepts": [
+      {
+       "concept_tag": "solar-and-wind-energy",
+       "learning_objective": "Explain how solar and wind energy are tapped and where India has potential for them."
+      },
+      {
+       "concept_tag": "tidal-geothermal-bio-energy",
+       "learning_objective": "Describe tidal, geothermal and bio-energy and their examples in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH05-T8",
+     "topic_number": 8,
+     "title": "Conservation of mineral resources",
+     "ncert_sections": "Conservation of Mineral Resources",
+     "concepts": [
+      {
+       "concept_tag": "sustainable-resource-use",
+       "learning_objective": "Explain why sustainable development calls for conserving mineral and energy resources."
+      },
+      {
+       "concept_tag": "recycling-and-substitution",
+       "learning_objective": "Evaluate measures such as recycling scrap, substitutes and reduced exports for conserving minerals."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Planning and Sustainable Development in Indian Context",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY2-CH06-T1",
+     "topic_number": 1,
+     "title": "Meaning and approaches to planning; NITI Aayog",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-planning",
+       "learning_objective": "Explain planning as a process of thinking, formulating a scheme and implementing actions to achieve a goal."
+      },
+      {
+       "concept_tag": "sectoral-and-regional-planning",
+       "learning_objective": "Distinguish sectoral planning from regional planning."
+      },
+      {
+       "concept_tag": "niti-aayog",
+       "learning_objective": "State when and why the NITI Aayog replaced the Planning Commission."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH06-T2",
+     "topic_number": 2,
+     "title": "Target area planning and Hill Area Development Programme",
+     "ncert_sections": "Target Area Planning; Hill Area Development Programme",
+     "concepts": [
+      {
+       "concept_tag": "target-area-and-target-group",
+       "learning_objective": "Explain why target area and target group approaches were introduced, with examples."
+      },
+      {
+       "concept_tag": "hill-area-development",
+       "learning_objective": "Describe the coverage, criteria and aims of the Hill Area Development Programmes."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH06-T3",
+     "topic_number": 3,
+     "title": "Drought Prone Area Programme",
+     "ncert_sections": "Drought Prone Area Programme",
+     "concepts": [
+      {
+       "concept_tag": "dpap-objectives",
+       "learning_objective": "Describe the objectives and changing emphasis of the Drought Prone Area Programme."
+      },
+      {
+       "concept_tag": "drought-prone-area-identification",
+       "learning_objective": "Identify how and where drought-prone areas of India were demarcated."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH06-T4",
+     "topic_number": 4,
+     "title": "Case study: Integrated Tribal Development Project in Bharmaur",
+     "ncert_sections": "Case Study - Integrated Tribal Development Project in Bharmaur Region",
+     "concepts": [
+      {
+       "concept_tag": "bharmaur-region-and-gaddis",
+       "learning_objective": "Describe the location, physical setting and the Gaddi community of the Bharmaur region."
+      },
+      {
+       "concept_tag": "itdp-outcomes",
+       "learning_objective": "Evaluate the infrastructural, social and economic outcomes of the ITDP in Bharmaur."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH06-T5",
+     "topic_number": 5,
+     "title": "Sustainable development",
+     "ncert_sections": "Sustainable Development",
+     "concepts": [
+      {
+       "concept_tag": "evolution-of-development-concept",
+       "learning_objective": "Trace how the concept of development evolved after World War II."
+      },
+      {
+       "concept_tag": "brundtland-definition",
+       "learning_objective": "State and apply the Brundtland Report's definition of sustainable development."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH06-T6",
+     "topic_number": 6,
+     "title": "Case study: Indira Gandhi Canal command area",
+     "ncert_sections": "Case Study - Indira Gandhi Canal (Nahar) Command Area",
+     "concepts": [
+      {
+       "concept_tag": "igc-canal-system",
+       "learning_objective": "Describe the origin, stages and flow and lift systems of the Indira Gandhi Canal."
+      },
+      {
+       "concept_tag": "irrigation-impacts",
+       "learning_objective": "Analyse the positive and negative impacts of canal irrigation on the command area."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH06-T7",
+     "topic_number": 7,
+     "title": "Measures for promotion of sustainable development in the IGC command area",
+     "ncert_sections": "Measures for Promotion of Sustainable Development",
+     "concepts": [
+      {
+       "concept_tag": "ecological-sustainability-measures",
+       "learning_objective": "Explain the measures proposed to restore ecological balance in the command area."
+      },
+      {
+       "concept_tag": "social-economic-sustainability",
+       "learning_objective": "Explain how social and economic sustainability can be achieved in the command area."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Transport and Communication",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY2-CH07-T1",
+     "topic_number": 1,
+     "title": "Road Transport and National Highways",
+     "ncert_sections": "Land Transport, Road Transport, National Highways, National Highways Development Projects",
+     "concepts": [
+      {
+       "concept_tag": "road-network-and-classification",
+       "learning_objective": "Describe the size, history and classification of India's road network and the share of traffic it carries."
+      },
+      {
+       "concept_tag": "national-highways-and-nhai",
+       "learning_objective": "Explain the role of National Highways and the National Highways Authority of India."
+      },
+      {
+       "concept_tag": "highway-development-projects",
+       "learning_objective": "Identify the Golden Quadrilateral, North-South and East-West Corridors and Bharatmala Pariyojana and their purposes."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH07-T2",
+     "topic_number": 2,
+     "title": "State, District, Rural and Other Roads",
+     "ncert_sections": "State Highways, District Roads, Rural Roads, Other Roads",
+     "concepts": [
+      {
+       "concept_tag": "state-district-rural-roads",
+       "learning_objective": "Distinguish State Highways, District Roads and Rural Roads and explain regional variation in rural road density."
+      },
+      {
+       "concept_tag": "border-roads-and-international-highways",
+       "learning_objective": "Explain the work of the Border Roads Organisation and the purpose of international highways."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH07-T3",
+     "topic_number": 3,
+     "title": "Rail Transport",
+     "ncert_sections": "Rail Transport, Konkan Railway",
+     "concepts": [
+      {
+       "concept_tag": "railway-history-and-zones",
+       "learning_objective": "Recall the beginning of Indian Railways and explain why the system is divided into zones."
+      },
+      {
+       "concept_tag": "railway-gauges",
+       "learning_objective": "Distinguish broad, metre and narrow gauges by track width and length."
+      },
+      {
+       "concept_tag": "railway-development-and-distribution",
+       "learning_objective": "Analyse the development and regional distribution of railways, including the Konkan Railway and metro rail."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH07-T4",
+     "topic_number": 4,
+     "title": "Water Transport",
+     "ncert_sections": "Water Transport, Inland Waterways, National Waterways, Oceanic Routes",
+     "concepts": [
+      {
+       "concept_tag": "inland-waterways",
+       "learning_objective": "Explain the features of inland water transport and the reasons for its decline."
+      },
+      {
+       "concept_tag": "national-waterways",
+       "learning_objective": "Identify India's National Waterways and the authority that develops them."
+      },
+      {
+       "concept_tag": "oceanic-routes",
+       "learning_objective": "Evaluate the importance of oceanic routes for India's foreign trade."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH07-T5",
+     "topic_number": 5,
+     "title": "Air Transport and Oil and Gas Pipelines",
+     "ncert_sections": "Air Transportation, Oil and Gas Pipelines",
+     "concepts": [
+      {
+       "concept_tag": "air-transport",
+       "learning_objective": "Explain the development of air transport in India, including UDAN and Pawan Hans."
+      },
+      {
+       "concept_tag": "oil-and-gas-pipelines",
+       "learning_objective": "Describe the advantages of pipelines and India's major oil and gas pipeline networks."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH07-T6",
+     "topic_number": 6,
+     "title": "Communication Networks",
+     "ncert_sections": "Communication Networks, Personal Communication System, Mass Communication System, Satellite Communication",
+     "concepts": [
+      {
+       "concept_tag": "personal-communication",
+       "learning_objective": "Explain why the internet is the most effective personal communication system."
+      },
+      {
+       "concept_tag": "mass-communication",
+       "learning_objective": "Trace the development of radio and television as mass communication in India."
+      },
+      {
+       "concept_tag": "satellite-communication",
+       "learning_objective": "Distinguish the INSAT and IRS satellite systems and their uses."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY2-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "International Trade",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy208.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY2-CH08-T1",
+     "topic_number": 1,
+     "title": "Changing pattern of India's international trade",
+     "ncert_sections": "Introduction, Table 8.1",
+     "concepts": [
+      {
+       "concept_tag": "trade-volume-growth",
+       "learning_objective": "Explain the growth in the volume of India's foreign trade since 1950-51 and the reasons for it."
+      },
+      {
+       "concept_tag": "trade-balance",
+       "learning_objective": "Interpret India's exports, imports and trade balance from Table 8.1."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH08-T2",
+     "topic_number": 2,
+     "title": "Changing pattern of the composition of India's exports",
+     "ncert_sections": "Table 8.2, Table 8.3",
+     "concepts": [
+      {
+       "concept_tag": "export-composition-shifts",
+       "learning_objective": "Analyse changes in the shares of commodity groups in India's exports."
+      },
+      {
+       "concept_tag": "agricultural-export-trends",
+       "learning_objective": "Describe the trends in traditional and new agricultural exports and their causes."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH08-T3",
+     "topic_number": 3,
+     "title": "Changing patterns of the composition of India's imports",
+     "ncert_sections": "Table 8.4, Table 8.5",
+     "concepts": [
+      {
+       "concept_tag": "import-composition-shifts",
+       "learning_objective": "Trace how India's import basket changed from foodgrains to fertilisers, petroleum and other goods."
+      },
+      {
+       "concept_tag": "petroleum-import-dependence",
+       "learning_objective": "Explain why the import of petroleum products has risen in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH08-T4",
+     "topic_number": 4,
+     "title": "Direction of trade",
+     "ncert_sections": "Direction of Trade, Table 8.6",
+     "concepts": [
+      {
+       "concept_tag": "direction-of-trade",
+       "learning_objective": "Interpret the region-wise pattern of India's import trade."
+      },
+      {
+       "concept_tag": "trade-routes-and-policy",
+       "learning_objective": "Identify the routes of India's foreign trade and the measures adopted to raise India's share in world trade."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH08-T5",
+     "topic_number": 5,
+     "title": "Sea ports as gateways of international trade",
+     "ncert_sections": "Sea Ports as Gateways of International Trade",
+     "concepts": [
+      {
+       "concept_tag": "port-development-history",
+       "learning_objective": "Explain how colonial rule and Partition shaped the development of Indian ports."
+      },
+      {
+       "concept_tag": "major-minor-ports",
+       "learning_objective": "Distinguish between major and minor ports of India by number and control."
+      },
+      {
+       "concept_tag": "hinterland",
+       "learning_objective": "Explain the meaning of hinterland and why its boundary is hard to fix."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH08-T6",
+     "topic_number": 6,
+     "title": "Major ports and their hinterlands",
+     "ncert_sections": "Ports of the west and east coasts",
+     "concepts": [
+      {
+       "concept_tag": "west-coast-ports",
+       "learning_objective": "Identify the location, functions and hinterlands of the ports on India's west coast."
+      },
+      {
+       "concept_tag": "east-coast-ports",
+       "learning_objective": "Identify the location, functions and hinterlands of the ports on India's east coast."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH08-T7",
+     "topic_number": 7,
+     "title": "Airports",
+     "ncert_sections": "Airports",
+     "concepts": [
+      {
+       "concept_tag": "air-transport-trade",
+       "learning_objective": "Evaluate the advantages and limitations of air transport in international trade."
+      },
+      {
+       "concept_tag": "airports-in-india",
+       "learning_objective": "Recall the number of major airports and the expansion under the UDAN scheme."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY2-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Geographical Perspective on Selected Issues and Problems",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy209.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY2-CH09-T1",
+     "topic_number": 1,
+     "title": "Environmental Pollution and Water Pollution",
+     "ncert_sections": "Environmental Pollution; Water Pollution; Namami Gange Programme",
+     "concepts": [
+      {
+       "concept_tag": "pollution-classification",
+       "learning_objective": "Classify environmental pollution by the medium through which pollutants are transported and diffused."
+      },
+      {
+       "concept_tag": "water-pollution-sources",
+       "learning_objective": "Identify natural and human sources of water pollution in India and their effects on health."
+      },
+      {
+       "concept_tag": "namami-gange-programme",
+       "learning_objective": "Explain the objectives of the Namami Gange Programme for cleaning the Ganga."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH09-T2",
+     "topic_number": 2,
+     "title": "Air Pollution",
+     "ncert_sections": "Air Pollution",
+     "concepts": [
+      {
+       "concept_tag": "air-pollution-sources",
+       "learning_objective": "Identify the main sources and pollutants responsible for air pollution."
+      },
+      {
+       "concept_tag": "air-pollution-effects",
+       "learning_objective": "Explain the effects of air pollution such as disease, urban smog and acid rain."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH09-T3",
+     "topic_number": 3,
+     "title": "Noise Pollution",
+     "ncert_sections": "Noise Pollution",
+     "concepts": [
+      {
+       "concept_tag": "noise-pollution-sources",
+       "learning_objective": "Identify the main sources of noise pollution and why traffic noise is the biggest nuisance."
+      },
+      {
+       "concept_tag": "noise-measurement-and-location",
+       "learning_objective": "Explain how noise is measured and why noise pollution is location specific."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH09-T4",
+     "topic_number": 4,
+     "title": "Urban Waste Disposal",
+     "ncert_sections": "Urban Waste Disposal; Case Study: Daurala",
+     "concepts": [
+      {
+       "concept_tag": "solid-waste-sources",
+       "learning_objective": "Describe what solid waste is and the two sources from which it is disposed of."
+      },
+      {
+       "concept_tag": "urban-waste-management",
+       "learning_objective": "Explain the health hazards of uncollected urban waste and the idea of treating waste as a resource."
+      },
+      {
+       "concept_tag": "daurala-polluter-pays",
+       "learning_objective": "Analyse the Daurala case of industrial groundwater contamination and its restoration on the polluter pays principle."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH09-T5",
+     "topic_number": 5,
+     "title": "Rural-Urban Migration",
+     "ncert_sections": "Rural-Urban Migration; A Case Study",
+     "concepts": [
+      {
+       "concept_tag": "migration-causes",
+       "learning_objective": "Explain the push and pull factors behind rural-urban migration in India."
+      },
+      {
+       "concept_tag": "migration-impacts",
+       "learning_objective": "Analyse the economic and social effects of migration on migrants and their families."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH09-T6",
+     "topic_number": 6,
+     "title": "Problems of Slums",
+     "ncert_sections": "Problems of Slums; Dharavi",
+     "concepts": [
+      {
+       "concept_tag": "urban-differentiation",
+       "learning_objective": "Explain how Indian urban centres are socially and economically differentiated."
+      },
+      {
+       "concept_tag": "slum-conditions",
+       "learning_objective": "Describe living conditions and socio-economic problems of slum dwellers."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY2-CH09-T7",
+     "topic_number": 7,
+     "title": "Land Degradation",
+     "ncert_sections": "Land Degradation; A Case Study: Jhabua",
+     "concepts": [
+      {
+       "concept_tag": "land-degradation-processes",
+       "learning_objective": "Define land degradation and identify the processes that cause it."
+      },
+      {
+       "concept_tag": "wasteland-classification",
+       "learning_objective": "Classify wastelands according to natural and human-induced processes."
+      },
+      {
+       "concept_tag": "watershed-management-jhabua",
+       "learning_objective": "Evaluate community participation in watershed management in Jhabua district."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

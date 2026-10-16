@@ -1,0 +1,1021 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "ganita-prakash-c07-en",
+  "curriculum": "cbse",
+  "class_level": 7,
+  "subject_code": "mathematics",
+  "language": "english",
+  "title": "Ganita Prakash",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "gegp1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "GEGP1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Large Numbers Around Us",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP1-CH01-T1",
+     "topic_number": 1,
+     "title": "A Lakh Varieties and Getting a Feel of Large Numbers",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "one-lakh-value",
+       "learning_objective": "Recognise one lakh as 1,00,000, the smallest 6-digit number, and compare quantities with it."
+      },
+      {
+       "concept_tag": "comparing-with-familiar-quantities",
+       "learning_objective": "Get a sense of large measurements by comparing them with familiar quantities."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH01-T2",
+     "topic_number": 2,
+     "title": "Reading and Writing Numbers in the Indian System",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "indian-place-value-commas",
+       "learning_objective": "Place commas in the Indian place value system and identify the place of each digit."
+      },
+      {
+       "concept_tag": "number-names-indian",
+       "learning_objective": "Convert between numerals and number names using lakhs and thousands."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH01-T3",
+     "topic_number": 3,
+     "title": "Land of Tens: Place Value through Button Clicks",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "place-value-button-clicks",
+       "learning_objective": "Find how many presses of +10, +100 or +1000 buttons make a given number."
+      },
+      {
+       "concept_tag": "minimum-clicks-digit-sum",
+       "learning_objective": "Explain why the fewest button clicks for a number equals the sum of its digits."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH01-T4",
+     "topic_number": 4,
+     "title": "Of Crores and Crores: Indian and American Systems",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "crore-arab-relations",
+       "learning_objective": "Relate thousand, lakh, crore and arab and count the zeroes in each."
+      },
+      {
+       "concept_tag": "indian-american-systems",
+       "learning_objective": "Read, write and compare numbers in the Indian and American (International) systems."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH01-T5",
+     "topic_number": 5,
+     "title": "Exact and Approximate Values",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "rounding-up-down",
+       "learning_objective": "Decide when rounding up or rounding down is appropriate in a real situation."
+      },
+      {
+       "concept_tag": "nearest-neighbours",
+       "learning_objective": "Find the nearest thousand, ten thousand, lakh, ten lakh and crore of a number."
+      },
+      {
+       "concept_tag": "estimating-sums-differences",
+       "learning_objective": "Estimate sums and differences of large numbers and judge which estimate is closer."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH01-T6",
+     "topic_number": 6,
+     "title": "Patterns in Products",
+     "ncert_sections": "1.5",
+     "concepts": [
+      {
+       "concept_tag": "multiplication-shortcuts",
+       "learning_objective": "Regroup factors such as 5 = 10/2 and 125 = 1000/8 to multiply quickly."
+      },
+      {
+       "concept_tag": "digits-in-product",
+       "learning_objective": "Predict the possible number of digits in a product from the digits of its factors."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH01-T7",
+     "topic_number": 7,
+     "title": "Did You Ever Wonder...? Thought Experiments",
+     "ncert_sections": "1.6",
+     "concepts": [
+      {
+       "concept_tag": "thought-experiments",
+       "learning_objective": "Make reasonable assumptions to test whether a large-number claim is possible."
+      },
+      {
+       "concept_tag": "calculating-in-stages",
+       "learning_objective": "Carry out large calculations in stages to answer distance and time questions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Arithmetic Expressions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP1-CH02-T1",
+     "topic_number": 1,
+     "title": "Simple expressions and their values",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "expression-and-its-value",
+       "learning_objective": "Find the value of a simple arithmetic expression and recognise that different expressions can have the same value."
+      },
+      {
+       "concept_tag": "writing-expressions-from-situations",
+       "learning_objective": "Write an arithmetic expression that describes an everyday situation."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH02-T2",
+     "topic_number": 2,
+     "title": "Comparing expressions",
+     "ncert_sections": "2.1 (Comparing Expressions)",
+     "concepts": [
+      {
+       "concept_tag": "comparing-expressions-by-value",
+       "learning_objective": "Compare two expressions using =, < or > according to their values."
+      },
+      {
+       "concept_tag": "comparing-without-calculating",
+       "learning_objective": "Compare sums and differences by reasoning about how the numbers differ, without full calculation."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH02-T3",
+     "topic_number": 3,
+     "title": "Brackets and terms in expressions",
+     "ncert_sections": "2.2 (Brackets in Expressions, Terms in Expressions)",
+     "concepts": [
+      {
+       "concept_tag": "brackets-order-of-operations",
+       "learning_objective": "Use brackets to show which operation in an expression is done first."
+      },
+      {
+       "concept_tag": "identifying-terms",
+       "learning_objective": "Identify the terms of an expression by writing subtractions as additions of inverses."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH02-T4",
+     "topic_number": 4,
+     "title": "Swapping, grouping and evaluating with terms",
+     "ncert_sections": "2.2 (Swapping and Grouping, More Expressions and Their Terms)",
+     "concepts": [
+      {
+       "concept_tag": "commutative-associative-addition",
+       "learning_objective": "Explain that adding terms in any order or grouping gives the same sum."
+      },
+      {
+       "concept_tag": "evaluating-expressions-with-terms",
+       "learning_objective": "Evaluate an expression by first evaluating each term and then adding the terms."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH02-T5",
+     "topic_number": 5,
+     "title": "Removing brackets I and tinkering the terms",
+     "ncert_sections": "2.2 (Removing Brackets I, Tinker the Terms I)",
+     "concepts": [
+      {
+       "concept_tag": "removing-brackets-after-minus",
+       "learning_objective": "Remove brackets correctly, changing the signs of the terms when the bracket is preceded by a minus sign."
+      },
+      {
+       "concept_tag": "tinkering-terms",
+       "learning_objective": "Predict how the value of an expression changes when one of its terms is increased or decreased."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH02-T6",
+     "topic_number": 6,
+     "title": "Removing brackets II: the distributive property",
+     "ncert_sections": "2.2 (Removing Brackets II, Tinker the Terms II)",
+     "concepts": [
+      {
+       "concept_tag": "distributive-property",
+       "learning_objective": "Use the fact that a multiple of a sum or difference equals the sum or difference of the multiples."
+      },
+      {
+       "concept_tag": "distributive-mental-multiplication",
+       "learning_objective": "Use the distributive property to find products quickly by splitting a number."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "A Peek Beyond the Point",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP1-CH03-T1",
+     "topic_number": 1,
+     "title": "The Need for Smaller Units and A Tenth Part",
+     "ncert_sections": "3.1, 3.2",
+     "concepts": [
+      {
+       "concept_tag": "smaller-units-for-precision",
+       "learning_objective": "Explain why a unit is split into smaller equal parts to measure lengths more exactly."
+      },
+      {
+       "concept_tag": "tenths-as-fractional-units",
+       "learning_objective": "Express and read lengths as units and one-tenths, and convert between mixed and tenths forms."
+      },
+      {
+       "concept_tag": "adding-subtracting-tenths",
+       "learning_objective": "Add and subtract lengths in units and tenths, regrouping 10 tenths as 1 unit."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH03-T2",
+     "topic_number": 2,
+     "title": "A Hundredth Part",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "hundredths-as-fractional-units",
+       "learning_objective": "Relate one-hundredths to one-tenths and units and write lengths using hundredths."
+      },
+      {
+       "concept_tag": "comparing-tenths-hundredths",
+       "learning_objective": "Compare lengths written with tenths and hundredths."
+      },
+      {
+       "concept_tag": "adding-subtracting-hundredths",
+       "learning_objective": "Add and subtract quantities in units, tenths and hundredths with regrouping."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH03-T3",
+     "topic_number": 3,
+     "title": "Decimal Place Value",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "base-ten-place-value-extension",
+       "learning_objective": "Explain how the Indian place value system is extended to tenths, hundredths and thousandths."
+      },
+      {
+       "concept_tag": "decimal-point-notation",
+       "learning_objective": "Write quantities given in units, tenths and hundredths in decimal notation."
+      },
+      {
+       "concept_tag": "reading-decimal-numbers",
+       "learning_objective": "Read decimal numbers correctly, digit by digit after the decimal point."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH03-T4",
+     "topic_number": 4,
+     "title": "Units of Measurement",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "length-conversion",
+       "learning_objective": "Convert between millimetres, centimetres and metres using decimals."
+      },
+      {
+       "concept_tag": "weight-conversion",
+       "learning_objective": "Convert between grams and kilograms using decimals."
+      },
+      {
+       "concept_tag": "rupee-paise-conversion",
+       "learning_objective": "Convert between paise and rupees using decimals."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH03-T5",
+     "topic_number": 5,
+     "title": "Locating and Comparing Decimals",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "decimals-on-number-line",
+       "learning_objective": "Locate decimal numbers on a number line divided into equal parts."
+      },
+      {
+       "concept_tag": "trailing-zeros-equivalence",
+       "learning_objective": "Recognise that zeros on the right of the last decimal digit do not change the value."
+      },
+      {
+       "concept_tag": "comparing-and-closest-decimals",
+       "learning_objective": "Compare decimals place by place and find the decimal closest to a given number."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH03-T6",
+     "topic_number": 6,
+     "title": "Addition and Subtraction of Decimals",
+     "ncert_sections": "3.7",
+     "concepts": [
+      {
+       "concept_tag": "adding-decimals",
+       "learning_objective": "Add decimal numbers by aligning place values and regrouping."
+      },
+      {
+       "concept_tag": "subtracting-decimals",
+       "learning_objective": "Subtract decimal numbers by aligning place values and regrouping."
+      },
+      {
+       "concept_tag": "decimal-sequences",
+       "learning_objective": "Identify the rule of a decimal sequence and extend it."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH03-T7",
+     "topic_number": 7,
+     "title": "More on the Decimal System",
+     "ncert_sections": "3.8",
+     "concepts": [
+      {
+       "concept_tag": "decimal-and-unit-errors",
+       "learning_objective": "Explain how misplacing a decimal point or mixing units changes a quantity."
+      },
+      {
+       "concept_tag": "decimal-like-non-decimal-notation",
+       "learning_objective": "Interpret notations such as hours and cricket overs that look decimal but are not based on ten."
+      },
+      {
+       "concept_tag": "history-of-decimal-notation",
+       "learning_objective": "Recall key steps in the history of decimal notation and the decimal separator."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Expressions using Letter-Numbers",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP1-CH04-T1",
+     "topic_number": 1,
+     "title": "The Notion of Letter-Numbers",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "letter-numbers-and-algebraic-expressions",
+       "learning_objective": "Use letters to stand for numbers and recognise expressions containing them as algebraic expressions."
+      },
+      {
+       "concept_tag": "expressions-from-situations",
+       "learning_objective": "Write an algebraic expression or formula that describes a relationship given in words or in a situation."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH04-T2",
+     "topic_number": 2,
+     "title": "Revisiting Arithmetic Expressions and Omitting the Multiplication Symbol",
+     "ncert_sections": "4.2, 4.3",
+     "concepts": [
+      {
+       "concept_tag": "evaluating-arithmetic-expressions",
+       "learning_objective": "Evaluate arithmetic expressions by writing them as sums of terms and handling brackets with a negative sign outside."
+      },
+      {
+       "concept_tag": "substituting-values-in-expressions",
+       "learning_objective": "Find the value of an algebraic expression such as 5m + 3 by replacing the letter-numbers with numbers."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH04-T3",
+     "topic_number": 3,
+     "title": "Simplification of Algebraic Expressions",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "like-and-unlike-terms",
+       "learning_objective": "Identify like and unlike terms and add like terms into a single term."
+      },
+      {
+       "concept_tag": "removing-brackets-and-simplifying",
+       "learning_objective": "Simplify expressions by removing brackets, using the distributive property and grouping like terms."
+      },
+      {
+       "concept_tag": "equality-of-expressions",
+       "learning_objective": "Decide whether two algebraic expressions are equal by comparing the values they take."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH04-T4",
+     "topic_number": 4,
+     "title": "Pick Patterns and Reveal Relationships",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "number-machine-formulas",
+       "learning_objective": "Find and apply the formula of a number machine from its inputs and outputs."
+      },
+      {
+       "concept_tag": "position-patterns",
+       "learning_objective": "Describe the positions of items in a repeating pattern with expressions such as 3n - 1."
+      },
+      {
+       "concept_tag": "calendar-patterns",
+       "learning_objective": "Use letter-numbers to prove that a calendar pattern always holds."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH04-T5",
+     "topic_number": 5,
+     "title": "Matchstick Patterns and Growing Patterns",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "matchstick-pattern-rule",
+       "learning_objective": "Find the general rule for the number of matchsticks at any step of a growing pattern."
+      },
+      {
+       "concept_tag": "modelling-situations-with-expressions",
+       "learning_objective": "Model real-life situations such as journeys and movement with algebraic expressions and interpret them."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Parallel and Intersecting Lines",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP1-CH05-T1",
+     "topic_number": 1,
+     "title": "Intersecting lines: linear pairs and vertically opposite angles",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "linear-pairs",
+       "learning_objective": "Use the fact that a linear pair formed by two intersecting lines adds up to 180° to find unknown angles."
+      },
+      {
+       "concept_tag": "vertically-opposite-angles",
+       "learning_objective": "Identify vertically opposite angles and reason why they are always equal."
+      },
+      {
+       "concept_tag": "reasoning-versus-measurement",
+       "learning_objective": "Explain why measured angles may differ slightly from values found by geometric reasoning."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH05-T2",
+     "topic_number": 2,
+     "title": "Perpendicular lines and parallel lines",
+     "ncert_sections": "5.2, 5.3",
+     "concepts": [
+      {
+       "concept_tag": "perpendicular-lines",
+       "learning_objective": "Recognise perpendicular lines as intersecting lines that form four right angles."
+      },
+      {
+       "concept_tag": "parallel-lines-same-plane",
+       "learning_objective": "Describe parallel lines as lines in the same plane that never meet however far they are extended."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH05-T3",
+     "topic_number": 3,
+     "title": "Parallel and perpendicular lines in paper folding; notation",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "paper-folding-lines",
+       "learning_objective": "Identify and count parallel and perpendicular creases formed by folding a square sheet."
+      },
+      {
+       "concept_tag": "parallel-perpendicular-notation",
+       "learning_objective": "Read and use arrow marks for parallel lines and the square mark for perpendicular lines."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH05-T4",
+     "topic_number": 4,
+     "title": "Transversals and corresponding angles",
+     "ncert_sections": "5.5, 5.6",
+     "concepts": [
+      {
+       "concept_tag": "transversal-angles",
+       "learning_objective": "Describe the eight angles formed when a transversal cuts two lines and the number of distinct measures possible."
+      },
+      {
+       "concept_tag": "corresponding-angles",
+       "learning_objective": "Use equality of corresponding angles to find angles and to decide whether two lines are parallel."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH05-T5",
+     "topic_number": 5,
+     "title": "Drawing parallel lines",
+     "ncert_sections": "5.7",
+     "concepts": [
+      {
+       "concept_tag": "set-square-method",
+       "learning_objective": "Draw parallel lines with a ruler and set square and justify them using equal corresponding angles."
+      },
+      {
+       "concept_tag": "paper-folding-parallel",
+       "learning_objective": "Make a line parallel to a given line through a point by folding two perpendiculars, and justify it."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH05-T6",
+     "topic_number": 6,
+     "title": "Alternate angles and interior angles",
+     "ncert_sections": "5.8",
+     "concepts": [
+      {
+       "concept_tag": "alternate-angles",
+       "learning_objective": "Find alternate angles formed by a transversal on parallel lines and justify that they are equal."
+      },
+      {
+       "concept_tag": "interior-angles-same-side",
+       "learning_objective": "Use the fact that interior angles on the same side of a transversal on parallel lines add up to 180°."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Number Play",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP1-CH06-T1",
+     "topic_number": 1,
+     "title": "Numbers Tell us Things",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "taller-in-front-rule",
+       "learning_objective": "Find the number each person calls out when the rule is 'count the taller people in front of you'."
+      },
+      {
+       "concept_tag": "always-sometimes-never",
+       "learning_objective": "Judge whether statements about the called-out numbers are always, sometimes or never true."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH06-T2",
+     "topic_number": 2,
+     "title": "Picking Parity: Sums of Even and Odd Numbers",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "parity-meaning",
+       "learning_objective": "Explain parity using the idea of arranging a number in pairs."
+      },
+      {
+       "concept_tag": "parity-of-sums",
+       "learning_objective": "Decide the parity of a sum from the parity and count of the numbers added."
+      },
+      {
+       "concept_tag": "consecutive-numbers-parity",
+       "learning_objective": "Use the fact that two consecutive numbers have different parity."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH06-T3",
+     "topic_number": 3,
+     "title": "Parity in Grids and Expressions",
+     "ncert_sections": "6.2 (Small Squares in Grids, Parity of Expressions)",
+     "concepts": [
+      {
+       "concept_tag": "parity-of-products",
+       "learning_objective": "Find the parity of the number of small squares in a grid without multiplying."
+      },
+      {
+       "concept_tag": "parity-of-expressions",
+       "learning_objective": "Identify expressions that are always even, always odd, or either."
+      },
+      {
+       "concept_tag": "nth-even-odd-formula",
+       "learning_objective": "Use 2n and 2n - 1 to find the nth even and nth odd number."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH06-T4",
+     "topic_number": 4,
+     "title": "Grid Sums and 3 x 3 Magic Squares",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "row-column-sums",
+       "learning_objective": "Use the smallest and largest possible sums and the total 45 to reason about grids filled with 1-9."
+      },
+      {
+       "concept_tag": "magic-square-properties",
+       "learning_objective": "Explain why a 1-9 magic square has magic sum 15, centre 5, and 1 and 9 in middle positions."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH06-T5",
+     "topic_number": 5,
+     "title": "Generalising Magic Squares and Their History",
+     "ncert_sections": "6.3 (Generalising a 3 x 3 Magic Square, Magic Squares in History and Culture)",
+     "concepts": [
+      {
+       "concept_tag": "generalised-magic-square",
+       "learning_objective": "Use the centre number m to describe a magic square and its magic sum 3m."
+      },
+      {
+       "concept_tag": "operations-on-magic-squares",
+       "learning_objective": "Predict the new magic sum when every number of a magic square is changed in the same way."
+      },
+      {
+       "concept_tag": "magic-squares-in-history",
+       "learning_objective": "Recall the Chautisa Yantra and other magic squares in Indian history and culture."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH06-T6",
+     "topic_number": 6,
+     "title": "Virahanka-Fibonacci Numbers",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "virahanka-rule",
+       "learning_objective": "Extend the Virahanka sequence by adding the two previous terms."
+      },
+      {
+       "concept_tag": "rhythms-and-steps",
+       "learning_objective": "Count rhythms of short and long syllables, or 1-and-2 step paths, using the Virahanka numbers."
+      },
+      {
+       "concept_tag": "virahanka-history",
+       "learning_objective": "Recall who first described these numbers and the parity pattern of the sequence."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH06-T7",
+     "topic_number": 7,
+     "title": "Digits in Disguise",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "cryptarithms",
+       "learning_objective": "Solve simple cryptarithms by reasoning about place value and carries."
+      },
+      {
+       "concept_tag": "parity-puzzles",
+       "learning_objective": "Apply parity to decide everyday puzzles such as switch toggling."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "A Tale of Three Intersecting Lines",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP1-CH07-T1",
+     "topic_number": 1,
+     "title": "Equilateral triangles and constructing a triangle from its three sides",
+     "ncert_sections": "7.1, 7.2",
+     "concepts": [
+      {
+       "concept_tag": "triangle-parts-and-naming",
+       "learning_objective": "Identify the vertices, sides and angles of a triangle and name them correctly."
+      },
+      {
+       "concept_tag": "compass-construction-three-sides",
+       "learning_objective": "Construct a triangle from three given sides using intersecting compass arcs and explain why it works."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH07-T2",
+     "topic_number": 2,
+     "title": "Triangle inequality and existence of a triangle",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "triangle-inequality",
+       "learning_objective": "Use the triangle inequality to decide whether three lengths can be the sides of a triangle."
+      },
+      {
+       "concept_tag": "third-side-range",
+       "learning_objective": "Find possible lengths of the third side when two sides of a triangle are given."
+      },
+      {
+       "concept_tag": "intersecting-circles-cases",
+       "learning_objective": "Relate the sum of the two smaller lengths to whether the construction circles touch, miss or intersect."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH07-T3",
+     "topic_number": 3,
+     "title": "Constructing triangles when some sides and angles are given",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "two-sides-included-angle",
+       "learning_objective": "Construct a triangle when two sides and the included angle are given."
+      },
+      {
+       "concept_tag": "two-angles-included-side",
+       "learning_objective": "Construct a triangle when two angles and the included side are given."
+      },
+      {
+       "concept_tag": "existence-two-angles",
+       "learning_objective": "Decide whether two given angles on a base can form a triangle using their sum."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH07-T4",
+     "topic_number": 4,
+     "title": "Angle sum property and exterior angles",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "angle-sum-property",
+       "learning_objective": "Use the angle sum property to find an unknown angle of a triangle."
+      },
+      {
+       "concept_tag": "parallel-line-proof",
+       "learning_objective": "Explain the proof of the angle sum property using a line parallel to the base."
+      },
+      {
+       "concept_tag": "exterior-angle",
+       "learning_objective": "Find an exterior angle of a triangle and relate it to the two opposite interior angles."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH07-T5",
+     "topic_number": 5,
+     "title": "Altitudes of a triangle",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "altitude-definition",
+       "learning_objective": "Define an altitude and locate it for acute, right and obtuse triangles."
+      },
+      {
+       "concept_tag": "altitude-construction",
+       "learning_objective": "Construct or fold an altitude and justify why it is perpendicular to the base."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH07-T6",
+     "topic_number": 6,
+     "title": "Types of triangles",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "classification-by-sides",
+       "learning_objective": "Classify triangles as equilateral, isosceles or scalene from their sides."
+      },
+      {
+       "concept_tag": "classification-by-angles",
+       "learning_objective": "Classify triangles as acute-angled, right-angled or obtuse-angled from their angles."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEGP1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Working with Fractions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gegp108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEGP1-CH08-T1",
+     "topic_number": 1,
+     "title": "Multiplying a fraction and a whole number",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "fraction-times-whole-number",
+       "learning_objective": "Multiply a fraction by a whole number by dividing the whole number by the denominator and multiplying by the numerator."
+      },
+      {
+       "concept_tag": "whole-number-times-fraction",
+       "learning_objective": "Find a whole number times a fraction as repeated addition and express the result as a mixed fraction."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH08-T2",
+     "topic_number": 2,
+     "title": "Multiplying two fractions using the unit square",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "unit-square-area-model",
+       "learning_objective": "Represent the product of two fractions as the area of a rectangle inside a unit square."
+      },
+      {
+       "concept_tag": "product-of-fractional-units",
+       "learning_objective": "Use the rule 1/b x 1/d = 1/(b x d) for multiplying two unit fractions."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH08-T3",
+     "topic_number": 3,
+     "title": "Brahmagupta's formula, cancelling and order of multiplication",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "brahmagupta-multiplication-formula",
+       "learning_objective": "Apply the formula a/b x c/d = (a x c)/(b x d), including for mixed fractions and whole numbers."
+      },
+      {
+       "concept_tag": "cancelling-common-factors",
+       "learning_objective": "Cancel common factors of numerators and denominators before multiplying to get the product in lowest form."
+      },
+      {
+       "concept_tag": "order-of-multiplication",
+       "learning_objective": "Recognise that the order of multiplying two fractions does not change the product."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH08-T4",
+     "topic_number": 4,
+     "title": "Is the product always greater than the numbers multiplied?",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "factor-between-zero-and-one",
+       "learning_objective": "Predict that multiplying by a number between 0 and 1 gives a product less than the other number."
+      },
+      {
+       "concept_tag": "factor-greater-than-one",
+       "learning_objective": "Predict that multiplying by a number greater than 1 gives a product greater than the other number."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH08-T5",
+     "topic_number": 5,
+     "title": "Division of fractions and reciprocals",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "reciprocal",
+       "learning_objective": "Find the reciprocal of a fraction and use it to restate a division as a multiplication."
+      },
+      {
+       "concept_tag": "brahmagupta-division-formula",
+       "learning_objective": "Divide fractions using a/b divided by c/d = (a x d)/(b x c)."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH08-T6",
+     "topic_number": 6,
+     "title": "Dividend, divisor and the quotient",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "divisor-between-zero-and-one",
+       "learning_objective": "Predict that dividing by a number between 0 and 1 gives a quotient greater than the dividend."
+      },
+      {
+       "concept_tag": "divisor-greater-than-one",
+       "learning_objective": "Predict that dividing by a number greater than 1 gives a quotient less than the dividend."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEGP1-CH08-T7",
+     "topic_number": 7,
+     "title": "Some problems involving fractions",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "fraction-word-problems",
+       "learning_objective": "Choose and carry out the correct fraction operation in everyday and historical word problems."
+      },
+      {
+       "concept_tag": "fractional-relations-area",
+       "learning_objective": "Find what fraction of a whole figure a shaded region occupies by multiplying successive fractions."
+      },
+      {
+       "concept_tag": "historical-fraction-problems",
+       "learning_objective": "Solve classical Indian fraction problems such as the dramma donation from the Lilavati."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

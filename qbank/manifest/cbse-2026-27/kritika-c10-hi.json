@@ -1,0 +1,388 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "kritika-c10-hi",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "hindi",
+  "language": "hindi",
+  "title": "Kritika",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jhkr1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JHKR1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "माता का अँचल",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhkr101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHKR1-CH01-T1",
+     "topic_number": 1,
+     "title": "पिता के साथ भोलानाथ की दिनचर्या",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pita-putra-sneh",
+       "learning_objective": "विद्यार्थी भोलानाथ और उसके पिता के आत्मीय, स्नेहपूर्ण संबंध को पाठ के प्रसंगों से समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "puja-aur-ramnaam",
+       "learning_objective": "विद्यार्थी पिता की पूजा-पाठ, रामनामा बही और मछलियों को आटे की गोलियाँ खिलाने की दिनचर्या का वर्णन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH01-T2",
+     "topic_number": 2,
+     "title": "भोजन का प्रसंग और मइयाँ का दुलार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhojan-prasang",
+       "learning_objective": "विद्यार्थी पिता और मइयाँ के बच्चे को खाना खिलाने के अलग-अलग ढंग की तुलना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "maa-ka-vatsalya",
+       "learning_objective": "विद्यार्थी मइयाँ के वात्सल्य और बच्चे की देखभाल की चिंता को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH01-T3",
+     "topic_number": 3,
+     "title": "बच्चों के खेल: नाटक, मिठाई की दुकान और घरौंदा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "khel-samagri",
+       "learning_objective": "विद्यार्थी बच्चों द्वारा घर-आँगन की साधारण वस्तुओं से बनाई गई खेल-सामग्री की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "gramin-khel-sanskriti",
+       "learning_objective": "विद्यार्थी बच्चों के खेलों में झलकती ग्रामीण संस्कृति और बड़ों के जीवन की नकल का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH01-T4",
+     "topic_number": 4,
+     "title": "बारात, खेती के खेल और तुकबंदियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "barat-aur-kheti-khel",
+       "learning_objective": "विद्यार्थी बारात और खेती के खेलों के वर्णन तथा उनमें बाबू जी की भागीदारी को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "tukbandi",
+       "learning_objective": "विद्यार्थी बच्चों की लोक-तुकबंदियों के प्रसंग और उनके प्रभाव को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH01-T5",
+     "topic_number": 5,
+     "title": "शरारतें, दंड और बाल-स्वभाव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shararat-aur-dand",
+       "learning_objective": "विद्यार्थी मूसन तिवारी को चिढ़ाने और पाठशाला में दंड मिलने के प्रसंग का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "baal-manovigyan",
+       "learning_objective": "विद्यार्थी बच्चों के दुख भूलकर खेल में रम जाने वाले स्वभाव का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH01-T6",
+     "topic_number": 6,
+     "title": "साँप का प्रसंग और माँ के आँचल की शरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sankat-mein-maa-ki-sharan",
+       "learning_objective": "विद्यार्थी संकट के समय बच्चे के माँ की गोद में शरण लेने के प्रसंग को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sheershak-ki-sarthakta",
+       "learning_objective": "विद्यार्थी 'माता का अँचल' शीर्षक की सार्थकता का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH01-T7",
+     "topic_number": 7,
+     "title": "भाषा-शैली: आंचलिक शब्द, मुहावरे और लोकोक्तियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "aanchalik-shabdavali",
+       "learning_objective": "विद्यार्थी पाठ में प्रयुक्त आंचलिक शब्दों के अर्थ और उनके प्रयोग का उद्देश्य बता सकेंगे।"
+      },
+      {
+       "concept_tag": "muhavare-aur-lokoktiyan",
+       "learning_objective": "विद्यार्थी पाठ के मुहावरों और लोकोक्तियों का अर्थ संदर्भ सहित समझा सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHKR1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "साना-साना हाथ जोड़ि...",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhkr102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHKR1-CH02-T1",
+     "topic_number": 1,
+     "title": "गंतोक की जगमगाती रात और प्रार्थना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gantok-ki-raat",
+       "learning_objective": "रात में जगमगाते गंतोक के सौंदर्य और उससे लेखिका पर पड़े सम्मोहन को समझना।"
+      },
+      {
+       "concept_tag": "prarthana-ka-bhav",
+       "learning_objective": "नेपाली प्रार्थना 'साना-साना हाथ जोड़ि' के अर्थ और भाव को स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "kanchanjangha-darshan",
+       "learning_objective": "कंचनजंघा देखने की लेखिका की उत्सुकता और उसके न दिखने की स्थिति को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH02-T2",
+     "topic_number": 2,
+     "title": "बौद्ध पताकाएँ, कवी-लोंग स्टॉक और धर्म चक्र",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bauddh-patakaen",
+       "learning_objective": "श्वेत और रंगीन बौद्ध पताकाओं को फहराने के अलग-अलग अवसरों को पहचानना।"
+      },
+      {
+       "concept_tag": "kavi-long-stok",
+       "learning_objective": "कवी-लोंग स्टॉक के ऐतिहासिक और सांस्कृतिक महत्त्व को जानना।"
+      },
+      {
+       "concept_tag": "dharm-chakra-aur-astha",
+       "learning_objective": "धर्म चक्र के माध्यम से पूरे देश की एक-सी आस्थाओं पर लेखिका के विचार का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH02-T3",
+     "topic_number": 3,
+     "title": "हिमालय का पल-पल बदलता सौंदर्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "himalay-ke-badalte-roop",
+       "learning_objective": "यात्रा में दिखे हिमालय, झरनों और तिस्ता नदी के बदलते रूपों का वर्णन समझना।"
+      },
+      {
+       "concept_tag": "jharne-ki-anubhooti",
+       "learning_objective": "सेवन सिस्टर्स झरने के पास लेखिका की आत्मिक अनुभूति को स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "chalayaman-saundarya",
+       "learning_objective": "'जीवन का आनंद है यही चलायमान सौंदर्य' जैसे कथनों के आशय की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH02-T4",
+     "topic_number": 4,
+     "title": "श्रम-सुंदरियाँ और पहाड़ी जीवन की कठोरता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pathar-todti-pahadinen",
+       "learning_objective": "पत्थर तोड़कर रास्ते बनाती पहाड़ी औरतों के कठोर श्रम और योगदान को समझना।"
+      },
+      {
+       "concept_tag": "pahadi-bachchon-ka-jeevan",
+       "learning_objective": "पहाड़ी बच्चों के कठिन जीवन और उनकी दिनचर्या को पहचानना।"
+      },
+      {
+       "concept_tag": "saundarya-aur-sangharsh",
+       "learning_objective": "प्राकृतिक सौंदर्य और जीवन-संघर्ष के विरोधाभास पर लेखिका की प्रतिक्रिया का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH02-T5",
+     "topic_number": 5,
+     "title": "लायुंग और कटाओ: बर्फ़, जल-संचय और सैनिक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "katao-ki-barf",
+       "learning_objective": "लायुंग में बर्फ़ न मिलने और कटाओ के प्राकृतिक स्वरूप के कारणों को जानना।"
+      },
+      {
+       "concept_tag": "himshikhar-jal-stambh",
+       "learning_objective": "हिमशिखरों को 'जल स्तंभ' कहने के पीछे प्रकृति की जल-संचय व्यवस्था को समझना।"
+      },
+      {
+       "concept_tag": "sainikon-ka-tyag",
+       "learning_objective": "सीमा पर तैनात सैनिकों के त्याग के प्रति लेखिका की संवेदना का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH02-T6",
+     "topic_number": 6,
+     "title": "यूमथांग की राह और जितेन की जानकारियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sikkim-ki-lok-manyataen",
+       "learning_objective": "जितेन द्वारा बताई गई सिक्किम की लोक-मान्यताओं और स्थानों के अर्थ को जानना।"
+      },
+      {
+       "concept_tag": "bharatiyata-ka-bhav",
+       "learning_objective": "सिक्किमी लोगों के भारत से जुड़ाव के भाव को समझना।"
+      },
+      {
+       "concept_tag": "manzil-aur-safar",
+       "learning_objective": "'मंज़िल से ज़्यादा रोमांचक मंज़िल तक का सफ़र' कथन के आशय का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHKR1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "मैं क्यों लिखता हूँ?",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhkr103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHKR1-CH03-T1",
+     "topic_number": 1,
+     "title": "लेखन का प्रश्न और भीतरी विवशता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bheetari-vivashta",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि लेखक भीतरी विवशता को पहचानने और उससे मुक्त होने के लिए लिखता है।"
+      },
+      {
+       "concept_tag": "kritikar-aur-lekhak",
+       "learning_objective": "विद्यार्थी लेखक और कृतिकार तथा लेखन और कृति के अंतर को स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH03-T2",
+     "topic_number": 2,
+     "title": "बाहरी दबाव और आत्मानुशासन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bahari-dabav",
+       "learning_objective": "विद्यार्थी संपादक, प्रकाशक और आर्थिक आवश्यकता जैसे बाहरी दबावों की लेखन में भूमिका बता सकेंगे।"
+      },
+      {
+       "concept_tag": "atmanushasan-alarm-upma",
+       "learning_objective": "विद्यार्थी अलार्म घड़ी की उपमा द्वारा स्वभाव और आत्मानुशासन का महत्त्व समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH03-T3",
+     "topic_number": 3,
+     "title": "विज्ञान का दुरुपयोग और बौद्धिक विद्रोह",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vigyan-ka-durupyog",
+       "learning_objective": "विद्यार्थी हिरोशिमा पर अणु-बम के प्रति लेखक की बौद्धिक प्रतिक्रिया का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vyarth-jeev-naash",
+       "learning_objective": "विद्यार्थी ब्रह्मपुत्र-प्रसंग से व्यर्थ जीव-नाश के प्रति लेखक की व्यथा को समझ सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH03-T4",
+     "topic_number": 4,
+     "title": "अनुभव और अनुभूति",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "anubhav-aur-anubhuti",
+       "learning_objective": "विद्यार्थी लेखक के अनुसार अनुभव और अनुभूति का अंतर स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "anubhuti-pratyaksh",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि संवेदना और कल्पना से अनुभूति-प्रत्यक्ष कैसे बनता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH03-T5",
+     "topic_number": 5,
+     "title": "जली हुई छाया और कविता का जन्म",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jali-hui-chhaya",
+       "learning_objective": "विद्यार्थी पत्थर पर जली छाया के प्रसंग और उसके प्रभाव का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kavita-ka-janm",
+       "learning_objective": "विद्यार्थी 'हिरोशिमा' कविता के अनुभूति-प्रसूत होने की प्रक्रिया समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHKR1-CH03-T6",
+     "topic_number": 6,
+     "title": "कविता 'हिरोशिमा' और शब्द-भंडार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "hiroshima-kavita-bimb",
+       "learning_objective": "विद्यार्थी 'हिरोशिमा' कविता के बिंबों और उनके निहितार्थ की व्याख्या कर सकेंगे।"
+      },
+      {
+       "concept_tag": "paath-shabdarth",
+       "learning_objective": "विद्यार्थी पाठ के कठिन शब्दों के अर्थ समझकर संदर्भ में उनका प्रयोग पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

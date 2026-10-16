@@ -1,0 +1,128 @@
+{
+ "chapter_id": "HECU1-CH06",
+ "title": "Pressure, Winds, Storms, and Cyclones",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HECU1-CH06-T1",
+   "topic_number": 1,
+   "title": "Pressure as force per unit area",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "pressure-force-per-unit-area",
+     "learning_objective": "Define pressure as force per unit area, state its SI unit (pascal) and calculate it."
+    },
+    {
+     "concept_tag": "pressure-and-area-in-daily-life",
+     "learning_objective": "Explain everyday tasks by relating a smaller or larger contact area to higher or lower pressure."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH06-T2",
+   "topic_number": 2,
+   "title": "Pressure exerted by liquids",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "liquid-pressure-and-height",
+     "learning_objective": "Relate the pressure at the bottom of a liquid column to the height of the column, not its weight."
+    },
+    {
+     "concept_tag": "liquid-pressure-on-walls",
+     "learning_objective": "Show that liquids exert pressure on the sides of a container and in all directions."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH06-T3",
+   "topic_number": 3,
+   "title": "Pressure exerted by air",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "atmospheric-pressure",
+     "learning_objective": "Describe atmospheric pressure, its magnitude and its units, including millibar and hectopascal."
+    },
+    {
+     "concept_tag": "sucker-and-body-pressure-balance",
+     "learning_objective": "Explain a sucker and our safety under the atmosphere using a pressure difference or a pressure balance."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH06-T4",
+   "topic_number": 4,
+   "title": "Formation of wind",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "air-flows-high-to-low-pressure",
+     "learning_objective": "State that air moves from high to low pressure, faster when the pressure difference is larger."
+    },
+    {
+     "concept_tag": "sea-and-land-breeze",
+     "learning_objective": "Explain the sea breeze and the land breeze through pressure differences over land and sea."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH06-T5",
+   "topic_number": 5,
+   "title": "High-speed winds lower air pressure",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "high-speed-wind-low-pressure",
+     "learning_objective": "Infer from the two-balloon activity that high-speed winds are accompanied by reduced air pressure."
+    },
+    {
+     "concept_tag": "pressure-difference-on-structures",
+     "learning_objective": "Explain why roofs blow off in storms and how open doors, windows or holes reduce the pressure difference."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH06-T6",
+   "topic_number": 6,
+   "title": "Storms, thunderstorms and lightning",
+   "ncert_sections": "6.5",
+   "concepts": [
+    {
+     "concept_tag": "storm-formation",
+     "learning_objective": "Describe how rising warm, moist air, cooling and condensation lead to clouds, rain and storms."
+    },
+    {
+     "concept_tag": "charge-separation-and-lightning",
+     "learning_objective": "Explain charge separation in clouds and how the breakdown of air's insulation causes lightning and thunder."
+    },
+    {
+     "concept_tag": "lightning-safety",
+     "learning_objective": "Choose safe actions during lightning and explain how a lightning conductor protects a building."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH06-T7",
+   "topic_number": 7,
+   "title": "Cyclones",
+   "ncert_sections": "6.6",
+   "concepts": [
+    {
+     "concept_tag": "cyclone-formation",
+     "learning_objective": "Explain how heat released by condensation, inflowing air and Earth's rotation build a cyclone, and why it weakens over land."
+    },
+    {
+     "concept_tag": "eye-of-cyclone",
+     "learning_objective": "Describe the eye of a cyclone as the calm centre of lowest pressure surrounded by strong winds and rain."
+    },
+    {
+     "concept_tag": "cyclone-impact-and-safety",
+     "learning_objective": "Evaluate the damage caused by cyclones and the measures that reduce their impact."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "chapter_id": "JEMH1-CH05",
+ "title": "Arithmetic Progressions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH05-T1",
+   "topic_number": 1,
+   "title": "Arithmetic progressions and the common difference",
+   "ncert_sections": "5.1, 5.2",
+   "concepts": [
+    {
+     "concept_tag": "ap-definition",
+     "learning_objective": "Recognise whether a list of numbers or a real-life situation forms an arithmetic progression."
+    },
+    {
+     "concept_tag": "common-difference",
+     "learning_objective": "Find the common difference of an AP and use the condition of equal successive differences."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH05-T2",
+   "topic_number": 2,
+   "title": "The nth term of an AP",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "general-form-of-ap",
+     "learning_objective": "Write an AP in the general form a, a + d, a + 2d, ... from its first term and common difference."
+    },
+    {
+     "concept_tag": "nth-term-formula",
+     "learning_objective": "Use a_n = a + (n - 1)d to find any term of an AP."
+    },
+    {
+     "concept_tag": "number-of-terms",
+     "learning_objective": "Find which term of an AP equals a given number, or how many terms a finite AP has."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH05-T3",
+   "topic_number": 3,
+   "title": "Applications of the nth term",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "nth-term-from-end",
+     "learning_objective": "Find the nth term from the last term of a finite AP."
+    },
+    {
+     "concept_tag": "finding-ap-from-conditions",
+     "learning_objective": "Determine an AP when conditions on two of its terms are given."
+    },
+    {
+     "concept_tag": "nth-term-word-problems",
+     "learning_objective": "Model and solve real-life situations using the nth term of an AP."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH05-T4",
+   "topic_number": 4,
+   "title": "Sum of the first n terms of an AP",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "sum-formula",
+     "learning_objective": "Use S = (n/2)[2a + (n - 1)d] to find the sum of the first n terms of an AP."
+    },
+    {
+     "concept_tag": "sum-using-last-term",
+     "learning_objective": "Use S = (n/2)(a + l) when the first and last terms of an AP are known."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH05-T5",
+   "topic_number": 5,
+   "title": "Applications of the sum of an AP",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "nth-term-from-sum",
+     "learning_objective": "Find a term of an AP from the sums of its terms using a_n = S_n - S_(n-1)."
+    },
+    {
+     "concept_tag": "sum-word-problems",
+     "learning_objective": "Solve real-life problems that involve the sum of terms of an AP."
+    },
+    {
+     "concept_tag": "sum-properties",
+     "learning_objective": "Reason about relationships between sums of different numbers of terms of an AP."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "chapter_id": "GEGP1-CH05",
+ "title": "Parallel and Intersecting Lines",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP1-CH05-T1",
+   "topic_number": 1,
+   "title": "Intersecting lines: linear pairs and vertically opposite angles",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "linear-pairs",
+     "learning_objective": "Use the fact that a linear pair formed by two intersecting lines adds up to 180° to find unknown angles."
+    },
+    {
+     "concept_tag": "vertically-opposite-angles",
+     "learning_objective": "Identify vertically opposite angles and reason why they are always equal."
+    },
+    {
+     "concept_tag": "reasoning-versus-measurement",
+     "learning_objective": "Explain why measured angles may differ slightly from values found by geometric reasoning."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH05-T2",
+   "topic_number": 2,
+   "title": "Perpendicular lines and parallel lines",
+   "ncert_sections": "5.2, 5.3",
+   "concepts": [
+    {
+     "concept_tag": "perpendicular-lines",
+     "learning_objective": "Recognise perpendicular lines as intersecting lines that form four right angles."
+    },
+    {
+     "concept_tag": "parallel-lines-same-plane",
+     "learning_objective": "Describe parallel lines as lines in the same plane that never meet however far they are extended."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH05-T3",
+   "topic_number": 3,
+   "title": "Parallel and perpendicular lines in paper folding; notation",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "paper-folding-lines",
+     "learning_objective": "Identify and count parallel and perpendicular creases formed by folding a square sheet."
+    },
+    {
+     "concept_tag": "parallel-perpendicular-notation",
+     "learning_objective": "Read and use arrow marks for parallel lines and the square mark for perpendicular lines."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH05-T4",
+   "topic_number": 4,
+   "title": "Transversals and corresponding angles",
+   "ncert_sections": "5.5, 5.6",
+   "concepts": [
+    {
+     "concept_tag": "transversal-angles",
+     "learning_objective": "Describe the eight angles formed when a transversal cuts two lines and the number of distinct measures possible."
+    },
+    {
+     "concept_tag": "corresponding-angles",
+     "learning_objective": "Use equality of corresponding angles to find angles and to decide whether two lines are parallel."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH05-T5",
+   "topic_number": 5,
+   "title": "Drawing parallel lines",
+   "ncert_sections": "5.7",
+   "concepts": [
+    {
+     "concept_tag": "set-square-method",
+     "learning_objective": "Draw parallel lines with a ruler and set square and justify them using equal corresponding angles."
+    },
+    {
+     "concept_tag": "paper-folding-parallel",
+     "learning_objective": "Make a line parallel to a given line through a point by folding two perpendiculars, and justify it."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH05-T6",
+   "topic_number": 6,
+   "title": "Alternate angles and interior angles",
+   "ncert_sections": "5.8",
+   "concepts": [
+    {
+     "concept_tag": "alternate-angles",
+     "learning_objective": "Find alternate angles formed by a transversal on parallel lines and justify that they are equal."
+    },
+    {
+     "concept_tag": "interior-angles-same-side",
+     "learning_objective": "Use the fact that interior angles on the same side of a transversal on parallel lines add up to 180°."
+    }
+   ]
+  }
+ ]
+}

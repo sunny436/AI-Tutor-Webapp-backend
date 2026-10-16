@@ -1,0 +1,144 @@
+{
+ "chapter_id": "LEBO1-CH03",
+ "title": "Reproductive Health",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBO1-CH03-T1",
+   "topic_number": 1,
+   "title": "Reproductive health: problems and strategies",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "reproductive-health-concept",
+     "learning_objective": "Define reproductive health as total well-being in all aspects of reproduction and identify indicators of its improvement."
+    },
+    {
+     "concept_tag": "rch-programmes-and-awareness",
+     "learning_objective": "Describe India's family planning and RCH programmes and the role of awareness and sex education."
+    },
+    {
+     "concept_tag": "amniocentesis-and-its-ban",
+     "learning_objective": "Explain what amniocentesis is, its legitimate use and why its use for sex determination is banned."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH03-T2",
+   "topic_number": 2,
+   "title": "Population stabilisation and the ideal contraceptive",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "population-explosion-causes",
+     "learning_objective": "State the reasons for rapid population growth and interpret population growth rates."
+    },
+    {
+     "concept_tag": "population-control-measures",
+     "learning_objective": "Identify the measures taken in India to check population growth."
+    },
+    {
+     "concept_tag": "ideal-contraceptive-features",
+     "learning_objective": "List the features of an ideal contraceptive and evaluate methods against them."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH03-T3",
+   "topic_number": 3,
+   "title": "Natural and barrier methods of contraception",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "natural-contraceptive-methods",
+     "learning_objective": "Explain periodic abstinence, withdrawal and lactational amenorrhoea and their limitations."
+    },
+    {
+     "concept_tag": "barrier-contraceptive-methods",
+     "learning_objective": "Describe condoms, diaphragms, cervical caps and vaults and how they prevent conception."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH03-T4",
+   "topic_number": 4,
+   "title": "IUDs, hormonal and surgical methods of contraception",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "intrauterine-devices",
+     "learning_objective": "Classify IUDs and explain how they prevent conception."
+    },
+    {
+     "concept_tag": "hormonal-contraceptives",
+     "learning_objective": "Explain the use and action of oral pills, injectables, implants and emergency contraceptives."
+    },
+    {
+     "concept_tag": "surgical-sterilisation",
+     "learning_objective": "Distinguish vasectomy and tubectomy and explain how sterilisation prevents conception."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH03-T5",
+   "topic_number": 5,
+   "title": "Medical termination of pregnancy",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "mtp-meaning-and-need",
+     "learning_objective": "Define MTP and state the reasons for which it is performed."
+    },
+    {
+     "concept_tag": "mtp-legal-provisions",
+     "learning_objective": "Apply the conditions of the MTP (Amendment) Act, 2017 to given situations."
+    },
+    {
+     "concept_tag": "mtp-safety-and-misuse",
+     "learning_objective": "Explain when MTP is relatively safe and identify its dangerous misuses."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH03-T6",
+   "topic_number": 6,
+   "title": "Sexually transmitted infections",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "sti-types-and-transmission",
+     "learning_objective": "Name common STIs, their modes of transmission and which of them are not completely curable."
+    },
+    {
+     "concept_tag": "sti-symptoms-and-complications",
+     "learning_objective": "Explain why STIs often go untreated and the complications that may follow."
+    },
+    {
+     "concept_tag": "sti-prevention",
+     "learning_objective": "State the simple principles that help prevent STIs."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH03-T7",
+   "topic_number": 7,
+   "title": "Infertility and assisted reproductive technologies",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "infertility-and-its-causes",
+     "learning_objective": "Define infertility and state its possible causes in either partner."
+    },
+    {
+     "concept_tag": "ivf-and-embryo-transfer",
+     "learning_objective": "Explain IVF followed by embryo transfer through ZIFT and IUT."
+    },
+    {
+     "concept_tag": "gift-icsi-and-artificial-insemination",
+     "learning_objective": "Distinguish GIFT, ICSI and artificial insemination and choose the suitable one for a case."
+    }
+   ]
+  }
+ ]
+}

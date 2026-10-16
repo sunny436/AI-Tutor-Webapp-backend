@@ -1,0 +1,1045 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "bhautiki-i-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "physics",
+  "language": "hindi",
+  "title": "Bhautiki-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhph1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHPH1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "वैद्युत आवेश तथा क्षेत्र",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhph101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPH1-CH01-T1",
+     "topic_number": 1,
+     "title": "वैद्युत आवेश, चालक तथा विद्युतरोधी",
+     "ncert_sections": "1.2, 1.3",
+     "concepts": [
+      {
+       "concept_tag": "gharshan-dwara-aaveshan",
+       "learning_objective": "घर्षण द्वारा वस्तुओं के आवेशित होने तथा दो प्रकार के आवेशों की पहचान करना।"
+      },
+      {
+       "concept_tag": "chalak-aur-vidyutrodhi",
+       "learning_objective": "चालकों, विद्युतरोधियों और भूसंपर्कण में आवेश के व्यवहार की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH01-T2",
+     "topic_number": 2,
+     "title": "वैद्युत आवेश के मूल गुण",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "aavesh-ki-yogatmakta",
+       "learning_objective": "किसी निकाय के कुल आवेश को सभी आवेशों के बीजगणितीय योग के रूप में ज्ञात करना।"
+      },
+      {
+       "concept_tag": "aavesh-sanrakshan",
+       "learning_objective": "आवेश संरक्षण के नियम को घर्षण जैसी प्रक्रियाओं पर लागू करना।"
+      },
+      {
+       "concept_tag": "aavesh-ka-kvantmikaran",
+       "learning_objective": "आवेश के क्वांटमीकरण q = ne को समझना और उसकी सीमाएँ बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH01-T3",
+     "topic_number": 3,
+     "title": "कूलॉम नियम तथा अनेक आवेशों के बीच बल",
+     "ncert_sections": "1.5, 1.6",
+     "concepts": [
+      {
+       "concept_tag": "coulomb-niyam",
+       "learning_objective": "कूलॉम नियम से दो बिंदु आवेशों के बीच बल की गणना करना।"
+      },
+      {
+       "concept_tag": "adhyaropan-siddhant",
+       "learning_objective": "अध्यारोपण सिद्धांत से अनेक आवेशों के कारण किसी आवेश पर नेट बल ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH01-T4",
+     "topic_number": 4,
+     "title": "वैद्युत क्षेत्र तथा वैद्युत क्षेत्र रेखाएँ",
+     "ncert_sections": "1.7, 1.8",
+     "concepts": [
+      {
+       "concept_tag": "vidyut-kshetra",
+       "learning_objective": "बिंदु आवेशों के कारण किसी बिंदु पर वैद्युत क्षेत्र का परिमाण और दिशा ज्ञात करना।"
+      },
+      {
+       "concept_tag": "kshetra-rekhaen",
+       "learning_objective": "वैद्युत क्षेत्र रेखाओं के गुणों को समझना और उनकी व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH01-T5",
+     "topic_number": 5,
+     "title": "वैद्युत फ्लक्स तथा वैद्युत द्विध्रुव",
+     "ncert_sections": "1.9, 1.10, 1.11",
+     "concepts": [
+      {
+       "concept_tag": "vidyut-flux",
+       "learning_objective": "किसी क्षेत्रफल अवयव से गुजरने वाले वैद्युत फ्लक्स की गणना करना।"
+      },
+      {
+       "concept_tag": "vidyut-dwidhruv",
+       "learning_objective": "वैद्युत द्विध्रुव और द्विध्रुव आघूर्ण की परिभाषा तथा दिशा बताना।"
+      },
+      {
+       "concept_tag": "dwidhruv-par-bal-aaghurn",
+       "learning_objective": "एकसमान बाह्य क्षेत्र में द्विध्रुव पर बल और बल-आघूर्ण का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH01-T6",
+     "topic_number": 6,
+     "title": "सतत आवेश वितरण तथा गाउस नियम",
+     "ncert_sections": "1.12, 1.13, 1.14",
+     "concepts": [
+      {
+       "concept_tag": "aavesh-ghanatva",
+       "learning_objective": "रैखिक, पृष्ठ और आयतन आवेश घनत्व तथा उनके मात्रक बताना।"
+      },
+      {
+       "concept_tag": "gauss-niyam",
+       "learning_objective": "गाउस नियम के अनुसार बंद पृष्ठ से निर्गत कुल फ्लक्स ज्ञात करना।"
+      },
+      {
+       "concept_tag": "gauss-niyam-anuprayog",
+       "learning_objective": "गाउस नियम से रैखिक आवेश, समतल चादर और गोलीय कोश के क्षेत्र ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPH1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "स्थिरवैद्युत विभव तथा धारिता",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhph102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPH1-CH02-T1",
+     "topic_number": 1,
+     "title": "स्थिरवैद्युत विभव तथा बिंदु आवेश के कारण विभव",
+     "ncert_sections": "2.1, 2.2, 2.3",
+     "concepts": [
+      {
+       "concept_tag": "vibhav-paribhasha",
+       "learning_objective": "विद्यार्थी स्थिरवैद्युत विभव को प्रति एकांक धनात्मक आवेश पर किए गए कार्य के रूप में परिभाषित कर सकेंगे।"
+      },
+      {
+       "concept_tag": "bindu-avesh-vibhav",
+       "learning_objective": "विद्यार्थी बिंदु आवेश के कारण किसी बिंदु पर विभव की गणना कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH02-T2",
+     "topic_number": 2,
+     "title": "वैद्युत द्विध्रुव तथा आवेशों के निकाय के कारण विभव",
+     "ncert_sections": "2.4, 2.5",
+     "concepts": [
+      {
+       "concept_tag": "dvidhruv-vibhav",
+       "learning_objective": "विद्यार्थी वैद्युत द्विध्रुव के कारण अक्षीय तथा निरक्षीय बिंदुओं पर विभव का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "adhyaropan-vibhav",
+       "learning_objective": "विद्यार्थी अध्यारोपण सिद्धांत से आवेशों के निकाय के कारण विभव ज्ञात कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH02-T3",
+     "topic_number": 3,
+     "title": "समविभव पृष्ठ",
+     "ncert_sections": "2.6",
+     "concepts": [
+      {
+       "concept_tag": "samvibhav-prishth",
+       "learning_objective": "विद्यार्थी समविभव पृष्ठों के गुण तथा विद्युत क्षेत्र से उनके संबंध को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "kshetra-vibhav-sambandh",
+       "learning_objective": "विद्यार्थी विद्युत क्षेत्र और विभव प्रवणता के संबंध E = −dV/dr का उपयोग कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH02-T4",
+     "topic_number": 4,
+     "title": "आवेशों के निकाय तथा बाह्य क्षेत्र में स्थितिज ऊर्जा",
+     "ncert_sections": "2.7, 2.8",
+     "concepts": [
+      {
+       "concept_tag": "nikay-sthitij-urja",
+       "learning_objective": "विद्यार्थी आवेशों के निकाय की स्थितिज ऊर्जा की गणना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "bahya-kshetra-urja",
+       "learning_objective": "विद्यार्थी बाह्य क्षेत्र में आवेश की स्थितिज ऊर्जा qV को लागू कर सकेंगे।"
+      },
+      {
+       "concept_tag": "dvidhruv-sthitij-urja",
+       "learning_objective": "विद्यार्थी बाह्य एकसमान क्षेत्र में द्विध्रुव की स्थितिज ऊर्जा और उसे घुमाने में कार्य ज्ञात कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH02-T5",
+     "topic_number": 5,
+     "title": "चालक-स्थिरवैद्युतिकी",
+     "ncert_sections": "2.9",
+     "concepts": [
+      {
+       "concept_tag": "chalak-gun",
+       "learning_objective": "विद्यार्थी स्थिरवैद्युत स्थिति में चालक के भीतर क्षेत्र, पृष्ठ आवेश और विभव के गुण बता सकेंगे।"
+      },
+      {
+       "concept_tag": "sthirvaidyut-parirakshan",
+       "learning_objective": "विद्यार्थी स्थिरवैद्युत परिरक्षण को दैनिक जीवन के उदाहरणों में लागू कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH02-T6",
+     "topic_number": 6,
+     "title": "परावैद्युत तथा ध्रुवण",
+     "ncert_sections": "2.10",
+     "concepts": [
+      {
+       "concept_tag": "dhruvi-adhruvi-anu",
+       "learning_objective": "विद्यार्थी ध्रुवी तथा अध्रुवी अणुओं में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "dhruvan",
+       "learning_objective": "विद्यार्थी ध्रुवण तथा परावैद्युत के भीतर क्षेत्र के घटने की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH02-T7",
+     "topic_number": 7,
+     "title": "संधारित्र, समांतर पट्टिका संधारित्र तथा परावैद्युत का प्रभाव",
+     "ncert_sections": "2.11, 2.12, 2.13",
+     "concepts": [
+      {
+       "concept_tag": "dharita",
+       "learning_objective": "विद्यार्थी धारिता की परिभाषा और उसका मात्रक बता सकेंगे।"
+      },
+      {
+       "concept_tag": "samantar-pattika-sandharitra",
+       "learning_objective": "विद्यार्थी समांतर पट्टिका संधारित्र की धारिता की गणना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "paravaidyut-prabhav",
+       "learning_objective": "विद्यार्थी धारिता, आवेश और विभवांतर पर परावैद्युत के प्रभाव का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH02-T8",
+     "topic_number": 8,
+     "title": "संधारित्रों का संयोजन तथा संचित ऊर्जा",
+     "ncert_sections": "2.14, 2.15",
+     "concepts": [
+      {
+       "concept_tag": "shreni-samantar-sanyojan",
+       "learning_objective": "विद्यार्थी श्रेणी तथा समांतर क्रम में संधारित्रों की तुल्य धारिता ज्ञात कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sanchit-urja",
+       "learning_objective": "विद्यार्थी संधारित्र में संचित ऊर्जा की गणना तथा आवेश बाँटने पर ऊर्जा हानि का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPH1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "विद्युत धारा",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhph103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPH1-CH03-T1",
+     "topic_number": 1,
+     "title": "विद्युत धारा और चालकों में धारा",
+     "ncert_sections": "3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "vidyut-dhara-paribhasha",
+       "learning_objective": "विद्युत धारा को एकांक समय में प्रवाहित नेट आवेश के रूप में परिभाषित कर उसकी गणना करना।"
+      },
+      {
+       "concept_tag": "chalakon-mein-dhara",
+       "learning_objective": "चालक में मुक्त इलेक्ट्रॉनों की यादृच्छिक गति और विद्युत क्षेत्र में धारा बनने को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH03-T2",
+     "topic_number": 2,
+     "title": "ओम का नियम और प्रतिरोधकता",
+     "ncert_sections": "3.4, 3.7",
+     "concepts": [
+      {
+       "concept_tag": "ohm-ka-niyam",
+       "learning_objective": "ओम के नियम तथा प्रतिरोध की लंबाई और अनुप्रस्थ काट के क्षेत्रफल पर निर्भरता को लागू करना।"
+      },
+      {
+       "concept_tag": "pratirodhakta",
+       "learning_objective": "प्रतिरोधकता, धारा घनत्व तथा विभिन्न पदार्थों की प्रतिरोधकता में अंतर को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH03-T3",
+     "topic_number": 3,
+     "title": "इलेक्ट्रॉनों का अपवाह और ओम के नियम की सीमाएँ",
+     "ncert_sections": "3.5, 3.5.1, 3.6",
+     "concepts": [
+      {
+       "concept_tag": "apvah-veg",
+       "learning_objective": "अपवाह वेग, विश्रांति काल और धारा के संबंध I = neAv_d का प्रयोग करना।"
+      },
+      {
+       "concept_tag": "gatisheelta",
+       "learning_objective": "गतिशीलता की परिभाषा और उसके मात्रक को पहचानना।"
+      },
+      {
+       "concept_tag": "ohm-niyam-seemayen",
+       "learning_objective": "अ-ओमीय युक्तियों के उदाहरणों से ओम के नियम की सीमाएँ पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH03-T4",
+     "topic_number": 4,
+     "title": "प्रतिरोधकता की ताप पर निर्भरता",
+     "ncert_sections": "3.8",
+     "concepts": [
+      {
+       "concept_tag": "pratirodhakta-tap-nirbharta",
+       "learning_objective": "धातुओं, मिश्रधातुओं और अर्धचालकों की प्रतिरोधकता पर ताप के प्रभाव की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "tap-gunank",
+       "learning_objective": "प्रतिरोधकता ताप गुणांक से किसी ताप पर प्रतिरोध की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH03-T5",
+     "topic_number": 5,
+     "title": "विद्युत ऊर्जा और शक्ति",
+     "ncert_sections": "3.9",
+     "concepts": [
+      {
+       "concept_tag": "vidyut-shakti",
+       "learning_objective": "विद्युत शक्ति के व्यंजकों P = VI = I²R = V²/R का प्रयोग करना।"
+      },
+      {
+       "concept_tag": "shakti-sancharan-kshay",
+       "learning_objective": "उच्च वोल्टता पर विद्युत शक्ति संचरण से संचरण तारों में ऊर्जा क्षय घटने को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH03-T6",
+     "topic_number": 6,
+     "title": "सेल, विद्युत वाहक बल, आंतरिक प्रतिरोध तथा सेलों का संयोजन",
+     "ncert_sections": "3.10, 3.11",
+     "concepts": [
+      {
+       "concept_tag": "emf-aantarik-pratirodh",
+       "learning_objective": "विद्युत वाहक बल, आंतरिक प्रतिरोध और टर्मिनल विभवांतर के संबंध V = ε − Ir को लागू करना।"
+      },
+      {
+       "concept_tag": "cell-sanyojan",
+       "learning_objective": "श्रेणी और पार्श्व क्रम में जुड़े सेलों का तुल्य विद्युत वाहक बल और आंतरिक प्रतिरोध ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH03-T7",
+     "topic_number": 7,
+     "title": "किरखोफ के नियम",
+     "ncert_sections": "3.12",
+     "concepts": [
+      {
+       "concept_tag": "sandhi-niyam",
+       "learning_objective": "संधि नियम को आवेश संरक्षण से जोड़कर संधि पर धाराएँ ज्ञात करना।"
+      },
+      {
+       "concept_tag": "pash-niyam",
+       "learning_objective": "पाश नियम को ऊर्जा संरक्षण से जोड़कर परिपथों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH03-T8",
+     "topic_number": 8,
+     "title": "व्हीटस्टोन सेतु",
+     "ncert_sections": "3.13",
+     "concepts": [
+      {
+       "concept_tag": "wheatstone-setu-santulan",
+       "learning_objective": "व्हीटस्टोन सेतु की संतुलन शर्त से अज्ञात प्रतिरोध ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPH1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "गतिमान आवेश और चुंबकत्व",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhph104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPH1-CH04-T1",
+     "topic_number": 1,
+     "title": "चुंबकीय बल: लोरेंज बल तथा धारावाही चालक पर बल",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "lorentz-bal",
+       "learning_objective": "गतिमान आवेश पर विद्युत और चुंबकीय क्षेत्रों द्वारा लगने वाले लोरेंज बल को समझना और उसकी गणना करना।"
+      },
+      {
+       "concept_tag": "dharavahi-chalak-par-bal",
+       "learning_objective": "चुंबकीय क्षेत्र में रखे धारावाही चालक पर लगने वाले बल की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH04-T2",
+     "topic_number": 2,
+     "title": "चुंबकीय क्षेत्र में आवेशित कण की गति",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "vrittiya-gati",
+       "learning_objective": "चुंबकीय क्षेत्र के लंबवत गतिमान आवेश के वृत्तीय पथ की त्रिज्या और आवृत्ति ज्ञात करना।"
+      },
+      {
+       "concept_tag": "kundalini-path",
+       "learning_objective": "क्षेत्र से कोण बनाते वेग वाले आवेश के कुंडलिनी पथ और उसके चूड़ी अंतराल को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH04-T3",
+     "topic_number": 3,
+     "title": "बायो-सावर्ट नियम तथा वृत्ताकार धारा पाश का चुंबकीय क्षेत्र",
+     "ncert_sections": "4.4, 4.5",
+     "concepts": [
+      {
+       "concept_tag": "bio-savart-niyam",
+       "learning_objective": "धारा अवयव के कारण चुंबकीय क्षेत्र के लिए बायो-सावर्ट नियम का कथन और प्रयोग करना।"
+      },
+      {
+       "concept_tag": "vrittiya-pash-aksh-kshetra",
+       "learning_objective": "वृत्ताकार धारा पाश के केंद्र और अक्ष पर चुंबकीय क्षेत्र की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH04-T4",
+     "topic_number": 4,
+     "title": "ऐम्पियर का परिपथीय नियम तथा परिनालिका",
+     "ncert_sections": "4.6, 4.7",
+     "concepts": [
+      {
+       "concept_tag": "ampere-paripathiya-niyam",
+       "learning_objective": "ऐम्पियर के परिपथीय नियम का कथन करना और उससे लंबे सीधे तार का क्षेत्र ज्ञात करना।"
+      },
+      {
+       "concept_tag": "parinalika-kshetra",
+       "learning_objective": "लंबी परिनालिका के भीतर एकसमान चुंबकीय क्षेत्र की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH04-T5",
+     "topic_number": 5,
+     "title": "दो समांतर धाराओं के बीच बल तथा ऐम्पियर",
+     "ncert_sections": "4.8",
+     "concepts": [
+      {
+       "concept_tag": "samantar-dharaon-ke-beech-bal",
+       "learning_objective": "दो समांतर धारावाही तारों के बीच प्रति इकाई लंबाई बल की दिशा और परिमाण ज्ञात करना।"
+      },
+      {
+       "concept_tag": "ampere-ki-paribhasha",
+       "learning_objective": "समांतर धाराओं के बीच बल के आधार पर ऐम्पियर की परिभाषा समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH04-T6",
+     "topic_number": 6,
+     "title": "धारा पाश पर बल-आघूर्ण तथा चुंबकीय द्विध्रुव",
+     "ncert_sections": "4.9",
+     "concepts": [
+      {
+       "concept_tag": "dhara-pash-par-bal-aaghurn",
+       "learning_objective": "एकसमान चुंबकीय क्षेत्र में धारा पाश पर लगने वाले बल-आघूर्ण की गणना करना।"
+      },
+      {
+       "concept_tag": "chumbakiya-dvidhruv-aaghurn",
+       "learning_objective": "धारा पाश के चुंबकीय आघूर्ण तथा उसके संतुलन की स्थितियों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH04-T7",
+     "topic_number": 7,
+     "title": "चल कुंडली गैल्वेनोमीटर",
+     "ncert_sections": "4.10",
+     "concepts": [
+      {
+       "concept_tag": "chal-kundli-galvenometer",
+       "learning_objective": "चल कुंडली गैल्वेनोमीटर की संरचना, अरीय क्षेत्र और सुग्राहिता को समझना।"
+      },
+      {
+       "concept_tag": "ammeter-voltmeter-me-rupantaran",
+       "learning_objective": "गैल्वेनोमीटर को शंट या श्रेणी प्रतिरोध द्वारा ऐमीटर या वोल्टमीटर में बदलना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPH1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "चुंबकत्व एवं द्रव्य",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhph105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPH1-CH05-T1",
+     "topic_number": 1,
+     "title": "छड़ चुंबक और चुंबकीय क्षेत्र रेखाएँ",
+     "ncert_sections": "5.1, 5.2, 5.2.1, 5.2.2",
+     "concepts": [
+      {
+       "concept_tag": "chumbakiya-kshetra-rekhayen",
+       "learning_objective": "चुंबकीय क्षेत्र रेखाओं के गुण बताना और उनसे क्षेत्र की दिशा व प्रबलता की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "chhad-chumbak-tulya-parinalika",
+       "learning_objective": "छड़ चुंबक को तुल्य धारावाही परिनालिका के रूप में समझना और परिनालिका का चुंबकीय आघूर्ण ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH05-T2",
+     "topic_number": 2,
+     "title": "एकसमान चुंबकीय क्षेत्र में द्विध्रुव",
+     "ncert_sections": "5.2.3",
+     "concepts": [
+      {
+       "concept_tag": "dvidhruv-par-bal-aaghurn",
+       "learning_objective": "एकसमान चुंबकीय क्षेत्र में चुंबकीय द्विध्रुव पर लगने वाले बल-आघूर्ण की गणना करना।"
+      },
+      {
+       "concept_tag": "chumbakiya-sthitij-urja",
+       "learning_objective": "चुंबकीय द्विध्रुव की स्थितिज ऊर्जा तथा स्थायी और अस्थायी संतुलन की स्थितियाँ समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH05-T3",
+     "topic_number": 3,
+     "title": "स्थिरवैद्युत अनुरूपता",
+     "ncert_sections": "5.2.4",
+     "concepts": [
+      {
+       "concept_tag": "sthirvaidyut-anurupata",
+       "learning_objective": "विद्युत द्विध्रुव से अनुरूपता द्वारा छड़ चुंबक के अक्षीय और विषुवतीय क्षेत्र ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH05-T4",
+     "topic_number": 4,
+     "title": "चुंबकत्व और गाउस का नियम",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "gauss-niyam-chumbakatva",
+       "learning_objective": "किसी बंद पृष्ठ से नेट चुंबकीय फ्लक्स शून्य होने के नियम को समझना और लागू करना।"
+      },
+      {
+       "concept_tag": "ekal-dhruv-anupasthiti",
+       "learning_objective": "पृथक्कृत चुंबकीय ध्रुवों की अनुपस्थिति और गाउस नियम से उसके संबंध की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH05-T5",
+     "topic_number": 5,
+     "title": "चुंबकन और चुंबकीय तीव्रता",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "chumbakan-aur-tivrata",
+       "learning_objective": "चुंबकन, चुंबकीय तीव्रता और कुल चुंबकीय क्षेत्र के संबंधों को लागू करना।"
+      },
+      {
+       "concept_tag": "pravrittita-aur-permeabilita",
+       "learning_objective": "चुंबकीय प्रवृत्ति, आपेक्षिक चुंबकशीलता और चुंबकशीलता के अंतर्संबंध का उपयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH05-T6",
+     "topic_number": 6,
+     "title": "पदार्थों के चुंबकीय गुण",
+     "ncert_sections": "5.5, 5.5.1, 5.5.2, 5.5.3",
+     "concepts": [
+      {
+       "concept_tag": "pratichumbakatva",
+       "learning_objective": "प्रतिचुंबकीय पदार्थों और अतिचालकों के व्यवहार को पहचानना।"
+      },
+      {
+       "concept_tag": "anuchumbakatva",
+       "learning_objective": "अनुचुंबकीय पदार्थों का बाह्य चुंबकीय क्षेत्र में व्यवहार समझाना।"
+      },
+      {
+       "concept_tag": "lauhchumbakatva",
+       "learning_objective": "लौहचुंबकीय पदार्थों के डोमेन तथा कठोर और नर्म लौहचुंबकों के गुणों का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPH1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "वैद्युतचुंबकीय प्रेरण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhph106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPH1-CH06-T1",
+     "topic_number": 1,
+     "title": "फैराडे एवं हेनरी के प्रयोग तथा चुंबकीय फ्लक्स",
+     "ncert_sections": "6.2, 6.3",
+     "concepts": [
+      {
+       "concept_tag": "faraday-henry-prayog",
+       "learning_objective": "फैराडे और हेनरी के प्रयोगों से यह समझना कि प्रेरित धारा केवल चुंबकीय फ्लक्स के परिवर्तन से उत्पन्न होती है।"
+      },
+      {
+       "concept_tag": "chumbakiy-flux",
+       "learning_objective": "चुंबकीय फ्लक्स Φ = BA cos θ की परिभाषा, मात्रक और गणना को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH06-T2",
+     "topic_number": 2,
+     "title": "फैराडे का प्रेरण का नियम",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "faraday-prerana-niyam",
+       "learning_objective": "प्रेरित विद्युत वाहक बल को फ्लक्स परिवर्तन की दर से संबंधित करना।"
+      },
+      {
+       "concept_tag": "prerit-dhara-ganana",
+       "learning_objective": "फेरों की संख्या और प्रतिरोध के आधार पर प्रेरित वि. वा. बल और धारा की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH06-T3",
+     "topic_number": 3,
+     "title": "लेंज़ का नियम तथा ऊर्जा संरक्षण",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "lenz-niyam",
+       "learning_objective": "लेंज़ के नियम से प्रेरित धारा की दिशा ज्ञात करना।"
+      },
+      {
+       "concept_tag": "urja-sanrakshan",
+       "learning_objective": "लेंज़ के नियम को ऊर्जा संरक्षण के सिद्धांत से जोड़ना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH06-T4",
+     "topic_number": 4,
+     "title": "गतिक विद्युत वाहक बल",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "gatik-vidyut-vahak-bal",
+       "learning_objective": "चुंबकीय क्षेत्र में गतिमान चालक में प्रेरित वि. वा. बल ε = Blv की गणना करना।"
+      },
+      {
+       "concept_tag": "ghurni-chhad-vvb",
+       "learning_objective": "घूर्णन करती छड़ तथा पटरियों पर चलती छड़ पर बल और वि. वा. बल का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH06-T5",
+     "topic_number": 5,
+     "title": "अन्योन्य प्रेरकत्व",
+     "ncert_sections": "6.7, 6.7.1",
+     "concepts": [
+      {
+       "concept_tag": "anyonya-prerakatva",
+       "learning_objective": "अन्योन्य प्रेरकत्व की परिभाषा, मात्रक और उस पर निर्भर करने वाले कारकों को समझना।"
+      },
+      {
+       "concept_tag": "anyonya-prerit-vvb",
+       "learning_objective": "अन्योन्य प्रेरकत्व से फ्लक्स संबंधन और प्रेरित वि. वा. बल की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH06-T6",
+     "topic_number": 6,
+     "title": "स्व-प्रेरकत्व",
+     "ncert_sections": "6.7.2",
+     "concepts": [
+      {
+       "concept_tag": "sva-prerakatva",
+       "learning_objective": "स्व-प्रेरकत्व, विरोधी वि. वा. बल और परिनालिका के स्व-प्रेरकत्व के व्यंजक को समझना।"
+      },
+      {
+       "concept_tag": "chumbakiy-sthitij-urja",
+       "learning_objective": "प्रेरक में संचित ऊर्जा ½LI² की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH06-T7",
+     "topic_number": 7,
+     "title": "प्रत्यावर्ती धारा जनित्र",
+     "ncert_sections": "6.8",
+     "concepts": [
+      {
+       "concept_tag": "ac-janitra-siddhant",
+       "learning_objective": "प्रत्यावर्ती धारा जनित्र के कार्य-सिद्धांत को समझना।"
+      },
+      {
+       "concept_tag": "tatkshanik-vvb",
+       "learning_objective": "जनित्र के वि. वा. बल ε = NBAω sin ωt का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPH1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "प्रत्यावर्ती धारा",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhph107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPH1-CH07-T1",
+     "topic_number": 1,
+     "title": "प्रतिरोधक पर लगाई गई ac वोल्टता",
+     "ncert_sections": "7.1, 7.2",
+     "concepts": [
+      {
+       "concept_tag": "varg-madhya-mool-maan",
+       "learning_objective": "ac वोल्टता और धारा के वर्ग-माध्य-मूल (प्रभावी) मान तथा शिखर मान का संबंध समझना।"
+      },
+      {
+       "concept_tag": "pratirodhak-ac-dhara",
+       "learning_objective": "प्रतिरोधक में ac धारा और वोल्टता के समान कला में होने को पहचानना।"
+      },
+      {
+       "concept_tag": "ausat-shakti-pratirodhak",
+       "learning_objective": "प्रतिरोधक में एक चक्र में क्षयित औसत शक्ति की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH07-T2",
+     "topic_number": 2,
+     "title": "ac धारा और वोल्टता का कलासमंजक निरूपण",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "phasor-arth",
+       "learning_objective": "कलासमंजक (फेजर) के अर्थ और उसके प्रक्षेप से तात्क्षणिक मान प्राप्त करना समझना।"
+      },
+      {
+       "concept_tag": "phasor-kalantar",
+       "learning_objective": "कलासमंजक आरेख से धारा और वोल्टता के बीच कलांतर की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH07-T3",
+     "topic_number": 3,
+     "title": "प्रेरक पर लगाई गई ac वोल्टता",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "prerakiya-pratighat",
+       "learning_objective": "प्रेरकीय प्रतिघात का सूत्र और उसकी आवृत्ति पर निर्भरता समझना।"
+      },
+      {
+       "concept_tag": "prerak-kala-pashchata",
+       "learning_objective": "प्रेरक में धारा के वोल्टता से π/2 पीछे रहने और शून्य औसत शक्ति को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH07-T4",
+     "topic_number": 4,
+     "title": "संधारित्र पर लगाई गई ac वोल्टता",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "dharitiya-pratighat",
+       "learning_objective": "धारितीय प्रतिघात का सूत्र और उसकी आवृत्ति पर निर्भरता समझना।"
+      },
+      {
+       "concept_tag": "sandharitra-kala-agrata",
+       "learning_objective": "संधारित्र में धारा के वोल्टता से π/2 आगे रहने को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH07-T5",
+     "topic_number": 5,
+     "title": "श्रेणी LCR परिपथ पर लगाई गई ac वोल्टता",
+     "ncert_sections": "7.6",
+     "concepts": [
+      {
+       "concept_tag": "pratibadha",
+       "learning_objective": "श्रेणी LCR परिपथ की प्रतिबाधा और कलांतर की गणना करना।"
+      },
+      {
+       "concept_tag": "anunad",
+       "learning_objective": "अनुनाद की शर्त, अनुनादी आवृत्ति और परिपथ की प्रकृति का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH07-T6",
+     "topic_number": 6,
+     "title": "ac परिपथ में शक्ति: शक्ति गुणांक",
+     "ncert_sections": "7.7",
+     "concepts": [
+      {
+       "concept_tag": "shakti-gunank",
+       "learning_objective": "ac परिपथ में औसत शक्ति और शक्ति गुणांक की गणना करना।"
+      },
+      {
+       "concept_tag": "wattheen-dhara",
+       "learning_objective": "शुद्ध प्रेरक या संधारित्र वाले परिपथ में वाटहीन धारा की अवधारणा समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH07-T7",
+     "topic_number": 7,
+     "title": "ट्रांसफ़ॉर्मर",
+     "ncert_sections": "7.8",
+     "concepts": [
+      {
+       "concept_tag": "transformer-siddhant",
+       "learning_objective": "ट्रांसफ़ॉर्मर के कार्य-सिद्धांत अन्योन्य प्रेरण को समझना।"
+      },
+      {
+       "concept_tag": "parivartan-anupat",
+       "learning_objective": "फेरों के अनुपात से द्वितीयक वोल्टता और धारा की गणना करना।"
+      },
+      {
+       "concept_tag": "urja-sancharan",
+       "learning_objective": "उच्च वोल्टता पर विद्युत शक्ति के संचरण से होने वाली हानि में कमी का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHPH1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "वैद्युतचुंबकीय तरंगें",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhph108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHPH1-CH08-T1",
+     "topic_number": 1,
+     "title": "विस्थापन धारा",
+     "ncert_sections": "8.1, 8.2",
+     "concepts": [
+      {
+       "concept_tag": "vistapan-dhara",
+       "learning_objective": "समय के साथ परिवर्तित विद्युत फ्लक्स से उत्पन्न विस्थापन धारा को परिभाषित करना और उसकी गणना करना।"
+      },
+      {
+       "concept_tag": "ampere-maxwell-niyam",
+       "learning_objective": "ऐम्पियर के परिपथीय नियम की असंगति और मैक्सवेल द्वारा उसके संशोधन को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH08-T2",
+     "topic_number": 2,
+     "title": "वैद्युतचुंबकीय तरंगों के स्रोत",
+     "ncert_sections": "8.3.1",
+     "concepts": [
+      {
+       "concept_tag": "tvarit-avesh-vikiran",
+       "learning_objective": "यह समझना कि केवल त्वरित आवेश ही वैद्युतचुंबकीय तरंगें विकिरित करते हैं।"
+      },
+      {
+       "concept_tag": "hertz-bose-marconi",
+       "learning_objective": "हर्ट्ज़, जगदीश चंद्र बोस और मार्कोनी के प्रयोगों का महत्व पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH08-T3",
+     "topic_number": 3,
+     "title": "वैद्युतचुंबकीय तरंगों की प्रकृति",
+     "ncert_sections": "8.3.2",
+     "concepts": [
+      {
+       "concept_tag": "anuprasth-prakriti",
+       "learning_objective": "विद्युत क्षेत्र, चुंबकीय क्षेत्र और संचरण दिशा के परस्पर लंबवत होने को समझना।"
+      },
+      {
+       "concept_tag": "tarang-chal-sambandh",
+       "learning_objective": "c = 1/√(μ0ε0), νλ = c और B0 = E0/c संबंधों का उपयोग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH08-T4",
+     "topic_number": 4,
+     "title": "वैद्युतचुंबकीय स्पेक्ट्रम: रेडियो तरंगें और सूक्ष्म तरंगें",
+     "ncert_sections": "8.4, 8.4.1, 8.4.2",
+     "concepts": [
+      {
+       "concept_tag": "spectrum-vargikaran",
+       "learning_objective": "वैद्युतचुंबकीय स्पेक्ट्रम के आवृत्ति के अनुसार वर्गीकरण और उसकी अतीक्ष्ण सीमाओं को समझना।"
+      },
+      {
+       "concept_tag": "radio-tarangen",
+       "learning_objective": "रेडियो तरंगों के उत्पादन तथा विभिन्न प्रसारण बैंडों को पहचानना।"
+      },
+      {
+       "concept_tag": "sukshm-tarangen",
+       "learning_objective": "सूक्ष्म तरंगों के उत्पादन तथा रडार और माइक्रोवेव ओवन में उनके उपयोग को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH08-T5",
+     "topic_number": 5,
+     "title": "अवरक्त, दृश्य और पराबैंगनी किरणें",
+     "ncert_sections": "8.4.3, 8.4.4, 8.4.5",
+     "concepts": [
+      {
+       "concept_tag": "avrakt-tarangen",
+       "learning_objective": "अवरक्त तरंगों को ऊष्मा तरंगें कहने का कारण और ग्रीनहाउस प्रभाव में उनकी भूमिका समझाना।"
+      },
+      {
+       "concept_tag": "drishya-prakash",
+       "learning_objective": "दृश्य प्रकाश की आवृत्ति और तरंगदैर्ध्य परिसर पहचानना।"
+      },
+      {
+       "concept_tag": "parabaingani-kiranen",
+       "learning_objective": "पराबैंगनी किरणों के स्रोत, प्रभाव, उपयोग और ओज़ोन परत की सुरक्षात्मक भूमिका समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHPH1-CH08-T6",
+     "topic_number": 6,
+     "title": "एक्स-किरणें और गामा किरणें",
+     "ncert_sections": "8.4.6, 8.4.7",
+     "concepts": [
+      {
+       "concept_tag": "x-kiranen",
+       "learning_objective": "एक्स-किरणों के उत्पादन और चिकित्सा में उपयोग को पहचानना।"
+      },
+      {
+       "concept_tag": "gama-kiranen",
+       "learning_objective": "गामा किरणों के स्रोत, तरंगदैर्ध्य परिसर और उपयोग को समझना।"
+      },
+      {
+       "concept_tag": "spectrum-kram",
+       "learning_objective": "विभिन्न वैद्युतचुंबकीय तरंगों की तरंगदैर्ध्य और आवृत्ति के क्रम की तुलना करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

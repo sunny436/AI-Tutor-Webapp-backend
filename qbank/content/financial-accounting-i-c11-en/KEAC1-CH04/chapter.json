@@ -1,0 +1,136 @@
+{
+ "chapter_id": "KEAC1-CH04",
+ "title": "Recording of Transactions - II",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEAC1-CH04-T1",
+   "topic_number": 1,
+   "title": "Special purpose books and the single column cash book",
+   "ncert_sections": "4.1, 4.1.1",
+   "concepts": [
+    {
+     "concept_tag": "special-purpose-books",
+     "learning_objective": "Explain why the journal is sub-divided into special purpose books and what the journal proper records."
+    },
+    {
+     "concept_tag": "single-column-cash-book",
+     "learning_objective": "Record cash transactions in a single column cash book and post them to the ledger."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH04-T2",
+   "topic_number": 2,
+   "title": "Double column cash book",
+   "ncert_sections": "4.1.2",
+   "concepts": [
+    {
+     "concept_tag": "contra-entry",
+     "learning_objective": "Record and identify contra entries between the cash and bank columns of a cash book."
+    },
+    {
+     "concept_tag": "bank-transactions-in-cash-book",
+     "learning_objective": "Record cheques received, deposits, bank charges, overdraft and dishonoured cheques in the bank column."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH04-T3",
+   "topic_number": 3,
+   "title": "Petty cash book",
+   "ncert_sections": "4.1.3",
+   "concepts": [
+    {
+     "concept_tag": "imprest-system",
+     "learning_objective": "Explain the imprest system of maintaining petty cash and calculate the amount reimbursed."
+    },
+    {
+     "concept_tag": "petty-cash-posting",
+     "learning_objective": "Prepare an analytical petty cash book and post its column totals to the ledger."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH04-T4",
+   "topic_number": 4,
+   "title": "Balancing of cash book",
+   "ncert_sections": "4.1.4",
+   "concepts": [
+    {
+     "concept_tag": "cash-book-balance",
+     "learning_objective": "Balance a cash book and explain why its cash column cannot show a credit balance."
+    },
+    {
+     "concept_tag": "vouchers-and-source-documents",
+     "learning_objective": "Identify the source documents (vouchers) used for recording entries in the cash book."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH04-T5",
+   "topic_number": 5,
+   "title": "Purchases book and purchases return book",
+   "ncert_sections": "4.2, 4.3",
+   "concepts": [
+    {
+     "concept_tag": "purchases-book",
+     "learning_objective": "Record credit purchases of goods at net invoice value in the purchases book and post them."
+    },
+    {
+     "concept_tag": "purchases-return-debit-note",
+     "learning_objective": "Record returns to suppliers in the purchases return book on the basis of debit notes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH04-T6",
+   "topic_number": 6,
+   "title": "Sales book and sales return book",
+   "ncert_sections": "4.4, 4.5",
+   "concepts": [
+    {
+     "concept_tag": "sales-book",
+     "learning_objective": "Record credit sales of goods in the sales book and post them to customers' accounts and sales account."
+    },
+    {
+     "concept_tag": "sales-return-credit-note",
+     "learning_objective": "Record returns from customers in the sales return book on the basis of credit notes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH04-T7",
+   "topic_number": 7,
+   "title": "Journal proper",
+   "ncert_sections": "4.6",
+   "concepts": [
+    {
+     "concept_tag": "journal-proper-entries",
+     "learning_objective": "Identify opening, adjustment, rectification and transfer entries recorded in the journal proper."
+    },
+    {
+     "concept_tag": "journal-proper-other-entries",
+     "learning_objective": "Identify other transactions, such as credit purchase of assets and goods withdrawn, that go to the journal proper."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH04-T8",
+   "topic_number": 8,
+   "title": "Balancing the accounts",
+   "ncert_sections": "4.7",
+   "concepts": [
+    {
+     "concept_tag": "balancing-procedure",
+     "learning_objective": "Balance a ledger account using balance c/d and balance b/d and state the nature of its balance."
+    },
+    {
+     "concept_tag": "closing-nominal-accounts",
+     "learning_objective": "Explain that expense, loss and revenue accounts are closed by transfer instead of being carried forward."
+    }
+   ]
+  }
+ ]
+}

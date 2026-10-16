@@ -1,0 +1,96 @@
+{
+ "chapter_id": "LEMH2-CH06",
+ "title": "Linear Programming",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEMH2-CH06-T1",
+   "topic_number": 1,
+   "title": "Linear programming problems and their terms",
+   "ncert_sections": "12.1, 12.2",
+   "concepts": [
+    {
+     "concept_tag": "lpp-definition",
+     "learning_objective": "Describe a linear programming problem and the meaning of the words linear and programming in it."
+    },
+    {
+     "concept_tag": "objective-function-and-decision-variables",
+     "learning_objective": "Identify a linear objective function Z = ax + by and its decision variables."
+    },
+    {
+     "concept_tag": "constraints-and-non-negativity",
+     "learning_objective": "Recognise linear constraints and the non-negative restrictions x >= 0, y >= 0."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH06-T2",
+   "topic_number": 2,
+   "title": "Mathematical formulation of a linear programming problem",
+   "ncert_sections": "12.2.1",
+   "concepts": [
+    {
+     "concept_tag": "formulating-constraints",
+     "learning_objective": "Translate the limits stated in a real-life problem into linear inequalities in the decision variables."
+    },
+    {
+     "concept_tag": "formulating-objective-function",
+     "learning_objective": "Write the linear objective function to be maximised or minimised from the data of a problem."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH06-T3",
+   "topic_number": 3,
+   "title": "Feasible region, feasible solutions and the fundamental theorems",
+   "ncert_sections": "12.2.2",
+   "concepts": [
+    {
+     "concept_tag": "feasible-region-and-solutions",
+     "learning_objective": "Determine the feasible region, its corner points and whether a point is a feasible or an infeasible solution."
+    },
+    {
+     "concept_tag": "bounded-unbounded-region",
+     "learning_objective": "Distinguish a bounded feasible region from an unbounded one."
+    },
+    {
+     "concept_tag": "fundamental-theorems",
+     "learning_objective": "Apply the theorems that place optimal values of a linear objective function at corner points of the feasible region."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH06-T4",
+   "topic_number": 4,
+   "title": "Corner point method on bounded regions",
+   "ncert_sections": "12.2.2",
+   "concepts": [
+    {
+     "concept_tag": "corner-point-method",
+     "learning_objective": "Solve a linear programming problem with a bounded feasible region by evaluating Z at its corner points."
+    },
+    {
+     "concept_tag": "multiple-optimal-solutions",
+     "learning_objective": "Recognise that when two corner points give the same optimal value, every point of the segment joining them is optimal."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH06-T5",
+   "topic_number": 5,
+   "title": "Unbounded regions and problems with no feasible solution",
+   "ncert_sections": "12.2.2",
+   "concepts": [
+    {
+     "concept_tag": "unbounded-optimum-test",
+     "learning_objective": "Use the open half-plane test to decide whether the smallest or largest corner value is the optimum on an unbounded region."
+    },
+    {
+     "concept_tag": "no-feasible-region",
+     "learning_objective": "Recognise a system of constraints that has no feasible region and hence no feasible solution."
+    }
+   ]
+  }
+ ]
+}

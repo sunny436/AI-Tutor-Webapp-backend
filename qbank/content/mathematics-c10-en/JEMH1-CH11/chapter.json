@@ -1,0 +1,92 @@
+{
+ "chapter_id": "JEMH1-CH11",
+ "title": "Areas Related to Circles",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH11-T1",
+   "topic_number": 1,
+   "title": "Sectors and segments: minor and major regions",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "sector-and-segment-definitions",
+     "learning_objective": "Define a sector and a segment of a circle and identify them in a figure."
+    },
+    {
+     "concept_tag": "minor-and-major-regions",
+     "learning_objective": "Distinguish minor and major sectors and segments and relate their angles and areas."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH11-T2",
+   "topic_number": 2,
+   "title": "Area of a sector",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "area-of-sector-formula",
+     "learning_objective": "Use the formula (θ/360) × πr² to find the area of a sector of angle θ."
+    },
+    {
+     "concept_tag": "major-sector-area",
+     "learning_objective": "Find the area of a major sector as πr² minus the minor sector, or with angle 360° − θ."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH11-T3",
+   "topic_number": 3,
+   "title": "Length of an arc of a sector",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "arc-length-formula",
+     "learning_objective": "Use the formula (θ/360) × 2πr to find the length of the arc of a sector."
+    },
+    {
+     "concept_tag": "perimeter-of-sector",
+     "learning_objective": "Find the perimeter of a sector as the arc length plus two radii."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH11-T4",
+   "topic_number": 4,
+   "title": "Area of a segment of a circle",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "segment-area-as-sector-minus-triangle",
+     "learning_objective": "Find the area of a minor segment as the area of the sector minus the area of the triangle."
+    },
+    {
+     "concept_tag": "major-segment-area",
+     "learning_objective": "Find the area of a major segment from the area of the circle and the minor segment."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH11-T5",
+   "topic_number": 5,
+   "title": "Applications of areas of sectors and segments",
+   "ncert_sections": "11.1 (Exercise 11.1)",
+   "concepts": [
+    {
+     "concept_tag": "swept-area-problems",
+     "learning_objective": "Find the area swept by clock hands and wiper blades using sector areas."
+    },
+    {
+     "concept_tag": "grazing-area-problems",
+     "learning_objective": "Find the area a tethered animal can graze in a field using sectors."
+    },
+    {
+     "concept_tag": "equal-sector-divisions",
+     "learning_objective": "Solve problems where a circle is divided into equal sectors or equal segments."
+    }
+   ]
+  }
+ ]
+}

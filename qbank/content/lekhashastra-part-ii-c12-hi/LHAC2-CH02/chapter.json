@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LHAC2-CH02",
+ "title": "ऋणपत्रों का निर्गम एवं मोचन",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHAC2-CH02-T1",
+   "topic_number": 1,
+   "title": "ऋणपत्र का अर्थ तथा अंश और ऋणपत्र में अंतर",
+   "ncert_sections": "2.1, 2.2",
+   "concepts": [
+    {
+     "concept_tag": "rinpatra-ka-arth",
+     "learning_objective": "ऋणपत्र का अर्थ, शब्द की उत्पत्ति तथा कंपनी अधिनियम, 2013 के अनुसार उसकी परिभाषा बताना।"
+    },
+    {
+     "concept_tag": "ansh-aur-rinpatra-mein-antar",
+     "learning_objective": "स्वामित्व, प्रतिफल, पुनर्भुगतान, मताधिकार, सुरक्षा और परिवर्तनीयता के आधार पर अंश और ऋणपत्र में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH02-T2",
+   "topic_number": 2,
+   "title": "ऋणपत्रों के प्रकार",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "suraksha-aur-avadhi-ke-aadhar-par-prakar",
+     "learning_objective": "सुरक्षा और अवधि के आधार पर प्रतिभूत, अप्रतिभूत, मोचनीय और अमोचनीय ऋणपत्रों की पहचान करना।"
+    },
+    {
+     "concept_tag": "parivartaniyata-coupon-aur-panjikaran-ke-aadhar-par-prakar",
+     "learning_objective": "परिवर्तनीयता, कूपन दर और पंजीकरण के आधार पर ऋणपत्रों का वर्गीकरण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH02-T3",
+   "topic_number": 3,
+   "title": "ऋणपत्रों का सममूल्य, बट्टे और प्रीमियम पर निर्गम तथा अभि-अभिदान",
+   "ncert_sections": "2.4, 2.5",
+   "concepts": [
+    {
+     "concept_tag": "sammulya-batta-premium-par-nirgam",
+     "learning_objective": "रोकड़ हेतु सममूल्य, बट्टे और प्रीमियम पर ऋणपत्र निर्गम की रोज़नामचा प्रविष्टियाँ करना।"
+    },
+    {
+     "concept_tag": "adhi-abhidan",
+     "learning_objective": "अभि-अभिदान की स्थिति में आनुपातिक आबंटन, अतिरिक्त राशि के समायोजन और वापसी का लेखांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH02-T4",
+   "topic_number": 4,
+   "title": "रोकड़ के अतिरिक्त प्रतिफल हेतु तथा संपार्श्विक प्रतिभूति के रूप में ऋणपत्रों का निर्गम",
+   "ncert_sections": "2.6, 2.7",
+   "concepts": [
+    {
+     "concept_tag": "rokad-ke-atirikt-pratiphal-hetu-nirgam",
+     "learning_objective": "परिसंपत्तियों के क्रय पर विक्रेता को ऋणपत्र जारी करने का लेखांकन करना।"
+    },
+    {
+     "concept_tag": "sampashvik-pratibhuti",
+     "learning_objective": "संपार्श्विक प्रतिभूति के रूप में जारी ऋणपत्रों का दोनों विधियों से लेखांकन और प्रस्तुतीकरण समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH02-T5",
+   "topic_number": 5,
+   "title": "ऋणपत्र निर्गम की शर्तें",
+   "ncert_sections": "2.8",
+   "concepts": [
+    {
+     "concept_tag": "nirgam-aur-mochan-ki-chhah-sthitiyan",
+     "learning_objective": "निर्गम और मोचन की छह प्रचलित स्थितियों में आबंटन की प्रविष्टियाँ करना।"
+    },
+    {
+     "concept_tag": "rinpatra-nirgam-par-hani",
+     "learning_objective": "ऋणपत्र निर्गम पर हानि और मोचन पर प्रीमियम की गणना तथा प्रकृति समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC2-CH02-T6",
+   "topic_number": 6,
+   "title": "ऋणपत्रों पर ब्याज तथा बट्टे/हानि का अपलेखन",
+   "ncert_sections": "2.9, 2.10",
+   "concepts": [
+    {
+     "concept_tag": "rinpatra-par-byaj-aur-srot-par-kar",
+     "learning_objective": "ऋणपत्र ब्याज की गणना, स्रोत पर कर कटौती और उससे जुड़ी प्रविष्टियाँ समझाना।"
+    },
+    {
+     "concept_tag": "batta-hani-ka-apalekhan",
+     "learning_objective": "प्रतिभूति प्रीमियम संचय और लाभ व हानि विवरण से बट्टे/हानि का अपलेखन करना।"
+    }
+   ]
+  }
+ ]
+}

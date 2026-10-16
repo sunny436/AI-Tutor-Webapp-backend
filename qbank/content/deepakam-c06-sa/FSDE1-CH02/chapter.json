@@ -1,0 +1,100 @@
+{
+ "chapter_id": "FSDE1-CH02",
+ "title": "संयुक्त-व्यञ्जनानि",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FSDE1-CH02-T1",
+   "topic_number": 1,
+   "title": "संयुक्त-व्यञ्जनानां स्वरूपम्",
+   "ncert_sections": "पाठारम्भः (संयुक्त-व्यञ्जन-परिचयः, टिप्पणी)",
+   "concepts": [
+    {
+     "concept_tag": "samyukta-vyanjana-paribhasha",
+     "learning_objective": "द्वयोः बहूनां वा व्यञ्जनानां मेलनेन संयुक्त-व्यञ्जनं भवति इति जानीयात्, पदेषु तत् अभिजानीयात् च।"
+    },
+    {
+     "concept_tag": "samyukta-lekhana-shaili",
+     "learning_objective": "संयुक्त-व्यञ्जनानि नवीनाः वर्णाः न, अपितु विशिष्टा लेखनशैली, तेषु स्वरः अन्तर्भूतः नास्ति इति अवगच्छेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH02-T2",
+   "topic_number": 2,
+   "title": "विशिष्टानि संयुक्त-व्यञ्जनानि – क्ष, त्र, ज्ञ, द्य",
+   "ncert_sections": "पाठारम्भः (क्ष, त्र, ज्ञ, द्य इत्येषां वियोगः)",
+   "concepts": [
+    {
+     "concept_tag": "ksha-tra-jna-dya",
+     "learning_objective": "क्ष, त्र, ज्ञ, द्य इत्येषां घटकव्यञ्जनानि ज्ञात्वा तद्युक्तानां पदानां वर्णवियोगं कुर्यात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH02-T3",
+   "topic_number": 3,
+   "title": "वर्णवियोगः – यकार-रेफ-युक्तानि संयुक्त-व्यञ्जनानि",
+   "ncert_sections": "वर्ण-वियोगः (क्य, न्य, ह्य, क्र, ग्र, द्र, र्ण, र्म, र्ष)",
+   "concepts": [
+    {
+     "concept_tag": "yakara-rephayukta-viyogah",
+     "learning_objective": "यकार-रेफ-युक्तानां संयुक्त-व्यञ्जनानां पदेषु शुद्धं वर्णवियोगं कुर्यात्।"
+    },
+    {
+     "concept_tag": "repha-uccharana-kramah",
+     "learning_objective": "रेफः व्यञ्जनात् पूर्वम् उत परं उच्चार्यते इति लेखनरूपेण निर्धारयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH02-T4",
+   "topic_number": 4,
+   "title": "वर्णवियोगः – द्वित्व-वर्गीय-संयोगाः, अनुस्वार-विसर्ग-अनुनासिकाः",
+   "ncert_sections": "वर्ण-वियोगः (क्क, त्त, द्ध, ङ्क, ञ्ज, न्ध, म्भ, संयमः, दुःखम्, सँस्कर्ता)",
+   "concepts": [
+    {
+     "concept_tag": "dvitva-vargiya-samyogah",
+     "learning_objective": "समानवर्णयोः वर्गीयवर्णानां च संयोगान् पदेषु अभिजानीयात्, वियोजयेत् च।"
+    },
+    {
+     "concept_tag": "anusvara-visarga-viyogah",
+     "learning_objective": "अनुस्वार-विसर्ग-अनुनासिक-युक्तानां पदानां वर्णवियोगे तेषां स्थानं निर्धारयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH02-T5",
+   "topic_number": 5,
+   "title": "वर्णसंयोगः बहुव्यञ्जन-संयोगाः च",
+   "ncert_sections": "वर्ण-संयोगः (दाशरथिः, नरेन्द्रः, स्वस्तिकः, मन्त्री, राष्ट्रम्, कार्त्स्न्यम्)",
+   "concepts": [
+    {
+     "concept_tag": "varna-samyogah",
+     "learning_objective": "दत्तानां वर्णानां संयोगेन शुद्धं पदं रचयेत्।"
+    },
+    {
+     "concept_tag": "bahu-vyanjana-samyogah",
+     "learning_objective": "त्रयाणां ततोऽधिकानां वा व्यञ्जनानां संयोगान् पदेषु अभिजानीयात्, गणयेत् च।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH02-T6",
+   "topic_number": 6,
+   "title": "शब्दार्थाः – वयं शब्दार्थान् जानीमः",
+   "ncert_sections": "वयं शब्दार्थान् जानीमः",
+   "concepts": [
+    {
+     "concept_tag": "shabdartha-paryayah",
+     "learning_objective": "पाठे आगतानां संयुक्त-व्यञ्जन-युक्त-शब्दानां अर्थान् पर्यायान् च जानीयात्।"
+    },
+    {
+     "concept_tag": "shabdartha-prayogah",
+     "learning_objective": "अर्थं ज्ञात्वा उचितं शब्दं वाक्ये प्रयुञ्ज्यात्।"
+    }
+   ]
+  }
+ ]
+}

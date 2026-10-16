@@ -1,0 +1,164 @@
+{
+ "chapter_id": "KEBO1-CH08",
+ "title": "Cell : The Unit of Life",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH08-T1",
+   "topic_number": 1,
+   "title": "What is a Cell? and Cell Theory",
+   "ncert_sections": "8.1, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "cell-basic-unit",
+     "learning_objective": "Explain why the cell is regarded as the fundamental structural and functional unit of life."
+    },
+    {
+     "concept_tag": "cell-theory-history",
+     "learning_objective": "Describe the contributions of Leeuwenhoek, Brown, Schleiden, Schwann and Virchow to cell theory."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH08-T2",
+   "topic_number": 2,
+   "title": "An Overview of Cell",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "prokaryotic-eukaryotic-overview",
+     "learning_objective": "Distinguish prokaryotic from eukaryotic cells on the basis of a membrane-bound nucleus and organelles."
+    },
+    {
+     "concept_tag": "membrane-and-non-membrane-organelles",
+     "learning_objective": "Identify membrane-bound and non-membrane-bound organelles and where ribosomes occur in a cell."
+    },
+    {
+     "concept_tag": "cell-size-and-shape",
+     "learning_objective": "Compare the sizes and shapes of different cells and relate shape to function."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH08-T3",
+   "topic_number": 3,
+   "title": "Prokaryotic Cells",
+   "ncert_sections": "8.4, 8.4.1, 8.4.2",
+   "concepts": [
+    {
+     "concept_tag": "prokaryote-general-features",
+     "learning_objective": "State the general features of prokaryotic cells, including the nucleoid, plasmids and mycoplasma."
+    },
+    {
+     "concept_tag": "cell-envelope-and-surface-structures",
+     "learning_objective": "Describe the bacterial cell envelope, mesosomes, flagella, pili and fimbriae."
+    },
+    {
+     "concept_tag": "prokaryotic-ribosomes-and-inclusions",
+     "learning_objective": "Describe 70S prokaryotic ribosomes, polysomes and inclusion bodies."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH08-T4",
+   "topic_number": 4,
+   "title": "Cell Membrane and Cell Wall",
+   "ncert_sections": "8.5, 8.5.1, 8.5.2",
+   "concepts": [
+    {
+     "concept_tag": "fluid-mosaic-model",
+     "learning_objective": "Explain the composition of the plasma membrane and the fluid mosaic model."
+    },
+    {
+     "concept_tag": "membrane-transport",
+     "learning_objective": "Distinguish simple diffusion, osmosis, carrier-mediated passive transport and active transport."
+    },
+    {
+     "concept_tag": "cell-wall-structure",
+     "learning_objective": "Describe the composition of the cell wall, primary and secondary walls, middle lamella and plasmodesmata."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH08-T5",
+   "topic_number": 5,
+   "title": "Endomembrane System",
+   "ncert_sections": "8.5.3",
+   "concepts": [
+    {
+     "concept_tag": "endomembrane-components",
+     "learning_objective": "Identify the organelles that make up the endomembrane system and those that do not."
+    },
+    {
+     "concept_tag": "er-and-golgi",
+     "learning_objective": "Describe the structure and functions of the rough and smooth ER and the Golgi apparatus."
+    },
+    {
+     "concept_tag": "lysosomes-and-vacuoles",
+     "learning_objective": "Describe the structure and functions of lysosomes and vacuoles, including the tonoplast."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH08-T6",
+   "topic_number": 6,
+   "title": "Mitochondria, Plastids and Ribosomes",
+   "ncert_sections": "8.5.4, 8.5.5, 8.5.6",
+   "concepts": [
+    {
+     "concept_tag": "mitochondria-structure-function",
+     "learning_objective": "Describe the double-membrane structure of mitochondria and relate it to aerobic respiration."
+    },
+    {
+     "concept_tag": "plastid-types",
+     "learning_objective": "Classify plastids into chloroplasts, chromoplasts and leucoplasts and state their roles."
+    },
+    {
+     "concept_tag": "ribosome-types",
+     "learning_objective": "Compare 70S and 80S ribosomes and explain the meaning of the Svedberg unit."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH08-T7",
+   "topic_number": 7,
+   "title": "Cytoskeleton, Cilia, Flagella and Centrosome",
+   "ncert_sections": "8.5.7, 8.5.8, 8.5.9",
+   "concepts": [
+    {
+     "concept_tag": "cytoskeleton-functions",
+     "learning_objective": "State the components and functions of the cytoskeleton."
+    },
+    {
+     "concept_tag": "cilia-flagella-structure",
+     "learning_objective": "Describe the 9+2 axoneme of eukaryotic cilia and flagella."
+    },
+    {
+     "concept_tag": "centrosome-centrioles",
+     "learning_objective": "Describe the cartwheel structure of centrioles and their role in basal bodies and spindle formation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH08-T8",
+   "topic_number": 8,
+   "title": "Nucleus and Chromosomes",
+   "ncert_sections": "8.5.10, 8.5.11",
+   "concepts": [
+    {
+     "concept_tag": "nuclear-envelope-and-nucleolus",
+     "learning_objective": "Describe the nuclear envelope, nuclear pores and the nucleolus."
+    },
+    {
+     "concept_tag": "chromatin-and-chromosomes",
+     "learning_objective": "Describe the composition of chromatin and the DNA content of human chromosomes."
+    },
+    {
+     "concept_tag": "chromosome-types-by-centromere",
+     "learning_objective": "Classify chromosomes by the position of the centromere."
+    }
+   ]
+  }
+ ]
+}

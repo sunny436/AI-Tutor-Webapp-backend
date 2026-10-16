@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LHPH1-CH04",
+ "title": "गतिमान आवेश और चुंबकत्व",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHPH1-CH04-T1",
+   "topic_number": 1,
+   "title": "चुंबकीय बल: लोरेंज बल तथा धारावाही चालक पर बल",
+   "ncert_sections": "4.1, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "lorentz-bal",
+     "learning_objective": "गतिमान आवेश पर विद्युत और चुंबकीय क्षेत्रों द्वारा लगने वाले लोरेंज बल को समझना और उसकी गणना करना।"
+    },
+    {
+     "concept_tag": "dharavahi-chalak-par-bal",
+     "learning_objective": "चुंबकीय क्षेत्र में रखे धारावाही चालक पर लगने वाले बल की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH04-T2",
+   "topic_number": 2,
+   "title": "चुंबकीय क्षेत्र में आवेशित कण की गति",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "vrittiya-gati",
+     "learning_objective": "चुंबकीय क्षेत्र के लंबवत गतिमान आवेश के वृत्तीय पथ की त्रिज्या और आवृत्ति ज्ञात करना।"
+    },
+    {
+     "concept_tag": "kundalini-path",
+     "learning_objective": "क्षेत्र से कोण बनाते वेग वाले आवेश के कुंडलिनी पथ और उसके चूड़ी अंतराल को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH04-T3",
+   "topic_number": 3,
+   "title": "बायो-सावर्ट नियम तथा वृत्ताकार धारा पाश का चुंबकीय क्षेत्र",
+   "ncert_sections": "4.4, 4.5",
+   "concepts": [
+    {
+     "concept_tag": "bio-savart-niyam",
+     "learning_objective": "धारा अवयव के कारण चुंबकीय क्षेत्र के लिए बायो-सावर्ट नियम का कथन और प्रयोग करना।"
+    },
+    {
+     "concept_tag": "vrittiya-pash-aksh-kshetra",
+     "learning_objective": "वृत्ताकार धारा पाश के केंद्र और अक्ष पर चुंबकीय क्षेत्र की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH04-T4",
+   "topic_number": 4,
+   "title": "ऐम्पियर का परिपथीय नियम तथा परिनालिका",
+   "ncert_sections": "4.6, 4.7",
+   "concepts": [
+    {
+     "concept_tag": "ampere-paripathiya-niyam",
+     "learning_objective": "ऐम्पियर के परिपथीय नियम का कथन करना और उससे लंबे सीधे तार का क्षेत्र ज्ञात करना।"
+    },
+    {
+     "concept_tag": "parinalika-kshetra",
+     "learning_objective": "लंबी परिनालिका के भीतर एकसमान चुंबकीय क्षेत्र की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH04-T5",
+   "topic_number": 5,
+   "title": "दो समांतर धाराओं के बीच बल तथा ऐम्पियर",
+   "ncert_sections": "4.8",
+   "concepts": [
+    {
+     "concept_tag": "samantar-dharaon-ke-beech-bal",
+     "learning_objective": "दो समांतर धारावाही तारों के बीच प्रति इकाई लंबाई बल की दिशा और परिमाण ज्ञात करना।"
+    },
+    {
+     "concept_tag": "ampere-ki-paribhasha",
+     "learning_objective": "समांतर धाराओं के बीच बल के आधार पर ऐम्पियर की परिभाषा समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH04-T6",
+   "topic_number": 6,
+   "title": "धारा पाश पर बल-आघूर्ण तथा चुंबकीय द्विध्रुव",
+   "ncert_sections": "4.9",
+   "concepts": [
+    {
+     "concept_tag": "dhara-pash-par-bal-aaghurn",
+     "learning_objective": "एकसमान चुंबकीय क्षेत्र में धारा पाश पर लगने वाले बल-आघूर्ण की गणना करना।"
+    },
+    {
+     "concept_tag": "chumbakiya-dvidhruv-aaghurn",
+     "learning_objective": "धारा पाश के चुंबकीय आघूर्ण तथा उसके संतुलन की स्थितियों को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH1-CH04-T7",
+   "topic_number": 7,
+   "title": "चल कुंडली गैल्वेनोमीटर",
+   "ncert_sections": "4.10",
+   "concepts": [
+    {
+     "concept_tag": "chal-kundli-galvenometer",
+     "learning_objective": "चल कुंडली गैल्वेनोमीटर की संरचना, अरीय क्षेत्र और सुग्राहिता को समझना।"
+    },
+    {
+     "concept_tag": "ammeter-voltmeter-me-rupantaran",
+     "learning_objective": "गैल्वेनोमीटर को शंट या श्रेणी प्रतिरोध द्वारा ऐमीटर या वोल्टमीटर में बदलना।"
+    }
+   ]
+  }
+ ]
+}

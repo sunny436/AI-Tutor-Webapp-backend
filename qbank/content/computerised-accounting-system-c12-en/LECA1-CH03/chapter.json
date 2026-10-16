@@ -1,0 +1,128 @@
+{
+ "chapter_id": "LECA1-CH03",
+ "title": "Use of Spreadsheet in Business Applications",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECA1-CH03-T1",
+   "topic_number": 1,
+   "title": "Payroll accounting and payroll components",
+   "ncert_sections": "3.1, 3.1.1",
+   "concepts": [
+    {
+     "concept_tag": "payroll-process",
+     "learning_objective": "Describe what the preparation of a salary bill provides for, from payroll data to the advice to bank."
+    },
+    {
+     "concept_tag": "earnings-components",
+     "learning_objective": "Identify earning heads such as Basic Pay, Grade Pay, Dearness Pay, DA, HRA and Transport Allowance."
+    },
+    {
+     "concept_tag": "deductions-components",
+     "learning_objective": "Distinguish statutory deductions (PT, PF, TDS) from other deductions such as loan and advance recoveries."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH03-T2",
+   "topic_number": 2,
+   "title": "Elements used in payroll calculation",
+   "ncert_sections": "3.1.2",
+   "concepts": [
+    {
+     "concept_tag": "basic-pay-earned",
+     "learning_objective": "Compute the number of effective days present and the Basic Pay Earned for a month."
+    },
+    {
+     "concept_tag": "gross-and-net-salary",
+     "learning_objective": "Calculate total earnings, total deductions and net salary of an employee."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH03-T3",
+   "topic_number": 3,
+   "title": "Template design for a payroll spreadsheet",
+   "ncert_sections": "3.1.2.1",
+   "concepts": [
+    {
+     "concept_tag": "template-design",
+     "learning_objective": "Explain why a spreadsheet's layout and formula cells are planned as a template before data entry."
+    },
+    {
+     "concept_tag": "absolute-addressing",
+     "learning_objective": "Apply absolute cell addresses so that references to rate cells do not change when formulas are copied."
+    },
+    {
+     "concept_tag": "nested-if-function",
+     "learning_objective": "Interpret nested IF formulas that assign HRA and Transport Allowance by employee type."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH03-T4",
+   "topic_number": 4,
+   "title": "Asset accounting and depreciation",
+   "ncert_sections": "3.2, 3.2.1, 3.2.2",
+   "concepts": [
+    {
+     "concept_tag": "fixed-asset-classification",
+     "learning_objective": "Classify fixed assets as tangible or intangible and recognise the asset categories used in asset accounting."
+    },
+    {
+     "concept_tag": "depreciation-concept",
+     "learning_objective": "Explain why depreciation is charged on fixed assets and compute the total depreciation over an asset's life."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH03-T5",
+   "topic_number": 5,
+   "title": "Depreciation by SLM and WDV methods using SLN and DB",
+   "ncert_sections": "3.2.2.1, 3.2.2.2",
+   "concepts": [
+    {
+     "concept_tag": "sln-function",
+     "learning_objective": "Use the SLN function with cost to use, salvage value and life to compute straight line depreciation."
+    },
+    {
+     "concept_tag": "db-function",
+     "learning_objective": "Interpret the arguments of the DB function and the formulas used for period and months in the first year."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH03-T6",
+   "topic_number": 6,
+   "title": "Schedule forming part of the balance sheet",
+   "ncert_sections": "3.2.2.3",
+   "concepts": [
+    {
+     "concept_tag": "gross-block",
+     "learning_objective": "Compute the closing gross block and accumulated depreciation in a fixed asset schedule."
+    },
+    {
+     "concept_tag": "net-block",
+     "learning_objective": "Compute and interpret the net block as gross block less accumulated depreciation."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH03-T7",
+   "topic_number": 7,
+   "title": "Loan repayment schedule using PMT",
+   "ncert_sections": "3.3, 3.3.1, 3.3.1.1",
+   "concepts": [
+    {
+     "concept_tag": "pmt-function-parameters",
+     "learning_objective": "State the meaning of the Rate, Nper, Pv, Fv and Type arguments of the PMT function."
+    },
+    {
+     "concept_tag": "loan-instalment-computation",
+     "learning_objective": "Write PMT formulas whose rate and number of periods match, to compute loan instalments."
+    }
+   ]
+  }
+ ]
+}

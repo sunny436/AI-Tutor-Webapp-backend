@@ -1,0 +1,92 @@
+{
+ "chapter_id": "LEMH1-CH02",
+ "title": "Inverse Trigonometric Functions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEMH1-CH02-T1",
+   "topic_number": 1,
+   "title": "Restricting domains: principal branches of sin⁻¹ and cos⁻¹",
+   "ncert_sections": "2.1, 2.2",
+   "concepts": [
+    {
+     "concept_tag": "restriction-for-invertibility",
+     "learning_objective": "Explain why a trigonometric function must be restricted to an interval on which it is one-one and onto before it can be inverted."
+    },
+    {
+     "concept_tag": "sine-inverse-principal-branch",
+     "learning_objective": "State the domain and principal value range of sin⁻¹."
+    },
+    {
+     "concept_tag": "cosine-inverse-principal-branch",
+     "learning_objective": "State the domain and principal value range of cos⁻¹ and identify valid branches."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH02-T2",
+   "topic_number": 2,
+   "title": "Principal branches of cosec⁻¹, sec⁻¹, tan⁻¹ and cot⁻¹",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "cosec-sec-inverse-branches",
+     "learning_objective": "State the domains and principal value ranges of cosec⁻¹ and sec⁻¹ and explain the excluded values."
+    },
+    {
+     "concept_tag": "tan-cot-inverse-branches",
+     "learning_objective": "State the domains and principal value ranges of tan⁻¹ and cot⁻¹."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH02-T3",
+   "topic_number": 3,
+   "title": "Principal values, notation and graphs",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "computing-principal-values",
+     "learning_objective": "Find principal values of inverse trigonometric functions and evaluate expressions built from them."
+    },
+    {
+     "concept_tag": "notation-and-graphs",
+     "learning_objective": "Distinguish sin⁻¹ x from (sin x)⁻¹ and obtain the graph of an inverse function by reflection in the line y = x."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH02-T4",
+   "topic_number": 4,
+   "title": "Composition properties of inverse trigonometric functions",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "inverse-composition-identities",
+     "learning_objective": "Use sin(sin⁻¹ x) = x and sin⁻¹(sin x) = x with their conditions on x."
+    },
+    {
+     "concept_tag": "reducing-to-principal-branch",
+     "learning_objective": "Evaluate expressions such as sin⁻¹(sin θ) when θ lies outside the principal branch."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH02-T5",
+   "topic_number": 5,
+   "title": "Writing inverse trigonometric expressions in the simplest form",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "trigonometric-substitution",
+     "learning_objective": "Choose a suitable substitution such as x = sin θ, x = a sin θ or x = sec θ to simplify an inverse trigonometric expression."
+    },
+    {
+     "concept_tag": "half-angle-simplification",
+     "learning_objective": "Simplify expressions in cos x and sin x using half-angle identities to reach tan⁻¹(tan θ)."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "chapter_id": "IEMH1-CH03",
+ "title": "The World of Numbers",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IEMH1-CH03-T1",
+   "topic_number": 1,
+   "title": "The need to count: natural numbers",
+   "ncert_sections": "3.1, 3.1.1, 3.1.2",
+   "concepts": [
+    {
+     "concept_tag": "one-to-one-correspondence",
+     "learning_objective": "Explain how one-to-one correspondence allowed early humans to count and record quantities."
+    },
+    {
+     "concept_tag": "early-number-records",
+     "learning_objective": "Identify early evidence of number use such as the Ishango bone and the Vedic names for powers of 10."
+    },
+    {
+     "concept_tag": "closure-of-natural-numbers",
+     "learning_objective": "Decide whether natural numbers are closed under a given operation, using counterexamples."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH03-T2",
+   "topic_number": 2,
+   "title": "Zero (Shunya) and Brahmagupta's rules",
+   "ncert_sections": "3.2, 3.2.1, 3.2.2",
+   "concepts": [
+    {
+     "concept_tag": "shunyata-to-zero",
+     "learning_objective": "Describe how the idea of shunyata and the Bakhshali manuscript led to zero as a number."
+    },
+    {
+     "concept_tag": "brahmagupta-rules-for-zero",
+     "learning_objective": "Apply Brahmagupta's rules for adding, subtracting and multiplying with zero."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH03-T3",
+   "topic_number": 3,
+   "title": "Integers: fortunes and debts",
+   "ncert_sections": "3.3, 3.3.1",
+   "concepts": [
+    {
+     "concept_tag": "dhana-rina-integers",
+     "learning_objective": "Describe integers as fortunes (dhana), debts (rina) and zero, and the symbol Z."
+    },
+    {
+     "concept_tag": "integer-operations",
+     "learning_objective": "Use Brahmagupta's rules of signs to add, subtract and multiply integers in real-life contexts."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH03-T4",
+   "topic_number": 4,
+   "title": "Fractions and rational numbers",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "definition-of-rational-numbers",
+     "learning_objective": "State the definition of a rational number p/q and explain why q must not be zero."
+    },
+    {
+     "concept_tag": "equivalent-rationals",
+     "learning_objective": "Test whether two rational numbers are equal using the rule ad = bc."
+    },
+    {
+     "concept_tag": "operations-on-rationals",
+     "learning_objective": "Add, subtract, multiply and divide rational numbers and use their closure properties."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH03-T5",
+   "topic_number": 5,
+   "title": "Rationals on the number line, absolute value and density",
+   "ncert_sections": "3.4.1, 3.4.2",
+   "concepts": [
+    {
+     "concept_tag": "rationals-on-number-line",
+     "learning_objective": "Locate rational numbers on the number line by dividing unit intervals into equal parts."
+    },
+    {
+     "concept_tag": "absolute-value-distance",
+     "learning_objective": "Find absolute values and the distance |a - b| between two rational numbers."
+    },
+    {
+     "concept_tag": "density-of-rationals",
+     "learning_objective": "Find rational numbers between two given rationals using averages and explain density."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH03-T6",
+   "topic_number": 6,
+   "title": "Irrational numbers",
+   "ncert_sections": "3.5, 3.5.1, 3.5.2, 3.5.3",
+   "concepts": [
+    {
+     "concept_tag": "irrationality-proof-by-contradiction",
+     "learning_objective": "Follow the proof by contradiction that the square root of 2 is irrational."
+    },
+    {
+     "concept_tag": "constructing-root-lengths",
+     "learning_objective": "Construct lengths such as the square roots of 2 and 3 on the number line using right triangles."
+    },
+    {
+     "concept_tag": "pi-and-madhava-series",
+     "learning_objective": "Describe pi as irrational and evaluate partial sums of Madhava's series."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH03-T7",
+   "topic_number": 7,
+   "title": "Real numbers and decimal expansions",
+   "ncert_sections": "3.6, 3.6.1, 3.6.2, 3.6.3, 3.7",
+   "concepts": [
+    {
+     "concept_tag": "terminating-and-repeating-decimals",
+     "learning_objective": "Predict from the denominator's prime factors whether a rational number's decimal terminates or repeats."
+    },
+    {
+     "concept_tag": "repeating-decimal-to-fraction",
+     "learning_objective": "Convert pure and general repeating decimals into the form p/q."
+    },
+    {
+     "concept_tag": "irrational-decimals-and-real-numbers",
+     "learning_objective": "Distinguish rational and irrational numbers by their decimal expansions and describe the real numbers."
+    }
+   ]
+  }
+ ]
+}

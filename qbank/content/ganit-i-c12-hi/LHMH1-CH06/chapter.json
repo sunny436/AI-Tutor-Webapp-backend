@@ -1,0 +1,100 @@
+{
+ "chapter_id": "LHMH1-CH06",
+ "title": "अवकलज के अनुप्रयोग",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH1-CH06-T1",
+   "topic_number": 1,
+   "title": "राशियों के परिवर्तन की दर",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "parivartan-ki-dar",
+     "learning_objective": "किसी राशि के दूसरी राशि के सापेक्ष परिवर्तन की दर को अवकलज के रूप में ज्ञात करना।"
+    },
+    {
+     "concept_tag": "sambaddh-dar",
+     "learning_objective": "शृंखला नियम से समय के सापेक्ष संबद्ध दरें ज्ञात करना।"
+    },
+    {
+     "concept_tag": "seemant-lagat-aay",
+     "learning_objective": "सीमांत लागत और सीमांत आय को कुल लागत और कुल आय के अवकलज के रूप में समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH06-T2",
+   "topic_number": 2,
+   "title": "वर्धमान और ह्रासमान फलन: परिभाषा और अवकलज परीक्षण",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "vardhaman-hrasaman-paribhasha",
+     "learning_objective": "निरंतर वर्धमान और निरंतर ह्रासमान फलनों की परिभाषा बताना।"
+    },
+    {
+     "concept_tag": "avakalaj-pariksha",
+     "learning_objective": "प्रथम अवकलज के चिह्न से फलन के वर्धमान या ह्रासमान होने का निर्णय करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH06-T3",
+   "topic_number": 3,
+   "title": "वर्धमान और ह्रासमान होने के अंतराल ज्ञात करना",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "antaral-gyat-karna",
+     "learning_objective": "f′(x) = 0 के बिंदुओं से वास्तविक रेखा को विभाजित कर वर्धमान और ह्रासमान अंतराल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH06-T4",
+   "topic_number": 4,
+   "title": "स्थानीय उच्चिष्ठ, निम्निष्ठ और प्रथम अवकलज परीक्षण",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "krantik-bindu",
+     "learning_objective": "क्रांतिक बिंदु की परिभाषा और स्थानीय चरम बिंदुओं से उसका संबंध समझना।"
+    },
+    {
+     "concept_tag": "pratham-avakalaj-pariksha",
+     "learning_objective": "प्रथम अवकलज परीक्षण से स्थानीय उच्चिष्ठ और निम्निष्ठ बिंदु पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH06-T5",
+   "topic_number": 5,
+   "title": "द्वितीय अवकलज परीक्षण और अनुप्रयुक्त समस्याएँ",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "dvitiya-avakalaj-pariksha",
+     "learning_objective": "द्वितीय अवकलज परीक्षण से स्थानीय उच्चिष्ठ और निम्निष्ठ ज्ञात करना।"
+    },
+    {
+     "concept_tag": "anuprayukt-samasya",
+     "learning_objective": "दैनिक जीवन की उच्चिष्ठ और निम्निष्ठ समस्याओं को अवकलज से हल करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH1-CH06-T6",
+   "topic_number": 6,
+   "title": "संवृत अंतराल में निरपेक्ष उच्चतम और निम्नतम मान",
+   "ncert_sections": "6.4.1",
+   "concepts": [
+    {
+     "concept_tag": "nirpeksh-charam-maan",
+     "learning_objective": "संवृत अंतराल में क्रांतिक बिंदुओं और अंत्य बिंदुओं पर मान लेकर निरपेक्ष उच्चतम और निम्नतम मान ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

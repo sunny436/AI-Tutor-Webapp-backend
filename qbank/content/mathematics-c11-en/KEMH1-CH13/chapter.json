@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KEMH1-CH13",
+ "title": "Statistics",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH13-T1",
+   "topic_number": 1,
+   "title": "Measures of Dispersion and Range",
+   "ncert_sections": "13.1, 13.2, 13.3",
+   "concepts": [
+    {
+     "concept_tag": "measures-of-dispersion",
+     "learning_objective": "Identify the measures of dispersion and why central tendency alone does not describe data."
+    },
+    {
+     "concept_tag": "range",
+     "learning_objective": "Compute and interpret the range of a data set and state its limitation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH13-T2",
+   "topic_number": 2,
+   "title": "Mean Deviation for Ungrouped Data",
+   "ncert_sections": "13.4, 13.4.1",
+   "concepts": [
+    {
+     "concept_tag": "mean-deviation-definition",
+     "learning_objective": "Define mean deviation about a central value using absolute deviations."
+    },
+    {
+     "concept_tag": "md-ungrouped-calculation",
+     "learning_objective": "Calculate mean deviation about the mean and about the median for ungrouped data."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH13-T3",
+   "topic_number": 3,
+   "title": "Mean Deviation for Grouped Data and its Limitations",
+   "ncert_sections": "13.4.2, 13.4.3",
+   "concepts": [
+    {
+     "concept_tag": "md-grouped-calculation",
+     "learning_objective": "Calculate mean deviation about the mean or median for discrete and continuous frequency distributions."
+    },
+    {
+     "concept_tag": "limitations-of-mean-deviation",
+     "learning_objective": "State the limitations of mean deviation as a measure of dispersion."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH13-T4",
+   "topic_number": 4,
+   "title": "Variance and Standard Deviation of Ungrouped Data",
+   "ncert_sections": "13.5, 13.5.1",
+   "concepts": [
+    {
+     "concept_tag": "variance-definition",
+     "learning_objective": "Define variance and standard deviation and relate their units to the data."
+    },
+    {
+     "concept_tag": "variance-ungrouped-calculation",
+     "learning_objective": "Calculate variance and standard deviation of ungrouped data and use them to find unknown observations."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH13-T5",
+   "topic_number": 5,
+   "title": "Standard Deviation of Frequency Distributions",
+   "ncert_sections": "13.5.2, 13.5.3",
+   "concepts": [
+    {
+     "concept_tag": "sd-discrete-distribution",
+     "learning_objective": "Calculate the variance and standard deviation of a discrete frequency distribution."
+    },
+    {
+     "concept_tag": "sd-continuous-distribution",
+     "learning_objective": "Calculate the standard deviation of a continuous frequency distribution using class mid-points."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH13-T6",
+   "topic_number": 6,
+   "title": "Shortcut Method and Effect of Changes on Variance",
+   "ncert_sections": "13.5.4",
+   "concepts": [
+    {
+     "concept_tag": "step-deviation-method",
+     "learning_objective": "Use the step-deviation method to find mean, variance and standard deviation."
+    },
+    {
+     "concept_tag": "change-of-origin-and-scale",
+     "learning_objective": "Determine how adding a constant to or multiplying the observations changes the mean, variance and standard deviation."
+    },
+    {
+     "concept_tag": "corrected-statistics",
+     "learning_objective": "Recompute mean and standard deviation after correcting wrongly recorded observations."
+    }
+   ]
+  }
+ ]
+}

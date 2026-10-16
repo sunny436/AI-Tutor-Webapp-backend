@@ -1,0 +1,144 @@
+{
+  "chapter_id": "LEEC2-CH02",
+  "title": "Theory of Consumer Behaviour",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "LEEC2-CH02-T1",
+      "topic_number": 1,
+      "title": "Utility and Cardinal Utility Analysis",
+      "ncert_sections": "2.1, 2.1.1",
+      "concepts": [
+        {
+          "concept_tag": "total-and-marginal-utility",
+          "learning_objective": "Define total and marginal utility and compute one from the other."
+        },
+        {
+          "concept_tag": "law-of-diminishing-marginal-utility",
+          "learning_objective": "Explain the law of diminishing marginal utility and how it explains a downward sloping demand curve."
+        }
+      ]
+    },
+    {
+      "topic_id": "LEEC2-CH02-T2",
+      "topic_number": 2,
+      "title": "Ordinal Utility Analysis and Indifference Curves",
+      "ncert_sections": "2.1.2",
+      "concepts": [
+        {
+          "concept_tag": "marginal-rate-of-substitution",
+          "learning_objective": "Define and calculate the marginal rate of substitution and state the law of diminishing MRS."
+        },
+        {
+          "concept_tag": "indifference-curve-features",
+          "learning_objective": "Explain the shape and features of indifference curves and the indifference map."
+        },
+        {
+          "concept_tag": "monotonic-preferences",
+          "learning_objective": "Apply the idea of monotonic preferences to rank consumption bundles."
+        }
+      ]
+    },
+    {
+      "topic_id": "LEEC2-CH02-T3",
+      "topic_number": 3,
+      "title": "The Consumer's Budget",
+      "ncert_sections": "2.2, 2.2.1, 2.2.2",
+      "concepts": [
+        {
+          "concept_tag": "budget-set-and-budget-line",
+          "learning_objective": "Describe the budget set and budget line, their intercepts and slope."
+        },
+        {
+          "concept_tag": "changes-in-budget-line",
+          "learning_objective": "Analyse how changes in income and prices change the budget line."
+        }
+      ]
+    },
+    {
+      "topic_id": "LEEC2-CH02-T4",
+      "topic_number": 4,
+      "title": "Optimal Choice of the Consumer",
+      "ncert_sections": "2.3",
+      "concepts": [
+        {
+          "concept_tag": "consumer-optimum",
+          "learning_objective": "Locate the consumer's optimum bundle as the tangency of the budget line with an indifference curve."
+        },
+        {
+          "concept_tag": "mrs-equals-price-ratio",
+          "learning_objective": "Explain why MRS must equal the price ratio at the optimum and how a consumer adjusts when it does not."
+        }
+      ]
+    },
+    {
+      "topic_id": "LEEC2-CH02-T5",
+      "topic_number": 5,
+      "title": "Demand, Law of Demand and Types of Goods",
+      "ncert_sections": "2.4, 2.4.1, 2.4.2, 2.4.3, 2.4.4",
+      "concepts": [
+        {
+          "concept_tag": "law-of-demand",
+          "learning_objective": "State the law of demand and interpret the demand function and a linear demand curve."
+        },
+        {
+          "concept_tag": "normal-inferior-and-giffen-goods",
+          "learning_objective": "Distinguish normal, inferior and Giffen goods using income and substitution effects."
+        },
+        {
+          "concept_tag": "substitutes-and-complements",
+          "learning_objective": "Distinguish substitutes from complements by the effect of a related good's price."
+        }
+      ]
+    },
+    {
+      "topic_id": "LEEC2-CH02-T6",
+      "topic_number": 6,
+      "title": "Shifts in Demand and Market Demand",
+      "ncert_sections": "2.4.5, 2.4.6, 2.5",
+      "concepts": [
+        {
+          "concept_tag": "shift-versus-movement",
+          "learning_objective": "Distinguish a movement along the demand curve from a shift of the demand curve."
+        },
+        {
+          "concept_tag": "market-demand",
+          "learning_objective": "Derive market demand by horizontal summation of individual demand curves."
+        }
+      ]
+    },
+    {
+      "topic_id": "LEEC2-CH02-T7",
+      "topic_number": 7,
+      "title": "Price Elasticity of Demand and its Measurement",
+      "ncert_sections": "2.6, 2.6.1",
+      "concepts": [
+        {
+          "concept_tag": "price-elasticity-measurement",
+          "learning_objective": "Calculate price elasticity of demand by the percentage method and classify it."
+        },
+        {
+          "concept_tag": "elasticity-along-linear-demand-curve",
+          "learning_objective": "Analyse how elasticity varies along a linear demand curve and identify constant elasticity curves."
+        }
+      ]
+    },
+    {
+      "topic_id": "LEEC2-CH02-T8",
+      "topic_number": 8,
+      "title": "Determinants of Elasticity, and Elasticity and Expenditure",
+      "ncert_sections": "2.6.2, 2.6.3",
+      "concepts": [
+        {
+          "concept_tag": "determinants-of-price-elasticity",
+          "learning_objective": "Identify how necessities, luxuries and close substitutes affect price elasticity."
+        },
+        {
+          "concept_tag": "elasticity-and-expenditure",
+          "learning_objective": "Predict the change in expenditure on a good from its price elasticity."
+        }
+      ]
+    }
+  ]
+}

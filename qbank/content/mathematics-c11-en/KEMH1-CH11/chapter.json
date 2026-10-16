@@ -1,0 +1,76 @@
+{
+ "chapter_id": "KEMH1-CH11",
+ "title": "Introduction to Three Dimensional Geometry",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH11-T1",
+   "topic_number": 1,
+   "title": "Coordinate axes, coordinate planes and octants",
+   "ncert_sections": "11.1, 11.2",
+   "concepts": [
+    {
+     "concept_tag": "coordinate-axes-and-planes",
+     "learning_objective": "Identify the three mutually perpendicular coordinate axes and the coordinate planes they determine."
+    },
+    {
+     "concept_tag": "octants",
+     "learning_objective": "Determine the octant of a point from the signs of its coordinates."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH11-T2",
+   "topic_number": 2,
+   "title": "Coordinates of a point in space",
+   "ncert_sections": "11.3",
+   "concepts": [
+    {
+     "concept_tag": "coordinates-as-distances-from-planes",
+     "learning_objective": "Interpret the coordinates of a point as its signed perpendicular distances from the YZ, ZX and XY-planes."
+    },
+    {
+     "concept_tag": "points-on-axes-and-planes",
+     "learning_objective": "State the form of the coordinates of points lying on the coordinate axes and coordinate planes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH11-T3",
+   "topic_number": 3,
+   "title": "Distance between two points",
+   "ncert_sections": "11.4",
+   "concepts": [
+    {
+     "concept_tag": "distance-formula",
+     "learning_objective": "Apply the distance formula to find the distance between two points in space."
+    },
+    {
+     "concept_tag": "distance-from-origin",
+     "learning_objective": "Find the distance of a point from the origin."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH11-T4",
+   "topic_number": 4,
+   "title": "Applications of the distance formula",
+   "ncert_sections": "11.4, Miscellaneous Examples",
+   "concepts": [
+    {
+     "concept_tag": "geometric-figure-tests",
+     "learning_objective": "Use distances to test collinearity and to classify triangles and quadrilaterals in space."
+    },
+    {
+     "concept_tag": "locus-equations",
+     "learning_objective": "Form the equation of a set of points satisfying a distance condition."
+    },
+    {
+     "concept_tag": "centroid-of-triangle",
+     "learning_objective": "Find the centroid of a triangle, or a missing vertex from the centroid."
+    }
+   ]
+  }
+ ]
+}

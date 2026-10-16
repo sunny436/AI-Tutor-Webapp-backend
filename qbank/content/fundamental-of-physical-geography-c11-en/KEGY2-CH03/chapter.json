@@ -1,0 +1,136 @@
+{
+ "chapter_id": "KEGY2-CH03",
+ "title": "Interior of the Earth",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH03-T1",
+   "topic_number": 1,
+   "title": "Sources of information about the interior",
+   "ncert_sections": "Sources of information about the interior: direct and indirect sources",
+   "concepts": [
+    {
+     "concept_tag": "direct-sources-of-information",
+     "learning_objective": "Identify mining, deep drilling and volcanic eruptions as direct sources of information about the earth's interior."
+    },
+    {
+     "concept_tag": "indirect-sources-of-information",
+     "learning_objective": "Explain how temperature, pressure, density, meteors, gravitation and magnetism give indirect evidence of the interior."
+    },
+    {
+     "concept_tag": "gravity-anomaly",
+     "learning_objective": "Interpret gravity anomalies as evidence of the distribution of mass in the crust."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH03-T2",
+   "topic_number": 2,
+   "title": "Earthquakes and earthquake waves",
+   "ncert_sections": "Earthquake; Why does the earth shake?; Earthquake waves; Propagation of earthquake waves",
+   "concepts": [
+    {
+     "concept_tag": "fault-focus-epicentre",
+     "learning_objective": "Describe how energy released along a fault produces an earthquake and define focus and epicentre."
+    },
+    {
+     "concept_tag": "body-and-surface-waves",
+     "learning_objective": "Distinguish P-waves, S-waves and surface waves by speed, medium and destructiveness."
+    },
+    {
+     "concept_tag": "wave-propagation",
+     "learning_objective": "Explain how P-waves and S-waves vibrate relative to the direction of propagation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH03-T3",
+   "topic_number": 3,
+   "title": "Emergence of shadow zone",
+   "ncert_sections": "Emergence of shadow zone",
+   "concepts": [
+    {
+     "concept_tag": "shadow-zone-p-s-waves",
+     "learning_objective": "Locate the shadow zones of P-waves and S-waves in terms of angular distance from the epicentre."
+    },
+    {
+     "concept_tag": "liquid-outer-core-inference",
+     "learning_objective": "Infer the liquid nature of the outer core from the absence of S-waves beyond 105 degrees."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH03-T4",
+   "topic_number": 4,
+   "title": "Types, measurement and effects of earthquakes",
+   "ncert_sections": "Types of earthquakes; Measuring earthquakes; Effects of earthquake; Frequency of earthquake occurrences",
+   "concepts": [
+    {
+     "concept_tag": "types-of-earthquakes",
+     "learning_objective": "Classify earthquakes as tectonic, volcanic, collapse, explosion and reservoir induced."
+    },
+    {
+     "concept_tag": "measuring-earthquakes",
+     "learning_objective": "Distinguish the Richter magnitude scale from the Mercalli intensity scale."
+    },
+    {
+     "concept_tag": "effects-of-earthquakes",
+     "learning_objective": "Identify the hazardous effects of earthquakes and the conditions for a tsunami."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH03-T5",
+   "topic_number": 5,
+   "title": "Structure of the earth",
+   "ncert_sections": "Structure of the earth: the crust, the mantle, the core",
+   "concepts": [
+    {
+     "concept_tag": "crust",
+     "learning_objective": "Describe the thickness and nature of the oceanic and continental crust."
+    },
+    {
+     "concept_tag": "mantle-and-asthenosphere",
+     "learning_objective": "Describe the extent of the mantle, the asthenosphere and the lithosphere."
+    },
+    {
+     "concept_tag": "core",
+     "learning_objective": "Describe the state and composition of the outer and inner core."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH03-T6",
+   "topic_number": 6,
+   "title": "Volcanoes",
+   "ncert_sections": "Volcanoes and volcanic landforms; Volcanoes (shield, composite, caldera, flood basalt, mid-ocean ridge)",
+   "concepts": [
+    {
+     "concept_tag": "magma-and-lava",
+     "learning_objective": "Distinguish magma from lava and name the materials a volcano releases."
+    },
+    {
+     "concept_tag": "types-of-volcanoes",
+     "learning_objective": "Compare shield, composite, caldera, flood basalt and mid-ocean ridge volcanoes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH03-T7",
+   "topic_number": 7,
+   "title": "Intrusive volcanic landforms",
+   "ncert_sections": "Volcanic landforms: intrusive forms (batholiths, lacoliths, lapolith, phacolith, sills, dykes)",
+   "concepts": [
+    {
+     "concept_tag": "volcanic-vs-plutonic-rocks",
+     "learning_objective": "Distinguish volcanic rocks from plutonic rocks by where the lava cools."
+    },
+    {
+     "concept_tag": "intrusive-landforms",
+     "learning_objective": "Identify batholiths, lacoliths, lapoliths, phacoliths, sills, sheets and dykes from their shape and position."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "chapter_id": "LHBS1-CH05",
+ "title": "संगठन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHBS1-CH05-T1",
+   "topic_number": 1,
+   "title": "संगठन की अवधारणा एवं संगठन प्रक्रिया के चरण",
+   "ncert_sections": "परिचय, संगठन प्रक्रिया के चरण",
+   "concepts": [
+    {
+     "concept_tag": "sangathan-arth",
+     "learning_objective": "संगठन को कार्यों की पहचान, समूहन तथा अधिकार संबंधों की स्थापना की प्रक्रिया के रूप में समझा सके।"
+    },
+    {
+     "concept_tag": "sangathan-prakriya-charan",
+     "learning_objective": "संगठन प्रक्रिया के चारों चरणों को सही क्रम में पहचान कर उदाहरणों पर लागू कर सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS1-CH05-T2",
+   "topic_number": 2,
+   "title": "संगठन का महत्त्व",
+   "ncert_sections": "संगठन का महत्त्व",
+   "concepts": [
+    {
+     "concept_tag": "sangathan-mahattva",
+     "learning_objective": "विशिष्टीकरण, स्पष्ट कार्य संबंध, संसाधनों के अनुकूलतम उपयोग आदि लाभों को स्थितियों में पहचान सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS1-CH05-T3",
+   "topic_number": 3,
+   "title": "संगठन संरचना एवं प्रबंध विस्तार",
+   "ncert_sections": "संगठन संरचना",
+   "concepts": [
+    {
+     "concept_tag": "sangathan-sanrachna",
+     "learning_objective": "संगठन संरचना को संगठन प्रक्रिया के परिणाम के रूप में तथा उसकी आवश्यकता को समझा सके।"
+    },
+    {
+     "concept_tag": "prabandh-vistar",
+     "learning_objective": "प्रबंध विस्तार का अर्थ तथा प्रबंध के स्तरों पर उसके प्रभाव का विश्लेषण कर सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS1-CH05-T4",
+   "topic_number": 4,
+   "title": "कार्यात्मक संरचना",
+   "ncert_sections": "संगठन संरचना के प्रकार – कार्यात्मक संरचना",
+   "concepts": [
+    {
+     "concept_tag": "karyatmak-sanrachna-arth",
+     "learning_objective": "कार्यात्मक संरचना का अर्थ तथा उसकी उपयुक्तता बता सके।"
+    },
+    {
+     "concept_tag": "karyatmak-gun-dosh",
+     "learning_objective": "कार्यात्मक संरचना के लाभ एवं सीमाओं का मूल्यांकन कर सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS1-CH05-T5",
+   "topic_number": 5,
+   "title": "प्रभागीय संरचना",
+   "ncert_sections": "संगठन संरचना के प्रकार – प्रभागीय संरचना",
+   "concepts": [
+    {
+     "concept_tag": "prabhagiya-sanrachna-arth",
+     "learning_objective": "प्रभागीय संरचना का आधार तथा उसकी उपयुक्तता समझा सके।"
+    },
+    {
+     "concept_tag": "prabhagiya-gun-dosh",
+     "learning_objective": "प्रभागीय संरचना के लाभ एवं सीमाओं को स्थितियों में पहचान सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS1-CH05-T6",
+   "topic_number": 6,
+   "title": "औपचारिक एवं अनौपचारिक संगठन",
+   "ncert_sections": "औपचारिक संगठन, अनौपचारिक संगठन",
+   "concepts": [
+    {
+     "concept_tag": "aupcharik-sangathan",
+     "learning_objective": "औपचारिक संगठन की विशेषताएँ, लाभ एवं सीमाएँ बता सके।"
+    },
+    {
+     "concept_tag": "anaupcharik-sangathan",
+     "learning_objective": "अनौपचारिक संगठन के उद्भव, विशेषताओं तथा प्रभावों का विश्लेषण कर सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS1-CH05-T7",
+   "topic_number": 7,
+   "title": "अधिकार अंतरण (भारार्पण)",
+   "ncert_sections": "भारार्पण, भारार्पण के तत्व, भारार्पण का महत्त्व",
+   "concepts": [
+    {
+     "concept_tag": "bhararpan-tatva",
+     "learning_objective": "भारार्पण के तत्व – अधिकार, उत्तरदायित्व एवं जवाबदेही – में अंतर कर सके।"
+    },
+    {
+     "concept_tag": "bhararpan-mahattva",
+     "learning_objective": "भारार्पण के महत्त्व को व्यावसायिक स्थितियों में लागू कर सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBS1-CH05-T8",
+   "topic_number": 8,
+   "title": "विकेंद्रीकरण",
+   "ncert_sections": "विकेंद्रीकरण, विकेंद्रीकरण का महत्त्व, भारार्पण एवं विकेंद्रीकरण में अंतर",
+   "concepts": [
+    {
+     "concept_tag": "vikendrikaran-arth",
+     "learning_objective": "विकेंद्रीकरण का अर्थ तथा केंद्रीकरण से उसका संबंध समझा सके।"
+    },
+    {
+     "concept_tag": "vikendrikaran-mahattva",
+     "learning_objective": "विकेंद्रीकरण के महत्त्व को स्थितियों में पहचान सके।"
+    },
+    {
+     "concept_tag": "bhararpan-vikendrikaran-tulna",
+     "learning_objective": "भारार्पण एवं विकेंद्रीकरण की प्रकृति और क्षेत्र की तुलना कर सके।"
+    }
+   ]
+  }
+ ]
+}

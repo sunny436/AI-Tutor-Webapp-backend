@@ -1,0 +1,88 @@
+{
+ "chapter_id": "JHMH1-CH11",
+ "title": "वृत्तों से संबंधित क्षेत्रफल",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH11-T1",
+   "topic_number": 1,
+   "title": "त्रिज्यखंड और वृत्तखंड: लघु और दीर्घ भाग",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "trijyakhand-aur-vrittakhand",
+     "learning_objective": "त्रिज्यखंड और वृत्तखंड की परिभाषा तथा उनके बीच का अंतर पहचानना।"
+    },
+    {
+     "concept_tag": "laghu-aur-dirgh-bhag",
+     "learning_objective": "लघु और दीर्घ त्रिज्यखंड के कोणों का संबंध (360° − θ) समझना और प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH11-T2",
+   "topic_number": 2,
+   "title": "त्रिज्यखंड का क्षेत्रफल",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "trijyakhand-kshetrafal-sutra",
+     "learning_objective": "ऐकिक विधि से प्राप्त सूत्र (θ/360) × πr² द्वारा त्रिज्यखंड का क्षेत्रफल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "dirgh-trijyakhand-kshetrafal",
+     "learning_objective": "वृत्त के क्षेत्रफल में से लघु त्रिज्यखंड घटाकर दीर्घ त्रिज्यखंड का क्षेत्रफल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH11-T3",
+   "topic_number": 3,
+   "title": "त्रिज्यखंड के चाप की लंबाई",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "chap-lambai-sutra",
+     "learning_objective": "सूत्र (θ/360) × 2πr द्वारा त्रिज्यखंड के चाप की लंबाई ज्ञात करना।"
+    },
+    {
+     "concept_tag": "trijyakhand-parimap",
+     "learning_objective": "चाप की लंबाई और दो त्रिज्याओं को जोड़कर त्रिज्यखंड का परिमाप ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH11-T4",
+   "topic_number": 4,
+   "title": "वृत्तखंड का क्षेत्रफल",
+   "ncert_sections": "11.1, 11.2",
+   "concepts": [
+    {
+     "concept_tag": "vrittakhand-kshetrafal",
+     "learning_objective": "वृत्तखंड का क्षेत्रफल = संगत त्रिज्यखंड का क्षेत्रफल − संगत त्रिभुज का क्षेत्रफल, इस संबंध का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "dirgh-vrittakhand",
+     "learning_objective": "वृत्त के क्षेत्रफल में से लघु वृत्तखंड घटाकर दीर्घ वृत्तखंड का क्षेत्रफल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH11-T5",
+   "topic_number": 5,
+   "title": "दैनिक जीवन में त्रिज्यखंड और चाप के अनुप्रयोग",
+   "ncert_sections": "11.1",
+   "concepts": [
+    {
+     "concept_tag": "ghadi-aur-vipar-samasya",
+     "learning_objective": "घड़ी की सुई, वाइपर आदि द्वारा घेरे गए क्षेत्रफल को त्रिज्यखंड के रूप में पहचानकर हल करना।"
+    },
+    {
+     "concept_tag": "charai-aur-dizain-samasya",
+     "learning_objective": "चराई क्षेत्र, छतरी और गोल डिज़ाइनों जैसी स्थितियों में त्रिज्यखंड का कोण और क्षेत्रफल ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

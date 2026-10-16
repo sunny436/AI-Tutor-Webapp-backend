@@ -1,0 +1,1181 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "hornbill-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "english",
+  "language": "english",
+  "title": "Hornbill",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kehb1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEHB1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "The Portrait of a Lady",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHB1-CH01-T1",
+     "topic_number": 1,
+     "title": "The grandmother and the grandfather's portrait",
+     "ncert_sections": "Para 1-2",
+     "concepts": [
+      {
+       "concept_tag": "grandmother-portrait",
+       "learning_objective": "Describe how the author portrays his grandmother's appearance and inner beauty."
+      },
+      {
+       "concept_tag": "figurative-description",
+       "learning_objective": "Interpret the similes and images used to describe the grandmother."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH01-T2",
+     "topic_number": 2,
+     "title": "Village days and the turning-point",
+     "ncert_sections": "Para 3-6",
+     "concepts": [
+      {
+       "concept_tag": "village-friendship",
+       "learning_objective": "Recall how the grandmother and the author spent their days in the village."
+      },
+      {
+       "concept_tag": "city-school-turning-point",
+       "learning_objective": "Explain why the move to the city school changed their friendship."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH01-T3",
+     "topic_number": 3,
+     "title": "Seclusion, sparrows and departure abroad",
+     "ncert_sections": "Para 7-8",
+     "concepts": [
+      {
+       "concept_tag": "seclusion-with-resignation",
+       "learning_objective": "Analyse how the grandmother accepted her loneliness after the author went to university."
+      },
+      {
+       "concept_tag": "strength-of-character",
+       "learning_objective": "Evaluate the grandmother's calm and unsentimental strength of character."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH01-T4",
+     "topic_number": 4,
+     "title": "Homecoming, death and the mourning sparrows",
+     "ncert_sections": "Para 9-13",
+     "concepts": [
+      {
+       "concept_tag": "homecoming-celebration",
+       "learning_objective": "Recall the grandmother's unusual behaviour on the evening of the author's return."
+      },
+      {
+       "concept_tag": "death-and-sparrows",
+       "learning_objective": "Interpret the sparrows' silent mourning at the grandmother's death."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH01-T5",
+     "topic_number": 5,
+     "title": "Working with words and noticing form",
+     "ncert_sections": "Working with words; Noticing form",
+     "concepts": [
+      {
+       "concept_tag": "senses-of-tell-take",
+       "learning_objective": "Identify the different senses of 'tell' and 'take' as used in the text."
+      },
+      {
+       "concept_tag": "words-of-walking",
+       "learning_objective": "Identify words that describe a manner of walking."
+      },
+      {
+       "concept_tag": "past-perfect-tense",
+       "learning_objective": "Recognise the past perfect form used to recount the distant past."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH01-T6",
+     "topic_number": 6,
+     "title": "Poem: A Photograph (Shirley Toulson)",
+     "ncert_sections": "Poem 'A Photograph'",
+     "concepts": [
+      {
+       "concept_tag": "photograph-three-phases",
+       "learning_objective": "Identify the three phases of time depicted in the poem's three stanzas."
+      },
+      {
+       "concept_tag": "loss-and-memory",
+       "learning_objective": "Interpret the poem's treatment of loss, memory and the transience of human life."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHB1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "We're Not Afraid to Die... if We Can All Be Together",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHB1-CH02-T1",
+     "topic_number": 1,
+     "title": "The dream voyage and its early stages",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "voyage-background",
+       "learning_objective": "Recall who undertook the voyage, why, and in what boat."
+      },
+      {
+       "concept_tag": "crew-and-route",
+       "learning_objective": "Trace the route of the first leg and explain why extra crew were taken on."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH02-T2",
+     "topic_number": 2,
+     "title": "The great wave strikes on January 2",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "storm-preparations",
+       "learning_objective": "Identify the precautions taken to protect the ship as the weather worsened."
+      },
+      {
+       "concept_tag": "the-giant-wave",
+       "learning_objective": "Interpret the narrator's description of the giant wave and his experience of it."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH02-T3",
+     "topic_number": 3,
+     "title": "Fighting the flood and the children's courage",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "damage-control",
+       "learning_objective": "Explain the steps taken to check the flooding of the ship."
+      },
+      {
+       "concept_tag": "childrens-courage",
+       "learning_objective": "Evaluate how the children's behaviour reveals courage and selflessness."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH02-T4",
+     "topic_number": 4,
+     "title": "The search for Ile Amsterdam",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "navigation-in-crisis",
+       "learning_objective": "Explain how the narrator navigated without proper instruments to find the island."
+      },
+      {
+       "concept_tag": "hope-and-optimism",
+       "learning_objective": "Analyse how optimism and family bonds helped the voyagers endure the direst stress."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH02-T5",
+     "topic_number": 5,
+     "title": "Words and expressions from the account",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ship-terms-homonyms",
+       "learning_objective": "Identify ship terms that have other common meanings and use them in context."
+      },
+      {
+       "concept_tag": "phrasal-verbs-and-expressions",
+       "learning_objective": "Infer the meaning of phrasal verbs and expressions from their context in the account."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHB1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Discovering Tut: the Saga Continues",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHB1-CH03-T1",
+     "topic_number": 1,
+     "title": "Tut's story and the night he left his tomb",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tut-background",
+       "learning_objective": "Recall the key facts of Tut's life, death and the 1922 discovery of his tomb."
+      },
+      {
+       "concept_tag": "opening-setting",
+       "learning_objective": "Interpret the imagery and beliefs (such as the pharaoh's curse) in the opening scene of the account."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH03-T2",
+     "topic_number": 2,
+     "title": "Howard Carter's investigation of the mummy",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "carter-mummy-removal",
+       "learning_objective": "Explain why and how Carter freed the mummy from its coffin and adornments."
+      },
+      {
+       "concept_tag": "funerary-treasures",
+       "learning_objective": "Describe the treasures and everyday objects buried with Tut and what they reveal about Egyptian beliefs."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH03-T3",
+     "topic_number": 3,
+     "title": "Changing archaeology: from X-ray to CT scan",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "changing-archaeology",
+       "learning_objective": "Explain how the aims and tools of archaeology have changed since Carter's time."
+      },
+      {
+       "concept_tag": "ct-scan",
+       "learning_objective": "Explain how computed tomography works and why it was used on Tut."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH03-T4",
+     "topic_number": 4,
+     "title": "Tut's dynasty and the Amarna period",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "amarna-period",
+       "learning_objective": "Identify Akhenaten's religious changes and why they were seen as strange."
+      },
+      {
+       "concept_tag": "tut-reign",
+       "learning_objective": "Explain Tut's change of name, his restoration of the old ways and his place among Egypt's mummies."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH03-T5",
+     "topic_number": 5,
+     "title": "The night of the CT scan",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "scan-night",
+       "learning_objective": "Recall the events of the scan night and what they reveal about the people involved."
+      },
+      {
+       "concept_tag": "closing-imagery",
+       "learning_objective": "Analyse the mood and figures of speech in the closing description of the account."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH03-T6",
+     "topic_number": 6,
+     "title": "The Laburnum Top (Ted Hughes)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "laburnum-imagery",
+       "learning_objective": "Identify the images, colours and comparisons used to describe the tree and the goldfinch."
+      },
+      {
+       "concept_tag": "engine-metaphor",
+       "learning_objective": "Explain the engine metaphor for the goldfinch and her family."
+      },
+      {
+       "concept_tag": "poem-structure",
+       "learning_objective": "Analyse how the stillness at the beginning and end frames the poem."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH03-T7",
+     "topic_number": 7,
+     "title": "The Voice of the Rain (Walt Whitman)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "two-voices",
+       "learning_objective": "Identify the speakers and the meaning of key words in the poem."
+      },
+      {
+       "concept_tag": "water-cycle",
+       "learning_objective": "Relate the poem's description of the rain to the water cycle."
+      },
+      {
+       "concept_tag": "rain-song-parallel",
+       "learning_objective": "Explain the parallel drawn between the rain and a song or poem."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHB1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "The Ailing Planet: the Green Movement's Role",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHB1-CH04-T1",
+     "topic_number": 1,
+     "title": "The Green Movement and the holistic view of the earth",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "green-movement-origin",
+       "learning_objective": "Recall how and when the Green Movement began and how widely it spread."
+      },
+      {
+       "concept_tag": "holistic-ecological-view",
+       "learning_objective": "Explain the shift from a mechanistic to a holistic, ecological view of the earth as a living organism."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH04-T2",
+     "topic_number": 2,
+     "title": "Sustainable development and the world's most dangerous animal",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sustainable-development",
+       "learning_objective": "Explain the 1987 definition of sustainable development and its meaning."
+      },
+      {
+       "concept_tag": "most-dangerous-animal",
+       "learning_objective": "Interpret the Lusaka zoo notice and the shift from domination to partnership."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH04-T3",
+     "topic_number": 3,
+     "title": "The earth's principal biological systems",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "four-biological-systems",
+       "learning_objective": "Identify the four principal biological systems and their role in the global economy."
+      },
+      {
+       "concept_tag": "depletion-of-forests",
+       "learning_objective": "Explain how over-use is depleting fisheries, forests, grasslands and croplands."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH04-T4",
+     "topic_number": 4,
+     "title": "Forests, law and the environment in India",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "article-48a-and-enforcement",
+       "learning_objective": "Explain Article 48A and the author's criticism of weak enforcement of laws in India."
+      },
+      {
+       "concept_tag": "india-forest-loss",
+       "learning_objective": "Interpret the data on the depletion of India's forests."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH04-T5",
+     "topic_number": 5,
+     "title": "Population growth and poverty",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "world-population-growth",
+       "learning_objective": "Recall the figures showing the rapid growth of world population."
+      },
+      {
+       "concept_tag": "development-and-family-planning",
+       "learning_objective": "Evaluate the author's argument linking development, family planning and poverty."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH04-T6",
+     "topic_number": 6,
+     "title": "The Era of Responsibility",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "era-of-responsibility",
+       "learning_objective": "Explain the transcending concern and the role of industry in the Era of Responsibility."
+      },
+      {
+       "concept_tag": "earth-as-borrowed-trust",
+       "learning_objective": "Interpret the Thatcher and Lester Brown quotations about our duty to future generations."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH04-T7",
+     "topic_number": 7,
+     "title": "The poem 'Childhood' by Markus Natten",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "childhood-poem-themes",
+       "learning_objective": "Identify the themes of rationalism, hypocrisy and individuality in the poem."
+      },
+      {
+       "concept_tag": "childhood-poem-craft",
+       "learning_objective": "Interpret the poet's feeling towards childhood and the poem's devices."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHB1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "The Adventure",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHB1-CH05-T1",
+     "topic_number": 1,
+     "title": "The journey to a different Bombay",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "altered-bombay",
+       "learning_objective": "Identify the details of Bombay and the train journey that show Gangadharpant is in a different world."
+      },
+      {
+       "concept_tag": "british-outpost",
+       "learning_objective": "Explain what the signs of British rule in Bombay reveal about this alternative India."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH05-T2",
+     "topic_number": 2,
+     "title": "History rewritten in the Asiatic Society library",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "panipat-turning-point",
+       "learning_objective": "Identify the point at which history changed, as found in Gangadharpant's own volumes."
+      },
+      {
+       "concept_tag": "alternative-history",
+       "learning_objective": "Describe the consequences of the Maratha victory for India in the alternative history."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH05-T3",
+     "topic_number": 3,
+     "title": "The Bakhar and the lecture at Azad Maidan",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bakhar-evidence",
+       "learning_objective": "Explain how the Bakhar and the torn page serve as evidence of Gangadharpant's experience."
+      },
+      {
+       "concept_tag": "unchaired-lecture",
+       "learning_objective": "Interpret the conflict over the empty chair and its effect on Professor Gaitonde."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH05-T4",
+     "topic_number": 4,
+     "title": "Rajendra's scientific explanation",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "catastrophe-theory",
+       "learning_objective": "Apply the catastrophe theory to the Battle of Panipat as Rajendra does."
+      },
+      {
+       "concept_tag": "quantum-many-worlds",
+       "learning_objective": "Explain how lack of determinism in quantum theory leads to the idea of many worlds and transitions between them."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH05-T5",
+     "topic_number": 5,
+     "title": "Words and forms in the story",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "idiomatic-expressions",
+       "learning_objective": "Infer the meaning of idiomatic expressions used in the story from context."
+      },
+      {
+       "concept_tag": "unreal-conditionals",
+       "learning_objective": "Recognise conditional sentences that express unreal and hypothetical conditions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHB1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Silk Road",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHB1-CH06-T1",
+     "topic_number": 1,
+     "title": "Leaving Ravu and crossing the Changtang",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "farewell-and-short-cut",
+       "learning_objective": "Recall Lhamo's farewell gift and Tsetan's short cut towards Mount Kailash."
+      },
+      {
+       "concept_tag": "changtang-wildlife-and-nomads",
+       "learning_objective": "Describe the kyang, drokbas and Tibetan mastiffs seen on the plains and explain why mastiffs were prized."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH06-T2",
+     "topic_number": 2,
+     "title": "Crossing the high mountain pass",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "snow-patch-crossing",
+       "learning_objective": "Explain how Tsetan got the vehicle across the snow and ice on the pass."
+      },
+      {
+       "concept_tag": "altitude-effects",
+       "learning_objective": "Relate the author's headache and the hissing petrol tank to the effects of high altitude."
+      },
+      {
+       "concept_tag": "cairn-tradition",
+       "learning_objective": "Identify how the top of the pass was marked and the custom observed there."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH06-T3",
+     "topic_number": 3,
+     "title": "The salt lake, Hor and Lake Manasarovar",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tethys-salt-flats",
+       "learning_objective": "Recall the salt-lake workcamp and the geological origin of the plateau's salt flats."
+      },
+      {
+       "concept_tag": "hor-and-manasarovar",
+       "learning_objective": "Contrast the author's bleak experience of Hor with the sanctity of Lake Manasarovar and earlier travellers' accounts."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH06-T4",
+     "topic_number": 4,
+     "title": "A troubled night and Tibetan medicine at Darchen",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sleepless-night-darchen",
+       "learning_objective": "Explain the author's breathing difficulty and fear of sleeping at Darchen."
+      },
+      {
+       "concept_tag": "tibetan-medicine-and-tsetan",
+       "learning_objective": "Interpret the doctor's treatment, its effect and Tsetan's parting remark."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH06-T5",
+     "topic_number": 5,
+     "title": "Waiting in Darchen and meeting Norbu",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "darchen-without-pilgrims",
+       "learning_objective": "Explain why the author was disappointed with Darchen and felt his options were limited."
+      },
+      {
+       "concept_tag": "norbu-as-companion",
+       "learning_objective": "Analyse why Norbu, though ill-equipped, seemed an ideal companion for the kora."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH06-T6",
+     "topic_number": 6,
+     "title": "Language, words and style of the travelogue",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tsetan-english-and-interpreters",
+       "learning_objective": "Interpret Tsetan's English and the use of interpreters in the narrative."
+      },
+      {
+       "concept_tag": "tibetan-words-and-adjectives",
+       "learning_objective": "Infer the meanings of Tibetan words and uncommon adjectives used in the text."
+      },
+      {
+       "concept_tag": "active-voice-narration",
+       "learning_objective": "Recognise how active voice shapes the style of the narrative."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH06-T7",
+     "topic_number": 7,
+     "title": "Father to Son (poem)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "father-son-distance",
+       "learning_objective": "Identify the lines that show the distance and lack of understanding between father and son."
+      },
+      {
+       "concept_tag": "father-longing-and-forgiveness",
+       "learning_objective": "Interpret the father's helplessness, the prodigal-son allusion and the longing for reconciliation."
+      },
+      {
+       "concept_tag": "poem-form-and-poet",
+       "learning_objective": "Recall the poet and describe the stanza form and rhyme pattern of the poem."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHB1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Chapter 7 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb107.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "KEHB1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Chapter 8 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb108.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "KEHB1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Childhood",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHB1-CH09-T1",
+     "topic_number": 1,
+     "title": "Stanza 1: Reason questions old beliefs",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ceasing-to-be-eleven",
+       "learning_objective": "Explain why the poet wonders whether childhood ended when he ceased to be eleven."
+      },
+      {
+       "concept_tag": "rational-questioning",
+       "learning_objective": "Analyse how logical reasoning about Heaven and Hell marks the end of childhood."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH09-T2",
+     "topic_number": 2,
+     "title": "Stanza 2: The hypocrisy of adults",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "adult-hypocrisy",
+       "learning_objective": "Interpret the poet's discovery that adults do not practise the love they preach."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH09-T3",
+     "topic_number": 3,
+     "title": "Stanza 3: A mind of one's own",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "individual-thinking",
+       "learning_objective": "Explain how forming independent thoughts signals the loss of childhood."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH09-T4",
+     "topic_number": 4,
+     "title": "Final stanza and central theme",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lost-innocence",
+       "learning_objective": "Interpret the image of childhood hidden in an infant's face."
+      },
+      {
+       "concept_tag": "central-theme",
+       "learning_objective": "Identify the poem's theme of growing up and the loss of innocence."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH09-T5",
+     "topic_number": 5,
+     "title": "Poetic devices and structure",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "refrain-and-questions",
+       "learning_objective": "Identify the refrain and rhetorical questions and explain their effect."
+      },
+      {
+       "concept_tag": "rhyme-and-repetition",
+       "learning_objective": "Identify rhyme and repetition in the poem and evaluate their purpose."
+      }
+     ]
+    }
+   ],
+   "content_source": "knowledge"
+  },
+  {
+   "chapter_id": "KEHB1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Chapter 10 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb110.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "KEHB1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "Note-making",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHB1-CH11-T1",
+     "topic_number": 1,
+     "title": "Effective writing and the purpose of note-making",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "effective-writing-skills",
+       "learning_objective": "Identify the abilities a student needs to write effectively, such as coherence, cohesive devices and command of grammar."
+      },
+      {
+       "concept_tag": "purpose-of-note-making",
+       "learning_objective": "Explain why note-making is an important study skill useful at study and at work."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH11-T2",
+     "topic_number": 2,
+     "title": "Reading for main points: underlining and questioning",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "underlining-key-information",
+       "learning_objective": "Identify the important information in a passage by underlining it."
+      },
+      {
+       "concept_tag": "questioning-the-text",
+       "learning_objective": "Frame and answer questions while reading to pick out the main points of a passage."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH11-T3",
+     "topic_number": 3,
+     "title": "Writing and organising notes",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "note-form-phrases",
+       "learning_objective": "Write points in note form using phrases, colons and long dashes without full verb forms."
+      },
+      {
+       "concept_tag": "numbering-systems",
+       "learning_objective": "Distinguish between the letter/figure system and the decimal system of dividing notes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH11-T4",
+     "topic_number": 4,
+     "title": "Characteristics of good notes",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "abbreviations-and-omissions",
+       "learning_objective": "Use abbreviations and symbols and omit articles, prepositions and conjunctions in notes."
+      },
+      {
+       "concept_tag": "notes-make-sense",
+       "learning_objective": "Evaluate whether a set of notes is short, logical and meaningful when read again."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH11-T5",
+     "topic_number": 5,
+     "title": "Practice: making notes on the formation of coal and petroleum",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "verbs-to-nouns",
+       "learning_objective": "Convert verb-based statements into noun-headed note points."
+      },
+      {
+       "concept_tag": "combining-grouping-points",
+       "learning_objective": "Combine and group related points from a passage into ordered notes."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHB1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Summarising",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHB1-CH12-T1",
+     "topic_number": 1,
+     "title": "What summarising is and how it differs from note-making",
+     "ncert_sections": "2. Summarising (introduction)",
+     "concepts": [
+      {
+       "concept_tag": "summary-vs-note-making",
+       "learning_objective": "Distinguish a summary from notes in purpose, length and form."
+      },
+      {
+       "concept_tag": "summarising-steps",
+       "learning_objective": "Recall the steps of summarising and how points are expanded and linked."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH12-T2",
+     "topic_number": 2,
+     "title": "Precise expression: one word for many",
+     "ncert_sections": "2. Summarising (one word for many)",
+     "concepts": [
+      {
+       "concept_tag": "one-word-for-many",
+       "learning_objective": "Replace a long phrase with a single precise word, as in 'precocious' or 'versatile'."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH12-T3",
+     "topic_number": 3,
+     "title": "Reducing the soybean passage",
+     "ncert_sections": "2. Summarising (soybean example)",
+     "concepts": [
+      {
+       "concept_tag": "summary-length",
+       "learning_objective": "Apply the guideline that a summary is usually about one-third of the original."
+      },
+      {
+       "concept_tag": "reduction-devices",
+       "learning_objective": "Identify apposition, present participles and a postponed main verb as devices that shorten a summary."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH12-T4",
+     "topic_number": 4,
+     "title": "Practice passage: Green Sahara",
+     "ncert_sections": "Green Sahara (practice text)",
+     "concepts": [
+      {
+       "concept_tag": "green-sahara-content",
+       "learning_objective": "Understand the main facts and causes described in 'Green Sahara'."
+      },
+      {
+       "concept_tag": "selecting-main-points",
+       "learning_objective": "Evaluate which details of a passage belong in its summary."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHB1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "Sub-titling",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHB1-CH13-T1",
+     "topic_number": 1,
+     "title": "The purpose of sub-titling",
+     "ncert_sections": "Introduction; Activity 1-2",
+     "concepts": [
+      {
+       "concept_tag": "purpose-of-sub-titling",
+       "learning_objective": "Explain why sub-titles are given to sections of a long piece of writing."
+      },
+      {
+       "concept_tag": "framing-a-sub-heading",
+       "learning_objective": "Frame a suitable sub-heading that captures the main idea of a section."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH13-T2",
+     "topic_number": 2,
+     "title": "Urban decay in Indian cities",
+     "ncert_sections": "Article: opening and 'Urban Decay' section",
+     "concepts": [
+      {
+       "concept_tag": "urban-decay-and-surat-plague",
+       "learning_objective": "Describe how the 1994 Surat plague exposed urban decay and neglected public health."
+      },
+      {
+       "concept_tag": "neglect-of-civic-reform",
+       "learning_objective": "Explain how cities chased 'modernisation' at the cost of basic civic reform."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH13-T3",
+     "topic_number": 3,
+     "title": "Sanitation, public health and urban transport",
+     "ncert_sections": "Article: sanitation data and transport paragraphs",
+     "concepts": [
+      {
+       "concept_tag": "sanitation-and-drainage-data",
+       "learning_objective": "Interpret the Census 2001 figures on latrines and drainage in urban households."
+      },
+      {
+       "concept_tag": "pedestrian-safety-and-transport",
+       "learning_objective": "Analyse how automobile-centred planning endangers pedestrians and cyclists."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH13-T4",
+     "topic_number": 4,
+     "title": "The Curitiba model of urban planning",
+     "ncert_sections": "Article: Curitiba paragraphs",
+     "concepts": [
+      {
+       "concept_tag": "curitiba-bus-and-land-use",
+       "learning_objective": "Describe Curitiba's low-cost transport and land-use measures."
+      },
+      {
+       "concept_tag": "curitiba-flood-management",
+       "learning_objective": "Explain how Curitiba managed floods compared with Indian cities."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH13-T5",
+     "topic_number": 5,
+     "title": "A rights-based approach to urban renewal",
+     "ncert_sections": "Article: conclusion; source",
+     "concepts": [
+      {
+       "concept_tag": "rights-based-urban-renewal",
+       "learning_objective": "Evaluate the writer's call for a rights-based, inclusive model of urban renewal."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEHB1-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "Essay-writing",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kehb114.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEHB1-CH14-T1",
+     "topic_number": 1,
+     "title": "Getting started: brainstorming and listing ideas",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "brainstorming-ideas",
+       "learning_objective": "Explain how brainstorming or jotting ideas around a central topic helps a writer begin an essay."
+      },
+      {
+       "concept_tag": "selecting-and-expanding-points",
+       "learning_objective": "Select relevant points from a random list and expand each into a sentence."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH14-T2",
+     "topic_number": 2,
+     "title": "Developing points into paragraphs",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "opening-with-definition",
+       "learning_objective": "Recognise that an essay usually opens with a definition or short description of the topic."
+      },
+      {
+       "concept_tag": "paragraph-development",
+       "learning_objective": "Show how related points are grouped and developed into connected paragraphs."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH14-T3",
+     "topic_number": 3,
+     "title": "Characteristics of a good essay",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "unity-and-coherence",
+       "learning_objective": "Distinguish unity (all parts linked to the main subject) from coherence (logical sequence of ideas)."
+      },
+      {
+       "concept_tag": "relevance-and-proportion",
+       "learning_objective": "Apply relevance and proportion when choosing and weighting content in an essay."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH14-T4",
+     "topic_number": 4,
+     "title": "Model essay: The Importance of Games",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "games-physical-benefits",
+       "learning_objective": "Identify the physical benefits of games argued in the model essay."
+      },
+      {
+       "concept_tag": "games-moral-benefits-and-dangers",
+       "learning_objective": "Interpret the moral benefits and the dangers of games discussed in the essay."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEHB1-CH14-T5",
+     "topic_number": 5,
+     "title": "Passage analysis and essay structure",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "essay-structure-plan",
+       "learning_objective": "Analyse the introduction-body-conclusion plan of the model essay paragraph by paragraph."
+      },
+      {
+       "concept_tag": "writing-on-given-topics",
+       "learning_objective": "Plan an essay on a new topic by applying the steps shown in the chapter."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

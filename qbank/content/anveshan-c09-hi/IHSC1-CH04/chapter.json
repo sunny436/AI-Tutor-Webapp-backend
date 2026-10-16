@@ -1,0 +1,124 @@
+{
+ "chapter_id": "IHSC1-CH04",
+ "title": "अपने परिवेश में गति का वर्णन",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHSC1-CH04-T1",
+   "topic_number": 1,
+   "title": "स्थिति का वर्णन, चलित दूरी और विस्थापन",
+   "ncert_sections": "4.1, 4.1.1, 4.1.2",
+   "concepts": [
+    {
+     "concept_tag": "sandarbh-bindu-sthiti",
+     "learning_objective": "संदर्भ बिंदु से दूरी और दिशा द्वारा किसी वस्तु की स्थिति का वर्णन करना।"
+    },
+    {
+     "concept_tag": "doori-aur-visthapan",
+     "learning_objective": "कुल चलित दूरी और विस्थापन में अंतर करना तथा उनका परिकलन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH04-T2",
+   "topic_number": 2,
+   "title": "माध्य चाल एवं माध्य वेग",
+   "ncert_sections": "4.1.3",
+   "concepts": [
+    {
+     "concept_tag": "madhya-chaal",
+     "learning_objective": "माध्य चाल को कुल चलित दूरी और समय अंतराल के अनुपात के रूप में परिकलित करना।"
+    },
+    {
+     "concept_tag": "madhya-veg",
+     "learning_objective": "माध्य वेग को विस्थापन और समय अंतराल के अनुपात के रूप में परिकलित करना।"
+    },
+    {
+     "concept_tag": "saman-asaman-gati",
+     "learning_objective": "समान और असमान सरल रेखीय गति को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH04-T3",
+   "topic_number": 3,
+   "title": "माध्य त्वरण",
+   "ncert_sections": "4.1.4",
+   "concepts": [
+    {
+     "concept_tag": "madhya-tvaran",
+     "learning_objective": "वेग में परिवर्तन और समय अंतराल से माध्य त्वरण ज्ञात करना।"
+    },
+    {
+     "concept_tag": "tvaran-ki-disha",
+     "learning_objective": "वेग के परिमाण के बढ़ने या घटने पर त्वरण की दिशा निर्धारित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH04-T4",
+   "topic_number": 4,
+   "title": "स्थिति-समय ग्राफ",
+   "ncert_sections": "4.2, 4.2.1, 4.2.2",
+   "concepts": [
+    {
+     "concept_tag": "sthiti-samay-graph",
+     "learning_objective": "स्थिति-समय ग्राफ के आकार से गति की प्रकृति की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "pravanata-se-veg",
+     "learning_objective": "स्थिति-समय ग्राफ की प्रवणता से वेग ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH04-T5",
+   "topic_number": 5,
+   "title": "वेग-समय ग्राफ",
+   "ncert_sections": "4.2.3",
+   "concepts": [
+    {
+     "concept_tag": "veg-samay-pravanata",
+     "learning_objective": "वेग-समय ग्राफ की प्रवणता से त्वरण की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "kshetrafal-se-visthapan",
+     "learning_objective": "वेग-समय ग्राफ के नीचे के क्षेत्रफल से विस्थापन ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH04-T6",
+   "topic_number": 6,
+   "title": "नियत त्वरण से गति के लिए शुद्धगतिक समीकरण",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "shuddhagatik-samikaran",
+     "learning_objective": "शुद्धगतिक समीकरणों को पहचानना और नियत त्वरण वाली गति पर लागू करना।"
+    },
+    {
+     "concept_tag": "rukne-ki-doori",
+     "learning_objective": "ब्रेक लगाने पर वाहन के रुकने की दूरी का परिकलन और सुरक्षित दूरी का महत्व समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHSC1-CH04-T7",
+   "topic_number": 7,
+   "title": "समतल में गति और एकसमान वृत्तीय गति",
+   "ncert_sections": "4.4, 4.4.1",
+   "concepts": [
+    {
+     "concept_tag": "samtal-mein-gati",
+     "learning_objective": "समतल में गति (द्वि-विमीय गति) के उदाहरण पहचानना।"
+    },
+    {
+     "concept_tag": "ekasaman-vrittiya-gati",
+     "learning_objective": "एकसमान वृत्तीय गति में चाल, वेग की दिशा और त्वरण की व्याख्या करना।"
+    }
+   ]
+  }
+ ]
+}

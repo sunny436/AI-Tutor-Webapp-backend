@@ -1,0 +1,124 @@
+{
+ "chapter_id": "FHGP1-CH02",
+ "title": "रेखाएँ और कोण",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHGP1-CH02-T1",
+   "topic_number": 1,
+   "title": "बिंदु, रेखाखंड, रेखा और किरण",
+   "ncert_sections": "2.1, 2.2, 2.3, 2.4",
+   "concepts": [
+    {
+     "concept_tag": "bindu-aur-rekhakhand",
+     "learning_objective": "विद्यार्थी बिंदु और रेखाखंड का अर्थ समझकर उन्हें सही प्रकार से नाम दे सकेंगे।"
+    },
+    {
+     "concept_tag": "rekha-aur-kiran",
+     "learning_objective": "विद्यार्थी रेखा और किरण में अंतर बताकर बिंदुओं से होकर जाने वाली रेखाओं की संख्या ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH02-T2",
+   "topic_number": 2,
+   "title": "कोण: शीर्ष, भुजाएँ और नामकरण",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "kon-ke-shirsh-aur-bhujaen",
+     "learning_objective": "विद्यार्थी किसी कोण के शीर्ष और भुजाओं को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "kon-ka-namkaran",
+     "learning_objective": "विद्यार्थी शीर्ष वाले अक्षर को मध्य में रखकर कोण का सही नाम लिख सकेंगे।"
+    },
+    {
+     "concept_tag": "kon-ka-akar-ghumav",
+     "learning_objective": "विद्यार्थी समझेंगे कि कोण का आकार घुमाव की मात्रा से तय होता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH02-T3",
+   "topic_number": 3,
+   "title": "कोणों की तुलना",
+   "ncert_sections": "2.6, 2.7",
+   "concepts": [
+    {
+     "concept_tag": "adhyaropan-dwara-tulna",
+     "learning_objective": "विद्यार्थी अध्यारोपण द्वारा दो कोणों की तुलना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "vritt-dwara-tulna",
+     "learning_objective": "विद्यार्थी पारदर्शी वृत्ताकार कागज से बिना अध्यारोपण के कोणों की तुलना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "bhuja-lambai-aur-kon",
+     "learning_objective": "विद्यार्थी समझेंगे कि कोण का माप भुजाओं की लंबाई पर निर्भर नहीं करता।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH02-T4",
+   "topic_number": 4,
+   "title": "विशेष प्रकार के कोण",
+   "ncert_sections": "2.8",
+   "concepts": [
+    {
+     "concept_tag": "saral-kon-aur-samkon",
+     "learning_objective": "विद्यार्थी सरल कोण और समकोण को पहचानकर उनका संबंध बता सकेंगे।"
+    },
+    {
+     "concept_tag": "lamb-rekhaen",
+     "learning_objective": "विद्यार्थी समकोण पर मिलने वाली रेखाओं को लंब रेखाओं के रूप में पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "nyun-aur-adhik-kon",
+     "learning_objective": "विद्यार्थी घुमाव की मात्रा के आधार पर न्यून और अधिक कोण का वर्गीकरण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH02-T5",
+   "topic_number": 5,
+   "title": "कोणों को मापना",
+   "ncert_sections": "2.9",
+   "concepts": [
+    {
+     "concept_tag": "ansh-aur-360",
+     "learning_objective": "विद्यार्थी अंश की इकाई और पूर्ण घुमाव के 360° होने का अर्थ समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "chande-se-maapna",
+     "learning_objective": "विद्यार्थी चाँदे की मापनी पढ़कर कोण का माप ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "kon-samdwibhajak",
+     "learning_objective": "विद्यार्थी कागज मोड़कर कोण समद्विभाजक बना और पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH02-T6",
+   "topic_number": 6,
+   "title": "कोणों को बनाना और कोणों के प्रकार",
+   "ncert_sections": "2.10, 2.11",
+   "concepts": [
+    {
+     "concept_tag": "chande-se-kon-banana",
+     "learning_objective": "विद्यार्थी चाँदे की सहायता से दिए गए माप का कोण बना सकेंगे।"
+    },
+    {
+     "concept_tag": "kon-ke-prakar-maap",
+     "learning_objective": "विद्यार्थी अंश माप के आधार पर न्यून, समकोण, अधिक, सरल और प्रतिवर्ती कोण पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "dainik-jeevan-mein-kon",
+     "learning_objective": "विद्यार्थी घड़ी और अशोक चक्र जैसी दैनिक जीवन की वस्तुओं में कोणों के माप ज्ञात कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

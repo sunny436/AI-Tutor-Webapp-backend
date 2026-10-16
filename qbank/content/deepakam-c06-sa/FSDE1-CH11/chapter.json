@@ -1,0 +1,128 @@
+{
+ "chapter_id": "FSDE1-CH11",
+ "title": "यः जानाति सः पण्डितः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FSDE1-CH11-T1",
+   "topic_number": 1,
+   "title": "प्रहेलिकानां परिचयः महत्त्वं च",
+   "ncert_sections": "पाठारम्भः, योग्यताविस्तरः १",
+   "concepts": [
+    {
+     "concept_tag": "prahelika-mahattvam",
+     "learning_objective": "प्रहेलिकाः मनसः उल्लासं, तार्किकशक्तिं चिन्तनक्षमतां च कथं वर्धयन्ति इति छात्रः जानाति।"
+    },
+    {
+     "concept_tag": "prahelika-vyutpattih",
+     "learning_objective": "'प्रहेलिका' इति पदस्य व्युत्पत्तिं विनोदकलासु तस्याः स्थानं च छात्रः वदति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH11-T2",
+   "topic_number": 2,
+   "title": "प्रहेलिकाः – तक्रम्, नयनम्, अनानसः",
+   "ncert_sections": "प्रहेलिकाः १, २, ३",
+   "concepts": [
+    {
+     "concept_tag": "takram-prahelika",
+     "learning_objective": "'भोजनान्ते च किं पेयम्' इति प्रहेलिकायाः त्रीणि उत्तराणि एकवाक्ये योजयति।"
+    },
+    {
+     "concept_tag": "nayanam-prahelika",
+     "learning_objective": "'न तस्यादिर्न तस्यान्तः' इति प्रहेलिकायाः वर्णसङ्केतेन 'नयनम्' इति उत्तरं प्राप्नोति।"
+    },
+    {
+     "concept_tag": "ananasah-prahelika",
+     "learning_objective": "'अकारादिं सकारान्तम्' इति सङ्केतेन 'अनानसः' इति उत्तरं विवृणोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH11-T3",
+   "topic_number": 3,
+   "title": "प्रहेलिके – मृत्युञ्जयः, कुम्भकर्णः",
+   "ncert_sections": "प्रहेलिके ४, ५",
+   "concepts": [
+    {
+     "concept_tag": "mrityunjayah-prahelika",
+     "learning_objective": "'किमिच्छति नरः काश्याम्' इति प्रहेलिकायाः उत्तरं 'मृत्युञ्जयः' इति योजयति।"
+    },
+    {
+     "concept_tag": "kumbhakarnah-prahelika",
+     "learning_objective": "'कुलालस्य गृहे ह्यर्धम्' इति प्रहेलिकायाः अर्धद्वयं योजयित्वा 'कुम्भकर्णः' इति प्राप्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH11-T4",
+   "topic_number": 4,
+   "title": "शब्दार्थाः – वयं शब्दार्थान् जानीमः",
+   "ncert_sections": "वयं शब्दार्थान् जानीमः",
+   "concepts": [
+    {
+     "concept_tag": "shabdarthah",
+     "learning_objective": "पाठस्य कठिनशब्दानां (पेयम्, सुतः, तक्रम्, कुलालः, रणे) समानार्थकपदानि छात्रः जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH11-T5",
+   "topic_number": 5,
+   "title": "षष्ठी विभक्तिः – सम्बन्धः शब्दरूपाणि च",
+   "ncert_sections": "अभ्यासः ३, ४, ५; योग्यताविस्तरः २",
+   "concepts": [
+    {
+     "concept_tag": "shashthi-sambandhah",
+     "learning_objective": "सम्बन्धे षष्ठी विभक्तिः भवति इति नियमं वाक्ये प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "shashthi-rupani",
+     "learning_objective": "अकारान्त-आकारान्त-ईकारान्तशब्दानां षष्ठीरूपाणि लिखति।"
+    },
+    {
+     "concept_tag": "sarvanama-shashthi",
+     "learning_objective": "अस्मद्, युष्मद्, तत्, एतत् सर्वनाम्नां षष्ठीरूपाणि लिङ्गवचनानुसारं चिनोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH11-T6",
+   "topic_number": 6,
+   "title": "अवधेयांशः – गुरुशिष्याः, ग्रन्थकर्तारः, पतिपत्न्यः",
+   "ncert_sections": "अवधेयांशः",
+   "concepts": [
+    {
+     "concept_tag": "guru-shishya",
+     "learning_objective": "प्रसिद्धानां गुरुशिष्याणां युग्मानि षष्ठ्या सम्बन्धं दर्शयन् वदति।"
+    },
+    {
+     "concept_tag": "grantha-granthakarta",
+     "learning_objective": "रामायण-महाभारत-रघुवंशादीनां ग्रन्थानां रचयितॄन् जानाति।"
+    },
+    {
+     "concept_tag": "pati-patni",
+     "learning_objective": "पाठे दत्तानि पतिपत्नीयुग्मानि अभिजानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FSDE1-CH11-T7",
+   "topic_number": 7,
+   "title": "कुटुम्बपरिचयः – रामस्य कुटुम्बं हस्तकुटुम्बकं च",
+   "ncert_sections": "अभ्यासः ६, ७; योग्यताविस्तरः ३",
+   "concepts": [
+    {
+     "concept_tag": "kutumba-sambandhah",
+     "learning_objective": "श्रीरामस्य कुटुम्बस्य रेखाचित्रं दृष्ट्वा सम्बन्धवाचकपदानि (श्वशुरः, स्नुषा, जामाता, देवरः) प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "hastakutumbakam",
+     "learning_objective": "'हस्तकुटुम्बकम्' इति गीते अङ्गुलीनां कुटुम्बसदस्यैः तुलनां जानाति।"
+    }
+   ]
+  }
+ ]
+}

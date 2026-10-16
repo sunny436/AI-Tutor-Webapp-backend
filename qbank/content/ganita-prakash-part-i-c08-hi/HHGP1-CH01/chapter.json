@@ -1,0 +1,120 @@
+{
+ "chapter_id": "HHGP1-CH01",
+ "title": "वर्ग और घन",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP1-CH01-T1",
+   "topic_number": 1,
+   "title": "लॉकर पहेली और गुणनखंडों की संख्या",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "gunankhandon-ki-sankhya",
+     "learning_objective": "विद्यार्थी समझ सकेंगे कि केवल पूर्ण वर्ग संख्याओं के गुणनखंडों की संख्या विषम होती है।"
+    },
+    {
+     "concept_tag": "sah-gunankhand-yugm",
+     "learning_objective": "विद्यार्थी किसी संख्या के सह-गुणनखंड युग्म पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH01-T2",
+   "topic_number": 2,
+   "title": "पूर्ण वर्ग और उनके इकाई अंक",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "varg-ikai-ank",
+     "learning_objective": "विद्यार्थी इकाई अंक देखकर बता सकेंगे कि कोई संख्या पूर्ण वर्ग नहीं है।"
+    },
+    {
+     "concept_tag": "varg-ant-shunya",
+     "learning_objective": "विद्यार्थी समझ सकेंगे कि किसी वर्ग के अंत में शून्यों की संख्या सदैव सम होती है।"
+    },
+    {
+     "concept_tag": "varg-samta",
+     "learning_objective": "विद्यार्थी किसी संख्या और उसके वर्ग की समता का संबंध बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH01-T3",
+   "topic_number": 3,
+   "title": "पूर्ण वर्ग, विषम संख्याएँ और त्रिभुजाकार संख्याएँ",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "vishm-sankhya-yog",
+     "learning_objective": "विद्यार्थी समझ सकेंगे कि पहली n विषम संख्याओं का योग n² होता है।"
+    },
+    {
+     "concept_tag": "kramagat-varg-antar",
+     "learning_objective": "विद्यार्थी क्रमागत वर्गों के अंतर और उनके बीच की संख्याओं का प्रतिरूप उपयोग कर सकेंगे।"
+    },
+    {
+     "concept_tag": "tribhujakar-sankhya",
+     "learning_objective": "विद्यार्थी त्रिभुजाकार संख्याओं और वर्ग संख्याओं का संबंध पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH01-T4",
+   "topic_number": 4,
+   "title": "वर्गमूल और उसका आकलन",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "abhajya-gunankhand-vargmul",
+     "learning_objective": "विद्यार्थी अभाज्य गुणनखंडन द्वारा पूर्ण वर्ग की जाँच कर वर्गमूल ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "vargmul-aakalan",
+     "learning_objective": "विद्यार्थी निकटतम पूर्ण वर्गों की सहायता से वर्गमूल का आकलन कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH01-T5",
+   "topic_number": 5,
+   "title": "घन संख्याएँ और हार्डी-रामानुजन संख्या",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "ghan-sankhya",
+     "learning_objective": "विद्यार्थी किसी संख्या का घन ज्ञात कर घन संख्याओं के गुणधर्म बता सकेंगे।"
+    },
+    {
+     "concept_tag": "ghan-ant-shunya",
+     "learning_objective": "विद्यार्थी समझ सकेंगे कि पूर्ण घन के अंत में शून्यों की संख्या 3 का गुणज होती है।"
+    },
+    {
+     "concept_tag": "hardy-ramanujan-sankhya",
+     "learning_objective": "विद्यार्थी 1729 की विशेषता और टैक्सीकैब संख्याओं का अर्थ बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH01-T6",
+   "topic_number": 6,
+   "title": "घनमूल, क्रमिक अंतर और थोड़ा इतिहास",
+   "ncert_sections": "1.2, 1.3",
+   "concepts": [
+    {
+     "concept_tag": "abhajya-gunankhand-ghanmul",
+     "learning_objective": "विद्यार्थी अभाज्य गुणनखंडों को तीन समान समूहों में बाँटकर घनमूल ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "kramik-antar",
+     "learning_objective": "विद्यार्थी पूर्ण घनों के क्रमिक अंतरों का प्रतिरूप ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "ganit-itihas",
+     "learning_objective": "विद्यार्थी वर्ग, घन और मूल जैसे शब्दों की प्राचीन भारतीय उत्पत्ति बता सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

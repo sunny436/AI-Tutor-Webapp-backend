@@ -1,0 +1,96 @@
+{
+ "chapter_id": "LEMH2-CH03",
+ "title": "Differential Equations",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEMH2-CH03-T1",
+   "topic_number": 1,
+   "title": "Differential equations: order and degree",
+   "ncert_sections": "9.1, 9.2, 9.2.1, 9.2.2",
+   "concepts": [
+    {
+     "concept_tag": "ordinary-differential-equation",
+     "learning_objective": "Recognise a differential equation and distinguish an ordinary differential equation from a partial one."
+    },
+    {
+     "concept_tag": "order-of-differential-equation",
+     "learning_objective": "Find the order of a differential equation from its highest order derivative."
+    },
+    {
+     "concept_tag": "degree-of-differential-equation",
+     "learning_objective": "Find the degree of a differential equation when it is a polynomial in its derivatives, and recognise when it is not defined."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH03-T2",
+   "topic_number": 2,
+   "title": "General and particular solutions",
+   "ncert_sections": "9.3",
+   "concepts": [
+    {
+     "concept_tag": "verifying-a-solution",
+     "learning_objective": "Verify by substitution that a given function is a solution of a differential equation."
+    },
+    {
+     "concept_tag": "general-and-particular-solution",
+     "learning_objective": "Distinguish general and particular solutions and relate the number of arbitrary constants to the order."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH03-T3",
+   "topic_number": 3,
+   "title": "Differential equations with variables separable",
+   "ncert_sections": "9.4, 9.4.1",
+   "concepts": [
+    {
+     "concept_tag": "separation-of-variables",
+     "learning_objective": "Identify and solve first order, first degree equations whose variables can be separated."
+    },
+    {
+     "concept_tag": "particular-solution-initial-condition",
+     "learning_objective": "Use a given condition or point on a curve to find a particular solution."
+    },
+    {
+     "concept_tag": "growth-model-application",
+     "learning_objective": "Model continuous growth with dP/dt = kP and interpret its solution."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH03-T4",
+   "topic_number": 4,
+   "title": "Homogeneous differential equations",
+   "ncert_sections": "9.4.2",
+   "concepts": [
+    {
+     "concept_tag": "homogeneous-function-degree",
+     "learning_objective": "Test whether a function of x and y is homogeneous and find its degree."
+    },
+    {
+     "concept_tag": "homogeneous-de-substitution",
+     "learning_objective": "Solve a homogeneous differential equation using the substitution y = vx."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH03-T5",
+   "topic_number": 5,
+   "title": "Linear differential equations",
+   "ncert_sections": "9.4.3",
+   "concepts": [
+    {
+     "concept_tag": "integrating-factor",
+     "learning_objective": "Write a first order linear equation in standard form and find its integrating factor."
+    },
+    {
+     "concept_tag": "solving-linear-de",
+     "learning_objective": "Solve a first order linear differential equation using its integrating factor."
+    }
+   ]
+  }
+ ]
+}

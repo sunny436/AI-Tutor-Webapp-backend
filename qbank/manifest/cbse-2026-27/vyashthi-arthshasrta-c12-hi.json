@@ -1,0 +1,602 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "vyashthi-arthshasrta-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "economics",
+  "language": "hindi",
+  "title": "Vyashthi Arthshasrta",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhec2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHEC2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "परिचय",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhec201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHEC2-CH01-T1",
+     "topic_number": 1,
+     "title": "सामान्य अर्थव्यवस्था",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "durlabhta-aur-chayan",
+       "learning_objective": "संसाधनों की दुर्लभता से चयन की समस्या कैसे उत्पन्न होती है, यह समझना।"
+      },
+      {
+       "concept_tag": "vastu-seva-sansadhan",
+       "learning_objective": "वस्तु, सेवा, संसाधन और निर्णय लेने वाली इकाई के अर्थ पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH01-T2",
+     "topic_number": 2,
+     "title": "अर्थव्यवस्था की केंद्रीय समस्याएँ",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "kendriya-samasyaen",
+       "learning_objective": "क्या, कैसे और किसके लिए उत्पादन की केंद्रीय समस्याओं को पहचानना और उनमें भेद करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH01-T3",
+     "topic_number": 3,
+     "title": "उत्पादन संभावनाएँ और अवसर लागत",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "utpadan-sambhavna-seemant",
+       "learning_objective": "सीमांत उत्पादन संभावना वक्र तथा उस पर और उसके नीचे के बिंदुओं की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "avsar-lagat",
+       "learning_objective": "तालिका से किसी वस्तु की अतिरिक्त इकाई की अवसर लागत की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH01-T4",
+     "topic_number": 4,
+     "title": "आर्थिक क्रियाकलापों का आयोजन",
+     "ncert_sections": "1.3, 1.3.1, 1.3.2",
+     "concepts": [
+      {
+       "concept_tag": "kendrikrit-yojanabaddh-arthvyavastha",
+       "learning_objective": "केंद्रीकृत योजनाबद्ध अर्थव्यवस्था में सरकार की भूमिका समझना।"
+      },
+      {
+       "concept_tag": "bazar-arthvyavastha",
+       "learning_objective": "बाज़ार अर्थव्यवस्था में कीमत संकेतों द्वारा समन्वय को समझाना।"
+      },
+      {
+       "concept_tag": "mishrit-arthvyavastha",
+       "learning_objective": "मिश्रित अर्थव्यवस्था की विशेषता पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH01-T5",
+     "topic_number": 5,
+     "title": "सकारात्मक तथा आदर्शक अर्थशास्त्र",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "sakaratmak-adarshak-vishleshan",
+       "learning_objective": "सकारात्मक और आदर्शक आर्थिक विश्लेषण में भेद करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH01-T6",
+     "topic_number": 6,
+     "title": "व्यष्टि अर्थशास्त्र तथा समष्टि अर्थशास्त्र",
+     "ncert_sections": "1.5, 1.6",
+     "concepts": [
+      {
+       "concept_tag": "vyashti-samashti",
+       "learning_objective": "व्यष्टि और समष्टि अर्थशास्त्र की विषय-वस्तु में भेद करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHEC2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "उपभोक्ता के व्यवहार का सिद्धांत",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhec202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHEC2-CH02-T1",
+     "topic_number": 1,
+     "title": "उपयोगिता और गणनावाचक उपयोगिता विश्लेषण",
+     "ncert_sections": "2.1, 2.1.1",
+     "concepts": [
+      {
+       "concept_tag": "kul-aur-seemant-upyogita",
+       "learning_objective": "कुल उपयोगिता और सीमांत उपयोगिता को परिभाषित कर उनका संबंध ज्ञात करना।"
+      },
+      {
+       "concept_tag": "hrasmaan-seemant-upyogita-niyam",
+       "learning_objective": "ह्रासमान सीमांत उपयोगिता के नियम से माँग वक्र के ऋणात्मक ढलान की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH02-T2",
+     "topic_number": 2,
+     "title": "क्रमवाचक उपयोगिता विश्लेषण",
+     "ncert_sections": "2.1.2",
+     "concepts": [
+      {
+       "concept_tag": "anadhimaan-vakra",
+       "learning_objective": "अनधिमान वक्र, अनधिमान मानचित्र और उनकी विशेषताओं को समझना।"
+      },
+      {
+       "concept_tag": "pratisthapan-ki-seemant-dar",
+       "learning_objective": "प्रतिस्थापन की सीमांत दर ज्ञात करना और उसके ह्रास से वक्र की उत्तलता समझाना।"
+      },
+      {
+       "concept_tag": "ekdishta-adhimaan",
+       "learning_objective": "एकदिष्ट अधिमान की मान्यता और उसके परिणामों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH02-T3",
+     "topic_number": 3,
+     "title": "उपभोक्ता का बजट",
+     "ncert_sections": "2.2, 2.2.1, 2.2.2",
+     "concepts": [
+      {
+       "concept_tag": "bajat-rekha",
+       "learning_objective": "बजट समुच्चय और बजट रेखा का समीकरण, अंतःखंड तथा ढलान ज्ञात करना।"
+      },
+      {
+       "concept_tag": "bajat-samuchchay-mein-parivartan",
+       "learning_objective": "आय और कीमतों में परिवर्तन से बजट रेखा के खिसकाव या घूर्णन की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH02-T4",
+     "topic_number": 4,
+     "title": "उपभोक्ता का इष्टतम चयन",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "upbhokta-santulan",
+       "learning_objective": "बजट रेखा और अनधिमान वक्र के स्पर्श बिंदु पर उपभोक्ता के इष्टतम बंडल की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH02-T5",
+     "topic_number": 5,
+     "title": "माँग",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "mang-ka-niyam-aur-khisakav",
+       "learning_objective": "माँग के नियम तथा माँग वक्र पर संचलन और माँग वक्र के खिसकाव में अंतर करना।"
+      },
+      {
+       "concept_tag": "samanya-aur-nimnstariya-vastuen",
+       "learning_objective": "आय में परिवर्तन के प्रभाव के आधार पर सामान्य और निम्नस्तरीय वस्तुओं में अंतर करना।"
+      },
+      {
+       "concept_tag": "sthanapann-aur-poorak-vastuen",
+       "learning_objective": "संबंधित वस्तु की कीमत बदलने पर स्थानापन्न और पूरक वस्तुओं की माँग पर प्रभाव समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH02-T6",
+     "topic_number": 6,
+     "title": "बाज़ार माँग",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "bazar-mang",
+       "learning_objective": "व्यक्तिगत माँग वक्रों के क्षैतिज योग से बाज़ार माँग ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH02-T7",
+     "topic_number": 7,
+     "title": "माँग की लोच",
+     "ncert_sections": "2.6, 2.6.1, 2.6.2, 2.6.3",
+     "concepts": [
+      {
+       "concept_tag": "mang-ki-kimat-loch",
+       "learning_objective": "माँग की कीमत लोच को परिभाषित कर स्थिर लोच वाले माँग वक्रों को पहचानना।"
+      },
+      {
+       "concept_tag": "rekhiya-mang-vakra-par-loch",
+       "learning_objective": "रेखीय माँग वक्र के विभिन्न बिंदुओं पर लोच की गणना करना।"
+      },
+      {
+       "concept_tag": "loch-aur-vyay",
+       "learning_objective": "कीमत परिवर्तन पर वस्तु पर कुल व्यय में परिवर्तन को लोच से जोड़ना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHEC2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "उत्पादन तथा लागत",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhec203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHEC2-CH03-T1",
+     "topic_number": 1,
+     "title": "उत्पादन फलन एवं समोत्पाद वक्र",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "utpadan-phalan",
+       "learning_objective": "विद्यार्थी उत्पादन फलन को आगतों और अधिकतम निर्गत के बीच तकनीकी संबंध के रूप में समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "samotpad-vakra",
+       "learning_objective": "विद्यार्थी समोत्पाद वक्र का अर्थ और उसकी विशेषताएँ बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH03-T2",
+     "topic_number": 2,
+     "title": "अल्पकाल और दीर्घकाल",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "alpkal",
+       "learning_objective": "विद्यार्थी अल्पकाल में स्थिर और परिवर्ती आगतों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "dirghkal",
+       "learning_objective": "विद्यार्थी दीर्घकाल को सभी आगतों के परिवर्तनीय होने की अवधि के रूप में समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH03-T3",
+     "topic_number": 3,
+     "title": "कुल उत्पाद, औसत उत्पाद और सीमांत उत्पाद",
+     "ncert_sections": "3.3, 3.3.1, 3.3.2, 3.3.3",
+     "concepts": [
+      {
+       "concept_tag": "kul-aur-ausat-utpad",
+       "learning_objective": "विद्यार्थी कुल उत्पाद से औसत उत्पाद की गणना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "seemant-utpad",
+       "learning_objective": "विद्यार्थी सीमांत उत्पाद की गणना कर उसका औसत उत्पाद से संबंध समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH03-T4",
+     "topic_number": 4,
+     "title": "ह्रासमान सीमांत उत्पाद का नियम तथा उत्पाद वक्रों के आकार",
+     "ncert_sections": "3.4, 3.5",
+     "concepts": [
+      {
+       "concept_tag": "hrasman-seemant-utpad-niyam",
+       "learning_objective": "विद्यार्थी ह्रासमान सीमांत उत्पाद अथवा परिवर्ती अनुपात के नियम और उसके कारण को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "utpad-vakron-ke-akar",
+       "learning_objective": "विद्यार्थी कुल, औसत और सीमांत उत्पाद वक्रों के आकार और उनके पारस्परिक संबंध का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH03-T5",
+     "topic_number": 5,
+     "title": "पैमाने का प्रतिफल",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "paimane-ka-pratiphal",
+       "learning_objective": "विद्यार्थी पैमाने के वर्धमान, स्थिर और ह्रासमान प्रतिफल में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "cobb-douglas-phalan",
+       "learning_objective": "विद्यार्थी कॉब-डगलस उत्पादन फलन में घातांकों के योग से पैमाने के प्रतिफल की प्रकृति ज्ञात कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH03-T6",
+     "topic_number": 6,
+     "title": "अल्पकालीन लागतें",
+     "ncert_sections": "3.7, 3.7.1",
+     "concepts": [
+      {
+       "concept_tag": "sthir-aur-parivarti-lagat",
+       "learning_objective": "विद्यार्थी कुल स्थिर लागत, कुल परिवर्ती लागत और कुल लागत में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "ausat-aur-seemant-lagat",
+       "learning_objective": "विद्यार्थी औसत और सीमांत लागतों की गणना कर उनके वक्रों के संबंध का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH03-T7",
+     "topic_number": 7,
+     "title": "दीर्घकालीन लागतें",
+     "ncert_sections": "3.7.2",
+     "concepts": [
+      {
+       "concept_tag": "dirghkalin-ausat-lagat",
+       "learning_objective": "विद्यार्थी दीर्घकालीन औसत लागत वक्र के आकार को पैमाने के प्रतिफल से जोड़ सकेंगे।"
+      },
+      {
+       "concept_tag": "dirghkalin-seemant-lagat",
+       "learning_objective": "विद्यार्थी दीर्घकालीन सीमांत लागत और दीर्घकालीन औसत लागत के संबंध को समझा सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHEC2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "पूर्ण प्रतिस्पर्धा की स्थिति में फर्म का सिद्धांत",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhec204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHEC2-CH04-T1",
+     "topic_number": 1,
+     "title": "पूर्ण प्रतिस्पर्धा की विशेषताएँ",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "purn-pratispardha-visheshtayen",
+       "learning_objective": "पूर्ण प्रतिस्पर्धी बाज़ार की प्रमुख विशेषताओं (अनेक क्रेता-विक्रेता, समरूप वस्तु, मुक्त प्रवेश-निकास, पूर्ण जानकारी) को पहचानना।"
+      },
+      {
+       "concept_tag": "kimat-swikarta",
+       "learning_objective": "यह समझाना कि पूर्ण प्रतिस्पर्धा में फर्म कीमत स्वीकारक क्यों होती है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH04-T2",
+     "topic_number": 2,
+     "title": "संप्राप्ति: कुल, औसत और सीमांत संप्राप्ति",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "kul-sampraapti",
+       "learning_objective": "कुल संप्राप्ति की गणना करना और उसके वक्र का स्वरूप समझना।"
+      },
+      {
+       "concept_tag": "ausat-seemant-sampraapti",
+       "learning_objective": "पूर्ण प्रतिस्पर्धा में औसत संप्राप्ति, सीमांत संप्राप्ति और कीमत रेखा के संबंध की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH04-T3",
+     "topic_number": 3,
+     "title": "लाभ अधिकतमीकरण",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "labh-adhiktam-shartein",
+       "learning_objective": "लाभ अधिकतमीकरण की तीनों शर्तों को पहचानना और लागू करना।"
+      },
+      {
+       "concept_tag": "labh-ganana",
+       "learning_objective": "कुल संप्राप्ति और कुल लागत से लाभ या हानि की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH04-T4",
+     "topic_number": 4,
+     "title": "फर्म का पूर्ति वक्र, उत्पादन बंद बिंदु और लाभ-अलाभ बिंदु",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "alpkalin-poorti-vakra",
+       "learning_objective": "अल्पकालीन और दीर्घकालीन पूर्ति वक्र की व्युत्पत्ति समझना।"
+      },
+      {
+       "concept_tag": "utpadan-band-bindu",
+       "learning_objective": "उत्पादन बंद बिंदु, सामान्य लाभ और लाभ-अलाभ बिंदु में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH04-T5",
+     "topic_number": 5,
+     "title": "पूर्ति वक्र के निर्धारक और बाज़ार पूर्ति वक्र",
+     "ncert_sections": "4.5, 4.6",
+     "concepts": [
+      {
+       "concept_tag": "poorti-nirdharak",
+       "learning_objective": "तकनीकी प्रगति, आगत कीमतों और इकाई कर का पूर्ति वक्र पर प्रभाव समझाना।"
+      },
+      {
+       "concept_tag": "bazar-poorti-vakra",
+       "learning_objective": "व्यक्तिगत फर्मों के पूर्ति वक्रों के क्षैतिज योग से बाज़ार पूर्ति वक्र प्राप्त करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH04-T6",
+     "topic_number": 6,
+     "title": "पूर्ति की कीमत लोच",
+     "ncert_sections": "4.7",
+     "concepts": [
+      {
+       "concept_tag": "poorti-loch-ganana",
+       "learning_objective": "प्रतिशत विधि से पूर्ति की कीमत लोच की गणना करना।"
+      },
+      {
+       "concept_tag": "poorti-loch-jyamitiya",
+       "learning_objective": "ज्यामितीय विधि से सीधी रेखा वाले पूर्ति वक्र की लोच का आकलन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHEC2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "बाज़ार संतुलन",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhec205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHEC2-CH05-T1",
+     "topic_number": 1,
+     "title": "संतुलन, अधिमाँग और अधिपूर्ति",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "santulan-paribhasha",
+       "learning_objective": "बाज़ार संतुलन, संतुलन कीमत और संतुलन मात्रा की परिभाषा समझना।"
+      },
+      {
+       "concept_tag": "adhimang-adhipurti",
+       "learning_objective": "अधिमाँग और अधिपूर्ति की स्थितियों में कीमत के समायोजन की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH05-T2",
+     "topic_number": 2,
+     "title": "फर्मों की स्थिर संख्या में संतुलन: संख्यात्मक विश्लेषण",
+     "ncert_sections": "5.1.1",
+     "concepts": [
+      {
+       "concept_tag": "santulan-ganana",
+       "learning_objective": "माँग और पूर्ति के समीकरणों से संतुलन कीमत और मात्रा की गणना करना।"
+      },
+      {
+       "concept_tag": "adhimang-ganana",
+       "learning_objective": "दी गई कीमत पर अधिमाँग और अधिपूर्ति की मात्रा ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH05-T3",
+     "topic_number": 3,
+     "title": "श्रम बाज़ार में मज़दूरी का निर्धारण",
+     "ncert_sections": "5.1.1",
+     "concepts": [
+      {
+       "concept_tag": "shram-mang",
+       "learning_objective": "सीमांत उत्पाद मूल्य (VMPL) के आधार पर फर्म की श्रम माँग और उसके ढलान की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "shram-purti",
+       "learning_objective": "आय और अवकाश के चयन से व्यक्तिगत तथा बाज़ार श्रम पूर्ति वक्र का आकार समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH05-T4",
+     "topic_number": 4,
+     "title": "माँग और पूर्ति वक्रों का खिसकना",
+     "ncert_sections": "5.1.1",
+     "concepts": [
+      {
+       "concept_tag": "mang-sthanantaran",
+       "learning_objective": "माँग वक्र के खिसकने का संतुलन कीमत और मात्रा पर प्रभाव समझना।"
+      },
+      {
+       "concept_tag": "purti-sthanantaran",
+       "learning_objective": "आगत कीमत या फर्मों की संख्या बदलने पर पूर्ति वक्र के खिसकने का प्रभाव बताना।"
+      },
+      {
+       "concept_tag": "yugpat-sthanantaran",
+       "learning_objective": "माँग और पूर्ति वक्रों के एक साथ खिसकने के प्रभावों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH05-T5",
+     "topic_number": 5,
+     "title": "निर्बाध प्रवेश और निकास के साथ बाज़ार संतुलन",
+     "ncert_sections": "5.1.2",
+     "concepts": [
+      {
+       "concept_tag": "mukt-pravesh-santulan",
+       "learning_objective": "निर्बाध प्रवेश-निकास में संतुलन कीमत के न्यूनतम औसत लागत के बराबर होने का कारण समझना।"
+      },
+      {
+       "concept_tag": "firmon-ki-sankhya",
+       "learning_objective": "संतुलन पर फर्मों की संख्या की गणना करना।"
+      },
+      {
+       "concept_tag": "mukt-pravesh-mang-badlav",
+       "learning_objective": "निर्बाध प्रवेश-निकास में माँग वक्र खिसकने के प्रभाव का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHEC2-CH05-T6",
+     "topic_number": 6,
+     "title": "अनुप्रयोग: कीमत की उच्चतम और निम्नतम सीमा",
+     "ncert_sections": "5.2, 5.2.1, 5.2.2",
+     "concepts": [
+      {
+       "concept_tag": "uchchatam-kimat-seema",
+       "learning_objective": "कीमत की उच्चतम सीमा और उससे उत्पन्न अधिमाँग, राशनिंग तथा काला बाज़ार को समझना।"
+      },
+      {
+       "concept_tag": "nimnatam-kimat-seema",
+       "learning_objective": "कीमत की निम्नतम सीमा, जैसे कृषि समर्थन कीमत और न्यूनतम मज़दूरी, के प्रभावों की व्याख्या करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

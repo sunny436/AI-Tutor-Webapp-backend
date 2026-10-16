@@ -1,0 +1,104 @@
+{
+ "chapter_id": "KHBO1-CH18",
+ "title": "तंत्रिकीय नियंत्रण एवं समन्वय",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHBO1-CH18-T1",
+   "topic_number": 1,
+   "title": "तंत्रिका तंत्र एवं मानव तंत्रिका तंत्र का विभाजन",
+   "ncert_sections": "18.1, 18.2",
+   "concepts": [
+    {
+     "concept_tag": "tantrika-tantra-sangathan",
+     "learning_objective": "हाइड्रा, कीटों और कशेरुकियों में तंत्रिकीय संगठन की जटिलता की तुलना करना।"
+    },
+    {
+     "concept_tag": "kendriya-paridhiya-vibhajan",
+     "learning_objective": "केंद्रीय तथा परिधीय तंत्रिका तंत्र, अभिवाही-अपवाही तंतुओं और कायिक-स्वायत्त तंत्र में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH18-T2",
+   "topic_number": 2,
+   "title": "तंत्रिका कोशिका: संरचना एवं प्रकार",
+   "ncert_sections": "18.3",
+   "concepts": [
+    {
+     "concept_tag": "tantrika-koshika-sanrachana",
+     "learning_objective": "तंत्रिका कोशिका के कोशिकाकाय, द्रुमिकाओं और तंत्रिकाक्ष की संरचना व कार्य पहचानना।"
+    },
+    {
+     "concept_tag": "tantrika-koshika-prakar",
+     "learning_objective": "बहुध्रुवीय, द्विध्रुवीय तथा एकध्रुवीय तंत्रिका कोशिकाओं और आच्छदी-अनाच्छदी तंतुओं में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH18-T3",
+   "topic_number": 3,
+   "title": "तंत्रिका आवेग का उत्पादन एवं संचरण",
+   "ncert_sections": "18.3.1",
+   "concepts": [
+    {
+     "concept_tag": "vishram-vibhav",
+     "learning_objective": "विश्राम अवस्था में झिल्ली के ध्रुवीकरण और सोडियम-पोटैशियम पंप की भूमिका समझाना।"
+    },
+    {
+     "concept_tag": "kriya-vibhav-sancharan",
+     "learning_objective": "विध्रुवण, क्रिया विभव और तंतु के अनुदिश आवेग के संचरण तथा पुनर्ध्रुवण की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH18-T4",
+   "topic_number": 4,
+   "title": "आवेगों का सिनैप्स द्वारा पारगमन",
+   "ncert_sections": "18.3.2",
+   "concepts": [
+    {
+     "concept_tag": "vidyut-rasayanik-synapse",
+     "learning_objective": "विद्युत तथा रासायनिक सिनैप्स की संरचना और पारगमन गति की तुलना करना।"
+    },
+    {
+     "concept_tag": "tantrikasanchari",
+     "learning_objective": "रासायनिक सिनैप्स पर तंत्रिकासंचारी के मुक्त होने और पश्च-सिनैप्टिक विभव बनने का क्रम समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH18-T5",
+   "topic_number": 5,
+   "title": "केंद्रीय तंत्रिका तंत्र एवं अग्रमस्तिष्क",
+   "ncert_sections": "18.4, 18.4.1",
+   "concepts": [
+    {
+     "concept_tag": "mastishk-avaran",
+     "learning_objective": "मस्तिष्क के कार्यों तथा कपाल तानिकाओं (दृढ़तानिका, जालतानिका, मृदुतानिका) का क्रम पहचानना।"
+    },
+    {
+     "concept_tag": "agramastishk",
+     "learning_objective": "प्रमस्तिष्क, थैलेमस, हाइपोथैलेमस और लिंबिक तंत्र के कार्यों का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH18-T6",
+   "topic_number": 6,
+   "title": "मध्यमस्तिष्क एवं पश्चमस्तिष्क",
+   "ncert_sections": "18.4.2, 18.4.3",
+   "concepts": [
+    {
+     "concept_tag": "madhyamastishk",
+     "learning_objective": "मध्यमस्तिष्क की स्थिति, प्रमस्तिष्क तरल नलिका और कॉर्पोरा क्वाड्रीजेमिना को पहचानना।"
+    },
+    {
+     "concept_tag": "pashchmastishk",
+     "learning_objective": "पोंस, अनुमस्तिष्क और मेडुला के कार्य तथा मस्तिष्क स्तंभ के घटकों को समझाना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "chapter_id": "JSAB1-CH11",
+ "title": "वाच्यम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JSAB1-CH11-T1",
+   "topic_number": 1,
+   "title": "वाच्यस्य स्वरूपं भेदाश्च",
+   "ncert_sections": "उदाहरणानि (क), (ख); अवधेयांशाः",
+   "concepts": [
+    {
+     "concept_tag": "vachya-svarupa",
+     "learning_objective": "वाच्यं कथनस्य विशिष्टा विधा इति अवगत्य कर्तृप्रधान-कर्मप्रधानवाक्ययोः भेदं ज्ञातुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "vachya-bheda",
+     "learning_objective": "कर्तृवाच्यं कर्मवाच्यं भाववाच्यं च इति त्रीन् भेदान् अभिज्ञातुं शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH11-T2",
+   "topic_number": 2,
+   "title": "कर्तृवाच्यस्य लक्षणानि",
+   "ncert_sections": "अवधेयांशाः",
+   "concepts": [
+    {
+     "concept_tag": "kartrivachya-vibhakti",
+     "learning_objective": "कर्तृवाच्ये कर्तरि प्रथमां कर्मणि च द्वितीयां विभक्तिं प्रयोक्तुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "kartrivachya-kriya",
+     "learning_objective": "कर्तृवाच्ये क्रियापदं कर्तृपदानुसारं चेतुं शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH11-T3",
+   "topic_number": 3,
+   "title": "कर्मवाच्ये कर्तृपदस्य परिवर्तनम्",
+   "ncert_sections": "अभ्यासः 1",
+   "concepts": [
+    {
+     "concept_tag": "kartripada-tritiya",
+     "learning_objective": "वाच्यपरिवर्तने कर्तृपदं तृतीयाविभक्तौ परिवर्तयितुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "sarvanama-tritiya-rupa",
+     "learning_objective": "अस्मद्-युष्मद्-आदीनां सर्वनाम्नां तृतीयारूपाणि प्रयोक्तुं शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH11-T4",
+   "topic_number": 4,
+   "title": "कर्मवाच्ये कर्मपदं क्रियापदं च",
+   "ncert_sections": "अभ्यासः 2, 3",
+   "concepts": [
+    {
+     "concept_tag": "karmapada-prathama",
+     "learning_objective": "कर्मवाच्ये कर्मपदं प्रथमाविभक्तौ परिवर्तयितुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "kriya-karma-anusara",
+     "learning_objective": "कर्मवाच्ये क्रियापदस्य वचनं कर्मपदानुसारं निर्धारयितुं शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH11-T5",
+   "topic_number": 5,
+   "title": "भाववाच्यम् अकर्मकधातवश्च",
+   "ncert_sections": "अवधेयांशाः; अभ्यासः 1, 3",
+   "concepts": [
+    {
+     "concept_tag": "akarmaka-dhatu",
+     "learning_objective": "अकर्मकधातून् अभिज्ञाय तेषां भाववाच्ये प्रयोगं ज्ञातुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "bhavavachya-kriya",
+     "learning_objective": "भाववाच्ये क्रियापदं प्रथमपुरुषे एकवचने एव प्रयोक्तुं शक्नुयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH11-T6",
+   "topic_number": 6,
+   "title": "कर्मवाच्य-भाववाच्ययोः क्रियारूपाणि",
+   "ncert_sections": "कतिपयक्रियारूपाणि",
+   "concepts": [
+    {
+     "concept_tag": "vishesha-kriyarupa",
+     "learning_objective": "स्थीयते, उह्यते, पीयते, दृश्यते, श्रूयते इत्यादीनि विशेषक्रियारूपाणि अभिज्ञातुं शक्नुयात्।"
+    }
+   ]
+  }
+ ]
+}

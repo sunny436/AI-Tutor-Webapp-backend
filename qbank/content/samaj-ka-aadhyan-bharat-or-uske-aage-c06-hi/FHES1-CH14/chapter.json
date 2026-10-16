@@ -1,0 +1,108 @@
+{
+ "chapter_id": "FHES1-CH14",
+ "title": "हमारे आस-पास की आर्थिक गतिविधियाँ",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHES1-CH14-T1",
+   "topic_number": 1,
+   "title": "आर्थिक गतिविधियाँ और आर्थिक क्षेत्रकों में उनका वर्गीकरण",
+   "ncert_sections": "परिचय; आर्थिक क्षेत्रकों में आर्थिक गतिविधियों का वर्गीकरण",
+   "concepts": [
+    {
+     "concept_tag": "arthik-gatividhi-maudrik-mulya",
+     "learning_objective": "मौद्रिक मूल्य के आधार पर आर्थिक और गैर-आर्थिक गतिविधियों में अंतर पहचानना।"
+    },
+    {
+     "concept_tag": "arthik-kshetrak-vargikaran",
+     "learning_objective": "समान विशेषताओं के आधार पर आर्थिक गतिविधियों को तीन मुख्य आर्थिक क्षेत्रकों में बाँटने का आधार समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH14-T2",
+   "topic_number": 2,
+   "title": "प्राथमिक गतिविधियाँ",
+   "ncert_sections": "(क) प्राथमिक गतिविधियाँ",
+   "concepts": [
+    {
+     "concept_tag": "prathamik-kshetrak",
+     "learning_objective": "प्राथमिक क्षेत्रक को प्रकृति पर प्रत्यक्ष निर्भरता वाली गतिविधियों के समूह के रूप में परिभाषित करना।"
+    },
+    {
+     "concept_tag": "prakritik-sansadhan-upyog",
+     "learning_objective": "कृषि, खनन, वानिकी, मत्स्य पालन जैसी गतिविधियों में प्रयुक्त प्राकृतिक संसाधनों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH14-T3",
+   "topic_number": 3,
+   "title": "द्वितीयक गतिविधियाँ",
+   "ncert_sections": "(ख) द्वितीयक गतिविधियाँ",
+   "concepts": [
+    {
+     "concept_tag": "dvitiyak-kshetrak-rupantaran",
+     "learning_objective": "प्राथमिक क्षेत्रक के कच्चे माल को नए उत्पादों में रूपांतरित करने वाली गतिविधियों को पहचानना।"
+    },
+    {
+     "concept_tag": "nirman-aur-urja-aapurti",
+     "learning_objective": "भवन-सड़क निर्माण तथा बिजली, पानी, गैस जैसी आपूर्ति को द्वितीयक क्षेत्रक के अंग के रूप में समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH14-T4",
+   "topic_number": 4,
+   "title": "तृतीयक गतिविधियाँ (सेवा क्षेत्रक)",
+   "ncert_sections": "(ग) तृतीयक गतिविधियाँ",
+   "concepts": [
+    {
+     "concept_tag": "tritiyak-kshetrak-sahayata",
+     "learning_objective": "यह समझाना कि तृतीयक गतिविधियाँ प्राथमिक और द्वितीयक क्षेत्रकों को सेवाओं द्वारा सहायता देती हैं।"
+    },
+    {
+     "concept_tag": "seva-kshetrak-udaharan",
+     "learning_objective": "परिवहन, बैंक, गोदाम, मरम्मत, संचार जैसी सेवाओं को तृतीयक क्षेत्रक के उदाहरणों के रूप में वर्गीकृत करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH14-T5",
+   "topic_number": 5,
+   "title": "क्षेत्रकों में परस्पर निर्भरता: डेयरी सहकारिता",
+   "ncert_sections": "क्षेत्रकों में परस्पर निर्भरता; डेयरी सहकारिता — खेत से थाली तक",
+   "concepts": [
+    {
+     "concept_tag": "sahkari-sangathan",
+     "learning_objective": "सहकारी संगठन की विशेषताएँ और अमूल की स्थापना की कहानी का वर्णन करना।"
+    },
+    {
+     "concept_tag": "bichauliye-ki-bhumika",
+     "learning_objective": "बिचौलियों पर निर्भरता से किसानों को होने वाली कठिनाइयों का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "amul-mein-teeno-kshetrak",
+     "learning_objective": "अमूल के उदाहरण में तीनों क्षेत्रकों की गतिविधियों और उनकी परस्पर निर्भरता को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHES1-CH14-T6",
+   "topic_number": 6,
+   "title": "पाठ्यपुस्तक कैसे बनती है और कागज का पुनर्चक्रण",
+   "ncert_sections": "चित्र 14.1; पुनर्चक्रण",
+   "concepts": [
+    {
+     "concept_tag": "pathyapustak-nirman-shrinkhala",
+     "learning_objective": "लुगदी से पाठ्यपुस्तक बनने तक की प्रक्रिया के चरणों को तीनों क्षेत्रकों में वर्गीकृत करना।"
+    },
+    {
+     "concept_tag": "kagaz-punarchakran",
+     "learning_objective": "कागज के पुनर्चक्रण से पेड़, लैंडफिल स्थान, ऊर्जा और पानी की बचत का आकलन करना।"
+    }
+   ]
+  }
+ ]
+}

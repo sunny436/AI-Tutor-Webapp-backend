@@ -1,0 +1,124 @@
+{
+ "chapter_id": "LHMH2-CH04",
+ "title": "सदिश बीजगणित",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH2-CH04-T1",
+   "topic_number": 1,
+   "title": "मूलभूत संकल्पनाएँ: स्थिति सदिश, परिमाण और दिक्-कोसाइन",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "sadish-parimaan",
+     "learning_objective": "सदिश राशि को पहचानना तथा स्थिति सदिश का परिमाण ज्ञात करना।"
+    },
+    {
+     "concept_tag": "dik-cosine",
+     "learning_objective": "किसी सदिश की दिक्-कोसाइन और दिक्-अनुपात ज्ञात करना तथा l² + m² + n² = 1 का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH04-T2",
+   "topic_number": 2,
+   "title": "सदिशों के प्रकार",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "shunya-matrak-sadish",
+     "learning_objective": "शून्य सदिश और मात्रक सदिश को पहचानना।"
+    },
+    {
+     "concept_tag": "sadish-samanta",
+     "learning_objective": "समान, संरेख, सह-आदिम और ऋणात्मक सदिशों में भेद करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH04-T3",
+   "topic_number": 3,
+   "title": "सदिशों का योगफल",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "tribhuj-niyam",
+     "learning_objective": "त्रिभुज नियम और समांतर चतुर्भुज नियम से सदिशों का योग और अंतर ज्ञात करना।"
+    },
+    {
+     "concept_tag": "yog-gun",
+     "learning_objective": "सदिश योग के क्रमविनिमेय और साहचर्य गुणों को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH04-T4",
+   "topic_number": 4,
+   "title": "अदिश से गुणन, घटक, दो बिंदुओं को मिलाने वाला सदिश और विभाजन सूत्र",
+   "ncert_sections": "10.5, 10.5.1, 10.5.2, 10.5.3",
+   "concepts": [
+    {
+     "concept_tag": "adish-gunan-ghatak",
+     "learning_objective": "घटकों के रूप में सदिश लिखकर अदिश गुणन और मात्रक सदिश ज्ञात करना।"
+    },
+    {
+     "concept_tag": "do-bindu-sadish",
+     "learning_objective": "दो बिंदुओं को मिलाने वाला सदिश ज्ञात करना और संरेखता की जाँच करना।"
+    },
+    {
+     "concept_tag": "vibhajan-sutra",
+     "learning_objective": "विभाजन सूत्र से रेखाखंड को दिए अनुपात में विभाजित करने वाले बिंदु का स्थिति सदिश ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH04-T5",
+   "topic_number": 5,
+   "title": "दो सदिशों का अदिश गुणनफल",
+   "ncert_sections": "10.6, 10.6.1",
+   "concepts": [
+    {
+     "concept_tag": "adish-gunanfal",
+     "learning_objective": "अदिश गुणनफल की परिभाषा से दो सदिशों का गुणनफल और उनके बीच का कोण ज्ञात करना।"
+    },
+    {
+     "concept_tag": "lambvat-sadish",
+     "learning_objective": "अदिश गुणनफल के शून्य होने से लंबवत सदिशों की पहचान करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH04-T6",
+   "topic_number": 6,
+   "title": "एक सदिश का किसी रेखा पर प्रक्षेप",
+   "ncert_sections": "10.6.2",
+   "concepts": [
+    {
+     "concept_tag": "prakshep",
+     "learning_objective": "एक सदिश का दूसरे सदिश पर प्रक्षेप ज्ञात करना।"
+    },
+    {
+     "concept_tag": "adish-gunanfal-gun",
+     "learning_objective": "अदिश गुणनफल के गुणों से सदिश व्यंजकों को सरल करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH04-T7",
+   "topic_number": 7,
+   "title": "दो सदिशों का सदिश गुणनफल",
+   "ncert_sections": "10.6.3",
+   "concepts": [
+    {
+     "concept_tag": "sadish-gunanfal",
+     "learning_objective": "सदिश गुणनफल की परिभाषा और गुणों का प्रयोग करके उसे घटक रूप में ज्ञात करना।"
+    },
+    {
+     "concept_tag": "kshetrafal",
+     "learning_objective": "सदिश गुणनफल से समांतर चतुर्भुज और त्रिभुज का क्षेत्रफल ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

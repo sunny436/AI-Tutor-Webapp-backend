@@ -1,0 +1,148 @@
+{
+ "chapter_id": "GEGP1-CH03",
+ "title": "A Peek Beyond the Point",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP1-CH03-T1",
+   "topic_number": 1,
+   "title": "The Need for Smaller Units and A Tenth Part",
+   "ncert_sections": "3.1, 3.2",
+   "concepts": [
+    {
+     "concept_tag": "smaller-units-for-precision",
+     "learning_objective": "Explain why a unit is split into smaller equal parts to measure lengths more exactly."
+    },
+    {
+     "concept_tag": "tenths-as-fractional-units",
+     "learning_objective": "Express and read lengths as units and one-tenths, and convert between mixed and tenths forms."
+    },
+    {
+     "concept_tag": "adding-subtracting-tenths",
+     "learning_objective": "Add and subtract lengths in units and tenths, regrouping 10 tenths as 1 unit."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH03-T2",
+   "topic_number": 2,
+   "title": "A Hundredth Part",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "hundredths-as-fractional-units",
+     "learning_objective": "Relate one-hundredths to one-tenths and units and write lengths using hundredths."
+    },
+    {
+     "concept_tag": "comparing-tenths-hundredths",
+     "learning_objective": "Compare lengths written with tenths and hundredths."
+    },
+    {
+     "concept_tag": "adding-subtracting-hundredths",
+     "learning_objective": "Add and subtract quantities in units, tenths and hundredths with regrouping."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH03-T3",
+   "topic_number": 3,
+   "title": "Decimal Place Value",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "base-ten-place-value-extension",
+     "learning_objective": "Explain how the Indian place value system is extended to tenths, hundredths and thousandths."
+    },
+    {
+     "concept_tag": "decimal-point-notation",
+     "learning_objective": "Write quantities given in units, tenths and hundredths in decimal notation."
+    },
+    {
+     "concept_tag": "reading-decimal-numbers",
+     "learning_objective": "Read decimal numbers correctly, digit by digit after the decimal point."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH03-T4",
+   "topic_number": 4,
+   "title": "Units of Measurement",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "length-conversion",
+     "learning_objective": "Convert between millimetres, centimetres and metres using decimals."
+    },
+    {
+     "concept_tag": "weight-conversion",
+     "learning_objective": "Convert between grams and kilograms using decimals."
+    },
+    {
+     "concept_tag": "rupee-paise-conversion",
+     "learning_objective": "Convert between paise and rupees using decimals."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH03-T5",
+   "topic_number": 5,
+   "title": "Locating and Comparing Decimals",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "decimals-on-number-line",
+     "learning_objective": "Locate decimal numbers on a number line divided into equal parts."
+    },
+    {
+     "concept_tag": "trailing-zeros-equivalence",
+     "learning_objective": "Recognise that zeros on the right of the last decimal digit do not change the value."
+    },
+    {
+     "concept_tag": "comparing-and-closest-decimals",
+     "learning_objective": "Compare decimals place by place and find the decimal closest to a given number."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH03-T6",
+   "topic_number": 6,
+   "title": "Addition and Subtraction of Decimals",
+   "ncert_sections": "3.7",
+   "concepts": [
+    {
+     "concept_tag": "adding-decimals",
+     "learning_objective": "Add decimal numbers by aligning place values and regrouping."
+    },
+    {
+     "concept_tag": "subtracting-decimals",
+     "learning_objective": "Subtract decimal numbers by aligning place values and regrouping."
+    },
+    {
+     "concept_tag": "decimal-sequences",
+     "learning_objective": "Identify the rule of a decimal sequence and extend it."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH03-T7",
+   "topic_number": 7,
+   "title": "More on the Decimal System",
+   "ncert_sections": "3.8",
+   "concepts": [
+    {
+     "concept_tag": "decimal-and-unit-errors",
+     "learning_objective": "Explain how misplacing a decimal point or mixing units changes a quantity."
+    },
+    {
+     "concept_tag": "decimal-like-non-decimal-notation",
+     "learning_objective": "Interpret notations such as hours and cricket overs that look decimal but are not based on ten."
+    },
+    {
+     "concept_tag": "history-of-decimal-notation",
+     "learning_objective": "Recall key steps in the history of decimal notation and the decimal separator."
+    }
+   ]
+  }
+ ]
+}

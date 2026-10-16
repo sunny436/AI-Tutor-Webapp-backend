@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LEMH2-CH05",
+ "title": "Three Dimensional Geometry",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEMH2-CH05-T1",
+   "topic_number": 1,
+   "title": "Direction cosines and direction ratios of a line",
+   "ncert_sections": "11.2",
+   "concepts": [
+    {
+     "concept_tag": "direction-cosines",
+     "learning_objective": "Define the direction cosines of a directed line and use the identity l^2 + m^2 + n^2 = 1."
+    },
+    {
+     "concept_tag": "direction-ratios-to-cosines",
+     "learning_objective": "Convert a set of direction ratios of a line into its direction cosines."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH05-T2",
+   "topic_number": 2,
+   "title": "Direction cosines of a line through two points",
+   "ncert_sections": "11.2.1",
+   "concepts": [
+    {
+     "concept_tag": "line-through-two-points",
+     "learning_objective": "Find the direction ratios and direction cosines of the line joining two given points."
+    },
+    {
+     "concept_tag": "collinearity-of-points",
+     "learning_objective": "Use proportional direction ratios to test whether three points are collinear."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH05-T3",
+   "topic_number": 3,
+   "title": "Equation of a line in space",
+   "ncert_sections": "11.3, 11.3.1",
+   "concepts": [
+    {
+     "concept_tag": "vector-equation-of-line",
+     "learning_objective": "Write and interpret the vector equation r = a + λb of a line through a point parallel to a vector."
+    },
+    {
+     "concept_tag": "cartesian-equation-of-line",
+     "learning_objective": "Write the Cartesian form of a line and convert between the vector and Cartesian forms."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH05-T4",
+   "topic_number": 4,
+   "title": "Angle between two lines",
+   "ncert_sections": "11.4",
+   "concepts": [
+    {
+     "concept_tag": "angle-between-lines",
+     "learning_objective": "Find the acute angle between two lines from their direction ratios, direction cosines or equations."
+    },
+    {
+     "concept_tag": "perpendicular-parallel-conditions",
+     "learning_objective": "Apply the conditions for two lines to be perpendicular or parallel."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH05-T5",
+   "topic_number": 5,
+   "title": "Shortest distance between skew lines",
+   "ncert_sections": "11.5, 11.5.1",
+   "concepts": [
+    {
+     "concept_tag": "skew-lines",
+     "learning_objective": "Identify skew lines as lines in space that are neither parallel nor intersecting."
+    },
+    {
+     "concept_tag": "shortest-distance-skew-lines",
+     "learning_objective": "Compute the shortest distance between two skew lines using the vector formula."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH05-T6",
+   "topic_number": 6,
+   "title": "Distance between parallel lines",
+   "ncert_sections": "11.5.2",
+   "concepts": [
+    {
+     "concept_tag": "parallel-lines-recognition",
+     "learning_objective": "Recognise parallel lines in space from proportional direction vectors and know they are coplanar."
+    },
+    {
+     "concept_tag": "distance-between-parallel-lines",
+     "learning_objective": "Compute the distance between two parallel lines using d = |b × (a2 − a1)| / |b|."
+    }
+   ]
+  }
+ ]
+}

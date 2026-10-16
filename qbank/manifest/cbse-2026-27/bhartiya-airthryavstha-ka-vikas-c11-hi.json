@@ -1,0 +1,1005 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "bhartiya-airthryavstha-ka-vikas-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "economics",
+  "language": "hindi",
+  "title": "Bhartiya Airthryavstha Ka Vikas",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khec1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHEC1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "स्वतंत्रता की पूर्व संध्या पर भारतीय अर्थव्यवस्था",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khec101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHEC1-CH01-T1",
+     "topic_number": 1,
+     "title": "औपनिवेशिक शासन में निम्न स्तरीय आर्थिक विकास",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "aupniveshik-arthik-niti",
+       "learning_objective": "औपनिवेशिक आर्थिक नीतियों के उद्देश्य और भारतीय अर्थव्यवस्था की संरचना पर उनके प्रभाव को समझना।"
+      },
+      {
+       "concept_tag": "rashtriya-aay-anuman",
+       "learning_objective": "औपनिवेशिक काल में राष्ट्रीय और प्रति व्यक्ति आय के अनुमानों तथा अनुमानकर्ताओं को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH01-T2",
+     "topic_number": 2,
+     "title": "कृषि क्षेत्र",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "krishi-gatihinta",
+       "learning_objective": "औपनिवेशिक काल में कृषि की गतिहीनता और निम्न उत्पादकता के कारणों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "zamindari-vyavastha",
+       "learning_objective": "ज़मींदारी व्यवस्था और राजस्व बंदोबस्त की शर्तों के कृषकों पर प्रभाव का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "krishi-ka-vanijyikaran",
+       "learning_objective": "कृषि के वाणिज्यीकरण का किसानों की आर्थिक दशा पर प्रभाव समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH01-T3",
+     "topic_number": 3,
+     "title": "औद्योगिक क्षेत्र",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "vi-audyogikaran",
+       "learning_objective": "ब्रिटिश शासन में भारत के व्यवस्थित वि-औद्योगीकरण के दोहरे उद्देश्य और परिणाम समझना।"
+      },
+      {
+       "concept_tag": "adhunik-udyog-vikas",
+       "learning_objective": "औपनिवेशिक भारत में आधुनिक उद्योगों के आरंभ, स्थान और स्वामित्व की पहचान करना।"
+      },
+      {
+       "concept_tag": "poonjigat-vastu-udyog",
+       "learning_objective": "पूँजीगत वस्तु उद्योग के अभाव और सार्वजनिक क्षेत्र के सीमित दायरे को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH01-T4",
+     "topic_number": 4,
+     "title": "विदेशी व्यापार",
+     "ncert_sections": "1.5",
+     "concepts": [
+      {
+       "concept_tag": "videshi-vyapar-sanrachna",
+       "learning_objective": "औपनिवेशिक काल के निर्यात-आयात की संरचना और व्यापार की दिशा पहचानना।"
+      },
+      {
+       "concept_tag": "niryat-adhishesh-dhan-nishkasan",
+       "learning_objective": "निर्यात अधिशेष और भारतीय धन के निष्कासन के संबंध का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "swez-nahar",
+       "learning_objective": "स्वेज़ नहर के खुलने से भारत के विदेशी व्यापार पर ब्रिटिश नियंत्रण पर प्रभाव समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH01-T5",
+     "topic_number": 5,
+     "title": "जनांकिकीय स्थिति",
+     "ncert_sections": "1.6",
+     "concepts": [
+      {
+       "concept_tag": "janganana-janankikiya-sankraman",
+       "learning_objective": "जनगणना के आरंभ और जनांकिकीय संक्रमण के चरणों की पहचान करना।"
+      },
+      {
+       "concept_tag": "samajik-vikas-sanketak",
+       "learning_objective": "साक्षरता, शिशु मृत्यु दर और जीवन प्रत्याशा जैसे संकेतकों से तत्कालीन जनसंख्या की दशा का आकलन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH01-T6",
+     "topic_number": 6,
+     "title": "व्यावसायिक संरचना",
+     "ncert_sections": "1.7",
+     "concepts": [
+      {
+       "concept_tag": "kshetrak-karyabal-hissa",
+       "learning_objective": "कृषि, विनिर्माण और सेवा क्षेत्रों में कार्यबल के वितरण को पहचानना और समझाना।"
+      },
+      {
+       "concept_tag": "kshetriya-vibhinnata",
+       "learning_objective": "व्यावसायिक संरचना में बढ़ती क्षेत्रीय विभिन्नता का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH01-T7",
+     "topic_number": 7,
+     "title": "आधारिक संरचना और निष्कर्ष",
+     "ncert_sections": "1.8, 1.9",
+     "concepts": [
+      {
+       "concept_tag": "railway-prabhav",
+       "learning_objective": "भारत में रेलवे के आरंभ और भारतीय अर्थव्यवस्था पर उसके दोहरे प्रभाव की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "aadharik-sanrachna-uddeshya",
+       "learning_objective": "सड़क, जलमार्ग, तार और डाक सेवाओं के विकास के पीछे औपनिवेशिक उद्देश्यों का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "swatantrata-ke-samay-chunautiyan",
+       "learning_objective": "स्वतंत्रता के समय भारत के सामने प्रमुख आर्थिक चुनौतियों की पहचान करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHEC1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "भारतीय अर्थव्यवस्था (1950-1990)",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khec102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHEC1-CH02-T1",
+     "topic_number": 1,
+     "title": "आर्थिक प्रणाली और योजना का परिचय",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "mishrit-arthvyavastha",
+       "learning_objective": "विद्यार्थी पूँजीवादी, समाजवादी और मिश्रित अर्थव्यवस्था में अंतर कर सकेगा।"
+      },
+      {
+       "concept_tag": "yojana-aayog",
+       "learning_objective": "विद्यार्थी योजना आयोग, पंचवर्षीय योजना और परिप्रेक्ष्य योजना का अर्थ समझा सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH02-T2",
+     "topic_number": 2,
+     "title": "पंचवर्षीय योजनाओं के लक्ष्य",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "samvriddhi-adhunikikaran",
+       "learning_objective": "विद्यार्थी संवृद्धि और आधुनिकीकरण के लक्ष्यों की व्याख्या कर सकेगा।"
+      },
+      {
+       "concept_tag": "atmanirbharta-samanta",
+       "learning_objective": "विद्यार्थी आत्मनिर्भरता और समानता के लक्ष्यों तथा लक्ष्यों के आपसी टकराव को समझ सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH02-T3",
+     "topic_number": 3,
+     "title": "कृषि: भूमि सुधार",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "bhumi-sudhar",
+       "learning_objective": "विद्यार्थी बिचौलियों के उन्मूलन और भूमि की अधिकतम सीमा निर्धारण के उद्देश्य व परिणाम बता सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH02-T4",
+     "topic_number": 4,
+     "title": "हरित क्रांति और कृषि सहायिकी",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "harit-kranti",
+       "learning_objective": "विद्यार्थी हरित क्रांति के चरणों, लाभों और जोखिमों का विश्लेषण कर सकेगा।"
+      },
+      {
+       "concept_tag": "vipanit-adhishesh",
+       "learning_objective": "विद्यार्थी विपणित अधिशेष का अर्थ और उसका अर्थव्यवस्था पर प्रभाव समझा सकेगा।"
+      },
+      {
+       "concept_tag": "krishi-sahayiki",
+       "learning_objective": "विद्यार्थी कृषि सहायिकी के पक्ष और विपक्ष के तर्कों का मूल्यांकन कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH02-T5",
+     "topic_number": 5,
+     "title": "उद्योग: औद्योगिक नीति और लघु उद्योग",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "audyogik-niti-1956",
+       "learning_objective": "विद्यार्थी औद्योगिक नीति प्रस्ताव 1956 के उद्योग वर्गीकरण और लाइसेंस व्यवस्था को समझा सकेगा।"
+      },
+      {
+       "concept_tag": "laghu-udyog",
+       "learning_objective": "विद्यार्थी लघु उद्योगों की परिभाषा, महत्त्व और संरक्षण के उपाय बता सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH02-T6",
+     "topic_number": 6,
+     "title": "व्यापार नीति: आयात प्रतिस्थापन और नीतियों का प्रभाव",
+     "ncert_sections": "2.5, 2.6",
+     "concepts": [
+      {
+       "concept_tag": "aayat-pratisthapan",
+       "learning_objective": "विद्यार्थी आयात प्रतिस्थापन, प्रशुल्क और कोटा का अर्थ व उद्देश्य समझा सकेगा।"
+      },
+      {
+       "concept_tag": "nitiyon-ka-mulyankan",
+       "learning_objective": "विद्यार्थी 1950-1990 की औद्योगिक व व्यापार नीतियों की उपलब्धियों और कमियों का मूल्यांकन कर सकेगा।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHEC1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "उदारीकरण, निजीकरण और वैश्वीकरण: एक समीक्षा",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khec103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHEC1-CH03-T1",
+     "topic_number": 1,
+     "title": "सुधारों की पृष्ठभूमि: 1991 का आर्थिक संकट",
+     "ncert_sections": "3.1, 3.2",
+     "concepts": [
+      {
+       "concept_tag": "sankat-1991",
+       "learning_objective": "1991 के भुगतान संतुलन संकट के कारणों और विश्व बैंक तथा अंतरराष्ट्रीय मुद्रा कोष की भूमिका को समझना।"
+      },
+      {
+       "concept_tag": "sthirikaran-sanrachnatmak-sudhar",
+       "learning_objective": "स्थिरीकरण उपायों और संरचनात्मक सुधार उपायों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH03-T2",
+     "topic_number": 2,
+     "title": "उदारीकरण: औद्योगिक क्षेत्रक और वित्तीय क्षेत्रक",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "audyogik-viniyaman-mukti",
+       "learning_objective": "औद्योगिक क्षेत्रक के विनियमन-मुक्ति के अंतर्गत किए गए परिवर्तनों की पहचान करना।"
+      },
+      {
+       "concept_tag": "vittiya-kshetrak-sudhar",
+       "learning_objective": "वित्तीय क्षेत्रक सुधारों में रिज़र्व बैंक की बदली हुई भूमिका को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH03-T3",
+     "topic_number": 3,
+     "title": "उदारीकरण: कर, विदेशी विनिमय तथा व्यापार और निवेश नीति सुधार",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "kar-sudhar",
+       "learning_objective": "प्रत्यक्ष और अप्रत्यक्ष कर सुधारों तथा वस्तु एवं सेवा कर के उद्देश्यों को समझना।"
+      },
+      {
+       "concept_tag": "videshi-vinimay-sudhar",
+       "learning_objective": "रुपये के अवमूल्यन और बाज़ार द्वारा विनिमय दर निर्धारण को समझाना।"
+      },
+      {
+       "concept_tag": "vyapar-niti-sudhar",
+       "learning_objective": "व्यापार नीति सुधारों के अंतर्गत मात्रात्मक प्रतिबंध, प्रशुल्क और आयात लाइसेंस में परिवर्तनों की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH03-T4",
+     "topic_number": 4,
+     "title": "निजीकरण",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "vinivesh",
+       "learning_objective": "निजीकरण के तरीकों और विनिवेश के अर्थ तथा उद्देश्य को समझना।"
+      },
+      {
+       "concept_tag": "navratna-niti",
+       "learning_objective": "महारत्न, नवरत्न और मिनीरत्न दर्जे के उद्देश्य और उदाहरणों की पहचान करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH03-T5",
+     "topic_number": 5,
+     "title": "वैश्वीकरण: बाह्य प्रापण और विश्व व्यापार संगठन",
+     "ncert_sections": "3.5",
+     "concepts": [
+      {
+       "concept_tag": "bahya-prapan",
+       "learning_objective": "बाह्य प्रापण का अर्थ और भारत के इसका गंतव्य बनने के कारण समझाना।"
+      },
+      {
+       "concept_tag": "vishva-vyapar-sangathan",
+       "learning_objective": "विश्व व्यापार संगठन की स्थापना, उद्देश्यों और भारत की भूमिका का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH03-T6",
+     "topic_number": 6,
+     "title": "सुधार काल में भारतीय अर्थव्यवस्था: एक मूल्यांकन",
+     "ncert_sections": "3.6",
+     "concepts": [
+      {
+       "concept_tag": "sudhar-uplabdhiyan",
+       "learning_objective": "सुधार काल में संवृद्धि, विदेशी निवेश और विदेशी मुद्रा भंडार में परिवर्तनों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "sudhar-alochna",
+       "learning_objective": "कृषि, उद्योग, विनिवेश और राजकोषीय नीति पर सुधारों के प्रभावों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHEC1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "भारत में मानव पूँजी निर्माण",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khec104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHEC1-CH04-T1",
+     "topic_number": 1,
+     "title": "मानव पूँजी का अर्थ",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "manav-poonji-arth",
+       "learning_objective": "विद्यार्थी मानव संसाधन और मानव पूँजी का अर्थ तथा मानव संसाधन को मानव पूँजी में बदलने की प्रक्रिया समझा सकेगा।"
+      },
+      {
+       "concept_tag": "manav-poonji-nivesh",
+       "learning_objective": "विद्यार्थी यह समझा सकेगा कि अधिक मानव पूँजी बनाने के लिए पहले से उपलब्ध मानव पूँजी और निवेश क्यों आवश्यक हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH04-T2",
+     "topic_number": 2,
+     "title": "मानव पूँजी के स्रोत",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "shiksha-swasthya-nivesh",
+       "learning_objective": "विद्यार्थी शिक्षा और स्वास्थ्य पर व्यय को मानव पूँजी के प्रमुख स्रोतों के रूप में पहचान सकेगा।"
+      },
+      {
+       "concept_tag": "prashikshan-pravas-soochna",
+       "learning_objective": "विद्यार्थी कार्यस्थल प्रशिक्षण, प्रवसन और सूचना पर व्यय को मानव पूँजी के स्रोत के रूप में समझा सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH04-T3",
+     "topic_number": 3,
+     "title": "भौतिक पूँजी और मानव पूँजी",
+     "ncert_sections": "बॉक्स 4.1",
+     "concepts": [
+      {
+       "concept_tag": "bhautik-manav-poonji-antar",
+       "learning_objective": "विद्यार्थी भौतिक पूँजी और मानव पूँजी में समानताओं और अंतरों की तुलना कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH04-T4",
+     "topic_number": 4,
+     "title": "मानव पूँजी और आर्थिक संवृद्धि",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "aarthik-samvriddhi-sambandh",
+       "learning_objective": "विद्यार्थी मानव पूँजी और आर्थिक संवृद्धि के बीच दोतरफा संबंध का विश्लेषण कर सकेगा।"
+      },
+      {
+       "concept_tag": "gyan-arthvyavastha",
+       "learning_objective": "विद्यार्थी राष्ट्रीय शिक्षा नीति 2020 के संदर्भ में ज्ञान आधारित अर्थव्यवस्था की ओर बढ़ने में कुशल मानव पूँजी की भूमिका समझा सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH04-T5",
+     "topic_number": 5,
+     "title": "मानव पूँजी और मानव विकास",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "manav-vikas-drishtikon",
+       "learning_objective": "विद्यार्थी मानव पूँजी और मानव विकास की अवधारणाओं में अंतर स्पष्ट कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH04-T6",
+     "topic_number": 6,
+     "title": "भारत में मानव पूँजी निर्माण की स्थिति और शिक्षा क्षेत्र",
+     "ncert_sections": "4.5, 4.6",
+     "concepts": [
+      {
+       "concept_tag": "sarkari-hastakshep",
+       "learning_objective": "विद्यार्थी शिक्षा और स्वास्थ्य क्षेत्रों में सरकारी हस्तक्षेप की आवश्यकता के तर्क दे सकेगा।"
+      },
+      {
+       "concept_tag": "shiksha-vyay",
+       "learning_objective": "विद्यार्थी शिक्षा पर सरकारी व्यय के दोनों मापों और अनुशंसित स्तर की व्याख्या कर सकेगा।"
+      },
+      {
+       "concept_tag": "shiksha-uplabdhiyan",
+       "learning_objective": "विद्यार्थी शैक्षिक उपलब्धियों के संकेतकों को पहचानकर आँकड़ों की व्याख्या कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH04-T7",
+     "topic_number": 7,
+     "title": "भविष्य की संभावनाएँ",
+     "ncert_sections": "4.7, 4.8",
+     "concepts": [
+      {
+       "concept_tag": "sabke-liye-shiksha",
+       "learning_objective": "विद्यार्थी सबके लिए शिक्षा के लक्ष्य की स्थिति और संवैधानिक प्रावधान को समझा सकेगा।"
+      },
+      {
+       "concept_tag": "ling-samta",
+       "learning_objective": "विद्यार्थी स्त्री शिक्षा को बढ़ावा देने की आवश्यकता के कारण बता सकेगा।"
+      },
+      {
+       "concept_tag": "uchch-shiksha-berozgari",
+       "learning_objective": "विद्यार्थी उच्च शिक्षा के तीखे पिरामिड और शिक्षित युवाओं में बेरोजगारी का विश्लेषण कर सकेगा।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHEC1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "ग्रामीण विकास",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khec105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHEC1-CH05-T1",
+     "topic_number": 1,
+     "title": "ग्रामीण विकास का अर्थ और महत्त्व",
+     "ncert_sections": "5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "gramin-vikas-arth",
+       "learning_objective": "ग्रामीण विकास के अर्थ और उसके प्रमुख क्षेत्रों को पहचानना।"
+      },
+      {
+       "concept_tag": "krishi-sankat-karan",
+       "learning_objective": "सुधारों के बाद कृषि संवृद्धि में गिरावट और ग्रामीण संकट के कारणों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH05-T2",
+     "topic_number": 2,
+     "title": "ग्रामीण क्षेत्रों में साख",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "gramin-sakh-sansthan",
+       "learning_objective": "ग्रामीण साख की आवश्यकता और बहु-संस्था व्यवस्था, नाबार्ड आदि संस्थाओं की भूमिका समझना।"
+      },
+      {
+       "concept_tag": "swayam-sahayata-samooh",
+       "learning_objective": "स्वयं सहायता समूहों और सूक्ष्म साख की कार्यप्रणाली तथा महत्त्व को समझना।"
+      },
+      {
+       "concept_tag": "gramin-banking-moolyankan",
+       "learning_objective": "ग्रामीण बैंकिंग की उपलब्धियों और कमियों का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH05-T3",
+     "topic_number": 3,
+     "title": "कृषि विपणन व्यवस्था",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "krishi-vipanan-arth",
+       "learning_objective": "कृषि विपणन का अर्थ और स्वतंत्रता से पूर्व किसानों की विपणन समस्याओं को समझना।"
+      },
+      {
+       "concept_tag": "sarkari-hastakshep-upay",
+       "learning_objective": "विपणन सुधार के लिए सरकार के चार उपायों को पहचानना।"
+      },
+      {
+       "concept_tag": "vaikalpik-vipanan",
+       "learning_objective": "उभरते वैकल्पिक विपणन माध्यमों और अनुबंध खेती के लाभों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH05-T4",
+     "topic_number": 4,
+     "title": "विविधीकरण: पशुपालन",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "vividhikaran-arth",
+       "learning_objective": "विविधीकरण के दो पहलुओं और उसकी आवश्यकता को समझना।"
+      },
+      {
+       "concept_tag": "pashupalan-dairy",
+       "learning_objective": "पशुपालन, डेयरी क्षेत्र और ऑपरेशन फ्लड की भूमिका को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH05-T5",
+     "topic_number": 5,
+     "title": "मत्स्य पालन, बागवानी और सूचना प्रौद्योगिकी",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "matsya-palan",
+       "learning_objective": "मत्स्य क्षेत्र की स्थिति और मछुआरा समुदाय की समस्याओं को समझना।"
+      },
+      {
+       "concept_tag": "bagwani",
+       "learning_objective": "बागवानी क्षेत्र के योगदान और रोजगार संभावनाओं को समझना।"
+      },
+      {
+       "concept_tag": "soochna-praudyogiki",
+       "learning_objective": "ग्रामीण विकास में सूचना प्रौद्योगिकी की भूमिका का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH05-T6",
+     "topic_number": 6,
+     "title": "धारणीय विकास और जैविक कृषि",
+     "ncert_sections": "5.6, 5.7",
+     "concepts": [
+      {
+       "concept_tag": "jaivik-krishi-labh",
+       "learning_objective": "जैविक कृषि के अर्थ और उसके लाभों को समझना।"
+      },
+      {
+       "concept_tag": "jaivik-krishi-seemayen",
+       "learning_objective": "जैविक कृषि की सीमाओं का मूल्यांकन करना और धारणीय विकास से उसका संबंध जोड़ना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHEC1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "रोज़गार: संवृद्धि, अनौपचारीकरण एवं अन्य मुद्दे",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khec106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHEC1-CH06-T1",
+     "topic_number": 1,
+     "title": "श्रमिक और रोज़गार",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "aarthik-kriya",
+       "learning_objective": "सकल राष्ट्रीय उत्पाद में योगदान देने वाली आर्थिक क्रियाओं को पहचानना।"
+      },
+      {
+       "concept_tag": "shramik-ki-paribhasha",
+       "learning_objective": "श्रमिक की परिभाषा में स्वनियोजित और अस्थायी रूप से काम से अनुपस्थित लोगों को सम्मिलित करना समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH06-T2",
+     "topic_number": 2,
+     "title": "रोज़गार में लोगों की सहभागिता",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "shramik-jansankhya-anupat",
+       "learning_objective": "श्रमिक-जनसंख्या अनुपात की गणना करना और उसका अर्थ समझाना।"
+      },
+      {
+       "concept_tag": "mahila-sahbhagita",
+       "learning_objective": "ग्रामीण-शहरी और स्त्री-पुरुष सहभागिता के अंतर के कारणों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH06-T3",
+     "topic_number": 3,
+     "title": "स्वनियोजित और भाड़े के श्रमिक",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "svaniyojit",
+       "learning_objective": "स्वनियोजित श्रमिक की पहचान करना और रोज़गार में उसके हिस्से को जानना।"
+      },
+      {
+       "concept_tag": "niyamit-aur-aniyat-shramik",
+       "learning_objective": "नियमित वेतनभोगी कर्मचारियों और अनियत मज़दूरी वाले श्रमिकों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH06-T4",
+     "topic_number": 4,
+     "title": "फर्मों, कारखानों और कार्यालयों में रोज़गार",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "teen-kshetrak",
+       "learning_objective": "आठ औद्योगिक प्रभागों को प्राथमिक, द्वितीयक और सेवा क्षेत्रक में वर्गीकृत करना।"
+      },
+      {
+       "concept_tag": "kshetrak-vaar-vitaran",
+       "learning_objective": "ग्रामीण, शहरी, पुरुष और महिला श्रमबल के क्षेत्रक-वार वितरण की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH06-T5",
+     "topic_number": 5,
+     "title": "रोज़गार की संवृद्धि और बदलती संरचना",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "rojgarviheen-samvriddhi",
+       "learning_objective": "सकल घरेलू उत्पाद और रोज़गार की संवृद्धि के अंतर से रोज़गारविहीन संवृद्धि को समझना।"
+      },
+      {
+       "concept_tag": "aniyatikaran",
+       "learning_objective": "श्रमबल के अनियतीकरण की प्रवृत्ति और उसके प्रभावों का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH06-T6",
+     "topic_number": 6,
+     "title": "भारतीय श्रमबल का अनौपचारीकरण",
+     "ncert_sections": "6.7",
+     "concepts": [
+      {
+       "concept_tag": "aupcharik-anaupcharik",
+       "learning_objective": "औपचारिक और अनौपचारिक क्षेत्रक के प्रतिष्ठानों तथा श्रमिकों की पहचान करना।"
+      },
+      {
+       "concept_tag": "anaupcharikaran-prabhav",
+       "learning_objective": "अनौपचारीकरण के कारणों और श्रमिकों पर उसके प्रभावों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH06-T7",
+     "topic_number": 7,
+     "title": "बेरोज़गारी",
+     "ncert_sections": "6.8",
+     "concepts": [
+      {
+       "concept_tag": "berojgari-paribhasha",
+       "learning_objective": "बेरोज़गारी की परिभाषा और उसके आँकड़ों के स्रोतों को जानना।"
+      },
+      {
+       "concept_tag": "berojgari-ke-prakar",
+       "learning_objective": "खुली, प्रच्छन्न और मौसमी बेरोज़गारी में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH06-T8",
+     "topic_number": 8,
+     "title": "सरकार और रोज़गार सृजन",
+     "ncert_sections": "6.9, 6.10",
+     "concepts": [
+      {
+       "concept_tag": "pratyaksh-apratyaksh-srijan",
+       "learning_objective": "सरकार द्वारा प्रत्यक्ष और अप्रत्यक्ष रोज़गार सृजन में अंतर करना।"
+      },
+      {
+       "concept_tag": "rojgar-karyakram",
+       "learning_objective": "महात्मा गांधी राष्ट्रीय ग्रामीण रोज़गार गारंटी अधिनियम और अन्य रोज़गार सृजन कार्यक्रमों को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHEC1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "पर्यावरण और धारणीय विकास",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khec107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHEC1-CH07-T1",
+     "topic_number": 1,
+     "title": "पर्यावरण: परिभाषा और कार्य",
+     "ncert_sections": "7.1, 7.2",
+     "concepts": [
+      {
+       "concept_tag": "paryavaran-paribhasha",
+       "learning_objective": "पर्यावरण को समस्त ग्रहीय विरासत तथा जैविक और अजैविक घटकों के समग्र रूप में परिभाषित करना।"
+      },
+      {
+       "concept_tag": "paryavaran-ke-karya",
+       "learning_objective": "पर्यावरण के चार प्रमुख कार्यों तथा नवीकरणीय और गैर-नवीकरणीय संसाधनों में अंतर को समझना।"
+      },
+      {
+       "concept_tag": "dharan-kshamta",
+       "learning_objective": "धारण क्षमता और अवशोषी क्षमता की सीमा पार होने से पर्यावरण संकट के उत्पन्न होने को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH07-T2",
+     "topic_number": 2,
+     "title": "पर्यावरण संकट और वैश्विक पर्यावरणीय समस्याएँ",
+     "ncert_sections": "7.2, बॉक्स 7.1, 7.2",
+     "concepts": [
+      {
+       "concept_tag": "mang-purti-ulat",
+       "learning_objective": "पर्यावरणीय गुणवत्ता के माँग-पूर्ति संबंध के उलटने और उसकी अवसर लागत का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "vaishvik-tapan",
+       "learning_objective": "वैश्विक तापन के कारणों, परिणामों और क्योटो सम्मेलन को समझना।"
+      },
+      {
+       "concept_tag": "ozone-kshay",
+       "learning_objective": "ओज़ोन क्षय के कारणों, प्रभावों और मॉन्ट्रियल प्रोटोकॉल को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH07-T3",
+     "topic_number": 3,
+     "title": "भारत के पर्यावरण की स्थिति",
+     "ncert_sections": "7.3, बॉक्स 7.3, 7.4",
+     "concepts": [
+      {
+       "concept_tag": "bharat-sansadhan-chunauti",
+       "learning_objective": "भारत के प्राकृतिक संसाधनों और निर्धनता तथा समृद्धि से उपजे पर्यावरणीय खतरों के द्विभाजन को समझना।"
+      },
+      {
+       "concept_tag": "bhumi-nimnikaran",
+       "learning_objective": "भूमि निम्नीकरण के कारकों और भूमि पर जनसंख्या दबाव का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "pradushan-niyantran",
+       "learning_objective": "वाहन प्रदूषण, प्रदूषण नियंत्रण बोर्डों और अप्पिको जैसे जन-आंदोलनों की भूमिका समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH07-T4",
+     "topic_number": 4,
+     "title": "धारणीय विकास",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "dharniya-vikas-avdharna",
+       "learning_objective": "धारणीय विकास की परिभाषा और उसमें 'आवश्यकता' तथा 'भावी पीढ़ी' के अर्थ को समझना।"
+      },
+      {
+       "concept_tag": "herman-daly-sujhav",
+       "learning_objective": "धारणीय विकास के लिए हरमन डेली के सुझावों को लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH07-T5",
+     "topic_number": 5,
+     "title": "धारणीय विकास की रणनीतियाँ: स्वच्छ ऊर्जा",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "gair-paramparagat-urja",
+       "learning_objective": "ताप और जल विद्युत के दुष्प्रभावों तथा पवन, सौर और लघु जलविद्युत जैसे विकल्पों को समझना।"
+      },
+      {
+       "concept_tag": "swachh-indhan",
+       "learning_objective": "ग्रामीण क्षेत्रों में एलपीजी और गोबर गैस तथा शहरी क्षेत्रों में सीएनजी के लाभ समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH07-T6",
+     "topic_number": 6,
+     "title": "धारणीय विकास की रणनीतियाँ: पारंपरिक ज्ञान और जैविक उपाय",
+     "ncert_sections": "7.5, 7.6",
+     "concepts": [
+      {
+       "concept_tag": "paramparik-gyan",
+       "learning_objective": "पारंपरिक ज्ञान और चिकित्सा पद्धतियों की पर्यावरण-अनुकूलता को समझना।"
+      },
+      {
+       "concept_tag": "jaivik-khad-keet-niyantran",
+       "learning_objective": "जैविक खाद और जैविक कीट नियंत्रण के लाभों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHEC1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "भारत और इसके पड़ोसी देशों के तुलनात्मक विकास अनुभव",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khec108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHEC1-CH08-T1",
+     "topic_number": 1,
+     "title": "परिचय: पड़ोसी देशों के विकास की तुलना क्यों",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "kshetriya-aarthik-samooh",
+       "learning_objective": "क्षेत्रीय और वैश्विक आर्थिक समूहों के बनने का उद्देश्य समझना।"
+      },
+      {
+       "concept_tag": "tulna-ka-mahatva",
+       "learning_objective": "पड़ोसी देशों की विकास प्रक्रियाओं को समझने का महत्व स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH08-T2",
+     "topic_number": 2,
+     "title": "विकास पथ: एक झलक (चीन और पाकिस्तान)",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "niyojan-ki-shuruaat",
+       "learning_objective": "भारत, चीन और पाकिस्तान में योजनाओं की शुरुआत की तुलना करना।"
+      },
+      {
+       "concept_tag": "cheen-ke-sudhar",
+       "learning_objective": "चीन की महान अग्रगामी छलाँग, कम्यून प्रणाली और 1978 के सुधारों को समझना।"
+      },
+      {
+       "concept_tag": "pakistan-ki-neetiyan",
+       "learning_objective": "पाकिस्तान की मिश्रित अर्थव्यवस्था और नीतिगत बदलावों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH08-T3",
+     "topic_number": 3,
+     "title": "जनांकिकीय संकेतक",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "ek-santan-neeti",
+       "learning_objective": "चीन की एक संतान नीति के परिणामों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "janankikiya-tulna",
+       "learning_objective": "तीनों देशों के जनसंख्या, घनत्व, लिंग अनुपात और प्रजनन दर की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH08-T4",
+     "topic_number": 4,
+     "title": "सकल घरेलू उत्पाद एवं क्षेत्रक",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "sanvriddhi-dar",
+       "learning_objective": "तीनों देशों की सकल घरेलू उत्पाद संवृद्धि दरों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "kshetrak-sanrachna",
+       "learning_objective": "उत्पादन और रोज़गार की क्षेत्रकवार संरचना की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH08-T5",
+     "topic_number": 5,
+     "title": "मानव विकास के संकेतक",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "manav-vikas-tulna",
+       "learning_objective": "मानव विकास के चुने हुए संकेतकों पर तीनों देशों का प्रदर्शन आँकना।"
+      },
+      {
+       "concept_tag": "swatantrata-sanketak",
+       "learning_objective": "मानव विकास सूचकांक की सीमाएँ और स्वतंत्रता संकेतकों की आवश्यकता समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHEC1-CH08-T6",
+     "topic_number": 6,
+     "title": "विकास रणनीतियाँ: एक मूल्यांकन और निष्कर्ष",
+     "ncert_sections": "8.6, 8.7",
+     "concepts": [
+      {
+       "concept_tag": "cheen-sudhar-safalta",
+       "learning_objective": "चीन के सुधारों की सफलता के कारणों का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "pakistan-sudhar-samasya",
+       "learning_objective": "पाकिस्तान में संवृद्धि की धीमी गति और निर्धनता के कारणों का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

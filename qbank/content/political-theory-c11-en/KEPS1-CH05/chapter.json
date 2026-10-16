@@ -1,0 +1,92 @@
+{
+ "chapter_id": "KEPS1-CH05",
+ "title": "Rights",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPS1-CH05-T1",
+   "topic_number": 1,
+   "title": "What are rights?",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "right-as-justified-claim",
+     "learning_objective": "Define a right as an entitlement or justified claim and distinguish it from a mere want."
+    },
+    {
+     "concept_tag": "grounds-dignity-well-being",
+     "learning_objective": "Explain dignity and well-being as grounds on which rights are claimed, and why harmful activities cannot be rights."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS1-CH05-T2",
+   "topic_number": 2,
+   "title": "Where do rights come from?",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "natural-rights",
+     "learning_objective": "Describe the seventeenth and eighteenth century theory of natural rights to life, liberty and property."
+    },
+    {
+     "concept_tag": "human-rights",
+     "learning_objective": "Explain the idea of universal human rights and how the list of human rights has expanded."
+    },
+    {
+     "concept_tag": "kant-human-dignity",
+     "learning_objective": "Explain Kant's moral conception of rights based on human dignity."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS1-CH05-T3",
+   "topic_number": 3,
+   "title": "Legal rights and the state",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "legal-recognition-of-rights",
+     "learning_objective": "Explain why legal and constitutional recognition gives rights a special status without being their basis."
+    },
+    {
+     "concept_tag": "rights-and-state-obligations",
+     "learning_objective": "Explain how rights require the state to act in some ways and to refrain from acting in others."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS1-CH05-T4",
+   "topic_number": 4,
+   "title": "Kinds of rights",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "political-rights-civil-liberties",
+     "learning_objective": "Identify political rights and civil liberties and explain how they make government accountable."
+    },
+    {
+     "concept_tag": "economic-and-cultural-rights",
+     "learning_objective": "Distinguish economic and cultural rights and explain why democracies recognise them."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS1-CH05-T5",
+   "topic_number": 5,
+   "title": "Rights and responsibilities",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "obligations-of-rights",
+     "learning_objective": "Explain the obligations that rights place on individuals, including the common good and respect for the rights of others."
+    },
+    {
+     "concept_tag": "balancing-and-vigilance",
+     "learning_objective": "Evaluate how rights are balanced when they conflict and why citizens must be vigilant about restrictions on civil liberties."
+    }
+   ]
+  }
+ ]
+}

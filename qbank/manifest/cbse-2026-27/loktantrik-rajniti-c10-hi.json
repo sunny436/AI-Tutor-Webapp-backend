@@ -1,0 +1,650 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "loktantrik-rajniti-c10-hi",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "social_science",
+  "language": "hindi",
+  "title": "Loktantrik Rajniti",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jhss4"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JHSS4-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "सत्ता की साझेदारी",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss401.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS4-CH01-T1",
+     "topic_number": 1,
+     "title": "बेल्जियम और श्रीलंका की सामाजिक बनावट",
+     "ncert_sections": "परिचय; बेल्जियम और श्रीलंका",
+     "concepts": [
+      {
+       "concept_tag": "belgium-jatiya-banavat",
+       "learning_objective": "बेल्जियम के भाषायी समुदायों की आबादी, क्षेत्र और उनके बीच तनाव के कारण समझना।"
+      },
+      {
+       "concept_tag": "shrilanka-jatiya-banavat",
+       "learning_objective": "श्रीलंका के प्रमुख जातीय समूहों, उनकी आबादी और धर्म की पहचान करना।"
+      },
+      {
+       "concept_tag": "jatiya-samooh-arth",
+       "learning_objective": "जातीय (एथनीक) सामाजिक विभाजन का अर्थ स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH01-T2",
+     "topic_number": 2,
+     "title": "श्रीलंका में बहुसंख्यकवाद",
+     "ncert_sections": "श्रीलंका में बहुसंख्यकवाद",
+     "concepts": [
+      {
+       "concept_tag": "bahusankhyakvad-arth",
+       "learning_objective": "बहुसंख्यकवाद की अवधारणा को परिभाषित करना।"
+      },
+      {
+       "concept_tag": "shrilanka-sarkari-kadam",
+       "learning_objective": "सिंहली प्रभुत्व कायम करने के लिए श्रीलंका सरकार के कदमों की पहचान करना।"
+      },
+      {
+       "concept_tag": "grihyuddh-parinam",
+       "learning_objective": "बहुसंख्यकवादी नीतियों से तमिलों के असंतोष और गृहयुद्ध के परिणामों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH01-T3",
+     "topic_number": 3,
+     "title": "बेल्जियम की समझदारी",
+     "ncert_sections": "बेल्जियम की समझदारी",
+     "concepts": [
+      {
+       "concept_tag": "belgium-model-pravdhan",
+       "learning_objective": "बेल्जियम के मॉडल के संवैधानिक प्रावधानों का वर्णन करना।"
+      },
+      {
+       "concept_tag": "samudayik-sarkar",
+       "learning_objective": "बेल्जियम की सामुदायिक सरकार के गठन और अधिकारों को समझना।"
+      },
+      {
+       "concept_tag": "belgium-model-safalta",
+       "learning_objective": "बेल्जियम के मॉडल की सफलता और श्रीलंका से उसकी तुलना का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH01-T4",
+     "topic_number": 4,
+     "title": "सत्ता की साझेदारी क्यों ज़रूरी है?",
+     "ncert_sections": "सत्ता की साझेदारी क्यों ज़रूरी है?",
+     "concepts": [
+      {
+       "concept_tag": "yuktiparak-tark",
+       "learning_objective": "सत्ता की साझेदारी के पक्ष में युक्तिपरक तर्क को समझाना।"
+      },
+      {
+       "concept_tag": "naitik-tark",
+       "learning_objective": "सत्ता की साझेदारी के पक्ष में नैतिक तर्क को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH01-T5",
+     "topic_number": 5,
+     "title": "सत्ता की साझेदारी के रूप",
+     "ncert_sections": "सत्ता की साझेदारी के रूप",
+     "concepts": [
+      {
+       "concept_tag": "kshaitij-vitaran",
+       "learning_objective": "शासन के अंगों के बीच सत्ता के क्षैतिज वितरण और नियंत्रण-संतुलन को समझना।"
+      },
+      {
+       "concept_tag": "urdhvadhar-vitaran",
+       "learning_objective": "विभिन्न स्तरों की सरकारों के बीच सत्ता के उर्ध्वाधर वितरण को पहचानना।"
+      },
+      {
+       "concept_tag": "samajik-samooh-aur-dal",
+       "learning_objective": "सामाजिक समूहों, राजनीतिक दलों और दबाव-समूहों के बीच सत्ता की साझेदारी को पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSS4-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "संघवाद",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss402.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS4-CH02-T1",
+     "topic_number": 1,
+     "title": "संघवाद क्या है: संघीय और एकात्मक शासन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sanghiya-banam-ekatmak-shasan",
+       "learning_objective": "विद्यार्थी संघीय और एकात्मक शासन व्यवस्था के बीच मूल अंतर पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "belgium-shrilanka-udaharan",
+       "learning_objective": "विद्यार्थी बेल्जियम और श्रीलंका के उदाहरण से संघीय व एकात्मक व्यवस्था को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH02-T2",
+     "topic_number": 2,
+     "title": "संघीय व्यवस्था की विशेषताएँ और गठन के तरीके",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sanghvad-ki-visheshtayen",
+       "learning_objective": "विद्यार्थी संघीय शासन व्यवस्था की प्रमुख विशेषताएँ और उसके दोहरे उद्देश्य बता सकेंगे।"
+      },
+      {
+       "concept_tag": "sangh-gathan-ke-tarike",
+       "learning_objective": "विद्यार्थी 'साथ आकर' और 'साथ रखकर' बने संघों में अंतर कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH02-T3",
+     "topic_number": 3,
+     "title": "भारत में संघीय व्यवस्था",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "teen-suchiyan-aur-avashisht-vishay",
+       "learning_objective": "विद्यार्थी संघ सूची, राज्य सूची, समवर्ती सूची और बाकी बचे विषयों के बँटवारे को लागू कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vishesh-darja-aur-kendra-shasit-pradesh",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि भारतीय संघ की सभी इकाइयों को बराबर अधिकार क्यों नहीं हैं।"
+      },
+      {
+       "concept_tag": "sanshodhan-aur-nyayapalika-ki-bhumika",
+       "learning_objective": "विद्यार्थी सत्ता के बँटवारे में बदलाव की प्रक्रिया और न्यायपालिका की भूमिका समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH02-T4",
+     "topic_number": 4,
+     "title": "भाषायी राज्य और भाषा-नीति",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhashayi-rajya",
+       "learning_objective": "विद्यार्थी भाषा के आधार पर राज्यों के गठन और उसके परिणामों का मूल्यांकन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "bhasha-niti",
+       "learning_objective": "विद्यार्थी भारत की लचीली भाषा-नीति और उसके महत्व को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH02-T5",
+     "topic_number": 5,
+     "title": "केंद्र-राज्य संबंध",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kendra-rajya-sambandh-mein-badlav",
+       "learning_objective": "विद्यार्थी समय के साथ केंद्र-राज्य संबंधों में आए बदलावों का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "gathbandhan-sarkar-aur-kshetriya-dal",
+       "learning_objective": "विद्यार्थी गठबंधन सरकारों और क्षेत्रीय दलों के उदय से संघवाद पर पड़े प्रभाव को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH02-T6",
+     "topic_number": 6,
+     "title": "भारत में विकेंद्रीकरण और स्थानीय शासन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vikendrikaran-ka-arth-aur-tark",
+       "learning_objective": "विद्यार्थी सत्ता के विकेंद्रीकरण का अर्थ और उसके पक्ष के तर्क बता सकेंगे।"
+      },
+      {
+       "concept_tag": "samvidhan-sanshodhan-1992",
+       "learning_objective": "विद्यार्थी 1992 के संविधान संशोधन से स्थानीय शासन में आए बदलाव पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "sthaniya-shasan-ka-dhancha",
+       "learning_objective": "विद्यार्थी ग्रामीण और शहरी स्थानीय शासन की संस्थाओं का ढाँचा समझा सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSS4-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "जाति, धर्म और लैंगिक मसले",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss403.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS4-CH03-T1",
+     "topic_number": 1,
+     "title": "लैंगिक मसले और राजनीति: निजी और सार्वजनिक का विभाजन",
+     "ncert_sections": "लैंगिक मसले और राजनीति; निजी और सार्वजनिक का विभाजन",
+     "concepts": [
+      {
+       "concept_tag": "shram-ka-laingik-vibhajan",
+       "learning_objective": "विद्यार्थी श्रम के लैंगिक विभाजन और उसके कारण सार्वजनिक जीवन में महिलाओं की नगण्य भूमिका को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "narivadi-andolan",
+       "learning_objective": "विद्यार्थी नारीवादी आंदोलनों की माँगों और लैंगिक मसले के राजनीतिकरण के परिणामों का वर्णन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH03-T2",
+     "topic_number": 2,
+     "title": "भारत में महिलाओं की स्थिति",
+     "ncert_sections": "निजी और सार्वजनिक का विभाजन (भारत में महिलाओं की स्थिति)",
+     "concepts": [
+      {
+       "concept_tag": "pitru-pradhan-samaj-bhedbhav",
+       "learning_objective": "विद्यार्थी पितृ-प्रधान समाज का अर्थ और शिक्षा, काम व मज़दूरी में महिलाओं से होने वाले भेदभाव को बता सकेंगे।"
+      },
+      {
+       "concept_tag": "ling-anupat-aur-hinsa",
+       "learning_objective": "विद्यार्थी गिरते लिंग अनुपात और महिलाओं के प्रति हिंसा के कारणों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH03-T3",
+     "topic_number": 3,
+     "title": "महिलाओं का राजनीतिक प्रतिनिधित्व",
+     "ncert_sections": "महिलाओं का राजनीतिक प्रतिनिधित्व",
+     "concepts": [
+      {
+       "concept_tag": "vidhayika-mein-mahila-pratinidhitva",
+       "learning_objective": "विद्यार्थी भारत की विधायिकाओं में महिलाओं के प्रतिनिधित्व की स्थिति बता सकेंगे।"
+      },
+      {
+       "concept_tag": "mahila-arakshan",
+       "learning_objective": "विद्यार्थी पंचायती राज संस्थाओं और नारी शक्ति वंदन अधिनियम 2023 के अंतर्गत महिला आरक्षण की व्यवस्था समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH03-T4",
+     "topic_number": 4,
+     "title": "धर्म, सांप्रदायिकता और राजनीति",
+     "ncert_sections": "धर्म, सांप्रदायिकता और राजनीति; सांप्रदायिकता",
+     "concepts": [
+      {
+       "concept_tag": "dharm-aur-rajniti",
+       "learning_objective": "विद्यार्थी राजनीति में धर्म की स्वीकार्य भूमिका और गांधीजी के विचार को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sampradayikta-arth-roop",
+       "learning_objective": "विद्यार्थी सांप्रदायिकता का अर्थ और राजनीति में उसके विभिन्न रूपों की पहचान कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH03-T5",
+     "topic_number": 5,
+     "title": "धर्मनिरपेक्ष शासन",
+     "ncert_sections": "धर्मनिरपेक्ष शासन",
+     "concepts": [
+      {
+       "concept_tag": "dharmnirpeksh-pravdhan",
+       "learning_objective": "विद्यार्थी उन संवैधानिक प्रावधानों को बता सकेंगे जो भारत को धर्मनिरपेक्ष देश बनाते हैं।"
+      },
+      {
+       "concept_tag": "sampradayikta-ka-mukabla",
+       "learning_objective": "विद्यार्थी मूल्यांकन कर सकेंगे कि सांप्रदायिकता का मुकाबला संविधान के साथ-साथ दैनिक जीवन और राजनीति में भी क्यों करना होगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH03-T6",
+     "topic_number": 6,
+     "title": "जातिगत असमानताएँ",
+     "ncert_sections": "जाति और राजनीति; जातिगत असमानताएँ; जातिगत असमानता (बॉक्स)",
+     "concepts": [
+      {
+       "concept_tag": "jati-vyavastha-badlav",
+       "learning_objective": "विद्यार्थी जाति व्यवस्था और वर्ण-व्यवस्था की विशेषताओं तथा आधुनिक भारत में उसमें आए बदलावों को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "jatigat-arthik-asamanta",
+       "learning_objective": "विद्यार्थी आँकड़ों के आधार पर जाति और आर्थिक हैसियत के संबंध का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH03-T7",
+     "topic_number": 7,
+     "title": "राजनीति में जाति और जाति के अंदर राजनीति",
+     "ncert_sections": "राजनीति में जाति; जाति के अंदर राजनीति",
+     "concepts": [
+      {
+       "concept_tag": "rajniti-mein-jati",
+       "learning_objective": "विद्यार्थी राजनीति में जाति के विभिन्न रूपों और जातिगत राजनीति के अच्छे-बुरे प्रभावों का मूल्यांकन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "chunav-keval-jati-nahin",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि भारत में चुनावी नतीजे केवल जाति के आधार पर तय क्यों नहीं होते।"
+      },
+      {
+       "concept_tag": "jati-ka-rajnitikaran",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि राजनीति जातिगत पहचान और जाति व्यवस्था को किस प्रकार प्रभावित करती है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSS4-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "राजनीतिक दल",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss404.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS4-CH04-T1",
+     "topic_number": 1,
+     "title": "राजनीतिक दल का अर्थ और कार्य",
+     "ncert_sections": "राजनीतिक दल का अर्थ; राजनीतिक दल के कार्य",
+     "concepts": [
+      {
+       "concept_tag": "rajnitik-dal-ka-arth",
+       "learning_objective": "विद्यार्थी राजनीतिक दल का अर्थ और उसके तीन प्रमुख हिस्सों को बता सकेंगे।"
+      },
+      {
+       "concept_tag": "rajnitik-dalon-ke-karya",
+       "learning_objective": "विद्यार्थी लोकतंत्र में राजनीतिक दलों के विभिन्न कार्यों को उदाहरणों सहित समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH04-T2",
+     "topic_number": 2,
+     "title": "राजनीतिक दलों की ज़रूरत",
+     "ncert_sections": "राजनीतिक दल की ज़रूरत",
+     "concepts": [
+      {
+       "concept_tag": "dalon-ke-bina-loktantra",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि दलों के बिना आधुनिक लोकतंत्र क्यों नहीं चल सकता।"
+      },
+      {
+       "concept_tag": "pratinidhi-loktantra-aur-dal",
+       "learning_objective": "विद्यार्थी प्रतिनिधित्व आधारित लोकतंत्र और राजनीतिक दलों के उदय के संबंध को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH04-T3",
+     "topic_number": 3,
+     "title": "कितने राजनीतिक दल?",
+     "ncert_sections": "कितने राजनीतिक दल?",
+     "concepts": [
+      {
+       "concept_tag": "ekdaliya-dvidaliya-bahudaliya",
+       "learning_objective": "विद्यार्थी एकदलीय, दो दलीय और बहुदलीय व्यवस्था में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "gathbandhan-ya-morcha",
+       "learning_objective": "विद्यार्थी बहुदलीय व्यवस्था में गठबंधन या मोर्चे का अर्थ और उदाहरण बता सकेंगे।"
+      },
+      {
+       "concept_tag": "daliya-vyavastha-ka-vikas",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि किसी देश की दलीय व्यवस्था उसकी परिस्थितियों से कैसे विकसित होती है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH04-T4",
+     "topic_number": 4,
+     "title": "राजनीतिक दलों में जन-भागीदारी",
+     "ncert_sections": "राजनीतिक दलों में जन-भागीदारी",
+     "concepts": [
+      {
+       "concept_tag": "dalon-par-jan-bharosa",
+       "learning_objective": "विद्यार्थी सर्वेक्षण के आधार पर राजनीतिक दलों पर लोगों के भरोसे के स्तर को बता सकेंगे।"
+      },
+      {
+       "concept_tag": "dalon-mein-jan-bhagidari",
+       "learning_objective": "विद्यार्थी भारत में दलों की सदस्यता और जुड़ाव से जुड़े आँकड़ों की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH04-T5",
+     "topic_number": 5,
+     "title": "राष्ट्रीय दल",
+     "ncert_sections": "राष्ट्रीय दल",
+     "concepts": [
+      {
+       "concept_tag": "dalon-ki-manyata",
+       "learning_objective": "विद्यार्थी चुनाव आयोग द्वारा दलों के पंजीकरण, मान्यता और उसकी शर्तों को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "pramukh-rashtriya-dal",
+       "learning_objective": "विद्यार्थी प्रमुख राष्ट्रीय दलों के गठन, विचारधारा और सामाजिक आधार को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH04-T6",
+     "topic_number": 6,
+     "title": "क्षेत्रीय दल",
+     "ncert_sections": "क्षेत्रीय दल",
+     "concepts": [
+      {
+       "concept_tag": "rajyiya-dal",
+       "learning_objective": "विद्यार्थी राज्यीय या क्षेत्रीय दलों की पहचान और प्रकृति को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "kshetriya-dal-aur-sanghvad",
+       "learning_objective": "विद्यार्थी क्षेत्रीय दलों के उभार का संघवाद और लोकतंत्र पर प्रभाव आँक सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH04-T7",
+     "topic_number": 7,
+     "title": "राजनीतिक दलों के लिए चुनौतियाँ",
+     "ncert_sections": "राजनीतिक दलों के लिए चुनौतियाँ",
+     "concepts": [
+      {
+       "concept_tag": "antarik-loktantra-aur-vanshvaad",
+       "learning_objective": "विद्यार्थी दलों में आंतरिक लोकतंत्र के अभाव और वंशवाद की चुनौती को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "dhan-aur-apradhi-tatva",
+       "learning_objective": "विद्यार्थी दलों में पैसे और अपराधी तत्वों की बढ़ती घुसपैठ की चुनौती पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "sarthak-vikalp-ka-abhav",
+       "learning_objective": "विद्यार्थी दलों के बीच सार्थक विकल्प के अभाव की चुनौती का अर्थ बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH04-T8",
+     "topic_number": 8,
+     "title": "दलों को कैसे सुधारा जा सकता है?",
+     "ncert_sections": "दलों को कैसे सुधारा जा सकता है?",
+     "concepts": [
+      {
+       "concept_tag": "haal-ke-sudhar-prayas",
+       "learning_objective": "विद्यार्थी दल-बदल कानून, शपथपत्र और चुनाव आयोग के आदेश जैसे सुधार प्रयासों को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sudhar-ke-sujhav",
+       "learning_objective": "विद्यार्थी दलों में सुधार के लिए दिए गए सुझावों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "jan-dabav-aur-bhagidari",
+       "learning_objective": "विद्यार्थी जन-दबाव और नागरिकों की भागीदारी से दल-सुधार के तरीकों का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JHSS4-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "लोकतंत्र के परिणाम",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss405.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS4-CH05-T1",
+     "topic_number": 1,
+     "title": "लोकतंत्र के परिणामों का मूल्यांकन कैसे करें",
+     "ncert_sections": "परिचय; लोकतंत्र के परिणामों का मूल्यांकन कैसे करें?",
+     "concepts": [
+      {
+       "concept_tag": "loktantra-shreshthata-ke-karan",
+       "learning_objective": "विद्यार्थी उन कारणों को पहचान सकेंगे जिनसे लोकतंत्र को अन्य शासन व्यवस्थाओं से बेहतर माना जाता है।"
+      },
+      {
+       "concept_tag": "siddhant-aur-vyavhar-ki-duvidha",
+       "learning_objective": "विद्यार्थी लोकतंत्र को सिद्धांत में अच्छा पर व्यवहार में कम संतोषजनक मानने की दुविधा समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "loktantra-shasan-ka-swaroop-bhar",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि लोकतंत्र शासन का एक स्वरूप भर है, सभी समस्याओं का जादुई हल नहीं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH05-T2",
+     "topic_number": 2,
+     "title": "उत्तरदायी, ज़िम्मेवार और वैध शासन",
+     "ncert_sections": "उत्तरदायी, ज़िम्मेवार और वैध शासन",
+     "concepts": [
+      {
+       "concept_tag": "jawabdehi-aur-pardarshita",
+       "learning_objective": "विद्यार्थी पारदर्शिता और जवाबदेही का अर्थ तथा लोकतंत्र में उनका महत्त्व समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "nirnay-prakriya-aur-prabhavsheelta",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि लोकतंत्र में धीमी निर्णय प्रक्रिया भी अधिक प्रभावी फ़ैसले क्यों देती है।"
+      },
+      {
+       "concept_tag": "vaidh-shasan",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि लोकतंत्र वैध शासन व्यवस्था होने के कारण अन्य शासनों से बेहतर है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH05-T3",
+     "topic_number": 3,
+     "title": "आर्थिक संवृद्धि और विकास",
+     "ncert_sections": "आर्थिक संवृद्धि और विकास; लोकतंत्र की आर्थिक उपलब्धियाँ (चार्ट 1)",
+     "concepts": [
+      {
+       "concept_tag": "arthik-samvriddhi-tulna",
+       "learning_objective": "विद्यार्थी चार्ट 1 के आधार पर लोकतंत्र और तानाशाही की आर्थिक विकास दरों की तुलना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vikas-ke-anya-karak",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि आर्थिक विकास शासन के प्रकार के अलावा कई अन्य कारकों पर निर्भर करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH05-T4",
+     "topic_number": 4,
+     "title": "असमानता और गरीबी में कमी",
+     "ncert_sections": "असमानता और गरीबी में कमी; चुने हुए देशों में आय की असमानता (चार्ट 2)",
+     "concepts": [
+      {
+       "concept_tag": "rajnitik-aur-arthik-samanta",
+       "learning_objective": "विद्यार्थी राजनीतिक समानता और बढ़ती आर्थिक असमानता के अंतर को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "aay-ki-asamanta",
+       "learning_objective": "विद्यार्थी चार्ट 2 के आँकड़ों से विभिन्न देशों में आय की असमानता का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "garibi-aur-loktantrik-sarkarein",
+       "learning_objective": "विद्यार्थी गरीब मतदाताओं की बड़ी संख्या के बावजूद गरीबी पर सरकारों के सीमित ध्यान को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH05-T5",
+     "topic_number": 5,
+     "title": "सामाजिक विविधताओं में सामंजस्य",
+     "ncert_sections": "सामाजिक विविधताओं में सामंजस्य",
+     "concepts": [
+      {
+       "concept_tag": "samajik-vibhajan-sambhalna",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि लोकतंत्र सामाजिक विभाजनों और टकरावों को कैसे सँभालता है।"
+      },
+      {
+       "concept_tag": "bahumat-aur-alpmat",
+       "learning_objective": "विद्यार्थी सामंजस्य के लिए बहुमत और अल्पमत से जुड़ी दो शर्तों को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS4-CH05-T6",
+     "topic_number": 6,
+     "title": "नागरिकों की गरिमा और आज़ादी",
+     "ncert_sections": "नागरिकों की गरिमा और आज़ादी",
+     "concepts": [
+      {
+       "concept_tag": "garima-aur-azadi",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि लोकतंत्र महिलाओं और वंचित जातियों की गरिमा व समानता के दावे को कैसे बल देता है।"
+      },
+      {
+       "concept_tag": "shikayatein-aur-safalta",
+       "learning_objective": "विद्यार्थी मूल्यांकन कर सकेंगे कि लोकतंत्र के प्रति शिकायतें उसकी सफलता की गवाही क्यों हैं।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

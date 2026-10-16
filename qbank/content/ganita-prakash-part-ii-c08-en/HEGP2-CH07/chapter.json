@@ -1,0 +1,132 @@
+{
+ "chapter_id": "HEGP2-CH07",
+ "title": "Area",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP2-CH07-T1",
+   "topic_number": 1,
+   "title": "Rectangles, squares and why perimeter is not area",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "area-of-rectangle",
+     "learning_objective": "Find the area of a rectangle and of the triangles cut off by its diagonal using length x width."
+    },
+    {
+     "concept_tag": "perimeter-vs-area",
+     "learning_objective": "Explain with examples why perimeter cannot be used as a measure of area."
+    },
+    {
+     "concept_tag": "area-of-path",
+     "learning_objective": "Find the area of a path around or across a rectangular plot by subtracting or adding rectangles."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH07-T2",
+   "topic_number": 2,
+   "title": "Area of a triangle",
+   "ncert_sections": "Triangles; Some Applications of the Area Formula",
+   "concepts": [
+    {
+     "concept_tag": "triangle-area-formula",
+     "learning_objective": "Use area of a triangle = 1/2 x base x height for any triangle."
+    },
+    {
+     "concept_tag": "altitude-from-area",
+     "learning_objective": "Find an unknown altitude by writing the area of a triangle with two different base-height pairs."
+    },
+    {
+     "concept_tag": "median-equal-areas",
+     "learning_objective": "Use the fact that a line from a vertex to the midpoint of the opposite side halves the area of a triangle."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH07-T3",
+   "topic_number": 3,
+   "title": "Triangles between parallel lines with a common base",
+   "ncert_sections": "Triangles between Parallel Lines with a Common Base",
+   "concepts": [
+    {
+     "concept_tag": "equal-area-common-base",
+     "learning_objective": "Recognise that triangles on the same base between the same parallels have equal areas."
+    },
+    {
+     "concept_tag": "minimum-perimeter-reflection",
+     "learning_objective": "Use reflection in a line to find the triangle of least perimeter on a given base."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH07-T4",
+   "topic_number": 4,
+   "title": "Area of any polygon",
+   "ncert_sections": "Area of any Polygon",
+   "concepts": [
+    {
+     "concept_tag": "polygon-triangulation",
+     "learning_objective": "Find the area of a polygon by dividing it into triangles."
+    },
+    {
+     "concept_tag": "quadrilateral-diagonal-heights",
+     "learning_objective": "Find the area of a quadrilateral from a diagonal and the perpendiculars dropped on it."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH07-T5",
+   "topic_number": 5,
+   "title": "Parallelogram and rhombus",
+   "ncert_sections": "Parallelogram; Rhombus",
+   "concepts": [
+    {
+     "concept_tag": "parallelogram-area",
+     "learning_objective": "Use area of a parallelogram = base x corresponding height."
+    },
+    {
+     "concept_tag": "dissection",
+     "learning_objective": "Explain how a parallelogram is dissected into a rectangle of equal area."
+    },
+    {
+     "concept_tag": "rhombus-diagonals-area",
+     "learning_objective": "Use area of a rhombus = 1/2 x product of its diagonals."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH07-T6",
+   "topic_number": 6,
+   "title": "Trapezium",
+   "ncert_sections": "Trapezium; Finding the Area Using Two Copies of the Trapezium",
+   "concepts": [
+    {
+     "concept_tag": "trapezium-area-formula",
+     "learning_objective": "Use area of a trapezium = 1/2 x height x sum of the parallel sides."
+    },
+    {
+     "concept_tag": "trapezium-two-copies",
+     "learning_objective": "Explain how two copies of a trapezium form a parallelogram and give the area formula."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH07-T7",
+   "topic_number": 7,
+   "title": "Areas in real life",
+   "ncert_sections": "Areas in Real Life",
+   "concepts": [
+    {
+     "concept_tag": "area-unit-conversion",
+     "learning_objective": "Convert between units of length and area such as in, cm, ft, in2 and cm2."
+    },
+    {
+     "concept_tag": "real-life-area",
+     "learning_objective": "Compute and estimate areas of everyday objects such as an A4 sheet."
+    }
+   ]
+  }
+ ]
+}

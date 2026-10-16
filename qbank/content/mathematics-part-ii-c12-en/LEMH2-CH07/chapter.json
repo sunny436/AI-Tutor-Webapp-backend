@@ -1,0 +1,88 @@
+{
+ "chapter_id": "LEMH2-CH07",
+ "title": "Probability",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEMH2-CH07-T1",
+   "topic_number": 1,
+   "title": "Conditional probability",
+   "ncert_sections": "13.2",
+   "concepts": [
+    {
+     "concept_tag": "conditional-probability-definition",
+     "learning_objective": "Define and compute the conditional probability P(E|F) = P(E ∩ F)/P(F) for events of a finite sample space."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH07-T2",
+   "topic_number": 2,
+   "title": "Properties of conditional probability",
+   "ncert_sections": "13.2.1",
+   "concepts": [
+    {
+     "concept_tag": "conditional-probability-properties",
+     "learning_objective": "Apply P(S|F) = P(F|F) = 1, the addition property for P((A ∪ B)|F) and P(E′|F) = 1 − P(E|F)."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH07-T3",
+   "topic_number": 3,
+   "title": "Multiplication theorem on probability",
+   "ncert_sections": "13.3",
+   "concepts": [
+    {
+     "concept_tag": "multiplication-rule",
+     "learning_objective": "Use P(E ∩ F) = P(E) P(F|E) = P(F) P(E|F), and its extension to three events, to find probabilities of successive events."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH07-T4",
+   "topic_number": 4,
+   "title": "Independent events",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "independent-events",
+     "learning_objective": "Test and use independence of events through P(E ∩ F) = P(E) P(F)."
+    },
+    {
+     "concept_tag": "independent-vs-mutually-exclusive",
+     "learning_objective": "Distinguish independent events from mutually exclusive events."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH07-T5",
+   "topic_number": 5,
+   "title": "Partition of a sample space and theorem of total probability",
+   "ncert_sections": "13.5.1, 13.5.2",
+   "concepts": [
+    {
+     "concept_tag": "partition-of-sample-space",
+     "learning_objective": "Identify when a set of events forms a partition of a sample space."
+    },
+    {
+     "concept_tag": "total-probability",
+     "learning_objective": "Find the probability of an event using the theorem of total probability over a partition."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH07-T6",
+   "topic_number": 6,
+   "title": "Bayes' theorem",
+   "ncert_sections": "13.5",
+   "concepts": [
+    {
+     "concept_tag": "bayes-theorem",
+     "learning_objective": "Apply Bayes' theorem to find the reverse probability of a cause given an observed event."
+    }
+   ]
+  }
+ ]
+}

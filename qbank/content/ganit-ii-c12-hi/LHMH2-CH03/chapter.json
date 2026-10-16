@@ -1,0 +1,92 @@
+{
+ "chapter_id": "LHMH2-CH03",
+ "title": "अवकल समीकरण",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH2-CH03-T1",
+   "topic_number": 1,
+   "title": "अवकल समीकरण की मूल संकल्पनाएँ: कोटि और घात",
+   "ncert_sections": "9.1, 9.2, 9.2.1, 9.2.2",
+   "concepts": [
+    {
+     "concept_tag": "avakal-samikaran-ki-koti",
+     "learning_objective": "किसी अवकल समीकरण में उपस्थित उच्चतम कोटि के अवकलज से उसकी कोटि ज्ञात करना।"
+    },
+    {
+     "concept_tag": "avakal-samikaran-ki-ghat",
+     "learning_objective": "अवकलजों में बहुपद समीकरण होने पर घात ज्ञात करना और पहचानना कि घात कब परिभाषित नहीं होती।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH03-T2",
+   "topic_number": 2,
+   "title": "अवकल समीकरण के व्यापक एवं विशिष्ट हल",
+   "ncert_sections": "9.3",
+   "concepts": [
+    {
+     "concept_tag": "vyapak-hal",
+     "learning_objective": "समझाना कि व्यापक हल में स्वेच्छ अचरों की संख्या समीकरण की कोटि के बराबर होती है।"
+    },
+    {
+     "concept_tag": "hal-ki-jaanch",
+     "learning_objective": "प्रतिस्थापन द्वारा जाँचना कि दिया गया फलन किसी अवकल समीकरण का हल है या नहीं।"
+    },
+    {
+     "concept_tag": "vishisht-hal",
+     "learning_objective": "दी गई प्रारंभिक शर्त से स्वेच्छ अचर का मान ज्ञात कर विशिष्ट हल प्राप्त करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH03-T3",
+   "topic_number": 3,
+   "title": "पृथक्करणीय चरों वाले अवकल समीकरण",
+   "ncert_sections": "9.4, 9.4.1",
+   "concepts": [
+    {
+     "concept_tag": "prithakkaraniya-pahchan",
+     "learning_objective": "पहचानना कि किसी अवकल समीकरण में चरों को अलग-अलग पक्षों में पृथक किया जा सकता है या नहीं।"
+    },
+    {
+     "concept_tag": "prithakkaraniya-hal",
+     "learning_objective": "चरों को पृथक कर समाकलन द्वारा व्यापक तथा विशिष्ट हल ज्ञात करना और उसे वृद्धि जैसी स्थितियों में लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH03-T4",
+   "topic_number": 4,
+   "title": "समघातीय अवकल समीकरण",
+   "ncert_sections": "9.4.2",
+   "concepts": [
+    {
+     "concept_tag": "samghatiya-phalan",
+     "learning_objective": "किसी फलन के समघातीय होने की जाँच करना और उसकी घात ज्ञात करना।"
+    },
+    {
+     "concept_tag": "y-barabar-vx-pratisthapan",
+     "learning_objective": "प्रतिस्थापन y = vx द्वारा समघातीय अवकल समीकरण को पृथक्करणीय रूप में बदलकर हल करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH03-T5",
+   "topic_number": 5,
+   "title": "रैखिक अवकल समीकरण",
+   "ncert_sections": "9.4.3",
+   "concepts": [
+    {
+     "concept_tag": "samakalan-gunak",
+     "learning_objective": "रैखिक अवकल समीकरण के मानक रूप से समाकलन गुणक ज्ञात करना।"
+    },
+    {
+     "concept_tag": "rekhik-samikaran-hal",
+     "learning_objective": "समाकलन गुणक की सहायता से प्रथम कोटि के रैखिक अवकल समीकरण का व्यापक हल ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

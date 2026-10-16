@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LEGY3-CH02",
+ "title": "Data Processing",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEGY3-CH02-T1",
+   "topic_number": 1,
+   "title": "Statistical techniques and measures of central tendency",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "statistical-techniques",
+     "learning_objective": "Distinguish measures of central tendency, dispersion and relationship by what each one describes."
+    },
+    {
+     "concept_tag": "central-tendency-concept",
+     "learning_objective": "Explain why a measure of central tendency is a representative figure for a data set."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH02-T2",
+   "topic_number": 2,
+   "title": "Mean from ungrouped data: direct and indirect methods",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "mean-ungrouped-direct",
+     "learning_objective": "Calculate the mean of ungrouped data by the direct method."
+    },
+    {
+     "concept_tag": "mean-ungrouped-indirect",
+     "learning_objective": "Calculate the mean of ungrouped data by coding with an assumed mean."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH02-T3",
+   "topic_number": 3,
+   "title": "Mean from grouped data: direct and indirect methods",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "mean-grouped-direct",
+     "learning_objective": "Calculate the mean of a frequency distribution using class midpoints."
+    },
+    {
+     "concept_tag": "mean-grouped-indirect",
+     "learning_objective": "Calculate the mean of grouped data from deviations about an assumed mean group."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH02-T4",
+   "topic_number": 4,
+   "title": "Median for ungrouped and grouped data",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "median-ungrouped",
+     "learning_objective": "Locate the median of an arranged series using the (N+1)/2 th item."
+    },
+    {
+     "concept_tag": "median-grouped",
+     "learning_objective": "Compute the median of grouped data with cumulative frequencies and the median formula."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH02-T5",
+   "topic_number": 5,
+   "title": "Mode for ungrouped data",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "mode-ungrouped",
+     "learning_objective": "Identify the mode of an ungrouped series."
+    },
+    {
+     "concept_tag": "modality-types",
+     "learning_objective": "Classify a series as unimodal, bimodal, trimodal, multimodal or without mode."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY3-CH02-T6",
+   "topic_number": 6,
+   "title": "Comparison of mean, median and mode",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "normal-distribution",
+     "learning_objective": "Describe the normal curve and the coincidence of mean, median and mode in it."
+    },
+    {
+     "concept_tag": "skewed-distribution",
+     "learning_objective": "Interpret the relative positions of mean, median and mode in skewed distributions."
+    }
+   ]
+  }
+ ]
+}

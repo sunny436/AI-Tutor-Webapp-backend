@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KEPH2-CH07",
+ "title": "Waves",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPH2-CH07-T1",
+   "topic_number": 1,
+   "title": "Mechanical waves; transverse and longitudinal waves",
+   "ncert_sections": "14.1, 14.2",
+   "concepts": [
+    {
+     "concept_tag": "mechanical-waves",
+     "learning_objective": "Explain that a mechanical wave transfers a disturbance and energy through an elastic medium without bulk flow of matter."
+    },
+    {
+     "concept_tag": "transverse-and-longitudinal",
+     "learning_objective": "Distinguish transverse and longitudinal waves and identify the media that can support each."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH07-T2",
+   "topic_number": 2,
+   "title": "Displacement relation in a progressive wave",
+   "ncert_sections": "14.3",
+   "concepts": [
+    {
+     "concept_tag": "wave-function-parameters",
+     "learning_objective": "Identify amplitude, phase, angular wave number and angular frequency in y = a sin(kx - wt + phi)."
+    },
+    {
+     "concept_tag": "wavelength-period-frequency",
+     "learning_objective": "Relate wavelength to k and period and frequency to w, and find phase differences between points."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH07-T3",
+   "topic_number": 3,
+   "title": "Speed of a travelling wave and waves on a string",
+   "ncert_sections": "14.4, 14.4.1",
+   "concepts": [
+    {
+     "concept_tag": "wave-speed-relation",
+     "learning_objective": "Apply v = w/k = lambda nu and recognise that the medium fixes speed while the source fixes frequency."
+    },
+    {
+     "concept_tag": "speed-on-stretched-string",
+     "learning_objective": "Calculate the speed of a transverse wave on a string from its tension and linear mass density."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH07-T4",
+   "topic_number": 4,
+   "title": "Speed of sound",
+   "ncert_sections": "14.4.2",
+   "concepts": [
+    {
+     "concept_tag": "speed-of-longitudinal-waves",
+     "learning_objective": "Use v = sqrt(B/rho) and v = sqrt(Y/rho) to explain the speed of longitudinal waves in fluids and solids."
+    },
+    {
+     "concept_tag": "newton-laplace-correction",
+     "learning_objective": "Explain Newton's formula for the speed of sound in a gas and the Laplace correction."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH07-T5",
+   "topic_number": 5,
+   "title": "Principle of superposition of waves",
+   "ncert_sections": "14.5",
+   "concepts": [
+    {
+     "concept_tag": "superposition-principle",
+     "learning_objective": "State the principle of superposition for overlapping waves and pulses."
+    },
+    {
+     "concept_tag": "interference-of-waves",
+     "learning_objective": "Find the resultant amplitude 2a cos(phi/2) of two identical waves differing in phase."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH07-T6",
+   "topic_number": 6,
+   "title": "Reflection of waves, standing waves and normal modes",
+   "ncert_sections": "14.6, 14.6.1",
+   "concepts": [
+    {
+     "concept_tag": "reflection-phase-change",
+     "learning_objective": "Describe the phase change on reflection at rigid and open boundaries."
+    },
+    {
+     "concept_tag": "standing-waves-string",
+     "learning_objective": "Locate nodes and antinodes and find the normal modes of a string fixed at both ends."
+    },
+    {
+     "concept_tag": "air-column-modes",
+     "learning_objective": "Find the normal modes of air columns closed at one end and open at both ends."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH07-T7",
+   "topic_number": 7,
+   "title": "Beats",
+   "ncert_sections": "14.7",
+   "concepts": [
+    {
+     "concept_tag": "beat-frequency",
+     "learning_objective": "Explain the formation of beats and calculate beat frequency and unknown frequencies from beat data."
+    }
+   ]
+  }
+ ]
+}

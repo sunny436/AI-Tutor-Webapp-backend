@@ -1,0 +1,136 @@
+{
+ "chapter_id": "JESC1-CH04",
+ "title": "Carbon and its Compounds",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JESC1-CH04-T1",
+   "topic_number": 1,
+   "title": "Bonding in carbon: the covalent bond",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "covalent-bond-formation",
+     "learning_objective": "Explain why carbon forms covalent bonds by sharing electrons rather than forming C4+ or C4- ions."
+    },
+    {
+     "concept_tag": "single-double-triple-bonds",
+     "learning_objective": "Identify single, double and triple covalent bonds from electron dot structures of simple molecules."
+    },
+    {
+     "concept_tag": "properties-of-covalent-compounds",
+     "learning_objective": "Relate the low melting points, boiling points and poor conductivity of covalent compounds to their bonding."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH04-T2",
+   "topic_number": 2,
+   "title": "Versatile nature of carbon: catenation, tetravalency and saturation",
+   "ncert_sections": "4.2, 4.2.1",
+   "concepts": [
+    {
+     "concept_tag": "catenation-and-tetravalency",
+     "learning_objective": "Explain how catenation and tetravalency allow carbon to form a very large number of stable compounds."
+    },
+    {
+     "concept_tag": "saturated-unsaturated-compounds",
+     "learning_objective": "Distinguish saturated from unsaturated carbon compounds using their bonds and structures."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH04-T3",
+   "topic_number": 3,
+   "title": "Chains, branches and rings",
+   "ncert_sections": "4.2.2",
+   "concepts": [
+    {
+     "concept_tag": "structural-isomerism",
+     "learning_objective": "Recognise structural isomers as compounds with the same molecular formula but different structures."
+    },
+    {
+     "concept_tag": "hydrocarbon-classes",
+     "learning_objective": "Classify hydrocarbons as alkanes, alkenes or alkynes and as open-chain or cyclic compounds."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH04-T4",
+   "topic_number": 4,
+   "title": "Functional groups, homologous series and nomenclature",
+   "ncert_sections": "4.2.3, 4.2.4, 4.2.5",
+   "concepts": [
+    {
+     "concept_tag": "functional-groups",
+     "learning_objective": "Identify heteroatoms and functional groups and explain how they decide the properties of a compound."
+    },
+    {
+     "concept_tag": "homologous-series",
+     "learning_objective": "Describe a homologous series and the gradation of physical properties along it."
+    },
+    {
+     "concept_tag": "nomenclature-of-carbon-compounds",
+     "learning_objective": "Name simple carbon compounds using the correct prefix or suffix for the functional group."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH04-T5",
+   "topic_number": 5,
+   "title": "Chemical properties of carbon compounds",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "combustion-of-carbon-compounds",
+     "learning_objective": "Explain complete and incomplete combustion and the nature of the flames they produce."
+    },
+    {
+     "concept_tag": "oxidation-of-alcohols",
+     "learning_objective": "Explain the oxidation of alcohols to carboxylic acids by oxidising agents."
+    },
+    {
+     "concept_tag": "addition-and-substitution-reactions",
+     "learning_objective": "Distinguish addition reactions of unsaturated hydrocarbons from substitution reactions of saturated ones."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH04-T6",
+   "topic_number": 6,
+   "title": "Ethanol and ethanoic acid",
+   "ncert_sections": "4.4, 4.4.1, 4.4.2",
+   "concepts": [
+    {
+     "concept_tag": "properties-of-ethanol",
+     "learning_objective": "Describe the properties and reactions of ethanol with sodium and with hot concentrated sulphuric acid."
+    },
+    {
+     "concept_tag": "reactions-of-ethanoic-acid",
+     "learning_objective": "Describe the properties of ethanoic acid and its reactions with bases, carbonates and hydrogencarbonates."
+    },
+    {
+     "concept_tag": "esterification-and-saponification",
+     "learning_objective": "Explain the formation of esters and their conversion back by saponification."
+    }
+   ]
+  },
+  {
+   "topic_id": "JESC1-CH04-T7",
+   "topic_number": 7,
+   "title": "Soaps and detergents",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "micelles-and-cleansing-action",
+     "learning_objective": "Explain how soap molecules form micelles that remove oily dirt."
+    },
+    {
+     "concept_tag": "hard-water-and-detergents",
+     "learning_objective": "Explain why soap forms scum in hard water and why detergents remain effective in it."
+    }
+   ]
+  }
+ ]
+}

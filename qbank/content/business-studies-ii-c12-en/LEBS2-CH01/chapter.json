@@ -1,0 +1,144 @@
+{
+ "chapter_id": "LEBS2-CH01",
+ "title": "Financial Management",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBS2-CH01-T1",
+   "topic_number": 1,
+   "title": "Business finance, financial management and its objective",
+   "ncert_sections": "Meaning of Business Finance; Financial Management; Importance; Objectives",
+   "concepts": [
+    {
+     "concept_tag": "business-finance-meaning",
+     "learning_objective": "Explain the meaning of business finance and why it is needed at every stage of a business."
+    },
+    {
+     "concept_tag": "financial-management-role",
+     "learning_objective": "Describe financial management and how its decisions shape the financial statements of a business."
+    },
+    {
+     "concept_tag": "wealth-maximisation",
+     "learning_objective": "Explain wealth maximisation as the primary objective of financial management."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH01-T2",
+   "topic_number": 2,
+   "title": "Investment decision (capital budgeting)",
+   "ncert_sections": "Investment Decision; Factors affecting Capital Budgeting Decision",
+   "concepts": [
+    {
+     "concept_tag": "investment-decision",
+     "learning_objective": "Distinguish long-term (capital budgeting) and short-term (working capital) investment decisions."
+    },
+    {
+     "concept_tag": "capital-budgeting-factors",
+     "learning_objective": "Explain the factors affecting capital budgeting decisions: cash flows, rate of return and investment criteria."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH01-T3",
+   "topic_number": 3,
+   "title": "Financing decision",
+   "ncert_sections": "Financing Decision; Factors Affecting Financing Decisions",
+   "concepts": [
+    {
+     "concept_tag": "financing-decision",
+     "learning_objective": "Explain the financing decision, financial risk and floatation cost of different sources of funds."
+    },
+    {
+     "concept_tag": "financing-decision-factors",
+     "learning_objective": "Apply the factors affecting financing decisions to business situations."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH01-T4",
+   "topic_number": 4,
+   "title": "Dividend decision",
+   "ncert_sections": "Dividend Decision; Factors Affecting Dividend Decision",
+   "concepts": [
+    {
+     "concept_tag": "dividend-decision",
+     "learning_objective": "Explain the dividend decision as the split of profit between dividend and retained earnings."
+    },
+    {
+     "concept_tag": "dividend-decision-factors",
+     "learning_objective": "Apply the factors affecting dividend decisions to business situations."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH01-T5",
+   "topic_number": 5,
+   "title": "Financial planning",
+   "ncert_sections": "Financial Planning; Importance",
+   "concepts": [
+    {
+     "concept_tag": "financial-planning-objectives",
+     "learning_objective": "State the meaning, process and twin objectives of financial planning."
+    },
+    {
+     "concept_tag": "financial-planning-importance",
+     "learning_objective": "Explain the importance of financial planning and how it differs from financial management."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH01-T6",
+   "topic_number": 6,
+   "title": "Capital structure and trading on equity",
+   "ncert_sections": "Capital Structure; EBIT-EPS analysis; Trading on Equity",
+   "concepts": [
+    {
+     "concept_tag": "capital-structure-meaning",
+     "learning_objective": "Explain capital structure, debt-equity ratio, financial leverage and the risk of debt."
+    },
+    {
+     "concept_tag": "trading-on-equity",
+     "learning_objective": "Use EBIT-EPS analysis to judge when trading on equity raises EPS."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH01-T7",
+   "topic_number": 7,
+   "title": "Factors affecting the choice of capital structure",
+   "ncert_sections": "Factors affecting the Choice of Capital Structure",
+   "concepts": [
+    {
+     "concept_tag": "coverage-ratios",
+     "learning_objective": "Calculate and interpret the interest coverage ratio and debt service coverage ratio."
+    },
+    {
+     "concept_tag": "capital-structure-factors",
+     "learning_objective": "Apply factors such as tax rate, cost of equity, risk, control and market conditions to capital structure choices."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS2-CH01-T8",
+   "topic_number": 8,
+   "title": "Fixed and working capital",
+   "ncert_sections": "Fixed and Working Capital: Meaning; Management of Fixed Capital; Working Capital; Factors",
+   "concepts": [
+    {
+     "concept_tag": "fixed-capital-management",
+     "learning_objective": "Explain the management of fixed capital and the factors affecting its requirement."
+    },
+    {
+     "concept_tag": "working-capital-factors",
+     "learning_objective": "Analyse the factors affecting the working capital requirement of a business."
+    },
+    {
+     "concept_tag": "net-working-capital",
+     "learning_objective": "Define current assets, current liabilities and net working capital."
+    }
+   ]
+  }
+ ]
+}

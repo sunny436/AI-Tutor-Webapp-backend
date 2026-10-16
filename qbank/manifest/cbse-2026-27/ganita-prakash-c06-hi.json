@@ -1,0 +1,1263 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "ganita-prakash-c06-hi",
+  "curriculum": "cbse",
+  "class_level": 6,
+  "subject_code": "mathematics",
+  "language": "hindi",
+  "title": "Ganita Prakash (Hindi)",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "fhgp1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "FHGP1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "गणित में पैटर्न",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhgp101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHGP1-CH01-T1",
+     "topic_number": 1,
+     "title": "गणित क्या है?",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "ganit-paitarn-aur-spashtikaran",
+       "learning_objective": "विद्यार्थी समझेंगे कि गणित पैटर्नों की खोज और उनके होने के कारणों का स्पष्टीकरण है।"
+      },
+      {
+       "concept_tag": "ganit-ke-dainik-upyog",
+       "learning_objective": "विद्यार्थी पहचानेंगे कि पैटर्नों की समझ ने विज्ञान, तकनीक और दैनिक जीवन में मानव की सहायता कैसे की है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH01-T2",
+     "topic_number": 2,
+     "title": "संख्याओं में पैटर्न",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "sankhya-siddhant",
+       "learning_objective": "विद्यार्थी जानेंगे कि पूर्ण संख्याओं के पैटर्नों का अध्ययन संख्या सिद्धांत कहलाता है।"
+      },
+      {
+       "concept_tag": "sankhya-anukram-niyam",
+       "learning_objective": "विद्यार्थी प्रमुख संख्या अनुक्रमों को पहचानकर उनके नियम से अगले पद ज्ञात करेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH01-T3",
+     "topic_number": 3,
+     "title": "संख्या अनुक्रमों का दृश्यांकन",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "chitriya-nirupan",
+       "learning_objective": "विद्यार्थी बिंदु-चित्रों से त्रिभुजाकार, वर्ग और घन संख्याओं के नामों का कारण समझेंगे।"
+      },
+      {
+       "concept_tag": "shadbhujakar-sankhyaen",
+       "learning_objective": "विद्यार्थी षड्भुजाकार संख्याओं का पैटर्न पहचानकर अगली संख्या ज्ञात करेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH01-T4",
+     "topic_number": 4,
+     "title": "संख्या अनुक्रमों के बीच संबंध",
+     "ncert_sections": "1.4",
+     "concepts": [
+      {
+       "concept_tag": "vishm-sankhyaon-ka-yog",
+       "learning_objective": "विद्यार्थी समझेंगे कि 1 से आरंभ होने वाली क्रमागत विषम संख्याओं का योग वर्ग संख्या होता है।"
+      },
+      {
+       "concept_tag": "upar-niche-jodna",
+       "learning_objective": "विद्यार्थी गणन संख्याओं को ऊपर और फिर नीचे जोड़कर वर्ग संख्याएँ प्राप्त करेंगे।"
+      },
+      {
+       "concept_tag": "anukramon-ke-sambandh",
+       "learning_objective": "विद्यार्थी त्रिभुजाकार संख्याओं और 2 की घातों से बनने वाले अन्य अनुक्रम पहचानेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH01-T5",
+     "topic_number": 5,
+     "title": "आकारों में पैटर्न",
+     "ncert_sections": "1.5",
+     "concepts": [
+      {
+       "concept_tag": "jyamiti-aakar-paitarn",
+       "learning_objective": "विद्यार्थी जानेंगे कि आकारों के पैटर्नों का अध्ययन ज्यामिति कहलाता है।"
+      },
+      {
+       "concept_tag": "aakar-anukram-pahchan",
+       "learning_objective": "विद्यार्थी सम बहुभुज, पूर्ण आलेख और कोच हिमकण जैसे आकार अनुक्रमों का नियम पहचानेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH01-T6",
+     "topic_number": 6,
+     "title": "संख्या अनुक्रमों से संबंध",
+     "ncert_sections": "1.6",
+     "concepts": [
+      {
+       "concept_tag": "sam-bahubhuj",
+       "learning_objective": "विद्यार्थी सम बहुभुज का अर्थ और उसकी भुजाओं से बनने वाला संख्या अनुक्रम समझेंगे।"
+      },
+      {
+       "concept_tag": "sampurn-aalekh-rekhaen",
+       "learning_objective": "विद्यार्थी पूर्ण आलेखों की रेखाओं की गिनती को त्रिभुजाकार संख्याओं से जोड़ेंगे।"
+      },
+      {
+       "concept_tag": "dherit-aakriti-koch",
+       "learning_objective": "विद्यार्थी ढेरित त्रिभुजों और कोच हिमकण से बनने वाले संख्या अनुक्रम ज्ञात करेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHGP1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "रेखाएँ और कोण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhgp102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHGP1-CH02-T1",
+     "topic_number": 1,
+     "title": "बिंदु, रेखाखंड, रेखा और किरण",
+     "ncert_sections": "2.1, 2.2, 2.3, 2.4",
+     "concepts": [
+      {
+       "concept_tag": "bindu-aur-rekhakhand",
+       "learning_objective": "विद्यार्थी बिंदु और रेखाखंड का अर्थ समझकर उन्हें सही प्रकार से नाम दे सकेंगे।"
+      },
+      {
+       "concept_tag": "rekha-aur-kiran",
+       "learning_objective": "विद्यार्थी रेखा और किरण में अंतर बताकर बिंदुओं से होकर जाने वाली रेखाओं की संख्या ज्ञात कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH02-T2",
+     "topic_number": 2,
+     "title": "कोण: शीर्ष, भुजाएँ और नामकरण",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "kon-ke-shirsh-aur-bhujaen",
+       "learning_objective": "विद्यार्थी किसी कोण के शीर्ष और भुजाओं को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "kon-ka-namkaran",
+       "learning_objective": "विद्यार्थी शीर्ष वाले अक्षर को मध्य में रखकर कोण का सही नाम लिख सकेंगे।"
+      },
+      {
+       "concept_tag": "kon-ka-akar-ghumav",
+       "learning_objective": "विद्यार्थी समझेंगे कि कोण का आकार घुमाव की मात्रा से तय होता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH02-T3",
+     "topic_number": 3,
+     "title": "कोणों की तुलना",
+     "ncert_sections": "2.6, 2.7",
+     "concepts": [
+      {
+       "concept_tag": "adhyaropan-dwara-tulna",
+       "learning_objective": "विद्यार्थी अध्यारोपण द्वारा दो कोणों की तुलना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vritt-dwara-tulna",
+       "learning_objective": "विद्यार्थी पारदर्शी वृत्ताकार कागज से बिना अध्यारोपण के कोणों की तुलना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "bhuja-lambai-aur-kon",
+       "learning_objective": "विद्यार्थी समझेंगे कि कोण का माप भुजाओं की लंबाई पर निर्भर नहीं करता।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH02-T4",
+     "topic_number": 4,
+     "title": "विशेष प्रकार के कोण",
+     "ncert_sections": "2.8",
+     "concepts": [
+      {
+       "concept_tag": "saral-kon-aur-samkon",
+       "learning_objective": "विद्यार्थी सरल कोण और समकोण को पहचानकर उनका संबंध बता सकेंगे।"
+      },
+      {
+       "concept_tag": "lamb-rekhaen",
+       "learning_objective": "विद्यार्थी समकोण पर मिलने वाली रेखाओं को लंब रेखाओं के रूप में पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "nyun-aur-adhik-kon",
+       "learning_objective": "विद्यार्थी घुमाव की मात्रा के आधार पर न्यून और अधिक कोण का वर्गीकरण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH02-T5",
+     "topic_number": 5,
+     "title": "कोणों को मापना",
+     "ncert_sections": "2.9",
+     "concepts": [
+      {
+       "concept_tag": "ansh-aur-360",
+       "learning_objective": "विद्यार्थी अंश की इकाई और पूर्ण घुमाव के 360° होने का अर्थ समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "chande-se-maapna",
+       "learning_objective": "विद्यार्थी चाँदे की मापनी पढ़कर कोण का माप ज्ञात कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kon-samdwibhajak",
+       "learning_objective": "विद्यार्थी कागज मोड़कर कोण समद्विभाजक बना और पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH02-T6",
+     "topic_number": 6,
+     "title": "कोणों को बनाना और कोणों के प्रकार",
+     "ncert_sections": "2.10, 2.11",
+     "concepts": [
+      {
+       "concept_tag": "chande-se-kon-banana",
+       "learning_objective": "विद्यार्थी चाँदे की सहायता से दिए गए माप का कोण बना सकेंगे।"
+      },
+      {
+       "concept_tag": "kon-ke-prakar-maap",
+       "learning_objective": "विद्यार्थी अंश माप के आधार पर न्यून, समकोण, अधिक, सरल और प्रतिवर्ती कोण पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "dainik-jeevan-mein-kon",
+       "learning_objective": "विद्यार्थी घड़ी और अशोक चक्र जैसी दैनिक जीवन की वस्तुओं में कोणों के माप ज्ञात कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHGP1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "संख्याओं का खेल",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhgp103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHGP1-CH03-T1",
+     "topic_number": 1,
+     "title": "संख्याएँ हमें कुछ बता सकती हैं: लंबे पड़ोसियों की गिनती",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "lambe-padosiyon-ki-ginti",
+       "learning_objective": "पंक्ति में खड़ा प्रत्येक बच्चा अपने से लंबे पड़ोसियों की संख्या बताता है, इस नियम को समझकर लागू करना।"
+      },
+      {
+       "concept_tag": "vyavastha-ka-tark",
+       "learning_objective": "दिए गए संख्या-अनुक्रम के लिए बच्चों की संभव व्यवस्था पर तर्क करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH03-T2",
+     "topic_number": 2,
+     "title": "महाकोष्ठ",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "mahakoshth-ki-pehchan",
+       "learning_objective": "समीपवर्ती कोष्ठों से तुलना करके महाकोष्ठ की पहचान करना।"
+      },
+      {
+       "concept_tag": "mahakoshth-ke-pattern",
+       "learning_objective": "सारणी में महाकोष्ठों की अधिकतम संख्या और सबसे बड़ी या सबसे छोटी संख्या वाले कोष्ठ पर तर्क करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH03-T3",
+     "topic_number": 3,
+     "title": "संख्या रेखा पर पैटर्न और अंकों के साथ खेल",
+     "ncert_sections": "3.3, 3.4",
+     "concepts": [
+      {
+       "concept_tag": "sankhya-rekha-par-kram",
+       "learning_objective": "संख्याओं को संख्या रेखा पर उनके उचित स्थान और क्रम में रखना।"
+      },
+      {
+       "concept_tag": "ankon-wali-sankhyaon-ki-ginti",
+       "learning_objective": "निश्चित अंकों वाली संख्याओं और किसी अंक के आने की बारंबारता की गिनती करना।"
+      },
+      {
+       "concept_tag": "ankon-ka-yog",
+       "learning_objective": "दिए गए अंकों के योग वाली सबसे छोटी और सबसे बड़ी संख्याएँ ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH03-T4",
+     "topic_number": 4,
+     "title": "विलोमाक्षर (पैलिंड्रोम) पैटर्न और कापरेकर की जादुई संख्या",
+     "ncert_sections": "3.5, 3.6",
+     "concepts": [
+      {
+       "concept_tag": "vilomakshar-sankhya",
+       "learning_objective": "पैलिंड्रोम संख्याओं को पहचानना और 'पलटें और जोड़ें' प्रक्रिया लागू करना।"
+      },
+      {
+       "concept_tag": "kaprekar-sthirank",
+       "learning_objective": "4 अंकों की संख्या पर कापरेकर प्रक्रिया लागू करके स्थिरांक 6174 तक पहुँचना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH03-T5",
+     "topic_number": 5,
+     "title": "घड़ी और कैलेंडर की संख्याएँ, मानसिक गणित",
+     "ncert_sections": "3.7, 3.8",
+     "concepts": [
+      {
+       "concept_tag": "ghadi-calendar-pattern",
+       "learning_objective": "घड़ी के समय और तिथियों में पैलिंड्रोम जैसे पैटर्न पहचानना।"
+      },
+      {
+       "concept_tag": "mansik-ganit",
+       "learning_objective": "दी गई संख्याओं को जोड़-घटाकर मन ही मन वांछित योग बनाना।"
+      },
+      {
+       "concept_tag": "ank-aur-sankriyaen",
+       "learning_objective": "जोड़ और घटाव के परिणाम के अंकों की संख्या के बारे में हमेशा, कभी-कभी या कभी नहीं का निर्णय करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH03-T6",
+     "topic_number": 6,
+     "title": "संख्या पैटर्न और कोलाट्ज़ अनुमान",
+     "ncert_sections": "3.9, 3.10",
+     "concepts": [
+      {
+       "concept_tag": "sankhya-pattern-yog",
+       "learning_objective": "व्यवस्थित संख्या पैटर्न का योग एक-एक जोड़ने की बजाय गुणा जैसी शीघ्र विधि से ज्ञात करना।"
+      },
+      {
+       "concept_tag": "kolatz-anuman",
+       "learning_objective": "कोलाट्ज़ अनुक्रम का नियम लागू करना और इस अनसुलझे अनुमान के बारे में तर्क करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH03-T7",
+     "topic_number": 7,
+     "title": "सरल आकलन तथा खेल और जीतने की युक्तियाँ",
+     "ncert_sections": "3.11, 3.12",
+     "concepts": [
+      {
+       "concept_tag": "saral-aaklan",
+       "learning_objective": "जहाँ सही संख्या आवश्यक न हो वहाँ तर्कसंगत आकलन करना।"
+      },
+      {
+       "concept_tag": "jeetne-ki-yukti",
+       "learning_objective": "जोड़ने वाले संख्या-खेलों में जीतने वाली संख्याओं का पैटर्न पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHGP1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "आँकड़ों का प्रबंधन और प्रस्तुतिकरण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhgp104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHGP1-CH04-T1",
+     "topic_number": 1,
+     "title": "आँकड़ों का संग्रहण और संगठन",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "aankde-sangrahan",
+       "learning_objective": "आँकड़े क्या हैं, यह बताना और पहचानना कि किन प्रश्नों के उत्तर के लिए आँकड़े संग्रहित करने पड़ते हैं।"
+      },
+      {
+       "concept_tag": "milan-chinh-barambarta",
+       "learning_objective": "मिलान चिह्नों से आँकड़ों को सारणी में संगठित करना और बारंबारता ज्ञात करना।"
+      },
+      {
+       "concept_tag": "aarohi-kram-vyavastha",
+       "learning_objective": "आँकड़ों को आरोही क्रम में व्यवस्थित करके उनसे प्रश्नों के उत्तर ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH04-T2",
+     "topic_number": 2,
+     "title": "चित्रालेख",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "chitralekh-padhna",
+       "learning_objective": "चित्रालेख को पढ़कर प्रतीकों की संख्या से वास्तविक बारंबारता ज्ञात करना।"
+      },
+      {
+       "concept_tag": "chitralekh-paimana",
+       "learning_objective": "चित्रालेख के लिए उपयुक्त पैमाना या कुंजी चुनना और उसके अनुसार प्रतीक बनाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH04-T3",
+     "topic_number": 3,
+     "title": "दंड आलेख",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "dand-aalekh-padhna",
+       "learning_objective": "दंड आलेख को पढ़कर मान ज्ञात करना, उनकी तुलना करना और निष्कर्ष निकालना।"
+      },
+      {
+       "concept_tag": "dand-aalekh-visheshtayen",
+       "learning_objective": "दंड आलेख की विशेषताएँ बताना, जैसे समान चौड़ाई के दंड, समान दूरी और शून्य से प्रारंभ पैमाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH04-T4",
+     "topic_number": 4,
+     "title": "दंड आलेख खींचना",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "paimana-chunna",
+       "learning_objective": "आँकड़ों के न्यूनतम और अधिकतम मानों को देखकर दंड आलेख के लिए उपयुक्त पैमाना चुनना।"
+      },
+      {
+       "concept_tag": "dand-unchai-ganana",
+       "learning_objective": "पैमाने के अनुसार प्रत्येक दंड की ऊँचाई इकाइयों में परिकलित करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH04-T5",
+     "topic_number": 5,
+     "title": "कलात्मक और सौंदर्यात्मक विचार",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "kshaitij-urdhvadhar-dand",
+       "learning_objective": "यह तय करना कि आँकड़ों के लिए क्षैतिज दंड उपयुक्त हैं या ऊर्ध्वाधर दंड (स्तंभ आलेख)।"
+      },
+      {
+       "concept_tag": "infographic-bhramak",
+       "learning_objective": "इन्फोग्राफिक्स को पढ़ते और बनाते समय पहचानना कि आकर्षक चित्र कब भ्रामक हो सकते हैं।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHGP1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "अभाज्य समय",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhgp105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHGP1-CH05-T1",
+     "topic_number": 1,
+     "title": "सार्व गुणज और सार्व गुणनखंड",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "saarv-gunaj",
+       "learning_objective": "विद्यार्थी इडली-वड़ा खेल की सहायता से दो या अधिक संख्याओं के सार्व गुणज ज्ञात कर सकेंगे।"
+      },
+      {
+       "concept_tag": "saarv-gunankhand",
+       "learning_objective": "विद्यार्थी छलाँग वाले खेल की सहायता से दो संख्याओं के सार्व गुणनखंड ज्ञात कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH05-T2",
+     "topic_number": 2,
+     "title": "अभाज्य संख्याएँ",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "abhajya-aur-bhajya-sankhya",
+       "learning_objective": "विद्यार्थी गुणनखंडों की संख्या के आधार पर अभाज्य और भाज्य संख्याओं में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "iratosthenes-ki-chhalni",
+       "learning_objective": "विद्यार्थी इराटोस्थेनीस की छलनी से अभाज्य संख्याएँ ज्ञात करने की विधि समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "judwan-abhajya",
+       "learning_objective": "विद्यार्थी 100 तक के जुड़वाँ अभाज्य युग्म पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH05-T3",
+     "topic_number": 3,
+     "title": "सह-अभाज्य संख्याएँ",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "sah-abhajya-paribhasha",
+       "learning_objective": "विद्यार्थी सह-अभाज्य संख्याओं की परिभाषा बताकर सह-अभाज्य युग्म पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "surakshit-yugm",
+       "learning_objective": "विद्यार्थी खजाने वाले खेल में सुरक्षित युग्मों का संबंध सह-अभाज्यता से जोड़ सकेंगे।"
+      },
+      {
+       "concept_tag": "pratham-saarv-gunaj-aur-gunanphal",
+       "learning_objective": "विद्यार्थी समझेंगे कि सह-अभाज्य संख्याओं का पहला सार्व गुणज उनके गुणनफल के बराबर होता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH05-T4",
+     "topic_number": 4,
+     "title": "अभाज्य गुणनखंडन",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "abhajya-gunankhandan",
+       "learning_objective": "विद्यार्थी किसी भाज्य संख्या को अभाज्य संख्याओं के गुणनफल के रूप में लिख सकेंगे।"
+      },
+      {
+       "concept_tag": "gunankhandan-ki-advitiyata",
+       "learning_objective": "विद्यार्थी समझेंगे कि क्रम को छोड़कर किसी संख्या का अभाज्य गुणनखंडन एक ही होता है।"
+      },
+      {
+       "concept_tag": "gunanphal-ka-gunankhandan",
+       "learning_objective": "विद्यार्थी दो संख्याओं के गुणनफल का अभाज्य गुणनखंडन बिना गुणा किए ज्ञात कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH05-T5",
+     "topic_number": 5,
+     "title": "अभाज्य गुणनखंडन से सह-अभाज्यता और विभाज्यता की जाँच",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "gunankhandan-se-sah-abhajyata",
+       "learning_objective": "विद्यार्थी अभाज्य गुणनखंडन की तुलना करके जाँच सकेंगे कि दो संख्याएँ सह-अभाज्य हैं या नहीं।"
+      },
+      {
+       "concept_tag": "gunankhandan-se-vibhajyata",
+       "learning_objective": "विद्यार्थी अभाज्य गुणनखंडन से जाँच सकेंगे कि एक संख्या दूसरी से विभाजित होती है या नहीं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH05-T6",
+     "topic_number": 6,
+     "title": "संख्याओं की विभाज्यता की जाँच",
+     "ncert_sections": "5.5",
+     "concepts": [
+      {
+       "concept_tag": "das-paanch-do-se-vibhajyata",
+       "learning_objective": "विद्यार्थी अंतिम अंक देखकर 10, 5 और 2 से विभाज्यता की जाँच कर सकेंगे।"
+      },
+      {
+       "concept_tag": "chaar-aur-aath-se-vibhajyata",
+       "learning_objective": "विद्यार्थी अंतिम दो या तीन अंकों से 4 और 8 से विभाज्यता की जाँच कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH05-T7",
+     "topic_number": 7,
+     "title": "संख्याओं के साथ मनोरंजन",
+     "ncert_sections": "5.6",
+     "concepts": [
+      {
+       "concept_tag": "vishesh-sankhyaen",
+       "learning_objective": "विद्यार्थी संख्याओं के गुणों के आधार पर बता सकेंगे कि किसी समूह में कौन-सी संख्या विशेष है।"
+      },
+      {
+       "concept_tag": "abhajya-paheli",
+       "learning_objective": "विद्यार्थी गुणनफल वाली अभाज्य पहेली को अभाज्य गुणनखंडन से हल कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHGP1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "परिमाप और क्षेत्रफल",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhgp106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHGP1-CH06-T1",
+     "topic_number": 1,
+     "title": "बहुभुज, आयत, वर्ग और त्रिभुज का परिमाप",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "parimap-ki-paribhasha",
+       "learning_objective": "किसी बंद समतल आकृति के परिमाप को उसकी सीमा के साथ तय की गई कुल दूरी के रूप में समझना।"
+      },
+      {
+       "concept_tag": "aayat-varg-parimap-sutra",
+       "learning_objective": "आयत और वर्ग के परिमाप के सूत्रों का प्रयोग करके परिमाप या लुप्त भुजा ज्ञात करना।"
+      },
+      {
+       "concept_tag": "tribhuj-parimap",
+       "learning_objective": "त्रिभुज का परिमाप उसकी तीनों भुजाओं के योग से ज्ञात करना और लुप्त भुजा निकालना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH06-T2",
+     "topic_number": 2,
+     "title": "परिमाप के अनुप्रयोग और सम बहुभुज",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "parimap-anuprayog-chakkar-baad",
+       "learning_objective": "चक्कर लगाने, फीता लगाने और बाड़ के व्यय जैसी दैनिक समस्याओं में परिमाप का प्रयोग करना।"
+      },
+      {
+       "concept_tag": "sam-bahubhuj-parimap",
+       "learning_objective": "सम बहुभुज को पहचानना और उसका परिमाप भुजाओं की संख्या × एक भुजा से ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH06-T3",
+     "topic_number": 3,
+     "title": "आयत और वर्ग का क्षेत्रफल",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "kshetrafal-paribhasha",
+       "learning_objective": "किसी बंद आकृति द्वारा घेरे गए क्षेत्र के माप के रूप में क्षेत्रफल को समझना।"
+      },
+      {
+       "concept_tag": "aayat-varg-kshetrafal",
+       "learning_objective": "आयत और वर्ग के क्षेत्रफल के सूत्रों से क्षेत्रफल, लुप्त भुजा और लागत ज्ञात करना।"
+      },
+      {
+       "concept_tag": "shesh-kshetrafal",
+       "learning_objective": "पूरे क्षेत्रफल में से किसी भाग का क्षेत्रफल घटाकर शेष क्षेत्रफल ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH06-T4",
+     "topic_number": 4,
+     "title": "वर्गांकित कागज और टैनग्राम से क्षेत्रफल",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "graph-paper-aakalan",
+       "learning_objective": "वर्गांकित कागज पर वर्ग गिनने के नियमों से किसी आकृति के क्षेत्रफल का आकलन करना।"
+      },
+      {
+       "concept_tag": "tangram-kshetrafal-tulna",
+       "learning_objective": "टैनग्राम के टुकड़ों के क्षेत्रफलों की आपस में तुलना करना।"
+      },
+      {
+       "concept_tag": "varg-ikai-ka-mahatva",
+       "learning_objective": "समझना कि क्षेत्रफल मापने के लिए वर्ग ही सबसे उपयुक्त इकाई आकार क्यों है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH06-T5",
+     "topic_number": 5,
+     "title": "त्रिभुज का क्षेत्रफल",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "tribhuj-aayat-ka-aadha",
+       "learning_objective": "समझना कि आयत की एक भुजा और सामने की भुजा पर शीर्ष वाले त्रिभुज का क्षेत्रफल आयत का आधा होता है।"
+      },
+      {
+       "concept_tag": "sanyukt-aakriti-vibhajan",
+       "learning_objective": "संयुक्त आकृतियों को आयतों और त्रिभुजों में बाँटकर उनका क्षेत्रफल ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH06-T6",
+     "topic_number": 6,
+     "title": "समान क्षेत्रफल, भिन्न परिमाप और क्षेत्रफल पहेलियाँ",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "samaan-kshetrafal-bhinn-parimap",
+       "learning_objective": "समझना कि समान क्षेत्रफल वाली आकृतियों के परिमाप भिन्न हो सकते हैं और इसके विपरीत भी।"
+      },
+      {
+       "concept_tag": "kshetrafal-paheli-nakshe",
+       "learning_objective": "घर के नक्शों और क्षेत्रफल पहेलियों में लुप्त माप और क्षेत्रफल ज्ञात करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHGP1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "भिन्न",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhgp107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHGP1-CH07-T1",
+     "topic_number": 1,
+     "title": "भिन्नात्मक इकाइयाँ और संपूर्ण के हिस्से",
+     "ncert_sections": "7.1, 7.2",
+     "concepts": [
+      {
+       "concept_tag": "bhinnatmak-ikai",
+       "learning_objective": "विद्यार्थी भिन्नात्मक इकाई को पहचानेंगे और दो भिन्नात्मक इकाइयों की तुलना करेंगे।"
+      },
+      {
+       "concept_tag": "sampurn-ke-hisse",
+       "learning_objective": "विद्यार्थी किसी संपूर्ण वस्तु के टुकड़े को भिन्नात्मक इकाइयों से मापकर भिन्न के रूप में लिखेंगे।"
+      },
+      {
+       "concept_tag": "saman-bantvara",
+       "learning_objective": "विद्यार्थी समान बँटवारे की स्थितियों में प्रत्येक के हिस्से को भिन्न के रूप में व्यक्त करेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH07-T2",
+     "topic_number": 2,
+     "title": "भिन्नात्मक इकाइयों द्वारा मापना और संख्या रेखा",
+     "ncert_sections": "7.3, 7.4",
+     "concepts": [
+      {
+       "concept_tag": "ikaiyon-se-mapna",
+       "learning_objective": "विद्यार्थी भिन्न को भिन्नात्मक इकाई के गुणज के रूप में पढ़ेंगे तथा अंश और हर पहचानेंगे।"
+      },
+      {
+       "concept_tag": "sankhya-rekha-par-bhinn",
+       "learning_objective": "विद्यार्थी संख्या रेखा पर भिन्नों की लंबाइयाँ पहचानेंगे और अंकित करेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH07-T3",
+     "topic_number": 3,
+     "title": "मिश्रित भिन्न",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "ek-se-badi-bhinn",
+       "learning_objective": "विद्यार्थी एक से बड़ी भिन्नों में पूर्ण इकाइयाँ ज्ञात करके उन्हें मिश्रित भिन्न के रूप में लिखेंगे।"
+      },
+      {
+       "concept_tag": "mishrit-se-bhinn",
+       "learning_objective": "विद्यार्थी मिश्रित संख्या को सामान्य भिन्न के रूप में बदलेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH07-T4",
+     "topic_number": 4,
+     "title": "तुल्य भिन्न और सरलतम रूप",
+     "ncert_sections": "7.6",
+     "concepts": [
+      {
+       "concept_tag": "tulya-bhinn",
+       "learning_objective": "विद्यार्थी समान बँटवारे और भिन्न पट्टियों के आधार पर तुल्य भिन्न पहचानेंगे और बनाएँगे।"
+      },
+      {
+       "concept_tag": "saraltam-roop",
+       "learning_objective": "विद्यार्थी अंश और हर को उभयनिष्ठ गुणनखंड से भाग देकर भिन्न को सरलतम रूप में लिखेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH07-T5",
+     "topic_number": 5,
+     "title": "भिन्नों की तुलना",
+     "ncert_sections": "7.7",
+     "concepts": [
+      {
+       "concept_tag": "saman-ansh-tulna",
+       "learning_objective": "विद्यार्थी समान अंश वाली भिन्नों की तुलना हरों के आधार पर करेंगे।"
+      },
+      {
+       "concept_tag": "saman-har-tulna",
+       "learning_objective": "विद्यार्थी भिन्नों को समान हर वाली तुल्य भिन्नों में बदलकर उनकी तुलना और क्रम निर्धारण करेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH07-T6",
+     "topic_number": 6,
+     "title": "भिन्नों को जोड़ना और घटाना",
+     "ncert_sections": "7.8",
+     "concepts": [
+      {
+       "concept_tag": "saman-har-yog-antar",
+       "learning_objective": "विद्यार्थी समान भिन्नात्मक इकाई वाली भिन्नों का योग और अंतर ज्ञात करेंगे।"
+      },
+      {
+       "concept_tag": "brahmagupt-vidhi",
+       "learning_objective": "विद्यार्थी ब्रह्मगुप्त विधि से भिन्न हर वाली भिन्नों को जोड़ेंगे और घटाएँगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH07-T7",
+     "topic_number": 7,
+     "title": "एक चुटकी इतिहास और पहेली",
+     "ncert_sections": "7.9",
+     "concepts": [
+      {
+       "concept_tag": "bhinn-ka-itihas",
+       "learning_objective": "विद्यार्थी भिन्नों के लेखन और नियमों के विकास में भारतीय तथा अन्य गणितज्ञों के योगदान को जानेंगे।"
+      },
+      {
+       "concept_tag": "ikaiyon-ka-yog",
+       "learning_objective": "विद्यार्थी भिन्नों को भिन्न-भिन्न भिन्नात्मक इकाइयों के योग के रूप में लिखेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHGP1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "रचनाओं के साथ खेलना",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhgp108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHGP1-CH08-T1",
+     "topic_number": 1,
+     "title": "कलाकृति: परकार और वृत्त",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "vritt-kendra-trijya",
+       "learning_objective": "वृत्त को केंद्र से समान दूरी पर स्थित बिंदुओं के समूह के रूप में पहचानना तथा केंद्र और त्रिज्या को परिभाषित करना।"
+      },
+      {
+       "concept_tag": "parkar-se-chaap-aur-ardhvritt",
+       "learning_objective": "परकार की सहायता से चाप, अर्धवृत्त और लहरों जैसी कलाकृतियाँ बनाने के लिए सही त्रिज्या और केंद्र चुनना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH08-T2",
+     "topic_number": 2,
+     "title": "वर्ग और आयत",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "aayat-aur-varg-ke-gun",
+       "learning_objective": "आयत के गुण (सम्मुख भुजाएँ बराबर, सभी कोण 90°) और वर्ग के गुण (सभी भुजाएँ बराबर, सभी कोण 90°) बताना।"
+      },
+      {
+       "concept_tag": "aayat-ka-namkaran",
+       "learning_objective": "शीर्षों के क्रम के आधार पर आयत या वर्ग के मान्य और अमान्य नामों में अंतर करना।"
+      },
+      {
+       "concept_tag": "ghumaye-gaye-varg-aur-aayat",
+       "learning_objective": "समझाना कि घुमाने पर वर्ग या आयत की भुजाओं की लंबाई और कोण नहीं बदलते।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH08-T3",
+     "topic_number": 3,
+     "title": "वर्ग और आयत की रचना",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "varg-aur-aayat-ki-rachna",
+       "learning_objective": "दी गई भुजाओं से रूलर, परकार और लंब रेखाओं की सहायता से वर्ग और आयत की रचना के चरण क्रम से लिखना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH08-T4",
+     "topic_number": 4,
+     "title": "आयतों में एक खोज",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "aayat-mein-bindu-ki-doori",
+       "learning_objective": "आयत की सम्मुख भुजाओं पर चलते बिंदुओं X और Y की न्यूनतम और अधिकतम दूरी की तुलना भुजा और विकर्ण से करना।"
+      },
+      {
+       "concept_tag": "aayat-ko-samroop-vargon-mein-baantna",
+       "learning_objective": "रफ आकृति की सहायता से ऐसे आयत की योजना बनाना जिसे दो या तीन समरूप वर्गों में बाँटा जा सके।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH08-T5",
+     "topic_number": 5,
+     "title": "आयतों और वर्गों के विकर्ण",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "vikarn-aur-sammukh-kon",
+       "learning_objective": "पहचानना कि विकर्ण सम्मुख कोणों को कैसे बाँटते हैं और वर्ग में ये भाग 45° के बराबर क्यों होते हैं।"
+      },
+      {
+       "concept_tag": "bhuja-aur-vikarn-se-aayat-ki-rachna",
+       "learning_objective": "एक भुजा और विकर्ण दिए होने पर लंब रेखा और चाप की सहायता से आयत की रचना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH08-T6",
+     "topic_number": 6,
+     "title": "दो दिए हुए बिंदुओं से समदूरस्थ बिंदु",
+     "ncert_sections": "8.6",
+     "concepts": [
+      {
+       "concept_tag": "samdoorasth-bindu-chaapon-se",
+       "learning_objective": "दो बिंदुओं से दी गई दूरी वाला बिंदु दोनों बिंदुओं को केंद्र मानकर खींचे गए चापों के प्रतिच्छेद से ज्ञात करना।"
+      },
+      {
+       "concept_tag": "ghar-aur-samchaturbhuj-ki-rachna",
+       "learning_objective": "समदूरस्थ बिंदु की विधि से 'घर' की आकृति और ऐसी चार समान भुजाओं वाली आकृति बनाना जो वर्ग न हो।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHGP1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "सममिति",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhgp109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHGP1-CH09-T1",
+     "topic_number": 1,
+     "title": "सममिति का परिचय: दोहराए जाने वाले पैटर्न",
+     "ncert_sections": "प्रारंभिक भाग",
+     "concepts": [
+      {
+       "concept_tag": "sammiti-ka-arth",
+       "learning_objective": "विद्यार्थी समझेंगे कि किसी आकृति के भागों का एक निश्चित पैटर्न में दोहराव सममिति कहलाता है।"
+      },
+      {
+       "concept_tag": "sammit-asammit-pahchan",
+       "learning_objective": "विद्यार्थी अपने परिवेश की सममित और असममित आकृतियों को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH09-T2",
+     "topic_number": 2,
+     "title": "सममिति की रेखा",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "sammiti-rekha-paribhasha",
+       "learning_objective": "विद्यार्थी मोड़ने पर दोनों भागों के पूर्णतया ढकने के आधार पर सममिति की रेखा पहचानेंगे।"
+      },
+      {
+       "concept_tag": "anek-sammiti-rekhaen",
+       "learning_objective": "विद्यार्थी वर्ग, आयत, त्रिभुज और षट्भुज जैसी आकृतियों की सममिति रेखाओं की संख्या ज्ञात करेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH09-T3",
+     "topic_number": 3,
+     "title": "परावर्तन और परावर्तीय सममिति",
+     "ncert_sections": "9.1 (प्रतिबिंब)",
+     "concepts": [
+      {
+       "concept_tag": "paravartan-bindu",
+       "learning_objective": "विद्यार्थी सममिति रेखा में परावर्तन के बाद आकृति के बिंदुओं की नई स्थितियाँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "paravartiya-sammiti",
+       "learning_objective": "विद्यार्थी समझेंगे कि सममिति रेखा वाली आकृति को परावर्तीय सममिति वाली आकृति भी कहते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH09-T4",
+     "topic_number": 4,
+     "title": "सममिति की रेखाओं वाले आकार बनाना",
+     "ncert_sections": "9.1 (इंक-ब्लॉट, मोड़ना-काटना, पंचिंग खेल)",
+     "concepts": [
+      {
+       "concept_tag": "mod-kar-sammit-aakar",
+       "learning_objective": "विद्यार्थी स्याही के धब्बे और कागज मोड़कर काटने से सममित आकार बनाने की विधि समझेंगे।"
+      },
+      {
+       "concept_tag": "panching-chhed-anuman",
+       "learning_objective": "विद्यार्थी मुड़े कागज में किए गए छेदों से खुलने पर बनने वाले सममित पैटर्न का अनुमान लगाएँगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH09-T5",
+     "topic_number": 5,
+     "title": "घूर्णन सममिति और सममिति के कोण",
+     "ncert_sections": "9.2",
+     "concepts": [
+      {
+       "concept_tag": "ghurnan-kendra",
+       "learning_objective": "विद्यार्थी घूर्णन सममिति और घूर्णन के केंद्र का अर्थ समझेंगे।"
+      },
+      {
+       "concept_tag": "sammiti-ke-kon",
+       "learning_objective": "विद्यार्थी पवन-चक्की, वर्ग और पट्टी जैसी आकृतियों के सममिति के कोण ज्ञात करेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH09-T6",
+     "topic_number": 6,
+     "title": "किरण-संबंधी भुजाओं वाली आकृतियाँ और न्यूनतम कोण",
+     "ncert_sections": "9.2 (किरण-संबंधी भुजाएँ)",
+     "concepts": [
+      {
+       "concept_tag": "kiran-bhujaen-kon",
+       "learning_objective": "विद्यार्थी समान दूरी पर रखी किरण-संबंधी भुजाओं के बीच का कोण 360° को भुजाओं की संख्या से भाग देकर ज्ञात करेंगे।"
+      },
+      {
+       "concept_tag": "nyuntam-kon-gunaj",
+       "learning_objective": "विद्यार्थी समझेंगे कि सभी सममिति कोण न्यूनतम कोण के गुणज होते हैं और न्यूनतम कोण 360° का गुणनखंड होता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH09-T7",
+     "topic_number": 7,
+     "title": "वृत्त की सममितियाँ और दोनों प्रकार की सममिति",
+     "ncert_sections": "9.2 (एक वृत्त की सममितियाँ)",
+     "concepts": [
+      {
+       "concept_tag": "vritt-ki-sammiti",
+       "learning_objective": "विद्यार्थी जानेंगे कि वृत्त के लिए प्रत्येक कोण सममिति का कोण और प्रत्येक व्यास सममिति की रेखा है।"
+      },
+      {
+       "concept_tag": "paravartan-aur-ghurnan-tulna",
+       "learning_objective": "विद्यार्थी आकृतियों में परावर्तीय और घूर्णन सममिति की उपस्थिति की तुलना कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FHGP1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "शून्य के दूसरी ओर",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fhgp110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FHGP1-CH10-T1",
+     "topic_number": 1,
+     "title": "बेला की मजेदार इमारत: धनात्मक और ऋणात्मक संख्याएँ",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "dhanatmak-rinatmak-sankhya",
+       "learning_objective": "भूतल को 0 मानकर ऊपर के तलों को धनात्मक और नीचे के तलों को ऋणात्मक संख्याओं से पहचानना।"
+      },
+      {
+       "concept_tag": "lift-gati-yog",
+       "learning_objective": "प्रारंभिक तल + गति = लक्षित तल के रूप में पूर्णांकों का योग करना।"
+      },
+      {
+       "concept_tag": "yojya-pratilom",
+       "learning_objective": "किसी संख्या का योज्य प्रतिलोम ज्ञात करना जिसे जोड़ने पर शून्य प्राप्त होता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH10-T2",
+     "topic_number": 2,
+     "title": "तलों की तुलना और घटाव से आवश्यक गति",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "purnank-tulna",
+       "learning_objective": "तलों के आधार पर पूर्णांकों की तुलना करके < या > चिह्न लगाना।"
+      },
+      {
+       "concept_tag": "ghatav-avashyak-gati",
+       "learning_objective": "लक्षित तल – प्रारंभिक तल = आवश्यक गति के रूप में घटाव को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH10-T3",
+     "topic_number": 3,
+     "title": "पूर्णांक, बड़ी संख्याएँ और संख्या रेखा",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "purnank-aur-badi-sankhyaen",
+       "learning_objective": "धनात्मक, ऋणात्मक संख्याओं और शून्य को पूर्णांक के रूप में पहचानना और बड़े पूर्णांकों को जोड़ना-घटाना।"
+      },
+      {
+       "concept_tag": "sankhya-rekha",
+       "learning_objective": "संख्या रेखा पर पूर्णांकों की स्थिति और उन पर आगे-पीछे की गति को समझना।"
+      },
+      {
+       "concept_tag": "ghatav-ko-jod-mein-badalna",
+       "learning_objective": "किसी पूर्णांक के घटाव को उसके योज्य प्रतिलोम के जोड़ में बदलना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH10-T4",
+     "topic_number": 4,
+     "title": "टोकन मॉडल",
+     "ncert_sections": "10.2",
+     "concepts": [
+      {
+       "concept_tag": "shunya-joda",
+       "learning_objective": "धनात्मक और ऋणात्मक टोकन के शून्य जोड़े हटाकर पूर्णांकों का योग करना।"
+      },
+      {
+       "concept_tag": "token-se-ghatav",
+       "learning_objective": "आवश्यकतानुसार शून्य जोड़े रखकर टोकन से पूर्णांकों का घटाव करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH10-T5",
+     "topic_number": 5,
+     "title": "अन्य स्थानों पर पूर्णांक",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "bank-jama-nikasi",
+       "learning_objective": "बैंक खाते में जमा को धनात्मक और निकासी को ऋणात्मक मानकर शेष राशि ज्ञात करना।"
+      },
+      {
+       "concept_tag": "samudra-tal-unchai",
+       "learning_objective": "समुद्र तल को 0 मानकर ऊँचाई और गहराई को पूर्णांकों से दर्शाना।"
+      },
+      {
+       "concept_tag": "tapman",
+       "learning_objective": "शून्य से कम तापमान को ऋणात्मक संख्याओं से दर्शाना और तापमान परिवर्तन ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH10-T6",
+     "topic_number": 6,
+     "title": "पूर्णांकों के साथ अन्वेषण",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "seema-yog-grid",
+       "learning_objective": "ग्रिड की सीमा पंक्तियों और स्तंभों का योग (सीमा योग) ज्ञात करना और ग्रिड पूर्ण करना।"
+      },
+      {
+       "concept_tag": "purnank-anukram",
+       "learning_objective": "पूर्णांकों के अनुक्रम का नियम पहचानकर अगले पद ज्ञात करना।"
+      },
+      {
+       "concept_tag": "chinh-vyavhar",
+       "learning_objective": "धनात्मक और ऋणात्मक पूर्णांकों के योग और अंतर के चिह्न के बारे में निष्कर्ष निकालना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "FHGP1-CH10-T7",
+     "topic_number": 7,
+     "title": "एक चुटकी इतिहास: ब्रह्मगुप्त के नियम",
+     "ncert_sections": "10.5",
+     "concepts": [
+      {
+       "concept_tag": "rinatmak-sankhya-itihas",
+       "learning_objective": "ऋणात्मक संख्याओं और शून्य के उपयोग के इतिहास में भारत और ब्रह्मगुप्त के योगदान को जानना।"
+      },
+      {
+       "concept_tag": "brahmagupta-yog-niyam",
+       "learning_objective": "ब्रह्मगुप्त के योग के नियमों से पूर्णांकों का योग करना।"
+      },
+      {
+       "concept_tag": "brahmagupta-ghatav-niyam",
+       "learning_objective": "ब्रह्मगुप्त के घटाव के नियमों को लागू करके त्रुटियाँ पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

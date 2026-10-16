@@ -1,0 +1,92 @@
+{
+ "chapter_id": "JHMH1-CH14",
+ "title": "प्रायिकता",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH14-T1",
+   "topic_number": 1,
+   "title": "सैद्धांतिक प्रायिकता और समसंभावी परिणाम",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "samsambhavi-parinam",
+     "learning_objective": "समसंभावी परिणामों वाले और न वाले प्रयोगों में अंतर पहचानना।"
+    },
+    {
+     "concept_tag": "saiddhantik-prayikta-paribhasha",
+     "learning_objective": "सैद्धांतिक (शास्त्रीय) प्रायिकता की परिभाषा बताना और उसका प्रयोग करना।"
+    },
+    {
+     "concept_tag": "prayogik-aur-saiddhantik-prayikta",
+     "learning_objective": "प्रायोगिक और सैद्धांतिक प्रायिकता की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH14-T2",
+   "topic_number": 2,
+   "title": "प्रारंभिक, असंभव और निश्चित घटनाएँ",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "prarambhik-ghatna",
+     "learning_objective": "प्रारंभिक घटना पहचानना और जानना कि सभी प्रारंभिक घटनाओं की प्रायिकताओं का योग 1 होता है।"
+    },
+    {
+     "concept_tag": "asambhav-aur-nishchit-ghatna",
+     "learning_objective": "असंभव घटना की प्रायिकता 0 और निश्चित घटना की प्रायिकता 1 पहचानना।"
+    },
+    {
+     "concept_tag": "prayikta-ki-seema",
+     "learning_objective": "समझना कि किसी घटना की प्रायिकता 0 और 1 के बीच (दोनों सम्मिलित) होती है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH14-T3",
+   "topic_number": 3,
+   "title": "पूरक घटनाएँ",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "poorak-ghatna",
+     "learning_objective": "संबंध P(E) + P(Ē) = 1 का प्रयोग करके पूरक घटना की प्रायिकता ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH14-T4",
+   "topic_number": 4,
+   "title": "एक बार निकालने के प्रयोग: ताश, गेंदें और संख्या वाले पत्ते",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "taash-ke-patte",
+     "learning_objective": "52 पत्तों की ताश की गड्डी से संबंधित घटनाओं की प्रायिकता ज्ञात करना।"
+    },
+    {
+     "concept_tag": "gend-aur-vastuen-nikalna",
+     "learning_objective": "थैले या डिब्बे से यादृच्छया निकाली गई वस्तु की प्रायिकता ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH14-T5",
+   "topic_number": 5,
+   "title": "दो सिक्के और दो पासे",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "do-sikke",
+     "learning_objective": "दो सिक्के एक साथ उछालने के सभी परिणाम लिखकर प्रायिकता ज्ञात करना।"
+    },
+    {
+     "concept_tag": "do-pase",
+     "learning_objective": "दो पासे फेंकने के 36 परिणामों की सहायता से प्रायिकता ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

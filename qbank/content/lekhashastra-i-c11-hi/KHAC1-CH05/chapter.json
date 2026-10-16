@@ -1,0 +1,104 @@
+{
+ "chapter_id": "KHAC1-CH05",
+ "title": "बैंक समाधान विवरण",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHAC1-CH05-T1",
+   "topic_number": 1,
+   "title": "बैंक समाधान विवरण का अर्थ और आवश्यकता",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "samadhan-vivaran-arth",
+     "learning_objective": "बैंक समाधान विवरण का अर्थ, उद्देश्य और उसे बनाने वाले को पहचानना।"
+    },
+    {
+     "concept_tag": "passbook-rokad-bahi",
+     "learning_objective": "पासबुक और रोकड़ बही के बैंक खाने में जमा, निकासी और शेष के लेखन को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH05-T2",
+   "topic_number": 2,
+   "title": "समय-अंतराल से उत्पन्न अंतर: चेक",
+   "ncert_sections": "5.1.1(क), 5.1.1(ख)",
+   "concepts": [
+    {
+     "concept_tag": "nirgamit-cheque",
+     "learning_objective": "निर्गमित परंतु भुगतान हेतु प्रस्तुत न किए गए चेकों का दोनों शेषों पर प्रभाव समझाना।"
+    },
+    {
+     "concept_tag": "jama-cheque-sangrah",
+     "learning_objective": "जमा किए गए परंतु बैंक द्वारा संग्रहित न किए गए चेकों का दोनों शेषों पर प्रभाव समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH05-T3",
+   "topic_number": 3,
+   "title": "बैंक द्वारा सीधे की गई प्रविष्टियाँ",
+   "ncert_sections": "5.1.1(ग) से 5.1.1(छ)",
+   "concepts": [
+    {
+     "concept_tag": "seedha-namey",
+     "learning_objective": "बैंक प्रभार, स्थायी निर्देश पर भुगतान और अनादरित चेक जैसी सीधी नामे प्रविष्टियों का प्रभाव पहचानना।"
+    },
+    {
+     "concept_tag": "seedha-jama",
+     "learning_objective": "सीधे जमा, ब्याज और लाभांश संग्रह जैसी सीधी जमा प्रविष्टियों का प्रभाव पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH05-T4",
+   "topic_number": 4,
+   "title": "त्रुटियों से उत्पन्न अंतर",
+   "ncert_sections": "5.1.2",
+   "concepts": [
+    {
+     "concept_tag": "farm-ki-trutiyan",
+     "learning_objective": "रोकड़ बही में फर्म द्वारा की गई त्रुटियों का शेष पर प्रभाव ज्ञात करना।"
+    },
+    {
+     "concept_tag": "bank-ki-trutiyan",
+     "learning_objective": "पासबुक में बैंक द्वारा की गई त्रुटियों का शेष पर प्रभाव ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH05-T5",
+   "topic_number": 5,
+   "title": "अनुकूल शेष की स्थिति में बैंक समाधान विवरण बनाना",
+   "ncert_sections": "5.2, 5.2.1, 5.2.1(क)",
+   "concepts": [
+    {
+     "concept_tag": "anukul-shesh-rokad-bahi",
+     "learning_objective": "रोकड़ बही के अनुकूल शेष से आरंभ कर पासबुक शेष ज्ञात करना।"
+    },
+    {
+     "concept_tag": "anukul-shesh-passbook",
+     "learning_objective": "पासबुक के अनुकूल शेष से आरंभ कर रोकड़ बही शेष ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHAC1-CH05-T6",
+   "topic_number": 6,
+   "title": "अधिविकर्ष की स्थिति में बैंक समाधान विवरण",
+   "ncert_sections": "5.2.1(ख)",
+   "concepts": [
+    {
+     "concept_tag": "adhivikarsh-arth",
+     "learning_objective": "बैंक अधिविकर्ष का अर्थ तथा रोकड़ बही और पासबुक में उसके शेष को पहचानना।"
+    },
+    {
+     "concept_tag": "adhivikarsh-samadhan",
+     "learning_objective": "अधिविकर्ष शेष से आरंभ कर बैंक समाधान विवरण बनाना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "chapter_id": "KHCH1-CH06",
+ "title": "साम्यावस्था",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHCH1-CH06-T1",
+   "topic_number": 1,
+   "title": "भौतिक प्रक्रमों में साम्यावस्था",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "bhautik-samyavastha-prakar",
+     "learning_objective": "ठोस-द्रव, द्रव-वाष्प, ठोस-वाष्प तथा विलयन संबंधी भौतिक साम्यों को पहचानना।"
+    },
+    {
+     "concept_tag": "gatik-samyavastha-lakshan",
+     "learning_objective": "भौतिक साम्यावस्था की गतिक प्रकृति और उसके सामान्य लक्षण समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH06-T2",
+   "topic_number": 2,
+   "title": "रासायनिक साम्यावस्था और साम्यावस्था नियम",
+   "ncert_sections": "6.2, 6.3",
+   "concepts": [
+    {
+     "concept_tag": "gatik-rasayanik-samyavastha",
+     "learning_objective": "रासायनिक साम्यावस्था की गतिक प्रकृति को समझाना।"
+    },
+    {
+     "concept_tag": "samyavastha-niyam-kc",
+     "learning_objective": "किसी अभिक्रिया के लिए Kc का व्यंजक लिखना और उसकी गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH06-T3",
+   "topic_number": 3,
+   "title": "समांगी एवं विषमांगी साम्यावस्था",
+   "ncert_sections": "6.4, 6.5",
+   "concepts": [
+    {
+     "concept_tag": "samangi-kp-kc-sambandh",
+     "learning_objective": "गैसीय अभिक्रियाओं के लिए Kp और Kc का संबंध प्रयोग करना।"
+    },
+    {
+     "concept_tag": "vishamangi-samyavastha",
+     "learning_objective": "विषमांगी साम्य के लिए शुद्ध ठोस व द्रवों को छोड़कर साम्य स्थिरांक लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH06-T4",
+   "topic_number": 4,
+   "title": "साम्यावस्था स्थिरांक के अनुप्रयोग और गिब्स ऊर्जा",
+   "ncert_sections": "6.6, 6.7",
+   "concepts": [
+    {
+     "concept_tag": "abhikriya-bhagfal-q",
+     "learning_objective": "अभिक्रिया भागफल Q की K से तुलना कर अभिक्रिया की दिशा व सीमा बताना।"
+    },
+    {
+     "concept_tag": "k-aur-gibbs-urja",
+     "learning_objective": "साम्य स्थिरांक और मानक गिब्स ऊर्जा परिवर्तन के संबंध का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH06-T5",
+   "topic_number": 5,
+   "title": "साम्यावस्था को प्रभावित करने वाले कारक",
+   "ncert_sections": "6.8",
+   "concepts": [
+    {
+     "concept_tag": "le-chatelier-siddhant",
+     "learning_objective": "सांद्रता व दाब परिवर्तन पर ला-शातेलिए सिद्धांत लागू करना।"
+    },
+    {
+     "concept_tag": "tap-utprerak-akriya-gas",
+     "learning_objective": "ताप, उत्प्रेरक व अक्रिय गैस के साम्य पर प्रभाव का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH06-T6",
+   "topic_number": 6,
+   "title": "आयनिक साम्य तथा अम्ल, क्षारक और लवण",
+   "ncert_sections": "6.9, 6.10",
+   "concepts": [
+    {
+     "concept_tag": "prabal-durbal-vidyut-apaghatya",
+     "learning_objective": "प्रबल और दुर्बल विद्युत-अपघट्यों में अंतर करना।"
+    },
+    {
+     "concept_tag": "bronsted-lowry-avdharana",
+     "learning_objective": "ब्रान्स्टेड-लोरी अम्ल-क्षारक और संयुग्मी युग्म पहचानना।"
+    },
+    {
+     "concept_tag": "lewis-amla-kshar",
+     "learning_objective": "लूइस अम्ल और क्षारक को इलेक्ट्रॉन-युग्म के आधार पर पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH06-T7",
+   "topic_number": 7,
+   "title": "अम्लों व क्षारकों का आयनन और pH",
+   "ncert_sections": "6.11",
+   "concepts": [
+    {
+     "concept_tag": "jal-ayanik-gunanfal-ph",
+     "learning_objective": "जल के आयनिक गुणनफल और pH मापक्रम का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "ka-kb-sambandh",
+     "learning_objective": "दुर्बल अम्ल-क्षारकों के आयनन स्थिरांक तथा Ka·Kb = Kw संबंध का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "lavan-jal-apaghatan",
+     "learning_objective": "लवणों के जल-अपघटन से विलयन की प्रकृति बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH06-T8",
+   "topic_number": 8,
+   "title": "बफर विलयन और विलेयता साम्य",
+   "ncert_sections": "6.12, 6.13",
+   "concepts": [
+    {
+     "concept_tag": "bafar-vilayan",
+     "learning_objective": "बफर विलयन की संरचना और उसके pH की गणना समझना।"
+    },
+    {
+     "concept_tag": "vileyata-gunanfal",
+     "learning_objective": "विलेयता गुणनफल Ksp और विलेयता का संबंध प्रयोग करना।"
+    },
+    {
+     "concept_tag": "saman-ayan-prabhav",
+     "learning_objective": "विलेयता पर सम-आयन प्रभाव की व्याख्या करना।"
+    }
+   ]
+  }
+ ]
+}

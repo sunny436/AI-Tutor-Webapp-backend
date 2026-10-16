@@ -1,0 +1,148 @@
+{
+ "chapter_id": "LEBO1-CH05",
+ "title": "Molecular Basis of Inheritance",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBO1-CH05-T1",
+   "topic_number": 1,
+   "title": "The DNA: Structure of the Polynucleotide Chain and Double Helix",
+   "ncert_sections": "5.1, 5.1.1",
+   "concepts": [
+    {
+     "concept_tag": "polynucleotide-chain",
+     "learning_objective": "Describe the components of a nucleotide and the linkages that form a nucleoside, nucleotide and polynucleotide chain."
+    },
+    {
+     "concept_tag": "double-helix-features",
+     "learning_objective": "Explain the salient features of the Watson-Crick double helix, including base pairing, Chargaff's rule and helix dimensions."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH05-T2",
+   "topic_number": 2,
+   "title": "Packaging of DNA Helix",
+   "ncert_sections": "5.1.2",
+   "concepts": [
+    {
+     "concept_tag": "nucleosome-and-histones",
+     "learning_objective": "Explain how negatively charged DNA is packaged with positively charged histones into nucleosomes and chromatin."
+    },
+    {
+     "concept_tag": "euchromatin-heterochromatin",
+     "learning_objective": "Distinguish euchromatin from heterochromatin and relate packaging to transcriptional activity."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH05-T3",
+   "topic_number": 3,
+   "title": "The Search for Genetic Material and the RNA World",
+   "ncert_sections": "5.2, 5.3",
+   "concepts": [
+    {
+     "concept_tag": "transforming-principle",
+     "learning_objective": "Interpret the experiments of Griffith and of Avery, MacLeod and McCarty on the transforming principle."
+    },
+    {
+     "concept_tag": "hershey-chase-experiment",
+     "learning_objective": "Explain how Hershey and Chase used radioactive phosphorus and sulfur to prove that DNA is the genetic material."
+    },
+    {
+     "concept_tag": "dna-vs-rna-genetic-material",
+     "learning_objective": "Evaluate DNA and RNA against the criteria for a genetic material and explain why RNA is regarded as the first genetic material."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH05-T4",
+   "topic_number": 4,
+   "title": "Replication",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "semiconservative-replication",
+     "learning_objective": "Interpret the Meselson and Stahl experiment as proof of semiconservative DNA replication."
+    },
+    {
+     "concept_tag": "replication-machinery",
+     "learning_objective": "Describe the roles of DNA polymerase, DNA ligase, the replication fork and the origin of replication."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH05-T5",
+   "topic_number": 5,
+   "title": "Transcription",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "transcription-unit-strands",
+     "learning_objective": "Identify the promoter, structural gene, terminator, template strand and coding strand of a transcription unit."
+    },
+    {
+     "concept_tag": "transcription-in-bacteria-and-eukaryotes",
+     "learning_objective": "Compare transcription in bacteria and eukaryotes, including the RNA polymerases and the sigma and rho factors."
+    },
+    {
+     "concept_tag": "split-genes-and-processing",
+     "learning_objective": "Explain split genes and the splicing, capping and tailing of hnRNA."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH05-T6",
+   "topic_number": 6,
+   "title": "Genetic Code, Mutations and tRNA",
+   "ncert_sections": "5.6, 5.6.1, 5.6.2",
+   "concepts": [
+    {
+     "concept_tag": "genetic-code-features",
+     "learning_objective": "State and apply the salient features of the genetic code."
+    },
+    {
+     "concept_tag": "frameshift-mutations",
+     "learning_objective": "Distinguish point mutations from frameshift insertion and deletion mutations and predict their effect."
+    },
+    {
+     "concept_tag": "trna-adapter",
+     "learning_objective": "Describe the structure and adapter role of tRNA."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH05-T7",
+   "topic_number": 7,
+   "title": "Translation and Regulation of Gene Expression",
+   "ncert_sections": "5.7, 5.8, 5.8.1",
+   "concepts": [
+    {
+     "concept_tag": "translation-process",
+     "learning_objective": "Describe the charging of tRNA and the initiation, elongation and termination of translation on the ribosome."
+    },
+    {
+     "concept_tag": "lac-operon",
+     "learning_objective": "Explain the negative regulation of the lac operon by its repressor and inducer."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBO1-CH05-T8",
+   "topic_number": 8,
+   "title": "Human Genome Project and DNA Fingerprinting",
+   "ncert_sections": "5.9, 5.10",
+   "concepts": [
+    {
+     "concept_tag": "hgp-goals-and-features",
+     "learning_objective": "State the goals, methods and salient findings of the Human Genome Project."
+    },
+    {
+     "concept_tag": "dna-fingerprinting-vntr",
+     "learning_objective": "Explain the steps and the polymorphism basis of DNA fingerprinting using VNTR probes."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "chapter_id": "KHSK2-CH01",
+ "title": "वेदामृतम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHSK2-CH01-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः वैदिकवाङ्मयं च",
+   "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "vaidika-vangmaya-parichaya",
+     "learning_objective": "छात्रः वैदिकवाङ्मयस्य प्राचीनतां पाठे सङ्कलितानां मन्त्राणां स्रोतांसि च जानाति।"
+    },
+    {
+     "concept_tag": "veda-vishaya-vibhaga",
+     "learning_objective": "छात्रः ऋग्यजुःसामाथर्ववेदानां मुख्यविषयान् विवेचयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH01-T2",
+   "topic_number": 2,
+   "title": "संगच्छध्वम्, समानी व आकूतिः (सङ्गठनमन्त्रौ)",
+   "ncert_sections": "मन्त्रौ 1-2",
+   "concepts": [
+    {
+     "concept_tag": "sangachchhadhvam-mantra",
+     "learning_objective": "छात्रः 'संगच्छध्वं संवदध्वम्' इति मन्त्रस्य अर्थं सामाजिकसन्देशं च अवगच्छति।"
+    },
+    {
+     "concept_tag": "samani-akutih-mantra",
+     "learning_objective": "छात्रः 'समानी व आकूतिः' इति मन्त्रे निहितं समानसङ्कल्पस्य आदर्शं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH01-T3",
+   "topic_number": 3,
+   "title": "मधु वाता ऋतायते",
+   "ncert_sections": "मन्त्रः 3",
+   "concepts": [
+    {
+     "concept_tag": "madhu-vata-mantra",
+     "learning_objective": "छात्रः प्रकृतेः माधुर्याय कृतायाः प्रार्थनायाः अर्थं शब्दार्थान् च जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH01-T4",
+   "topic_number": 4,
+   "title": "यज्जाग्रतो दूरमुदैति (शिवसङ्कल्पः)",
+   "ncert_sections": "मन्त्रः 4",
+   "concepts": [
+    {
+     "concept_tag": "shivasankalpa-mantra",
+     "learning_objective": "छात्रः मनसः वैशिष्ट्यं शिवसङ्कल्पस्य प्रार्थनां च व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH01-T5",
+   "topic_number": 5,
+   "title": "तच्चक्षुर्देवहितम्",
+   "ncert_sections": "मन्त्रः 5",
+   "concepts": [
+    {
+     "concept_tag": "tachchakshuh-mantra",
+     "learning_objective": "छात्रः शतवर्षपर्यन्तम् अदीनजीवनस्य प्रार्थनां तत्र प्रयुक्तानि क्रियापदानि च अवगच्छति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHSK2-CH01-T6",
+   "topic_number": 6,
+   "title": "जनं बिभ्रती (पृथिवीसूक्तम्)",
+   "ncert_sections": "मन्त्रः 6",
+   "concepts": [
+    {
+     "concept_tag": "prithivi-sukta-mantra",
+     "learning_objective": "छात्रः पृथिवीसूक्ते वर्णितां नानाभाषाधर्मजनधारिणीं पृथिवीं राष्ट्रभावनां च व्याख्याति।"
+    }
+   ]
+  }
+ ]
+}

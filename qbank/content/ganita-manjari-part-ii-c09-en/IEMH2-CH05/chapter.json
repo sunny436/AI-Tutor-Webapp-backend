@@ -1,0 +1,116 @@
+{
+  "chapter_id": "IEMH2-CH05",
+  "title": "Two Variables, One Line",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "IEMH2-CH05-T1",
+      "topic_number": 1,
+      "title": "Linear equations in two variables and standard form",
+      "ncert_sections": "13.1, 13.1.1",
+      "concepts": [
+        {
+          "concept_tag": "standard-form-linear-equation",
+          "learning_objective": "Identify a linear equation in two variables and write it in the standard form ax + by + c = 0."
+        },
+        {
+          "concept_tag": "modelling-with-two-variables",
+          "learning_objective": "Express an everyday situation as a linear equation in two variables."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH2-CH05-T2",
+      "topic_number": 2,
+      "title": "Solutions of a linear equation in two variables",
+      "ncert_sections": "13.2, 13.2.1, 13.2.2",
+      "concepts": [
+        {
+          "concept_tag": "solution-as-ordered-pair",
+          "learning_objective": "Check whether an ordered pair satisfies a linear equation and recognise that there are infinitely many solutions."
+        },
+        {
+          "concept_tag": "graph-of-linear-equation",
+          "learning_objective": "Find the axis-intercept points of a line and relate solutions to points on its graph."
+        },
+        {
+          "concept_tag": "line-through-origin",
+          "learning_objective": "Explain why the line ax + by + c = 0 passes through the origin exactly when c = 0."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH2-CH05-T3",
+      "topic_number": 3,
+      "title": "Slope and the slope-intercept form",
+      "ncert_sections": "13.3, 13.3.1, 13.3.2",
+      "concepts": [
+        {
+          "concept_tag": "slope-rise-over-run",
+          "learning_objective": "Calculate the slope of a line as rise over run using two points on it."
+        },
+        {
+          "concept_tag": "slope-intercept-form",
+          "learning_objective": "Read the slope and y-intercept from y = mx + d after rewriting ax + by + c = 0."
+        },
+        {
+          "concept_tag": "zero-and-undefined-slope",
+          "learning_objective": "Recognise horizontal lines as having zero slope and vertical lines as having undefined slope."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH2-CH05-T4",
+      "topic_number": 4,
+      "title": "Pair of linear equations in two variables",
+      "ncert_sections": "13.4",
+      "concepts": [
+        {
+          "concept_tag": "forming-a-pair-of-equations",
+          "learning_objective": "Frame a pair of linear equations in two variables from a word situation."
+        },
+        {
+          "concept_tag": "solution-of-a-pair",
+          "learning_objective": "State that a solution of a pair is an ordered pair satisfying both equations."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH2-CH05-T5",
+      "topic_number": 5,
+      "title": "Algebraic methods: substitution and elimination",
+      "ncert_sections": "13.5, 13.5.1",
+      "concepts": [
+        {
+          "concept_tag": "substitution-method",
+          "learning_objective": "Solve a pair of linear equations by expressing one variable in terms of the other."
+        },
+        {
+          "concept_tag": "elimination-method",
+          "learning_objective": "Solve a pair of linear equations by making coefficients equal and eliminating a variable."
+        },
+        {
+          "concept_tag": "ratio-test-for-solutions",
+          "learning_objective": "Use the ratios a1/a2, b1/b2 and c1/c2 to decide whether a pair has a unique, no or infinitely many solutions."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEMH2-CH05-T6",
+      "topic_number": 6,
+      "title": "Graphical method for solving a pair of linear equations",
+      "ncert_sections": "13.6",
+      "concepts": [
+        {
+          "concept_tag": "graphical-solution",
+          "learning_objective": "Find the solution of a pair of equations as the point common to both lines."
+        },
+        {
+          "concept_tag": "intersecting-parallel-coincident",
+          "learning_objective": "Relate intersecting, parallel and coincident lines to unique, no and infinitely many solutions."
+        }
+      ]
+    }
+  ]
+}

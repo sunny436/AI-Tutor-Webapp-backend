@@ -1,0 +1,1072 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "contemporary-world-politics-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "political_science",
+  "language": "english",
+  "title": "Contemporary World Politics",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "leps1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEPS1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "The End of Bipolarity",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS1-CH01-T1",
+     "topic_number": 1,
+     "title": "What was the Soviet System?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "soviet-political-economic-system",
+       "learning_objective": "Describe the political and economic features of the Soviet system that came up after the 1917 revolution."
+      },
+      {
+       "concept_tag": "second-world-socialist-bloc",
+       "learning_objective": "Explain how the east European countries formed the Second World or socialist bloc led by the USSR."
+      },
+      {
+       "concept_tag": "weaknesses-of-soviet-system",
+       "learning_objective": "Identify the bureaucratic, authoritarian and national weaknesses of the Soviet system."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH01-T2",
+     "topic_number": 2,
+     "title": "Gorbachev and the Disintegration",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gorbachev-reforms",
+       "learning_objective": "Explain why Gorbachev introduced reforms and what perestroika and glasnost meant."
+      },
+      {
+       "concept_tag": "collapse-of-the-ussr",
+       "learning_objective": "Trace the sequence of events from 1985 to December 1991 that ended the Soviet Union."
+      },
+      {
+       "concept_tag": "russia-successor-state",
+       "learning_objective": "Describe how Russia became the successor state of the Soviet Union and how the CIS was formed."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH01-T3",
+     "topic_number": 3,
+     "title": "Why did the Soviet Union Disintegrate?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "economic-stagnation",
+       "learning_objective": "Explain how military spending, satellite states and shortages led to Soviet economic stagnation."
+      },
+      {
+       "concept_tag": "political-administrative-stagnation",
+       "learning_objective": "Analyse how an unaccountable party and stifling administration alienated Soviet citizens."
+      },
+      {
+       "concept_tag": "rise-of-nationalism",
+       "learning_objective": "Evaluate the rise of nationalism in the republics as the most immediate cause of the collapse."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH01-T4",
+     "topic_number": 4,
+     "title": "Consequences of Disintegration",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "end-of-cold-war-confrontation",
+       "learning_objective": "Explain why the collapse of the Soviet bloc ended Cold War confrontations and the arms race."
+      },
+      {
+       "concept_tag": "unipolar-world-order",
+       "learning_objective": "Analyse the change in power relations that made the US the sole superpower."
+      },
+      {
+       "concept_tag": "emergence-of-new-countries",
+       "learning_objective": "Describe the aspirations of the new countries that emerged from the Soviet bloc."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH01-T5",
+     "topic_number": 5,
+     "title": "Shock Therapy in Post-Communist Regimes",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shock-therapy-features",
+       "learning_objective": "Identify the main features of the shock therapy model of transition to capitalism."
+      },
+      {
+       "concept_tag": "consequences-of-shock-therapy",
+       "learning_objective": "Explain the economic and social consequences of shock therapy in Russia and the region."
+      },
+      {
+       "concept_tag": "post-soviet-democracy-and-revival",
+       "learning_objective": "Evaluate the state of democratic institutions and the economic revival in post-Soviet states."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH01-T6",
+     "topic_number": 6,
+     "title": "Tensions and Conflicts",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "conflicts-in-former-soviet-republics",
+       "learning_objective": "Identify the secessionist movements and civil wars in the former Soviet republics."
+      },
+      {
+       "concept_tag": "central-asia-great-power-competition",
+       "learning_objective": "Explain why Central Asia became a zone of competition between outside powers."
+      },
+      {
+       "concept_tag": "conflicts-in-eastern-europe",
+       "learning_objective": "Compare the peaceful split of Czechoslovakia with the violent break-up of Yugoslavia."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH01-T7",
+     "topic_number": 7,
+     "title": "India and Post-communist Countries",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "india-ussr-special-relationship",
+       "learning_objective": "Describe the economic, political, military and cultural ties between India and the USSR during the Cold War."
+      },
+      {
+       "concept_tag": "india-russia-strategic-ties",
+       "learning_objective": "Explain the shared multipolar vision of India and Russia and the benefits each gains from the relationship."
+      },
+      {
+       "concept_tag": "cultural-links-with-post-soviet-countries",
+       "learning_objective": "Interpret the popularity of Indian films and culture in post-Soviet countries."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Contemporary Centres of Power",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS1-CH02-T1",
+     "topic_number": 1,
+     "title": "European integration after 1945",
+     "ncert_sections": "European Union",
+     "concepts": [
+      {
+       "concept_tag": "post-war-european-integration",
+       "learning_objective": "Explain how the Marshall Plan, NATO and the Cold War aided European integration after the Second World War."
+      },
+      {
+       "concept_tag": "eu-integration-timeline",
+       "learning_objective": "Sequence the main stages of European integration from the ECSC to the European Union and the euro."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH02-T2",
+     "topic_number": 2,
+     "title": "Influence and limits of the European Union",
+     "ncert_sections": "European Union",
+     "concepts": [
+      {
+       "concept_tag": "eu-influence",
+       "learning_objective": "Describe the economic, political-diplomatic and military influence of the European Union."
+      },
+      {
+       "concept_tag": "eu-limitations-euroskepticism",
+       "learning_objective": "Analyse how divergent national policies and Euroskepticism limit the EU's ability to act."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH02-T3",
+     "topic_number": 3,
+     "title": "ASEAN: origins and the ASEAN Way",
+     "ncert_sections": "Association of South East Asian Nations (ASEAN)",
+     "concepts": [
+      {
+       "concept_tag": "asean-formation-objectives",
+       "learning_objective": "Identify the founding members, founding document and objectives of ASEAN."
+      },
+      {
+       "concept_tag": "asean-way",
+       "learning_objective": "Explain the 'ASEAN Way' and ASEAN's emphasis on national sovereignty compared with the EU."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH02-T4",
+     "topic_number": 4,
+     "title": "ASEAN Community, economy and India",
+     "ncert_sections": "Association of South East Asian Nations (ASEAN)",
+     "concepts": [
+      {
+       "concept_tag": "asean-community-pillars",
+       "learning_objective": "Name the three pillars of the ASEAN Community and the role of the ASEAN Regional Forum."
+      },
+      {
+       "concept_tag": "asean-economy-and-vision-2020",
+       "learning_objective": "Explain the objectives of the ASEAN Economic Community and the outward-looking role in Vision 2020."
+      },
+      {
+       "concept_tag": "india-asean-relations",
+       "learning_objective": "Describe India's growing ties with ASEAN through the Look East and Act East policies and trade agreements."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH02-T5",
+     "topic_number": 5,
+     "title": "The rise of the Chinese economy",
+     "ncert_sections": "The Rise of the Chinese Economy",
+     "concepts": [
+      {
+       "concept_tag": "china-command-economy",
+       "learning_objective": "Explain the features and shortcomings of China's Soviet-model command economy."
+      },
+      {
+       "concept_tag": "china-economic-reforms",
+       "learning_objective": "Describe the step-by-step economic reforms in China from the 1970s onwards."
+      },
+      {
+       "concept_tag": "consequences-of-china-rise",
+       "learning_objective": "Evaluate the domestic and international consequences of China's economic rise."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH02-T6",
+     "topic_number": 6,
+     "title": "India-China relations",
+     "ncert_sections": "India - China Relations",
+     "concepts": [
+      {
+       "concept_tag": "india-china-historical-relations",
+       "learning_objective": "Explain why India and China had limited interaction before the twentieth century."
+      },
+      {
+       "concept_tag": "border-conflict-1962",
+       "learning_objective": "Describe the 1962 border conflict and its long-term implications for India-China relations."
+      },
+      {
+       "concept_tag": "post-cold-war-india-china-ties",
+       "learning_objective": "Analyse the strategic and economic dimensions of India-China relations since the late 1980s."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH02-T7",
+     "topic_number": 7,
+     "title": "Japan and South Korea as centres of power",
+     "ncert_sections": "Japan; South Korea (boxes)",
+     "concepts": [
+      {
+       "concept_tag": "japan-as-centre-of-power",
+       "learning_objective": "Assess Japan's economic strength and constitutional limits as an alternative centre of power."
+      },
+      {
+       "concept_tag": "south-korea-as-centre-of-power",
+       "learning_objective": "Describe South Korea's rapid development and the factors behind its high human development."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Contemporary South Asia",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS1-CH03-T1",
+     "topic_number": 1,
+     "title": "What is South Asia?",
+     "ncert_sections": "What is South Asia?",
+     "concepts": [
+      {
+       "concept_tag": "south-asia-region-definition",
+       "learning_objective": "Identify the countries and natural boundaries that define South Asia as a region."
+      },
+      {
+       "concept_tag": "democracy-in-south-asia",
+       "learning_objective": "Describe the mixed democratic record of South Asian countries and the shared aspiration for democracy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH03-T2",
+     "topic_number": 2,
+     "title": "The Military and Democracy in Pakistan",
+     "ncert_sections": "The Military and Democracy in Pakistan",
+     "concepts": [
+      {
+       "concept_tag": "pakistan-military-rule-timeline",
+       "learning_objective": "Trace the sequence of military and elected governments in Pakistan."
+      },
+      {
+       "concept_tag": "pakistan-democracy-failure-factors",
+       "learning_objective": "Explain the factors that have prevented Pakistan from building a stable democracy."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH03-T3",
+     "topic_number": 3,
+     "title": "Democracy in Bangladesh",
+     "ncert_sections": "Democracy in Bangladesh",
+     "concepts": [
+      {
+       "concept_tag": "bangladesh-liberation-1971",
+       "learning_objective": "Explain the causes and course of the struggle that led to the creation of Bangladesh in 1971."
+      },
+      {
+       "concept_tag": "bangladesh-democracy-evolution",
+       "learning_objective": "Describe how Bangladesh moved between presidential, military and representative democratic rule after 1971."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH03-T4",
+     "topic_number": 4,
+     "title": "Monarchy and Democracy in Nepal",
+     "ncert_sections": "Monarchy and Democracy in Nepal",
+     "concepts": [
+      {
+       "concept_tag": "nepal-monarchy-and-democracy-movements",
+       "learning_objective": "Describe the struggle between the monarchy and pro-democracy forces in Nepal up to the 2006 movement."
+      },
+      {
+       "concept_tag": "nepal-maoists-and-transition",
+       "learning_objective": "Explain the role of the Maoists and the challenges in Nepal's transition to a democratic republic."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH03-T5",
+     "topic_number": 5,
+     "title": "Ethnic Conflict and Democracy in Sri Lanka",
+     "ncert_sections": "Ethnic Conflict and Democracy in Sri Lanka",
+     "concepts": [
+      {
+       "concept_tag": "sri-lanka-ethnic-conflict",
+       "learning_objective": "Explain the origins and course of the Sinhala-Tamil ethnic conflict in Sri Lanka."
+      },
+      {
+       "concept_tag": "india-ipkf-sri-lanka",
+       "learning_objective": "Describe India's 1987 intervention in Sri Lanka through the Indian Peace Keeping Force and its outcome."
+      },
+      {
+       "concept_tag": "sri-lanka-development-record",
+       "learning_objective": "Evaluate Sri Lanka's economic and human development record despite the civil conflict."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH03-T6",
+     "topic_number": 6,
+     "title": "India-Pakistan Conflicts",
+     "ncert_sections": "India-Pakistan Conflicts",
+     "concepts": [
+      {
+       "concept_tag": "kashmir-and-strategic-disputes",
+       "learning_objective": "Explain the Kashmir issue and the strategic and nuclear dimensions of the India-Pakistan conflict."
+      },
+      {
+       "concept_tag": "india-pakistan-water-and-border-disputes",
+       "learning_objective": "Describe the river water and Sir Creek disputes between India and Pakistan and how they have been handled."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH03-T7",
+     "topic_number": 7,
+     "title": "India and its Other Neighbours",
+     "ncert_sections": "India and its Other Neighbours",
+     "concepts": [
+      {
+       "concept_tag": "india-bangladesh-relations",
+       "learning_objective": "Distinguish the areas of disagreement and cooperation between India and Bangladesh."
+      },
+      {
+       "concept_tag": "india-nepal-relations",
+       "learning_objective": "Describe the special features and the irritants in India-Nepal relations."
+      },
+      {
+       "concept_tag": "india-smaller-neighbours",
+       "learning_objective": "Analyse India's relations with Sri Lanka, Bhutan and the Maldives and the mutual perceptions of India and its smaller neighbours."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH03-T8",
+     "topic_number": 8,
+     "title": "Peace and Cooperation",
+     "ncert_sections": "Peace and Cooperation",
+     "concepts": [
+      {
+       "concept_tag": "saarc-and-safta",
+       "learning_objective": "Explain the aims, achievements and limitations of SAARC and SAFTA."
+      },
+      {
+       "concept_tag": "india-pakistan-peace-efforts",
+       "learning_objective": "Identify the measures taken to manage tensions and build peace between India and Pakistan."
+      },
+      {
+       "concept_tag": "external-powers-in-south-asia",
+       "learning_objective": "Evaluate the role of China and the United States in South Asian politics."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "International Organisations",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS1-CH04-T1",
+     "topic_number": 1,
+     "title": "Why International Organisations?",
+     "ncert_sections": "Why International Organisations?",
+     "concepts": [
+      {
+       "concept_tag": "nature-of-international-organisation",
+       "learning_objective": "Explain that an international organisation is created by and responds to states and is not a super-state."
+      },
+      {
+       "concept_tag": "need-for-cooperation",
+       "learning_objective": "Explain why problems such as disease and global warming need international cooperation and how organisations help states cooperate."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH04-T2",
+     "topic_number": 2,
+     "title": "Evolution of the UN",
+     "ncert_sections": "Evolution of the UN; Founding of the United Nations",
+     "concepts": [
+      {
+       "concept_tag": "league-to-un",
+       "learning_objective": "Describe how the UN emerged as the successor to the League of Nations and state its main objectives."
+      },
+      {
+       "concept_tag": "founding-of-un",
+       "learning_objective": "Recall the key events and dates in the founding of the United Nations."
+      },
+      {
+       "concept_tag": "un-organs-and-agencies",
+       "learning_objective": "Identify the principal bodies and specialised agencies of the UN and the issues they handle."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH04-T3",
+     "topic_number": 3,
+     "title": "Reform of the UN after the Cold War",
+     "ncert_sections": "Reform of the UN after the Cold War; Reform of Structures and Processes",
+     "concepts": [
+      {
+       "concept_tag": "two-kinds-of-reform",
+       "learning_objective": "Distinguish between reform of the UN's structures and processes and a review of the issues within its jurisdiction."
+      },
+      {
+       "concept_tag": "post-cold-war-changes",
+       "learning_objective": "Identify the changes in world politics after the Cold War that created demands for UN reform."
+      },
+      {
+       "concept_tag": "criteria-for-new-members",
+       "learning_objective": "Evaluate the criteria proposed for new members of the Security Council and the problems with each."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH04-T4",
+     "topic_number": 4,
+     "title": "The Security Council and the Veto",
+     "ncert_sections": "Reform of Structures and Processes (membership and veto)",
+     "concepts": [
+      {
+       "concept_tag": "permanent-and-non-permanent-members",
+       "learning_objective": "State the composition of the Security Council and the terms of its permanent and non-permanent members."
+      },
+      {
+       "concept_tag": "veto-power",
+       "learning_objective": "Explain what the veto is and how a single permanent member can stall a decision."
+      },
+      {
+       "concept_tag": "debate-on-abolishing-veto",
+       "learning_objective": "Analyse the arguments for abolishing or retaining the veto power."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH04-T5",
+     "topic_number": 5,
+     "title": "Jurisdiction of the UN",
+     "ncert_sections": "Jurisdiction of the UN",
+     "concepts": [
+      {
+       "concept_tag": "world-summit-2005-decisions",
+       "learning_objective": "Recall the steps agreed by world leaders in September 2005 to make the UN more relevant."
+      },
+      {
+       "concept_tag": "contentious-jurisdiction-issues",
+       "learning_objective": "Analyse why the decisions on the UN's jurisdiction remain contentious."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH04-T6",
+     "topic_number": 6,
+     "title": "India and the UN Reforms",
+     "ncert_sections": "India and the UN Reforms",
+     "concepts": [
+      {
+       "concept_tag": "india-on-un-restructuring",
+       "learning_objective": "Explain India's position on restructuring the UN and expanding the Security Council."
+      },
+      {
+       "concept_tag": "india-claim-permanent-seat",
+       "learning_objective": "Identify the grounds on which India claims a permanent seat in the Security Council."
+      },
+      {
+       "concept_tag": "objections-to-india-candidature",
+       "learning_objective": "Analyse the concerns that make some countries reluctant to accept India as a permanent member."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH04-T7",
+     "topic_number": 7,
+     "title": "The UN in a Unipolar World",
+     "ncert_sections": "The UN in a Unipolar World",
+     "concepts": [
+      {
+       "concept_tag": "limits-on-checking-us-power",
+       "learning_objective": "Explain why the UN cannot easily check the power of the US."
+      },
+      {
+       "concept_tag": "un-as-arena-for-dialogue",
+       "learning_objective": "Evaluate how the UN still serves as a space for dialogue between the US and the rest of the world."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH04-T8",
+     "topic_number": 8,
+     "title": "Other International Organisations and NGOs",
+     "ncert_sections": "Boxes: IMF, World Bank, WTO, IAEA, Amnesty International, Human Rights Watch",
+     "concepts": [
+      {
+       "concept_tag": "imf-and-world-bank",
+       "learning_objective": "Describe the functions of the IMF and the World Bank and the criticisms made of them."
+      },
+      {
+       "concept_tag": "wto-and-iaea",
+       "learning_objective": "State the purpose and origin of the WTO and the IAEA."
+      },
+      {
+       "concept_tag": "human-rights-ngos",
+       "learning_objective": "Distinguish human rights NGOs such as Amnesty International and Human Rights Watch from intergovernmental organisations."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Security in the Contemporary World",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS1-CH05-T1",
+     "topic_number": 1,
+     "title": "What is Security?",
+     "ncert_sections": "What is Security?",
+     "concepts": [
+      {
+       "concept_tag": "security-and-core-values",
+       "learning_objective": "Explain security as freedom from threats to core values."
+      },
+      {
+       "concept_tag": "extremely-dangerous-threats",
+       "learning_objective": "Explain why security relates only to extremely dangerous threats to core values."
+      },
+      {
+       "concept_tag": "security-as-slippery-idea",
+       "learning_objective": "Recognise that conceptions of security vary across societies and over time."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH05-T2",
+     "topic_number": 2,
+     "title": "Traditional Notions: External",
+     "ncert_sections": "Traditional Notions: External",
+     "concepts": [
+      {
+       "concept_tag": "deterrence-and-defence",
+       "learning_objective": "Identify the choices a state has when threatened by war, including deterrence and defence."
+      },
+      {
+       "concept_tag": "balance-of-power-and-alliances",
+       "learning_objective": "Explain balance of power and alliance building as components of traditional security policy."
+      },
+      {
+       "concept_tag": "absence-of-world-authority",
+       "learning_objective": "Explain why, without a central world authority, each state is responsible for its own security."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH05-T3",
+     "topic_number": 3,
+     "title": "Traditional Notions: Internal",
+     "ncert_sections": "Traditional Notions: Internal",
+     "concepts": [
+      {
+       "concept_tag": "cold-war-context-of-security",
+       "learning_objective": "Explain why powerful states focused on external threats after the Second World War."
+      },
+      {
+       "concept_tag": "security-of-new-states",
+       "learning_objective": "Describe the external and internal security challenges of newly independent states."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH05-T4",
+     "topic_number": 4,
+     "title": "Traditional Security and Cooperation",
+     "ncert_sections": "Traditional Security and Cooperation",
+     "concepts": [
+      {
+       "concept_tag": "limits-on-war",
+       "learning_objective": "State the accepted limits on the ends and means of war."
+      },
+      {
+       "concept_tag": "disarmament-and-arms-control",
+       "learning_objective": "Distinguish disarmament from arms control with treaty examples."
+      },
+      {
+       "concept_tag": "confidence-building",
+       "learning_objective": "Explain confidence building as a means of avoiding violence between rivals."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH05-T5",
+     "topic_number": 5,
+     "title": "Non-Traditional Notions",
+     "ncert_sections": "Non-Traditional Notions",
+     "concepts": [
+      {
+       "concept_tag": "referent-of-security",
+       "learning_objective": "Compare the referent of security in traditional and non-traditional conceptions."
+      },
+      {
+       "concept_tag": "human-security",
+       "learning_objective": "Distinguish the narrow and broad concepts of human security."
+      },
+      {
+       "concept_tag": "global-security",
+       "learning_objective": "Explain why global threats led to the idea of global security."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH05-T6",
+     "topic_number": 6,
+     "title": "New Sources of Threats",
+     "ncert_sections": "New Sources of Threats",
+     "concepts": [
+      {
+       "concept_tag": "terrorism-and-human-rights",
+       "learning_objective": "Define terrorism and describe debates on human rights as security issues."
+      },
+      {
+       "concept_tag": "poverty-migration-and-refugees",
+       "learning_objective": "Distinguish migrants, refugees and internally displaced people and link them to poverty and conflict."
+      },
+      {
+       "concept_tag": "epidemics-and-limits-of-security",
+       "learning_objective": "Explain how epidemics threaten security and the criterion that limits what counts as a security issue."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH05-T7",
+     "topic_number": 7,
+     "title": "Cooperative Security and India's Security Strategy",
+     "ncert_sections": "Cooperative Security; India's Security Strategy",
+     "concepts": [
+      {
+       "concept_tag": "cooperative-security",
+       "learning_objective": "Explain why non-traditional threats need cooperation and collectively sanctioned force."
+      },
+      {
+       "concept_tag": "india-security-strategy",
+       "learning_objective": "Describe the four components of India's security strategy with examples."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Environment and Natural Resources",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS1-CH06-T1",
+     "topic_number": 1,
+     "title": "Environmental Concerns in Global Politics",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "environment-as-political-issue",
+       "learning_objective": "Explain why environmental degradation is a subject of world politics and not only of geography."
+      },
+      {
+       "concept_tag": "rise-of-environmentalism",
+       "learning_objective": "Trace the growing political profile of environmental concerns from the 1960s, including the Club of Rome and UNEP."
+      },
+      {
+       "concept_tag": "earth-summit-rio-1992",
+       "learning_objective": "Describe the Rio Earth Summit of 1992, its outcomes and the differing agendas of the global North and South."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH06-T2",
+     "topic_number": 2,
+     "title": "The Protection of Global Commons",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "global-commons-meaning",
+       "learning_objective": "Define global commons and identify the areas that form part of them."
+      },
+      {
+       "concept_tag": "antarctica-governance",
+       "learning_objective": "Describe the environmental importance of Antarctica and the rules governing it."
+      },
+      {
+       "concept_tag": "commons-north-south-inequality",
+       "learning_objective": "Analyse why cooperation over the global commons is difficult and shaped by North-South inequality."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH06-T3",
+     "topic_number": 3,
+     "title": "Common but Differentiated Responsibilities",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "cbdr-principle",
+       "learning_objective": "Explain the principle of common but differentiated responsibilities and the North-South debate behind it."
+      },
+      {
+       "concept_tag": "unfccc-kyoto-protocol",
+       "learning_objective": "Describe the UNFCCC and the Kyoto Protocol and why developing countries were exempted from its requirements."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH06-T4",
+     "topic_number": 4,
+     "title": "Common Property Resources",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "common-property-regime",
+       "learning_objective": "Explain the meaning of common property resources and the reasons for their decline."
+      },
+      {
+       "concept_tag": "sacred-groves",
+       "learning_objective": "Describe sacred groves in India as an example of community-based resource management and its problems."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH06-T5",
+     "topic_number": 5,
+     "title": "India's Stand on Environmental Issues",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "india-historical-responsibility",
+       "learning_objective": "Explain India's negotiating position based on historical responsibility and per capita emissions."
+      },
+      {
+       "concept_tag": "india-domestic-climate-efforts",
+       "learning_objective": "Identify the programmes and laws through which India participates in global environmental efforts."
+      },
+      {
+       "concept_tag": "india-rio-review-technology-transfer",
+       "learning_objective": "Explain India's demand for financial resources and clean technology from developed countries."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH06-T6",
+     "topic_number": 6,
+     "title": "Environmental Movements: One or Many?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "diversity-of-environmental-movements",
+       "learning_objective": "Explain why diversity is an important trait of contemporary environmental movements."
+      },
+      {
+       "concept_tag": "forest-movements-north-south",
+       "learning_objective": "Compare the forest and wilderness perspectives of the North and the South."
+      },
+      {
+       "concept_tag": "anti-dam-mining-movements",
+       "learning_objective": "Describe movements against mining companies and mega-dams with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH06-T7",
+     "topic_number": 7,
+     "title": "Resource Geopolitics",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "resource-geopolitics-history",
+       "learning_objective": "Explain the meaning of resource geopolitics and how powers have sought secure access to resources."
+      },
+      {
+       "concept_tag": "oil-geopolitics",
+       "learning_objective": "Analyse the importance of oil and the Gulf region in global strategy."
+      },
+      {
+       "concept_tag": "water-conflicts",
+       "learning_objective": "Explain how shared freshwater resources can become a source of conflict between states."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH06-T8",
+     "topic_number": 8,
+     "title": "The Indigenous Peoples and Their Rights",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "un-definition-indigenous",
+       "learning_objective": "State the UN definition of indigenous populations and their international organisation."
+      },
+      {
+       "concept_tag": "indigenous-land-and-rights",
+       "learning_objective": "Explain why land is central to the survival and rights of indigenous peoples."
+      },
+      {
+       "concept_tag": "scheduled-tribes-india",
+       "learning_objective": "Describe the situation of Scheduled Tribes in India as indigenous people."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEPS1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Globalisation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leps107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEPS1-CH07-T1",
+     "topic_number": 1,
+     "title": "The Concept of Globalisation",
+     "ncert_sections": "The Concept of Globalisation",
+     "concepts": [
+      {
+       "concept_tag": "worldwide-interconnectedness",
+       "learning_objective": "Explain globalisation as flows of ideas, capital, commodities and people that create worldwide interconnectedness."
+      },
+      {
+       "concept_tag": "multidimensional-and-uneven-globalisation",
+       "learning_objective": "Recognise that globalisation has political, economic and cultural dimensions and an uneven impact."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH07-T2",
+     "topic_number": 2,
+     "title": "Causes of Globalisation",
+     "ncert_sections": "Causes of Globalisation",
+     "concepts": [
+      {
+       "concept_tag": "scale-and-speed-of-flows",
+       "learning_objective": "Explain that the scale and speed of flows distinguish contemporary globalisation from earlier periods."
+      },
+      {
+       "concept_tag": "technology-as-a-cause",
+       "learning_objective": "Describe how technological advances have made the flows of globalisation possible."
+      },
+      {
+       "concept_tag": "awareness-of-interconnections",
+       "learning_objective": "Explain why recognition of global interconnections is needed for globalisation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH07-T3",
+     "topic_number": 3,
+     "title": "Political Consequences",
+     "ncert_sections": "Political Consequences",
+     "concepts": [
+      {
+       "concept_tag": "erosion-of-state-capacity",
+       "learning_objective": "Explain how globalisation erodes state capacity and replaces the welfare state with a minimalist state."
+      },
+      {
+       "concept_tag": "continuing-primacy-of-the-state",
+       "learning_objective": "Evaluate why the state remains important and can even gain capacity through new technology."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH07-T4",
+     "topic_number": 4,
+     "title": "Economic Consequences",
+     "ncert_sections": "Economic Consequences",
+     "concepts": [
+      {
+       "concept_tag": "economic-flows-and-institutions",
+       "learning_objective": "Describe economic globalisation as greater flows of commodities, capital and ideas involving many actors."
+      },
+      {
+       "concept_tag": "restricted-movement-of-people",
+       "learning_objective": "Explain why the movement of people has not grown as much as other flows."
+      },
+      {
+       "concept_tag": "debate-on-economic-globalisation",
+       "learning_objective": "Compare the arguments of critics and advocates of economic globalisation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH07-T5",
+     "topic_number": 5,
+     "title": "Cultural Consequences",
+     "ncert_sections": "Cultural Consequences",
+     "concepts": [
+      {
+       "concept_tag": "cultural-homogenisation",
+       "learning_objective": "Explain cultural homogenisation and the idea of US soft power and McDonaldisation."
+      },
+      {
+       "concept_tag": "cultural-heterogenisation",
+       "learning_objective": "Explain how outside influences can enlarge choices and make cultures more distinctive."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH07-T6",
+     "topic_number": 6,
+     "title": "India and Globalisation",
+     "ncert_sections": "India and Globalisation",
+     "concepts": [
+      {
+       "concept_tag": "colonial-economy-and-protectionism",
+       "learning_objective": "Describe India's colonial economic role and its policy of protectionism after independence."
+      },
+      {
+       "concept_tag": "economic-reforms-of-1991",
+       "learning_objective": "Evaluate India's 1991 economic reforms against the test of shared benefits of growth."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEPS1-CH07-T7",
+     "topic_number": 7,
+     "title": "Resistance to Globalisation",
+     "ncert_sections": "Resistance to Globalisation; India and Resistance to Globalisation",
+     "concepts": [
+      {
+       "concept_tag": "left-and-right-critiques",
+       "learning_objective": "Distinguish the criticisms of globalisation made by the political left and right."
+      },
+      {
+       "concept_tag": "global-anti-globalisation-movements",
+       "learning_objective": "Describe global platforms of resistance such as the Seattle protests and the World Social Forum."
+      },
+      {
+       "concept_tag": "resistance-in-india",
+       "learning_objective": "Identify forms of resistance to globalisation in India from different quarters."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

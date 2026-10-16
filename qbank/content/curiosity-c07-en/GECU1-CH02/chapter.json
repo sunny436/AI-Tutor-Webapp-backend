@@ -1,0 +1,108 @@
+{
+ "chapter_id": "GECU1-CH02",
+ "title": "Exploring Substances: Acidic, Basic, and Neutral",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GECU1-CH02-T1",
+   "topic_number": 1,
+   "title": "Litmus as an indicator: acidic, basic and neutral substances",
+   "ncert_sections": "2.1, 2.1.1",
+   "concepts": [
+    {
+     "concept_tag": "litmus-acid-base-indicator",
+     "learning_objective": "Describe litmus as a natural acid-base indicator obtained from lichens and state its colour changes."
+    },
+    {
+     "concept_tag": "classifying-acidic-basic-neutral",
+     "learning_objective": "Classify common substances as acidic, basic or neutral from their effect on blue and red litmus paper."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH02-T2",
+   "topic_number": 2,
+   "title": "Taste, touch and acids in everyday substances",
+   "ncert_sections": "2.1.1",
+   "concepts": [
+    {
+     "concept_tag": "acids-in-edible-substances",
+     "learning_objective": "Name the common acids present in edible substances such as lemon, tamarind, amla, curd and vinegar."
+    },
+    {
+     "concept_tag": "properties-of-acids-and-bases",
+     "learning_objective": "Relate the sour taste of acids and the slippery feel and bitter taste of bases, recognising the limits of taste as a test."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH02-T3",
+   "topic_number": 3,
+   "title": "Red rose and other natural indicators",
+   "ncert_sections": "2.1.2",
+   "concepts": [
+    {
+     "concept_tag": "red-rose-extract-indicator",
+     "learning_objective": "Explain how red rose extract changes colour in acidic and basic solutions."
+    },
+    {
+     "concept_tag": "natural-flower-indicators",
+     "learning_objective": "Identify other natural indicators such as beetroot, purple cabbage, jamun, red hibiscus and hydrangea flowers."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH02-T4",
+   "topic_number": 4,
+   "title": "Turmeric paper and olfactory indicators",
+   "ncert_sections": "2.1.3",
+   "concepts": [
+    {
+     "concept_tag": "turmeric-indicator",
+     "learning_objective": "Use turmeric paper to detect basic substances and explain why it cannot tell acidic from neutral substances."
+    },
+    {
+     "concept_tag": "olfactory-indicators",
+     "learning_objective": "Explain what olfactory indicators are, using onion-soaked strips as an example."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH02-T5",
+   "topic_number": 5,
+   "title": "Neutralisation: when acids mix with bases",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "neutralisation-reaction",
+     "learning_objective": "State that an acid and a base neutralise each other to form salt and water with the release of heat."
+    },
+    {
+     "concept_tag": "observing-neutralisation",
+     "learning_objective": "Interpret indicator colour changes that show an acidic or basic solution being neutralised."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH02-T6",
+   "topic_number": 6,
+   "title": "Neutralisation in daily life",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "ant-bite-treatment",
+     "learning_objective": "Explain why moist baking soda relieves the sting of a red ant bite."
+    },
+    {
+     "concept_tag": "soil-treatment",
+     "learning_objective": "Choose suitable treatments for acidic, basic and neutral soils with poor plant growth."
+    },
+    {
+     "concept_tag": "industrial-waste-treatment",
+     "learning_objective": "Explain how acidic factory waste can be neutralised before it is released into water bodies."
+    }
+   ]
+  }
+ ]
+}

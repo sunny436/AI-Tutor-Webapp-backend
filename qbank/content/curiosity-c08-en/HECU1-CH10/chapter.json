@@ -1,0 +1,112 @@
+{
+ "chapter_id": "HECU1-CH10",
+ "title": "Light: Mirrors and Lenses",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HECU1-CH10-T1",
+   "topic_number": 1,
+   "title": "What are spherical mirrors?",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "concave-and-convex-mirrors",
+     "learning_objective": "Define concave and convex mirrors and identify them from their reflecting surfaces."
+    },
+    {
+     "concept_tag": "making-spherical-mirrors",
+     "learning_objective": "Explain how spherical mirrors are made and how the coated side decides the mirror type."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH10-T2",
+   "topic_number": 2,
+   "title": "Images formed by spherical mirrors and their uses",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "concave-mirror-images",
+     "learning_objective": "Describe how the image in a concave mirror changes as the object moves away."
+    },
+    {
+     "concept_tag": "convex-mirror-images",
+     "learning_objective": "State that a convex mirror always forms an erect, diminished image."
+    },
+    {
+     "concept_tag": "uses-of-spherical-mirrors",
+     "learning_objective": "Relate the uses of concave and convex mirrors to the images they form."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH10-T3",
+   "topic_number": 3,
+   "title": "Laws of reflection",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "normal-and-angles",
+     "learning_objective": "Identify the incident ray, reflected ray, normal, angle of incidence and angle of reflection."
+    },
+    {
+     "concept_tag": "angle-of-incidence-equals-reflection",
+     "learning_objective": "Apply the law that the angle of incidence equals the angle of reflection."
+    },
+    {
+     "concept_tag": "rays-in-same-plane",
+     "learning_objective": "Explain the law that the incident ray, normal and reflected ray lie in one plane."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH10-T4",
+   "topic_number": 4,
+   "title": "Reflection of parallel beams by spherical mirrors",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "converging-and-diverging-mirrors",
+     "learning_objective": "Explain why a concave mirror converges and a convex mirror diverges parallel beams."
+    },
+    {
+     "concept_tag": "solar-concentrators",
+     "learning_objective": "Explain how concentrating sunlight with a concave mirror produces heat."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH10-T5",
+   "topic_number": 5,
+   "title": "What is a lens?",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "convex-and-concave-lenses",
+     "learning_objective": "Define a lens and distinguish convex and concave lenses by their shape."
+    },
+    {
+     "concept_tag": "images-through-lenses",
+     "learning_objective": "Describe how objects appear through convex and concave lenses at different distances."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH10-T6",
+   "topic_number": 6,
+   "title": "Converging and diverging lenses and their uses",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "converging-and-diverging-lenses",
+     "learning_objective": "Explain that a convex lens converges and a concave lens diverges light."
+    },
+    {
+     "concept_tag": "uses-of-lenses",
+     "learning_objective": "Identify everyday uses of lenses, including eyeglasses, cameras and the human eye."
+    }
+   ]
+  }
+ ]
+}

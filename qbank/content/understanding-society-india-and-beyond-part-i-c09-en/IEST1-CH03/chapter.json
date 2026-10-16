@@ -1,0 +1,152 @@
+{
+ "chapter_id": "IEST1-CH03",
+ "title": "Atmosphere and Climate",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IEST1-CH03-T1",
+   "topic_number": 1,
+   "title": "Composition of the Atmosphere",
+   "ncert_sections": "Composition of the Atmosphere",
+   "concepts": [
+    {
+     "concept_tag": "atmospheric-gases",
+     "learning_objective": "Identify the main gases of the atmosphere and their approximate shares."
+    },
+    {
+     "concept_tag": "water-vapour-and-dust",
+     "learning_objective": "Explain the varying share of water vapour and its role in clouds and precipitation."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH03-T2",
+   "topic_number": 2,
+   "title": "Structure of the Atmosphere",
+   "ncert_sections": "Structure of the Atmosphere",
+   "concepts": [
+    {
+     "concept_tag": "layer-basis-and-order",
+     "learning_objective": "Describe how the layers of the atmosphere are defined and how temperature changes through them."
+    },
+    {
+     "concept_tag": "troposphere-stratosphere",
+     "learning_objective": "Distinguish the troposphere from the stratosphere by their features and uses."
+    },
+    {
+     "concept_tag": "upper-layers",
+     "learning_objective": "Describe the mesosphere, thermosphere and exosphere and the phenomena linked to them."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH03-T3",
+   "topic_number": 3,
+   "title": "Weather, Climate and Their Elements",
+   "ncert_sections": "Weather and Climate; Elements of Weather and Climate (temperature, humidity, precipitation)",
+   "concepts": [
+    {
+     "concept_tag": "weather-vs-climate",
+     "learning_objective": "Distinguish weather from climate."
+    },
+    {
+     "concept_tag": "insolation-and-temperature",
+     "learning_objective": "Explain why temperature decreases from the equator towards the poles."
+    },
+    {
+     "concept_tag": "humidity-and-precipitation",
+     "learning_objective": "Explain humidity and the forms and causes of precipitation."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH03-T4",
+   "topic_number": 4,
+   "title": "Air Pressure, Wind and Local Winds",
+   "ncert_sections": "Atmospheric pressure; Wind; Land breeze and sea breeze",
+   "concepts": [
+    {
+     "concept_tag": "air-pressure",
+     "learning_objective": "Explain how air pressure varies with altitude and temperature."
+    },
+    {
+     "concept_tag": "wind-and-naming",
+     "learning_objective": "Define wind and name winds by the direction they blow from."
+    },
+    {
+     "concept_tag": "land-and-sea-breeze",
+     "learning_objective": "Explain the formation of land and sea breezes."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH03-T5",
+   "topic_number": 5,
+   "title": "Seasons in India",
+   "ncert_sections": "Seasons in India; traditional Indian seasons (Table 3.2)",
+   "concepts": [
+    {
+     "concept_tag": "imd-seasons",
+     "learning_objective": "Describe the four seasons recognised by the IMD and their months."
+    },
+    {
+     "concept_tag": "traditional-seasons",
+     "learning_objective": "Relate the six traditional Indian seasons to the Gregorian months."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH03-T6",
+   "topic_number": 6,
+   "title": "Monsoon",
+   "ncert_sections": "Monsoon",
+   "concepts": [
+    {
+     "concept_tag": "monsoon-mechanism",
+     "learning_objective": "Explain the origin of the word monsoon and the mechanism of the south-west monsoon."
+    },
+    {
+     "concept_tag": "northeast-monsoon",
+     "learning_objective": "Explain the north-east monsoon and its rainfall on the south-eastern coast."
+    },
+    {
+     "concept_tag": "monsoon-and-life",
+     "learning_objective": "Assess the role of the monsoon in the economy and life of India."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH03-T7",
+   "topic_number": 7,
+   "title": "Climate Change and Carbon Footprint",
+   "ncert_sections": "Climate Change; Let's Explore: My Carbon Footprint",
+   "concepts": [
+    {
+     "concept_tag": "climate-change-causes",
+     "learning_objective": "Explain the human causes and effects of climate change."
+    },
+    {
+     "concept_tag": "carbon-footprint",
+     "learning_objective": "Define carbon footprint and suggest ways to reduce it."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEST1-CH03-T8",
+   "topic_number": 8,
+   "title": "Punjab Floods 2025: A Case Study",
+   "ncert_sections": "Punjab Floods 2025: A Case Study",
+   "concepts": [
+    {
+     "concept_tag": "flood-causes",
+     "learning_objective": "Distinguish the natural and human-made causes of the 2025 Punjab floods."
+    },
+    {
+     "concept_tag": "flood-effects-preparedness",
+     "learning_objective": "Analyse the effects of floods and measures to reduce flood damage."
+    }
+   ]
+  }
+ ]
+}

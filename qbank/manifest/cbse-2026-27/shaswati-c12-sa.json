@@ -1,0 +1,1364 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "shaswati-c12-sa",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "sanskrit",
+  "language": "sanskrit",
+  "title": "Shaswati",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhsk2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHSK2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "विद्ययाऽमृतमश्नुते",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhsk201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHSK2-CH01-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः – ईशावास्योपनिषद् उपनिषदः च",
+     "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "ishavasya-parichayah",
+       "learning_objective": "ईशावास्योपनिषदः स्रोतं, नामकारणं, मन्त्रसङ्ख्यां च वदेत्।"
+      },
+      {
+       "concept_tag": "upanishad-svaroopam",
+       "learning_objective": "उपनिषत्-शब्दस्य व्युत्पत्तिं, नामान्तराणि, प्रमुखोपनिषदः च जानीयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH01-T2",
+     "topic_number": 2,
+     "title": "त्यागपूर्वकः भोगः निष्कामकर्म च (मन्त्रौ १-२)",
+     "ncert_sections": "मन्त्रौ १-२",
+     "concepts": [
+      {
+       "concept_tag": "tyaga-bhogah",
+       "learning_objective": "'तेन त्यक्तेन भुञ्जीथाः, मा गृधः' इति उपदेशस्य आशयं व्याख्यायेत्।"
+      },
+      {
+       "concept_tag": "nishkama-karma",
+       "learning_objective": "कर्म कुर्वन् शतं समाः जिजीविषेत् इति मन्त्रस्य तात्पर्यं विवेचयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH01-T3",
+     "topic_number": 3,
+     "title": "आत्महनः जनाः आत्मस्वरूपं च (मन्त्रौ ३-४)",
+     "ncert_sections": "मन्त्रौ ३-४",
+     "concepts": [
+      {
+       "concept_tag": "atmahano-janah",
+       "learning_objective": "असुर्याः लोकाः आत्महनः जनाः च के इति स्पष्टीकुर्यात्।"
+      },
+      {
+       "concept_tag": "atma-svaroopam",
+       "learning_objective": "अनेजत्, मनसः जवीयः इत्यादिभिः विशेषणैः आत्मतत्त्वस्य स्वरूपं विश्लेषयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH01-T4",
+     "topic_number": 4,
+     "title": "विद्या अविद्या च तयोः समन्वयः (मन्त्राः ५-७)",
+     "ncert_sections": "मन्त्राः ५-७",
+     "concepts": [
+      {
+       "concept_tag": "vidya-avidya",
+       "learning_objective": "पाठानुसारं विद्या-अविद्या-शब्दयोः अर्थं भेदं च वदेत्।"
+      },
+      {
+       "concept_tag": "vidya-avidya-samanvayah",
+       "learning_objective": "अविद्यया मृत्युं तीर्त्वा विद्यया अमृतम् अश्नुते इति समन्वयं मूल्याङ्कयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH01-T5",
+     "topic_number": 5,
+     "title": "व्याकरणम् – शब्दार्थाः प्रकृतिप्रत्ययौ सन्धिः च",
+     "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः (प्रश्नाः ८, ९, ११)",
+     "concepts": [
+      {
+       "concept_tag": "prakriti-pratyayah",
+       "learning_objective": "पाठगतपदेषु प्रकृतिं प्रत्ययं च पृथक् कुर्यात्।"
+      },
+      {
+       "concept_tag": "lakara-rupani",
+       "learning_objective": "पाठगतक्रियापदानां धातुं लकारं पुरुषं वचनं च अभिजानीयात्।"
+      },
+      {
+       "concept_tag": "sandhi",
+       "learning_objective": "पाठगतपदेषु सन्धिं सन्धिविच्छेदं च कुर्यात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH01-T6",
+     "topic_number": 6,
+     "title": "योग्यताविस्तारः – श्रेयः प्रेयः वैदिकस्वराः च",
+     "ncert_sections": "योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "shreyah-preyah",
+       "learning_objective": "कठोपनिषदि प्रतिपादितं श्रेयः-प्रेयसोः भेदं पाठसन्देशेन सह तोलयेत्।"
+      },
+      {
+       "concept_tag": "vaidika-svarah",
+       "learning_objective": "उदात्त-अनुदात्त-स्वरितानां लक्षणं चिह्नानि महत्त्वं च वदेत्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHSK2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "रघुकौत्ससंवादः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhsk202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHSK2-CH02-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः – कालिदासः रघुवंशं च",
+     "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "raghuvamsha-parichaya",
+       "learning_objective": "पाठस्य स्रोतग्रन्थं, कविं, कालिदासस्य अन्याः रचनाः च अभिजानीयात्।"
+      },
+      {
+       "concept_tag": "chaturdasha-vidya",
+       "learning_objective": "प्राचीनाः चतुर्दश विद्याः काः इति ज्ञातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "path-sandesha",
+       "learning_objective": "पाठात् प्राप्यमाणं सन्देशं – दातुः औदार्यं याचकस्य निःस्पृहतां च – विवेचयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH02-T2",
+     "topic_number": 2,
+     "title": "कौत्सस्य आगमनं रघोः आतिथ्यं च",
+     "ncert_sections": "श्लोकाः 1-5",
+     "concepts": [
+      {
+       "concept_tag": "kautsa-agamana",
+       "learning_objective": "विश्वजिद्यज्ञानन्तरं वरतन्तुशिष्यस्य कौत्सस्य आगमनं वर्णयेत्।"
+      },
+      {
+       "concept_tag": "raghu-atithya",
+       "learning_objective": "रघोः मृण्मयपात्रेण अर्घ्यदानं, विनयपूर्णं प्रश्नं च व्याख्यायेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH02-T3",
+     "topic_number": 3,
+     "title": "कौत्सस्य निराशा",
+     "ncert_sections": "श्लोकाः 6-9",
+     "concepts": [
+      {
+       "concept_tag": "kautsa-nirasha",
+       "learning_objective": "अर्घ्यपात्रं दृष्ट्वा कौत्सस्य निराशायाः कारणं बोधेत।"
+      },
+      {
+       "concept_tag": "nivara-chataka-drishtanta",
+       "learning_objective": "नीवार-चातक-सूर्यदृष्टान्तानाम् आशयं विश्लेषयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH02-T4",
+     "topic_number": 4,
+     "title": "गुरुदक्षिणायाः वृत्तान्तः",
+     "ncert_sections": "श्लोकाः 10-13",
+     "concepts": [
+      {
+       "concept_tag": "raghu-anuyoga",
+       "learning_objective": "प्रतियातुकामं कौत्सं निषिध्य रघोः प्रश्नं तस्य उत्तरं च बोधेत।"
+      },
+      {
+       "concept_tag": "gurudakshina-vrittanta",
+       "learning_objective": "वरतन्तोः चतुर्दशकोटिरूपायाः गुरुदक्षिणायाः कारणं व्याख्यायेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH02-T5",
+     "topic_number": 5,
+     "title": "रघोः प्रतिज्ञा कुबेरात् धनप्राप्तिश्च",
+     "ncert_sections": "श्लोकाः 14-20",
+     "concepts": [
+      {
+       "concept_tag": "raghu-pratijna",
+       "learning_objective": "परीवादभयात् रघोः प्रतिज्ञां कुबेरविषयकं निश्चयं च वर्णयेत्।"
+      },
+      {
+       "concept_tag": "suvarnavrishti-prashamsa",
+       "learning_objective": "सुवर्णवृष्टिं, धनदानं, द्वयोः प्रशंसायाः कारणं च मूल्याङ्कयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH02-T6",
+     "topic_number": 6,
+     "title": "व्याकरणम् – समासः, प्रकृतिप्रत्ययौ, लकाराः",
+     "ncert_sections": "अभ्यासः, शब्दार्थाः टिप्पण्यश्च",
+     "concepts": [
+      {
+       "concept_tag": "samasa-vigraha",
+       "learning_objective": "पाठगतानां समस्तपदानां विग्रहं समासनाम च निर्दिशेत्।"
+      },
+      {
+       "concept_tag": "prakriti-pratyaya",
+       "learning_objective": "पाठगतेषु पदेषु प्रकृतिप्रत्ययविभागं दर्शयेत्।"
+      },
+      {
+       "concept_tag": "lakara-parichaya",
+       "learning_objective": "पाठगतानां क्रियापदानां धातुं, लकारं, पुरुषं, वचनं च अभिजानीयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH02-T7",
+     "topic_number": 7,
+     "title": "अलङ्कारः, छन्दः, अनेकार्थकशब्दाः च",
+     "ncert_sections": "अभ्यासः, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "upama-alankara",
+       "learning_objective": "पाठगतेषु श्लोकेषु उपमालङ्कारम् अभिजानीयात्।"
+      },
+      {
+       "concept_tag": "upajati-chhanda",
+       "learning_objective": "पाठस्य श्लोकानाम् उपजातिछन्दः तस्य स्वरूपं च जानीयात्।"
+      },
+      {
+       "concept_tag": "anekarthaka-shabda",
+       "learning_objective": "'गो' इत्यादीनाम् अनेकार्थकशब्दानां प्रसङ्गानुसारम् अर्थं निर्धारयेत्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHSK2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "बालकौतुकम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhsk203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHSK2-CH03-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः – भवभूतिः उत्तररामचरितं च",
+     "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "bhavabhuti-parichaya",
+       "learning_objective": "भवभूतेः कालं, आश्रयदातारं, रसविशेषं च अभिजानीयात्।"
+      },
+      {
+       "concept_tag": "uttararamacharita-parichaya",
+       "learning_objective": "पाठस्य स्रोतं, नाटकस्य नामसार्थक्यं, प्रस्तुतांशस्य भावं च विवेचयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH03-T2",
+     "topic_number": 2,
+     "title": "बटूनां कोलाहलः लवस्य दर्शनं च",
+     "ncert_sections": "आरम्भः – श्लोकौ 1, 2",
+     "concepts": [
+      {
+       "concept_tag": "batu-kolahala",
+       "learning_objective": "आश्रमबालकानां क्रीडायाः बाल्यस्य सुखस्य च वर्णनं बोधेत्।"
+      },
+      {
+       "concept_tag": "lava-varnana",
+       "learning_objective": "अरुन्धत्याः श्लोके लवस्य रूपवर्णनस्य शब्दार्थान् जानीयात्।"
+      },
+      {
+       "concept_tag": "lava-rama-sadrishya",
+       "learning_objective": "लवे रामस्य सादृश्यं दृष्ट्वा जनकादीनां भावं विश्लेषयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH03-T3",
+     "topic_number": 3,
+     "title": "लवस्य अभिवादनं वात्सल्यभावः च",
+     "ncert_sections": "लवप्रवेशः – श्लोकः 3",
+     "concepts": [
+      {
+       "concept_tag": "lava-abhivadana",
+       "learning_objective": "लवस्य विनयपूर्णम् अभिवादनं गुरुजनानाम् आशीर्वचनानि च जानीयात्।"
+      },
+      {
+       "concept_tag": "vatsalya-bhava",
+       "learning_objective": "कौसल्याजनकयोः वात्सल्यं सीतारामयोः स्मृतिं च विवेचयेत्।"
+      },
+      {
+       "concept_tag": "lava-parichaya",
+       "learning_objective": "कौसल्यायाः प्रश्नान् लवस्य उत्तराणि च बोधेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH03-T4",
+     "topic_number": 4,
+     "title": "बटूनाम् अश्ववर्णनम् आश्वमेधिकाश्वस्य अभिज्ञानं च",
+     "ncert_sections": "बटुप्रवेशः – श्लोकः 4",
+     "concepts": [
+      {
+       "concept_tag": "ashva-varnana-hasya",
+       "learning_objective": "बटूनां सरलेन अश्ववर्णनेन उत्पन्नं हास्यं बोधेत्।"
+      },
+      {
+       "concept_tag": "ashvamedhika-ashva",
+       "learning_objective": "लवः आश्वमेधिकम् अश्वं कथम् अभिजानाति इति व्याख्यायेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH03-T5",
+     "topic_number": 5,
+     "title": "अश्वमेधघोषणा लवस्य वीरता च",
+     "ncert_sections": "घोषणा – श्लोकौ 5, 6, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "ashvamedha-yajna",
+       "learning_objective": "अश्वमेधयज्ञस्य स्वरूपं प्रयोजनं च जानीयात्।"
+      },
+      {
+       "concept_tag": "ashvamedha-ghoshana",
+       "learning_objective": "रक्षकाणां घोषणायाः अर्थं तया लवस्य प्रतिक्रियां च विश्लेषयेत्।"
+      },
+      {
+       "concept_tag": "lava-virata",
+       "learning_objective": "लवस्य क्षात्रतेजः निर्भयतां च मूल्याङ्कयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH03-T6",
+     "topic_number": 6,
+     "title": "व्याकरणम् – समासाः, प्रत्ययाः, छन्दः, अलङ्कारः च",
+     "ncert_sections": "अभ्यासः",
+     "concepts": [
+      {
+       "concept_tag": "samasa",
+       "learning_objective": "पाठगतानां समस्तपदानां विग्रहं समासनाम च जानीयात्।"
+      },
+      {
+       "concept_tag": "pratyaya",
+       "learning_objective": "पाठगतेषु पदेषु प्रकृतिप्रत्ययविभागं कुर्यात्।"
+      },
+      {
+       "concept_tag": "chhanda-alankara",
+       "learning_objective": "पाठगतश्लोकानां छन्दः अलङ्कारं च अभिजानीयात्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHSK2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "कर्मगौरवम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhsk204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHSK2-CH04-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः – श्रीमद्भगवद्गीता",
+     "ncert_sections": "पाठपरिचयः, श्रीमद्भगवद्गीतापरिचयः, अभ्यासः ९",
+     "concepts": [
+      {
+       "concept_tag": "gita-parichayah",
+       "learning_objective": "श्रीमद्भगवद्गीतायाः स्रोतः, पर्व, श्लोकसङ्ख्या, अध्यायसङ्ख्या च जानीयात्।"
+      },
+      {
+       "concept_tag": "upadesha-prasangah",
+       "learning_objective": "विषादग्रस्ताय अर्जुनाय श्रीकृष्णस्य उपदेशस्य प्रसङ्गं ज्ञान-भक्ति-कर्मसमन्वयं च अवगच्छेत्।"
+      },
+      {
+       "concept_tag": "anushtup-chhandah",
+       "learning_objective": "पाठे प्रयुक्तस्य अनुष्टुप्छन्दसः स्वरूपं परिचिनुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH04-T2",
+     "topic_number": 2,
+     "title": "योगः कर्मसु कौशलम् – नियतं कर्म",
+     "ncert_sections": "श्लोकौ १-२",
+     "concepts": [
+      {
+       "concept_tag": "yogah-karmasu-kaushalam",
+       "learning_objective": "बुद्धियुक्तस्य पुरुषस्य लक्षणं 'योगः कर्मसु कौशलम्' इत्यस्य आशयं च व्याख्यायेत्।"
+      },
+      {
+       "concept_tag": "niyatam-karma",
+       "learning_objective": "अकर्मणः कर्म ज्यायः इति, कर्म विना शरीरयात्रा अपि न सिध्यति इति च विवृणुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH04-T3",
+     "topic_number": 3,
+     "title": "कर्मणः अनिवार्यता असक्तकर्म च",
+     "ncert_sections": "श्लोकाः ३-५",
+     "concepts": [
+      {
+       "concept_tag": "naishkarmyam",
+       "learning_objective": "कर्मणाम् अनारम्भात् संन्यसनमात्रात् वा नैष्कर्म्यं सिद्धिः च न प्राप्यते इति अवगच्छेत्।"
+      },
+      {
+       "concept_tag": "prakritija-gunah",
+       "learning_objective": "प्रकृतिजैः गुणैः सर्वः अवशः कर्म कार्यते इति तत्त्वं व्याख्यायेत्।"
+      },
+      {
+       "concept_tag": "asakta-karma",
+       "learning_objective": "असक्तः सन् कार्यं कर्म आचरन् पुरुषः परम् आप्नोति इति विश्लेषयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH04-T4",
+     "topic_number": 4,
+     "title": "लोकसङ्ग्रहः श्रेष्ठाचरणं च",
+     "ncert_sections": "श्लोकाः ६-८, १२",
+     "concepts": [
+      {
+       "concept_tag": "lokasangrahah",
+       "learning_objective": "जनकादीनाम् उदाहरणेन लोकसङ्ग्रहार्थं कर्मणः महत्त्वं वर्णयेत्।"
+      },
+      {
+       "concept_tag": "shreshtha-acharanam",
+       "learning_objective": "श्रेष्ठजनस्य आचरणं लोकः अनुवर्तते इति तत्त्वं जीवने प्रयुञ्ज्यात्।"
+      },
+      {
+       "concept_tag": "buddhibhedah",
+       "learning_objective": "विद्वान् अज्ञानां कर्मसङ्गिनां बुद्धिभेदं न जनयेत् इति उपदेशं विवेचयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH04-T5",
+     "topic_number": 5,
+     "title": "समत्वं निष्कामकर्म च",
+     "ncert_sections": "श्लोकाः ९-११, १३",
+     "concepts": [
+      {
+       "concept_tag": "samatvam",
+       "learning_objective": "सुखदुःख-लाभालाभ-जयाजयेषु समत्वबुद्धेः स्वरूपं परिणामं च व्याख्यायेत्।"
+      },
+      {
+       "concept_tag": "nishkama-karma",
+       "learning_objective": "'कर्मण्येवाधिकारस्ते मा फलेषु कदाचन' इत्यस्य आशयं विश्लेषयेत्।"
+      },
+      {
+       "concept_tag": "sannyasi-yogi",
+       "learning_objective": "कर्मफलम् अनाश्रित्य कार्यं कर्म कुर्वन् एव संन्यासी योगी च इति निर्धारयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH04-T6",
+     "topic_number": 6,
+     "title": "व्याकरणम् – सन्धिः, लकाराः, समासः",
+     "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः ५-६, समासविग्रहाः",
+     "concepts": [
+      {
+       "concept_tag": "sandhi-vichchhedah",
+       "learning_objective": "पाठगतपदेषु सन्धिविच्छेदं सन्धिनाम च वदेत्।"
+      },
+      {
+       "concept_tag": "lakara-purusha-vachanam",
+       "learning_objective": "पाठगतक्रियापदानां धातुं लकारं पुरुषं वचनं च निर्दिशेत्।"
+      },
+      {
+       "concept_tag": "samasah",
+       "learning_objective": "पाठगतसमस्तपदानां विग्रहं समासनाम च निर्धारयेत्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHSK2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "शुकनासोपदेशः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhsk205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHSK2-CH05-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः – बाणभट्टः कादम्बरी च",
+     "ncert_sections": "पाठपरिचयः, योग्यताविस्तरः",
+     "concepts": [
+      {
+       "concept_tag": "banabhatta-krtayah",
+       "learning_objective": "बाणभट्टस्य कालं, आश्रयदातारं, कृतिद्वयं च जानीयात्।"
+      },
+      {
+       "concept_tag": "kadambari-kathavastu",
+       "learning_objective": "कादम्बर्याः कथाश्रेणीं, कथावस्तु, पात्राणि, अस्य पाठस्य प्रसङ्गं च अवगच्छेत्।"
+      },
+      {
+       "concept_tag": "panchali-ritih",
+       "learning_objective": "बाणस्य पाञ्चालीरीतेः लक्षणं बाणविषयकसूक्तीनाम् आशयं च परिचिनुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH05-T2",
+     "topic_number": 2,
+     "title": "यौवराज्याभिषेकः यौवनदोषाश्च",
+     "ncert_sections": "गद्यांशः – 'एवं समतिक्रामत्सु' इत्यारभ्य 'विषयेषु' पर्यन्तम्",
+     "concepts": [
+      {
+       "concept_tag": "yauvarajyabhishekah",
+       "learning_objective": "यौवराज्याभिषेकस्य प्रसङ्गं शुकनासस्य उपदेशप्रयोजनं च वर्णयेत्।"
+      },
+      {
+       "concept_tag": "yauvana-doshah",
+       "learning_objective": "यौवन-लक्ष्मीमद-गर्भेश्वरत्वादीनाम् अनर्थपरम्परां व्याख्यायेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH05-T3",
+     "topic_number": 3,
+     "title": "गुरूपदेशस्य महिमा",
+     "ncert_sections": "गद्यांशः – 'भवादृशा एव' इत्यारभ्य 'गुरून्' पर्यन्तम्",
+     "concepts": [
+      {
+       "concept_tag": "guru-upadesha-mahima",
+       "learning_objective": "गुरूपदेशः अजलं स्नानम् इति उपमायाः आशयं स्पष्टीकुर्यात्।"
+      },
+      {
+       "concept_tag": "rajnam-upadeshtarah",
+       "learning_objective": "राज्ञां हितोपदेष्टारः विरलाः किमर्थम् इति विश्लेषयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH05-T4",
+     "topic_number": 4,
+     "title": "लक्ष्म्याः स्वभावः",
+     "ncert_sections": "गद्यांशः – 'आलोकयतु तावत्' इत्यारभ्य 'लघिमानमापादयति' पर्यन्तम्",
+     "concepts": [
+      {
+       "concept_tag": "lakshmi-svabhavah",
+       "learning_objective": "लक्ष्म्याः चञ्चलतां अनार्यस्वभावं च पाठानुसारं वर्णयेत्।"
+      },
+      {
+       "concept_tag": "lakshmi-gunavirodhah",
+       "learning_objective": "गुणवद्भिः सह लक्ष्म्याः विरोधं तत्र प्रयुक्ताः उपमाः च विश्लेषयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH05-T5",
+     "topic_number": 5,
+     "title": "लक्ष्मीपरिगृहीताः राजानः धूर्ताश्च",
+     "ncert_sections": "गद्यांशः – 'एवंविधयापि' इत्यारभ्य 'उद्भावयति' पर्यन्तम्",
+     "concepts": [
+      {
+       "concept_tag": "dhurta-pratarana",
+       "learning_objective": "स्वार्थपरैः धूर्तैः प्रतार्यमाणानां राज्ञां दशां वर्णयेत्।"
+      },
+      {
+       "concept_tag": "vriddhopadesha-anadarah",
+       "learning_objective": "मदमत्तराज्ञां वृद्धोपदेशे हितवादिषु च व्यवहारं विश्लेषयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH05-T6",
+     "topic_number": 6,
+     "title": "उपसंहारः – अन्तिमः उपदेशः चन्द्रापीडस्य प्रतिक्रिया च",
+     "ncert_sections": "गद्यांशः – 'तदतिकुटिल' इत्यारभ्य पाठान्तं यावत्, योग्यताविस्तरः",
+     "concepts": [
+      {
+       "concept_tag": "prayatethah-upadeshah",
+       "learning_objective": "'तथा प्रयतेथाः' इति उपदेशस्य अष्टौ निषेधान् लक्ष्म्याः खलीकरणं च व्याख्यायेत्।"
+      },
+      {
+       "concept_tag": "chandrapida-pratikriya",
+       "learning_objective": "उपदेशं श्रुत्वा चन्द्रापीडस्य मनोदशां उत्प्रेक्षाश्रेणीं च अवगच्छेत्।"
+      },
+      {
+       "concept_tag": "upadesha-prasangikata",
+       "learning_objective": "पञ्चतन्त्र-विदुरनीतिश्लोकैः सह उपदेशस्य तुलनां कृत्वा प्रासङ्गिकतां मूल्याङ्कयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH05-T7",
+     "topic_number": 7,
+     "title": "व्याकरणम् – सन्धिः, समासः, प्रकृतिप्रत्ययः",
+     "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः ४-६",
+     "concepts": [
+      {
+       "concept_tag": "sandhih",
+       "learning_objective": "पाठगतपदानां सन्धिविच्छेदं सन्धिनाम च जानीयात्।"
+      },
+      {
+       "concept_tag": "samasah",
+       "learning_objective": "पाठगतसमस्तपदानां विग्रहं समासनाम च निर्दिशेत्।"
+      },
+      {
+       "concept_tag": "prakriti-pratyayah",
+       "learning_objective": "पाठगतपदानां प्रकृतिं प्रत्ययं लकारं च विभजेत्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHSK2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "सूक्तिसुधा",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhsk206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHSK2-CH06-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः – सूक्तिसुधा, कवयः च",
+     "ncert_sections": "पाठपरिचयः",
+     "concepts": [
+      {
+       "concept_tag": "sukti-artha",
+       "learning_objective": "'सूक्तिसुधा' इति शीर्षकस्य अर्थं वक्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "kavi-parichaya",
+       "learning_objective": "पाठे सङ्कलितानां श्लोकानां रचयितॄन् कवीन् अभिज्ञातुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH06-T2",
+     "topic_number": 2,
+     "title": "पण्डितराजजगन्नाथस्य अन्योक्तयः (श्लोकाः १–३)",
+     "ncert_sections": "श्लोकाः १–३",
+     "concepts": [
+      {
+       "concept_tag": "marala-manasam",
+       "learning_objective": "हंसस्य मानसप्रीतिं नीरक्षीरविवेकं च व्याख्यातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "kokila-rasala",
+       "learning_objective": "कोकिल-रसाल-अन्योक्तेः धैर्यसन्देशं बोद्धुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH06-T3",
+     "topic_number": 3,
+     "title": "माघ-भवभूति-भारवीणां सूक्तयः (श्लोकाः ४–६)",
+     "ncert_sections": "श्लोकाः ४–६",
+     "concepts": [
+      {
+       "concept_tag": "daiva-paurusha",
+       "learning_objective": "विदुषः भाग्य-पुरुषार्थयोः समन्वयं व्याख्यातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "priyajana-mahima",
+       "learning_objective": "प्रियजनस्य सान्निध्यस्य महत्त्वं बोद्धुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "vimrishyakaritvam",
+       "learning_objective": "विचार्य कार्यकरणस्य लाभं सहसा कार्यस्य हानिं च विवेक्तुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH06-T4",
+     "topic_number": 4,
+     "title": "भर्तृहरेः नीतिसूक्तयः – मौनं, महात्मानः, सन्मित्रं, सन्तः (श्लोकाः ७–१०)",
+     "ncert_sections": "श्लोकाः ७–१०",
+     "concepts": [
+      {
+       "concept_tag": "maunam-bhushanam",
+       "learning_objective": "अपण्डितानां कृते मौनस्य महत्त्वं वक्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "mahatma-sanmitra",
+       "learning_objective": "महात्मनां प्रकृतिसिद्धान् गुणान् सन्मित्रलक्षणानि च अभिज्ञातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "santa-svabhava",
+       "learning_objective": "सज्जनानां परगुणग्रहणस्वभावं व्याख्यातुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH06-T5",
+     "topic_number": 5,
+     "title": "वाग्भूषणम् आत्मश्रेयः च (श्लोकौ ११–१२)",
+     "ncert_sections": "श्लोकौ ११–१२",
+     "concepts": [
+      {
+       "concept_tag": "vagbhushanam",
+       "learning_objective": "संस्कृतायाः वाण्याः अक्षयभूषणत्वं व्याख्यातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "atma-shreyas",
+       "learning_objective": "समये एव आत्मकल्याणाय प्रयत्नस्य आवश्यकतां बोद्धुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH06-T6",
+     "topic_number": 6,
+     "title": "व्याकरणम् – सन्धिः, समासः, प्रकृतिप्रत्ययौ",
+     "ncert_sections": "अभ्यासः ८–१०",
+     "concepts": [
+      {
+       "concept_tag": "sandhi-vichchheda",
+       "learning_objective": "पाठगतपदानां सन्धिविच्छेदं कर्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "samasa-vigraha",
+       "learning_objective": "पाठगतसमस्तपदानां विग्रहं कर्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "prakriti-pratyaya",
+       "learning_objective": "पाठगतपदेषु प्रकृतिप्रत्ययविभागं लकारादिकं च ज्ञातुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH06-T7",
+     "topic_number": 7,
+     "title": "छन्दः अलङ्कारः च",
+     "ncert_sections": "अभ्यासः ११–१२, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "chhanda-parichaya",
+       "learning_objective": "पाठगतश्लोकानां छन्दांसि लक्षणैः सह अभिज्ञातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "alankara",
+       "learning_objective": "पाठगतपङ्क्तिषु उपमा-यमकौ अलङ्कारौ अभिज्ञातुं शक्नुयात्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHSK2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "विक्रमस्यौदार्यम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhsk207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHSK2-CH07-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः – सिंहासनद्वात्रिंशिका पुत्तलिकायाः प्रश्नः च",
+     "ncert_sections": "पाठपरिचयः, कथारम्भः",
+     "concepts": [
+      {
+       "concept_tag": "simhasana-dvatrimshika",
+       "learning_objective": "सिंहासनद्वात्रिंशिकायाः स्वरूपं, राज्ञः भोजस्य विक्रमादित्यस्य च सम्बन्धं वदेत्।"
+      },
+      {
+       "concept_tag": "lakshmi-vasa-hetu",
+       "learning_objective": "लक्ष्मीः कीदृशं पुरुषं स्वयं वाञ्छति इति श्लोकस्य आशयं व्याख्यायात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH07-T2",
+     "topic_number": 2,
+     "title": "विक्रमस्य चिन्तनम् – संसारस्य असारता धनस्य त्यागः च",
+     "ncert_sections": "उपार्जितानां वित्तानां..., दातव्यं भोक्तव्यं...",
+     "concepts": [
+      {
+       "concept_tag": "vitta-tyaga",
+       "learning_objective": "उपार्जितस्य धनस्य रक्षणं त्यागेन एव इति उपमया सह व्याख्यायात्।"
+      },
+      {
+       "concept_tag": "sanchaya-nishedha",
+       "learning_objective": "मधुकरीणाम् उदाहरणेन धनसञ्चयस्य निषेधं बोधयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH07-T3",
+     "topic_number": 3,
+     "title": "सर्वस्वदक्षिणयज्ञः समुद्रस्य आह्वानं च",
+     "ncert_sections": "यज्ञारम्भः, समुद्रतीरे ब्राह्मणः",
+     "concepts": [
+      {
+       "concept_tag": "sarvasva-dakshina-yajna",
+       "learning_objective": "सर्वस्वदक्षिणयज्ञस्य स्वरूपं तस्य आयोजनं च वर्णयेत्।"
+      },
+      {
+       "concept_tag": "samudra-ahvana",
+       "learning_objective": "ब्राह्मणेन समुद्रतीरे कृतस्य आह्वानस्य क्रमं जानीयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH07-T4",
+     "topic_number": 4,
+     "title": "समुद्रस्य वचनं मैत्रीलक्षणं रत्नचतुष्टयं च",
+     "ncert_sections": "ददाति प्रतिगृह्णाति..., गिरौ कलापी..., रत्नमाहात्म्यम्",
+     "concepts": [
+      {
+       "concept_tag": "priti-lakshana",
+       "learning_objective": "षड्विधं प्रीतिलक्षणं दूरस्थमैत्र्याः भावं च व्याख्यायात्।"
+      },
+      {
+       "concept_tag": "ratna-chatushtaya",
+       "learning_objective": "चतुर्णां रत्नानां प्रत्येकस्य माहात्म्यं वदेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH07-T5",
+     "topic_number": 5,
+     "title": "ब्राह्मणपरिवारस्य विवादः विक्रमस्य औदार्यं च",
+     "ncert_sections": "यज्ञसमाप्तिः, परिवारविवादः, कथोपसंहारः",
+     "concepts": [
+      {
+       "concept_tag": "parivara-vivada",
+       "learning_objective": "ब्राह्मणपरिवारस्य सदस्यानां रत्नविषयकान् मतभेदान् तेषां कारणानि च विश्लेषयेत्।"
+      },
+      {
+       "concept_tag": "vikrama-audarya",
+       "learning_objective": "विक्रमस्य सहजम् औदार्यं कथायाः सन्देशं च मूल्याङ्कयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH07-T6",
+     "topic_number": 6,
+     "title": "व्याकरणम् – सन्धिः समासः प्रकृतिप्रत्ययविभागः च",
+     "ncert_sections": "अभ्यासः ४, ५, ७",
+     "concepts": [
+      {
+       "concept_tag": "sandhi-viccheda",
+       "learning_objective": "पाठगतानां पदानां सन्धिविच्छेदं कुर्यात्।"
+      },
+      {
+       "concept_tag": "prakriti-pratyaya",
+       "learning_objective": "पाठगतपदेषु प्रकृतिं प्रत्ययं च पृथक् कुर्यात्।"
+      },
+      {
+       "concept_tag": "samasa-vigraha",
+       "learning_objective": "पाठगतानां समस्तपदानां विग्रहं समासनाम च जानीयात्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHSK2-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "कार्यं वा साधयेयम्, देहं वा पातयेयम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhsk208.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHSK2-CH08-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः लेखकः च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lekhaka-parichayah",
+       "learning_objective": "छात्रः पाठस्य लेखकं मूलग्रन्थं च ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "patha-sandeshah",
+       "learning_objective": "छात्रः दृढसंकल्पस्य कर्मठतायाः च सन्देशं बोधिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH08-T2",
+     "topic_number": 2,
+     "title": "सायंकालस्य मेघमालायाः च वर्णनम्",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sayankala-varnanam",
+       "learning_objective": "छात्रः आषाढमासस्य सायंकालस्य प्रकृतिवर्णनं बोधिष्यति।"
+      },
+      {
+       "concept_tag": "meghamala-varnanam",
+       "learning_objective": "छात्रः मेघमालायाः विविधरूपाणां वर्णनं विश्लेषयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH08-T3",
+     "topic_number": 3,
+     "title": "शिववीरस्य विश्वासपात्रस्य युवकस्य वर्णनम्",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "yuvaka-varnanam",
+       "learning_objective": "छात्रः अश्वारोहिणः युवकस्य रूपवेशयोः वर्णनं ज्ञास्यति।"
+      },
+      {
+       "concept_tag": "yuvaka-karyam",
+       "learning_objective": "छात्रः युवकस्य कार्यं गन्तव्यं च बोधिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH08-T4",
+     "topic_number": 4,
+     "title": "झञ्झावातः मार्गबाधाः प्रतिज्ञा च",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jhanjhavata-badhah",
+       "learning_objective": "छात्रः झञ्झावातजनिताः मार्गबाधाः वर्णयिष्यति।"
+      },
+      {
+       "concept_tag": "dridha-pratijna",
+       "learning_objective": "छात्रः विघ्नेषु अपि युवकस्य अविचलां प्रतिज्ञां मूल्याङ्कयिष्यति।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH08-T5",
+     "topic_number": 5,
+     "title": "व्याकरणम्: सन्धिः समासः प्रत्ययः अलङ्कारः च",
+     "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः",
+     "concepts": [
+      {
+       "concept_tag": "sandhi-samasah",
+       "learning_objective": "छात्रः पाठगतपदानां सन्धिविच्छेदं समासविग्रहं च करिष्यति।"
+      },
+      {
+       "concept_tag": "pratyaya-alankarah",
+       "learning_objective": "छात्रः पाठगतपदानां प्रकृतिप्रत्ययविभागम् अलङ्कारान् च अभिज्ञास्यति।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHSK2-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "दीनबन्धुः श्रीनायारः",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhsk209.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHSK2-CH09-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः – मूललेखकः कथासङ्ग्रहः च",
+     "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः १",
+     "concepts": [
+      {
+       "concept_tag": "path-parichayah",
+       "learning_objective": "पाठस्य मूलभाषां, स्रोतं, कथानायकस्य परिचयं च जानीयात्।"
+      },
+      {
+       "concept_tag": "lekhaka-parichayah",
+       "learning_objective": "श्रीचन्द्रशेखरदासवर्मणः जन्मवर्षं कृतीः च परिचिनुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH09-T2",
+     "topic_number": 2,
+     "title": "श्रीनायारस्य स्वभावः कर्मनैपुण्यं च",
+     "ncert_sections": "अनुच्छेदौ १-२",
+     "concepts": [
+      {
+       "concept_tag": "nayarasya-svabhavah",
+       "learning_objective": "श्रीनायारस्य स्वल्पभाषित्वं, समयपालनं, कार्ये मनोनिवेशं च वर्णयेत्।"
+      },
+      {
+       "concept_tag": "karma-naipunyam",
+       "learning_objective": "खाद्यापूर्तिविभागे सचिवरूपेण श्रीनायारस्य कार्यस्य परिणामान् विवृणुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH09-T3",
+     "topic_number": 3,
+     "title": "परोपकारः वेतनप्रेषणरहस्यं च",
+     "ncert_sections": "अनुच्छेदः ३",
+     "concepts": [
+      {
+       "concept_tag": "paropakarah",
+       "learning_objective": "अपरस्य सहकारः परमधर्मः इति श्रीनायारस्य जीवनमूल्यम् अवगच्छेत्।"
+      },
+      {
+       "concept_tag": "vetana-preshanam",
+       "learning_objective": "प्रतिमासं केरलं प्रति वेतनांशप्रेषणात् कृतम् अनुमानं विश्लेषयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH09-T4",
+     "topic_number": 4,
+     "title": "पत्रपठनं, अवकाशः, विदाई च",
+     "ncert_sections": "अनुच्छेदौ ४-५",
+     "concepts": [
+      {
+       "concept_tag": "avakasha-vidai",
+       "learning_objective": "पत्रं पठित्वा श्रीनायारस्य अवकाशग्रहणं क्षमायाचनं विदाईं च वर्णयेत्।"
+      },
+      {
+       "concept_tag": "patra-agamanam",
+       "learning_objective": "श्रीनायारस्य गमनानन्तरं कार्यालये आगतस्य पत्रस्य प्रसङ्गं जानीयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH09-T5",
+     "topic_number": 5,
+     "title": "सुश्रीमेर्याः पत्रम् – अनाथाश्रमः",
+     "ncert_sections": "पत्रांशः",
+     "concepts": [
+      {
+       "concept_tag": "meri-patram",
+       "learning_objective": "सुश्रीमेर्याः पत्रस्य विषयं तस्याः भावनां च अवगच्छेत्।"
+      },
+      {
+       "concept_tag": "anathashramah",
+       "learning_objective": "श्रीनायारेण निर्मितस्य अनाथाश्रमस्य विकासं पाठस्य शीर्षकस्य सार्थकतां च मूल्याङ्कयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH09-T6",
+     "topic_number": 6,
+     "title": "व्याकरणम् – समासः, प्रकृतिप्रत्ययौ, विपरीतार्थकपदानि",
+     "ncert_sections": "शब्दार्थाः, अभ्यासः ३, ५, ७",
+     "concepts": [
+      {
+       "concept_tag": "samasah",
+       "learning_objective": "पाठगतानां समस्तपदानां विग्रहं समासनाम च निर्दिशेत्।"
+      },
+      {
+       "concept_tag": "prakriti-pratyayah",
+       "learning_objective": "पाठगतानां कृदन्तपदानां प्रकृतिप्रत्ययविभागं कुर्यात्।"
+      },
+      {
+       "concept_tag": "viparitarthaka-padani",
+       "learning_objective": "पाठगतानां पदानां विपरीतार्थकपदानि चिनुयात्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHSK2-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "योगस्य वैशिष्ट्यम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhsk210.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHSK2-CH10-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः योगकक्षायाः आरम्भश्च",
+     "ncert_sections": "पाठपरिचयः, संवादस्य आरम्भः",
+     "concepts": [
+      {
+       "concept_tag": "yoga-patha-parichayah",
+       "learning_objective": "पाठस्य आधारं योगकक्षायाः प्रसङ्गं च ज्ञातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "antarrashtriya-yogadivasah",
+       "learning_objective": "योगस्य उपयोगितां अन्ताराष्ट्रिययोगदिवसं च वक्तुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH10-T2",
+     "topic_number": 2,
+     "title": "योगस्य लक्षणं चित्तवृत्तयश्च",
+     "ncert_sections": "योगः चित्तवृत्तिनिरोधः; पञ्च वृत्तयः",
+     "concepts": [
+      {
+       "concept_tag": "yoga-lakshanam",
+       "learning_objective": "‘योगश्चित्तवृत्तिनिरोधः’ इति योगलक्षणं व्याख्यातुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "chittavrittayah",
+       "learning_objective": "प्रमाणादीनां पञ्चानां चित्तवृत्तीनां लक्षणानि भेदयितुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH10-T3",
+     "topic_number": 3,
+     "title": "अष्टाङ्गयोगः यमाः नियमाश्च",
+     "ncert_sections": "योगाङ्गानि, यमः, नियमः",
+     "concepts": [
+      {
+       "concept_tag": "ashtanga-yoga",
+       "learning_objective": "योगस्य अष्टौ अङ्गानि क्रमेण वक्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "yama-niyama",
+       "learning_objective": "पञ्च यमान् पञ्च नियमान् च परिचेतुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH10-T4",
+     "topic_number": 4,
+     "title": "आसनादीनां लक्षणानि",
+     "ncert_sections": "आसनम्, प्राणायामः, प्रत्याहारः, धारणा, ध्यानम्, समाधिः",
+     "concepts": [
+      {
+       "concept_tag": "asana-pranayama-lakshanam",
+       "learning_objective": "आसनस्य प्राणायामस्य प्रत्याहारस्य च लक्षणानि वक्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "dharana-dhyana-samadhi",
+       "learning_objective": "धारणाध्यानसमाधीनां लक्षणानि तुलयितुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH10-T5",
+     "topic_number": 5,
+     "title": "यमानां फलानि",
+     "ncert_sections": "यमप्रतिष्ठायाः फलम्",
+     "concepts": [
+      {
+       "concept_tag": "yama-phalani",
+       "learning_objective": "अहिंसादीनां पञ्चानां यमानां फलानि वक्तुं विश्लेषयितुं च शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH10-T6",
+     "topic_number": 6,
+     "title": "नियमानां फलानि",
+     "ncert_sections": "नियमप्रतिष्ठायाः फलम्",
+     "concepts": [
+      {
+       "concept_tag": "niyama-phalani",
+       "learning_objective": "शौचादीनां पञ्चानां नियमानां फलानि वक्तुं विश्लेषयितुं च शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH10-T7",
+     "topic_number": 7,
+     "title": "आसनादीनां फलानि संयमश्च",
+     "ncert_sections": "आसनादीनां फलम्, संयमः",
+     "concepts": [
+      {
+       "concept_tag": "asanadi-phalani",
+       "learning_objective": "आसनप्राणायामप्रत्याहाराणां फलानि वक्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "samyamah",
+       "learning_objective": "धारणाध्यानसमाधीनां संयमं तस्य फलं च व्याख्यातुं शक्नुयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH10-T8",
+     "topic_number": 8,
+     "title": "शब्दार्थाः व्याकरणं च",
+     "ncert_sections": "शब्दार्थाः टिप्पण्यश्च, अभ्यासः",
+     "concepts": [
+      {
+       "concept_tag": "sandhi-viccheda",
+       "learning_objective": "पाठगतपदानां सन्धिं विच्छेदं च कर्तुं शक्नुयात्।"
+      },
+      {
+       "concept_tag": "shabdarupa-prakriti-pratyaya",
+       "learning_objective": "पाठगतपदानां मूलशब्दं, विभक्तिं, प्रत्ययं च ज्ञातुं शक्नुयात्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHSK2-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "कथं शब्दानुशासनं कर्तव्यम्",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhsk211.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHSK2-CH11-T1",
+     "topic_number": 1,
+     "title": "पाठपरिचयः – महाभाष्यं पाणिनीयव्याकरणपरम्परा च",
+     "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः",
+     "concepts": [
+      {
+       "concept_tag": "mahabhashya-parichayah",
+       "learning_objective": "पाठस्य स्रोतं महाभाष्यं शब्दानुशासनपदस्य च आशयं वदेत्।"
+      },
+      {
+       "concept_tag": "trimuni-vyakaranam",
+       "learning_objective": "पाणिनि-कात्यायन-पतञ्जलीनां ग्रन्थान् त्रिमुनिव्याकरणस्य स्वरूपं च जानीयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH11-T2",
+     "topic_number": 2,
+     "title": "अन्यतरोपदेशेन कृतं स्यात् – भक्ष्यनियमदृष्टान्तः",
+     "ncert_sections": "गद्यांशः १",
+     "concepts": [
+      {
+       "concept_tag": "anyatara-upadeshah",
+       "learning_objective": "शब्दस्य अपशब्दस्य वा एकतरस्य उपदेशेन अपरस्य बोधः इति तर्कं व्याख्यायेत्।"
+      },
+      {
+       "concept_tag": "bhakshya-niyamah",
+       "learning_objective": "भक्ष्यनियम-अभक्ष्यप्रतिषेधयोः दृष्टान्तं शब्दानुशासने योजयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH11-T3",
+     "topic_number": 3,
+     "title": "शब्दोपदेशस्य ज्यायस्त्वम् – अपभ्रंशाः",
+     "ncert_sections": "गद्यांशः २",
+     "concepts": [
+      {
+       "concept_tag": "laghutvam-shabdopadeshah",
+       "learning_objective": "लघुत्वात् इष्टान्वाख्यानात् च शब्दोपदेशः ज्यायान् इति विवेचयेत्।"
+      },
+      {
+       "concept_tag": "apabhramshah",
+       "learning_objective": "अपभ्रंशानां स्वरूपं 'गौः' इत्यस्य अपभ्रंशान् च अभिजानीयात्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH11-T4",
+     "topic_number": 4,
+     "title": "प्रतिपदपाठस्य अनभ्युपायत्वम् – बृहस्पति-इन्द्राख्यानम्",
+     "ncert_sections": "गद्यांशः ३",
+     "concepts": [
+      {
+       "concept_tag": "pratipadapathah",
+       "learning_objective": "बृहस्पति-इन्द्राख्यानेन प्रतिपदपाठस्य अनभ्युपायत्वं स्पष्टीकुर्यात्।"
+      },
+      {
+       "concept_tag": "vidya-chaturvidha",
+       "learning_objective": "आगम-स्वाध्याय-प्रवचन-व्यवहारकालैः विद्यायाः उपयोगं वदेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH11-T5",
+     "topic_number": 5,
+     "title": "उत्सर्गापवादौ – सामान्यविशेषवत् लक्षणम्",
+     "ncert_sections": "गद्यांशः ४, टिप्पणी",
+     "concepts": [
+      {
+       "concept_tag": "utsarga-apavadau",
+       "learning_objective": "उत्सर्गस्य अपवादस्य च स्वरूपं सम्बन्धं च वदेत्।"
+      },
+      {
+       "concept_tag": "karmanyan-atah-kah",
+       "learning_objective": "'कर्मण्यण्' 'आतोऽनुपसर्गे कः' इति सूत्रयोः उदाहरणानि विश्लेषयेत्।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHSK2-CH11-T6",
+     "topic_number": 6,
+     "title": "व्याकरणम् – शब्दार्थाः सन्धिः प्रत्ययाः च",
+     "ncert_sections": "शब्दार्थाः, अभ्यासः (प्रश्नाः ५, ७, ८)",
+     "concepts": [
+      {
+       "concept_tag": "sandhi",
+       "learning_objective": "पाठगतपदेषु सन्धिविच्छेदं सन्धिनाम च कुर्यात्।"
+      },
+      {
+       "concept_tag": "shabdarthah",
+       "learning_objective": "पाठगतपदानां अर्थान् अभिजानीयात्।"
+      },
+      {
+       "concept_tag": "kritya-pratyayah",
+       "learning_objective": "पाठगतपदेषु प्रकृतिप्रत्ययविभागं कुर्यात्।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "chapter_id": "IEMH1-CH02",
+ "title": "Introduction to Linear Polynomials",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IEMH1-CH02-T1",
+   "topic_number": 1,
+   "title": "Algebraic expressions and univariate polynomials",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "terms-variables-coefficients",
+     "learning_objective": "Identify the terms, variables, coefficients and constant term of an algebraic expression."
+    },
+    {
+     "concept_tag": "degree-of-polynomial",
+     "learning_objective": "Find the degree of a one-variable polynomial and classify it as constant, linear, quadratic or cubic."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH02-T2",
+   "topic_number": 2,
+   "title": "Linear polynomials, linear equations and input-output processes",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "value-of-polynomial",
+     "learning_objective": "Evaluate a polynomial by substituting a value of the variable, viewing it as an input-output process."
+    },
+    {
+     "concept_tag": "linear-equation-word-problems",
+     "learning_objective": "Form and solve a linear equation by equating a linear polynomial to a constant in a word problem."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH02-T3",
+   "topic_number": 3,
+   "title": "Exploring linear patterns",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "linear-pattern-constant-difference",
+     "learning_objective": "Recognise a linear pattern as a sequence whose consecutive terms have a constant difference."
+    },
+    {
+     "concept_tag": "nth-term-of-linear-pattern",
+     "learning_objective": "Find and use a linear expression in n for the nth term of a growing pattern."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH02-T4",
+   "topic_number": 4,
+   "title": "Linear growth and linear decay",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "linear-growth",
+     "learning_objective": "Model a quantity that increases by a fixed amount over equal intervals with a linear function."
+    },
+    {
+     "concept_tag": "linear-decay",
+     "learning_objective": "Model a quantity that decreases by a fixed amount over equal intervals with a linear function."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH02-T5",
+   "topic_number": 5,
+   "title": "Linear relationships y = ax + b",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "finding-a-and-b-from-data",
+     "learning_objective": "Find a and b in y = ax + b from two pairs of values of x and y."
+    },
+    {
+     "concept_tag": "interpreting-a-and-b",
+     "learning_objective": "Interpret a as the rate of change and b as the fixed starting value in a real-life linear relationship."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH02-T6",
+   "topic_number": 6,
+   "title": "Visualising linear relationships: slope and y-intercept",
+   "ncert_sections": "2.6",
+   "concepts": [
+    {
+     "concept_tag": "plotting-linear-equations",
+     "learning_objective": "Plot y = ax + b using two points and check whether a point lies on the line."
+    },
+    {
+     "concept_tag": "slope-and-y-intercept",
+     "learning_objective": "Identify the slope a and y-intercept b of y = ax + b and describe how they change the line."
+    },
+    {
+     "concept_tag": "parallel-lines",
+     "learning_objective": "Recognise that lines with equal slopes and different y-intercepts are parallel."
+    }
+   ]
+  }
+ ]
+}

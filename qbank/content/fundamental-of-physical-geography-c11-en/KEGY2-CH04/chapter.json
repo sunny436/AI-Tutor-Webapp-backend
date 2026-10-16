@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KEGY2-CH04",
+ "title": "Distribution of Oceans and Continents",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH04-T1",
+   "topic_number": 1,
+   "title": "Continental drift theory and its driving forces",
+   "ncert_sections": "Continental Drift; Force for Drifting",
+   "concepts": [
+    {
+     "concept_tag": "continental-drift-pangaea",
+     "learning_objective": "Describe Wegener's continental drift theory, Pangaea, Panthalassa and the split into Laurasia and Gondwanaland."
+    },
+    {
+     "concept_tag": "wegener-drift-forces",
+     "learning_objective": "Explain the pole-fleeing and tidal forces proposed by Wegener and why they were rejected."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH04-T2",
+   "topic_number": 2,
+   "title": "Evidence in support of continental drift",
+   "ncert_sections": "Evidence in Support of the Continental Drift",
+   "concepts": [
+    {
+     "concept_tag": "jigsaw-fit-and-rock-age",
+     "learning_objective": "Explain how the jig-saw fit of coastlines and rocks of the same age across oceans support drift."
+    },
+    {
+     "concept_tag": "tillite-placer-fossil-evidence",
+     "learning_objective": "Interpret tillite, placer deposits and fossil distribution as evidence of continental drift."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH04-T3",
+   "topic_number": 3,
+   "title": "Post-drift studies and the ocean floor",
+   "ncert_sections": "Post-drift Studies; Convectional Current Theory; Mapping of the Ocean Floor; Ocean Floor Configuration; Distribution of Earthquakes and Volcanoes",
+   "concepts": [
+    {
+     "concept_tag": "convection-current-theory",
+     "learning_objective": "Explain Arthur Holmes's convection current theory and its role in answering the problem of force."
+    },
+    {
+     "concept_tag": "ocean-floor-configuration",
+     "learning_objective": "Identify the divisions of the ocean floor: continental margins, abyssal plains and mid-oceanic ridges."
+    },
+    {
+     "concept_tag": "earthquake-volcano-distribution",
+     "learning_objective": "Interpret the global distribution of earthquakes and volcanoes and their focal depths."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH04-T4",
+   "topic_number": 4,
+   "title": "Concept of sea floor spreading",
+   "ncert_sections": "Concept of Sea Floor Spreading",
+   "concepts": [
+    {
+     "concept_tag": "post-drift-ocean-floor-facts",
+     "learning_objective": "Recall the facts about ocean-floor rocks, sediments and magnetism revealed by post-drift studies."
+    },
+    {
+     "concept_tag": "hess-sea-floor-spreading",
+     "learning_objective": "Explain Hess's hypothesis of sea floor spreading and the consumption of crust at trenches."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH04-T5",
+   "topic_number": 5,
+   "title": "Plate tectonics and plate boundaries",
+   "ncert_sections": "Plate Tectonics; Divergent, Convergent and Transform Boundaries",
+   "concepts": [
+    {
+     "concept_tag": "tectonic-plates-major-minor",
+     "learning_objective": "Define a tectonic plate and identify the major and minor plates of the world."
+    },
+    {
+     "concept_tag": "plate-boundary-types",
+     "learning_objective": "Distinguish divergent, convergent and transform plate boundaries with examples."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH04-T6",
+   "topic_number": 6,
+   "title": "Rate of plate movement and its driving force",
+   "ncert_sections": "Rates of Plate Movement; Force for the Plate Movement",
+   "concepts": [
+    {
+     "concept_tag": "rates-of-plate-movement",
+     "learning_objective": "Explain how magnetic stripes give the rates of plate movement and compare slow and fast ridges."
+    },
+    {
+     "concept_tag": "mantle-convection-driving-force",
+     "learning_objective": "Explain convection cells in the mantle as the force behind plate movement."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH04-T7",
+   "topic_number": 7,
+   "title": "Movement of the Indian plate",
+   "ncert_sections": "Movement of the Indian Plate",
+   "concepts": [
+    {
+     "concept_tag": "indian-plate-boundaries",
+     "learning_objective": "Identify the northern, eastern, western and southern boundaries of the Indian plate."
+    },
+    {
+     "concept_tag": "indian-plate-journey",
+     "learning_objective": "Describe India's northward journey, the Deccan Traps and the formation of the Himalayas."
+    }
+   ]
+  }
+ ]
+}

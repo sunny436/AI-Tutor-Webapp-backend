@@ -1,0 +1,120 @@
+{
+ "chapter_id": "HEGP1-CH01",
+ "title": "A Square and A Cube",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP1-CH01-T1",
+   "topic_number": 1,
+   "title": "Square numbers and the locker puzzle",
+   "ncert_sections": "Introduction, 1.1",
+   "concepts": [
+    {
+     "concept_tag": "odd-number-of-factors",
+     "learning_objective": "Explain why only square numbers have an odd number of factors, using partner factors."
+    },
+    {
+     "concept_tag": "square-number-meaning",
+     "learning_objective": "Recognise a square number as a number multiplied by itself and as the area of a square."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH01-T2",
+   "topic_number": 2,
+   "title": "Patterns and properties of perfect squares",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "units-digit-of-squares",
+     "learning_objective": "Use the units digit to decide when a number cannot be a perfect square."
+    },
+    {
+     "concept_tag": "zeros-and-parity-of-squares",
+     "learning_objective": "Relate the trailing zeros and the parity of a number to those of its square."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH01-T3",
+   "topic_number": 3,
+   "title": "Perfect squares, odd numbers and triangular numbers",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "squares-as-sums-of-odd-numbers",
+     "learning_objective": "Use the fact that the sum of the first n odd numbers is n squared."
+    },
+    {
+     "concept_tag": "numbers-between-consecutive-squares",
+     "learning_objective": "Count the numbers lying between two consecutive perfect squares."
+    },
+    {
+     "concept_tag": "triangular-and-square-numbers",
+     "learning_objective": "Recognise that two consecutive triangular numbers add up to a square."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH01-T4",
+   "topic_number": 4,
+   "title": "Square roots",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "square-root-meaning",
+     "learning_objective": "State the square roots of a perfect square and find the side of a square from its area."
+    },
+    {
+     "concept_tag": "square-root-by-prime-factorisation",
+     "learning_objective": "Use prime factorisation to test for perfect squares and find square roots."
+    },
+    {
+     "concept_tag": "estimating-square-roots",
+     "learning_objective": "Estimate the square root of a number lying between two perfect squares."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH01-T5",
+   "topic_number": 5,
+   "title": "Cubic numbers",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "perfect-cube-meaning",
+     "learning_objective": "Recognise a perfect cube as a number multiplied by itself three times."
+    },
+    {
+     "concept_tag": "properties-of-cubes",
+     "learning_objective": "Evaluate statements about the units digits, parity, zeros and digit counts of cubes."
+    },
+    {
+     "concept_tag": "taxicab-and-odd-number-patterns",
+     "learning_objective": "Use taxicab numbers and the odd-number pattern for cubes."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH01-T6",
+   "topic_number": 6,
+   "title": "Cube roots, successive differences and history",
+   "ncert_sections": "1.2, 1.3",
+   "concepts": [
+    {
+     "concept_tag": "cube-root-by-prime-factorisation",
+     "learning_objective": "Find cube roots and make numbers perfect cubes using prime factorisation."
+    },
+    {
+     "concept_tag": "successive-differences",
+     "learning_objective": "Compute successive differences of squares and cubes and interpret the pattern."
+    },
+    {
+     "concept_tag": "history-of-squares-and-roots",
+     "learning_objective": "Recall the Babylonian and ancient Indian terms for squares, cubes and roots."
+    }
+   ]
+  }
+ ]
+}

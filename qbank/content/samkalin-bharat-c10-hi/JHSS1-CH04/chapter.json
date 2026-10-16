@@ -1,0 +1,132 @@
+{
+ "chapter_id": "JHSS1-CH04",
+ "title": "कृषि",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHSS1-CH04-T1",
+   "topic_number": 1,
+   "title": "प्रारंभिक जीविका निर्वाह और गहन जीविका कृषि",
+   "ncert_sections": "कृषि के प्रकार",
+   "concepts": [
+    {
+     "concept_tag": "kartan-dahan-krishi",
+     "learning_objective": "प्रारंभिक जीविका निर्वाह (कर्तन दहन) कृषि की विशेषताएँ और उसके क्षेत्रीय नाम बताना।"
+    },
+    {
+     "concept_tag": "gahan-jeevika-krishi",
+     "learning_objective": "गहन जीविका कृषि की विशेषताओं और भूमि पर बढ़ते दबाव के कारणों को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSS1-CH04-T2",
+   "topic_number": 2,
+   "title": "वाणिज्यिक और रोपण कृषि",
+   "ncert_sections": "कृषि के प्रकार",
+   "concepts": [
+    {
+     "concept_tag": "vanijyik-krishi",
+     "learning_objective": "वाणिज्यिक कृषि की विशेषताएँ और क्षेत्रों के अनुसार वाणिज्यीकरण के अंतर को समझाना।"
+    },
+    {
+     "concept_tag": "ropan-krishi",
+     "learning_objective": "रोपण कृषि की विशेषताएँ, प्रमुख फसलें और उसके विकास की आवश्यक दशाएँ बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSS1-CH04-T3",
+   "topic_number": 3,
+   "title": "शस्य प्रारूप",
+   "ncert_sections": "शस्य प्रारूप",
+   "concepts": [
+    {
+     "concept_tag": "fasal-rituen",
+     "learning_objective": "रबी, खरीफ और जायद ऋतुओं के समय तथा उनकी प्रमुख फसलों में अंतर करना।"
+    },
+    {
+     "concept_tag": "rabi-safalta-karak",
+     "learning_objective": "उत्तर और उत्तर-पश्चिमी भारत में रबी फसलों की सफलता के कारकों की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSS1-CH04-T4",
+   "topic_number": 4,
+   "title": "मुख्य खाद्यान्न फसलें",
+   "ncert_sections": "मुख्य फसलें",
+   "concepts": [
+    {
+     "concept_tag": "chaval-gehun",
+     "learning_objective": "चावल और गेहूँ की भौगोलिक दशाएँ तथा उनके प्रमुख उत्पादक क्षेत्र बताना।"
+    },
+    {
+     "concept_tag": "mote-anaj-makka",
+     "learning_objective": "मोटे अनाजों और मक्का की विशेषताएँ, पोषण मूल्य और उत्पादक क्षेत्र पहचानना।"
+    },
+    {
+     "concept_tag": "dalen",
+     "learning_objective": "दालों का महत्त्व और मृदा की उर्वरता बढ़ाने में उनकी भूमिका समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSS1-CH04-T5",
+   "topic_number": 5,
+   "title": "खाद्यान्नों के अलावा अन्य खाद्य फसलें",
+   "ncert_sections": "खाद्यान्नों के अलावा अन्य खाद्य फसलें",
+   "concepts": [
+    {
+     "concept_tag": "ganna-tilhan",
+     "learning_objective": "गन्ने और तिलहनों की उपज दशाएँ, ऋतुएँ और उत्पादन में भारत का स्थान बताना।"
+    },
+    {
+     "concept_tag": "chay-kofi",
+     "learning_objective": "चाय और कॉफी की खेती की भौगोलिक दशाओं और विशेषताओं की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "bagwani-faslen",
+     "learning_objective": "उष्ण और शीतोष्ण बागवानी फसलों तथा उनके उत्पादक राज्यों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSS1-CH04-T6",
+   "topic_number": 6,
+   "title": "अखाद्य फसलें",
+   "ncert_sections": "अखाद्य फसलें",
+   "concepts": [
+    {
+     "concept_tag": "rabad",
+     "learning_objective": "रबड़ की खेती के लिए आवश्यक जलवायु और उसके उत्पादक क्षेत्र बताना।"
+    },
+    {
+     "concept_tag": "reshedar-faslen",
+     "learning_objective": "कपास, जूट, सन और रेशम जैसी रेशेदार फसलों की विशेषताएँ और दशाएँ समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSS1-CH04-T7",
+   "topic_number": 7,
+   "title": "प्रौद्योगिकीय और संस्थागत सुधार तथा भूदान-ग्रामदान",
+   "ncert_sections": "प्रौद्योगिकीय और संस्थागत सुधार; भूदान-ग्रामदान",
+   "concepts": [
+    {
+     "concept_tag": "sansthagat-sudhar",
+     "learning_objective": "स्वतंत्रता के बाद कृषि में किए गए संस्थागत और प्रौद्योगिकीय सुधारों का मूल्यांकन करना।"
+    },
+    {
+     "concept_tag": "kisan-yojanaen",
+     "learning_objective": "किसानों के हित में चलाई गई सरकारी योजनाओं और समर्थन मूल्य के उद्देश्य बताना।"
+    },
+    {
+     "concept_tag": "bhoodan-gramdan",
+     "learning_objective": "विनोबा भावे के भूदान-ग्रामदान आंदोलन की प्रकृति और महत्त्व का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

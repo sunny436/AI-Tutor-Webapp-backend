@@ -1,0 +1,140 @@
+{
+ "chapter_id": "KEPS2-CH03",
+ "title": "Election and Representation",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPS2-CH03-T1",
+   "topic_number": 1,
+   "title": "Elections and democracy",
+   "ncert_sections": "Elections and Democracy",
+   "concepts": [
+    {
+     "concept_tag": "direct-and-indirect-democracy",
+     "learning_objective": "Distinguish direct democracy from representative democracy and explain why large democracies elect representatives."
+    },
+    {
+     "concept_tag": "constitutional-rules-on-elections",
+     "learning_objective": "Identify the basic rules about elections that a democratic constitution lays down and why they are written into it."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS2-CH03-T2",
+   "topic_number": 2,
+   "title": "First Past the Post system",
+   "ncert_sections": "Election System in India; First Past the Post System",
+   "concepts": [
+    {
+     "concept_tag": "fptp-features",
+     "learning_objective": "Describe how a winner is decided under the First Past the Post (plurality) system."
+    },
+    {
+     "concept_tag": "vote-seat-disproportion",
+     "learning_objective": "Interpret election results to explain the gap between vote share and seat share under FPTP."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS2-CH03-T3",
+   "topic_number": 3,
+   "title": "Proportional Representation and the Rajya Sabha",
+   "ncert_sections": "Proportional Representation; How does PR work in Rajya Sabha elections",
+   "concepts": [
+    {
+     "concept_tag": "proportional-representation",
+     "learning_objective": "Explain the features and variations of the Proportional Representation system."
+    },
+    {
+     "concept_tag": "single-transferable-vote",
+     "learning_objective": "Apply the Single Transferable Vote method and quota formula used for Rajya Sabha elections."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS2-CH03-T4",
+   "topic_number": 4,
+   "title": "Why India adopted the FPTP system",
+   "ncert_sections": "Why did India adopt the FPTP system?",
+   "concepts": [
+    {
+     "concept_tag": "reasons-for-fptp",
+     "learning_objective": "Explain why the Constitution makers preferred FPTP for a large and diverse country."
+    },
+    {
+     "concept_tag": "fptp-and-party-system",
+     "learning_objective": "Analyse how FPTP has shaped India's party system in practice."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS2-CH03-T5",
+   "topic_number": 5,
+   "title": "Reservation of constituencies",
+   "ncert_sections": "Reservation of Constituencies",
+   "concepts": [
+    {
+     "concept_tag": "reserved-constituencies",
+     "learning_objective": "Distinguish reserved constituencies from separate electorates and explain why reservation is needed under FPTP."
+    },
+    {
+     "concept_tag": "delimitation-commission",
+     "learning_objective": "Describe how the Delimitation Commission decides which constituencies are reserved for SC and ST."
+    },
+    {
+     "concept_tag": "womens-reservation",
+     "learning_objective": "State the position on reservation of seats for women in local bodies and legislatures."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS2-CH03-T6",
+   "topic_number": 6,
+   "title": "Universal franchise and right to contest",
+   "ncert_sections": "Free and Fair Elections; Universal franchise and right to contest",
+   "concepts": [
+    {
+     "concept_tag": "universal-adult-franchise",
+     "learning_objective": "Explain universal adult franchise and its basis in equality."
+    },
+    {
+     "concept_tag": "right-to-contest",
+     "learning_objective": "Identify the conditions and restrictions on the right to contest elections."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS2-CH03-T7",
+   "topic_number": 7,
+   "title": "Independent Election Commission",
+   "ncert_sections": "Independent Election Commission",
+   "concepts": [
+    {
+     "concept_tag": "ec-composition-and-tenure",
+     "learning_objective": "Describe the constitutional basis, composition, tenure and removal of the Election Commission."
+    },
+    {
+     "concept_tag": "ec-functions-and-powers",
+     "learning_objective": "Explain the functions of the Election Commission and how it uses its powers to ensure free and fair polls."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS2-CH03-T8",
+   "topic_number": 8,
+   "title": "Electoral reforms and conclusion",
+   "ncert_sections": "Electoral Reforms; Conclusion",
+   "concepts": [
+    {
+     "concept_tag": "electoral-reform-proposals",
+     "learning_objective": "Identify and evaluate the main proposals for electoral reform and their limits."
+    },
+    {
+     "concept_tag": "success-of-indian-elections",
+     "learning_objective": "Assess the factors that show the success of India's election system."
+    }
+   ]
+  }
+ ]
+}

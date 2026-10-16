@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LHSK1-CH04",
+ "title": "दौवारिकस्य निष्ठा",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHSK1-CH04-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः – शिवराजविजयः गद्यकाव्यं च",
+   "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "shivarajavijaya-parichaya",
+     "learning_objective": "शिवराजविजयस्य लेखकं, विषयं, संस्कृतसाहित्ये स्थानं च ज्ञातुं शक्नुयात्।"
+    },
+    {
+     "concept_tag": "gadyakavya-bhedah",
+     "learning_objective": "काव्यस्य दृश्य-श्रव्य-भेदान् गद्यकाव्यस्य प्रमुखान् ग्रन्थान् च अभिजानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH04-T2",
+   "topic_number": 2,
+   "title": "रात्रौ दौवारिकस्य सतर्कता",
+   "ncert_sections": "पाठस्य प्रथमः अंशः",
+   "concepts": [
+    {
+     "concept_tag": "dauvarika-satarkata",
+     "learning_objective": "अन्धकारे दौवारिकस्य सावधानतां प्रश्नपद्धतिं च वर्णयेत्।"
+    },
+    {
+     "concept_tag": "prabhu-adesha",
+     "learning_objective": "प्रभोः आदेशस्य – त्रिःपृष्टः अपि अनुत्तरन् हन्तव्यः – आशयं व्याख्यायेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH04-T3",
+   "topic_number": 3,
+   "title": "संन्यासिदौवारिकयोः संवादः – प्रवेशनियमाः",
+   "ncert_sections": "संन्यासिदौवारिकसंवादः (प्रथमः भागः)",
+   "concepts": [
+    {
+     "concept_tag": "sannyasi-tarka",
+     "learning_objective": "संन्यासिनः प्रवेशविषयकान् तर्कान् अभिजानीयात्।"
+    },
+    {
+     "concept_tag": "pravesha-niyama",
+     "learning_objective": "दुर्गे रात्रौ प्रवेशस्य नियमान् दौवारिकस्य उत्तराणि च बोधेत।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH04-T4",
+   "topic_number": 4,
+   "title": "उत्कोचप्रलोभनं दौवारिकस्य निष्ठा च",
+   "ncert_sections": "संन्यासिदौवारिकसंवादः (द्वितीयः भागः)",
+   "concepts": [
+    {
+     "concept_tag": "utkocha-pralobhana",
+     "learning_objective": "पारदभस्मरूपं प्रलोभनं तस्य उद्देश्यं च विश्लेषयेत्।"
+    },
+    {
+     "concept_tag": "svamibhakti-nishtha",
+     "learning_objective": "दौवारिकस्य स्वामिभक्तिं कर्तव्यनिष्ठां च मूल्याङ्कयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH04-T5",
+   "topic_number": 5,
+   "title": "गौरसिंहस्य परीक्षा पुरस्कारश्च",
+   "ncert_sections": "पाठस्य अन्तिमः अंशः",
+   "concepts": [
+    {
+     "concept_tag": "gaurasimha-pariksha",
+     "learning_objective": "संन्यासिरूपस्य गौरसिंहस्य परिचयं परीक्षायाः परिणामं च वर्णयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK1-CH04-T6",
+   "topic_number": 6,
+   "title": "व्याकरणम् – सन्धिः, समासः, प्रत्ययाः",
+   "ncert_sections": "अभ्यासः (सन्धिः, समासः, प्रत्ययाः)",
+   "concepts": [
+    {
+     "concept_tag": "sandhi-vichchheda",
+     "learning_objective": "पाठगतानां पदानां सन्धिविच्छेदं कुर्यात्।"
+    },
+    {
+     "concept_tag": "samasa-vigraha",
+     "learning_objective": "पाठगतानां समस्तपदानां विग्रहं समासनाम च निर्दिशेत्।"
+    },
+    {
+     "concept_tag": "pratyaya-vibhaga",
+     "learning_objective": "पाठगतेषु पदेषु उपसर्ग-धातु-प्रत्यय-विभागं दर्शयेत्।"
+    }
+   ]
+  }
+ ]
+}

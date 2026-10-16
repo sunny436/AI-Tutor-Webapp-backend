@@ -1,0 +1,128 @@
+{
+ "chapter_id": "LEAC2-CH03",
+ "title": "Financial Statements of a Company",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEAC2-CH03-T1",
+   "topic_number": 1,
+   "title": "Meaning and nature of financial statements",
+   "ncert_sections": "3.1, 3.2",
+   "concepts": [
+    {
+     "concept_tag": "meaning-of-financial-statements",
+     "learning_objective": "State what financial statements are and which statements they include."
+    },
+    {
+     "concept_tag": "nature-of-financial-statements",
+     "learning_objective": "Explain how recorded facts, conventions, postulates and personal judgements shape financial statements."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH03-T2",
+   "topic_number": 2,
+   "title": "Objectives of financial statements",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "primary-objective-decision-making",
+     "learning_objective": "Explain that the primary objective of financial statements is to assist users in decision-making."
+    },
+    {
+     "concept_tag": "specific-objectives",
+     "learning_objective": "Identify the specific objectives of financial statements and match them to users' needs."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH03-T3",
+   "topic_number": 3,
+   "title": "Form of balance sheet and shareholders' funds under Schedule III",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "schedule-iii-balance-sheet-format",
+     "learning_objective": "Describe the heads, sub-heads and presentation features of the balance sheet under Schedule III."
+    },
+    {
+     "concept_tag": "share-capital-disclosure",
+     "learning_objective": "Show share capital, calls-in-arrears and forfeited shares in the balance sheet and notes to accounts."
+    },
+    {
+     "concept_tag": "reserves-and-surplus",
+     "learning_objective": "Compute and present reserves and surplus, including a debit balance of the statement of profit and loss."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH03-T4",
+   "topic_number": 4,
+   "title": "Current and non-current classification of balance sheet items",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "current-non-current-criteria",
+     "learning_objective": "State the criteria for classifying an item as current or non-current."
+    },
+    {
+     "concept_tag": "classification-of-liabilities",
+     "learning_objective": "Classify borrowings, trade payables, provisions and deferred tax under the correct heads."
+    },
+    {
+     "concept_tag": "classification-of-assets",
+     "learning_objective": "Classify fixed assets, investments, inventories and trade receivables under the correct heads."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH03-T5",
+   "topic_number": 5,
+   "title": "Form and content of the statement of profit and loss",
+   "ncert_sections": "3.4.2",
+   "concepts": [
+    {
+     "concept_tag": "revenue-and-other-income",
+     "learning_objective": "Distinguish revenue from operations from other income."
+    },
+    {
+     "concept_tag": "expense-heads",
+     "learning_objective": "Place expenses under the correct heads of the statement of profit and loss."
+    },
+    {
+     "concept_tag": "profit-before-tax-computation",
+     "learning_objective": "Compute profit before tax in the Schedule III format."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH03-T6",
+   "topic_number": 6,
+   "title": "Uses and importance of financial statements",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "uses-of-financial-statements",
+     "learning_objective": "Explain how different users rely on financial statements for their decisions."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH03-T7",
+   "topic_number": 7,
+   "title": "Limitations of financial statements",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "historical-cost-limitations",
+     "learning_objective": "Explain limitations arising from historical cost and the realisable value of assets."
+    },
+    {
+     "concept_tag": "information-gaps-and-bias",
+     "learning_objective": "Explain limitations of bias, aggregation, missing and qualitative information, and interim reporting."
+    }
+   ]
+  }
+ ]
+}

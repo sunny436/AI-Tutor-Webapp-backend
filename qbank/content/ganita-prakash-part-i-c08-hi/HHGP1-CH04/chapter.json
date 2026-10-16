@@ -1,0 +1,92 @@
+{
+ "chapter_id": "HHGP1-CH04",
+ "title": "चतुर्भुज",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP1-CH04-T1",
+   "topic_number": 1,
+   "title": "आयत तथा वर्ग",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "aayat-ke-gun",
+     "learning_objective": "आयत की परिभाषा और उसके कोणों, भुजाओं तथा विकर्णों के गुण पहचानना और लागू करना।"
+    },
+    {
+     "concept_tag": "varg-ke-gun",
+     "learning_objective": "वर्ग के गुण, विशेषकर विकर्णों द्वारा कोणों के समद्विभाजन, को समझना और लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH04-T2",
+   "topic_number": 2,
+   "title": "चतुर्भुज के कोण",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "chaturbhuj-kon-yog",
+     "learning_objective": "चतुर्भुज के कोणों का योग 360° होने का कारण समझना और अज्ञात कोण ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH04-T3",
+   "topic_number": 3,
+   "title": "समांतर सम्मुख भुजाओं वाले और चतुर्भुज (समांतर चतुर्भुज)",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "samantar-chaturbhuj-gun",
+     "learning_objective": "समांतर चतुर्भुज की भुजाओं, कोणों और विकर्णों के गुणों का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH04-T4",
+   "topic_number": 4,
+   "title": "समान लंबाई की भुजाओं वाले चतुर्भुज (समचतुर्भुज)",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "samchaturbhuj-gun",
+     "learning_objective": "समचतुर्भुज के विकर्णों और कोणों के गुण समझना तथा उन्हें प्रश्नों में लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH04-T5",
+   "topic_number": 5,
+   "title": "चतुर्भुजों के साथ खेल",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "tribhuj-jodkar-chaturbhuj",
+     "learning_objective": "दो सर्वांगसम त्रिभुजों को जोड़कर बने चतुर्भुज का प्रकार तर्क से पहचानना।"
+    },
+    {
+     "concept_tag": "vikarn-se-chaturbhuj-pahchan",
+     "learning_objective": "विकर्णों की लंबाई और उनके प्रतिच्छेद के आधार पर चतुर्भुज का प्रकार पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH04-T6",
+   "topic_number": 6,
+   "title": "पतंग और समलंब चतुर्भुज",
+   "ncert_sections": "4.6",
+   "concepts": [
+    {
+     "concept_tag": "patang-gun",
+     "learning_objective": "पतंग की परिभाषा और उसके विकर्णों तथा कोणों के गुण लागू करना।"
+    },
+    {
+     "concept_tag": "samlamb-gun",
+     "learning_objective": "समलंब और समद्विबाहु समलंब के कोणों के गुणों से अज्ञात कोण ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

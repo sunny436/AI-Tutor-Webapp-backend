@@ -1,0 +1,104 @@
+{
+ "chapter_id": "JEMH1-CH06",
+ "title": "Triangles",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH06-T1",
+   "topic_number": 1,
+   "title": "Similar figures and similarity of polygons",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "similar-vs-congruent-figures",
+     "learning_objective": "Distinguish similar figures from congruent figures and identify classes of figures that are always similar."
+    },
+    {
+     "concept_tag": "similarity-of-polygons-conditions",
+     "learning_objective": "Apply the two conditions (equal corresponding angles and proportional corresponding sides) for similarity of polygons."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH06-T2",
+   "topic_number": 2,
+   "title": "Basic Proportionality Theorem (Thales theorem)",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "basic-proportionality-theorem",
+     "learning_objective": "State the Basic Proportionality Theorem and write the ratios it gives."
+    },
+    {
+     "concept_tag": "bpt-ratio-applications",
+     "learning_objective": "Use the Basic Proportionality Theorem to find unknown lengths in triangles and trapeziums."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH06-T3",
+   "topic_number": 3,
+   "title": "Converse of the Basic Proportionality Theorem",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "converse-of-bpt",
+     "learning_objective": "Use the converse of the Basic Proportionality Theorem to decide whether a line is parallel to a side of a triangle."
+    },
+    {
+     "concept_tag": "midpoint-theorem-via-bpt",
+     "learning_objective": "Deduce mid-point results for a triangle from the converse of the Basic Proportionality Theorem."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH06-T4",
+   "topic_number": 4,
+   "title": "AAA and AA similarity criteria",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "aa-similarity-criterion",
+     "learning_objective": "Prove triangles similar using the AAA or AA criterion and use the resulting proportions."
+    },
+    {
+     "concept_tag": "similarity-notation-correspondence",
+     "learning_objective": "Write the similarity of two triangles with the correct correspondence of vertices and sides."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH06-T5",
+   "topic_number": 5,
+   "title": "SSS and SAS similarity criteria",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "sss-similarity-criterion",
+     "learning_objective": "Prove triangles similar when their corresponding sides are proportional and find unknown angles."
+    },
+    {
+     "concept_tag": "sas-similarity-criterion",
+     "learning_objective": "Prove triangles similar using one equal angle with the including sides proportional."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH06-T6",
+   "topic_number": 6,
+   "title": "Applications of similar triangles",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "shadow-height-problems",
+     "learning_objective": "Use similar triangles to find heights and shadow lengths by indirect measurement."
+    },
+    {
+     "concept_tag": "corresponding-medians-ratio",
+     "learning_objective": "Relate corresponding medians of similar triangles to their corresponding sides."
+    }
+   ]
+  }
+ ]
+}

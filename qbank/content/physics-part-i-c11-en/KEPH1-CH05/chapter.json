@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KEPH1-CH05",
+ "title": "Work, Energy and Power",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPH1-CH05-T1",
+   "topic_number": 1,
+   "title": "Scalar product and work",
+   "ncert_sections": "5.1, 5.2, 5.3",
+   "concepts": [
+    {
+     "concept_tag": "scalar-product",
+     "learning_objective": "Compute the scalar product of two vectors and use it to find the angle between them."
+    },
+    {
+     "concept_tag": "work-by-constant-force",
+     "learning_objective": "Calculate the work done by a constant force as W = F.d and interpret its sign."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH05-T2",
+   "topic_number": 2,
+   "title": "Kinetic energy, work by a variable force and the work-energy theorem",
+   "ncert_sections": "5.4, 5.5, 5.6",
+   "concepts": [
+    {
+     "concept_tag": "kinetic-energy",
+     "learning_objective": "Relate kinetic energy to mass, speed and linear momentum."
+    },
+    {
+     "concept_tag": "work-by-variable-force",
+     "learning_objective": "Find the work done by a variable force as the area under the force-displacement graph."
+    },
+    {
+     "concept_tag": "work-energy-theorem",
+     "learning_objective": "Apply the work-energy theorem: the change in kinetic energy equals the work done by the net force."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH05-T3",
+   "topic_number": 3,
+   "title": "Potential energy and conservation of mechanical energy",
+   "ncert_sections": "5.7, 5.8",
+   "concepts": [
+    {
+     "concept_tag": "conservative-force-potential-energy",
+     "learning_objective": "Distinguish conservative and non-conservative forces and relate force to potential energy."
+    },
+    {
+     "concept_tag": "conservation-of-mechanical-energy",
+     "learning_objective": "Apply conservation of mechanical energy to falling bodies and a pendulum in a vertical circle."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH05-T4",
+   "topic_number": 4,
+   "title": "The potential energy of a spring",
+   "ncert_sections": "5.9",
+   "concepts": [
+    {
+     "concept_tag": "spring-force-hookes-law",
+     "learning_objective": "Describe the restoring spring force F = -kx for an ideal spring."
+    },
+    {
+     "concept_tag": "spring-potential-energy",
+     "learning_objective": "Calculate the elastic potential energy (1/2)kx^2 and use it in energy conservation problems."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH05-T5",
+   "topic_number": 5,
+   "title": "Power",
+   "ncert_sections": "5.10",
+   "concepts": [
+    {
+     "concept_tag": "average-instantaneous-power",
+     "learning_objective": "Define average and instantaneous power and state their units."
+    },
+    {
+     "concept_tag": "power-calculation",
+     "learning_objective": "Calculate power from P = F.v and relate energy to the kilowatt hour."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH1-CH05-T6",
+   "topic_number": 6,
+   "title": "Collisions",
+   "ncert_sections": "5.11",
+   "concepts": [
+    {
+     "concept_tag": "elastic-inelastic-collisions",
+     "learning_objective": "Distinguish elastic and inelastic collisions by what is conserved."
+    },
+    {
+     "concept_tag": "one-dimensional-collisions",
+     "learning_objective": "Find final velocities and kinetic energy loss in one-dimensional collisions."
+    },
+    {
+     "concept_tag": "two-dimensional-collisions",
+     "learning_objective": "Analyse an elastic collision in two dimensions using momentum and energy conservation."
+    }
+   ]
+  }
+ ]
+}

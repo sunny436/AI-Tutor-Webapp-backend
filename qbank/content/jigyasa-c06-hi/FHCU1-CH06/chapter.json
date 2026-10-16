@@ -1,0 +1,120 @@
+{
+ "chapter_id": "FHCU1-CH06",
+ "title": "हमारे आस-पास की सामग्री",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHCU1-CH06-T1",
+   "topic_number": 1,
+   "title": "हमारे आस-पास की वस्तुओं का अवलोकन",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "samagri-ki-paribhasha",
+     "learning_objective": "सामग्री को किसी वस्तु को बनाने में उपयोग होने वाले पदार्थ या पदार्थों के मिश्रण के रूप में परिभाषित करना।"
+    },
+    {
+     "concept_tag": "vastu-aur-samagri",
+     "learning_objective": "पहचानना कि एक वस्तु एक या अनेक सामग्रियों से बनती है और एक सामग्री से अनेक वस्तुएँ बन सकती हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH06-T2",
+   "topic_number": 2,
+   "title": "वस्तुओं को समूहों में कैसे बाँटें?",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "vargikaran",
+     "learning_objective": "वर्गीकरण को समान गुणों के आधार पर वस्तुओं को समूहों में व्यवस्थित करने की विधि के रूप में समझाना।"
+    },
+    {
+     "concept_tag": "upyog-ke-aadhar-par-samagri-chayan",
+     "learning_objective": "समझाना कि किसी वस्तु के लिए सामग्री का चयन उसके गुणों और वस्तु के प्रयोजन के आधार पर होता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH06-T3",
+   "topic_number": 3,
+   "title": "सामग्रियों का स्वरूप और कठोरता",
+   "ncert_sections": "6.3.1, 6.3.2",
+   "concepts": [
+    {
+     "concept_tag": "dyutimay-aur-dyutiheen",
+     "learning_objective": "द्युतिमय और द्युतिहीन सामग्रियों में अंतर करना तथा कुछ धातुओं के मलिन दिखने का कारण बताना।"
+    },
+    {
+     "concept_tag": "kathor-aur-naram",
+     "learning_objective": "सामग्रियों को कठोर या नरम में बाँटना और समझना कि कठोरता एक सापेक्ष गुण है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH06-T4",
+   "topic_number": 4,
+   "title": "पारदर्शी, पारभासी और अपारदर्शी सामग्रियाँ",
+   "ncert_sections": "6.3.3",
+   "concepts": [
+    {
+     "concept_tag": "pardarshi-parbhasi-apardarshi",
+     "learning_objective": "आर-पार देखने की स्पष्टता के आधार पर सामग्रियों को पारदर्शी, पारभासी या अपारदर्शी में वर्गीकृत करना।"
+    },
+    {
+     "concept_tag": "pardarshita-ke-upyog",
+     "learning_objective": "सामग्री की पारदर्शिता को उसके दैनिक जीवन के उपयोग से जोड़ना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH06-T5",
+   "topic_number": 5,
+   "title": "जल में क्या घुलनशील है, क्या नहीं?",
+   "ncert_sections": "6.3.4",
+   "concepts": [
+    {
+     "concept_tag": "ghulansheel-aur-aghulansheel",
+     "learning_objective": "अवलोकन के आधार पर ठोस सामग्रियों को जल में घुलनशील या अघुलनशील में बाँटना।"
+    },
+    {
+     "concept_tag": "drav-aur-gas-jal-mein",
+     "learning_objective": "पहचानना कि कुछ द्रव और गैसें जल में मिल या घुल जाती हैं जबकि अन्य नहीं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH06-T6",
+   "topic_number": 6,
+   "title": "द्रव्यमान, स्थान और आयतन",
+   "ncert_sections": "6.3.5, 6.3.6",
+   "concepts": [
+    {
+     "concept_tag": "dravyaman",
+     "learning_objective": "समान आयतन पर किसी सामग्री के भारी या हल्के होने को द्रव्यमान से जोड़ना।"
+    },
+    {
+     "concept_tag": "aayatan",
+     "learning_objective": "आयतन को किसी पदार्थ द्वारा घेरे गए स्थान के रूप में समझना और उससे सरल गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHCU1-CH06-T7",
+   "topic_number": 7,
+   "title": "द्रव्य क्या होता है?",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "dravya-ki-paribhasha",
+     "learning_objective": "द्रव्य को ऐसी किसी भी वस्तु के रूप में परिभाषित करना जो स्थान घेरती है और जिसका द्रव्यमान होता है।"
+    },
+    {
+     "concept_tag": "dravyaman-aur-aayatan-ki-ikaiyan",
+     "learning_objective": "द्रव्यमान और आयतन की इकाइयों को सही रूप में लिखना और सरल रूपांतरण करना।"
+    }
+   ]
+  }
+ ]
+}

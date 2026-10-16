@@ -1,0 +1,116 @@
+{
+ "chapter_id": "IESC1-CH12",
+ "title": "Patterns in Life: Diversity and Classification",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IESC1-CH12-T1",
+   "topic_number": 1,
+   "title": "Biodiversity and India as a biodiversity hotspot",
+   "ncert_sections": "12.1, 12.2",
+   "concepts": [
+    {
+     "concept_tag": "biodiversity-and-its-importance",
+     "learning_objective": "Explain what biodiversity is and how organisms such as algae, decomposers and pollinators keep ecosystems functioning."
+    },
+    {
+     "concept_tag": "endemic-species-and-hotspots",
+     "learning_objective": "Identify endemic species and explain what makes a region a biodiversity hotspot."
+    },
+    {
+     "concept_tag": "evolution-of-biodiversity",
+     "learning_objective": "Explain how small differences accumulated over generations gave rise to present-day diversity."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH12-T2",
+   "topic_number": 2,
+   "title": "Criteria and need for classification",
+   "ncert_sections": "12.3, 12.4",
+   "concepts": [
+    {
+     "concept_tag": "criteria-for-classification",
+     "learning_objective": "List the criteria scientists use to classify organisms, from external features to genetic similarity."
+    },
+    {
+     "concept_tag": "need-for-biological-classification",
+     "learning_objective": "Explain how biological classification makes the study of diversity systematic and supports conservation."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH12-T3",
+   "topic_number": 3,
+   "title": "Classification systems over time and the kingdoms Monera, Protista and Fungi",
+   "ncert_sections": "12.5, 12.6, 12.6.1, 12.6.2, 12.6.3",
+   "concepts": [
+    {
+     "concept_tag": "history-of-kingdom-systems",
+     "learning_objective": "Trace the change from Aristotle's grouping to Whittaker's five kingdom system and the reason for each change."
+    },
+    {
+     "concept_tag": "monera-and-protista",
+     "learning_objective": "Distinguish Monera and Protista on the basis of cell type, cell wall and nutrition."
+    },
+    {
+     "concept_tag": "kingdom-fungi",
+     "learning_objective": "Describe the features and ecological role of fungi, including chitin cell walls and saprophytic nutrition."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH12-T4",
+   "topic_number": 4,
+   "title": "Kingdom Plantae",
+   "ncert_sections": "12.6.4",
+   "concepts": [
+    {
+     "concept_tag": "plant-groups-features",
+     "learning_objective": "Identify the distinguishing features of Thallophyta, Bryophyta, Pteridophyta, Gymnosperms and Angiosperms."
+    },
+    {
+     "concept_tag": "plant-adaptations-to-land",
+     "learning_objective": "Analyse how transport tissues, seeds and flowers reduced plants' dependence on water."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH12-T5",
+   "topic_number": 5,
+   "title": "Kingdom Animalia",
+   "ncert_sections": "12.6.5",
+   "concepts": [
+    {
+     "concept_tag": "invertebrate-phyla",
+     "learning_objective": "Identify the key features of the invertebrate phyla from Porifera to Echinodermata."
+    },
+    {
+     "concept_tag": "chordates-and-vertebrates",
+     "learning_objective": "Explain the role of the notochord and vertebral column in separating chordates from invertebrates."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH12-T6",
+   "topic_number": 6,
+   "title": "Hierarchy, binomial nomenclature, fossils and threats to biodiversity",
+   "ncert_sections": "12.7, 12.7.1, 12.8, 12.9, 12.10",
+   "concepts": [
+    {
+     "concept_tag": "classification-hierarchy",
+     "learning_objective": "Arrange the levels of classification from kingdom to species and relate shared features to each level."
+    },
+    {
+     "concept_tag": "binomial-nomenclature",
+     "learning_objective": "Apply the rules of binomial nomenclature to write and interpret scientific names."
+    },
+    {
+     "concept_tag": "fossils-adaptations-and-threats",
+     "learning_objective": "Explain adaptations and fossils as evidence of change and identify human threats to biodiversity."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "chapter_id": "LEEC1-CH04",
+ "title": "Determination of Income and Employment",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEEC1-CH04-T1",
+   "topic_number": 1,
+   "title": "Ex ante and ex post measures",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "ex-ante-ex-post",
+     "learning_objective": "Distinguish planned (ex ante) values of macroeconomic variables from their actual (ex post) values."
+    },
+    {
+     "concept_tag": "planned-vs-actual-investment",
+     "learning_objective": "Calculate ex post investment from planned investment and unplanned changes in inventories."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH04-T2",
+   "topic_number": 2,
+   "title": "Consumption function, MPC and MPS",
+   "ncert_sections": "4.1.1",
+   "concepts": [
+    {
+     "concept_tag": "consumption-function",
+     "learning_objective": "Explain the consumption function C = C-bar + cY with its autonomous and induced parts."
+    },
+    {
+     "concept_tag": "mpc-mps-relation",
+     "learning_objective": "State and apply the relation MPC + MPS = 1 and the possible values of MPC."
+    },
+    {
+     "concept_tag": "average-propensities",
+     "learning_objective": "Compute the average propensities to consume and to save at a given income."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH04-T3",
+   "topic_number": 3,
+   "title": "Investment and aggregate demand in the two-sector model",
+   "ncert_sections": "4.1.2, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "investment-meaning",
+     "learning_objective": "Define investment and explain why it is treated as autonomous in the simple model."
+    },
+    {
+     "concept_tag": "aggregate-demand-components",
+     "learning_objective": "Express ex ante aggregate demand as the sum of consumption, investment and, with government, G - cT."
+    },
+    {
+     "concept_tag": "unplanned-inventory-change",
+     "learning_objective": "Explain how unplanned inventory changes reconcile planned output with planned demand."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH04-T4",
+   "topic_number": 4,
+   "title": "Equilibrium income with a fixed price level",
+   "ncert_sections": "4.3, 4.3.1",
+   "concepts": [
+    {
+     "concept_tag": "fixed-price-assumption",
+     "learning_objective": "Explain why the price level is assumed fixed at the first stage of macroeconomic analysis."
+    },
+    {
+     "concept_tag": "graphical-equilibrium",
+     "learning_objective": "Interpret the 45-degree line diagram to locate equilibrium and disequilibrium positions."
+    },
+    {
+     "concept_tag": "algebraic-equilibrium",
+     "learning_objective": "Calculate equilibrium income using Y = (C-bar + I)/(1 - c) and test whether an economy is in equilibrium."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH04-T5",
+   "topic_number": 5,
+   "title": "Autonomous changes and the multiplier",
+   "ncert_sections": "4.3.2, 4.3.3",
+   "concepts": [
+    {
+     "concept_tag": "autonomous-expenditure-change",
+     "learning_objective": "Explain how a change in autonomous expenditure shifts the aggregate demand line."
+    },
+    {
+     "concept_tag": "investment-multiplier",
+     "learning_objective": "Calculate the investment multiplier 1/(1 - c) and the resulting change in equilibrium income."
+    },
+    {
+     "concept_tag": "multiplier-rounds",
+     "learning_objective": "Trace the round-by-round working of the multiplier process."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH04-T6",
+   "topic_number": 6,
+   "title": "Paradox of thrift",
+   "ncert_sections": "4.3.3",
+   "concepts": [
+    {
+     "concept_tag": "paradox-of-thrift",
+     "learning_objective": "Explain why an increase in the propensity to save leaves total savings unchanged or lower."
+    },
+    {
+     "concept_tag": "ad-line-swing",
+     "learning_objective": "Distinguish a swing of the AD line caused by a change in MPC from a parallel shift."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH04-T7",
+   "topic_number": 7,
+   "title": "Full employment, deficient and excess demand",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "full-employment-equilibrium",
+     "learning_objective": "Explain why equilibrium income need not be the full employment level of income."
+    },
+    {
+     "concept_tag": "deficient-excess-demand",
+     "learning_objective": "Identify situations of deficient and excess demand and their long-run effect on prices."
+    },
+    {
+     "concept_tag": "effective-demand-principle",
+     "learning_objective": "State the effective demand principle under a fixed price and perfectly elastic supply."
+    }
+   ]
+  }
+ ]
+}

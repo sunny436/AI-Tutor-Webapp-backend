@@ -1,0 +1,80 @@
+{
+ "chapter_id": "KHMH1-CH06",
+ "title": "क्रमचय और संचय",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH06-T1",
+   "topic_number": 1,
+   "title": "गणना का आधारभूत सिद्धांत",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "ganana-ka-adharbhut-siddhant",
+     "learning_objective": "गुणन सिद्धांत द्वारा क्रमागत घटनाओं के घटित होने के कुल तरीकों की गणना करना।"
+    },
+    {
+     "concept_tag": "punaravritti-sahit-aur-rahit-ganana",
+     "learning_objective": "पुनरावृत्ति की अनुमति होने और न होने पर गणना का अंतर समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH06-T2",
+   "topic_number": 2,
+   "title": "क्रमगुणित संकेतन",
+   "ncert_sections": "6.3.2",
+   "concepts": [
+    {
+     "concept_tag": "kramgunit-sanketan",
+     "learning_objective": "क्रमगुणित संकेतन n! का अर्थ समझना और उससे जुड़े व्यंजकों का मान निकालना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH06-T3",
+   "topic_number": 3,
+   "title": "भिन्न वस्तुओं के क्रमचय",
+   "ncert_sections": "6.3, 6.3.1, 6.3.3",
+   "concepts": [
+    {
+     "concept_tag": "kramchay-sutra",
+     "learning_objective": "सूत्र nPr = n!/(n−r)! को समझना और लागू करना।"
+    },
+    {
+     "concept_tag": "pratibandhit-kramchay",
+     "learning_objective": "शर्तों वाले विन्यासों में क्रमचयों की संख्या ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH06-T4",
+   "topic_number": 4,
+   "title": "जब सभी वस्तुएँ भिन्न न हों, तब क्रमचय",
+   "ncert_sections": "6.3.4",
+   "concepts": [
+    {
+     "concept_tag": "asaman-vastuon-ke-kramchay",
+     "learning_objective": "समान वस्तुओं वाले समूह के विन्यासों की संख्या n!/(p₁! p₂! …) से ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH06-T5",
+   "topic_number": 5,
+   "title": "संचय",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "sanchay-sutra",
+     "learning_objective": "सूत्र nCr = n!/(r!(n−r)!) और उसके गुणधर्मों का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "chayan-ki-samasyaen",
+     "learning_objective": "क्रम का महत्व न होने वाली चयन की समस्याओं को हल करना।"
+    }
+   ]
+  }
+ ]
+}

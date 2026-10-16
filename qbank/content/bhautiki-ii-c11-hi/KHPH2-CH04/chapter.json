@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KHPH2-CH04",
+ "title": "ऊष्मागतिकी",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH2-CH04-T1",
+   "topic_number": 1,
+   "title": "ऊष्मीय साम्य तथा ऊष्मागतिकी का शून्य कोटि नियम",
+   "ncert_sections": "11.2, 11.3",
+   "concepts": [
+    {
+     "concept_tag": "ushmiya-samya",
+     "learning_objective": "ऊष्मीय साम्य की स्थिति तथा रुद्धोष्म और ऊष्मा-पारक दीवारों की भूमिका समझना।"
+    },
+    {
+     "concept_tag": "shunya-koti-niyam",
+     "learning_objective": "शून्य कोटि नियम का कथन देना तथा उससे ताप की संकल्पना को जोड़ना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH04-T2",
+   "topic_number": 2,
+   "title": "ऊष्मा, आंतरिक ऊर्जा और कार्य",
+   "ncert_sections": "11.4",
+   "concepts": [
+    {
+     "concept_tag": "antarik-urja",
+     "learning_objective": "आंतरिक ऊर्जा को अवस्था चर के रूप में पहचानना जो केवल निकाय की अवस्था पर निर्भर है।"
+    },
+    {
+     "concept_tag": "ushma-aur-karya",
+     "learning_objective": "ऊष्मा और कार्य को ऊर्जा-स्थानांतरण के दो ढंगों के रूप में पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH04-T3",
+   "topic_number": 3,
+   "title": "ऊष्मागतिकी का प्रथम नियम",
+   "ncert_sections": "11.5",
+   "concepts": [
+    {
+     "concept_tag": "pratham-niyam",
+     "learning_objective": "प्रथम नियम ΔQ = ΔU + ΔW को ऊर्जा संरक्षण के कथन के रूप में समझना।"
+    },
+    {
+     "concept_tag": "pratham-niyam-anuprayog",
+     "learning_objective": "प्रथम नियम का उपयोग कर ऊष्मा, कार्य और आंतरिक ऊर्जा परिवर्तन की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH04-T4",
+   "topic_number": 4,
+   "title": "विशिष्ट ऊष्मा धारिता",
+   "ncert_sections": "11.6",
+   "concepts": [
+    {
+     "concept_tag": "vishisht-ushma-dharita",
+     "learning_objective": "विशिष्ट ऊष्मा धारिता का उपयोग कर ऊष्मा की मात्रा की गणना करना।"
+    },
+    {
+     "concept_tag": "gas-cp-cv",
+     "learning_objective": "आदर्श गैस के लिए Cp − Cv = R संबंध को समझना और लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH04-T5",
+   "topic_number": 5,
+   "title": "ऊष्मागतिक अवस्था चर तथा ऊष्मागतिक प्रक्रम",
+   "ncert_sections": "11.7, 11.8",
+   "concepts": [
+    {
+     "concept_tag": "avastha-char",
+     "learning_objective": "विस्तीर्ण और गहन अवस्था चरों में अंतर करना।"
+    },
+    {
+     "concept_tag": "samtapi-prakram",
+     "learning_objective": "समतापी प्रक्रम में ऊष्मा, कार्य और आंतरिक ऊर्जा का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "ruddhoshm-prakram",
+     "learning_objective": "रुद्धोष्म प्रक्रम के संबंध PVᵞ = नियतांक का उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH04-T6",
+   "topic_number": 6,
+   "title": "ऊष्मागतिकी का द्वितीय नियम तथा उत्क्रमणीय और अनुत्क्रमणीय प्रक्रम",
+   "ncert_sections": "11.9, 11.10",
+   "concepts": [
+    {
+     "concept_tag": "dwitiya-niyam",
+     "learning_objective": "द्वितीय नियम के केल्विन-प्लांक तथा क्लॉसियस कथनों को समझना।"
+    },
+    {
+     "concept_tag": "utkramaniya-prakram",
+     "learning_objective": "उत्क्रमणीय तथा अनुत्क्रमणीय प्रक्रमों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH04-T7",
+   "topic_number": 7,
+   "title": "कार्नो इंजन",
+   "ncert_sections": "11.11",
+   "concepts": [
+    {
+     "concept_tag": "carnot-chakra",
+     "learning_objective": "कार्नो चक्र के चरणों तथा कार्नो प्रमेय को समझना।"
+    },
+    {
+     "concept_tag": "carnot-dakshata",
+     "learning_objective": "कार्नो इंजन की दक्षता η = 1 − T₂/T₁ की गणना और विश्लेषण करना।"
+    }
+   ]
+  }
+ ]
+}

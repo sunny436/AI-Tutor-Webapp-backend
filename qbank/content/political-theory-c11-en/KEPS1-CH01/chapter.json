@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KEPS1-CH01",
+ "title": "Political Theory: An Introduction",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPS1-CH01-T1",
+   "topic_number": 1,
+   "title": "Political Theory: Its Roots and Objectives",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "roots-of-political-theory",
+     "learning_objective": "Explain how reason, reflection and language form the roots of political theory."
+    },
+    {
+     "concept_tag": "objectives-of-political-theory",
+     "learning_objective": "State what political theory examines and its objective of training citizens to think rationally."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS1-CH01-T2",
+   "topic_number": 2,
+   "title": "What is Politics?",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "conflicting-images-of-politics",
+     "learning_objective": "Distinguish the negative popular image of politics from politics as a worthwhile and integral activity."
+    },
+    {
+     "concept_tag": "politics-as-collective-decision-making",
+     "learning_objective": "Explain politics as negotiation and collective decision making at the level of government and of people."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS1-CH01-T3",
+   "topic_number": 3,
+   "title": "Ideas, Thinkers and the Constitution",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "thinkers-and-ideas",
+     "learning_objective": "Identify the contributions of major political thinkers to ideas such as freedom and equality."
+    },
+    {
+     "concept_tag": "scope-of-political-theory",
+     "learning_objective": "Describe how political theory clarifies concepts and probes principles that shape constitutions and social life."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS1-CH01-T4",
+   "topic_number": 4,
+   "title": "Why Questions of Freedom and Equality Persist",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "unequal-realisation-of-values",
+     "learning_objective": "Explain why values guaranteed formally may not be realised equally in all spheres of life."
+    },
+    {
+     "concept_tag": "reinterpretation-of-rights",
+     "learning_objective": "Explain how constitutional rights are reinterpreted and expanded in response to new circumstances."
+    },
+    {
+     "concept_tag": "new-dimensions-of-freedom",
+     "learning_objective": "Analyse new opportunities and threats to freedom created by communication technology and the internet."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS1-CH01-T5",
+   "topic_number": 5,
+   "title": "Putting Political Theory to Practice",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "multiple-definitions-of-concepts",
+     "learning_objective": "Explain why political concepts have many definitions unlike mathematical terms."
+    },
+    {
+     "concept_tag": "socratic-method",
+     "learning_objective": "Describe how Socrates used reason to reveal the limitations of a given view of justice."
+    },
+    {
+     "concept_tag": "contextual-meaning-of-equality",
+     "learning_objective": "Analyse how the meaning of equality changes with context, from equal opportunity to special provisions and fair distribution."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPS1-CH01-T6",
+   "topic_number": 6,
+   "title": "Why Should We Study Political Theory?",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "relevance-for-citizens",
+     "learning_objective": "Explain why political theory is useful for students, professionals and voting citizens."
+    },
+    {
+     "concept_tag": "examining-ideas-and-prejudices",
+     "learning_objective": "Evaluate how political theory helps us examine our prejudices and debate rationally."
+    }
+   ]
+  }
+ ]
+}

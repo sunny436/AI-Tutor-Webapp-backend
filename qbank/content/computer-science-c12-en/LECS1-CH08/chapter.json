@@ -1,0 +1,140 @@
+{
+ "chapter_id": "LECS1-CH08",
+ "title": "Database Concepts",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECS1-CH08-T1",
+   "topic_number": 1,
+   "title": "Introduction and the File System",
+   "ncert_sections": "8.1, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "manual-record-keeping",
+     "learning_objective": "Identify the limitations of manual record keeping and the benefits of storing records in computer files."
+    },
+    {
+     "concept_tag": "computer-files",
+     "learning_objective": "Describe a file as a container of data and explain that application programs are needed to access file data."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH08-T2",
+   "topic_number": 2,
+   "title": "Limitations of a File System",
+   "ncert_sections": "8.2.1",
+   "concepts": [
+    {
+     "concept_tag": "redundancy-and-inconsistency",
+     "learning_objective": "Explain data redundancy and how it leads to data inconsistency in a file system."
+    },
+    {
+     "concept_tag": "isolation-and-dependence",
+     "learning_objective": "Explain data isolation and data dependence as limitations of a file system."
+    },
+    {
+     "concept_tag": "access-and-controlled-sharing",
+     "learning_objective": "Explain the difficulty of access and of controlled data sharing in a file system."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH08-T3",
+   "topic_number": 3,
+   "title": "Database Management System",
+   "ncert_sections": "8.3, 8.3.1",
+   "concepts": [
+    {
+     "concept_tag": "dbms-definition",
+     "learning_objective": "Define a DBMS, give examples and state what querying a database means."
+    },
+    {
+     "concept_tag": "file-system-to-dbms",
+     "learning_objective": "Explain how related files are redesigned into tables of a database to remove redundancy."
+    },
+    {
+     "concept_tag": "dbms-limitations",
+     "learning_objective": "State the costs and limitations of moving from a file system to a DBMS."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH08-T4",
+   "topic_number": 4,
+   "title": "Key Concepts in DBMS",
+   "ncert_sections": "8.3.2",
+   "concepts": [
+    {
+     "concept_tag": "schema-and-instance",
+     "learning_objective": "Distinguish a database schema from a database instance."
+    },
+    {
+     "concept_tag": "constraints-and-metadata",
+     "learning_objective": "Explain data constraints and meta-data stored in the database catalog."
+    },
+    {
+     "concept_tag": "query-and-data-manipulation",
+     "learning_objective": "Identify queries and the insertion, deletion and update operations on a database."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH08-T5",
+   "topic_number": 5,
+   "title": "Relational Data Model",
+   "ncert_sections": "8.4",
+   "concepts": [
+    {
+     "concept_tag": "data-models",
+     "learning_objective": "Identify the relational data model among the types of data models."
+    },
+    {
+     "concept_tag": "relational-terminology",
+     "learning_objective": "Define relation, attribute, tuple and domain in the relational data model."
+    },
+    {
+     "concept_tag": "degree-and-cardinality",
+     "learning_objective": "Find the degree and cardinality of a relation."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH08-T6",
+   "topic_number": 6,
+   "title": "Three Important Properties of a Relation",
+   "ncert_sections": "8.4.1",
+   "concepts": [
+    {
+     "concept_tag": "attribute-and-tuple-rules",
+     "learning_objective": "Apply the rules on attribute names, distinct tuples and the order of tuples and attributes."
+    },
+    {
+     "concept_tag": "atomic-values-and-null",
+     "learning_objective": "Apply the rules on domains, atomic values and the use of NULL in a relation."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH08-T7",
+   "topic_number": 7,
+   "title": "Keys in a Relational Database",
+   "ncert_sections": "8.5",
+   "concepts": [
+    {
+     "concept_tag": "candidate-primary-alternate-keys",
+     "learning_objective": "Identify candidate, primary and alternate keys of a relation."
+    },
+    {
+     "concept_tag": "composite-primary-key",
+     "learning_objective": "Explain when a composite primary key is needed and identify one."
+    },
+    {
+     "concept_tag": "foreign-key",
+     "learning_objective": "Explain how a foreign key relates two relations and restricts the values that can be stored."
+    }
+   ]
+  }
+ ]
+}

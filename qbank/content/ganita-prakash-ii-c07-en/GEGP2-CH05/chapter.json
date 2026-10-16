@@ -1,0 +1,128 @@
+{
+ "chapter_id": "GEGP2-CH05",
+ "title": "Connecting the Dots",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP2-CH05-T1",
+   "topic_number": 1,
+   "title": "Statistical questions and statements",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "statistical-question",
+     "learning_objective": "Identify a statistical question as one that is answered by collecting data that varies."
+    },
+    {
+     "concept_tag": "statistical-statement",
+     "learning_objective": "Recognise a statistical statement as a claim or summary expressed through numbers, proportions, probabilities or predictions."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH05-T2",
+   "topic_number": 2,
+   "title": "The arithmetic mean as a fair share",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "arithmetic-mean",
+     "learning_objective": "Calculate the arithmetic mean as the sum of the values divided by the number of values."
+    },
+    {
+     "concept_tag": "mean-as-fair-share",
+     "learning_objective": "Interpret the mean as the equal share each member would get if the total were shared equally."
+    },
+    {
+     "concept_tag": "zero-vs-no-value",
+     "learning_objective": "Distinguish a value of zero from a missing value when counting the number of values for a mean."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH05-T3",
+   "topic_number": 3,
+   "title": "Describing and comparing data with dot plots",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "describing-data",
+     "learning_objective": "Describe and compare data using its minimum, maximum, total, average and the difference between maximum and minimum."
+    },
+    {
+     "concept_tag": "dot-plot",
+     "learning_objective": "Read and interpret a dot plot to see how data is clustered or spread out."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH05-T4",
+   "topic_number": 4,
+   "title": "Outliers and the median",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "median",
+     "learning_objective": "Find the median of sorted data with an odd or an even number of values."
+    },
+    {
+     "concept_tag": "outliers",
+     "learning_objective": "Explain how an outlier affects the mean much more than the median."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH05-T5",
+   "topic_number": 5,
+   "title": "Of ends and the essence: centre and variability",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "central-tendency",
+     "learning_objective": "Use the mean and median as measures of central tendency to describe the centre of data."
+    },
+    {
+     "concept_tag": "variability",
+     "learning_objective": "Describe the variability of data using its extremes and the spread between them."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH05-T6",
+   "topic_number": 6,
+   "title": "Visualising data with clustered column graphs",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "clustered-column-graph",
+     "learning_objective": "Read and explain a clustered (double) column graph that compares categories side by side."
+    },
+    {
+     "concept_tag": "graph-scale",
+     "learning_objective": "Use the scale of a graph to convert bar lengths into values."
+    },
+    {
+     "concept_tag": "two-step-reading",
+     "learning_objective": "Make sense of a graph by first identifying what is given and then inferring from it."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH05-T7",
+   "topic_number": 7,
+   "title": "Data detective: stories in data",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "interpreting-data-tables",
+     "learning_objective": "Read a data table to compare values and spot trends across ages and years."
+    },
+    {
+     "concept_tag": "generalising-from-data",
+     "learning_objective": "Judge whether a conclusion can be justified or generalised from the data given."
+    }
+   ]
+  }
+ ]
+}

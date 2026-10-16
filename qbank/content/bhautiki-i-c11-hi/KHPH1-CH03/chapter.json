@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KHPH1-CH03",
+ "title": "समतल में गति",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH1-CH03-T1",
+   "topic_number": 1,
+   "title": "अदिश और सदिश राशियाँ",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "adish-sadish-rashiyan",
+     "learning_objective": "अदिश और सदिश राशियों में अंतर करना और उदाहरण पहचानना।"
+    },
+    {
+     "concept_tag": "sthiti-visthapan-sadish",
+     "learning_objective": "स्थिति सदिश, विस्थापन सदिश और सदिशों की समता को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH03-T2",
+   "topic_number": 2,
+   "title": "सदिशों का वास्तविक संख्या से गुणन तथा योग-व्यवकलन",
+   "ncert_sections": "3.3, 3.4",
+   "concepts": [
+    {
+     "concept_tag": "sadish-guna-vastavik-sankhya",
+     "learning_objective": "किसी सदिश को वास्तविक संख्या से गुणा करने का परिमाण और दिशा पर प्रभाव समझाना।"
+    },
+    {
+     "concept_tag": "sadish-yog-grafiya-vidhi",
+     "learning_objective": "त्रिभुज और समांतर चतुर्भुज विधि से सदिशों का योग और व्यवकलन करना।"
+    },
+    {
+     "concept_tag": "shunya-sadish",
+     "learning_objective": "शून्य सदिश के गुणों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH03-T3",
+   "topic_number": 3,
+   "title": "सदिशों का वियोजन और विश्लेषणात्मक योग",
+   "ncert_sections": "3.5, 3.6",
+   "concepts": [
+    {
+     "concept_tag": "ekank-sadish-ghatak",
+     "learning_objective": "एकांक सदिशों की सहायता से सदिश को घटकों में वियोजित करना।"
+    },
+    {
+     "concept_tag": "vishleshnatmak-yog",
+     "learning_objective": "घटक विधि और कोज्या नियम से परिणामी सदिश का परिमाण और दिशा ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH03-T4",
+   "topic_number": 4,
+   "title": "समतल में गति तथा नियत त्वरण",
+   "ncert_sections": "3.7, 3.8",
+   "concepts": [
+    {
+     "concept_tag": "veg-tvaran-samtal",
+     "learning_objective": "समतल में स्थिति सदिश से वेग और त्वरण सदिश ज्ञात करना।"
+    },
+    {
+     "concept_tag": "niyat-tvaran-samikaran",
+     "learning_objective": "नियत त्वरण के लिए सदिश गति-समीकरणों का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH03-T5",
+   "topic_number": 5,
+   "title": "प्रक्षेप्य गति",
+   "ncert_sections": "3.9",
+   "concepts": [
+    {
+     "concept_tag": "prakshepya-path",
+     "learning_objective": "प्रक्षेप्य के परवलयाकार पथ और स्वतंत्र क्षैतिज-ऊर्ध्वाधर गतियों को समझना।"
+    },
+    {
+     "concept_tag": "udan-kaal-unchai-paras",
+     "learning_objective": "उड्डयन काल, अधिकतम ऊँचाई और क्षैतिज परास की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH1-CH03-T6",
+   "topic_number": 6,
+   "title": "एकसमान वृत्तीय गति",
+   "ncert_sections": "3.10",
+   "concepts": [
+    {
+     "concept_tag": "abhikendra-tvaran",
+     "learning_objective": "एकसमान वृत्तीय गति में अभिकेंद्र त्वरण का परिमाण और दिशा बताना।"
+    },
+    {
+     "concept_tag": "kon-veg-avarta",
+     "learning_objective": "कोणीय चाल, आवर्तकाल और आवृत्ति के बीच संबंधों का प्रयोग करना।"
+    }
+   ]
+  }
+ ]
+}

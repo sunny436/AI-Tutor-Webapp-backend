@@ -1,0 +1,1497 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "curiosity-c07-en",
+  "curriculum": "cbse",
+  "class_level": 7,
+  "subject_code": "science",
+  "language": "english",
+  "title": "Curiosity",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "gecu1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "GECU1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "The Ever-Evolving World of Science",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gecu101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GECU1-CH01-T1",
+     "topic_number": 1,
+     "title": "Science as a process of discovery",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "science-as-a-process",
+       "learning_objective": "Describe science as an ongoing process and a way of thinking that welcomes curiosity and questions."
+      },
+      {
+       "concept_tag": "learning-through-experiments",
+       "learning_objective": "Explain why activities, experiments and simple observations are central to learning science."
+      },
+      {
+       "concept_tag": "science-and-responsibility",
+       "learning_objective": "Relate human activities to the natural world and the role of science in building a sustainable world."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH01-T2",
+     "topic_number": 2,
+     "title": "Interconnected fields: materials, changes, heat and water",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "interconnected-fields-of-science",
+       "learning_objective": "Recognise that physics, chemistry, biology and earth sciences are interconnected."
+      },
+      {
+       "concept_tag": "properties-and-changes-of-materials",
+       "learning_objective": "Identify properties of materials and distinguish changes that can be reversed from those that cannot."
+      },
+      {
+       "concept_tag": "heat-and-water-movement",
+       "learning_objective": "Describe how heat flows and how water moves from the seas to rain and into the ground."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH01-T3",
+     "topic_number": 3,
+     "title": "Life processes, time, light and the sky",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "life-processes",
+       "learning_objective": "State that animals and plants carry out life processes such as getting food and breathing."
+      },
+      {
+       "concept_tag": "measuring-time-with-shadows",
+       "learning_objective": "Explain how early humans used the position of shadows to tell the time."
+      },
+      {
+       "concept_tag": "light-shadows-and-sky",
+       "learning_objective": "Relate day and night and eclipses to light, shadows and the movements of the Earth and the Moon."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH01-T4",
+     "topic_number": 4,
+     "title": "Happy Exploring: Question the Answer",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "asking-good-questions",
+       "learning_objective": "Explain why asking interesting questions is as important as finding answers in science."
+      },
+      {
+       "concept_tag": "many-questions-one-answer",
+       "learning_objective": "Recognise that a single answer can fit many very different questions."
+      },
+      {
+       "concept_tag": "experiments-lead-to-new-questions",
+       "learning_objective": "Evaluate how even confirming experiments can lead to further questions and experiments."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GECU1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Exploring Substances: Acidic, Basic, and Neutral",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gecu102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GECU1-CH02-T1",
+     "topic_number": 1,
+     "title": "Litmus as an indicator: acidic, basic and neutral substances",
+     "ncert_sections": "2.1, 2.1.1",
+     "concepts": [
+      {
+       "concept_tag": "litmus-acid-base-indicator",
+       "learning_objective": "Describe litmus as a natural acid-base indicator obtained from lichens and state its colour changes."
+      },
+      {
+       "concept_tag": "classifying-acidic-basic-neutral",
+       "learning_objective": "Classify common substances as acidic, basic or neutral from their effect on blue and red litmus paper."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH02-T2",
+     "topic_number": 2,
+     "title": "Taste, touch and acids in everyday substances",
+     "ncert_sections": "2.1.1",
+     "concepts": [
+      {
+       "concept_tag": "acids-in-edible-substances",
+       "learning_objective": "Name the common acids present in edible substances such as lemon, tamarind, amla, curd and vinegar."
+      },
+      {
+       "concept_tag": "properties-of-acids-and-bases",
+       "learning_objective": "Relate the sour taste of acids and the slippery feel and bitter taste of bases, recognising the limits of taste as a test."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH02-T3",
+     "topic_number": 3,
+     "title": "Red rose and other natural indicators",
+     "ncert_sections": "2.1.2",
+     "concepts": [
+      {
+       "concept_tag": "red-rose-extract-indicator",
+       "learning_objective": "Explain how red rose extract changes colour in acidic and basic solutions."
+      },
+      {
+       "concept_tag": "natural-flower-indicators",
+       "learning_objective": "Identify other natural indicators such as beetroot, purple cabbage, jamun, red hibiscus and hydrangea flowers."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH02-T4",
+     "topic_number": 4,
+     "title": "Turmeric paper and olfactory indicators",
+     "ncert_sections": "2.1.3",
+     "concepts": [
+      {
+       "concept_tag": "turmeric-indicator",
+       "learning_objective": "Use turmeric paper to detect basic substances and explain why it cannot tell acidic from neutral substances."
+      },
+      {
+       "concept_tag": "olfactory-indicators",
+       "learning_objective": "Explain what olfactory indicators are, using onion-soaked strips as an example."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH02-T5",
+     "topic_number": 5,
+     "title": "Neutralisation: when acids mix with bases",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "neutralisation-reaction",
+       "learning_objective": "State that an acid and a base neutralise each other to form salt and water with the release of heat."
+      },
+      {
+       "concept_tag": "observing-neutralisation",
+       "learning_objective": "Interpret indicator colour changes that show an acidic or basic solution being neutralised."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH02-T6",
+     "topic_number": 6,
+     "title": "Neutralisation in daily life",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "ant-bite-treatment",
+       "learning_objective": "Explain why moist baking soda relieves the sting of a red ant bite."
+      },
+      {
+       "concept_tag": "soil-treatment",
+       "learning_objective": "Choose suitable treatments for acidic, basic and neutral soils with poor plant growth."
+      },
+      {
+       "concept_tag": "industrial-waste-treatment",
+       "learning_objective": "Explain how acidic factory waste can be neutralised before it is released into water bodies."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GECU1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Electricity: Circuits and their Components",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gecu103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GECU1-CH03-T1",
+     "topic_number": 1,
+     "title": "Electric cell and battery",
+     "ncert_sections": "3.1, 3.2.1, 3.2.2",
+     "concepts": [
+      {
+       "concept_tag": "cell-terminals",
+       "learning_objective": "Identify the positive and negative terminals of an electric cell and describe the cell as a portable source of electrical energy."
+      },
+      {
+       "concept_tag": "battery-cell-arrangement",
+       "learning_objective": "Explain how two or more cells must be joined to form a working battery."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH03-T2",
+     "topic_number": 2,
+     "title": "Electric lamps: incandescent and LED",
+     "ncert_sections": "3.2.3",
+     "concepts": [
+      {
+       "concept_tag": "incandescent-lamp-filament",
+       "learning_objective": "Describe the filament and the two terminals of an incandescent lamp and how it produces light."
+      },
+      {
+       "concept_tag": "led-lamp-terminals",
+       "learning_objective": "Identify the positive and negative terminals of an LED and contrast it with an incandescent lamp."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH03-T3",
+     "topic_number": 3,
+     "title": "Making a lamp glow: the electrical circuit",
+     "ncert_sections": "3.2.4, 3.2.5",
+     "concepts": [
+      {
+       "concept_tag": "complete-circuit",
+       "learning_objective": "Explain that a lamp glows only when it is part of a complete path for electric current."
+      },
+      {
+       "concept_tag": "current-direction",
+       "learning_objective": "State the conventional direction of electric current in a circuit."
+      },
+      {
+       "concept_tag": "led-one-way-current",
+       "learning_objective": "Apply the idea that current passes through an LED in one direction only."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH03-T4",
+     "topic_number": 4,
+     "title": "Electric switch",
+     "ncert_sections": "3.2.6",
+     "concepts": [
+      {
+       "concept_tag": "switch-function",
+       "learning_objective": "Explain that a switch completes or breaks a circuit and can be placed anywhere in it."
+      },
+      {
+       "concept_tag": "open-closed-circuit",
+       "learning_objective": "Distinguish between an open circuit (switch OFF) and a closed circuit (switch ON)."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH03-T5",
+     "topic_number": 5,
+     "title": "Circuit diagrams",
+     "ncert_sections": "3.3",
+     "concepts": [
+      {
+       "concept_tag": "component-symbols",
+       "learning_objective": "Recognise and interpret the symbols for a cell, battery, lamp, LED, switch and wire."
+      },
+      {
+       "concept_tag": "circuit-diagram-purpose",
+       "learning_objective": "Explain what a circuit diagram is and why standard symbols are used."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH03-T6",
+     "topic_number": 6,
+     "title": "Electrical conductors and insulators",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "conductors-and-insulators",
+       "learning_objective": "Classify materials as conductors or insulators using a conduction tester."
+      },
+      {
+       "concept_tag": "insulators-for-safety",
+       "learning_objective": "Explain how insulators are used to protect people from electric shocks."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GECU1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "The World of Metals and Non-metals",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gecu104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GECU1-CH04-T1",
+     "topic_number": 1,
+     "title": "Lustre, hardness and malleability",
+     "ncert_sections": "4.1, 4.1.1",
+     "concepts": [
+      {
+       "concept_tag": "metallic-lustre-and-hardness",
+       "learning_objective": "Identify metals by their metallic lustre and hardness, and recognise exceptions such as sodium, potassium and mercury."
+      },
+      {
+       "concept_tag": "malleability",
+       "learning_objective": "Define malleability and give examples of metals beaten into thin sheets."
+      },
+      {
+       "concept_tag": "brittleness",
+       "learning_objective": "Distinguish brittle materials from malleable ones using the hammering activity."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH04-T2",
+     "topic_number": 2,
+     "title": "Ductility and sonority",
+     "ncert_sections": "4.1.2, 4.1.3",
+     "concepts": [
+      {
+       "concept_tag": "ductility",
+       "learning_objective": "Define ductility and relate it to the everyday uses of metal wires."
+      },
+      {
+       "concept_tag": "sonority",
+       "learning_objective": "Explain sonority as the ability of metals to produce a ringing sound."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH04-T3",
+     "topic_number": 3,
+     "title": "Conduction of heat and electricity",
+     "ncert_sections": "4.1.4, 4.1.5",
+     "concepts": [
+      {
+       "concept_tag": "conduction-of-heat",
+       "learning_objective": "Explain that metals are good conductors of heat and relate this to cooking vessels and their handles."
+      },
+      {
+       "concept_tag": "conduction-of-electricity",
+       "learning_objective": "Classify materials as good or poor conductors of electricity using a tester circuit."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH04-T4",
+     "topic_number": 4,
+     "title": "Effect of air and water on iron: rusting",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "conditions-for-rusting",
+       "learning_objective": "Infer from Activity 4.5 that both air and water are needed for iron to rust."
+      },
+      {
+       "concept_tag": "corrosion-and-its-prevention",
+       "learning_objective": "Describe corrosion of metals and the methods used to prevent rusting."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH04-T5",
+     "topic_number": 5,
+     "title": "Effect of air and water on other metals",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "metal-oxides-are-basic",
+       "learning_objective": "Describe the burning of magnesium and the basic nature of metal oxides."
+      },
+      {
+       "concept_tag": "reactive-metals-storage",
+       "learning_objective": "Explain why a very reactive metal such as sodium is stored in kerosene."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH04-T6",
+     "topic_number": 6,
+     "title": "Substances that behave differently from metals: non-metals",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "non-metal-oxides-are-acidic",
+       "learning_objective": "Describe the burning of sulfur and the acidic nature of non-metal oxides."
+      },
+      {
+       "concept_tag": "properties-of-non-metals",
+       "learning_objective": "List the properties of non-metals and use them to classify an unknown element."
+      },
+      {
+       "concept_tag": "elements-metals-non-metals",
+       "learning_objective": "Recognise that metals and non-metals are elements and that materials like plastic and wood are not."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH04-T7",
+     "topic_number": 7,
+     "title": "Uses of non-metals and metals in everyday life",
+     "ncert_sections": "4.5",
+     "concepts": [
+      {
+       "concept_tag": "uses-of-non-metals",
+       "learning_objective": "State everyday uses of non-metals such as oxygen, carbon, nitrogen, chlorine and iodine."
+      },
+      {
+       "concept_tag": "uses-of-metals-and-alloys",
+       "learning_objective": "Describe alloys and the special uses of metals in technology and industry."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GECU1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Changes Around Us: Physical and Chemical",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gecu105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GECU1-CH05-T1",
+     "topic_number": 1,
+     "title": "A substance may change in appearance but remain the same",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "physical-change",
+       "learning_objective": "Identify a physical change as one in which only physical properties such as shape and size change and no new substance is formed."
+      },
+      {
+       "concept_tag": "change-of-state",
+       "learning_objective": "Explain why changes of state such as melting and boiling of water are physical changes."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH05-T2",
+     "topic_number": 2,
+     "title": "A substance may change in appearance and not remain the same",
+     "ncert_sections": "5.2",
+     "concepts": [
+      {
+       "concept_tag": "chemical-change",
+       "learning_objective": "Identify a chemical change as one in which one or more new substances are formed through a chemical reaction."
+      },
+      {
+       "concept_tag": "lime-water-test",
+       "learning_objective": "Use the turning of lime water milky as a test for carbon dioxide and interpret the reaction involved."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH05-T3",
+     "topic_number": 3,
+     "title": "Rusting and combustion",
+     "ncert_sections": "5.3, 5.3.1, 5.3.2",
+     "concepts": [
+      {
+       "concept_tag": "rusting",
+       "learning_objective": "Explain why rusting of iron is a chemical change that forms iron oxide."
+      },
+      {
+       "concept_tag": "combustion",
+       "learning_objective": "Describe combustion as a reaction with oxygen that gives out heat and/or light, and identify combustible substances."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH05-T4",
+     "topic_number": 4,
+     "title": "Conditions needed for combustion",
+     "ncert_sections": "5.3.2",
+     "concepts": [
+      {
+       "concept_tag": "ignition-temperature",
+       "learning_objective": "Define ignition temperature and use it to explain why a substance does or does not catch fire."
+      },
+      {
+       "concept_tag": "fire-triangle",
+       "learning_objective": "State the three requirements for combustion and apply them to putting out a fire."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH05-T5",
+     "topic_number": 5,
+     "title": "Physical and chemical changes in the same process",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "burning-candle",
+       "learning_objective": "Distinguish the physical and chemical changes that take place when a candle burns."
+      },
+      {
+       "concept_tag": "classifying-changes",
+       "learning_objective": "Classify everyday processes as physical, chemical, or involving both kinds of change."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH05-T6",
+     "topic_number": 6,
+     "title": "Reversible and desirable changes",
+     "ncert_sections": "5.5, 5.6",
+     "concepts": [
+      {
+       "concept_tag": "reversible-changes",
+       "learning_objective": "Distinguish changes that can be reversed from those that cannot be reversed."
+      },
+      {
+       "concept_tag": "desirable-undesirable-changes",
+       "learning_objective": "Evaluate whether a change is desirable or undesirable in a given situation, including its effect on the environment."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH05-T7",
+     "topic_number": 7,
+     "title": "Some slow natural changes",
+     "ncert_sections": "5.7, 5.7.1, 5.7.2",
+     "concepts": [
+      {
+       "concept_tag": "weathering",
+       "learning_objective": "Explain weathering of rocks as a combination of physical and chemical changes that leads to soil formation."
+      },
+      {
+       "concept_tag": "erosion",
+       "learning_objective": "Describe erosion as the movement of rock pieces, soil and sediments by wind and flowing water."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GECU1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Adolescence: A Stage of Growth and Change",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gecu106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GECU1-CH06-T1",
+     "topic_number": 1,
+     "title": "Growing with age: the teenage years",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "stages-of-human-life",
+       "learning_objective": "Identify the stages of human life and the age range of adolescence."
+      },
+      {
+       "concept_tag": "physical-changes-in-adolescence",
+       "learning_objective": "Describe the observable physical changes of adolescence, such as growth in height, voice change, acne and body hair, and recognise that their timing varies."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH06-T2",
+     "topic_number": 2,
+     "title": "Secondary sexual characteristics and puberty",
+     "ncert_sections": "6.1",
+     "concepts": [
+      {
+       "concept_tag": "secondary-sexual-characteristics",
+       "learning_objective": "Define secondary sexual characteristics and classify changes seen in boys, in girls, or in both."
+      },
+      {
+       "concept_tag": "puberty",
+       "learning_objective": "Explain puberty as the stage in which the body develops into an adult capable of reproduction."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH06-T3",
+     "topic_number": 3,
+     "title": "Changes that indicate reproductive capability",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "menstrual-cycle",
+       "learning_objective": "Describe the menstrual cycle, its usual length, the duration of menstruation and when it stops."
+      },
+      {
+       "concept_tag": "menstruation-myths",
+       "learning_objective": "Evaluate myths and taboos about menstruation using a scientific outlook."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH06-T4",
+     "topic_number": 4,
+     "title": "Emotional and behavioural changes in adolescents",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "emotional-changes",
+       "learning_objective": "Recognise the emotional changes of adolescence, such as mood swings, strong emotions and increased sensitivity."
+      },
+      {
+       "concept_tag": "channelling-emotions",
+       "learning_objective": "Suggest positive ways to channel emotions and explain how understanding emotions helps in making better choices."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH06-T5",
+     "topic_number": 5,
+     "title": "Nutrition, personal hygiene and physical activity",
+     "ncert_sections": "6.4.1, 6.4.2, 6.4.3",
+     "concepts": [
+      {
+       "concept_tag": "adolescent-nutrition",
+       "learning_objective": "Relate food sources to the nutrients adolescents need and to their functions in growth."
+      },
+      {
+       "concept_tag": "personal-and-menstrual-hygiene",
+       "learning_objective": "Explain good personal and menstrual hygiene practices, including proper disposal of sanitary pads."
+      },
+      {
+       "concept_tag": "physical-activity",
+       "learning_objective": "State the benefits of regular exercise and physical activity during adolescence."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH06-T6",
+     "topic_number": 6,
+     "title": "Balanced social life and saying NO to harmful substances",
+     "ncert_sections": "6.4.4, 6.4.5",
+     "concepts": [
+      {
+       "concept_tag": "responsible-social-media",
+       "learning_objective": "Apply the dos and don'ts of responsible social media use and respond wisely to cyberbullying."
+      },
+      {
+       "concept_tag": "avoiding-substance-abuse",
+       "learning_objective": "Explain why addictive substances are harmful and why one should say NO the first time and every time."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH06-T7",
+     "topic_number": 7,
+     "title": "The 'why' question: role of hormones",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "role-of-hormones",
+       "learning_objective": "Explain that hormones are chemicals produced in the body that regulate growth, development, mood and behaviour."
+      },
+      {
+       "concept_tag": "hormone-release",
+       "learning_objective": "State that hormones are produced in different parts of the body and released in response to signals from the brain."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GECU1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Heat Transfer in Nature",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gecu107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GECU1-CH07-T1",
+     "topic_number": 1,
+     "title": "Conduction of heat; good and poor conductors",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "conduction-in-solids",
+       "learning_objective": "Explain conduction as heat passing from particle to neighbouring particle, from the hotter to the colder part of an object, without the particles moving."
+      },
+      {
+       "concept_tag": "good-and-poor-conductors",
+       "learning_objective": "Classify materials as good or poor conductors (insulators) of heat and relate this to their everyday uses."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH07-T2",
+     "topic_number": 2,
+     "title": "Trapped air as an insulator in clothing and houses",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "trapped-air-insulation",
+       "learning_objective": "Explain how air trapped in wool, between layers of clothing or between blankets reduces heat flow because air is a poor conductor."
+      },
+      {
+       "concept_tag": "heat-and-house-design",
+       "learning_objective": "Explain how hollow bricks and walls of wood and mud keep houses comfortable in very hot or cold climates."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH07-T3",
+     "topic_number": 3,
+     "title": "Convection in air and in liquids",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "convection-in-air",
+       "learning_objective": "Explain that heated air expands, becomes lighter and rises, as seen with the paper cups, smoke and a balloon in the Sun."
+      },
+      {
+       "concept_tag": "convection-in-liquids",
+       "learning_objective": "Describe convection currents in heated water as hot water rising and cooler water sinking to take its place."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH07-T4",
+     "topic_number": 4,
+     "title": "Land and sea breeze",
+     "ncert_sections": "7.2.1",
+     "concepts": [
+      {
+       "concept_tag": "land-water-heating-rates",
+       "learning_objective": "Compare how quickly soil and water heat up and cool down in sunlight and in shade."
+      },
+      {
+       "concept_tag": "sea-and-land-breeze",
+       "learning_objective": "Explain the formation of sea breeze by day and land breeze by night in coastal areas."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH07-T5",
+     "topic_number": 5,
+     "title": "Radiation and the three processes together",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "radiation-without-medium",
+       "learning_objective": "State that radiation transfers heat without a material medium, as from the Sun or a fire, and that all objects radiate heat."
+      },
+      {
+       "concept_tag": "colour-and-heat-absorption",
+       "learning_objective": "Explain why light-coloured clothes suit summer and dark-coloured clothes suit winter."
+      },
+      {
+       "concept_tag": "three-processes-together",
+       "learning_objective": "Identify conduction, convection and radiation acting together in heating water in a pan or using a bukhari."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH07-T6",
+     "topic_number": 6,
+     "title": "Water cycle",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "water-cycle-processes",
+       "learning_objective": "Describe evaporation, transpiration, condensation and precipitation as steps of the water cycle driven by the Sun's heat."
+      },
+      {
+       "concept_tag": "water-cycle-redistribution",
+       "learning_objective": "Explain how the water cycle redistributes and replenishes water while conserving its total amount on the Earth."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH07-T7",
+     "topic_number": 7,
+     "title": "Seepage of water, groundwater and its conservation",
+     "ncert_sections": "7.4.1",
+     "concepts": [
+      {
+       "concept_tag": "infiltration-and-seepage",
+       "learning_objective": "Relate the rate of infiltration through clay, sand and gravel to the size and connection of the spaces between particles."
+      },
+      {
+       "concept_tag": "groundwater-and-aquifers",
+       "learning_objective": "Define groundwater and aquifers and explain how water is drawn from them through wells."
+      },
+      {
+       "concept_tag": "groundwater-conservation",
+       "learning_objective": "Explain causes of groundwater depletion and ways to conserve water such as rainwater harvesting, recharge pits and ice stupas."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GECU1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Measurement of Time and Motion",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gecu108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GECU1-CH08-T1",
+     "topic_number": 1,
+     "title": "Measuring time before clocks",
+     "ncert_sections": "8.1",
+     "concepts": [
+      {
+       "concept_tag": "periodic-natural-events",
+       "learning_objective": "Recognise that early timekeeping used natural events that repeat after definite intervals."
+      },
+      {
+       "concept_tag": "ancient-time-devices",
+       "learning_objective": "Describe how sundials, water clocks, hourglasses and candle clocks measured time."
+      },
+      {
+       "concept_tag": "ghatika-yantra",
+       "learning_objective": "Explain the working and limitations of ancient Indian water clocks, including the Ghatika-yantra."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH08-T2",
+     "topic_number": 2,
+     "title": "The simple pendulum",
+     "ncert_sections": "8.1.1",
+     "concepts": [
+      {
+       "concept_tag": "pendulum-oscillation",
+       "learning_objective": "Identify the mean and extreme positions of a pendulum and what counts as one oscillation."
+      },
+      {
+       "concept_tag": "pendulum-time-period",
+       "learning_objective": "Define and calculate the time period of a simple pendulum."
+      },
+      {
+       "concept_tag": "time-period-factors",
+       "learning_objective": "Analyse how the length and the bob's mass affect a pendulum's time period."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH08-T3",
+     "topic_number": 3,
+     "title": "Clocks and the SI unit of time",
+     "ncert_sections": "8.1, 8.1.2",
+     "concepts": [
+      {
+       "concept_tag": "periodic-process-clocks",
+       "learning_objective": "Explain that all clocks rely on a process repeating at equal intervals of time."
+      },
+      {
+       "concept_tag": "si-unit-time",
+       "learning_objective": "State the SI unit of time, convert between s, min and h, and write time units correctly."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH08-T4",
+     "topic_number": 4,
+     "title": "Slow or fast: speed",
+     "ncert_sections": "8.2, 8.3",
+     "concepts": [
+      {
+       "concept_tag": "comparing-motion",
+       "learning_objective": "Decide which object is faster by comparing distances covered in the same time."
+      },
+      {
+       "concept_tag": "speed-formula-units",
+       "learning_objective": "Calculate speed as total distance divided by total time and state its units."
+      },
+      {
+       "concept_tag": "speed-unit-conversion",
+       "learning_objective": "Convert speeds between m/s and km/h to compare motions."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH08-T5",
+     "topic_number": 5,
+     "title": "Relationship between speed, distance and time",
+     "ncert_sections": "8.3.1",
+     "concepts": [
+      {
+       "concept_tag": "distance-speed-time",
+       "learning_objective": "Use the relations among speed, distance and time to find an unknown quantity."
+      },
+      {
+       "concept_tag": "average-speed",
+       "learning_objective": "Calculate average speed for journeys with changing speeds or stops."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH08-T6",
+     "topic_number": 6,
+     "title": "Uniform and non-uniform linear motion",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "uniform-linear-motion",
+       "learning_objective": "Identify uniform linear motion as equal distances covered in equal intervals of time."
+      },
+      {
+       "concept_tag": "non-uniform-linear-motion",
+       "learning_objective": "Recognise non-uniform linear motion in data and everyday examples."
+      },
+      {
+       "concept_tag": "speedometer-odometer",
+       "learning_objective": "State what a speedometer and an odometer measure in a vehicle."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GECU1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Life Processes in Animals",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gecu109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GECU1-CH09-T1",
+     "topic_number": 1,
+     "title": "Digestion begins in the mouth",
+     "ncert_sections": "9.1, 9.1.1",
+     "concepts": [
+      {
+       "concept_tag": "mechanical-digestion",
+       "learning_objective": "Describe how teeth and tongue begin breaking down food in the mouth."
+      },
+      {
+       "concept_tag": "saliva-starch-digestion",
+       "learning_objective": "Explain how saliva breaks down starch into sugar and how the iodine test shows this."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH09-T2",
+     "topic_number": 2,
+     "title": "Food pipe and stomach",
+     "ncert_sections": "9.1.1",
+     "concepts": [
+      {
+       "concept_tag": "food-pipe-movement",
+       "learning_objective": "Explain how wave-like contraction and relaxation of the food pipe walls push food to the stomach."
+      },
+      {
+       "concept_tag": "stomach-secretions",
+       "learning_objective": "State the roles of the digestive juice, acid and mucus secreted in the stomach."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH09-T3",
+     "topic_number": 3,
+     "title": "Small intestine and absorption",
+     "ncert_sections": "9.1.1",
+     "concepts": [
+      {
+       "concept_tag": "bile-pancreatic-juice",
+       "learning_objective": "Describe the roles of bile, pancreatic juice and intestinal juice in the small intestine."
+      },
+      {
+       "concept_tag": "absorption-finger-like-projections",
+       "learning_objective": "Explain how finger-like projections of the small intestine help absorb nutrients into blood."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH09-T4",
+     "topic_number": 4,
+     "title": "Large intestine and egestion",
+     "ncert_sections": "9.1.1",
+     "concepts": [
+      {
+       "concept_tag": "large-intestine-function",
+       "learning_objective": "Explain how the large intestine absorbs water and salts and forms stool."
+      },
+      {
+       "concept_tag": "digestive-health",
+       "learning_objective": "Relate fibre, fermented foods and gut bacteria to a healthy digestive system."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH09-T5",
+     "topic_number": 5,
+     "title": "Digestion in other animals",
+     "ncert_sections": "9.1.2",
+     "concepts": [
+      {
+       "concept_tag": "rumination",
+       "learning_objective": "Explain rumination in grass-eating animals such as cows and buffaloes."
+      },
+      {
+       "concept_tag": "gizzard-in-birds",
+       "learning_objective": "Describe how the gizzard helps birds break down food without teeth."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH09-T6",
+     "topic_number": 6,
+     "title": "Breathing in humans",
+     "ncert_sections": "9.2, 9.2.1",
+     "concepts": [
+      {
+       "concept_tag": "respiratory-pathway",
+       "learning_objective": "Trace the path of air from the nostrils to the alveoli and state the role of each part."
+      },
+      {
+       "concept_tag": "mechanism-of-breathing",
+       "learning_objective": "Explain the movements of the ribs and diaphragm during inhalation and exhalation."
+      },
+      {
+       "concept_tag": "exhaled-air-carbon-dioxide",
+       "learning_objective": "Interpret the lime water test showing that exhaled air has more carbon dioxide."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH09-T7",
+     "topic_number": 7,
+     "title": "Gas exchange, respiration and circulation",
+     "ncert_sections": "9.2.1",
+     "concepts": [
+      {
+       "concept_tag": "gas-exchange-alveoli",
+       "learning_objective": "Describe the exchange of oxygen and carbon dioxide between the alveoli and blood."
+      },
+      {
+       "concept_tag": "breathing-vs-respiration",
+       "learning_objective": "Distinguish breathing as a physical process from respiration as a chemical process."
+      },
+      {
+       "concept_tag": "circulatory-system",
+       "learning_objective": "State the role of the heart, blood and blood vessels in transport."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH09-T8",
+     "topic_number": 8,
+     "title": "Breathing in other animals",
+     "ncert_sections": "9.2.2",
+     "concepts": [
+      {
+       "concept_tag": "gills-in-fish",
+       "learning_objective": "Explain how gills help aquatic animals exchange gases with water."
+      },
+      {
+       "concept_tag": "breathing-adaptations",
+       "learning_objective": "Relate the breathing organs of frogs and earthworms to their habitats."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GECU1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Life Processes in Plants",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gecu110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GECU1-CH10-T1",
+     "topic_number": 1,
+     "title": "How do plants grow?",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "signs-of-plant-growth",
+       "learning_objective": "Students will identify the visible changes that show a plant is growing."
+      },
+      {
+       "concept_tag": "sunlight-water-for-growth",
+       "learning_objective": "Students will explain, from the three-pot activity, that plants need both sunlight and water to grow."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH10-T2",
+     "topic_number": 2,
+     "title": "Leaves: the food factories of plants",
+     "ncert_sections": "10.2.1",
+     "concepts": [
+      {
+       "concept_tag": "leaves-food-factories",
+       "learning_objective": "Students will state that plants make and store food as starch in their broad, flat, green leaves."
+      },
+      {
+       "concept_tag": "iodine-starch-test",
+       "learning_objective": "Students will describe the iodine test for starch in a leaf and the reason for decolourising the leaf."
+      },
+      {
+       "concept_tag": "chlorophyll-and-starch",
+       "learning_objective": "Students will infer from variegated and coloured leaves that chlorophyll and sunlight are needed to make starch."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH10-T3",
+     "topic_number": 3,
+     "title": "Role of air and the products of photosynthesis",
+     "ncert_sections": "10.2.2, 10.2.3",
+     "concepts": [
+      {
+       "concept_tag": "carbon-dioxide-needed",
+       "learning_objective": "Students will explain, using the caustic soda experiment, that carbon dioxide from air is essential for making starch."
+      },
+      {
+       "concept_tag": "oxygen-released",
+       "learning_objective": "Students will interpret the water-plant experiment to show that oxygen is released during photosynthesis in light."
+      },
+      {
+       "concept_tag": "photosynthesis-word-equation",
+       "learning_objective": "Students will write the word equation of photosynthesis and name its raw materials and products."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH10-T4",
+     "topic_number": 4,
+     "title": "Exchange of gases through stomata",
+     "ncert_sections": "10.2.4",
+     "concepts": [
+      {
+       "concept_tag": "stomata-structure",
+       "learning_objective": "Students will identify stomata as tiny pores on the surface of leaves, seen in a stained leaf peel."
+      },
+      {
+       "concept_tag": "gas-exchange-stomata",
+       "learning_objective": "Students will explain how stomata allow carbon dioxide and oxygen to move in and out of leaves."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH10-T5",
+     "topic_number": 5,
+     "title": "Transport in plants",
+     "ncert_sections": "10.3, 10.3.1, 10.3.2",
+     "concepts": [
+      {
+       "concept_tag": "xylem-water-minerals",
+       "learning_objective": "Students will explain that water and dissolved minerals move up from the roots to all parts through the xylem."
+      },
+      {
+       "concept_tag": "phloem-food-transport",
+       "learning_objective": "Students will explain that food made in leaves is carried to other parts through the phloem and may be stored there."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH10-T6",
+     "topic_number": 6,
+     "title": "Respiration in plants",
+     "ncert_sections": "10.4",
+     "concepts": [
+      {
+       "concept_tag": "respiration-in-plants",
+       "learning_objective": "Students will describe the germinating-seed experiment and state that all parts of a plant respire."
+      },
+      {
+       "concept_tag": "respiration-word-equation",
+       "learning_objective": "Students will write the word equation of respiration and identify its reactants and products."
+      },
+      {
+       "concept_tag": "photosynthesis-respiration-balance",
+       "learning_objective": "Students will analyse how photosynthesis and respiration together keep the exchange of gases balanced."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GECU1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "Light: Shadows and Reflections",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gecu111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GECU1-CH11-T1",
+     "topic_number": 1,
+     "title": "Sources of Light",
+     "ncert_sections": "11.1",
+     "concepts": [
+      {
+       "concept_tag": "luminous-and-non-luminous-objects",
+       "learning_objective": "Distinguish luminous objects, which emit their own light, from non-luminous objects such as the Moon, which only reflect light."
+      },
+      {
+       "concept_tag": "natural-and-artificial-light-sources",
+       "learning_objective": "Identify natural sources of light and artificial sources such as fire and electric lamps, including LEDs."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH11-T2",
+     "topic_number": 2,
+     "title": "Does Light Travel in a Straight Line?",
+     "ncert_sections": "11.2",
+     "concepts": [
+      {
+       "concept_tag": "light-travels-in-straight-line",
+       "learning_objective": "Explain how the matchbox, bent-pipe and laser activities show that light travels in a straight line."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH11-T3",
+     "topic_number": 3,
+     "title": "Light through Transparent, Translucent, and Opaque Materials",
+     "ncert_sections": "11.3",
+     "concepts": [
+      {
+       "concept_tag": "transparent-translucent-opaque",
+       "learning_objective": "Classify materials as transparent, translucent or opaque by how much light passes through them."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH11-T4",
+     "topic_number": 4,
+     "title": "Shadow Formation",
+     "ncert_sections": "11.4",
+     "concepts": [
+      {
+       "concept_tag": "conditions-for-shadow",
+       "learning_objective": "State that a shadow forms when an object blocks light, and that a light source, an opaque object and a screen are needed to observe it."
+      },
+      {
+       "concept_tag": "shadow-size-and-position",
+       "learning_objective": "Explain how the size and shape of a shadow change with the position of the object relative to the light source and the screen."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH11-T5",
+     "topic_number": 5,
+     "title": "Reflection of Light",
+     "ncert_sections": "11.5",
+     "concepts": [
+      {
+       "concept_tag": "reflection-of-light",
+       "learning_objective": "Describe reflection as the change in direction of light by a mirror or shiny surface."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH11-T6",
+     "topic_number": 6,
+     "title": "Images Formed in a Plane Mirror",
+     "ncert_sections": "11.6",
+     "concepts": [
+      {
+       "concept_tag": "plane-mirror-image-properties",
+       "learning_objective": "State that a plane mirror image is erect, of the same size as the object and cannot be obtained on a screen."
+      },
+      {
+       "concept_tag": "lateral-inversion",
+       "learning_objective": "Explain lateral inversion and its everyday uses, such as the lettering on an ambulance."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH11-T7",
+     "topic_number": 7,
+     "title": "Pinhole Camera, Periscope and Kaleidoscope",
+     "ncert_sections": "11.7, 11.8",
+     "concepts": [
+      {
+       "concept_tag": "pinhole-camera",
+       "learning_objective": "Explain how a pinhole camera forms an inverted image of an object on a screen."
+      },
+      {
+       "concept_tag": "periscope-and-kaleidoscope",
+       "learning_objective": "Describe how plane mirrors are used in a periscope and a kaleidoscope."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GECU1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Earth, Moon, and the Sun",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gecu112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GECU1-CH12-T1",
+     "topic_number": 1,
+     "title": "Rotation of the Earth",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "earth-rotation-axis",
+       "learning_objective": "Describe the Earth's rotation about its axis through the North and South Poles, from West to East, in about 24 hours."
+      },
+      {
+       "concept_tag": "apparent-motion-of-sun",
+       "learning_objective": "Explain that the Sun appears to move from East to West across the sky because the Earth rotates from West to East."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH12-T2",
+     "topic_number": 2,
+     "title": "Day and night",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "day-night-cycle",
+       "learning_objective": "Explain how the Earth's rotation causes the cycle of day and night, with half the Earth lit at any time."
+      },
+      {
+       "concept_tag": "sunrise-order-across-places",
+       "learning_objective": "Use the West-to-East rotation to explain why sunrise occurs earlier in eastern places than in western ones."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH12-T3",
+     "topic_number": 3,
+     "title": "Apparent motion of the stars and the Moon",
+     "ncert_sections": "12.1",
+     "concepts": [
+      {
+       "concept_tag": "pole-star-and-star-motion",
+       "learning_objective": "Explain why the Pole Star appears nearly stationary while other stars appear to move around it."
+      },
+      {
+       "concept_tag": "evidence-for-earth-rotation",
+       "learning_objective": "Recognise the Foucault pendulum and Aryabhata's boat analogy as ways of understanding the Earth's rotation."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH12-T4",
+     "topic_number": 4,
+     "title": "Revolution of the Earth and the changing night sky",
+     "ncert_sections": "12.2, 12.2.1",
+     "concepts": [
+      {
+       "concept_tag": "earth-revolution-orbit",
+       "learning_objective": "Define revolution and orbit and state that the Earth revolves around the Sun in about 365 days and 6 hours."
+      },
+      {
+       "concept_tag": "changing-night-sky",
+       "learning_objective": "Explain why the stars seen after sunset change gradually over a year as the Earth revolves."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH12-T5",
+     "topic_number": 5,
+     "title": "Seasons on the Earth",
+     "ncert_sections": "12.2.2",
+     "concepts": [
+      {
+       "concept_tag": "tilt-and-seasons",
+       "learning_objective": "Explain how the tilt of the Earth's axis and its spherical shape cause seasons, reversed in the two hemispheres."
+      },
+      {
+       "concept_tag": "solstices-and-equinoxes",
+       "learning_objective": "Identify the solstices and equinoxes and the length of daytime on them in the Northern Hemisphere."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH12-T6",
+     "topic_number": 6,
+     "title": "Solar eclipse",
+     "ncert_sections": "12.3, 12.3.1",
+     "concepts": [
+      {
+       "concept_tag": "apparent-size",
+       "learning_objective": "Explain how apparent size depends on actual size and distance, so the Moon can cover the Sun."
+      },
+      {
+       "concept_tag": "solar-eclipse-geometry",
+       "learning_objective": "Describe the arrangement of the Sun, Moon and Earth in total and partial solar eclipses."
+      },
+      {
+       "concept_tag": "safe-solar-eclipse-viewing",
+       "learning_objective": "State safe and unsafe ways of viewing a solar eclipse."
+      }
+     ]
+    },
+    {
+     "topic_id": "GECU1-CH12-T7",
+     "topic_number": 7,
+     "title": "Lunar eclipse",
+     "ncert_sections": "12.3.2",
+     "concepts": [
+      {
+       "concept_tag": "lunar-eclipse-geometry",
+       "learning_objective": "Describe the arrangement of the Sun, Earth and Moon during a lunar eclipse."
+      },
+      {
+       "concept_tag": "lunar-eclipse-observation",
+       "learning_objective": "Describe how total and partial lunar eclipses appear and that they are safe to watch."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

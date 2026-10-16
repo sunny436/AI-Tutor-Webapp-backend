@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KECS1-CH09",
+ "title": "Lists",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KECS1-CH09-T1",
+   "topic_number": 1,
+   "title": "Introduction to lists: creating, accessing elements and mutability",
+   "ncert_sections": "9.1, 9.1.1, 9.1.2",
+   "concepts": [
+    {
+     "concept_tag": "list-creation",
+     "learning_objective": "Describe a list as an ordered, mutable sequence whose elements may be of different types."
+    },
+    {
+     "concept_tag": "list-indexing",
+     "learning_objective": "Access list elements using positive and negative indices and recognise an out-of-range index."
+    },
+    {
+     "concept_tag": "list-mutability",
+     "learning_objective": "Explain that list elements can be changed in place, unlike string characters."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH09-T2",
+   "topic_number": 2,
+   "title": "List operations: concatenation, repetition, membership and slicing",
+   "ncert_sections": "9.2",
+   "concepts": [
+    {
+     "concept_tag": "list-concatenation-repetition",
+     "learning_objective": "Use the + and * operators to join and repeat lists."
+    },
+    {
+     "concept_tag": "list-membership",
+     "learning_objective": "Evaluate the membership operators in and not in on lists."
+    },
+    {
+     "concept_tag": "list-slicing",
+     "learning_objective": "Predict the result of list slices with start, stop and step, including negative steps."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH09-T3",
+   "topic_number": 3,
+   "title": "Traversing a list",
+   "ncert_sections": "9.3",
+   "concepts": [
+    {
+     "concept_tag": "traversal-for-loop",
+     "learning_objective": "Traverse a list with a for loop over its elements or over range(len(list))."
+    },
+    {
+     "concept_tag": "traversal-while-loop",
+     "learning_objective": "Traverse a list with a while loop and an index variable."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH09-T4",
+   "topic_number": 4,
+   "title": "List methods and built-in functions",
+   "ncert_sections": "9.4",
+   "concepts": [
+    {
+     "concept_tag": "list-adding-methods",
+     "learning_objective": "Distinguish append(), extend() and insert() and predict the resulting list."
+    },
+    {
+     "concept_tag": "list-removing-methods",
+     "learning_objective": "Use remove() and pop() and predict their effect, including ValueError cases."
+    },
+    {
+     "concept_tag": "list-sort-and-builtins",
+     "learning_objective": "Apply count(), index(), sort(), sorted(), reverse(), len(), min(), max() and sum()."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH09-T5",
+   "topic_number": 5,
+   "title": "Nested lists and copying lists",
+   "ncert_sections": "9.5, 9.6",
+   "concepts": [
+    {
+     "concept_tag": "nested-list-indexing",
+     "learning_objective": "Access elements of a nested list using two indices."
+    },
+    {
+     "concept_tag": "aliasing-vs-copying",
+     "learning_objective": "Distinguish aliasing by assignment from copying by slicing, list() and copy.copy()."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH09-T6",
+   "topic_number": 6,
+   "title": "List as argument to a function",
+   "ncert_sections": "9.7",
+   "concepts": [
+    {
+     "concept_tag": "list-passed-by-reference",
+     "learning_objective": "Explain that a function receiving a list can change the caller's list object."
+    },
+    {
+     "concept_tag": "reassignment-inside-function",
+     "learning_objective": "Explain why assigning a new list to a parameter does not affect the caller's list."
+    }
+   ]
+  },
+  {
+   "topic_id": "KECS1-CH09-T7",
+   "topic_number": 7,
+   "title": "List manipulation programs",
+   "ncert_sections": "9.8",
+   "concepts": [
+    {
+     "concept_tag": "menu-driven-list-operations",
+     "learning_objective": "Choose suitable list methods to implement a menu of list operations."
+    },
+    {
+     "concept_tag": "list-programs-average-search",
+     "learning_objective": "Trace programs that compute an average and perform a linear search on a list."
+    }
+   ]
+  }
+ ]
+}

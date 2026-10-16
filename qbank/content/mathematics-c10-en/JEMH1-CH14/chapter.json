@@ -1,0 +1,88 @@
+{
+ "chapter_id": "JEMH1-CH14",
+ "title": "Probability",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JEMH1-CH14-T1",
+   "topic_number": 1,
+   "title": "Theoretical probability and equally likely outcomes",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "equally-likely-outcomes",
+     "learning_objective": "Decide whether the outcomes of an experiment are equally likely and explain why."
+    },
+    {
+     "concept_tag": "theoretical-probability",
+     "learning_objective": "Use P(E) = favourable outcomes / all possible outcomes for experiments with equally likely outcomes."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH14-T2",
+   "topic_number": 2,
+   "title": "Elementary, sure and impossible events",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "elementary-events",
+     "learning_objective": "Identify elementary events and use the fact that their probabilities add up to 1."
+    },
+    {
+     "concept_tag": "sure-and-impossible-events",
+     "learning_objective": "Recognise sure and impossible events and state that their probabilities are 1 and 0."
+    },
+    {
+     "concept_tag": "range-of-probability",
+     "learning_objective": "Use 0 <= P(E) <= 1 to judge whether a number can be a probability."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH14-T3",
+   "topic_number": 3,
+   "title": "Complementary events",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "complementary-events",
+     "learning_objective": "Use P(not E) = 1 - P(E) to find the probability of the complement of an event."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH14-T4",
+   "topic_number": 4,
+   "title": "Drawing at random: playing cards, balls and numbered objects",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "playing-cards",
+     "learning_objective": "Find probabilities of events when one card is drawn from a well-shuffled deck of 52 cards."
+    },
+    {
+     "concept_tag": "random-draws",
+     "learning_objective": "Find probabilities when one object is drawn at random from a collection of balls, discs or items."
+    }
+   ]
+  },
+  {
+   "topic_id": "JEMH1-CH14-T5",
+   "topic_number": 5,
+   "title": "Experiments with two coins, two dice and repeated tosses",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "coins-and-repeated-tosses",
+     "learning_objective": "List the equally likely outcomes of tossing two or more coins and find probabilities from them."
+    },
+    {
+     "concept_tag": "two-dice-outcomes",
+     "learning_objective": "Use the 36 ordered outcomes of throwing two dice to find probabilities of sums and other events."
+    }
+   ]
+  }
+ ]
+}

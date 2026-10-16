@@ -1,0 +1,412 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "chemistry-part-ii-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "chemistry",
+  "language": "english",
+  "title": "Chemistry Part II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kech2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KECH2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Redox Reactions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kech201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECH2-CH01-T1",
+     "topic_number": 1,
+     "title": "Classical idea of redox reactions",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "oxidation-reduction-classical",
+       "learning_objective": "Define oxidation and reduction in terms of addition or removal of oxygen, hydrogen or electronegative elements."
+      },
+      {
+       "concept_tag": "oxidant-reductant-classical",
+       "learning_objective": "Identify the oxidising and reducing agent in a reaction using the classical definitions."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH01-T2",
+     "topic_number": 2,
+     "title": "Redox reactions in terms of electron transfer",
+     "ncert_sections": "7.2, 7.2.1",
+     "concepts": [
+      {
+       "concept_tag": "electron-transfer-redox",
+       "learning_objective": "Explain oxidation as loss and reduction as gain of electrons using half reactions."
+      },
+      {
+       "concept_tag": "competitive-electron-transfer",
+       "learning_objective": "Use competitive electron transfer experiments to compare the tendency of metals to release electrons."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH01-T3",
+     "topic_number": 3,
+     "title": "Oxidation number",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "oxidation-number-rules",
+       "learning_objective": "Apply the rules to calculate the oxidation number of an element in a compound or ion."
+      },
+      {
+       "concept_tag": "redox-by-oxidation-number",
+       "learning_objective": "Identify oxidation, reduction, oxidant and reductant from changes in oxidation number."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH01-T4",
+     "topic_number": 4,
+     "title": "Types of redox reactions",
+     "ncert_sections": "7.3.1",
+     "concepts": [
+      {
+       "concept_tag": "combination-decomposition-displacement",
+       "learning_objective": "Classify redox reactions as combination, decomposition or displacement reactions."
+      },
+      {
+       "concept_tag": "disproportionation",
+       "learning_objective": "Recognise disproportionation reactions and the oxidation states that allow them."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH01-T5",
+     "topic_number": 5,
+     "title": "Balancing redox reactions, titrations and limitations",
+     "ncert_sections": "7.3.2, 7.3.3, 7.3.4",
+     "concepts": [
+      {
+       "concept_tag": "balancing-redox-equations",
+       "learning_objective": "Balance redox equations by the oxidation number and half-reaction methods."
+      },
+      {
+       "concept_tag": "redox-titration-indicators",
+       "learning_objective": "Explain how end points are detected in permanganate, dichromate and iodometric titrations."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH01-T6",
+     "topic_number": 6,
+     "title": "Redox reactions and electrode processes",
+     "ncert_sections": "7.4",
+     "concepts": [
+      {
+       "concept_tag": "galvanic-cell-electrodes",
+       "learning_objective": "Describe a Daniell cell, its electrodes, salt bridge and direction of electron flow."
+      },
+      {
+       "concept_tag": "electrode-potential-series",
+       "learning_objective": "Use standard electrode potentials to compare oxidising and reducing strengths."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECH2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Organic Chemistry – Some Basic Principles and Techniques",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kech202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECH2-CH02-T1",
+     "topic_number": 1,
+     "title": "Tetravalence of carbon, shapes and structural representations",
+     "ncert_sections": "8.1, 8.2, 8.3",
+     "concepts": [
+      {
+       "concept_tag": "hybridisation-and-shape",
+       "learning_objective": "Relate the hybridisation of carbon to bond angle, bond length and shape of organic molecules."
+      },
+      {
+       "concept_tag": "structural-representations",
+       "learning_objective": "Interpret complete, condensed and bond-line structural formulas."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH02-T2",
+     "topic_number": 2,
+     "title": "Classification of organic compounds",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "classification-of-compounds",
+       "learning_objective": "Classify organic compounds as acyclic, alicyclic, benzenoid or non-benzenoid aromatic and heterocyclic."
+      },
+      {
+       "concept_tag": "functional-group-homologous-series",
+       "learning_objective": "Identify functional groups and members of a homologous series."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH02-T3",
+     "topic_number": 3,
+     "title": "Nomenclature of organic compounds",
+     "ncert_sections": "8.5",
+     "concepts": [
+      {
+       "concept_tag": "iupac-alkane-naming",
+       "learning_objective": "Name alkanes and substituted chains by the IUPAC rules of longest chain and lowest locants."
+      },
+      {
+       "concept_tag": "iupac-functional-groups",
+       "learning_objective": "Apply suffixes, prefixes and priority rules to name compounds with functional groups and multiple bonds."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH02-T4",
+     "topic_number": 4,
+     "title": "Isomerism",
+     "ncert_sections": "8.6",
+     "concepts": [
+      {
+       "concept_tag": "structural-isomerism",
+       "learning_objective": "Distinguish chain, position, functional group isomerism and metamerism."
+      },
+      {
+       "concept_tag": "stereoisomerism",
+       "learning_objective": "Explain how stereoisomers differ from structural isomers."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH02-T5",
+     "topic_number": 5,
+     "title": "Bond fission, substrates and reagents",
+     "ncert_sections": "8.7.1, 8.7.2, 8.7.3",
+     "concepts": [
+      {
+       "concept_tag": "bond-fission-intermediates",
+       "learning_objective": "Describe homolytic and heterolytic cleavage and the stability and structure of the intermediates formed."
+      },
+      {
+       "concept_tag": "nucleophiles-electrophiles",
+       "learning_objective": "Identify nucleophiles and electrophiles and use curved-arrow notation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH02-T6",
+     "topic_number": 6,
+     "title": "Electron displacement effects and types of reactions",
+     "ncert_sections": "8.7.4 to 8.7.10",
+     "concepts": [
+      {
+       "concept_tag": "inductive-effect",
+       "learning_objective": "Explain the +I and -I effects of groups."
+      },
+      {
+       "concept_tag": "resonance-effect",
+       "learning_objective": "Use resonance structures and the +R/-R effect to explain properties."
+      },
+      {
+       "concept_tag": "electromeric-hyperconjugation",
+       "learning_objective": "Explain the electromeric effect and hyperconjugation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH02-T7",
+     "topic_number": 7,
+     "title": "Methods of purification of organic compounds",
+     "ncert_sections": "8.8",
+     "concepts": [
+      {
+       "concept_tag": "sublimation-crystallisation-distillation",
+       "learning_objective": "Choose sublimation, crystallisation or a suitable distillation method for a given compound."
+      },
+      {
+       "concept_tag": "extraction-chromatography",
+       "learning_objective": "Explain differential extraction and chromatography, including the retardation factor."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH02-T8",
+     "topic_number": 8,
+     "title": "Qualitative and quantitative analysis",
+     "ncert_sections": "8.9, 8.10",
+     "concepts": [
+      {
+       "concept_tag": "qualitative-detection",
+       "learning_objective": "Detect carbon, hydrogen, nitrogen, sulphur, halogens and phosphorus in organic compounds."
+      },
+      {
+       "concept_tag": "quantitative-estimation",
+       "learning_objective": "Calculate the percentage of an element from analytical data."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KECH2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Hydrocarbons",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kech203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KECH2-CH03-T1",
+     "topic_number": 1,
+     "title": "Classification of hydrocarbons and their uses",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "hydrocarbon-classification",
+       "learning_objective": "Classify hydrocarbons as open-chain saturated, unsaturated, alicyclic or aromatic from structure or formula."
+      },
+      {
+       "concept_tag": "hydrocarbon-fuels",
+       "learning_objective": "Relate common fuels such as LPG, CNG, LNG and coal gas to their sources."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH03-T2",
+     "topic_number": 2,
+     "title": "Alkanes: nomenclature, isomerism and preparation",
+     "ncert_sections": "9.2, 9.2.1, 9.2.2",
+     "concepts": [
+      {
+       "concept_tag": "alkane-isomerism",
+       "learning_objective": "Identify the structural isomers possible for a given alkane formula."
+      },
+      {
+       "concept_tag": "alkane-preparation",
+       "learning_objective": "Predict products of decarboxylation, Wurtz reaction and Kolbe's electrolysis."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH03-T3",
+     "topic_number": 3,
+     "title": "Alkanes: properties and conformations",
+     "ncert_sections": "9.2.3, 9.2.4",
+     "concepts": [
+      {
+       "concept_tag": "alkane-properties",
+       "learning_objective": "Explain physical properties and the substitution, oxidation and aromatisation reactions of alkanes."
+      },
+      {
+       "concept_tag": "ethane-conformations",
+       "learning_objective": "Compare the stability of staggered and eclipsed conformations of ethane."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH03-T4",
+     "topic_number": 4,
+     "title": "Alkenes",
+     "ncert_sections": "9.3",
+     "concepts": [
+      {
+       "concept_tag": "alkene-isomerism",
+       "learning_objective": "Identify alkenes that show geometrical isomerism and compare properties of cis and trans forms."
+      },
+      {
+       "concept_tag": "alkene-addition",
+       "learning_objective": "Predict products of addition of HBr to unsymmetrical alkenes with and without peroxide."
+      },
+      {
+       "concept_tag": "alkene-ozonolysis",
+       "learning_objective": "Deduce the structure of an alkene from its ozonolysis products."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH03-T5",
+     "topic_number": 5,
+     "title": "Alkynes",
+     "ncert_sections": "9.4",
+     "concepts": [
+      {
+       "concept_tag": "alkyne-structure-acidity",
+       "learning_objective": "Explain the linear structure of ethyne and the acidic character of terminal alkynes."
+      },
+      {
+       "concept_tag": "alkyne-preparation-reactions",
+       "learning_objective": "Describe preparation of ethyne from calcium carbide and the addition of water to alkynes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH03-T6",
+     "topic_number": 6,
+     "title": "Aromatic hydrocarbons: structure, aromaticity and preparation",
+     "ncert_sections": "9.5.1, 9.5.2, 9.5.3, 9.5.4",
+     "concepts": [
+      {
+       "concept_tag": "benzene-structure",
+       "learning_objective": "Explain the equal bond lengths and stability of benzene using resonance."
+      },
+      {
+       "concept_tag": "aromaticity-huckel",
+       "learning_objective": "Apply the conditions of aromaticity and Huckel's (4n + 2) rule."
+      },
+      {
+       "concept_tag": "benzene-preparation",
+       "learning_objective": "Recall laboratory methods of preparing benzene."
+      }
+     ]
+    },
+    {
+     "topic_id": "KECH2-CH03-T7",
+     "topic_number": 7,
+     "title": "Reactions of benzene, directive influence and carcinogenicity",
+     "ncert_sections": "9.5.5, 9.5.6, 9.6",
+     "concepts": [
+      {
+       "concept_tag": "electrophilic-substitution",
+       "learning_objective": "Identify electrophiles and products in electrophilic substitution of benzene."
+      },
+      {
+       "concept_tag": "directive-influence",
+       "learning_objective": "Predict the directive and activating or deactivating effect of substituents on a benzene ring."
+      },
+      {
+       "concept_tag": "carcinogenicity",
+       "learning_objective": "State the origin and harmful effects of carcinogenic polynuclear hydrocarbons."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "chapter_id": "LEMH1-CH04",
+ "title": "Determinants",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEMH1-CH04-T1",
+   "topic_number": 1,
+   "title": "Determinant of a square matrix",
+   "ncert_sections": "4.2, 4.2.1, 4.2.2, 4.2.3",
+   "concepts": [
+    {
+     "concept_tag": "evaluating-determinants",
+     "learning_objective": "Evaluate determinants of order 1, 2 and 3 by expanding along a row or a column."
+    },
+    {
+     "concept_tag": "determinant-of-scalar-multiple",
+     "learning_objective": "Use |kA| = k^n |A| for a square matrix A of order n."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH04-T2",
+   "topic_number": 2,
+   "title": "Area of a triangle",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "area-of-triangle-by-determinant",
+     "learning_objective": "Find the area of a triangle, or an unknown vertex coordinate, using a determinant."
+    },
+    {
+     "concept_tag": "collinearity-and-equation-of-line",
+     "learning_objective": "Use a zero determinant to test collinearity and find the equation of a line through two points."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH04-T3",
+   "topic_number": 3,
+   "title": "Minors and cofactors",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "minors-and-cofactors",
+     "learning_objective": "Find the minor Mij and the cofactor Aij = (-1)^(i+j) Mij of an element."
+    },
+    {
+     "concept_tag": "expansion-using-cofactors",
+     "learning_objective": "Express a determinant as the sum of products of a row's elements with their cofactors."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH04-T4",
+   "topic_number": 4,
+   "title": "Adjoint and inverse of a matrix",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "adjoint-of-a-matrix",
+     "learning_objective": "Find the adjoint of a square matrix and use A(adj A) = (adj A)A = |A| I."
+    },
+    {
+     "concept_tag": "singular-and-nonsingular-matrices",
+     "learning_objective": "Classify a matrix as singular or non-singular and relate this to invertibility."
+    },
+    {
+     "concept_tag": "inverse-using-adjoint",
+     "learning_objective": "Find the inverse of a non-singular matrix using A^(-1) = (1/|A|) adj A."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH1-CH04-T5",
+   "topic_number": 5,
+   "title": "Applications of determinants and matrices",
+   "ncert_sections": "4.6, 4.6.1",
+   "concepts": [
+    {
+     "concept_tag": "consistency-of-linear-systems",
+     "learning_objective": "Decide whether a system AX = B is consistent using |A| and (adj A)B."
+    },
+    {
+     "concept_tag": "solving-equations-by-matrix-method",
+     "learning_objective": "Solve a system of linear equations in two or three variables using X = A^(-1) B."
+    }
+   ]
+  }
+ ]
+}

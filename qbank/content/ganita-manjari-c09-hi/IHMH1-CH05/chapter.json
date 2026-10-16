@@ -1,0 +1,132 @@
+{
+ "chapter_id": "IHMH1-CH05",
+ "title": "मैं हूँ गोल-गोल, ऊपर-नीचे",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IHMH1-CH05-T1",
+   "topic_number": 1,
+   "title": "वृत्त की परिभाषाएँ और सममिति",
+   "ncert_sections": "5.1, 5.2",
+   "concepts": [
+    {
+     "concept_tag": "vritt-paribhasha-bindupath",
+     "learning_objective": "विद्यार्थी वृत्त को किसी दिए गए बिंदु से समदूरस्थ बिंदुओं के बिंदुपथ के रूप में परिभाषित कर सकेंगे।"
+    },
+    {
+     "concept_tag": "jiva-aur-vyas",
+     "learning_objective": "विद्यार्थी जीवा, व्यास और त्रिज्या में संबंध पहचानकर सबसे लंबी जीवा ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "vritt-ki-sammiti",
+     "learning_objective": "विद्यार्थी वृत्त की पूर्ण घूर्णन सममिति और व्यासों के परावर्तन सममिति रेखा होने को समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH05-T2",
+   "topic_number": 2,
+   "title": "दिए गए बिंदुओं से होकर कितने वृत्त",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "do-binduon-se-vritt",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि दो बिंदुओं से होकर जाने वाले सभी वृत्तों के केंद्र उन्हें मिलाने वाले रेखाखंड के लंब समद्विभाजक पर होते हैं।"
+    },
+    {
+     "concept_tag": "teen-binduon-se-adwitiya-vritt",
+     "learning_objective": "विद्यार्थी तीन असंरेख बिंदुओं से होकर जाने वाले अद्वितीय वृत्त के प्रमेय का प्रयोग कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH05-T3",
+   "topic_number": 3,
+   "title": "जीवाएँ और केंद्र पर अंतरित कोण",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "saman-jiva-saman-kon",
+     "learning_objective": "विद्यार्थी प्रमेय का प्रयोग कर सकेंगे कि वृत्त की समान जीवाएँ केंद्र पर समान कोण अंतरित करती हैं।"
+    },
+    {
+     "concept_tag": "saman-kon-saman-jiva",
+     "learning_objective": "विद्यार्थी विलोम प्रमेय का प्रयोग कर सकेंगे कि केंद्र पर समान कोण अंतरित करने वाली जीवाएँ समान होती हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH05-T4",
+   "topic_number": 4,
+   "title": "जीवाओं के मध्यबिंदु और लंब समद्विभाजक",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "kendra-madhyabindu-lamb",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि केंद्र को जीवा के मध्यबिंदु से मिलाने वाली रेखा जीवा पर लंब होती है।"
+    },
+    {
+     "concept_tag": "kendra-se-lamb-samdwibhajan",
+     "learning_objective": "विद्यार्थी केंद्र से जीवा पर डाले गए लंब द्वारा जीवा के समद्विभाजन का प्रयोग गणना में कर सकेंगे।"
+    },
+    {
+     "concept_tag": "lamb-samdwibhajak-kendra-se",
+     "learning_objective": "विद्यार्थी जीवाओं के लंब समद्विभाजकों की सहायता से वृत्त का केंद्र ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH05-T5",
+   "topic_number": 5,
+   "title": "केंद्र से जीवाओं की दूरी",
+   "ncert_sections": "5.6, 5.6.1",
+   "concepts": [
+    {
+     "concept_tag": "saman-jiva-saman-doori",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि समान जीवाएँ केंद्र से समदूरस्थ होती हैं और इसका विलोम भी सत्य है।"
+    },
+    {
+     "concept_tag": "lambi-jiva-kendra-ke-nikat",
+     "learning_objective": "विद्यार्थी दो असमान जीवाओं में से केंद्र के निकट वाली जीवा पहचानकर उसका कारण बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH05-T6",
+   "topic_number": 6,
+   "title": "चाप द्वारा अंतरित कोण",
+   "ncert_sections": "5.7, 5.7.1",
+   "concepts": [
+    {
+     "concept_tag": "laghu-dirgh-chap",
+     "learning_objective": "विद्यार्थी केंद्र पर अंतरित कोण के आधार पर लघु चाप और दीर्घ चाप में अंतर कर सकेंगे।"
+    },
+    {
+     "concept_tag": "kendra-par-kon-dugna",
+     "learning_objective": "विद्यार्थी चाप द्वारा केंद्र पर अंतरित कोण के, वृत्त के शेष भाग के किसी बिंदु पर अंतरित कोण का दुगुना होने का प्रयोग कर सकेंगे।"
+    },
+    {
+     "concept_tag": "vyas-dwara-samkon",
+     "learning_objective": "विद्यार्थी उपप्रमेय का प्रयोग कर सकेंगे कि व्यास वृत्त के किसी भी बिंदु पर समकोण अंतरित करता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "IHMH1-CH05-T7",
+   "topic_number": 7,
+   "title": "बिंदुओं की संवृत्तीयता और चक्रीय चतुर्भुज",
+   "ncert_sections": "5.8",
+   "concepts": [
+    {
+     "concept_tag": "samvrittiya-bindu",
+     "learning_objective": "विद्यार्थी पहचान सकेंगे कि चार बिंदु कब एक ही वृत्त पर स्थित होते हैं।"
+    },
+    {
+     "concept_tag": "chakriya-chaturbhuj-sammukh-kon",
+     "learning_objective": "विद्यार्थी चक्रीय चतुर्भुज के सम्मुख कोणों का योग 180° होने तथा इसके विलोम का प्रयोग कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

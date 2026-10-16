@@ -1,0 +1,128 @@
+{
+ "chapter_id": "JHSC1-CH06",
+ "title": "नियंत्रण एवं समन्वय",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSC1-CH06-T1",
+   "topic_number": 1,
+   "title": "तंत्रिका कोशिका और तंत्रिका आवेग का संचरण",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "tantrika-koshika-sanrachna",
+     "learning_objective": "तंत्रिका कोशिका के भागों (द्रुमिका, कोशिकाकाय, तंत्रिकाक्ष) और ग्राहियों के कार्य पहचानना।"
+    },
+    {
+     "concept_tag": "antargrathan-sanchar",
+     "learning_objective": "अंतर्ग्रथन (सिनेप्स) पर रसायनों द्वारा आवेग के एक कोशिका से दूसरी कोशिका तक पहुँचने की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH06-T2",
+   "topic_number": 2,
+   "title": "प्रतिवर्ती क्रिया और प्रतिवर्ती चाप",
+   "ncert_sections": "6.1.1",
+   "concepts": [
+    {
+     "concept_tag": "prativarti-kriya",
+     "learning_objective": "प्रतिवर्ती क्रिया को पहचानना और ऐच्छिक क्रिया से उसका अंतर बताना।"
+    },
+    {
+     "concept_tag": "prativarti-chaap",
+     "learning_objective": "प्रतिवर्ती चाप के घटकों का क्रम और मेरुरज्जु में उसके बनने का महत्व समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH06-T3",
+   "topic_number": 3,
+   "title": "मानव मस्तिष्क, उसकी सुरक्षा और पेशी गति",
+   "ncert_sections": "6.1.2, 6.1.3, 6.1.4",
+   "concepts": [
+    {
+     "concept_tag": "tantrika-tantra-sangathan",
+     "learning_objective": "केंद्रीय तथा परिधीय तंत्रिका तंत्र के घटक और उनकी भूमिका बताना।"
+    },
+    {
+     "concept_tag": "mastishk-ke-bhag",
+     "learning_objective": "अग्रमस्तिष्क, मध्यमस्तिष्क और पश्चमस्तिष्क (मेडुला, अनुमस्तिष्क) के कार्य पहचानना।"
+    },
+    {
+     "concept_tag": "suraksha-aur-peshi-gati",
+     "learning_objective": "मस्तिष्क व मेरुरज्जु की सुरक्षा तथा पेशी कोशिकाओं की गति की क्रियाविधि समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH06-T4",
+   "topic_number": 4,
+   "title": "पादपों में समन्वय: तत्काल अनुक्रिया और वृद्धि के कारण गति",
+   "ncert_sections": "6.2, 6.2.1, 6.2.2",
+   "concepts": [
+    {
+     "concept_tag": "chhuimui-tatkal-anukriya",
+     "learning_objective": "छुई-मुई की स्पर्श-अनुक्रिया को वृद्धि से स्वतंत्र गति के रूप में समझाना।"
+    },
+    {
+     "concept_tag": "anuvartan-gatiyan",
+     "learning_objective": "प्रकाशानुवर्तन, गुरुत्वानुवर्तन, जलानुवर्तन और रसायनानुवर्तन में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH06-T5",
+   "topic_number": 5,
+   "title": "पादप हॉर्मोन",
+   "ncert_sections": "6.2.2",
+   "concepts": [
+    {
+     "concept_tag": "padap-hormone-prakar",
+     "learning_objective": "ऑक्सिन, जिब्बेरेलिन, साइटोकाइनिन और एब्सिसिक अम्ल के कार्य पहचानना।"
+    },
+    {
+     "concept_tag": "oksin-prakashanuvartan",
+     "learning_objective": "एकतरफ़ा प्रकाश में प्ररोह के मुड़ने में ऑक्सिन की भूमिका की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH06-T6",
+   "topic_number": 6,
+   "title": "जंतुओं में हॉर्मोन: रासायनिक समन्वय और एड्रीनलीन",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "rasayanik-samanvay",
+     "learning_objective": "तंत्रिका आवेग और हॉर्मोन द्वारा समन्वय की तुलना करना।"
+    },
+    {
+     "concept_tag": "adrenaline-anukriya",
+     "learning_objective": "आपात स्थिति में एड्रीनलीन के स्रोत और शरीर पर उसके प्रभाव बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH06-T7",
+   "topic_number": 7,
+   "title": "वृद्धि व उपापचय नियंत्रक हॉर्मोन तथा पुनर्भरण क्रियाविधि",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "thairoksin-aayodin",
+     "learning_objective": "थायरॉक्सिन के कार्य और उसके संश्लेषण में आयोडीन का महत्व बताना।"
+    },
+    {
+     "concept_tag": "vriddhi-yaun-hormone",
+     "learning_objective": "वृद्धि हॉर्मोन, टेस्टोस्टेरोन और एस्ट्रोजन के स्रोत व कार्य पहचानना।"
+    },
+    {
+     "concept_tag": "insulin-punarbharan",
+     "learning_objective": "इंसुलिन द्वारा रुधिर शर्करा नियमन में पुनर्भरण क्रियाविधि का विश्लेषण करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "chapter_id": "LHAC1-CH03",
+ "title": "साझेदारी फर्म का पुनर्गठन — साझेदार की सेवानिवृत्ति/मृत्यु",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHAC1-CH03-T1",
+   "topic_number": 1,
+   "title": "सेवानिवृत्त/मृत साझेदार को देय राशि का निर्धारण",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "dey-rashi-ke-ghatak",
+     "learning_objective": "सेवानिवृत्त या मृत साझेदार की देय राशि में जुड़ने वाली मदों को पहचानना।"
+    },
+    {
+     "concept_tag": "dey-rashi-se-katautiyan",
+     "learning_objective": "देय राशि से घटाई जाने वाली मदों को पहचानकर शुद्ध देय राशि ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH03-T2",
+   "topic_number": 2,
+   "title": "नया लाभ विभाजन अनुपात और अभिलाभ अनुपात",
+   "ncert_sections": "3.2, 3.3",
+   "concepts": [
+    {
+     "concept_tag": "naya-labh-vibhajan-anupat",
+     "learning_objective": "सेवानिवृत्ति या मृत्यु के बाद शेष साझेदारों का नया लाभ विभाजन अनुपात ज्ञात करना।"
+    },
+    {
+     "concept_tag": "abhilabh-anupat",
+     "learning_objective": "नए भाग में से पुराना भाग घटाकर शेष साझेदारों का अभिलाभ अनुपात ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH03-T3",
+   "topic_number": 3,
+   "title": "ख्याति का व्यवहार और प्रच्छन्न ख्याति",
+   "ncert_sections": "3.4, 3.4.1, 3.4.2",
+   "concepts": [
+    {
+     "concept_tag": "khyati-abhilabh-anupat-samayojan",
+     "learning_objective": "सेवानिवृत्त साझेदार के ख्याति के भाग को अभिलाभी साझेदारों के पूँजी खातों से समायोजित करना।"
+    },
+    {
+     "concept_tag": "vidyaman-khyati-apalikhan",
+     "learning_objective": "पुस्तकों में पहले से विद्यमान ख्याति को पुराने अनुपात में अपलिखित करने का नियम समझना।"
+    },
+    {
+     "concept_tag": "prachhann-khyati",
+     "learning_objective": "एकमुश्त भुगतान की स्थिति में प्रच्छन्न ख्याति की गणना और उसका समायोजन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH03-T4",
+   "topic_number": 4,
+   "title": "परिसंपत्तियों और दायित्वों का पुनर्मूल्यांकन",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "punarmulyankan-labh-hani-vitran",
+     "learning_objective": "पुनर्मूल्यांकन के शुद्ध लाभ या हानि को सभी साझेदारों में पुराने अनुपात में बाँटना।"
+    },
+    {
+     "concept_tag": "punarmulyankan-pravishtiyan",
+     "learning_objective": "पुनर्मूल्यांकन खाते की प्रविष्टियों से परिसंपत्तियों के मूल्य परिवर्तन का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH03-T5",
+   "topic_number": 5,
+   "title": "संचित लाभों और हानियों का समायोजन",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "sanchit-labh-vitran",
+     "learning_objective": "संचय और अवितरित लाभों को सभी साझेदारों में पुराने अनुपात में बाँटना।"
+    },
+    {
+     "concept_tag": "sanchit-hani-samayojan",
+     "learning_objective": "संचित हानियों को साझेदारों के पूँजी खातों में नाम करके समायोजित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH03-T6",
+   "topic_number": 6,
+   "title": "सेवानिवृत्त साझेदार को देय राशि का निपटारा",
+   "ncert_sections": "3.7",
+   "concepts": [
+    {
+     "concept_tag": "dhara-37-vikalp",
+     "learning_objective": "समझौते के अभाव में भारतीय साझेदारी अधिनियम की धारा 37 के अंतर्गत बाहर जाने वाले साझेदार के अधिकार समझना।"
+    },
+    {
+     "concept_tag": "sevanivritt-sajhedar-rin-khata",
+     "learning_objective": "किस्तों में भुगतान की स्थिति में सेवानिवृत्त साझेदार का ऋण खाता और ब्याज की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH03-T7",
+   "topic_number": 7,
+   "title": "शेष साझेदारों की पूँजी का समायोजन",
+   "ncert_sections": "3.8",
+   "concepts": [
+    {
+     "concept_tag": "punji-samayojan-ganana",
+     "learning_objective": "नई फर्म की कुल पूँजी को नए अनुपात में बाँटकर पूँजी की अधिकता या कमी ज्ञात करना।"
+    },
+    {
+     "concept_tag": "punji-samayojan-pravishtiyan",
+     "learning_objective": "अधिक पूँजी निकालने और कम पूँजी लाने की रोजनामचा प्रविष्टियाँ पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHAC1-CH03-T8",
+   "topic_number": 8,
+   "title": "साझेदार की मृत्यु",
+   "ncert_sections": "3.9",
+   "concepts": [
+    {
+     "concept_tag": "mrityu-tak-labh-ganana",
+     "learning_objective": "पिछले वर्ष के लाभ, औसत लाभ या विक्रय के आधार पर मृत्यु की तिथि तक मृत साझेदार का लाभ भाग ज्ञात करना।"
+    },
+    {
+     "concept_tag": "nishpadak-khata-aur-uchant",
+     "learning_objective": "मृत साझेदार के लाभ भाग की प्रविष्टि और निष्पादक खाते में देय राशि के हस्तांतरण को समझना।"
+    }
+   ]
+  }
+ ]
+}

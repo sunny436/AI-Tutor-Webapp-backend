@@ -1,0 +1,72 @@
+{
+ "chapter_id": "JHMH1-CH05",
+ "title": "समांतर श्रेढ़ियाँ",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH05-T1",
+   "topic_number": 1,
+   "title": "परिचय और समांतर श्रेढ़ी की पहचान",
+   "ncert_sections": "5.1, 5.2",
+   "concepts": [
+    {
+     "concept_tag": "samantar-shredhi-pahchan",
+     "learning_objective": "विद्यार्थी पहचान सकेगा कि कोई सूची समांतर श्रेढ़ी है या नहीं, यह जाँचकर कि क्रमागत पदों का अंतर समान है।"
+    },
+    {
+     "concept_tag": "sarv-antar",
+     "learning_objective": "विद्यार्थी समांतर श्रेढ़ी का सार्व अंतर ज्ञात कर सकेगा और प्रथम पद व सार्व अंतर से श्रेढ़ी लिख सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH05-T2",
+   "topic_number": 2,
+   "title": "समांतर श्रेढ़ी का n वाँ पद",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "nva-pad-sutra",
+     "learning_objective": "विद्यार्थी सूत्र aₙ = a + (n − 1)d का प्रयोग करके किसी समांतर श्रेढ़ी का कोई भी पद ज्ञात कर सकेगा।"
+    },
+    {
+     "concept_tag": "padon-ki-sankhya",
+     "learning_objective": "विद्यार्थी दिए गए पद का स्थान तथा किसी परिमित समांतर श्रेढ़ी में पदों की संख्या ज्ञात कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH05-T3",
+   "topic_number": 3,
+   "title": "समांतर श्रेढ़ी के प्रथम n पदों का योग",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "n-padon-ka-yog",
+     "learning_objective": "विद्यार्थी सूत्रों Sₙ = n/2 [2a + (n − 1)d] तथा Sₙ = n/2 (a + l) से प्रथम n पदों का योग ज्ञात कर सकेगा।"
+    },
+    {
+     "concept_tag": "yog-se-pad",
+     "learning_objective": "विद्यार्थी योग Sₙ दिए होने पर aₙ = Sₙ − Sₙ₋₁ द्वारा पद, प्रथम पद और सार्व अंतर ज्ञात कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH05-T4",
+   "topic_number": 4,
+   "title": "दैनिक जीवन में समांतर श्रेढ़ी के अनुप्रयोग",
+   "ncert_sections": "5.3, 5.4",
+   "concepts": [
+    {
+     "concept_tag": "nva-pad-anuprayog",
+     "learning_objective": "विद्यार्थी वेतन, बचत, लंबाई जैसी दैनिक जीवन की स्थितियों को समांतर श्रेढ़ी के रूप में लिखकर कोई विशेष पद ज्ञात कर सकेगा।"
+    },
+    {
+     "concept_tag": "yog-anuprayog",
+     "learning_objective": "विद्यार्थी दैनिक जीवन की समस्याओं में कुल मात्रा ज्ञात करने के लिए समांतर श्रेढ़ी के योग सूत्र का प्रयोग कर सकेगा।"
+    }
+   ]
+  }
+ ]
+}

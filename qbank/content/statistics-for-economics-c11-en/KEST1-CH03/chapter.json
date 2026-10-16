@@ -1,0 +1,148 @@
+{
+ "chapter_id": "KEST1-CH03",
+ "title": "Organisation of Data",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEST1-CH03-T1",
+   "topic_number": 1,
+   "title": "Raw data and the need for classification",
+   "ncert_sections": "1, 2",
+   "concepts": [
+    {
+     "concept_tag": "raw-data",
+     "learning_objective": "Recognise raw data and explain why large raw data are difficult to analyse."
+    },
+    {
+     "concept_tag": "purpose-of-classification",
+     "learning_objective": "Explain classification as grouping things on the basis of some criteria and state its advantages."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH03-T2",
+   "topic_number": 2,
+   "title": "Types of classification",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "chronological-spatial-classification",
+     "learning_objective": "Distinguish chronological (time-based) and spatial (location-based) classification of data."
+    },
+    {
+     "concept_tag": "qualitative-classification",
+     "learning_objective": "Classify data on attributes on the basis of the presence or absence of a quality."
+    },
+    {
+     "concept_tag": "quantitative-classification",
+     "learning_objective": "Identify quantitative classification of measurable characteristics into classes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH03-T3",
+   "topic_number": 3,
+   "title": "Continuous and discrete variables",
+   "ncert_sections": "4",
+   "concepts": [
+    {
+     "concept_tag": "continuous-variable",
+     "learning_objective": "Identify a continuous variable as one that can take any value, including fractions, within a range."
+    },
+    {
+     "concept_tag": "discrete-variable",
+     "learning_objective": "Identify a discrete variable as one that changes only by finite jumps, even when its values are fractions."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH03-T4",
+   "topic_number": 4,
+   "title": "Frequency distribution: class limits, class interval and class mark",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "class-limits-interval",
+     "learning_objective": "Identify lower and upper class limits and compute the class interval of a class."
+    },
+    {
+     "concept_tag": "class-mark",
+     "learning_objective": "Calculate the class mark of a class and use class marks to draw a frequency curve."
+    },
+    {
+     "concept_tag": "class-frequency",
+     "learning_objective": "Interpret class frequencies and relative frequencies in a frequency distribution."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH03-T5",
+   "topic_number": 5,
+   "title": "Number and size of classes; equal and unequal intervals",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "number-of-classes",
+     "learning_objective": "Compute the range and relate it to the number of classes and the size of the class interval."
+    },
+    {
+     "concept_tag": "unequal-class-intervals",
+     "learning_objective": "Explain the situations in which unequal class intervals are preferred."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH03-T6",
+   "topic_number": 6,
+   "title": "Class limits: inclusive and exclusive methods and adjustment",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "inclusive-exclusive",
+     "learning_objective": "Distinguish inclusive and exclusive class intervals and place values that equal a class limit."
+    },
+    {
+     "concept_tag": "class-adjustment",
+     "learning_objective": "Adjust inclusive class limits to restore continuity and find adjusted limits and class marks."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH03-T7",
+   "topic_number": 7,
+   "title": "Tally marking, loss of information, unequal classes and frequency array",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "tally-marking",
+     "learning_objective": "Use tally marks, grouped in fives, to find class frequencies."
+    },
+    {
+     "concept_tag": "loss-of-information",
+     "learning_objective": "Explain the loss of information in grouped data and why unequal classes can make class marks more representative."
+    },
+    {
+     "concept_tag": "frequency-array",
+     "learning_objective": "Prepare and interpret a frequency array for a discrete variable."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH03-T8",
+   "topic_number": 8,
+   "title": "Bivariate frequency distribution",
+   "ncert_sections": "6",
+   "concepts": [
+    {
+     "concept_tag": "bivariate-distribution",
+     "learning_objective": "Define a bivariate frequency distribution and read the frequency in a cell of a bivariate table."
+    },
+    {
+     "concept_tag": "univariate-vs-bivariate",
+     "learning_objective": "Distinguish univariate from bivariate data and interpret row and column totals."
+    }
+   ]
+  }
+ ]
+}

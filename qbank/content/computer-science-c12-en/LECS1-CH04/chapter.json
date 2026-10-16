@@ -1,0 +1,112 @@
+{
+ "chapter_id": "LECS1-CH04",
+ "title": "Queue",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECS1-CH04-T1",
+   "topic_number": 1,
+   "title": "Introduction to Queue and the FIFO principle",
+   "ncert_sections": "4.1, 4.1.1",
+   "concepts": [
+    {
+     "concept_tag": "queue-fifo-principle",
+     "learning_objective": "Explain how a queue follows the First-In-First-Out (FIFO) principle and contrast it with a stack."
+    },
+    {
+     "concept_tag": "queue-front-rear",
+     "learning_objective": "Identify the FRONT (HEAD) and REAR (TAIL) ends of a queue and the operation performed at each."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH04-T2",
+   "topic_number": 2,
+   "title": "Applications of Queue",
+   "ncert_sections": "4.1.2",
+   "concepts": [
+    {
+     "concept_tag": "queue-real-life-applications",
+     "learning_objective": "Recognise real-life situations such as waiting lists and toll booths that follow a queue."
+    },
+    {
+     "concept_tag": "queue-computer-applications",
+     "learning_objective": "Explain why queues are used in computer science for web-server requests, OS job scheduling and print spooling."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH04-T3",
+   "topic_number": 3,
+   "title": "Operations on Queue",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "enqueue-dequeue",
+     "learning_objective": "Trace the effect of ENQUEUE and DEQUEUE operations on the contents of a queue."
+    },
+    {
+     "concept_tag": "overflow-underflow",
+     "learning_objective": "Distinguish between the Overflow and Underflow exceptions in a queue."
+    },
+    {
+     "concept_tag": "peek-isempty-isfull",
+     "learning_objective": "Explain the role of PEEK, IS EMPTY and IS FULL in supporting enqueue and dequeue."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH04-T4",
+   "topic_number": 4,
+   "title": "Implementation of Queue using Python",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "queue-python-list",
+     "learning_objective": "Implement a queue with a Python list using append() at the rear and pop(0) at the front."
+    },
+    {
+     "concept_tag": "queue-python-functions",
+     "learning_objective": "Predict the output of Python queue functions such as dequeue, size and peek, including on an empty queue."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH04-T5",
+   "topic_number": 5,
+   "title": "Introduction to Deque and its operations",
+   "ncert_sections": "4.4, 4.4.1, 4.4.2",
+   "concepts": [
+    {
+     "concept_tag": "deque-concept",
+     "learning_objective": "Describe a deque as a double-ended queue that can behave as a stack or a queue."
+    },
+    {
+     "concept_tag": "deque-applications",
+     "learning_objective": "Identify situations such as browser history and undo options where a deque is useful."
+    },
+    {
+     "concept_tag": "deque-operations",
+     "learning_objective": "Trace INSERTFRONT, INSERTREAR, DELETIONFRONT and DELETIONREAR operations on a deque."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH04-T6",
+   "topic_number": 6,
+   "title": "Implementation of Deque using Python and the palindrome check",
+   "ncert_sections": "4.4.2 (Algorithm 4.1), 4.5",
+   "concepts": [
+    {
+     "concept_tag": "deque-python-list",
+     "learning_objective": "Implement deque operations with Python list methods insert(0, x), append(), pop() and pop(0)."
+    },
+    {
+     "concept_tag": "deque-palindrome-check",
+     "learning_objective": "Apply the deque-based algorithm to decide whether a string is a palindrome."
+    }
+   ]
+  }
+ ]
+}

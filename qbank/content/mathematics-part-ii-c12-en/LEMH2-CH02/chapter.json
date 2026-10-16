@@ -1,0 +1,76 @@
+{
+ "chapter_id": "LEMH2-CH02",
+ "title": "Application of Integrals",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEMH2-CH02-T1",
+   "topic_number": 1,
+   "title": "Area under a curve using vertical strips",
+   "ncert_sections": "8.1, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "elementary-vertical-strip",
+     "learning_objective": "Explain the area under y = f(x) as the sum of thin vertical strips of area dA = y dx."
+    },
+    {
+     "concept_tag": "area-under-curve-x-axis",
+     "learning_objective": "Calculate the area bounded by y = f(x), the x-axis and the ordinates x = a and x = b when f(x) is non-negative."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH02-T2",
+   "topic_number": 2,
+   "title": "Area using horizontal strips",
+   "ncert_sections": "8.2",
+   "concepts": [
+    {
+     "concept_tag": "horizontal-strip-area",
+     "learning_objective": "Calculate the area bounded by x = g(y), the y-axis and the lines y = c and y = d."
+    },
+    {
+     "concept_tag": "choosing-strip-direction",
+     "learning_objective": "Decide whether vertical or horizontal strips describe a given region and set up the correct integral."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH02-T3",
+   "topic_number": 3,
+   "title": "Regions below the x-axis and curves crossing it",
+   "ncert_sections": "8.2 (Remark), Miscellaneous Examples",
+   "concepts": [
+    {
+     "concept_tag": "area-below-x-axis",
+     "learning_objective": "Take the absolute value of the definite integral when the curve lies below the x-axis."
+    },
+    {
+     "concept_tag": "curve-crossing-x-axis",
+     "learning_objective": "Split the interval at the points where the curve crosses the x-axis and add the absolute areas of the parts."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH02-T4",
+   "topic_number": 4,
+   "title": "Areas of circles, ellipses and parabolic regions",
+   "ncert_sections": "8.2 (Examples 1, 2), Exercise 8.1",
+   "concepts": [
+    {
+     "concept_tag": "area-of-circle",
+     "learning_objective": "Find the area enclosed by a circle x² + y² = a², or a quadrant of it, by integration."
+    },
+    {
+     "concept_tag": "area-of-ellipse",
+     "learning_objective": "Find the area enclosed by the ellipse x²/a² + y²/b² = 1 by integration."
+    },
+    {
+     "concept_tag": "symmetry-in-area",
+     "learning_objective": "Use the symmetry of a circle, ellipse or parabola to reduce an area to one quadrant and multiply."
+    }
+   ]
+  }
+ ]
+}

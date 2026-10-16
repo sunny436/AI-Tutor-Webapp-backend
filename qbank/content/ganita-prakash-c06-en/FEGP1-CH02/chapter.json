@@ -1,0 +1,144 @@
+{
+ "chapter_id": "FEGP1-CH02",
+ "title": "Lines and Angles",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FEGP1-CH02-T1",
+   "topic_number": 1,
+   "title": "Point, line segment and line",
+   "ncert_sections": "2.1, 2.2, 2.3",
+   "concepts": [
+    {
+     "concept_tag": "point-as-location",
+     "learning_objective": "Describe a point as a precise location with no length, breadth or height."
+    },
+    {
+     "concept_tag": "line-segment",
+     "learning_objective": "Identify a line segment as the shortest path between two end points and name it."
+    },
+    {
+     "concept_tag": "line-through-two-points",
+     "learning_objective": "Recognise that a line extends endlessly both ways and that two points determine a unique line."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH02-T2",
+   "topic_number": 2,
+   "title": "Ray",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "ray-definition",
+     "learning_objective": "Describe a ray as a part of a line with one starting point going endlessly in one direction."
+    },
+    {
+     "concept_tag": "naming-rays",
+     "learning_objective": "Name a ray correctly using its starting point first and any other point on it."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH02-T3",
+   "topic_number": 3,
+   "title": "Angle: vertex, arms and size",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "angle-vertex-arms",
+     "learning_objective": "Identify the vertex and arms of an angle formed by two rays with a common starting point."
+    },
+    {
+     "concept_tag": "naming-angles",
+     "learning_objective": "Name angles using three letters with the vertex as the middle letter."
+    },
+    {
+     "concept_tag": "angle-size-as-rotation",
+     "learning_objective": "Explain the size of an angle as the amount of turn about the vertex."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH02-T4",
+   "topic_number": 4,
+   "title": "Comparing angles",
+   "ncert_sections": "2.6, 2.7",
+   "concepts": [
+    {
+     "concept_tag": "superimposition",
+     "learning_objective": "Compare two angles by superimposing them with their vertices overlapping."
+    },
+    {
+     "concept_tag": "comparing-with-transparent-circle",
+     "learning_objective": "Compare angles without superimposition using a transparent circle centred at the vertex."
+    },
+    {
+     "concept_tag": "angle-size-not-arm-length",
+     "learning_objective": "Recognise that the size of an angle does not depend on the lengths of its arms."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH02-T5",
+   "topic_number": 5,
+   "title": "Special types of angles",
+   "ncert_sections": "2.8",
+   "concepts": [
+    {
+     "concept_tag": "straight-and-right-angles",
+     "learning_objective": "Relate straight and right angles to half and quarter turns."
+    },
+    {
+     "concept_tag": "perpendicular-lines",
+     "learning_objective": "Identify perpendicular lines as lines meeting at right angles and justify right angles made by folding."
+    },
+    {
+     "concept_tag": "acute-and-obtuse",
+     "learning_objective": "Classify angles as acute or obtuse by comparing them with a right angle."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH02-T6",
+   "topic_number": 6,
+   "title": "Measuring and drawing angles",
+   "ncert_sections": "2.9, 2.10",
+   "concepts": [
+    {
+     "concept_tag": "degree-measure",
+     "learning_objective": "Use the fact that a full turn is 360 degrees to find measures of angles."
+    },
+    {
+     "concept_tag": "using-protractor",
+     "learning_objective": "Read and draw angles correctly with a protractor."
+    },
+    {
+     "concept_tag": "angle-bisector",
+     "learning_objective": "Explain bisecting an angle and find angles made by repeated halving."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH02-T7",
+   "topic_number": 7,
+   "title": "Types of angles and their measures",
+   "ncert_sections": "2.11",
+   "concepts": [
+    {
+     "concept_tag": "classifying-by-measure",
+     "learning_objective": "Classify angles as acute, right, obtuse, straight or reflex from their degree measures."
+    },
+    {
+     "concept_tag": "reflex-angles",
+     "learning_objective": "Find the measure of a reflex angle from the angle on the other side."
+    },
+    {
+     "concept_tag": "finding-unknown-angles",
+     "learning_objective": "Find an unknown angle using the fact that a straight angle measures 180 degrees."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "chapter_id": "JHSC1-CH09",
+ "title": "प्रकाश – परावर्तन तथा अपवर्तन",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSC1-CH09-T1",
+   "topic_number": 1,
+   "title": "प्रकाश का परावर्तन और गोलीय दर्पण से संबंधित पद",
+   "ncert_sections": "9.1, 9.2",
+   "concepts": [
+    {
+     "concept_tag": "paravartan-ke-niyam",
+     "learning_objective": "प्रकाश के परावर्तन के दोनों नियमों को बताना और आपतन व परावर्तन कोण ज्ञात करना।"
+    },
+    {
+     "concept_tag": "goliya-darpan-pad",
+     "learning_objective": "गोलीय दर्पण के ध्रुव, वक्रता केंद्र, वक्रता त्रिज्या, मुख्य अक्ष, मुख्य फोकस और फोकस दूरी को पहचानना तथा R = 2f का उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH09-T2",
+   "topic_number": 2,
+   "title": "गोलीय दर्पणों द्वारा प्रतिबिंब का बनना और उनके उपयोग",
+   "ncert_sections": "9.2.1, 9.2.2",
+   "concepts": [
+    {
+     "concept_tag": "avatal-darpan-pratibimb",
+     "learning_objective": "बिंब की विभिन्न स्थितियों के लिए अवतल दर्पण द्वारा बने प्रतिबिंब की स्थिति, प्रकृति और साइज़ बताना।"
+    },
+    {
+     "concept_tag": "uttal-darpan-pratibimb-upyog",
+     "learning_objective": "उत्तल दर्पण द्वारा बने प्रतिबिंब के अभिलक्षणों और उसके उपयोगों को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH09-T3",
+   "topic_number": 3,
+   "title": "चिह्न परिपाटी, दर्पण सूत्र तथा आवर्धन",
+   "ncert_sections": "9.2.3, 9.2.4",
+   "concepts": [
+    {
+     "concept_tag": "chinh-paripati-darpan-sutra",
+     "learning_objective": "नई कार्तीय चिह्न परिपाटी के साथ दर्पण सूत्र का उपयोग करके प्रतिबिंब दूरी ज्ञात करना।"
+    },
+    {
+     "concept_tag": "darpan-avardhan",
+     "learning_objective": "दर्पण द्वारा उत्पन्न आवर्धन की गणना करना और उसके चिह्न से प्रतिबिंब की प्रकृति बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH09-T4",
+   "topic_number": 4,
+   "title": "प्रकाश का अपवर्तन और अपवर्तनांक",
+   "ncert_sections": "9.3, 9.3.1, 9.3.2",
+   "concepts": [
+    {
+     "concept_tag": "apvartan-niyam-slab",
+     "learning_objective": "काँच के आयताकार स्लैब से अपवर्तन तथा अपवर्तन के नियमों को समझाना।"
+    },
+    {
+     "concept_tag": "apvartanank",
+     "learning_objective": "अपवर्तनांक को प्रकाश की चालों के अनुपात के रूप में व्यक्त करना और प्रकाशिक सघनता की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH09-T5",
+   "topic_number": 5,
+   "title": "गोलीय लेंस और लेंसों द्वारा प्रतिबिंब",
+   "ncert_sections": "9.3.3, 9.3.4, 9.3.5",
+   "concepts": [
+    {
+     "concept_tag": "lens-pad",
+     "learning_objective": "उत्तल और अवतल लेंस, प्रकाशिक केंद्र तथा मुख्य फोकस को पहचानना और किरणों का व्यवहार बताना।"
+    },
+    {
+     "concept_tag": "lens-pratibimb",
+     "learning_objective": "बिंब की विभिन्न स्थितियों के लिए उत्तल व अवतल लेंस द्वारा बने प्रतिबिंब की प्रकृति और स्थिति बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH09-T6",
+   "topic_number": 6,
+   "title": "लेंस सूत्र, आवर्धन तथा लेंस की क्षमता",
+   "ncert_sections": "9.3.6, 9.3.7, 9.3.8",
+   "concepts": [
+    {
+     "concept_tag": "lens-sutra-avardhan",
+     "learning_objective": "चिह्न परिपाटी के साथ लेंस सूत्र और आवर्धन का उपयोग करके प्रतिबिंब की स्थिति व साइज़ ज्ञात करना।"
+    },
+    {
+     "concept_tag": "lens-kshamata",
+     "learning_objective": "लेंस की क्षमता को डाइऑप्टर में ज्ञात करना और संपर्क में रखे लेंसों की कुल क्षमता निकालना।"
+    }
+   ]
+  }
+ ]
+}

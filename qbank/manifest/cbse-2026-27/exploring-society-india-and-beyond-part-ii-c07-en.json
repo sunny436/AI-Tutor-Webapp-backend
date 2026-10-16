@@ -1,0 +1,1145 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "exploring-society-india-and-beyond-part-ii-c07-en",
+  "curriculum": "cbse",
+  "class_level": 7,
+  "subject_code": "social_science",
+  "language": "english",
+  "title": "Exploring Society India and Beyond Part-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "gees2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "GEES2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "The Story of Indian Farming",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gees201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEES2-CH01-T1",
+     "topic_number": 1,
+     "title": "India's Agricultural Landscape",
+     "ncert_sections": "India's Agricultural Landscape",
+     "concepts": [
+      {
+       "concept_tag": "scope-of-agriculture",
+       "learning_objective": "Explain what the term agriculture covers, including its allied activities."
+      },
+      {
+       "concept_tag": "agriculture-in-indian-economy",
+       "learning_objective": "State the importance of agriculture to India's output, workforce and women workers."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH01-T2",
+     "topic_number": 2,
+     "title": "Echoes from the Past",
+     "ncert_sections": "Echoes from the Past",
+     "concepts": [
+      {
+       "concept_tag": "early-crop-cultivation",
+       "learning_objective": "Describe the archaeological evidence for early farming and intercropping in the Indian subcontinent."
+      },
+      {
+       "concept_tag": "ancient-agricultural-texts",
+       "learning_objective": "Identify ancient Indian texts that record knowledge of agriculture, seeds and grafting."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH01-T3",
+     "topic_number": 3,
+     "title": "Climate, Seasons, and Crops",
+     "ncert_sections": "Climate, Seasons, and Crops; The monsoon and agriculture; The rhythm of seasons and crops",
+     "concepts": [
+      {
+       "concept_tag": "climatic-diversity-agroclimatic-zones",
+       "learning_objective": "Explain how India's climatic diversity and agroclimatic zones guide what crops are grown."
+      },
+      {
+       "concept_tag": "monsoon-and-agriculture",
+       "learning_objective": "Explain the role of the southwest and northeast monsoons in Indian farming."
+      },
+      {
+       "concept_tag": "kharif-rabi-zaid",
+       "learning_objective": "Classify crops into the kharif, rabi and zaid cropping seasons."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH01-T4",
+     "topic_number": 4,
+     "title": "Soil, the Foundation of Cultivation",
+     "ncert_sections": "Soil, the Foundation of Cultivation; Soils of India; Soil-crop linkages",
+     "concepts": [
+      {
+       "concept_tag": "soil-formation",
+       "learning_objective": "Describe how soil and humus are formed from rock and organic matter."
+      },
+      {
+       "concept_tag": "soil-types-of-india",
+       "learning_objective": "Distinguish the major soil types of India by their formation, properties and crops."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH01-T5",
+     "topic_number": 5,
+     "title": "Nurturing the Soil",
+     "ncert_sections": "Nurturing the soil",
+     "concepts": [
+      {
+       "concept_tag": "traditional-soil-conservation",
+       "learning_objective": "Explain traditional soil-care methods such as crop rotation, multiple cropping and contour ploughing."
+      },
+      {
+       "concept_tag": "contemporary-soil-conservation",
+       "learning_objective": "Explain contemporary soil-conservation methods such as terracing and afforestation."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH01-T6",
+     "topic_number": 6,
+     "title": "Water and Seeds",
+     "ncert_sections": "Water: Rain-Fed vs. Irrigated Agriculture; Seeds",
+     "concepts": [
+      {
+       "concept_tag": "rainfed-and-irrigated-agriculture",
+       "learning_objective": "Distinguish rain-fed agriculture from irrigated agriculture and their challenges."
+      },
+      {
+       "concept_tag": "traditional-and-modern-irrigation",
+       "learning_objective": "Compare traditional irrigation systems with modern drip and sprinkler irrigation."
+      },
+      {
+       "concept_tag": "seeds-and-seed-practices",
+       "learning_objective": "Explain traditional and modern seed practices and the issue of dependence on seed companies."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH01-T7",
+     "topic_number": 7,
+     "title": "Agricultural Practices: Traditional Wisdom and Modern Innovations",
+     "ncert_sections": "Traditional farming systems; Contemporary agriculture; Sustainable pathways",
+     "concepts": [
+      {
+       "concept_tag": "traditional-farming-systems",
+       "learning_objective": "Describe traditional farming systems such as terrace farming, kulagar and gokrishi."
+      },
+      {
+       "concept_tag": "green-revolution",
+       "learning_objective": "Evaluate the gains and the limits of the Green Revolution."
+      },
+      {
+       "concept_tag": "sustainable-agriculture",
+       "learning_objective": "Explain how sustainable agriculture combines modern productivity with traditional practices."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH01-T8",
+     "topic_number": 8,
+     "title": "The Role of the Government and Challenges",
+     "ncert_sections": "The Role of the Government; Challenges",
+     "concepts": [
+      {
+       "concept_tag": "government-support-for-farmers",
+       "learning_objective": "Describe how the government supports farmers with inputs, insurance and markets."
+      },
+      {
+       "concept_tag": "challenges-faced-by-farmers",
+       "learning_objective": "Analyse challenges such as small landholdings, climate change and stress on river basins."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEES2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "India and Her Neighbours",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gees202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEES2-CH02-T1",
+     "topic_number": 1,
+     "title": "Framing the neighbourhood: land and maritime neighbours",
+     "ncert_sections": "Framing the Neighbourhood",
+     "concepts": [
+      {
+       "concept_tag": "land-and-maritime-neighbours",
+       "learning_objective": "Distinguish India's land-border neighbours from her maritime neighbours with examples."
+      },
+      {
+       "concept_tag": "indian-ocean-strategic-position",
+       "learning_objective": "Explain how India's coastline and peninsular shape give her a central place in the Indian Ocean."
+      },
+      {
+       "concept_tag": "regionalism",
+       "learning_objective": "Describe regionalism as working together with neighbours for peace, stability and shared progress."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH02-T2",
+     "topic_number": 2,
+     "title": "India's largest neighbour China, and Pakistan",
+     "ncert_sections": "India and her largest neighbour; India and Pakistan",
+     "concepts": [
+      {
+       "concept_tag": "india-china-relations",
+       "learning_objective": "Describe the geographical, cultural and trade links between India and China."
+      },
+      {
+       "concept_tag": "india-pakistan-relations",
+       "learning_objective": "Describe the India-Pakistan border and the mix of conflict and shared heritage between the two."
+      },
+      {
+       "concept_tag": "kartarpur-corridor",
+       "learning_objective": "Explain the purpose and significance of the Kartarpur Corridor."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH02-T3",
+     "topic_number": 3,
+     "title": "Bangladesh and Nepal",
+     "ncert_sections": "A newborn neighbour; In the lap of the Himalayas",
+     "concepts": [
+      {
+       "concept_tag": "india-bangladesh-relations",
+       "learning_objective": "Explain how history, culture, language and rivers link India and Bangladesh."
+      },
+      {
+       "concept_tag": "sundarban-shared-ecosystem",
+       "learning_objective": "Explain why the jointly managed Sundarban mangroves matter for biodiversity and climate resilience."
+      },
+      {
+       "concept_tag": "india-nepal-open-border",
+       "learning_objective": "Explain the India-Nepal open border and the 1950 Treaty of Peace and Friendship."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH02-T4",
+     "topic_number": 4,
+     "title": "Bhutan and the schools of Buddhism",
+     "ncert_sections": "The 'Land of the Thunder Dragon'",
+     "concepts": [
+      {
+       "concept_tag": "india-bhutan-relations",
+       "learning_objective": "Describe the economic and spiritual ties between India and Bhutan."
+      },
+      {
+       "concept_tag": "gross-national-happiness",
+       "learning_objective": "Explain how Bhutan's Gross National Happiness Index differs from GDP as a measure of progress."
+      },
+      {
+       "concept_tag": "schools-of-buddhism",
+       "learning_objective": "Identify the Theravada, Mahayana and Vajrayana schools of Buddhism and where they spread."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH02-T5",
+     "topic_number": 5,
+     "title": "Myanmar and Afghanistan",
+     "ncert_sections": "India's gateway to Southeast Asia; A land-locked neighbour",
+     "concepts": [
+      {
+       "concept_tag": "india-myanmar-gateway",
+       "learning_objective": "Explain why Myanmar is called India's gateway to Southeast Asia."
+      },
+      {
+       "concept_tag": "uttarapatha-route",
+       "learning_objective": "Describe the ancient Uttarapatha route linking India with Central Asia via Afghanistan."
+      },
+      {
+       "concept_tag": "india-afghanistan-ties",
+       "learning_objective": "Describe the ancient cultural links and recent cooperation between India and Afghanistan."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH02-T6",
+     "topic_number": 6,
+     "title": "SAARC, Sri Lanka and the Maldives",
+     "ncert_sections": "India's Maritime Neighbours; India's nearest maritime neighbour; A nation of islets",
+     "concepts": [
+      {
+       "concept_tag": "saarc",
+       "learning_objective": "State the purpose and members of SAARC."
+      },
+      {
+       "concept_tag": "india-sri-lanka-relations",
+       "learning_objective": "Describe the geographical closeness and the cultural ties and difficulties between India and Sri Lanka."
+      },
+      {
+       "concept_tag": "india-maldives-relations",
+       "learning_objective": "Explain the cultural links between India and the Maldives and the Maldives' climate concerns."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH02-T7",
+     "topic_number": 7,
+     "title": "Thailand, Malaysia, Singapore and Indonesia",
+     "ncert_sections": "From Dvaraka to Dvaravati; The Malay Peninsula; The 'Lion City'; The Indonesian archipelago",
+     "concepts": [
+      {
+       "concept_tag": "thailand-indian-names",
+       "learning_objective": "Interpret Indian-derived names in Thailand as evidence of cultural exchange."
+      },
+      {
+       "concept_tag": "malaysia-singapore-links",
+       "learning_objective": "Compare the historical and present-day links of Malaysia and Singapore with India."
+      },
+      {
+       "concept_tag": "indonesia-archipelago-and-tsunami",
+       "learning_objective": "Explain Indonesia's ties with India and their cooperation after the 2004 tsunami."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH02-T8",
+     "topic_number": 8,
+     "title": "Iran and Oman",
+     "ncert_sections": "An Ancient Neighbour; The 'Land of Copper'",
+     "concepts": [
+      {
+       "concept_tag": "india-iran-ties",
+       "learning_objective": "Describe the ancient and modern links between India and Iran, including Chabahar Port."
+      },
+      {
+       "concept_tag": "india-oman-ties",
+       "learning_objective": "Describe the ancient trade and present defence ties between India and Oman."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEES2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Empires and Kingdoms: 6th to 10th Centuries",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gees203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEES2-CH03-T1",
+     "topic_number": 1,
+     "title": "Harshavardhana, the 'Great King of Kings'",
+     "ncert_sections": "The 'Great King of Kings'",
+     "concepts": [
+      {
+       "concept_tag": "harsha-rule-and-patronage",
+       "learning_objective": "Describe Harshavardhana's rule from Kannauj, his patronage of scholars and the limits of his expansion."
+      },
+      {
+       "concept_tag": "xuanzang-travelogue",
+       "learning_objective": "Explain why Xuanzang travelled to India and why his travelogue is an important historical source."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH03-T2",
+     "topic_number": 2,
+     "title": "The Tripartite Struggle for Kannauj",
+     "ncert_sections": "A Tripartite Struggle for Kannauj; The Palas; The Gurjara-Pratiharas; The Rashtrakutas",
+     "concepts": [
+      {
+       "concept_tag": "tripartite-struggle-kannauj",
+       "learning_objective": "Identify the three powers that fought over Kannauj and explain why no lasting victor emerged."
+      },
+      {
+       "concept_tag": "pala-patronage-learning",
+       "learning_objective": "Describe the Palas' patronage of Buddhist learning, including the university of Vikramashila."
+      },
+      {
+       "concept_tag": "pratiharas-and-rashtrakutas",
+       "learning_objective": "Match the major Gurjara-Pratihara and Rashtrakuta rulers with their achievements."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH03-T3",
+     "topic_number": 3,
+     "title": "Kashmir",
+     "ncert_sections": "Kashmir",
+     "concepts": [
+      {
+       "concept_tag": "kalhana-rajatarangini",
+       "learning_objective": "Explain Kalhana's method and purpose in writing the Rajatarangini."
+      },
+      {
+       "concept_tag": "kashmir-rulers",
+       "learning_objective": "Identify important rulers of Kashmir such as Lalitaditya Muktapida and Queen Didda."
+      },
+      {
+       "concept_tag": "kashmir-culture-learning",
+       "learning_objective": "Describe Kashmir's role as a centre of Sanskrit learning, Kashmir Shaivism and Buddhist scholarship."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH03-T4",
+     "topic_number": 4,
+     "title": "The Deccan and the South",
+     "ncert_sections": "The Deccan and Beyond; The Chalukyas; The Pallavas; Further South",
+     "concepts": [
+      {
+       "concept_tag": "chalukyas-and-pallavas",
+       "learning_objective": "Describe the rivalry of the Chalukyas and Pallavas and evaluate sources such as the Aihole inscription."
+      },
+      {
+       "concept_tag": "southern-kingdoms-cholas",
+       "learning_objective": "Trace the re-emergence of the Pandyas, Cheras and Cholas in the far south."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH03-T5",
+     "topic_number": 5,
+     "title": "Polity, Economy and Society",
+     "ncert_sections": "Other Developments: Polity and administration; Trade, economy and urbanisation; Social life",
+     "concepts": [
+      {
+       "concept_tag": "samanta-administration",
+       "learning_objective": "Explain how kings governed through samantas and directly controlled provinces, districts and villages."
+      },
+      {
+       "concept_tag": "land-grants-trade",
+       "learning_objective": "Describe the expansion of land grants, agriculture and maritime trade in this period."
+      },
+      {
+       "concept_tag": "jati-social-life",
+       "learning_objective": "Explain how jatis multiplied and why the varna-jati system remained flexible."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH03-T6",
+     "topic_number": 6,
+     "title": "Cultural Life and Science",
+     "ncert_sections": "Cultural life; A galaxy of mathematicians and astronomers",
+     "concepts": [
+      {
+       "concept_tag": "religious-pluralism-bhakti",
+       "learning_objective": "Describe the coexistence of religious traditions and the spread of the Bhakti tradition."
+      },
+      {
+       "concept_tag": "mathematicians-astronomers",
+       "learning_objective": "Identify the contributions of Brahmagupta, Bhaskara I, Virahanka and Mahavira."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH03-T7",
+     "topic_number": 7,
+     "title": "Foreign Invasions",
+     "ncert_sections": "Foreign Invasions: The Hunas' challenge; The Arabs arrive on India's shores",
+     "concepts": [
+      {
+       "concept_tag": "huna-invasions",
+       "learning_objective": "Describe the Huna invasions, their defeat and their assimilation into Indian society."
+      },
+      {
+       "concept_tag": "arab-invasions-sindh",
+       "learning_objective": "Explain the Arab conquest of Sindh and why Arab gains in India remained limited."
+      },
+      {
+       "concept_tag": "india-arab-exchange",
+       "learning_objective": "Describe the trade and scientific exchanges between India and the Arab world."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEES2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Turning Tides: 11th and 12th Centuries",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gees204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEES2-CH04-T1",
+     "topic_number": 1,
+     "title": "The Ghaznavid Invasions",
+     "ncert_sections": "The Ghaznavid Invasions",
+     "concepts": [
+      {
+       "concept_tag": "hindu-shahis-and-khyber-pass",
+       "learning_objective": "Explain why the Hindu Shahis' control of the Khyber Pass made their resistance to invaders important."
+      },
+      {
+       "concept_tag": "mahmud-of-ghazni-campaigns",
+       "learning_objective": "Describe the main events of Mahmud of Ghazni's campaigns in India, including Mathura, Kannauj and Somnath."
+      },
+      {
+       "concept_tag": "motives-of-mahmud",
+       "learning_objective": "Evaluate the evidence historians use to discuss Mahmud's motives for his raids."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH04-T2",
+     "topic_number": 2,
+     "title": "Scholars of the Age: al-Biruni and Bhaskaracharya",
+     "ncert_sections": "Al-Biruni; Bhaskaracharya",
+     "concepts": [
+      {
+       "concept_tag": "al-biruni-survey-of-india",
+       "learning_objective": "Describe al-Biruni's study of Indian knowledge and his remarks on the effects of Mahmud's campaigns."
+      },
+      {
+       "concept_tag": "bhaskaracharya-works",
+       "learning_objective": "Identify Bhaskaracharya's major works and explain why they were valued by students."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH04-T3",
+     "topic_number": 3,
+     "title": "Eastern India and the Kingdoms of the Deccan",
+     "ncert_sections": "Eastern India; Further South; The Kakatiyas; The Hoysalas",
+     "concepts": [
+      {
+       "concept_tag": "senas-and-eastern-gangas",
+       "learning_objective": "Identify the Senas and Eastern Gangas, their regions and their cultural contributions."
+      },
+      {
+       "concept_tag": "kakatiyas-and-hoysalas",
+       "learning_objective": "Describe how the Kakatiyas and Hoysalas rose in the Deccan and what they are remembered for."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH04-T4",
+     "topic_number": 4,
+     "title": "The Cholas, Masters of the Seas",
+     "ncert_sections": "The Cholas, masters of the seas",
+     "concepts": [
+      {
+       "concept_tag": "rajaraja-chola-conquests",
+       "learning_objective": "Describe the conquests and policies of Rajaraja Chola I and the later decline of the Cholas."
+      },
+      {
+       "concept_tag": "rajendra-naval-expedition",
+       "learning_objective": "Explain the causes and nature of Rajendra Chola I's naval expedition against Srivijaya."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH04-T5",
+     "topic_number": 5,
+     "title": "Back to the North: the Paramaras and the Ghurids",
+     "ncert_sections": "Back to the North; The Paramaras; A turning point: the Ghurids in India",
+     "concepts": [
+      {
+       "concept_tag": "bhoja-paramara-scholar-king",
+       "learning_objective": "Describe the achievements of Bhoja Paramara as a ruler, builder and scholar."
+      },
+      {
+       "concept_tag": "ghurid-conquest-and-tarain",
+       "learning_objective": "Explain how Muhammad Ghuri's conquest differed from Mahmud's raids and led to lasting rule."
+      },
+      {
+       "concept_tag": "bakhtiyar-khilji-campaigns",
+       "learning_objective": "Describe Bakhtiyar Khilji's campaigns in eastern India and their impact on centres of learning."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH04-T6",
+     "topic_number": 6,
+     "title": "Governance, Trade and Cultural Life",
+     "ncert_sections": "Governance, Trade and Cultural Life",
+     "concepts": [
+      {
+       "concept_tag": "governance-and-economy",
+       "learning_objective": "Explain how kingdoms of this period were administered and what sustained their economy."
+      },
+      {
+       "concept_tag": "thinkers-ramanuja-and-basava",
+       "learning_objective": "Describe the ideas of Ramanujacharya and Basavanna and their impact on society."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH04-T7",
+     "topic_number": 7,
+     "title": "Taking Stock: Change and Continuity",
+     "ncert_sections": "Taking Stock",
+     "concepts": [
+      {
+       "concept_tag": "change-and-continuity",
+       "learning_objective": "Distinguish between the changes and the continuities of the 11th and 12th centuries."
+      },
+      {
+       "concept_tag": "indian-influence-southeast-asia",
+       "learning_objective": "Explain how Angkor Wat shows the influence of Indian traditions in Southeast Asia."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEES2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "India, a Home to Many",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gees205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEES2-CH05-T1",
+     "topic_number": 1,
+     "title": "The Story of Indian Jews",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bene-israel-konkan",
+       "learning_objective": "Describe how the Bene Israel came to India and where they settled."
+      },
+      {
+       "concept_tag": "cochin-jews-synagogue",
+       "learning_objective": "Explain how the Jews of Kochi were welcomed and able to practise their faith."
+      },
+      {
+       "concept_tag": "india-shelter-for-persecuted",
+       "learning_objective": "Interpret Swami Vivekananda's 1893 words about India sheltering the persecuted."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH05-T2",
+     "topic_number": 2,
+     "title": "Syriac Christians and Arab Merchants",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "syriac-christians-malabar",
+       "learning_objective": "Explain why Syriac Christians left West Asia and settled on the Malabar coast."
+      },
+      {
+       "concept_tag": "arab-merchants-west-coast",
+       "learning_objective": "Describe how Arab merchants settled on India's west coast as peaceful traders."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH05-T3",
+     "topic_number": 3,
+     "title": "The Parsis and Zoroastrianism",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "parsi-migration-sanjan",
+       "learning_objective": "Explain why the Parsis left Persia and how they settled at Sanjan in Gujarat."
+      },
+      {
+       "concept_tag": "zoroastrian-vedic-links",
+       "learning_objective": "Compare the similarities and differences between Zoroastrian and Vedic traditions."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH05-T4",
+     "topic_number": 4,
+     "title": "The Siddis, the Armenians and the Baha'is",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "siddi-african-heritage",
+       "learning_objective": "Describe the African origin of the Siddis and the fusion in their culture."
+      },
+      {
+       "concept_tag": "armenians-in-india",
+       "learning_objective": "Describe the roles and lasting legacy of Armenians in Indian cities."
+      },
+      {
+       "concept_tag": "bahai-community",
+       "learning_objective": "Explain why Baha'is came to India and how the faith grew here."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH05-T5",
+     "topic_number": 5,
+     "title": "The Polish Children and Tibetan Refugees",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "good-maharaja-polish-children",
+       "learning_objective": "Describe how the Maharaja of Nawanagar sheltered Polish orphans during the Second World War."
+      },
+      {
+       "concept_tag": "tibetan-refugees-india",
+       "learning_objective": "Explain how India sheltered and rehabilitated Tibetan refugees after 1959."
+      },
+      {
+       "concept_tag": "sowa-rigpa",
+       "learning_objective": "Identify Sowa Rigpa as a Tibetan system of medicine linked with Ayurveda."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH05-T6",
+     "topic_number": 6,
+     "title": "The Whole World is Family",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "indian-values-of-inclusion",
+       "learning_objective": "Explain how values like vasudhaiva kutumbakam and atithi devo bhava made India a home for many."
+      },
+      {
+       "concept_tag": "indian-values-abroad",
+       "learning_objective": "Describe how Indians living abroad carry these values of peaceful coexistence."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEES2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "The State, the Government, and You",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gees206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEES2-CH06-T1",
+     "topic_number": 1,
+     "title": "What is a State?",
+     "ncert_sections": "What is a State?",
+     "concepts": [
+      {
+       "concept_tag": "four-features-of-a-state",
+       "learning_objective": "Identify the four features of a state: people, territory, government and sovereignty."
+      },
+      {
+       "concept_tag": "sovereignty",
+       "learning_objective": "Explain why sovereignty is an essential feature of a state."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH06-T2",
+     "topic_number": 2,
+     "title": "What is a Government?",
+     "ncert_sections": "What is a Government?; People, police, and the government",
+     "concepts": [
+      {
+       "concept_tag": "state-versus-government",
+       "learning_objective": "Distinguish between the permanent state and the changing government that acts on its behalf."
+      },
+      {
+       "concept_tag": "role-of-police",
+       "learning_objective": "Describe the role of the police as agents of the state government."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH06-T3",
+     "topic_number": 3,
+     "title": "Democracy and Republic",
+     "ncert_sections": "Democracy and Republic; India, a Republic that Protects the Rights of All",
+     "concepts": [
+      {
+       "concept_tag": "democracy-and-republic",
+       "learning_objective": "Distinguish a democracy (rule by the people) from a republic (elected head of state)."
+      },
+      {
+       "concept_tag": "protection-of-minority-rights",
+       "learning_objective": "Explain how a constitution protects rights against the dominance of the majority."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH06-T4",
+     "topic_number": 4,
+     "title": "Legislature and Executive",
+     "ncert_sections": "Legislature: The Lawmaking Body; Executive: The Law-Implementing and Policymaking Body",
+     "concepts": [
+      {
+       "concept_tag": "legislature-makes-laws",
+       "learning_objective": "State the role of the legislature as the lawmaking body at union and state levels."
+      },
+      {
+       "concept_tag": "political-and-permanent-executive",
+       "learning_objective": "Distinguish between the elected political executive and the permanent executive of civil servants."
+      },
+      {
+       "concept_tag": "functions-of-bureaucracy",
+       "learning_objective": "Describe the key functions of the bureaucracy and its grassroots workers."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH06-T5",
+     "topic_number": 5,
+     "title": "The Government and You",
+     "ncert_sections": "The Government and You",
+     "concepts": [
+      {
+       "concept_tag": "roles-of-government",
+       "learning_objective": "Explain the triple role of the government as protector, provider and regulator."
+      },
+      {
+       "concept_tag": "citizen-engagement",
+       "learning_objective": "Identify ways citizens can make the government work, such as grievance portals, RTI, media, NGOs and voting."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH06-T6",
+     "topic_number": 6,
+     "title": "Judiciary: Guardian of the Constitution",
+     "ncert_sections": "Judiciary: Guardian of the Constitution",
+     "concepts": [
+      {
+       "concept_tag": "functions-of-judiciary",
+       "learning_objective": "Describe the functions of an independent judiciary."
+      },
+      {
+       "concept_tag": "rule-of-law",
+       "learning_objective": "Explain the rule of law and why the judiciary is needed to uphold it."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH06-T7",
+     "topic_number": 7,
+     "title": "Tiers of Government and Decentralisation",
+     "ncert_sections": "Tiers of Government; What is decentralisation?",
+     "concepts": [
+      {
+       "concept_tag": "three-tiers-of-government",
+       "learning_objective": "Identify the union, state and local tiers of government and their responsibilities."
+      },
+      {
+       "concept_tag": "decentralisation",
+       "learning_objective": "Explain what decentralisation means and why it is important in India."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEES2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Infrastructure: Engine of India’s Development",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gees207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEES2-CH07-T1",
+     "topic_number": 1,
+     "title": "Physical infrastructure and why it matters",
+     "ncert_sections": "Introduction; Why is physical infrastructure important?",
+     "concepts": [
+      {
+       "concept_tag": "physical-infrastructure-meaning",
+       "learning_objective": "Identify the main forms of physical infrastructure and how they work together."
+      },
+      {
+       "concept_tag": "importance-of-infrastructure",
+       "learning_objective": "Explain how physical infrastructure supports people, businesses, trade, emergencies and national security."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH07-T2",
+     "topic_number": 2,
+     "title": "Roads, highways and bridges",
+     "ncert_sections": "Transportation Infrastructure (a) Road and highway network",
+     "concepts": [
+      {
+       "concept_tag": "road-network-types",
+       "learning_objective": "Distinguish local roads, state highways, national highways and expressways and who maintains them."
+      },
+      {
+       "concept_tag": "bridges-in-difficult-terrain",
+       "learning_objective": "Explain how bridges such as the Dhola Sadiya Bridge and living root bridges overcome difficult terrain."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH07-T3",
+     "topic_number": 3,
+     "title": "Railways and metro train systems",
+     "ncert_sections": "Transportation Infrastructure (b) Indian railway network; (c) Metro train systems",
+     "concepts": [
+      {
+       "concept_tag": "railways-colonial-origins",
+       "learning_objective": "State why the British introduced railways in India in 1853."
+      },
+      {
+       "concept_tag": "railways-today",
+       "learning_objective": "Describe the role of Indian Railways today in moving people and goods, employment and electrification."
+      },
+      {
+       "concept_tag": "metro-train-systems",
+       "learning_objective": "Explain how metro trains make city travel faster and cleaner."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH07-T4",
+     "topic_number": 4,
+     "title": "Air transport, shipping and ports",
+     "ncert_sections": "Transportation Infrastructure (d) Air transport; (e) Shipping and ports",
+     "concepts": [
+      {
+       "concept_tag": "air-transport",
+       "learning_objective": "Explain the uses of passenger and cargo flights, including during disasters."
+      },
+      {
+       "concept_tag": "shipping-and-ports",
+       "learning_objective": "Describe the role of ships and ports in carrying heavy goods and in India's trade."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH07-T5",
+     "topic_number": 5,
+     "title": "Communications infrastructure",
+     "ncert_sections": "Communications Infrastructure",
+     "concepts": [
+      {
+       "concept_tag": "communication-network",
+       "learning_objective": "Identify the parts of communication infrastructure that carry messages across places."
+      },
+      {
+       "concept_tag": "uses-of-communication",
+       "learning_objective": "Explain how communication infrastructure supports education, emergencies, e-commerce and e-governance."
+      },
+      {
+       "concept_tag": "history-of-communication",
+       "learning_objective": "Trace key milestones in communication, including J.C. Bose's work on wireless transmission."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH07-T6",
+     "topic_number": 6,
+     "title": "Collective responsibility towards infrastructure",
+     "ncert_sections": "Collective Responsibility Towards Infrastructure; Infrastructure in the Arthashastra",
+     "concepts": [
+      {
+       "concept_tag": "collective-responsibility",
+       "learning_objective": "Explain why caring for public infrastructure is the shared duty of citizens and government."
+      },
+      {
+       "concept_tag": "sustainable-inclusive-infrastructure",
+       "learning_objective": "Explain how infrastructure can be made sustainable and suitable for children, the elderly and disabled persons."
+      },
+      {
+       "concept_tag": "arthashastra-infrastructure",
+       "learning_objective": "Describe how Kautilya's Arthashastra regulated roads and protected public works."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GEES2-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Banks and the Magic of Finance",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/gees208.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GEES2-CH08-T1",
+     "topic_number": 1,
+     "title": "Financial infrastructure and what banks do",
+     "ncert_sections": "Introduction; What are banks and what do they do?",
+     "concepts": [
+      {
+       "concept_tag": "financial-infrastructure-meaning",
+       "learning_objective": "Explain what financial infrastructure is and how it supports physical infrastructure."
+      },
+      {
+       "concept_tag": "banks-as-intermediaries",
+       "learning_objective": "Describe how a bank links savers who deposit money with borrowers who need loans."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH08-T2",
+     "topic_number": 2,
+     "title": "Holding deposits: types of bank accounts and the passbook",
+     "ncert_sections": "Hold deposits; Types of bank accounts (Fig. 8.4); Passbook",
+     "concepts": [
+      {
+       "concept_tag": "types-of-bank-accounts",
+       "learning_objective": "Distinguish between savings, current and fixed deposit accounts."
+      },
+      {
+       "concept_tag": "passbook-debit-credit",
+       "learning_objective": "Interpret debit and credit entries recorded in a bank passbook."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH08-T3",
+     "topic_number": 3,
+     "title": "Interest and the magic of compounding",
+     "ncert_sections": "Interest on deposits; The Magic of Compounding - the story of a King and a Sage",
+     "concepts": [
+      {
+       "concept_tag": "interest-meaning",
+       "learning_objective": "Define interest as the cost of borrowing or the gain from lending money."
+      },
+      {
+       "concept_tag": "compound-interest-calculation",
+       "learning_objective": "Calculate how a deposit grows when interest is earned on earlier interest."
+      },
+      {
+       "concept_tag": "exponential-growth-story",
+       "learning_objective": "Use the king and sage chessboard story to explain exponential growth."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH08-T4",
+     "topic_number": 4,
+     "title": "Loans, how banks earn, and the Jan Dhan Yojana",
+     "ncert_sections": "Offer loans or credit; Don't miss out; Jan Dhan Yojana",
+     "concepts": [
+      {
+       "concept_tag": "bank-loans",
+       "learning_objective": "Identify the purposes for which people and businesses take bank loans."
+      },
+      {
+       "concept_tag": "interest-rate-spread",
+       "learning_objective": "Explain how the gap between deposit and loan interest rates gives banks income."
+      },
+      {
+       "concept_tag": "jan-dhan-financial-inclusion",
+       "learning_objective": "Describe how the Pradhan Mantri Jan Dhan Yojana widened access to banking."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH08-T5",
+     "topic_number": 5,
+     "title": "Other financial institutions and the Reserve Bank of India",
+     "ncert_sections": "Other Financial Institutions; Reserve Bank of India - Banker to Banks; Temples as lenders",
+     "concepts": [
+      {
+       "concept_tag": "post-office-and-specialised-institutions",
+       "learning_objective": "Identify the financial roles of post offices, NABARD and the Industrial Finance Corporation of India."
+      },
+      {
+       "concept_tag": "rbi-central-bank",
+       "learning_objective": "State the functions of the RBI as India's central bank and banker to banks."
+      },
+      {
+       "concept_tag": "temples-as-ancient-banks",
+       "learning_objective": "Compare the lending role of temples in ancient India with modern banks."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH08-T6",
+     "topic_number": 6,
+     "title": "Payment modes and systems",
+     "ncert_sections": "Payment Modes and Systems; Cheque; Debit cards and POS; Internet banking; Mobile payments; UPI",
+     "concepts": [
+      {
+       "concept_tag": "cash-withdrawal-and-atm",
+       "learning_objective": "Describe how cash is withdrawn using a withdrawal slip or a debit card at an ATM."
+      },
+      {
+       "concept_tag": "cheque-and-electronic-payments",
+       "learning_objective": "Compare cheques with electronic payment methods such as POS machines and internet banking."
+      },
+      {
+       "concept_tag": "upi-payment-system",
+       "learning_objective": "Explain the steps of a UPI transaction and why UPI became popular."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH08-T7",
+     "topic_number": 7,
+     "title": "Stock market",
+     "ncert_sections": "Stock Market",
+     "concepts": [
+      {
+       "concept_tag": "shares-and-stock-exchange",
+       "learning_objective": "Explain what a share is and why companies issue shares on a stock exchange."
+      },
+      {
+       "concept_tag": "share-price-fluctuations",
+       "learning_objective": "Analyse the factors that cause share prices to rise and fall, leading to booms and crashes."
+      }
+     ]
+    },
+    {
+     "topic_id": "GEES2-CH08-T8",
+     "topic_number": 8,
+     "title": "Financial frauds and the role of financial infrastructure",
+     "ncert_sections": "Financial frauds and how to prevent them; Before we move on",
+     "concepts": [
+      {
+       "concept_tag": "digital-fraud-prevention",
+       "learning_objective": "Apply safety practices to avoid and report digital payment frauds."
+      },
+      {
+       "concept_tag": "financial-infrastructure-and-progress",
+       "learning_objective": "Evaluate how financial infrastructure contributes to a nation's progress."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

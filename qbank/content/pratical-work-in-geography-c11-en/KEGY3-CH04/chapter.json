@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KEGY3-CH04",
+ "title": "Map Projections",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY3-CH04-T1",
+   "topic_number": 1,
+   "title": "Map projection and the need for it",
+   "ncert_sections": "Map Projection; Need for Map Projection",
+   "concepts": [
+    {
+     "concept_tag": "map-projection-graticule",
+     "learning_objective": "Define map projection and graticule and explain the limitations of a globe."
+    },
+    {
+     "concept_tag": "need-for-projection",
+     "learning_objective": "Explain why projections are needed and why distortion is inevitable on a flat surface."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH04-T2",
+   "topic_number": 2,
+   "title": "Elements of map projection",
+   "ncert_sections": "Elements of Map Projection",
+   "concepts": [
+    {
+     "concept_tag": "reduced-earth",
+     "learning_objective": "Describe the reduced earth as a model drawn to a reduced scale."
+    },
+    {
+     "concept_tag": "parallels-and-meridians",
+     "learning_objective": "Distinguish parallels of latitude from meridians of longitude."
+    },
+    {
+     "concept_tag": "global-properties",
+     "learning_objective": "Identify the four global properties a projection tries to preserve."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH04-T3",
+   "topic_number": 3,
+   "title": "Classification by drawing technique and developable surface",
+   "ncert_sections": "Classification of Map Projections (a), (b)",
+   "concepts": [
+    {
+     "concept_tag": "drawing-techniques",
+     "learning_objective": "Distinguish perspective, non-perspective and mathematical projections."
+    },
+    {
+     "concept_tag": "developable-surface",
+     "learning_objective": "Classify projections as cylindrical, conical or zenithal and as normal, oblique or polar."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH04-T4",
+   "topic_number": 4,
+   "title": "Classification by global properties and source of light",
+   "ncert_sections": "Classification of Map Projections (c), (d)",
+   "concepts": [
+    {
+     "concept_tag": "property-based-projections",
+     "learning_objective": "Distinguish equal area, orthomorphic, azimuthal and equi-distant projections."
+    },
+    {
+     "concept_tag": "source-of-light",
+     "learning_objective": "Classify gnomonic, stereographic and orthographic projections by the position of the light."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH04-T5",
+   "topic_number": 5,
+   "title": "Conical projection with one standard parallel",
+   "ncert_sections": "Constructing Some Selected Projections (a)",
+   "concepts": [
+    {
+     "concept_tag": "conical-construction",
+     "learning_objective": "Calculate the reduced-earth radius and choose the standard parallel and central meridian for a conical projection."
+    },
+    {
+     "concept_tag": "conical-properties-uses",
+     "learning_objective": "State the properties, limitations and uses of the simple conical projection."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH04-T6",
+   "topic_number": 6,
+   "title": "Cylindrical equal area projection",
+   "ncert_sections": "Constructing Some Selected Projections (b)",
+   "concepts": [
+    {
+     "concept_tag": "cylindrical-calculation",
+     "learning_objective": "Calculate the radius, equator length and interval for a cylindrical equal area projection."
+    },
+    {
+     "concept_tag": "cylindrical-properties-uses",
+     "learning_objective": "State the properties, limitations and uses of the cylindrical equal area projection."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH04-T7",
+   "topic_number": 7,
+   "title": "Mercator's projection",
+   "ncert_sections": "Constructing Some Selected Projections (c)",
+   "concepts": [
+    {
+     "concept_tag": "mercator-properties",
+     "learning_objective": "Explain the orthomorphic properties and rhumb lines of Mercator's projection."
+    },
+    {
+     "concept_tag": "mercator-limitations-uses",
+     "learning_objective": "Evaluate the limitations and uses of Mercator's projection."
+    }
+   ]
+  }
+ ]
+}

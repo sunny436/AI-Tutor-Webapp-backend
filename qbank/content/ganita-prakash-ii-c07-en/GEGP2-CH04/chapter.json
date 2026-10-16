@@ -1,0 +1,108 @@
+{
+ "chapter_id": "GEGP2-CH04",
+ "title": "Another Peek Beyond the Point",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP2-CH04-T1",
+   "topic_number": 1,
+   "title": "A Quick Recap of Decimals",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "decimal-place-value",
+     "learning_objective": "Write decimal fractions with denominators 10, 100, 1000 and their sums as decimals using place value."
+    },
+    {
+     "concept_tag": "dividing-by-powers-of-ten",
+     "learning_objective": "Divide a whole number by 10, 100 or 1000 by moving the decimal point to the left."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH04-T2",
+   "topic_number": 2,
+   "title": "Decimal Multiplication",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "decimal-multiplication-rule",
+     "learning_objective": "Multiply decimals by multiplying the numbers without decimal points and placing the decimal point by counting decimal digits."
+    },
+    {
+     "concept_tag": "product-size-comparison",
+     "learning_objective": "Predict whether a product of decimals is greater or less than the numbers multiplied."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH04-T3",
+   "topic_number": 3,
+   "title": "Decimal Division by 10, 100, 1000 and Equivalent Fractions",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "decimal-division-by-powers-of-ten",
+     "learning_objective": "Divide a decimal by 10, 100 or 1000 by shifting the decimal point left."
+    },
+    {
+     "concept_tag": "fraction-to-decimal-equivalent",
+     "learning_objective": "Convert a fraction to a decimal by finding an equivalent fraction with denominator 10, 100, 1000 and so on."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH04-T4",
+   "topic_number": 4,
+   "title": "Long Division with Decimal Quotients, Dividends and Divisors",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "long-division-decimal-quotient",
+     "learning_objective": "Use division by place value, regrouping Ones into Tenths and beyond, to find decimal quotients."
+    },
+    {
+     "concept_tag": "decimal-divisor-conversion",
+     "learning_objective": "Divide by a decimal by multiplying the divisor and dividend by the same power of 10."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH04-T5",
+   "topic_number": 5,
+   "title": "Does This Ever End? Dividend, Divisor and Quotient",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "non-terminating-division",
+     "learning_objective": "Recognise divisions whose decimal quotient never ends because remainders repeat."
+    },
+    {
+     "concept_tag": "cyclic-number-142857",
+     "learning_objective": "Explore the repeating block 142857 of 1/7 and its cyclic multiples."
+    },
+    {
+     "concept_tag": "quotient-dividend-relationship",
+     "learning_objective": "Compare the quotient with the dividend when dividing by numbers greater or less than 1."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP2-CH04-T6",
+   "topic_number": 6,
+   "title": "Look Before You Leap!",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "leap-year-rule",
+     "learning_objective": "Apply the rules of divisibility by 4, 100 and 400 to decide leap years."
+    },
+    {
+     "concept_tag": "calendar-drift-calculation",
+     "learning_objective": "Use decimal multiplication to compare calendar days with the Earth's actual revolution time."
+    }
+   ]
+  }
+ ]
+}

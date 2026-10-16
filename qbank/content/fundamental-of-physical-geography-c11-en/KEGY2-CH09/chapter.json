@@ -1,0 +1,140 @@
+{
+ "chapter_id": "KEGY2-CH09",
+ "title": "Atmospheric Circulation and Weather Systems",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH09-T1",
+   "topic_number": 1,
+   "title": "Atmospheric Pressure and its Distribution",
+   "ncert_sections": "Atmospheric Pressure; Vertical Variation of Pressure; Horizontal Distribution of Pressure; World Distribution of Sea Level Pressure",
+   "concepts": [
+    {
+     "concept_tag": "vertical-variation-of-pressure",
+     "learning_objective": "Explain how atmospheric pressure is measured and how it decreases with height."
+    },
+    {
+     "concept_tag": "isobars-and-pressure-belts",
+     "learning_objective": "Describe isobars and the world pattern of sea level pressure belts and their seasonal shift."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH09-T2",
+   "topic_number": 2,
+   "title": "Forces Affecting the Velocity and Direction of Wind",
+   "ncert_sections": "Forces Affecting the Velocity and Direction of Wind; Pressure Gradient Force; Frictional Force; Coriolis Force",
+   "concepts": [
+    {
+     "concept_tag": "pressure-gradient-and-friction",
+     "learning_objective": "Explain how the pressure gradient force and friction influence wind speed."
+    },
+    {
+     "concept_tag": "coriolis-force",
+     "learning_objective": "Explain how the Coriolis force deflects winds and why it varies with latitude."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH09-T3",
+   "topic_number": 3,
+   "title": "Pressure and Wind",
+   "ncert_sections": "Pressure and Wind",
+   "concepts": [
+    {
+     "concept_tag": "geostrophic-wind",
+     "learning_objective": "Describe the geostrophic wind as a balance of pressure gradient and Coriolis forces."
+    },
+    {
+     "concept_tag": "cyclonic-anticyclonic-circulation",
+     "learning_objective": "Distinguish cyclonic and anticyclonic circulation and the associated convergence and divergence."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH09-T4",
+   "topic_number": 4,
+   "title": "General Circulation of the Atmosphere",
+   "ncert_sections": "General circulation of the atmosphere; General Atmospheric Circulation and its Effects on Oceans",
+   "concepts": [
+    {
+     "concept_tag": "three-cell-circulation",
+     "learning_objective": "Describe the Hadley, Ferrel and polar cells and the planetary winds they produce."
+    },
+    {
+     "concept_tag": "enso",
+     "learning_objective": "Explain El Nino, the southern oscillation and the global effects of ENSO."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH09-T5",
+   "topic_number": 5,
+   "title": "Seasonal and Local Winds",
+   "ncert_sections": "Seasonal Wind; Local Winds; Land and Sea Breezes; Mountain and Valley Winds",
+   "concepts": [
+    {
+     "concept_tag": "land-and-sea-breezes",
+     "learning_objective": "Explain the daily reversal of land and sea breezes from differential heating."
+    },
+    {
+     "concept_tag": "mountain-and-valley-winds",
+     "learning_objective": "Explain valley breezes, mountain winds, katabatic winds and warm leeward winds."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH09-T6",
+   "topic_number": 6,
+   "title": "Air Masses and Fronts",
+   "ncert_sections": "Air Masses; Fronts",
+   "concepts": [
+    {
+     "concept_tag": "air-masses",
+     "learning_objective": "Define an air mass and classify air masses by their source regions."
+    },
+    {
+     "concept_tag": "fronts",
+     "learning_objective": "Identify the types of fronts and the weather they bring."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH09-T7",
+   "topic_number": 7,
+   "title": "Extra Tropical Cyclones",
+   "ncert_sections": "Extra Tropical Cyclones",
+   "concepts": [
+    {
+     "concept_tag": "extra-tropical-cyclone-development",
+     "learning_objective": "Describe the development and occlusion of an extra tropical cyclone along the polar front."
+    },
+    {
+     "concept_tag": "extra-tropical-vs-tropical",
+     "learning_objective": "Compare extra tropical cyclones with tropical cyclones."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH09-T8",
+   "topic_number": 8,
+   "title": "Tropical Cyclones, Thunderstorms and Tornadoes",
+   "ncert_sections": "Tropical Cyclones; Thunderstorms and Tornadoes",
+   "concepts": [
+    {
+     "concept_tag": "tropical-cyclone-formation",
+     "learning_objective": "State the conditions for the formation of tropical cyclones and the source of their energy."
+    },
+    {
+     "concept_tag": "tropical-cyclone-structure",
+     "learning_objective": "Describe the eye, eye wall and landfall of a mature tropical cyclone."
+    },
+    {
+     "concept_tag": "thunderstorms-and-tornadoes",
+     "learning_objective": "Explain how thunderstorms and tornadoes form."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1098 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "first-flight-c10-en",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "english",
+  "language": "english",
+  "title": "First Flight",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jeff1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JEFF1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "A Letter to God",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jeff101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEFF1-CH01-T1",
+     "topic_number": 1,
+     "title": "Lencho's hope for rain",
+     "ncert_sections": "Opening of the story",
+     "concepts": [
+      {
+       "concept_tag": "setting-and-hope",
+       "learning_objective": "Describe the setting of Lencho's house and explain why he was waiting eagerly for rain."
+      },
+      {
+       "concept_tag": "raindrops-as-new-coins",
+       "learning_objective": "Interpret Lencho's comparison of raindrops to new coins and what it shows about his hopes."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH01-T2",
+     "topic_number": 2,
+     "title": "The hailstorm destroys the crop",
+     "ncert_sections": "The hailstorm and the sorrowful night",
+     "concepts": [
+      {
+       "concept_tag": "hailstorm-destruction",
+       "learning_objective": "Recall how the rain turned into a hailstorm and describe the damage it caused."
+      },
+      {
+       "concept_tag": "human-versus-nature",
+       "learning_objective": "Explain the conflict between humans and nature, and between humans themselves, in the story."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH01-T3",
+     "topic_number": 3,
+     "title": "Lencho's faith and his letter to God",
+     "ncert_sections": "Lencho writes and posts his letter",
+     "concepts": [
+      {
+       "concept_tag": "lencho-faith-in-god",
+       "learning_objective": "Identify the lines that show Lencho's complete faith in God."
+      },
+      {
+       "concept_tag": "letter-to-god",
+       "learning_objective": "Recall what Lencho asked for in his letter to God and why."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH01-T4",
+     "topic_number": 4,
+     "title": "The postmaster's act of goodwill",
+     "ncert_sections": "The post office reads and answers the letter",
+     "concepts": [
+      {
+       "concept_tag": "postmaster-preserves-faith",
+       "learning_objective": "Explain why the postmaster answered the letter and signed it 'God'."
+      },
+      {
+       "concept_tag": "collecting-the-money",
+       "learning_objective": "Recall how the postmaster gathered money for Lencho and how much he could send."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH01-T5",
+     "topic_number": 5,
+     "title": "Lencho's reply and the irony of the story",
+     "ncert_sections": "Lencho receives the money and writes again",
+     "concepts": [
+      {
+       "concept_tag": "irony-of-situation",
+       "learning_objective": "Explain the irony in Lencho blaming the post office employees for the missing money."
+      },
+      {
+       "concept_tag": "lencho-character",
+       "learning_objective": "Evaluate Lencho's character using evidence from the story."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH01-T6",
+     "topic_number": 6,
+     "title": "Grammar: relative clauses, negatives for emphasis and 'hope'",
+     "ncert_sections": "Thinking about Language II-IV",
+     "concepts": [
+      {
+       "concept_tag": "non-defining-relative-clauses",
+       "learning_objective": "Identify non-defining relative clauses and join sentences using who, whom, whose and which."
+      },
+      {
+       "concept_tag": "negatives-for-emphasis",
+       "learning_objective": "Distinguish negatives that show absence from negatives used for emphasis."
+      },
+      {
+       "concept_tag": "noun-and-verb-hope",
+       "learning_objective": "Distinguish the uses of 'hope' as a noun and as a verb."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH01-T7",
+     "topic_number": 7,
+     "title": "Metaphors and storm vocabulary",
+     "ncert_sections": "Thinking about Language I and V",
+     "concepts": [
+      {
+       "concept_tag": "metaphors-in-story",
+       "learning_objective": "Identify the metaphors in the story and the qualities they compare."
+      },
+      {
+       "concept_tag": "storm-vocabulary",
+       "learning_objective": "Match names of storms such as hailstorm, tornado and gale with their descriptions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEFF1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Nelson Mandela: Long Walk to Freedom",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jeff102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEFF1-CH02-T1",
+     "topic_number": 1,
+     "title": "The inauguration at the Union Buildings and Mandela's address",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "inauguration-setting",
+       "learning_objective": "Recall the place, people and significance of the inauguration ceremony of 10 May 1994."
+      },
+      {
+       "concept_tag": "inaugural-speech-ideals",
+       "learning_objective": "Interpret the ideals and references in Mandela's inaugural address."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH02-T2",
+     "topic_number": 2,
+     "title": "The air show and the two national anthems",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "military-loyalty",
+       "learning_objective": "Explain how the generals' salute and the air show showed the military's new loyalty to democracy."
+      },
+      {
+       "concept_tag": "two-national-anthems",
+       "learning_objective": "Explain the significance of the two national anthems sung at the inauguration."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH02-T3",
+     "topic_number": 3,
+     "title": "The legacy of apartheid: character, courage and love",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "heights-of-character",
+       "learning_objective": "Explain how decades of oppression produced people of extraordinary character, South Africa's greatest wealth."
+      },
+      {
+       "concept_tag": "meaning-of-courage",
+       "learning_objective": "State Mandela's view that courage is the triumph over fear, not its absence."
+      },
+      {
+       "concept_tag": "love-over-hate",
+       "learning_objective": "Explain why Mandela believes that love comes more naturally to the human heart than hate."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH02-T4",
+     "topic_number": 4,
+     "title": "Twin obligations and the growing hunger for freedom",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "twin-obligations",
+       "learning_objective": "Describe Mandela's twin obligations and why apartheid made it impossible to fulfil both."
+      },
+      {
+       "concept_tag": "changing-idea-of-freedom",
+       "learning_objective": "Trace how Mandela's idea of freedom changed from boyhood to manhood."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH02-T5",
+     "topic_number": 5,
+     "title": "Freedom is indivisible: the oppressor and the oppressed",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "freedom-indivisible",
+       "learning_objective": "Explain Mandela's idea that freedom is indivisible and the chains on one are the chains on all."
+      },
+      {
+       "concept_tag": "oppressor-prisoner-of-hatred",
+       "learning_objective": "Explain why Mandela says the oppressor is a prisoner of hatred who must also be liberated."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH02-T6",
+     "topic_number": 6,
+     "title": "Language study: noun forms, 'the' with names, idioms and contrasts",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "noun-forms-of-verbs",
+       "learning_objective": "Form nouns from verbs with suffixes such as -ion, -ment and -ance."
+      },
+      {
+       "concept_tag": "definite-article-with-proper-nouns",
+       "learning_objective": "Interpret the use of 'the' and the plural with proper nouns to mean people of that kind."
+      },
+      {
+       "concept_tag": "idioms-and-contrasts",
+       "learning_objective": "Interpret idiomatic phrases and balanced contrasts in Mandela's prose."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEFF1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Two Stories about Flying",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jeff103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEFF1-CH03-T1",
+     "topic_number": 1,
+     "title": "His First Flight: the young seagull's fear",
+     "ncert_sections": "Part I (opening)",
+     "concepts": [
+      {
+       "concept_tag": "seagull-fear-of-flying",
+       "learning_objective": "Explain why the young seagull could not bring himself to fly although he was physically able to."
+      },
+      {
+       "concept_tag": "family-pressure-and-taunting",
+       "learning_objective": "Describe how the seagull's parents and siblings reacted to his refusal to fly."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH03-T2",
+     "topic_number": 2,
+     "title": "His First Flight: hunger and the mother's plan",
+     "ncert_sections": "Part I (middle)",
+     "concepts": [
+      {
+       "concept_tag": "hunger-as-motivation",
+       "learning_objective": "Explain how hunger drove the young seagull to overcome his fear."
+      },
+      {
+       "concept_tag": "mothers-clever-strategy",
+       "learning_objective": "Interpret the mother's use of the piece of fish to make the seagull leave the ledge."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH03-T3",
+     "topic_number": 3,
+     "title": "His First Flight: the first flight and landing on the sea",
+     "ncert_sections": "Part I (ending)",
+     "concepts": [
+      {
+       "concept_tag": "experience-of-first-flight",
+       "learning_objective": "Describe the seagull's feelings and movements during his first flight."
+      },
+      {
+       "concept_tag": "triumph-and-theme",
+       "learning_objective": "Evaluate the ending of the story and the lesson it conveys about overcoming fear."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH03-T4",
+     "topic_number": 4,
+     "title": "The Black Aeroplane: the night flight and the risk",
+     "ncert_sections": "Part II (opening)",
+     "concepts": [
+      {
+       "concept_tag": "setting-of-the-flight",
+       "learning_objective": "Recall the setting and details of the narrator's flight in the Dakota."
+      },
+      {
+       "concept_tag": "pilots-risky-decision",
+       "learning_objective": "Analyse why the narrator chose to fly into the storm and judge that decision."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH03-T5",
+     "topic_number": 5,
+     "title": "The Black Aeroplane: lost in the storm and the mysterious helper",
+     "ncert_sections": "Part II (middle and ending)",
+     "concepts": [
+      {
+       "concept_tag": "lost-in-the-storm",
+       "learning_objective": "Describe what happened to the narrator and his instruments inside the storm clouds."
+      },
+      {
+       "concept_tag": "mystery-of-the-black-aeroplane",
+       "learning_objective": "Interpret the mysterious ending and the role of the black aeroplane."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH03-T6",
+     "topic_number": 6,
+     "title": "Vocabulary: meanings of 'black' and 'fly', and glossary words",
+     "ncert_sections": "Thinking about Language I-III",
+     "concepts": [
+      {
+       "concept_tag": "meanings-of-black",
+       "learning_objective": "Identify the meaning of the word 'black' in different contexts."
+      },
+      {
+       "concept_tag": "phrases-and-words-with-fly",
+       "learning_objective": "Use phrases with 'fly' and words with a meaning close to 'fly' correctly."
+      },
+      {
+       "concept_tag": "glossary-words",
+       "learning_objective": "Recall the meanings of difficult words glossed in the chapter."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEFF1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "From the Diary of Anne Frank",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jeff104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEFF1-CH04-T1",
+     "topic_number": 1,
+     "title": "Before You Read: Anne Frank and kinds of personal records",
+     "ncert_sections": "Before You Read; Activity",
+     "concepts": [
+      {
+       "concept_tag": "anne-frank-background",
+       "learning_objective": "Recall who Anne Frank was, when and why she kept her diary, and why it became famous."
+      },
+      {
+       "concept_tag": "personal-record-types",
+       "learning_objective": "Distinguish a diary, a journal, a log and a memoir by their features."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH04-T2",
+     "topic_number": 2,
+     "title": "Why Anne keeps a diary and calls it Kitty",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "why-anne-keeps-diary",
+       "learning_objective": "Explain why Anne feels she has no true friend and turns to a diary."
+      },
+      {
+       "concept_tag": "diary-as-friend-kitty",
+       "learning_objective": "Interpret Anne's decision to treat her diary as a friend named Kitty."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH04-T3",
+     "topic_number": 3,
+     "title": "A brief sketch of Anne's life",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "family-and-emigration",
+       "learning_objective": "Recall the main facts of Anne's family and their move from Germany to Holland."
+      },
+      {
+       "concept_tag": "anne-affection-for-loved-ones",
+       "learning_objective": "Infer Anne's feelings for her grandmother and her teacher Mrs Kuperus."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH04-T4",
+     "topic_number": 4,
+     "title": "The class meeting and Mr Keesing's essays",
+     "ncert_sections": "Diary entry of 20 June 1942",
+     "concepts": [
+      {
+       "concept_tag": "class-promotion-anxiety",
+       "learning_objective": "Describe the class's anxiety about the meeting that decides promotion."
+      },
+      {
+       "concept_tag": "keesing-essays",
+       "learning_objective": "Recall the three essays Mr Keesing set and how Anne answered each."
+      },
+      {
+       "concept_tag": "anne-wit-and-character",
+       "learning_objective": "Evaluate what the chatterbox episode reveals about Anne and Mr Keesing."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH04-T5",
+     "topic_number": 5,
+     "title": "Language study: compound words, phrasal verbs, idioms and contracted forms",
+     "ncert_sections": "Thinking about Language I-V",
+     "concepts": [
+      {
+       "concept_tag": "compound-words",
+       "learning_objective": "Identify compound words from the lesson and the part of speech they form."
+      },
+      {
+       "concept_tag": "phrasal-verbs-and-idioms",
+       "learning_objective": "Work out the meanings of phrasal verbs and idioms used in the lesson."
+      },
+      {
+       "concept_tag": "contracted-forms",
+       "learning_objective": "Expand contracted forms correctly and explain their use in diary language."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEFF1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Glimpses of India",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jeff105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEFF1-CH05-T1",
+     "topic_number": 1,
+     "title": "A Baker from Goa: the pader and the author's childhood memories",
+     "ncert_sections": "Part I, 'A Baker from Goa' (opening and childhood memories)",
+     "concepts": [
+      {
+       "concept_tag": "pader-tradition-survives",
+       "learning_objective": "Students will explain how the traditional Goan baker, the pader, still carries on the craft of bread-making."
+      },
+      {
+       "concept_tag": "childhood-memories-of-baker",
+       "learning_objective": "Students will describe the baker's daily visits and why the children eagerly ran to meet him."
+      },
+      {
+       "concept_tag": "author-tone-baker",
+       "learning_objective": "Students will identify the nostalgic and humorous tone of the author's recollections."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH05-T2",
+     "topic_number": 2,
+     "title": "A Baker from Goa: bread in Goan life, the baker's dress and prosperity",
+     "ncert_sections": "Part I, 'A Baker from Goa' (bread in Goan life, the kabai, accounts and prosperity)",
+     "concepts": [
+      {
+       "concept_tag": "bread-in-goan-occasions",
+       "learning_objective": "Students will relate bread items such as the bol, cakes and bolinhas to Goan occasions and festivals."
+      },
+      {
+       "concept_tag": "pader-dress-kabai",
+       "learning_objective": "Students will describe the baker's dress in Portuguese days and in the author's childhood."
+      },
+      {
+       "concept_tag": "baker-accounts-prosperity",
+       "learning_objective": "Students will interpret how the baker collected his bills and why baking was considered profitable."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH05-T3",
+     "topic_number": 3,
+     "title": "Coorg: the land and its people",
+     "ncert_sections": "Part II, 'Coorg' (location, climate, the Kodavus and their traditions)",
+     "concepts": [
+      {
+       "concept_tag": "coorg-location-climate",
+       "learning_objective": "Students will state the location, landscape and best season to visit Coorg."
+      },
+      {
+       "concept_tag": "kodavu-origin-theories",
+       "learning_objective": "Students will explain the Greek and Arab theories about the origin of the Kodavus."
+      },
+      {
+       "concept_tag": "coorgi-valour-hospitality",
+       "learning_objective": "Students will identify evidence of the martial tradition and hospitality of the people of Coorg."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH05-T4",
+     "topic_number": 4,
+     "title": "Coorg: river, wildlife, adventure and sights",
+     "ncert_sections": "Part II, 'Coorg' (Kaveri, wildlife, adventure sports, Brahmagiri, Nisargadhama, Bylakuppe)",
+     "concepts": [
+      {
+       "concept_tag": "kaveri-and-wildlife",
+       "learning_objective": "Students will describe the river Kaveri and the birds and animals found in Coorg."
+      },
+      {
+       "concept_tag": "coorg-adventure-sports",
+       "learning_objective": "Students will explain how Coorg's adventure sports attract even laidback visitors."
+      },
+      {
+       "concept_tag": "coorg-places-to-see",
+       "learning_objective": "Students will identify sights such as the Brahmagiri hills, Nisargadhama and Bylakuppe."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH05-T5",
+     "topic_number": 5,
+     "title": "Tea from Assam: the journey and the legends of tea",
+     "ncert_sections": "Part III, 'Tea from Assam' (the train journey, legends and history of tea)",
+     "concepts": [
+      {
+       "concept_tag": "journey-to-tea-country",
+       "learning_objective": "Students will describe the train journey and the two boys' different reactions to the tea country."
+      },
+      {
+       "concept_tag": "legends-of-tea",
+       "learning_objective": "Students will retell the Chinese and Indian legends about the discovery of tea."
+      },
+      {
+       "concept_tag": "history-of-tea",
+       "learning_objective": "Students will recall facts about the early history and spread of tea."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH05-T6",
+     "topic_number": 6,
+     "title": "Tea from Assam: the Dhekiabari Tea Estate",
+     "ncert_sections": "Part III, 'Tea from Assam' (arrival at Mariani and the tea estate)",
+     "concepts": [
+      {
+       "concept_tag": "tea-estate-scene",
+       "learning_objective": "Students will interpret the description of the tea estate and the work of the tea-pluckers."
+      },
+      {
+       "concept_tag": "second-flush-period",
+       "learning_objective": "Students will explain what the second-flush period is and why it matters."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH05-T7",
+     "topic_number": 7,
+     "title": "Vocabulary and language work from the chapter",
+     "ncert_sections": "Glossary; Collocations; compound words; -ing and -ed adjectives",
+     "concepts": [
+      {
+       "concept_tag": "chapter-word-meanings",
+       "learning_objective": "Students will give the meanings of words glossed in the chapter as used in context."
+      },
+      {
+       "concept_tag": "collocations",
+       "learning_objective": "Students will identify words that commonly go together (collocations)."
+      },
+      {
+       "concept_tag": "compound-words-and-participle-adjectives",
+       "learning_objective": "Students will use verb-particle compound words and -ing/-ed adjectives correctly."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEFF1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Mijbil the Otter",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jeff106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEFF1-CH06-T1",
+     "topic_number": 1,
+     "title": "Maxwell's plan and the long wait at Basra",
+     "ncert_sections": "Before You Read; Part I",
+     "concepts": [
+      {
+       "concept_tag": "otter-experiment-camusfearna",
+       "learning_objective": "Explain why Maxwell wanted to keep an otter and why he thought Camusfearna suited the experiment."
+      },
+      {
+       "concept_tag": "waiting-at-basra",
+       "learning_objective": "Recall the events at Basra that delayed Maxwell and led to his getting the otter."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH06-T2",
+     "topic_number": 2,
+     "title": "Mijbil's arrival, naming and early days",
+     "ncert_sections": "Part II",
+     "concepts": [
+      {
+       "concept_tag": "mijbil-arrival-and-naming",
+       "learning_objective": "Describe Mijbil's appearance and early behaviour, and why his species was named Maxwell's otter."
+      },
+      {
+       "concept_tag": "otter-love-of-water",
+       "learning_objective": "Interpret what Mijbil's behaviour in the bathroom reveals about otters and water."
+      },
+      {
+       "concept_tag": "mijbil-at-play",
+       "learning_objective": "Analyse how Maxwell's description of Mij's play shows the otter's skill and intelligence."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH06-T3",
+     "topic_number": 3,
+     "title": "The journey from Basra: the box and the aircraft",
+     "ncert_sections": "Part III",
+     "concepts": [
+      {
+       "concept_tag": "journey-arrangements",
+       "learning_objective": "Recall the arrangements Maxwell had to make to fly Mij from Basra to London."
+      },
+      {
+       "concept_tag": "box-ordeal",
+       "learning_objective": "Interpret Mij's struggle in the box and Maxwell's rush to the airport."
+      },
+      {
+       "concept_tag": "scene-on-the-aircraft",
+       "learning_objective": "Evaluate the events on the aircraft and the role of the air hostess."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH06-T4",
+     "topic_number": 4,
+     "title": "Mij in London: games, walks and Londoners' guesses",
+     "ncert_sections": "Part IV",
+     "concepts": [
+      {
+       "concept_tag": "ping-pong-suitcase-game",
+       "learning_objective": "Describe the game Mij invented with the ping-pong ball and the damaged suitcase."
+      },
+      {
+       "concept_tag": "compulsive-habits",
+       "learning_objective": "Explain Mij's compulsive habits on walks and how Maxwell compares them to children's rituals."
+      },
+      {
+       "concept_tag": "londoners-guesses",
+       "learning_objective": "Analyse the Londoners' guesses about Mij and the humour in Maxwell's account of them."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH06-T5",
+     "topic_number": 5,
+     "title": "Language work: would and used to, noun modifiers, quantity phrases",
+     "ncert_sections": "Thinking about Language I, II, III",
+     "concepts": [
+      {
+       "concept_tag": "would-and-used-to",
+       "learning_objective": "Distinguish the use of would and used to for repeated past actions and past states."
+      },
+      {
+       "concept_tag": "noun-modifiers",
+       "learning_objective": "Identify nouns, proper nouns and adjectives used as modifiers before a noun."
+      },
+      {
+       "concept_tag": "quantity-phrases",
+       "learning_objective": "Use phrases such as a cloud of and a gust of to express quantities of uncountable nouns."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEFF1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Madam Rides the Bus",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jeff107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEFF1-CH07-T1",
+     "topic_number": 1,
+     "title": "Valli's fascination with the bus and her secret plan",
+     "ncert_sections": "Section I",
+     "concepts": [
+      {
+       "concept_tag": "valli-curiosity-and-wish",
+       "learning_objective": "Explain how Valli's curiosity about the street and the bus grew into an overwhelming desire to ride it."
+      },
+      {
+       "concept_tag": "gathering-journey-details",
+       "learning_objective": "Describe how Valli gathered the facts of the journey and used them to plan a return trip."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH07-T2",
+     "topic_number": 2,
+     "title": "Boarding the bus: the conductor and the passengers",
+     "ncert_sections": "Section II",
+     "concepts": [
+      {
+       "concept_tag": "conductor-humour-madam",
+       "learning_objective": "Explain why the jolly conductor teases Valli by calling her 'madam'."
+      },
+      {
+       "concept_tag": "valli-asserts-independence",
+       "learning_objective": "Analyse how Valli insists on being treated as a grown-up by the conductor and the passengers."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH07-T3",
+     "topic_number": 3,
+     "title": "Saving the fare and the journey to town",
+     "ncert_sections": "Section III",
+     "concepts": [
+      {
+       "concept_tag": "saving-and-self-control",
+       "learning_objective": "Describe how Valli saved sixty paise and resisted temptations to do so."
+      },
+      {
+       "concept_tag": "sights-on-the-way-to-town",
+       "learning_objective": "Recall the sights Valli enjoyed on the way to town, including the running cow."
+      },
+      {
+       "concept_tag": "staying-on-the-bus",
+       "learning_objective": "Explain why Valli stayed on the bus in town and refused the conductor's offer of a drink."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH07-T4",
+     "topic_number": 4,
+     "title": "The return journey and the dead cow",
+     "ncert_sections": "Section IV",
+     "concepts": [
+      {
+       "concept_tag": "encounter-with-death",
+       "learning_objective": "Interpret how the sight of the dead cow introduces Valli to the reality of death."
+      },
+      {
+       "concept_tag": "changed-mood-on-return",
+       "learning_objective": "Explain how Valli's mood and behaviour change on the return journey."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH07-T5",
+     "topic_number": 5,
+     "title": "Coming home: knowing and understanding",
+     "ncert_sections": "Section IV",
+     "concepts": [
+      {
+       "concept_tag": "secret-kept-at-home",
+       "learning_objective": "Describe how Valli returns home and keeps her journey a secret from the grown-ups."
+      },
+      {
+       "concept_tag": "knowing-versus-understanding",
+       "learning_objective": "Interpret the mother's remark about knowing and understanding in the light of Valli's day."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH07-T6",
+     "topic_number": 6,
+     "title": "Valli's character, the child's point of view and vocabulary",
+     "ncert_sections": "Sections I-IV",
+     "concepts": [
+      {
+       "concept_tag": "valli-character-traits",
+       "learning_objective": "Identify Valli's character traits from her words and actions."
+      },
+      {
+       "concept_tag": "child-point-of-view",
+       "learning_objective": "Recognise how the story presents sights from an eight-year-old's point of view."
+      },
+      {
+       "concept_tag": "story-vocabulary",
+       "learning_objective": "Use the meanings of words glossed in the story."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH07-T7",
+     "topic_number": 7,
+     "title": "Poem: The Tale of Custard the Dragon (Ogden Nash)",
+     "ncert_sections": "Poem",
+     "concepts": [
+      {
+       "concept_tag": "custard-cowardice-and-courage",
+       "learning_objective": "Explain how the 'cowardly' Custard proves the bravest when the pirate attacks."
+      },
+      {
+       "concept_tag": "ballad-humour-and-devices",
+       "learning_objective": "Identify the ballad form, humour and poetic devices used in the poem."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEFF1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "The Sermon at Benares",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jeff108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEFF1-CH08-T1",
+     "topic_number": 1,
+     "title": "Siddhartha's search for enlightenment",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "four-sights-and-renunciation",
+       "learning_objective": "Recall how the sights of sickness, age, death and a begging monk led Prince Siddhartha to seek enlightenment."
+      },
+      {
+       "concept_tag": "enlightenment-and-first-sermon",
+       "learning_objective": "Explain how Siddhartha became the Buddha and where he preached his first sermon."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH08-T2",
+     "topic_number": 2,
+     "title": "Kisa Gotami's grief and the mustard-seed task",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kisa-gotamis-first-search",
+       "learning_objective": "Describe Kisa Gotami's first search for medicine and how her neighbours reacted."
+      },
+      {
+       "concept_tag": "mustard-seed-condition",
+       "learning_objective": "Explain the condition the Buddha set for the mustard-seed and the purpose behind it."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH08-T3",
+     "topic_number": 3,
+     "title": "Kisa Gotami's realisation",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lights-of-the-city-image",
+       "learning_objective": "Interpret the image of the flickering city lights as a symbol of human life."
+      },
+      {
+       "concept_tag": "selfishness-in-grief",
+       "learning_objective": "Explain why Kisa Gotami calls herself selfish in her grief and what she comes to understand."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH08-T4",
+     "topic_number": 4,
+     "title": "The Buddha's sermon on death and grief",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "inevitability-of-death-similes",
+       "learning_objective": "Interpret the similes the Buddha uses to show that all mortals are subject to death."
+      },
+      {
+       "concept_tag": "futility-of-lamentation",
+       "learning_objective": "Explain why the Buddha says lamentation brings no peace and how peace of mind is obtained."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH08-T5",
+     "topic_number": 5,
+     "title": "Language and style of the text",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "archaic-expressions",
+       "learning_objective": "Rephrase the old-fashioned words and expressions of the text in current English."
+      },
+      {
+       "concept_tag": "semicolons-joining-clauses",
+       "learning_objective": "Explain how semicolons join closely related clauses and split such a sentence into simple sentences."
+      },
+      {
+       "concept_tag": "chapter-vocabulary",
+       "learning_objective": "Recall the meanings of key words glossed in the chapter."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH08-T6",
+     "topic_number": 6,
+     "title": "Grief in modern texts compared with the sermon",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "feelings-of-grief",
+       "learning_objective": "Identify the feelings of grief and the ways of helping a grieving person described in the guide."
+      },
+      {
+       "concept_tag": "good-grief-etzioni",
+       "learning_objective": "Compare Amitai Etzioni's experience of grief in 'Good Grief' with the Buddha's teaching."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEFF1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "The Proposal",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jeff109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEFF1-CH09-T1",
+     "topic_number": 1,
+     "title": "The playwright, the genre and the theme of the play",
+     "ncert_sections": "Introductory note to the play",
+     "concepts": [
+      {
+       "concept_tag": "chekhov-and-farce",
+       "learning_objective": "Students will identify Anton Chekhov as the author and explain why the play is a one-act farce."
+      },
+      {
+       "concept_tag": "marriage-and-wealth-theme",
+       "learning_objective": "Students will explain the play's theme of wealthy families seeking marriages that make economic sense."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH09-T2",
+     "topic_number": 2,
+     "title": "Lomov's arrival and Chubukov's response to the proposal",
+     "ncert_sections": "Opening scene: Lomov and Chubukov",
+     "concepts": [
+      {
+       "concept_tag": "chubukov-suspicion-and-hypocrisy",
+       "learning_objective": "Students will analyse how Chubukov's asides and later conduct reveal the insincerity of his affection for Lomov."
+      },
+      {
+       "concept_tag": "lomov-nervous-proposal",
+       "learning_objective": "Students will describe how Lomov's dress and nervous behaviour reveal his anxiety about proposing."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH09-T3",
+     "topic_number": 3,
+     "title": "Lomov's soliloquy: his reasons for marrying and his health",
+     "ncert_sections": "Lomov alone on stage",
+     "concepts": [
+      {
+       "concept_tag": "lomov-reasons-for-marriage",
+       "learning_objective": "Students will explain the practical reasons for which Lomov decides to marry Natalya."
+      },
+      {
+       "concept_tag": "lomov-hypochondria",
+       "learning_objective": "Students will identify the ailments Lomov complains of and how they make him a comic figure."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH09-T4",
+     "topic_number": 4,
+     "title": "The quarrel over Oxen Meadows",
+     "ncert_sections": "Lomov and Natalya; Chubukov joins the quarrel",
+     "concepts": [
+      {
+       "concept_tag": "oxen-meadows-dispute",
+       "learning_objective": "Students will explain each side's claim to Oxen Meadows and why the dispute is petty."
+      },
+      {
+       "concept_tag": "insults-and-pride",
+       "learning_objective": "Students will analyse how pride and family insults turn the dispute into an absurd quarrel."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH09-T5",
+     "topic_number": 5,
+     "title": "The quarrel over Guess and Squeezer, and the ending",
+     "ncert_sections": "Lomov's return; the dogs; the engagement",
+     "concepts": [
+      {
+       "concept_tag": "guess-squeezer-quarrel",
+       "learning_objective": "Students will recall the details and arguments of the quarrel over the dogs Guess and Squeezer."
+      },
+      {
+       "concept_tag": "ironic-ending",
+       "learning_objective": "Students will interpret the ironic ending in which the engaged couple go on quarrelling."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEFF1-CH09-T6",
+     "topic_number": 6,
+     "title": "Language: reported speech, phrases and translated expressions",
+     "ncert_sections": "Thinking about Language I, II and III",
+     "concepts": [
+      {
+       "concept_tag": "reported-speech",
+       "learning_objective": "Students will convert sentences from the play from direct speech into reported speech."
+      },
+      {
+       "concept_tag": "phrases-and-idioms",
+       "learning_objective": "Students will explain the meaning of phrases from the play such as 'my foot's gone to sleep'."
+      },
+      {
+       "concept_tag": "translated-expressions",
+       "learning_objective": "Students will recognise expressions in the play that reflect its Russian original rather than idiomatic English."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

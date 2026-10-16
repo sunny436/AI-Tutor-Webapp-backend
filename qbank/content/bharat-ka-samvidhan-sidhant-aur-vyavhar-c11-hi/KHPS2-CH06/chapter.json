@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KHPS2-CH06",
+ "title": "न्यायपालिका",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPS2-CH06-T1",
+   "topic_number": 1,
+   "title": "स्वतंत्र न्यायपालिका की आवश्यकता और उसकी स्वतंत्रता",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "kanoon-ka-shasan",
+     "learning_objective": "कानून के शासन की रक्षा में न्यायपालिका की मुख्य भूमिका को समझाना।"
+    },
+    {
+     "concept_tag": "nyayapalika-ki-swatantrata",
+     "learning_objective": "न्यायपालिका की स्वतंत्रता के अर्थ और उसे सुनिश्चित करने वाले संवैधानिक उपायों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPS2-CH06-T2",
+   "topic_number": 2,
+   "title": "न्यायाधीशों की नियुक्ति और उन्हें पद से हटाना",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "nyayadhishon-ki-niyukti",
+     "learning_objective": "मुख्य न्यायाधीश तथा अन्य न्यायाधीशों की नियुक्ति की प्रक्रिया और न्यायाधीश-मंडल के सिद्धांत को समझाना।"
+    },
+    {
+     "concept_tag": "nyayadhish-ko-hatana",
+     "learning_objective": "न्यायाधीशों को हटाने की कठिन प्रक्रिया और विशेष बहुमत की शर्त का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPS2-CH06-T3",
+   "topic_number": 3,
+   "title": "न्यायपालिका की संरचना",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "ekikrit-nyayik-vyavastha",
+     "learning_objective": "भारत की एकीकृत और पिरामिडनुमा न्यायिक व्यवस्था तथा विभिन्न स्तरों के न्यायालयों के कार्य बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPS2-CH06-T4",
+   "topic_number": 4,
+   "title": "सर्वोच्च न्यायालय का क्षेत्राधिकार",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "maulik-kshetradhikar",
+     "learning_objective": "संघ और राज्यों के विवादों में सर्वोच्च न्यायालय के मौलिक क्षेत्राधिकार को समझाना।"
+    },
+    {
+     "concept_tag": "apiliy-aur-salahkari",
+     "learning_objective": "अपीलीय और सलाहकारी क्षेत्राधिकार में अंतर करना।"
+    },
+    {
+     "concept_tag": "rit-kshetradhikar",
+     "learning_objective": "मौलिक अधिकारों की रक्षा हेतु रिट क्षेत्राधिकार को लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPS2-CH06-T5",
+   "topic_number": 5,
+   "title": "न्यायिक सक्रियता",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "janhit-yachika",
+     "learning_objective": "जनहित याचिका के उद्भव और उसकी विशेषताओं को समझाना।"
+    },
+    {
+     "concept_tag": "nyayik-sakriyata-ke-prabhav",
+     "learning_objective": "न्यायिक सक्रियता के सकारात्मक और नकारात्मक प्रभावों का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPS2-CH06-T6",
+   "topic_number": 6,
+   "title": "न्यायपालिका और अधिकार",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "rit-aur-adhikar-raksha",
+     "learning_objective": "अनुच्छेद 32 और 226 के अंतर्गत अधिकारों की रक्षा के उपाय बताना।"
+    },
+    {
+     "concept_tag": "nyayik-punravalokan",
+     "learning_objective": "न्यायिक पुनरावलोकन की शक्ति के अर्थ, आधार और विस्तार का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPS2-CH06-T7",
+   "topic_number": 7,
+   "title": "न्यायपालिका और संसद",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "mool-dhancha",
+     "learning_objective": "केशवानंद भारती मामले और संविधान के मूल ढाँचे के सिद्धांत को समझाना।"
+    },
+    {
+     "concept_tag": "shakti-santulan",
+     "learning_objective": "संसद और न्यायपालिका के बीच शक्ति-संतुलन और टकराव के मुद्दों का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

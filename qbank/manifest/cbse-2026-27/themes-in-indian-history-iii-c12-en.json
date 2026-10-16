@@ -1,0 +1,605 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "themes-in-indian-history-iii-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "history",
+  "language": "english",
+  "title": "Themes in Indian History-III",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lehs3"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEHS3-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Colonialism and the Countryside: Exploring Official Archives",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lehs301.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEHS3-CH01-T1",
+     "topic_number": 1,
+     "title": "Bengal and the Permanent Settlement",
+     "ncert_sections": "1.1, 1.2, 1.3",
+     "concepts": [
+      {
+       "concept_tag": "permanent-settlement-objectives",
+       "learning_objective": "Explain why the Company introduced the Permanent Settlement in 1793 and how it defined the zamindar's role."
+      },
+      {
+       "concept_tag": "zamindar-revenue-default",
+       "learning_objective": "Analyse why zamindars repeatedly failed to pay the fixed revenue demand in the early decades of the Permanent Settlement."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH01-T2",
+     "topic_number": 2,
+     "title": "The rise of the jotedars and the resistance of zamindars",
+     "ncert_sections": "1.4, 1.5",
+     "concepts": [
+      {
+       "concept_tag": "rise-of-jotedars",
+       "learning_objective": "Describe how jotedars consolidated their power in the villages and undermined zamindari authority."
+      },
+      {
+       "concept_tag": "zamindar-survival-strategies",
+       "learning_objective": "Explain the strategies, such as fictitious sales, by which zamindars retained control of their estates."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH01-T3",
+     "topic_number": 3,
+     "title": "The Fifth Report",
+     "ncert_sections": "1.6",
+     "concepts": [
+      {
+       "concept_tag": "fifth-report-origins",
+       "learning_objective": "Explain why and how the Fifth Report on the East India Company's administration came to be prepared in 1813."
+      },
+      {
+       "concept_tag": "reading-official-reports",
+       "learning_objective": "Evaluate the limitations of the Fifth Report as evidence for the history of rural Bengal."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH01-T4",
+     "topic_number": 4,
+     "title": "The Paharias of the Rajmahal hills",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "paharia-livelihood",
+       "learning_objective": "Describe the forest-based livelihood and shifting cultivation of the Paharias."
+      },
+      {
+       "concept_tag": "paharia-colonial-relations",
+       "learning_objective": "Analyse the relations of the Paharias with plains people and the British, from raids to pacification."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH01-T5",
+     "topic_number": 5,
+     "title": "The Santhals: pioneer settlers",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "santhal-settlement-damin-i-koh",
+       "learning_objective": "Explain how and why the Santhals were settled in the Damin-i-Koh and how their settlements expanded."
+      },
+      {
+       "concept_tag": "santhal-revolt",
+       "learning_objective": "Explain the causes and consequences of the Santhal Revolt of 1855-56."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH01-T6",
+     "topic_number": 6,
+     "title": "The accounts of Buchanan",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "buchanan-company-agenda",
+       "learning_objective": "Explain how Buchanan's surveys served the commercial interests of the East India Company."
+      },
+      {
+       "concept_tag": "buchanan-idea-of-development",
+       "learning_objective": "Interpret Buchanan's descriptions to evaluate his idea of progress and its conflict with forest dwellers' lives."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH01-T7",
+     "topic_number": 7,
+     "title": "A revolt in the Bombay Deccan and the ryotwari system",
+     "ncert_sections": "3.1, 3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "deccan-revolt-1875",
+       "learning_objective": "Describe the course and pattern of the 1875 revolt of the Deccan ryots against sahukars."
+      },
+      {
+       "concept_tag": "ryotwari-settlement",
+       "learning_objective": "Explain the ryotwari settlement and the Ricardian ideas behind it."
+      },
+      {
+       "concept_tag": "peasant-indebtedness",
+       "learning_objective": "Explain how high revenue demand, falling prices and famine pushed Deccan peasants into debt."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH01-T8",
+     "topic_number": 8,
+     "title": "Cotton boom, credit crisis and the Deccan Riots Commission",
+     "ncert_sections": "3.4, 3.5, 3.6, 4",
+     "concepts": [
+      {
+       "concept_tag": "cotton-boom-and-credit",
+       "learning_objective": "Explain how the American Civil War created a cotton boom in the Deccan and how credit dried up after it."
+      },
+      {
+       "concept_tag": "moneylender-ryot-relations",
+       "learning_objective": "Analyse how moneylenders violated customary norms and used bonds and laws against the ryots."
+      },
+      {
+       "concept_tag": "deccan-riots-commission",
+       "learning_objective": "Evaluate the Deccan Riots Commission report as an official source on peasant unrest."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEHS3-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Rebels and the Raj: The Revolt of 1857 and Its Representations",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lehs302.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEHS3-CH02-T1",
+     "topic_number": 1,
+     "title": "Pattern of the Uprising",
+     "ncert_sections": "1, 1.1, 1.2, 1.3",
+     "concepts": [
+      {
+       "concept_tag": "mutiny-pattern",
+       "learning_objective": "Describe the common sequence of actions through which mutinies broke out and widened into a rebellion in 1857."
+      },
+      {
+       "concept_tag": "rebel-communication-planning",
+       "learning_objective": "Interpret the evidence of communication, planning and collective decision-making among the sepoys."
+      },
+      {
+       "concept_tag": "leadership-of-revolt",
+       "learning_objective": "Explain how pre-British rulers and local leaders came to lead the revolt in different regions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH02-T2",
+     "topic_number": 2,
+     "title": "Rumours and Prophecies",
+     "ncert_sections": "1.4, 1.5",
+     "concepts": [
+      {
+       "concept_tag": "greased-cartridge-rumour",
+       "learning_objective": "Identify the rumour about the greased cartridges of the Enfield rifle."
+      },
+      {
+       "concept_tag": "other-rumours-and-omens",
+       "learning_objective": "Recall the other rumours, prophecies and omens such as the Plassey centenary prophecy and the chapattis."
+      },
+      {
+       "concept_tag": "why-rumours-believed",
+       "learning_objective": "Analyse why rumours spread in the context of British reform policies, annexations and missionary activity."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH02-T3",
+     "topic_number": 3,
+     "title": "Awadh in Revolt",
+     "ncert_sections": "2.1, 2.2, 2.3",
+     "concepts": [
+      {
+       "concept_tag": "annexation-of-awadh",
+       "learning_objective": "Explain the stages of the British takeover of Awadh from the Subsidiary Alliance of 1801 to annexation in 1856."
+      },
+      {
+       "concept_tag": "taluqdars-and-summary-settlement",
+       "learning_objective": "Analyse how the disarming of taluqdars and the Summary Settlement of 1856 turned taluqdars and peasants against British rule."
+      },
+      {
+       "concept_tag": "sepoys-and-peasant-links",
+       "learning_objective": "Explain the links between sepoy grievances and the rural world of Awadh."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH02-T4",
+     "topic_number": 4,
+     "title": "What the Rebels Wanted",
+     "ncert_sections": "3, 3.1, 3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "rebel-sources-and-proclamations",
+       "learning_objective": "Evaluate the limits of sources on the rebel viewpoint and interpret rebel proclamations such as the Azamgarh Proclamation."
+      },
+      {
+       "concept_tag": "vision-of-unity",
+       "learning_objective": "Explain how rebel proclamations appealed to Hindu-Muslim unity across caste and creed."
+      },
+      {
+       "concept_tag": "alternative-power",
+       "learning_objective": "Analyse the rebels' attack on symbols of oppression and their attempts to set up an alternative structure of power."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH02-T5",
+     "topic_number": 5,
+     "title": "Repression",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "repressive-laws",
+       "learning_objective": "State the special laws passed by the British in 1857 to suppress the rebellion."
+      },
+      {
+       "concept_tag": "reconquest-and-popular-resistance",
+       "learning_objective": "Explain why the British reconquest of Delhi and the Gangetic plain was slow and difficult."
+      },
+      {
+       "concept_tag": "breaking-rebel-unity",
+       "learning_objective": "Explain how the British used promises of land to break the unity of landholders and peasants."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH02-T6",
+     "topic_number": 6,
+     "title": "Images of the Revolt",
+     "ncert_sections": "5, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6",
+     "concepts": [
+      {
+       "concept_tag": "british-images-of-revolt",
+       "learning_objective": "Interpret how British paintings, cartoons and prints celebrated saviours and justified vengeance and repression."
+      },
+      {
+       "concept_tag": "nationalist-imageries",
+       "learning_objective": "Explain how nationalist art and literature presented 1857 and its leaders."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEHS3-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Mahatma Gandhi and the Nationalist Movement: Civil Disobedience and Beyond",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lehs303.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEHS3-CH03-T1",
+     "topic_number": 1,
+     "title": "A Leader Announces Himself",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "south-africa-and-return",
+       "learning_objective": "Describe how Gandhiji's years in South Africa and the India of 1915 shaped his entry into Indian politics."
+      },
+      {
+       "concept_tag": "bhu-speech-1916",
+       "learning_objective": "Explain why Gandhiji's Banaras Hindu University speech of February 1916 was both a statement of fact and a statement of intent."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH03-T2",
+     "topic_number": 2,
+     "title": "The Making and Unmaking of Non-cooperation",
+     "ncert_sections": "2, 2.1",
+     "concepts": [
+      {
+       "concept_tag": "champaran-kheda-rowlatt",
+       "learning_objective": "Trace how the localised struggles of 1917-18 and the Rowlatt Satyagraha made Gandhiji a national leader."
+      },
+      {
+       "concept_tag": "non-cooperation-khilafat",
+       "learning_objective": "Explain the aims of Non-cooperation and the reasons for joining it with the Khilafat Movement."
+      },
+      {
+       "concept_tag": "chauri-chaura-withdrawal",
+       "learning_objective": "Analyse why Gandhiji called off Non-cooperation after the Chauri Chaura incident of February 1922."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH03-T3",
+     "topic_number": 3,
+     "title": "A People's Leader",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "dress-and-charkha",
+       "learning_objective": "Explain how Gandhiji's dress and the charkha helped him identify with the labouring poor."
+      },
+      {
+       "concept_tag": "rumours-of-the-mahatma",
+       "learning_objective": "Interpret what the rumours about Gandhiji's powers reveal about how peasants saw him."
+      },
+      {
+       "concept_tag": "organisation-and-followers",
+       "learning_objective": "Describe how Congress organisation, followers and supporters broadened Gandhian nationalism."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH03-T4",
+     "topic_number": 4,
+     "title": "The Salt Satyagraha: Purna Swaraj and Dandi",
+     "ncert_sections": "3, 3.1",
+     "concepts": [
+      {
+       "concept_tag": "lahore-purna-swaraj",
+       "learning_objective": "State the significance of the Lahore Congress of 1929 and the observance of Independence Day in 1930."
+      },
+      {
+       "concept_tag": "salt-monopoly-dandi",
+       "learning_objective": "Explain why Gandhiji chose the salt monopoly as the target of the Dandi March."
+      },
+      {
+       "concept_tag": "civil-disobedience-spread",
+       "learning_objective": "Compare the wider streams of protest during Civil Disobedience with those of Non-cooperation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH03-T5",
+     "topic_number": 5,
+     "title": "Dialogues: Round Table Conferences and Separate Electorates",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "salt-march-significance",
+       "learning_objective": "State why the Salt March was a notable event in the national movement."
+      },
+      {
+       "concept_tag": "round-table-gandhi-irwin",
+       "learning_objective": "Explain the Gandhi-Irwin Pact and why the Round Table dialogues remained inconclusive."
+      },
+      {
+       "concept_tag": "separate-electorates-debate",
+       "learning_objective": "Compare the views of Gandhiji and Ambedkar on separate electorates for the Depressed Classes."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH03-T6",
+     "topic_number": 6,
+     "title": "Quit India and the Last Heroic Days",
+     "ncert_sections": "4, 5",
+     "concepts": [
+      {
+       "concept_tag": "cripps-and-quit-india",
+       "learning_objective": "Describe the failure of the Cripps Mission and the mass character of the Quit India Movement."
+      },
+      {
+       "concept_tag": "road-to-partition",
+       "learning_objective": "Explain how the 1946 elections and Direct Action Day led to political polarisation and Partition."
+      },
+      {
+       "concept_tag": "gandhis-last-days",
+       "learning_objective": "Evaluate Gandhiji's work for communal harmony after Independence and the response to his death."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH03-T7",
+     "topic_number": 7,
+     "title": "Knowing Gandhi: Sources for the Nationalist Movement",
+     "ncert_sections": "6.1, 6.2, 6.3, 6.4",
+     "concepts": [
+      {
+       "concept_tag": "letters-and-autobiographies",
+       "learning_objective": "Analyse what private letters and autobiographies reveal and the care needed in reading them."
+      },
+      {
+       "concept_tag": "fortnightly-reports",
+       "learning_objective": "Interpret the Fortnightly Reports of the Home Department as a colonial source."
+      },
+      {
+       "concept_tag": "newspapers-as-sources",
+       "learning_objective": "Explain why contemporary newspapers are useful but not unprejudiced sources."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEHS3-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Framing the Constitution: The Beginning of a New Era",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lehs304.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEHS3-CH04-T1",
+     "topic_number": 1,
+     "title": "A Tumultuous Time and the Making of the Constituent Assembly",
+     "ncert_sections": "1, 1.1",
+     "concepts": [
+      {
+       "concept_tag": "tumultuous-background",
+       "learning_objective": "Describe the political situation of 1945-47, including popular upsurges, Partition violence and the problem of the princely states, in which the Constituent Assembly met."
+      },
+      {
+       "concept_tag": "making-of-the-assembly",
+       "learning_objective": "Explain how the members of the Constituent Assembly were chosen and why the Congress dominated it."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH04-T2",
+     "topic_number": 2,
+     "title": "The Dominant Voices",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "dominant-members",
+       "learning_objective": "Identify the roles played by Nehru, Patel, Rajendra Prasad and Ambedkar in the Constituent Assembly."
+      },
+      {
+       "concept_tag": "drafting-and-advisers",
+       "learning_objective": "Recognise the members of the Drafting Committee and the civil servants who assisted the framing of the Constitution."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH04-T3",
+     "topic_number": 3,
+     "title": "The Vision of the Constitution: The Objectives Resolution",
+     "ncert_sections": "2",
+     "concepts": [
+      {
+       "concept_tag": "objectives-resolution",
+       "learning_objective": "State the ideals proclaimed in the Objectives Resolution moved by Nehru on 13 December 1946."
+      },
+      {
+       "concept_tag": "learning-not-copying",
+       "learning_objective": "Interpret Nehru's argument that India would learn from other revolutions and democracies without merely copying them."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH04-T4",
+     "topic_number": 4,
+     "title": "The Will of the People",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "lahiri-british-shadow",
+       "learning_objective": "Explain Somnath Lahiri's criticism that the Constituent Assembly worked under the shadow of British power."
+      },
+      {
+       "concept_tag": "will-of-the-people",
+       "learning_objective": "Explain Nehru's claim that the Assembly drew its strength from the will of the people and the social struggles behind it."
+      },
+      {
+       "concept_tag": "colonial-constitutional-reforms",
+       "learning_objective": "Distinguish the colonial Acts of 1909, 1919 and 1935 from the constitution-making of 1946-49."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH04-T5",
+     "topic_number": 5,
+     "title": "Defining Rights: The Problem with Separate Electorates",
+     "ncert_sections": "3, 3.1",
+     "concepts": [
+      {
+       "concept_tag": "separate-electorates-demand",
+       "learning_objective": "Describe B. Pocker Bahadur's case for continuing separate electorates for Muslims."
+      },
+      {
+       "concept_tag": "arguments-against-separate-electorates",
+       "learning_objective": "Analyse the arguments of Patel, Pant and others against separate electorates and their concern for a unified nation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH04-T6",
+     "topic_number": 6,
+     "title": "Protection for the Poor, Tribals and Depressed Castes",
+     "ncert_sections": "3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "economic-minorities",
+       "learning_objective": "Explain N.G. Ranga's view that the real minorities were the poor and downtrodden masses."
+      },
+      {
+       "concept_tag": "tribal-protection",
+       "learning_objective": "Describe Jaipal Singh's arguments for protecting tribals through reservation of seats."
+      },
+      {
+       "concept_tag": "depressed-castes-rights",
+       "learning_objective": "Explain the demands of Depressed Caste members and the measures finally recommended by the Assembly."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH04-T7",
+     "topic_number": 7,
+     "title": "The Powers of the State",
+     "ncert_sections": "4, 4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "division-of-powers",
+       "learning_objective": "Describe the three lists of subjects, Article 356 and the fiscal provisions of the Constitution."
+      },
+      {
+       "concept_tag": "provincial-rights-argument",
+       "learning_objective": "Explain K. Santhanam's arguments for giving greater powers to the provinces."
+      },
+      {
+       "concept_tag": "strong-centre-argument",
+       "learning_objective": "Analyse why most members, especially after Partition, argued for a strong Centre."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEHS3-CH04-T8",
+     "topic_number": 8,
+     "title": "The Language of the Nation, Universal Franchise and Secularism",
+     "ncert_sections": "5, 5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "hindustani-composite-language",
+       "learning_objective": "Explain why Mahatma Gandhi wanted Hindustani, a composite language, to be the national language."
+      },
+      {
+       "concept_tag": "official-language-debate",
+       "learning_objective": "Describe the Hindi debate, the fears of non-Hindi speakers and the Language Committee's compromise formula."
+      },
+      {
+       "concept_tag": "franchise-and-secularism",
+       "learning_objective": "Evaluate universal adult franchise and the Indian idea of secularism as features of the Constitution."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

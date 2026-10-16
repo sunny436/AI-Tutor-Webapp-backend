@@ -1,0 +1,132 @@
+{
+ "chapter_id": "LHBO1-CH06",
+ "title": "विकास",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHBO1-CH06-T1",
+   "topic_number": 1,
+   "title": "जीवन की उत्पत्ति",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "jeevan-ki-utpatti-siddhant",
+     "learning_objective": "विद्यार्थी पैनस्पर्मिया, स्वतः जनन तथा ओपेरिन-हाल्डेन के रासायनिक विकास की परिकल्पना में अंतर कर सकेगा।"
+    },
+    {
+     "concept_tag": "miller-prayog",
+     "learning_objective": "विद्यार्थी मिलर के प्रयोग की परिस्थितियों और उसके परिणाम की व्याख्या कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH06-T2",
+   "topic_number": 2,
+   "title": "जीव-स्वरूप का विकास: एक सिद्धांत",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "vishesh-srishti-vad",
+     "learning_objective": "विद्यार्थी विशेष सृष्टिवाद की तीन मान्यताओं को पहचान सकेगा।"
+    },
+    {
+     "concept_tag": "prakritik-varan-darwin",
+     "learning_objective": "विद्यार्थी डार्विन के प्राकृतिक वरण तथा जनन योग्यता की अवधारणा समझा सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH06-T3",
+   "topic_number": 3,
+   "title": "विकास के प्रमाण",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "jeevashm-bhrun-praman",
+     "learning_objective": "विद्यार्थी जीवाश्मिकीय तथा भ्रूणीय प्रमाणों का महत्व और उनकी सीमाएँ बता सकेगा।"
+    },
+    {
+     "concept_tag": "samjat-samvriti-ang",
+     "learning_objective": "विद्यार्थी समजात तथा समवृत्ति अंगों के उदाहरण पहचानकर उन्हें अपसारी और अभिसारी विकास से जोड़ सकेगा।"
+    },
+    {
+     "concept_tag": "audyogik-melanikaran",
+     "learning_objective": "विद्यार्थी औद्योगिक मेलेनिनता तथा प्रतिरोधी जीवों के चयन को प्राकृतिक वरण के प्रमाण के रूप में समझा सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH06-T4",
+   "topic_number": 4,
+   "title": "अनुकूली विकिरण",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "anukuli-vikiran",
+     "learning_objective": "विद्यार्थी डार्विन की फिंचों तथा ऑस्ट्रेलियाई शिशुधानियों के उदाहरण से अनुकूली विकिरण समझा सकेगा।"
+    },
+    {
+     "concept_tag": "abhisari-vikas-shishudhani",
+     "learning_objective": "विद्यार्थी ऑस्ट्रेलियाई शिशुधानी और अपरास्तनियों में अभिसारी विकास पहचान सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH06-T5",
+   "topic_number": 5,
+   "title": "जैव विकास तथा विकास की क्रियाविधि",
+   "ncert_sections": "6.5, 6.6",
+   "concepts": [
+    {
+     "concept_tag": "yogyata-aur-varan",
+     "learning_objective": "विद्यार्थी समझा सकेगा कि योग्यता वंशागत लक्षणों पर आधारित है और प्रकृति योग्यता का वरण करती है।"
+    },
+    {
+     "concept_tag": "lamark-darwin-tulna",
+     "learning_objective": "विद्यार्थी लैमार्क के उपार्जित लक्षणों की वंशागति के विचार की डार्विनवाद से तुलना कर सकेगा।"
+    },
+    {
+     "concept_tag": "de-vries-utparivartan",
+     "learning_objective": "विद्यार्थी ह्यूगो डी व्रीज के उत्परिवर्तन सिद्धांत तथा साल्टेशन को डार्विन की विभिन्नताओं से अलग कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH06-T6",
+   "topic_number": 6,
+   "title": "हार्डी-वेनबर्ग सिद्धांत",
+   "ncert_sections": "6.7",
+   "concepts": [
+    {
+     "concept_tag": "hardy-weinberg-samikaran",
+     "learning_objective": "विद्यार्थी p² + 2pq + q² = 1 का उपयोग कर युग्मविकल्पी तथा जीनप्ररूप आवृत्तियाँ परिकलित कर सकेगा।"
+    },
+    {
+     "concept_tag": "santulan-prabhavit-karak",
+     "learning_objective": "विद्यार्थी आनुवंशिक संतुलन को प्रभावित करने वाले पाँच कारकों तथा संस्थापक प्रभाव को समझा सकेगा।"
+    },
+    {
+     "concept_tag": "varan-ke-prakar",
+     "learning_objective": "विद्यार्थी स्थायीकारी, दिशात्मक तथा विदारक प्राकृतिक वरण में अंतर कर सकेगा।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHBO1-CH06-T7",
+   "topic_number": 7,
+   "title": "विकास का संक्षिप्त विवरण तथा मानव का उद्भव",
+   "ncert_sections": "6.8, 6.9",
+   "concepts": [
+    {
+     "concept_tag": "vikas-ka-kram",
+     "learning_objective": "विद्यार्थी भूवैज्ञानिक काल में पादपों और कशेरुकियों के विकास का क्रम बता सकेगा।"
+    },
+    {
+     "concept_tag": "manav-vikas",
+     "learning_objective": "विद्यार्थी ड्रायोपिथेकस से होमो सेपियंस तक मानव विकास के चरणों तथा मस्तिष्क क्षमता की तुलना कर सकेगा।"
+    }
+   ]
+  }
+ ]
+}

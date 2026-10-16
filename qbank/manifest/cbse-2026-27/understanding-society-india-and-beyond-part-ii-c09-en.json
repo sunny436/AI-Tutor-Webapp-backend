@@ -1,0 +1,843 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "understanding-society-india-and-beyond-part-ii-c09-en",
+  "curriculum": "cbse",
+  "class_level": 9,
+  "subject_code": "social_science",
+  "language": "english",
+  "title": "Understanding Society India and Beyond PART-II",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "iest2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "IEST2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Oceans and Life",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST2-CH01-T1",
+     "topic_number": 1,
+     "title": "Ocean Relief and Submarine Features",
+     "ncert_sections": "Ocean Relief; Important submarine relief features",
+     "concepts": [
+      {
+       "concept_tag": "submarine-relief-features",
+       "learning_objective": "Identify the main features of the ocean floor such as the continental shelf, slope, abyssal plain, ridges and trenches."
+      },
+      {
+       "concept_tag": "seamounts-and-guyots",
+       "learning_objective": "Distinguish seamounts from guyots and explain how they are formed."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH01-T2",
+     "topic_number": 2,
+     "title": "Waves",
+     "ncert_sections": "Movement of Ocean Water: Waves",
+     "concepts": [
+      {
+       "concept_tag": "wave-anatomy",
+       "learning_objective": "Describe the cause of waves and the parts of a wave such as crest, trough and wavelength."
+      },
+      {
+       "concept_tag": "wave-erosion-landforms",
+       "learning_objective": "Explain how wave erosion forms caves, arches, stacks and stumps along a coast."
+      },
+      {
+       "concept_tag": "tsunamis",
+       "learning_objective": "Distinguish tsunamis from ordinary storm waves by their cause and effects."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH01-T3",
+     "topic_number": 3,
+     "title": "Tides",
+     "ncert_sections": "Tides; Spring Tides and Neap Tides",
+     "concepts": [
+      {
+       "concept_tag": "spring-and-neap-tides",
+       "learning_objective": "Explain how the relative positions of the Sun, Earth and Moon produce spring and neap tides."
+      },
+      {
+       "concept_tag": "uses-of-tides",
+       "learning_objective": "Explain the importance of tides for navigation, fishing and tidal energy."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH01-T4",
+     "topic_number": 4,
+     "title": "Ocean Currents",
+     "ncert_sections": "Ocean Currents",
+     "concepts": [
+      {
+       "concept_tag": "causes-of-ocean-currents",
+       "learning_objective": "State the factors, including the Coriolis force, that cause ocean currents."
+      },
+      {
+       "concept_tag": "warm-and-cold-currents",
+       "learning_objective": "Analyse how warm and cold currents affect the climate of coastal regions."
+      },
+      {
+       "concept_tag": "fishing-grounds",
+       "learning_objective": "Explain why the meeting zones of warm and cold currents are rich fishing grounds."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH01-T5",
+     "topic_number": 5,
+     "title": "Cyclones and Tsunamis: Early Warning Systems",
+     "ncert_sections": "Cyclones and Tsunamis: Early Warning Systems; Focus on Cyclones",
+     "concepts": [
+      {
+       "concept_tag": "cyclone-warning-and-naming",
+       "learning_objective": "Describe India's cyclone warning measures and the system of naming cyclones."
+      },
+      {
+       "concept_tag": "tsunami-early-warning-system",
+       "learning_objective": "Explain how the tsunami early warning system detects, confirms and communicates threats."
+      },
+      {
+       "concept_tag": "gemini-device",
+       "learning_objective": "Describe how the GEMINI device helps fishermen stay safe at sea."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH01-T6",
+     "topic_number": 6,
+     "title": "Marine Resources and the Blue Economy",
+     "ncert_sections": "Marine Resources and Their Significance; Blue Economy",
+     "concepts": [
+      {
+       "concept_tag": "classification-of-marine-resources",
+       "learning_objective": "Classify marine resources into living and non-living, and energy into conventional and non-conventional."
+      },
+      {
+       "concept_tag": "significance-of-marine-resources",
+       "learning_objective": "Explain the importance of marine resources for food, energy, trade and culture."
+      },
+      {
+       "concept_tag": "blue-economy-sdg14",
+       "learning_objective": "Evaluate actions in the light of the Blue Economy and SDG 14 Life Below Water."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH01-T7",
+     "topic_number": 7,
+     "title": "Maritime Zones and International Maritime Rules",
+     "ncert_sections": "Maritime Zones; International Maritime Rules and Regulations",
+     "concepts": [
+      {
+       "concept_tag": "maritime-zones-unclos",
+       "learning_objective": "Identify the extent of territorial sea, contiguous zone, EEZ and high seas under UNCLOS."
+      },
+      {
+       "concept_tag": "innocent-passage-and-high-seas",
+       "learning_objective": "Apply the principles of innocent passage and flag-state law on the high seas."
+      },
+      {
+       "concept_tag": "maritime-rules-colregs-marpol",
+       "learning_objective": "State the purpose of maritime rules such as COLREGs and MARPOL."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Life on Earth",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST2-CH02-T1",
+     "topic_number": 1,
+     "title": "Biomes: meaning and the factors that shape them",
+     "ncert_sections": "Introduction; Types of Biomes",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-biome",
+       "learning_objective": "Define a biome and distinguish it from an ecosystem."
+      },
+      {
+       "concept_tag": "factors-determining-biomes",
+       "learning_objective": "Identify the factors such as temperature and precipitation that decide which plants and animals a biome supports."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH02-T2",
+     "topic_number": 2,
+     "title": "Terrestrial biomes",
+     "ncert_sections": "Terrestrial Biomes: Forest, Grassland, Desert, Tundra",
+     "concepts": [
+      {
+       "concept_tag": "forest-biome",
+       "learning_objective": "Describe the location and importance of tropical rainforests as a gene bank."
+      },
+      {
+       "concept_tag": "grassland-and-desert-biomes",
+       "learning_objective": "Compare grasslands and deserts in rainfall, vegetation and adaptations of life."
+      },
+      {
+       "concept_tag": "tundra-biome",
+       "learning_objective": "Explain how permafrost and cold limit life in the tundra."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH02-T3",
+     "topic_number": 3,
+     "title": "Aquatic biomes and the biome pyramid",
+     "ncert_sections": "Aquatic Biomes; Biome Pyramid",
+     "concepts": [
+      {
+       "concept_tag": "aquatic-biomes",
+       "learning_objective": "Distinguish freshwater and marine biomes and state their importance."
+      },
+      {
+       "concept_tag": "biome-pyramid",
+       "learning_objective": "Explain why number, biomass and energy decrease up the levels of a biome pyramid."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH02-T4",
+     "topic_number": 4,
+     "title": "Biodiversity and its geographical conservation",
+     "ncert_sections": "Interconnectedness between Biomes and Living Beings; Maintaining Ecological Balance and Biodiversity",
+     "concepts": [
+      {
+       "concept_tag": "biodiversity-meaning",
+       "learning_objective": "Define biodiversity at the level of species, genes and ecosystems."
+      },
+      {
+       "concept_tag": "conservation-strategies",
+       "learning_objective": "Explain hotspots, protected areas, ecosystem-based conservation and wildlife corridors."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH02-T5",
+     "topic_number": 5,
+     "title": "Forest ecotourism and forests as livelihoods",
+     "ncert_sections": "Forest Ecotourism; Forests and Livelihoods; Forest Dwellers",
+     "concepts": [
+      {
+       "concept_tag": "forest-ecotourism",
+       "learning_objective": "Explain ecotourism and evaluate the Thenmala model of community-based tourism."
+      },
+      {
+       "concept_tag": "forest-livelihoods",
+       "learning_objective": "Describe how forest dwellers depend on and protect forests, including sacred groves and forest movements."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH02-T6",
+     "topic_number": 6,
+     "title": "Geographical Indication of forest products",
+     "ncert_sections": "Geographical Indication (GI); GI-tagged Forest Products in India",
+     "concepts": [
+      {
+       "concept_tag": "geographical-indication",
+       "learning_objective": "Explain what a GI tag is and how it benefits local communities."
+      },
+      {
+       "concept_tag": "gi-tagged-forest-products",
+       "learning_objective": "Match GI-tagged forest products of India with their regions and features."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH02-T7",
+     "topic_number": 7,
+     "title": "Challenges of forest dwellers and government efforts",
+     "ncert_sections": "Challenges Faced by People Living in Forests; Government Efforts to Support Forest Dwellers; Mendha Lekha",
+     "concepts": [
+      {
+       "concept_tag": "forest-dweller-challenges",
+       "learning_objective": "Identify the problems faced by forest dwellers, such as disasters, fires and human-wildlife conflict."
+      },
+      {
+       "concept_tag": "forest-rights-and-community-management",
+       "learning_objective": "Explain the Forest Rights Act, JFM and the Mendha Lekha model of community forest management."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH02-T8",
+     "topic_number": 8,
+     "title": "Ecological commons",
+     "ncert_sections": "Ecological Commons; Bihar fisheries; Water tanks",
+     "concepts": [
+      {
+       "concept_tag": "ecological-commons",
+       "learning_objective": "Define ecological commons and explain why they are shrinking."
+      },
+      {
+       "concept_tag": "commons-management-cases",
+       "learning_objective": "Analyse commons-based fisheries in Bihar and traditional water tanks as collective resource management."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Resistance and Resilience (1000–1700 CE)",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST2-CH03-T1",
+     "topic_number": 1,
+     "title": "Meaning of resistance and resilience; early resistance to invasions",
+     "ncert_sections": "Introduction; Safeguarding Sovereignty: Resistance, Alliances, and Confederacies",
+     "concepts": [
+      {
+       "concept_tag": "resistance-resilience-meaning",
+       "learning_objective": "Define resistance and resilience and explain how they are interconnected."
+      },
+      {
+       "concept_tag": "early-resistance-invasions",
+       "learning_objective": "Describe how Indian rulers resisted the Arab, Ghaznavid and Ghurid invasions of the 7th to 12th centuries."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH03-T2",
+     "topic_number": 2,
+     "title": "Rajput resistance against the Sultanate and the Mughals",
+     "ncert_sections": "Rajput Dynasties: Confederacies and Resistance; Rajput-Mughal Dynamics; Mewar's Resistance against Mughals",
+     "concepts": [
+      {
+       "concept_tag": "sultanate-and-regional-resistance",
+       "learning_objective": "Explain why the Delhi Sultanate faced resistance from regional kingdoms and Rajput dynasties."
+      },
+      {
+       "concept_tag": "rajput-mughal-relations",
+       "learning_objective": "Distinguish between Rajput kingdoms that resisted the Mughals and those that negotiated cooperation."
+      },
+      {
+       "concept_tag": "mewar-resistance",
+       "learning_objective": "Trace Mewar's resistance from the siege of Chittor to the treaty that recognised its autonomy."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH03-T3",
+     "topic_number": 3,
+     "title": "The Ahom kingdom and the Vijayanagara Empire",
+     "ncert_sections": "The Ahom Kingdom: Centuries of Endurance; Vijayanagara Empire: Resilience against Expansion",
+     "concepts": [
+      {
+       "concept_tag": "ahom-endurance",
+       "learning_objective": "Explain how terrain, the navy, the Paik system and leaders like Lachit Borphukan helped the Ahoms resist the Mughals."
+      },
+      {
+       "concept_tag": "vijayanagara-resilience",
+       "learning_objective": "Describe how the Vijayanagara Empire rose to check the Sultanate's expansion into peninsular India."
+      },
+      {
+       "concept_tag": "nayaka-defiance",
+       "learning_objective": "Interpret acts of symbolic defiance by the Nayaka rulers after Vijayanagara fragmented."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH03-T4",
+     "topic_number": 4,
+     "title": "Marathas, Sikhs and Jats",
+     "ncert_sections": "Marathas: The Quest for Swarajya; The Sikhs: A Story of Spiritual and Political Resilience; Jat Resistance",
+     "concepts": [
+      {
+       "concept_tag": "maratha-swarajya-forts",
+       "learning_objective": "Explain the idea of swarajya and the role of forts in Maratha resistance."
+      },
+      {
+       "concept_tag": "sikh-resilience",
+       "learning_objective": "Describe how the martyrdom of the Gurus, the Akal Takht, miri-piri, the Khalsa and the misals shaped Sikh resilience."
+      },
+      {
+       "concept_tag": "jat-resistance",
+       "learning_objective": "Explain the causes and course of the Jat rebellions against the Mughals."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH03-T5",
+     "topic_number": 5,
+     "title": "The Bhakti tradition and spiritual resilience",
+     "ncert_sections": "Bhakti Tradition: Affirmation of the Spirit of Resilience; Sufism; Sulh-i-Kul",
+     "concepts": [
+      {
+       "concept_tag": "bhakti-features",
+       "learning_objective": "Identify the main features and streams of the Bhakti tradition and its prominent saints."
+      },
+      {
+       "concept_tag": "bhakti-as-resilience",
+       "learning_objective": "Explain how non-material worship, local languages and community singing made Bhakti resilient."
+      },
+      {
+       "concept_tag": "sufism-sulh-i-kul",
+       "learning_objective": "Describe the spread of Sufism and the meaning of Akbar's policy of Sulh-i-kul."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH03-T6",
+     "topic_number": 6,
+     "title": "Temples: the resilience of sacred sites",
+     "ncert_sections": "Temples: The Resilience of Sacred Sites",
+     "concepts": [
+      {
+       "concept_tag": "temple-functions",
+       "learning_objective": "Describe the economic, social and political functions of temples."
+      },
+      {
+       "concept_tag": "temple-restoration-adaptation",
+       "learning_objective": "Explain how temples were restored and how the haveli-style design reflected adaptation."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH03-T7",
+     "topic_number": 7,
+     "title": "Economy: agriculture, trade networks and merchant communities",
+     "ncert_sections": "Indian Economy: Agriculture, Trading Networks, and Merchant Communities; The World of the Indian Ocean: Continuity and Change",
+     "concepts": [
+      {
+       "concept_tag": "agrarian-economy",
+       "learning_objective": "Explain the role of land revenue and irrigation technologies in the agrarian economy."
+      },
+      {
+       "concept_tag": "trade-and-hundi",
+       "learning_objective": "Describe inland and seaborne trade networks and the use of the hundi as a financial instrument."
+      },
+      {
+       "concept_tag": "indian-ocean-merchants",
+       "learning_objective": "Analyse how Indian merchant groups adapted to the arrival of European trading companies."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Governance and Public Policy",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST2-CH04-T1",
+     "topic_number": 1,
+     "title": "Government and governance",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "government-vs-governance",
+       "learning_objective": "Distinguish government as the institutions exercising political authority from governance as the process of making, implementing and monitoring decisions."
+      },
+      {
+       "concept_tag": "collective-response",
+       "learning_objective": "Explain why public problems need coordinated action by many institutions and citizens."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH04-T2",
+     "topic_number": 2,
+     "title": "Evolution of governance in India",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "indian-traditions-of-governance",
+       "learning_objective": "Identify Indian ideas of governance such as Sabha and Samiti, Rajadharma and Ram Rajya."
+      },
+      {
+       "concept_tag": "national-symbols-and-values",
+       "learning_objective": "Relate national mottos and the Sengol to the values of good governance in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH04-T3",
+     "topic_number": 3,
+     "title": "Good governance, its challenges and e-governance",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "features-of-good-governance",
+       "learning_objective": "Identify the features of good governance such as transparency, accountability, rule of law and inclusiveness."
+      },
+      {
+       "concept_tag": "challenges-to-good-governance",
+       "learning_objective": "Analyse challenges such as weak coordination, unequal access, misuse of office and misinformation."
+      },
+      {
+       "concept_tag": "e-governance",
+       "learning_objective": "Explain how e-governance improves service delivery and why it must remain inclusive."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH04-T4",
+     "topic_number": 4,
+     "title": "Public policy and its participants",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-public-policy",
+       "learning_objective": "Explain public policy as a course of action adopted by the government to solve public problems."
+      },
+      {
+       "concept_tag": "public-vs-private-policy",
+       "learning_objective": "Distinguish a public policy from the policy of an organisation or limited group."
+      },
+      {
+       "concept_tag": "policy-stakeholders",
+       "learning_objective": "Identify the roles of different stakeholders in policy-making and implementation."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH04-T5",
+     "topic_number": 5,
+     "title": "The making of a public policy",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "policy-cycle",
+       "learning_objective": "Sequence the stages of the policy cycle from desirability to evaluation."
+      },
+      {
+       "concept_tag": "nep-2020-consultation",
+       "learning_objective": "Describe how NEP 2020 was developed through expert advice and public consultation."
+      },
+      {
+       "concept_tag": "policy-programme-scheme",
+       "learning_objective": "Distinguish a policy, a programme and a scheme using the National Health Policy 2017."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH04-T6",
+     "topic_number": 6,
+     "title": "Policy coordination: key to good governance",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "multi-level-coordination",
+       "learning_objective": "Explain why a policy like Khelo Bharat Niti 2025 depends on coordination across levels and stakeholders."
+      },
+      {
+       "concept_tag": "citizen-role-in-governance",
+       "learning_objective": "Evaluate how citizens strengthen governance by voting, following laws and giving feedback."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Managing Your Personal Finances",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST2-CH05-T1",
+     "topic_number": 1,
+     "title": "Personal finance and its pillars: income",
+     "ncert_sections": "Introduction; Pillars of Personal Finance; Income (Earnings)",
+     "concepts": [
+      {
+       "concept_tag": "personal-finance-meaning",
+       "learning_objective": "Explain what personal finance means and why money must be managed efficiently."
+      },
+      {
+       "concept_tag": "pillars-of-personal-finance",
+       "learning_objective": "Identify the five pillars of personal finance and what each involves."
+      },
+      {
+       "concept_tag": "sources-of-income",
+       "learning_objective": "Recognise different forms of income such as salary, profit, rent, interest and dividends."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH05-T2",
+     "topic_number": 2,
+     "title": "Budgeting and saving",
+     "ncert_sections": "Budgeting (Planning Expenses); Steps in Budgeting; Saving",
+     "concepts": [
+      {
+       "concept_tag": "budgeting-meaning",
+       "learning_objective": "Explain budgeting as planning in advance how income will be spent to balance income and expenses."
+      },
+      {
+       "concept_tag": "steps-in-budgeting",
+       "learning_objective": "Apply the four steps of budgeting, including setting a savings goal."
+      },
+      {
+       "concept_tag": "saving-purpose",
+       "learning_objective": "Explain why people save a part of their income."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH05-T3",
+     "topic_number": 3,
+     "title": "Investing: inflation and the power of compounding",
+     "ncert_sections": "Investing (Growing Wealth); Power of Early Investments",
+     "concepts": [
+      {
+       "concept_tag": "investing-vs-saving",
+       "learning_objective": "Distinguish between keeping savings as cash and investing them in assets."
+      },
+      {
+       "concept_tag": "inflation-purchasing-power",
+       "learning_objective": "Explain how inflation reduces the purchasing power of money."
+      },
+      {
+       "concept_tag": "compounding-early-investment",
+       "learning_objective": "Analyse how compounding makes early investment more rewarding."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH05-T4",
+     "topic_number": 4,
+     "title": "Common investment options",
+     "ncert_sections": "Common Investment Options: Fixed Deposits, Bonds, Stocks, Mutual Funds",
+     "concepts": [
+      {
+       "concept_tag": "fixed-deposits-and-bonds",
+       "learning_objective": "Describe fixed deposits and bonds and calculate the interest earned on them."
+      },
+      {
+       "concept_tag": "stocks-equity",
+       "learning_objective": "Explain that shares represent ownership and carry higher risk and potential return."
+      },
+      {
+       "concept_tag": "mutual-funds-diversification",
+       "learning_objective": "Explain how mutual funds pool money and reduce risk through diversification."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH05-T5",
+     "topic_number": 5,
+     "title": "Protection: insurance, borrowing and credit",
+     "ncert_sections": "Protection and Risk Management; Insurance; Types of Insurance; Borrowing and Credit",
+     "concepts": [
+      {
+       "concept_tag": "insurance-risk-sharing",
+       "learning_objective": "Explain insurance as a contract based on premiums and risk sharing."
+      },
+      {
+       "concept_tag": "types-of-insurance",
+       "learning_objective": "Classify health, life and general insurance with examples."
+      },
+      {
+       "concept_tag": "responsible-borrowing-emi",
+       "learning_objective": "Evaluate responsible borrowing and the meaning of an EMI."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH05-T6",
+     "topic_number": 6,
+     "title": "Risk and return",
+     "ncert_sections": "Risk and Return; Risk/Return Trade-Off",
+     "concepts": [
+      {
+       "concept_tag": "investment-factors",
+       "learning_objective": "Identify risk, return, time horizon and liquidity as factors in investment decisions."
+      },
+      {
+       "concept_tag": "risk-return-tradeoff",
+       "learning_objective": "Analyse the trade-off between risk and return across investment options."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH05-T7",
+     "topic_number": 7,
+     "title": "Taxes and personal income tax",
+     "ncert_sections": "Taxes; Personal Income Tax; Tables 5.1 and 5.2",
+     "concepts": [
+      {
+       "concept_tag": "direct-indirect-taxes",
+       "learning_objective": "Distinguish between direct and indirect taxes with examples."
+      },
+      {
+       "concept_tag": "progressive-taxation",
+       "learning_objective": "Explain progressive taxation and the slab system."
+      },
+      {
+       "concept_tag": "income-tax-calculation",
+       "learning_objective": "Calculate income tax using the standard deduction and the tax slabs."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IEST2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "From Ideas to Startups",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iest206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IEST2-CH06-T1",
+     "topic_number": 1,
+     "title": "Entrepreneurship and the entrepreneur",
+     "ncert_sections": "Introduction; Fig. 6.1, 6.2; From a Dead Mouse to Riches",
+     "concepts": [
+      {
+       "concept_tag": "entrepreneurship-meaning",
+       "learning_objective": "Explain entrepreneurship as the process of converting a potential idea into a business venture."
+      },
+      {
+       "concept_tag": "tasks-of-an-entrepreneur",
+       "learning_objective": "Identify the tasks an entrepreneur performs, such as combining factors of production and taking risks."
+      },
+      {
+       "concept_tag": "spotting-opportunities",
+       "learning_objective": "Interpret the Jataka tale to show how entrepreneurs spot opportunities and work smart."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH06-T2",
+     "topic_number": 2,
+     "title": "Entrepreneurial journeys: Lijjat and Oberoi",
+     "ncert_sections": "From Rooftop to Revolution; The Man who Transformed the Hospitality Industry",
+     "concepts": [
+      {
+       "concept_tag": "lijjat-cooperative",
+       "learning_objective": "Describe how Lijjat Papad grew as a women's cooperative with equal ownership and shared profits."
+      },
+      {
+       "concept_tag": "oberoi-risk-and-vision",
+       "learning_objective": "Explain how Mohan Singh Oberoi's initiative, risk-taking and management built a hotel chain."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH06-T3",
+     "topic_number": 3,
+     "title": "Business plan: a road map for the business",
+     "ncert_sections": "Business Plan - A Road Map for the Business; Fig. 6.6",
+     "concepts": [
+      {
+       "concept_tag": "business-plan-meaning",
+       "learning_objective": "Define a business plan as a written blueprint of goals and the steps to achieve them."
+      },
+      {
+       "concept_tag": "business-plan-considerations",
+       "learning_objective": "Apply the key considerations of a business plan (needs, customers, costs, location, pricing, promotion, risks) to a venture."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH06-T4",
+     "topic_number": 4,
+     "title": "Functional areas of a business",
+     "ncert_sections": "Functional Areas of a Business; Fig. 6.9; Management and Operations; Human Resources; Marketing and Sales",
+     "concepts": [
+      {
+       "concept_tag": "four-functional-areas",
+       "learning_objective": "Name the four functional areas of a business and the key focus of each."
+      },
+      {
+       "concept_tag": "functional-area-tasks",
+       "learning_objective": "Classify business activities into management and operations, human resources, or marketing and sales."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH06-T5",
+     "topic_number": 5,
+     "title": "Finance and accounting",
+     "ncert_sections": "Finance and Accounting; Fig. 6.11",
+     "concepts": [
+      {
+       "concept_tag": "fixed-and-variable-costs",
+       "learning_objective": "Distinguish between fixed costs and variable costs with examples."
+      },
+      {
+       "concept_tag": "profit-and-loss-account",
+       "learning_objective": "Calculate profit from revenue and expenses using a profit and loss account."
+      }
+     ]
+    },
+    {
+     "topic_id": "IEST2-CH06-T6",
+     "topic_number": 6,
+     "title": "Traditional entrepreneurs, startups and the nation",
+     "ncert_sections": "India's Traditional Entrepreneurial Community; Startups and Their Contribution to the Nation; Fig. 6.13",
+     "concepts": [
+      {
+       "concept_tag": "chettiar-community",
+       "learning_objective": "Describe the Chettiar community as a traditional entrepreneurial community and its practices."
+      },
+      {
+       "concept_tag": "startup-ecosystem",
+       "learning_objective": "Describe India's startup ecosystem, unicorns, failure as learning and schemes like Startup India."
+      },
+      {
+       "concept_tag": "business-contribution-to-society",
+       "learning_objective": "Analyse how businesses contribute to society and the economy and to Viksit Bharat 2047."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

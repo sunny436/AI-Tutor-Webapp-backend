@@ -1,0 +1,140 @@
+{
+  "chapter_id": "IEST2-CH01",
+  "title": "Oceans and Life",
+  "title_verified": true,
+  "source": "pdf",
+  "topics": [
+    {
+      "topic_id": "IEST2-CH01-T1",
+      "topic_number": 1,
+      "title": "Ocean Relief and Submarine Features",
+      "ncert_sections": "Ocean Relief; Important submarine relief features",
+      "concepts": [
+        {
+          "concept_tag": "submarine-relief-features",
+          "learning_objective": "Identify the main features of the ocean floor such as the continental shelf, slope, abyssal plain, ridges and trenches."
+        },
+        {
+          "concept_tag": "seamounts-and-guyots",
+          "learning_objective": "Distinguish seamounts from guyots and explain how they are formed."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH01-T2",
+      "topic_number": 2,
+      "title": "Waves",
+      "ncert_sections": "Movement of Ocean Water: Waves",
+      "concepts": [
+        {
+          "concept_tag": "wave-anatomy",
+          "learning_objective": "Describe the cause of waves and the parts of a wave such as crest, trough and wavelength."
+        },
+        {
+          "concept_tag": "wave-erosion-landforms",
+          "learning_objective": "Explain how wave erosion forms caves, arches, stacks and stumps along a coast."
+        },
+        {
+          "concept_tag": "tsunamis",
+          "learning_objective": "Distinguish tsunamis from ordinary storm waves by their cause and effects."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH01-T3",
+      "topic_number": 3,
+      "title": "Tides",
+      "ncert_sections": "Tides; Spring Tides and Neap Tides",
+      "concepts": [
+        {
+          "concept_tag": "spring-and-neap-tides",
+          "learning_objective": "Explain how the relative positions of the Sun, Earth and Moon produce spring and neap tides."
+        },
+        {
+          "concept_tag": "uses-of-tides",
+          "learning_objective": "Explain the importance of tides for navigation, fishing and tidal energy."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH01-T4",
+      "topic_number": 4,
+      "title": "Ocean Currents",
+      "ncert_sections": "Ocean Currents",
+      "concepts": [
+        {
+          "concept_tag": "causes-of-ocean-currents",
+          "learning_objective": "State the factors, including the Coriolis force, that cause ocean currents."
+        },
+        {
+          "concept_tag": "warm-and-cold-currents",
+          "learning_objective": "Analyse how warm and cold currents affect the climate of coastal regions."
+        },
+        {
+          "concept_tag": "fishing-grounds",
+          "learning_objective": "Explain why the meeting zones of warm and cold currents are rich fishing grounds."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH01-T5",
+      "topic_number": 5,
+      "title": "Cyclones and Tsunamis: Early Warning Systems",
+      "ncert_sections": "Cyclones and Tsunamis: Early Warning Systems; Focus on Cyclones",
+      "concepts": [
+        {
+          "concept_tag": "cyclone-warning-and-naming",
+          "learning_objective": "Describe India's cyclone warning measures and the system of naming cyclones."
+        },
+        {
+          "concept_tag": "tsunami-early-warning-system",
+          "learning_objective": "Explain how the tsunami early warning system detects, confirms and communicates threats."
+        },
+        {
+          "concept_tag": "gemini-device",
+          "learning_objective": "Describe how the GEMINI device helps fishermen stay safe at sea."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH01-T6",
+      "topic_number": 6,
+      "title": "Marine Resources and the Blue Economy",
+      "ncert_sections": "Marine Resources and Their Significance; Blue Economy",
+      "concepts": [
+        {
+          "concept_tag": "classification-of-marine-resources",
+          "learning_objective": "Classify marine resources into living and non-living, and energy into conventional and non-conventional."
+        },
+        {
+          "concept_tag": "significance-of-marine-resources",
+          "learning_objective": "Explain the importance of marine resources for food, energy, trade and culture."
+        },
+        {
+          "concept_tag": "blue-economy-sdg14",
+          "learning_objective": "Evaluate actions in the light of the Blue Economy and SDG 14 Life Below Water."
+        }
+      ]
+    },
+    {
+      "topic_id": "IEST2-CH01-T7",
+      "topic_number": 7,
+      "title": "Maritime Zones and International Maritime Rules",
+      "ncert_sections": "Maritime Zones; International Maritime Rules and Regulations",
+      "concepts": [
+        {
+          "concept_tag": "maritime-zones-unclos",
+          "learning_objective": "Identify the extent of territorial sea, contiguous zone, EEZ and high seas under UNCLOS."
+        },
+        {
+          "concept_tag": "innocent-passage-and-high-seas",
+          "learning_objective": "Apply the principles of innocent passage and flag-state law on the high seas."
+        },
+        {
+          "concept_tag": "maritime-rules-colregs-marpol",
+          "learning_objective": "State the purpose of maritime rules such as COLREGs and MARPOL."
+        }
+      ]
+    }
+  ]
+}

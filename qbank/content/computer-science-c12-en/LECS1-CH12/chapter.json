@@ -1,0 +1,140 @@
+{
+ "chapter_id": "LECS1-CH12",
+ "title": "Security Aspects",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECS1-CH12-T1",
+   "topic_number": 1,
+   "title": "Threats and prevention; viruses, worms, ransomware and Trojans",
+   "ncert_sections": "12.1, 12.2, 12.2.1, 12.2.2, 12.2.3, 12.2.4",
+   "concepts": [
+    {
+     "concept_tag": "virus-and-worm",
+     "learning_objective": "Distinguish a virus from a worm by how each needs a host and how each replicates."
+    },
+    {
+     "concept_tag": "ransomware-and-trojan",
+     "learning_objective": "Explain how ransomware holds user data hostage and how a Trojan disguises itself as legitimate software."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH12-T2",
+   "topic_number": 2,
+   "title": "Spyware, adware and keyloggers",
+   "ncert_sections": "12.2.5, 12.2.6, 12.2.7",
+   "concepts": [
+    {
+     "concept_tag": "spyware-and-adware",
+     "learning_objective": "Describe how spyware collects user information secretly and how adware earns revenue through advertisements."
+    },
+    {
+     "concept_tag": "keyloggers-and-virtual-keyboards",
+     "learning_objective": "Explain the threat of keyloggers and why an online virtual keyboard resists them better than an on-screen keyboard."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH12-T3",
+   "topic_number": 3,
+   "title": "Modes of malware distribution and combating malware",
+   "ncert_sections": "12.2.8, 12.2.9",
+   "concepts": [
+    {
+     "concept_tag": "malware-distribution-modes",
+     "learning_objective": "Identify the common routes by which malware reaches a computer."
+    },
+    {
+     "concept_tag": "malware-signs-and-prevention",
+     "learning_objective": "Recognise signs of malware infection and choose suitable preventive measures."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH12-T4",
+   "topic_number": 4,
+   "title": "Antivirus and spam",
+   "ncert_sections": "12.3, 12.3.1, 12.4",
+   "concepts": [
+    {
+     "concept_tag": "antivirus-detection-methods",
+     "learning_objective": "Compare signature-based, sandbox, data mining, heuristic and real-time methods of malware identification."
+    },
+    {
+     "concept_tag": "email-spam",
+     "learning_objective": "Explain what email spam is and how spam filtering and user marking help."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH12-T5",
+   "topic_number": 5,
+   "title": "HTTP vs HTTPS and firewalls",
+   "ncert_sections": "12.5, 12.6, 12.6.1",
+   "concepts": [
+    {
+     "concept_tag": "http-vs-https",
+     "learning_objective": "Compare HTTP and HTTPS in terms of encryption and suitable uses."
+    },
+    {
+     "concept_tag": "firewall",
+     "learning_objective": "Explain how a firewall filters traffic using rules and distinguish network and host-based firewalls."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH12-T6",
+   "topic_number": 6,
+   "title": "Cookies and threats due to cookies",
+   "ncert_sections": "12.7, 12.7.1",
+   "concepts": [
+    {
+     "concept_tag": "cookie-types-and-uses",
+     "learning_objective": "Describe what a cookie is and the roles of session and authentication cookies."
+    },
+    {
+     "concept_tag": "cookie-threats",
+     "learning_objective": "Identify threats from supercookies, zombie cookies and third-party tracking cookies."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH12-T7",
+   "topic_number": 7,
+   "title": "Hackers and crackers",
+   "ncert_sections": "12.8, 12.8.1, 12.8.2, 12.8.3",
+   "concepts": [
+    {
+     "concept_tag": "ethical-hacking",
+     "learning_objective": "Explain the role of white hat (ethical) hackers in securing systems."
+    },
+    {
+     "concept_tag": "hacker-types",
+     "learning_objective": "Classify hackers as white, black or grey hats (and hacktivists) based on their intent."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH12-T8",
+   "topic_number": 8,
+   "title": "Network security threats",
+   "ncert_sections": "12.9, 12.9.1, 12.9.2, 12.9.3, 12.9.4",
+   "concepts": [
+    {
+     "concept_tag": "dos-and-ddos",
+     "learning_objective": "Explain DoS and DDoS attacks and why DDoS is harder to counter."
+    },
+    {
+     "concept_tag": "network-intrusion",
+     "learning_objective": "Identify intrusion attacks such as asymmetric routing, buffer overflow and traffic flooding."
+    },
+    {
+     "concept_tag": "snooping-and-eavesdropping",
+     "learning_objective": "Distinguish snooping from eavesdropping."
+    }
+   ]
+  }
+ ]
+}

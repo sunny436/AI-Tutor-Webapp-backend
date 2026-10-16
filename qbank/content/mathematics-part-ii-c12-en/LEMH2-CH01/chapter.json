@@ -1,0 +1,148 @@
+{
+ "chapter_id": "LEMH2-CH01",
+ "title": "Integrals",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEMH2-CH01-T1",
+   "topic_number": 1,
+   "title": "Integration as an inverse process of differentiation",
+   "ncert_sections": "7.2, 7.2.1, 7.2.2",
+   "concepts": [
+    {
+     "concept_tag": "antiderivative-and-constant",
+     "learning_objective": "Recognise that a function has a family of antiderivatives differing by a constant and fix the constant from a given condition."
+    },
+    {
+     "concept_tag": "standard-integral-formulas",
+     "learning_objective": "Recall the standard indefinite integrals that follow from the derivatives of standard functions."
+    },
+    {
+     "concept_tag": "linearity-of-indefinite-integral",
+     "learning_objective": "Use the sum and constant-multiple properties of indefinite integrals to integrate combinations of functions."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH01-T2",
+   "topic_number": 2,
+   "title": "Integration by substitution and trigonometric identities",
+   "ncert_sections": "7.3, 7.3.1, 7.3.2",
+   "concepts": [
+    {
+     "concept_tag": "integration-by-substitution",
+     "learning_objective": "Choose a suitable substitution to reduce an integral to a standard form."
+    },
+    {
+     "concept_tag": "trigonometric-identities-integration",
+     "learning_objective": "Use trigonometric identities to rewrite integrands such as powers and products of sines and cosines."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH01-T3",
+   "topic_number": 3,
+   "title": "Integrals of some particular functions",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "special-standard-forms",
+     "learning_objective": "Apply the standard integrals of 1/(x^2 ± a^2), 1/(a^2 - x^2) and their square-root forms."
+    },
+    {
+     "concept_tag": "completing-the-square",
+     "learning_objective": "Reduce integrals with a quadratic ax^2 + bx + c in the denominator to standard forms by completing the square."
+    },
+    {
+     "concept_tag": "linear-over-quadratic",
+     "learning_objective": "Integrate (px + q)/(ax^2 + bx + c) by writing the numerator as A times the derivative of the denominator plus B."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH01-T4",
+   "topic_number": 4,
+   "title": "Integration by partial fractions",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "proper-improper-rational-functions",
+     "learning_objective": "Distinguish proper and improper rational functions and reduce improper ones by long division."
+    },
+    {
+     "concept_tag": "partial-fraction-decomposition",
+     "learning_objective": "Write the correct partial fraction form for a proper rational function and integrate it."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH01-T5",
+   "topic_number": 5,
+   "title": "Integration by parts",
+   "ncert_sections": "7.6, 7.6.1, 7.6.2",
+   "concepts": [
+    {
+     "concept_tag": "integration-by-parts",
+     "learning_objective": "Apply the integration by parts formula with a sensible choice of the first and second functions."
+    },
+    {
+     "concept_tag": "exponential-f-plus-f-prime",
+     "learning_objective": "Use the result that the integral of e^x[f(x) + f'(x)] is e^x f(x) + C."
+    },
+    {
+     "concept_tag": "square-root-quadratic-integrals",
+     "learning_objective": "Apply the standard integrals of the square roots of x^2 + a^2, x^2 - a^2 and a^2 - x^2."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH01-T6",
+   "topic_number": 6,
+   "title": "Definite integral and the fundamental theorem of calculus",
+   "ncert_sections": "7.7, 7.8",
+   "concepts": [
+    {
+     "concept_tag": "area-function-first-theorem",
+     "learning_objective": "Interpret the area function and use the first fundamental theorem to differentiate it."
+    },
+    {
+     "concept_tag": "second-fundamental-theorem",
+     "learning_objective": "Evaluate definite integrals as F(b) - F(a) using an antiderivative F."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH01-T7",
+   "topic_number": 7,
+   "title": "Evaluation of definite integrals by substitution",
+   "ncert_sections": "7.9",
+   "concepts": [
+    {
+     "concept_tag": "change-of-limits",
+     "learning_objective": "Change the limits of integration when a substitution is made and evaluate the new definite integral."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEMH2-CH01-T8",
+   "topic_number": 8,
+   "title": "Some properties of definite integrals",
+   "ncert_sections": "7.10",
+   "concepts": [
+    {
+     "concept_tag": "basic-definite-integral-properties",
+     "learning_objective": "Use the properties of interchanging limits and splitting the interval of integration."
+    },
+    {
+     "concept_tag": "property-a-plus-b-minus-x",
+     "learning_objective": "Apply the property that the integral of f(x) from 0 to a equals the integral of f(a - x) to evaluate integrals."
+    },
+    {
+     "concept_tag": "odd-even-function-property",
+     "learning_objective": "Use the properties of definite integrals of odd and even functions over a symmetric interval."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KHGY3-CH01",
+ "title": "मानचित्र का परिचय",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHGY3-CH01-T1",
+   "topic_number": 1,
+   "title": "मानचित्र का अर्थ और रेखाचित्र से अंतर",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "manchitra-ki-paribhasha",
+     "learning_objective": "मानचित्र को पृथ्वी के किसी भाग के चयनात्मक, प्रतीकात्मक और सामान्यीकृत लघुकृत निरूपण के रूप में परिभाषित करना।"
+    },
+    {
+     "concept_tag": "rekhachitra-se-antar",
+     "learning_objective": "मापनी के आधार पर मानचित्र और रेखाचित्र में अंतर स्पष्ट करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH01-T2",
+   "topic_number": 2,
+   "title": "मानचित्र निर्माण के आवश्यक तत्व",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "mapni-aur-prakshep",
+     "learning_objective": "मानचित्र निर्माण में मापनी और प्रक्षेप की भूमिका समझना।"
+    },
+    {
+     "concept_tag": "samanyikaran-aur-abhikalpana",
+     "learning_objective": "सामान्यीकरण, अभिकल्पना तथा निर्माण एवं उत्पादन की प्रक्रियाओं को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH01-T3",
+   "topic_number": 3,
+   "title": "मानचित्र निर्माण का इतिहास",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vishva-manchitran-itihas",
+     "learning_objective": "मेसोपोटामिया से आधुनिक काल तक मानचित्र निर्माण के विकास को समझना।"
+    },
+    {
+     "concept_tag": "bharat-manchitran-itihas",
+     "learning_objective": "वैदिक काल से भारतीय सर्वेक्षण विभाग तक भारत में मानचित्र निर्माण के विकास को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH01-T4",
+   "topic_number": 4,
+   "title": "मापनी के आधार पर मानचित्रों के प्रकार",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vrihat-mapni-manchitra",
+     "learning_objective": "भूसंपत्ति और स्थलाकृतिक मानचित्रों की मापनी और उद्देश्य पहचानना।"
+    },
+    {
+     "concept_tag": "laghu-mapni-manchitra",
+     "learning_objective": "भित्ति और एटलस मानचित्रों की विशेषताएँ समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH01-T5",
+   "topic_number": 5,
+   "title": "कार्य के आधार पर मानचित्रों के प्रकार",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "bhautik-manchitra",
+     "learning_objective": "उच्चावच, भूगर्भिक, जलवायु और मृदा मानचित्रों जैसे भौतिक मानचित्रों को पहचानना।"
+    },
+    {
+     "concept_tag": "sanskritik-manchitra",
+     "learning_objective": "राजनीतिक, जनसंख्या, आर्थिक और परिवहन मानचित्रों जैसे सांस्कृतिक मानचित्रों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH01-T6",
+   "topic_number": 6,
+   "title": "मानचित्रों के उपयोग",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "doori-mapan",
+     "learning_objective": "सीधी और टेढ़ी-मेढ़ी रेखाओं की दूरी मापने की विधियाँ लागू करना।"
+    },
+    {
+     "concept_tag": "disha-mapan",
+     "learning_objective": "उत्तर दिशा को आधार मानकर प्रधान और मध्यवर्ती दिशाएँ समझना।"
+    },
+    {
+     "concept_tag": "kshetraphal-mapan",
+     "learning_objective": "वर्ग विधि और ध्रुवीय प्लैनीमीटर से क्षेत्रफल मापना।"
+    }
+   ]
+  }
+ ]
+}

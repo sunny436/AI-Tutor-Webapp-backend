@@ -1,0 +1,140 @@
+{
+ "chapter_id": "HEGP1-CH02",
+ "title": "Power Play",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP1-CH02-T1",
+   "topic_number": 1,
+   "title": "Experiencing the Power Play: folding paper",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "doubling-by-folding",
+     "learning_objective": "Calculate the thickness of a sheet of paper after a given number of folds when each fold doubles it."
+    },
+    {
+     "concept_tag": "multiplicative-growth",
+     "learning_objective": "Explain how repeated doubling makes a quantity grow by the same factor over equal numbers of steps."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH02-T2",
+   "topic_number": 2,
+   "title": "Exponential notation: base, exponent and prime factors",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "base-and-exponent",
+     "learning_objective": "Identify the base and exponent and write repeated products in exponential form."
+    },
+    {
+     "concept_tag": "prime-factorisation-exponential-form",
+     "learning_objective": "Express a number as a product of powers of its prime factors."
+    },
+    {
+     "concept_tag": "powers-of-negative-numbers",
+     "learning_objective": "Decide the sign and value of powers of negative numbers."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH02-T3",
+   "topic_number": 3,
+   "title": "Operations with exponents and counting combinations",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "product-and-power-of-power",
+     "learning_objective": "Use the rules n^a x n^b = n^(a+b) and (n^a)^b = n^(ab) to simplify expressions."
+    },
+    {
+     "concept_tag": "same-exponent-products",
+     "learning_objective": "Use m^a x n^a = (mn)^a to combine powers with the same exponent."
+    },
+    {
+     "concept_tag": "counting-combinations",
+     "learning_objective": "Count combinations and passwords by multiplying the number of choices at each step."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH02-T4",
+   "topic_number": 4,
+   "title": "The other side of powers: division, zero and negative exponents",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "quotient-of-powers",
+     "learning_objective": "Use n^a / n^b = n^(a-b) to divide powers with the same base."
+    },
+    {
+     "concept_tag": "zero-exponent",
+     "learning_objective": "Explain why n^0 = 1 for any non-zero n."
+    },
+    {
+     "concept_tag": "negative-exponents",
+     "learning_objective": "Interpret n^(-a) as 1/n^a and simplify expressions and power lines with negative exponents."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH02-T5",
+   "topic_number": 5,
+   "title": "Powers of 10 and scientific notation",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "expanded-form-powers-of-ten",
+     "learning_objective": "Write numbers, including decimals, in expanded form using powers of 10."
+    },
+    {
+     "concept_tag": "scientific-notation",
+     "learning_objective": "Express large numbers in the standard form x x 10^y with 1 <= x < 10."
+    },
+    {
+     "concept_tag": "comparing-with-exponents",
+     "learning_objective": "Compare quantities written in scientific notation using the exponent first."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH02-T6",
+   "topic_number": 6,
+   "title": "Did you ever wonder? Estimation, linear and exponential growth",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "estimation-with-assumptions",
+     "learning_objective": "Estimate quantities by describing relationships and making reasonable assumptions."
+    },
+    {
+     "concept_tag": "linear-vs-exponential-growth",
+     "learning_objective": "Distinguish additive (linear) growth from multiplicative (exponential) growth."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP1-CH02-T7",
+   "topic_number": 7,
+   "title": "Getting a sense for large numbers and a pinch of history",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "indian-and-international-number-names",
+     "learning_objective": "Relate lakh, crore, arab and kharab to million, billion and trillion as powers of 10."
+    },
+    {
+     "concept_tag": "comparing-large-quantities",
+     "learning_objective": "Compare large real-world quantities by dividing numbers written in scientific notation."
+    },
+    {
+     "concept_tag": "history-of-number-names",
+     "learning_objective": "Describe how Indian texts named large powers of ten and the pattern behind the names."
+    }
+   ]
+  }
+ ]
+}

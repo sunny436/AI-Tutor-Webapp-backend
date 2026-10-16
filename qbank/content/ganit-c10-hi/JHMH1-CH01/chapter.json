@@ -1,0 +1,92 @@
+{
+ "chapter_id": "JHMH1-CH01",
+ "title": "वास्तविक संख्याएँ",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH01-T1",
+   "topic_number": 1,
+   "title": "अंकगणित की आधारभूत प्रमेय और अभाज्य गुणनखंडन",
+   "ncert_sections": "1.1, 1.2",
+   "concepts": [
+    {
+     "concept_tag": "ankganit-ki-aadharbhut-pramey",
+     "learning_objective": "अंकगणित की आधारभूत प्रमेय का कथन और गुणनखंडन की अद्वितीयता का अर्थ समझना।"
+    },
+    {
+     "concept_tag": "abhajya-gunankhandan",
+     "learning_objective": "किसी भाज्य संख्या को अभाज्य संख्याओं की घातों के गुणनफल के रूप में व्यक्त करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH01-T2",
+   "topic_number": 2,
+   "title": "अभाज्य गुणनखंडन विधि से म.स. और ल.स.",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "abhajya-gunankhandan-vidhi-mas-las",
+     "learning_objective": "अभाज्य गुणनखंडन विधि से दो या तीन संख्याओं का म.स. और ल.स. ज्ञात करना।"
+    },
+    {
+     "concept_tag": "mas-las-gunanphal-sambandh",
+     "learning_objective": "दो धनात्मक पूर्णांकों के लिए म.स. × ल.स. = संख्याओं का गुणनफल संबंध का प्रयोग करना और इसकी सीमा समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH01-T3",
+   "topic_number": 3,
+   "title": "आधारभूत प्रमेय के अनुप्रयोग",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "shunya-par-samapti",
+     "learning_objective": "अभाज्य गुणनखंडन के आधार पर यह जाँचना कि कोई संख्या अंक 0 पर समाप्त हो सकती है या नहीं।"
+    },
+    {
+     "concept_tag": "bhajya-sankhya-pahchan",
+     "learning_objective": "गुणनखंड निकालकर यह सिद्ध करना कि दिया गया व्यंजक एक भाज्य संख्या है।"
+    },
+    {
+     "concept_tag": "mas-las-vyavaharik-anuprayog",
+     "learning_objective": "दैनिक जीवन की समस्याओं में ल.स. और म.स. का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH01-T4",
+   "topic_number": 4,
+   "title": "अपरिमेय संख्याएँ और अभाज्य द्वारा विभाज्यता की प्रमेय",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "aparimey-sankhya-paribhasha",
+     "learning_objective": "अपरिमेय संख्या की परिभाषा जानना और परिमेय तथा अपरिमेय संख्याओं में अंतर पहचानना।"
+    },
+    {
+     "concept_tag": "abhajya-vibhajan-pramey",
+     "learning_objective": "प्रमेय 'यदि अभाज्य p, a² को विभाजित करे तो p, a को विभाजित करता है' को समझना और प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH01-T5",
+   "topic_number": 5,
+   "title": "विरोधाभास द्वारा अपरिमेयता की उपपत्ति",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "virodhabhas-dwara-uppatti",
+     "learning_objective": "विरोधाभास द्वारा उपपत्ति से √2, √3 जैसी संख्याओं की अपरिमेयता सिद्ध करने के चरण समझना।"
+    },
+    {
+     "concept_tag": "parimey-aparimey-sanyojan",
+     "learning_objective": "परिमेय और अपरिमेय संख्याओं के योग, अंतर, गुणनफल और भागफल की प्रकृति पहचानना।"
+    }
+   ]
+  }
+ ]
+}

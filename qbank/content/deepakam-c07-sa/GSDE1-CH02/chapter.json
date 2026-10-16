@@ -1,0 +1,104 @@
+{
+ "chapter_id": "GSDE1-CH02",
+ "title": "नित्यं पिबामः सुभाषितरसम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GSDE1-CH02-T1",
+   "topic_number": 1,
+   "title": "सुभाषितानां महत्त्वं पञ्च वकाराः च",
+   "ncert_sections": "भूमिका, श्लोकः १",
+   "concepts": [
+    {
+     "concept_tag": "subhashita-mahattvam",
+     "learning_objective": "छात्रः सुभाषितानाम् अर्थं, प्रयोजनं, 'अयोग्यः पुरुषो नास्ति' इत्यस्य भावं च अवगच्छति।"
+    },
+    {
+     "concept_tag": "pancha-vakarah",
+     "learning_objective": "छात्रः वस्त्रं, वपुः, वाक्, विद्या, विनयः इति पञ्च वकारान् अभिज्ञाय जीवने योजयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH02-T2",
+   "topic_number": 2,
+   "title": "षड् दोषाः शुद्धिसाधनानि च",
+   "ncert_sections": "श्लोकौ २, ३",
+   "concepts": [
+    {
+     "concept_tag": "shad-doshah",
+     "learning_objective": "छात्रः उन्नतिम् इच्छता त्यक्तव्यान् षड् दोषान् अभिजानाति, व्यवहारे च तान् परिचिनोति।"
+    },
+    {
+     "concept_tag": "shuddhi-sadhanani",
+     "learning_objective": "छात्रः शरीर-मनः-आत्म-बुद्धीनां शुद्धिसाधनानि श्लोकानुसारं वदति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH02-T3",
+   "topic_number": 3,
+   "title": "भारतवर्षं निरन्तराभ्यासः च",
+   "ncert_sections": "श्लोकौ ४, ५",
+   "concepts": [
+    {
+     "concept_tag": "bharatavarsha-svarupam",
+     "learning_objective": "छात्रः श्लोके वर्णितं भारतवर्षस्य भौगोलिकं स्वरूपं वदति।"
+    },
+    {
+     "concept_tag": "nirantara-abhyasah",
+     "learning_objective": "छात्रः जलबिन्दुनिपातस्य दृष्टान्तेन निरन्तराभ्यासस्य महत्त्वं व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH02-T4",
+   "topic_number": 4,
+   "title": "बुद्धिविकासः प्रियवचनं च",
+   "ncert_sections": "श्लोकौ ६, ७",
+   "concepts": [
+    {
+     "concept_tag": "buddhi-vikasah",
+     "learning_objective": "छात्रः पठन-लेखन-दर्शन-प्रश्न-सत्सङ्गैः बुद्धेः विकासं कथं भवति इति अवगच्छति।"
+    },
+    {
+     "concept_tag": "priyavachanam",
+     "learning_objective": "छात्रः प्रियवचनस्य महत्त्वं 'वचने का दरिद्रता' इत्यस्य भावं च व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH02-T5",
+   "topic_number": 5,
+   "title": "आलस्यम् उद्यमः परोपकारः च",
+   "ncert_sections": "श्लोकौ ८, ९",
+   "concepts": [
+    {
+     "concept_tag": "alasyam-udyamah",
+     "learning_objective": "छात्रः आलस्यं शत्रुः, उद्यमः च बन्धुः इति भावम् अवगच्छति।"
+    },
+    {
+     "concept_tag": "paropakarah",
+     "learning_objective": "छात्रः व्यासस्य वचनद्वयानुसारं परोपकारस्य परपीडनस्य च फलं विवेचयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH02-T6",
+   "topic_number": 6,
+   "title": "तृतीयाविभक्तिः पर्यायपदानि च",
+   "ncert_sections": "शब्दरूपाणि, अभ्यासः, योग्यताविस्तरः",
+   "concepts": [
+    {
+     "concept_tag": "tritiya-vibhaktih",
+     "learning_objective": "छात्रः अकारान्त-आकारान्तशब्दानां तृतीयाविभक्तेः रूपाणि जानाति प्रयुङ्क्ते च।"
+    },
+    {
+     "concept_tag": "paryayapadani",
+     "learning_objective": "छात्रः पाठगतानां शब्दानां पर्यायपदानि अमरकोशानुसारं अभिजानाति।"
+    }
+   ]
+  }
+ ]
+}

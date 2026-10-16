@@ -1,0 +1,104 @@
+{
+ "chapter_id": "LHCH2-CH04",
+ "title": "ऐमीन",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHCH2-CH04-T1",
+   "topic_number": 1,
+   "title": "ऐमीनों की संरचना, वर्गीकरण एवं नामपद्धति",
+   "ncert_sections": "9.1, 9.2, 9.3",
+   "concepts": [
+    {
+     "concept_tag": "aimeen-sanrachna",
+     "learning_objective": "ऐमीनों में नाइट्रोजन के sp3 संकरण तथा पिरैमिडी ज्यामिति को समझा सके।"
+    },
+    {
+     "concept_tag": "aimeen-vargikaran",
+     "learning_objective": "ऐमीनों को प्राथमिक, द्वितीयक और तृतीयक में वर्गीकृत कर सके।"
+    },
+    {
+     "concept_tag": "aimeen-namapaddhati",
+     "learning_objective": "ऐमीनों के सामान्य एवं आईयूपीएसी नाम लिख सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH04-T2",
+   "topic_number": 2,
+   "title": "ऐमीनों का विरचन",
+   "ncert_sections": "9.4",
+   "concepts": [
+    {
+     "concept_tag": "nitro-apchayan-amonia-apghatan",
+     "learning_objective": "नाइट्रो यौगिकों के अपचयन तथा ऐल्किल हैलाइडों के अमोनिया-अपघटन द्वारा ऐमीन बनाना समझा सके।"
+    },
+    {
+     "concept_tag": "gabriel-hofmann",
+     "learning_objective": "गैब्रिएल थैलिमाइड संश्लेषण तथा हॉफमान ब्रोमेमाइड निम्नीकरण की विशेषताएँ लागू कर सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH04-T3",
+   "topic_number": 3,
+   "title": "ऐमीनों के भौतिक गुण",
+   "ncert_sections": "9.5",
+   "concepts": [
+    {
+     "concept_tag": "aimeen-bhautik-gun",
+     "learning_objective": "ऐमीनों की विलेयता, क्वथनांक तथा हाइड्रोजन आबंधन के संबंध की व्याख्या कर सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH04-T4",
+   "topic_number": 4,
+   "title": "ऐमीनों का क्षारकीय गुण",
+   "ncert_sections": "9.6",
+   "concepts": [
+    {
+     "concept_tag": "kshariyata-pkb",
+     "learning_objective": "pKb मानों के आधार पर ऐमीनों की क्षारकीय प्रबलता की तुलना कर सके।"
+    },
+    {
+     "concept_tag": "aril-aimeen-kshariyata",
+     "learning_objective": "ऐरिलऐमीनों की दुर्बल क्षारकता को अनुनाद के आधार पर समझा सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH04-T5",
+   "topic_number": 5,
+   "title": "ऐमीनों की अन्य रासायनिक अभिक्रियाएँ",
+   "ncert_sections": "9.6",
+   "concepts": [
+    {
+     "concept_tag": "carbylamine-hinsberg",
+     "learning_objective": "कार्बिलऐमीन परीक्षण तथा हिंसबर्ग अभिकर्मक द्वारा ऐमीनों में विभेद कर सके।"
+    },
+    {
+     "concept_tag": "aniline-ilektronragi-pratisthapan",
+     "learning_objective": "ऐनिलीन की इलेक्ट्रॉनरागी प्रतिस्थापन अभिक्रियाओं तथा ऐसीटिलन द्वारा सक्रियता नियंत्रण की व्याख्या कर सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHCH2-CH04-T6",
+   "topic_number": 6,
+   "title": "डाइऐज़ोनियम लवण",
+   "ncert_sections": "9.7, 9.8, 9.9, 9.10",
+   "concepts": [
+    {
+     "concept_tag": "diazotikaran",
+     "learning_objective": "डाइऐज़ोटीकरण द्वारा बेन्ज़ीनडाइऐज़ोनियम क्लोराइड बनाने की विधि तथा उसकी स्थिरता समझा सके।"
+    },
+    {
+     "concept_tag": "diazonium-abhikriyaen",
+     "learning_objective": "डाइऐज़ोनियम लवणों की प्रतिस्थापन एवं युग्मन अभिक्रियाओं से ऐरोमैटिक यौगिकों का संश्लेषण बता सके।"
+    }
+   ]
+  }
+ ]
+}

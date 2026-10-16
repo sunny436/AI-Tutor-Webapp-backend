@@ -1,0 +1,136 @@
+{
+ "chapter_id": "HECU1-CH03",
+ "title": "Health: The Ultimate Treasure",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HECU1-CH03-T1",
+   "topic_number": 1,
+   "title": "Health: more than not falling sick",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "who-definition-of-health",
+     "learning_objective": "State the WHO definition of health as complete physical, mental and social well-being."
+    },
+    {
+     "concept_tag": "factors-affecting-well-being",
+     "learning_objective": "Explain how habits and surroundings affect a person's physical, mental and social well-being."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH03-T2",
+   "topic_number": 2,
+   "title": "Staying healthy: lifestyle and a clean environment",
+   "ncert_sections": "3.2, 3.2.1, 3.2.2",
+   "concepts": [
+    {
+     "concept_tag": "healthy-lifestyle-habits",
+     "learning_objective": "Distinguish healthy habits from unhealthy habits in daily life."
+    },
+    {
+     "concept_tag": "clean-environment-and-health",
+     "learning_objective": "Explain how clean surroundings, clean air and water, and good relationships support health."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH03-T3",
+   "topic_number": 3,
+   "title": "Knowing we are unwell: signs and symptoms",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "signs-versus-symptoms",
+     "learning_objective": "Distinguish a symptom (what we feel) from a sign (what can be seen or measured)."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH03-T4",
+   "topic_number": 4,
+   "title": "Diseases: causes and types",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "pathogens",
+     "learning_objective": "Identify pathogens such as bacteria, viruses, fungi, worms and protozoa as disease-causing organisms."
+    },
+    {
+     "concept_tag": "communicable-vs-non-communicable",
+     "learning_objective": "Classify diseases as communicable or non-communicable based on cause and spread."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH03-T5",
+   "topic_number": 5,
+   "title": "Spread and prevention of communicable diseases",
+   "ncert_sections": "3.4.1",
+   "concepts": [
+    {
+     "concept_tag": "modes-of-transmission",
+     "learning_objective": "Describe how communicable diseases spread through air, contact, food and water, and vectors."
+    },
+    {
+     "concept_tag": "prevention-of-communicable-diseases",
+     "learning_objective": "Choose suitable preventive measures for diseases listed in Table 3.1."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH03-T6",
+   "topic_number": 6,
+   "title": "Non-communicable diseases",
+   "ncert_sections": "3.4.2",
+   "concepts": [
+    {
+     "concept_tag": "deficiency-and-chronic-diseases",
+     "learning_objective": "Explain deficiency diseases and chronic diseases as types of non-communicable diseases."
+    },
+    {
+     "concept_tag": "lifestyle-diseases-diabetes",
+     "learning_objective": "Relate the causes, symptoms and prevention of lifestyle diseases such as diabetes and obesity."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH03-T7",
+   "topic_number": 7,
+   "title": "Prevention: immunity and vaccines",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "immunity-and-immune-system",
+     "learning_objective": "Define immunity and acquired immunity."
+    },
+    {
+     "concept_tag": "vaccines",
+     "learning_objective": "Explain how vaccines train the immune system and why they are preventive, not curative."
+    },
+    {
+     "concept_tag": "history-of-vaccination",
+     "learning_objective": "Describe Jenner's smallpox vaccine and the traditional Indian practice of variolation."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH03-T8",
+   "topic_number": 8,
+   "title": "Treatment of diseases and antibiotic resistance",
+   "ncert_sections": "3.5.1",
+   "concepts": [
+    {
+     "concept_tag": "antibiotics",
+     "learning_objective": "Explain that antibiotics act only against bacteria and recall the discovery of penicillin."
+    },
+    {
+     "concept_tag": "antibiotic-resistance",
+     "learning_objective": "Explain how antibiotic resistance develops and how wise use of antibiotics prevents it."
+    }
+   ]
+  }
+ ]
+}

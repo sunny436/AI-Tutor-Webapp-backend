@@ -1,0 +1,124 @@
+{
+ "chapter_id": "GECU1-CH12",
+ "title": "Earth, Moon, and the Sun",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GECU1-CH12-T1",
+   "topic_number": 1,
+   "title": "Rotation of the Earth",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "earth-rotation-axis",
+     "learning_objective": "Describe the Earth's rotation about its axis through the North and South Poles, from West to East, in about 24 hours."
+    },
+    {
+     "concept_tag": "apparent-motion-of-sun",
+     "learning_objective": "Explain that the Sun appears to move from East to West across the sky because the Earth rotates from West to East."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH12-T2",
+   "topic_number": 2,
+   "title": "Day and night",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "day-night-cycle",
+     "learning_objective": "Explain how the Earth's rotation causes the cycle of day and night, with half the Earth lit at any time."
+    },
+    {
+     "concept_tag": "sunrise-order-across-places",
+     "learning_objective": "Use the West-to-East rotation to explain why sunrise occurs earlier in eastern places than in western ones."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH12-T3",
+   "topic_number": 3,
+   "title": "Apparent motion of the stars and the Moon",
+   "ncert_sections": "12.1",
+   "concepts": [
+    {
+     "concept_tag": "pole-star-and-star-motion",
+     "learning_objective": "Explain why the Pole Star appears nearly stationary while other stars appear to move around it."
+    },
+    {
+     "concept_tag": "evidence-for-earth-rotation",
+     "learning_objective": "Recognise the Foucault pendulum and Aryabhata's boat analogy as ways of understanding the Earth's rotation."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH12-T4",
+   "topic_number": 4,
+   "title": "Revolution of the Earth and the changing night sky",
+   "ncert_sections": "12.2, 12.2.1",
+   "concepts": [
+    {
+     "concept_tag": "earth-revolution-orbit",
+     "learning_objective": "Define revolution and orbit and state that the Earth revolves around the Sun in about 365 days and 6 hours."
+    },
+    {
+     "concept_tag": "changing-night-sky",
+     "learning_objective": "Explain why the stars seen after sunset change gradually over a year as the Earth revolves."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH12-T5",
+   "topic_number": 5,
+   "title": "Seasons on the Earth",
+   "ncert_sections": "12.2.2",
+   "concepts": [
+    {
+     "concept_tag": "tilt-and-seasons",
+     "learning_objective": "Explain how the tilt of the Earth's axis and its spherical shape cause seasons, reversed in the two hemispheres."
+    },
+    {
+     "concept_tag": "solstices-and-equinoxes",
+     "learning_objective": "Identify the solstices and equinoxes and the length of daytime on them in the Northern Hemisphere."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH12-T6",
+   "topic_number": 6,
+   "title": "Solar eclipse",
+   "ncert_sections": "12.3, 12.3.1",
+   "concepts": [
+    {
+     "concept_tag": "apparent-size",
+     "learning_objective": "Explain how apparent size depends on actual size and distance, so the Moon can cover the Sun."
+    },
+    {
+     "concept_tag": "solar-eclipse-geometry",
+     "learning_objective": "Describe the arrangement of the Sun, Moon and Earth in total and partial solar eclipses."
+    },
+    {
+     "concept_tag": "safe-solar-eclipse-viewing",
+     "learning_objective": "State safe and unsafe ways of viewing a solar eclipse."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH12-T7",
+   "topic_number": 7,
+   "title": "Lunar eclipse",
+   "ncert_sections": "12.3.2",
+   "concepts": [
+    {
+     "concept_tag": "lunar-eclipse-geometry",
+     "learning_objective": "Describe the arrangement of the Sun, Earth and Moon during a lunar eclipse."
+    },
+    {
+     "concept_tag": "lunar-eclipse-observation",
+     "learning_objective": "Describe how total and partial lunar eclipses appear and that they are safe to watch."
+    }
+   ]
+  }
+ ]
+}

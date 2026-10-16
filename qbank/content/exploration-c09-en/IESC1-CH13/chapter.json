@@ -1,0 +1,128 @@
+{
+ "chapter_id": "IESC1-CH13",
+ "title": "Earth as a System: Energy, Matter, and Life",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IESC1-CH13-T1",
+   "topic_number": 1,
+   "title": "The Earth system and its interacting spheres",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "earth-spheres",
+     "learning_objective": "Identify the geosphere, hydrosphere, cryosphere, atmosphere and biosphere with examples."
+    },
+    {
+     "concept_tag": "sphere-interactions",
+     "learning_objective": "Explain how a disturbance in one sphere of the Earth leads to changes in the others."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH13-T2",
+   "topic_number": 2,
+   "title": "Solar radiation, insolation and the solar constant",
+   "ncert_sections": "13.1",
+   "concepts": [
+    {
+     "concept_tag": "electromagnetic-spectrum",
+     "learning_objective": "Describe the parts of the electromagnetic spectrum in solar radiation and their effects on the Earth."
+    },
+    {
+     "concept_tag": "insolation-solar-constant",
+     "learning_objective": "Define insolation and the solar constant and calculate solar energy received by an area."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH13-T3",
+   "topic_number": 3,
+   "title": "Albedo, latitude and the role of the atmosphere",
+   "ncert_sections": "13.1.1, 13.1.2, 13.1.3",
+   "concepts": [
+    {
+     "concept_tag": "albedo",
+     "learning_objective": "Relate the albedo of a surface to how much it heats up, including the urban heat island effect."
+    },
+    {
+     "concept_tag": "latitude-uneven-heating",
+     "learning_objective": "Explain why the spherical shape of the Earth causes uneven heating between the equator and the poles."
+    },
+    {
+     "concept_tag": "atmospheric-layers-greenhouse",
+     "learning_objective": "Describe the troposphere, stratosphere and ozone layer and how greenhouse gases keep the Earth warm."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH13-T4",
+   "topic_number": 4,
+   "title": "Winds and ocean currents",
+   "ncert_sections": "13.2, 13.2.1, 13.2.2, 13.2.3",
+   "concepts": [
+    {
+     "concept_tag": "local-winds",
+     "learning_objective": "Explain the formation of valley and mountain breezes from uneven heating."
+    },
+    {
+     "concept_tag": "planetary-winds-pressure-belts",
+     "learning_objective": "Describe the pressure belts and planetary winds and their deflection by the Earth's rotation."
+    },
+    {
+     "concept_tag": "ocean-currents",
+     "learning_objective": "Explain what drives ocean currents and how they regulate climate."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH13-T5",
+   "topic_number": 5,
+   "title": "Water and carbon cycles",
+   "ncert_sections": "13.3, 13.3.1, 13.3.2",
+   "concepts": [
+    {
+     "concept_tag": "water-cycle-climate",
+     "learning_objective": "Describe the water cycle and how climate change is altering it across the spheres."
+    },
+    {
+     "concept_tag": "carbon-cycle",
+     "learning_objective": "Distinguish the fast and slow carbon cycles and the role of oceans and fossil fuels."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH13-T6",
+   "topic_number": 6,
+   "title": "Nitrogen and oxygen cycles",
+   "ncert_sections": "13.3.3, 13.3.4",
+   "concepts": [
+    {
+     "concept_tag": "nitrogen-cycle",
+     "learning_objective": "Explain nitrogen fixation, nitrification, assimilation, ammonification and denitrification with the organisms involved."
+    },
+    {
+     "concept_tag": "oxygen-cycle",
+     "learning_objective": "Describe the balance between consumption and production of atmospheric oxygen."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH13-T7",
+   "topic_number": 7,
+   "title": "Human impact on the Earth's processes",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "human-disruption-of-cycles",
+     "learning_objective": "Analyse how fossil fuel burning, fertiliser overuse and deforestation disrupt biogeochemical cycles."
+    },
+    {
+     "concept_tag": "restoring-balance",
+     "learning_objective": "Evaluate local actions and global agreements that help restore the Earth's natural balance."
+    }
+   ]
+  }
+ ]
+}

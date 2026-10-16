@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LHPH2-CH06",
+ "title": "अर्धचालक इलेक्ट्रॉनिकी : पदार्थ, युक्तियाँ तथा सरल परिपथ",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHPH2-CH06-T1",
+   "topic_number": 1,
+   "title": "धातुओं, चालकों तथा अर्धचालकों का वर्गीकरण",
+   "ncert_sections": "14.2",
+   "concepts": [
+    {
+     "concept_tag": "oorja-band-siddhant",
+     "learning_objective": "ऊर्जा बैंड के आधार पर धातु, विद्युतरोधी तथा अर्धचालक में अंतर स्पष्ट करना।"
+    },
+    {
+     "concept_tag": "pratirodhakta-vargikaran",
+     "learning_objective": "प्रतिरोधकता एवं चालकता के मानों के आधार पर ठोसों का वर्गीकरण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH06-T2",
+   "topic_number": 2,
+   "title": "नैज अर्धचालक",
+   "ncert_sections": "14.3",
+   "concepts": [
+    {
+     "concept_tag": "naij-ardhchalak-vahak",
+     "learning_objective": "नैज अर्धचालक में इलेक्ट्रॉन-होल युग्म के बनने तथा n_e = n_h = n_i को समझना।"
+    },
+    {
+     "concept_tag": "hole-gati",
+     "learning_objective": "होल की गति तथा ताप के साथ चालकता में परिवर्तन की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH06-T3",
+   "topic_number": 3,
+   "title": "बाह्य अर्धचालक",
+   "ncert_sections": "14.4",
+   "concepts": [
+    {
+     "concept_tag": "n-prakar-ardhchalak",
+     "learning_objective": "पंचसंयोजी अपमिश्रण से n-प्रकार अर्धचालक के बनने को समझना।"
+    },
+    {
+     "concept_tag": "p-prakar-ardhchalak",
+     "learning_objective": "त्रिसंयोजी अपमिश्रण से p-प्रकार अर्धचालक के बनने को समझना।"
+    },
+    {
+     "concept_tag": "dravya-anupati-niyam",
+     "learning_objective": "सूत्र n_e n_h = n_i² का उपयोग करके वाहक सांद्रता की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH06-T4",
+   "topic_number": 4,
+   "title": "p-n संधि का निर्माण",
+   "ncert_sections": "14.5",
+   "concepts": [
+    {
+     "concept_tag": "visaran-apvah",
+     "learning_objective": "p-n संधि में विसरण तथा अपवाह धाराओं की भूमिका समझना।"
+    },
+    {
+     "concept_tag": "hrasi-kshetra-vibhav-prachir",
+     "learning_objective": "ह्रासी क्षेत्र तथा विभव प्राचीर के बनने की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH06-T5",
+   "topic_number": 5,
+   "title": "अर्धचालक डायोड",
+   "ncert_sections": "14.6",
+   "concepts": [
+    {
+     "concept_tag": "agra-bayas",
+     "learning_objective": "अग्रदिशिक बायस में डायोड के व्यवहार तथा देहली वोल्टता को समझना।"
+    },
+    {
+     "concept_tag": "pashch-bayas",
+     "learning_objective": "पश्चदिशिक बायस, भंजन वोल्टता तथा V-I अभिलाक्षणिक की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH06-T6",
+   "topic_number": 6,
+   "title": "दिष्टकारी के रूप में संधि डायोड का अनुप्रयोग",
+   "ncert_sections": "14.7",
+   "concepts": [
+    {
+     "concept_tag": "ardh-tarang-dishtkari",
+     "learning_objective": "अर्धतरंग दिष्टकारी की कार्यविधि तथा निर्गत आवृत्ति समझना।"
+    },
+    {
+     "concept_tag": "poorn-tarang-dishtkari",
+     "learning_objective": "पूर्णतरंग दिष्टकारी तथा संधारित्र फ़िल्टर की भूमिका समझना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1415 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "mathematics-c10-en",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "mathematics",
+  "language": "english",
+  "title": "Mathematics",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jemh1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JEMH1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Real Numbers",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH01-T1",
+     "topic_number": 1,
+     "title": "The Fundamental Theorem of Arithmetic",
+     "ncert_sections": "1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "fundamental-theorem-of-arithmetic",
+       "learning_objective": "State the Fundamental Theorem of Arithmetic and explain what the uniqueness of prime factorisation means."
+      },
+      {
+       "concept_tag": "prime-factorisation",
+       "learning_objective": "Express a composite number as a product of powers of primes and use the factorisation to identify its factors."
+      },
+      {
+       "concept_tag": "uniqueness-applications",
+       "learning_objective": "Use the uniqueness of prime factorisation to decide whether numbers such as 4^n can end in 0 or whether an expression is composite."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH01-T2",
+     "topic_number": 2,
+     "title": "HCF and LCM by the Prime Factorisation Method",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "hcf-lcm-prime-factorisation",
+       "learning_objective": "Find the HCF and LCM of two or three numbers from their prime factorisations."
+      },
+      {
+       "concept_tag": "hcf-lcm-product-relation",
+       "learning_objective": "Use HCF(a, b) x LCM(a, b) = a x b for two numbers and recognise that it does not hold in general for three numbers."
+      },
+      {
+       "concept_tag": "lcm-word-problems",
+       "learning_objective": "Apply the LCM to real-life problems about events that repeat at fixed intervals."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH01-T3",
+     "topic_number": 3,
+     "title": "Proving Square Roots of Primes Irrational",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "irrational-number-definition",
+       "learning_objective": "Recall the definition of an irrational number as one that cannot be written as p/q with integers p, q and q not 0."
+      },
+      {
+       "concept_tag": "prime-divides-square",
+       "learning_objective": "State and apply the result that if a prime p divides a^2, then p divides a."
+      },
+      {
+       "concept_tag": "proof-by-contradiction",
+       "learning_objective": "Follow and complete a proof by contradiction that the square root of a prime is irrational."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH01-T4",
+     "topic_number": 4,
+     "title": "Irrationality of Sums, Differences and Products",
+     "ncert_sections": "1.3",
+     "concepts": [
+      {
+       "concept_tag": "rational-irrational-operations",
+       "learning_objective": "Decide whether sums, differences, products and quotients involving rational and irrational numbers are rational or irrational."
+      },
+      {
+       "concept_tag": "proving-expressions-irrational",
+       "learning_objective": "Prove that expressions such as 5 - root 3 or 3 root 2 are irrational by reducing them to a known irrational number."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Polynomials",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH02-T1",
+     "topic_number": 1,
+     "title": "Polynomials, their degree, value and zeroes",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "degree-and-types-of-polynomials",
+       "learning_objective": "Identify polynomials and classify them as linear, quadratic or cubic by their degree."
+      },
+      {
+       "concept_tag": "value-and-zero-of-polynomial",
+       "learning_objective": "Find the value p(k) of a polynomial and decide whether k is a zero of p(x)."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH02-T2",
+     "topic_number": 2,
+     "title": "Geometrical meaning of the zeroes of a polynomial",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "zeroes-as-x-intercepts",
+       "learning_objective": "Interpret the zeroes of p(x) as the x-coordinates of the points where the graph of y = p(x) meets the x-axis."
+      },
+      {
+       "concept_tag": "number-of-zeroes-from-graph",
+       "learning_objective": "Determine the number of zeroes of a polynomial from its graph and relate it to the degree."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH02-T3",
+     "topic_number": 3,
+     "title": "Zeroes and coefficients of a quadratic polynomial",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "finding-zeroes-by-factorisation",
+       "learning_objective": "Find the zeroes of a quadratic polynomial by splitting the middle term or using identities."
+      },
+      {
+       "concept_tag": "sum-and-product-of-zeroes-quadratic",
+       "learning_objective": "Use the relations sum of zeroes = -b/a and product of zeroes = c/a for ax^2 + bx + c."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH02-T4",
+     "topic_number": 4,
+     "title": "Forming a quadratic polynomial and expressions in its zeroes",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "forming-quadratic-from-zeroes",
+       "learning_objective": "Write a quadratic polynomial as k[x^2 - (sum of zeroes)x + (product of zeroes)]."
+      },
+      {
+       "concept_tag": "expressions-in-zeroes",
+       "learning_objective": "Evaluate expressions such as alpha^2 + beta^2 and 1/alpha + 1/beta using the sum and product of zeroes."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH02-T5",
+     "topic_number": 5,
+     "title": "Zeroes and coefficients of a cubic polynomial",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "sum-and-product-of-zeroes-cubic",
+       "learning_objective": "Use alpha + beta + gamma = -b/a and alpha*beta*gamma = -d/a for ax^3 + bx^2 + cx + d."
+      },
+      {
+       "concept_tag": "pairwise-products-of-zeroes-cubic",
+       "learning_objective": "Use alpha*beta + beta*gamma + gamma*alpha = c/a for a cubic polynomial."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Pair of Linear Equations in Two Variables",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH03-T1",
+     "topic_number": 1,
+     "title": "Representing situations as a pair of linear equations",
+     "ncert_sections": "3.1",
+     "concepts": [
+      {
+       "concept_tag": "forming-pair-of-equations",
+       "learning_objective": "Translate a real-life situation into a pair of linear equations in two variables."
+      },
+      {
+       "concept_tag": "general-form-linear-equation",
+       "learning_objective": "Write a linear equation in two variables in the general form ax + by + c = 0 and identify a, b and c."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH03-T2",
+     "topic_number": 2,
+     "title": "Graphical method of solution",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "graphical-interpretation",
+       "learning_objective": "Interpret the graphs of a pair of linear equations as intersecting, coincident or parallel lines and read the solution."
+      },
+      {
+       "concept_tag": "consistency-classification",
+       "learning_objective": "Classify a pair of linear equations as consistent, inconsistent or dependent."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH03-T3",
+     "topic_number": 3,
+     "title": "Comparing ratios of coefficients",
+     "ncert_sections": "3.2",
+     "concepts": [
+      {
+       "concept_tag": "coefficient-ratio-conditions",
+       "learning_objective": "Use the ratios a1/a2, b1/b2 and c1/c2 to decide the number of solutions of a pair of linear equations."
+      },
+      {
+       "concept_tag": "finding-unknown-for-condition",
+       "learning_objective": "Find an unknown coefficient for which a pair of linear equations has a unique, no or infinitely many solutions."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH03-T4",
+     "topic_number": 4,
+     "title": "Substitution method",
+     "ncert_sections": "3.3, 3.3.1",
+     "concepts": [
+      {
+       "concept_tag": "substitution-method",
+       "learning_objective": "Solve a pair of linear equations by expressing one variable in terms of the other and substituting."
+      },
+      {
+       "concept_tag": "substitution-word-problems",
+       "learning_objective": "Model and solve word problems using the substitution method."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH03-T5",
+     "topic_number": 5,
+     "title": "Elimination method",
+     "ncert_sections": "3.3.2",
+     "concepts": [
+      {
+       "concept_tag": "elimination-method",
+       "learning_objective": "Solve a pair of linear equations by making the coefficients of one variable numerically equal and eliminating it."
+      },
+      {
+       "concept_tag": "elimination-word-problems",
+       "learning_objective": "Model and solve word problems such as digit, income and speed problems using the elimination method."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Quadratic Equations",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH04-T1",
+     "topic_number": 1,
+     "title": "Quadratic equations and the standard form",
+     "ncert_sections": "4.1, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "quadratic-equation-standard-form",
+       "learning_objective": "State the standard form ax² + bx + c = 0 (a ≠ 0) and identify its coefficients a, b and c."
+      },
+      {
+       "concept_tag": "checking-quadratic-equations",
+       "learning_objective": "Simplify a given equation to decide whether or not it is a quadratic equation."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH04-T2",
+     "topic_number": 2,
+     "title": "Representing situations as quadratic equations",
+     "ncert_sections": "4.2",
+     "concepts": [
+      {
+       "concept_tag": "forming-equations-from-situations",
+       "learning_objective": "Translate area, number and age situations into a quadratic equation in one variable."
+      },
+      {
+       "concept_tag": "speed-time-equations",
+       "learning_objective": "Form a quadratic equation from a uniform speed, distance and time situation."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH04-T3",
+     "topic_number": 3,
+     "title": "Roots and solution by factorisation",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "root-of-quadratic-equation",
+       "learning_objective": "Explain when a real number is a root of a quadratic equation and how many roots it can have."
+      },
+      {
+       "concept_tag": "splitting-the-middle-term",
+       "learning_objective": "Find the roots of a quadratic equation by splitting the middle term and equating each factor to zero."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH04-T4",
+     "topic_number": 4,
+     "title": "Word problems solved by factorisation",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "solving-word-problems-by-factorisation",
+       "learning_objective": "Solve number, geometry and cost problems by forming and factorising a quadratic equation."
+      },
+      {
+       "concept_tag": "rejecting-inadmissible-roots",
+       "learning_objective": "Decide which root of an equation fits the situation and reject the inadmissible one."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH04-T5",
+     "topic_number": 5,
+     "title": "Discriminant, nature of roots and the quadratic formula",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "discriminant-and-nature-of-roots",
+       "learning_objective": "Use the discriminant b² − 4ac to decide whether the roots are distinct, equal or not real."
+      },
+      {
+       "concept_tag": "quadratic-formula",
+       "learning_objective": "Find the roots of a quadratic equation using the quadratic formula."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH04-T6",
+     "topic_number": 6,
+     "title": "Equal roots and feasibility of situations",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "condition-for-equal-roots",
+       "learning_objective": "Find the value of an unknown coefficient for which a quadratic equation has equal roots."
+      },
+      {
+       "concept_tag": "feasibility-of-situations",
+       "learning_objective": "Use the discriminant to decide whether a real-life situation is possible and find its values."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Arithmetic Progressions",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH05-T1",
+     "topic_number": 1,
+     "title": "Arithmetic progressions and the common difference",
+     "ncert_sections": "5.1, 5.2",
+     "concepts": [
+      {
+       "concept_tag": "ap-definition",
+       "learning_objective": "Recognise whether a list of numbers or a real-life situation forms an arithmetic progression."
+      },
+      {
+       "concept_tag": "common-difference",
+       "learning_objective": "Find the common difference of an AP and use the condition of equal successive differences."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH05-T2",
+     "topic_number": 2,
+     "title": "The nth term of an AP",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "general-form-of-ap",
+       "learning_objective": "Write an AP in the general form a, a + d, a + 2d, ... from its first term and common difference."
+      },
+      {
+       "concept_tag": "nth-term-formula",
+       "learning_objective": "Use a_n = a + (n - 1)d to find any term of an AP."
+      },
+      {
+       "concept_tag": "number-of-terms",
+       "learning_objective": "Find which term of an AP equals a given number, or how many terms a finite AP has."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH05-T3",
+     "topic_number": 3,
+     "title": "Applications of the nth term",
+     "ncert_sections": "5.3",
+     "concepts": [
+      {
+       "concept_tag": "nth-term-from-end",
+       "learning_objective": "Find the nth term from the last term of a finite AP."
+      },
+      {
+       "concept_tag": "finding-ap-from-conditions",
+       "learning_objective": "Determine an AP when conditions on two of its terms are given."
+      },
+      {
+       "concept_tag": "nth-term-word-problems",
+       "learning_objective": "Model and solve real-life situations using the nth term of an AP."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH05-T4",
+     "topic_number": 4,
+     "title": "Sum of the first n terms of an AP",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "sum-formula",
+       "learning_objective": "Use S = (n/2)[2a + (n - 1)d] to find the sum of the first n terms of an AP."
+      },
+      {
+       "concept_tag": "sum-using-last-term",
+       "learning_objective": "Use S = (n/2)(a + l) when the first and last terms of an AP are known."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH05-T5",
+     "topic_number": 5,
+     "title": "Applications of the sum of an AP",
+     "ncert_sections": "5.4",
+     "concepts": [
+      {
+       "concept_tag": "nth-term-from-sum",
+       "learning_objective": "Find a term of an AP from the sums of its terms using a_n = S_n - S_(n-1)."
+      },
+      {
+       "concept_tag": "sum-word-problems",
+       "learning_objective": "Solve real-life problems that involve the sum of terms of an AP."
+      },
+      {
+       "concept_tag": "sum-properties",
+       "learning_objective": "Reason about relationships between sums of different numbers of terms of an AP."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Triangles",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH06-T1",
+     "topic_number": 1,
+     "title": "Similar figures and similarity of polygons",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "similar-vs-congruent-figures",
+       "learning_objective": "Distinguish similar figures from congruent figures and identify classes of figures that are always similar."
+      },
+      {
+       "concept_tag": "similarity-of-polygons-conditions",
+       "learning_objective": "Apply the two conditions (equal corresponding angles and proportional corresponding sides) for similarity of polygons."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH06-T2",
+     "topic_number": 2,
+     "title": "Basic Proportionality Theorem (Thales theorem)",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "basic-proportionality-theorem",
+       "learning_objective": "State the Basic Proportionality Theorem and write the ratios it gives."
+      },
+      {
+       "concept_tag": "bpt-ratio-applications",
+       "learning_objective": "Use the Basic Proportionality Theorem to find unknown lengths in triangles and trapeziums."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH06-T3",
+     "topic_number": 3,
+     "title": "Converse of the Basic Proportionality Theorem",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "converse-of-bpt",
+       "learning_objective": "Use the converse of the Basic Proportionality Theorem to decide whether a line is parallel to a side of a triangle."
+      },
+      {
+       "concept_tag": "midpoint-theorem-via-bpt",
+       "learning_objective": "Deduce mid-point results for a triangle from the converse of the Basic Proportionality Theorem."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH06-T4",
+     "topic_number": 4,
+     "title": "AAA and AA similarity criteria",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "aa-similarity-criterion",
+       "learning_objective": "Prove triangles similar using the AAA or AA criterion and use the resulting proportions."
+      },
+      {
+       "concept_tag": "similarity-notation-correspondence",
+       "learning_objective": "Write the similarity of two triangles with the correct correspondence of vertices and sides."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH06-T5",
+     "topic_number": 5,
+     "title": "SSS and SAS similarity criteria",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "sss-similarity-criterion",
+       "learning_objective": "Prove triangles similar when their corresponding sides are proportional and find unknown angles."
+      },
+      {
+       "concept_tag": "sas-similarity-criterion",
+       "learning_objective": "Prove triangles similar using one equal angle with the including sides proportional."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH06-T6",
+     "topic_number": 6,
+     "title": "Applications of similar triangles",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "shadow-height-problems",
+       "learning_objective": "Use similar triangles to find heights and shadow lengths by indirect measurement."
+      },
+      {
+       "concept_tag": "corresponding-medians-ratio",
+       "learning_objective": "Relate corresponding medians of similar triangles to their corresponding sides."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Coordinate Geometry",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH07-T1",
+     "topic_number": 1,
+     "title": "Coordinates of a point: abscissa and ordinate",
+     "ncert_sections": "7.1",
+     "concepts": [
+      {
+       "concept_tag": "abscissa-and-ordinate",
+       "learning_objective": "Relate the coordinates of a point to its distances from the y-axis and the x-axis."
+      },
+      {
+       "concept_tag": "points-on-axes",
+       "learning_objective": "Recognise that points on the x-axis have the form (x, 0) and points on the y-axis have the form (0, y)."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH07-T2",
+     "topic_number": 2,
+     "title": "Distance formula",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "distance-formula",
+       "learning_objective": "Use the distance formula to find the distance between two points with given coordinates."
+      },
+      {
+       "concept_tag": "distance-from-origin",
+       "learning_objective": "Find the distance of a point (x, y) from the origin as the square root of x squared plus y squared."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH07-T3",
+     "topic_number": 3,
+     "title": "Applications of the distance formula",
+     "ncert_sections": "7.2",
+     "concepts": [
+      {
+       "concept_tag": "collinearity-test",
+       "learning_objective": "Decide whether three points are collinear by comparing the distances between them."
+      },
+      {
+       "concept_tag": "classifying-figures",
+       "learning_objective": "Classify a triangle or quadrilateral from the lengths of its sides and diagonals."
+      },
+      {
+       "concept_tag": "equidistant-point",
+       "learning_objective": "Find a point, or a relation between x and y, for a point equidistant from two given points."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH07-T4",
+     "topic_number": 4,
+     "title": "Section formula for internal division",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "section-formula-internal",
+       "learning_objective": "Find the coordinates of the point dividing a line segment internally in a given ratio m1 : m2."
+      },
+      {
+       "concept_tag": "k-ratio-form",
+       "learning_objective": "Write the coordinates of a point dividing a segment in the ratio k : 1."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH07-T5",
+     "topic_number": 5,
+     "title": "Finding the ratio of division",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "finding-division-ratio",
+       "learning_objective": "Find the ratio in which a given point divides the segment joining two points."
+      },
+      {
+       "concept_tag": "division-by-axes",
+       "learning_objective": "Find the ratio in which a coordinate axis divides a segment and the point of intersection."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH07-T6",
+     "topic_number": 6,
+     "title": "Mid-point formula and its applications",
+     "ncert_sections": "7.3, 7.4",
+     "concepts": [
+      {
+       "concept_tag": "mid-point-formula",
+       "learning_objective": "Find the mid-point of a segment and points dividing it into equal parts."
+      },
+      {
+       "concept_tag": "mid-point-applications",
+       "learning_objective": "Use the mid-point formula with diameters of circles and diagonals of parallelograms."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Introduction to Trigonometry",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH08-T1",
+     "topic_number": 1,
+     "title": "Trigonometric ratios of an acute angle",
+     "ncert_sections": "8.1, 8.2",
+     "concepts": [
+      {
+       "concept_tag": "defining-trigonometric-ratios",
+       "learning_objective": "Identify the opposite side, adjacent side and hypotenuse for an acute angle and define sin, cos and tan as ratios of these sides."
+      },
+      {
+       "concept_tag": "reciprocal-and-quotient-relations",
+       "learning_objective": "Use cosec A = 1/sin A, sec A = 1/cos A, cot A = 1/tan A, tan A = sin A/cos A and cot A = cos A/sin A."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH08-T2",
+     "topic_number": 2,
+     "title": "Finding all trigonometric ratios from one given ratio",
+     "ncert_sections": "8.2",
+     "concepts": [
+      {
+       "concept_tag": "ratios-independent-of-triangle-size",
+       "learning_objective": "Explain, using similar triangles, that trigonometric ratios depend only on the angle, and that sin A and cos A never exceed 1."
+      },
+      {
+       "concept_tag": "ratios-from-one-given-ratio",
+       "learning_objective": "Find the remaining trigonometric ratios of an acute angle from one known ratio using the Pythagoras theorem."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH08-T3",
+     "topic_number": 3,
+     "title": "Trigonometric ratios of 30, 45 and 60 degrees",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "standard-angle-values",
+       "learning_objective": "Recall the values of the trigonometric ratios of 30°, 45° and 60° and how they are derived from geometry."
+      },
+      {
+       "concept_tag": "evaluating-standard-angle-expressions",
+       "learning_objective": "Evaluate expressions and solve simple equations involving the trigonometric ratios of 30°, 45° and 60°."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH08-T4",
+     "topic_number": 4,
+     "title": "Ratios of 0 and 90 degrees and solving right triangles",
+     "ncert_sections": "8.3",
+     "concepts": [
+      {
+       "concept_tag": "ratios-of-0-and-90-degrees",
+       "learning_objective": "State the trigonometric ratios of 0° and 90°, identify which are not defined, and describe how sin A and cos A change from 0° to 90°."
+      },
+      {
+       "concept_tag": "solving-right-triangles",
+       "learning_objective": "Find the unknown sides and angles of a right triangle when one side and one other part are known."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH08-T5",
+     "topic_number": 5,
+     "title": "Trigonometric identities",
+     "ncert_sections": "8.4, 8.5",
+     "concepts": [
+      {
+       "concept_tag": "fundamental-identities",
+       "learning_objective": "Use sin²A + cos²A = 1, 1 + tan²A = sec²A and 1 + cot²A = cosec²A together with the angles for which each holds."
+      },
+      {
+       "concept_tag": "proving-identities",
+       "learning_objective": "Simplify trigonometric expressions and prove identities by writing them in terms of sin and cos or by using the basic identities."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Some Applications of Trigonometry",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH09-T1",
+     "topic_number": 1,
+     "title": "Line of sight, angle of elevation and angle of depression",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "line-of-sight",
+       "learning_objective": "Identify the line of sight as the line from the observer's eye to the point viewed and use it to set up a right triangle."
+      },
+      {
+       "concept_tag": "angle-of-elevation",
+       "learning_objective": "Recognise the angle of elevation as the angle the line of sight makes with the horizontal when the object is above eye level."
+      },
+      {
+       "concept_tag": "angle-of-depression",
+       "learning_objective": "Recognise the angle of depression as the angle the line of sight makes with the horizontal when the object is below eye level."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH09-T2",
+     "topic_number": 2,
+     "title": "Heights and distances using one right triangle",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "height-using-tangent",
+       "learning_objective": "Find an unknown height or horizontal distance using tan or cot of a single angle of elevation."
+      },
+      {
+       "concept_tag": "inclined-length-using-sine-cosine",
+       "learning_objective": "Find the length of an inclined object such as a ladder, rope or kite string using sin or cos."
+      },
+      {
+       "concept_tag": "observer-eye-height",
+       "learning_objective": "Account for the height of the observer's eye when finding the height of an object."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH09-T3",
+     "topic_number": 3,
+     "title": "Problems with two angles of elevation",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "flagstaff-on-building",
+       "learning_objective": "Find the height of an object standing on another object using two angles of elevation from the same point."
+      },
+      {
+       "concept_tag": "shadow-and-sun-altitude",
+       "learning_objective": "Relate the length of a shadow to the Sun's altitude and solve problems on change in shadow length."
+      },
+      {
+       "concept_tag": "moving-observer",
+       "learning_objective": "Find the distance moved by an observer when the angle of elevation of a fixed object changes."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH09-T4",
+     "topic_number": 4,
+     "title": "Problems with angles of depression",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "depression-equals-elevation",
+       "learning_objective": "Use alternate angles to show that an angle of depression equals the corresponding angle of elevation."
+      },
+      {
+       "concept_tag": "objects-seen-from-a-height",
+       "learning_objective": "Find distances such as the width of a river or the gap between two ships observed from a height."
+      },
+      {
+       "concept_tag": "building-observed-from-building",
+       "learning_objective": "Combine an angle of elevation and an angle of depression observed from one point to find the height of another structure."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Circles",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH10-T1",
+     "topic_number": 1,
+     "title": "A circle and a line in a plane",
+     "ncert_sections": "10.1",
+     "concepts": [
+      {
+       "concept_tag": "line-circle-positions",
+       "learning_objective": "Classify a line as non-intersecting, secant or tangent by the number of points it shares with a circle."
+      },
+      {
+       "concept_tag": "secant-and-tangent-meaning",
+       "learning_objective": "State the meaning of a secant and a tangent to a circle and recognise them in real situations."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH10-T2",
+     "topic_number": 2,
+     "title": "Tangent to a circle and its existence",
+     "ncert_sections": "10.2",
+     "concepts": [
+      {
+       "concept_tag": "tangent-meaning",
+       "learning_objective": "Describe a tangent, its point of contact and how many tangents a circle can have."
+      },
+      {
+       "concept_tag": "tangent-as-limiting-secant",
+       "learning_objective": "Explain a tangent as the limiting position of a secant when the two ends of its chord coincide."
+      },
+      {
+       "concept_tag": "parallel-tangents",
+       "learning_objective": "Reason that at most two tangents to a circle can be parallel to a given secant or line."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH10-T3",
+     "topic_number": 3,
+     "title": "Tangent perpendicular to the radius (Theorem 10.1)",
+     "ncert_sections": "10.2",
+     "concepts": [
+      {
+       "concept_tag": "tangent-perpendicular-to-radius",
+       "learning_objective": "Use the fact that the tangent at a point of a circle is perpendicular to the radius through the point of contact."
+      },
+      {
+       "concept_tag": "tangent-length-by-pythagoras",
+       "learning_objective": "Calculate lengths in the right triangle formed by a radius, a tangent and the line joining the centre to an external point."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH10-T4",
+     "topic_number": 4,
+     "title": "Number of tangents from a point and length of a tangent",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "tangents-from-point-by-position",
+       "learning_objective": "State how many tangents pass through a point inside, on or outside a circle."
+      },
+      {
+       "concept_tag": "length-of-tangent",
+       "learning_objective": "Define and calculate the length of the tangent from an external point to a circle."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH10-T5",
+     "topic_number": 5,
+     "title": "Equal tangents from an external point (Theorem 10.2)",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "equal-tangent-lengths",
+       "learning_objective": "Prove and use the fact that the two tangents from an external point to a circle are equal in length."
+      },
+      {
+       "concept_tag": "angle-between-tangents",
+       "learning_objective": "Find angles formed by two tangents from an external point, the radii and the chord of contact."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH10-T6",
+     "topic_number": 6,
+     "title": "Applications: concentric circles and circumscribed figures",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "concentric-circles-chord",
+       "learning_objective": "Find the chord of the larger of two concentric circles that touches the smaller circle."
+      },
+      {
+       "concept_tag": "circumscribed-quadrilateral",
+       "learning_objective": "Use equal tangents to relate the sides of a quadrilateral circumscribing a circle."
+      },
+      {
+       "concept_tag": "circumscribed-triangle",
+       "learning_objective": "Find the sides of a triangle circumscribing a circle using equal tangent lengths and areas."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "Areas Related to Circles",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH11-T1",
+     "topic_number": 1,
+     "title": "Sectors and segments: minor and major regions",
+     "ncert_sections": "11.1",
+     "concepts": [
+      {
+       "concept_tag": "sector-and-segment-definitions",
+       "learning_objective": "Define a sector and a segment of a circle and identify them in a figure."
+      },
+      {
+       "concept_tag": "minor-and-major-regions",
+       "learning_objective": "Distinguish minor and major sectors and segments and relate their angles and areas."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH11-T2",
+     "topic_number": 2,
+     "title": "Area of a sector",
+     "ncert_sections": "11.1",
+     "concepts": [
+      {
+       "concept_tag": "area-of-sector-formula",
+       "learning_objective": "Use the formula (θ/360) × πr² to find the area of a sector of angle θ."
+      },
+      {
+       "concept_tag": "major-sector-area",
+       "learning_objective": "Find the area of a major sector as πr² minus the minor sector, or with angle 360° − θ."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH11-T3",
+     "topic_number": 3,
+     "title": "Length of an arc of a sector",
+     "ncert_sections": "11.1",
+     "concepts": [
+      {
+       "concept_tag": "arc-length-formula",
+       "learning_objective": "Use the formula (θ/360) × 2πr to find the length of the arc of a sector."
+      },
+      {
+       "concept_tag": "perimeter-of-sector",
+       "learning_objective": "Find the perimeter of a sector as the arc length plus two radii."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH11-T4",
+     "topic_number": 4,
+     "title": "Area of a segment of a circle",
+     "ncert_sections": "11.1",
+     "concepts": [
+      {
+       "concept_tag": "segment-area-as-sector-minus-triangle",
+       "learning_objective": "Find the area of a minor segment as the area of the sector minus the area of the triangle."
+      },
+      {
+       "concept_tag": "major-segment-area",
+       "learning_objective": "Find the area of a major segment from the area of the circle and the minor segment."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH11-T5",
+     "topic_number": 5,
+     "title": "Applications of areas of sectors and segments",
+     "ncert_sections": "11.1 (Exercise 11.1)",
+     "concepts": [
+      {
+       "concept_tag": "swept-area-problems",
+       "learning_objective": "Find the area swept by clock hands and wiper blades using sector areas."
+      },
+      {
+       "concept_tag": "grazing-area-problems",
+       "learning_objective": "Find the area a tethered animal can graze in a field using sectors."
+      },
+      {
+       "concept_tag": "equal-sector-divisions",
+       "learning_objective": "Solve problems where a circle is divided into equal sectors or equal segments."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Surface Areas and Volumes",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH12-T1",
+     "topic_number": 1,
+     "title": "Surface Area of a Combined Solid: The Principle",
+     "ncert_sections": "12.1, 12.2",
+     "concepts": [
+      {
+       "concept_tag": "identifying-component-solids",
+       "learning_objective": "Identify the basic solids (cuboid, cube, cylinder, cone, sphere, hemisphere) that make up an everyday object and which of their faces stay exposed."
+      },
+      {
+       "concept_tag": "surface-area-of-combined-solid",
+       "learning_objective": "Explain why the total surface area of a combined solid is the sum of the exposed surfaces of its parts and not the sum of their total surface areas."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH12-T2",
+     "topic_number": 2,
+     "title": "Surface Area of Solids Joined Together",
+     "ncert_sections": "12.2",
+     "concepts": [
+      {
+       "concept_tag": "tsa-joined-solids",
+       "learning_objective": "Calculate the total surface area of solids such as toys and capsules formed by joining a cone, cylinder or hemisphere of equal radius."
+      },
+      {
+       "concept_tag": "tsa-exposed-faces",
+       "learning_objective": "Account for flat faces that remain partly exposed, such as a cube carrying a hemisphere or a cone resting on a narrower cylinder."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH12-T3",
+     "topic_number": 3,
+     "title": "Surface Area of Solids with Depressions and Cavities",
+     "ncert_sections": "12.2",
+     "concepts": [
+      {
+       "concept_tag": "tsa-hemispherical-depression",
+       "learning_objective": "Find the surface area of a solid from which a hemisphere has been scooped out, adding the inner curved surface and removing the hidden flat face."
+      },
+      {
+       "concept_tag": "tsa-conical-cavity",
+       "learning_objective": "Find the surface area of a cylinder from which a conical cavity has been hollowed out and compare it with that of the original solid."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH12-T4",
+     "topic_number": 4,
+     "title": "Volume of a Combination of Solids",
+     "ncert_sections": "12.3",
+     "concepts": [
+      {
+       "concept_tag": "volume-additivity",
+       "learning_objective": "Explain that the volume of a solid formed by joining two basic solids is the sum of their volumes."
+      },
+      {
+       "concept_tag": "volume-joined-solids",
+       "learning_objective": "Calculate the volume of objects such as toys, sheds and capsules formed by combining a cuboid, cylinder, cone or hemisphere."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH12-T5",
+     "topic_number": 5,
+     "title": "Volume of Solids with Parts Removed, Capacity and Displacement",
+     "ncert_sections": "12.3",
+     "concepts": [
+      {
+       "concept_tag": "volume-removed-parts",
+       "learning_objective": "Calculate the volume or actual capacity of a solid from which another solid has been removed, such as a glass with a raised base or a pen stand with depressions."
+      },
+      {
+       "concept_tag": "capacity-displacement",
+       "learning_objective": "Relate the volume of solids dropped into a full vessel to the volume of liquid that overflows, and count the number of objects needed."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "Statistics",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH13-T1",
+     "topic_number": 1,
+     "title": "Mean of grouped data: class marks and the direct method",
+     "ncert_sections": "13.2",
+     "concepts": [
+      {
+       "concept_tag": "class-mark",
+       "learning_objective": "Find the class mark of a class interval and explain why it represents the class."
+      },
+      {
+       "concept_tag": "mean-direct-method",
+       "learning_objective": "Calculate the mean of grouped data using the direct method."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH13-T2",
+     "topic_number": 2,
+     "title": "Assumed mean and step-deviation methods",
+     "ncert_sections": "13.2",
+     "concepts": [
+      {
+       "concept_tag": "assumed-mean-method",
+       "learning_objective": "Calculate the mean of grouped data using deviations from an assumed mean."
+      },
+      {
+       "concept_tag": "step-deviation-method",
+       "learning_objective": "Use the step-deviation method and judge when it is convenient."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH13-T3",
+     "topic_number": 3,
+     "title": "Mode of grouped data",
+     "ncert_sections": "13.3",
+     "concepts": [
+      {
+       "concept_tag": "modal-class",
+       "learning_objective": "Identify the modal class and the quantities used in the mode formula."
+      },
+      {
+       "concept_tag": "mode-formula",
+       "learning_objective": "Calculate the mode of grouped data using the mode formula."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH13-T4",
+     "topic_number": 4,
+     "title": "Cumulative frequency distributions",
+     "ncert_sections": "13.4",
+     "concepts": [
+      {
+       "concept_tag": "cumulative-frequency-less-than",
+       "learning_objective": "Construct and read a less than type cumulative frequency distribution."
+      },
+      {
+       "concept_tag": "cumulative-frequency-more-than",
+       "learning_objective": "Construct and read a more than or equal to type cumulative frequency distribution."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH13-T5",
+     "topic_number": 5,
+     "title": "Median of grouped data and the empirical relationship",
+     "ncert_sections": "13.4",
+     "concepts": [
+      {
+       "concept_tag": "median-class",
+       "learning_objective": "Locate the median class using n/2 and cumulative frequencies."
+      },
+      {
+       "concept_tag": "median-formula",
+       "learning_objective": "Calculate the median of grouped data using the median formula."
+      },
+      {
+       "concept_tag": "empirical-relationship",
+       "learning_objective": "Apply the empirical relationship 3 Median = Mode + 2 Mean."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JEMH1-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "Probability",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jemh114.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JEMH1-CH14-T1",
+     "topic_number": 1,
+     "title": "Theoretical probability and equally likely outcomes",
+     "ncert_sections": "14.1",
+     "concepts": [
+      {
+       "concept_tag": "equally-likely-outcomes",
+       "learning_objective": "Decide whether the outcomes of an experiment are equally likely and explain why."
+      },
+      {
+       "concept_tag": "theoretical-probability",
+       "learning_objective": "Use P(E) = favourable outcomes / all possible outcomes for experiments with equally likely outcomes."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH14-T2",
+     "topic_number": 2,
+     "title": "Elementary, sure and impossible events",
+     "ncert_sections": "14.1",
+     "concepts": [
+      {
+       "concept_tag": "elementary-events",
+       "learning_objective": "Identify elementary events and use the fact that their probabilities add up to 1."
+      },
+      {
+       "concept_tag": "sure-and-impossible-events",
+       "learning_objective": "Recognise sure and impossible events and state that their probabilities are 1 and 0."
+      },
+      {
+       "concept_tag": "range-of-probability",
+       "learning_objective": "Use 0 <= P(E) <= 1 to judge whether a number can be a probability."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH14-T3",
+     "topic_number": 3,
+     "title": "Complementary events",
+     "ncert_sections": "14.1",
+     "concepts": [
+      {
+       "concept_tag": "complementary-events",
+       "learning_objective": "Use P(not E) = 1 - P(E) to find the probability of the complement of an event."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH14-T4",
+     "topic_number": 4,
+     "title": "Drawing at random: playing cards, balls and numbered objects",
+     "ncert_sections": "14.1",
+     "concepts": [
+      {
+       "concept_tag": "playing-cards",
+       "learning_objective": "Find probabilities of events when one card is drawn from a well-shuffled deck of 52 cards."
+      },
+      {
+       "concept_tag": "random-draws",
+       "learning_objective": "Find probabilities when one object is drawn at random from a collection of balls, discs or items."
+      }
+     ]
+    },
+    {
+     "topic_id": "JEMH1-CH14-T5",
+     "topic_number": 5,
+     "title": "Experiments with two coins, two dice and repeated tosses",
+     "ncert_sections": "14.1",
+     "concepts": [
+      {
+       "concept_tag": "coins-and-repeated-tosses",
+       "learning_objective": "List the equally likely outcomes of tossing two or more coins and find probabilities from them."
+      },
+      {
+       "concept_tag": "two-dice-outcomes",
+       "learning_objective": "Use the 36 ordered outcomes of throwing two dice to find probabilities of sums and other events."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

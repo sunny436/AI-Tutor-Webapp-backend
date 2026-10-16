@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KEGY2-CH02",
+ "title": "The Origin and Evolution of the Earth",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH02-T1",
+   "topic_number": 1,
+   "title": "Early Theories: Origin of the Earth",
+   "ncert_sections": "Early Theories",
+   "concepts": [
+    {
+     "concept_tag": "nebular-hypothesis",
+     "learning_objective": "Describe the nebular hypothesis of Kant and Laplace and its revision by Otto Schmidt and Carl Weizascar."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH02-T2",
+   "topic_number": 2,
+   "title": "Origin of the Universe: the Big Bang Theory",
+   "ncert_sections": "Modern Theories",
+   "concepts": [
+    {
+     "concept_tag": "big-bang-stages",
+     "learning_objective": "Explain the stages in the development of the universe according to the Big Bang Theory."
+    },
+    {
+     "concept_tag": "expanding-universe",
+     "learning_objective": "Interpret the evidence for an expanding universe and contrast it with the steady state concept."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH02-T3",
+   "topic_number": 3,
+   "title": "The Star Formation",
+   "ncert_sections": "The Star Formation",
+   "concepts": [
+    {
+     "concept_tag": "galaxy-star-formation",
+     "learning_objective": "Explain how density differences in the early universe led to nebulae, galaxies and stars."
+    },
+    {
+     "concept_tag": "light-year",
+     "learning_objective": "Use the light year as a measure of distance in simple calculations."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH02-T4",
+   "topic_number": 4,
+   "title": "Formation of Planets",
+   "ncert_sections": "Formation of Planets",
+   "concepts": [
+    {
+     "concept_tag": "planetesimals-accretion",
+     "learning_objective": "Sequence the stages by which planetesimals accreted into planets."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH02-T5",
+   "topic_number": 5,
+   "title": "Evolution of the Earth and its Lithosphere",
+   "ncert_sections": "Evolution of the Earth; Evolution of Lithosphere",
+   "concepts": [
+    {
+     "concept_tag": "layered-structure",
+     "learning_objective": "Describe the layered structure of the earth and the change in density from crust to core."
+    },
+    {
+     "concept_tag": "differentiation",
+     "learning_objective": "Explain how differentiation separated earth material into layers."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH02-T6",
+   "topic_number": 6,
+   "title": "Evolution of Atmosphere and Hydrosphere",
+   "ncert_sections": "Evolution of Atmosphere and Hydrosphere",
+   "concepts": [
+    {
+     "concept_tag": "atmosphere-stages",
+     "learning_objective": "Identify the three stages in the evolution of the present atmosphere."
+    },
+    {
+     "concept_tag": "degassing-oceans",
+     "learning_objective": "Explain degassing and the formation of oceans and atmospheric oxygen."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH02-T7",
+   "topic_number": 7,
+   "title": "Origin of Life",
+   "ncert_sections": "Origin of Life",
+   "concepts": [
+    {
+     "concept_tag": "origin-of-life",
+     "learning_objective": "Explain the origin of life as a chemical process and the fossil evidence for its age."
+    }
+   ]
+  }
+ ]
+}

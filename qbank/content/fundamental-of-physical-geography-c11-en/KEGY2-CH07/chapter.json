@@ -1,0 +1,96 @@
+{
+ "chapter_id": "KEGY2-CH07",
+ "title": "Composition and Structure of Atmosphere",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH07-T1",
+   "topic_number": 1,
+   "title": "Atmosphere and its gases",
+   "ncert_sections": "Introduction; Composition of the Atmosphere; Gases",
+   "concepts": [
+    {
+     "concept_tag": "atmosphere-meaning",
+     "learning_objective": "Describe the atmosphere as a mixture of gases enveloping the earth and state where most of its mass lies."
+    },
+    {
+     "concept_tag": "carbon-dioxide-greenhouse",
+     "learning_objective": "Explain why carbon dioxide is meteorologically important and how its rising volume affects air temperature."
+    },
+    {
+     "concept_tag": "ozone-filter",
+     "learning_objective": "Explain the role of ozone in absorbing ultra-violet rays."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH07-T2",
+   "topic_number": 2,
+   "title": "Water vapour and dust particles",
+   "ncert_sections": "Water Vapour; Dust Particles",
+   "concepts": [
+    {
+     "concept_tag": "water-vapour-variability",
+     "learning_objective": "Explain how water vapour varies with altitude and latitude and how it regulates the earth's temperature."
+    },
+    {
+     "concept_tag": "dust-particles-hygroscopic-nuclei",
+     "learning_objective": "Identify sources and distribution of dust particles and their role as hygroscopic nuclei."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH07-T3",
+   "topic_number": 3,
+   "title": "Troposphere and tropopause",
+   "ncert_sections": "Structure of the Atmosphere: troposphere, tropopause",
+   "concepts": [
+    {
+     "concept_tag": "atmospheric-layers-basis",
+     "learning_objective": "State the five layers of the atmosphere and the basis of the division."
+    },
+    {
+     "concept_tag": "troposphere-features",
+     "learning_objective": "Explain the thickness, rate of temperature decrease and importance of the troposphere."
+    },
+    {
+     "concept_tag": "tropopause",
+     "learning_objective": "Describe the temperature conditions at the tropopause."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH07-T4",
+   "topic_number": 4,
+   "title": "Upper layers of the atmosphere",
+   "ncert_sections": "Structure of the Atmosphere: stratosphere, mesosphere, ionosphere, exosphere",
+   "concepts": [
+    {
+     "concept_tag": "stratosphere-ozone-layer",
+     "learning_objective": "Describe the extent of the stratosphere and the importance of its ozone layer."
+    },
+    {
+     "concept_tag": "mesosphere-ionosphere",
+     "learning_objective": "Describe the temperature trend in the mesosphere and the features of the ionosphere."
+    },
+    {
+     "concept_tag": "exosphere",
+     "learning_objective": "Describe the nature of the exosphere."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH07-T5",
+   "topic_number": 5,
+   "title": "Elements of weather and climate",
+   "ncert_sections": "Elements of Weather and Climate",
+   "concepts": [
+    {
+     "concept_tag": "weather-climate-elements",
+     "learning_objective": "Identify the main elements of weather and climate that influence human life."
+    }
+   ]
+  }
+ ]
+}

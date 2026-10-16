@@ -1,0 +1,88 @@
+{
+ "chapter_id": "HSDE1-CH12",
+ "title": "सम्यग्वर्णप्रयोगेण ब्रह्मलोके महीयते",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HSDE1-CH12-T1",
+   "topic_number": 1,
+   "title": "इन्द्रवृत्रासुरकथा — शुद्धोच्चारणस्य महत्त्वम्",
+   "ncert_sections": "आरम्भिकः संवादः कथा च",
+   "concepts": [
+    {
+     "concept_tag": "indra-vritrasura-katha",
+     "learning_objective": "वृत्रासुरस्य यज्ञे स्वरपरिवर्तनेन अर्थपरिवर्तनस्य कथां जानाति।"
+    },
+    {
+     "concept_tag": "shuddha-uccharanam",
+     "learning_objective": "पठनकाले भाषणकाले च स्पष्टस्य शुद्धस्य उच्चारणस्य आवश्यकतां व्याख्याति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH12-T2",
+   "topic_number": 2,
+   "title": "व्याकरणाध्ययनम् — स्वजनः श्वजनः",
+   "ncert_sections": "श्लोकः १",
+   "concepts": [
+    {
+     "concept_tag": "vyakaranam-patha",
+     "learning_objective": "व्याकरणस्य अध्ययनं किमर्थम् आवश्यकम् इति अवगच्छति।"
+    },
+    {
+     "concept_tag": "varna-bhedena-artha-bhedah",
+     "learning_objective": "स्वजन-श्वजन, सकल-शकल, सकृत्-शकृत् इत्येषां अर्थभेदं निर्धारयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH12-T3",
+   "topic_number": 3,
+   "title": "व्याघ्रीदृष्टान्तः सम्यग्वर्णप्रयोगः च",
+   "ncert_sections": "श्लोकौ २, ३",
+   "concepts": [
+    {
+     "concept_tag": "vyaghri-drishtantah",
+     "learning_objective": "व्याघ्र्याः पुत्रनयनस्य दृष्टान्तेन वर्णोच्चारणस्य सन्तुलनं व्याख्याति।"
+    },
+    {
+     "concept_tag": "avyakta-pidita-varnah",
+     "learning_objective": "अव्यक्ताः पीडिताः च वर्णाः न प्रयोक्तव्याः, सम्यग्वर्णप्रयोगस्य फलं च जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH12-T4",
+   "topic_number": 4,
+   "title": "पाठकानां षड् गुणाः षड् दोषाः च",
+   "ncert_sections": "श्लोकौ ४, ५",
+   "concepts": [
+    {
+     "concept_tag": "pathaka-gunah",
+     "learning_objective": "माधुर्यादीन् उत्तमपाठकस्य षड् गुणान् अभिजानाति।"
+    },
+    {
+     "concept_tag": "pathaka-doshah",
+     "learning_objective": "गीत्यादीन् अधमपाठकस्य षड् दोषान् अभिजानाति, गुणदोषान् च विभजति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HSDE1-CH12-T5",
+   "topic_number": 5,
+   "title": "वेदाङ्गानि अक्षरपरिवर्तनेन अर्थपरिवर्तनं च",
+   "ncert_sections": "अत्र इदम् अवधेयम्, योग्यताविस्तरः",
+   "concepts": [
+    {
+     "concept_tag": "vedangani",
+     "learning_objective": "षड् वेदाङ्गानि तेषां विषयान् च जानाति।"
+    },
+    {
+     "concept_tag": "akshara-parivartanam",
+     "learning_objective": "अक्षरमात्रापरिवर्तनेन पदस्य अर्थपरिवर्तनं भवति इति उदाहरणैः दर्शयति।"
+    }
+   ]
+  }
+ ]
+}

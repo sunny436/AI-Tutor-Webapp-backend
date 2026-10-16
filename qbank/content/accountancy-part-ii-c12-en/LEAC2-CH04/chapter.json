@@ -1,0 +1,124 @@
+{
+ "chapter_id": "LEAC2-CH04",
+ "title": "Analysis of Financial Statements",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEAC2-CH04-T1",
+   "topic_number": 1,
+   "title": "Meaning of analysis of financial statements",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "analysis-and-interpretation",
+     "learning_objective": "Explain that financial analysis combines analysis (simplifying and classifying data) with interpretation (explaining its meaning and significance)."
+    },
+    {
+     "concept_tag": "cross-sectional-and-time-series-analysis",
+     "learning_objective": "Distinguish comparison with other firms (cross-sectional analysis) from comparison with the firm's own past performance (time series analysis)."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH04-T2",
+   "topic_number": 2,
+   "title": "Significance of financial analysis to its users",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "internal-users-of-financial-analysis",
+     "learning_objective": "Describe how the finance manager and top management use financial analysis for decisions and control."
+    },
+    {
+     "concept_tag": "external-users-of-financial-analysis",
+     "learning_objective": "Identify what trade payables, lenders, investors, labour unions and others look for when they analyse financial statements."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH04-T3",
+   "topic_number": 3,
+   "title": "Objectives of analysis of financial statements",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "objectives-of-financial-analysis",
+     "learning_objective": "State the objectives of financial analysis such as judging profitability, relative importance of components, reasons for change and debt-repaying ability."
+    },
+    {
+     "concept_tag": "uses-for-economists-and-government",
+     "learning_objective": "Explain how economists and government use the analysis of corporate financial statements."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH04-T4",
+   "topic_number": 4,
+   "title": "Tools of analysis of financial statements",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "horizontal-and-vertical-analysis",
+     "learning_objective": "Distinguish comparative statements (horizontal analysis) from common size statements (vertical analysis)."
+    },
+    {
+     "concept_tag": "trend-analysis",
+     "learning_objective": "Calculate and interpret trend percentages with reference to a base year."
+    },
+    {
+     "concept_tag": "ratio-and-cash-flow-analysis",
+     "learning_objective": "Describe the purpose of ratio analysis and cash flow analysis as tools of financial analysis."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH04-T5",
+   "topic_number": 5,
+   "title": "Comparative statements",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "comparative-statement-preparation",
+     "learning_objective": "Prepare and interpret comparative statements of profit and loss and comparative balance sheets."
+    },
+    {
+     "concept_tag": "percentage-change-calculation",
+     "learning_objective": "Calculate absolute and percentage changes between two years in a comparative statement."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH04-T6",
+   "topic_number": 6,
+   "title": "Common size statements",
+   "ncert_sections": "4.6",
+   "concepts": [
+    {
+     "concept_tag": "common-size-base",
+     "learning_objective": "Identify the common base used in common size statements of profit and loss and balance sheets."
+    },
+    {
+     "concept_tag": "common-size-calculation-and-comparison",
+     "learning_objective": "Calculate common size percentages and use them for intra-firm and inter-firm comparison."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC2-CH04-T7",
+   "topic_number": 7,
+   "title": "Limitations of financial analysis",
+   "ncert_sections": "4.7",
+   "concepts": [
+    {
+     "concept_tag": "price-level-and-non-monetary-limits",
+     "learning_objective": "Explain that financial analysis ignores price level changes and non-monetary aspects of a business."
+    },
+    {
+     "concept_tag": "accounting-policy-and-window-dressing",
+     "learning_objective": "Explain how changes in accounting policies and window dressing can make financial analysis misleading."
+    }
+   ]
+  }
+ ]
+}

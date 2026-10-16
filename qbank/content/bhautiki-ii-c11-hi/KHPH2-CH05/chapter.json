@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KHPH2-CH05",
+ "title": "अणुगति सिद्धांत",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH2-CH05-T1",
+   "topic_number": 1,
+   "title": "पदार्थ की आण्विक प्रकृति",
+   "ncert_sections": "5.1, 5.2",
+   "concepts": [
+    {
+     "concept_tag": "parmanu-parikalpana",
+     "learning_objective": "परमाणु परिकल्पना तथा रासायनिक संयोजन के नियमों को पदार्थ की आण्विक प्रकृति से जोड़ना।"
+    },
+    {
+     "concept_tag": "antar-anuk-doori",
+     "learning_objective": "ठोस, द्रव और गैस में अणुओं के बीच की दूरी और उनके व्यवहार की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH05-T2",
+   "topic_number": 2,
+   "title": "गैसों का व्यवहार",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "adarsh-gas-samikaran",
+     "learning_objective": "आदर्श गैस समीकरण का प्रयोग करके दाब, आयतन, ताप और मोल संख्या की गणना करना।"
+    },
+    {
+     "concept_tag": "boyle-charles-niyam",
+     "learning_objective": "बॉयल और चार्ल्स के नियमों को आदर्श गैस समीकरण की विशेष स्थितियों के रूप में समझना।"
+    },
+    {
+     "concept_tag": "dalton-anshik-dab",
+     "learning_objective": "डाल्टन के आंशिक दाबों के नियम से गैस मिश्रण का दाब ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH05-T3",
+   "topic_number": 3,
+   "title": "आदर्श गैस का अणुगति सिद्धांत",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "dab-anugati-vyanjak",
+     "learning_objective": "अणुओं की टक्करों से गैस के दाब का व्यंजक समझना और प्रयोग करना।"
+    },
+    {
+     "concept_tag": "tap-anugati-vyakhya",
+     "learning_objective": "ताप को अणुओं की माध्य गतिज ऊर्जा के रूप में समझना तथा वर्ग माध्य मूल चाल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH05-T4",
+   "topic_number": 4,
+   "title": "ऊर्जा के समविभाजन का नियम",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "swatantrata-kotiyan",
+     "learning_objective": "विभिन्न प्रकार के अणुओं की स्थानांतरीय, घूर्णी और कंपनिक स्वातंत्र्य कोटियाँ गिनना।"
+    },
+    {
+     "concept_tag": "samvibhajan-niyam",
+     "learning_objective": "समविभाजन नियम से अणु और गैस की औसत आंतरिक ऊर्जा ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH05-T5",
+   "topic_number": 5,
+   "title": "विशिष्ट ऊष्मा धारिता",
+   "ncert_sections": "5.6",
+   "concepts": [
+    {
+     "concept_tag": "gas-vishisht-ushma",
+     "learning_objective": "एकपरमाणुक, द्विपरमाणुक और बहुपरमाणुक गैसों की मोलर विशिष्ट ऊष्मा तथा उनके अनुपात की गणना करना।"
+    },
+    {
+     "concept_tag": "thos-vishisht-ushma",
+     "learning_objective": "ठोसों की मोलर विशिष्ट ऊष्मा का समविभाजन नियम से अनुमान लगाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH05-T6",
+   "topic_number": 6,
+   "title": "माध्य मुक्त पथ",
+   "ncert_sections": "5.7",
+   "concepts": [
+    {
+     "concept_tag": "madhya-mukt-path",
+     "learning_objective": "माध्य मुक्त पथ के व्यंजक से उसकी संख्या घनत्व और अणु व्यास पर निर्भरता समझना।"
+    },
+    {
+     "concept_tag": "takkar-avriti",
+     "learning_objective": "माध्य मुक्त पथ और चाल से टक्कर आवृत्ति ज्ञात करना तथा विसरण की धीमी गति समझाना।"
+    }
+   ]
+  }
+ ]
+}

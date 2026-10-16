@@ -1,0 +1,108 @@
+{
+ "chapter_id": "KHPH2-CH07",
+ "title": "तरंगें",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH2-CH07-T1",
+   "topic_number": 1,
+   "title": "तरंगें: अनुप्रस्थ और अनुदैर्ध्य तरंगें",
+   "ncert_sections": "14.1, 14.2",
+   "concepts": [
+    {
+     "concept_tag": "tarang-prakriti",
+     "learning_objective": "समझना कि तरंग में माध्यम का प्रवाह नहीं, केवल विक्षोभ और ऊर्जा का संचरण होता है।"
+    },
+    {
+     "concept_tag": "anuprasth-anudairghya",
+     "learning_objective": "अनुप्रस्थ और अनुदैर्ध्य तरंगों में अंतर करना और उनके माध्यम पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH07-T2",
+   "topic_number": 2,
+   "title": "प्रगामी तरंग में विस्थापन संबंध",
+   "ncert_sections": "14.3",
+   "concepts": [
+    {
+     "concept_tag": "aayam-kala",
+     "learning_objective": "आवर्ती तरंग के आयाम और कला को पहचानना।"
+    },
+    {
+     "concept_tag": "tarangdairghya-sankhya-avarta",
+     "learning_objective": "तरंगदैर्ध्य, कोणीय तरंग संख्या, आवर्तकाल और आवृत्ति के संबंधों का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH07-T3",
+   "topic_number": 3,
+   "title": "प्रगामी तरंग की चाल",
+   "ncert_sections": "14.4",
+   "concepts": [
+    {
+     "concept_tag": "dori-anuprasth-chal",
+     "learning_objective": "तनी डोरी पर अनुप्रस्थ तरंग की चाल v = √(T/μ) का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "dhwani-chal-newton-laplace",
+     "learning_objective": "न्यूटन सूत्र और लाप्लास संशोधन द्वारा गैस में ध्वनि की चाल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH07-T4",
+   "topic_number": 4,
+   "title": "तरंगों के अध्यारोपण का सिद्धांत",
+   "ncert_sections": "14.5",
+   "concepts": [
+    {
+     "concept_tag": "adhyaropan-siddhant",
+     "learning_objective": "अध्यारोपण सिद्धांत से परिणामी विस्थापन ज्ञात करना।"
+    },
+    {
+     "concept_tag": "vyatikaran-kalantar",
+     "learning_objective": "कलांतर के अनुसार संपोषी और विनाशी व्यतिकरण में परिणामी आयाम ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH07-T5",
+   "topic_number": 5,
+   "title": "तरंगों का परावर्तन तथा अप्रगामी तरंगें",
+   "ncert_sections": "14.6",
+   "concepts": [
+    {
+     "concept_tag": "paravartan-kala-parivartan",
+     "learning_objective": "दृढ़ और खुली सीमा पर परावर्तन में कला परिवर्तन को समझना।"
+    },
+    {
+     "concept_tag": "aprgami-tarang-nispand",
+     "learning_objective": "अप्रगामी तरंगों में निस्पंद और प्रस्पंद की स्थितियाँ बताना।"
+    },
+    {
+     "concept_tag": "prasamanya-vidhayen",
+     "learning_objective": "डोरी और वायु स्तंभों की प्रसामान्य विधाओं की आवृत्तियाँ ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH07-T6",
+   "topic_number": 6,
+   "title": "विस्पंद",
+   "ncert_sections": "14.7",
+   "concepts": [
+    {
+     "concept_tag": "vispand-avritti",
+     "learning_objective": "विस्पंद आवृत्ति को दो आवृत्तियों के अंतर के रूप में समझना।"
+    },
+    {
+     "concept_tag": "vispand-anuprayog",
+     "learning_objective": "विस्पंदों की सहायता से अज्ञात आवृत्ति ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

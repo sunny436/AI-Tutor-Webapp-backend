@@ -1,0 +1,88 @@
+{
+ "chapter_id": "LHMH2-CH06",
+ "title": "रैखिक प्रोग्रामन",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH2-CH06-T1",
+   "topic_number": 1,
+   "title": "इष्टतमकारी समस्याएँ और रैखिक प्रोग्रामन समस्या",
+   "ncert_sections": "12.1, 12.2",
+   "concepts": [
+    {
+     "concept_tag": "ishtatamkari-samasya",
+     "learning_objective": "अधिकतम लाभ या न्यूनतम लागत खोजने वाली समस्याओं को इष्टतमकारी समस्याओं के रूप में पहचानना।"
+    },
+    {
+     "concept_tag": "rekhik-programan-samasya-pahchan",
+     "learning_objective": "यह पहचानना कि रैखिक प्रोग्रामन समस्या में उद्देश्य फलन तथा सभी व्यवरोध रैखिक होते हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH06-T2",
+   "topic_number": 2,
+   "title": "समस्या का गणितीय सूत्रीकरण",
+   "ncert_sections": "12.2.1",
+   "concepts": [
+    {
+     "concept_tag": "uddeshya-phalan-aur-vyavrodh",
+     "learning_objective": "उद्देश्य फलन, निर्णायक चर, व्यवरोध तथा ऋणेतर व्यवरोधों को पहचानना।"
+    },
+    {
+     "concept_tag": "shabdik-samasya-ka-sutrikaran",
+     "learning_objective": "किसी शाब्दिक समस्या को उद्देश्य फलन और रैखिक असमिकाओं के रूप में लिखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH06-T3",
+   "topic_number": 3,
+   "title": "सुसंगत क्षेत्र, सुसंगत हल और इष्टतम हल",
+   "ncert_sections": "12.2.1",
+   "concepts": [
+    {
+     "concept_tag": "susangat-kshetra-aur-hal",
+     "learning_objective": "सुसंगत क्षेत्र, सुसंगत हल, असुसंगत हल तथा इष्टतम हल की परिभाषा देना और बिंदुओं की जाँच करना।"
+    },
+    {
+     "concept_tag": "paribaddh-aparibaddh-kshetra",
+     "learning_objective": "पहचानना कि कोई सुसंगत क्षेत्र परिबद्ध है या अपरिबद्ध।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH06-T4",
+   "topic_number": 4,
+   "title": "मूल प्रमेय और कोणीय बिंदु विधि",
+   "ncert_sections": "12.2.2",
+   "concepts": [
+    {
+     "concept_tag": "koniya-bindu-pramey",
+     "learning_objective": "रैखिक प्रोग्रामन के मूल प्रमेयों का कथन बताना कि इष्टतम मान कोणीय बिंदु पर प्राप्त होता है।"
+    },
+    {
+     "concept_tag": "koniya-bindu-vidhi",
+     "learning_objective": "कोणीय बिंदुओं पर उद्देश्य फलन का मान निकालकर परिबद्ध क्षेत्र पर अधिकतम एवं न्यूनतम मान ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH06-T5",
+   "topic_number": 5,
+   "title": "अपरिबद्ध सुसंगत क्षेत्र पर इष्टतम मान",
+   "ncert_sections": "12.2.2",
+   "concepts": [
+    {
+     "concept_tag": "aparibaddh-kshetra-jaanch",
+     "learning_objective": "विवृत अर्धतल की सहायता से जाँचना कि अपरिबद्ध क्षेत्र पर अधिकतम या न्यूनतम मान का अस्तित्व है या नहीं।"
+    },
+    {
+     "concept_tag": "anek-ishtatam-hal",
+     "learning_objective": "पहचानना कि दो कोणीय बिंदुओं पर समान इष्टतम मान होने पर उन्हें मिलाने वाले रेखाखंड का प्रत्येक बिंदु इष्टतम हल होता है।"
+    }
+   ]
+  }
+ ]
+}

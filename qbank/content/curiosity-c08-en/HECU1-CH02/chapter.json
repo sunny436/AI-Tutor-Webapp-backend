@@ -1,0 +1,156 @@
+{
+ "chapter_id": "HECU1-CH02",
+ "title": "The Invisible Living World: Beyond Our Naked Eye",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HECU1-CH02-T1",
+   "topic_number": 1,
+   "title": "Seeing the invisible: lenses and early microscopes",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "lens-magnification",
+     "learning_objective": "Explain how a curved transparent lens or water-filled flask makes small things look bigger."
+    },
+    {
+     "concept_tag": "hooke-and-cells",
+     "learning_objective": "Describe Robert Hooke's observation of cork and his first use of the word cell."
+    },
+    {
+     "concept_tag": "leeuwenhoek-microbiology",
+     "learning_objective": "State why Antonie van Leeuwenhoek is called the Father of Microbiology."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH02-T2",
+   "topic_number": 2,
+   "title": "Basic structure of a cell",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "cell-observation-staining",
+     "learning_objective": "Describe how onion peel and cheek cells are stained and mounted for observation."
+    },
+    {
+     "concept_tag": "parts-of-a-cell",
+     "learning_objective": "Identify the cell membrane, cytoplasm and nucleus and state their functions."
+    },
+    {
+     "concept_tag": "plant-cell-structures",
+     "learning_objective": "Explain the roles of the cell wall, plastids and vacuole in plant cells."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH02-T3",
+   "topic_number": 3,
+   "title": "Variation in shape and structure of cells",
+   "ncert_sections": "2.1.1",
+   "concepts": [
+    {
+     "concept_tag": "cell-shape-function",
+     "learning_objective": "Relate the shape of muscle, nerve and cheek cells to the functions they perform."
+    },
+    {
+     "concept_tag": "cells-in-digestion",
+     "learning_objective": "Explain how different cell types in the food pipe and stomach work together in digestion."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH02-T4",
+   "topic_number": 4,
+   "title": "Levels of organisation in living organisms",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "levels-of-organisation",
+     "learning_objective": "Arrange cell, tissue, organ, organ system and organism in order and classify examples."
+    },
+    {
+     "concept_tag": "multicellular-development",
+     "learning_objective": "Explain that complex organisms begin as a single egg cell, using the ostrich egg as an example."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH02-T5",
+   "topic_number": 5,
+   "title": "Microorganisms and how we observe them",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "microorganism-types",
+     "learning_objective": "Classify microorganisms as protozoa, algae, fungi and bacteria and as unicellular or multicellular."
+    },
+    {
+     "concept_tag": "observing-microbes",
+     "learning_objective": "Interpret observations of pond water and soil suspension under a microscope."
+    },
+    {
+     "concept_tag": "viruses-acellular",
+     "learning_objective": "State why viruses differ from other microorganisms."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH02-T6",
+   "topic_number": 6,
+   "title": "Microbes around us and in cleaning the environment",
+   "ncert_sections": "2.4, 2.4.1",
+   "concepts": [
+    {
+     "concept_tag": "microbe-habitats",
+     "learning_objective": "Recognise that microbes live everywhere and explain why salt and sugar preserve food."
+    },
+    {
+     "concept_tag": "decomposition-manure",
+     "learning_objective": "Explain how bacteria and fungi decompose waste into nutrient-rich manure."
+    },
+    {
+     "concept_tag": "biogas-and-bioremediation",
+     "learning_objective": "Describe how microbes produce biogas and can be used to clean up pollution."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH02-T7",
+   "topic_number": 7,
+   "title": "Microorganisms in food, farming and water",
+   "ncert_sections": "2.4.2, 2.4.3",
+   "concepts": [
+    {
+     "concept_tag": "fermentation-yeast-lactobacillus",
+     "learning_objective": "Explain the roles of yeast and Lactobacillus in making bread, idli and curd."
+    },
+    {
+     "concept_tag": "rhizobium-nitrogen-fixation",
+     "learning_objective": "Explain how Rhizobium in root nodules of legumes enriches soil with nitrogen."
+    },
+    {
+     "concept_tag": "microalgae-uses",
+     "learning_objective": "Describe the importance of microalgae such as Spirulina for oxygen, food and medicine."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH02-T8",
+   "topic_number": 8,
+   "title": "The cell as the basic unit of life",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "unicellular-multicellular",
+     "learning_objective": "Distinguish unicellular from multicellular organisms with examples."
+    },
+    {
+     "concept_tag": "microbial-cell-features",
+     "learning_objective": "Compare cells of bacteria and fungi with plant and animal cells."
+    }
+   ]
+  }
+ ]
+}

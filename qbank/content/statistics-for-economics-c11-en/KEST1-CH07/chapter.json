@@ -1,0 +1,136 @@
+{
+ "chapter_id": "KEST1-CH07",
+ "title": "Index Numbers",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEST1-CH07-T1",
+   "topic_number": 1,
+   "title": "Meaning of an index number",
+   "ncert_sections": "1, 2",
+   "concepts": [
+    {
+     "concept_tag": "index-number-meaning",
+     "learning_objective": "Explain an index number as a statistical device measuring the average change in a group of related variables."
+    },
+    {
+     "concept_tag": "base-period",
+     "learning_objective": "Interpret index values relative to a base period whose value is set at 100."
+    },
+    {
+     "concept_tag": "price-and-quantity-index",
+     "learning_objective": "Distinguish between price index numbers and quantity index numbers."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH07-T2",
+   "topic_number": 2,
+   "title": "Construction by the aggregative method",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "simple-aggregative-index",
+     "learning_objective": "Calculate a simple aggregative price index and state its limitations."
+    },
+    {
+     "concept_tag": "laspeyres-index",
+     "learning_objective": "Calculate and interpret Laspeyre's price index using base-period quantity weights."
+    },
+    {
+     "concept_tag": "paasche-index",
+     "learning_objective": "Calculate and interpret Paasche's price index using current-period quantity weights."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH07-T3",
+   "topic_number": 3,
+   "title": "Construction by the method of averaging relatives",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "price-relative",
+     "learning_objective": "Compute price relatives and the simple average of price relatives."
+    },
+    {
+     "concept_tag": "weighted-price-relatives",
+     "learning_objective": "Compute a weighted index of price relatives and explain the role of weights."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH07-T4",
+   "topic_number": 4,
+   "title": "Consumer Price Index and Wholesale Price Index",
+   "ncert_sections": "4",
+   "concepts": [
+    {
+     "concept_tag": "consumer-price-index",
+     "learning_objective": "Construct and interpret a consumer price index from weights and price relatives."
+    },
+    {
+     "concept_tag": "wholesale-price-index",
+     "learning_objective": "Describe the coverage, base and uses of the Wholesale Price Index."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH07-T5",
+   "topic_number": 5,
+   "title": "Index of Industrial Production and Sensex",
+   "ncert_sections": "4",
+   "concepts": [
+    {
+     "concept_tag": "index-of-industrial-production",
+     "learning_objective": "Explain how the Index of Industrial Production weights quantity relatives and why its base is revised."
+    },
+    {
+     "concept_tag": "sensex",
+     "learning_objective": "Describe the composition, base and significance of the Sensex."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH07-T6",
+   "topic_number": 6,
+   "title": "Issues in the construction of an index number",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "purpose-and-selection-of-items",
+     "learning_objective": "Explain why the purpose of an index and a representative choice of items matter."
+    },
+    {
+     "concept_tag": "choice-of-base-year",
+     "learning_objective": "Identify the desirable properties of a base year."
+    },
+    {
+     "concept_tag": "choice-of-formula-and-data",
+     "learning_objective": "Recognise that the formula and data source must suit the question being studied."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEST1-CH07-T7",
+   "topic_number": 7,
+   "title": "Index numbers in economics",
+   "ncert_sections": "6, 7",
+   "concepts": [
+    {
+     "concept_tag": "uses-of-index-numbers",
+     "learning_objective": "State the uses of CPI, WPI, IIP and Sensex in economic policy."
+    },
+    {
+     "concept_tag": "inflation-rate",
+     "learning_objective": "Calculate the rate of inflation from successive values of a price index."
+    },
+    {
+     "concept_tag": "purchasing-power-and-real-wage",
+     "learning_objective": "Calculate the purchasing power of money, real wage and the salary needed to maintain living standards."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "chapter_id": "KEPY1-CH02",
+ "title": "Methods of Enquiry in Psychology",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPY1-CH02-T1",
+   "topic_number": 1,
+   "title": "Goals of psychological enquiry",
+   "ncert_sections": "Goals of Psychological Enquiry",
+   "concepts": [
+    {
+     "concept_tag": "goals-of-enquiry",
+     "learning_objective": "Identify description, prediction, explanation, control and application as the goals of psychological enquiry."
+    },
+    {
+     "concept_tag": "prediction-and-control",
+     "learning_objective": "Distinguish between prediction, explanation and control of behaviour with examples."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH02-T2",
+   "topic_number": 2,
+   "title": "Steps in scientific research and alternative paradigms",
+   "ncert_sections": "Steps in Conducting Scientific Research; Alternative Paradigms of Research",
+   "concepts": [
+    {
+     "concept_tag": "steps-of-scientific-research",
+     "learning_objective": "Sequence the four steps of scientific research and explain the role of a hypothesis."
+    },
+    {
+     "concept_tag": "scientific-vs-interpretive-paradigm",
+     "learning_objective": "Contrast the scientific and interpretive traditions of psychological research."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH02-T3",
+   "topic_number": 3,
+   "title": "Nature of psychological data",
+   "ncert_sections": "Nature of Psychological Data",
+   "concepts": [
+    {
+     "concept_tag": "data-in-context",
+     "learning_objective": "Explain why psychological data are tied to context, method and theory."
+    },
+    {
+     "concept_tag": "types-of-data",
+     "learning_objective": "Classify information as demographic, physical, physiological or psychological data."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH02-T4",
+   "topic_number": 4,
+   "title": "Observational method",
+   "ncert_sections": "Observational Method; Types of Observation",
+   "concepts": [
+    {
+     "concept_tag": "scientific-observation",
+     "learning_objective": "Describe selection, recording and analysis in scientific observation and the risk of observer bias."
+    },
+    {
+     "concept_tag": "types-of-observation",
+     "learning_objective": "Distinguish naturalistic from controlled and participant from non-participant observation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH02-T5",
+   "topic_number": 5,
+   "title": "Experimental method",
+   "ncert_sections": "Experimental Method; Box 2.1; Field Experiments and Quasi Experiments",
+   "concepts": [
+    {
+     "concept_tag": "independent-dependent-variables",
+     "learning_objective": "Identify independent, dependent and extraneous variables in an experiment."
+    },
+    {
+     "concept_tag": "experimental-control-techniques",
+     "learning_objective": "Explain experimental and control groups and techniques such as elimination, matching, counter-balancing and random assignment."
+    },
+    {
+     "concept_tag": "field-and-quasi-experiments",
+     "learning_objective": "Distinguish laboratory, field and quasi experiments and evaluate their strengths and limits."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH02-T6",
+   "topic_number": 6,
+   "title": "Correlational and survey research",
+   "ncert_sections": "Correlational Research; Survey Research; Box 2.2",
+   "concepts": [
+    {
+     "concept_tag": "correlation-coefficient",
+     "learning_objective": "Interpret positive, negative and zero correlation coefficients ranging from +1.0 to -1.0."
+    },
+    {
+     "concept_tag": "survey-techniques",
+     "learning_objective": "Compare interviews, questionnaires and telephone surveys and state the strengths and limits of surveys."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH02-T7",
+   "topic_number": 7,
+   "title": "Psychological testing and case study",
+   "ncert_sections": "Psychological Testing; Types of Tests; Case Study",
+   "concepts": [
+    {
+     "concept_tag": "test-reliability-validity-norms",
+     "learning_objective": "Explain objectivity, reliability, validity and norms of a standardised test."
+    },
+    {
+     "concept_tag": "types-of-tests",
+     "learning_objective": "Classify tests as verbal, non-verbal or performance, individual or group, and speed or power."
+    },
+    {
+     "concept_tag": "case-study-method",
+     "learning_objective": "Describe the case study method, its uses and its limitations."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPY1-CH02-T8",
+   "topic_number": 8,
+   "title": "Analysis of data, limitations and ethical issues",
+   "ncert_sections": "Analysis of Data; Limitations of Psychological Enquiry; Ethical Issues",
+   "concepts": [
+    {
+     "concept_tag": "quantitative-qualitative-analysis",
+     "learning_objective": "Distinguish quantitative from qualitative analysis of data."
+    },
+    {
+     "concept_tag": "limitations-of-enquiry",
+     "learning_objective": "Explain the lack of a true zero point, relative nature of tools and subjective interpretation as limitations."
+    },
+    {
+     "concept_tag": "ethical-principles",
+     "learning_objective": "Apply the ethical principles of voluntary participation, informed consent, debriefing, sharing results and confidentiality."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KEEC1-CH07",
+ "title": "Environment and Sustainable Development",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEEC1-CH07-T1",
+   "topic_number": 1,
+   "title": "Environment: meaning and functions",
+   "ncert_sections": "7.2",
+   "concepts": [
+    {
+     "concept_tag": "environment-meaning",
+     "learning_objective": "Define environment and distinguish its biotic and abiotic elements."
+    },
+    {
+     "concept_tag": "functions-of-environment",
+     "learning_objective": "Identify the four functions of the environment and the types of resources it supplies."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEEC1-CH07-T2",
+   "topic_number": 2,
+   "title": "Environmental crisis and global issues",
+   "ncert_sections": "7.2 (Boxes 7.1, 7.2)",
+   "concepts": [
+    {
+     "concept_tag": "reversal-of-supply-demand",
+     "learning_objective": "Explain why environmental problems have become critical through the reversal of the supply-demand relationship."
+    },
+    {
+     "concept_tag": "global-warming-ozone-depletion",
+     "learning_objective": "Describe the causes and effects of global warming and ozone depletion and the related international agreements."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEEC1-CH07-T3",
+   "topic_number": 3,
+   "title": "State of India's environment: resources and land degradation",
+   "ncert_sections": "7.3",
+   "concepts": [
+    {
+     "concept_tag": "india-natural-resources",
+     "learning_objective": "Identify India's major natural resource endowments and its priority environmental issues."
+    },
+    {
+     "concept_tag": "land-degradation",
+     "learning_objective": "Explain the causes and extent of land degradation in India."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEEC1-CH07-T4",
+   "topic_number": 4,
+   "title": "Pollution in India and pollution control",
+   "ncert_sections": "7.3 (Boxes 7.3, 7.4)",
+   "concepts": [
+    {
+     "concept_tag": "air-pollution-india",
+     "learning_objective": "Explain the sources of air pollution in India, especially vehicular emissions."
+    },
+    {
+     "concept_tag": "pollution-control-boards",
+     "learning_objective": "Describe the role of the pollution control boards and people's movements such as Appiko."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEEC1-CH07-T5",
+   "topic_number": 5,
+   "title": "Sustainable development",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "meaning-of-sustainable-development",
+     "learning_objective": "State the UNCED/Brundtland definition of sustainable development and its key phrases."
+    },
+    {
+     "concept_tag": "herman-daly-conditions",
+     "learning_objective": "Apply Herman Daly's conditions for achieving sustainable development."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEEC1-CH07-T6",
+   "topic_number": 6,
+   "title": "Strategies: cleaner sources of energy",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "non-conventional-energy",
+     "learning_objective": "Explain the environmental advantages of wind, solar and mini-hydel power over thermal and hydro power."
+    },
+    {
+     "concept_tag": "clean-fuels",
+     "learning_objective": "Explain how LPG, gobar gas and CNG reduce pollution in rural and urban areas."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEEC1-CH07-T7",
+   "topic_number": 7,
+   "title": "Strategies: traditional knowledge, biocomposting and biopest control",
+   "ncert_sections": "7.5, 7.6",
+   "concepts": [
+    {
+     "concept_tag": "traditional-knowledge",
+     "learning_objective": "Explain the value of traditional knowledge and practices such as indigenous healthcare for sustainability."
+    },
+    {
+     "concept_tag": "biocomposting-biopest-control",
+     "learning_objective": "Explain how biocomposting and biopest control reduce the harm caused by agro-chemicals."
+    }
+   ]
+  }
+ ]
+}

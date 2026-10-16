@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LEGY2-CH07",
+ "title": "Transport and Communication",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEGY2-CH07-T1",
+   "topic_number": 1,
+   "title": "Road Transport and National Highways",
+   "ncert_sections": "Land Transport, Road Transport, National Highways, National Highways Development Projects",
+   "concepts": [
+    {
+     "concept_tag": "road-network-and-classification",
+     "learning_objective": "Describe the size, history and classification of India's road network and the share of traffic it carries."
+    },
+    {
+     "concept_tag": "national-highways-and-nhai",
+     "learning_objective": "Explain the role of National Highways and the National Highways Authority of India."
+    },
+    {
+     "concept_tag": "highway-development-projects",
+     "learning_objective": "Identify the Golden Quadrilateral, North-South and East-West Corridors and Bharatmala Pariyojana and their purposes."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH07-T2",
+   "topic_number": 2,
+   "title": "State, District, Rural and Other Roads",
+   "ncert_sections": "State Highways, District Roads, Rural Roads, Other Roads",
+   "concepts": [
+    {
+     "concept_tag": "state-district-rural-roads",
+     "learning_objective": "Distinguish State Highways, District Roads and Rural Roads and explain regional variation in rural road density."
+    },
+    {
+     "concept_tag": "border-roads-and-international-highways",
+     "learning_objective": "Explain the work of the Border Roads Organisation and the purpose of international highways."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH07-T3",
+   "topic_number": 3,
+   "title": "Rail Transport",
+   "ncert_sections": "Rail Transport, Konkan Railway",
+   "concepts": [
+    {
+     "concept_tag": "railway-history-and-zones",
+     "learning_objective": "Recall the beginning of Indian Railways and explain why the system is divided into zones."
+    },
+    {
+     "concept_tag": "railway-gauges",
+     "learning_objective": "Distinguish broad, metre and narrow gauges by track width and length."
+    },
+    {
+     "concept_tag": "railway-development-and-distribution",
+     "learning_objective": "Analyse the development and regional distribution of railways, including the Konkan Railway and metro rail."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH07-T4",
+   "topic_number": 4,
+   "title": "Water Transport",
+   "ncert_sections": "Water Transport, Inland Waterways, National Waterways, Oceanic Routes",
+   "concepts": [
+    {
+     "concept_tag": "inland-waterways",
+     "learning_objective": "Explain the features of inland water transport and the reasons for its decline."
+    },
+    {
+     "concept_tag": "national-waterways",
+     "learning_objective": "Identify India's National Waterways and the authority that develops them."
+    },
+    {
+     "concept_tag": "oceanic-routes",
+     "learning_objective": "Evaluate the importance of oceanic routes for India's foreign trade."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH07-T5",
+   "topic_number": 5,
+   "title": "Air Transport and Oil and Gas Pipelines",
+   "ncert_sections": "Air Transportation, Oil and Gas Pipelines",
+   "concepts": [
+    {
+     "concept_tag": "air-transport",
+     "learning_objective": "Explain the development of air transport in India, including UDAN and Pawan Hans."
+    },
+    {
+     "concept_tag": "oil-and-gas-pipelines",
+     "learning_objective": "Describe the advantages of pipelines and India's major oil and gas pipeline networks."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY2-CH07-T6",
+   "topic_number": 6,
+   "title": "Communication Networks",
+   "ncert_sections": "Communication Networks, Personal Communication System, Mass Communication System, Satellite Communication",
+   "concepts": [
+    {
+     "concept_tag": "personal-communication",
+     "learning_objective": "Explain why the internet is the most effective personal communication system."
+    },
+    {
+     "concept_tag": "mass-communication",
+     "learning_objective": "Trace the development of radio and television as mass communication in India."
+    },
+    {
+     "concept_tag": "satellite-communication",
+     "learning_objective": "Distinguish the INSAT and IRS satellite systems and their uses."
+    }
+   ]
+  }
+ ]
+}

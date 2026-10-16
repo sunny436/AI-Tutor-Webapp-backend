@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LECS1-CH03",
+ "title": "Stack",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECS1-CH03-T1",
+   "topic_number": 1,
+   "title": "Data structures and the stack",
+   "ncert_sections": "3.1, 3.2",
+   "concepts": [
+    {
+     "concept_tag": "data-structure-basics",
+     "learning_objective": "Define a data structure and identify a stack as a linear data structure."
+    },
+    {
+     "concept_tag": "lifo-principle",
+     "learning_objective": "Explain the Last-In-First-Out principle and predict the order in which elements leave a stack."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH03-T2",
+   "topic_number": 2,
+   "title": "Applications of stack",
+   "ncert_sections": "3.2.1",
+   "concepts": [
+    {
+     "concept_tag": "stack-applications",
+     "learning_objective": "Identify real-life and programming situations, such as undo/redo, browser history and string reversal, that use a stack."
+    },
+    {
+     "concept_tag": "parenthesis-matching",
+     "learning_objective": "Explain how a stack is used to check that parentheses in an expression are matched and properly nested."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH03-T3",
+   "topic_number": 3,
+   "title": "PUSH and POP operations",
+   "ncert_sections": "3.3, 3.3.1",
+   "concepts": [
+    {
+     "concept_tag": "push-pop-operations",
+     "learning_objective": "Describe PUSH and POP and trace the contents of a stack after a sequence of these operations."
+    },
+    {
+     "concept_tag": "overflow-underflow",
+     "learning_objective": "Distinguish overflow from underflow and identify the operation that causes each."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH03-T4",
+   "topic_number": 4,
+   "title": "Implementation of stack in Python",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "list-as-stack",
+     "learning_objective": "Explain why a Python list with append() and pop() can implement a stack without an explicit TOP."
+    },
+    {
+     "concept_tag": "stack-functions-python",
+     "learning_objective": "Trace and reason about Python functions that push, pop, peek and display elements of a list-based stack."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH03-T5",
+   "topic_number": 5,
+   "title": "Notations for arithmetic expressions",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "notation-types",
+     "learning_objective": "Distinguish infix, prefix (Polish) and postfix (reverse Polish) notations and convert simple expressions between them."
+    },
+    {
+     "concept_tag": "parenthesis-free-notation",
+     "learning_objective": "Explain why prefix and postfix expressions need no parentheses to fix the order of evaluation."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH03-T6",
+   "topic_number": 6,
+   "title": "Conversion from infix to postfix notation",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "infix-to-postfix-conversion",
+     "learning_objective": "Apply the stack-based algorithm to convert an infix expression to postfix, tracing the stack and output string."
+    },
+    {
+     "concept_tag": "operator-precedence",
+     "learning_objective": "Use operator precedence and left-to-right order to decide when operators are popped during conversion."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH03-T7",
+   "topic_number": 7,
+   "title": "Evaluation of postfix expression",
+   "ncert_sections": "3.7",
+   "concepts": [
+    {
+     "concept_tag": "postfix-evaluation",
+     "learning_objective": "Evaluate a postfix expression using a stack, tracing the stack after each symbol."
+    },
+    {
+     "concept_tag": "operand-order",
+     "learning_objective": "Apply popped operands in the correct order for non-commutative operators while evaluating postfix."
+    }
+   ]
+  }
+ ]
+}

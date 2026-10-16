@@ -1,0 +1,140 @@
+{
+ "chapter_id": "KEBO1-CH03",
+ "title": "Plant Kingdom",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH03-T1",
+   "topic_number": 1,
+   "title": "Systems of classification in the plant kingdom",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "artificial-and-natural-classification",
+     "learning_objective": "Distinguish artificial systems such as that of Linnaeus from natural systems such as that of Bentham and Hooker."
+    },
+    {
+     "concept_tag": "phylogenetic-classification",
+     "learning_objective": "Explain that phylogenetic systems are based on evolutionary relationships and assume a common ancestor for members of a taxon."
+    },
+    {
+     "concept_tag": "numerical-cyto-chemotaxonomy",
+     "learning_objective": "Identify numerical taxonomy, cytotaxonomy and chemotaxonomy as aids to classification."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH03-T2",
+   "topic_number": 2,
+   "title": "Algae: features, reproduction and uses",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "algae-characteristics",
+     "learning_objective": "Describe algae as chlorophyll-bearing, simple, thalloid, autotrophic, largely aquatic organisms of varied form."
+    },
+    {
+     "concept_tag": "reproduction-in-algae",
+     "learning_objective": "Distinguish vegetative, asexual and sexual reproduction in algae, including isogamy, anisogamy and oogamy."
+    },
+    {
+     "concept_tag": "economic-importance-of-algae",
+     "learning_objective": "State the ecological and commercial uses of algae such as agar, algin, carrageen and Chlorella."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH03-T3",
+   "topic_number": 3,
+   "title": "Classes of algae: Chlorophyceae, Phaeophyceae and Rhodophyceae",
+   "ncert_sections": "3.1.1, 3.1.2, 3.1.3",
+   "concepts": [
+    {
+     "concept_tag": "green-algae-chlorophyceae",
+     "learning_objective": "Describe the pigments, stored food, cell wall and flagella of green algae."
+    },
+    {
+     "concept_tag": "brown-algae-phaeophyceae",
+     "learning_objective": "Describe the pigments, stored food, body organisation and reproduction of brown algae."
+    },
+    {
+     "concept_tag": "red-algae-rhodophyceae",
+     "learning_objective": "Describe the pigments, stored food, habitat and reproduction of red algae."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH03-T4",
+   "topic_number": 4,
+   "title": "Bryophytes: liverworts and mosses",
+   "ncert_sections": "3.2, 3.2.1, 3.2.2",
+   "concepts": [
+    {
+     "concept_tag": "bryophyte-features-and-importance",
+     "learning_objective": "Explain why bryophytes are called amphibians of the plant kingdom and state their ecological importance."
+    },
+    {
+     "concept_tag": "bryophyte-gametophyte-sporophyte",
+     "learning_objective": "Explain the dominant haploid gametophyte and the dependent diploid sporophyte of bryophytes."
+    },
+    {
+     "concept_tag": "liverworts-and-mosses",
+     "learning_objective": "Compare the plant body and reproduction of liverworts and mosses, including gemmae and protonema."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH03-T5",
+   "topic_number": 5,
+   "title": "Pteridophytes",
+   "ncert_sections": "3.3",
+   "concepts": [
+    {
+     "concept_tag": "pteridophyte-life-cycle",
+     "learning_objective": "Describe the dominant vascular sporophyte and the free-living prothallus of pteridophytes."
+    },
+    {
+     "concept_tag": "heterospory-and-seed-habit",
+     "learning_objective": "Explain heterospory and why it is regarded as a precursor to the seed habit."
+    },
+    {
+     "concept_tag": "pteridophyte-classes",
+     "learning_objective": "Classify pteridophytes into Psilopsida, Lycopsida, Sphenopsida and Pteropsida with examples."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH03-T6",
+   "topic_number": 6,
+   "title": "Gymnosperms",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "gymnosperm-vegetative-features",
+     "learning_objective": "Describe the roots, stems and leaves of gymnosperms and their adaptations."
+    },
+    {
+     "concept_tag": "gymnosperm-reproduction",
+     "learning_objective": "Explain heterospory, strobili, the reduced gametophytes and the formation of naked seeds in gymnosperms."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH03-T7",
+   "topic_number": 7,
+   "title": "Angiosperms",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "angiosperm-characteristics",
+     "learning_objective": "State the defining features, range of size and classes of angiosperms."
+    },
+    {
+     "concept_tag": "gymnosperms-versus-angiosperms",
+     "learning_objective": "Distinguish gymnosperms from angiosperms on the basis of ovules and seeds."
+    }
+   ]
+  }
+ ]
+}

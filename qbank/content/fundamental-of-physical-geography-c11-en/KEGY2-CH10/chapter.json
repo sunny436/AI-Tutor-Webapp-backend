@@ -1,0 +1,140 @@
+{
+ "chapter_id": "KEGY2-CH10",
+ "title": "Water in the Atmosphere",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH10-T1",
+   "topic_number": 1,
+   "title": "Humidity, saturation and dew point",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "absolute-humidity",
+     "learning_objective": "Define absolute humidity and state its unit."
+    },
+    {
+     "concept_tag": "relative-humidity",
+     "learning_objective": "Explain relative humidity and how it changes with temperature."
+    },
+    {
+     "concept_tag": "saturation-dew-point",
+     "learning_objective": "Explain saturated air and the dew point."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH10-T2",
+   "topic_number": 2,
+   "title": "Evaporation",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "evaporation-process",
+     "learning_objective": "Describe evaporation and the role of latent heat of vaporisation."
+    },
+    {
+     "concept_tag": "factors-of-evaporation",
+     "learning_objective": "Explain how temperature, dryness and air movement affect evaporation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH10-T3",
+   "topic_number": 3,
+   "title": "Condensation",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "condensation-process",
+     "learning_objective": "Explain condensation, condensation nuclei and its causes."
+    },
+    {
+     "concept_tag": "conditions-of-condensation",
+     "learning_objective": "Identify the conditions under which condensation takes place."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH10-T4",
+   "topic_number": 4,
+   "title": "Forms of condensation: dew, frost, fog and mist",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "dew-and-frost",
+     "learning_objective": "Distinguish dew and frost and the conditions for their formation."
+    },
+    {
+     "concept_tag": "fog-mist-smog",
+     "learning_objective": "Distinguish fog, mist and smog by visibility, moisture and location."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH10-T5",
+   "topic_number": 5,
+   "title": "Clouds",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "cloud-types",
+     "learning_objective": "Identify cirrus, cumulus, stratus and nimbus clouds by height and appearance."
+    },
+    {
+     "concept_tag": "cloud-combinations",
+     "learning_objective": "Classify combined cloud types into high, middle, low and vertical-development groups."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH10-T6",
+   "topic_number": 6,
+   "title": "Precipitation and its forms",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "precipitation-process",
+     "learning_objective": "Explain how precipitation occurs and its liquid and solid forms."
+    },
+    {
+     "concept_tag": "sleet-and-hail",
+     "learning_objective": "Distinguish sleet and hailstones by their formation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH10-T7",
+   "topic_number": 7,
+   "title": "Types of rainfall",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "convectional-rain",
+     "learning_objective": "Explain the formation and distribution of convectional rain."
+    },
+    {
+     "concept_tag": "orographic-rain",
+     "learning_objective": "Explain orographic rain and the rain-shadow area."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH10-T8",
+   "topic_number": 8,
+   "title": "World distribution of rainfall",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "rainfall-distribution-patterns",
+     "learning_objective": "Describe latitudinal, coastal and windward patterns of rainfall distribution."
+    },
+    {
+     "concept_tag": "precipitation-regimes",
+     "learning_objective": "Classify regions by annual precipitation regime."
+    }
+   ]
+  }
+ ]
+}

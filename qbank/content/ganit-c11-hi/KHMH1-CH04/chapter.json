@@ -1,0 +1,96 @@
+{
+ "chapter_id": "KHMH1-CH04",
+ "title": "सम्मिश्र संख्याएँ और द्विघातीय समीकरण",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH04-T1",
+   "topic_number": 1,
+   "title": "सम्मिश्र संख्याओं की परिभाषा",
+   "ncert_sections": "4.1, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "iota-ki-paribhasha",
+     "learning_objective": "विद्यार्थी i = √(−1) की परिभाषा और i² = −1 को समझकर सम्मिश्र संख्या a + ib को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "vastavik-kalpanik-bhag",
+     "learning_objective": "विद्यार्थी किसी सम्मिश्र संख्या का वास्तविक भाग और काल्पनिक भाग बता सकेंगे।"
+    },
+    {
+     "concept_tag": "samishra-sankhya-samta",
+     "learning_objective": "विद्यार्थी दो सम्मिश्र संख्याओं की समता की शर्त से अज्ञात वास्तविक मान ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH04-T2",
+   "topic_number": 2,
+   "title": "सम्मिश्र संख्याओं का योग, अंतर और गुणन",
+   "ncert_sections": "4.3.1, 4.3.2, 4.3.3",
+   "concepts": [
+    {
+     "concept_tag": "yog-antar",
+     "learning_objective": "विद्यार्थी सम्मिश्र संख्याओं का योग, अंतर और योज्य प्रतिलोम ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "gunan",
+     "learning_objective": "विद्यार्थी i² = −1 का प्रयोग करके दो सम्मिश्र संख्याओं का गुणनफल ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH04-T3",
+   "topic_number": 3,
+   "title": "भाग, i की घातें और ऋणात्मक संख्याओं के वर्गमूल",
+   "ncert_sections": "4.3.4, 4.3.5, 4.3.6, 4.3.7",
+   "concepts": [
+    {
+     "concept_tag": "bhag-vyutkram",
+     "learning_objective": "विद्यार्थी गुणात्मक प्रतिलोम की सहायता से एक सम्मिश्र संख्या को दूसरी से भाग दे सकेंगे।"
+    },
+    {
+     "concept_tag": "i-ki-ghaten",
+     "learning_objective": "विद्यार्थी i की किसी भी पूर्णांक घात का मान ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "rinatmak-vargmool",
+     "learning_objective": "विद्यार्थी ऋणात्मक वास्तविक संख्याओं के वर्गमूल ज्ञात कर सकेंगे और √a × √b = √(ab) की सीमा समझ सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH04-T4",
+   "topic_number": 4,
+   "title": "सम्मिश्र संख्या का मापांक और संयुग्मी",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "mapank",
+     "learning_objective": "विद्यार्थी सम्मिश्र संख्या का मापांक और उसके गुणधर्मों का प्रयोग कर सकेंगे।"
+    },
+    {
+     "concept_tag": "sanyugmi",
+     "learning_objective": "विद्यार्थी सम्मिश्र संख्या का संयुग्मी ज्ञात कर सकेंगे और z·z̄ = |z|² का प्रयोग कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH04-T5",
+   "topic_number": 5,
+   "title": "आर्गण्ड तल",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "argand-tal",
+     "learning_objective": "विद्यार्थी सम्मिश्र संख्या को आर्गण्ड तल में बिंदु के रूप में निरूपित कर सकेंगे।"
+    },
+    {
+     "concept_tag": "sanyugmi-pratibimb",
+     "learning_objective": "विद्यार्थी समझ सकेंगे कि संयुग्मी का बिंदु वास्तविक अक्ष में मूल बिंदु का दर्पण प्रतिबिंब होता है।"
+    }
+   ]
+  }
+ ]
+}

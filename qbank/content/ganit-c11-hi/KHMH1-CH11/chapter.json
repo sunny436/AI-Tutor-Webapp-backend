@@ -1,0 +1,72 @@
+{
+ "chapter_id": "KHMH1-CH11",
+ "title": "त्रिविमीय ज्यामिति का परिचय",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH11-T1",
+   "topic_number": 1,
+   "title": "निर्देशांक अक्ष और निर्देशांक तल",
+   "ncert_sections": "11.1, 11.2",
+   "concepts": [
+    {
+     "concept_tag": "nirdeshank-aksh-tal",
+     "learning_objective": "विद्यार्थी त्रिविमीय समष्टि में तीन परस्पर लंब निर्देशांक अक्षों और निर्देशांक तलों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "ashtanshak",
+     "learning_objective": "विद्यार्थी समझ सकेंगे कि निर्देशांक तल समष्टि को आठ अष्टांशकों में बाँटते हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH11-T2",
+   "topic_number": 2,
+   "title": "समष्टि में किसी बिंदु के निर्देशांक",
+   "ncert_sections": "11.3",
+   "concepts": [
+    {
+     "concept_tag": "bindu-ke-nirdeshank",
+     "learning_objective": "विद्यार्थी समष्टि में किसी बिंदु के निर्देशांक (x, y, z) को निर्देशांक तलों से लंबवत दूरियों के रूप में समझ सकेंगे।"
+    },
+    {
+     "concept_tag": "ashtanshak-chinh",
+     "learning_objective": "विद्यार्थी निर्देशांकों के चिह्नों से बिंदु का अष्टांशक ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH11-T3",
+   "topic_number": 3,
+   "title": "दो बिंदुओं के बीच की दूरी",
+   "ncert_sections": "11.4",
+   "concepts": [
+    {
+     "concept_tag": "doori-sutra",
+     "learning_objective": "विद्यार्थी दूरी सूत्र से समष्टि में दो बिंदुओं के बीच की दूरी ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "sanrekhata",
+     "learning_objective": "विद्यार्थी दूरी सूत्र की सहायता से तीन बिंदुओं की संरेखता की जाँच कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH11-T4",
+   "topic_number": 4,
+   "title": "दूरी सूत्र के अनुप्रयोग",
+   "ncert_sections": "11.4, विविध उदाहरण",
+   "concepts": [
+    {
+     "concept_tag": "bindupath-samikaran",
+     "learning_objective": "विद्यार्थी दी गई दूरी-शर्त को संतुष्ट करने वाले बिंदुओं के समुच्चय का समीकरण ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "tribhuj-prakar",
+     "learning_objective": "विद्यार्थी दूरी सूत्र से त्रिभुज या चतुर्भुज के प्रकार का निर्धारण कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

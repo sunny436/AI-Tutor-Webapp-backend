@@ -1,0 +1,108 @@
+{
+ "chapter_id": "LHSK2-CH11",
+ "title": "कथं शब्दानुशासनं कर्तव्यम्",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LHSK2-CH11-T1",
+   "topic_number": 1,
+   "title": "पाठपरिचयः – महाभाष्यं पाणिनीयव्याकरणपरम्परा च",
+   "ncert_sections": "पाठपरिचयः, योग्यताविस्तारः",
+   "concepts": [
+    {
+     "concept_tag": "mahabhashya-parichayah",
+     "learning_objective": "पाठस्य स्रोतं महाभाष्यं शब्दानुशासनपदस्य च आशयं वदेत्।"
+    },
+    {
+     "concept_tag": "trimuni-vyakaranam",
+     "learning_objective": "पाणिनि-कात्यायन-पतञ्जलीनां ग्रन्थान् त्रिमुनिव्याकरणस्य स्वरूपं च जानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH11-T2",
+   "topic_number": 2,
+   "title": "अन्यतरोपदेशेन कृतं स्यात् – भक्ष्यनियमदृष्टान्तः",
+   "ncert_sections": "गद्यांशः १",
+   "concepts": [
+    {
+     "concept_tag": "anyatara-upadeshah",
+     "learning_objective": "शब्दस्य अपशब्दस्य वा एकतरस्य उपदेशेन अपरस्य बोधः इति तर्कं व्याख्यायेत्।"
+    },
+    {
+     "concept_tag": "bhakshya-niyamah",
+     "learning_objective": "भक्ष्यनियम-अभक्ष्यप्रतिषेधयोः दृष्टान्तं शब्दानुशासने योजयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH11-T3",
+   "topic_number": 3,
+   "title": "शब्दोपदेशस्य ज्यायस्त्वम् – अपभ्रंशाः",
+   "ncert_sections": "गद्यांशः २",
+   "concepts": [
+    {
+     "concept_tag": "laghutvam-shabdopadeshah",
+     "learning_objective": "लघुत्वात् इष्टान्वाख्यानात् च शब्दोपदेशः ज्यायान् इति विवेचयेत्।"
+    },
+    {
+     "concept_tag": "apabhramshah",
+     "learning_objective": "अपभ्रंशानां स्वरूपं 'गौः' इत्यस्य अपभ्रंशान् च अभिजानीयात्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH11-T4",
+   "topic_number": 4,
+   "title": "प्रतिपदपाठस्य अनभ्युपायत्वम् – बृहस्पति-इन्द्राख्यानम्",
+   "ncert_sections": "गद्यांशः ३",
+   "concepts": [
+    {
+     "concept_tag": "pratipadapathah",
+     "learning_objective": "बृहस्पति-इन्द्राख्यानेन प्रतिपदपाठस्य अनभ्युपायत्वं स्पष्टीकुर्यात्।"
+    },
+    {
+     "concept_tag": "vidya-chaturvidha",
+     "learning_objective": "आगम-स्वाध्याय-प्रवचन-व्यवहारकालैः विद्यायाः उपयोगं वदेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH11-T5",
+   "topic_number": 5,
+   "title": "उत्सर्गापवादौ – सामान्यविशेषवत् लक्षणम्",
+   "ncert_sections": "गद्यांशः ४, टिप्पणी",
+   "concepts": [
+    {
+     "concept_tag": "utsarga-apavadau",
+     "learning_objective": "उत्सर्गस्य अपवादस्य च स्वरूपं सम्बन्धं च वदेत्।"
+    },
+    {
+     "concept_tag": "karmanyan-atah-kah",
+     "learning_objective": "'कर्मण्यण्' 'आतोऽनुपसर्गे कः' इति सूत्रयोः उदाहरणानि विश्लेषयेत्।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHSK2-CH11-T6",
+   "topic_number": 6,
+   "title": "व्याकरणम् – शब्दार्थाः सन्धिः प्रत्ययाः च",
+   "ncert_sections": "शब्दार्थाः, अभ्यासः (प्रश्नाः ५, ७, ८)",
+   "concepts": [
+    {
+     "concept_tag": "sandhi",
+     "learning_objective": "पाठगतपदेषु सन्धिविच्छेदं सन्धिनाम च कुर्यात्।"
+    },
+    {
+     "concept_tag": "shabdarthah",
+     "learning_objective": "पाठगतपदानां अर्थान् अभिजानीयात्।"
+    },
+    {
+     "concept_tag": "kritya-pratyayah",
+     "learning_objective": "पाठगतपदेषु प्रकृतिप्रत्ययविभागं कुर्यात्।"
+    }
+   ]
+  }
+ ]
+}

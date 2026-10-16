@@ -1,0 +1,136 @@
+{
+ "chapter_id": "FEGP1-CH07",
+ "title": "Fractions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FEGP1-CH07-T1",
+   "topic_number": 1,
+   "title": "Fractional Units and Equal Shares",
+   "ncert_sections": "7.1",
+   "concepts": [
+    {
+     "concept_tag": "fraction-as-equal-share",
+     "learning_objective": "Express the share each person gets when a whole number of things is shared equally as a fraction."
+    },
+    {
+     "concept_tag": "comparing-unit-fractions",
+     "learning_objective": "Compare fractional units by reasoning that sharing among more people gives a smaller share."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH07-T2",
+   "topic_number": 2,
+   "title": "Fractional Units as Parts of a Whole and Measuring",
+   "ncert_sections": "7.2, 7.3",
+   "concepts": [
+    {
+     "concept_tag": "fractional-unit-of-whole",
+     "learning_objective": "Identify the fractional unit obtained when a whole is divided into equal parts, whatever their shape."
+    },
+    {
+     "concept_tag": "measuring-with-fractional-units",
+     "learning_objective": "Describe a fractional quantity as a number of fractional units and read a fraction such as 3/4 as '3 times 1/4'."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH07-T3",
+   "topic_number": 3,
+   "title": "Marking Fraction Lengths on the Number Line",
+   "ncert_sections": "7.4",
+   "concepts": [
+    {
+     "concept_tag": "fraction-on-number-line",
+     "learning_objective": "Find and mark fraction lengths on the number line by dividing a unit into equal parts."
+    },
+    {
+     "concept_tag": "fractions-between-numbers",
+     "learning_objective": "Recognise that there are endlessly many fractions between 0 and 1 and locate fractions between given values."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH07-T4",
+   "topic_number": 4,
+   "title": "Mixed Fractions",
+   "ncert_sections": "7.5",
+   "concepts": [
+    {
+     "concept_tag": "fraction-to-mixed-number",
+     "learning_objective": "Find the whole units in a fraction greater than 1 and write it as a mixed number."
+    },
+    {
+     "concept_tag": "mixed-number-to-fraction",
+     "learning_objective": "Convert a mixed number into a fraction by counting its fractional units."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH07-T5",
+   "topic_number": 5,
+   "title": "Equivalent Fractions and Lowest Terms",
+   "ncert_sections": "7.6",
+   "concepts": [
+    {
+     "concept_tag": "equivalent-fractions",
+     "learning_objective": "Recognise and generate equivalent fractions using the fraction wall and equal-share situations."
+    },
+    {
+     "concept_tag": "lowest-terms",
+     "learning_objective": "Express a fraction in lowest terms by dividing the numerator and denominator by common factors."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH07-T6",
+   "topic_number": 6,
+   "title": "Comparing Fractions",
+   "ncert_sections": "7.6, 7.7",
+   "concepts": [
+    {
+     "concept_tag": "compare-common-denominator",
+     "learning_objective": "Compare fractions by converting them to equivalent fractions with a common denominator."
+    },
+    {
+     "concept_tag": "compare-same-numerator-or-denominator",
+     "learning_objective": "Compare fractions with the same numerator or the same denominator by reasoning about shares."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH07-T7",
+   "topic_number": 7,
+   "title": "Addition and Subtraction of Fractions",
+   "ncert_sections": "7.8",
+   "concepts": [
+    {
+     "concept_tag": "adding-fractions",
+     "learning_objective": "Add fractions with the same or different denominators using Brahmagupta's method."
+    },
+    {
+     "concept_tag": "subtracting-fractions",
+     "learning_objective": "Subtract fractions with the same or different denominators using Brahmagupta's method."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH07-T8",
+   "topic_number": 8,
+   "title": "A Pinch of History and Unit Fraction Puzzles",
+   "ncert_sections": "7.9",
+   "concepts": [
+    {
+     "concept_tag": "history-of-fractions",
+     "learning_objective": "Recall how fractions were named, written and worked with in ancient India and how the notation spread."
+    },
+    {
+     "concept_tag": "sums-of-unit-fractions",
+     "learning_objective": "Reason about writing fractions and the number 1 as sums of different fractional units."
+    }
+   ]
+  }
+ ]
+}

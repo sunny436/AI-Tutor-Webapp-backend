@@ -1,0 +1,980 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "samkalin-bharat-c10-hi",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "social_science",
+  "language": "hindi",
+  "title": "Samkalin Bharat",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jhss1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JHSS1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "संसाधन एवं विकास",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS1-CH01-T1",
+     "topic_number": 1,
+     "title": "संसाधन: अर्थ और वर्गीकरण",
+     "ncert_sections": "परिचय, चित्र 1.1, 1.2",
+     "concepts": [
+      {
+       "concept_tag": "sansadhan-paribhasha",
+       "learning_objective": "विद्यार्थी संसाधन की परिभाषा तथा प्रकृति, प्रौद्योगिकी और संस्थाओं के अंतर्संबंध को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sansadhan-vargikaran",
+       "learning_objective": "विद्यार्थी उत्पत्ति, समाप्यता, स्वामित्व और विकास के स्तर के आधार पर संसाधनों का वर्गीकरण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH01-T2",
+     "topic_number": 2,
+     "title": "संसाधनों का विकास और सतत पोषणीय विकास",
+     "ncert_sections": "संसाधनों का विकास; सतत पोषणीय विकास; रियो डी जेनेरो पृथ्वी सम्मेलन; एजेंडा 21",
+     "concepts": [
+      {
+       "concept_tag": "sansadhan-vikas-samasyaen",
+       "learning_objective": "विद्यार्थी संसाधनों के अविवेकपूर्ण उपयोग से उत्पन्न समस्याओं को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "satat-poshniya-vikas",
+       "learning_objective": "विद्यार्थी सतत पोषणीय विकास की अवधारणा को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "rio-sammelan-agenda-21",
+       "learning_objective": "विद्यार्थी 1992 के पृथ्वी सम्मेलन और एजेंडा 21 के उद्देश्यों का वर्णन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH01-T3",
+     "topic_number": 3,
+     "title": "संसाधन नियोजन",
+     "ncert_sections": "संसाधन नियोजन; भारत में संसाधन नियोजन",
+     "concepts": [
+      {
+       "concept_tag": "bharat-mein-sansadhan-niyojan",
+       "learning_objective": "विद्यार्थी भारत में संसाधन नियोजन की आवश्यकता और उसके चरणों की व्याख्या कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sansadhan-praudyogiki-sansthaen",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि संसाधन प्रौद्योगिकी और संस्थागत परिवर्तनों के साथ ही विकास में योगदान देते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH01-T4",
+     "topic_number": 4,
+     "title": "संसाधनों का संरक्षण",
+     "ncert_sections": "संसाधनों का संरक्षण",
+     "concepts": [
+      {
+       "concept_tag": "sansadhan-sanrakshan-vichar",
+       "learning_objective": "विद्यार्थी गांधीजी, क्लब ऑफ रोम, शुमेसर और ब्रुन्डटलैंड आयोग के संरक्षण संबंधी विचारों की तुलना कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH01-T5",
+     "topic_number": 5,
+     "title": "भू-संसाधन और भू-उपयोग",
+     "ncert_sections": "भू-संसाधन; भू-उपयोग; भारत में भू-उपयोग प्रारूप",
+     "concepts": [
+      {
+       "concept_tag": "bhu-sansadhan-bhuakriti",
+       "learning_objective": "विद्यार्थी भारत में मैदान, पर्वत और पठार के अंतर्गत भूमि के अनुपात और उनके महत्त्व को बता सकेंगे।"
+      },
+      {
+       "concept_tag": "bhu-upyog-shreniyan",
+       "learning_objective": "विद्यार्थी भू-उपयोग की श्रेणियों, शुद्ध बोए गए क्षेत्र और परती भूमि के प्रकारों में अंतर कर सकेंगे।"
+      },
+      {
+       "concept_tag": "bhu-upyog-pratirup",
+       "learning_objective": "विद्यार्थी भारत के भू-उपयोग प्रारूप और राज्यों के बीच अंतर का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH01-T6",
+     "topic_number": 6,
+     "title": "भूमि निम्नीकरण और संरक्षण उपाय",
+     "ncert_sections": "भूमि निम्नीकरण और संरक्षण उपाय",
+     "concepts": [
+      {
+       "concept_tag": "bhumi-nimnikaran-karan",
+       "learning_objective": "विद्यार्थी विभिन्न राज्यों में भूमि निम्नीकरण के मानवीय कारणों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "bhumi-sanrakshan-upay",
+       "learning_objective": "विद्यार्थी भूमि निम्नीकरण को रोकने के उपयुक्त उपाय सुझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH01-T7",
+     "topic_number": 7,
+     "title": "मृदा संसाधन और मृदाओं का वर्गीकरण",
+     "ncert_sections": "मृदा एक संसाधन; मृदाओं का वर्गीकरण",
+     "concepts": [
+      {
+       "concept_tag": "mrida-nirman",
+       "learning_objective": "विद्यार्थी मृदा निर्माण के कारकों और मृदा परिच्छेदिका को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "mrida-prakar",
+       "learning_objective": "विद्यार्थी भारत की प्रमुख मृदाओं की विशेषताओं, वितरण और उपयुक्त फसलों में अंतर कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH01-T8",
+     "topic_number": 8,
+     "title": "मृदा अपरदन और मृदा संरक्षण",
+     "ncert_sections": "मृदा अपरदन और संरक्षण",
+     "concepts": [
+      {
+       "concept_tag": "mrida-apardan-prakar",
+       "learning_objective": "विद्यार्थी मृदा अपरदन के कारणों और प्रकारों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "mrida-sanrakshan-vidhiyan",
+       "learning_objective": "विद्यार्थी समोच्च जुताई, सीढ़ीदार खेती, पट्टी कृषि और रक्षक मेखला जैसी विधियों का उपयोग समझा सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "JHSS1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "वन एवं वन्य जीव संसाधन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS1-CH02-T1",
+     "topic_number": 1,
+     "title": "भारत में वनस्पतिजात और प्राणिजात",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jaiv-vividhata",
+       "learning_objective": "विद्यार्थी जैव विविधता का अर्थ और भारत की जैव विविधता की समृद्धि समझा सकेगा।"
+      },
+      {
+       "concept_tag": "paristhitik-tantra-nirbharta",
+       "learning_objective": "विद्यार्थी समझा सकेगा कि मनुष्य पारिस्थितिक तंत्र का भाग है और वन प्राथमिक उत्पादक क्यों हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH02-T2",
+     "topic_number": 2,
+     "title": "भारत में वन और वन्य जीवन का संरक्षण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sanrakshan-ka-mahatva",
+       "learning_objective": "विद्यार्थी वनों और वन्य जीवन के संरक्षण की आवश्यकता बता सकेगा।"
+      },
+      {
+       "concept_tag": "vanya-jeev-rakshan-adhiniyam",
+       "learning_objective": "विद्यार्थी भारतीय वन्य जीवन (रक्षण) अधिनियम 1972 के प्रावधानों और उद्देश्यों की व्याख्या कर सकेगा।"
+      },
+      {
+       "concept_tag": "sanrakshit-jatiyon-ka-vistar",
+       "learning_objective": "विद्यार्थी संरक्षित जातियों की सूची में कीटों और पौधों के जोड़े जाने का क्रम बता सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH02-T3",
+     "topic_number": 3,
+     "title": "बाघ परियोजना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bagh-pariyojana",
+       "learning_objective": "विद्यार्थी बाघों की घटती संख्या के कारण और बाघ परियोजना के उद्देश्य का विश्लेषण कर सकेगा।"
+      },
+      {
+       "concept_tag": "bagh-rizarv",
+       "learning_objective": "विद्यार्थी भारत के प्रमुख बाघ रिज़र्वों और उनके राज्यों की पहचान कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH02-T4",
+     "topic_number": 4,
+     "title": "वन और वन्य जीव संसाधनों के प्रकार और वितरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "van-shreniyan",
+       "learning_objective": "विद्यार्थी आरक्षित, रक्षित और अवर्गीकृत वनों में अंतर कर सकेगा।"
+      },
+      {
+       "concept_tag": "sthayi-van-kshetra",
+       "learning_objective": "विद्यार्थी स्थायी वन क्षेत्र का अर्थ और मध्य प्रदेश में उसका विस्तार बता सकेगा।"
+      },
+      {
+       "concept_tag": "rajyavar-van-vitaran",
+       "learning_objective": "विद्यार्थी राज्यों में विभिन्न वन श्रेणियों के वितरण की तुलना कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH02-T5",
+     "topic_number": 5,
+     "title": "समुदाय और वन संरक्षण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samudayik-sanrakshan",
+       "learning_objective": "विद्यार्थी वन और वन्य जीव संरक्षण में स्थानीय समुदायों के योगदान का मूल्यांकन कर सकेगा।"
+      },
+      {
+       "concept_tag": "paryavaran-andolan",
+       "learning_objective": "विद्यार्थी चिपको आंदोलन और बीज बचाओ आंदोलन जैसे प्रयासों का महत्त्व समझा सकेगा।"
+      },
+      {
+       "concept_tag": "sanyukt-van-prabandhan",
+       "learning_objective": "विद्यार्थी संयुक्त वन प्रबंधन की कार्यप्रणाली और उससे समुदायों को मिलने वाले लाभ बता सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH02-T6",
+     "topic_number": 6,
+     "title": "पवित्र पेड़ों के झुरमुट – विविध और दुर्लभ जातियों की संपत्ति",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pavitra-ped-jhurmut",
+       "learning_objective": "विद्यार्थी पवित्र पेड़ों के झुरमुट का अर्थ और जैव विविधता संरक्षण में उनकी भूमिका समझा सकेगा।"
+      },
+      {
+       "concept_tag": "prakriti-puja-parampara",
+       "learning_objective": "विद्यार्थी प्रकृति पूजा से जुड़ी पारंपरिक संरक्षण प्रथाओं के उदाहरण पहचान सकेगा।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "JHSS1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "जल संसाधन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS1-CH03-T1",
+     "topic_number": 1,
+     "title": "जल: एक नवीकरणीय संसाधन और जल दुर्लभता के कारण",
+     "ncert_sections": "प्रस्तावना; जल दुर्लभता और जल संरक्षण एवं प्रबंधन की आवश्यकता",
+     "concepts": [
+      {
+       "concept_tag": "jal-navikarniya-sansadhan",
+       "learning_objective": "विद्यार्थी समझाता है कि जलीय चक्र के कारण जल एक नवीकरणीय संसाधन है।"
+      },
+      {
+       "concept_tag": "jal-durlabhta-ke-karan",
+       "learning_objective": "विद्यार्थी जनसंख्या, सिंचाई, औद्योगीकरण और नगरीकरण को जल दुर्लभता के कारणों के रूप में पहचानता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH03-T2",
+     "topic_number": 2,
+     "title": "जल की गुणवत्ता और जल संरक्षण की आवश्यकता",
+     "ncert_sections": "जल दुर्लभता और जल संरक्षण एवं प्रबंधन की आवश्यकता",
+     "concepts": [
+      {
+       "concept_tag": "jal-gunvatta-aur-pradushan",
+       "learning_objective": "विद्यार्थी पहचानता है कि प्रदूषण के कारण पर्याप्त जल होते हुए भी जल दुर्लभता हो सकती है।"
+      },
+      {
+       "concept_tag": "jal-sanrakshan-ki-avashyakta",
+       "learning_objective": "विद्यार्थी जल संरक्षण की आवश्यकता को स्वास्थ्य, खाद्य सुरक्षा और पारितंत्र से जोड़ता है।"
+      },
+      {
+       "concept_tag": "sarkari-jal-yojanaen",
+       "learning_objective": "विद्यार्थी जल जीवन मिशन और अटल भूजल योजना के उद्देश्यों को बताता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH03-T3",
+     "topic_number": 3,
+     "title": "प्राचीन भारत की जलीय संरचनाएँ और बाँध",
+     "ncert_sections": "बहुउद्देशीय नदी परियोजनाएँ और समन्वित जल संसाधन प्रबंधन",
+     "concepts": [
+      {
+       "concept_tag": "prachin-jaliya-sanrachnaen",
+       "learning_objective": "विद्यार्थी प्राचीन और मध्यकालीन भारत की प्रमुख जलीय संरचनाओं को पहचानता है।"
+      },
+      {
+       "concept_tag": "bandh-paribhasha-vargikaran",
+       "learning_objective": "विद्यार्थी बाँध की परिभाषा देता है और संरचना तथा ऊँचाई के आधार पर उसका वर्गीकरण करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH03-T4",
+     "topic_number": 4,
+     "title": "बहुउद्देशीय नदी परियोजनाएँ",
+     "ncert_sections": "बहुउद्देशीय नदी परियोजनाएँ और समन्वित जल संसाधन प्रबंधन",
+     "concepts": [
+      {
+       "concept_tag": "bahuuddeshiya-pariyojana-uddeshya",
+       "learning_objective": "विद्यार्थी समझाता है कि बाँधों को बहुउद्देशीय परियोजनाएँ क्यों कहा जाता है और उनसे क्या अपेक्षाएँ थीं।"
+      },
+      {
+       "concept_tag": "pramukh-nadi-pariyojanaen",
+       "learning_objective": "विद्यार्थी भाखड़ा-नांगल, हीराकुड और सरदार सरोवर परियोजनाओं को उनकी नदियों और उपयोगों से जोड़ता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH03-T5",
+     "topic_number": 5,
+     "title": "बहुउद्देशीय परियोजनाओं के दुष्प्रभाव, जल विवाद और सिंचाई",
+     "ncert_sections": "बहुउद्देशीय नदी परियोजनाएँ और समन्वित जल संसाधन प्रबंधन",
+     "concepts": [
+      {
+       "concept_tag": "bandhon-ke-dushprabhav",
+       "learning_objective": "विद्यार्थी बड़े बाँधों के पर्यावरणीय और सामाजिक दुष्प्रभावों का विश्लेषण करता है।"
+      },
+      {
+       "concept_tag": "antarrajyiya-jal-vivad",
+       "learning_objective": "विद्यार्थी अंतर्राज्यीय जल विवादों के कारण को उदाहरण सहित समझाता है।"
+      },
+      {
+       "concept_tag": "krishi-sinchai-yojana",
+       "learning_objective": "विद्यार्थी प्रधानमंत्री कृषि सिंचाई योजना के उद्देश्यों को बताता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH03-T6",
+     "topic_number": 6,
+     "title": "पारंपरिक वर्षा जल संग्रहण",
+     "ncert_sections": "वर्षा जल संग्रहण",
+     "concepts": [
+      {
+       "concept_tag": "paramparik-jal-sangrahan-vidhiyan",
+       "learning_objective": "विद्यार्थी गुल, कुल, बाढ़ जल वाहिकाएँ, खादीन और जोहड़ जैसी विधियों को उनके क्षेत्रों से जोड़ता है।"
+      },
+      {
+       "concept_tag": "rajasthan-ke-tanke",
+       "learning_objective": "विद्यार्थी राजस्थान में टाँकों द्वारा छत वर्षा जल संग्रहण की विधि समझाता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH03-T7",
+     "topic_number": 7,
+     "title": "वर्षा जल संग्रहण के आधुनिक रूप और बाँस ड्रिप सिंचाई",
+     "ncert_sections": "वर्षा जल संग्रहण; बाँस ड्रिप सिंचाई प्रणाली",
+     "concepts": [
+      {
+       "concept_tag": "chhat-varsha-jal-sangrahan",
+       "learning_objective": "विद्यार्थी गेंदाथूर, तमिलनाडु और शिलांग के उदाहरणों से छत वर्षा जल संग्रहण के आधुनिक रूपों को समझाता है।"
+      },
+      {
+       "concept_tag": "bans-drip-sinchai",
+       "learning_objective": "विद्यार्थी मेघालय की बाँस ड्रिप सिंचाई प्रणाली की कार्यविधि बताता है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "JHSS1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "कृषि",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS1-CH04-T1",
+     "topic_number": 1,
+     "title": "प्रारंभिक जीविका निर्वाह और गहन जीविका कृषि",
+     "ncert_sections": "कृषि के प्रकार",
+     "concepts": [
+      {
+       "concept_tag": "kartan-dahan-krishi",
+       "learning_objective": "प्रारंभिक जीविका निर्वाह (कर्तन दहन) कृषि की विशेषताएँ और उसके क्षेत्रीय नाम बताना।"
+      },
+      {
+       "concept_tag": "gahan-jeevika-krishi",
+       "learning_objective": "गहन जीविका कृषि की विशेषताओं और भूमि पर बढ़ते दबाव के कारणों को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH04-T2",
+     "topic_number": 2,
+     "title": "वाणिज्यिक और रोपण कृषि",
+     "ncert_sections": "कृषि के प्रकार",
+     "concepts": [
+      {
+       "concept_tag": "vanijyik-krishi",
+       "learning_objective": "वाणिज्यिक कृषि की विशेषताएँ और क्षेत्रों के अनुसार वाणिज्यीकरण के अंतर को समझाना।"
+      },
+      {
+       "concept_tag": "ropan-krishi",
+       "learning_objective": "रोपण कृषि की विशेषताएँ, प्रमुख फसलें और उसके विकास की आवश्यक दशाएँ बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH04-T3",
+     "topic_number": 3,
+     "title": "शस्य प्रारूप",
+     "ncert_sections": "शस्य प्रारूप",
+     "concepts": [
+      {
+       "concept_tag": "fasal-rituen",
+       "learning_objective": "रबी, खरीफ और जायद ऋतुओं के समय तथा उनकी प्रमुख फसलों में अंतर करना।"
+      },
+      {
+       "concept_tag": "rabi-safalta-karak",
+       "learning_objective": "उत्तर और उत्तर-पश्चिमी भारत में रबी फसलों की सफलता के कारकों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH04-T4",
+     "topic_number": 4,
+     "title": "मुख्य खाद्यान्न फसलें",
+     "ncert_sections": "मुख्य फसलें",
+     "concepts": [
+      {
+       "concept_tag": "chaval-gehun",
+       "learning_objective": "चावल और गेहूँ की भौगोलिक दशाएँ तथा उनके प्रमुख उत्पादक क्षेत्र बताना।"
+      },
+      {
+       "concept_tag": "mote-anaj-makka",
+       "learning_objective": "मोटे अनाजों और मक्का की विशेषताएँ, पोषण मूल्य और उत्पादक क्षेत्र पहचानना।"
+      },
+      {
+       "concept_tag": "dalen",
+       "learning_objective": "दालों का महत्त्व और मृदा की उर्वरता बढ़ाने में उनकी भूमिका समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH04-T5",
+     "topic_number": 5,
+     "title": "खाद्यान्नों के अलावा अन्य खाद्य फसलें",
+     "ncert_sections": "खाद्यान्नों के अलावा अन्य खाद्य फसलें",
+     "concepts": [
+      {
+       "concept_tag": "ganna-tilhan",
+       "learning_objective": "गन्ने और तिलहनों की उपज दशाएँ, ऋतुएँ और उत्पादन में भारत का स्थान बताना।"
+      },
+      {
+       "concept_tag": "chay-kofi",
+       "learning_objective": "चाय और कॉफी की खेती की भौगोलिक दशाओं और विशेषताओं की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "bagwani-faslen",
+       "learning_objective": "उष्ण और शीतोष्ण बागवानी फसलों तथा उनके उत्पादक राज्यों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH04-T6",
+     "topic_number": 6,
+     "title": "अखाद्य फसलें",
+     "ncert_sections": "अखाद्य फसलें",
+     "concepts": [
+      {
+       "concept_tag": "rabad",
+       "learning_objective": "रबड़ की खेती के लिए आवश्यक जलवायु और उसके उत्पादक क्षेत्र बताना।"
+      },
+      {
+       "concept_tag": "reshedar-faslen",
+       "learning_objective": "कपास, जूट, सन और रेशम जैसी रेशेदार फसलों की विशेषताएँ और दशाएँ समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH04-T7",
+     "topic_number": 7,
+     "title": "प्रौद्योगिकीय और संस्थागत सुधार तथा भूदान-ग्रामदान",
+     "ncert_sections": "प्रौद्योगिकीय और संस्थागत सुधार; भूदान-ग्रामदान",
+     "concepts": [
+      {
+       "concept_tag": "sansthagat-sudhar",
+       "learning_objective": "स्वतंत्रता के बाद कृषि में किए गए संस्थागत और प्रौद्योगिकीय सुधारों का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "kisan-yojanaen",
+       "learning_objective": "किसानों के हित में चलाई गई सरकारी योजनाओं और समर्थन मूल्य के उद्देश्य बताना।"
+      },
+      {
+       "concept_tag": "bhoodan-gramdan",
+       "learning_objective": "विनोबा भावे के भूदान-ग्रामदान आंदोलन की प्रकृति और महत्त्व का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "JHSS1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "खनिज तथा ऊर्जा संसाधन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS1-CH05-T1",
+     "topic_number": 1,
+     "title": "खनिज क्या है और खनिजों की उपस्थिति की विधियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "khanij-ki-paribhasha",
+       "learning_objective": "खनिज की परिभाषा तथा भूगोलवेत्ता और भूवैज्ञानिक द्वारा खनिजों के अध्ययन का अंतर बताना।"
+      },
+      {
+       "concept_tag": "khanijon-ki-upasthiti",
+       "learning_objective": "शिराओं, परतों, अवशिष्ट पिंड, प्लेसर निक्षेपों और महासागरीय जल में खनिजों के मिलने की विधियाँ समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH05-T2",
+     "topic_number": 2,
+     "title": "लौह खनिज: लौह अयस्क और मैंगनीज़",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lauh-ayask-ke-prakar",
+       "learning_objective": "मैग्नेटाइट और हेमेटाइट लौह अयस्कों की लौह मात्रा और उपयोग की तुलना करना।"
+      },
+      {
+       "concept_tag": "lauh-ayask-ki-petiyan",
+       "learning_objective": "भारत की प्रमुख लौह अयस्क पेटियों, खानों और निर्यात पत्तनों की पहचान करना।"
+      },
+      {
+       "concept_tag": "manganese",
+       "learning_objective": "इस्पात निर्माण तथा अन्य उद्योगों में मैंगनीज़ के उपयोग बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH05-T3",
+     "topic_number": 3,
+     "title": "अलौह, अधात्विक तथा शैल खनिज",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tanba-aur-bauxite",
+       "learning_objective": "ताँबे और बॉक्साइट के गुण, उपयोग और भारत में उनके प्रमुख उत्पादक क्षेत्र बताना।"
+      },
+      {
+       "concept_tag": "abhrak-aur-choona-patthar",
+       "learning_objective": "अभ्रक और चूना पत्थर के गुण, उपयोग और प्राप्ति क्षेत्र समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH05-T4",
+     "topic_number": 4,
+     "title": "खनन के खतरे और खनिजों का संरक्षण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "khanan-ke-khatre",
+       "learning_objective": "खनन से श्रमिकों के स्वास्थ्य और पर्यावरण पर पड़ने वाले प्रभाव तथा रैट-होल खनन को समझाना।"
+      },
+      {
+       "concept_tag": "khanij-sanrakshan",
+       "learning_objective": "खनिजों के सीमित और अनवीकरणीय होने के कारण तथा उनके संरक्षण के उपाय बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH05-T5",
+     "topic_number": 5,
+     "title": "ऊर्जा संसाधन और कोयला",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "urja-sansadhan-vargikaran",
+       "learning_objective": "ऊर्जा संसाधनों को पारंपरिक और गैर-पारंपरिक स्रोतों में वर्गीकृत करना।"
+      },
+      {
+       "concept_tag": "koyla",
+       "learning_objective": "कोयले के प्रकार, भूगर्भिक युग, वितरण और कोयला आधारित उद्योगों की अवस्थिति समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH05-T6",
+     "topic_number": 6,
+     "title": "पेट्रोलियम, प्राकृतिक गैस और विद्युत",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "petroleum",
+       "learning_objective": "भारत में पेट्रोलियम की उपस्थिति की भूगर्भिक दशाएँ और प्रमुख उत्पादक क्षेत्र बताना।"
+      },
+      {
+       "concept_tag": "prakritik-gas",
+       "learning_objective": "प्राकृतिक गैस के उपयोग, भंडार क्षेत्र और गैस पाइपलाइन जाल का महत्त्व समझाना।"
+      },
+      {
+       "concept_tag": "vidyut",
+       "learning_objective": "जलविद्युत और ताप विद्युत के उत्पादन की विधियों की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH05-T7",
+     "topic_number": 7,
+     "title": "गैर-पारंपरिक ऊर्जा स्रोत और ऊर्जा संरक्षण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "parmanu-aur-saur-urja",
+       "learning_objective": "परमाणु और सौर ऊर्जा के स्रोत तथा भारत में उनकी संभावनाएँ बताना।"
+      },
+      {
+       "concept_tag": "pavan-jaiv-jvar-bhutapiya",
+       "learning_objective": "पवन, बायोगैस, ज्वारीय और भूतापीय ऊर्जा के स्रोत और भारत में उनके क्षेत्र पहचानना।"
+      },
+      {
+       "concept_tag": "urja-sanrakshan",
+       "learning_objective": "सतत ऊर्जा विकास के लिए ऊर्जा संरक्षण के उपायों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "JHSS1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "विनिर्माण उद्योग",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS1-CH06-T1",
+     "topic_number": 1,
+     "title": "विनिर्माण का अर्थ और महत्व",
+     "ncert_sections": "परिचय; विनिर्माण का महत्व",
+     "concepts": [
+      {
+       "concept_tag": "vinirman-arth",
+       "learning_objective": "विद्यार्थी विनिर्माण का अर्थ बता सकेगा और उसे द्वितीयक क्षेत्रक से जोड़ सकेगा।"
+      },
+      {
+       "concept_tag": "vinirman-mahatva",
+       "learning_objective": "विद्यार्थी देश के आर्थिक विकास में विनिर्माण उद्योगों के महत्व की व्याख्या कर सकेगा।"
+      },
+      {
+       "concept_tag": "krishi-udyog-sambandh",
+       "learning_objective": "विद्यार्थी कृषि और उद्योग की परस्पर निर्भरता को समझा सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH06-T2",
+     "topic_number": 2,
+     "title": "उद्योगों का वर्गीकरण",
+     "ncert_sections": "उद्योगों का वर्गीकरण",
+     "concepts": [
+      {
+       "concept_tag": "kachcha-maal-aur-bhumika-adhar",
+       "learning_objective": "विद्यार्थी कच्चे माल के स्रोत और मुख्य भूमिका के आधार पर उद्योगों को वर्गीकृत कर सकेगा।"
+      },
+      {
+       "concept_tag": "swamitva-adhar",
+       "learning_objective": "विद्यार्थी स्वामित्व के आधार पर सार्वजनिक, निजी, संयुक्त और सहकारी उद्योगों में अंतर कर सकेगा।"
+      },
+      {
+       "concept_tag": "poonji-aur-bhar-adhar",
+       "learning_objective": "विद्यार्थी पूंजी निवेश तथा कच्चे और तैयार माल के भार के आधार पर उद्योगों को पहचान सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH06-T3",
+     "topic_number": 3,
+     "title": "कृषि आधारित उद्योग",
+     "ncert_sections": "कृषि आधारित उद्योग: वस्त्र, सूती वस्त्र, जूट वस्त्र, चीनी उद्योग",
+     "concepts": [
+      {
+       "concept_tag": "sooti-vastra-udyog",
+       "learning_objective": "विद्यार्थी सूती वस्त्र उद्योग के विकास, स्थानीयकरण और समस्याओं की व्याख्या कर सकेगा।"
+      },
+      {
+       "concept_tag": "joot-udyog",
+       "learning_objective": "विद्यार्थी जूट उद्योग की स्थिति और उसके स्थानीयकरण के कारकों को बता सकेगा।"
+      },
+      {
+       "concept_tag": "cheeni-udyog",
+       "learning_objective": "विद्यार्थी चीनी उद्योग की अवस्थिति और उसके स्थानांतरण के कारणों का विश्लेषण कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH06-T4",
+     "topic_number": 4,
+     "title": "खनिज आधारित उद्योग: लोहा-इस्पात और एल्युमिनियम",
+     "ncert_sections": "खनिज आधारित उद्योग; लोहा तथा इस्पात उद्योग; एल्युमिनियम प्रगलन",
+     "concepts": [
+      {
+       "concept_tag": "loha-ispat-udyog",
+       "learning_objective": "विद्यार्थी लोहा-इस्पात उद्योग के कच्चे माल और उसकी अवस्थिति के कारकों की व्याख्या कर सकेगा।"
+      },
+      {
+       "concept_tag": "aluminium-pradravan",
+       "learning_objective": "विद्यार्थी एल्युमिनियम प्रगलन के कच्चे माल और स्थान निर्धारण के कारकों को बता सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH06-T5",
+     "topic_number": 5,
+     "title": "रसायन, उर्वरक, सीमेंट, मोटरगाड़ी तथा इलेक्ट्रॉनिक उद्योग",
+     "ncert_sections": "रसायन उद्योग; उर्वरक उद्योग; सीमेंट उद्योग; मोटरगाड़ी उद्योग; सूचना प्रौद्योगिकी तथा इलेक्ट्रॉनिक उद्योग",
+     "concepts": [
+      {
+       "concept_tag": "rasayan-urvarak-udyog",
+       "learning_objective": "विद्यार्थी रसायन और उर्वरक उद्योगों की विशेषताओं तथा अवस्थिति को समझा सकेगा।"
+      },
+      {
+       "concept_tag": "cement-udyog",
+       "learning_objective": "विद्यार्थी सीमेंट उद्योग के कच्चे माल और संयंत्रों की अवस्थिति के कारण बता सकेगा।"
+      },
+      {
+       "concept_tag": "motorgadi-electronics-udyog",
+       "learning_objective": "विद्यार्थी मोटरगाड़ी तथा इलेक्ट्रॉनिक उद्योग के प्रमुख केंद्रों को पहचान सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH06-T6",
+     "topic_number": 6,
+     "title": "औद्योगिक प्रदूषण और पर्यावरण निम्नीकरण",
+     "ncert_sections": "औद्योगिक प्रदूषण तथा पर्यावरण निम्नीकरण",
+     "concepts": [
+      {
+       "concept_tag": "vayu-jal-pradooshan",
+       "learning_objective": "विद्यार्थी उद्योगों द्वारा होने वाले वायु और जल प्रदूषण के स्रोत तथा प्रभाव बता सकेगा।"
+      },
+      {
+       "concept_tag": "bhumi-dhvani-pradooshan",
+       "learning_objective": "विद्यार्थी भूमि और ध्वनि प्रदूषण के कारणों और प्रभावों की व्याख्या कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH06-T7",
+     "topic_number": 7,
+     "title": "पर्यावरण निम्नीकरण की रोकथाम",
+     "ncert_sections": "पर्यावरण निम्नीकरण की रोकथाम; एनटीपीसी का उदाहरण",
+     "concepts": [
+      {
+       "concept_tag": "jal-pradooshan-niyantran",
+       "learning_objective": "विद्यार्थी औद्योगिक जल प्रदूषण कम करने और बहिःस्राव उपचार के उपाय बता सकेगा।"
+      },
+      {
+       "concept_tag": "vayu-dhvani-niyantran",
+       "learning_objective": "विद्यार्थी वायु और ध्वनि प्रदूषण कम करने के उपकरणों और उपायों को पहचान सकेगा।"
+      },
+      {
+       "concept_tag": "ntpc-satat-vikas",
+       "learning_objective": "विद्यार्थी सतत पोषणीय विकास के लिए एनटीपीसी द्वारा अपनाए गए उपायों का मूल्यांकन कर सकेगा।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "JHSS1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "राष्ट्रीय अर्थव्यवस्था की जीवन रेखाएँ",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jhss107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JHSS1-CH07-T1",
+     "topic_number": 1,
+     "title": "परिवहन, संचार और व्यापार: राष्ट्र की जीवन रेखाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "parivahan-ki-avashyakta",
+       "learning_objective": "विद्यार्थी समझा सकेगा कि वस्तुओं और सेवाओं को आपूर्ति स्थलों से माँग स्थलों तक पहुँचाने और देश के विकास के लिए परिवहन क्यों आवश्यक है।"
+      },
+      {
+       "concept_tag": "parivahan-sanchar-vyapar-poorak",
+       "learning_objective": "विद्यार्थी स्पष्ट कर सकेगा कि परिवहन, संचार और व्यापार एक-दूसरे के पूरक क्यों हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH07-T2",
+     "topic_number": 2,
+     "title": "सड़क परिवहन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sadak-parivahan-ke-gun",
+       "learning_objective": "विद्यार्थी रेल परिवहन की तुलना में सड़क परिवहन के गुणों को परिस्थितियों में लागू कर सकेगा।"
+      },
+      {
+       "concept_tag": "sadakon-ka-vargikaran",
+       "learning_objective": "विद्यार्थी क्षमता और निर्माण सामग्री के आधार पर भारत की सड़कों के वर्गों की पहचान कर सकेगा।"
+      },
+      {
+       "concept_tag": "seema-sadak",
+       "learning_objective": "विद्यार्थी सीमा सड़क संगठन और सीमांत सड़कों का महत्त्व बता सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH07-T3",
+     "topic_number": 3,
+     "title": "रेल परिवहन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rail-parivahan-ka-mahattva",
+       "learning_objective": "विद्यार्थी भारतीय रेल के महत्त्व, इतिहास और इसकी समस्याओं का वर्णन कर सकेगा।"
+      },
+      {
+       "concept_tag": "railmarg-vitaran-ke-karak",
+       "learning_objective": "विद्यार्थी रेलमार्गों के वितरण को प्रभावित करने वाले भौतिक, आर्थिक और प्रशासनिक कारकों का विश्लेषण कर सकेगा।"
+      },
+      {
+       "concept_tag": "rail-gauge",
+       "learning_objective": "विद्यार्थी पटरी की चौड़ाई के आधार पर रेल लाइनों के प्रकार पहचान सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH07-T4",
+     "topic_number": 4,
+     "title": "पाइपलाइन परिवहन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pipeline-ke-labh",
+       "learning_objective": "विद्यार्थी पाइपलाइन परिवहन की विशेषताएँ, लाभ और लागत संरचना समझा सकेगा।"
+      },
+      {
+       "concept_tag": "pipeline-jaal",
+       "learning_objective": "विद्यार्थी देश के तीन प्रमुख पाइपलाइन जालों के मार्ग और उनसे भेजे जाने वाले पदार्थ पहचान सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH07-T5",
+     "topic_number": 5,
+     "title": "जलमार्ग और प्रमुख समुद्री पत्तन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rashtriya-jalmarg",
+       "learning_objective": "विद्यार्थी जल परिवहन की विशेषताएँ और प्रमुख राष्ट्रीय जलमार्ग पहचान सकेगा।"
+      },
+      {
+       "concept_tag": "pramukh-samudri-pattan",
+       "learning_objective": "विद्यार्थी भारत के प्रमुख समुद्री पत्तनों की स्थिति और विशेषताओं का विश्लेषण कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH07-T6",
+     "topic_number": 6,
+     "title": "वायु परिवहन और संचार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vayu-parivahan",
+       "learning_objective": "विद्यार्थी वायु परिवहन का महत्त्व, विशेषकर दुर्गम क्षेत्रों के लिए, समझा सकेगा।"
+      },
+      {
+       "concept_tag": "dak-sanchar",
+       "learning_objective": "विद्यार्थी भारतीय डाक की श्रेणियों और डाक मार्गों (चैनलों) की व्यवस्था बता सकेगा।"
+      },
+      {
+       "concept_tag": "doorsanchar-aur-jansanchar",
+       "learning_objective": "विद्यार्थी दूरसंचार और जनसंचार माध्यमों की भूमिका का वर्णन कर सकेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "JHSS1-CH07-T7",
+     "topic_number": 7,
+     "title": "अंतरराष्ट्रीय व्यापार और पर्यटन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "antarrashtriya-vyapar",
+       "learning_objective": "विद्यार्थी व्यापार के प्रकार और अंतरराष्ट्रीय व्यापार के महत्त्व को समझा सकेगा।"
+      },
+      {
+       "concept_tag": "vyapar-santulan",
+       "learning_objective": "विद्यार्थी निर्यात और आयात के आँकड़ों से व्यापार संतुलन की गणना और व्याख्या कर सकेगा।"
+      },
+      {
+       "concept_tag": "paryatan-vyapar",
+       "learning_objective": "विद्यार्थी व्यापार के रूप में पर्यटन का महत्त्व और इसे बढ़ाने की योजनाएँ पहचान सकेगा।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

@@ -1,0 +1,1687 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "exploring-society-india-and-beyond-c06-en",
+  "curriculum": "cbse",
+  "class_level": 6,
+  "subject_code": "social_science",
+  "language": "english",
+  "title": "Exploring Society India and Beyond",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "fees1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "FEES1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Locating Places on the Earth",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH01-T1",
+     "topic_number": 1,
+     "title": "Maps and their kinds",
+     "ncert_sections": "A Map and Its Components",
+     "concepts": [
+      {
+       "concept_tag": "map-as-representation",
+       "learning_objective": "Explain that a map is a top-view drawing of an area, small or large."
+      },
+      {
+       "concept_tag": "kinds-of-maps",
+       "learning_objective": "Distinguish physical, political and thematic maps and define an atlas."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH01-T2",
+     "topic_number": 2,
+     "title": "Distance and the scale of a map",
+     "ncert_sections": "A Map and Its Components (distance)",
+     "concepts": [
+      {
+       "concept_tag": "map-scale-meaning",
+       "learning_objective": "State what a map's scale tells us about map and ground distances."
+      },
+      {
+       "concept_tag": "distance-using-scale",
+       "learning_objective": "Calculate real distances from map measurements using a given scale."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH01-T3",
+     "topic_number": 3,
+     "title": "Direction and symbols on maps",
+     "ncert_sections": "A Map and Its Components (direction, symbols)",
+     "concepts": [
+      {
+       "concept_tag": "cardinal-and-intermediate-directions",
+       "learning_objective": "Identify the cardinal and intermediate directions and use them on a map."
+      },
+      {
+       "concept_tag": "map-symbols",
+       "learning_objective": "Explain why maps use standard symbols and who fixes them for India."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH01-T4",
+     "topic_number": 4,
+     "title": "Mapping the Earth: the globe and coordinates",
+     "ncert_sections": "Mapping the Earth; a) Understanding coordinates",
+     "concepts": [
+      {
+       "concept_tag": "earth-shape-and-globe",
+       "learning_objective": "Explain why a globe represents the nearly spherical Earth better than a flat map."
+      },
+      {
+       "concept_tag": "system-of-coordinates",
+       "learning_objective": "Explain how two coordinates together fix a location precisely."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH01-T5",
+     "topic_number": 5,
+     "title": "Latitudes",
+     "ncert_sections": "b) Latitudes",
+     "concepts": [
+      {
+       "concept_tag": "parallels-of-latitude",
+       "learning_objective": "Describe parallels of latitude, the Equator and the poles and their values."
+      },
+      {
+       "concept_tag": "latitude-and-climate",
+       "learning_objective": "Relate latitude to torrid, temperate and frigid climates."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH01-T6",
+     "topic_number": 6,
+     "title": "Longitudes and the Prime Meridian",
+     "ncert_sections": "c) Longitudes",
+     "concepts": [
+      {
+       "concept_tag": "meridians-of-longitude",
+       "learning_objective": "Describe meridians of longitude and how longitude is measured east and west."
+      },
+      {
+       "concept_tag": "prime-meridian",
+       "learning_objective": "Identify the Greenwich Prime Meridian as the 0 degree reference for longitude."
+      },
+      {
+       "concept_tag": "ujjayini-prime-meridian",
+       "learning_objective": "Describe the ancient Indian prime meridian through Ujjayini."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH01-T7",
+     "topic_number": 7,
+     "title": "Local time and longitude",
+     "ncert_sections": "Understanding Time Zones",
+     "concepts": [
+      {
+       "concept_tag": "earth-rotation-and-local-time",
+       "learning_objective": "Relate the Earth's rotation of 15 degrees per hour to local time."
+      },
+      {
+       "concept_tag": "local-time-calculation",
+       "learning_objective": "Calculate differences in local time from differences in longitude."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH01-T8",
+     "topic_number": 8,
+     "title": "Standard time, time zones and the International Date Line",
+     "ncert_sections": "Understanding Time Zones",
+     "concepts": [
+      {
+       "concept_tag": "standard-time",
+       "learning_objective": "Explain standard time and Indian Standard Time relative to GMT."
+      },
+      {
+       "concept_tag": "time-zones",
+       "learning_objective": "Explain why time zones follow borders and why large countries have several."
+      },
+      {
+       "concept_tag": "international-date-line",
+       "learning_objective": "Explain the International Date Line and the change of date on crossing it."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Oceans and Continents",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH02-T1",
+     "topic_number": 1,
+     "title": "The Blue Planet: Water and Land on the Earth",
+     "ncert_sections": "Chapter introduction",
+     "concepts": [
+      {
+       "concept_tag": "earth-surface-water-and-land",
+       "learning_objective": "Recall that almost three-fourths of the Earth's surface is water and a little over one-fourth is land, which is why the Earth looks blue from space."
+      },
+      {
+       "concept_tag": "oceans-and-continents-defined",
+       "learning_objective": "Define oceans and continents and state that both shape the climate and all life on Earth."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH02-T2",
+     "topic_number": 2,
+     "title": "The Distribution of Water and Land",
+     "ncert_sections": "The Distribution of Water and Land on the Earth",
+     "concepts": [
+      {
+       "concept_tag": "hemispheres-land-water-distribution",
+       "learning_objective": "Explain that land and water are not equally distributed and that the Northern Hemisphere has more land than the Southern."
+      },
+      {
+       "concept_tag": "reading-polar-maps",
+       "learning_objective": "Identify parallels of latitude and meridians of longitude on maps of the Earth seen from above the poles."
+      },
+      {
+       "concept_tag": "seawater-and-freshwater",
+       "learning_objective": "Distinguish salty seawater from the small share of freshwater found in glaciers, rivers, lakes, the atmosphere and underground."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH02-T3",
+     "topic_number": 3,
+     "title": "The Five Oceans",
+     "ncert_sections": "Oceans",
+     "concepts": [
+      {
+       "concept_tag": "five-oceans-by-size",
+       "learning_objective": "Name the five oceans and arrange them in order of size."
+      },
+      {
+       "concept_tag": "interconnected-oceans-marine-life",
+       "learning_objective": "Explain that the oceans are interconnected and support a rich diversity of marine flora and fauna."
+      },
+      {
+       "concept_tag": "indian-ocean-and-its-seas",
+       "learning_objective": "Describe the limits of the Indian Ocean and locate the Arabian Sea and the Bay of Bengal on either side of India."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH02-T4",
+     "topic_number": 4,
+     "title": "Oceans and Disasters",
+     "ncert_sections": "Oceans and disasters",
+     "concepts": [
+      {
+       "concept_tag": "ocean-rain-and-storms",
+       "learning_objective": "Explain that oceans bring life-giving monsoon rains but also give rise to destructive storms such as cyclones."
+      },
+      {
+       "concept_tag": "tsunami-causes-and-effects",
+       "learning_objective": "Describe what a tsunami is, what causes it and how it affected India in 2004."
+      },
+      {
+       "concept_tag": "early-warning-and-disaster-management",
+       "learning_objective": "Explain how early warning systems and disaster management help protect lives and property."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH02-T5",
+     "topic_number": 5,
+     "title": "Counting the Continents",
+     "ncert_sections": "Continents",
+     "concepts": [
+      {
+       "concept_tag": "ways-of-counting-continents",
+       "learning_objective": "Explain why continents can be counted as four, five, six or seven, and identify the most widely used count."
+      },
+      {
+       "concept_tag": "seven-continents-relative-size",
+       "learning_objective": "Compare the relative sizes of the seven continents and identify the largest and the smallest."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH02-T6",
+     "topic_number": 6,
+     "title": "Islands",
+     "ncert_sections": "Islands",
+     "concepts": [
+      {
+       "concept_tag": "what-is-an-island",
+       "learning_objective": "Define an island and explain why continents, though surrounded by water, are not called islands."
+      },
+      {
+       "concept_tag": "islands-of-india",
+       "learning_objective": "Locate India's two major island groups in the Bay of Bengal and the Arabian Sea."
+      },
+      {
+       "concept_tag": "india-in-antarctica",
+       "learning_objective": "Describe the Indian Antarctica Programme and its first base station, Dakshin Gangotri."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH02-T7",
+     "topic_number": 7,
+     "title": "Oceans and Life",
+     "ncert_sections": "Oceans and Life",
+     "concepts": [
+      {
+       "concept_tag": "oceans-climate-and-oxygen",
+       "learning_objective": "Explain how oceans bring rain through the water cycle and produce more than half of the world's oxygen."
+      },
+      {
+       "concept_tag": "oceans-and-human-history",
+       "learning_objective": "Describe how people have used oceans for migration, trade, military campaigns, food and culture."
+      },
+      {
+       "concept_tag": "ocean-pollution-and-protection",
+       "learning_objective": "Identify human threats to oceans such as plastic pollution and overfishing and the need to protect them."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Landforms and Life",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH03-T1",
+     "topic_number": 1,
+     "title": "Landforms and their main types",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "landform-definition",
+       "learning_objective": "Define a landform and describe how landforms are connected with the environment and life."
+      },
+      {
+       "concept_tag": "three-major-landforms",
+       "learning_objective": "Identify mountains, plateaus and plains as the three major landforms and recognise them on a real journey."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH03-T2",
+     "topic_number": 2,
+     "title": "Mountains: features, ranges and age",
+     "ncert_sections": "Mountains",
+     "concepts": [
+      {
+       "concept_tag": "mountain-features",
+       "learning_objective": "Describe the features of mountains and distinguish them from hills."
+      },
+      {
+       "concept_tag": "mountain-ranges-and-peaks",
+       "learning_objective": "Name major mountain ranges and peaks of the world and of India mentioned in the chapter."
+      },
+      {
+       "concept_tag": "young-and-old-mountains",
+       "learning_objective": "Explain the difference between young and old mountains using the Himalayas and the Aravallis."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH03-T3",
+     "topic_number": 3,
+     "title": "Mountain environment and life in the mountains",
+     "ncert_sections": "Mountain environment; Life in the mountains",
+     "concepts": [
+      {
+       "concept_tag": "montane-forest-and-fauna",
+       "learning_objective": "Describe the vegetation and animals of mountain environments."
+      },
+      {
+       "concept_tag": "mountain-livelihoods",
+       "learning_objective": "Explain how people farm and earn a living in mountain regions."
+      },
+      {
+       "concept_tag": "mountain-challenges",
+       "learning_objective": "Identify natural and human-made challenges of mountain life and the need for balance in tourism."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH03-T4",
+     "topic_number": 4,
+     "title": "Plateaus",
+     "ncert_sections": "Plateaus",
+     "concepts": [
+      {
+       "concept_tag": "plateau-features",
+       "learning_objective": "Describe the features of plateaus and give examples such as the Tibetan and Deccan plateaus."
+      },
+      {
+       "concept_tag": "plateau-resources",
+       "learning_objective": "Explain why plateaus are called storehouses of minerals and how their soils affect farming."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH03-T5",
+     "topic_number": 5,
+     "title": "Plains and life in the plains",
+     "ncert_sections": "Plains; Life in the plains",
+     "concepts": [
+      {
+       "concept_tag": "plains-formation",
+       "learning_objective": "Explain how floodplains are formed by river sediments and why they are fertile."
+      },
+      {
+       "concept_tag": "life-in-plains",
+       "learning_objective": "Describe occupations in the Ganga plain and evaluate the challenges of irrigation and groundwater use."
+      },
+      {
+       "concept_tag": "rivers-and-culture",
+       "learning_objective": "Explain the cultural value of rivers, their sources and confluences."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH03-T6",
+     "topic_number": 6,
+     "title": "Deserts, the tinais and human adaptability",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "deserts",
+       "learning_objective": "Describe hot and cold deserts and how humans have adapted to them."
+      },
+      {
+       "concept_tag": "tinai-landscapes",
+       "learning_objective": "Relate the five tinais of Sangam poetry to their landscapes and main occupations."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Timeline and Sources of History",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH04-T1",
+     "topic_number": 1,
+     "title": "How Do We Learn About the Past?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "history-and-the-earths-past",
+       "learning_objective": "Explain what history is and how human history fits within the Earth's very long history."
+      },
+      {
+       "concept_tag": "specialists-who-study-the-past",
+       "learning_objective": "Identify what geologists, palaeontologists, anthropologists and archaeologists study."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH04-T2",
+     "topic_number": 2,
+     "title": "How Is Time Measured in History?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "calendars-and-eras",
+       "learning_objective": "Describe the Gregorian calendar, its leap-year rule and the meaning of CE and BCE."
+      },
+      {
+       "concept_tag": "bce-ce-year-calculation",
+       "learning_objective": "Calculate the number of years between BCE and CE dates, keeping in mind that there is no year zero."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH04-T3",
+     "topic_number": 3,
+     "title": "Timelines, Centuries, Millenniums and Indian Calendars",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "timeline-and-chronology",
+       "learning_objective": "Use a timeline to arrange dates and events in chronological order."
+      },
+      {
+       "concept_tag": "centuries-and-millenniums",
+       "learning_objective": "Work out which century or millennium, CE or BCE, a given year belongs to."
+      },
+      {
+       "concept_tag": "panchanga",
+       "learning_objective": "State what a panchanga is and what information it provides."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH04-T4",
+     "topic_number": 4,
+     "title": "What Are the Sources of History?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "types-of-sources",
+       "learning_objective": "Define a source of history and recognise different kinds of sources."
+      },
+      {
+       "concept_tag": "cross-checking-sources",
+       "learning_objective": "Explain why historians compare many sources and decide which to trust when they disagree."
+      },
+      {
+       "concept_tag": "contributors-to-history",
+       "learning_objective": "Identify the experts and scientific studies that help reconstruct the past."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH04-T5",
+     "topic_number": 5,
+     "title": "The Beginnings of Human History",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "early-human-life",
+       "learning_objective": "Describe how early humans lived as hunters and gatherers in bands."
+      },
+      {
+       "concept_tag": "rock-art-tools-and-ornaments",
+       "learning_objective": "Explain what rock paintings, tools and ornaments tell us about early humans."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH04-T6",
+     "topic_number": 6,
+     "title": "The First Crops and Growing Communities",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ice-age-and-first-crops",
+       "learning_objective": "Explain how the end of the last Ice Age led to settled farming near rivers."
+      },
+      {
+       "concept_tag": "growth-of-villages-and-towns",
+       "learning_objective": "Trace how farming communities grew into villages and towns with new technologies."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "India, That Is Bharat",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH05-T1",
+     "topic_number": 1,
+     "title": "Many names and shifting boundaries",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "changing-names-and-boundaries",
+       "learning_objective": "Explain that the region called the Indian Subcontinent has had many names and changing boundaries over thousands of years."
+      },
+      {
+       "concept_tag": "sources-of-names",
+       "learning_objective": "Identify ancient texts, travellers' accounts and inscriptions as the sources of India's names."
+      },
+      {
+       "concept_tag": "natural-boundaries-subcontinent",
+       "learning_objective": "Recognise the natural boundaries of the Indian Subcontinent on a physical map."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH05-T2",
+     "topic_number": 2,
+     "title": "How Indians named India: Sapta Sindhava and the regions of the Mahabharata",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sapta-sindhava",
+       "learning_objective": "State the meaning and extent of the Rig Veda's name 'Sapta Sindhava'."
+      },
+      {
+       "concept_tag": "mahabharata-regions",
+       "learning_objective": "Match regions listed in the Mahabharata with the present-day areas they roughly correspond to."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH05-T3",
+     "topic_number": 3,
+     "title": "Bharatavarsha and Jambudvipa",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bharatavarsha-meaning",
+       "learning_objective": "Explain the meaning of 'Bharatavarsha' and the origin of the name 'Bharata'."
+      },
+      {
+       "concept_tag": "jambudvipa-meaning",
+       "learning_objective": "State the meaning of 'Jambudvipa' and its link with the jamun tree."
+      },
+      {
+       "concept_tag": "ashoka-jambudvipa",
+       "learning_objective": "Explain how Ashoka's inscription helps date the use of 'Jambudvipa' and what area it covered."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH05-T4",
+     "topic_number": 4,
+     "title": "Bharata: the Vishnu Purana, a Tamil poem and the Constitution",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vishnu-purana-bharata",
+       "learning_objective": "Describe how the Vishnu Purana defines the country called Bharata."
+      },
+      {
+       "concept_tag": "tamil-poem-boundaries",
+       "learning_objective": "Interpret the ancient Tamil poem's description of the land's extent."
+      },
+      {
+       "concept_tag": "constitution-india-that-is-bharat",
+       "learning_objective": "Recall that the Constitution of India begins with the phrase 'India, that is Bharat'."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH05-T5",
+     "topic_number": 5,
+     "title": "How foreigners named India",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "persian-hindu-from-sindhu",
+       "learning_objective": "Explain how the Persian name 'Hindu' was derived from 'Sindhu' as a geographical term."
+      },
+      {
+       "concept_tag": "greek-chinese-names",
+       "learning_objective": "Trace how Greek and Chinese names for India came from 'Sindhu'."
+      },
+      {
+       "concept_tag": "hindustan-and-xuanzang",
+       "learning_objective": "Recall the origin of 'Hindustan' and the journey of the Chinese traveller Xuanzang."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "The Beginnings of Indian Civilisation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH06-T1",
+     "topic_number": 1,
+     "title": "What Is a Civilisation?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "characteristics-of-civilisation",
+       "learning_objective": "Identify the characteristics that mark a society as a civilisation."
+      },
+      {
+       "concept_tag": "early-world-civilisations",
+       "learning_objective": "Place the beginnings of civilisation in Mesopotamia, Egypt and India in time."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH06-T2",
+     "topic_number": 2,
+     "title": "From Village to City",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "indus-plains-and-first-urbanisation",
+       "learning_objective": "Explain how fertile river plains led villages to grow into towns and cities around 2600 BCE."
+      },
+      {
+       "concept_tag": "names-of-the-civilisation",
+       "learning_objective": "Explain why the civilisation has several names and why its inhabitants are called Harappans."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH06-T3",
+     "topic_number": 3,
+     "title": "The Sarasvati River and Harappan Sites",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sarasvati-river",
+       "learning_objective": "Describe the Sarasvati River, its present names and its mention in the Rig Veda."
+      },
+      {
+       "concept_tag": "harappan-sites-and-regions",
+       "learning_objective": "Locate major Harappan cities and sites in their modern states or regions."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH06-T4",
+     "topic_number": 4,
+     "title": "Town-Planning",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "planned-cities",
+       "learning_objective": "Describe the main features of Harappan town-planning, such as streets, fortifications and upper and lower towns."
+      },
+      {
+       "concept_tag": "great-bath",
+       "learning_objective": "Explain the structure of the Great Bath of Mohenjo-daro and the debate about its purpose."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH06-T5",
+     "topic_number": 5,
+     "title": "Water Management",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "drains-and-wells",
+       "learning_objective": "Describe how Harappan houses, drains and wells reflect care for cleanliness and water."
+      },
+      {
+       "concept_tag": "dholavira-reservoirs",
+       "learning_objective": "Explain how the reservoirs of Dholavira harvested and stored water."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH06-T6",
+     "topic_number": 6,
+     "title": "What Did the Harappans Eat?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "harappan-agriculture",
+       "learning_objective": "Identify the crops and farming tools of the Harappans and the link between villages and cities."
+      },
+      {
+       "concept_tag": "harappan-diet-evidence",
+       "learning_objective": "Explain how archaeological evidence reveals what the Harappans ate."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH06-T7",
+     "topic_number": 7,
+     "title": "A Brisk Trade",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "trade-goods-and-routes",
+       "learning_objective": "Identify Harappan exports, imports and trade routes, including the Lothal dockyard."
+      },
+      {
+       "concept_tag": "harappan-seals",
+       "learning_objective": "Describe Harappan seals and their likely link with trade."
+      },
+      {
+       "concept_tag": "harappan-crafts-and-metals",
+       "learning_objective": "Describe Harappan crafts such as carnelian beads, shell bangles and bronze."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH06-T8",
+     "topic_number": 8,
+     "title": "The Lives of the Ancients and the End of the Cities",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "objects-of-daily-and-cultural-life",
+       "learning_objective": "Interpret Harappan objects of daily use and cultural or symbolic objects."
+      },
+      {
+       "concept_tag": "decline-of-harappan-cities",
+       "learning_objective": "Explain the factors agreed upon for the decline of Harappan cities and what survived."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "India's Cultural Roots",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH07-T1",
+     "topic_number": 1,
+     "title": "The Vedas",
+     "ncert_sections": "a. What are the Vedas?",
+     "concepts": [
+      {
+       "concept_tag": "vedas-oral-transmission",
+       "learning_objective": "Explain what the Vedas are and how their hymns were preserved orally over many generations."
+      },
+      {
+       "concept_tag": "vedic-worldview",
+       "learning_objective": "Describe the Vedic ideas of ritam, the many names of one reality, and the call for unity among people."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH07-T2",
+     "topic_number": 2,
+     "title": "Vedic Society",
+     "ncert_sections": "b. Vedic society",
+     "concepts": [
+      {
+       "concept_tag": "janas-and-assemblies",
+       "learning_objective": "Identify the janas of early Vedic society and the clues (raja, sabha, samiti) about how they were governed."
+      },
+      {
+       "concept_tag": "vedic-professions",
+       "learning_objective": "Recognise the variety of professions mentioned in the Vedic texts."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH07-T3",
+     "topic_number": 3,
+     "title": "Vedic Schools of Thought",
+     "ncert_sections": "c. Vedic schools of thought",
+     "concepts": [
+      {
+       "concept_tag": "brahman-and-atman",
+       "learning_objective": "Explain the Upanishadic ideas of brahman and atman and why they lead to the idea that all beings are connected."
+      },
+      {
+       "concept_tag": "upanishad-stories",
+       "learning_objective": "Interpret the stories of Shvetaketu, Nachiketa and Gargi and the value they place on asking questions."
+      },
+      {
+       "concept_tag": "yoga-and-vedanta",
+       "learning_objective": "Identify Vedanta and Yoga as schools that grew out of the Vedas and formed the foundations of Hinduism."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH07-T4",
+     "topic_number": 4,
+     "title": "Buddhism",
+     "ncert_sections": "Buddhism",
+     "concepts": [
+      {
+       "concept_tag": "life-of-the-buddha",
+       "learning_objective": "Narrate the main events in the life of Siddhartha Gautama leading to his enlightenment."
+      },
+      {
+       "concept_tag": "buddhist-teachings",
+       "learning_objective": "Explain the Buddha's teachings on ignorance, attachment, ahimsa and inner discipline."
+      },
+      {
+       "concept_tag": "sangha-and-jataka",
+       "learning_objective": "Describe the Sangha and the values expressed through the Jataka tales."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH07-T5",
+     "topic_number": 5,
+     "title": "Jainism",
+     "ncert_sections": "Jainism",
+     "concepts": [
+      {
+       "concept_tag": "mahavira-and-jain-stories",
+       "learning_objective": "Describe the life of Mahavira and the lessons of Jain stories such as that of Rohineya."
+      },
+      {
+       "concept_tag": "jain-principles",
+       "learning_objective": "Explain the Jain principles of ahimsa, anekantavada and aparigraha."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH07-T6",
+     "topic_number": 6,
+     "title": "Many Schools, One Trunk",
+     "ncert_sections": "Spread of teachings; Charvaka; shared concepts",
+     "concepts": [
+      {
+       "concept_tag": "spread-of-teachings",
+       "learning_objective": "Describe how monks and nuns spread their teachings and the evidence left in monasteries and rock-cut caves."
+      },
+      {
+       "concept_tag": "diversity-of-belief-systems",
+       "learning_objective": "Explain the diversity of schools of thought, including the Charvaka school, and why the term 'religion' is considered limiting."
+      },
+      {
+       "concept_tag": "shared-concepts",
+       "learning_objective": "Identify the concepts shared by the Vedic, Buddhist and Jain schools that form the 'trunk' of Indian culture."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH07-T7",
+     "topic_number": 7,
+     "title": "Folk and Tribal Roots",
+     "ncert_sections": "Folk and Tribal Roots",
+     "concepts": [
+      {
+       "concept_tag": "tribes-and-oral-traditions",
+       "learning_objective": "Define a tribe and explain folk and tribal traditions as oral traditions of India."
+      },
+      {
+       "concept_tag": "sacred-nature-and-supreme-being",
+       "learning_objective": "Explain how tribal belief systems regard nature as sacred while also holding a concept of a supreme being."
+      },
+      {
+       "concept_tag": "tribal-hindu-interaction",
+       "learning_objective": "Analyse the two-way interaction between tribal traditions and Hinduism and its result of mutual enrichment."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Unity in Diversity, or 'Many in the One'",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH08-T1",
+     "topic_number": 1,
+     "title": "A Rich Diversity",
+     "ncert_sections": "Introduction; A Rich Diversity",
+     "concepts": [
+      {
+       "concept_tag": "diversity-of-india",
+       "learning_objective": "Describe the range of India's diversity in people, languages, dress, food and customs."
+      },
+      {
+       "concept_tag": "people-of-india-project",
+       "learning_objective": "Recall the findings of the Anthropological Survey of India's 'People of India' project."
+      },
+      {
+       "concept_tag": "meaning-of-unity-in-diversity",
+       "learning_objective": "Explain what is meant by 'unity in diversity' in the Indian context."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH08-T2",
+     "topic_number": 2,
+     "title": "Food for All",
+     "ncert_sections": "Food for All",
+     "concepts": [
+      {
+       "concept_tag": "staple-grains",
+       "learning_objective": "Identify the staple grains and common spices used across India."
+      },
+      {
+       "concept_tag": "same-ingredients-many-dishes",
+       "learning_objective": "Explain how common ingredients combined in many ways show unity in diversity."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH08-T3",
+     "topic_number": 3,
+     "title": "Textiles and Clothing",
+     "ncert_sections": "Textiles and Clothing",
+     "concepts": [
+      {
+       "concept_tag": "sari-unity-diversity",
+       "learning_objective": "Explain how the sari reflects both unity and diversity."
+      },
+      {
+       "concept_tag": "indian-textile-heritage",
+       "learning_objective": "Recall the long history of Indian textiles, including the Vaishali relief and chintz."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH08-T4",
+     "topic_number": 4,
+     "title": "Festivals Galore",
+     "ncert_sections": "Festivals Galore",
+     "concepts": [
+      {
+       "concept_tag": "harvest-festival-many-names",
+       "learning_objective": "Recognise Makara Sankranti and its regional names as one harvest festival."
+      },
+      {
+       "concept_tag": "shared-festival-timing",
+       "learning_objective": "Interpret how similar festivals held about the same time show unity in diversity."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH08-T5",
+     "topic_number": 5,
+     "title": "An Epic Spread",
+     "ncert_sections": "An Epic Spread",
+     "concepts": [
+      {
+       "concept_tag": "panchatantra-adaptations",
+       "learning_objective": "Describe how the Panchatantra spread across languages and lands."
+      },
+      {
+       "concept_tag": "ramayana-mahabharata",
+       "learning_objective": "Recall the main stories and themes of the Ramayana and the Mahabharata."
+      },
+      {
+       "concept_tag": "folk-and-tribal-versions",
+       "learning_objective": "Explain how folk and tribal versions of the epics link communities across India."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH08-T6",
+     "topic_number": 6,
+     "title": "Diversity as Enrichment",
+     "ncert_sections": "Quotations; Before we move on; Questions",
+     "concepts": [
+      {
+       "concept_tag": "many-in-the-one",
+       "learning_objective": "Interpret the idea of 'the Many in the One' in the chapter's quotations."
+      },
+      {
+       "concept_tag": "diversity-enriches",
+       "learning_objective": "Evaluate why Indian culture treats diversity as an enrichment rather than a division."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Family and Community",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH09-T1",
+     "topic_number": 1,
+     "title": "The family and its types",
+     "ncert_sections": "Family",
+     "concepts": [
+      {
+       "concept_tag": "family-as-basic-unit",
+       "learning_objective": "State that the family is the fundamental and most ancient unit of society."
+      },
+      {
+       "concept_tag": "joint-and-nuclear-families",
+       "learning_objective": "Distinguish joint families from nuclear families and reason about why families take each form."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH09-T2",
+     "topic_number": 2,
+     "title": "Family relationship terms in Indian languages",
+     "ncert_sections": "Family",
+     "concepts": [
+      {
+       "concept_tag": "kinship-terms",
+       "learning_objective": "Explain how Indian languages name family relationships more precisely than English and why most have no word for cousin."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH09-T3",
+     "topic_number": 3,
+     "title": "Roles, responsibilities and values in the family",
+     "ncert_sections": "Roles and Responsibilities",
+     "concepts": [
+      {
+       "concept_tag": "family-roles-cooperation",
+       "learning_objective": "Explain that family relationships rest on love, care, cooperation and interdependence, with roles for every member."
+      },
+      {
+       "concept_tag": "family-as-school-values",
+       "learning_objective": "Identify the values such as ahimsa, dana, seva and tyaga that children learn in the family."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH09-T4",
+     "topic_number": 4,
+     "title": "Family values in practice: Shalini and Tenzing",
+     "ncert_sections": "Roles and Responsibilities",
+     "concepts": [
+      {
+       "concept_tag": "sharing-in-joint-family",
+       "learning_objective": "Interpret how Shalini's family in Kerala shared what it had with relatives in difficulty."
+      },
+      {
+       "concept_tag": "shared-household-roles",
+       "learning_objective": "Analyse how members of Tenzing's family in Meghalaya share work, decisions and care."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH09-T5",
+     "topic_number": 5,
+     "title": "Community: meaning, shared resources and service",
+     "ncert_sections": "Community",
+     "concepts": [
+      {
+       "concept_tag": "community-meaning-and-shared-rules",
+       "learning_objective": "Describe a community and explain how agreed practices on shared resources bring both access and duties."
+      },
+      {
+       "concept_tag": "halma-and-community-service",
+       "learning_objective": "Explain the halma tradition of the Bhils and other examples of serving the community without expecting a return."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH09-T6",
+     "topic_number": 6,
+     "title": "Communities in cities and the many kinds of community",
+     "ncert_sections": "Community",
+     "concepts": [
+      {
+       "concept_tag": "urban-community-initiative",
+       "learning_objective": "Evaluate Kamal Parmar's evening classes in Ahmedabad as an example of community spirit in a city."
+      },
+      {
+       "concept_tag": "rwa-and-interdependence",
+       "learning_objective": "Explain how Residents' Welfare Associations make rules and why communities are interdependent."
+      },
+      {
+       "concept_tag": "flexible-meaning-of-community",
+       "learning_objective": "Recognise that community is a flexible concept covering groups based on jati, religion, region, work or interest."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Grassroots Democracy — Part 1: Governance",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH10-T1",
+     "topic_number": 1,
+     "title": "Rules, governance and government",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "need-for-rules",
+       "learning_objective": "Explain why rules are needed when many people live together in a society."
+      },
+      {
+       "concept_tag": "governance-and-government",
+       "learning_objective": "Distinguish between governance as a process and government as the system that makes and enforces rules and laws."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH10-T2",
+     "topic_number": 2,
+     "title": "Three organs of government",
+     "ncert_sections": "Three Organs of Government",
+     "concepts": [
+      {
+       "concept_tag": "legislature-executive-judiciary",
+       "learning_objective": "Identify the roles of the legislature, the executive and the judiciary."
+      },
+      {
+       "concept_tag": "separation-of-powers",
+       "learning_objective": "Explain how separation of powers provides checks and balances among the three organs."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH10-T3",
+     "topic_number": 3,
+     "title": "Three levels of government",
+     "ncert_sections": "Three Levels of Government",
+     "concepts": [
+      {
+       "concept_tag": "three-tiers-of-government",
+       "learning_objective": "Describe the local, State and Central levels of government and when each acts."
+      },
+      {
+       "concept_tag": "central-and-state-functions",
+       "learning_objective": "Match the organs, heads and main functions of the Central and State governments."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH10-T4",
+     "topic_number": 4,
+     "title": "Democracy and its forms",
+     "ncert_sections": "Democracy",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-democracy",
+       "learning_objective": "State the meaning and origin of the word democracy."
+      },
+      {
+       "concept_tag": "representative-and-direct-democracy",
+       "learning_objective": "Distinguish between representative democracy and direct democracy with examples."
+      },
+      {
+       "concept_tag": "grassroots-democracy",
+       "learning_objective": "Explain grassroots democracy as the participation of ordinary citizens in decisions that affect them."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "Grassroots Democracy – Part 2: Local Government in Rural Areas",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH11-T1",
+     "topic_number": 1,
+     "title": "Why local government? The Panchayati Raj system",
+     "ncert_sections": "Introduction; Panchayati Raj System",
+     "concepts": [
+      {
+       "concept_tag": "need-for-local-government",
+       "learning_objective": "Explain why a large and diverse country like India needs government at the local level."
+      },
+      {
+       "concept_tag": "panchayat-self-government",
+       "learning_objective": "Describe the Panchayat as a village council and a form of self-government that brings governance closer to people."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH11-T2",
+     "topic_number": 2,
+     "title": "The three-tier structure of Panchayati Raj",
+     "ncert_sections": "Panchayati Raj System (Fig. 11.1)",
+     "concepts": [
+      {
+       "concept_tag": "three-tier-system",
+       "learning_objective": "Identify the village, block and district tiers of Panchayati Raj and the names of their bodies."
+      },
+      {
+       "concept_tag": "scope-of-panchayati-raj",
+       "learning_objective": "Recognise the range of local matters that Panchayati Raj institutions look after."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH11-T3",
+     "topic_number": 3,
+     "title": "Gram Sabha and Gram Panchayat",
+     "ncert_sections": "Gram Panchayat; Exemplary Sarpanchs",
+     "concepts": [
+      {
+       "concept_tag": "gram-sabha-and-gram-panchayat",
+       "learning_objective": "Distinguish the Gram Sabha of adult voters from the Gram Panchayat it elects."
+      },
+      {
+       "concept_tag": "sarpanch-and-support-staff",
+       "learning_objective": "Describe the roles of the Sarpanch, the Panchayat Secretary and the Patwari."
+      },
+      {
+       "concept_tag": "exemplary-sarpanchs",
+       "learning_objective": "Evaluate how committed Sarpanchs working with villagers can transform their villages."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH11-T4",
+     "topic_number": 4,
+     "title": "Child-Friendly Panchayat Initiative",
+     "ncert_sections": "Child-Friendly Panchayat Initiative",
+     "concepts": [
+      {
+       "concept_tag": "bal-panchayat-participation",
+       "learning_objective": "Explain how Bal Sabhas and Bal Panchayats give children a voice in local matters."
+      },
+      {
+       "concept_tag": "child-friendly-gram-panchayat",
+       "learning_objective": "Interpret how actions of a Gram Panchayat can make it child-friendly."
+      },
+      {
+       "concept_tag": "childrens-parliament",
+       "learning_objective": "Analyse how the Children's Parliament in rural Rajasthan taught democracy through practice."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH11-T5",
+     "topic_number": 5,
+     "title": "Panchayat Samiti and Zila Parishad",
+     "ncert_sections": "Panchayat Samiti and Zila Parishad",
+     "concepts": [
+      {
+       "concept_tag": "block-and-district-bodies",
+       "learning_objective": "Describe the Panchayat Samiti as the link between the Gram Panchayat and the Zila Parishad."
+      },
+      {
+       "concept_tag": "coordination-and-planning",
+       "learning_objective": "Explain how the Panchayat Samiti coordinates development plans and funds across Gram Panchayats."
+      },
+      {
+       "concept_tag": "reservation-and-inclusion",
+       "learning_objective": "Explain the reservation of one-third of seats for women and special rules for disadvantaged sections."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH11-T6",
+     "topic_number": 6,
+     "title": "Ancient roots: Kautilya's Arthashastra",
+     "ncert_sections": "The Arthashastra (box)",
+     "concepts": [
+      {
+       "concept_tag": "arthashastra-text",
+       "learning_objective": "Identify the Arthashastra, its author and the subjects it deals with."
+      },
+      {
+       "concept_tag": "arthashastra-administrative-structure",
+       "learning_objective": "Apply Kautilya's plan of headquarters for groups of villages and compare it with today's tiers."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Grassroots Democracy – Part 3: Local Government in Urban Areas",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH12-T1",
+     "topic_number": 1,
+     "title": "Participatory democracy and the levels of governance",
+     "ncert_sections": "Introduction, Fig. 12.2",
+     "concepts": [
+      {
+       "concept_tag": "participatory-democracy",
+       "learning_objective": "Explain participatory democracy as citizens actively taking part in governance at every level."
+      },
+      {
+       "concept_tag": "levels-of-governance",
+       "learning_objective": "Identify the rural and urban sides of the local level in India's pyramid of governance."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH12-T2",
+     "topic_number": 2,
+     "title": "Urban local bodies and ward committees",
+     "ncert_sections": "Urban Local Bodies",
+     "concepts": [
+      {
+       "concept_tag": "urban-local-bodies-decentralisation",
+       "learning_objective": "Explain what urban local bodies are and why they are called decentralised."
+      },
+      {
+       "concept_tag": "wards-and-ward-committees",
+       "learning_objective": "Describe how cities are divided into wards and what ward committees do."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH12-T3",
+     "topic_number": 3,
+     "title": "Functions and funding of urban local bodies",
+     "ncert_sections": "Urban Local Bodies, Figs. 12.3 and 12.4",
+     "concepts": [
+      {
+       "concept_tag": "functions-of-urban-local-bodies",
+       "learning_objective": "List the main functions and services of urban local bodies."
+      },
+      {
+       "concept_tag": "funding-of-local-bodies",
+       "learning_objective": "Explain how urban local bodies raise money through taxes, fines and charges."
+      },
+      {
+       "concept_tag": "history-of-municipal-bodies",
+       "learning_objective": "Recall the origins of the Madras Corporation as India's oldest municipal institution."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH12-T4",
+     "topic_number": 4,
+     "title": "Types of urban local bodies",
+     "ncert_sections": "Urban Local Bodies (Municipal Corporation, Municipal Council, Nagar Panchayat)",
+     "concepts": [
+      {
+       "concept_tag": "types-by-population",
+       "learning_objective": "Classify an urban local body as a Municipal Corporation, Municipal Council or Nagar Panchayat by population."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH12-T5",
+     "topic_number": 5,
+     "title": "Duties of citizens in urban areas",
+     "ncert_sections": "Urban Local Bodies; Before we move on",
+     "concepts": [
+      {
+       "concept_tag": "citizen-duties",
+       "learning_objective": "Explain how citizens' care for their area helps local bodies work efficiently."
+      },
+      {
+       "concept_tag": "responsible-civic-action",
+       "learning_objective": "Apply the idea of responsible citizenship to everyday civic problems."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH12-T6",
+     "topic_number": 6,
+     "title": "Village and city: comparing local democracy",
+     "ncert_sections": "Conversation between Sameer and Anita",
+     "concepts": [
+      {
+       "concept_tag": "rural-urban-comparison",
+       "learning_objective": "Compare the Panchayati Raj system and urban local bodies."
+      },
+      {
+       "concept_tag": "every-voice-matters",
+       "learning_objective": "Explain why everyone's voice matters in local democracy, in villages and cities alike."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "The Value of Work",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH13-T1",
+     "topic_number": 1,
+     "title": "Economic activities",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "economic-activities",
+       "learning_objective": "Identify economic activities as those performed in exchange for money or money's worth."
+      },
+      {
+       "concept_tag": "money-market-and-moneys-worth",
+       "learning_objective": "Explain the meaning of money's worth and of a market where goods and services are exchanged."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH13-T2",
+     "topic_number": 2,
+     "title": "Non-economic activities",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "non-economic-activities",
+       "learning_objective": "Identify non-economic activities as those done out of love, care, gratitude and respect, not for income."
+      },
+      {
+       "concept_tag": "classifying-activities",
+       "learning_objective": "Classify the activities of a person as economic or non-economic depending on whether they involve payment."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH13-T3",
+     "topic_number": 3,
+     "title": "Types of economic activities and ways of payment",
+     "ncert_sections": "Types of Economic Activities",
+     "concepts": [
+      {
+       "concept_tag": "salary-and-wage",
+       "learning_objective": "Distinguish between a salary and a wage as forms of payment for work."
+      },
+      {
+       "concept_tag": "fee-and-payment-in-kind",
+       "learning_objective": "Explain a fee and payment in kind as other ways in which people are paid for work."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH13-T4",
+     "topic_number": 4,
+     "title": "Value addition",
+     "ncert_sections": "Types of Economic Activities",
+     "concepts": [
+      {
+       "concept_tag": "value-addition",
+       "learning_objective": "Calculate the value added when something is transformed into another form and sold."
+      },
+      {
+       "concept_tag": "monetary-value-creation",
+       "learning_objective": "Recognise which activities and professions create money-related value."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH13-T5",
+     "topic_number": 5,
+     "title": "The importance of non-economic activities",
+     "ncert_sections": "The Importance of Non-Economic Activities",
+     "concepts": [
+      {
+       "concept_tag": "seva-selfless-service",
+       "learning_objective": "Explain seva as selfless service, such as langars, done without expecting anything in return."
+      },
+      {
+       "concept_tag": "community-participation",
+       "learning_objective": "Describe how community efforts like Swachh Bharat Abhiyan and Van Mahotsav add value to society."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "FEES1-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "Economic Activities Around Us",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/fees114.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "FEES1-CH14-T1",
+     "topic_number": 1,
+     "title": "Economic activities and economic sectors",
+     "ncert_sections": "Introduction; The Classification of Economic Activities into Economic Sectors",
+     "concepts": [
+      {
+       "concept_tag": "economic-activities-monetary-value",
+       "learning_objective": "Identify economic activities as those that create monetary value and recognise how their number has grown."
+      },
+      {
+       "concept_tag": "classification-into-sectors",
+       "learning_objective": "Explain why economic activities with similar characteristics are grouped into primary, secondary and tertiary sectors."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH14-T2",
+     "topic_number": 2,
+     "title": "Primary activities",
+     "ncert_sections": "A. Primary activities",
+     "concepts": [
+      {
+       "concept_tag": "primary-sector-nature",
+       "learning_objective": "Describe primary activities as those that depend directly on nature to produce goods."
+      },
+      {
+       "concept_tag": "primary-activity-examples",
+       "learning_objective": "Identify agriculture, mining, fishing, raising livestock and forestry as primary activities."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH14-T3",
+     "topic_number": 3,
+     "title": "Secondary activities",
+     "ncert_sections": "B. Secondary activities",
+     "concepts": [
+      {
+       "concept_tag": "secondary-sector-processing",
+       "learning_objective": "Explain how secondary activities process outputs of the primary sector into goods for sale or use."
+      },
+      {
+       "concept_tag": "construction-and-utilities",
+       "learning_objective": "Recognise construction and the supply of water, electricity and gas as part of the secondary sector."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH14-T4",
+     "topic_number": 4,
+     "title": "Tertiary activities",
+     "ncert_sections": "C. Tertiary activities",
+     "concepts": [
+      {
+       "concept_tag": "tertiary-sector-services",
+       "learning_objective": "Describe tertiary activities as services that support the primary and secondary sectors and people."
+      },
+      {
+       "concept_tag": "service-sector-examples",
+       "learning_objective": "Identify transport, trade, banking, healthcare, teaching and repair as service sector activities."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH14-T5",
+     "topic_number": 5,
+     "title": "Interdependence among sectors: the AMUL dairy cooperative",
+     "ncert_sections": "Interdependence Among Sectors; Dairy cooperative: from farm to plate",
+     "concepts": [
+      {
+       "concept_tag": "cooperative-and-middlemen",
+       "learning_objective": "Explain how the AMUL cooperative freed milk producers from dependence on middlemen."
+      },
+      {
+       "concept_tag": "dairy-sector-linkages",
+       "learning_objective": "Trace how milk moves through primary, secondary and tertiary activities in the dairy cooperative."
+      }
+     ]
+    },
+    {
+     "topic_id": "FEES1-CH14-T6",
+     "topic_number": 6,
+     "title": "From tree to textbook and recycling paper",
+     "ncert_sections": "Fig. 14.1; Don't Miss Out (recycling paper)",
+     "concepts": [
+      {
+       "concept_tag": "paper-production-chain",
+       "learning_objective": "Sequence the stages from tree pulp to a printed textbook and link each stage to a sector."
+      },
+      {
+       "concept_tag": "paper-recycling",
+       "learning_objective": "Explain the resources saved by recycling paper and ways to use paper judiciously."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

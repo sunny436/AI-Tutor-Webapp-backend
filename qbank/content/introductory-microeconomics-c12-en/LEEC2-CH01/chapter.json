@@ -1,0 +1,120 @@
+{
+ "chapter_id": "LEEC2-CH01",
+ "title": "Introduction",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEEC2-CH01-T1",
+   "topic_number": 1,
+   "title": "A Simple Economy",
+   "ncert_sections": "1.1",
+   "concepts": [
+    {
+     "concept_tag": "goods-services-resources",
+     "learning_objective": "Distinguish goods, services and resources as used in the chapter."
+    },
+    {
+     "concept_tag": "scarcity-and-choice",
+     "learning_objective": "Explain why limited resources force individuals to make choices."
+    },
+    {
+     "concept_tag": "allocation-and-distribution",
+     "learning_objective": "Identify allocation of resources and distribution of output as basic economic problems."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH01-T2",
+   "topic_number": 2,
+   "title": "Central Problems of an Economy",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "scarcity-and-competing-uses",
+     "learning_objective": "Explain how scarcity of resources with competing uses gives rise to the problem of choice."
+    },
+    {
+     "concept_tag": "what-how-for-whom",
+     "learning_objective": "Classify economic decisions under what to produce, how to produce and for whom to produce."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH01-T3",
+   "topic_number": 3,
+   "title": "Production Possibility Frontier and Opportunity Cost",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "production-possibility-set",
+     "learning_objective": "Define the production possibility set of an economy."
+    },
+    {
+     "concept_tag": "production-possibility-frontier",
+     "learning_objective": "Interpret points on, inside and outside the production possibility frontier."
+    },
+    {
+     "concept_tag": "opportunity-cost",
+     "learning_objective": "Calculate the opportunity cost of an additional unit of a good from a production possibilities schedule."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH01-T4",
+   "topic_number": 4,
+   "title": "Organisation of Economic Activities",
+   "ncert_sections": "1.3, 1.3.1, 1.3.2",
+   "concepts": [
+    {
+     "concept_tag": "centrally-planned-economy",
+     "learning_objective": "Describe how a central authority solves the central problems in a centrally planned economy."
+    },
+    {
+     "concept_tag": "market-economy-price-signals",
+     "learning_objective": "Explain how price signals coordinate economic activities in a market economy."
+    },
+    {
+     "concept_tag": "mixed-economy",
+     "learning_objective": "Describe why real-world economies are mixed economies."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH01-T5",
+   "topic_number": 5,
+   "title": "Positive and Normative Economics",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "positive-economic-analysis",
+     "learning_objective": "Identify positive economic analysis as the study of how mechanisms function."
+    },
+    {
+     "concept_tag": "normative-economic-analysis",
+     "learning_objective": "Identify normative economic analysis as the evaluation of whether outcomes are desirable."
+    },
+    {
+     "concept_tag": "positive-normative-link",
+     "learning_objective": "Explain why the distinction between positive and normative analysis is not sharp."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC2-CH01-T6",
+   "topic_number": 6,
+   "title": "Microeconomics and Macroeconomics",
+   "ncert_sections": "1.5, 1.6",
+   "concepts": [
+    {
+     "concept_tag": "microeconomics-scope",
+     "learning_objective": "Describe the subject matter of microeconomics."
+    },
+    {
+     "concept_tag": "macroeconomics-scope",
+     "learning_objective": "Describe the aggregate questions studied in macroeconomics."
+    }
+   ]
+  }
+ ]
+}

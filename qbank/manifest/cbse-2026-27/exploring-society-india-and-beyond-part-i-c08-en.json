@@ -1,0 +1,1068 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "exploring-society-india-and-beyond-part-i-c08-en",
+  "curriculum": "cbse",
+  "class_level": 8,
+  "subject_code": "social_science",
+  "language": "english",
+  "title": "Exploring Society India and Beyond Part-I",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "hees1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "HEES1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Natural Resources and Their Use",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES1-CH01-T1",
+     "topic_number": 1,
+     "title": "When does Nature become a resource?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nature-as-resource",
+       "learning_objective": "Explain when an element of Nature comes to be seen as a natural resource."
+      },
+      {
+       "concept_tag": "conditions-for-a-resource",
+       "learning_objective": "Apply the conditions of technological access, economic feasibility and cultural acceptability to decide whether something is a resource."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH01-T2",
+     "topic_number": 2,
+     "title": "Categories of natural resources by their use",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "resources-essential-for-life",
+       "learning_objective": "Identify the resources without which life could not exist on Earth."
+      },
+      {
+       "concept_tag": "resources-for-materials",
+       "learning_objective": "Recognise natural resources that humans turn into useful and beautiful objects."
+      },
+      {
+       "concept_tag": "resources-for-energy",
+       "learning_objective": "Identify natural sources of energy and see that one resource can serve several uses."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH01-T3",
+     "topic_number": 3,
+     "title": "Renewable resources: restoration and regeneration",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "restoration-and-regeneration",
+       "learning_objective": "Distinguish between restoration and regeneration as principles of Nature."
+      },
+      {
+       "concept_tag": "renewable-resources-condition",
+       "learning_objective": "Explain why renewable resources stay renewable only if Nature's rhythm is not disturbed."
+      },
+      {
+       "concept_tag": "ecosystem-services",
+       "learning_objective": "Distinguish ecosystem functions from the ecosystem services humans receive."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH01-T4",
+     "topic_number": 4,
+     "title": "Non-renewable resources",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "non-renewable-resources",
+       "learning_objective": "Define non-renewable resources and identify examples such as fossil fuels and metals."
+      },
+      {
+       "concept_tag": "judicious-use-of-non-renewables",
+       "learning_objective": "Suggest judicious uses of non-renewable resources and renewable substitutes."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH01-T5",
+     "topic_number": 5,
+     "title": "Distribution of natural resources and its implications",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "uneven-distribution",
+       "learning_objective": "Explain how the uneven distribution of resources shapes settlements, trade and industry."
+      },
+      {
+       "concept_tag": "costs-and-benefits-of-extraction",
+       "learning_objective": "Weigh the benefits of resource-based industries against costs such as displacement."
+      },
+      {
+       "concept_tag": "sharing-across-boundaries",
+       "learning_objective": "Explain why resources that cross political boundaries lead to sharing disputes."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH01-T6",
+     "topic_number": 6,
+     "title": "The 'Paradox of Plenty'",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "resource-curse",
+       "learning_objective": "Explain the meaning of the natural resource curse or paradox of plenty."
+      },
+      {
+       "concept_tag": "overcoming-resource-curse",
+       "learning_objective": "Evaluate how investment in industry, skills and governance can overcome the resource curse."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH01-T7",
+     "topic_number": 7,
+     "title": "Stewardship: restoring and regenerating renewable resources",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "groundwater-overexploitation",
+       "learning_objective": "Analyse the causes and effects of groundwater over-exploitation, as in Punjab."
+      },
+      {
+       "concept_tag": "soil-health-traditional-practices",
+       "learning_objective": "Explain how traditional and organic practices restore soil health, as in Sikkim and Vrikshayurveda."
+      },
+      {
+       "concept_tag": "sustainable-building-materials",
+       "learning_objective": "Describe the pollution caused by cement and the move towards alternative materials."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH01-T8",
+     "topic_number": 8,
+     "title": "Responsible and judicious use of resources",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "switch-to-renewables",
+       "learning_objective": "Explain the need to shift to renewable energy, with the International Solar Alliance as an example."
+      },
+      {
+       "concept_tag": "stewardship-and-equity",
+       "learning_objective": "Evaluate fair access to resources and the idea of lokasangraha in acting as stewards of Nature."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Reshaping India’s Political Map",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES1-CH02-T1",
+     "topic_number": 1,
+     "title": "Rise and Fall of the Delhi Sultanate",
+     "ncert_sections": "Rise and Fall of the Delhi Sultanate",
+     "concepts": [
+      {
+       "concept_tag": "sultanate-dynasties",
+       "learning_objective": "Name the five dynasties of the Delhi Sultanate in order and describe the instability of its successions."
+      },
+      {
+       "concept_tag": "khilji-tughlaq-rule",
+       "learning_objective": "Explain the campaigns of Ala-ud-din Khilji and the schemes of Muhammad bin Tughlaq."
+      },
+      {
+       "concept_tag": "timur-invasion",
+       "learning_objective": "Describe Timur's attack on Delhi and its effect on the Sultanate."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH02-T2",
+     "topic_number": 2,
+     "title": "Resistance to the Delhi Sultanate",
+     "ncert_sections": "Resistance to the Delhi Sultanate",
+     "concepts": [
+      {
+       "concept_tag": "eastern-ganga-resistance",
+       "learning_objective": "Describe how the Eastern Ganga kingdom under Narasimhadeva I resisted the Sultanate."
+      },
+      {
+       "concept_tag": "hoysala-and-telugu-resistance",
+       "learning_objective": "Explain the resistance of the Hoysalas and the Telugu chieftains in the south."
+      },
+      {
+       "concept_tag": "regional-sultanates-mewar",
+       "learning_objective": "Identify the regional Sultanates and the Mewar kingdom as challenges to Delhi's power."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH02-T3",
+     "topic_number": 3,
+     "title": "The Vijayanagara Empire",
+     "ncert_sections": "The Vijayanagara Empire; Krishnadevaraya",
+     "concepts": [
+      {
+       "concept_tag": "vijayanagara-founding-and-rivals",
+       "learning_objective": "Describe the founding of Vijayanagara and its rivals in the Deccan."
+      },
+      {
+       "concept_tag": "krishnadevaraya-reign",
+       "learning_objective": "Explain the military and cultural achievements of Krishnadevaraya's reign."
+      },
+      {
+       "concept_tag": "talikota-and-decline",
+       "learning_objective": "Analyse the effects of the Battle of Talikota on the Vijayanagara Empire."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH02-T4",
+     "topic_number": 4,
+     "title": "The Mughals",
+     "ncert_sections": "The Mughals; Akbar; Aurangzeb",
+     "concepts": [
+      {
+       "concept_tag": "babur-and-panipat",
+       "learning_objective": "Describe how Babur's victory at Panipat founded the Mughal Empire."
+      },
+      {
+       "concept_tag": "akbar-policies",
+       "learning_objective": "Explain the military and political strategies Akbar used to expand and stabilise his empire."
+      },
+      {
+       "concept_tag": "shah-jahan-aurangzeb",
+       "learning_objective": "Describe the reigns of Shah Jahan and Aurangzeb and the causes of Mughal decline."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH02-T5",
+     "topic_number": 5,
+     "title": "Resistance to the Mughals: Peasants, Tribes and Rajputs",
+     "ncert_sections": "Resistance to the Mughals; Surge of the Rajputs",
+     "concepts": [
+      {
+       "concept_tag": "peasant-and-tribal-resistance",
+       "learning_objective": "Describe the resistance of peasant communities, tribal groups and Rani Durgavati."
+      },
+      {
+       "concept_tag": "rajput-resistance",
+       "learning_objective": "Explain how Rajput rulers such as Maharana Pratap resisted Mughal dominance."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH02-T6",
+     "topic_number": 6,
+     "title": "The Ahoms and the Rise of the Sikhs",
+     "ncert_sections": "The Ahoms; The Rise of the Sikhs",
+     "concepts": [
+      {
+       "concept_tag": "ahom-kingdom-paik",
+       "learning_objective": "Explain the paik system and how the Ahoms defended their independence."
+      },
+      {
+       "concept_tag": "sikh-gurus-khalsa",
+       "learning_objective": "Describe how the Sikh Gurus responded to persecution and the founding of the Khalsa."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH02-T7",
+     "topic_number": 7,
+     "title": "Administering India",
+     "ncert_sections": "Administering India",
+     "concepts": [
+      {
+       "concept_tag": "sultanate-iqta-system",
+       "learning_objective": "Describe the role of the sultan and the iqta system of the Delhi Sultanate."
+      },
+      {
+       "concept_tag": "mughal-ministers-subahs",
+       "learning_objective": "Identify the duties of Akbar's ministers and the division of the empire into subahs."
+      },
+      {
+       "concept_tag": "mansabdari-and-revenue",
+       "learning_objective": "Explain the mansabdari system and Todar Mal's revenue reforms."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH02-T8",
+     "topic_number": 8,
+     "title": "People's Lives",
+     "ncert_sections": "People's Lives; Temples as centres of economic activity",
+     "concepts": [
+      {
+       "concept_tag": "agriculture-and-trade",
+       "learning_objective": "Describe agriculture, crafts and trade in the period and the condition of common people."
+      },
+      {
+       "concept_tag": "hundi-and-trader-networks",
+       "learning_objective": "Explain how the hundi system helped merchants trade across political boundaries."
+      },
+      {
+       "concept_tag": "temple-economy",
+       "learning_objective": "Describe the economic role of temples in this period."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "The Rise of the Marathas",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES1-CH03-T1",
+     "topic_number": 1,
+     "title": "Who Are the Marathas?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "marathas-land-and-language",
+       "learning_objective": "Identify the homeland, language and early rulers of the Marathas."
+      },
+      {
+       "concept_tag": "bhakti-saints-of-maharashtra",
+       "learning_objective": "Explain how the bhakti saints of Maharashtra built the cultural foundation for Maratha power."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH03-T2",
+     "topic_number": 2,
+     "title": "Foundation of Maratha Power and the Rise of Chhatrapati Shivaji",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "early-campaigns-and-swarajya",
+       "learning_objective": "Describe Chhatrapati Shivaji's early life, his first campaigns and the founding of the navy."
+      },
+      {
+       "concept_tag": "guerrilla-warfare",
+       "learning_objective": "Explain how guerrilla warfare and surprise raids helped the Marathas defeat bigger armies."
+      },
+      {
+       "concept_tag": "surat-and-mughal-conflict",
+       "learning_objective": "Describe the sacking of Surat and what it shows about Chhatrapati Shivaji's conduct."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH03-T3",
+     "topic_number": 3,
+     "title": "Purandar, Agra, Coronation and the Conquest of the South",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "purandar-and-agra-escape",
+       "learning_objective": "Recall the treaty of Purandar and Chhatrapati Shivaji's escape from Agra."
+      },
+      {
+       "concept_tag": "coronation-at-raigad",
+       "learning_objective": "Explain the significance of Chhatrapati Shivaji's coronation at Raigad in 1674."
+      },
+      {
+       "concept_tag": "dakshina-digvijaya",
+       "learning_objective": "Analyse why the conquest of the South gave the Marathas strategic depth."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH03-T4",
+     "topic_number": 4,
+     "title": "The Marathas after Chhatrapati Shivaji",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mughal-maratha-wars",
+       "learning_objective": "Describe the course of the Mughal-Maratha wars after Chhatrapati Shivaji's death."
+      },
+      {
+       "concept_tag": "peshwas-and-expansion",
+       "learning_objective": "Explain the rise of the Peshwas and the pan-Indian expansion of the Marathas."
+      },
+      {
+       "concept_tag": "anglo-maratha-wars",
+       "learning_objective": "Evaluate why the British are said to have taken India mainly from the Marathas."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH03-T5",
+     "topic_number": 5,
+     "title": "Maratha Administration: Civilian Administration and Revenue",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ashta-pradhan-mandala",
+       "learning_objective": "Identify the council of eight ministers and the role of each minister."
+      },
+      {
+       "concept_tag": "centralised-administration-and-welfare",
+       "learning_objective": "Explain the features and values of Chhatrapati Shivaji's civilian administration."
+      },
+      {
+       "concept_tag": "chauth-and-sardeshmukhi",
+       "learning_objective": "Calculate and explain the taxes chauth and sardeshmukhi."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH03-T6",
+     "topic_number": 6,
+     "title": "Military Administration, Maritime Supremacy, Justice and Trade",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "army-and-forts",
+       "learning_objective": "Describe the divisions of the Maratha army and the importance of forts."
+      },
+      {
+       "concept_tag": "maritime-supremacy",
+       "learning_objective": "Explain how the Maratha navy challenged European naval control."
+      },
+      {
+       "concept_tag": "justice-and-trade",
+       "learning_objective": "Describe the Maratha judicial system and their trade networks."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH03-T7",
+     "topic_number": 7,
+     "title": "Cultural Revival, Maratha Women, Thanjavur and the Maratha Legacy",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "swarajya-and-cultural-revival",
+       "learning_objective": "Explain how Chhatrapati Shivaji's cultural policies and the ideal of Swarajya shaped the Maratha legacy."
+      },
+      {
+       "concept_tag": "maratha-women-rulers",
+       "learning_objective": "Describe the contributions of Tarabai and Ahilyabai Holkar."
+      },
+      {
+       "concept_tag": "thanjavur-marathas",
+       "learning_objective": "Describe the cultural contributions of the Thanjavur Marathas, especially Serfoji II."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "The Colonial Era in India",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES1-CH04-T1",
+     "topic_number": 1,
+     "title": "The Age of Colonialism",
+     "ncert_sections": "The Age of Colonialism",
+     "concepts": [
+      {
+       "concept_tag": "colonialism-definition",
+       "learning_objective": "Define colonialism and place the European 'Age of Colonialism' in its longer history."
+      },
+      {
+       "concept_tag": "motives-of-colonial-expansion",
+       "learning_objective": "Identify the political, economic, religious and scientific motives behind European expansion."
+      },
+      {
+       "concept_tag": "civilising-mission-claim",
+       "learning_objective": "Evaluate the colonisers' claim of a 'civilising mission' against its actual results."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH04-T2",
+     "topic_number": 2,
+     "title": "Europeans in India: the Portuguese, the Dutch and the French",
+     "ncert_sections": "Europeans in India",
+     "concepts": [
+      {
+       "concept_tag": "india-economic-standing",
+       "learning_objective": "Describe India's economic standing in the world before European colonisation."
+      },
+      {
+       "concept_tag": "portuguese-in-india",
+       "learning_objective": "Explain how the Portuguese combined commercial control with religious persecution and faced resistance."
+      },
+      {
+       "concept_tag": "dutch-and-french-in-india",
+       "learning_objective": "Compare the aims and fortunes of the Dutch and the French in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH04-T3",
+     "topic_number": 3,
+     "title": "Enter the British: from traders to rulers",
+     "ncert_sections": "Enter the British; From traders to rulers; The strategy of 'divide and rule'",
+     "concepts": [
+      {
+       "concept_tag": "divide-and-rule-plassey",
+       "learning_objective": "Explain the 'divide and rule' strategy using the Battle of Plassey as an example."
+      },
+      {
+       "concept_tag": "doctrine-of-lapse",
+       "learning_objective": "Explain the Doctrine of Lapse and why it caused resentment."
+      },
+      {
+       "concept_tag": "subsidiary-alliance",
+       "learning_objective": "Analyse how the subsidiary alliance transferred real power and costs to Indian rulers."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH04-T4",
+     "topic_number": 4,
+     "title": "From Paradise to Hell? Famines and the drain of wealth",
+     "ncert_sections": "From Paradise to Hell?; Devastating famines; The drain of India's wealth",
+     "concepts": [
+      {
+       "concept_tag": "colonial-famines",
+       "learning_objective": "Explain how colonial revenue and trade policies worsened famines in India."
+      },
+      {
+       "concept_tag": "drain-of-wealth",
+       "learning_objective": "Describe the drain of India's wealth and the scholars who documented it."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH04-T5",
+     "topic_number": 5,
+     "title": "Changing Landscapes: industries and governance",
+     "ncert_sections": "Decline of India's indigenous industries; Dismantling traditional governance structures",
+     "concepts": [
+      {
+       "concept_tag": "deindustrialisation",
+       "learning_objective": "Explain how British trade policies ruined India's indigenous industries, especially textiles."
+      },
+      {
+       "concept_tag": "traditional-governance",
+       "learning_objective": "Describe India's village self-governance and how British rule and law replaced it."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH04-T6",
+     "topic_number": 6,
+     "title": "Changing Landscapes: education and the economy",
+     "ncert_sections": "Transforming Indian education; Reshaping economic structures to serve imperial needs",
+     "concepts": [
+      {
+       "concept_tag": "macaulay-education-policy",
+       "learning_objective": "Explain the aims and effects of Macaulay's 1835 Minute on Indian Education."
+      },
+      {
+       "concept_tag": "railways-imperial-economy",
+       "learning_objective": "Analyse how railways and the colonial economy served British interests and were paid for by Indians."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH04-T7",
+     "topic_number": 7,
+     "title": "Early resistance movements",
+     "ncert_sections": "Early Resistance Movements: Challenging Colonial Authority",
+     "concepts": [
+      {
+       "concept_tag": "sannyasi-fakir-rebellion",
+       "learning_objective": "Describe the Sannyasi-Fakir rebellion and its later influence."
+      },
+      {
+       "concept_tag": "tribal-uprisings",
+       "learning_objective": "Explain why tribal communities such as the Kols and Santhals rose against colonial rule."
+      },
+      {
+       "concept_tag": "indigo-revolt",
+       "learning_objective": "Explain the causes and outcome of the Indigo Revolt."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH04-T8",
+     "topic_number": 8,
+     "title": "The Great Rebellion of 1857 and the legacy of colonialism",
+     "ncert_sections": "The Great Rebellion of 1857; The Legacy of European Colonialism in India",
+     "concepts": [
+      {
+       "concept_tag": "rebellion-1857-causes",
+       "learning_objective": "Identify the causes of sepoy discontent leading to the 1857 rebellion."
+      },
+      {
+       "concept_tag": "rebellion-1857-outcome",
+       "learning_objective": "Explain the course, failure and significance of the Great Rebellion of 1857."
+      },
+      {
+       "concept_tag": "colonial-legacy",
+       "learning_objective": "Evaluate the intended and unintended consequences of colonial rule in India."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Universal Franchise and India’s Electoral System",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES1-CH05-T1",
+     "topic_number": 1,
+     "title": "Universal Adult Franchise: meaning and importance",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "universal-adult-franchise-meaning",
+       "learning_objective": "Explain what universal adult franchise means and who is entitled to vote in India."
+      },
+      {
+       "concept_tag": "importance-of-universal-franchise",
+       "learning_objective": "Evaluate why the Constitution makers granted universal franchise from the time of Independence."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH05-T2",
+     "topic_number": 2,
+     "title": "Bridging barriers and enabling participation",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "scale-and-diversity-of-elections",
+       "learning_objective": "Describe how India's size and diversity make organising elections a complex task."
+      },
+      {
+       "concept_tag": "accessibility-measures",
+       "learning_objective": "Identify the measures taken by the ECI to remove barriers to voting."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH05-T3",
+     "topic_number": 3,
+     "title": "A class election: the election process in miniature",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "secret-ballot-and-election-officer",
+       "learning_objective": "Explain the role of the election officer and the importance of a secret ballot."
+      },
+      {
+       "concept_tag": "counting-and-nota",
+       "learning_objective": "Interpret election results, invalid votes and the NOTA option."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH05-T4",
+     "topic_number": 4,
+     "title": "The Election Commission of India and the Model Code of Conduct",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "eci-structure-and-functions",
+       "learning_objective": "Describe the structure of the ECI and the tasks it performs."
+      },
+      {
+       "concept_tag": "model-code-of-conduct",
+       "learning_objective": "Identify the purpose of the Model Code of Conduct and recognise its violations."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH05-T5",
+     "topic_number": 5,
+     "title": "Managing the electoral process: polling, EVMs and VVPAT",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "polling-process",
+       "learning_objective": "Sequence the steps a voter goes through at a polling station."
+      },
+      {
+       "concept_tag": "evm-vvpat-and-reserved-seats",
+       "learning_objective": "Explain the use of EVMs and VVPAT and the reservation of Lok Sabha seats."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH05-T6",
+     "topic_number": 6,
+     "title": "Elections to the Lok Sabha and State Legislative Assemblies",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "first-past-the-post",
+       "learning_objective": "Apply the First-Past-the-Post system to decide the winner of a constituency."
+      },
+      {
+       "concept_tag": "mp-mla-and-government-formation",
+       "learning_objective": "Distinguish between MPs and MLAs and explain how governments are formed."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH05-T7",
+     "topic_number": 7,
+     "title": "Indirect elections: Rajya Sabha, President and Vice President",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rajya-sabha-election",
+       "learning_objective": "Explain how members of the Rajya Sabha are chosen and why it is a permanent house."
+      },
+      {
+       "concept_tag": "president-vice-president-election",
+       "learning_objective": "Identify the electoral colleges that elect the President and the Vice President."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH05-T8",
+     "topic_number": 8,
+     "title": "Challenges and the road ahead",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "electoral-challenges",
+       "learning_objective": "Identify challenges such as money power, criminalisation and voter apathy."
+      },
+      {
+       "concept_tag": "aware-voter",
+       "learning_objective": "Evaluate the role of an informed and vigilant voter in strengthening democracy."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "The Parliamentary System: Legislature and Executive",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES1-CH06-T1",
+     "topic_number": 1,
+     "title": "Introduction and composition of the Parliament",
+     "ncert_sections": "Introduction; Composition of the Parliament of India",
+     "concepts": [
+      {
+       "concept_tag": "parliament-composition-bicameral",
+       "learning_objective": "Describe the composition of the Indian Parliament and explain why India chose a bicameral system."
+      },
+      {
+       "concept_tag": "election-of-members",
+       "learning_objective": "Distinguish the direct election of Lok Sabha members from the indirect election of Rajya Sabha members."
+      },
+      {
+       "concept_tag": "presiding-officers",
+       "learning_objective": "Identify the presiding officers of the Lok Sabha and the Rajya Sabha and their role."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH06-T2",
+     "topic_number": 2,
+     "title": "Legislative functions: constitutional functions and lawmaking",
+     "ncert_sections": "Legislative Functions of the Parliament: 1) Constitutional function, 2) Lawmaking",
+     "concepts": [
+      {
+       "concept_tag": "constitutional-functions",
+       "learning_objective": "State the constitutional functions of Parliament and the core constitutional values it upholds."
+      },
+      {
+       "concept_tag": "bill-to-act-process",
+       "learning_objective": "Explain the steps by which a bill becomes an act, using the example of the RTE Act, 2009."
+      },
+      {
+       "concept_tag": "money-bill",
+       "learning_objective": "Explain the special rules for introducing a Money Bill."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH06-T3",
+     "topic_number": 3,
+     "title": "Executive and financial accountability",
+     "ncert_sections": "3) Executive accountability; 4) Financial accountability",
+     "concepts": [
+      {
+       "concept_tag": "question-hour",
+       "learning_objective": "Explain how the Question Hour holds ministers accountable to the Lok Sabha."
+      },
+      {
+       "concept_tag": "parliamentary-committees",
+       "learning_objective": "Describe how standing committees scrutinise the work of ministries."
+      },
+      {
+       "concept_tag": "financial-accountability",
+       "learning_objective": "Explain how Parliament approves and monitors government expenditure through the budget."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH06-T4",
+     "topic_number": 4,
+     "title": "Executive functions: the President, the Prime Minister and the Council of Ministers",
+     "ncert_sections": "Executive Functions of Parliament; Differences Between the Legislature and the Executive",
+     "concepts": [
+      {
+       "concept_tag": "president-role",
+       "learning_objective": "Describe the President as Head of State and nominal head of the Executive, including discretionary powers."
+      },
+      {
+       "concept_tag": "prime-minister-council",
+       "learning_objective": "Explain the role of the Prime Minister and the collective responsibility of the Council of Ministers."
+      },
+      {
+       "concept_tag": "legislature-vs-executive",
+       "learning_objective": "Distinguish the functions of the Legislature from those of the Executive."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH06-T5",
+     "topic_number": 5,
+     "title": "The Judiciary: checks and balances",
+     "ncert_sections": "The Judiciary - Role of Checks and Balances",
+     "concepts": [
+      {
+       "concept_tag": "judiciary-custodian",
+       "learning_objective": "Describe the Judiciary's role in interpreting laws and guarding the Constitution."
+      },
+      {
+       "concept_tag": "checks-and-balances",
+       "learning_objective": "Explain how the separation of powers and checks and balances stop any one organ from becoming too powerful."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH06-T6",
+     "topic_number": 6,
+     "title": "Legislature and executive at the state level",
+     "ncert_sections": "Legislative and Executive Functions at the State Level; Union, State and Concurrent Lists; Structure of State Legislatures",
+     "concepts": [
+      {
+       "concept_tag": "legislative-lists",
+       "learning_objective": "Explain the Union, State and Concurrent Lists and which government can legislate on each."
+      },
+      {
+       "concept_tag": "union-state-parallel-structure",
+       "learning_objective": "Compare the parallel structures of the Union and State governments."
+      },
+      {
+       "concept_tag": "state-legislature-structure",
+       "learning_objective": "Distinguish unicameral and bicameral state legislatures and name states with a Vidhan Parishad."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH06-T7",
+     "topic_number": 7,
+     "title": "Challenges to the effective functioning of the legislatures",
+     "ncert_sections": "Challenges to the Effective Functioning of the Legislatures",
+     "concepts": [
+      {
+       "concept_tag": "sessions-and-productivity",
+       "learning_objective": "Interpret data on sessions, sittings and productivity of the legislature."
+      },
+      {
+       "concept_tag": "citizen-engagement",
+       "learning_objective": "Evaluate how informed and engaged citizens can strengthen the legislature."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "HEES1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Factors of Production",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/hees107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "HEES1-CH07-T1",
+     "topic_number": 1,
+     "title": "Introduction: factors of production and land",
+     "ncert_sections": "Introduction; Factors of Production; Land (natural resources)",
+     "concepts": [
+      {
+       "concept_tag": "factors-of-production",
+       "learning_objective": "Define factors of production and name the four types along with technology as a facilitator."
+      },
+      {
+       "concept_tag": "land-as-natural-resources",
+       "learning_objective": "Explain that land in economics includes all natural resources used in production."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH07-T2",
+     "topic_number": 2,
+     "title": "Labour, human capital and its facilitators",
+     "ncert_sections": "Labour (human resources); People as a resource; Facilitators of human capital",
+     "concepts": [
+      {
+       "concept_tag": "labour-and-human-capital",
+       "learning_objective": "Distinguish labour as effort from human capital as the skills and quality of that effort."
+      },
+      {
+       "concept_tag": "facilitators-of-human-capital",
+       "learning_objective": "Explain how education, training, healthcare and work culture build human capital."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH07-T3",
+     "topic_number": 3,
+     "title": "Challenges to human capital and India's ancient skill heritage",
+     "ncert_sections": "Challenges to human capital; India's ancient skill heritage",
+     "concepts": [
+      {
+       "concept_tag": "challenges-and-demographic-dividend",
+       "learning_objective": "Analyse challenges to human capital and the conditions for a demographic dividend."
+      },
+      {
+       "concept_tag": "ancient-skill-heritage",
+       "learning_objective": "Describe India's traditional skill systems such as the shilpa shastras and stitched shipbuilding."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH07-T4",
+     "topic_number": 4,
+     "title": "Capital",
+     "ncert_sections": "Capital",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-capital",
+       "learning_objective": "Identify capital as money plus human-made durable assets used in production."
+      },
+      {
+       "concept_tag": "sources-of-capital",
+       "learning_objective": "Explain how businesses raise capital through savings, bank loans and the stock market."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH07-T5",
+     "topic_number": 5,
+     "title": "Entrepreneurship",
+     "ncert_sections": "Entrepreneurship",
+     "concepts": [
+      {
+       "concept_tag": "role-of-entrepreneur",
+       "learning_objective": "Describe the tasks of an entrepreneur, including taking risks and combining factors."
+      },
+      {
+       "concept_tag": "startups-and-social-purpose",
+       "learning_objective": "Explain what a startup is and why entrepreneurs such as J.R.D. Tata served society."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH07-T6",
+     "topic_number": 6,
+     "title": "Technology: an enabler of production",
+     "ncert_sections": "Technology: An Enabler of Production",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-technology",
+       "learning_objective": "Explain technology as applied scientific knowledge and how it changes production."
+      },
+      {
+       "concept_tag": "technology-for-skills-and-jobs",
+       "learning_objective": "Explain how platforms like SWAYAM and National Career Service widen access to skills and jobs."
+      }
+     ]
+    },
+    {
+     "topic_id": "HEES1-CH07-T7",
+     "topic_number": 7,
+     "title": "How the factors are connected and responsibilities towards them",
+     "ncert_sections": "How are the Factors Connected?; Responsibilities towards Factors of Production",
+     "concepts": [
+      {
+       "concept_tag": "interconnection-of-factors",
+       "learning_objective": "Analyse how factors combine in different proportions in labour- and capital-intensive production."
+      },
+      {
+       "concept_tag": "supply-chain",
+       "learning_objective": "Explain what a supply chain is and how its disruption can halt production."
+      },
+      {
+       "concept_tag": "responsibilities-and-csr",
+       "learning_objective": "Describe producers' responsibilities to the environment and workers, including CSR."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

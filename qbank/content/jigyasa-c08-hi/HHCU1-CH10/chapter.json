@@ -1,0 +1,92 @@
+{
+ "chapter_id": "HHCU1-CH10",
+ "title": "प्रकाश— दर्पण एवं लेंस",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHCU1-CH10-T1",
+   "topic_number": 1,
+   "title": "गोलीय दर्पण: अवतल और उत्तल",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "goliya-darpan-prakar",
+     "learning_objective": "विद्यार्थी परावर्तक पृष्ठ की वक्रता के आधार पर अवतल और उत्तल दर्पण की पहचान कर सकेंगे।"
+    },
+    {
+     "concept_tag": "goliya-darpan-nirman",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि परावर्तक परत किस पृष्ठ पर चढ़ाने से अवतल या उत्तल दर्पण बनता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH10-T2",
+   "topic_number": 2,
+   "title": "गोलीय दर्पणों द्वारा बने प्रतिबिंब और उनके उपयोग",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "pratibimb-ke-abhilakshan",
+     "learning_objective": "विद्यार्थी समतल, अवतल और उत्तल दर्पणों द्वारा बने प्रतिबिंबों के अभिलक्षणों की तुलना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "darpanon-ke-upyog",
+     "learning_objective": "विद्यार्थी दैनिक जीवन में अवतल और उत्तल दर्पणों के उपयोगों को उनके गुणों से जोड़ सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH10-T3",
+   "topic_number": 3,
+   "title": "परावर्तन के नियम",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "paravartan-ke-niyam",
+     "learning_objective": "विद्यार्थी आपतन कोण, परावर्तन कोण और अभिलंब को परिभाषित कर परावर्तन के नियम लागू कर सकेंगे।"
+    },
+    {
+     "concept_tag": "ek-hi-tal",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि आपतित किरण, अभिलंब और परावर्तित किरण एक ही तल में होती हैं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH10-T4",
+   "topic_number": 4,
+   "title": "गोलीय दर्पणों द्वारा प्रकाश का अभिसरण और अपसरण",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "abhisaran-apsaran-darpan",
+     "learning_objective": "विद्यार्थी बता सकेंगे कि अवतल दर्पण समांतर किरणों को अभिसरित और उत्तल दर्पण अपसरित करता है।"
+    },
+    {
+     "concept_tag": "saur-sandrak",
+     "learning_objective": "विद्यार्थी अवतल दर्पण द्वारा सूर्य के प्रकाश के संकेंद्रण और सौर सांद्रकों के उपयोग समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHCU1-CH10-T5",
+   "topic_number": 5,
+   "title": "लेंस: प्रकार, प्रतिबिंब और उपयोग",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "lens-ke-prakar",
+     "learning_objective": "विद्यार्थी मोटाई के आधार पर उत्तल और अवतल लेंस में अंतर कर सकेंगे।"
+    },
+    {
+     "concept_tag": "lens-se-pratibimb",
+     "learning_objective": "विद्यार्थी उत्तल और अवतल लेंस से देखी गई वस्तुओं के रूप की तुलना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "abhisari-apsari-lens",
+     "learning_objective": "विद्यार्थी अभिसारी और अपसारी लेंस तथा लेंसों के उपयोग पहचान सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

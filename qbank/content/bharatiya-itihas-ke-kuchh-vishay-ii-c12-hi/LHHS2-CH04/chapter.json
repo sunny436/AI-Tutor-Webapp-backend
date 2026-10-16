@@ -1,0 +1,140 @@
+{
+ "chapter_id": "LHHS2-CH04",
+ "title": "किसान, ज़मींदार और राज्य",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHHS2-CH04-T1",
+   "topic_number": 1,
+   "title": "किसान और कृषि उत्पादन",
+   "ncert_sections": "1, 1.1, 1.2, 1.3, 1.4",
+   "concepts": [
+    {
+     "concept_tag": "kisan-ke-prakar",
+     "learning_objective": "मुगलकालीन स्रोतों में किसानों के लिए प्रयुक्त शब्दों और खुद-काश्त तथा पाहि-काश्त किसानों का अंतर समझना।"
+    },
+    {
+     "concept_tag": "sinchai-aur-takneek",
+     "learning_objective": "सिंचाई के साधनों और लकड़ी के हल जैसी कृषि तकनीकों की विशेषताएँ समझना।"
+    },
+    {
+     "concept_tag": "fasalen-aur-jins-e-kamil",
+     "learning_objective": "खरीफ़-रबी चक्र, जिन्स-ए-कामिल और नई फ़सलों के आगमन को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHHS2-CH04-T2",
+   "topic_number": 2,
+   "title": "ग्राम समुदाय",
+   "ncert_sections": "2, 2.1, 2.2, 2.3, 2.4",
+   "concepts": [
+    {
+     "concept_tag": "jati-aur-gramin-samaj",
+     "learning_objective": "ग्रामीण समाज में जाति, गरीबी और सामाजिक स्थिति के संबंध का विश्लेषण करना।"
+    },
+    {
+     "concept_tag": "panchayat-aur-mukhiya",
+     "learning_objective": "ग्राम पंचायत, जाति पंचायत और मुक़द्दम या मंडल के कार्यों को समझना।"
+    },
+    {
+     "concept_tag": "gram-dastkar",
+     "learning_objective": "ग्राम दस्तकारों को दिए जाने वाले पारिश्रमिक के तरीकों और 'छोटे गणराज्य' की धारणा का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHHS2-CH04-T3",
+   "topic_number": 3,
+   "title": "कृषि समाज में महिलाएँ",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "mahilaon-ka-shram",
+     "learning_objective": "खेती और दस्तकारी में महिलाओं के श्रम की भूमिका पहचानना।"
+    },
+    {
+     "concept_tag": "mahilaon-ke-adhikar",
+     "learning_objective": "दुल्हन की कीमत, पुनर्विवाह, याचिकाओं और संपत्ति के उत्तराधिकार से जुड़े महिलाओं के अधिकार समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHHS2-CH04-T4",
+   "topic_number": 4,
+   "title": "जंगल और कबीले",
+   "ncert_sections": "4, 4.1, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "jangli-jeevan",
+     "learning_objective": "जंगलवासियों की आजीविका और 'जंगली' शब्द के तत्कालीन अर्थ को समझना।"
+    },
+    {
+     "concept_tag": "jangalon-mein-baahari-prabhav",
+     "learning_objective": "राज्य, वाणिज्यिक खेती और सामाजिक बदलावों से जंगलवासियों के जीवन पर पड़े प्रभावों का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHHS2-CH04-T5",
+   "topic_number": 5,
+   "title": "ज़मींदार",
+   "ncert_sections": "5",
+   "concepts": [
+    {
+     "concept_tag": "zamindar-ki-shakti",
+     "learning_objective": "ज़मींदारों की हैसियत, मिल्कियत ज़मीन और सैन्य शक्ति के स्रोत पहचानना।"
+    },
+    {
+     "concept_tag": "zamindari-ka-sudridhikaran",
+     "learning_objective": "ज़मींदारियों के बनने और मज़बूत होने की प्रक्रियाओं तथा किसानों से उनके संबंधों का मूल्यांकन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHHS2-CH04-T6",
+   "topic_number": 6,
+   "title": "भू-राजस्व प्रणाली",
+   "ncert_sections": "6",
+   "concepts": [
+    {
+     "concept_tag": "jama-aur-hasil",
+     "learning_objective": "जमा और हासिल का अंतर तथा राजस्व प्रशासन के अधिकारियों की भूमिका समझना।"
+    },
+    {
+     "concept_tag": "bhumi-vargikaran",
+     "learning_objective": "अकबर के समय ज़मीन के वर्गीकरण तथा राजस्व वसूली के तरीकों को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHHS2-CH04-T7",
+   "topic_number": 7,
+   "title": "चाँदी का बहाव",
+   "ncert_sections": "7",
+   "concepts": [
+    {
+     "concept_tag": "chandi-ka-pravah",
+     "learning_objective": "वैश्विक व्यापार के कारण भारत में चाँदी के आगमन और उसके आर्थिक प्रभावों का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHHS2-CH04-T8",
+   "topic_number": 8,
+   "title": "अबुल फ़ज़्ल की आइन-ए-अकबरी",
+   "ncert_sections": "8",
+   "concepts": [
+    {
+     "concept_tag": "aain-ki-sanrachna",
+     "learning_objective": "आइन-ए-अकबरी की रचना, उसके पाँच दफ़्तरों और मुल्क-आबादी की विषय-वस्तु को पहचानना।"
+    },
+    {
+     "concept_tag": "aain-ki-seemaen",
+     "learning_objective": "एक ऐतिहासिक स्रोत के रूप में आइन की विशेषताओं और सीमाओं का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

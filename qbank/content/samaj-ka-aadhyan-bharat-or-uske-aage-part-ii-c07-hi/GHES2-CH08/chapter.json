@@ -1,0 +1,128 @@
+{
+ "chapter_id": "GHES2-CH08",
+ "title": "बैंक एवं वित्तीय सेवाएँ",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHES2-CH08-T1",
+   "topic_number": 1,
+   "title": "वित्तीय अवसंरचना और बैंक का परिचय",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vittiya-avsanrachna",
+     "learning_objective": "विद्यार्थी वित्तीय अवसंरचना के घटकों और भौतिक अवसंरचना से उसके संबंध को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "bank-madhyasth",
+     "learning_objective": "विद्यार्थी बैंक को बचतकर्ताओं और ऋण लेने वालों के बीच मध्यस्थ के रूप में पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH08-T2",
+   "topic_number": 2,
+   "title": "बैंक खाते और जमा पर ब्याज",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "bank-khate-ke-prakar",
+     "learning_objective": "विद्यार्थी बचत, चालू और सावधि जमा खातों में अंतर कर सकेंगे।"
+    },
+    {
+     "concept_tag": "byaj-aur-chakravriddhi",
+     "learning_objective": "विद्यार्थी ब्याज और चक्रवृद्धि की गणना कर उसका महत्त्व समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH08-T3",
+   "topic_number": 3,
+   "title": "ऋण, बैंकों की आय और जन धन योजना",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "rin-aur-bank-ki-aay",
+     "learning_objective": "विद्यार्थी ऋण तथा ब्याज-दरों के अंतर से बैंक की आय की गणना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "jan-dhan-yojana",
+     "learning_objective": "विद्यार्थी जन धन योजना के उद्देश्य और प्रभाव की व्याख्या कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH08-T4",
+   "topic_number": 4,
+   "title": "अन्य वित्तीय संस्थान और भारतीय रिज़र्व बैंक",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "anya-vittiya-sansthan",
+     "learning_objective": "विद्यार्थी डाकघर, नाबार्ड जैसे संस्थानों की वित्तीय भूमिका पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "bhartiya-reserve-bank",
+     "learning_objective": "विद्यार्थी भारतीय रिज़र्व बैंक के 'बैंकों के बैंक' के रूप में कार्य बता सकेंगे।"
+    },
+    {
+     "concept_tag": "prachin-bharat-ke-mandir",
+     "learning_objective": "विद्यार्थी प्राचीन भारत में मंदिरों की बैंक-जैसी भूमिका का मूल्यांकन कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH08-T5",
+   "topic_number": 5,
+   "title": "भुगतान के माध्यम और प्रणालियाँ",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "nakad-nikasi-aur-chek",
+     "learning_objective": "विद्यार्थी निकासी पर्ची, ए.टी.एम. और चेक से धन के लेन-देन की प्रक्रिया समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "electronic-bhugtan",
+     "learning_objective": "विद्यार्थी पी.ओ.एस. यंत्र और इंटरनेट बैंकिंग जैसे इलेक्ट्रॉनिक भुगतानों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "upi",
+     "learning_objective": "विद्यार्थी यू.पी.आई. लेन-देन के चरणों और उसके लाभों का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH08-T6",
+   "topic_number": 6,
+   "title": "शेयर बाजार",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "share-aur-stock",
+     "learning_objective": "विद्यार्थी शेयर, स्टॉक और शेयर विनिमय का अर्थ समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "share-kimat-utar-chadhav",
+     "learning_objective": "विद्यार्थी शेयर-कीमतों के उतार-चढ़ाव के कारणों का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES2-CH08-T7",
+   "topic_number": 7,
+   "title": "वित्तीय धोखाधड़ी और उनसे बचाव",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "dhokhadhadi-ke-tarike",
+     "learning_objective": "विद्यार्थी डिजिटल धोखाधड़ी के सामान्य तरीकों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "suraksha-ke-upay",
+     "learning_objective": "विद्यार्थी डिजिटल भुगतान करते समय सुरक्षित रहने के उपाय अपना सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

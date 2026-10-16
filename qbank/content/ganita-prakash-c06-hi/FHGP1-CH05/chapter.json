@@ -1,0 +1,132 @@
+{
+ "chapter_id": "FHGP1-CH05",
+ "title": "अभाज्य समय",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FHGP1-CH05-T1",
+   "topic_number": 1,
+   "title": "सार्व गुणज और सार्व गुणनखंड",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "saarv-gunaj",
+     "learning_objective": "विद्यार्थी इडली-वड़ा खेल की सहायता से दो या अधिक संख्याओं के सार्व गुणज ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "saarv-gunankhand",
+     "learning_objective": "विद्यार्थी छलाँग वाले खेल की सहायता से दो संख्याओं के सार्व गुणनखंड ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH05-T2",
+   "topic_number": 2,
+   "title": "अभाज्य संख्याएँ",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "abhajya-aur-bhajya-sankhya",
+     "learning_objective": "विद्यार्थी गुणनखंडों की संख्या के आधार पर अभाज्य और भाज्य संख्याओं में अंतर कर सकेंगे।"
+    },
+    {
+     "concept_tag": "iratosthenes-ki-chhalni",
+     "learning_objective": "विद्यार्थी इराटोस्थेनीस की छलनी से अभाज्य संख्याएँ ज्ञात करने की विधि समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "judwan-abhajya",
+     "learning_objective": "विद्यार्थी 100 तक के जुड़वाँ अभाज्य युग्म पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH05-T3",
+   "topic_number": 3,
+   "title": "सह-अभाज्य संख्याएँ",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "sah-abhajya-paribhasha",
+     "learning_objective": "विद्यार्थी सह-अभाज्य संख्याओं की परिभाषा बताकर सह-अभाज्य युग्म पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "surakshit-yugm",
+     "learning_objective": "विद्यार्थी खजाने वाले खेल में सुरक्षित युग्मों का संबंध सह-अभाज्यता से जोड़ सकेंगे।"
+    },
+    {
+     "concept_tag": "pratham-saarv-gunaj-aur-gunanphal",
+     "learning_objective": "विद्यार्थी समझेंगे कि सह-अभाज्य संख्याओं का पहला सार्व गुणज उनके गुणनफल के बराबर होता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH05-T4",
+   "topic_number": 4,
+   "title": "अभाज्य गुणनखंडन",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "abhajya-gunankhandan",
+     "learning_objective": "विद्यार्थी किसी भाज्य संख्या को अभाज्य संख्याओं के गुणनफल के रूप में लिख सकेंगे।"
+    },
+    {
+     "concept_tag": "gunankhandan-ki-advitiyata",
+     "learning_objective": "विद्यार्थी समझेंगे कि क्रम को छोड़कर किसी संख्या का अभाज्य गुणनखंडन एक ही होता है।"
+    },
+    {
+     "concept_tag": "gunanphal-ka-gunankhandan",
+     "learning_objective": "विद्यार्थी दो संख्याओं के गुणनफल का अभाज्य गुणनखंडन बिना गुणा किए ज्ञात कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH05-T5",
+   "topic_number": 5,
+   "title": "अभाज्य गुणनखंडन से सह-अभाज्यता और विभाज्यता की जाँच",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "gunankhandan-se-sah-abhajyata",
+     "learning_objective": "विद्यार्थी अभाज्य गुणनखंडन की तुलना करके जाँच सकेंगे कि दो संख्याएँ सह-अभाज्य हैं या नहीं।"
+    },
+    {
+     "concept_tag": "gunankhandan-se-vibhajyata",
+     "learning_objective": "विद्यार्थी अभाज्य गुणनखंडन से जाँच सकेंगे कि एक संख्या दूसरी से विभाजित होती है या नहीं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH05-T6",
+   "topic_number": 6,
+   "title": "संख्याओं की विभाज्यता की जाँच",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "das-paanch-do-se-vibhajyata",
+     "learning_objective": "विद्यार्थी अंतिम अंक देखकर 10, 5 और 2 से विभाज्यता की जाँच कर सकेंगे।"
+    },
+    {
+     "concept_tag": "chaar-aur-aath-se-vibhajyata",
+     "learning_objective": "विद्यार्थी अंतिम दो या तीन अंकों से 4 और 8 से विभाज्यता की जाँच कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "FHGP1-CH05-T7",
+   "topic_number": 7,
+   "title": "संख्याओं के साथ मनोरंजन",
+   "ncert_sections": "5.6",
+   "concepts": [
+    {
+     "concept_tag": "vishesh-sankhyaen",
+     "learning_objective": "विद्यार्थी संख्याओं के गुणों के आधार पर बता सकेंगे कि किसी समूह में कौन-सी संख्या विशेष है।"
+    },
+    {
+     "concept_tag": "abhajya-paheli",
+     "learning_objective": "विद्यार्थी गुणनफल वाली अभाज्य पहेली को अभाज्य गुणनखंडन से हल कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

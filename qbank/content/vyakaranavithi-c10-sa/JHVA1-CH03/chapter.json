@@ -1,0 +1,136 @@
+{
+ "chapter_id": "JHVA1-CH03",
+ "title": "सन्धि",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHVA1-CH03-T1",
+   "topic_number": 1,
+   "title": "स्वरसन्धिः — दीर्घः, गुणः, वृद्धिः च",
+   "ncert_sections": "1 (i), (ii), (iii)",
+   "concepts": [
+    {
+     "concept_tag": "sandhi-svarupa-dirgha",
+     "learning_objective": "छात्रः सन्धेः अर्थं भेदान् च ज्ञात्वा दीर्घसन्धिं (अकः सवर्णे दीर्घः) प्रयोक्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "guna-sandhi",
+     "learning_objective": "छात्रः आद्गुणः इति सूत्रानुसारं गुणसन्धिं कृत्वा अभिज्ञातुं शक्नोति।"
+    },
+    {
+     "concept_tag": "vriddhi-sandhi",
+     "learning_objective": "छात्रः वृद्धिरेचि इति सूत्रानुसारं वृद्धिसन्धेः विच्छेदं नाम च ज्ञातुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH03-T2",
+   "topic_number": 2,
+   "title": "स्वरसन्धिः — यण्, अयादिः, पूर्वरूपं, पररूपं च",
+   "ncert_sections": "1 (iv), (v), (vi), (viii)",
+   "concepts": [
+    {
+     "concept_tag": "yan-sandhi",
+     "learning_objective": "छात्रः इको यणचि इति सूत्रेण यण्सन्धिं कर्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "ayadi-sandhi",
+     "learning_objective": "छात्रः एचोऽयवायावः इति सूत्रेण अयादिसन्धिं कर्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "purvarupa-pararupa-sandhi",
+     "learning_objective": "छात्रः पूर्वरूपसन्धिं पररूपसन्धिं च अपवादरूपेण अवगन्तुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH03-T3",
+   "topic_number": 3,
+   "title": "प्रकृतिभावः",
+   "ncert_sections": "1 (vii)",
+   "concepts": [
+    {
+     "concept_tag": "prakritibhava-niyama",
+     "learning_objective": "छात्रः प्रकृतिभावस्य अर्थं विधायकसूत्रं च ज्ञातुं शक्नोति।"
+    },
+    {
+     "concept_tag": "pragrihya-sanjna",
+     "learning_objective": "छात्रः ईदूदेद्द्विवचनं प्रगृह्यम्, अदसो मात् इति नियमौ प्रयोक्तुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH03-T4",
+   "topic_number": 4,
+   "title": "व्यञ्जनसन्धिः — श्चुत्वं, ष्टुत्वं, जश्त्वं, चर्त्वं च",
+   "ncert_sections": "2 (i), (ii), (iii), (iv)",
+   "concepts": [
+    {
+     "concept_tag": "schutva-shtutva",
+     "learning_objective": "छात्रः श्चुत्वस्य ष्टुत्वस्य च नियमेन सन्धिपदं रचयितुं शक्नोति।"
+    },
+    {
+     "concept_tag": "jashtva",
+     "learning_objective": "छात्रः झलां जशोऽन्ते इति सूत्रस्य उदाहरणानि अभिज्ञातुं शक्नोति।"
+    },
+    {
+     "concept_tag": "chartva",
+     "learning_objective": "छात्रः खरि च इति सूत्रेण चर्त्वसन्धिं व्याख्यातुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH03-T5",
+   "topic_number": 5,
+   "title": "व्यञ्जनसन्धिः — अनुस्वारः, परसवर्णः, लत्वं, छत्वं, चागमः, रो रि, णत्वं च",
+   "ncert_sections": "2 (v) - (xi)",
+   "concepts": [
+    {
+     "concept_tag": "anusvara-parasavarna",
+     "learning_objective": "छात्रः मोऽनुस्वारः, अनुस्वारस्य ययि परसवर्णः इति नियमौ प्रयोक्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "latva-chhatva",
+     "learning_objective": "छात्रः लत्वं, छत्वं, चकारस्य आगमं च सोदाहरणम् अवगन्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "ro-ri-natva",
+     "learning_objective": "छात्रः रेफलोपेन पूर्वस्वरस्य दीर्घत्वं णत्वविधिं च प्रयोक्तुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH03-T6",
+   "topic_number": 6,
+   "title": "विसर्गसन्धिः — सत्वं षत्वं च",
+   "ncert_sections": "3 (i), (ii)",
+   "concepts": [
+    {
+     "concept_tag": "visarga-satva",
+     "learning_objective": "छात्रः विसर्जनीयस्य सः इति नियमेन विसर्गस्य स्, श्, ष् इति विकारान् ज्ञातुं शक्नोति।"
+    },
+    {
+     "concept_tag": "visarga-shatva",
+     "learning_objective": "छात्रः इकार-उकारपूर्वस्य विसर्गस्य षत्वं तस्य अपवादं च अवगन्तुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH03-T7",
+   "topic_number": 7,
+   "title": "विसर्गसन्धिः — उत्वं रुत्वं च",
+   "ncert_sections": "3 (iii), (iv)",
+   "concepts": [
+    {
+     "concept_tag": "visarga-utva",
+     "learning_objective": "छात्रः अतो रोरप्लुतादप्लुते, हशि च इति नियमाभ्यां विसर्गस्य ओत्वं व्याख्यातुं शक्नोति।"
+    },
+    {
+     "concept_tag": "visarga-rutva",
+     "learning_objective": "छात्रः अकार-आकारभिन्नस्वरात् परस्य विसर्गस्य रेफादेशं प्रयोक्तुं शक्नोति।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "chapter_id": "KEBO1-CH04",
+ "title": "Animal Kingdom",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH04-T1",
+   "topic_number": 1,
+   "title": "Levels of organisation and symmetry",
+   "ncert_sections": "4.1, 4.1.1, 4.1.2",
+   "concepts": [
+    {
+     "concept_tag": "levels-of-organisation",
+     "learning_objective": "Identify cellular, tissue, organ and organ-system levels of organisation with examples."
+    },
+    {
+     "concept_tag": "digestive-and-circulatory-patterns",
+     "learning_objective": "Distinguish complete from incomplete digestive systems and open from closed circulatory systems."
+    },
+    {
+     "concept_tag": "body-symmetry",
+     "learning_objective": "Distinguish asymmetrical, radially symmetrical and bilaterally symmetrical body plans."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH04-T2",
+   "topic_number": 2,
+   "title": "Germ layers, coelom, segmentation and notochord",
+   "ncert_sections": "4.1.3, 4.1.4, 4.1.5, 4.1.6",
+   "concepts": [
+    {
+     "concept_tag": "germ-layers",
+     "learning_objective": "Distinguish diploblastic from triploblastic animals on the basis of embryonic layers."
+    },
+    {
+     "concept_tag": "coelom-types",
+     "learning_objective": "Classify animals as coelomates, pseudocoelomates or acoelomates from the nature of the body cavity."
+    },
+    {
+     "concept_tag": "segmentation-and-notochord",
+     "learning_objective": "Explain metameric segmentation and the notochord as bases of classification."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH04-T3",
+   "topic_number": 3,
+   "title": "Porifera, Coelenterata and Ctenophora",
+   "ncert_sections": "4.2.1, 4.2.2, 4.2.3",
+   "concepts": [
+    {
+     "concept_tag": "porifera-canal-system",
+     "learning_objective": "Describe the water canal system, skeleton and reproduction of sponges."
+    },
+    {
+     "concept_tag": "cnidaria-cnidoblasts-and-body-forms",
+     "learning_objective": "Explain cnidoblasts, polyp and medusa forms and metagenesis in cnidarians."
+    },
+    {
+     "concept_tag": "ctenophora-features",
+     "learning_objective": "Identify the distinctive features of ctenophores such as comb plates and bioluminescence."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH04-T4",
+   "topic_number": 4,
+   "title": "Platyhelminthes, Aschelminthes and Annelida",
+   "ncert_sections": "4.2.4, 4.2.5, 4.2.6",
+   "concepts": [
+    {
+     "concept_tag": "platyhelminthes-features",
+     "learning_objective": "Describe the features and parasitic adaptations of flatworms."
+    },
+    {
+     "concept_tag": "aschelminthes-features",
+     "learning_objective": "Describe the pseudocoelomate body plan and features of roundworms."
+    },
+    {
+     "concept_tag": "annelida-features",
+     "learning_objective": "Describe metamerism, circulation, excretion and reproduction in annelids."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH04-T5",
+   "topic_number": 5,
+   "title": "Arthropoda, Mollusca, Echinodermata and Hemichordata",
+   "ncert_sections": "4.2.7, 4.2.8, 4.2.9, 4.2.10",
+   "concepts": [
+    {
+     "concept_tag": "arthropoda-features",
+     "learning_objective": "Describe the features and economically important examples of arthropods."
+    },
+    {
+     "concept_tag": "mollusca-features",
+     "learning_objective": "Describe the body plan of molluscs including mantle, shell and radula."
+    },
+    {
+     "concept_tag": "echinodermata-hemichordata-features",
+     "learning_objective": "Describe the water vascular system of echinoderms and the body plan of hemichordates."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH04-T6",
+   "topic_number": 6,
+   "title": "Chordata, protochordates, Cyclostomata and fishes",
+   "ncert_sections": "4.2.11, 4.2.11.1, 4.2.11.2, 4.2.11.3",
+   "concepts": [
+    {
+     "concept_tag": "chordate-characters",
+     "learning_objective": "State the fundamental characters that distinguish chordates from non-chordates."
+    },
+    {
+     "concept_tag": "protochordates-and-vertebrates",
+     "learning_objective": "Compare urochordates, cephalochordates and vertebrates on the basis of the notochord."
+    },
+    {
+     "concept_tag": "cyclostomata-and-fishes",
+     "learning_objective": "Compare cyclostomes, cartilaginous fishes and bony fishes."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH04-T7",
+   "topic_number": 7,
+   "title": "Tetrapoda: Amphibia, Reptilia, Aves and Mammalia",
+   "ncert_sections": "4.2.11.4, 4.2.11.5, 4.2.11.6, 4.2.11.7",
+   "concepts": [
+    {
+     "concept_tag": "amphibia-reptilia-features",
+     "learning_objective": "Describe the distinguishing features of amphibians and reptiles."
+    },
+    {
+     "concept_tag": "aves-flight-adaptations",
+     "learning_objective": "Describe the features of birds, including those that help in flight."
+    },
+    {
+     "concept_tag": "mammalia-features",
+     "learning_objective": "Identify the unique features of mammals and classify examples."
+    }
+   ]
+  }
+ ]
+}

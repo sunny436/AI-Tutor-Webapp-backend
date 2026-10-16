@@ -1,0 +1,132 @@
+{
+ "chapter_id": "KHBO1-CH09",
+ "title": "जैव अणु",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHBO1-CH09-T1",
+   "topic_number": 1,
+   "title": "रासायनिक संगठन का विश्लेषण तथा प्राथमिक एवं द्वितीयक उपापचयज",
+   "ncert_sections": "9.1, 9.2",
+   "concepts": [
+    {
+     "concept_tag": "rasayanik-vishleshan-amla-vileya-pool",
+     "learning_objective": "जीवित ऊतक के रासायनिक विश्लेषण में अम्ल-विलेय और अम्ल-अविलेय अंश प्राप्त करने की विधि समझाना।"
+    },
+    {
+     "concept_tag": "prathamik-dvitiyak-upapachayaj",
+     "learning_objective": "प्राथमिक और द्वितीयक उपापचयजों में अंतर कर उनके उदाहरण पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH09-T2",
+   "topic_number": 2,
+   "title": "जैव वृहद् अणु",
+   "ncert_sections": "9.3",
+   "concepts": [
+    {
+     "concept_tag": "jaiv-vrihad-anu",
+     "learning_objective": "अम्ल-अविलेय अंश के वृहद् अणुओं और लघु अणुओं में आणविक भार के आधार पर अंतर करना।"
+    },
+    {
+     "concept_tag": "lipid-amla-avileya-ansh",
+     "learning_objective": "लिपिड के अम्ल-अविलेय अंश में मिलने का कारण स्पष्ट करना।"
+    },
+    {
+     "concept_tag": "koshika-ka-ausat-sanghatan",
+     "learning_objective": "कोशिका के कुल द्रव्यमान में विभिन्न घटकों का औसत प्रतिशत बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH09-T3",
+   "topic_number": 3,
+   "title": "प्रोटीन और प्रोटीन की संरचना",
+   "ncert_sections": "9.4, 9.7",
+   "concepts": [
+    {
+     "concept_tag": "protein-vishambahulak-karya",
+     "learning_objective": "प्रोटीन को विषमबहुलक के रूप में समझकर उसके प्रमुख कार्य पहचानना।"
+    },
+    {
+     "concept_tag": "protein-sanrachna-ke-star",
+     "learning_objective": "प्रोटीन की प्राथमिक, द्वितीयक, तृतीयक और चतुष्क संरचना में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH09-T4",
+   "topic_number": 4,
+   "title": "पॉलीसैकेराइड और न्यूक्लिक अम्ल",
+   "ncert_sections": "9.5, 9.6",
+   "concepts": [
+    {
+     "concept_tag": "polysaccharide-prakar",
+     "learning_objective": "सेलुलोज, स्टार्च, ग्लाइकोजन, इनुलिन और काइटिन की संरचना व गुणों की तुलना करना।"
+    },
+    {
+     "concept_tag": "nucleic-amla-ghatak",
+     "learning_objective": "न्यूक्लियोटाइड के घटकों तथा डी एन ए और आर एन ए के अंतर को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH09-T5",
+   "topic_number": 5,
+   "title": "एंजाइम: रासायनिक अभिक्रियाएँ, सक्रियण ऊर्जा और क्रिया की प्रकृति",
+   "ncert_sections": "9.8, 9.8.1, 9.8.2, 9.8.3",
+   "concepts": [
+    {
+     "concept_tag": "enzyme-prakriti-sakriya-sthal",
+     "learning_objective": "एंजाइम की प्रकृति, सक्रिय स्थल और राइबोज़ाइम को पहचानना।"
+    },
+    {
+     "concept_tag": "abhikriya-dar-sakriyan-urja",
+     "learning_objective": "अभिक्रिया की दर और सक्रियण ऊर्जा पर एंजाइम के प्रभाव की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "utpreraka-chakra",
+     "learning_objective": "एंजाइम के उत्प्रेरक चक्र के चरणों को सही क्रम में रखना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH09-T6",
+   "topic_number": 6,
+   "title": "एंजाइम सक्रियता को प्रभावित करने वाले कारक",
+   "ncert_sections": "9.8.4",
+   "concepts": [
+    {
+     "concept_tag": "taap-ph-prabhav",
+     "learning_objective": "ताप और पीएच का एंजाइम सक्रियता पर प्रभाव समझाना।"
+    },
+    {
+     "concept_tag": "kriyadhar-sandrata-vmax",
+     "learning_objective": "क्रियाधार सांद्रता बढ़ने पर अभिक्रिया वेग के अधिकतम मान तक पहुँचने की व्याख्या करना।"
+    },
+    {
+     "concept_tag": "pratispardhi-sandaman",
+     "learning_objective": "प्रतिस्पर्धी संदमन की क्रियाविधि और उसका उदाहरण विश्लेषित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBO1-CH09-T7",
+   "topic_number": 7,
+   "title": "एंजाइमों का वर्गीकरण, नामकरण एवं सहकारक",
+   "ncert_sections": "9.8.5, 9.8.6",
+   "concepts": [
+    {
+     "concept_tag": "enzyme-varg",
+     "learning_objective": "अभिक्रिया के प्रकार के आधार पर एंजाइमों के छह वर्ग पहचानना।"
+    },
+    {
+     "concept_tag": "sahakarak-prakar",
+     "learning_objective": "प्रोस्थेटिक समूह, सहएंजाइम और धातु आयन सहकारकों में अंतर करना।"
+    }
+   ]
+  }
+ ]
+}

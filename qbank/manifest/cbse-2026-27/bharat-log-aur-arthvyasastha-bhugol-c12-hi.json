@@ -1,0 +1,1162 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "bharat-log-aur-arthvyasastha-bhugol-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "geography",
+  "language": "hindi",
+  "title": "Bharat log aur arthvyasastha(Bhugol)",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhgy2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHGY2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "जनसंख्या: वितरण, घनत्व, वृद्धि और संघटन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY2-CH01-T1",
+     "topic_number": 1,
+     "title": "जनसंख्या आँकड़ों के स्रोत और जनसंख्या का वितरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "janganana-srot",
+       "learning_objective": "विद्यार्थी भारत में जनगणना द्वारा जनसंख्या आँकड़े एकत्र करने की व्यवस्था और उसके इतिहास को बता सकेंगे।"
+      },
+      {
+       "concept_tag": "vitaran-karak",
+       "learning_objective": "विद्यार्थी भारत में जनसंख्या के असमान वितरण को प्रभावित करने वाले भौतिक, सामाजिक-आर्थिक और ऐतिहासिक कारकों को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH01-T2",
+     "topic_number": 2,
+     "title": "जनसंख्या का घनत्व",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ghanatva-pratirup",
+       "learning_objective": "विद्यार्थी भारत में जनसंख्या घनत्व के स्थानिक प्रतिरूप और उसमें समय के साथ हुए परिवर्तन की व्याख्या कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kayik-krishi-ghanatva",
+       "learning_objective": "विद्यार्थी कायिक घनत्व और कृषि घनत्व की गणना करके उनका महत्त्व समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH01-T3",
+     "topic_number": 3,
+     "title": "जनसंख्या की वृद्धि और उसकी प्रावस्थाएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dashakiya-vriddhi-dar",
+       "learning_objective": "विद्यार्थी जनसंख्या वृद्धि के घटकों को पहचान सकेंगे और दशकीय वृद्धि दर की गणना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "vriddhi-pravasthayen",
+       "learning_objective": "विद्यार्थी 1901 से अब तक भारत की जनसंख्या वृद्धि की चार प्रावस्थाओं और उनके कारणों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH01-T4",
+     "topic_number": 4,
+     "title": "जनसंख्या वृद्धि में प्रादेशिक भिन्नता और किशोर जनसंख्या",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pradeshik-bhinnata",
+       "learning_objective": "विद्यार्थी राज्यों के बीच जनसंख्या वृद्धि दर की प्रादेशिक भिन्नता के प्रतिरूप की व्याख्या कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kishor-yuva-niti",
+       "learning_objective": "विद्यार्थी किशोर जनसंख्या की चुनौतियों और राष्ट्रीय युवा नीति जैसे सरकारी प्रयासों को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH01-T5",
+     "topic_number": 5,
+     "title": "ग्रामीण-नगरीय संघटन और भाषाई संघटन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gramin-nagariya-sanghatan",
+       "learning_objective": "विद्यार्थी भारत में ग्रामीण और नगरीय जनसंख्या के वितरण तथा ग्रामीण-नगरीय प्रवास के क्षेत्रों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "bhashai-parivar",
+       "learning_objective": "विद्यार्थी भारत की भाषाई विविधता और भाषाओं के चार भाषा-परिवारों को बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH01-T6",
+     "topic_number": 6,
+     "title": "धार्मिक संघटन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dharmik-vitaran",
+       "learning_objective": "विद्यार्थी भारत में विभिन्न धार्मिक समुदायों के स्थानिक वितरण का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "dharm-aur-bhudrishya",
+       "learning_objective": "विद्यार्थी समझा सकेंगे कि धर्म की औपचारिक अभिव्यक्ति भूदृश्य पर किस प्रकार दिखाई देती है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH01-T7",
+     "topic_number": 7,
+     "title": "कार्यशील जनसंख्या का संघटन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shramik-vargikaran",
+       "learning_objective": "विद्यार्थी मुख्य श्रमिक, सीमांत श्रमिक और अश्रमिक में अंतर कर सकेंगे तथा कार्य सहभागिता दर की भिन्नता समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "vyavsayik-sanrachna",
+       "learning_objective": "विद्यार्थी भारत की व्यावसायिक संरचना और उसमें हो रहे क्षेत्रीय बदलाव का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "मानव बस्तियाँ",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY2-CH02-T1",
+     "topic_number": 1,
+     "title": "मानव बस्ती का अर्थ तथा ग्रामीण और नगरीय बस्तियों में अंतर",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "manav-basti-ka-arth",
+       "learning_objective": "मानव बस्ती का अर्थ और उसके आकार व प्रकार की विविधता को समझना।"
+      },
+      {
+       "concept_tag": "gramin-nagariya-antar",
+       "learning_objective": "आर्थिक आधार, कार्यात्मक संबंध और सामाजिक जीवन के आधार पर ग्रामीण और नगरीय बस्तियों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH02-T2",
+     "topic_number": 2,
+     "title": "ग्रामीण बस्तियों के प्रकार: गुच्छित और अर्ध-गुच्छित बस्तियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "gramin-basti-ke-karak",
+       "learning_objective": "ग्रामीण बस्तियों के प्रकारों को निर्धारित करने वाले भौतिक, सांस्कृतिक और सुरक्षा कारकों को पहचानना।"
+      },
+      {
+       "concept_tag": "guchchhit-basti",
+       "learning_objective": "गुच्छित बस्तियों की विशेषताएँ और उनके वितरण के कारण बताना।"
+      },
+      {
+       "concept_tag": "ardh-guchchhit-basti",
+       "learning_objective": "अर्ध-गुच्छित या विखंडित बस्तियों के बनने की प्रक्रिया और क्षेत्र समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH02-T3",
+     "topic_number": 3,
+     "title": "पल्ली बस्तियाँ और परिक्षिप्त बस्तियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "palli-basti",
+       "learning_objective": "पल्ली बस्तियों के स्थानीय नाम, कारण और क्षेत्र पहचानना।"
+      },
+      {
+       "concept_tag": "parikshipt-basti",
+       "learning_objective": "परिक्षिप्त या एकाकी बस्तियों के कारण और उनके क्षेत्रों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH02-T4",
+     "topic_number": 4,
+     "title": "नगरीय बस्तियाँ और भारत में नगरों का विकास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nagariya-basti-paribhasha",
+       "learning_objective": "जनगणना 1991 के अनुसार नगरीय बस्ती की परिभाषा के मानदंड लागू करना।"
+      },
+      {
+       "concept_tag": "nagaron-ka-vikas",
+       "learning_objective": "प्राचीन, मध्यकालीन और आधुनिक नगरों को उनकी उत्पत्ति के आधार पर वर्गीकृत करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH02-T5",
+     "topic_number": 5,
+     "title": "भारत में नगरीकरण",
+     "ncert_sections": "तालिका 2.1",
+     "concepts": [
+      {
+       "concept_tag": "nagarikaran-star",
+       "learning_objective": "नगरीकरण के स्तर का अर्थ समझना और तालिका 2.1 के आँकड़ों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH02-T6",
+     "topic_number": 6,
+     "title": "नगरों का प्रकार्यात्मक वर्गीकरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prakaryatmak-vargikaran",
+       "learning_objective": "प्रमुख प्रकार्य के आधार पर भारतीय नगरों को विभिन्न वर्गों में रखना।"
+      },
+      {
+       "concept_tag": "bahuprakaryatmak-nagar",
+       "learning_objective": "नगरों के बहुप्रकार्यात्मक बनने के कारणों और स्मार्ट सिटी मिशन के उद्देश्यों का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "भू संसाधन तथा कृषि",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY2-CH03-T1",
+     "topic_number": 1,
+     "title": "भू-उपयोग संवर्ग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhu-upyog-sanvarg",
+       "learning_objective": "भू-राजस्व अभिलेखों में दर्ज नौ भू-उपयोग संवर्गों को पहचानना और उनमें अंतर करना।"
+      },
+      {
+       "concept_tag": "parti-bhumi",
+       "learning_objective": "चालू परती, अन्य परती और कृषि योग्य व्यर्थ भूमि में समय-अवधि के आधार पर भेद करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH03-T2",
+     "topic_number": 2,
+     "title": "भारत में भू-उपयोग परिवर्तन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "arthvyavastha-aur-bhu-upyog",
+       "learning_objective": "अर्थव्यवस्था के आकार और संरचना में परिवर्तन का भू-उपयोग पर प्रभाव समझना।"
+      },
+      {
+       "concept_tag": "bhu-upyog-pravritti",
+       "learning_objective": "1950-51 से 2019-20 के बीच विभिन्न भू-उपयोग संवर्गों में वृद्धि और ह्रास के कारणों की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH03-T3",
+     "topic_number": 3,
+     "title": "साझा संपत्ति संसाधन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sajha-sampatti-sansadhan",
+       "learning_objective": "साझा संपत्ति संसाधनों का अर्थ, उदाहरण और ग्रामीण निर्धनों व महिलाओं के लिए उनका महत्त्व बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH03-T4",
+     "topic_number": 4,
+     "title": "कृषि भू-उपयोग और शस्य गहनता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "krishi-yogya-bhumi",
+       "learning_objective": "कुल कृषि योग्य भूमि का आकलन करना और कृषि में भूमि के विशेष महत्त्व को समझना।"
+      },
+      {
+       "concept_tag": "shasya-gahanta",
+       "learning_objective": "सकल फसल क्षेत्र और निवल बोए गए क्षेत्र से शस्य गहनता की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH03-T5",
+     "topic_number": 5,
+     "title": "फसल ऋतुएँ और कृषि के प्रकार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "fasal-ritu",
+       "learning_objective": "खरीफ, रबी और ज़ायद ऋतुओं तथा उनकी प्रमुख फसलों को पहचानना।"
+      },
+      {
+       "concept_tag": "krishi-ke-prakar",
+       "learning_objective": "सिंचित और वर्षा-निर्भर कृषि तथा शुष्क भूमि और आर्द्र भूमि कृषि में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH03-T6",
+     "topic_number": 6,
+     "title": "भारत की प्रमुख फसलें",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "khadyann",
+       "learning_objective": "अनाजों और दालों के वितरण, उत्पादक राज्यों और उपज की दशाओं की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "tilhan-aur-reshedar-fasal",
+       "learning_objective": "तिलहन, कपास और जूट के उत्पादन क्षेत्रों और दशाओं को समझना।"
+      },
+      {
+       "concept_tag": "anya-fasalen",
+       "learning_objective": "गन्ना, चाय और कॉफ़ी की भौगोलिक दशाओं और प्रमुख उत्पादक क्षेत्रों को जानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH03-T7",
+     "topic_number": 7,
+     "title": "भारत में कृषि विकास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "harit-kranti",
+       "learning_objective": "हरित क्रांति की पैकेज प्रौद्योगिकी, उसकी शर्तों और प्रभावों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "krishi-vikas-ranneeti",
+       "learning_objective": "स्वतंत्रता के बाद अपनाई गई कृषि विकास की रणनीतियों और कार्यक्रमों को क्रम से समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH03-T8",
+     "topic_number": 8,
+     "title": "भारतीय कृषि की समस्याएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "krishi-samasyayen",
+       "learning_objective": "मानसून पर निर्भरता, कम उत्पादकता, ऋणग्रस्तता और छोटी जोतों जैसी समस्याओं की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "bhumi-nimnikaran",
+       "learning_objective": "सिंचित और वर्षा-निर्भर क्षेत्रों में कृषि भूमि के निम्नीकरण के रूपों और कारणों को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "जल संसाधन",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY2-CH04-T1",
+     "topic_number": 1,
+     "title": "भारत के जल संसाधन: धरातलीय जल, भौम जल तथा लैगून और पश्च जल",
+     "ncert_sections": "भारत के जल संसाधन; धरातलीय जल संसाधन; भौम जल संसाधन; लैगून और पश्च जल",
+     "concepts": [
+      {
+       "concept_tag": "bharat-ke-jal-sansadhan",
+       "learning_objective": "विद्यार्थी भारत में उपलब्ध और उपयोग योग्य जल की मात्रा तथा विश्व की तुलना में भारत की स्थिति बता सकेंगे।"
+      },
+      {
+       "concept_tag": "dharatliya-jal-vitran",
+       "learning_objective": "विद्यार्थी धरातलीय जल के स्रोतों और नदी द्रोणियों में इसके असमान वितरण के कारण समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "bhaum-jal-upyog",
+       "learning_objective": "विद्यार्थी विभिन्न राज्यों में भौम जल के उपयोग के स्तर की तुलना कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH04-T2",
+     "topic_number": 2,
+     "title": "जल की माँग और उपयोग तथा सिंचाई",
+     "ncert_sections": "जल की माँग और उपयोग; सिंचाई के लिए जल की माँग; प्रधानमंत्री कृषि सिंचाई योजना",
+     "concepts": [
+      {
+       "concept_tag": "kshetrvar-jal-upyog",
+       "learning_objective": "विद्यार्थी कृषि, उद्योग और घरेलू क्षेत्रों में धरातलीय व भौम जल के उपयोग के हिस्से बता सकेंगे।"
+      },
+      {
+       "concept_tag": "sinchai-ki-avashyakta",
+       "learning_objective": "विद्यार्थी भारत में सिंचाई की आवश्यकता और अति-सिंचाई के दुष्परिणाम समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "pradhanmantri-krishi-sinchai-yojana",
+       "learning_objective": "विद्यार्थी प्रधानमंत्री कृषि सिंचाई योजना के उद्देश्यों को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH04-T3",
+     "topic_number": 3,
+     "title": "उभरती जल समस्याएँ: जल गुणवत्ता का ह्रास और जल प्रदूषण का निवारण",
+     "ncert_sections": "उभरती जल समस्याएँ; जल गुणवत्ता का ह्रास; जल प्रदूषण का निवारण",
+     "concepts": [
+      {
+       "concept_tag": "jal-gunvatta-hras",
+       "learning_objective": "विद्यार्थी जल गुणवत्ता का अर्थ और उसके ह्रास के कारण समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "jal-pradushan-nivaran",
+       "learning_objective": "विद्यार्थी प्रदूषित नदियों, प्रदूषण निगरानी और जल प्रदूषण संबंधी कानूनों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH04-T4",
+     "topic_number": 4,
+     "title": "जल संरक्षण और प्रबंधन तथा जल का पुनर्चक्रण और पुनः उपयोग",
+     "ncert_sections": "जल संरक्षण और प्रबंधन; जल का पुनर्चक्रण और पुनः उपयोग",
+     "concepts": [
+      {
+       "concept_tag": "jal-sanrakshan-aavashyakta",
+       "learning_objective": "विद्यार्थी जल संरक्षण और प्रबंधन की आवश्यकता तथा उसके उपाय समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "punarchakran-punah-upyog",
+       "learning_objective": "विद्यार्थी दैनिक जीवन और उद्योगों में जल के पुनर्चक्रण व पुनः उपयोग के उपाय लागू कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH04-T5",
+     "topic_number": 5,
+     "title": "जल-संभर प्रबंधन",
+     "ncert_sections": "जल-संभर प्रबंधन; रालेगन सिद्धि का प्रकरण अध्ययन",
+     "concepts": [
+      {
+       "concept_tag": "jal-sambhar-prabandhan",
+       "learning_objective": "विद्यार्थी जल-संभर प्रबंधन का अर्थ और इसमें सामुदायिक भागीदारी का महत्त्व समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "jal-sambhar-karyakram",
+       "learning_objective": "विद्यार्थी हरियाली, अटल भूजल योजना, नीरू-मीरू और अरवारी पानी संसद जैसे कार्यक्रमों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "ralegan-siddhi",
+       "learning_objective": "विद्यार्थी रालेगन सिद्धि के अनुभव से जल-संभर विकास की सफलता के कारकों का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH04-T6",
+     "topic_number": 6,
+     "title": "वर्षा जल संग्रहण, राष्ट्रीय जल नीति 2012 और जल क्रांति अभियान",
+     "ncert_sections": "वर्षा जल संग्रहण; राष्ट्रीय जल नीति 2012; जल क्रांति अभियान",
+     "concepts": [
+      {
+       "concept_tag": "varsha-jal-sangrahan",
+       "learning_objective": "विद्यार्थी वर्षा जल संग्रहण की विधियाँ और उसके लाभ समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "rashtriya-jal-niti-2012",
+       "learning_objective": "विद्यार्थी राष्ट्रीय जल नीति 2012 की प्रमुख विशेषताएँ पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "jal-kranti-abhiyan",
+       "learning_objective": "विद्यार्थी जल क्रांति अभियान के उद्देश्य और गतिविधियाँ बता सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "खनिज तथा ऊर्जा संसाधन",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY2-CH05-T1",
+     "topic_number": 1,
+     "title": "खनिजों का अर्थ, प्रकार एवं विशेषताएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "khanij-vargikaran",
+       "learning_objective": "धात्विक-अधात्विक तथा लौह-अलौह खनिजों का वर्गीकरण उदाहरण सहित कर सकें।"
+      },
+      {
+       "concept_tag": "khanij-visheshtayen",
+       "learning_objective": "खनिजों के असमान वितरण, गुणवत्ता-मात्रा के व्युत्क्रम संबंध और समाप्यता को समझ सकें।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH05-T2",
+     "topic_number": 2,
+     "title": "भारत में खनिजों का वितरण एवं खनिज पेटियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "khanij-petiyan",
+       "learning_objective": "उत्तर-पूर्वी पठारी, दक्षिण-पश्चिमी पठारी और उत्तर-पश्चिमी खनिज पेटियों की विशेषताएँ पहचान सकें।"
+      },
+      {
+       "concept_tag": "khanij-sthanik-pratirup",
+       "learning_objective": "भारत में खनिजों के स्थानिक प्रतिरूप (प्रायद्वीपीय पठार, मंगलुरु-कानपुर रेखा) की व्याख्या कर सकें।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH05-T3",
+     "topic_number": 3,
+     "title": "लौह खनिज: लौह अयस्क एवं मैंगनीज",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lauh-ayask",
+       "learning_objective": "भारत में लौह अयस्क के प्रकार और प्रमुख खनन क्षेत्रों को पहचान सकें।"
+      },
+      {
+       "concept_tag": "manganese",
+       "learning_objective": "मैंगनीज के उपयोग और उसके प्रमुख उत्पादक क्षेत्रों को समझ सकें।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH05-T4",
+     "topic_number": 4,
+     "title": "अलौह एवं अधात्विक खनिज: बॉक्साइट, ताँबा, अभ्रक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bauxite-tamba",
+       "learning_objective": "बॉक्साइट और ताँबे के उपयोग तथा वितरण को समझ सकें।"
+      },
+      {
+       "concept_tag": "abhrak",
+       "learning_objective": "अभ्रक के गुण, उपयोग और प्रमुख उत्पादक क्षेत्रों को पहचान सकें।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH05-T5",
+     "topic_number": 5,
+     "title": "परंपरागत ऊर्जा संसाधन: कोयला, पेट्रोलियम, प्राकृतिक गैस",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "koyla",
+       "learning_objective": "गोंडवाना और टर्शियरी कोयले के वितरण को समझ सकें।"
+      },
+      {
+       "concept_tag": "petroleum-gas",
+       "learning_objective": "पेट्रोलियम, शोधनशालाओं के प्रकार और प्राकृतिक गैस के वितरण व उपयोग की व्याख्या कर सकें।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH05-T6",
+     "topic_number": 6,
+     "title": "नाभिकीय ऊर्जा संसाधन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "parmanu-urja",
+       "learning_objective": "यूरेनियम-थोरियम के स्रोत और भारत के प्रमुख परमाणु ऊर्जा केंद्रों को पहचान सकें।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH05-T7",
+     "topic_number": 7,
+     "title": "गैर-परंपरागत ऊर्जा स्रोत",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "saur-pavan-urja",
+       "learning_objective": "सौर और पवन ऊर्जा की संभावनाओं वाले क्षेत्रों और उनकी विशेषताओं को समझ सकें।"
+      },
+      {
+       "concept_tag": "bhutapiya-jaiv-urja",
+       "learning_objective": "ज्वारीय, भूतापीय और जैव ऊर्जा के स्रोतों व लाभों की व्याख्या कर सकें।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH05-T8",
+     "topic_number": 8,
+     "title": "खनिज संसाधनों का संरक्षण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "khanij-sanrakshan",
+       "learning_objective": "सतत विकास हेतु खनिज संसाधनों के संरक्षण के उपायों का मूल्यांकन कर सकें।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY2-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "भारत के संदर्भ में नियोजन और सततपोषणीय विकास",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy206.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY2-CH06-T1",
+     "topic_number": 1,
+     "title": "नियोजन की संकल्पना: खंडीय और प्रादेशिक नियोजन",
+     "ncert_sections": "परिचय",
+     "concepts": [
+      {
+       "concept_tag": "niyojan-ke-upagam",
+       "learning_objective": "खंडीय नियोजन और प्रादेशिक नियोजन के बीच अंतर स्पष्ट कर सकेंगे।"
+      },
+      {
+       "concept_tag": "niti-aayog",
+       "learning_objective": "भारत में केंद्रीकृत से बहुस्तरीय नियोजन तथा नीति आयोग की भूमिका समझ सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH06-T2",
+     "topic_number": 2,
+     "title": "लक्ष्य क्षेत्र नियोजन और पर्वतीय क्षेत्र विकास कार्यक्रम",
+     "ncert_sections": "लक्ष्य क्षेत्र नियोजन; पर्वतीय क्षेत्र विकास कार्यक्रम",
+     "concepts": [
+      {
+       "concept_tag": "lakshya-kshetra-niyojan",
+       "learning_objective": "लक्ष्य क्षेत्र और लक्ष्य समूह उपागमों के उदाहरण पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "parvatiya-kshetra-vikas",
+       "learning_objective": "पर्वतीय क्षेत्र विकास कार्यक्रम के क्षेत्र और उद्देश्य बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH06-T3",
+     "topic_number": 3,
+     "title": "सूखा संभावी क्षेत्र कार्यक्रम",
+     "ncert_sections": "सूखा संभावी क्षेत्र कार्यक्रम",
+     "concepts": [
+      {
+       "concept_tag": "sukha-sambhavi-karyakram",
+       "learning_objective": "सूखा संभावी क्षेत्र कार्यक्रम के उद्देश्य और बदलते बल को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "sukha-sambhavi-kshetra",
+       "learning_objective": "भारत में सूखा संभावी क्षेत्रों का निर्धारण और वितरण पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH06-T4",
+     "topic_number": 4,
+     "title": "भरमौर क्षेत्र में समन्वित जनजातीय विकास परियोजना",
+     "ncert_sections": "केस अध्ययन: भरमौर",
+     "concepts": [
+      {
+       "concept_tag": "bharmaur-bhugol",
+       "learning_objective": "भरमौर क्षेत्र की स्थिति, भू-आकृति और गद्दी समुदाय की विशेषताएँ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "bharmaur-vikas-prabhav",
+       "learning_objective": "समन्वित जनजातीय विकास परियोजना के सामाजिक-आर्थिक प्रभावों का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH06-T5",
+     "topic_number": 5,
+     "title": "सततपोषणीय विकास की संकल्पना",
+     "ncert_sections": "सततपोषणीय विकास",
+     "concepts": [
+      {
+       "concept_tag": "vikas-ki-badalti-sankalpana",
+       "learning_objective": "विकास की संकल्पना के आर्थिक वृद्धि से कल्याण तक के विकास को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "brundtland-report",
+       "learning_objective": "ब्रंटलैंड प्रतिवेदन और सततपोषणीय विकास की परिभाषा बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH06-T6",
+     "topic_number": 6,
+     "title": "इंदिरा गांधी नहर कमान क्षेत्र",
+     "ncert_sections": "केस अध्ययन: इंदिरा गांधी नहर कमान क्षेत्र",
+     "concepts": [
+      {
+       "concept_tag": "indira-gandhi-nahar",
+       "learning_objective": "इंदिरा गांधी नहर के उद्गम, विस्तार और चरणों का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "sinchai-ke-prabhav",
+       "learning_objective": "नहर सिंचाई के सकारात्मक और नकारात्मक प्रभावों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH06-T7",
+     "topic_number": 7,
+     "title": "सततपोषणीय विकास के प्रोत्साहन हेतु उपाय",
+     "ncert_sections": "सततपोषणीय विकास के प्रोत्साहन हेतु उपाय",
+     "concepts": [
+      {
+       "concept_tag": "paristhitik-santulan-upay",
+       "learning_objective": "कमान क्षेत्र में पारिस्थितिक संतुलन बहाल करने वाले उपाय बता सकेंगे।"
+      },
+      {
+       "concept_tag": "samajik-arthik-satat",
+       "learning_objective": "सामाजिक और आर्थिक सततपोषणीयता हेतु सुझाए गए उपायों का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY2-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "परिवहन तथा संचार",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy207.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY2-CH07-T1",
+     "topic_number": 1,
+     "title": "स्थल परिवहन और सड़क परिवहन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sadak-parivahan-mahattva",
+       "learning_objective": "भारत में यात्री और माल यातायात में सड़कों की भूमिका तथा कम दूरी के लिए उनकी उपयुक्तता को समझना।"
+      },
+      {
+       "concept_tag": "sadak-vikas-itihas",
+       "learning_objective": "शेरशाह सूरी के शाही मार्ग, नागपुर योजना और बीस वर्षीय सड़क योजना के माध्यम से सड़क विकास के इतिहास को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH07-T2",
+     "topic_number": 2,
+     "title": "राष्ट्रीय महामार्ग और विकास परियोजनाएँ",
+     "ncert_sections": "सारणी 7.1",
+     "concepts": [
+      {
+       "concept_tag": "rashtriya-mahamarg",
+       "learning_objective": "राष्ट्रीय महामार्गों के निर्माण, रखरखाव और यातायात में उनके योगदान को समझना।"
+      },
+      {
+       "concept_tag": "mahamarg-pariyojanaen",
+       "learning_objective": "स्वर्णिम चतुर्भुज, उत्तर-दक्षिण और पूर्व-पश्चिम गलियारों तथा भारतमाला परियोजना की विशेषताओं में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH07-T3",
+     "topic_number": 3,
+     "title": "राज्य महामार्ग, जिला, ग्रामीण तथा अन्य सड़कें",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rajya-jila-gramin-sadak",
+       "learning_objective": "राज्य महामार्गों, जिला सड़कों और ग्रामीण सड़कों की भूमिका तथा ग्रामीण सड़क घनत्व में क्षेत्रीय भिन्नता समझाना।"
+      },
+      {
+       "concept_tag": "seema-sadak-sangathan",
+       "learning_objective": "सीमा सड़क संगठन के उद्देश्यों, कार्यों और अटल सुरंग जैसी उपलब्धियों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH07-T4",
+     "topic_number": 4,
+     "title": "रेल परिवहन",
+     "ncert_sections": "सारणी 7.2",
+     "concepts": [
+      {
+       "concept_tag": "rail-vikas-kshetra",
+       "learning_objective": "भारतीय रेल के आरंभ, क्षेत्रीय विभाजन और जाल के वितरण को समझना।"
+      },
+      {
+       "concept_tag": "rail-gej",
+       "learning_objective": "बड़ी, मीटर और छोटी लाइन की पटरियों की चौड़ाई और उपयोग में अंतर करना।"
+      },
+      {
+       "concept_tag": "konkan-railway",
+       "learning_objective": "कोंकण रेलवे की विशेषताओं और उसके महत्त्व का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH07-T5",
+     "topic_number": 5,
+     "title": "जल परिवहन",
+     "ncert_sections": "सारणी 7.3",
+     "concepts": [
+      {
+       "concept_tag": "antardeshiya-jalmarg",
+       "learning_objective": "राष्ट्रीय जलमार्गों, अंतर्देशीय जलमार्ग प्राधिकरण और अंतर्देशीय जल परिवहन की समस्याओं को समझना।"
+      },
+      {
+       "concept_tag": "mahasagariya-marg",
+       "learning_objective": "भारत के विदेशी व्यापार में महासागरीय मार्गों और पत्तनों की भूमिका को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH07-T6",
+     "topic_number": 6,
+     "title": "वायु परिवहन तथा तेल और गैस पाइपलाइन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vayu-parivahan",
+       "learning_objective": "भारत में वायु परिवहन के विकास, उड़ान योजना और पवन हंस की भूमिका को पहचानना।"
+      },
+      {
+       "concept_tag": "pipeline-parivahan",
+       "learning_objective": "तेल और गैस पाइपलाइनों के लाभ तथा भारत की प्रमुख पाइपलाइनों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH07-T7",
+     "topic_number": 7,
+     "title": "संचार तंत्र",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vyaktigat-jansanchar",
+       "learning_objective": "व्यक्तिगत और जनसंचार तंत्र में अंतर करना तथा रेडियो और दूरदर्शन के विकास को जानना।"
+      },
+      {
+       "concept_tag": "upgrah-sanchar",
+       "learning_objective": "इन्सैट और आई.आर.एस. उपग्रह तंत्रों के उद्देश्य और उपयोग का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY2-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "अंतर्राष्ट्रीय व्यापार",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy208.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY2-CH08-T1",
+     "topic_number": 1,
+     "title": "भारत के अंतर्राष्ट्रीय व्यापार का बदलता प्रारूप",
+     "ncert_sections": "सारणी 8.1",
+     "concepts": [
+      {
+       "concept_tag": "vyapar-matra-vriddhi",
+       "learning_objective": "भारत के विदेशी व्यापार की मात्रा में वृद्धि और उसके कारणों को समझना।"
+      },
+      {
+       "concept_tag": "vyapar-santulan",
+       "learning_objective": "निर्यात और आयात के मूल्यों से व्यापार संतुलन की गणना और व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH08-T2",
+     "topic_number": 2,
+     "title": "भारत के निर्यात संघटन का बदलता प्रारूप",
+     "ncert_sections": "सारणी 8.2, 8.3",
+     "concepts": [
+      {
+       "concept_tag": "niryat-sanghatan",
+       "learning_objective": "विभिन्न वस्तु वर्गों के निर्यात में हिस्से के परिवर्तनों की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "paramparik-niryat",
+       "learning_objective": "पारंपरिक निर्यात वस्तुओं में गिरावट और नई वस्तुओं में वृद्धि के कारण समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH08-T3",
+     "topic_number": 3,
+     "title": "भारत के आयात संघटन का बदलता प्रारूप",
+     "ncert_sections": "सारणी 8.4, 8.5",
+     "concepts": [
+      {
+       "concept_tag": "aayat-itihas",
+       "learning_objective": "1950 से अब तक आयात की प्रमुख वस्तुओं में आए परिवर्तनों को पहचानना।"
+      },
+      {
+       "concept_tag": "aayat-sanghatan",
+       "learning_objective": "आयात सारणियों के आधार पर ईंधन, पूँजीगत वस्तुओं आदि के हिस्से का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH08-T4",
+     "topic_number": 4,
+     "title": "व्यापार की दिशा और व्यापार के मार्ग",
+     "ncert_sections": "सारणी 8.6",
+     "concepts": [
+      {
+       "concept_tag": "vyapar-disha",
+       "learning_objective": "क्षेत्रवार आयात आँकड़ों से भारत के प्रमुख व्यापारिक क्षेत्रों की पहचान करना।"
+      },
+      {
+       "concept_tag": "vyapar-marg-aur-niti",
+       "learning_objective": "विदेशी व्यापार के मार्गों और व्यापार बढ़ाने के उपायों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH08-T5",
+     "topic_number": 5,
+     "title": "अंतर्राष्ट्रीय व्यापार के प्रवेश द्वार के रूप में समुद्री पत्तन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pattan-itihas",
+       "learning_objective": "औपनिवेशिक काल और विभाजन के भारतीय पत्तनों पर प्रभाव को समझना।"
+      },
+      {
+       "concept_tag": "pattan-prakar",
+       "learning_objective": "बड़े और छोटे पत्तनों तथा उनके प्रशासन में अंतर पहचानना।"
+      },
+      {
+       "concept_tag": "prishthpradesh",
+       "learning_objective": "पृष्ठप्रदेश का अर्थ और उसकी सीमा निर्धारण की कठिनाई समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH08-T6",
+     "topic_number": 6,
+     "title": "पश्चिमी तट के प्रमुख पत्तन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pashchim-tat-pattan",
+       "learning_objective": "पश्चिमी तट के प्रमुख पत्तनों की स्थिति और विशेषताएँ पहचानना।"
+      },
+      {
+       "concept_tag": "pashchim-pattan-prishthpradesh",
+       "learning_objective": "पश्चिमी तट के पत्तनों के पृष्ठप्रदेश और उनके विकास के कारणों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH08-T7",
+     "topic_number": 7,
+     "title": "पूर्वी तट के प्रमुख पत्तन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "purvi-tat-pattan",
+       "learning_objective": "पूर्वी तट के प्रमुख पत्तनों की स्थिति और विशेषताएँ पहचानना।"
+      },
+      {
+       "concept_tag": "purvi-pattan-samasyaen",
+       "learning_objective": "पूर्वी तट के पत्तनों की समस्याओं और उनके समाधान हेतु विकसित पत्तनों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH08-T8",
+     "topic_number": 8,
+     "title": "वायुपत्तन और अंतर्राष्ट्रीय व्यापार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vayu-parivahan-visheshtaen",
+       "learning_objective": "अंतर्राष्ट्रीय व्यापार में वायु परिवहन के लाभ और सीमाएँ समझना।"
+      },
+      {
+       "concept_tag": "pramukh-vayupattan",
+       "learning_objective": "भारत के प्रमुख वायुपत्तनों और उड़ान योजना की जानकारी देना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "LHGY2-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "भौगोलिक परिप्रेक्ष्य में चयनित कुछ मुद्दे एवं समस्याएँ",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhgy209.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHGY2-CH09-T1",
+     "topic_number": 1,
+     "title": "पर्यावरण प्रदूषण एवं जल प्रदूषण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "paryavaran-pradushan-ke-prakar",
+       "learning_objective": "प्रदूषण का अर्थ और माध्यम के आधार पर उसके प्रकार बताना।"
+      },
+      {
+       "concept_tag": "jal-pradushan",
+       "learning_objective": "जल प्रदूषण के स्रोतों, प्रभावों और नमामि गंगे कार्यक्रम को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH09-T2",
+     "topic_number": 2,
+     "title": "वायु प्रदूषण एवं ध्वनि प्रदूषण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vayu-pradushan",
+       "learning_objective": "वायु प्रदूषण के स्रोतों, नगरीय धूम्र-कोहरे और अम्ल वर्षा को समझाना।"
+      },
+      {
+       "concept_tag": "dhvani-pradushan",
+       "learning_objective": "ध्वनि प्रदूषण के स्रोतों, मापन और उसकी स्थान-विशिष्ट प्रकृति का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH09-T3",
+     "topic_number": 3,
+     "title": "नगरीय अपशिष्ट निपटान",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "thos-apshisht",
+       "learning_objective": "ठोस अपशिष्ट के स्रोतों, निपटान और स्वास्थ्य पर प्रभावों को बताना।"
+      },
+      {
+       "concept_tag": "daurala-adhyayan",
+       "learning_objective": "दौराला के उदाहरण से 'प्रदूषक भुगतान करे' सिद्धांत और सहभागी पुनर्स्थापन का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH09-T4",
+     "topic_number": 4,
+     "title": "ग्रामीण-नगरीय प्रवास",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pravas-ke-karak",
+       "learning_objective": "ग्रामीण से नगरीय प्रवास के प्रतिकर्ष और अपकर्ष कारकों की पहचान करना।"
+      },
+      {
+       "concept_tag": "pravas-ke-parinam",
+       "learning_objective": "प्रवासी परिवारों पर प्रेषित धन और पुरुष-प्रधान प्रवास के परिणामों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH09-T5",
+     "topic_number": 5,
+     "title": "गंदी बस्तियों की समस्याएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nagariya-vibhedan",
+       "learning_objective": "भारतीय नगरों के आंतरिक सामाजिक-आर्थिक विभेदन को समझाना।"
+      },
+      {
+       "concept_tag": "gandi-basti-ki-samasyaen",
+       "learning_objective": "गंदी बस्तियों की दशाओं और वहाँ के निवासियों की समस्याओं का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHGY2-CH09-T6",
+     "topic_number": 6,
+     "title": "भूमि निम्नीकरण एवं झाबुआ का उदाहरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bhumi-nimnikaran",
+       "learning_objective": "भूमि निम्नीकरण के अर्थ और प्राकृतिक व मानवजनित बंजर भूमि में अंतर करना।"
+      },
+      {
+       "concept_tag": "jalsambhar-prabandhan",
+       "learning_objective": "झाबुआ में जलसंभर प्रबंधन और सामुदायिक सहभागिता की भूमिका का मूल्यांकन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

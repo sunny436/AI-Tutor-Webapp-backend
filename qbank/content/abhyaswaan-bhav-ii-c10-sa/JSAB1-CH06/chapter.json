@@ -1,0 +1,124 @@
+{
+ "chapter_id": "JSAB1-CH06",
+ "title": "सन्धिः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JSAB1-CH06-T1",
+   "topic_number": 1,
+   "title": "स्वरसन्धिः – दीर्घः, गुणः, वृद्धिः, यण् (पुनरावृत्तिः)",
+   "ncert_sections": "स्वरसन्धिः (आरम्भिकः संवादः, अनुच्छेदाभ्यासः)",
+   "concepts": [
+    {
+     "concept_tag": "swar-sandhi-deergha-guna",
+     "learning_objective": "छात्रः दीर्घगुणसन्ध्योः नियमान् प्रयुज्य सन्धिं सन्धिविच्छेदं च कर्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "swar-sandhi-vriddhi-yan",
+     "learning_objective": "छात्रः वृद्धियण्सन्ध्योः उदाहरणानि अभिज्ञाय तेषां सन्धिरूपं लेखितुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH06-T2",
+   "topic_number": 2,
+   "title": "अयादिसन्धिः (एचोऽयवायावः)",
+   "ncert_sections": "स्वरसन्धिः – अयादिचतुष्टयम्",
+   "concepts": [
+    {
+     "concept_tag": "ayadi-sandhi",
+     "learning_objective": "छात्रः ए, ऐ, ओ, औ इत्येषां स्थाने अय्, आय्, अव्, आव् आदेशान् प्रयोक्तुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH06-T3",
+   "topic_number": 3,
+   "title": "पूर्वरूपसन्धिः स्वरसन्धेः भेदाः च",
+   "ncert_sections": "स्वरसन्धिः – पूर्वरूपम्, अभ्यासः",
+   "concepts": [
+    {
+     "concept_tag": "purvarupa-sandhi",
+     "learning_objective": "छात्रः पदान्तात् एकार-ओकारात् परे अकारे पूर्वरूपसन्धिं अवग्रहचिह्नेन सह कर्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "swar-sandhi-bheda",
+     "learning_objective": "छात्रः स्वरसन्धेः दशमकक्षायां पठितान् षड् भेदान् अन्यभेदान् च जानाति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH06-T4",
+   "topic_number": 4,
+   "title": "व्यञ्जनसन्धिः",
+   "ncert_sections": "व्यञ्जनसन्धिः (क-छ)",
+   "concepts": [
+    {
+     "concept_tag": "vyanjan-jashtva-chartva",
+     "learning_objective": "छात्रः वर्गस्य प्रथमवर्णस्य तृतीयवर्णे तृतीयवर्णस्य च प्रथमवर्णे परिवर्तनं प्रयोक्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "vyanjan-shchutva-shtutva",
+     "learning_objective": "छात्रः सकार-तवर्गयोः शकार-चवर्गेण षकार-टवर्गेण च योगे परिवर्तनं ज्ञातुं शक्नोति।"
+    },
+    {
+     "concept_tag": "vyanjan-anusvara-parasavarna",
+     "learning_objective": "छात्रः पदान्तमकारस्य अनुस्वारे परवर्गपञ्चमवर्णे च परिवर्तनं प्रयोक्तुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH06-T5",
+   "topic_number": 5,
+   "title": "विसर्गसन्धिः",
+   "ncert_sections": "विसर्गसन्धिः (क-घ)",
+   "concepts": [
+    {
+     "concept_tag": "visarga-satva-shatva",
+     "learning_objective": "छात्रः विसर्गस्य स्, श्, ष् इत्येषु परिवर्तनं परवर्णानुसारं कर्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "visarga-utva-rutva",
+     "learning_objective": "छात्रः विसर्गस्य ओकारे रेफे च परिवर्तनस्य नियमान् भेदयितुं शक्नोति।"
+    },
+    {
+     "concept_tag": "visarga-lopa",
+     "learning_objective": "छात्रः विसर्गलोपस्य उदाहरणानि अभिज्ञातुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH06-T6",
+   "topic_number": 6,
+   "title": "अनुनासिकसन्धिः",
+   "ncert_sections": "अनुनासिकसन्धिः",
+   "concepts": [
+    {
+     "concept_tag": "anunasika-sandhi",
+     "learning_objective": "छात्रः अनुनासिकवर्णे परे पूर्वपदान्तवर्णस्य स्ववर्गपञ्चमवर्णे परिवर्तनं कर्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "anunasika-varna",
+     "learning_objective": "छात्रः ङ्, ञ्, ण्, न्, म् इति अनुनासिकवर्णान् अभिज्ञातुं शक्नोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH06-T7",
+   "topic_number": 7,
+   "title": "तुक्-आगमसन्धिः",
+   "ncert_sections": "तुक् आगमसन्धिः",
+   "concepts": [
+    {
+     "concept_tag": "tuk-agama-nitya",
+     "learning_objective": "छात्रः ह्रस्वस्वरात् परे छकारे च् वर्णस्य आगमं कर्तुं शक्नोति।"
+    },
+    {
+     "concept_tag": "tuk-agama-vikalpa",
+     "learning_objective": "छात्रः दीर्घस्वरात् परे छकारे च् आगमः विकल्पेन भवति इति ज्ञातुं शक्नोति।"
+    }
+   ]
+  }
+ ]
+}

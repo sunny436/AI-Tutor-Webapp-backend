@@ -1,0 +1,72 @@
+{
+ "chapter_id": "JHMH1-CH06",
+ "title": "त्रिभुज",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "JHMH1-CH06-T1",
+   "topic_number": 1,
+   "title": "समरूप आकृतियाँ और बहुभुजों की समरूपता",
+   "ncert_sections": "6.1, 6.2",
+   "concepts": [
+    {
+     "concept_tag": "samroop-aur-sarvangsam-akritiyan",
+     "learning_objective": "समरूप और सर्वांगसम आकृतियों में अंतर पहचानना तथा सदैव समरूप रहने वाली आकृतियों को पहचानना।"
+    },
+    {
+     "concept_tag": "bahubhujon-ki-samroopta-ki-shartein",
+     "learning_objective": "दो बहुभुजों के समरूप होने की दोनों शर्तों (संगत कोण बराबर और संगत भुजाएँ समानुपाती) का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH06-T2",
+   "topic_number": 2,
+   "title": "त्रिभुजों की समरूपता और आधारभूत समानुपातिकता प्रमेय",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "aadharbhoot-samanupatikta-pramey",
+     "learning_objective": "आधारभूत समानुपातिकता प्रमेय (थेल्स प्रमेय) का कथन समझकर उससे अज्ञात लंबाइयाँ ज्ञात करना।"
+    },
+    {
+     "concept_tag": "aadharbhoot-samanupatikta-pramey-ka-vilom",
+     "learning_objective": "आधारभूत समानुपातिकता प्रमेय के विलोम से यह जाँचना कि कोई रेखा त्रिभुज की तीसरी भुजा के समांतर है या नहीं।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH06-T3",
+   "topic_number": 3,
+   "title": "समरूपता की कसौटियाँ: कोण-कोण-कोण और भुजा-भुजा-भुजा",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "kon-kon-kon-samroopta-kasauti",
+     "learning_objective": "कोण-कोण-कोण तथा कोण-कोण कसौटी से दो त्रिभुजों की समरूपता स्थापित करना।"
+    },
+    {
+     "concept_tag": "bhuja-bhuja-bhuja-samroopta-kasauti",
+     "learning_objective": "भुजा-भुजा-भुजा कसौटी से संगत भुजाओं के अनुपात द्वारा समरूपता पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHMH1-CH06-T4",
+   "topic_number": 4,
+   "title": "भुजा-कोण-भुजा कसौटी और समरूपता के अनुप्रयोग",
+   "ncert_sections": "6.4",
+   "concepts": [
+    {
+     "concept_tag": "bhuja-kon-bhuja-samroopta-kasauti",
+     "learning_objective": "भुजा-कोण-भुजा कसौटी की शर्तें पहचानकर उसका प्रयोग करना।"
+    },
+    {
+     "concept_tag": "samroopta-ke-anuprayog",
+     "learning_objective": "समरूप त्रिभुजों से ऊँचाइयाँ और छाया की लंबाइयाँ अप्रत्यक्ष रूप से ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,871 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "introductory-macroeconomics-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "economics",
+  "language": "english",
+  "title": "Introductory Macroeconomics",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "leec1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEEC1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Introduction",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leec101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEEC1-CH01-T1",
+     "topic_number": 1,
+     "title": "How macroeconomics differs from microeconomics",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "aggregate-variables-representative-good",
+       "learning_objective": "Explain why macroeconomics can study the whole economy through aggregate variables and a single representative good."
+      },
+      {
+       "concept_tag": "micro-vs-macro-distinction",
+       "learning_objective": "Distinguish microeconomic questions and agents from macroeconomic ones."
+      },
+      {
+       "concept_tag": "sectoral-disaggregation",
+       "learning_objective": "Explain why macroeconomics sometimes divides the economy into a few distinct goods or sectors."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH01-T2",
+     "topic_number": 2,
+     "title": "Economic agents and why macroeconomics is needed",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "economic-agents",
+       "learning_objective": "Define economic agents and identify consumers, producers and institutions as examples."
+      },
+      {
+       "concept_tag": "limits-of-self-interest-markets",
+       "learning_objective": "State the reasons economists had to look beyond Adam Smith's self-interest view of markets."
+      },
+      {
+       "concept_tag": "macroeconomic-decision-makers",
+       "learning_objective": "Identify macroeconomic decision-makers such as the State, RBI and SEBI and the public goals they pursue."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH01-T3",
+     "topic_number": 3,
+     "title": "Emergence of macroeconomics",
+     "ncert_sections": "1.1",
+     "concepts": [
+      {
+       "concept_tag": "classical-tradition",
+       "learning_objective": "Describe the classical view of full employment that dominated economics before Keynes."
+      },
+      {
+       "concept_tag": "great-depression",
+       "learning_objective": "Describe the Great Depression of 1929 and calculate the unemployment rate from its definition."
+      },
+      {
+       "concept_tag": "keynes-general-theory",
+       "learning_objective": "Explain how Keynes's General Theory (1936) gave rise to macroeconomics as a separate branch."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH01-T4",
+     "topic_number": 4,
+     "title": "The capitalist economy and its firms",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "features-of-capitalist-economy",
+       "learning_objective": "State the features of a capitalist economy and recognise economies to which they do not apply."
+      },
+      {
+       "concept_tag": "factors-and-factor-incomes",
+       "learning_objective": "Match the factors of production with rent, interest, wages and profit."
+      },
+      {
+       "concept_tag": "investment-expenditure",
+       "learning_objective": "Identify investment expenditure as spending that raises productive capacity."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH01-T5",
+     "topic_number": 5,
+     "title": "Four sectors of the economy",
+     "ncert_sections": "1.2",
+     "concepts": [
+      {
+       "concept_tag": "household-sector",
+       "learning_objective": "Define a household and explain how households earn incomes and support firms' markets."
+      },
+      {
+       "concept_tag": "government-sector",
+       "learning_objective": "Describe the economic functions of the government sector."
+      },
+      {
+       "concept_tag": "external-sector",
+       "learning_objective": "Explain exports, imports and capital flows as links with the external sector."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEEC1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "National Income Accounting",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leec102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEEC1-CH02-T1",
+     "topic_number": 1,
+     "title": "Some basic concepts of macroeconomics",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "final-and-intermediate-goods",
+       "learning_objective": "Distinguish final goods (consumption and capital goods, consumer durables) from intermediate goods by their economic use."
+      },
+      {
+       "concept_tag": "stocks-and-flows",
+       "learning_objective": "Distinguish stock variables, defined at a point of time, from flow variables, defined over a period of time."
+      },
+      {
+       "concept_tag": "gross-net-investment-depreciation",
+       "learning_objective": "Relate gross investment, depreciation and net investment, and explain the time trade-off between capital and consumer goods."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH02-T2",
+     "topic_number": 2,
+     "title": "Circular flow of income",
+     "ncert_sections": "2.2",
+     "concepts": [
+      {
+       "concept_tag": "factor-payments",
+       "learning_objective": "Identify the four factors of production and their remunerations: wage, interest, profit and rent."
+      },
+      {
+       "concept_tag": "circular-flow-of-income",
+       "learning_objective": "Explain the circular flow of income and goods between households and firms in a simple economy."
+      },
+      {
+       "concept_tag": "three-methods-equivalence",
+       "learning_objective": "Explain why the product, expenditure and income methods measure the same aggregate at different points of the circular flow."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH02-T3",
+     "topic_number": 3,
+     "title": "The product or value added method",
+     "ncert_sections": "2.2.1",
+     "concepts": [
+      {
+       "concept_tag": "value-added-double-counting",
+       "learning_objective": "Calculate value added and explain how deducting intermediate goods avoids double counting."
+      },
+      {
+       "concept_tag": "gross-and-net-value-added",
+       "learning_objective": "Calculate gross and net value added, using change in inventories and depreciation."
+      },
+      {
+       "concept_tag": "inventories",
+       "learning_objective": "Distinguish inventory (a stock) from change in inventories (a flow), and planned from unplanned changes."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH02-T4",
+     "topic_number": 4,
+     "title": "Expenditure method and income method",
+     "ncert_sections": "2.2.2, 2.2.3",
+     "concepts": [
+      {
+       "concept_tag": "expenditure-method",
+       "learning_objective": "Compute GDP as C + I + G + X - M and explain the treatment of intermediate goods and imports."
+      },
+      {
+       "concept_tag": "income-method",
+       "learning_objective": "Compute GDP as the sum of wages, profits, interest and rent, and verify it against value added."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH02-T5",
+     "topic_number": 5,
+     "title": "Factor cost, basic prices and market prices",
+     "ncert_sections": "2.2.4",
+     "concepts": [
+      {
+       "concept_tag": "production-and-product-taxes",
+       "learning_objective": "Distinguish production taxes and subsidies from product taxes and subsidies with examples."
+      },
+      {
+       "concept_tag": "price-bases-conversion",
+       "learning_objective": "Convert GVA between factor cost, basic prices and market prices using net production and net product taxes."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH02-T6",
+     "topic_number": 6,
+     "title": "Some macroeconomic identities",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "gnp-nnp-national-income",
+       "learning_objective": "Derive GNP, NNP at market prices and National Income (NNP at factor cost) from GDP."
+      },
+      {
+       "concept_tag": "personal-and-disposable-income",
+       "learning_objective": "Derive Personal Income and Personal Disposable Income from National Income."
+      },
+      {
+       "concept_tag": "national-disposable-and-private-income",
+       "learning_objective": "Calculate National Disposable Income and identify the components of Private Income."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH02-T7",
+     "topic_number": 7,
+     "title": "Nominal and real GDP and price indices",
+     "ncert_sections": "2.4",
+     "concepts": [
+      {
+       "concept_tag": "nominal-and-real-gdp",
+       "learning_objective": "Distinguish nominal GDP at current prices from real GDP at constant base-year prices."
+      },
+      {
+       "concept_tag": "gdp-deflator",
+       "learning_objective": "Calculate the GDP (or GNP) deflator and interpret what it says about the price level."
+      },
+      {
+       "concept_tag": "cpi-and-wpi",
+       "learning_objective": "Calculate a Consumer Price Index and explain how CPI and WPI differ from the GDP deflator."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH02-T8",
+     "topic_number": 8,
+     "title": "GDP and welfare",
+     "ncert_sections": "2.5",
+     "concepts": [
+      {
+       "concept_tag": "gdp-distribution-and-welfare",
+       "learning_objective": "Evaluate why a rise in GDP may not raise welfare when its distribution is unequal."
+      },
+      {
+       "concept_tag": "non-monetary-exchanges",
+       "learning_objective": "Explain how non-monetary exchanges lead to underestimation of GDP."
+      },
+      {
+       "concept_tag": "externalities",
+       "learning_objective": "Explain how negative and positive externalities make GDP misstate welfare."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEEC1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Money and Banking",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leec103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEEC1-CH03-T1",
+     "topic_number": 1,
+     "title": "Barter exchange and the functions of money",
+     "ncert_sections": "Introduction, 3.1",
+     "concepts": [
+      {
+       "concept_tag": "barter-double-coincidence",
+       "learning_objective": "Explain barter exchange and why the double coincidence of wants makes it costly in a large economy."
+      },
+      {
+       "concept_tag": "functions-of-money",
+       "learning_objective": "Describe money as a medium of exchange and a unit of account and use it to work out relative prices."
+      },
+      {
+       "concept_tag": "store-of-value",
+       "learning_objective": "Explain money as a store of value and how a rising price level erodes its purchasing power."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH03-T2",
+     "topic_number": 2,
+     "title": "Demand for money: income, interest and the transaction motive",
+     "ncert_sections": "3.2.1, Box 3.1",
+     "concepts": [
+      {
+       "concept_tag": "money-demand-determinants",
+       "learning_objective": "State how the demand for money depends on income and on the rate of interest."
+      },
+      {
+       "concept_tag": "transaction-motive",
+       "learning_objective": "Calculate and interpret the transaction demand for money using MdT = kT and MdT = kPY."
+      },
+      {
+       "concept_tag": "velocity-of-circulation",
+       "learning_objective": "Calculate the velocity of circulation of money and relate it to k."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH03-T3",
+     "topic_number": 3,
+     "title": "Speculative demand for money, bond prices and the liquidity trap",
+     "ncert_sections": "Box 3.1",
+     "concepts": [
+      {
+       "concept_tag": "bond-price-interest-rate",
+       "learning_objective": "Explain, using present value, why the price of a bond is inversely related to the market rate of interest."
+      },
+      {
+       "concept_tag": "speculative-demand",
+       "learning_objective": "Explain why the speculative demand for money is inversely related to the rate of interest."
+      },
+      {
+       "concept_tag": "liquidity-trap",
+       "learning_objective": "Describe the liquidity trap and why extra money then fails to lower the rate of interest."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH03-T4",
+     "topic_number": 4,
+     "title": "Central bank and commercial banks",
+     "ncert_sections": "3.2.2",
+     "concepts": [
+      {
+       "concept_tag": "central-bank-functions",
+       "learning_objective": "Identify the functions of the central bank and the meaning of high-powered money."
+      },
+      {
+       "concept_tag": "commercial-bank-intermediation",
+       "learning_objective": "Explain how commercial banks accept deposits, lend part of them and earn the spread, as in Lala's story."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH03-T5",
+     "topic_number": 5,
+     "title": "Money creation by the banking system and the money multiplier",
+     "ncert_sections": "3.3, 3.3.1, 3.3.2",
+     "concepts": [
+      {
+       "concept_tag": "bank-balance-sheet",
+       "learning_objective": "Identify the assets, liabilities and net worth of a bank's balance sheet."
+      },
+      {
+       "concept_tag": "cash-reserve-ratio",
+       "learning_objective": "Explain how the Cash Reserve Ratio limits the loans a bank can make in each round."
+      },
+      {
+       "concept_tag": "money-multiplier",
+       "learning_objective": "Calculate the money multiplier and the deposits and loans created from a given amount of reserves."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH03-T6",
+     "topic_number": 6,
+     "title": "Policy tools to control money supply",
+     "ncert_sections": "3.4",
+     "concepts": [
+      {
+       "concept_tag": "lender-of-last-resort",
+       "learning_objective": "Explain why the central bank is called the lender of last resort."
+      },
+      {
+       "concept_tag": "quantitative-qualitative-tools",
+       "learning_objective": "Distinguish quantitative and qualitative tools of monetary control and the effect of the bank rate."
+      },
+      {
+       "concept_tag": "open-market-operations",
+       "learning_objective": "Explain outright open market operations, repo and reverse repo and their effect on money supply."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH03-T7",
+     "topic_number": 7,
+     "title": "Measures of money supply, fiat money and demonetisation",
+     "ncert_sections": "The supply of money: various measures; Box 3.2",
+     "concepts": [
+      {
+       "concept_tag": "fiat-money-legal-tender",
+       "learning_objective": "Define fiat money and legal tender and explain why demand deposits are not legal tender."
+      },
+      {
+       "concept_tag": "measures-of-money-supply",
+       "learning_objective": "State and calculate M1, M2, M3 and M4 and rank them by liquidity."
+      },
+      {
+       "concept_tag": "demonetisation",
+       "learning_objective": "Evaluate the effects of the 2016 demonetisation on the economy and the banking system."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEEC1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Determination of Income and Employment",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leec104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEEC1-CH04-T1",
+     "topic_number": 1,
+     "title": "Ex ante and ex post measures",
+     "ncert_sections": "4.1",
+     "concepts": [
+      {
+       "concept_tag": "ex-ante-ex-post",
+       "learning_objective": "Distinguish planned (ex ante) values of macroeconomic variables from their actual (ex post) values."
+      },
+      {
+       "concept_tag": "planned-vs-actual-investment",
+       "learning_objective": "Calculate ex post investment from planned investment and unplanned changes in inventories."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH04-T2",
+     "topic_number": 2,
+     "title": "Consumption function, MPC and MPS",
+     "ncert_sections": "4.1.1",
+     "concepts": [
+      {
+       "concept_tag": "consumption-function",
+       "learning_objective": "Explain the consumption function C = C-bar + cY with its autonomous and induced parts."
+      },
+      {
+       "concept_tag": "mpc-mps-relation",
+       "learning_objective": "State and apply the relation MPC + MPS = 1 and the possible values of MPC."
+      },
+      {
+       "concept_tag": "average-propensities",
+       "learning_objective": "Compute the average propensities to consume and to save at a given income."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH04-T3",
+     "topic_number": 3,
+     "title": "Investment and aggregate demand in the two-sector model",
+     "ncert_sections": "4.1.2, 4.2",
+     "concepts": [
+      {
+       "concept_tag": "investment-meaning",
+       "learning_objective": "Define investment and explain why it is treated as autonomous in the simple model."
+      },
+      {
+       "concept_tag": "aggregate-demand-components",
+       "learning_objective": "Express ex ante aggregate demand as the sum of consumption, investment and, with government, G - cT."
+      },
+      {
+       "concept_tag": "unplanned-inventory-change",
+       "learning_objective": "Explain how unplanned inventory changes reconcile planned output with planned demand."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH04-T4",
+     "topic_number": 4,
+     "title": "Equilibrium income with a fixed price level",
+     "ncert_sections": "4.3, 4.3.1",
+     "concepts": [
+      {
+       "concept_tag": "fixed-price-assumption",
+       "learning_objective": "Explain why the price level is assumed fixed at the first stage of macroeconomic analysis."
+      },
+      {
+       "concept_tag": "graphical-equilibrium",
+       "learning_objective": "Interpret the 45-degree line diagram to locate equilibrium and disequilibrium positions."
+      },
+      {
+       "concept_tag": "algebraic-equilibrium",
+       "learning_objective": "Calculate equilibrium income using Y = (C-bar + I)/(1 - c) and test whether an economy is in equilibrium."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH04-T5",
+     "topic_number": 5,
+     "title": "Autonomous changes and the multiplier",
+     "ncert_sections": "4.3.2, 4.3.3",
+     "concepts": [
+      {
+       "concept_tag": "autonomous-expenditure-change",
+       "learning_objective": "Explain how a change in autonomous expenditure shifts the aggregate demand line."
+      },
+      {
+       "concept_tag": "investment-multiplier",
+       "learning_objective": "Calculate the investment multiplier 1/(1 - c) and the resulting change in equilibrium income."
+      },
+      {
+       "concept_tag": "multiplier-rounds",
+       "learning_objective": "Trace the round-by-round working of the multiplier process."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH04-T6",
+     "topic_number": 6,
+     "title": "Paradox of thrift",
+     "ncert_sections": "4.3.3",
+     "concepts": [
+      {
+       "concept_tag": "paradox-of-thrift",
+       "learning_objective": "Explain why an increase in the propensity to save leaves total savings unchanged or lower."
+      },
+      {
+       "concept_tag": "ad-line-swing",
+       "learning_objective": "Distinguish a swing of the AD line caused by a change in MPC from a parallel shift."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH04-T7",
+     "topic_number": 7,
+     "title": "Full employment, deficient and excess demand",
+     "ncert_sections": "4.4",
+     "concepts": [
+      {
+       "concept_tag": "full-employment-equilibrium",
+       "learning_objective": "Explain why equilibrium income need not be the full employment level of income."
+      },
+      {
+       "concept_tag": "deficient-excess-demand",
+       "learning_objective": "Identify situations of deficient and excess demand and their long-run effect on prices."
+      },
+      {
+       "concept_tag": "effective-demand-principle",
+       "learning_objective": "State the effective demand principle under a fixed price and perfectly elastic supply."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEEC1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Government Budget and the Economy",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leec105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEEC1-CH05-T1",
+     "topic_number": 1,
+     "title": "Government budget: meaning and objectives",
+     "ncert_sections": "5.1, 5.1.1",
+     "concepts": [
+      {
+       "concept_tag": "annual-financial-statement",
+       "learning_objective": "Explain the constitutional basis of the budget and why it is split into revenue and capital accounts."
+      },
+      {
+       "concept_tag": "public-goods",
+       "learning_objective": "Distinguish public goods from private goods using non-rivalry and non-excludability, and public provision from public production."
+      },
+      {
+       "concept_tag": "budget-objectives",
+       "learning_objective": "Identify the allocation, redistribution and stabilisation functions of the government budget."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH05-T2",
+     "topic_number": 2,
+     "title": "Classification of receipts",
+     "ncert_sections": "5.1.2",
+     "concepts": [
+      {
+       "concept_tag": "revenue-receipts",
+       "learning_objective": "Classify revenue receipts into tax and non-tax revenue and describe progressive and proportional taxation."
+      },
+      {
+       "concept_tag": "capital-receipts",
+       "learning_objective": "Identify capital receipts as those that create liabilities or reduce financial assets, debt creating or non-debt creating."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH05-T3",
+     "topic_number": 3,
+     "title": "Classification of expenditure",
+     "ncert_sections": "5.1.3",
+     "concepts": [
+      {
+       "concept_tag": "revenue-expenditure",
+       "learning_objective": "Identify revenue expenditure and its main items such as interest, defence, subsidies, salaries and grants."
+      },
+      {
+       "concept_tag": "capital-expenditure",
+       "learning_objective": "Identify capital expenditure as spending that creates assets or reduces financial liabilities."
+      },
+      {
+       "concept_tag": "frbma-policy-statements",
+       "learning_objective": "State the purpose of the three fiscal policy statements laid with the budget under the FRBMA."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH05-T4",
+     "topic_number": 4,
+     "title": "Balanced, surplus and deficit budgets; measures of deficit",
+     "ncert_sections": "5.2, 5.2.1",
+     "concepts": [
+      {
+       "concept_tag": "budget-balance",
+       "learning_objective": "Distinguish balanced, surplus and deficit budgets."
+      },
+      {
+       "concept_tag": "revenue-deficit",
+       "learning_objective": "Compute the revenue deficit and interpret its implications for government dissaving."
+      },
+      {
+       "concept_tag": "fiscal-and-primary-deficit",
+       "learning_objective": "Compute fiscal and primary deficits and interpret them as measures of borrowing requirement."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH05-T5",
+     "topic_number": 5,
+     "title": "Fiscal policy and the multipliers",
+     "ncert_sections": "Box 5.1",
+     "concepts": [
+      {
+       "concept_tag": "expenditure-multiplier",
+       "learning_objective": "Calculate the government expenditure multiplier and the change in equilibrium income with lump-sum taxes."
+      },
+      {
+       "concept_tag": "tax-transfer-balanced-budget-multipliers",
+       "learning_objective": "Calculate and compare the tax, transfer and balanced budget multipliers."
+      },
+      {
+       "concept_tag": "proportional-taxes-stabilisers",
+       "learning_objective": "Analyse how proportional taxes reduce the multiplier and act as automatic stabilisers."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH05-T6",
+     "topic_number": 6,
+     "title": "Government debt, deficit reduction, FRBMA and GST",
+     "ncert_sections": "Debt; Box 5.2; Box 5.3",
+     "concepts": [
+      {
+       "concept_tag": "government-debt",
+       "learning_objective": "Evaluate perspectives on the burden of debt, including Ricardian equivalence and crowding out."
+      },
+      {
+       "concept_tag": "deficit-reduction-frbma",
+       "learning_objective": "Explain ways of reducing deficits and the main features of the FRBMA, 2003."
+      },
+      {
+       "concept_tag": "gst",
+       "learning_objective": "Explain how GST works as a destination-based value-added tax that removes cascading."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEEC1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Open Economy Macroeconomics",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/leec106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEEC1-CH06-T1",
+     "topic_number": 1,
+     "title": "Open economy, its linkages and foreign trade",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "open-economy-linkages",
+       "learning_objective": "Identify the output, financial and labour market linkages through which an open economy interacts with other countries."
+      },
+      {
+       "concept_tag": "foreign-trade-and-aggregate-demand",
+       "learning_objective": "Explain how imports act as a leakage and exports as an injection in the circular flow of income."
+      },
+      {
+       "concept_tag": "international-currency-confidence",
+       "learning_objective": "Explain why a national currency is accepted internationally only when it keeps a stable purchasing power."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH06-T2",
+     "topic_number": 2,
+     "title": "Balance of payments and the current account",
+     "ncert_sections": "6.1, 6.1.1",
+     "concepts": [
+      {
+       "concept_tag": "bop-meaning",
+       "learning_objective": "Define the balance of payments and identify its main accounts."
+      },
+      {
+       "concept_tag": "current-account-components",
+       "learning_objective": "Classify trade in goods, services and transfer payments as components of the current account."
+      },
+      {
+       "concept_tag": "balance-of-trade-and-invisibles",
+       "learning_objective": "Distinguish between balance of trade and current account balance and calculate both from given data."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH06-T3",
+     "topic_number": 3,
+     "title": "Capital account and BoP surplus or deficit",
+     "ncert_sections": "6.1.2, 6.1.3",
+     "concepts": [
+      {
+       "concept_tag": "capital-account-items",
+       "learning_objective": "Identify credit and debit items of the capital account such as FDI, FII, borrowings and assistance."
+      },
+      {
+       "concept_tag": "bop-deficit-financing-reserves",
+       "learning_objective": "Calculate the overall balance of payments and explain how official reserve transactions settle a deficit or surplus."
+      },
+      {
+       "concept_tag": "autonomous-accommodating-transactions",
+       "learning_objective": "Distinguish between autonomous (above the line) and accommodating (below the line) transactions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH06-T4",
+     "topic_number": 4,
+     "title": "The foreign exchange market and the exchange rate",
+     "ncert_sections": "6.2, 6.2.1",
+     "concepts": [
+      {
+       "concept_tag": "forex-market",
+       "learning_objective": "Describe the foreign exchange market, its participants and the meaning of the foreign exchange rate."
+      },
+      {
+       "concept_tag": "demand-supply-of-forex",
+       "learning_objective": "Explain the sources of demand for and supply of foreign exchange and how they respond to the exchange rate."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH06-T5",
+     "topic_number": 5,
+     "title": "Flexible exchange rate and its determinants",
+     "ncert_sections": "6.2.2 (Flexible Exchange Rate)",
+     "concepts": [
+      {
+       "concept_tag": "flexible-rate-depreciation-appreciation",
+       "learning_objective": "Explain how a flexible exchange rate is determined and distinguish depreciation from appreciation."
+      },
+      {
+       "concept_tag": "short-run-exchange-rate-factors",
+       "learning_objective": "Analyse how speculation, interest rate differentials and income changes affect the exchange rate in the short run."
+      },
+      {
+       "concept_tag": "purchasing-power-parity",
+       "learning_objective": "Apply the purchasing power parity theory to predict long-run exchange rates."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH06-T6",
+     "topic_number": 6,
+     "title": "Fixed exchange rates and managed floating",
+     "ncert_sections": "6.2.2 (Fixed Exchange Rates), 6.2.3, 6.2.4",
+     "concepts": [
+      {
+       "concept_tag": "fixed-exchange-rate-system",
+       "learning_objective": "Explain how a government maintains a fixed exchange rate and distinguish devaluation from revaluation."
+      },
+      {
+       "concept_tag": "fixed-vs-flexible-merits",
+       "learning_objective": "Evaluate the merits and demerits of fixed and flexible exchange rate systems, including speculative attacks."
+      },
+      {
+       "concept_tag": "managed-floating",
+       "learning_objective": "Describe managed floating as a mix of a flexible rate and central bank intervention."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEEC1-CH06-T7",
+     "topic_number": 7,
+     "title": "Determination of equilibrium income in an open economy",
+     "ncert_sections": "Appendix 6.1",
+     "concepts": [
+      {
+       "concept_tag": "open-economy-income-identity",
+       "learning_objective": "State the national income identity for an open economy and interpret net exports."
+      },
+      {
+       "concept_tag": "marginal-propensity-to-import",
+       "learning_objective": "Identify the marginal propensity to import from an import function and explain its role in aggregate demand."
+      },
+      {
+       "concept_tag": "open-economy-multiplier",
+       "learning_objective": "Calculate the open economy multiplier and explain why it is smaller than the closed economy multiplier."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

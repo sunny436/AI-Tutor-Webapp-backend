@@ -1,0 +1,128 @@
+{
+ "chapter_id": "LHGY3-CH03",
+ "title": "आँकड़ों का आलेखी निरूपण",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHGY3-CH03-T1",
+   "topic_number": 1,
+   "title": "आँकड़ों का निरूपण तथा आरेख और मानचित्र बनाने के सामान्य नियम",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "ankadon-ka-nirupan",
+     "learning_objective": "आँकड़ों के आलेखी निरूपण का अर्थ और उसकी उपयोगिता समझना।"
+    },
+    {
+     "concept_tag": "samanya-niyam",
+     "learning_objective": "उपयुक्त विधि, उपयुक्त मापनी और अभिकल्पना (शीर्षक, सूचक, दिशा) के नियम लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH03-T2",
+   "topic_number": 2,
+   "title": "रेखा ग्राफ और बहुरेखी ग्राफ",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "rekha-graph",
+     "learning_objective": "समय-श्रेणी आँकड़ों के लिए रेखा ग्राफ बनाने के चरण समझना।"
+    },
+    {
+     "concept_tag": "bahurekhi-graph",
+     "learning_objective": "दो या अधिक चरों की तुलना हेतु बहुरेखी ग्राफ का उपयोग पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH03-T3",
+   "topic_number": 3,
+   "title": "दंड आरेख: सरल, रेखा और दंड, बहुदंड तथा मिश्रित दंड आरेख",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "saral-dand-aarekh",
+     "learning_objective": "सरल दंड आरेख बनाने के नियम और उसका उपयोग समझना।"
+    },
+    {
+     "concept_tag": "rekha-aur-dand-aarekh",
+     "learning_objective": "तापमान और वर्षा को एक ही आरेख में दिखाने की विधि समझना।"
+    },
+    {
+     "concept_tag": "bahudand-mishrit-aarekh",
+     "learning_objective": "बहुदंड आरेख और मिश्रित दंड आरेख में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH03-T4",
+   "topic_number": 4,
+   "title": "वृत्त आरेख",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vritt-aarekh-kon",
+     "learning_objective": "वृत्त आरेख के लिए कोणों की गणना करना।"
+    },
+    {
+     "concept_tag": "vritt-aarekh-rachna",
+     "learning_objective": "वृत्त आरेख बनाने के चरण और सावधानियाँ समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH03-T5",
+   "topic_number": 5,
+   "title": "प्रवाह मानचित्र",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "pravah-manchitra",
+     "learning_objective": "प्रवाह मानचित्र का अर्थ, उसके आँकड़े और आवश्यकताएँ समझना।"
+    },
+    {
+     "concept_tag": "pravah-maapni",
+     "learning_objective": "चुनी गई मापनी से प्रवाह पट्टी की मोटाई की गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH03-T6",
+   "topic_number": 6,
+   "title": "विषयक मानचित्र: बिंदुकित मानचित्र और वर्णमात्री मानचित्र",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "vishayak-manchitra",
+     "learning_objective": "विषयक मानचित्रों की आवश्यकताएँ और मात्रात्मक-गुणात्मक वर्गीकरण समझना।"
+    },
+    {
+     "concept_tag": "bindukit-manchitra",
+     "learning_objective": "बिंदुकित मानचित्र में बिंदुओं की संख्या निकालना और सावधानियाँ लागू करना।"
+    },
+    {
+     "concept_tag": "varnamatri-manchitra",
+     "learning_objective": "वर्णमात्री मानचित्र के लिए परिसर और वर्ग-अंतराल निर्धारित करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHGY3-CH03-T7",
+   "topic_number": 7,
+   "title": "सममान रेखा मानचित्र और अंतर्वेशन",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "samman-rekha",
+     "learning_objective": "सममान रेखाओं के प्रकार और उन्हें खींचने के नियम पहचानना।"
+    },
+    {
+     "concept_tag": "antarveshan",
+     "learning_objective": "अंतर्वेशन सूत्र से सममान रेखा का सटीक बिंदु ज्ञात करना।"
+    }
+   ]
+  }
+ ]
+}

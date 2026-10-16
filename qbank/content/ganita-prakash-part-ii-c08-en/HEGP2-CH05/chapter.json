@@ -1,0 +1,128 @@
+{
+ "chapter_id": "HEGP2-CH05",
+ "title": "Tales by Dots and Lines",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HEGP2-CH05-T1",
+   "topic_number": 1,
+   "title": "The Balancing Act: Mean as the Centre",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "mean-as-balance-point",
+     "learning_objective": "Show that the mean is the value where the total distance to the lower values equals the total distance to the higher values."
+    },
+    {
+     "concept_tag": "mean-change-on-include-remove",
+     "learning_objective": "Predict whether including or removing values raises, lowers or keeps the mean."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH05-T2",
+   "topic_number": 2,
+   "title": "Relatively Unchanged: Adding to or Multiplying Every Value",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "mean-shift-by-constant",
+     "learning_objective": "Explain why adding or subtracting a fixed number from every value shifts the mean by the same number."
+    },
+    {
+     "concept_tag": "mean-scale-by-constant",
+     "learning_objective": "Explain why multiplying every value by a fixed number multiplies the mean by that number."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH05-T3",
+   "topic_number": 3,
+   "title": "Tinkering with the Median",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "median-of-sorted-data",
+     "learning_objective": "Find the median as the middle value of sorted data, or the average of the two middle values."
+    },
+    {
+     "concept_tag": "median-change-on-include-remove",
+     "learning_objective": "Reason about how including or removing values changes the median."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH05-T4",
+   "topic_number": 4,
+   "title": "Finding the Unknown and Mean and Median with Frequencies",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "missing-value-from-mean",
+     "learning_objective": "Use mean = sum / number of values to find a total or a missing value."
+    },
+    {
+     "concept_tag": "correcting-a-wrong-mean",
+     "learning_objective": "Correct a mean when one recorded value was wrong, without the full data."
+    },
+    {
+     "concept_tag": "mean-median-from-frequency-table",
+     "learning_objective": "Find the mean and median of data given as values with frequencies."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH05-T5",
+   "topic_number": 5,
+   "title": "Spreadsheets",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "spreadsheet-cell-reference",
+     "learning_objective": "Name cells and ranges of a spreadsheet using column letters and row numbers."
+    },
+    {
+     "concept_tag": "spreadsheet-formulae",
+     "learning_objective": "Write SUM and AVERAGE formulae over a row or column range."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH05-T6",
+   "topic_number": 6,
+   "title": "Line Graphs",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "line-graph-reading",
+     "learning_objective": "Read values, trends and changes from a line graph."
+    },
+    {
+     "concept_tag": "choosing-a-line-graph",
+     "learning_objective": "Explain when a line graph is a better choice than a column graph."
+    }
+   ]
+  },
+  {
+   "topic_id": "HEGP2-CH05-T7",
+   "topic_number": 7,
+   "title": "Infographics, Activity Strips and Data Stories",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "reading-an-infographic",
+     "learning_objective": "Interpret an infographic that uses a colour scale to compare states."
+    },
+    {
+     "concept_tag": "activity-strip",
+     "learning_objective": "Read and make a time strip of 48 half-hour boxes for a day's activities."
+    },
+    {
+     "concept_tag": "data-story-sleep",
+     "learning_objective": "Interpret the trend of typical sleep duration across ages from a line graph."
+    }
+   ]
+  }
+ ]
+}

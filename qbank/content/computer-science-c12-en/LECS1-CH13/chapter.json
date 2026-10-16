@@ -1,0 +1,88 @@
+{
+ "chapter_id": "LECS1-CH13",
+ "title": "Project Based Learning",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECS1-CH13-T1",
+   "topic_number": 1,
+   "title": "Introduction to project based learning",
+   "ncert_sections": "13.1",
+   "concepts": [
+    {
+     "concept_tag": "pbl-skills-and-benefits",
+     "learning_objective": "Identify the skills and practical exposure students gain through project based learning."
+    },
+    {
+     "concept_tag": "pbl-problem-solving-process",
+     "learning_objective": "Describe how a project problem is analysed, broken into modules, solved and integrated, with data collected and reported in a set format."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH13-T2",
+   "topic_number": 2,
+   "title": "Approaches and steps for solving projects",
+   "ncert_sections": "13.2",
+   "concepts": [
+    {
+     "concept_tag": "modular-approach",
+     "learning_objective": "Explain how a modular approach divides a project into modules whose outputs are integrated."
+    },
+    {
+     "concept_tag": "steps-in-project-based-learning",
+     "learning_objective": "Sequence and describe the five steps of project based learning from identification to outcome."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH13-T3",
+   "topic_number": 3,
+   "title": "Teamwork and its components",
+   "ncert_sections": "13.3, 13.3.1",
+   "concepts": [
+    {
+     "concept_tag": "teamwork-meaning",
+     "learning_objective": "Define teamwork and explain why complex tasks need collective effort."
+    },
+    {
+     "concept_tag": "components-of-teamwork",
+     "learning_objective": "Recognise the components of teamwork such as communicating, listening, sharing, respecting, helping and participating."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH13-T4",
+   "topic_number": 4,
+   "title": "Project 1: Automation of order processing in a restaurant",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "restaurant-order-specifications",
+     "learning_objective": "Interpret the login, ordering and reporting requirements of the restaurant order processing project."
+    },
+    {
+     "concept_tag": "unique-bill-identification",
+     "learning_objective": "Explain why each bill needs a unique identification made from the date and the order number of the day."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECS1-CH13-T5",
+   "topic_number": 5,
+   "title": "Projects 2 and 3: Puzzle and educational game",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "bomb-puzzle-game",
+     "learning_objective": "Apply the rules and exception handling needs of the grid-based bomb puzzle project."
+    },
+    {
+     "concept_tag": "match-the-sum-game",
+     "learning_objective": "Apply the rules of the 'Match the Sum' educational game to given situations."
+    }
+   ]
+  }
+ ]
+}

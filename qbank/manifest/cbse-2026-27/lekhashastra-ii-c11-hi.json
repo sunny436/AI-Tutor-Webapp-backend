@@ -1,0 +1,251 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "lekhashastra-ii-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "accountancy",
+  "language": "hindi",
+  "title": "Lekhashastra-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khac2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHAC2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "वित्तीय विवरण - 1",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khac201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAC2-CH01-T1",
+     "topic_number": 1,
+     "title": "हितधारक और उनकी सूचना आवश्यकताएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "hitdharak-upyogkarta",
+       "learning_objective": "आंतरिक और बाह्य उपयोगकर्ताओं तथा उनकी लेखांकन सूचना आवश्यकताओं को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC2-CH01-T2",
+     "topic_number": 2,
+     "title": "पूँजीगत और आगम मदों में अंतर",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "punjigat-agam-vyay",
+       "learning_objective": "पूँजीगत व्यय, आगम व्यय और आस्थगित आगम व्यय में अंतर करना।"
+      },
+      {
+       "concept_tag": "punjigat-agam-prapti",
+       "learning_objective": "पूँजीगत और आगम प्राप्तियों को पहचानना।"
+      },
+      {
+       "concept_tag": "vargikaran-ka-mahatva",
+       "learning_objective": "गलत वर्गीकरण का लाभ और परिसंपत्तियों पर प्रभाव समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC2-CH01-T3",
+     "topic_number": 3,
+     "title": "वित्तीय विवरण तथा व्यापारिक एवं लाभ-हानि खाता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vittiya-vivaran-uddeshya",
+       "learning_objective": "वित्तीय विवरणों के उद्देश्य और प्रकार बताना।"
+      },
+      {
+       "concept_tag": "lekhe-ki-madein",
+       "learning_objective": "व्यापारिक एवं लाभ-हानि खाते के नाम और जमा पक्ष की मदें पहचानना।"
+      },
+      {
+       "concept_tag": "samapan-pravishtiyan",
+       "learning_objective": "आय और व्यय खातों की समापन प्रविष्टियाँ लिखना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC2-CH01-T4",
+     "topic_number": 4,
+     "title": "सकल लाभ, शुद्ध लाभ और बेचे गए माल की लागत",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sakal-shuddh-labh",
+       "learning_objective": "प्रत्यक्ष और अप्रत्यक्ष व्ययों के आधार पर सकल लाभ और शुद्ध लाभ की गणना करना।"
+      },
+      {
+       "concept_tag": "beche-gaye-mal-ki-lagat",
+       "learning_objective": "प्रारंभिक व अंतिम स्टॉक सहित बेचे गए माल की लागत ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC2-CH01-T5",
+     "topic_number": 5,
+     "title": "परिचालन लाभ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "parichalan-labh",
+       "learning_objective": "गैर-परिचालन मदों को समायोजित कर परिचालन लाभ की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC2-CH01-T6",
+     "topic_number": 6,
+     "title": "तुलन पत्र, क्रमबद्धता और समूहन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tulan-patra-madein",
+       "learning_objective": "तुलन पत्र की चालू, स्थायी और अमूर्त परिसंपत्तियों व दायित्वों को पहचानना।"
+      },
+      {
+       "concept_tag": "kramabaddhata-samuhan",
+       "learning_objective": "तरलता और स्थायित्व के क्रम में क्रमबद्धता तथा समूहन को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC2-CH01-T7",
+     "topic_number": 7,
+     "title": "प्रारंभिक प्रविष्टि",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prarambhik-pravishti",
+       "learning_objective": "तुलन पत्र के शेषों से अगले वर्ष की प्रारंभिक प्रविष्टि बनाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHAC2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "वित्तीय विवरण – 2",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khac202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHAC2-CH02-T1",
+     "topic_number": 1,
+     "title": "समायोजन की आवश्यकता और अंतिम स्टॉक",
+     "ncert_sections": "9.1, 9.2",
+     "concepts": [
+      {
+       "concept_tag": "samayojan-ki-avashyakta",
+       "learning_objective": "विद्यार्थी उपार्जन आधार पर सही लाभ ज्ञात करने के लिए समायोजनों की आवश्यकता समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "antim-stock",
+       "learning_objective": "विद्यार्थी अंतिम स्टॉक का मूल्यांकन और अंतिम खातों में उसका प्रदर्शन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC2-CH02-T2",
+     "topic_number": 2,
+     "title": "अदत्त व्यय और पूर्वदत्त व्यय",
+     "ncert_sections": "9.3, 9.4",
+     "concepts": [
+      {
+       "concept_tag": "adatt-vyay",
+       "learning_objective": "विद्यार्थी अदत्त व्ययों का लेखांकन और अंतिम खातों में उनका दोहरा प्रभाव दर्शा सकेंगे।"
+      },
+      {
+       "concept_tag": "poorvadatt-vyay",
+       "learning_objective": "विद्यार्थी पूर्वदत्त व्ययों की गणना कर उन्हें अंतिम खातों में समायोजित कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC2-CH02-T3",
+     "topic_number": 3,
+     "title": "उपार्जित आय और अग्रिम प्राप्त आय",
+     "ncert_sections": "9.5, 9.6",
+     "concepts": [
+      {
+       "concept_tag": "upaarjit-aay",
+       "learning_objective": "विद्यार्थी उपार्जित आय को आय में जोड़कर परिसंपत्ति के रूप में दर्शा सकेंगे।"
+      },
+      {
+       "concept_tag": "agrim-prapt-aay",
+       "learning_objective": "विद्यार्थी अग्रिम प्राप्त आय को आय से घटाकर देयता के रूप में दर्शा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC2-CH02-T4",
+     "topic_number": 4,
+     "title": "ह्रास और डूबत ऋण",
+     "ncert_sections": "9.7, 9.8",
+     "concepts": [
+      {
+       "concept_tag": "hras",
+       "learning_objective": "विद्यार्थी स्थायी परिसंपत्तियों पर ह्रास की गणना कर उसे अंतिम खातों में दर्शा सकेंगे।"
+      },
+      {
+       "concept_tag": "doobat-rin",
+       "learning_objective": "विद्यार्थी अतिरिक्त डूबत ऋणों का लाभ-हानि खाते और देनदारों पर प्रभाव बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC2-CH02-T5",
+     "topic_number": 5,
+     "title": "संदिग्ध ऋणों के लिए प्रावधान और देनदारों पर बट्टे के लिए प्रावधान",
+     "ncert_sections": "9.9, 9.10",
+     "concepts": [
+      {
+       "concept_tag": "sandigdh-rin-pravdhan",
+       "learning_objective": "विद्यार्थी डूबत एवं संदिग्ध ऋणों के लिए प्रावधान की गणना और समायोजन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "batta-pravdhan",
+       "learning_objective": "विद्यार्थी देनदारों पर बट्टे के लिए प्रावधान सही आधार राशि पर ज्ञात कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHAC2-CH02-T6",
+     "topic_number": 6,
+     "title": "प्रबंधक का कमीशन और पूँजी पर ब्याज",
+     "ncert_sections": "9.11, 9.12",
+     "concepts": [
+      {
+       "concept_tag": "prabandhak-kamishan",
+       "learning_objective": "विद्यार्थी कमीशन से पूर्व और पश्चात लाभ पर प्रबंधक के कमीशन की गणना कर सकेंगे।"
+      },
+      {
+       "concept_tag": "poonji-par-byaj",
+       "learning_objective": "विद्यार्थी पूँजी पर ब्याज की गणना और उसका लेखांकन प्रभाव समझा सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

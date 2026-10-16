@@ -1,0 +1,1898 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "exploration-c09-en",
+  "curriculum": "cbse",
+  "class_level": 9,
+  "subject_code": "science",
+  "language": "english",
+  "title": "Exploration",
+  "edition": "NCERT (reprint year not stated in the prelims)",
+  "ncert_code": "iesc1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "IESC1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Exploration: Entering the World of Secondary Science",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH01-T1",
+     "topic_number": 1,
+     "title": "Models: simplifying complex systems",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "scientific-models",
+       "learning_objective": "Explain that a scientific model is a simplified representation of a real system that keeps only what matters for a given question."
+      },
+      {
+       "concept_tag": "deliberate-assumptions",
+       "learning_objective": "Decide which details to keep and which to ignore when building a simple model for a stated question."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH01-T2",
+     "topic_number": 2,
+     "title": "The language of science: terms, symbols, units and mathematics",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "precise-terms-and-symbols",
+       "learning_objective": "Recognise that scientific words and symbols have precise, agreed meanings that allow clear communication."
+      },
+      {
+       "concept_tag": "standard-units",
+       "learning_objective": "Explain why agreed international (SI) units are needed for comparing results and avoiding errors."
+      },
+      {
+       "concept_tag": "mathematics-as-language",
+       "learning_objective": "Describe an equation as a compact statement of how quantities are related, used after understanding the situation."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH01-T3",
+     "topic_number": 3,
+     "title": "Laws, theories and principles",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "law-theory-principle",
+       "learning_objective": "Distinguish between a scientific law, a theory and a principle using examples."
+      },
+      {
+       "concept_tag": "theory-not-a-guess",
+       "learning_objective": "Explain that a scientific theory is a tested, evidence-based explanation that stays open to revision."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH01-T4",
+     "topic_number": 4,
+     "title": "Predictions, their limits and checking claims",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "scientific-prediction",
+       "learning_objective": "Explain how well-established laws, theories and models are used to make testable predictions."
+      },
+      {
+       "concept_tag": "self-correcting-science",
+       "learning_objective": "Evaluate claims using evidence and explain why failed predictions strengthen science."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH01-T5",
+     "topic_number": 5,
+     "title": "Estimation and approximate reasoning",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "order-of-magnitude-estimation",
+       "learning_objective": "Make a rough estimate by identifying the relevant quantities and multiplying reasonable values."
+      },
+      {
+       "concept_tag": "checking-reasonableness",
+       "learning_objective": "Use estimates to judge whether an answer is reasonable or impossible."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH01-T6",
+     "topic_number": 6,
+     "title": "Connected branches of science and science as a human activity",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "interdisciplinary-science",
+       "learning_objective": "Identify how several branches of science and mathematics combine to solve a real problem."
+      },
+      {
+       "concept_tag": "science-as-human-activity",
+       "learning_objective": "Describe science as a human, collaborative and self-correcting way of understanding the world."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IESC1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Cell: The Building Block of Life",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH02-T1",
+     "topic_number": 1,
+     "title": "How to Study Cells",
+     "ncert_sections": "2.1",
+     "concepts": [
+      {
+       "concept_tag": "limit-of-resolution",
+       "learning_objective": "State the limit of resolution of the human eye and why microscopes are needed to study cells."
+      },
+      {
+       "concept_tag": "microscope-magnification",
+       "learning_objective": "Calculate total magnification and compare light and electron microscopes."
+      },
+      {
+       "concept_tag": "cell-size-estimation",
+       "learning_objective": "Estimate the real size of a cell from the field of view of a microscope."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH02-T2",
+     "topic_number": 2,
+     "title": "Cell Membrane: The Universal Feature of a Cell",
+     "ncert_sections": "2.2, 2.2.1",
+     "concepts": [
+      {
+       "concept_tag": "selective-permeability",
+       "learning_objective": "Explain that the cell membrane is selectively permeable."
+      },
+      {
+       "concept_tag": "osmosis-diffusion",
+       "learning_objective": "Distinguish diffusion from osmosis and explain osmosis in cells."
+      },
+      {
+       "concept_tag": "tonicity",
+       "learning_objective": "Predict the effect of isotonic, hypotonic and hypertonic solutions on a cell."
+      },
+      {
+       "concept_tag": "fluid-mosaic-model",
+       "learning_objective": "Describe the composition and fluid-mosaic structure of the cell membrane."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH02-T3",
+     "topic_number": 3,
+     "title": "Cell Wall: The Outer Covering of Cells",
+     "ncert_sections": "2.2.2",
+     "concepts": [
+      {
+       "concept_tag": "cell-wall-function",
+       "learning_objective": "Explain the composition, permeability and functions of the cell wall."
+      },
+      {
+       "concept_tag": "plant-animal-cells-in-solution",
+       "learning_objective": "Compare how plant and animal cells respond to a concentrated solution."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH02-T4",
+     "topic_number": 4,
+     "title": "The Cell Interior: Prokaryotic and Eukaryotic Cells",
+     "ncert_sections": "2.3",
+     "concepts": [
+      {
+       "concept_tag": "prokaryotic-eukaryotic",
+       "learning_objective": "Distinguish prokaryotic and eukaryotic cells by nucleus, organelles and size."
+      },
+      {
+       "concept_tag": "cytoskeleton-inclusions",
+       "learning_objective": "Describe the cytoskeleton and cell inclusions in the cytoplasm."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH02-T5",
+     "topic_number": 5,
+     "title": "Nucleus, Ribosomes, ER, Golgi Apparatus and Lysosomes",
+     "ncert_sections": "2.3.1",
+     "concepts": [
+      {
+       "concept_tag": "nucleus-chromosomes",
+       "learning_objective": "Describe the nucleus, chromatin, chromosomes, DNA and genes."
+      },
+      {
+       "concept_tag": "ribosomes-er",
+       "learning_objective": "Explain the roles of ribosomes and of rough and smooth endoplasmic reticulum."
+      },
+      {
+       "concept_tag": "golgi-lysosomes",
+       "learning_objective": "Describe how the Golgi apparatus packages materials and lysosomes clean up the cell."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH02-T6",
+     "topic_number": 6,
+     "title": "Mitochondria, Plastids and Vacuoles",
+     "ncert_sections": "2.3.1",
+     "concepts": [
+      {
+       "concept_tag": "mitochondria-energy",
+       "learning_objective": "Describe the structure of mitochondria and their role in releasing energy as ATP."
+      },
+      {
+       "concept_tag": "plastid-types",
+       "learning_objective": "Distinguish chloroplasts, chromoplasts and leucoplasts by pigment and function."
+      },
+      {
+       "concept_tag": "vacuole-turgidity",
+       "learning_objective": "Explain how the central vacuole stores materials and keeps plant cells firm."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH02-T7",
+     "topic_number": 7,
+     "title": "How Cells Grow and Divide: Mitosis and Meiosis",
+     "ncert_sections": "2.4, 2.4.1",
+     "concepts": [
+      {
+       "concept_tag": "mitosis",
+       "learning_objective": "Explain that mitosis forms two genetically identical cells for growth and repair."
+      },
+      {
+       "concept_tag": "meiosis",
+       "learning_objective": "Explain that meiosis forms four gametes with half the chromosome number."
+      },
+      {
+       "concept_tag": "onion-root-tip",
+       "learning_objective": "Interpret the observation of dividing cells in an onion root tip."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH02-T8",
+     "topic_number": 8,
+     "title": "Cell Theory and the Life Span of Cells",
+     "ncert_sections": "2.5, 2.5.1",
+     "concepts": [
+      {
+       "concept_tag": "cell-theory",
+       "learning_objective": "State the classical cell theory and the scientists who formulated it."
+      },
+      {
+       "concept_tag": "contact-inhibition-cancer",
+       "learning_objective": "Explain contact inhibition and how its loss leads to tumours."
+      },
+      {
+       "concept_tag": "programmed-cell-death",
+       "learning_objective": "Explain the role of programmed cell death in development."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IESC1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Tissues in Action",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH03-T1",
+     "topic_number": 1,
+     "title": "Tissues, division of labour and why plant and animal tissues differ",
+     "ncert_sections": "Introduction, 3.1",
+     "concepts": [
+      {
+       "concept_tag": "levels-of-organisation",
+       "learning_objective": "Describe the hierarchy cell, tissue, organ, organ system and organism and the division of labour it brings."
+      },
+      {
+       "concept_tag": "plant-vs-animal-tissues",
+       "learning_objective": "Explain how a fixed, upright life and photosynthesis make plant tissues differ from animal tissues."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH03-T2",
+     "topic_number": 2,
+     "title": "Meristematic tissues: apical, lateral and intercalary",
+     "ncert_sections": "3.2, 3.2.1, 3.2.2, 3.2.3",
+     "concepts": [
+      {
+       "concept_tag": "types-of-meristem",
+       "learning_objective": "Identify the location and role of apical, lateral and intercalary meristems."
+      },
+      {
+       "concept_tag": "meristematic-cell-features",
+       "learning_objective": "Relate the features of meristematic cells to continuous cell division."
+      },
+      {
+       "concept_tag": "differentiation",
+       "learning_objective": "Explain how meristematic cells lose the ability to divide and differentiate into permanent tissue."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH03-T3",
+     "topic_number": 3,
+     "title": "Permanent tissues: epidermis and simple permanent tissues",
+     "ncert_sections": "3.2.4 (i), (ii)",
+     "concepts": [
+      {
+       "concept_tag": "epidermis-and-cuticle",
+       "learning_objective": "Describe the epidermis, cuticle, root hairs and stomata and their protective roles."
+      },
+      {
+       "concept_tag": "simple-permanent-tissues",
+       "learning_objective": "Distinguish parenchyma, collenchyma and sclerenchyma by cell walls, living state and function."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH03-T4",
+     "topic_number": 4,
+     "title": "Complex permanent tissues and plant tissue systems",
+     "ncert_sections": "3.2.4 (iii)",
+     "concepts": [
+      {
+       "concept_tag": "xylem-and-phloem",
+       "learning_objective": "Name the components of xylem and phloem and state what each transports."
+      },
+      {
+       "concept_tag": "plant-tissue-systems",
+       "learning_objective": "Classify plant tissues into the dermal, ground and vascular tissue systems."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH03-T5",
+     "topic_number": 5,
+     "title": "Epithelial and connective tissues",
+     "ncert_sections": "3.3, 3.3.1, 3.3.2",
+     "concepts": [
+      {
+       "concept_tag": "epithelial-tissue",
+       "learning_objective": "Match types of epithelium to their structure, function and location in the body."
+      },
+      {
+       "concept_tag": "blood-as-connective-tissue",
+       "learning_objective": "Describe blood as a fluid connective tissue and the roles of its components."
+      },
+      {
+       "concept_tag": "bone-cartilage-tendon-ligament",
+       "learning_objective": "Distinguish bone, cartilage, tendons and ligaments by matrix and function."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH03-T6",
+     "topic_number": 6,
+     "title": "Muscular and nervous tissues",
+     "ncert_sections": "3.3.3, 3.3.4",
+     "concepts": [
+      {
+       "concept_tag": "types-of-muscle",
+       "learning_objective": "Compare skeletal, smooth and cardiac muscle by structure, location and control."
+      },
+      {
+       "concept_tag": "neuron-structure",
+       "learning_objective": "Identify the cell body, dendrites, axon and axon terminals of a neuron and their roles."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH03-T7",
+     "topic_number": 7,
+     "title": "Musculoskeletal system, joints and skeletal system",
+     "ncert_sections": "3.4, 3.4.1, 3.5, 3.6",
+     "concepts": [
+      {
+       "concept_tag": "musculoskeletal-system",
+       "learning_objective": "Explain how muscles, tendons, bones and joints work together under nervous control to produce movement."
+      },
+      {
+       "concept_tag": "types-of-joints",
+       "learning_objective": "Identify ball and socket, hinge, pivot and fixed joints and the movements they allow."
+      },
+      {
+       "concept_tag": "vertebral-column-and-rib-cage",
+       "learning_objective": "Describe how the vertebral column and rib cage protect organs yet allow movement."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH03-T8",
+     "topic_number": 8,
+     "title": "Totipotency and plant tissue culture",
+     "ncert_sections": "Think as a Scientist; Bridging Science and Society",
+     "concepts": [
+      {
+       "concept_tag": "totipotency",
+       "learning_objective": "Explain totipotency through dedifferentiation and redifferentiation in Steward's carrot experiment."
+      },
+      {
+       "concept_tag": "tissue-culture-applications",
+       "learning_objective": "Evaluate applications of plant tissue culture and of Agrobacterium in improving crops."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IESC1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Describing Motion Around Us",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH04-T1",
+     "topic_number": 1,
+     "title": "Position, distance travelled and displacement",
+     "ncert_sections": "4.1, 4.1.1, 4.1.2",
+     "concepts": [
+      {
+       "concept_tag": "reference-point-and-position",
+       "learning_objective": "Describe the position of an object using a reference point, distance and direction, and decide whether it is at rest or in motion."
+      },
+      {
+       "concept_tag": "distance-and-displacement",
+       "learning_objective": "Distinguish between total distance travelled and displacement for motion in a straight line."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH04-T2",
+     "topic_number": 2,
+     "title": "Average speed and average velocity",
+     "ncert_sections": "4.1.3",
+     "concepts": [
+      {
+       "concept_tag": "average-speed",
+       "learning_objective": "Calculate average speed as total distance travelled divided by the time interval."
+      },
+      {
+       "concept_tag": "average-velocity",
+       "learning_objective": "Calculate average velocity as displacement divided by the time interval and state its direction."
+      },
+      {
+       "concept_tag": "uniform-and-non-uniform-motion",
+       "learning_objective": "Distinguish between uniform and non-uniform motion in a straight line."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH04-T3",
+     "topic_number": 3,
+     "title": "Average acceleration",
+     "ncert_sections": "4.1.4",
+     "concepts": [
+      {
+       "concept_tag": "average-acceleration",
+       "learning_objective": "Calculate average acceleration as the change in velocity divided by the time interval."
+      },
+      {
+       "concept_tag": "direction-of-acceleration",
+       "learning_objective": "Relate the direction of acceleration to whether the magnitude of velocity is increasing or decreasing."
+      },
+      {
+       "concept_tag": "free-fall-acceleration",
+       "learning_objective": "Recognise that an object falling freely has a constant acceleration of about 9.8 m/s squared."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH04-T4",
+     "topic_number": 4,
+     "title": "Plotting and interpreting position-time graphs",
+     "ncert_sections": "4.2, 4.2.1, 4.2.2",
+     "concepts": [
+      {
+       "concept_tag": "plotting-motion-graphs",
+       "learning_objective": "Plot a position-time graph from a data table by choosing axes and suitable scales."
+      },
+      {
+       "concept_tag": "position-time-graph-shape",
+       "learning_objective": "Interpret the shape of a position-time graph to identify rest, constant velocity or changing velocity."
+      },
+      {
+       "concept_tag": "slope-gives-velocity",
+       "learning_objective": "Calculate the magnitude of velocity from the slope of a straight-line position-time graph."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH04-T5",
+     "topic_number": 5,
+     "title": "Velocity-time graphs",
+     "ncert_sections": "4.2.3",
+     "concepts": [
+      {
+       "concept_tag": "velocity-time-graph-slope",
+       "learning_objective": "Interpret the slope of a velocity-time graph as acceleration and calculate it."
+      },
+      {
+       "concept_tag": "area-under-velocity-time-graph",
+       "learning_objective": "Calculate displacement from the area enclosed by a velocity-time graph and the time axis."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH04-T6",
+     "topic_number": 6,
+     "title": "Kinematic equations for constant acceleration",
+     "ncert_sections": "4.3",
+     "concepts": [
+      {
+       "concept_tag": "kinematic-equations",
+       "learning_objective": "State the kinematic equations v = u + at, s = ut + 1/2 at squared and v squared = u squared + 2as and the condition for their use."
+      },
+      {
+       "concept_tag": "solving-kinematic-problems",
+       "learning_objective": "Apply the kinematic equations to find velocity, displacement, acceleration or time."
+      },
+      {
+       "concept_tag": "stopping-distance",
+       "learning_objective": "Explain how the stopping distance of a vehicle depends on its initial velocity and braking."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH04-T7",
+     "topic_number": 7,
+     "title": "Motion in a plane and uniform circular motion",
+     "ncert_sections": "4.4, 4.4.1",
+     "concepts": [
+      {
+       "concept_tag": "motion-in-a-plane",
+       "learning_objective": "Identify examples of motion in two dimensions."
+      },
+      {
+       "concept_tag": "uniform-circular-motion",
+       "learning_objective": "Explain why uniform circular motion is accelerated even though the speed is constant."
+      },
+      {
+       "concept_tag": "circular-distance-and-displacement",
+       "learning_objective": "Calculate distance, displacement and average speed for motion along a circle."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IESC1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Exploring Mixtures and their Separation",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH05-T1",
+     "topic_number": 1,
+     "title": "Classifying mixtures: homogeneous and heterogeneous",
+     "ncert_sections": "5.1",
+     "concepts": [
+      {
+       "concept_tag": "homogeneous-mixtures",
+       "learning_objective": "Identify homogeneous mixtures (solutions) by their uniform composition."
+      },
+      {
+       "concept_tag": "heterogeneous-mixtures",
+       "learning_objective": "Recognise heterogeneous mixtures, including those with a gas as one component."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH05-T2",
+     "topic_number": 2,
+     "title": "Solutions and their concentration",
+     "ncert_sections": "5.2, 5.2.1, 5.2.2",
+     "concepts": [
+      {
+       "concept_tag": "concentration-of-solution",
+       "learning_objective": "Explain what the concentration of a solution means and why the right proportion matters."
+      },
+      {
+       "concept_tag": "percentage-concentration",
+       "learning_objective": "Calculate concentration as % m/m, % m/v and % v/v and choose the suitable form."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH05-T3",
+     "topic_number": 3,
+     "title": "Solubility and solubility curves",
+     "ncert_sections": "5.2.3",
+     "concepts": [
+      {
+       "concept_tag": "solubility-and-saturation",
+       "learning_objective": "Define solubility and a saturated solution at a given temperature."
+      },
+      {
+       "concept_tag": "temperature-and-solubility",
+       "learning_objective": "Interpret solubility data and curves to predict the effect of temperature."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH05-T4",
+     "topic_number": 4,
+     "title": "Crystallization",
+     "ncert_sections": "5.3.1",
+     "concepts": [
+      {
+       "concept_tag": "crystallization-principle",
+       "learning_objective": "Explain crystallization as separation based on change of solubility with temperature."
+      },
+      {
+       "concept_tag": "crystal-growth",
+       "learning_objective": "Relate the rate of cooling to the size and shape of crystals formed."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH05-T5",
+     "topic_number": 5,
+     "title": "Distillation and paper chromatography",
+     "ncert_sections": "5.3.2, 5.3.3",
+     "concepts": [
+      {
+       "concept_tag": "distillation",
+       "learning_objective": "Use boiling point differences to decide when simple or fractional distillation applies."
+      },
+      {
+       "concept_tag": "paper-chromatography",
+       "learning_objective": "Explain how paper chromatography separates the components of a coloured mixture."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH05-T6",
+     "topic_number": 6,
+     "title": "Immiscible liquids, sublimation and alloys",
+     "ncert_sections": "5.4.1, 5.4.2",
+     "concepts": [
+      {
+       "concept_tag": "separating-funnel",
+       "learning_objective": "Separate two immiscible liquids using a separating funnel based on density."
+      },
+      {
+       "concept_tag": "sublimation",
+       "learning_objective": "Separate a sublimable solid from a non-sublimable one by sublimation."
+      },
+      {
+       "concept_tag": "alloys",
+       "learning_objective": "Describe alloys as homogeneous mixtures whose components cannot be separated physically."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH05-T7",
+     "topic_number": 7,
+     "title": "Suspensions, centrifugation and coagulation",
+     "ncert_sections": "5.4.3",
+     "concepts": [
+      {
+       "concept_tag": "suspensions",
+       "learning_objective": "Describe the properties of suspensions."
+      },
+      {
+       "concept_tag": "centrifugation",
+       "learning_objective": "Explain how centrifugation separates heavier particles from a liquid."
+      },
+      {
+       "concept_tag": "coagulation",
+       "learning_objective": "Explain how a coagulant such as alum clears muddy water."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH05-T8",
+     "topic_number": 8,
+     "title": "Colloids and the Tyndall effect",
+     "ncert_sections": "5.4.4, 5.5",
+     "concepts": [
+      {
+       "concept_tag": "colloids",
+       "learning_objective": "Distinguish colloids from solutions and suspensions by particle size and behaviour."
+      },
+      {
+       "concept_tag": "tyndall-effect",
+       "learning_objective": "Explain the Tyndall effect and identify mixtures that show it."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IESC1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "How Forces Affect Motion",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH06-T1",
+     "topic_number": 1,
+     "title": "The Concept of Force",
+     "ncert_sections": "6.1, 6.1.1",
+     "concepts": [
+      {
+       "concept_tag": "force-magnitude-and-direction",
+       "learning_objective": "Recognise force as a quantity that needs both magnitude and direction, measured in newtons (N)."
+      },
+      {
+       "concept_tag": "measuring-force-spring-balance",
+       "learning_objective": "Explain how a spring balance measures the magnitude of a force and the range of forces we meet."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH06-T2",
+     "topic_number": 2,
+     "title": "Balanced and Unbalanced Forces",
+     "ncert_sections": "6.2",
+     "concepts": [
+      {
+       "concept_tag": "balanced-unbalanced-forces",
+       "learning_objective": "Distinguish balanced from unbalanced forces and predict whether an object will move."
+      },
+      {
+       "concept_tag": "net-force-calculation",
+       "learning_objective": "Calculate the magnitude and direction of the net force when forces act along the same line."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH06-T3",
+     "topic_number": 3,
+     "title": "The Force of Friction",
+     "ncert_sections": "6.3",
+     "concepts": [
+      {
+       "concept_tag": "friction-opposes-motion",
+       "learning_objective": "Describe how friction acts opposite to motion and brings moving objects to rest."
+      },
+      {
+       "concept_tag": "friction-depends-on-surfaces",
+       "learning_objective": "Relate the distance travelled and spring balance readings to the friction offered by different surfaces."
+      },
+      {
+       "concept_tag": "normal-force-and-weight",
+       "learning_objective": "Identify the normal force and weight acting on an object on a surface and how they balance."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH06-T4",
+     "topic_number": 4,
+     "title": "Newton's First Law of Motion",
+     "ncert_sections": "6.4",
+     "concepts": [
+      {
+       "concept_tag": "newtons-first-law",
+       "learning_objective": "State Newton's first law and apply it to objects with zero net force."
+      },
+      {
+       "concept_tag": "inertia-and-galileo",
+       "learning_objective": "Explain inertia and Galileo's argument that no force is needed to maintain uniform motion."
+      },
+      {
+       "concept_tag": "zero-net-force-graphs",
+       "learning_objective": "Interpret position-time and velocity-time graphs of objects with no net force."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH06-T5",
+     "topic_number": 5,
+     "title": "Newton's Second Law of Motion",
+     "ncert_sections": "6.5",
+     "concepts": [
+      {
+       "concept_tag": "newtons-second-law",
+       "learning_objective": "Apply F = ma to find force, acceleration or displacement of an object."
+      },
+      {
+       "concept_tag": "newton-unit-and-weight",
+       "learning_objective": "Define one newton and calculate weight using F = mg."
+      },
+      {
+       "concept_tag": "stopping-time-and-force",
+       "learning_objective": "Explain why increasing the stopping time reduces the force, as in catching a ball or airbags."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH06-T6",
+     "topic_number": 6,
+     "title": "Newton's Third Law of Motion",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "action-reaction-pairs",
+       "learning_objective": "State Newton's third law and explain that the paired forces act on different objects."
+      },
+      {
+       "concept_tag": "third-law-everyday-applications",
+       "learning_objective": "Explain walking, rowing and recoil using Newton's third law."
+      },
+      {
+       "concept_tag": "rocket-propulsion",
+       "learning_objective": "Explain rocket lift-off and slowing down in space using Newton's third law."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH06-T7",
+     "topic_number": 7,
+     "title": "Forces Acting on a System of Objects",
+     "ncert_sections": "6.7",
+     "concepts": [
+      {
+       "concept_tag": "internal-external-forces",
+       "learning_objective": "Distinguish internal forces from external forces for a system of connected objects."
+      },
+      {
+       "concept_tag": "system-acceleration",
+       "learning_objective": "Calculate the acceleration of connected objects treated as a single system."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IESC1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Work, Energy, and Simple Machines",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH07-T1",
+     "topic_number": 1,
+     "title": "Work done by a constant force",
+     "ncert_sections": "7.1, 7.1.1, 7.1.2",
+     "concepts": [
+      {
+       "concept_tag": "work-definition-and-unit",
+       "learning_objective": "Define work done by a constant force and express its SI unit, the joule."
+      },
+      {
+       "concept_tag": "zero-work",
+       "learning_objective": "Identify situations in which the work done by a force is zero."
+      },
+      {
+       "concept_tag": "positive-negative-work",
+       "learning_objective": "Distinguish between positive and negative work from the directions of force and displacement."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH07-T2",
+     "topic_number": 2,
+     "title": "Work-energy theorem and forms of energy",
+     "ncert_sections": "7.2, 7.3",
+     "concepts": [
+      {
+       "concept_tag": "work-energy-theorem",
+       "learning_objective": "State the work-energy theorem and relate work done on an object to its change in energy."
+      },
+      {
+       "concept_tag": "energy-transfer-modes",
+       "learning_objective": "Recognise that energy is transferred by mechanical work and also by heat, radiation, sound and electric circuits."
+      },
+      {
+       "concept_tag": "forms-of-energy",
+       "learning_objective": "Identify different forms of energy and their conversion from one form to another."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH07-T3",
+     "topic_number": 3,
+     "title": "Kinetic energy",
+     "ncert_sections": "7.4, 7.4.1",
+     "concepts": [
+      {
+       "concept_tag": "kinetic-energy-expression",
+       "learning_objective": "Derive and use the expression K = (1/2)mv^2 for kinetic energy."
+      },
+      {
+       "concept_tag": "kinetic-energy-velocity-dependence",
+       "learning_objective": "Analyse how kinetic energy depends on mass and velocity and apply it to stopping problems."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH07-T4",
+     "topic_number": 4,
+     "title": "Potential energy",
+     "ncert_sections": "7.4.2",
+     "concepts": [
+      {
+       "concept_tag": "potential-energy-meaning",
+       "learning_objective": "Explain potential energy as energy stored by deformation or by the relative positions of interacting objects."
+      },
+      {
+       "concept_tag": "gravitational-potential-energy",
+       "learning_objective": "Calculate gravitational potential energy using U = mgh near the Earth's surface."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH07-T5",
+     "topic_number": 5,
+     "title": "Conservation of mechanical energy",
+     "ncert_sections": "7.4.3",
+     "concepts": [
+      {
+       "concept_tag": "mechanical-energy-conservation",
+       "learning_objective": "State that the sum of kinetic and potential energy stays constant when only gravity does work."
+      },
+      {
+       "concept_tag": "energy-in-pendulum",
+       "learning_objective": "Describe the interchange of kinetic and potential energy in a swinging pendulum."
+      },
+      {
+       "concept_tag": "speed-from-energy",
+       "learning_objective": "Use energy conservation and the work-energy theorem to find speeds, heights and losses."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH07-T6",
+     "topic_number": 6,
+     "title": "Power",
+     "ncert_sections": "7.5",
+     "concepts": [
+      {
+       "concept_tag": "power-definition",
+       "learning_objective": "Define power as the rate of doing work and state its units."
+      },
+      {
+       "concept_tag": "power-calculation",
+       "learning_objective": "Calculate average power from work done or energy change and time taken."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH07-T7",
+     "topic_number": 7,
+     "title": "Simple machines: pulley and inclined plane",
+     "ncert_sections": "7.6, 7.6.1, 7.6.2",
+     "concepts": [
+      {
+       "concept_tag": "mechanical-advantage",
+       "learning_objective": "Define effort, load and mechanical advantage of a simple machine."
+      },
+      {
+       "concept_tag": "pulley",
+       "learning_objective": "Explain how a fixed pulley provides convenience by changing the direction of effort."
+      },
+      {
+       "concept_tag": "inclined-plane",
+       "learning_objective": "Calculate the mechanical advantage L/h of an inclined plane and the effort it requires."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH07-T8",
+     "topic_number": 8,
+     "title": "Lever",
+     "ncert_sections": "7.6.3",
+     "concepts": [
+      {
+       "concept_tag": "lever-principle",
+       "learning_objective": "Apply effort x effort arm = load x load arm to balance and mechanical advantage problems."
+      },
+      {
+       "concept_tag": "classes-of-levers",
+       "learning_objective": "Classify levers into three classes by the relative positions of fulcrum, load and effort."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IESC1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Journey Inside the Atom",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH08-T1",
+     "topic_number": 1,
+     "title": "Roots of atomic theory and Thomson's model",
+     "ncert_sections": "8.1, 8.2, 8.2.1",
+     "concepts": [
+      {
+       "concept_tag": "early-atomic-ideas",
+       "learning_objective": "Describe the ideas of Kanada, Democritus and Dalton about indivisible particles of matter."
+      },
+      {
+       "concept_tag": "cathode-rays-electron",
+       "learning_objective": "Explain how the study of cathode rays led to the discovery of the electron."
+      },
+      {
+       "concept_tag": "thomson-model",
+       "learning_objective": "Describe Thomson's plum pudding model of a neutral atom."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH08-T2",
+     "topic_number": 2,
+     "title": "Gold foil experiment and Rutherford's nuclear model",
+     "ncert_sections": "8.2.2 (A, C)",
+     "concepts": [
+      {
+       "concept_tag": "gold-foil-experiment",
+       "learning_objective": "Interpret the observations of the alpha particle scattering experiment."
+      },
+      {
+       "concept_tag": "rutherford-nuclear-model",
+       "learning_objective": "State the features of Rutherford's nuclear model and the relative sizes of atom and nucleus."
+      },
+      {
+       "concept_tag": "discovery-of-proton",
+       "learning_objective": "Describe the charge and mass of the proton and why atoms are electrically neutral."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH08-T3",
+     "topic_number": 3,
+     "title": "Limitations of Rutherford's model and Bohr's model",
+     "ncert_sections": "8.2.2 (B), 8.2.3",
+     "concepts": [
+      {
+       "concept_tag": "rutherford-model-instability",
+       "learning_objective": "Explain why Rutherford's model could not account for the stability of atoms."
+      },
+      {
+       "concept_tag": "bohr-postulates",
+       "learning_objective": "State Bohr's postulates of stationary states, shells and energy levels."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH08-T4",
+     "topic_number": 4,
+     "title": "Discovery of the neutron and symbols of elements",
+     "ncert_sections": "8.3, 8.4",
+     "concepts": [
+      {
+       "concept_tag": "discovery-of-neutron",
+       "learning_objective": "Explain how the neutron accounts for atomic mass and helps hold the nucleus together."
+      },
+      {
+       "concept_tag": "symbols-of-elements",
+       "learning_objective": "Apply IUPAC norms to write and interpret symbols of elements."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH08-T5",
+     "topic_number": 5,
+     "title": "Atomic number and mass number",
+     "ncert_sections": "8.5, 8.6",
+     "concepts": [
+      {
+       "concept_tag": "atomic-number",
+       "learning_objective": "Define atomic number and relate it to the identity of an element."
+      },
+      {
+       "concept_tag": "mass-number",
+       "learning_objective": "Calculate mass number and the number of neutrons from nucleon counts."
+      },
+      {
+       "concept_tag": "atomic-notation",
+       "learning_objective": "Interpret the standard notation showing symbol, atomic number and mass number."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH08-T6",
+     "topic_number": 6,
+     "title": "Distribution of electrons in energy levels",
+     "ncert_sections": "8.7, 8.7.1",
+     "concepts": [
+      {
+       "concept_tag": "bohr-bury-rules",
+       "learning_objective": "Apply the Bohr-Bury rules, including the 2n squared rule, to the filling of shells."
+      },
+      {
+       "concept_tag": "electronic-configuration",
+       "learning_objective": "Write the electronic configuration of the first eighteen elements."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH08-T7",
+     "topic_number": 7,
+     "title": "Valency: combining capacity of an atom",
+     "ncert_sections": "8.8",
+     "concepts": [
+      {
+       "concept_tag": "valence-electrons-octet",
+       "learning_objective": "Relate valence electrons and a complete octet to the reactivity of an atom."
+      },
+      {
+       "concept_tag": "valency",
+       "learning_objective": "Determine the valency of an element from its electronic configuration or formula."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH08-T8",
+     "topic_number": 8,
+     "title": "Isotopes, average atomic mass and isobars",
+     "ncert_sections": "8.9, 8.9.1, 8.9.2",
+     "concepts": [
+      {
+       "concept_tag": "isotopes",
+       "learning_objective": "Define isotopes and explain why they have similar chemical properties."
+      },
+      {
+       "concept_tag": "average-atomic-mass",
+       "learning_objective": "Calculate the weighted average atomic mass of an element from isotopic abundances."
+      },
+      {
+       "concept_tag": "isobars",
+       "learning_objective": "Identify isobars and distinguish them from isotopes."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IESC1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Atomic Foundations of Matter",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH09-T1",
+     "topic_number": 1,
+     "title": "Law of Conservation of Mass",
+     "ncert_sections": "9.1",
+     "concepts": [
+      {
+       "concept_tag": "conservation-of-mass",
+       "learning_objective": "State the Law of Conservation of Mass and verify it from given masses of reactants and products."
+      },
+      {
+       "concept_tag": "closed-and-open-systems",
+       "learning_objective": "Explain why a reaction that releases a gas must be done in a closed system to show that mass is conserved."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH09-T2",
+     "topic_number": 2,
+     "title": "Law of Constant Proportions",
+     "ncert_sections": "9.2",
+     "concepts": [
+      {
+       "concept_tag": "constant-proportions",
+       "learning_objective": "State the Law of Constant (Definite) Proportions and use a fixed mass ratio to find unknown masses."
+      },
+      {
+       "concept_tag": "compounds-versus-mixtures",
+       "learning_objective": "Explain why the law applies to compounds and not to mixtures."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH09-T3",
+     "topic_number": 3,
+     "title": "Dalton's Atomic Theory",
+     "ncert_sections": "9.3",
+     "concepts": [
+      {
+       "concept_tag": "dalton-postulates",
+       "learning_objective": "Recall the postulates of Dalton's Atomic Theory."
+      },
+      {
+       "concept_tag": "postulates-explain-laws",
+       "learning_objective": "Use Dalton's postulates to explain the laws of conservation of mass and constant proportions."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH09-T4",
+     "topic_number": 4,
+     "title": "Covalent bonding and naming covalent compounds",
+     "ncert_sections": "9.4, 9.4.1",
+     "concepts": [
+      {
+       "concept_tag": "molecules-and-chemical-bond",
+       "learning_objective": "Define a molecule and a chemical bond, and explain why atoms combine to become stable."
+      },
+      {
+       "concept_tag": "covalent-bond",
+       "learning_objective": "Explain single, double and triple covalent bonds through sharing of electron pairs in molecules such as H2, Cl2, O2, HCl and H2O."
+      },
+      {
+       "concept_tag": "naming-covalent-compounds",
+       "learning_objective": "Name binary covalent compounds using the prefix system."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH09-T5",
+     "topic_number": 5,
+     "title": "Ionic bonding and naming ionic compounds",
+     "ncert_sections": "9.4.2",
+     "concepts": [
+      {
+       "concept_tag": "ion-formation",
+       "learning_objective": "Explain how atoms form cations and anions by losing or gaining electrons."
+      },
+      {
+       "concept_tag": "ionic-bond",
+       "learning_objective": "Describe the ionic bond and the crystal structure of sodium chloride."
+      },
+      {
+       "concept_tag": "naming-ionic-compounds",
+       "learning_objective": "Name ionic compounds and recognise common monoatomic and polyatomic ions."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH09-T6",
+     "topic_number": 6,
+     "title": "Writing chemical formulae",
+     "ncert_sections": "9.5",
+     "concepts": [
+      {
+       "concept_tag": "criss-cross-method",
+       "learning_objective": "Write formulae of covalent and ionic compounds by criss-crossing valencies and reducing to the simplest ratio."
+      },
+      {
+       "concept_tag": "polyatomic-ion-formulae",
+       "learning_objective": "Write formulae containing polyatomic ions, using brackets where needed."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH09-T7",
+     "topic_number": 7,
+     "title": "Properties of ionic and covalent compounds",
+     "ncert_sections": "9.6",
+     "concepts": [
+      {
+       "concept_tag": "solubility-of-compounds",
+       "learning_objective": "Compare the solubility of ionic and covalent compounds in water, kerosene and petrol."
+      },
+      {
+       "concept_tag": "electrical-conductivity-and-melting-point",
+       "learning_objective": "Explain the electrical conductivity and melting points of ionic and covalent compounds."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH09-T8",
+     "topic_number": 8,
+     "title": "Molecular mass and formula unit mass",
+     "ncert_sections": "9.7, 9.8",
+     "concepts": [
+      {
+       "concept_tag": "molecular-mass",
+       "learning_objective": "Calculate the molecular mass of a covalent compound from atomic masses."
+      },
+      {
+       "concept_tag": "formula-unit-mass",
+       "learning_objective": "Calculate the formula unit mass of an ionic compound and explain why ionic compounds have formula units."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IESC1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Sound Waves: Characteristics and Applications",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH10-T1",
+     "topic_number": 1,
+     "title": "Production of sound",
+     "ncert_sections": "10.1, 10.1.1",
+     "concepts": [
+      {
+       "concept_tag": "sound-from-vibrations",
+       "learning_objective": "Explain that sound is produced by vibrating objects such as strings, membranes and air columns."
+      },
+      {
+       "concept_tag": "vocal-cords-and-tuning-fork",
+       "learning_objective": "Identify how humans, animals and a tuning fork produce sound through vibration."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH10-T2",
+     "topic_number": 2,
+     "title": "Propagation of sound and the need for a medium",
+     "ncert_sections": "10.2, 10.2.1",
+     "concepts": [
+      {
+       "concept_tag": "sound-needs-medium",
+       "learning_objective": "Explain using the vacuum bell jar experiment that sound cannot travel through vacuum."
+      },
+      {
+       "concept_tag": "propagation-through-states",
+       "learning_objective": "State that sound travels through solids, liquids and gases."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH10-T3",
+     "topic_number": 3,
+     "title": "Sound waves: compressions, rarefactions and longitudinal waves",
+     "ncert_sections": "10.3",
+     "concepts": [
+      {
+       "concept_tag": "compressions-and-rarefactions",
+       "learning_objective": "Describe how a vibrating source produces alternate compressions and rarefactions in a medium."
+      },
+      {
+       "concept_tag": "longitudinal-mechanical-waves",
+       "learning_objective": "Distinguish longitudinal and transverse waves and identify sound as a longitudinal mechanical wave."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH10-T4",
+     "topic_number": 4,
+     "title": "Energy of sound waves and their graphical representation",
+     "ncert_sections": "10.4, 10.5",
+     "concepts": [
+      {
+       "concept_tag": "sound-energy-transfer",
+       "learning_objective": "Explain that a sound wave transfers energy, not particles, through a medium."
+      },
+      {
+       "concept_tag": "density-distance-graph",
+       "learning_objective": "Interpret crests, troughs and the average density on a density-distance graph of a sound wave."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH10-T5",
+     "topic_number": 5,
+     "title": "Wavelength, frequency, time period, amplitude, intensity and speed",
+     "ncert_sections": "10.6.1, 10.6.2, 10.6.3",
+     "concepts": [
+      {
+       "concept_tag": "frequency-and-time-period",
+       "learning_objective": "Calculate frequency and time period using the relation frequency = 1/T."
+      },
+      {
+       "concept_tag": "wave-speed-relation",
+       "learning_objective": "Apply v = wavelength x frequency and relate the speed of sound to the medium."
+      },
+      {
+       "concept_tag": "amplitude-and-intensity",
+       "learning_objective": "Relate amplitude to energy and explain why intensity decreases with distance."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH10-T6",
+     "topic_number": 6,
+     "title": "Human perception of sound",
+     "ncert_sections": "10.6.4",
+     "concepts": [
+      {
+       "concept_tag": "pitch-and-loudness",
+       "learning_objective": "Relate pitch to frequency and loudness to amplitude."
+      },
+      {
+       "concept_tag": "audible-range",
+       "learning_objective": "State the human audible range and classify infrasonic and ultrasonic waves."
+      },
+      {
+       "concept_tag": "tone-note-timbre",
+       "learning_objective": "Distinguish a tone, a musical note, timbre and an octave."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH10-T7",
+     "topic_number": 7,
+     "title": "Reflection of sound: echo and reverberation",
+     "ncert_sections": "10.7, 10.7.1, 10.7.2",
+     "concepts": [
+      {
+       "concept_tag": "echo-and-minimum-distance",
+       "learning_objective": "Calculate distances using echoes and the 0.1 s condition for hearing an echo."
+      },
+      {
+       "concept_tag": "reverberation",
+       "learning_objective": "Explain reverberation and how halls are designed to control it."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH10-T8",
+     "topic_number": 8,
+     "title": "Ultrasonic and infrasonic waves and their applications",
+     "ncert_sections": "10.8, 10.8.1",
+     "concepts": [
+      {
+       "concept_tag": "ultrasound-infrasound-uses",
+       "learning_objective": "Identify applications of ultrasonic and infrasonic waves in medicine, industry and detection."
+      },
+      {
+       "concept_tag": "echolocation-and-sonar",
+       "learning_objective": "Explain echolocation and calculate distances using sonar."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IESC1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "Reproduction: How Life Continues",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH11-T1",
+     "topic_number": 1,
+     "title": "Vegetative propagation and its use in agriculture",
+     "ncert_sections": "11.1, 11.1.1",
+     "concepts": [
+      {
+       "concept_tag": "vegetative-propagation",
+       "learning_objective": "Explain that vegetative propagation produces new plants from vegetative parts of a single parent, giving genetically identical plants."
+      },
+      {
+       "concept_tag": "cutting-grafting-layering",
+       "learning_objective": "Describe cutting, grafting, layering and tissue culture and explain how they help farmers grow desirable crops on a large scale."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH11-T2",
+     "topic_number": 2,
+     "title": "Budding, spore formation and mitosis",
+     "ncert_sections": "11.1",
+     "concepts": [
+      {
+       "concept_tag": "budding",
+       "learning_objective": "Describe budding in yeast and hydra as the growth and separation of an outgrowth from the parent."
+      },
+      {
+       "concept_tag": "spore-formation",
+       "learning_objective": "Explain how moulds spread by large numbers of light, air-borne spores that germinate in warm, moist conditions."
+      },
+      {
+       "concept_tag": "mitosis-and-clones",
+       "learning_objective": "Explain that mitosis makes asexually produced offspring genetically identical clones of the parent."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH11-T3",
+     "topic_number": 3,
+     "title": "Meiosis and variation in sexual reproduction",
+     "ncert_sections": "11.2, 11.2.1",
+     "concepts": [
+      {
+       "concept_tag": "meiosis-and-gametes",
+       "learning_objective": "Explain that meiosis halves the chromosome number to form haploid gametes so that the number stays constant across generations."
+      },
+      {
+       "concept_tag": "variation-from-meiosis",
+       "learning_objective": "Explain how the random sorting of chromosome pairs into gametes produces many combinations and variation among offspring."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH11-T4",
+     "topic_number": 4,
+     "title": "Flowers, pollination and fertilisation in plants",
+     "ncert_sections": "11.2.2, 11.2.3, 11.2.4, 11.2.5",
+     "concepts": [
+      {
+       "concept_tag": "parts-of-a-flower",
+       "learning_objective": "Identify the sepals, petals, stamen and pistil of a flower and state their roles in reproduction."
+      },
+      {
+       "concept_tag": "pollination-types-and-agents",
+       "learning_objective": "Distinguish self- and cross-pollination and relate flower features to wind, water, insect and bird pollination."
+      },
+      {
+       "concept_tag": "fertilisation-and-seed-formation",
+       "learning_objective": "Describe the growth of the pollen tube, fertilisation and the development of the ovule into seed and the ovary into fruit."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH11-T5",
+     "topic_number": 5,
+     "title": "Sexual reproduction and its variations in animals",
+     "ncert_sections": "11.3, 11.4",
+     "concepts": [
+      {
+       "concept_tag": "external-and-internal-fertilisation",
+       "learning_objective": "Compare external and internal fertilisation in terms of number of eggs and survival of young ones."
+      },
+      {
+       "concept_tag": "larval-strategy-and-parental-care",
+       "learning_objective": "Explain the role of yolk, larval feeding stages and post-birth care in the development of young animals."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH11-T6",
+     "topic_number": 6,
+     "title": "Human reproductive organs and gametes",
+     "ncert_sections": "11.5.1, 11.5.2, 11.5.3, 11.5.4",
+     "concepts": [
+      {
+       "concept_tag": "male-reproductive-system",
+       "learning_objective": "Identify the parts of the male reproductive system and state their functions."
+      },
+      {
+       "concept_tag": "female-reproductive-system",
+       "learning_objective": "Identify the parts of the female reproductive system and state their functions."
+      },
+      {
+       "concept_tag": "gametogenesis",
+       "learning_objective": "Explain gametogenesis and the differences in size, number, nutrients and motility of sperm and egg."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH11-T7",
+     "topic_number": 7,
+     "title": "Fertilisation, menstrual cycle, pregnancy and reproductive health",
+     "ncert_sections": "11.5.5, 11.5.6, 11.5.7, 11.5.8, 11.5.9, 11.5.10",
+     "concepts": [
+      {
+       "concept_tag": "ovulation-and-menstrual-cycle",
+       "learning_objective": "Relate ovulation, fertilisation, implantation and menstruation to the stages of the menstrual cycle."
+      },
+      {
+       "concept_tag": "pregnancy-and-sex-determination",
+       "learning_objective": "Describe the stages of pregnancy and explain how the sex chromosome from the father decides the biological sex of a baby."
+      },
+      {
+       "concept_tag": "contraception-and-sti-prevention",
+       "learning_objective": "Distinguish barrier, hormonal, IUD and surgical methods of contraception and explain how STIs can be prevented."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IESC1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Patterns in Life: Diversity and Classification",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH12-T1",
+     "topic_number": 1,
+     "title": "Biodiversity and India as a biodiversity hotspot",
+     "ncert_sections": "12.1, 12.2",
+     "concepts": [
+      {
+       "concept_tag": "biodiversity-and-its-importance",
+       "learning_objective": "Explain what biodiversity is and how organisms such as algae, decomposers and pollinators keep ecosystems functioning."
+      },
+      {
+       "concept_tag": "endemic-species-and-hotspots",
+       "learning_objective": "Identify endemic species and explain what makes a region a biodiversity hotspot."
+      },
+      {
+       "concept_tag": "evolution-of-biodiversity",
+       "learning_objective": "Explain how small differences accumulated over generations gave rise to present-day diversity."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH12-T2",
+     "topic_number": 2,
+     "title": "Criteria and need for classification",
+     "ncert_sections": "12.3, 12.4",
+     "concepts": [
+      {
+       "concept_tag": "criteria-for-classification",
+       "learning_objective": "List the criteria scientists use to classify organisms, from external features to genetic similarity."
+      },
+      {
+       "concept_tag": "need-for-biological-classification",
+       "learning_objective": "Explain how biological classification makes the study of diversity systematic and supports conservation."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH12-T3",
+     "topic_number": 3,
+     "title": "Classification systems over time and the kingdoms Monera, Protista and Fungi",
+     "ncert_sections": "12.5, 12.6, 12.6.1, 12.6.2, 12.6.3",
+     "concepts": [
+      {
+       "concept_tag": "history-of-kingdom-systems",
+       "learning_objective": "Trace the change from Aristotle's grouping to Whittaker's five kingdom system and the reason for each change."
+      },
+      {
+       "concept_tag": "monera-and-protista",
+       "learning_objective": "Distinguish Monera and Protista on the basis of cell type, cell wall and nutrition."
+      },
+      {
+       "concept_tag": "kingdom-fungi",
+       "learning_objective": "Describe the features and ecological role of fungi, including chitin cell walls and saprophytic nutrition."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH12-T4",
+     "topic_number": 4,
+     "title": "Kingdom Plantae",
+     "ncert_sections": "12.6.4",
+     "concepts": [
+      {
+       "concept_tag": "plant-groups-features",
+       "learning_objective": "Identify the distinguishing features of Thallophyta, Bryophyta, Pteridophyta, Gymnosperms and Angiosperms."
+      },
+      {
+       "concept_tag": "plant-adaptations-to-land",
+       "learning_objective": "Analyse how transport tissues, seeds and flowers reduced plants' dependence on water."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH12-T5",
+     "topic_number": 5,
+     "title": "Kingdom Animalia",
+     "ncert_sections": "12.6.5",
+     "concepts": [
+      {
+       "concept_tag": "invertebrate-phyla",
+       "learning_objective": "Identify the key features of the invertebrate phyla from Porifera to Echinodermata."
+      },
+      {
+       "concept_tag": "chordates-and-vertebrates",
+       "learning_objective": "Explain the role of the notochord and vertebral column in separating chordates from invertebrates."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH12-T6",
+     "topic_number": 6,
+     "title": "Hierarchy, binomial nomenclature, fossils and threats to biodiversity",
+     "ncert_sections": "12.7, 12.7.1, 12.8, 12.9, 12.10",
+     "concepts": [
+      {
+       "concept_tag": "classification-hierarchy",
+       "learning_objective": "Arrange the levels of classification from kingdom to species and relate shared features to each level."
+      },
+      {
+       "concept_tag": "binomial-nomenclature",
+       "learning_objective": "Apply the rules of binomial nomenclature to write and interpret scientific names."
+      },
+      {
+       "concept_tag": "fossils-adaptations-and-threats",
+       "learning_objective": "Explain adaptations and fossils as evidence of change and identify human threats to biodiversity."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "IESC1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "Earth as a System: Energy, Matter, and Life",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/iesc113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "IESC1-CH13-T1",
+     "topic_number": 1,
+     "title": "The Earth system and its interacting spheres",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "earth-spheres",
+       "learning_objective": "Identify the geosphere, hydrosphere, cryosphere, atmosphere and biosphere with examples."
+      },
+      {
+       "concept_tag": "sphere-interactions",
+       "learning_objective": "Explain how a disturbance in one sphere of the Earth leads to changes in the others."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH13-T2",
+     "topic_number": 2,
+     "title": "Solar radiation, insolation and the solar constant",
+     "ncert_sections": "13.1",
+     "concepts": [
+      {
+       "concept_tag": "electromagnetic-spectrum",
+       "learning_objective": "Describe the parts of the electromagnetic spectrum in solar radiation and their effects on the Earth."
+      },
+      {
+       "concept_tag": "insolation-solar-constant",
+       "learning_objective": "Define insolation and the solar constant and calculate solar energy received by an area."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH13-T3",
+     "topic_number": 3,
+     "title": "Albedo, latitude and the role of the atmosphere",
+     "ncert_sections": "13.1.1, 13.1.2, 13.1.3",
+     "concepts": [
+      {
+       "concept_tag": "albedo",
+       "learning_objective": "Relate the albedo of a surface to how much it heats up, including the urban heat island effect."
+      },
+      {
+       "concept_tag": "latitude-uneven-heating",
+       "learning_objective": "Explain why the spherical shape of the Earth causes uneven heating between the equator and the poles."
+      },
+      {
+       "concept_tag": "atmospheric-layers-greenhouse",
+       "learning_objective": "Describe the troposphere, stratosphere and ozone layer and how greenhouse gases keep the Earth warm."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH13-T4",
+     "topic_number": 4,
+     "title": "Winds and ocean currents",
+     "ncert_sections": "13.2, 13.2.1, 13.2.2, 13.2.3",
+     "concepts": [
+      {
+       "concept_tag": "local-winds",
+       "learning_objective": "Explain the formation of valley and mountain breezes from uneven heating."
+      },
+      {
+       "concept_tag": "planetary-winds-pressure-belts",
+       "learning_objective": "Describe the pressure belts and planetary winds and their deflection by the Earth's rotation."
+      },
+      {
+       "concept_tag": "ocean-currents",
+       "learning_objective": "Explain what drives ocean currents and how they regulate climate."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH13-T5",
+     "topic_number": 5,
+     "title": "Water and carbon cycles",
+     "ncert_sections": "13.3, 13.3.1, 13.3.2",
+     "concepts": [
+      {
+       "concept_tag": "water-cycle-climate",
+       "learning_objective": "Describe the water cycle and how climate change is altering it across the spheres."
+      },
+      {
+       "concept_tag": "carbon-cycle",
+       "learning_objective": "Distinguish the fast and slow carbon cycles and the role of oceans and fossil fuels."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH13-T6",
+     "topic_number": 6,
+     "title": "Nitrogen and oxygen cycles",
+     "ncert_sections": "13.3.3, 13.3.4",
+     "concepts": [
+      {
+       "concept_tag": "nitrogen-cycle",
+       "learning_objective": "Explain nitrogen fixation, nitrification, assimilation, ammonification and denitrification with the organisms involved."
+      },
+      {
+       "concept_tag": "oxygen-cycle",
+       "learning_objective": "Describe the balance between consumption and production of atmospheric oxygen."
+      }
+     ]
+    },
+    {
+     "topic_id": "IESC1-CH13-T7",
+     "topic_number": 7,
+     "title": "Human impact on the Earth's processes",
+     "ncert_sections": "13.4",
+     "concepts": [
+      {
+       "concept_tag": "human-disruption-of-cycles",
+       "learning_objective": "Analyse how fossil fuel burning, fertiliser overuse and deforestation disrupt biogeochemical cycles."
+      },
+      {
+       "concept_tag": "restoring-balance",
+       "learning_objective": "Evaluate local actions and global agreements that help restore the Earth's natural balance."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

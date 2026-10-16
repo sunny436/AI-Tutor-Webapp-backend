@@ -1,0 +1,654 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "democratic-politics-c10-en",
+  "curriculum": "cbse",
+  "class_level": 10,
+  "subject_code": "social_science",
+  "language": "english",
+  "title": "Democratic Politics",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "jess4"
+ },
+ "chapters": [
+  {
+   "chapter_id": "JESS4-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Power-sharing",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess401.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS4-CH01-T1",
+     "topic_number": 1,
+     "title": "Belgium and Sri Lanka: two diverse societies",
+     "ncert_sections": "Belgium and Sri Lanka",
+     "concepts": [
+      {
+       "concept_tag": "belgium-ethnic-composition",
+       "learning_objective": "Describe the linguistic composition of Belgium and the special problem of Brussels."
+      },
+      {
+       "concept_tag": "sri-lanka-ethnic-composition",
+       "learning_objective": "Describe the major social groups of Sri Lanka and where they are concentrated."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH01-T2",
+     "topic_number": 2,
+     "title": "Majoritarianism in Sri Lanka",
+     "ncert_sections": "Majoritarianism in Sri Lanka",
+     "concepts": [
+      {
+       "concept_tag": "majoritarian-measures",
+       "learning_objective": "Identify the majoritarian measures adopted in Sri Lanka after 1948 and explain the idea of majoritarianism."
+      },
+      {
+       "concept_tag": "tamil-alienation-and-civil-war",
+       "learning_objective": "Explain how majoritarian policies led to Tamil alienation, demands for autonomy and civil war."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH01-T3",
+     "topic_number": 3,
+     "title": "Accommodation in Belgium",
+     "ncert_sections": "Accommodation in Belgium",
+     "concepts": [
+      {
+       "concept_tag": "belgian-model-elements",
+       "learning_objective": "State the main elements of the Belgian power-sharing model and explain how they prevent domination by one community."
+      },
+      {
+       "concept_tag": "community-government",
+       "learning_objective": "Explain the composition and powers of the community government in Belgium."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH01-T4",
+     "topic_number": 4,
+     "title": "Why power sharing is desirable",
+     "ncert_sections": "Why power sharing is desirable?",
+     "concepts": [
+      {
+       "concept_tag": "prudential-reasons",
+       "learning_objective": "Explain the prudential reasons for power sharing, such as reducing conflict and ensuring stability."
+      },
+      {
+       "concept_tag": "moral-reasons",
+       "learning_objective": "Explain the moral reason that power sharing is the very spirit of democracy."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH01-T5",
+     "topic_number": 5,
+     "title": "Forms of power-sharing",
+     "ncert_sections": "Forms of power-sharing",
+     "concepts": [
+      {
+       "concept_tag": "horizontal-distribution",
+       "learning_objective": "Explain horizontal distribution of power among organs of government and the system of checks and balances."
+      },
+      {
+       "concept_tag": "vertical-division",
+       "learning_objective": "Explain vertical (federal) division of power among different levels of government."
+      },
+      {
+       "concept_tag": "social-groups-and-parties",
+       "learning_objective": "Identify power sharing among social groups and among political parties, pressure groups and movements."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS4-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Federalism",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess402.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS4-CH02-T1",
+     "topic_number": 1,
+     "title": "What is federalism?",
+     "ncert_sections": "What is federalism?",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-federalism",
+       "learning_objective": "Define federalism and distinguish a federal system from a unitary one."
+      },
+      {
+       "concept_tag": "key-features-of-federalism",
+       "learning_objective": "Identify the key features of a federal system of government."
+      },
+      {
+       "concept_tag": "coming-together-and-holding-together",
+       "learning_objective": "Distinguish 'coming together' from 'holding together' federations with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH02-T2",
+     "topic_number": 2,
+     "title": "What makes India a federal country?",
+     "ncert_sections": "What makes India a federal country?",
+     "concepts": [
+      {
+       "concept_tag": "three-lists-and-residuary-powers",
+       "learning_objective": "Classify subjects under the Union, State and Concurrent Lists and explain residuary powers."
+      },
+      {
+       "concept_tag": "special-status-and-union-territories",
+       "learning_objective": "Explain why some States have special powers and how Union Territories are governed."
+      },
+      {
+       "concept_tag": "amending-power-sharing-and-judiciary",
+       "learning_objective": "Describe how the Union-State power-sharing arrangement can be changed and the role of courts."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH02-T3",
+     "topic_number": 3,
+     "title": "Linguistic States and language policy",
+     "ncert_sections": "How is federalism practised? (Linguistic States; Language policy; Linguistic diversity of India)",
+     "concepts": [
+      {
+       "concept_tag": "linguistic-states",
+       "learning_objective": "Explain how the creation of linguistic States tested and strengthened Indian federalism."
+      },
+      {
+       "concept_tag": "language-policy",
+       "learning_objective": "Describe India's language policy and the accommodation shown towards non-Hindi speakers."
+      },
+      {
+       "concept_tag": "linguistic-diversity",
+       "learning_objective": "Interpret Census data on the linguistic diversity of India."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH02-T4",
+     "topic_number": 4,
+     "title": "Centre-State relations",
+     "ncert_sections": "How is federalism practised? (Centre-State relations)",
+     "concepts": [
+      {
+       "concept_tag": "centre-state-relations-before-1990",
+       "learning_objective": "Explain how one-party dominance weakened State autonomy in the early decades."
+      },
+      {
+       "concept_tag": "coalition-era-and-state-autonomy",
+       "learning_objective": "Analyse how regional parties and coalition governments after 1990 strengthened federal power sharing."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH02-T5",
+     "topic_number": 5,
+     "title": "Decentralisation and the 1992 amendment",
+     "ncert_sections": "Decentralisation in India",
+     "concepts": [
+      {
+       "concept_tag": "need-for-decentralisation",
+       "learning_objective": "Explain the meaning of decentralisation and the reasons for it."
+      },
+      {
+       "concept_tag": "constitutional-amendment-1992",
+       "learning_objective": "State the main provisions of the 1992 amendment on local government."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH02-T6",
+     "topic_number": 6,
+     "title": "Rural and urban local government at work",
+     "ncert_sections": "Decentralisation in India (Panchayati raj; urban local bodies; An experiment in Brazil)",
+     "concepts": [
+      {
+       "concept_tag": "panchayati-raj-structure",
+       "learning_objective": "Describe the structure of rural local government from the gram panchayat to the zilla parishad."
+      },
+      {
+       "concept_tag": "urban-local-bodies",
+       "learning_objective": "Identify urban local bodies and their political heads."
+      },
+      {
+       "concept_tag": "working-of-local-government",
+       "learning_objective": "Evaluate the achievements and difficulties of local self-government."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS4-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Gender, Religion and Caste",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess403.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS4-CH03-T1",
+     "topic_number": 1,
+     "title": "Gender division and the public/private division",
+     "ncert_sections": "Gender and politics; Public/private division",
+     "concepts": [
+      {
+       "concept_tag": "gender-division-social-basis",
+       "learning_objective": "Explain that gender division is based on social expectations and stereotypes, not on biology."
+      },
+      {
+       "concept_tag": "sexual-division-of-labour",
+       "learning_objective": "Describe the sexual division of labour and its effect on women's role in public life."
+      },
+      {
+       "concept_tag": "feminist-movements",
+       "learning_objective": "Identify the aims of feminist movements and the meaning of the term feminist."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH03-T2",
+     "topic_number": 2,
+     "title": "Discrimination and disadvantage faced by women in India",
+     "ncert_sections": "Gender and politics (patriarchy, literacy, wages, child sex ratio)",
+     "concepts": [
+      {
+       "concept_tag": "patriarchy",
+       "learning_objective": "Define patriarchy and relate it to the disadvantages women face in India."
+      },
+      {
+       "concept_tag": "unpaid-and-unequal-work",
+       "learning_objective": "Interpret evidence on unpaid household work and unequal pay for women."
+      },
+      {
+       "concept_tag": "child-sex-ratio",
+       "learning_objective": "Explain the meaning of child sex ratio and why it has declined in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH03-T3",
+     "topic_number": 3,
+     "title": "Women's political representation",
+     "ncert_sections": "Women's political representation",
+     "concepts": [
+      {
+       "concept_tag": "women-in-legislatures",
+       "learning_objective": "Describe the low level of women's representation in India's legislatures."
+      },
+      {
+       "concept_tag": "reservation-for-women",
+       "learning_objective": "Explain how reservation of seats aims to increase women's representation in elected bodies."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH03-T4",
+     "topic_number": 4,
+     "title": "Religion, communalism and politics",
+     "ncert_sections": "Religion, communalism and politics; Communalism",
+     "concepts": [
+      {
+       "concept_tag": "religion-in-politics",
+       "learning_objective": "Distinguish acceptable roles of religion in politics from communal politics."
+      },
+      {
+       "concept_tag": "communalism-beliefs",
+       "learning_objective": "Explain the beliefs on which communal politics is based and why they are flawed."
+      },
+      {
+       "concept_tag": "forms-of-communalism",
+       "learning_objective": "Identify the various forms that communalism takes in politics."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH03-T5",
+     "topic_number": 5,
+     "title": "Secular state",
+     "ncert_sections": "Secular state",
+     "concepts": [
+      {
+       "concept_tag": "secular-constitutional-provisions",
+       "learning_objective": "State the constitutional provisions that make India a secular state."
+      },
+      {
+       "concept_tag": "combating-communalism",
+       "learning_objective": "Evaluate why a secular Constitution is necessary but not sufficient to combat communalism."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH03-T6",
+     "topic_number": 6,
+     "title": "Caste inequalities",
+     "ncert_sections": "Caste and politics; Caste inequalities; Caste inequality today",
+     "concepts": [
+      {
+       "concept_tag": "caste-system-features",
+       "learning_objective": "Describe the features of the traditional caste system."
+      },
+      {
+       "concept_tag": "changes-in-caste",
+       "learning_objective": "Explain the factors that have weakened caste hierarchy and the aspects of caste that persist."
+      },
+      {
+       "concept_tag": "caste-and-economic-status",
+       "learning_objective": "Interpret evidence on the link between caste and economic status."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH03-T7",
+     "topic_number": 7,
+     "title": "Caste in politics and politics in caste",
+     "ncert_sections": "Caste in politics; Politics in caste",
+     "concepts": [
+      {
+       "concept_tag": "caste-in-electoral-politics",
+       "learning_objective": "Identify the ways in which caste enters electoral politics."
+      },
+      {
+       "concept_tag": "limits-of-caste-in-elections",
+       "learning_objective": "Explain why caste alone cannot determine election results in India."
+      },
+      {
+       "concept_tag": "politicisation-of-caste",
+       "learning_objective": "Analyse how politics influences caste identities and evaluate caste politics in a democracy."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS4-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Political Parties",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess404.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS4-CH04-T1",
+     "topic_number": 1,
+     "title": "Meaning and components of a political party",
+     "ncert_sections": "Why do we need political parties? - Meaning",
+     "concepts": [
+      {
+       "concept_tag": "political-party-meaning",
+       "learning_objective": "Define a political party and explain why parties try to persuade people about their policies."
+      },
+      {
+       "concept_tag": "partisanship",
+       "learning_objective": "Explain how parties reflect political divisions and involve partisanship."
+      },
+      {
+       "concept_tag": "party-components",
+       "learning_objective": "Identify the three components of a political party."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH04-T2",
+     "topic_number": 2,
+     "title": "Functions of political parties",
+     "ncert_sections": "Functions",
+     "concepts": [
+      {
+       "concept_tag": "party-functions",
+       "learning_objective": "Describe the functions parties perform, from offering policies to providing access to government."
+      },
+      {
+       "concept_tag": "candidate-selection",
+       "learning_objective": "Distinguish the ways parties in different countries select their candidates."
+      },
+      {
+       "concept_tag": "opposition-role",
+       "learning_objective": "Explain the role of parties that lose elections and how parties shape public opinion."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH04-T3",
+     "topic_number": 3,
+     "title": "Necessity of political parties and popular participation",
+     "ncert_sections": "Necessity; Popular participation in political parties",
+     "concepts": [
+      {
+       "concept_tag": "necessity-of-parties",
+       "learning_objective": "Explain why modern representative democracies cannot exist without political parties."
+      },
+      {
+       "concept_tag": "popular-participation",
+       "learning_objective": "Interpret survey evidence on trust in and participation in political parties in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH04-T4",
+     "topic_number": 4,
+     "title": "Party systems: how many parties should we have?",
+     "ncert_sections": "How many parties should we have?",
+     "concepts": [
+      {
+       "concept_tag": "types-of-party-systems",
+       "learning_objective": "Distinguish one-party, two-party and multiparty systems with examples."
+      },
+      {
+       "concept_tag": "alliances-and-coalitions",
+       "learning_objective": "Explain what an alliance or front is in a multiparty system."
+      },
+      {
+       "concept_tag": "party-system-evolution",
+       "learning_objective": "Explain why a party system evolves from a country's circumstances and cannot simply be chosen."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH04-T5",
+     "topic_number": 5,
+     "title": "National parties and State parties",
+     "ncert_sections": "National parties; State parties",
+     "concepts": [
+      {
+       "concept_tag": "recognition-criteria",
+       "learning_objective": "Apply the Election Commission's criteria for recognising State and national parties."
+      },
+      {
+       "concept_tag": "national-party-profiles",
+       "learning_objective": "Identify the founding, ideas and support base of India's recognised national parties."
+      },
+      {
+       "concept_tag": "state-parties-federalism",
+       "learning_objective": "Explain how the rise of State parties has strengthened federalism and democracy."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH04-T6",
+     "topic_number": 6,
+     "title": "Challenges to political parties",
+     "ncert_sections": "Challenges to political parties",
+     "concepts": [
+      {
+       "concept_tag": "internal-democracy-and-dynasty",
+       "learning_objective": "Explain the lack of internal democracy and dynastic succession as challenges to parties."
+      },
+      {
+       "concept_tag": "money-and-muscle-power",
+       "learning_objective": "Explain the growing role of money and muscle power in parties during elections."
+      },
+      {
+       "concept_tag": "meaningful-choice",
+       "learning_objective": "Analyse why voters often do not get a meaningful choice among parties."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH04-T7",
+     "topic_number": 7,
+     "title": "How can parties be reformed?",
+     "ncert_sections": "How can parties be reformed?",
+     "concepts": [
+      {
+       "concept_tag": "anti-defection-law",
+       "learning_objective": "Evaluate the effects of the constitutional amendment against defection."
+      },
+      {
+       "concept_tag": "affidavits-and-ec-orders",
+       "learning_objective": "Describe the Supreme Court and Election Commission orders aimed at reforming parties."
+      },
+      {
+       "concept_tag": "reform-suggestions-and-citizen-role",
+       "learning_objective": "Evaluate suggested reforms and the role of citizens in reforming parties."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "JESS4-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Outcomes of Democracy",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/jess405.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "JESS4-CH05-T1",
+     "topic_number": 1,
+     "title": "How do we assess democracy's outcomes?",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "expectations-from-democracy",
+       "learning_objective": "Recall the reasons democracy is considered better than other forms of government and the gap between its principle and practice."
+      },
+      {
+       "concept_tag": "democracy-as-form-of-government",
+       "learning_objective": "Explain that democracy is only a form of government that creates conditions which citizens must use to achieve goals."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH05-T2",
+     "topic_number": 2,
+     "title": "Accountable, responsive and legitimate government",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "accountability-and-transparency",
+       "learning_objective": "Explain how democracy produces a government that follows procedures, is transparent and is accountable to citizens."
+      },
+      {
+       "concept_tag": "efficiency-versus-deliberation",
+       "learning_objective": "Evaluate the argument that the delay caused by deliberation makes democratic government inefficient."
+      },
+      {
+       "concept_tag": "legitimacy-of-democratic-government",
+       "learning_objective": "Explain why democratic government is legitimate and enjoys overwhelming popular support."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH05-T3",
+     "topic_number": 3,
+     "title": "Economic growth and development",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "growth-record-democracy-dictatorship",
+       "learning_objective": "Interpret evidence comparing economic growth rates of democracies and dictatorships between 1950 and 2000."
+      },
+      {
+       "concept_tag": "factors-of-economic-development",
+       "learning_objective": "Identify the factors other than the form of government on which economic development depends."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH05-T4",
+     "topic_number": 4,
+     "title": "Reduction of inequality and poverty",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "political-equality-economic-inequality",
+       "learning_objective": "Distinguish political equality in voting from the growing economic inequalities found in democracies."
+      },
+      {
+       "concept_tag": "income-inequality-data",
+       "learning_objective": "Interpret data on the share of national income held by the top and bottom 20 per cent in selected democracies."
+      },
+      {
+       "concept_tag": "poverty-and-democracy",
+       "learning_objective": "Analyse why democratically elected governments have not been very successful in reducing poverty."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH05-T5",
+     "topic_number": 5,
+     "title": "Accommodation of social diversity",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "negotiating-social-differences",
+       "learning_objective": "Explain how democracies develop procedures to negotiate social differences and prevent them from turning violent."
+      },
+      {
+       "concept_tag": "conditions-for-accommodation",
+       "learning_objective": "State the two conditions a democracy must fulfil to accommodate social diversity."
+      }
+     ]
+    },
+    {
+     "topic_id": "JESS4-CH05-T6",
+     "topic_number": 6,
+     "title": "Dignity and freedom of the citizens",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dignity-of-women-and-castes",
+       "learning_objective": "Explain how recognition of equality in democracy strengthens the struggles of women and disadvantaged castes."
+      },
+      {
+       "concept_tag": "examination-of-democracy-never-ends",
+       "learning_objective": "Interpret why public complaints about democracy are a sign of its success in turning subjects into citizens."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

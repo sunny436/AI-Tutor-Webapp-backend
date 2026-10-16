@@ -1,0 +1,160 @@
+{
+ "chapter_id": "LECA1-CH02",
+ "title": "Spreadsheet",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECA1-CH02-T1",
+   "topic_number": 1,
+   "title": "Workbooks, worksheets, cells and cell references",
+   "ncert_sections": "2.1",
+   "concepts": [
+    {
+     "concept_tag": "workbook-worksheet-cell",
+     "learning_objective": "Identify a workbook, a worksheet, the active worksheet, a cell and a cell address in a spreadsheet."
+    },
+    {
+     "concept_tag": "cell-reference-types",
+     "learning_objective": "Distinguish relative, absolute and mixed cell references and predict how each changes when a formula is copied."
+    },
+    {
+     "concept_tag": "basic-and-derived-values",
+     "learning_objective": "Explain how derived values are calculated from basic values and support what-if analysis."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH02-T2",
+   "topic_number": 2,
+   "title": "Labels, formulas, order of operations and functions",
+   "ncert_sections": "2.1.1, 2.1.2, 2.1.3",
+   "concepts": [
+    {
+     "concept_tag": "labels-and-formulas",
+     "learning_objective": "Distinguish labels from formulas and explain how a formula's result can be kept as a fixed value."
+    },
+    {
+     "concept_tag": "order-of-operations",
+     "learning_objective": "Apply the order of mathematical operations that Excel follows when evaluating a formula."
+    },
+    {
+     "concept_tag": "functions-and-named-ranges",
+     "learning_objective": "Explain the structure of a function and use named ranges as function arguments."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH02-T3",
+   "topic_number": 3,
+   "title": "Logical functions: IF, nested IF, AND and OR",
+   "ncert_sections": "2.1.3, 2.1.4.4",
+   "concepts": [
+    {
+     "concept_tag": "if-function",
+     "learning_objective": "Evaluate the result of an IF function from its logical test and its true and false values."
+    },
+    {
+     "concept_tag": "nested-if",
+     "learning_objective": "Trace the result of nested IF functions that test several conditions in turn."
+    },
+    {
+     "concept_tag": "and-or-functions",
+     "learning_objective": "Use AND and OR to combine logical conditions, alone or inside IF."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH02-T4",
+   "topic_number": 4,
+   "title": "Date and time, mathematical and text functions",
+   "ncert_sections": "2.1.4.1, 2.1.4.2, 2.1.4.3",
+   "concepts": [
+    {
+     "concept_tag": "date-time-functions",
+     "learning_objective": "Use TODAY, NOW, DAY, MONTH, YEAR and DATEVALUE and interpret Excel's date serial numbers."
+    },
+    {
+     "concept_tag": "sumif-round-count",
+     "learning_objective": "Apply SUMIF, the rounding functions and the COUNT family of functions to business data."
+    },
+    {
+     "concept_tag": "text-functions",
+     "learning_objective": "Use TEXT and CONCATENATE to format numbers as text and join text strings."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH02-T5",
+   "topic_number": 5,
+   "title": "Lookup and reference functions",
+   "ncert_sections": "2.1.4.5",
+   "concepts": [
+    {
+     "concept_tag": "lookup-function",
+     "learning_objective": "Use the vector and array forms of LOOKUP and predict their results, including approximate matches."
+    },
+    {
+     "concept_tag": "vlookup-hlookup",
+     "learning_objective": "Use VLOOKUP and HLOOKUP with the correct arguments and explain their error values."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH02-T6",
+   "topic_number": 6,
+   "title": "Financial functions",
+   "ncert_sections": "2.1.2.6",
+   "concepts": [
+    {
+     "concept_tag": "pv-fv-pmt-functions",
+     "learning_objective": "Use PV, FV and PMT with consistent rate, nper, payment sign and type arguments."
+    },
+    {
+     "concept_tag": "npv-and-rate",
+     "learning_objective": "Explain how NPV and RATE work and how NPV differs from PV."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH02-T7",
+   "topic_number": 7,
+   "title": "Data entry, data validation and formatting",
+   "ncert_sections": "2.2, 2.3",
+   "concepts": [
+    {
+     "concept_tag": "data-entry-and-fill",
+     "learning_objective": "Describe default data alignment and use the fill handle and Fill Series for fast data entry."
+    },
+    {
+     "concept_tag": "data-validation",
+     "learning_objective": "Set data validation rules, input messages and error alerts to keep data accurate."
+    },
+    {
+     "concept_tag": "cell-formatting",
+     "learning_objective": "Apply number formats, merging of cells and other formatting tools to make a worksheet readable."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH02-T8",
+   "topic_number": 8,
+   "title": "Output reports, data tables, pivot tables and common errors",
+   "ncert_sections": "2.4, 2.5, 2.6",
+   "concepts": [
+    {
+     "concept_tag": "print-area",
+     "learning_objective": "Define, extend and clear a print area and print selected ranges of a worksheet."
+    },
+    {
+     "concept_tag": "data-and-pivot-tables",
+     "learning_objective": "Use one-variable and two-variable data tables and pivot tables to analyse and summarise data."
+    },
+    {
+     "concept_tag": "error-values",
+     "learning_objective": "Identify the causes of common error values such as #####, #DIV/0!, #N/A and #VALUE! and correct them."
+    }
+   ]
+  }
+ ]
+}

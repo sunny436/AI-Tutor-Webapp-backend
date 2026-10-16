@@ -1,0 +1,116 @@
+{
+ "chapter_id": "GECU1-CH10",
+ "title": "Life Processes in Plants",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GECU1-CH10-T1",
+   "topic_number": 1,
+   "title": "How do plants grow?",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "signs-of-plant-growth",
+     "learning_objective": "Students will identify the visible changes that show a plant is growing."
+    },
+    {
+     "concept_tag": "sunlight-water-for-growth",
+     "learning_objective": "Students will explain, from the three-pot activity, that plants need both sunlight and water to grow."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH10-T2",
+   "topic_number": 2,
+   "title": "Leaves: the food factories of plants",
+   "ncert_sections": "10.2.1",
+   "concepts": [
+    {
+     "concept_tag": "leaves-food-factories",
+     "learning_objective": "Students will state that plants make and store food as starch in their broad, flat, green leaves."
+    },
+    {
+     "concept_tag": "iodine-starch-test",
+     "learning_objective": "Students will describe the iodine test for starch in a leaf and the reason for decolourising the leaf."
+    },
+    {
+     "concept_tag": "chlorophyll-and-starch",
+     "learning_objective": "Students will infer from variegated and coloured leaves that chlorophyll and sunlight are needed to make starch."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH10-T3",
+   "topic_number": 3,
+   "title": "Role of air and the products of photosynthesis",
+   "ncert_sections": "10.2.2, 10.2.3",
+   "concepts": [
+    {
+     "concept_tag": "carbon-dioxide-needed",
+     "learning_objective": "Students will explain, using the caustic soda experiment, that carbon dioxide from air is essential for making starch."
+    },
+    {
+     "concept_tag": "oxygen-released",
+     "learning_objective": "Students will interpret the water-plant experiment to show that oxygen is released during photosynthesis in light."
+    },
+    {
+     "concept_tag": "photosynthesis-word-equation",
+     "learning_objective": "Students will write the word equation of photosynthesis and name its raw materials and products."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH10-T4",
+   "topic_number": 4,
+   "title": "Exchange of gases through stomata",
+   "ncert_sections": "10.2.4",
+   "concepts": [
+    {
+     "concept_tag": "stomata-structure",
+     "learning_objective": "Students will identify stomata as tiny pores on the surface of leaves, seen in a stained leaf peel."
+    },
+    {
+     "concept_tag": "gas-exchange-stomata",
+     "learning_objective": "Students will explain how stomata allow carbon dioxide and oxygen to move in and out of leaves."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH10-T5",
+   "topic_number": 5,
+   "title": "Transport in plants",
+   "ncert_sections": "10.3, 10.3.1, 10.3.2",
+   "concepts": [
+    {
+     "concept_tag": "xylem-water-minerals",
+     "learning_objective": "Students will explain that water and dissolved minerals move up from the roots to all parts through the xylem."
+    },
+    {
+     "concept_tag": "phloem-food-transport",
+     "learning_objective": "Students will explain that food made in leaves is carried to other parts through the phloem and may be stored there."
+    }
+   ]
+  },
+  {
+   "topic_id": "GECU1-CH10-T6",
+   "topic_number": 6,
+   "title": "Respiration in plants",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "respiration-in-plants",
+     "learning_objective": "Students will describe the germinating-seed experiment and state that all parts of a plant respire."
+    },
+    {
+     "concept_tag": "respiration-word-equation",
+     "learning_objective": "Students will write the word equation of respiration and identify its reactants and products."
+    },
+    {
+     "concept_tag": "photosynthesis-respiration-balance",
+     "learning_objective": "Students will analyse how photosynthesis and respiration together keep the exchange of gases balanced."
+    }
+   ]
+  }
+ ]
+}

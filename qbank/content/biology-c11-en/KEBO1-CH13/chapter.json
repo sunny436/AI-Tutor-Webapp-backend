@@ -1,0 +1,164 @@
+{
+ "chapter_id": "KEBO1-CH13",
+ "title": "Plant Growth and Development",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH13-T1",
+   "topic_number": 1,
+   "title": "Growth: definition, open growth and measurement",
+   "ncert_sections": "13.1, 13.1.1, 13.1.2",
+   "concepts": [
+    {
+     "concept_tag": "growth-definition",
+     "learning_objective": "Define growth as an irreversible permanent increase in size accompanied by metabolism."
+    },
+    {
+     "concept_tag": "open-form-of-growth",
+     "learning_objective": "Explain how meristems give plants an open, indeterminate form of growth with primary and secondary growth."
+    },
+    {
+     "concept_tag": "growth-measurement",
+     "learning_objective": "Identify the parameters used to measure growth in different plant parts."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH13-T2",
+   "topic_number": 2,
+   "title": "Phases of growth and growth rates",
+   "ncert_sections": "13.1.3, 13.1.4",
+   "concepts": [
+    {
+     "concept_tag": "phases-of-growth",
+     "learning_objective": "Describe the meristematic, elongation and maturation phases of growth."
+    },
+    {
+     "concept_tag": "arithmetic-geometric-growth",
+     "learning_objective": "Distinguish arithmetic and geometric growth and use their equations and curves."
+    },
+    {
+     "concept_tag": "absolute-relative-growth-rate",
+     "learning_objective": "Compare absolute and relative growth rates of growing systems."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH13-T3",
+   "topic_number": 3,
+   "title": "Conditions for growth",
+   "ncert_sections": "13.1.5",
+   "concepts": [
+    {
+     "concept_tag": "water-oxygen-nutrients",
+     "learning_objective": "Explain the roles of water, oxygen and nutrients in plant growth."
+    },
+    {
+     "concept_tag": "temperature-light-gravity",
+     "learning_objective": "Explain how temperature and environmental signals such as light and gravity affect growth."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH13-T4",
+   "topic_number": 4,
+   "title": "Differentiation, dedifferentiation and redifferentiation",
+   "ncert_sections": "13.2",
+   "concepts": [
+    {
+     "concept_tag": "differentiation",
+     "learning_objective": "Describe differentiation and the structural changes cells undergo while maturing."
+    },
+    {
+     "concept_tag": "dedifferentiation-redifferentiation",
+     "learning_objective": "Distinguish dedifferentiation and redifferentiation with examples."
+    },
+    {
+     "concept_tag": "open-differentiation",
+     "learning_objective": "Explain why differentiation in plants is open and depends on the position of a cell."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH13-T5",
+   "topic_number": 5,
+   "title": "Development and plasticity",
+   "ncert_sections": "13.3",
+   "concepts": [
+    {
+     "concept_tag": "development-sequence",
+     "learning_objective": "Describe development as the sum of growth and differentiation and its sequence in a plant cell."
+    },
+    {
+     "concept_tag": "plasticity-heterophylly",
+     "learning_objective": "Explain plasticity using examples of heterophylly."
+    },
+    {
+     "concept_tag": "intrinsic-extrinsic-factors",
+     "learning_objective": "Classify the intrinsic and extrinsic factors that control plant development."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH13-T6",
+   "topic_number": 6,
+   "title": "Plant growth regulators: characteristics and discovery",
+   "ncert_sections": "13.4.1, 13.4.2",
+   "concepts": [
+    {
+     "concept_tag": "pgr-chemical-nature",
+     "learning_objective": "Identify the chemical nature of the major plant growth regulators."
+    },
+    {
+     "concept_tag": "pgr-promoters-inhibitors",
+     "learning_objective": "Classify plant growth regulators as growth promoters or growth inhibitors."
+    },
+    {
+     "concept_tag": "pgr-discovery",
+     "learning_objective": "Recall how each major group of plant growth regulators was discovered."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH13-T7",
+   "topic_number": 7,
+   "title": "Auxins, gibberellins and cytokinins",
+   "ncert_sections": "13.4.3.1, 13.4.3.2, 13.4.3.3",
+   "concepts": [
+    {
+     "concept_tag": "auxin-effects",
+     "learning_objective": "Describe the physiological effects and applications of auxins."
+    },
+    {
+     "concept_tag": "gibberellin-effects",
+     "learning_objective": "Describe the physiological effects and applications of gibberellins."
+    },
+    {
+     "concept_tag": "cytokinin-effects",
+     "learning_objective": "Describe the physiological effects and applications of cytokinins."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH13-T8",
+   "topic_number": 8,
+   "title": "Ethylene, abscisic acid and interaction of PGRs",
+   "ncert_sections": "13.4.3.4, 13.4.3.5",
+   "concepts": [
+    {
+     "concept_tag": "ethylene-effects",
+     "learning_objective": "Describe the physiological effects and agricultural uses of ethylene."
+    },
+    {
+     "concept_tag": "abscisic-acid-effects",
+     "learning_objective": "Explain why abscisic acid is called the stress hormone and list its effects."
+    },
+    {
+     "concept_tag": "pgr-interactions",
+     "learning_objective": "Evaluate how PGRs act synergistically or antagonistically in plant events."
+    }
+   ]
+  }
+ ]
+}

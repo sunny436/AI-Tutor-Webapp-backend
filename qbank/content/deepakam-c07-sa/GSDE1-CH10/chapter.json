@@ -1,0 +1,112 @@
+{
+ "chapter_id": "GSDE1-CH10",
+ "title": "दशमः कः ?",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GSDE1-CH10-T1",
+   "topic_number": 1,
+   "title": "संवादः – संस्कृत-ओलम्पियाड्-परीक्षायाः परिणामः",
+   "ncert_sections": "पाठारम्भः (संवादः)",
+   "concepts": [
+    {
+     "concept_tag": "olampiad-parinamah",
+     "learning_objective": "छात्रः संवादात् परीक्षायाः परिणामं स्थानानि च अवगच्छति।"
+    },
+    {
+     "concept_tag": "dashamasya-prashnah",
+     "learning_objective": "छात्रः 'दशमः कः' इति प्रश्नात् कथायाः आरम्भं बोधति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH10-T2",
+   "topic_number": 2,
+   "title": "कथा – दश बालकाः नद्यां स्नानं गणनादोषः च",
+   "ncert_sections": "कथायाः पूर्वभागः",
+   "concepts": [
+    {
+     "concept_tag": "balakanam-snanam",
+     "learning_objective": "छात्रः बालकानां नदीस्नानस्य नदीतरणस्य च घटनां वर्णयति।"
+    },
+    {
+     "concept_tag": "ganana-dosha",
+     "learning_objective": "छात्रः गणनाकाले आत्मानं त्यक्त्वा गणनस्य दोषं विश्लेषयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH10-T3",
+   "topic_number": 3,
+   "title": "कथा – पथिकस्य समाधानं कथायाः सन्देशः च",
+   "ncert_sections": "कथायाः उत्तरभागः",
+   "concepts": [
+    {
+     "concept_tag": "pathikasya-ganana",
+     "learning_objective": "छात्रः पथिकेन कृतां गणनां बालकानां हर्षं च अवगच्छति।"
+    },
+    {
+     "concept_tag": "kathayah-sandeshah",
+     "learning_objective": "छात्रः कथायाः मुख्यं सन्देशं मूल्याङ्कयति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH10-T4",
+   "topic_number": 4,
+   "title": "शब्दार्थाः",
+   "ncert_sections": "शब्दार्थाः",
+   "concepts": [
+    {
+     "concept_tag": "shabdarthah",
+     "learning_objective": "छात्रः पाठस्थानां कठिनशब्दानां अर्थान् समानार्थकान् विपरीतार्थकान् च जानाति।"
+    },
+    {
+     "concept_tag": "kriyapadani",
+     "learning_objective": "छात्रः पाठस्थानां क्रियापदानाम् अर्थं बोधति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH10-T5",
+   "topic_number": 5,
+   "title": "पूरणसंख्याशब्दाः – अङ्गुलयः, सप्ताहः, मासाः",
+   "ncert_sections": "अभ्यासः ३-६, अत्र इदम् अवधेयम्",
+   "concepts": [
+    {
+     "concept_tag": "purana-shabdah",
+     "learning_objective": "छात्रः संख्याशब्देभ्यः पूरणशब्दान् निर्माति।"
+    },
+    {
+     "concept_tag": "purana-linga",
+     "learning_objective": "छात्रः विशेष्यानुसारं पूरणशब्दस्य लिङ्गं प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "dina-masa-kramah",
+     "learning_objective": "छात्रः सप्ताहस्य दिवसानां मासानां च क्रमं पूरणशब्दैः वदति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GSDE1-CH10-T6",
+   "topic_number": 6,
+   "title": "संख्याशब्दाः, त्रिषु लिङ्गेषु रूपाणि, श्रीगणेशस्तोत्रम्",
+   "ncert_sections": "योग्यताविस्तरः, परियोजनाकार्यम्",
+   "concepts": [
+    {
+     "concept_tag": "sankhya-shabdah",
+     "learning_objective": "छात्रः एकतः शतपर्यन्तं संख्याशब्दान् जानाति।"
+    },
+    {
+     "concept_tag": "sankhya-linga",
+     "learning_objective": "छात्रः एकतः चतुःपर्यन्तं संख्याशब्दानां लिङ्गभेदं प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "ganesha-stotram",
+     "learning_objective": "छात्रः स्तोत्रे पूरणशब्दैः उक्तानि गणेशनामानि जानाति।"
+    }
+   ]
+  }
+ ]
+}

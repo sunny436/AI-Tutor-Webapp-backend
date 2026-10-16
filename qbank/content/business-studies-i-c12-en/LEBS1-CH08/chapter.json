@@ -1,0 +1,116 @@
+{
+ "chapter_id": "LEBS1-CH08",
+ "title": "Controlling",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEBS1-CH08-T1",
+   "topic_number": 1,
+   "title": "Meaning and nature of controlling",
+   "ncert_sections": "Meaning of Controlling",
+   "concepts": [
+    {
+     "concept_tag": "meaning-of-controlling",
+     "learning_objective": "State the meaning of controlling as ensuring that activities are performed as per plans."
+    },
+    {
+     "concept_tag": "goal-oriented-and-pervasive",
+     "learning_objective": "Explain why controlling is a goal-oriented and pervasive function of management."
+    },
+    {
+     "concept_tag": "controlling-not-the-last-function",
+     "learning_objective": "Explain why controlling completes one management cycle and improves planning in the next."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS1-CH08-T2",
+   "topic_number": 2,
+   "title": "Importance of controlling",
+   "ncert_sections": "Importance of Controlling",
+   "concepts": [
+    {
+     "concept_tag": "goals-standards-and-resources",
+     "learning_objective": "Explain how controlling helps accomplish goals, judge the accuracy of standards and use resources efficiently."
+    },
+    {
+     "concept_tag": "motivation-discipline-coordination",
+     "learning_objective": "Explain how controlling improves employee motivation, ensures order and discipline and facilitates coordination."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS1-CH08-T3",
+   "topic_number": 3,
+   "title": "Limitations of controlling",
+   "ncert_sections": "Limitations of Controlling",
+   "concepts": [
+    {
+     "concept_tag": "standards-and-external-factors",
+     "learning_objective": "Identify the difficulty of setting quantitative standards and the little control over external factors as limitations."
+    },
+    {
+     "concept_tag": "resistance-and-cost",
+     "learning_objective": "Explain resistance from employees and the cost of control systems as limitations of controlling."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS1-CH08-T4",
+   "topic_number": 4,
+   "title": "Relationship between planning and controlling",
+   "ncert_sections": "Relationship between Planning and Controlling",
+   "concepts": [
+    {
+     "concept_tag": "planning-basis-of-controlling",
+     "learning_objective": "Explain why planning is a prerequisite for controlling and controlling is blind without planning."
+    },
+    {
+     "concept_tag": "looking-ahead-and-looking-back",
+     "learning_objective": "Evaluate the statement that planning is looking ahead and controlling is looking back."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS1-CH08-T5",
+   "topic_number": 5,
+   "title": "Controlling process: setting, measuring and comparing",
+   "ncert_sections": "Controlling Process, Steps 1-3",
+   "concepts": [
+    {
+     "concept_tag": "steps-of-control-process",
+     "learning_objective": "State the five steps of the controlling process in their correct order."
+    },
+    {
+     "concept_tag": "setting-performance-standards",
+     "learning_objective": "Distinguish quantitative and qualitative standards and set standards in measurable terms."
+    },
+    {
+     "concept_tag": "measuring-and-comparing-performance",
+     "learning_objective": "Apply techniques of measuring actual performance and compare it with standards to find deviations."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEBS1-CH08-T6",
+   "topic_number": 6,
+   "title": "Analysing deviations and taking corrective action",
+   "ncert_sections": "Controlling Process, Steps 4-5",
+   "concepts": [
+    {
+     "concept_tag": "critical-point-control",
+     "learning_objective": "Explain critical point control as focusing control on key result areas."
+    },
+    {
+     "concept_tag": "management-by-exception",
+     "learning_objective": "Apply management by exception to decide which deviations need managerial attention."
+    },
+    {
+     "concept_tag": "corrective-action",
+     "learning_objective": "Decide the corrective action needed when deviations go beyond the acceptable range."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "chapter_id": "LHPH2-CH05",
+ "title": "नाभिक",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHPH2-CH05-T1",
+   "topic_number": 1,
+   "title": "परमाणु द्रव्यमान तथा नाभिक की संरचना",
+   "ncert_sections": "13.1, 13.2",
+   "concepts": [
+    {
+     "concept_tag": "parmanu-dravyaman-matrak",
+     "learning_objective": "परमाणु द्रव्यमान मात्रक की परिभाषा देना और समस्थानिकों से औसत परमाणु द्रव्यमान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "samsthanik-samabhari-samnyutroni",
+     "learning_objective": "समस्थानिक, समभारिक और समन्यूट्रॉनिक नाभिकों में अंतर करना।"
+    },
+    {
+     "concept_tag": "nyutron-ki-khoj",
+     "learning_objective": "न्यूट्रॉन की खोज, उसके गुण तथा नाभिक में प्रोटॉन-न्यूट्रॉन संख्या समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH05-T2",
+   "topic_number": 2,
+   "title": "नाभिक का साइज़",
+   "ncert_sections": "13.3",
+   "concepts": [
+    {
+     "concept_tag": "nabhik-trijya",
+     "learning_objective": "संबंध R = R₀A^(1/3) से विभिन्न नाभिकों की त्रिज्याओं की तुलना करना।"
+    },
+    {
+     "concept_tag": "nabhikiya-ghanatva",
+     "learning_objective": "नाभिकीय द्रव्य के घनत्व के द्रव्यमान संख्या से स्वतंत्र होने की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH05-T3",
+   "topic_number": 3,
+   "title": "द्रव्यमान-ऊर्जा तथा नाभिकीय बंधन ऊर्जा",
+   "ncert_sections": "13.4",
+   "concepts": [
+    {
+     "concept_tag": "dravyaman-urja-tulyata",
+     "learning_objective": "आइंस्टाइन के संबंध E = mc² से द्रव्यमान के तुल्य ऊर्जा ज्ञात करना।"
+    },
+    {
+     "concept_tag": "dravyaman-kshati-bandhan-urja",
+     "learning_objective": "द्रव्यमान क्षति से किसी नाभिक की बंधन ऊर्जा की गणना करना।"
+    },
+    {
+     "concept_tag": "prati-nyuklion-bandhan-urja",
+     "learning_objective": "प्रति न्यूक्लिऑन बंधन ऊर्जा वक्र की व्याख्या कर नाभिकों के स्थायित्व की तुलना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH05-T4",
+   "topic_number": 4,
+   "title": "नाभिकीय बल",
+   "ncert_sections": "13.5",
+   "concepts": [
+    {
+     "concept_tag": "nabhikiya-bal-gun",
+     "learning_objective": "नाभिकीय बल के प्रबलता, लघु परास और आवेश-स्वतंत्रता जैसे गुण बताना।"
+    },
+    {
+     "concept_tag": "nabhikiya-bal-santripti",
+     "learning_objective": "नाभिकीय बल की संतृप्ति से बंधन ऊर्जा की लगभग स्थिरता को जोड़ना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH05-T5",
+   "topic_number": 5,
+   "title": "रेडियोऐक्टिवता",
+   "ncert_sections": "13.6",
+   "concepts": [
+    {
+     "concept_tag": "radioactivity-khoj",
+     "learning_objective": "रेडियोऐक्टिवता की खोज और उसके नाभिकीय परिघटना होने को समझना।"
+    },
+    {
+     "concept_tag": "alpha-beta-gamma-kshay",
+     "learning_objective": "ऐल्फा, बीटा और गामा क्षय में उत्सर्जित कणों तथा Z और A में परिवर्तन ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHPH2-CH05-T6",
+   "topic_number": 6,
+   "title": "नाभिकीय ऊर्जा: विखंडन तथा संलयन",
+   "ncert_sections": "13.7",
+   "concepts": [
+    {
+     "concept_tag": "nabhikiya-vikhandan",
+     "learning_objective": "नाभिकीय विखंडन की अभिक्रियाओं को संतुलित करना और मुक्त ऊर्जा का आकलन करना।"
+    },
+    {
+     "concept_tag": "nabhikiya-sanlayan",
+     "learning_objective": "तारों में संलयन और नियंत्रित तापनाभिकीय संलयन की आवश्यकताओं की व्याख्या करना।"
+    }
+   ]
+  }
+ ]
+}

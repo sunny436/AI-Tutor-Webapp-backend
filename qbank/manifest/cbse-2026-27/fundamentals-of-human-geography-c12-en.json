@@ -1,0 +1,1077 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "fundamentals-of-human-geography-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "geography",
+  "language": "english",
+  "title": "Fundamentals of Human Geography",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "legy1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEGY1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Human Geography: Nature and Scope",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY1-CH01-T1",
+     "topic_number": 1,
+     "title": "Human geography: dualism and definitions",
+     "ncert_sections": "Introduction; Human Geography Defined",
+     "concepts": [
+      {
+       "concept_tag": "physical-human-dualism",
+       "learning_objective": "Explain why the dichotomy between physical and human geography is not a valid one and why nature and humans must be seen holistically."
+      },
+      {
+       "concept_tag": "definitions-of-human-geography",
+       "learning_objective": "Identify the definitions of human geography given by Ratzel, Ellen C. Semple and Paul Vidal de la Blache and their key ideas."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH01-T2",
+     "topic_number": 2,
+     "title": "Nature of human geography and naturalisation of humans",
+     "ncert_sections": "Nature of Human Geography; The Naturalisation of Humans",
+     "concepts": [
+      {
+       "concept_tag": "physical-and-cultural-environment",
+       "learning_objective": "Distinguish elements of the physical environment from elements of material culture created by human beings."
+      },
+      {
+       "concept_tag": "technology-and-nature",
+       "learning_objective": "Explain how understanding of natural laws leads to technology and how technology reflects cultural development."
+      },
+      {
+       "concept_tag": "environmental-determinism",
+       "learning_objective": "Describe environmental determinism and the naturalisation of humans in primitive societies."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH01-T3",
+     "topic_number": 3,
+     "title": "Humanisation of nature: possibilism and neo-determinism",
+     "ncert_sections": "Humanisation of Nature; Neodeterminism",
+     "concepts": [
+      {
+       "concept_tag": "possibilism",
+       "learning_objective": "Explain possibilism as the creation of possibilities by humans using technology and resources of the environment."
+      },
+      {
+       "concept_tag": "cultural-landscape",
+       "learning_objective": "Identify imprints of human activity that form the cultural landscape."
+      },
+      {
+       "concept_tag": "neo-determinism",
+       "learning_objective": "Explain Griffith Taylor's neo-determinism (stop and go determinism) as a middle path between determinism and possibilism."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH01-T4",
+     "topic_number": 4,
+     "title": "Broad stages and thrust of human geography",
+     "ncert_sections": "Table 1.1",
+     "concepts": [
+      {
+       "concept_tag": "stages-of-human-geography",
+       "learning_objective": "Sequence the broad stages of human geography and state the approach of each period."
+      },
+      {
+       "concept_tag": "quantitative-revolution",
+       "learning_objective": "Describe the spatial organisation phase and the quantitative revolution."
+      },
+      {
+       "concept_tag": "post-modernism",
+       "learning_objective": "Explain how post-modernism questioned grand generalisations and stressed local context."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH01-T5",
+     "topic_number": 5,
+     "title": "Schools of thought, fields and sub-fields of human geography",
+     "ncert_sections": "Box on schools of thought; Fields and Sub-fields of Human Geography; Table 1.2",
+     "concepts": [
+      {
+       "concept_tag": "welfare-radical-behavioural-schools",
+       "learning_objective": "Distinguish the welfare (humanistic), radical and behavioural schools of thought that emerged in the 1970s."
+      },
+      {
+       "concept_tag": "sub-fields-and-sister-disciplines",
+       "learning_objective": "Match fields and sub-fields of human geography with their sister disciplines in the social sciences."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "The World Population: Distribution, Density and Growth",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY1-CH02-T1",
+     "topic_number": 1,
+     "title": "Patterns of population distribution and density",
+     "ncert_sections": "Patterns of Population Distribution in the World; Density of Population",
+     "concepts": [
+      {
+       "concept_tag": "population-distribution-patterns",
+       "learning_objective": "Describe the uneven distribution of the world's population across its land area."
+      },
+      {
+       "concept_tag": "population-density-calculation",
+       "learning_objective": "Calculate and interpret the density of population as persons per sq km."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH02-T2",
+     "topic_number": 2,
+     "title": "Factors influencing the distribution of population",
+     "ncert_sections": "Factors Influencing the Distribution of Population",
+     "concepts": [
+      {
+       "concept_tag": "geographical-factors",
+       "learning_objective": "Explain how water, landforms, climate and soils affect where people live."
+      },
+      {
+       "concept_tag": "economic-factors",
+       "learning_objective": "Explain how minerals, urbanisation and industrialisation concentrate population."
+      },
+      {
+       "concept_tag": "social-cultural-factors",
+       "learning_objective": "Recognise how religious, cultural, political and government factors influence settlement."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH02-T3",
+     "topic_number": 3,
+     "title": "Population growth: basic concepts",
+     "ncert_sections": "Population Growth; Some Basic Concepts of Population Geography",
+     "concepts": [
+      {
+       "concept_tag": "growth-and-growth-rate",
+       "learning_objective": "Distinguish growth of population in absolute numbers from the growth rate in per cent."
+      },
+      {
+       "concept_tag": "natural-and-actual-growth",
+       "learning_objective": "Compute natural growth and actual growth of population from births, deaths and migration."
+      },
+      {
+       "concept_tag": "positive-negative-growth",
+       "learning_objective": "Explain the conditions that produce positive or negative growth of population."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH02-T4",
+     "topic_number": 4,
+     "title": "Components of population change: births and deaths",
+     "ncert_sections": "Components of Population Change",
+     "concepts": [
+      {
+       "concept_tag": "crude-birth-rate",
+       "learning_objective": "Define and calculate the crude birth rate per thousand of population."
+      },
+      {
+       "concept_tag": "crude-death-rate",
+       "learning_objective": "Define and calculate the crude death rate and relate falling mortality to population growth."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH02-T5",
+     "topic_number": 5,
+     "title": "Migration: origin, destination, push and pull factors",
+     "ncert_sections": "Migration",
+     "concepts": [
+      {
+       "concept_tag": "immigration-emigration",
+       "learning_objective": "Distinguish immigrants from emigrants and the place of origin from the place of destination."
+      },
+      {
+       "concept_tag": "push-pull-factors",
+       "learning_objective": "Classify the push and pull factors that influence migration."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH02-T6",
+     "topic_number": 6,
+     "title": "Demographic transition",
+     "ncert_sections": "Demographic Transition",
+     "concepts": [
+      {
+       "concept_tag": "demographic-transition-stages",
+       "learning_objective": "Describe fertility, mortality and population growth in the three stages of demographic transition."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH02-T7",
+     "topic_number": 7,
+     "title": "Population control measures",
+     "ncert_sections": "Population Control Measures",
+     "concepts": [
+      {
+       "concept_tag": "family-planning",
+       "learning_objective": "Identify family planning and other measures that help control population growth."
+      },
+      {
+       "concept_tag": "malthusian-theory",
+       "learning_objective": "State Malthus's theory on population growth and food supply."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Human Development",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY1-CH03-T1",
+     "topic_number": 1,
+     "title": "Growth and development",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "growth-vs-development",
+       "learning_objective": "Distinguish growth as a quantitative, value-neutral change from development as a qualitative, value-positive change."
+      },
+      {
+       "concept_tag": "economic-growth-as-development-measure",
+       "learning_objective": "Explain why measuring development only by economic growth ignores changes in people's lives."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH03-T2",
+     "topic_number": 2,
+     "title": "The concept of human development",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "haq-and-sen-contributions",
+       "learning_objective": "Describe the contributions of Mahbub-ul-Haq and Amartya Sen to the idea of human development."
+      },
+      {
+       "concept_tag": "key-areas-of-human-development",
+       "learning_objective": "Identify health, education and access to resources as the key areas of human development."
+      },
+      {
+       "concept_tag": "capabilities-and-choices",
+       "learning_objective": "Explain how a lack of capability in health, education or resources limits people's choices."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH03-T3",
+     "topic_number": 3,
+     "title": "The four pillars of human development",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "equity",
+       "learning_objective": "Explain equity as equal access to opportunities irrespective of gender, race, income and caste."
+      },
+      {
+       "concept_tag": "sustainability",
+       "learning_objective": "Explain sustainability as continuity in the availability of opportunities across generations."
+      },
+      {
+       "concept_tag": "productivity-and-empowerment",
+       "learning_objective": "Explain productivity as human work efficiency and empowerment as the power to make choices."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH03-T4",
+     "topic_number": 4,
+     "title": "Approaches to human development",
+     "ncert_sections": "Table 3.1",
+     "concepts": [
+      {
+       "concept_tag": "income-and-welfare-approaches",
+       "learning_objective": "Compare the income approach and the welfare approach to human development."
+      },
+      {
+       "concept_tag": "basic-needs-and-capability-approaches",
+       "learning_objective": "Compare the basic needs approach of the ILO with the capability approach of Amartya Sen."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH03-T5",
+     "topic_number": 5,
+     "title": "Measuring human development",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "hdi-indicators",
+       "learning_objective": "Identify the indicators and weightage used in the human development index and interpret its scores."
+      },
+      {
+       "concept_tag": "human-poverty-index",
+       "learning_objective": "Explain the human poverty index as a non-income measure of the shortfall in human development."
+      },
+      {
+       "concept_tag": "gross-national-happiness",
+       "learning_objective": "Describe Bhutan's Gross National Happiness as an alternative measure of progress."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH03-T6",
+     "topic_number": 6,
+     "title": "International comparisons",
+     "ncert_sections": "Tables 3.2, 3.3",
+     "concepts": [
+      {
+       "concept_tag": "hdi-categories",
+       "learning_objective": "Classify countries into very high, high, medium and low human development using HDI scores."
+      },
+      {
+       "concept_tag": "size-and-income-not-determinants",
+       "learning_objective": "Explain why territorial size and per capita income are not directly related to human development."
+      },
+      {
+       "concept_tag": "factors-behind-hd-levels",
+       "learning_objective": "Analyse how social-sector spending, political stability, freedom and equity shape human development levels."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Primary Activities",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY1-CH04-T1",
+     "topic_number": 1,
+     "title": "Economic activities and hunting and gathering",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "primary-activities-classification",
+       "learning_objective": "Explain what primary activities are and why they depend directly on the environment."
+      },
+      {
+       "concept_tag": "hunting-and-gathering",
+       "learning_objective": "Describe the features, regions and commercialisation of hunting and gathering."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH04-T2",
+     "topic_number": 2,
+     "title": "Pastoralism: nomadic herding and commercial livestock rearing",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nomadic-herding",
+       "learning_objective": "Describe pastoral nomadism, its animals, regions and reasons for decline."
+      },
+      {
+       "concept_tag": "transhumance",
+       "learning_objective": "Explain transhumance with examples from the Himalayas and the tundra."
+      },
+      {
+       "concept_tag": "commercial-livestock-ranching",
+       "learning_objective": "Explain the organised, scientific and capital-intensive nature of commercial livestock ranching."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH04-T3",
+     "topic_number": 3,
+     "title": "Subsistence agriculture: primitive and intensive",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shifting-cultivation",
+       "learning_objective": "Describe slash and burn agriculture, its regional names and its problems."
+      },
+      {
+       "concept_tag": "intensive-subsistence-agriculture",
+       "learning_objective": "Distinguish the two types of intensive subsistence agriculture of monsoon Asia."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH04-T4",
+     "topic_number": 4,
+     "title": "Plantation, extensive commercial grain and mixed farming",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "plantation-agriculture",
+       "learning_objective": "Identify the characteristics, crops and colonial origins of plantation agriculture."
+      },
+      {
+       "concept_tag": "extensive-commercial-grain",
+       "learning_objective": "Explain the features and regions of extensive commercial grain cultivation."
+      },
+      {
+       "concept_tag": "mixed-farming",
+       "learning_objective": "Describe the crops, livestock and practices of mixed farming."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH04-T5",
+     "topic_number": 5,
+     "title": "Dairy, Mediterranean agriculture, market gardening and factory farming",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dairy-farming",
+       "learning_objective": "Explain the capital and labour needs, location and regions of commercial dairy farming."
+      },
+      {
+       "concept_tag": "mediterranean-agriculture",
+       "learning_objective": "Describe viticulture, citrus fruits and the winter advantage of Mediterranean agriculture."
+      },
+      {
+       "concept_tag": "market-gardening",
+       "learning_objective": "Explain market gardening, truck farming and factory farming near urban markets."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH04-T6",
+     "topic_number": 6,
+     "title": "Farming organisation: co-operative and collective farming",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "cooperative-farming",
+       "learning_objective": "Explain how co-operative farming works and where it has succeeded."
+      },
+      {
+       "concept_tag": "collective-farming",
+       "learning_objective": "Describe the principle and working of collective farming (Kolkhoz) in the erstwhile Soviet Union."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH04-T7",
+     "topic_number": 7,
+     "title": "Mining: factors and methods",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mining-factors",
+       "learning_objective": "Identify the physical and economic factors that decide the profitability of mining."
+      },
+      {
+       "concept_tag": "mining-methods",
+       "learning_objective": "Compare surface (open-cast) and underground (shaft) mining."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Secondary Activities",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY1-CH05-T1",
+     "topic_number": 1,
+     "title": "Secondary activities and the meaning of manufacturing",
+     "ncert_sections": "Introduction; Manufacturing; 'Manufacturing' Industry and 'Manufacturing Industry'",
+     "concepts": [
+      {
+       "concept_tag": "value-addition-by-secondary-activities",
+       "learning_objective": "Explain how secondary activities add value to natural resources by transforming raw materials into finished products."
+      },
+      {
+       "concept_tag": "meaning-of-manufacturing-and-industry",
+       "learning_objective": "Distinguish the literal meaning of manufacturing from its modern meaning and from the concept of an industry."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH05-T2",
+     "topic_number": 2,
+     "title": "Characteristics of modern large scale manufacturing",
+     "ncert_sections": "Characteristics of Modern Large Scale Manufacturing",
+     "concepts": [
+      {
+       "concept_tag": "specialisation-of-production",
+       "learning_objective": "Contrast the craft method with mass production of standardised parts."
+      },
+      {
+       "concept_tag": "mechanisation-and-automation",
+       "learning_objective": "Describe mechanisation, automation, technological innovation and the organisational needs of modern manufacturing."
+      },
+      {
+       "concept_tag": "uneven-geographic-distribution",
+       "learning_objective": "Interpret why modern manufacturing is concentrated in a few small areas of the world."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH05-T3",
+     "topic_number": 3,
+     "title": "Factors of industrial location and footloose industries",
+     "ncert_sections": "Why do Large-scale Industries choose different locations?; Foot Loose Industries",
+     "concepts": [
+      {
+       "concept_tag": "market-and-raw-material",
+       "learning_objective": "Explain how access to markets and to raw materials influences where industries are located."
+      },
+      {
+       "concept_tag": "other-locational-factors",
+       "learning_objective": "Explain the role of labour, energy, transport, government policy and agglomeration economies in industrial location."
+      },
+      {
+       "concept_tag": "footloose-industries",
+       "learning_objective": "Identify the features and the main locational factor of footloose industries."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH05-T4",
+     "topic_number": 4,
+     "title": "Classification of industries based on size",
+     "ncert_sections": "Classification of Manufacturing Industries; Industries based on Size",
+     "concepts": [
+      {
+       "concept_tag": "household-industries",
+       "learning_objective": "Describe the features of household or cottage manufacturing."
+      },
+      {
+       "concept_tag": "small-scale-manufacturing",
+       "learning_objective": "Distinguish small scale manufacturing from household industries and state its role in employment."
+      },
+      {
+       "concept_tag": "large-scale-manufacturing",
+       "learning_objective": "Describe large scale manufacturing and the two broad types of world industrial regions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH05-T5",
+     "topic_number": 5,
+     "title": "Classification of industries based on inputs or raw materials",
+     "ncert_sections": "Industries based on Inputs/Raw Materials",
+     "concepts": [
+      {
+       "concept_tag": "agro-based-industries",
+       "learning_objective": "Identify agro-based industries and explain the idea of agri-business."
+      },
+      {
+       "concept_tag": "mineral-and-chemical-based-industries",
+       "learning_objective": "Classify industries using ferrous, non-ferrous, non-metallic and chemical raw materials."
+      },
+      {
+       "concept_tag": "forest-and-animal-based-industries",
+       "learning_objective": "Identify raw materials that industries obtain from forests and animals."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH05-T6",
+     "topic_number": 6,
+     "title": "Classification of industries based on output and ownership",
+     "ncert_sections": "Industries Based On Output/Product; Industries Based on Ownership",
+     "concepts": [
+      {
+       "concept_tag": "basic-and-consumer-goods-industries",
+       "learning_objective": "Distinguish basic industries from consumer goods industries using examples."
+      },
+      {
+       "concept_tag": "ownership-of-industries",
+       "learning_objective": "Differentiate public, private and joint sector industries."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH05-T7",
+     "topic_number": 7,
+     "title": "High technology industry and technopolies",
+     "ncert_sections": "Concept of High Technology Industry",
+     "concepts": [
+      {
+       "concept_tag": "high-tech-industry",
+       "learning_objective": "Explain the features of high technology industry and its landscape."
+      },
+      {
+       "concept_tag": "technopolies",
+       "learning_objective": "Define technopolies and analyse why high-tech industries concentrate in planned areas."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Tertiary and Quaternary Activities",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY1-CH06-T1",
+     "topic_number": 1,
+     "title": "Nature of tertiary activities",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "tertiary-activity-nature",
+       "learning_objective": "Explain that tertiary activities provide services for payment rather than producing tangible goods."
+      },
+      {
+       "concept_tag": "tertiary-vs-secondary",
+       "learning_objective": "Distinguish tertiary activities from secondary activities on the basis of skills versus machinery."
+      },
+      {
+       "concept_tag": "sectoral-shift-development",
+       "learning_objective": "Relate the share of workers in each sector to the stage of economic development."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH06-T2",
+     "topic_number": 2,
+     "title": "Trade and commerce",
+     "ncert_sections": "Trade and commerce; Retail Trading; Wholesale Trading",
+     "concepts": [
+      {
+       "concept_tag": "trading-centres",
+       "learning_objective": "Describe rural and urban marketing centres and the services they offer."
+      },
+      {
+       "concept_tag": "periodic-markets",
+       "learning_objective": "Explain how periodic markets serve areas without regular markets."
+      },
+      {
+       "concept_tag": "retail-wholesale-trade",
+       "learning_objective": "Distinguish retail trading, non-store retailing and wholesale trading."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH06-T3",
+     "topic_number": 3,
+     "title": "Transport",
+     "ncert_sections": "Transport; Network and Accessibility; Factors Affecting Transport",
+     "concepts": [
+      {
+       "concept_tag": "transport-distance",
+       "learning_objective": "Explain km distance, time distance and cost distance, and the use of isochrones."
+      },
+      {
+       "concept_tag": "transport-networks",
+       "learning_objective": "Describe nodes, links and how the number of links shows accessibility."
+      },
+      {
+       "concept_tag": "factors-affecting-transport",
+       "learning_objective": "Identify the factors that influence transport demand and route choice."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH06-T4",
+     "topic_number": 4,
+     "title": "Communication",
+     "ncert_sections": "Communication; Telecommunications",
+     "concepts": [
+      {
+       "concept_tag": "communication-and-transport",
+       "learning_objective": "Explain the link between transport and communication and how it has changed."
+      },
+      {
+       "concept_tag": "telecommunications-mass-media",
+       "learning_objective": "Describe the role of telecommunications, mass media, satellites and the internet."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH06-T5",
+     "topic_number": 5,
+     "title": "Services and people engaged in tertiary activities",
+     "ncert_sections": "Services; People Engaged in Tertiary Activities",
+     "concepts": [
+      {
+       "concept_tag": "service-levels",
+       "learning_objective": "Distinguish low-order and high-order services and physical and mental labour."
+      },
+      {
+       "concept_tag": "service-types-location",
+       "learning_objective": "Describe regulated, professional, recreational and personal services and their location."
+      },
+      {
+       "concept_tag": "service-employment-trends",
+       "learning_objective": "Interpret the share of service workers in developed and less developed countries."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH06-T6",
+     "topic_number": 6,
+     "title": "Tourism and medical tourism",
+     "ncert_sections": "Tourism; Tourist Regions; Tourist Attractions; Medical Services for Overseas Patients in India",
+     "concepts": [
+      {
+       "concept_tag": "tourism-significance",
+       "learning_objective": "Explain the meaning of tourism and its importance for jobs and other industries."
+      },
+      {
+       "concept_tag": "tourist-attractions",
+       "learning_objective": "Identify climate, landscape, history and art, and culture and economy as tourist attractions."
+      },
+      {
+       "concept_tag": "medical-tourism",
+       "learning_objective": "Explain medical tourism and the outsourcing of medical tests and data interpretation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH06-T7",
+     "topic_number": 7,
+     "title": "Quaternary and quinary activities",
+     "ncert_sections": "Quaternary Activities; The Quaternary Sector; Quinary Activities",
+     "concepts": [
+      {
+       "concept_tag": "quaternary-activities",
+       "learning_objective": "Describe quaternary activities as knowledge-based services of information, research and development."
+      },
+      {
+       "concept_tag": "quinary-activities",
+       "learning_objective": "Explain quinary activities as the highly paid 'gold collar' work of top decision makers."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH06-T8",
+     "topic_number": 8,
+     "title": "Outsourcing, KPO and the digital divide",
+     "ncert_sections": "Outsourcing; The Digital Divide",
+     "concepts": [
+      {
+       "concept_tag": "outsourcing-offshoring",
+       "learning_objective": "Explain outsourcing and off-shoring and why work moves to countries such as India."
+      },
+      {
+       "concept_tag": "kpo-bpo",
+       "learning_objective": "Distinguish knowledge processing outsourcing (KPO) from business process outsourcing (BPO)."
+      },
+      {
+       "concept_tag": "digital-divide",
+       "learning_objective": "Explain the digital divide between and within countries."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Transport and Communication",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY1-CH07-T1",
+     "topic_number": 1,
+     "title": "Transport: meaning, network and modes",
+     "ncert_sections": "Transport; Modes of Transportation",
+     "concepts": [
+      {
+       "concept_tag": "transport-network",
+       "learning_objective": "Explain transport as an organised service and describe a transport network of nodes and links."
+      },
+      {
+       "concept_tag": "modes-of-transport",
+       "learning_objective": "Distinguish the suitability of land, water, air and pipeline transport for different goods and distances."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH07-T2",
+     "topic_number": 2,
+     "title": "Land transport: pack animals, roads, highways and border roads",
+     "ncert_sections": "Land Transport; Roads; Highways; Border Roads",
+     "concepts": [
+      {
+       "concept_tag": "land-transport-and-roads",
+       "learning_objective": "Explain the evolution of land transport and the merits and problems of road transport."
+      },
+      {
+       "concept_tag": "highways-and-border-roads",
+       "learning_objective": "Identify major highways of the world and the purpose of border roads."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH07-T3",
+     "topic_number": 3,
+     "title": "Railways and trans-continental railways",
+     "ncert_sections": "Railways; Trans-Continental Railways",
+     "concepts": [
+      {
+       "concept_tag": "railway-networks",
+       "learning_objective": "Describe railway gauges and the distribution of rail networks across continents."
+      },
+      {
+       "concept_tag": "trans-continental-railways",
+       "learning_objective": "Identify the routes and significance of the major trans-continental railways."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH07-T4",
+     "topic_number": 4,
+     "title": "Water transport: sea routes and shipping canals",
+     "ncert_sections": "Water Transport; Sea Routes; Coastal Shipping; Shipping Canals",
+     "concepts": [
+      {
+       "concept_tag": "sea-routes",
+       "learning_objective": "Describe the major ocean trade routes and the factors that influence their traffic."
+      },
+      {
+       "concept_tag": "shipping-canals",
+       "learning_objective": "Compare the Suez and Panama Canals and explain their importance to world trade."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH07-T5",
+     "topic_number": 5,
+     "title": "Inland waterways",
+     "ncert_sections": "Inland Waterways",
+     "concepts": [
+      {
+       "concept_tag": "inland-waterway-development",
+       "learning_objective": "Explain the conditions for developing inland waterways and why some declined."
+      },
+      {
+       "concept_tag": "major-inland-waterways",
+       "learning_objective": "Identify the major inland waterways of the world and the regions they serve."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH07-T6",
+     "topic_number": 6,
+     "title": "Air transport and pipelines",
+     "ncert_sections": "Air Transport; Inter-Continental Air Routes; Pipelines",
+     "concepts": [
+      {
+       "concept_tag": "air-transport",
+       "learning_objective": "Explain the merits, limits and global distribution of air transport."
+      },
+      {
+       "concept_tag": "pipelines",
+       "learning_objective": "Explain the uses and examples of pipelines for transporting liquids and gases."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH07-T7",
+     "topic_number": 7,
+     "title": "Communications: telecommunication, satellites and cyberspace",
+     "ncert_sections": "Communications; Satellite Communication; Cyber Space - Internet",
+     "concepts": [
+      {
+       "concept_tag": "telecommunication",
+       "learning_objective": "Describe the role of the telegraph, telephone and optic fibre cables in communication."
+      },
+      {
+       "concept_tag": "satellite-communication",
+       "learning_objective": "Explain how satellite communication changed the cost of communicating over distance."
+      },
+      {
+       "concept_tag": "cyberspace",
+       "learning_objective": "Analyse the growth of the Internet and how cyberspace expands economic and social space."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEGY1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "International Trade",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/legy108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEGY1-CH08-T1",
+     "topic_number": 1,
+     "title": "Trade, Barter, Money and the History of International Trade",
+     "ncert_sections": "Introduction; History of International Trade",
+     "concepts": [
+      {
+       "concept_tag": "barter-and-money",
+       "learning_objective": "Explain the barter system, its difficulties and how money and objects of intrinsic value replaced it."
+      },
+      {
+       "concept_tag": "history-of-international-trade",
+       "learning_objective": "Trace the major phases of international trade from the Silk Route to the post-war reduction of tariffs."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH08-T2",
+     "topic_number": 2,
+     "title": "Why International Trade Exists and Its Basis",
+     "ncert_sections": "Why Does International Trade Exist?; Basis of International Trade",
+     "concepts": [
+      {
+       "concept_tag": "specialisation-and-comparative-advantage",
+       "learning_objective": "State that international trade results from specialisation and rests on comparative advantage, complementarity and transferability."
+      },
+      {
+       "concept_tag": "basis-of-international-trade",
+       "learning_objective": "Explain how resources, population, economic development, foreign investment and transport shape trade."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH08-T3",
+     "topic_number": 3,
+     "title": "Balance of Trade and Types of International Trade",
+     "ncert_sections": "Balance of Trade; Types of International Trade",
+     "concepts": [
+      {
+       "concept_tag": "balance-of-trade",
+       "learning_objective": "Distinguish favourable and unfavourable balance of trade and their implications for an economy."
+      },
+      {
+       "concept_tag": "bilateral-and-multilateral-trade",
+       "learning_objective": "Distinguish bilateral trade from multilateral trade and the grant of Most Favoured Nation status."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH08-T4",
+     "topic_number": 4,
+     "title": "Free Trade, Dumping and the World Trade Organisation",
+     "ncert_sections": "Case for Free Trade; Dumping; World Trade Organisation",
+     "concepts": [
+      {
+       "concept_tag": "free-trade-and-dumping",
+       "learning_objective": "Explain trade liberalisation and why dumped goods can harm domestic producers."
+      },
+      {
+       "concept_tag": "world-trade-organisation",
+       "learning_objective": "Describe the origin, functions and criticisms of the World Trade Organisation."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH08-T5",
+     "topic_number": 5,
+     "title": "Regional Trade Blocs and Concerns Related to International Trade",
+     "ncert_sections": "Regional Trade Blocs; Concerns Related to International Trade",
+     "concepts": [
+      {
+       "concept_tag": "regional-trade-blocs",
+       "learning_objective": "Explain why regional trade blocs arose and their likely effect on trade between blocs."
+      },
+      {
+       "concept_tag": "concerns-of-international-trade",
+       "learning_objective": "Evaluate the benefits and harmful effects of international trade, including environmental concerns."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH08-T6",
+     "topic_number": 6,
+     "title": "Ports: Functions and Types by Cargo and Location",
+     "ncert_sections": "Gateways of International Trade: Ports; Types of Port (cargo handled, location)",
+     "concepts": [
+      {
+       "concept_tag": "port-functions-and-hinterland",
+       "learning_objective": "Describe the facilities ports provide and how cargo handled reflects the development of the hinterland."
+      },
+      {
+       "concept_tag": "ports-by-cargo-and-location",
+       "learning_objective": "Classify ports as industrial, commercial or comprehensive, and as inland ports or out ports."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEGY1-CH08-T7",
+     "topic_number": 7,
+     "title": "Ports by Specialised Functions",
+     "ncert_sections": "Types of port on the basis of specialised functions",
+     "concepts": [
+      {
+       "concept_tag": "ports-of-call-and-packet-stations",
+       "learning_objective": "Identify ports of call and packet stations with their examples."
+      },
+      {
+       "concept_tag": "oil-entrepot-and-naval-ports",
+       "learning_objective": "Identify oil, entrepot and naval ports and their examples."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

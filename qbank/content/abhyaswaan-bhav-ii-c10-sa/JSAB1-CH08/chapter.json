@@ -1,0 +1,136 @@
+{
+ "chapter_id": "JSAB1-CH08",
+ "title": "प्रत्ययाः",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JSAB1-CH08-T1",
+   "topic_number": 1,
+   "title": "प्रत्ययानां परिचयः भेदाश्च",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "pratyaya-paribhasha",
+     "learning_objective": "छात्रः शब्दस्य धातोः वा अन्ते युज्यमानं प्रत्ययं परिचिनोति।"
+    },
+    {
+     "concept_tag": "pratyaya-traividhyam",
+     "learning_objective": "छात्रः कृदन्त-तद्धित-स्त्रीप्रत्ययानां त्रैविध्यं विभेदयति।"
+    },
+    {
+     "concept_tag": "ktva-tumun-avyaya",
+     "learning_objective": "छात्रः क्त्वा-तुमुन्-प्रत्यययुक्तानि पदानि अव्ययानि इति अवगच्छति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH08-T2",
+   "topic_number": 2,
+   "title": "शतृ-शानच्-प्रत्ययौ",
+   "ncert_sections": "2, 3",
+   "concepts": [
+    {
+     "concept_tag": "shatri-pratyaya-nirmanam",
+     "learning_objective": "छात्रः धातुना सह शतृप्रत्ययं योजयित्वा विशेषणपदं निर्माति।"
+    },
+    {
+     "concept_tag": "shatri-vibhakti-rupani",
+     "learning_objective": "छात्रः विशेष्यानुसारं शतृप्रत्ययान्तपदस्य लिङ्गविभक्तिवचनानि प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "shanach-pratyaya",
+     "learning_objective": "छात्रः आत्मनेपदिधातुभिः सह शानच्प्रत्ययस्य प्रयोगं करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH08-T3",
+   "topic_number": 3,
+   "title": "तव्यत्-अनीयर्-प्रत्ययौ",
+   "ncert_sections": "4, 5",
+   "concepts": [
+    {
+     "concept_tag": "tavyat-pratyaya",
+     "learning_objective": "छात्रः तव्यत्प्रत्ययस्य रूपनिर्माणं विधिलिङर्थं च अवगच्छति।"
+    },
+    {
+     "concept_tag": "aniyar-pratyaya",
+     "learning_objective": "छात्रः योग्यार्थे अनीयर्प्रत्ययस्य प्रयोगं परिचिनोति।"
+    },
+    {
+     "concept_tag": "karmavachya-prayoga",
+     "learning_objective": "छात्रः कर्मवाच्ये कर्मानुसारं तव्यत्-अनीयर्-पदानां प्रयोगं करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH08-T4",
+   "topic_number": 4,
+   "title": "मतुप्-वतुप्-इन्-प्रत्ययाः",
+   "ncert_sections": "6",
+   "concepts": [
+    {
+     "concept_tag": "matup-vatup-prayoga",
+     "learning_objective": "छात्रः युक्ततार्थे मतुप्-वतुप्प्रत्यययोः प्रयोगनियमं जानाति।"
+    },
+    {
+     "concept_tag": "matup-vatup-rupani",
+     "learning_objective": "छात्रः मतुप्-वतुप्प्रत्ययान्तपदानां रूपाणि वाक्ये प्रयुङ्क्ते।"
+    },
+    {
+     "concept_tag": "ini-pratyaya",
+     "learning_objective": "छात्रः अकारान्तशब्दैः सह णिनि (इन्) प्रत्ययस्य प्रयोगं करोति।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH08-T5",
+   "topic_number": 5,
+   "title": "त्व-तल्-प्रत्ययौ",
+   "ncert_sections": "7",
+   "concepts": [
+    {
+     "concept_tag": "tva-pratyaya",
+     "learning_objective": "छात्रः भाववाचके त्वप्रत्ययं तस्य नपुंसकलिङ्गं च जानाति।"
+    },
+    {
+     "concept_tag": "tal-pratyaya",
+     "learning_objective": "छात्रः तल्प्रत्ययान्तपदानि स्त्रीलिङ्गे प्रयुङ्क्ते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH08-T6",
+   "topic_number": 6,
+   "title": "ठक्-प्रत्ययः",
+   "ncert_sections": "8",
+   "concepts": [
+    {
+     "concept_tag": "thak-vriddhi-nirmanam",
+     "learning_objective": "छात्रः ठक्प्रत्यये इकादेशम् आदिस्वरवृद्धिं च अवगच्छति।"
+    },
+    {
+     "concept_tag": "thak-linga-rupani",
+     "learning_objective": "छात्रः ठक्प्रत्ययान्तपदानां त्रिषु लिङ्गेषु रूपाणि प्रयुङ्क्ते।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JSAB1-CH08-T7",
+   "topic_number": 7,
+   "title": "स्त्रीप्रत्ययाः (टाप्, ङीप्)",
+   "ncert_sections": "9",
+   "concepts": [
+    {
+     "concept_tag": "tap-pratyaya",
+     "learning_objective": "छात्रः टाप्प्रत्ययेन पुंलिङ्गशब्दान् स्त्रीलिङ्गे परिवर्तयति।"
+    },
+    {
+     "concept_tag": "ngip-pratyaya",
+     "learning_objective": "छात्रः ङीप्प्रत्ययान्तानि स्त्रीलिङ्गपदानि नदीवत् प्रयुङ्क्ते।"
+    }
+   ]
+  }
+ ]
+}

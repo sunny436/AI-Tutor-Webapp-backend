@@ -1,0 +1,124 @@
+{
+ "chapter_id": "LEEC1-CH05",
+ "title": "Government Budget and the Economy",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEEC1-CH05-T1",
+   "topic_number": 1,
+   "title": "Government budget: meaning and objectives",
+   "ncert_sections": "5.1, 5.1.1",
+   "concepts": [
+    {
+     "concept_tag": "annual-financial-statement",
+     "learning_objective": "Explain the constitutional basis of the budget and why it is split into revenue and capital accounts."
+    },
+    {
+     "concept_tag": "public-goods",
+     "learning_objective": "Distinguish public goods from private goods using non-rivalry and non-excludability, and public provision from public production."
+    },
+    {
+     "concept_tag": "budget-objectives",
+     "learning_objective": "Identify the allocation, redistribution and stabilisation functions of the government budget."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH05-T2",
+   "topic_number": 2,
+   "title": "Classification of receipts",
+   "ncert_sections": "5.1.2",
+   "concepts": [
+    {
+     "concept_tag": "revenue-receipts",
+     "learning_objective": "Classify revenue receipts into tax and non-tax revenue and describe progressive and proportional taxation."
+    },
+    {
+     "concept_tag": "capital-receipts",
+     "learning_objective": "Identify capital receipts as those that create liabilities or reduce financial assets, debt creating or non-debt creating."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH05-T3",
+   "topic_number": 3,
+   "title": "Classification of expenditure",
+   "ncert_sections": "5.1.3",
+   "concepts": [
+    {
+     "concept_tag": "revenue-expenditure",
+     "learning_objective": "Identify revenue expenditure and its main items such as interest, defence, subsidies, salaries and grants."
+    },
+    {
+     "concept_tag": "capital-expenditure",
+     "learning_objective": "Identify capital expenditure as spending that creates assets or reduces financial liabilities."
+    },
+    {
+     "concept_tag": "frbma-policy-statements",
+     "learning_objective": "State the purpose of the three fiscal policy statements laid with the budget under the FRBMA."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH05-T4",
+   "topic_number": 4,
+   "title": "Balanced, surplus and deficit budgets; measures of deficit",
+   "ncert_sections": "5.2, 5.2.1",
+   "concepts": [
+    {
+     "concept_tag": "budget-balance",
+     "learning_objective": "Distinguish balanced, surplus and deficit budgets."
+    },
+    {
+     "concept_tag": "revenue-deficit",
+     "learning_objective": "Compute the revenue deficit and interpret its implications for government dissaving."
+    },
+    {
+     "concept_tag": "fiscal-and-primary-deficit",
+     "learning_objective": "Compute fiscal and primary deficits and interpret them as measures of borrowing requirement."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH05-T5",
+   "topic_number": 5,
+   "title": "Fiscal policy and the multipliers",
+   "ncert_sections": "Box 5.1",
+   "concepts": [
+    {
+     "concept_tag": "expenditure-multiplier",
+     "learning_objective": "Calculate the government expenditure multiplier and the change in equilibrium income with lump-sum taxes."
+    },
+    {
+     "concept_tag": "tax-transfer-balanced-budget-multipliers",
+     "learning_objective": "Calculate and compare the tax, transfer and balanced budget multipliers."
+    },
+    {
+     "concept_tag": "proportional-taxes-stabilisers",
+     "learning_objective": "Analyse how proportional taxes reduce the multiplier and act as automatic stabilisers."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEEC1-CH05-T6",
+   "topic_number": 6,
+   "title": "Government debt, deficit reduction, FRBMA and GST",
+   "ncert_sections": "Debt; Box 5.2; Box 5.3",
+   "concepts": [
+    {
+     "concept_tag": "government-debt",
+     "learning_objective": "Evaluate perspectives on the burden of debt, including Ricardian equivalence and crowding out."
+    },
+    {
+     "concept_tag": "deficit-reduction-frbma",
+     "learning_objective": "Explain ways of reducing deficits and the main features of the FRBMA, 2003."
+    },
+    {
+     "concept_tag": "gst",
+     "learning_objective": "Explain how GST works as a destination-based value-added tax that removes cascading."
+    }
+   ]
+  }
+ ]
+}

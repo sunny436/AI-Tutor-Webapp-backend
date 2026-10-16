@@ -1,0 +1,124 @@
+{
+ "chapter_id": "GHES1-CH08",
+ "title": "भौगोलिक क्षेत्र कैसे पावन होते हैं?",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GHES1-CH08-T1",
+   "topic_number": 1,
+   "title": "पावनता और विभिन्न धर्मों के पावन स्थल",
+   "ncert_sections": "पावनता क्या है?",
+   "concepts": [
+    {
+     "concept_tag": "pavanta-ka-arth",
+     "learning_objective": "पावनता का अर्थ और किसी स्थल के पावन माने जाने का आधार समझना।"
+    },
+    {
+     "concept_tag": "dharmon-ke-pavan-sthal",
+     "learning_objective": "भारत में विभिन्न धर्मों और पंथों के प्रमुख पावन स्थलों की पहचान करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH08-T2",
+   "topic_number": 2,
+   "title": "तीर्थयात्राएँ",
+   "ncert_sections": "तीर्थयात्राएँ",
+   "concepts": [
+    {
+     "concept_tag": "tirth-ka-arth",
+     "learning_objective": "तीर्थ और तीर्थंकर शब्दों के शाब्दिक और प्रतीकात्मक अर्थ समझाना।"
+    },
+    {
+     "concept_tag": "tirthyatra-parampara",
+     "learning_objective": "भारत की प्राचीन तीर्थयात्रा परंपरा और उसके उदाहरणों का वर्णन करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH08-T3",
+   "topic_number": 3,
+   "title": "अन्य पावन स्थल और पावन भूभाग",
+   "ncert_sections": "अन्य पावन स्थल; पावन भूभाग से अवगत होना",
+   "concepts": [
+    {
+     "concept_tag": "prakriti-mein-pavanta",
+     "learning_objective": "लोक और जनजातीय परंपराओं में प्रकृति के तत्वों को पावन मानने के उदाहरण बताना।"
+    },
+    {
+     "concept_tag": "pavan-bhubhag-ka-jaal",
+     "learning_objective": "चार धाम, ज्योतिर्लिंग और शक्तिपीठों से बने पावन भूभाग के जाल को समझना।"
+    },
+    {
+     "concept_tag": "sanskritik-ekikaran",
+     "learning_objective": "तीर्थयात्रा और लंबी यात्राओं से उपमहाद्वीप के सांस्कृतिक एकीकरण का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH08-T4",
+   "topic_number": 4,
+   "title": "पावन पारिस्थितिकी: नदियाँ, संगम और पर्वत",
+   "ncert_sections": "पावन पारिस्थितिकी; नदियाँ एवं संगम; पर्वत और वन",
+   "concepts": [
+    {
+     "concept_tag": "nadiyan-aur-sangam",
+     "learning_objective": "नदियों की पूजा, संगम और कुंभ मेले की परंपरा को समझना।"
+    },
+    {
+     "concept_tag": "parvat-aur-tirth",
+     "learning_objective": "पर्वतों पर स्थित तीर्थों के प्रतीकात्मक महत्व की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH08-T5",
+   "topic_number": 5,
+   "title": "वृक्ष, वन तथा पावन निकुंज",
+   "ncert_sections": "वृक्ष, वन तथा पावन निकुंज",
+   "concepts": [
+    {
+     "concept_tag": "peepal-vriksh",
+     "learning_objective": "पीपल वृक्ष के धार्मिक, ऐतिहासिक और पारिस्थितिक महत्व को बताना।"
+    },
+    {
+     "concept_tag": "pavan-nikunj",
+     "learning_objective": "पावन निकुंजों के क्षेत्रीय नाम और जैव-विविधता संरक्षण में उनकी भूमिका समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH08-T6",
+   "topic_number": 6,
+   "title": "तीर्थयात्रा से व्यापार तक",
+   "ncert_sections": "तीर्थयात्रा से व्यापार तक",
+   "concepts": [
+    {
+     "concept_tag": "tirthyatra-aur-vyapar",
+     "learning_objective": "तीर्थयात्रा मार्गों और व्यापार मार्गों के आपसी संबंध को समझाना।"
+    },
+    {
+     "concept_tag": "prachin-vyapar-marg",
+     "learning_objective": "उत्तरापथ, दक्षिणापथ और उन पर होने वाले व्यापार की पहचान करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "GHES1-CH08-T7",
+   "topic_number": 7,
+   "title": "भारत से बाहर के पावन भूभाग और पावन स्थलों का संरक्षण",
+   "ncert_sections": "भारत से बाहर के पावन भूभाग; पावन स्थलों का पुनरुद्धार और संरक्षण",
+   "concepts": [
+    {
+     "concept_tag": "bharat-se-bahar-pavan-bhubhag",
+     "learning_objective": "भारत से बाहर पावन भूभाग की अवधारणा के उदाहरण बताना।"
+    },
+    {
+     "concept_tag": "pavan-sthalon-ka-sanrakshan",
+     "learning_objective": "पावन स्थलों के प्रदूषण के कारणों और उनके संरक्षण के दायित्व का मूल्यांकन करना।"
+    }
+   ]
+  }
+ ]
+}

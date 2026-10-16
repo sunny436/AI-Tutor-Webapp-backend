@@ -1,0 +1,1217 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "introduction-to-psychology-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "psychology",
+  "language": "english",
+  "title": "Introduction to Psychology",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kepy1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEPY1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "What is Psychology?",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kepy101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPY1-CH01-T1",
+     "topic_number": 1,
+     "title": "Defining psychology: mental processes, experience and behaviour",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "definition-of-psychology",
+       "learning_objective": "Students will state the formal definition of psychology and the origin of the term."
+      },
+      {
+       "concept_tag": "mental-processes-and-experience",
+       "learning_objective": "Students will distinguish mental processes from brain activity and explain why experiences are subjective."
+      },
+      {
+       "concept_tag": "overt-and-covert-behaviour",
+       "learning_objective": "Students will classify behaviours as overt or covert and relate them to stimulus and response."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH01-T2",
+     "topic_number": 2,
+     "title": "Psychology as a discipline: natural science and social science",
+     "ncert_sections": "Psychology as a Discipline; Psychology as a Natural Science; Psychology as a Social Science",
+     "concepts": [
+      {
+       "concept_tag": "hypothetico-deductive-model",
+       "learning_objective": "Students will explain how the hypothetico-deductive model guides psychology as a natural science."
+      },
+      {
+       "concept_tag": "psychology-as-social-science",
+       "learning_objective": "Students will explain how psychology studies individuals in their socio-cultural context."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH01-T3",
+     "topic_number": 3,
+     "title": "Understanding mind and behaviour",
+     "ncert_sections": "Understanding Mind and Behaviour",
+     "concepts": [
+      {
+       "concept_tag": "mind-and-brain",
+       "learning_objective": "Students will explain why the mind is considered distinct from, though dependent on, the brain."
+      },
+      {
+       "concept_tag": "mind-body-relationship",
+       "learning_objective": "Students will describe evidence from affective neuroscience that the mind influences bodily processes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH01-T4",
+     "topic_number": 4,
+     "title": "Popular notions about psychology",
+     "ncert_sections": "Popular Notions about the Discipline of Psychology",
+     "concepts": [
+      {
+       "concept_tag": "common-sense-and-hindsight",
+       "learning_objective": "Students will explain why common-sense explanations of behaviour rely on hindsight."
+      },
+      {
+       "concept_tag": "dweck-study",
+       "learning_objective": "Students will interpret Dweck's study as an example of scientific findings that run against common sense."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH01-T5",
+     "topic_number": 5,
+     "title": "Evolution of psychology",
+     "ncert_sections": "Evolution of Psychology; Box 1.1",
+     "concepts": [
+      {
+       "concept_tag": "structuralism-and-functionalism",
+       "learning_objective": "Students will compare Wundt's structuralism with James's functionalism."
+      },
+      {
+       "concept_tag": "gestalt-and-behaviourism",
+       "learning_objective": "Students will describe Gestalt psychology and behaviourism as reactions to structuralism."
+      },
+      {
+       "concept_tag": "psychoanalysis-humanism-cognitive",
+       "learning_objective": "Students will distinguish psychoanalytic, humanistic, cognitive and constructivist perspectives."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH01-T6",
+     "topic_number": 6,
+     "title": "Development of psychology in India",
+     "ncert_sections": "Development of Psychology in India",
+     "concepts": [
+      {
+       "concept_tag": "early-indian-psychology",
+       "learning_objective": "Students will identify the landmarks of the modern era of psychology in India."
+      },
+      {
+       "concept_tag": "phases-of-indian-psychology",
+       "learning_objective": "Students will sequence Durganand Sinha's four phases of psychology in India."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH01-T7",
+     "topic_number": 7,
+     "title": "Branches of psychology",
+     "ncert_sections": "Branches of Psychology",
+     "concepts": [
+      {
+       "concept_tag": "fields-of-specialisation",
+       "learning_objective": "Students will match problems to the appropriate branch of psychology."
+      },
+      {
+       "concept_tag": "clinical-psychologist-vs-psychiatrist",
+       "learning_objective": "Students will distinguish a clinical psychologist from a psychiatrist."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH01-T8",
+     "topic_number": 8,
+     "title": "Psychology, other disciplines and everyday life",
+     "ncert_sections": "Psychology and Other Disciplines; Psychology in Everyday Life",
+     "concepts": [
+      {
+       "concept_tag": "interdisciplinary-links",
+       "learning_objective": "Students will explain how psychology contributes to and draws from other disciplines."
+      },
+      {
+       "concept_tag": "psychology-in-everyday-life",
+       "learning_objective": "Students will apply psychological understanding to personal and social problems in daily life."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPY1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Methods of Enquiry in Psychology",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kepy102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPY1-CH02-T1",
+     "topic_number": 1,
+     "title": "Goals of psychological enquiry",
+     "ncert_sections": "Goals of Psychological Enquiry",
+     "concepts": [
+      {
+       "concept_tag": "goals-of-enquiry",
+       "learning_objective": "Identify description, prediction, explanation, control and application as the goals of psychological enquiry."
+      },
+      {
+       "concept_tag": "prediction-and-control",
+       "learning_objective": "Distinguish between prediction, explanation and control of behaviour with examples."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH02-T2",
+     "topic_number": 2,
+     "title": "Steps in scientific research and alternative paradigms",
+     "ncert_sections": "Steps in Conducting Scientific Research; Alternative Paradigms of Research",
+     "concepts": [
+      {
+       "concept_tag": "steps-of-scientific-research",
+       "learning_objective": "Sequence the four steps of scientific research and explain the role of a hypothesis."
+      },
+      {
+       "concept_tag": "scientific-vs-interpretive-paradigm",
+       "learning_objective": "Contrast the scientific and interpretive traditions of psychological research."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH02-T3",
+     "topic_number": 3,
+     "title": "Nature of psychological data",
+     "ncert_sections": "Nature of Psychological Data",
+     "concepts": [
+      {
+       "concept_tag": "data-in-context",
+       "learning_objective": "Explain why psychological data are tied to context, method and theory."
+      },
+      {
+       "concept_tag": "types-of-data",
+       "learning_objective": "Classify information as demographic, physical, physiological or psychological data."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH02-T4",
+     "topic_number": 4,
+     "title": "Observational method",
+     "ncert_sections": "Observational Method; Types of Observation",
+     "concepts": [
+      {
+       "concept_tag": "scientific-observation",
+       "learning_objective": "Describe selection, recording and analysis in scientific observation and the risk of observer bias."
+      },
+      {
+       "concept_tag": "types-of-observation",
+       "learning_objective": "Distinguish naturalistic from controlled and participant from non-participant observation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH02-T5",
+     "topic_number": 5,
+     "title": "Experimental method",
+     "ncert_sections": "Experimental Method; Box 2.1; Field Experiments and Quasi Experiments",
+     "concepts": [
+      {
+       "concept_tag": "independent-dependent-variables",
+       "learning_objective": "Identify independent, dependent and extraneous variables in an experiment."
+      },
+      {
+       "concept_tag": "experimental-control-techniques",
+       "learning_objective": "Explain experimental and control groups and techniques such as elimination, matching, counter-balancing and random assignment."
+      },
+      {
+       "concept_tag": "field-and-quasi-experiments",
+       "learning_objective": "Distinguish laboratory, field and quasi experiments and evaluate their strengths and limits."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH02-T6",
+     "topic_number": 6,
+     "title": "Correlational and survey research",
+     "ncert_sections": "Correlational Research; Survey Research; Box 2.2",
+     "concepts": [
+      {
+       "concept_tag": "correlation-coefficient",
+       "learning_objective": "Interpret positive, negative and zero correlation coefficients ranging from +1.0 to -1.0."
+      },
+      {
+       "concept_tag": "survey-techniques",
+       "learning_objective": "Compare interviews, questionnaires and telephone surveys and state the strengths and limits of surveys."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH02-T7",
+     "topic_number": 7,
+     "title": "Psychological testing and case study",
+     "ncert_sections": "Psychological Testing; Types of Tests; Case Study",
+     "concepts": [
+      {
+       "concept_tag": "test-reliability-validity-norms",
+       "learning_objective": "Explain objectivity, reliability, validity and norms of a standardised test."
+      },
+      {
+       "concept_tag": "types-of-tests",
+       "learning_objective": "Classify tests as verbal, non-verbal or performance, individual or group, and speed or power."
+      },
+      {
+       "concept_tag": "case-study-method",
+       "learning_objective": "Describe the case study method, its uses and its limitations."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH02-T8",
+     "topic_number": 8,
+     "title": "Analysis of data, limitations and ethical issues",
+     "ncert_sections": "Analysis of Data; Limitations of Psychological Enquiry; Ethical Issues",
+     "concepts": [
+      {
+       "concept_tag": "quantitative-qualitative-analysis",
+       "learning_objective": "Distinguish quantitative from qualitative analysis of data."
+      },
+      {
+       "concept_tag": "limitations-of-enquiry",
+       "learning_objective": "Explain the lack of a true zero point, relative nature of tools and subjective interpretation as limitations."
+      },
+      {
+       "concept_tag": "ethical-principles",
+       "learning_objective": "Apply the ethical principles of voluntary participation, informed consent, debriefing, sharing results and confidentiality."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPY1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Human Development",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kepy103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPY1-CH03-T1",
+     "topic_number": 1,
+     "title": "Meaning of development and the life-span perspective",
+     "ncert_sections": "Meaning of Development; Life-Span Perspective; Box 3.1",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-development",
+       "learning_objective": "Define development and distinguish it from growth, maturation and evolution."
+      },
+      {
+       "concept_tag": "life-span-perspective",
+       "learning_objective": "Explain the assumptions of the life-span perspective on development."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH03-T2",
+     "topic_number": 2,
+     "title": "Factors influencing development",
+     "ncert_sections": "Factors Influencing Development",
+     "concepts": [
+      {
+       "concept_tag": "genotype-and-phenotype",
+       "learning_objective": "Distinguish genotype from phenotype and explain how heredity sets limits on development."
+      },
+      {
+       "concept_tag": "heredity-environment-interaction",
+       "learning_objective": "Explain how genes and environment interact, including Scarr's view of parent-provided and child-chosen environments."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH03-T3",
+     "topic_number": 3,
+     "title": "Context of development",
+     "ncert_sections": "Context of Development",
+     "concepts": [
+      {
+       "concept_tag": "bronfenbrenner-ecological-systems",
+       "learning_objective": "Identify the microsystem, mesosystem, exosystem, macrosystem and chronosystem in Bronfenbrenner's contextual view."
+      },
+      {
+       "concept_tag": "sinha-ecological-model",
+       "learning_objective": "Describe Durganand Sinha's two-layer ecological model of child development in the Indian context."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH03-T4",
+     "topic_number": 4,
+     "title": "Developmental stages and the prenatal stage",
+     "ncert_sections": "Overview of Developmental Stages; Prenatal Stage",
+     "concepts": [
+      {
+       "concept_tag": "developmental-tasks",
+       "learning_objective": "Explain what developmental stages and developmental tasks are."
+      },
+      {
+       "concept_tag": "prenatal-influences",
+       "learning_objective": "Identify maternal factors and teratogens that affect prenatal development."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH03-T5",
+     "topic_number": 5,
+     "title": "Infancy",
+     "ncert_sections": "Infancy",
+     "concepts": [
+      {
+       "concept_tag": "newborn-reflexes-and-senses",
+       "learning_objective": "Describe newborn reflexes, motor skills and sensory abilities."
+      },
+      {
+       "concept_tag": "sensorimotor-object-permanence",
+       "learning_objective": "Explain sensorimotor thinking and object permanence in infancy."
+      },
+      {
+       "concept_tag": "attachment-and-trust",
+       "learning_objective": "Explain attachment, Harlow's contact-comfort study and Erikson's trust versus mistrust."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH03-T6",
+     "topic_number": 6,
+     "title": "Childhood",
+     "ncert_sections": "Childhood; Box 3.2 Gender and Sex Roles",
+     "concepts": [
+      {
+       "concept_tag": "physical-motor-trends",
+       "learning_objective": "Explain the cephalocaudal and proximodistal trends and motor skill development in childhood."
+      },
+      {
+       "concept_tag": "preoperational-concrete-thought",
+       "learning_objective": "Distinguish preoperational features (egocentrism, animism, centration) from concrete operational thought."
+      },
+      {
+       "concept_tag": "self-gender-moral-development",
+       "learning_objective": "Describe the development of self, gender roles and Kohlberg's moral reasoning in childhood."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH03-T7",
+     "topic_number": 7,
+     "title": "Challenges of adolescence",
+     "ncert_sections": "Challenges of Adolescence",
+     "concepts": [
+      {
+       "concept_tag": "puberty-and-formal-operations",
+       "learning_objective": "Describe pubertal changes and formal operational thought in adolescence."
+      },
+      {
+       "concept_tag": "adolescent-egocentrism-identity",
+       "learning_objective": "Explain imaginary audience, personal fable and identity formation in adolescence."
+      },
+      {
+       "concept_tag": "adolescent-concerns",
+       "learning_objective": "Identify features of delinquency, substance abuse and eating disorders in adolescence."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH03-T8",
+     "topic_number": 8,
+     "title": "Adulthood and old age",
+     "ncert_sections": "Adulthood and Old Age",
+     "concepts": [
+      {
+       "concept_tag": "adulthood-tasks-changes",
+       "learning_objective": "Describe the tasks, roles and physical and cognitive changes of adulthood."
+      },
+      {
+       "concept_tag": "old-age-challenges",
+       "learning_objective": "Explain the challenges of old age such as retirement, widowhood and dependency."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPY1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Sensory, Attentional and Perceptual Processes",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kepy104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPY1-CH04-T1",
+     "topic_number": 1,
+     "title": "Knowing the world: stimuli, sense modalities and thresholds",
+     "ncert_sections": "Knowing the World; Nature and Varieties of Stimulus; Sense Modalities",
+     "concepts": [
+      {
+       "concept_tag": "sense-organs-and-modalities",
+       "learning_objective": "Identify the seven sense organs, including the two deep senses, and define sensation and sense modality."
+      },
+      {
+       "concept_tag": "absolute-threshold",
+       "learning_objective": "Explain the absolute threshold and why it is estimated over many trials."
+      },
+      {
+       "concept_tag": "difference-threshold",
+       "learning_objective": "Distinguish the difference threshold from the absolute threshold in a given situation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH04-T2",
+     "topic_number": 2,
+     "title": "Attention and selective attention",
+     "ncert_sections": "Attentional Processes; Selective Attention",
+     "concepts": [
+      {
+       "concept_tag": "properties-of-attention",
+       "learning_objective": "Describe alertness, concentration and search as properties of attention, and its focus and fringe."
+      },
+      {
+       "concept_tag": "factors-selective-attention",
+       "learning_objective": "Classify external and internal factors that determine selective attention."
+      },
+      {
+       "concept_tag": "theories-selective-attention",
+       "learning_objective": "Compare the filter, filter-attenuation and multimode theories of selective attention."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH04-T3",
+     "topic_number": 3,
+     "title": "Sustained attention, span of attention, divided attention and ADHD",
+     "ncert_sections": "Sustained Attention; Box 4.1; Box 4.2; Box 4.3",
+     "concepts": [
+      {
+       "concept_tag": "sustained-attention",
+       "learning_objective": "Explain vigilance and the factors that facilitate or inhibit sustained attention."
+      },
+      {
+       "concept_tag": "span-and-divided-attention",
+       "learning_objective": "State the span of attention and explain when attention can be divided."
+      },
+      {
+       "concept_tag": "adhd",
+       "learning_objective": "Describe the features, causes and management of attention deficit hyperactivity disorder."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH04-T4",
+     "topic_number": 4,
+     "title": "Perceptual processes and the perceiver",
+     "ncert_sections": "Perceptual Processes; Processing Approaches in Perception; The Perceiver",
+     "concepts": [
+      {
+       "concept_tag": "bottom-up-top-down",
+       "learning_objective": "Define perception and distinguish bottom-up from top-down processing."
+      },
+      {
+       "concept_tag": "perceiver-factors",
+       "learning_objective": "Explain how motivation, expectations and cultural experience shape perception."
+      },
+      {
+       "concept_tag": "cognitive-styles",
+       "learning_objective": "Distinguish field dependent and field independent cognitive styles."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH04-T5",
+     "topic_number": 5,
+     "title": "Principles of perceptual organisation",
+     "ncert_sections": "Principles of Perceptual Organisation",
+     "concepts": [
+      {
+       "concept_tag": "gestalt-and-figure-ground",
+       "learning_objective": "Explain the Gestalt view of form perception and the features of figure and ground."
+      },
+      {
+       "concept_tag": "gestalt-principles",
+       "learning_objective": "Apply the Gestalt principles of organisation to visual patterns."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH04-T6",
+     "topic_number": 6,
+     "title": "Perception of space, depth and distance",
+     "ncert_sections": "Perception of Space, Depth, and Distance; Monocular Cues and Binocular Cues",
+     "concepts": [
+      {
+       "concept_tag": "monocular-cues",
+       "learning_objective": "Identify monocular (pictorial and kinetic) cues to depth in given scenes."
+      },
+      {
+       "concept_tag": "binocular-cues",
+       "learning_objective": "Explain retinal disparity, convergence and accommodation as cues to depth."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH04-T7",
+     "topic_number": 7,
+     "title": "Perceptual constancies and illusions",
+     "ncert_sections": "Perceptual Constancies; Illusions",
+     "concepts": [
+      {
+       "concept_tag": "perceptual-constancies",
+       "learning_objective": "Distinguish size, shape and brightness constancy."
+      },
+      {
+       "concept_tag": "illusions",
+       "learning_objective": "Explain geometrical and apparent movement illusions and why illusions occur."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH04-T8",
+     "topic_number": 8,
+     "title": "Socio-cultural influences on perception",
+     "ncert_sections": "Socio-Cultural Influences on Perception",
+     "concepts": [
+      {
+       "concept_tag": "illusion-susceptibility-culture",
+       "learning_objective": "Interpret cross-cultural findings on susceptibility to visual illusions."
+      },
+      {
+       "concept_tag": "pictorial-perception-culture",
+       "learning_objective": "Explain how cultural exposure to pictures affects pictorial perception."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPY1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Learning",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kepy105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPY1-CH05-T1",
+     "topic_number": 1,
+     "title": "Nature of Learning",
+     "ncert_sections": "Nature of Learning",
+     "concepts": [
+      {
+       "concept_tag": "learning-definition",
+       "learning_objective": "Define learning as a relatively permanent change in behaviour or behavioural potential produced by experience."
+      },
+      {
+       "concept_tag": "non-learning-changes",
+       "learning_objective": "Distinguish learning from temporary changes due to fatigue, habituation and drugs."
+      },
+      {
+       "concept_tag": "learning-vs-performance",
+       "learning_objective": "Explain that learning is an inferred process, different from observed performance."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH05-T2",
+     "topic_number": 2,
+     "title": "Classical Conditioning",
+     "ncert_sections": "Classical Conditioning; Determinants of Classical Conditioning",
+     "concepts": [
+      {
+       "concept_tag": "pavlov-experiment",
+       "learning_objective": "Identify the US, UR, CS and CR in Pavlov's experiment and everyday examples."
+      },
+      {
+       "concept_tag": "cs-us-time-relations",
+       "learning_objective": "Compare simultaneous, delayed, trace and backward conditioning procedures."
+      },
+      {
+       "concept_tag": "type-intensity-of-stimuli",
+       "learning_objective": "Explain how appetitive or aversive US and the intensity of the CS affect conditioning."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH05-T3",
+     "topic_number": 3,
+     "title": "Operant/Instrumental Conditioning",
+     "ncert_sections": "Operant/Instrumental Conditioning; Determinants of Operant Conditioning; Box 5.1",
+     "concepts": [
+      {
+       "concept_tag": "skinner-operant",
+       "learning_objective": "Describe Skinner's operant conditioning and the nature of operants."
+      },
+      {
+       "concept_tag": "positive-negative-reinforcement",
+       "learning_objective": "Distinguish positive reinforcement, negative reinforcement and punishment."
+      },
+      {
+       "concept_tag": "reinforcement-features",
+       "learning_objective": "Explain how number, amount, quality, schedule and delay of reinforcement influence operant learning."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH05-T4",
+     "topic_number": 4,
+     "title": "Key Learning Processes",
+     "ncert_sections": "Key Learning Processes; Box 5.2",
+     "concepts": [
+      {
+       "concept_tag": "primary-secondary-reinforcer",
+       "learning_objective": "Distinguish primary and secondary reinforcers."
+      },
+      {
+       "concept_tag": "extinction-spontaneous-recovery",
+       "learning_objective": "Explain extinction, resistance to extinction and spontaneous recovery."
+      },
+      {
+       "concept_tag": "generalisation-discrimination",
+       "learning_objective": "Differentiate generalisation from discrimination and explain learned helplessness."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH05-T5",
+     "topic_number": 5,
+     "title": "Observational and Cognitive Learning",
+     "ncert_sections": "Observational Learning; Cognitive Learning",
+     "concepts": [
+      {
+       "concept_tag": "observational-learning",
+       "learning_objective": "Explain observational learning using Bandura's Bobo doll study."
+      },
+      {
+       "concept_tag": "insight-learning",
+       "learning_objective": "Describe Kohler's insight learning in chimpanzees."
+      },
+      {
+       "concept_tag": "latent-learning",
+       "learning_objective": "Explain Tolman's latent learning and the idea of a cognitive map."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH05-T6",
+     "topic_number": 6,
+     "title": "Verbal Learning",
+     "ncert_sections": "Verbal Learning",
+     "concepts": [
+      {
+       "concept_tag": "verbal-learning-methods",
+       "learning_objective": "Describe paired-associates learning, serial learning and free recall."
+      },
+      {
+       "concept_tag": "verbal-learning-determinants",
+       "learning_objective": "Explain the determinants of verbal learning, including meaningfulness and the total time principle."
+      },
+      {
+       "concept_tag": "category-clustering",
+       "learning_objective": "Explain category clustering and subjective organisation in free recall."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH05-T7",
+     "topic_number": 7,
+     "title": "Skill Learning and Factors Facilitating Learning",
+     "ncert_sections": "Skill Learning; Factors Facilitating Learning",
+     "concepts": [
+      {
+       "concept_tag": "skill-phases",
+       "learning_objective": "Identify Fitts' cognitive, associative and autonomous phases of skill acquisition."
+      },
+      {
+       "concept_tag": "partial-reinforcement-effect",
+       "learning_objective": "Explain the partial reinforcement effect and the role of motivation in learning."
+      },
+      {
+       "concept_tag": "preparedness",
+       "learning_objective": "Explain preparedness for learning as a continuum set by biological constraints."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH05-T8",
+     "topic_number": 8,
+     "title": "Learning Disabilities",
+     "ncert_sections": "Learning Disabilities",
+     "concepts": [
+      {
+       "concept_tag": "learning-disability-nature",
+       "learning_objective": "Describe the nature and origin of learning disabilities."
+      },
+      {
+       "concept_tag": "learning-disability-symptoms",
+       "learning_objective": "Identify the major symptoms of learning disabilities, including dyslexia."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPY1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Human Memory",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kepy106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPY1-CH06-T1",
+     "topic_number": 1,
+     "title": "Nature of memory: encoding, storage and retrieval",
+     "ncert_sections": "Introduction; Nature of Memory",
+     "concepts": [
+      {
+       "concept_tag": "encoding-storage-retrieval",
+       "learning_objective": "Describe memory as the three interrelated stages of encoding, storage and retrieval."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH06-T2",
+     "topic_number": 2,
+     "title": "The stage model: sensory, short-term and long-term memory",
+     "ncert_sections": "Information Processing Approach: The Stage Model; Memory Systems",
+     "concepts": [
+      {
+       "concept_tag": "stage-model-memory-systems",
+       "learning_objective": "Compare the capacity, duration and encoding of sensory, short-term and long-term memory in the Atkinson-Shiffrin model."
+      },
+      {
+       "concept_tag": "control-processes",
+       "learning_objective": "Explain how attention, maintenance rehearsal, chunking and elaborative rehearsal move information between stores."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH06-T3",
+     "topic_number": 3,
+     "title": "Working memory and evaluation of the stage model",
+     "ncert_sections": "Box 6.1 Working Memory; Memory Systems (evaluation)",
+     "concepts": [
+      {
+       "concept_tag": "working-memory-components",
+       "learning_objective": "Identify the phonological loop, visuospatial sketchpad and central executive in Baddeley's working memory."
+      },
+      {
+       "concept_tag": "critique-of-stage-model",
+       "learning_objective": "Evaluate evidence such as the case of KF that questions separate STM and LTM stores."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH06-T4",
+     "topic_number": 4,
+     "title": "Levels of processing",
+     "ncert_sections": "Levels of Processing",
+     "concepts": [
+      {
+       "concept_tag": "levels-of-processing",
+       "learning_objective": "Explain Craik and Lockhart's structural, phonetic and semantic levels of processing and their effect on retention."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH06-T5",
+     "topic_number": 5,
+     "title": "Types of long-term memory",
+     "ncert_sections": "Types of Long-term Memory; Box 6.2; Box 6.3",
+     "concepts": [
+      {
+       "concept_tag": "declarative-procedural-memory",
+       "learning_objective": "Distinguish declarative from procedural memory with examples."
+      },
+      {
+       "concept_tag": "episodic-semantic-memory",
+       "learning_objective": "Distinguish Tulving's episodic and semantic memory."
+      },
+      {
+       "concept_tag": "ltm-phenomena-and-measurement",
+       "learning_objective": "Describe flashbulb, autobiographical and implicit memory and methods such as recall, recognition and priming."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH06-T6",
+     "topic_number": 6,
+     "title": "Nature and causes of forgetting",
+     "ncert_sections": "Nature and Causes of Forgetting; Box 6.4",
+     "concepts": [
+      {
+       "concept_tag": "forgetting-curve-trace-decay",
+       "learning_objective": "Interpret Ebbinghaus's curve of forgetting and evaluate trace decay theory."
+      },
+      {
+       "concept_tag": "interference-theory",
+       "learning_objective": "Distinguish proactive from retroactive interference."
+      },
+      {
+       "concept_tag": "retrieval-failure",
+       "learning_objective": "Explain forgetting due to absent or inappropriate retrieval cues."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH06-T7",
+     "topic_number": 7,
+     "title": "Enhancing memory",
+     "ncert_sections": "Enhancing Memory; Mnemonics using Images and Organisation",
+     "concepts": [
+      {
+       "concept_tag": "mnemonics-using-images",
+       "learning_objective": "Apply the keyword method and the method of loci."
+      },
+      {
+       "concept_tag": "mnemonics-using-organisation",
+       "learning_objective": "Apply chunking and the first letter technique to organise material."
+      },
+      {
+       "concept_tag": "memory-improvement-strategies",
+       "learning_objective": "Explain deep processing, minimising interference, retrieval cues and the PQRST method."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPY1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Thinking",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kepy107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPY1-CH07-T1",
+     "topic_number": 1,
+     "title": "Nature of Thinking and Building Blocks of Thought",
+     "ncert_sections": "Nature of Thinking; Building Blocks of Thought; Box 7.1",
+     "concepts": [
+      {
+       "concept_tag": "nature-of-thinking",
+       "learning_objective": "Describe thinking as a higher mental process that manipulates information and is inferred from behaviour."
+      },
+      {
+       "concept_tag": "images-and-concepts",
+       "learning_objective": "Distinguish mental images and concepts as the building blocks of thought and explain why concepts are formed."
+      },
+      {
+       "concept_tag": "culture-and-thinking",
+       "learning_objective": "Explain how culture shapes analytical and holistic styles of thinking."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH07-T2",
+     "topic_number": 2,
+     "title": "Problem Solving and Its Obstacles",
+     "ncert_sections": "Problem Solving; Obstacles to Solving Problems",
+     "concepts": [
+      {
+       "concept_tag": "problem-solving-steps",
+       "learning_objective": "Identify the sequence of mental operations involved in solving a problem."
+      },
+      {
+       "concept_tag": "mental-set-functional-fixedness",
+       "learning_objective": "Explain how mental set and functional fixedness hinder problem solving."
+      },
+      {
+       "concept_tag": "lack-of-motivation",
+       "learning_objective": "Recognise lack of motivation and persistence as an obstacle to problem solving."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH07-T3",
+     "topic_number": 3,
+     "title": "Reasoning and Decision-making",
+     "ncert_sections": "Reasoning; Decision-making",
+     "concepts": [
+      {
+       "concept_tag": "deductive-inductive-reasoning",
+       "learning_objective": "Distinguish deductive reasoning (general to particular) from inductive reasoning (particular to general)."
+      },
+      {
+       "concept_tag": "analogy",
+       "learning_objective": "Explain analogy as a four-part form of reasoning."
+      },
+      {
+       "concept_tag": "judgment-decision-making",
+       "learning_objective": "Explain how judgment and decision-making are interrelated yet different processes."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH07-T4",
+     "topic_number": 4,
+     "title": "Nature of Creative Thinking",
+     "ncert_sections": "Nature of Creative Thinking; Box 7.2",
+     "concepts": [
+      {
+       "concept_tag": "criteria-of-creativity",
+       "learning_objective": "State the criteria of creative thinking: novelty, originality, effective surprise and appropriateness."
+      },
+      {
+       "concept_tag": "convergent-divergent-thinking",
+       "learning_objective": "Distinguish convergent from divergent thinking and identify fluency, flexibility, originality and elaboration."
+      },
+      {
+       "concept_tag": "lateral-thinking",
+       "learning_objective": "Explain de Bono's lateral thinking and the six thinking hats technique."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH07-T5",
+     "topic_number": 5,
+     "title": "Process and Strategies of Creative Thinking",
+     "ncert_sections": "Process of Creative Thinking; Strategies for Creative Thinking",
+     "concepts": [
+      {
+       "concept_tag": "stages-of-creative-process",
+       "learning_objective": "Sequence the stages of preparation, incubation, illumination and verification."
+      },
+      {
+       "concept_tag": "brainstorming",
+       "learning_objective": "Explain the principle of brainstorming and other strategies that enhance creative thinking."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH07-T6",
+     "topic_number": 6,
+     "title": "Thought and Language",
+     "ncert_sections": "Thought and Language",
+     "concepts": [
+      {
+       "concept_tag": "linguistic-relativity",
+       "learning_objective": "Explain Whorf's linguistic relativity hypothesis and its strong version."
+      },
+      {
+       "concept_tag": "piaget-vygotsky-views",
+       "learning_objective": "Compare Piaget's and Vygotsky's views on the relationship between thought and language."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH07-T7",
+     "topic_number": 7,
+     "title": "Development of Language and Language Use",
+     "ncert_sections": "Development of Language and Language Use; Box 7.3",
+     "concepts": [
+      {
+       "concept_tag": "characteristics-of-language",
+       "learning_objective": "Identify symbols, rules and communication as the basic characteristics of language."
+      },
+      {
+       "concept_tag": "stages-of-language-development",
+       "learning_objective": "Sequence the stages of language development from crying to telegraphic speech."
+      },
+      {
+       "concept_tag": "theories-of-language-acquisition",
+       "learning_objective": "Compare Skinner's learning view and Chomsky's innate view of language acquisition, and explain pragmatic language use."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEPY1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Motivation and Emotion",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kepy108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEPY1-CH08-T1",
+     "topic_number": 1,
+     "title": "Nature of motivation and the motivational cycle",
+     "ncert_sections": "Nature of Motivation; The Motivational Cycle",
+     "concepts": [
+      {
+       "concept_tag": "meaning-of-motivation",
+       "learning_objective": "Explain the meaning of motivation and how motives help explain and predict behaviour."
+      },
+      {
+       "concept_tag": "motivational-cycle",
+       "learning_objective": "Describe the sequence of need, drive, goal-directed behaviour and drive reduction in the motivational cycle."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH08-T2",
+     "topic_number": 2,
+     "title": "Types of motives and biological motives",
+     "ncert_sections": "Types of Motives; Biological Motives (Hunger, Thirst, Sex)",
+     "concepts": [
+      {
+       "concept_tag": "biological-vs-psychosocial",
+       "learning_objective": "Distinguish biological and psychosocial motives and explain their interdependence."
+      },
+      {
+       "concept_tag": "instinct",
+       "learning_objective": "Define instinct as an inborn, biologically determined pattern of behaviour."
+      },
+      {
+       "concept_tag": "hunger-thirst-sex",
+       "learning_objective": "Explain the internal and external bases of hunger, thirst and the sex drive."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH08-T3",
+     "topic_number": 3,
+     "title": "Psychosocial motives",
+     "ncert_sections": "Psychosocial Motives",
+     "concepts": [
+      {
+       "concept_tag": "affiliation-and-power",
+       "learning_objective": "Describe the need for affiliation and McClelland's four ways of expressing the power motive."
+      },
+      {
+       "concept_tag": "achievement-motivation",
+       "learning_objective": "Explain the features and sources of the need for achievement (n-Ach)."
+      },
+      {
+       "concept_tag": "curiosity-exploration",
+       "learning_objective": "Explain curiosity and exploration as motives without a specific identifiable goal."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH08-T4",
+     "topic_number": 4,
+     "title": "Maslow's hierarchy of needs",
+     "ncert_sections": "Maslow's Hierarchy of Needs",
+     "concepts": [
+      {
+       "concept_tag": "hierarchy-levels",
+       "learning_objective": "Arrange the five levels of Maslow's hierarchy in order and identify a need at each level."
+      },
+      {
+       "concept_tag": "self-actualisation",
+       "learning_objective": "Describe the characteristics of a self-actualised person and the limits of the hierarchy."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH08-T5",
+     "topic_number": 5,
+     "title": "Nature of emotions",
+     "ncert_sections": "Nature of Emotions",
+     "concepts": [
+      {
+       "concept_tag": "emotion-feeling-mood",
+       "learning_objective": "Distinguish emotion from feeling and mood."
+      },
+      {
+       "concept_tag": "basic-emotions",
+       "learning_objective": "Compare the six universally recognised emotions with the basic emotions proposed by Izard and Plutchik."
+      },
+      {
+       "concept_tag": "factors-in-emotional-experience",
+       "learning_objective": "Explain how intensity, quality, gender and situation influence emotional experience."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH08-T6",
+     "topic_number": 6,
+     "title": "Expression of emotions and culture",
+     "ncert_sections": "Expression of Emotions; Culture and Emotional Expression; Culture and Emotional Labeling",
+     "concepts": [
+      {
+       "concept_tag": "channels-of-expression",
+       "learning_objective": "Identify verbal and non-verbal channels of emotional expression, including paralanguage."
+      },
+      {
+       "concept_tag": "culture-and-expression",
+       "learning_objective": "Explain cultural differences in gaze behaviour and emotional labeling."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEPY1-CH08-T7",
+     "topic_number": 7,
+     "title": "Managing negative emotions and enhancing positive emotions",
+     "ncert_sections": "Managing Negative Emotions; Box 8.1; Box 8.2; Managing your Anger; Enhancing Positive Emotions",
+     "concepts": [
+      {
+       "concept_tag": "emotion-management-tips",
+       "learning_objective": "Apply strategies such as self-monitoring, self-modeling and cognitive restructuring to manage emotions."
+      },
+      {
+       "concept_tag": "exam-anxiety-ptsd",
+       "learning_objective": "Distinguish monitoring and blunting strategies for examination anxiety and describe PTSD."
+      },
+      {
+       "concept_tag": "anger-and-positive-emotions",
+       "learning_objective": "Explain the bases of anger management and the functions and enhancement of positive emotions."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

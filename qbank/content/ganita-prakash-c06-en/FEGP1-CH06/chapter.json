@@ -1,0 +1,136 @@
+{
+ "chapter_id": "FEGP1-CH06",
+ "title": "Perimeter and Area",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FEGP1-CH06-T1",
+   "topic_number": 1,
+   "title": "Perimeter of rectangles, squares and triangles",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "perimeter-of-polygon",
+     "learning_objective": "State that the perimeter of a closed figure is the total length of its boundary, the sum of all sides for a polygon."
+    },
+    {
+     "concept_tag": "perimeter-rectangle-square",
+     "learning_objective": "Use the formulas 2 x (length + breadth) and 4 x side to find the perimeter of rectangles and squares."
+    },
+    {
+     "concept_tag": "missing-side-from-perimeter",
+     "learning_objective": "Find an unknown side length when the perimeter and the other sides of a figure are known."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH06-T2",
+   "topic_number": 2,
+   "title": "Perimeter in real-life situations",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "perimeter-word-problems",
+     "learning_objective": "Apply perimeter to fencing, lace, rope and cost problems."
+    },
+    {
+     "concept_tag": "perimeter-running-tracks",
+     "learning_objective": "Find and compare distances covered in several rounds of a rectangular or square track."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH06-T3",
+   "topic_number": 3,
+   "title": "Regular polygons and joined shapes",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "perimeter-regular-polygon",
+     "learning_objective": "Identify regular polygons and find their perimeter as number of sides x length of a side."
+    },
+    {
+     "concept_tag": "straight-and-diagonal-units",
+     "learning_objective": "Explain why a diagonal of a grid square is longer than a side when finding perimeters on a grid."
+    },
+    {
+     "concept_tag": "split-and-rejoin-perimeter",
+     "learning_objective": "Reason how the perimeter changes when pieces of a shape are joined in different ways."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH06-T4",
+   "topic_number": 4,
+   "title": "Area of rectangles and squares",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "area-meaning-units",
+     "learning_objective": "Describe area as the region enclosed by a closed figure, measured in square units."
+    },
+    {
+     "concept_tag": "area-rectangle-square",
+     "learning_objective": "Use length x width and side x side to find areas and missing dimensions."
+    },
+    {
+     "concept_tag": "area-remaining-region",
+     "learning_objective": "Find the area of a region left over after parts of it are covered or removed."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH06-T5",
+   "topic_number": 5,
+   "title": "Estimating area and tangram shapes",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "estimate-area-grid-conventions",
+     "learning_objective": "Estimate the area of a shape on squared paper using the counting conventions for full, more than half, half and less than half squares."
+    },
+    {
+     "concept_tag": "squares-as-area-units",
+     "learning_objective": "Explain why squares are the preferred unit shape for measuring area."
+    },
+    {
+     "concept_tag": "tangram-area-relationships",
+     "learning_objective": "Compare the areas of tangram pieces and reason that rearranging pieces keeps the total area unchanged."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH06-T6",
+   "topic_number": 6,
+   "title": "Area of a triangle",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "triangle-half-of-rectangle",
+     "learning_objective": "Show that a triangle drawn on the side of a rectangle with its third vertex on the opposite side has half the area of the rectangle."
+    },
+    {
+     "concept_tag": "area-composite-rectangles-triangles",
+     "learning_objective": "Find the area of a figure by splitting it into rectangles and triangles."
+    }
+   ]
+  },
+  {
+   "topic_id": "FEGP1-CH06-T7",
+   "topic_number": 7,
+   "title": "Same area, different perimeters",
+   "ncert_sections": "6.3",
+   "concepts": [
+    {
+     "concept_tag": "same-area-different-perimeter",
+     "learning_objective": "Recognise that figures with the same area can have different perimeters, and the reverse."
+    },
+    {
+     "concept_tag": "area-perimeter-puzzles",
+     "learning_objective": "Solve puzzles and plans that combine area and perimeter reasoning."
+    }
+   ]
+  }
+ ]
+}

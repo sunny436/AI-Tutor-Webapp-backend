@@ -1,0 +1,1203 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "malhar-c07-hi",
+  "curriculum": "cbse",
+  "class_level": 7,
+  "subject_code": "hindi",
+  "language": "hindi",
+  "title": "Malhar",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "ghml1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "GHML1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "माँ, कह एक कहानी",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghml101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHML1-CH01-T1",
+     "topic_number": 1,
+     "title": "कविता का प्रसंग और कवि-परिचय",
+     "ncert_sections": "कवि से परिचय",
+     "concepts": [
+      {
+       "concept_tag": "kavi-parichay-maithilisharan-gupt",
+       "learning_objective": "विद्यार्थी मैथिलीशरण गुप्त के जीवन, भाषा और प्रमुख काव्य-कृतियों के बारे में बता सकेंगे।"
+      },
+      {
+       "concept_tag": "yashodhara-rahul-patra",
+       "learning_objective": "विद्यार्थी कविता के पात्रों माँ यशोधरा, पुत्र राहुल और पिता सिद्धार्थ को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH01-T2",
+     "topic_number": 2,
+     "title": "कहानी का आरंभ और उपवन का प्रकृति-वर्णन",
+     "ncert_sections": "पद 1-4",
+     "concepts": [
+      {
+       "concept_tag": "kahani-ka-aarambh",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि बालक किस प्रकार माँ से कहानी सुनाने का हठ करता है।"
+      },
+      {
+       "concept_tag": "upavan-prakriti-varnan",
+       "learning_objective": "विद्यार्थी उपवन के फूलों, ओस, हवा और पानी के वर्णन का अर्थ समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH01-T3",
+     "topic_number": 3,
+     "title": "घायल हंस, आखेटक और सदय-निर्दय का विवाद",
+     "ncert_sections": "पद 5-8",
+     "concepts": [
+      {
+       "concept_tag": "ghayal-hans-ki-ghatna",
+       "learning_objective": "विद्यार्थी हंस के घायल होने और सिद्धार्थ द्वारा उसे बचाने की घटना का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "saday-nirday-vivad",
+       "learning_objective": "विद्यार्थी आखेटक और सिद्धार्थ के बीच हुए विवाद का कारण और स्वरूप समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH01-T4",
+     "topic_number": 4,
+     "title": "राहुल का निर्णय: न्याय और दया",
+     "ncert_sections": "पद 9-10",
+     "concepts": [
+      {
+       "concept_tag": "nyay-daya-ka-dani",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि कविता में न्याय को दया का दानी क्यों कहा गया है।"
+      },
+      {
+       "concept_tag": "nirnay-aur-jeevan-mulya",
+       "learning_objective": "विद्यार्थी कविता के संदेश को अपने जीवन की स्थितियों पर लागू कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH01-T5",
+     "topic_number": 5,
+     "title": "कविता की रचना और विशेषताएँ",
+     "ncert_sections": "कविता की रचना",
+     "concepts": [
+      {
+       "concept_tag": "samvadatmak-varnanatmak-shaili",
+       "learning_objective": "विद्यार्थी कविता की संवादात्मक और वर्णनात्मक शैली को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "kavya-visheshtaen",
+       "learning_objective": "विद्यार्थी पुनरावृत्ति, तुक, विपरीतार्थक शब्द और एक ही वर्ण की आवृत्ति जैसी विशेषताएँ पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH01-T6",
+     "topic_number": 6,
+     "title": "शब्द-अर्थ और कविता में विराम चिह्न",
+     "ncert_sections": "पंक्ति से पंक्ति, शब्द से जुड़े शब्द, कविता में विराम चिह्न",
+     "concepts": [
+      {
+       "concept_tag": "kathin-shabdarth",
+       "learning_objective": "विद्यार्थी कविता के कठिन शब्दों और पंक्तियों का अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "viram-chihn-prayog",
+       "learning_objective": "विद्यार्थी कविता में प्रयुक्त विराम चिह्नों के कार्य पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHML1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "तीन बुद्धिमान",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghml102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHML1-CH02-T1",
+     "topic_number": 1,
+     "title": "पिता की सीख और भाइयों की यात्रा",
+     "ncert_sections": "कथा का आरंभ",
+     "concepts": [
+      {
+       "concept_tag": "pita-ki-seekh",
+       "learning_objective": "पिता द्वारा बताए गए 'दूसरे प्रकार के धन' का अर्थ समझना।"
+      },
+      {
+       "concept_tag": "yatra-ki-kathinaiyan",
+       "learning_objective": "भाइयों के यात्रा पर निकलने के कारण और मार्ग की कठिनाइयों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH02-T2",
+     "topic_number": 2,
+     "title": "नगर के निकट ऊँट के बारे में अनुमान",
+     "ncert_sections": "कथा: नगर के निकट की घटना",
+     "concepts": [
+      {
+       "concept_tag": "oont-ka-varnan",
+       "learning_objective": "तीनों भाइयों द्वारा ऊँट के बारे में बताई गई बातों को पहचानना।"
+      },
+      {
+       "concept_tag": "sanketon-se-anuman",
+       "learning_objective": "धरती के चिह्नों और घास जैसे संकेतों से निष्कर्ष निकालने की प्रक्रिया समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH02-T3",
+     "topic_number": 3,
+     "title": "घुड़सवार का संदेह और राजा का दरबार",
+     "ncert_sections": "कथा: घुड़सवार और राजा",
+     "concepts": [
+      {
+       "concept_tag": "ghudsawar-ka-sandeh",
+       "learning_objective": "घुड़सवार के संदेह और उसके व्यवहार के कारणों को समझना।"
+      },
+      {
+       "concept_tag": "raja-ka-nirnay",
+       "learning_objective": "राजा के आरंभिक निष्कर्ष और जाँच करने के निर्णय का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH02-T4",
+     "topic_number": 4,
+     "title": "पेटी की परीक्षा और भाइयों के तर्क",
+     "ncert_sections": "कथा: पेटी की परीक्षा",
+     "concepts": [
+      {
+       "concept_tag": "peti-ka-anuman",
+       "learning_objective": "पेटी में रखी वस्तु के बारे में भाइयों के अनुमानों को पहचानना।"
+      },
+      {
+       "concept_tag": "tark-aur-praman",
+       "learning_objective": "भाइयों के तर्कों और परीक्षा से मिले प्रमाण का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH02-T5",
+     "topic_number": 5,
+     "title": "कथा का संदेश, पात्र और वाक्यों के भाव",
+     "ncert_sections": "पाठ से: मेरी समझ से, पंक्तियों पर चर्चा, मिलकर करें मिलान",
+     "concepts": [
+      {
+       "concept_tag": "katha-ka-sandesh",
+       "learning_objective": "लोककथा में छिपे मूल्य और संदेश को पहचानना।"
+      },
+      {
+       "concept_tag": "patron-ki-visheshtayen",
+       "learning_objective": "भाइयों और राजा के चरित्र की विशेषताएँ बताना।"
+      },
+      {
+       "concept_tag": "vakyon-ka-bhav",
+       "learning_objective": "पाठ के वाक्यों और मुहावरों का भाव समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH02-T6",
+     "topic_number": 6,
+     "title": "भाषा अध्ययन: कारक और शब्द-संपदा",
+     "ncert_sections": "कारक, शब्द से जुड़े शब्द",
+     "concepts": [
+      {
+       "concept_tag": "karak-parsarg",
+       "learning_objective": "वाक्यों में उचित कारक चिह्न या परसर्ग का प्रयोग करना।"
+      },
+      {
+       "concept_tag": "buddhi-se-jude-shabd",
+       "learning_objective": "'बुद्धि' से जुड़े समानार्थी शब्दों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH02-T7",
+     "topic_number": 7,
+     "title": "लोककथा सुनाना और ज्ञानेंद्रियों का उपयोग",
+     "ncert_sections": "कथा सुनाना, ध्यान से देखना-सुनना-अनुभव करना",
+     "concepts": [
+      {
+       "concept_tag": "lokkatha-vachan",
+       "learning_objective": "लोककथा को रोचक ढंग से सुनाने के उपाय समझना।"
+      },
+      {
+       "concept_tag": "gyanendriyan",
+       "learning_objective": "ज्ञानेंद्रियों और बुद्धि से वस्तुओं को पहचानने की प्रक्रिया समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHML1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "फूल और काँटा",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghml103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHML1-CH03-T1",
+     "topic_number": 1,
+     "title": "कवि परिचय: अयोध्यासिंह उपाध्याय 'हरिऔध'",
+     "ncert_sections": "कवि से परिचय",
+     "concepts": [
+      {
+       "concept_tag": "kavi-parichay-hariaudh",
+       "learning_objective": "विद्यार्थी कवि हरिऔध के जीवन, जन्मस्थान और प्रमुख रचनाओं को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH03-T2",
+     "topic_number": 2,
+     "title": "फूल और काँटे की समानताएँ",
+     "ncert_sections": "कविता के पहले दो छंद",
+     "concepts": [
+      {
+       "concept_tag": "saman-palan-poshan",
+       "learning_objective": "विद्यार्थी बता सकेंगे कि फूल और काँटे को प्रकृति से एक-सा पालन-पोषण मिलता है।"
+      },
+      {
+       "concept_tag": "dhang-ki-bhinnata",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि समान परिस्थितियों के बाद भी दोनों के ढंग अलग होते हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH03-T3",
+     "topic_number": 3,
+     "title": "काँटे और फूल का स्वभाव",
+     "ncert_sections": "कविता के तीसरे और चौथे छंद",
+     "concepts": [
+      {
+       "concept_tag": "kante-ka-swabhav",
+       "learning_objective": "विद्यार्थी काँटे के दूसरों को पीड़ा देने वाले स्वभाव का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "phool-ka-swabhav",
+       "learning_objective": "विद्यार्थी फूल के दूसरों को सुख और आनंद देने वाले स्वभाव का वर्णन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH03-T4",
+     "topic_number": 4,
+     "title": "कविता का संदेश: कुल नहीं, गुणों से बड़प्पन",
+     "ncert_sections": "कविता का अंतिम छंद, शब्द से जुड़े शब्द",
+     "concepts": [
+      {
+       "concept_tag": "badappan-gun-se",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि व्यक्ति का सम्मान उसके गुणों और कर्मों से होता है, कुल से नहीं।"
+      },
+      {
+       "concept_tag": "phool-kanta-pratik",
+       "learning_objective": "विद्यार्थी फूल और काँटे को अच्छे और बुरे स्वभाव के प्रतीक के रूप में पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "badappan-bhav-shabd",
+       "learning_objective": "विद्यार्थी 'बड़प्पन' का अर्थ और उसका भाव व्यक्त करने वाले शब्द पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH03-T5",
+     "topic_number": 5,
+     "title": "कविता की रचना और सौंदर्य",
+     "ncert_sections": "कविता की रचना, कविता का सौंदर्य",
+     "concepts": [
+      {
+       "concept_tag": "kavya-visheshtayen",
+       "learning_objective": "विद्यार्थी कविता में मुहावरे, मानवीकरण, तुकांत और शब्द-संक्षेप जैसी विशेषताएँ पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "paryayvachi-shabd",
+       "learning_objective": "विद्यार्थी कविता के शब्दों के समान अर्थ वाले शब्द पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH03-T6",
+     "topic_number": 6,
+     "title": "विशेषण और विशेष्य",
+     "ncert_sections": "विशेषण",
+     "concepts": [
+      {
+       "concept_tag": "visheshan-visheshya",
+       "learning_objective": "विद्यार्थी कविता की पंक्तियों में विशेषण और विशेष्य शब्दों की पहचान कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHML1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "पानी रे पानी",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghml104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHML1-CH04-T1",
+     "topic_number": 1,
+     "title": "जल-चक्र की किताबी बात",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jal-chakra",
+       "learning_objective": "विद्यार्थी पाठ में वर्णित जल-चक्र की प्रक्रिया और उसके चरणों का क्रम समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "pani-ka-chakkar",
+       "learning_objective": "विद्यार्थी 'किताबी जल-चक्र' और जीवन में दिखने वाले 'पानी के चक्कर' का अंतर स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH04-T2",
+     "topic_number": 2,
+     "title": "घरों और मोहल्लों में पानी का संकट",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nal-mein-pani-ka-sankat",
+       "learning_objective": "विद्यार्थी नलों में पानी न आने और बेवक्त आने से होने वाली परेशानियों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "padosi-ka-hak",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि नलों में मोटर लगवाना पड़ोसियों का हक छीनने जैसा क्यों है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH04-T3",
+     "topic_number": 3,
+     "title": "अकाल और बाढ़: एक ही सिक्के के दो पहलू",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "akaal-aur-baadh",
+       "learning_objective": "विद्यार्थी गरमी में पानी की कमी और बरसात में बाढ़ की स्थितियों का वर्णन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "ek-sikke-ke-do-pahlu",
+       "learning_objective": "विद्यार्थी 'अकाल और बाढ़ एक ही सिक्के के दो पहलू हैं' कथन का आशय समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH04-T4",
+     "topic_number": 4,
+     "title": "धरती की गुल्लक और भूजल भंडार",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dharti-ki-gullak",
+       "learning_objective": "विद्यार्थी धरती को गुल्लक कहे जाने और वर्षा-जल को रुपयों से कीमती बताने का कारण समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "bhujal-bhandar",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि तालाबों और झीलों का पानी भूजल भंडार को कैसे समृद्ध करता है।"
+      },
+      {
+       "concept_tag": "talabon-ko-patna",
+       "learning_objective": "विद्यार्थी तालाबों को पाटने की गलती और उसके परिणामों का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH04-T5",
+     "topic_number": 5,
+     "title": "जलस्रोतों की रखवाली, वर्षा-जल संग्रहण और लेखक-परिचय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lekhak-parichay",
+       "learning_objective": "विद्यार्थी लेखक अनुपम मिश्र और उनकी प्रमुख रचनाओं को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "varsha-jal-sangrahan",
+       "learning_objective": "विद्यार्थी वर्षा-जल संग्रहण का अर्थ, उद्देश्य और छत पर संग्रहण की विधि समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "jalsrot-sanrakshan",
+       "learning_objective": "विद्यार्थी पानी की कमी से बचने के लिए पाठ में सुझाए गए उपायों का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH04-T6",
+     "topic_number": 6,
+     "title": "शब्दों की बात: समानार्थी शब्द, उपसर्ग और बल देने वाले शब्द",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "samanarthi-shabd",
+       "learning_objective": "विद्यार्थी सूर्य, बादल, हवा और भाप जैसे शब्दों के समानार्थी शब्द पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "upsarg",
+       "learning_objective": "विद्यार्थी उपसर्ग की पहचान कर सकेंगे और समझ सकेंगे कि उपसर्ग शब्द का अर्थ कैसे बदलता है।"
+      },
+      {
+       "concept_tag": "bal-dene-wale-shabd",
+       "learning_objective": "विद्यार्थी 'भी' जैसे शब्दों से वाक्य के अर्थ में आने वाले विशेष बल को पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHML1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "नहीं होना बीमार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghml105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHML1-CH05-T1",
+     "topic_number": 1,
+     "title": "अस्पताल का दृश्य और बीमारों के 'ठाठ'",
+     "ncert_sections": "पाठ का आरंभिक अंश",
+     "concepts": [
+      {
+       "concept_tag": "aspatal-ka-vatavaran",
+       "learning_objective": "विद्यार्थी अस्पताल के वार्ड और वहाँ के शांत वातावरण के वर्णन को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "bimaron-ke-thaath",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि बच्चे को बीमार होना सुखद क्यों लगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH05-T2",
+     "topic_number": 2,
+     "title": "बीमारी का बहाना और घर का उपचार",
+     "ncert_sections": "पाठ का दूसरा अंश",
+     "concepts": [
+      {
+       "concept_tag": "bahane-ki-yojana",
+       "learning_objective": "विद्यार्थी बच्चे के बहाने के कारण और उसे सच दिखाने की चालों को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "nanaji-ka-upchar",
+       "learning_objective": "विद्यार्थी नानाजी द्वारा किए गए घरेलू उपचार को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH05-T3",
+     "topic_number": 3,
+     "title": "अकेलापन, ऊब और भूख",
+     "ncert_sections": "पाठ का तीसरा अंश",
+     "concepts": [
+      {
+       "concept_tag": "oob-aur-akelapan",
+       "learning_objective": "विद्यार्थी अकेले लेटे बच्चे की ऊब और बदलती सोच का विश्लेषण कर सकेंगे।"
+      },
+      {
+       "concept_tag": "bhojan-ki-kalpana",
+       "learning_objective": "विद्यार्थी भूखे बच्चे की भोजन से जुड़ी कल्पनाओं को समझ सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH05-T4",
+     "topic_number": 4,
+     "title": "मन्नू का आम और कहानी का अंत",
+     "ncert_sections": "पाठ का अंतिम अंश",
+     "concepts": [
+      {
+       "concept_tag": "irshya-aur-kudhan",
+       "learning_objective": "विद्यार्थी मन्नू को आम खाते देखकर बच्चे के मन में उठे भावों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "kahani-ki-seekh",
+       "learning_objective": "विद्यार्थी कहानी के अंत, शीर्षक और उसकी सीख का मूल्यांकन कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH05-T5",
+     "topic_number": 5,
+     "title": "लेखक परिचय और कहानी की रचना",
+     "ncert_sections": "लेखक से परिचय; कहानी की रचना",
+     "concepts": [
+      {
+       "concept_tag": "lekhak-parichay",
+       "learning_objective": "विद्यार्थी लेखक स्वयं प्रकाश और उनकी रचनाओं को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "chitratmak-bhasha",
+       "learning_objective": "विद्यार्थी चित्रात्मक भाषा की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "kahani-ki-visheshtayen",
+       "learning_objective": "विद्यार्थी कहानी को रोचक बनाने वाली विशेषताओं को उदाहरणों में पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH05-T6",
+     "topic_number": 6,
+     "title": "शब्दार्थ, विशेष प्रयोग और विराम चिह्न",
+     "ncert_sections": "मिलकर करें मिलान; लेखन के अनोखे तरीके; विराम चिह्न",
+     "concepts": [
+      {
+       "concept_tag": "shabdarth",
+       "learning_objective": "विद्यार्थी पाठ में आए शब्दों के सही अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "vishesh-prayog",
+       "learning_objective": "विद्यार्थी पाठ के मुहावरों और विशेष प्रयोगों का अर्थ समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "viram-chihn",
+       "learning_objective": "विद्यार्थी वाक्यों में विराम चिह्नों का सही प्रयोग पहचान सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHML1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "गिरिधर कविराय की कुंडलिया",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghml106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHML1-CH06-T1",
+     "topic_number": 1,
+     "title": "कवि परिचय: गिरिधर कविराय",
+     "ncert_sections": "कवि से परिचय",
+     "concepts": [
+      {
+       "concept_tag": "kavi-parichay-giridhar",
+       "learning_objective": "विद्यार्थी गिरिधर कविराय के समय, काव्य-रूप और उनकी रचनाओं के विषयों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "kahavat-ke-roop-mein-prayog",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि कवि की नीतिपरक पंक्तियाँ कहावतों की तरह क्यों और कैसे प्रयोग होती हैं।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH06-T2",
+     "topic_number": 2,
+     "title": "पहली कुंडलिया: बिना बिचारे जो करै",
+     "ncert_sections": "कुंडलिया (1); मेरी समझ से; पंक्तियों पर चर्चा",
+     "concepts": [
+      {
+       "concept_tag": "bina-vichare-parinam",
+       "learning_objective": "विद्यार्थी बिना विचारे किए गए काम के परिणामों को कुंडलिया के आधार पर बता सकेंगे।"
+      },
+      {
+       "concept_tag": "man-ki-ashanti",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि बिना सोचे किया गया काम मन को लंबे समय तक कैसे अशांत रखता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH06-T3",
+     "topic_number": 3,
+     "title": "दूसरी कुंडलिया: बीती ताहि बिसारि दे",
+     "ncert_sections": "कुंडलिया (2); मेरी समझ से; मिलकर करें मिलान",
+     "concepts": [
+      {
+       "concept_tag": "biti-tahi-bisari",
+       "learning_objective": "विद्यार्थी अतीत को भूलकर भविष्य पर ध्यान देने की सीख का अर्थ और उपयोग समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "sahaj-karya-mein-chit",
+       "learning_objective": "विद्यार्थी सहज रूप से बन सकने वाले काम में मन लगाने की सीख और उसके लाभ समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH06-T4",
+     "topic_number": 4,
+     "title": "कविता की रचना: कुंडलिया की विशेषताएँ",
+     "ncert_sections": "कविता की रचना",
+     "concepts": [
+      {
+       "concept_tag": "kundaliya-ki-banavat",
+       "learning_objective": "विद्यार्थी कुंडलिया छंद की बनावट, जैसे आरंभ और अंत का एक शब्द तथा कवि की छाप, पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "tuk-anupras-virodh",
+       "learning_objective": "विद्यार्थी पंक्तियों में तुक, एक वर्ण की आवृत्ति और विपरीत विचारों को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH06-T5",
+     "topic_number": 5,
+     "title": "शब्द-संपदा: शब्दार्थ, काल और मात्राएँ",
+     "ncert_sections": "शब्द से जुड़े शब्द; काल से जुड़े शब्द; आज की पहेली",
+     "concepts": [
+      {
+       "concept_tag": "shabdarth-kundaliya",
+       "learning_objective": "विद्यार्थी कुंडलियों में आए लोकभाषा के शब्दों के अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "kaal-bodhak-shabd",
+       "learning_objective": "विद्यार्थी भूत, वर्तमान और भविष्य काल बताने वाले शब्दों को पहचानकर वाक्यों में प्रयोग कर सकेंगे।"
+      },
+      {
+       "concept_tag": "ek-matra-vakya",
+       "learning_objective": "विद्यार्थी केवल एक मात्रा वाले सार्थक वाक्यों को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH06-T6",
+     "topic_number": 6,
+     "title": "पाठ से आगे: सोच-समझकर निर्णय",
+     "ncert_sections": "पाठ से आगे; हँसी; सोच-समझकर",
+     "concepts": [
+      {
+       "concept_tag": "jaldbazi-ke-nuksan",
+       "learning_objective": "विद्यार्थी जल्दबाजी में लिए गए निर्णयों के नुकसान का मूल्यांकन कर सकेंगे।"
+      },
+      {
+       "concept_tag": "dhokhadhadi-se-bachav",
+       "learning_objective": "विद्यार्थी झूठे संदेशों और ऑनलाइन धोखाधड़ी से बचने के सही उपाय चुन सकेंगे।"
+      },
+      {
+       "concept_tag": "hansi-aur-samvedansheelta",
+       "learning_objective": "विद्यार्थी दूसरों की भूल पर हँसने के प्रभाव को समझकर उचित व्यवहार चुन सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHML1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "वर्षा-बहार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghml107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHML1-CH07-T1",
+     "topic_number": 1,
+     "title": "कवि-परिचय और कविता का मूल भाव",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kavi-parichay",
+       "learning_objective": "विद्यार्थी कवि मुकुटधर पाण्डेय के जीवन, उनकी रचनाओं की विशेषता और उन्हें मिले सम्मान को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "mool-bhav",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि कविता में वर्षा ऋतु से उपजे आनंद और उसके महत्त्व का भाव है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH07-T2",
+     "topic_number": 2,
+     "title": "वर्षा के प्राकृतिक दृश्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prakritik-drishya",
+       "learning_objective": "विद्यार्थी कविता में वर्णित बादल, बिजली, वर्षा, झरने और ठंडी हवा के दृश्यों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "pankti-bhavarth",
+       "learning_objective": "विद्यार्थी प्रकृति-वर्णन वाली पंक्तियों का भावार्थ और उनके आपसी संबंध स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH07-T3",
+     "topic_number": 3,
+     "title": "जीव-जंतुओं और लोगों का आनंद",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "jeev-aur-jan-ka-anand",
+       "learning_objective": "विद्यार्थी पहचान सकेंगे कि वर्षा में मोर, मेंढक, हंस, मालिनें और किसान अपना आनंद कैसे प्रकट करते हैं।"
+      },
+      {
+       "concept_tag": "aamod-aur-sheershak",
+       "learning_objective": "विद्यार्थी 'आमोद' का अर्थ समझकर बता सकेंगे कि कविता का शीर्षक 'वर्षा-बहार' क्यों उपयुक्त है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH07-T4",
+     "topic_number": 4,
+     "title": "कविता की रचना: पर्यायवाची और विशेषण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kavita-ki-rachna",
+       "learning_objective": "विद्यार्थी समझ सकेंगे कि 'वर्षा' और 'बहार' को साथ रखकर कवि ने वर्षा की सुंदरता कैसे उभारी है।"
+      },
+      {
+       "concept_tag": "paryayvachi",
+       "learning_objective": "विद्यार्थी कविता के शब्दों, जैसे पानी, बादल और आकाश, के पर्यायवाची पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "visheshan-visheshya",
+       "learning_objective": "विद्यार्थी कविता की पंक्तियों में विशेषण और विशेष्य शब्दों की पहचान कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH07-T5",
+     "topic_number": 5,
+     "title": "भारत की ऋतुएँ और 'ग्रीष्म' कविता",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ritu-aur-shabd",
+       "learning_objective": "विद्यार्थी भारत की छह ऋतुओं, उनके सामान्य महीनों और उनसे जुड़े शब्दों को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "grishm-kavita",
+       "learning_objective": "विद्यार्थी मुकुटधर पाण्डेय की 'ग्रीष्म' कविता के अंश का भाव समझकर उसकी तुलना 'वर्षा-बहार' से कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHML1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "बिरजू महाराज से साक्षात्कार",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghml108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHML1-CH08-T1",
+     "topic_number": 1,
+     "title": "बचपन का संघर्ष और माँ का सहयोग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bachpan-ka-sangharsh",
+       "learning_objective": "बचपन के संघर्ष और आर्थिक कठिनाइयों का वर्णन कर पाना।"
+      },
+      {
+       "concept_tag": "maa-ka-yogdan",
+       "learning_objective": "बिरजू महाराज के जीवन में माँ के योगदान को समझ पाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH08-T2",
+     "topic_number": 2,
+     "title": "कथक की शिक्षा और गुरु-शिष्य परंपरा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "guru-aur-taleem",
+       "learning_objective": "बिरजू महाराज के गुरुओं और उनकी आरंभिक शिक्षा को पहचान पाना।"
+      },
+      {
+       "concept_tag": "ganda-parampara",
+       "learning_objective": "गंडा बाँधने की रस्म और उसमें किए गए परिवर्तन को समझ पाना।"
+      },
+      {
+       "concept_tag": "mehnat-aur-drdh-nishchay",
+       "learning_objective": "कला-साधना में सामर्थ्य, मेहनत और दृढ़ निश्चय का महत्त्व समझ पाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH08-T3",
+     "topic_number": 3,
+     "title": "कथक की परंपरा और घराने",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kathak-ka-itihas",
+       "learning_objective": "कथक की प्राचीन परंपरा और उसके आरंभिक रूप को समझ पाना।"
+      },
+      {
+       "concept_tag": "gharane",
+       "learning_objective": "कथक के घरानों और लखनऊ घराने की जड़ों को पहचान पाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH08-T4",
+     "topic_number": 4,
+     "title": "संगीत, लय और परंपरा",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lay-ka-mahatva",
+       "learning_objective": "नृत्य और जीवन में लय के महत्त्व को समझा पाना।"
+      },
+      {
+       "concept_tag": "parampara-vriksh",
+       "learning_objective": "परंपरा को वृक्ष के रूप में देखने के विचार की व्याख्या कर पाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH08-T5",
+     "topic_number": 5,
+     "title": "कथक के प्रस्तुतीकरण में बदलाव और बचपन के प्रसंग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "prastutikaran-mein-badlav",
+       "learning_objective": "पहले और अब के कथक-प्रस्तुतीकरण में आए बदलावों की तुलना कर पाना।"
+      },
+      {
+       "concept_tag": "bachpan-ki-ruchi",
+       "learning_objective": "बचपन से ही गाने, बजाने और नाचने में बिरजू महाराज की रुचि को पहचान पाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH08-T6",
+     "topic_number": 6,
+     "title": "शास्त्रीय नृत्य, लोक नृत्य और नृत्य-शैलियाँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "shastriya-aur-lok-nritya",
+       "learning_objective": "शास्त्रीय नृत्य और लोक नृत्य में अंतर बता पाना।"
+      },
+      {
+       "concept_tag": "nritya-shailiyan",
+       "learning_objective": "कथक और अन्य शास्त्रीय नृत्यों की भाव-भंगिमा की तुलना कर पाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH08-T7",
+     "topic_number": 7,
+     "title": "बिरजू महाराज की रुचियाँ और संदेश",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vividh-ruchiyan",
+       "learning_objective": "नृत्य के अतिरिक्त बिरजू महाराज की रुचियों से उनकी बहुमुखी प्रतिभा को पहचान पाना।"
+      },
+      {
+       "concept_tag": "abhibhavakon-ko-sandesh",
+       "learning_objective": "बच्चों की रुचि के बारे में अभिभावकों को दी गई सलाह समझ पाना।"
+      },
+      {
+       "concept_tag": "betiyon-ki-shiksha",
+       "learning_objective": "लड़कियों की शिक्षा और हुनर पर बिरजू महाराज के विचार समझ पाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH08-T8",
+     "topic_number": 8,
+     "title": "शब्दों की बात, साक्षात्कार विधा और ताल",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "upsarg-pratyay",
+       "learning_objective": "पाठ के शब्दों में उपसर्ग और प्रत्यय पहचान पाना।"
+      },
+      {
+       "concept_tag": "sakshatkar-vidha",
+       "learning_objective": "व्यक्तिपरक साक्षात्कार विधा की विशेषताएँ समझ पाना।"
+      },
+      {
+       "concept_tag": "taal-aur-matra",
+       "learning_objective": "संगीत में ताल और मात्रा का संबंध समझ पाना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHML1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "चिड़िया",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghml109.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHML1-CH09-T1",
+     "topic_number": 1,
+     "title": "कविता का केंद्रीय भाव और कवि-परिचय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kendriya-bhav",
+       "learning_objective": "विद्यार्थी कविता में चिड़िया द्वारा दिए गए प्रेम-प्रीति और मुक्ति के संदेश को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "kavi-parichay",
+       "learning_objective": "विद्यार्थी कवि आरसी प्रसाद सिंह और उनकी रचनाओं की मुख्य विशेषताएँ बता सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH09-T2",
+     "topic_number": 2,
+     "title": "पक्षियों का मिल-जुलकर रहना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mil-julkar-rahna",
+       "learning_objective": "विद्यार्थी पक्षियों के सहयोग, एकता और परिश्रमी जीवन के चित्रण को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "pakshiyon-ke-naam",
+       "learning_objective": "विद्यार्थी कविता और पहेलियों में आए पक्षियों के नाम और उनके अर्थ पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH09-T3",
+     "topic_number": 3,
+     "title": "लोभहीनता, श्रम और संतोष",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "lobh-heenata",
+       "learning_objective": "विद्यार्थी पक्षियों की लोभहीनता और मनुष्य के लालच के अंतर को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "shram-aur-santosh",
+       "learning_objective": "विद्यार्थी अपने श्रम से जरूरत भर लेने और बाकी औरों के लिए छोड़ने के भाव को समझा सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH09-T4",
+     "topic_number": 4,
+     "title": "स्वतंत्रता का संदेश और मनुष्य के लिए सीख",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "swatantrata-ka-sandesh",
+       "learning_objective": "विद्यार्थी पक्षियों के स्वच्छंद और निर्भय जीवन से मिलने वाले स्वतंत्रता के संदेश को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "pratikatmak-arth",
+       "learning_objective": "विद्यार्थी बेड़ी, सोने की कड़ियाँ और द्रोह-भावना जैसे प्रतीकों का अर्थ स्पष्ट कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH09-T5",
+     "topic_number": 5,
+     "title": "भाषा की बात: क्रिया, शब्द-आवृत्ति और एक शब्द अनेक अर्थ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "kriya-shabd",
+       "learning_objective": "विद्यार्थी कविता की पंक्तियों में क्रिया शब्दों की पहचान कर सकेंगे।"
+      },
+      {
+       "concept_tag": "punarukti-shaili",
+       "learning_objective": "विद्यार्थी कविता में एक जैसे शब्दों की आवृत्ति से उत्पन्न लय और प्रभाव को समझ सकेंगे।"
+      },
+      {
+       "concept_tag": "shabd-ek-arth-anek",
+       "learning_objective": "विद्यार्थी संदर्भ के अनुसार एक ही शब्द के अलग-अलग अर्थ पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH09-T6",
+     "topic_number": 6,
+     "title": "झरोखे से: पक्षियों की प्रवास यात्राएँ",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "pravas-ka-samay-aur-disha",
+       "learning_objective": "विद्यार्थी पक्षियों के प्रवास के समय, दिशा और स्थानों के बारे में बता सकेंगे।"
+      },
+      {
+       "concept_tag": "pravas-ki-kathinaiyan",
+       "learning_objective": "विद्यार्थी प्रवास यात्राओं की कठिनाइयों और पक्षियों के उड़ने के ढंग का विश्लेषण कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "GHML1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "मीरा के पद",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/ghml110.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "GHML1-CH10-T1",
+     "topic_number": 1,
+     "title": "पहला पद: श्रीकृष्ण का रूप-वर्णन और मीरा की विनती",
+     "ncert_sections": "पद 1",
+     "concepts": [
+      {
+       "concept_tag": "krishna-roop-varnan",
+       "learning_objective": "विद्यार्थी पहले पद में वर्णित श्रीकृष्ण के रूप, आभूषणों और शोभा को पहचानकर उनका अर्थ समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "bhakti-aur-vinti",
+       "learning_objective": "विद्यार्थी पहले पद में मीरा की विनती और श्रीकृष्ण के स्नेहमय स्वभाव के वर्णन की व्याख्या कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH10-T2",
+     "topic_number": 2,
+     "title": "दूसरा पद: सावन का चित्रण और मीरा का उल्लास",
+     "ncert_sections": "पद 2",
+     "concepts": [
+      {
+       "concept_tag": "sawan-ka-chitran",
+       "learning_objective": "विद्यार्थी दूसरे पद में सावन के बादलों, बिजली, बूँदों और हवा के चित्रण को समझा सकेंगे।"
+      },
+      {
+       "concept_tag": "meera-ka-ullas",
+       "learning_objective": "विद्यार्थी सावन में मीरा के मन की उमंग का कारण पहचानकर उसका विश्लेषण कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH10-T3",
+     "topic_number": 3,
+     "title": "कवयित्री परिचय और कविता की रचना",
+     "ncert_sections": "कवयित्री से परिचय; कविता की रचना",
+     "concepts": [
+      {
+       "concept_tag": "meera-parichay",
+       "learning_objective": "विद्यार्थी पाठ के आधार पर मीरा के जीवन और भक्ति से जुड़ी मुख्य बातें बता सकेंगे।"
+      },
+      {
+       "concept_tag": "kavita-ki-rachna",
+       "learning_objective": "विद्यार्थी मीरा के पदों की रचना-संबंधी विशेषताएँ, जैसे अंत में कवयित्री का नाम और गेयता, पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "padon-ka-vishay",
+       "learning_objective": "विद्यार्थी दोनों पदों के मुख्य विषय की तुलना कर सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH10-T4",
+     "topic_number": 4,
+     "title": "शब्दों के अर्थ और रूप",
+     "ncert_sections": "मिलकर करें मिलान; शब्दों के रूप; शब्द से जुड़े शब्द",
+     "concepts": [
+      {
+       "concept_tag": "shabd-arth",
+       "learning_objective": "विद्यार्थी पद में आए शब्दों, जैसे गिरधर, भनक और आवन, के अर्थ संदर्भ के अनुसार बता सकेंगे।"
+      },
+      {
+       "concept_tag": "shabdon-ke-roop",
+       "learning_objective": "विद्यार्थी पद के शब्दों के आज प्रचलित रूप पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "krishna-ke-naam",
+       "learning_objective": "विद्यार्थी पाठ में श्रीकृष्ण के लिए आए विभिन्न नामों को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH10-T5",
+     "topic_number": 5,
+     "title": "कविता का सौंदर्य: वर्ण की आवृत्ति, तुक और मधुर ध्वनियाँ",
+     "ncert_sections": "कविता का सौंदर्य; मधुर ध्वनियाँ; आज की पहेली",
+     "concepts": [
+      {
+       "concept_tag": "varn-avritti",
+       "learning_objective": "विद्यार्थी पदों में एक ही वर्ण की आवृत्ति से आए सौंदर्य को पहचान सकेंगे।"
+      },
+      {
+       "concept_tag": "tukant-shabd",
+       "learning_objective": "विद्यार्थी पद के शब्दों से मिलती-जुलती अंतिम ध्वनि वाले शब्द खोज सकेंगे।"
+      },
+      {
+       "concept_tag": "madhur-dhvaniyan",
+       "learning_objective": "विद्यार्थी पद और पहेलियों में आई मधुर ध्वनि उत्पन्न करने वाली वस्तुओं और वाद्ययंत्रों को पहचान सकेंगे।"
+      }
+     ]
+    },
+    {
+     "topic_id": "GHML1-CH10-T6",
+     "topic_number": 6,
+     "title": "आँखों से जुड़े मुहावरे",
+     "ncert_sections": "मुहावरे",
+     "concepts": [
+      {
+       "concept_tag": "aankh-muhavare-arth",
+       "learning_objective": "विद्यार्थी 'नैनों में बस जाना' और आँखों से जुड़े अन्य मुहावरों के अर्थ बता सकेंगे।"
+      },
+      {
+       "concept_tag": "muhavare-prayog",
+       "learning_objective": "विद्यार्थी आँखों से जुड़े मुहावरों का स्थिति के अनुसार उचित प्रयोग कर सकेंगे।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

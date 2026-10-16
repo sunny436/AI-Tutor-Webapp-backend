@@ -1,0 +1,140 @@
+{
+ "chapter_id": "IESC1-CH04",
+ "title": "Describing Motion Around Us",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IESC1-CH04-T1",
+   "topic_number": 1,
+   "title": "Position, distance travelled and displacement",
+   "ncert_sections": "4.1, 4.1.1, 4.1.2",
+   "concepts": [
+    {
+     "concept_tag": "reference-point-and-position",
+     "learning_objective": "Describe the position of an object using a reference point, distance and direction, and decide whether it is at rest or in motion."
+    },
+    {
+     "concept_tag": "distance-and-displacement",
+     "learning_objective": "Distinguish between total distance travelled and displacement for motion in a straight line."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH04-T2",
+   "topic_number": 2,
+   "title": "Average speed and average velocity",
+   "ncert_sections": "4.1.3",
+   "concepts": [
+    {
+     "concept_tag": "average-speed",
+     "learning_objective": "Calculate average speed as total distance travelled divided by the time interval."
+    },
+    {
+     "concept_tag": "average-velocity",
+     "learning_objective": "Calculate average velocity as displacement divided by the time interval and state its direction."
+    },
+    {
+     "concept_tag": "uniform-and-non-uniform-motion",
+     "learning_objective": "Distinguish between uniform and non-uniform motion in a straight line."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH04-T3",
+   "topic_number": 3,
+   "title": "Average acceleration",
+   "ncert_sections": "4.1.4",
+   "concepts": [
+    {
+     "concept_tag": "average-acceleration",
+     "learning_objective": "Calculate average acceleration as the change in velocity divided by the time interval."
+    },
+    {
+     "concept_tag": "direction-of-acceleration",
+     "learning_objective": "Relate the direction of acceleration to whether the magnitude of velocity is increasing or decreasing."
+    },
+    {
+     "concept_tag": "free-fall-acceleration",
+     "learning_objective": "Recognise that an object falling freely has a constant acceleration of about 9.8 m/s squared."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH04-T4",
+   "topic_number": 4,
+   "title": "Plotting and interpreting position-time graphs",
+   "ncert_sections": "4.2, 4.2.1, 4.2.2",
+   "concepts": [
+    {
+     "concept_tag": "plotting-motion-graphs",
+     "learning_objective": "Plot a position-time graph from a data table by choosing axes and suitable scales."
+    },
+    {
+     "concept_tag": "position-time-graph-shape",
+     "learning_objective": "Interpret the shape of a position-time graph to identify rest, constant velocity or changing velocity."
+    },
+    {
+     "concept_tag": "slope-gives-velocity",
+     "learning_objective": "Calculate the magnitude of velocity from the slope of a straight-line position-time graph."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH04-T5",
+   "topic_number": 5,
+   "title": "Velocity-time graphs",
+   "ncert_sections": "4.2.3",
+   "concepts": [
+    {
+     "concept_tag": "velocity-time-graph-slope",
+     "learning_objective": "Interpret the slope of a velocity-time graph as acceleration and calculate it."
+    },
+    {
+     "concept_tag": "area-under-velocity-time-graph",
+     "learning_objective": "Calculate displacement from the area enclosed by a velocity-time graph and the time axis."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH04-T6",
+   "topic_number": 6,
+   "title": "Kinematic equations for constant acceleration",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "kinematic-equations",
+     "learning_objective": "State the kinematic equations v = u + at, s = ut + 1/2 at squared and v squared = u squared + 2as and the condition for their use."
+    },
+    {
+     "concept_tag": "solving-kinematic-problems",
+     "learning_objective": "Apply the kinematic equations to find velocity, displacement, acceleration or time."
+    },
+    {
+     "concept_tag": "stopping-distance",
+     "learning_objective": "Explain how the stopping distance of a vehicle depends on its initial velocity and braking."
+    }
+   ]
+  },
+  {
+   "topic_id": "IESC1-CH04-T7",
+   "topic_number": 7,
+   "title": "Motion in a plane and uniform circular motion",
+   "ncert_sections": "4.4, 4.4.1",
+   "concepts": [
+    {
+     "concept_tag": "motion-in-a-plane",
+     "learning_objective": "Identify examples of motion in two dimensions."
+    },
+    {
+     "concept_tag": "uniform-circular-motion",
+     "learning_objective": "Explain why uniform circular motion is accelerated even though the speed is constant."
+    },
+    {
+     "concept_tag": "circular-distance-and-displacement",
+     "learning_objective": "Calculate distance, displacement and average speed for motion along a circle."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "chapter_id": "GEGP1-CH08",
+ "title": "Working with Fractions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "GEGP1-CH08-T1",
+   "topic_number": 1,
+   "title": "Multiplying a fraction and a whole number",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "fraction-times-whole-number",
+     "learning_objective": "Multiply a fraction by a whole number by dividing the whole number by the denominator and multiplying by the numerator."
+    },
+    {
+     "concept_tag": "whole-number-times-fraction",
+     "learning_objective": "Find a whole number times a fraction as repeated addition and express the result as a mixed fraction."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH08-T2",
+   "topic_number": 2,
+   "title": "Multiplying two fractions using the unit square",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "unit-square-area-model",
+     "learning_objective": "Represent the product of two fractions as the area of a rectangle inside a unit square."
+    },
+    {
+     "concept_tag": "product-of-fractional-units",
+     "learning_objective": "Use the rule 1/b x 1/d = 1/(b x d) for multiplying two unit fractions."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH08-T3",
+   "topic_number": 3,
+   "title": "Brahmagupta's formula, cancelling and order of multiplication",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "brahmagupta-multiplication-formula",
+     "learning_objective": "Apply the formula a/b x c/d = (a x c)/(b x d), including for mixed fractions and whole numbers."
+    },
+    {
+     "concept_tag": "cancelling-common-factors",
+     "learning_objective": "Cancel common factors of numerators and denominators before multiplying to get the product in lowest form."
+    },
+    {
+     "concept_tag": "order-of-multiplication",
+     "learning_objective": "Recognise that the order of multiplying two fractions does not change the product."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH08-T4",
+   "topic_number": 4,
+   "title": "Is the product always greater than the numbers multiplied?",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "factor-between-zero-and-one",
+     "learning_objective": "Predict that multiplying by a number between 0 and 1 gives a product less than the other number."
+    },
+    {
+     "concept_tag": "factor-greater-than-one",
+     "learning_objective": "Predict that multiplying by a number greater than 1 gives a product greater than the other number."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH08-T5",
+   "topic_number": 5,
+   "title": "Division of fractions and reciprocals",
+   "ncert_sections": "8.2",
+   "concepts": [
+    {
+     "concept_tag": "reciprocal",
+     "learning_objective": "Find the reciprocal of a fraction and use it to restate a division as a multiplication."
+    },
+    {
+     "concept_tag": "brahmagupta-division-formula",
+     "learning_objective": "Divide fractions using a/b divided by c/d = (a x d)/(b x c)."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH08-T6",
+   "topic_number": 6,
+   "title": "Dividend, divisor and the quotient",
+   "ncert_sections": "8.2",
+   "concepts": [
+    {
+     "concept_tag": "divisor-between-zero-and-one",
+     "learning_objective": "Predict that dividing by a number between 0 and 1 gives a quotient greater than the dividend."
+    },
+    {
+     "concept_tag": "divisor-greater-than-one",
+     "learning_objective": "Predict that dividing by a number greater than 1 gives a quotient less than the dividend."
+    }
+   ]
+  },
+  {
+   "topic_id": "GEGP1-CH08-T7",
+   "topic_number": 7,
+   "title": "Some problems involving fractions",
+   "ncert_sections": "8.3",
+   "concepts": [
+    {
+     "concept_tag": "fraction-word-problems",
+     "learning_objective": "Choose and carry out the correct fraction operation in everyday and historical word problems."
+    },
+    {
+     "concept_tag": "fractional-relations-area",
+     "learning_objective": "Find what fraction of a whole figure a shaded region occupies by multiplying successive fractions."
+    },
+    {
+     "concept_tag": "historical-fraction-problems",
+     "learning_objective": "Solve classical Indian fraction problems such as the dramma donation from the Lilavati."
+    }
+   ]
+  }
+ ]
+}

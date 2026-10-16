@@ -1,0 +1,818 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "chemistry-ii-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "chemistry",
+  "language": "english",
+  "title": "Chemistry-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lech2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LECH2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Haloalkanes and Haloarenes",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lech201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECH2-CH01-T1",
+     "topic_number": 1,
+     "title": "Classification and nomenclature",
+     "ncert_sections": "6.1, 6.2",
+     "concepts": [
+      {
+       "concept_tag": "classification-of-halides",
+       "learning_objective": "Classify halogen compounds by the number of halogen atoms and the hybridisation of the carbon bearing the halogen."
+      },
+      {
+       "concept_tag": "iupac-naming-of-halides",
+       "learning_objective": "Name haloalkanes and haloarenes by the IUPAC system and identify them as primary, secondary or tertiary."
+      },
+      {
+       "concept_tag": "gem-and-vic-dihalides",
+       "learning_objective": "Distinguish geminal and vicinal dihalides and relate their common and IUPAC names."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH01-T2",
+     "topic_number": 2,
+     "title": "Nature of the C-X bond and methods of preparation",
+     "ncert_sections": "6.3, 6.4, 6.5",
+     "concepts": [
+      {
+       "concept_tag": "c-x-bond-nature",
+       "learning_objective": "Relate the polarity, length and enthalpy of the carbon-halogen bond to the size of the halogen."
+      },
+      {
+       "concept_tag": "preparation-of-haloalkanes",
+       "learning_objective": "Describe the preparation of haloalkanes from alcohols, hydrocarbons and by halogen exchange."
+      },
+      {
+       "concept_tag": "preparation-of-haloarenes",
+       "learning_objective": "Describe the preparation of haloarenes by electrophilic substitution and from diazonium salts."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH01-T3",
+     "topic_number": 3,
+     "title": "Physical properties",
+     "ncert_sections": "6.6",
+     "concepts": [
+      {
+       "concept_tag": "boiling-point-trends",
+       "learning_objective": "Explain the trends in boiling points of haloalkanes with halogen size and branching."
+      },
+      {
+       "concept_tag": "solubility-and-density",
+       "learning_objective": "Explain the low water solubility and the density trends of haloalkanes."
+      },
+      {
+       "concept_tag": "melting-point-and-symmetry",
+       "learning_objective": "Relate the high melting point of para-dihalobenzenes to molecular symmetry."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH01-T4",
+     "topic_number": 4,
+     "title": "Nucleophilic substitution: SN1 and SN2",
+     "ncert_sections": "6.7.1",
+     "concepts": [
+      {
+       "concept_tag": "ambident-nucleophiles",
+       "learning_objective": "Predict the products of haloalkanes with ambident nucleophiles such as cyanide and nitrite."
+      },
+      {
+       "concept_tag": "sn2-mechanism",
+       "learning_objective": "Describe the SN2 mechanism, its kinetics and the effect of steric hindrance on its rate."
+      },
+      {
+       "concept_tag": "sn1-mechanism",
+       "learning_objective": "Describe the SN1 mechanism and relate its rate to carbocation stability."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH01-T5",
+     "topic_number": 5,
+     "title": "Stereochemical aspects of nucleophilic substitution",
+     "ncert_sections": "6.7.1",
+     "concepts": [
+      {
+       "concept_tag": "chirality-and-enantiomers",
+       "learning_objective": "Identify chiral molecules and state how enantiomers differ in their properties."
+      },
+      {
+       "concept_tag": "retention-inversion-racemisation",
+       "learning_objective": "Predict retention, inversion or racemisation at an asymmetric carbon in substitution reactions."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH01-T6",
+     "topic_number": 6,
+     "title": "Elimination reactions and reactions with metals",
+     "ncert_sections": "6.7.1",
+     "concepts": [
+      {
+       "concept_tag": "beta-elimination-zaitsev",
+       "learning_objective": "Predict the major alkene in dehydrohalogenation using Zaitsev's rule."
+      },
+      {
+       "concept_tag": "substitution-versus-elimination",
+       "learning_objective": "Decide whether substitution or elimination is favoured from the halide and the base."
+      },
+      {
+       "concept_tag": "grignard-and-wurtz",
+       "learning_objective": "Describe the formation of Grignard reagents and the Wurtz reaction of alkyl halides."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH01-T7",
+     "topic_number": 7,
+     "title": "Reactions of haloarenes",
+     "ncert_sections": "6.7.2",
+     "concepts": [
+      {
+       "concept_tag": "haloarene-nucleophilic-substitution",
+       "learning_objective": "Explain the low reactivity of haloarenes towards nucleophilic substitution and the effect of nitro groups."
+      },
+      {
+       "concept_tag": "haloarene-electrophilic-substitution",
+       "learning_objective": "Explain why halogens are deactivating yet ortho, para-directing in electrophilic substitution."
+      },
+      {
+       "concept_tag": "wurtz-fittig-and-fittig",
+       "learning_objective": "Identify the Wurtz-Fittig and Fittig reactions of aryl halides with sodium."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH01-T8",
+     "topic_number": 8,
+     "title": "Polyhalogen compounds",
+     "ncert_sections": "6.8",
+     "concepts": [
+      {
+       "concept_tag": "uses-and-hazards-of-halomethanes",
+       "learning_objective": "State the uses and hazards of dichloromethane, chloroform, iodoform and carbon tetrachloride."
+      },
+      {
+       "concept_tag": "freons-and-ozone",
+       "learning_objective": "Describe freons and explain how they affect the ozone layer."
+      },
+      {
+       "concept_tag": "ddt-in-the-environment",
+       "learning_objective": "Explain why DDT persists and accumulates in living organisms."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECH2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Alcohols, Phenols and Ethers",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lech202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECH2-CH02-T1",
+     "topic_number": 1,
+     "title": "Classification and nomenclature of alcohols, phenols and ethers",
+     "ncert_sections": "7.1, 7.2",
+     "concepts": [
+      {
+       "concept_tag": "classification-of-alcohols-phenols-ethers",
+       "learning_objective": "Classify alcohols, phenols and ethers by the number of -OH groups, the hybridisation of the carbon bearing -OH, and the groups on the ether oxygen."
+      },
+      {
+       "concept_tag": "iupac-nomenclature",
+       "learning_objective": "Name alcohols, phenols and ethers by common and IUPAC systems."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH02-T2",
+     "topic_number": 2,
+     "title": "Structures of functional groups",
+     "ncert_sections": "7.3",
+     "concepts": [
+      {
+       "concept_tag": "structure-of-alcohols-and-ethers",
+       "learning_objective": "Relate the bond angles at oxygen in alcohols and ethers to lone pair and bulky group repulsions."
+      },
+      {
+       "concept_tag": "carbon-oxygen-bond-in-phenol",
+       "learning_objective": "Explain why the C-O bond in phenol is shorter than in methanol."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH02-T3",
+     "topic_number": 3,
+     "title": "Preparation of alcohols and phenols",
+     "ncert_sections": "7.4.1, 7.4.2",
+     "concepts": [
+      {
+       "concept_tag": "preparation-of-alcohols",
+       "learning_objective": "Describe preparation of alcohols from alkenes and by reduction of carbonyl compounds and acids."
+      },
+      {
+       "concept_tag": "grignard-synthesis-of-alcohols",
+       "learning_objective": "Predict the class and structure of alcohols formed from Grignard reagents and carbonyl compounds."
+      },
+      {
+       "concept_tag": "preparation-of-phenols",
+       "learning_objective": "Describe preparation of phenol from haloarenes, sulphonic acids, diazonium salts and cumene."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH02-T4",
+     "topic_number": 4,
+     "title": "Physical properties of alcohols and phenols",
+     "ncert_sections": "7.4.3",
+     "concepts": [
+      {
+       "concept_tag": "boiling-points-and-hydrogen-bonding",
+       "learning_objective": "Explain trends in boiling points of alcohols in terms of hydrogen bonding, chain length and branching."
+      },
+      {
+       "concept_tag": "solubility-of-alcohols",
+       "learning_objective": "Explain the solubility of alcohols in water and its dependence on the size of the alkyl group."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH02-T5",
+     "topic_number": 5,
+     "title": "Acidity and esterification of alcohols and phenols",
+     "ncert_sections": "7.4.4",
+     "concepts": [
+      {
+       "concept_tag": "acidity-of-alcohols-and-phenols",
+       "learning_objective": "Compare the acid strength of alcohols, water and substituted phenols using inductive and resonance effects."
+      },
+      {
+       "concept_tag": "esterification-and-acetylation",
+       "learning_objective": "Describe esterification of alcohols and phenols and the role of the reagents used."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH02-T6",
+     "topic_number": 6,
+     "title": "Reactions of alcohols and commercially important alcohols",
+     "ncert_sections": "7.4.4, 7.5",
+     "concepts": [
+      {
+       "concept_tag": "lucas-test-and-dehydration",
+       "learning_objective": "Explain the Lucas test and the mechanism and ease of acid-catalysed dehydration of alcohols."
+      },
+      {
+       "concept_tag": "oxidation-of-alcohols",
+       "learning_objective": "Predict the oxidation and dehydrogenation products of primary, secondary and tertiary alcohols."
+      },
+      {
+       "concept_tag": "methanol-and-ethanol",
+       "learning_objective": "Describe the manufacture, uses and toxicity of methanol and ethanol."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH02-T7",
+     "topic_number": 7,
+     "title": "Reactions of phenols",
+     "ncert_sections": "7.4.4",
+     "concepts": [
+      {
+       "concept_tag": "electrophilic-substitution-in-phenol",
+       "learning_objective": "Explain nitration and halogenation of phenol in terms of the activating, ortho-para directing -OH group."
+      },
+      {
+       "concept_tag": "kolbe-and-reimer-tiemann-reactions",
+       "learning_objective": "Write the products of Kolbe's and Reimer-Tiemann reactions of phenol."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH02-T8",
+     "topic_number": 8,
+     "title": "Ethers",
+     "ncert_sections": "7.6",
+     "concepts": [
+      {
+       "concept_tag": "preparation-of-ethers",
+       "learning_objective": "Prepare ethers by dehydration of alcohols and Williamson synthesis and state their limitations."
+      },
+      {
+       "concept_tag": "properties-and-reactions-of-ethers",
+       "learning_objective": "Explain the physical properties of ethers and their cleavage by hydrogen halides and ring substitution."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECH2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Aldehydes, Ketones and Carboxylic Acids",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lech203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECH2-CH03-T1",
+     "topic_number": 1,
+     "title": "Nomenclature and structure of the carbonyl group",
+     "ncert_sections": "8.1, 8.1.1, 8.1.2",
+     "concepts": [
+      {
+       "concept_tag": "carbonyl-nomenclature",
+       "learning_objective": "Write common and IUPAC names of aldehydes and ketones, including ring and unsaturated compounds."
+      },
+      {
+       "concept_tag": "carbonyl-group-structure",
+       "learning_objective": "Describe the hybridisation, geometry and polarity of the carbonyl group."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH03-T2",
+     "topic_number": 2,
+     "title": "Preparation of aldehydes and ketones",
+     "ncert_sections": "8.2, 8.2.1, 8.2.2, 8.2.3",
+     "concepts": [
+      {
+       "concept_tag": "aldehyde-preparation",
+       "learning_objective": "Choose reagents and named reactions that give aldehydes from alcohols, hydrocarbons, acyl chlorides, nitriles and esters."
+      },
+      {
+       "concept_tag": "ketone-preparation",
+       "learning_objective": "Choose methods that give ketones from acyl chlorides, nitriles, alkynes and arenes."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH03-T3",
+     "topic_number": 3,
+     "title": "Physical properties and uses of aldehydes and ketones",
+     "ncert_sections": "8.3, 8.5",
+     "concepts": [
+      {
+       "concept_tag": "carbonyl-physical-properties",
+       "learning_objective": "Explain the boiling points and solubility of aldehydes and ketones in terms of intermolecular forces."
+      },
+      {
+       "concept_tag": "carbonyl-uses",
+       "learning_objective": "State important uses of common aldehydes and ketones."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH03-T4",
+     "topic_number": 4,
+     "title": "Nucleophilic addition, reduction and oxidation of aldehydes and ketones",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "nucleophilic-addition",
+       "learning_objective": "Explain the mechanism of nucleophilic addition and the relative reactivity of aldehydes and ketones."
+      },
+      {
+       "concept_tag": "carbonyl-reduction",
+       "learning_objective": "Identify reagents that reduce carbonyl compounds to alcohols or to hydrocarbons."
+      },
+      {
+       "concept_tag": "carbonyl-oxidation-tests",
+       "learning_objective": "Use oxidation reactions such as Tollens', Fehling's and iodoform tests to distinguish and identify carbonyl compounds."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH03-T5",
+     "topic_number": 5,
+     "title": "Reactions due to alpha-hydrogen and other reactions",
+     "ncert_sections": "8.4",
+     "concepts": [
+      {
+       "concept_tag": "alpha-hydrogen-acidity",
+       "learning_objective": "Explain why the alpha-hydrogens of aldehydes and ketones are acidic."
+      },
+      {
+       "concept_tag": "aldol-condensation",
+       "learning_objective": "Predict the products of aldol and cross aldol condensation."
+      },
+      {
+       "concept_tag": "cannizzaro-reaction",
+       "learning_objective": "Identify aldehydes that undergo the Cannizzaro reaction and predict its products."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH03-T6",
+     "topic_number": 6,
+     "title": "Carboxylic acids: nomenclature, preparation and physical properties",
+     "ncert_sections": "8.6, 8.7, 8.8",
+     "concepts": [
+      {
+       "concept_tag": "carboxylic-acid-nomenclature",
+       "learning_objective": "Write common and IUPAC names of mono- and dicarboxylic acids."
+      },
+      {
+       "concept_tag": "carboxylic-acid-preparation",
+       "learning_objective": "Choose methods to prepare carboxylic acids from alcohols, alkylbenzenes, nitriles and Grignard reagents."
+      },
+      {
+       "concept_tag": "carboxylic-acid-physical-properties",
+       "learning_objective": "Explain the boiling points and solubility of carboxylic acids."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH03-T7",
+     "topic_number": 7,
+     "title": "Acidity of carboxylic acids",
+     "ncert_sections": "8.9.1",
+     "concepts": [
+      {
+       "concept_tag": "carboxylic-acid-acidity",
+       "learning_objective": "Compare the acidity of carboxylic acids with phenols and alcohols using conjugate base stability."
+      },
+      {
+       "concept_tag": "substituent-effect-on-acidity",
+       "learning_objective": "Predict how electron withdrawing and donating groups change the acidity of carboxylic acids."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH03-T8",
+     "topic_number": 8,
+     "title": "Other reactions and uses of carboxylic acids",
+     "ncert_sections": "8.9.2, 8.9.3, 8.9.4, 8.10",
+     "concepts": [
+      {
+       "concept_tag": "acid-derivative-formation",
+       "learning_objective": "Write reactions that replace the -OH of the carboxyl group to give acid chlorides, esters, anhydrides and amides."
+      },
+      {
+       "concept_tag": "carboxyl-group-reactions",
+       "learning_objective": "Describe reduction and decarboxylation of carboxylic acids and the reagents used."
+      },
+      {
+       "concept_tag": "hydrocarbon-part-substitution",
+       "learning_objective": "Explain the Hell-Volhard-Zelinsky reaction and ring substitution in aromatic acids."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECH2-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Amines",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lech204.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECH2-CH04-T1",
+     "topic_number": 1,
+     "title": "Structure, classification and nomenclature of amines",
+     "ncert_sections": "9.1, 9.2, 9.3",
+     "concepts": [
+      {
+       "concept_tag": "amine-pyramidal-structure",
+       "learning_objective": "Describe the sp3 hybridisation of nitrogen and the pyramidal shape of amines."
+      },
+      {
+       "concept_tag": "amine-classification",
+       "learning_objective": "Classify amines as primary, secondary or tertiary from the number of groups on nitrogen."
+      },
+      {
+       "concept_tag": "amine-iupac-nomenclature",
+       "learning_objective": "Name alkylamines and arylamines by common and IUPAC systems."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH04-T2",
+     "topic_number": 2,
+     "title": "Preparation of amines",
+     "ncert_sections": "9.4",
+     "concepts": [
+      {
+       "concept_tag": "nitro-reduction",
+       "learning_objective": "Explain the reduction of nitro compounds to amines and the advantage of iron scrap and HCl."
+      },
+      {
+       "concept_tag": "ammonolysis-of-alkyl-halides",
+       "learning_objective": "Explain ammonolysis of alkyl halides and why it gives a mixture of amines."
+      },
+      {
+       "concept_tag": "gabriel-and-hoffmann-methods",
+       "learning_objective": "Apply Gabriel phthalimide synthesis and Hoffmann bromamide degradation to prepare primary amines."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH04-T3",
+     "topic_number": 3,
+     "title": "Physical properties of amines",
+     "ncert_sections": "9.5",
+     "concepts": [
+      {
+       "concept_tag": "amine-hydrogen-bonding-boiling-point",
+       "learning_objective": "Relate the boiling points of amines to intermolecular hydrogen bonding."
+      },
+      {
+       "concept_tag": "amine-solubility",
+       "learning_objective": "Explain the solubility of amines in water in terms of hydrogen bonding and the alkyl part."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH04-T4",
+     "topic_number": 4,
+     "title": "Basic character of amines",
+     "ncert_sections": "9.6",
+     "concepts": [
+      {
+       "concept_tag": "kb-pkb-basicity",
+       "learning_objective": "Interpret Kb and pKb values to compare the basic strength of amines."
+      },
+      {
+       "concept_tag": "alkylamine-basicity-in-water",
+       "learning_objective": "Explain the order of basicity of alkylamines from inductive, solvation and steric effects."
+      },
+      {
+       "concept_tag": "arylamine-basicity",
+       "learning_objective": "Explain why arylamines are weaker bases than ammonia and how substituents change this."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH04-T5",
+     "topic_number": 5,
+     "title": "Alkylation, acylation and tests for amines",
+     "ncert_sections": "9.6",
+     "concepts": [
+      {
+       "concept_tag": "amine-acylation",
+       "learning_objective": "Describe acylation and benzoylation of primary and secondary amines."
+      },
+      {
+       "concept_tag": "primary-amine-tests",
+       "learning_objective": "Use the carbylamine reaction and the reaction with nitrous acid to identify primary amines."
+      },
+      {
+       "concept_tag": "hinsberg-test",
+       "learning_objective": "Distinguish primary, secondary and tertiary amines with benzenesulphonyl chloride."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH04-T6",
+     "topic_number": 6,
+     "title": "Electrophilic substitution in aromatic amines",
+     "ncert_sections": "9.6",
+     "concepts": [
+      {
+       "concept_tag": "amino-group-activating-effect",
+       "learning_objective": "Explain the ortho/para directing and activating effect of the amino group."
+      },
+      {
+       "concept_tag": "acetylation-protecting-group",
+       "learning_objective": "Explain how acetylation controls the reactivity of aniline in substitution."
+      },
+      {
+       "concept_tag": "anilinium-ion-effects",
+       "learning_objective": "Explain meta product in nitration, sulphonation and failure of Friedel-Crafts reaction of aniline."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH04-T7",
+     "topic_number": 7,
+     "title": "Diazonium salts: preparation and properties",
+     "ncert_sections": "9.7, 9.8",
+     "concepts": [
+      {
+       "concept_tag": "diazotisation",
+       "learning_objective": "Describe the preparation of benzenediazonium chloride by diazotisation."
+      },
+      {
+       "concept_tag": "diazonium-salt-stability",
+       "learning_objective": "Explain the stability of arenediazonium salts compared with alkyldiazonium salts."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH04-T8",
+     "topic_number": 8,
+     "title": "Reactions of diazonium salts and their importance in synthesis",
+     "ncert_sections": "9.9, 9.10",
+     "concepts": [
+      {
+       "concept_tag": "nitrogen-displacement-reactions",
+       "learning_objective": "Describe replacement of the diazonium group by halide, cyanide, hydroxyl, hydrogen and nitro groups."
+      },
+      {
+       "concept_tag": "azo-coupling",
+       "learning_objective": "Describe coupling reactions of diazonium salts with phenol and aniline to form azo compounds."
+      },
+      {
+       "concept_tag": "diazonium-synthetic-utility",
+       "learning_objective": "Plan syntheses of aromatic compounds that cannot be made by direct substitution."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LECH2-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Biomolecules",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lech205.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LECH2-CH05-T1",
+     "topic_number": 1,
+     "title": "Carbohydrates: definition and classification",
+     "ncert_sections": "10.1, 10.1.1, 10.1.2",
+     "concepts": [
+      {
+       "concept_tag": "carbohydrate-definition-classification",
+       "learning_objective": "Define carbohydrates chemically and classify them as monosaccharides, oligosaccharides and polysaccharides by their behaviour on hydrolysis."
+      },
+      {
+       "concept_tag": "monosaccharide-aldose-ketose",
+       "learning_objective": "Name monosaccharides as aldoses or ketoses by carbon number and recognise that all monosaccharides are reducing sugars."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH05-T2",
+     "topic_number": 2,
+     "title": "Structure of glucose and fructose",
+     "ncert_sections": "10.1.2.1, 10.1.2.2",
+     "concepts": [
+      {
+       "concept_tag": "glucose-open-chain-evidence",
+       "learning_objective": "Relate the reactions of glucose to the evidence for its open-chain structure."
+      },
+      {
+       "concept_tag": "glucose-cyclic-structure-anomers",
+       "learning_objective": "Explain the cyclic hemiacetal (pyranose) structure of glucose and its alpha and beta anomers."
+      },
+      {
+       "concept_tag": "d-l-configuration",
+       "learning_objective": "Interpret the D/L and (+)/(-) notation of sugars with reference to glyceraldehyde."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH05-T3",
+     "topic_number": 3,
+     "title": "Disaccharides, polysaccharides and importance of carbohydrates",
+     "ncert_sections": "10.1.3, 10.1.4, 10.1.5",
+     "concepts": [
+      {
+       "concept_tag": "glycosidic-linkage-disaccharides",
+       "learning_objective": "Describe glycosidic linkages in sucrose, maltose and lactose and decide whether a disaccharide is reducing."
+      },
+      {
+       "concept_tag": "invert-sugar",
+       "learning_objective": "Explain the change in sign of rotation on hydrolysis of sucrose (invert sugar)."
+      },
+      {
+       "concept_tag": "polysaccharide-structure",
+       "learning_objective": "Compare the structures of starch (amylose, amylopectin), cellulose and glycogen."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH05-T4",
+     "topic_number": 4,
+     "title": "Amino acids and structure of proteins",
+     "ncert_sections": "10.2, 10.2.1, 10.2.2, 10.2.3",
+     "concepts": [
+      {
+       "concept_tag": "amino-acid-classification",
+       "learning_objective": "Classify amino acids as acidic, basic or neutral and as essential or non-essential."
+      },
+      {
+       "concept_tag": "zwitter-ion-amphoteric",
+       "learning_objective": "Explain the zwitter ion form and the salt-like, amphoteric behaviour of amino acids."
+      },
+      {
+       "concept_tag": "peptide-bond-protein-structure",
+       "learning_objective": "Describe peptide bond formation and the primary to quaternary levels of protein structure."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH05-T5",
+     "topic_number": 5,
+     "title": "Denaturation of proteins and enzymes",
+     "ncert_sections": "10.2.4, 10.3, 10.3.1",
+     "concepts": [
+      {
+       "concept_tag": "protein-denaturation",
+       "learning_objective": "Explain denaturation of proteins and its effect on their structure and activity."
+      },
+      {
+       "concept_tag": "enzyme-specificity-catalysis",
+       "learning_objective": "Describe enzymes as specific biocatalysts that lower activation energy, and how they are named."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH05-T6",
+     "topic_number": 6,
+     "title": "Vitamins",
+     "ncert_sections": "10.4, 10.4.1",
+     "concepts": [
+      {
+       "concept_tag": "vitamin-classification-solubility",
+       "learning_objective": "Classify vitamins as fat soluble or water soluble and relate this to their storage in the body."
+      },
+      {
+       "concept_tag": "vitamin-deficiency-diseases",
+       "learning_objective": "Match important vitamins with their sources and deficiency diseases."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH05-T7",
+     "topic_number": 7,
+     "title": "Nucleic acids",
+     "ncert_sections": "10.5, 10.5.1, 10.5.2, 10.5.3",
+     "concepts": [
+      {
+       "concept_tag": "nucleic-acid-composition",
+       "learning_objective": "State the sugars, bases and phosphate units of DNA and RNA and distinguish nucleosides from nucleotides."
+      },
+      {
+       "concept_tag": "dna-double-helix-base-pairing",
+       "learning_objective": "Apply complementary base pairing in the DNA double helix."
+      },
+      {
+       "concept_tag": "nucleic-acid-functions",
+       "learning_objective": "Describe the roles of DNA and RNA in heredity and protein synthesis."
+      }
+     ]
+    },
+    {
+     "topic_id": "LECH2-CH05-T8",
+     "topic_number": 8,
+     "title": "Hormones",
+     "ncert_sections": "10.6",
+     "concepts": [
+      {
+       "concept_tag": "hormone-chemical-nature",
+       "learning_objective": "Classify hormones as steroids, polypeptides or amino acid derivatives."
+      },
+      {
+       "concept_tag": "hormone-functions",
+       "learning_objective": "Relate common hormones and glands to their functions and to disorders of deficiency or excess."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

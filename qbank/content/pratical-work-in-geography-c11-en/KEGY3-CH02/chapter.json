@@ -1,0 +1,88 @@
+{
+ "chapter_id": "KEGY3-CH02",
+ "title": "Map Scale",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY3-CH02-T1",
+   "topic_number": 1,
+   "title": "What is Scale and Systems of Measurement",
+   "ncert_sections": "What is Scale?; Box 2.1",
+   "concepts": [
+    {
+     "concept_tag": "map-scale-definition",
+     "learning_objective": "Explain map scale as the ratio between map distance and the corresponding ground distance."
+    },
+    {
+     "concept_tag": "systems-of-measurement",
+     "learning_objective": "Recall the units of the Metric and English systems of measurement and convert between them."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH02-T2",
+   "topic_number": 2,
+   "title": "Statement of Scale and Graphical Scale",
+   "ncert_sections": "Methods of Scale 1, 2",
+   "concepts": [
+    {
+     "concept_tag": "statement-of-scale",
+     "learning_objective": "Describe the statement of scale method with its advantages and limitations."
+    },
+    {
+     "concept_tag": "graphical-bar-scale",
+     "learning_objective": "Explain why the graphical or bar scale stays valid when a map is reduced or enlarged."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH02-T3",
+   "topic_number": 3,
+   "title": "Representative Fraction",
+   "ncert_sections": "Methods of Scale 3",
+   "concepts": [
+    {
+     "concept_tag": "rf-meaning",
+     "learning_objective": "Interpret a representative fraction as a ratio of map distance to ground distance in the same units."
+    },
+    {
+     "concept_tag": "rf-universality",
+     "learning_objective": "Explain why the representative fraction is the universal method of scale."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH02-T4",
+   "topic_number": 4,
+   "title": "Conversion of Scale",
+   "ncert_sections": "Conversion of Scale",
+   "concepts": [
+    {
+     "concept_tag": "statement-to-rf",
+     "learning_objective": "Convert a statement of scale into a representative fraction."
+    },
+    {
+     "concept_tag": "rf-to-statement",
+     "learning_objective": "Convert a representative fraction into a statement of scale in a given system."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY3-CH02-T5",
+   "topic_number": 5,
+   "title": "Construction of the Graphical Scale",
+   "ncert_sections": "Construction of the Graphical/Bar Scale",
+   "concepts": [
+    {
+     "concept_tag": "bar-scale-calculation",
+     "learning_objective": "Calculate the length of line and divisions needed to construct a graphical scale."
+    },
+    {
+     "concept_tag": "dividing-line-equal-parts",
+     "learning_objective": "Apply the angled-line method to divide an uneven line into equal parts."
+    }
+   ]
+  }
+ ]
+}

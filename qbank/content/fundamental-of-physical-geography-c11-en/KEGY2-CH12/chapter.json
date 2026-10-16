@@ -1,0 +1,116 @@
+{
+ "chapter_id": "KEGY2-CH12",
+ "title": "Water (Oceans)",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH12-T1",
+   "topic_number": 1,
+   "title": "Hydrological Cycle",
+   "ncert_sections": "Hydrological Cycle; Table 12.1",
+   "concepts": [
+    {
+     "concept_tag": "hydrological-cycle-processes",
+     "learning_objective": "Describe the hydrological cycle and identify its components and processes."
+    },
+    {
+     "concept_tag": "distribution-of-earth-water",
+     "learning_objective": "State how the earth's water is distributed and explain why water crisis arises."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH12-T2",
+   "topic_number": 2,
+   "title": "Relief of the Ocean Floor: Major Divisions",
+   "ncert_sections": "Relief of the Ocean Floor; Divisions of the Ocean Floors",
+   "concepts": [
+    {
+     "concept_tag": "continental-shelf-and-slope",
+     "learning_objective": "Describe the gradient, width, depth and significance of the continental shelf and slope."
+    },
+    {
+     "concept_tag": "deep-sea-plains-and-trenches",
+     "learning_objective": "Describe deep sea plains and oceanic deeps and their link with plate movements."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH12-T3",
+   "topic_number": 3,
+   "title": "Minor Relief Features of the Ocean Floor",
+   "ncert_sections": "Minor Relief Features",
+   "concepts": [
+    {
+     "concept_tag": "ridges-seamounts-guyots",
+     "learning_objective": "Distinguish mid-oceanic ridges, seamounts and guyots with examples."
+    },
+    {
+     "concept_tag": "canyons-and-atolls",
+     "learning_objective": "Describe submarine canyons and atolls with examples."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH12-T4",
+   "topic_number": 4,
+   "title": "Factors Affecting Ocean Temperature",
+   "ncert_sections": "Temperature of Ocean Waters; Factors Affecting Temperature Distribution",
+   "concepts": [
+    {
+     "concept_tag": "factors-of-ocean-temperature",
+     "learning_objective": "Explain how latitude, land-water distribution, winds and currents affect ocean temperature."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH12-T5",
+   "topic_number": 5,
+   "title": "Horizontal and Vertical Distribution of Temperature",
+   "ncert_sections": "Horizontal and Vertical Distribution of Temperature",
+   "concepts": [
+    {
+     "concept_tag": "thermocline-and-thermal-layers",
+     "learning_objective": "Describe the three-layer thermal structure of oceans and the thermocline."
+    },
+    {
+     "concept_tag": "latitudinal-temperature-pattern",
+     "learning_objective": "Interpret the variation of surface temperature with latitude and hemisphere."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH12-T6",
+   "topic_number": 6,
+   "title": "Salinity and Factors Affecting It",
+   "ncert_sections": "Salinity of Ocean Waters",
+   "concepts": [
+    {
+     "concept_tag": "salinity-definition",
+     "learning_objective": "Define salinity and state how it is expressed."
+    },
+    {
+     "concept_tag": "factors-of-salinity",
+     "learning_objective": "Explain the factors that influence the salinity of ocean water."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH12-T7",
+   "topic_number": 7,
+   "title": "Horizontal and Vertical Distribution of Salinity",
+   "ncert_sections": "Horizontal Distribution of Salinity; Vertical Distribution of Salinity",
+   "concepts": [
+    {
+     "concept_tag": "regional-salinity-patterns",
+     "learning_objective": "Explain regional variations in salinity of oceans and seas."
+    },
+    {
+     "concept_tag": "halocline-and-stratification",
+     "learning_objective": "Describe the vertical variation of salinity, the halocline and stratification."
+    }
+   ]
+  }
+ ]
+}

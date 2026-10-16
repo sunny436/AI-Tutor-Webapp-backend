@@ -1,0 +1,124 @@
+{
+ "chapter_id": "LEGY1-CH07",
+ "title": "Transport and Communication",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEGY1-CH07-T1",
+   "topic_number": 1,
+   "title": "Transport: meaning, network and modes",
+   "ncert_sections": "Transport; Modes of Transportation",
+   "concepts": [
+    {
+     "concept_tag": "transport-network",
+     "learning_objective": "Explain transport as an organised service and describe a transport network of nodes and links."
+    },
+    {
+     "concept_tag": "modes-of-transport",
+     "learning_objective": "Distinguish the suitability of land, water, air and pipeline transport for different goods and distances."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH07-T2",
+   "topic_number": 2,
+   "title": "Land transport: pack animals, roads, highways and border roads",
+   "ncert_sections": "Land Transport; Roads; Highways; Border Roads",
+   "concepts": [
+    {
+     "concept_tag": "land-transport-and-roads",
+     "learning_objective": "Explain the evolution of land transport and the merits and problems of road transport."
+    },
+    {
+     "concept_tag": "highways-and-border-roads",
+     "learning_objective": "Identify major highways of the world and the purpose of border roads."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH07-T3",
+   "topic_number": 3,
+   "title": "Railways and trans-continental railways",
+   "ncert_sections": "Railways; Trans-Continental Railways",
+   "concepts": [
+    {
+     "concept_tag": "railway-networks",
+     "learning_objective": "Describe railway gauges and the distribution of rail networks across continents."
+    },
+    {
+     "concept_tag": "trans-continental-railways",
+     "learning_objective": "Identify the routes and significance of the major trans-continental railways."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH07-T4",
+   "topic_number": 4,
+   "title": "Water transport: sea routes and shipping canals",
+   "ncert_sections": "Water Transport; Sea Routes; Coastal Shipping; Shipping Canals",
+   "concepts": [
+    {
+     "concept_tag": "sea-routes",
+     "learning_objective": "Describe the major ocean trade routes and the factors that influence their traffic."
+    },
+    {
+     "concept_tag": "shipping-canals",
+     "learning_objective": "Compare the Suez and Panama Canals and explain their importance to world trade."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH07-T5",
+   "topic_number": 5,
+   "title": "Inland waterways",
+   "ncert_sections": "Inland Waterways",
+   "concepts": [
+    {
+     "concept_tag": "inland-waterway-development",
+     "learning_objective": "Explain the conditions for developing inland waterways and why some declined."
+    },
+    {
+     "concept_tag": "major-inland-waterways",
+     "learning_objective": "Identify the major inland waterways of the world and the regions they serve."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH07-T6",
+   "topic_number": 6,
+   "title": "Air transport and pipelines",
+   "ncert_sections": "Air Transport; Inter-Continental Air Routes; Pipelines",
+   "concepts": [
+    {
+     "concept_tag": "air-transport",
+     "learning_objective": "Explain the merits, limits and global distribution of air transport."
+    },
+    {
+     "concept_tag": "pipelines",
+     "learning_objective": "Explain the uses and examples of pipelines for transporting liquids and gases."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEGY1-CH07-T7",
+   "topic_number": 7,
+   "title": "Communications: telecommunication, satellites and cyberspace",
+   "ncert_sections": "Communications; Satellite Communication; Cyber Space - Internet",
+   "concepts": [
+    {
+     "concept_tag": "telecommunication",
+     "learning_objective": "Describe the role of the telegraph, telephone and optic fibre cables in communication."
+    },
+    {
+     "concept_tag": "satellite-communication",
+     "learning_objective": "Explain how satellite communication changed the cost of communicating over distance."
+    },
+    {
+     "concept_tag": "cyberspace",
+     "learning_objective": "Analyse the growth of the Internet and how cyberspace expands economic and social space."
+    }
+   ]
+  }
+ ]
+}

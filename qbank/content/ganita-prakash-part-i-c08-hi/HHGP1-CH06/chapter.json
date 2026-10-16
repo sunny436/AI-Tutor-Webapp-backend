@@ -1,0 +1,112 @@
+{
+ "chapter_id": "HHGP1-CH06",
+ "title": "जितना बाँटेंगे उतना बढ़ेगा",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP1-CH06-T1",
+   "topic_number": 1,
+   "title": "वितरण गुणधर्म और गुणनफल में वृद्धि",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "vitaran-gunadharm",
+     "learning_objective": "योग पर गुणन के वितरण गुणधर्म a(b + c) = ab + ac को पहचानना और लागू करना।"
+    },
+    {
+     "concept_tag": "gunanphal-mein-vriddhi",
+     "learning_objective": "एक या दोनों संख्याओं के बदलने पर गुणनफल में होने वाले परिवर्तन को बीजगणित से ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH06-T2",
+   "topic_number": 2,
+   "title": "सर्वसमिका 1 और व्यंजकों का प्रसार",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "sarvasamika-ek",
+     "learning_objective": "सर्वसमिका (a + m)(b + n) = ab + mb + an + mn को समझना और लागू करना।"
+    },
+    {
+     "concept_tag": "vyanjak-prasar",
+     "learning_objective": "समान पदों को जोड़ते हुए बीजीय व्यंजकों के गुणनफल का प्रसार करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH06-T3",
+   "topic_number": 3,
+   "title": "वितरण गुणधर्म द्वारा त्वरित गुणन",
+   "ncert_sections": "6.1",
+   "concepts": [
+    {
+     "concept_tag": "gyarah-se-gunan",
+     "learning_objective": "किसी संख्या को 11 से एक पंक्ति में गुणा करने की विधि समझना।"
+    },
+    {
+     "concept_tag": "ek-sau-ek-se-gunan",
+     "learning_objective": "101, 1001, 99 आदि से त्वरित गुणन के लिए वितरण गुणधर्म का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "khand-gunan-itihas",
+     "learning_objective": "ब्रह्मगुप्त के खंड-गुणन और इष्ट-गुणन के ऐतिहासिक योगदान को जानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH06-T4",
+   "topic_number": 4,
+   "title": "दो संख्याओं के योग और अंतर का वर्ग",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "yog-ka-varg",
+     "learning_objective": "सर्वसमिका (a + b)² = a² + 2ab + b² का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "antar-ka-varg",
+     "learning_objective": "सर्वसमिका (a − b)² = a² − 2ab + b² का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH06-T5",
+   "topic_number": 5,
+   "title": "वर्गों का अंतर और प्रतिरूपों की खोज",
+   "ncert_sections": "6.2",
+   "concepts": [
+    {
+     "concept_tag": "vargon-ka-antar",
+     "learning_objective": "सर्वसमिका (a + b)(a − b) = a² − b² से गणनाएँ करना।"
+    },
+    {
+     "concept_tag": "shridharacharya-vidhi",
+     "learning_objective": "श्रीधराचार्य की विधि a² = (a + b)(a − b) + b² से वर्ग ज्ञात करना।"
+    },
+    {
+     "concept_tag": "pratirup-vyakhya",
+     "learning_objective": "सर्वसमिकाओं से संख्या प्रतिरूपों की व्याख्या करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH06-T6",
+   "topic_number": 6,
+   "title": "त्रुटि पहचान और प्रतिरूप के अनेक तरीके",
+   "ncert_sections": "6.3, 6.4",
+   "concepts": [
+    {
+     "concept_tag": "truti-pahchan",
+     "learning_objective": "बीजीय सरलीकरण में होने वाली सामान्य त्रुटियों को पहचानना और सुधारना।"
+    },
+    {
+     "concept_tag": "pratirup-vyanjak",
+     "learning_objective": "किसी प्रतिरूप के लिए विभिन्न व्यंजकों की समानता सिद्ध करना।"
+    }
+   ]
+  }
+ ]
+}

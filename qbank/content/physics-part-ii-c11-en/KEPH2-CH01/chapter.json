@@ -1,0 +1,112 @@
+{
+ "chapter_id": "KEPH2-CH01",
+ "title": "Mechanical Properties of Solids",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEPH2-CH01-T1",
+   "topic_number": 1,
+   "title": "Elasticity, plasticity, stress and strain",
+   "ncert_sections": "8.1, 8.2",
+   "concepts": [
+    {
+     "concept_tag": "elasticity-and-plasticity",
+     "learning_objective": "Distinguish elastic from plastic behaviour of bodies under deforming forces."
+    },
+    {
+     "concept_tag": "stress-and-strain-types",
+     "learning_objective": "Define stress and the longitudinal, shearing and volume strains and compute simple strains."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH01-T2",
+   "topic_number": 2,
+   "title": "Hooke's law and the stress-strain curve",
+   "ncert_sections": "8.3, 8.4",
+   "concepts": [
+    {
+     "concept_tag": "hookes-law",
+     "learning_objective": "State Hooke's law and the region of the stress-strain curve in which it holds."
+    },
+    {
+     "concept_tag": "stress-strain-curve",
+     "learning_objective": "Interpret the elastic limit, yield point, permanent set and fracture on a stress-strain curve."
+    },
+    {
+     "concept_tag": "ductile-brittle-elastomers",
+     "learning_objective": "Classify materials as ductile, brittle or elastomers from their stress-strain behaviour."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH01-T3",
+   "topic_number": 3,
+   "title": "Young's modulus",
+   "ncert_sections": "8.5, 8.5.1",
+   "concepts": [
+    {
+     "concept_tag": "youngs-modulus",
+     "learning_objective": "Define Young's modulus and identify the states of matter for which it is meaningful."
+    },
+    {
+     "concept_tag": "extension-of-wire",
+     "learning_objective": "Use F/A = Y(Delta L/L) to calculate and compare extensions of wires."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH01-T4",
+   "topic_number": 4,
+   "title": "Shear modulus and bulk modulus",
+   "ncert_sections": "8.5.2, 8.5.3",
+   "concepts": [
+    {
+     "concept_tag": "shear-modulus",
+     "learning_objective": "Define the shear modulus and use it to find the displacement under a tangential force."
+    },
+    {
+     "concept_tag": "bulk-modulus",
+     "learning_objective": "Define the bulk modulus and calculate the fractional change in volume under hydraulic pressure."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH01-T5",
+   "topic_number": 5,
+   "title": "Poisson's ratio and elastic potential energy",
+   "ncert_sections": "8.5.4, 8.5.5",
+   "concepts": [
+    {
+     "concept_tag": "poissons-ratio",
+     "learning_objective": "Define Poisson's ratio and calculate it from lateral and longitudinal strains."
+    },
+    {
+     "concept_tag": "elastic-potential-energy",
+     "learning_objective": "Calculate the elastic potential energy stored in a stretched wire."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEPH2-CH01-T6",
+   "topic_number": 6,
+   "title": "Applications of elastic behaviour of materials",
+   "ncert_sections": "8.6",
+   "concepts": [
+    {
+     "concept_tag": "crane-rope-design",
+     "learning_objective": "Estimate the minimum cross-section of a crane rope from the yield strength."
+    },
+    {
+     "concept_tag": "beam-bending",
+     "learning_objective": "Use the sag relation for a centrally loaded beam to explain beam design."
+    },
+    {
+     "concept_tag": "mountain-height",
+     "learning_objective": "Estimate the maximum height of a mountain from the elastic limit of rock."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "chapter_id": "KHST1-CH01",
+ "title": "परिचय",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHST1-CH01-T1",
+   "topic_number": 1,
+   "title": "अर्थशास्त्र क्यों? आर्थिक क्रियाएँ",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "arthik-kriyaen",
+     "learning_objective": "विद्यार्थी मौद्रिक लाभ के लिए की जाने वाली आर्थिक क्रियाओं को अन्य क्रियाओं से अलग पहचानता है।"
+    },
+    {
+     "concept_tag": "upbhokta-utpadak-karmachari",
+     "learning_objective": "विद्यार्थी उपभोक्ता, विक्रेता, उत्पादक, कर्मचारी और नियोक्ता की भूमिकाओं में अंतर करता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH01-T2",
+   "topic_number": 2,
+   "title": "दुर्लभता और चुनाव की समस्या",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "durlabhata",
+     "learning_objective": "विद्यार्थी असीमित इच्छाओं और सीमित साधनों से उत्पन्न दुर्लभता को सभी आर्थिक समस्याओं की जड़ के रूप में समझाता है।"
+    },
+    {
+     "concept_tag": "vaikalpik-upyog",
+     "learning_objective": "विद्यार्थी संसाधनों के वैकल्पिक उपयोग से उत्पन्न चुनाव की समस्या को उदाहरण सहित स्पष्ट करता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH01-T3",
+   "topic_number": 3,
+   "title": "उपभोग, उत्पादन, वितरण और अर्थशास्त्र की परिभाषा",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "upbhog-utpadan-vitaran",
+     "learning_objective": "विद्यार्थी अर्थशास्त्र के तीन परंपरागत भागों उपभोग, उत्पादन और वितरण को पहचानता है।"
+    },
+    {
+     "concept_tag": "arthashastra-paribhasha",
+     "learning_objective": "विद्यार्थी दुर्लभ और वैकल्पिक उपयोग वाले संसाधनों पर आधारित अर्थशास्त्र की परिभाषा तथा उसमें सांख्यिकी की आवश्यकता को समझाता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH01-T4",
+   "topic_number": 4,
+   "title": "अर्थशास्त्र में सांख्यिकी और सांख्यिकी का अर्थ",
+   "ncert_sections": "2, 3",
+   "concepts": [
+    {
+     "concept_tag": "ankde-vishleshan-niti",
+     "learning_objective": "विद्यार्थी आर्थिक आँकड़ों, समस्या के विश्लेषण और नीति-निर्माण के संबंध को समझाता है।"
+    },
+    {
+     "concept_tag": "matratmak-gunatmak-ankde",
+     "learning_objective": "विद्यार्थी मात्रात्मक और गुणात्मक आँकड़ों में अंतर करता है।"
+    },
+    {
+     "concept_tag": "sankhyiki-arth-charan",
+     "learning_objective": "विद्यार्थी सांख्यिकी का अर्थ और उसके संग्रह, प्रस्तुतीकरण, संक्षेपण तथा विश्लेषण के चरण बताता है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH01-T5",
+   "topic_number": 5,
+   "title": "सांख्यिकी क्या करती है और निष्कर्ष",
+   "ncert_sections": "4, 5",
+   "concepts": [
+    {
+     "concept_tag": "sankhyiki-karya",
+     "learning_objective": "विद्यार्थी तथ्यों को सटीक बनाने, आँकड़ों के संक्षेपण, संबंधों के परीक्षण और पूर्वानुमान में सांख्यिकी के कार्यों का विश्लेषण करता है।"
+    },
+    {
+     "concept_tag": "sankhyiki-aur-samanya-buddhi",
+     "learning_objective": "विद्यार्थी मूल्यांकन करता है कि सांख्यिकीय विधियाँ सामान्य बुद्धि का विकल्प नहीं हैं।"
+    }
+   ]
+  }
+ ]
+}

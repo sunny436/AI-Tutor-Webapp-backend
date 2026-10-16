@@ -1,0 +1,152 @@
+{
+ "chapter_id": "KEAC1-CH01",
+ "title": "Introduction to Accounting",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEAC1-CH01-T1",
+   "topic_number": 1,
+   "title": "Meaning of accounting and the accounting process",
+   "ncert_sections": "1.1, 1.1.1, 1.1.2, 1.1.3",
+   "concepts": [
+    {
+     "concept_tag": "definition-of-accounting",
+     "learning_objective": "State the meaning of accounting as defined by AICPA and AAA."
+    },
+    {
+     "concept_tag": "economic-events",
+     "learning_objective": "Distinguish external and internal economic events and identify the transactions an event comprises."
+    },
+    {
+     "concept_tag": "accounting-process-steps",
+     "learning_objective": "Explain identification, measurement, recording and communication as steps of the accounting process."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH01-T2",
+   "topic_number": 2,
+   "title": "Users of accounting information and their needs",
+   "ncert_sections": "1.1.4, 1.3.4",
+   "concepts": [
+    {
+     "concept_tag": "internal-and-external-users",
+     "learning_objective": "Classify users of accounting information as internal or external users."
+    },
+    {
+     "concept_tag": "information-needs-of-users",
+     "learning_objective": "Identify the information each user group seeks from accounting reports."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH01-T3",
+   "topic_number": 3,
+   "title": "Accounting as a source of information and its branches",
+   "ncert_sections": "1.2",
+   "concepts": [
+    {
+     "concept_tag": "accounting-information-system",
+     "learning_objective": "Explain why accounting is a source of information and a means of disseminating it to users."
+    },
+    {
+     "concept_tag": "branches-of-accounting",
+     "learning_objective": "Distinguish financial accounting, cost accounting and management accounting."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH01-T4",
+   "topic_number": 4,
+   "title": "Qualitative characteristics of accounting information",
+   "ncert_sections": "1.2.1",
+   "concepts": [
+    {
+     "concept_tag": "reliability-and-relevance",
+     "learning_objective": "Explain reliability and relevance as qualities that make accounting information decision-useful."
+    },
+    {
+     "concept_tag": "understandability-and-comparability",
+     "learning_objective": "Explain understandability and comparability and recognise when they are violated."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH01-T5",
+   "topic_number": 5,
+   "title": "Objectives and role of accounting",
+   "ncert_sections": "1.3, 1.4",
+   "concepts": [
+    {
+     "concept_tag": "objectives-of-accounting",
+     "learning_objective": "State the objectives of accounting, including ascertaining profit or loss and financial position."
+    },
+    {
+     "concept_tag": "role-of-accounting",
+     "learning_objective": "Describe the different roles of accounting such as language of business and historical record."
+    },
+    {
+     "concept_tag": "limitations-of-accounting",
+     "learning_objective": "Recognise that accounting information is historical, quantitative and financial in nature."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH01-T6",
+   "topic_number": 6,
+   "title": "Basic terms: entity, transaction, assets, liabilities and capital",
+   "ncert_sections": "1.5.1 to 1.5.5",
+   "concepts": [
+    {
+     "concept_tag": "entity-and-transaction",
+     "learning_objective": "Identify the business entity and decide whether an event is a transaction of that entity."
+    },
+    {
+     "concept_tag": "assets-and-liabilities",
+     "learning_objective": "Classify assets and liabilities as current or non-current."
+    },
+    {
+     "concept_tag": "capital",
+     "learning_objective": "Explain capital and its treatment as a claim of the owner on the business."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH01-T7",
+   "topic_number": 7,
+   "title": "Basic terms: revenue, expenses, expenditure, profit, gain and loss",
+   "ncert_sections": "1.5.6 to 1.5.12",
+   "concepts": [
+    {
+     "concept_tag": "revenue-expense-expenditure",
+     "learning_objective": "Distinguish revenue, expense, revenue expenditure and capital expenditure."
+    },
+    {
+     "concept_tag": "profit-gain-loss",
+     "learning_objective": "Compute profit and distinguish it from gain and loss."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH01-T8",
+   "topic_number": 8,
+   "title": "Basic terms: discount, voucher, goods, drawings, purchases, stock, debtors and creditors",
+   "ncert_sections": "1.5.13 to 1.5.20",
+   "concepts": [
+    {
+     "concept_tag": "discount-and-voucher",
+     "learning_objective": "Explain trade discount, cash discount and vouchers."
+    },
+    {
+     "concept_tag": "goods-and-drawings",
+     "learning_objective": "Decide when an item is goods for a business and identify drawings by the owner."
+    },
+    {
+     "concept_tag": "stock-debtors-creditors",
+     "learning_objective": "Explain stock, debtors and creditors and their place in the balance sheet."
+    }
+   ]
+  }
+ ]
+}

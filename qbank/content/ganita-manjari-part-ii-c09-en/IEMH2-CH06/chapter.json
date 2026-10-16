@@ -1,0 +1,128 @@
+{
+ "chapter_id": "IEMH2-CH06",
+ "title": "Math of Space: Surface Area and Volume",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IEMH2-CH06-T1",
+   "topic_number": 1,
+   "title": "Cuboids and cubes",
+   "ncert_sections": "14.1",
+   "concepts": [
+    {
+     "concept_tag": "cuboid-surface-area-volume",
+     "learning_objective": "Calculate the total surface area 2(lw + wh + hl) and volume lwh of a cuboid."
+    },
+    {
+     "concept_tag": "cube-surface-area-volume",
+     "learning_objective": "Use 6a² and a³ for the surface area and volume of a cube, including packing problems."
+    },
+    {
+     "concept_tag": "surface-area-volume-comparison",
+     "learning_objective": "Compare solids of equal volume and reason about how surface area changes with shape."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH06-T2",
+   "topic_number": 2,
+   "title": "Right circular cylinder",
+   "ncert_sections": "14.2, 14.2.1",
+   "concepts": [
+    {
+     "concept_tag": "cylinder-cross-section",
+     "learning_objective": "Distinguish a right circular cylinder from an oblique one and describe its cross-sections."
+    },
+    {
+     "concept_tag": "cylinder-surface-area",
+     "learning_objective": "Find the curved and total surface areas of a cylinder using 2πrh and 2πr(h + r)."
+    },
+    {
+     "concept_tag": "cylinder-volume",
+     "learning_objective": "Find and compare cylinder volumes using V = πr²h, including recasting and scaling problems."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH06-T3",
+   "topic_number": 3,
+   "title": "Cones",
+   "ncert_sections": "14.3",
+   "concepts": [
+    {
+     "concept_tag": "cone-slant-height",
+     "learning_objective": "Relate slant height, height and base radius of a right circular cone by l² = h² + r²."
+    },
+    {
+     "concept_tag": "cone-surface-area",
+     "learning_objective": "Find the curved and total surface areas of a cone using πrl and πr(l + r)."
+    },
+    {
+     "concept_tag": "cone-volume",
+     "learning_objective": "Use V = (1/3)πr²h, including solids formed by rotating a right triangle."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH06-T4",
+   "topic_number": 4,
+   "title": "Pyramidal shapes",
+   "ncert_sections": "14.4",
+   "concepts": [
+    {
+     "concept_tag": "pyramid-structure",
+     "learning_objective": "Describe a pyramidal shape as a base joined to a single apex in a different plane."
+    },
+    {
+     "concept_tag": "pyramid-volume",
+     "learning_objective": "Find the volume of a pyramid as one third of base area times height."
+    },
+    {
+     "concept_tag": "pyramid-surface-area",
+     "learning_objective": "Find the surface area of a pyramid by adding the areas of its faces."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH06-T5",
+   "topic_number": 5,
+   "title": "Spheres and hemispheres",
+   "ncert_sections": "14.5, 14.5.1, 14.5.2",
+   "concepts": [
+    {
+     "concept_tag": "sphere-surface-area",
+     "learning_objective": "Use 4πr² for the surface area of a sphere and relate it to the result of Archimedes about the enclosing cylinder."
+    },
+    {
+     "concept_tag": "sphere-volume",
+     "learning_objective": "Use V = (4/3)πr³ and reason about how volume scales with the radius."
+    },
+    {
+     "concept_tag": "hemisphere-area-volume",
+     "learning_objective": "Find the curved surface area 2πr², total surface area 3πr² and volume (2/3)πr³ of a hemisphere."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH2-CH06-T6",
+   "topic_number": 6,
+   "title": "Areas and volumes around us: guesstimates",
+   "ncert_sections": "14.6, 14.6.1",
+   "concepts": [
+    {
+     "concept_tag": "everyday-volume-estimation",
+     "learning_objective": "Model everyday situations with solids and make reasoned estimates of quantities."
+    },
+    {
+     "concept_tag": "packing-and-upper-bounds",
+     "learning_objective": "Explain why dividing volumes gives an upper bound when spheres are packed with gaps."
+    },
+    {
+     "concept_tag": "litre-conversion",
+     "learning_objective": "Convert volumes between cubic centimetres and litres using 1000 cm³ = 1 litre."
+    }
+   ]
+  }
+ ]
+}

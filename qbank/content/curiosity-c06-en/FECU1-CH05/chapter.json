@@ -1,0 +1,140 @@
+{
+ "chapter_id": "FECU1-CH05",
+ "title": "Measurement of Length and Motion",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FECU1-CH05-T1",
+   "topic_number": 1,
+   "title": "How do we Measure?",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "non-standard-body-units",
+     "learning_objective": "Explain why lengths measured with body parts such as the handspan or stride differ from person to person."
+    },
+    {
+     "concept_tag": "number-and-unit",
+     "learning_objective": "State that a measured length is expressed in two parts, a number and a unit."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH05-T2",
+   "topic_number": 2,
+   "title": "Standard Units",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "si-unit-of-length",
+     "learning_objective": "Identify the metre as the SI unit of length and distinguish standard from non-standard units."
+    },
+    {
+     "concept_tag": "conversion-of-length-units",
+     "learning_objective": "Convert lengths between kilometre, metre, centimetre and millimetre."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH05-T3",
+   "topic_number": 3,
+   "title": "Correct Way of Measuring Length",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "choosing-measuring-device",
+     "learning_objective": "Choose a suitable scale or tape for measuring a given length."
+    },
+    {
+     "concept_tag": "scale-placement-and-eye-position",
+     "learning_objective": "Describe the correct placement of a scale and the correct position of the eye while reading it."
+    },
+    {
+     "concept_tag": "broken-scale-measurement",
+     "learning_objective": "Measure a length with a scale whose ends are broken by subtracting the starting mark reading."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH05-T4",
+   "topic_number": 4,
+   "title": "Measuring the Length of a Curved Line",
+   "ncert_sections": "5.4",
+   "concepts": [
+    {
+     "concept_tag": "curved-line-measurement",
+     "learning_objective": "Measure the length of a curved line using a thread or flexible tape and apply it to find distances."
+    },
+    {
+     "concept_tag": "writing-units-correctly",
+     "learning_objective": "Write lengths with the correct unit symbols, spacing and lowercase letters."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH05-T5",
+   "topic_number": 5,
+   "title": "Describing Position",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "reference-point",
+     "learning_objective": "Define a reference point and identify it in everyday situations."
+    },
+    {
+     "concept_tag": "position-from-reference-point",
+     "learning_objective": "Interpret how the position of an object changes with respect to a reference point."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH05-T6",
+   "topic_number": 6,
+   "title": "Moving Things",
+   "ncert_sections": "5.6",
+   "concepts": [
+    {
+     "concept_tag": "rest-and-motion",
+     "learning_objective": "Decide whether an object is at rest or in motion from the change in its position with time."
+    },
+    {
+     "concept_tag": "motion-depends-on-reference-point",
+     "learning_objective": "Explain that the same object can be at rest or in motion depending on the chosen reference point."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH05-T7",
+   "topic_number": 7,
+   "title": "Types of Motion: Linear and Circular Motion",
+   "ncert_sections": "5.7",
+   "concepts": [
+    {
+     "concept_tag": "linear-motion",
+     "learning_objective": "Identify linear motion as motion along a straight line."
+    },
+    {
+     "concept_tag": "circular-motion",
+     "learning_objective": "Identify circular motion as motion along a circular path."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH05-T8",
+   "topic_number": 8,
+   "title": "Types of Motion: Oscillatory and Periodic Motion",
+   "ncert_sections": "5.7",
+   "concepts": [
+    {
+     "concept_tag": "oscillatory-motion",
+     "learning_objective": "Identify oscillatory motion as to-and-fro motion about a fixed position."
+    },
+    {
+     "concept_tag": "periodic-motion",
+     "learning_objective": "Explain that circular and oscillatory motions are periodic because the path repeats after a fixed interval of time."
+    }
+   ]
+  }
+ ]
+}

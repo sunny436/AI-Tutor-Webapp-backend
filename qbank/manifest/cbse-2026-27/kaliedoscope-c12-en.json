@@ -1,0 +1,1738 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "kaliedoscope-c12-en",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "english",
+  "language": "english",
+  "title": "Kaliedoscope",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lekl1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LEKL1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "I Sell my Dreams",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH01-T1",
+     "topic_number": 1,
+     "title": "The Havana Riviera disaster and the serpent ring",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "havana-wave-incident",
+       "learning_objective": "Recall the events of the huge wave at the Havana Riviera Hotel and the discovery of the dead woman in the car."
+      },
+      {
+       "concept_tag": "serpent-ring-clue",
+       "learning_objective": "Explain why the gold serpent ring with emerald eyes links the dead woman to the narrator's memory of Frau Frieda."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH01-T2",
+     "topic_number": 2,
+     "title": "Frau Frieda in Vienna: the woman who sells her dreams",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "frau-frieda-identity",
+       "learning_objective": "Identify Frau Frieda's background, her invented name and her claim that she sells her dreams."
+      },
+      {
+       "concept_tag": "childhood-prophecy",
+       "learning_objective": "Interpret the episode of her brother's death as an illustration of her system of prophecy."
+      },
+      {
+       "concept_tag": "dreams-as-power",
+       "learning_objective": "Analyse how her dreams gave her livelihood, authority and wealth in the Viennese family."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH01-T3",
+     "topic_number": 3,
+     "title": "The meeting in Barcelona with Pablo Neruda",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "neruda-portrait",
+       "learning_objective": "Describe how the narrator portrays Pablo Neruda's appetite, curiosity and presence."
+      },
+      {
+       "concept_tag": "neruda-scepticism",
+       "learning_objective": "State how Neruda rejects Frau Frieda's claim to prophetic dreams."
+      },
+      {
+       "concept_tag": "mirrored-dreams",
+       "learning_objective": "Analyse the mirrored dreams of Neruda and Frau Frieda and the reference to Borges."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH01-T4",
+     "topic_number": 4,
+     "title": "The ambassador's account, irony and magical realism",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "marquez-magical-realism",
+       "learning_objective": "Identify the author and the magical realism that mixes reality with fantasy in the story."
+      },
+      {
+       "concept_tag": "ending-and-ambiguity",
+       "learning_objective": "Evaluate the contradiction and the unresolved mystery in the narrator's last exchange with the ambassador."
+      },
+      {
+       "concept_tag": "narrator-irony",
+       "learning_objective": "Analyse the irony in the narrator's attitude to Frau Frieda's dreams."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH01-T5",
+     "topic_number": 5,
+     "title": "Language work: emphasis, vocabulary and syllables",
+     "ncert_sections": "Language Work A, B, C",
+     "concepts": [
+      {
+       "concept_tag": "sentence-emphasis",
+       "learning_objective": "Apply the principle that the end of a sentence is its most emphatic position and the middle its least."
+      },
+      {
+       "concept_tag": "dream-sell-phrases",
+       "learning_objective": "Use phrases built on 'dream' and 'sell' with their correct meanings."
+      },
+      {
+       "concept_tag": "syllable-division",
+       "learning_objective": "Divide words into syllables and count them."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Eveline",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH02-T1",
+     "topic_number": 1,
+     "title": "James Joyce and the story in context",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "joyce-and-dubliners",
+       "learning_objective": "Recall the author, the collection and the literary standing of 'Eveline'."
+      },
+      {
+       "concept_tag": "theme-of-failed-escape",
+       "learning_objective": "Explain the central concern of the story: an escape within reach that is not seized."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH02-T2",
+     "topic_number": 2,
+     "title": "Evening at the window: the avenue and home",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "childhood-memories-of-the-avenue",
+       "learning_objective": "Recall Eveline's memories of the field, the neighbours and her family's past."
+      },
+      {
+       "concept_tag": "familiar-objects-of-home",
+       "learning_objective": "Interpret what the familiar objects of the room reveal about Eveline's life."
+      },
+      {
+       "concept_tag": "symbolism-of-the-window-scene",
+       "learning_objective": "Analyse the symbolism of the window, the dusk and the dusty cretonne."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH02-T3",
+     "topic_number": 3,
+     "title": "Weighing the decision: home, the Stores and her father",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "weighing-home-and-work",
+       "learning_objective": "Explain how Eveline weighs her hard life at home and at the Stores against a new life."
+      },
+      {
+       "concept_tag": "father-and-money",
+       "learning_objective": "Describe her father's violence and the Saturday quarrels over money."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH02-T4",
+     "topic_number": 4,
+     "title": "Frank and the promise of Buenos Aires",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "frank-and-courtship",
+       "learning_objective": "Recall who Frank is and how Eveline's feelings for him developed."
+      },
+      {
+       "concept_tag": "fathers-opposition",
+       "learning_objective": "Explain why Eveline's father opposed Frank and its effect on the courtship."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH02-T5",
+     "topic_number": 5,
+     "title": "Memories, the organ and the promise to her mother",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "softening-memories-of-father",
+       "learning_objective": "Interpret Eveline's softer memories of her father as her departure nears."
+      },
+      {
+       "concept_tag": "promise-to-mother",
+       "learning_objective": "Explain the significance of the street organ, the promise and 'Derevaun Seraun'."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH02-T6",
+     "topic_number": 6,
+     "title": "At the North Wall: the moment of choice",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "paralysis-at-the-quay",
+       "learning_objective": "Analyse Eveline's paralysis and final response to Frank at the station."
+      },
+      {
+       "concept_tag": "imagery-of-the-ending",
+       "learning_objective": "Interpret the emotions evoked by the images in the last section."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH02-T7",
+     "topic_number": 7,
+     "title": "Language work: parallelism and word stress",
+     "ncert_sections": "Language Work A, B",
+     "concepts": [
+      {
+       "concept_tag": "parallelism",
+       "learning_objective": "Identify parallel structures and explain how they show similarity or contrast."
+      },
+      {
+       "concept_tag": "syllables-and-stress",
+       "learning_objective": "Identify the stressed syllable in words taken from the lesson."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "A Wedding in Brownsville",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH03-T1",
+     "topic_number": 1,
+     "title": "The author and the burden of the wedding",
+     "ncert_sections": "Author note; opening section (pp. 21-23)",
+     "concepts": [
+      {
+       "concept_tag": "singer-author-background",
+       "learning_objective": "Recall key facts about Isaac Bashevis Singer given in the author note."
+      },
+      {
+       "concept_tag": "margolin-reluctance-wedding",
+       "learning_objective": "Explain why Dr Margolin and Gretl regard the Brownsville wedding as a burden."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH03-T2",
+     "topic_number": 2,
+     "title": "Dr Margolin's past and Gretl",
+     "ncert_sections": "Section before the first Stop and Think (pp. 23-25)",
+     "concepts": [
+      {
+       "concept_tag": "margolin-sense-of-failure",
+       "learning_objective": "Analyse why the outwardly successful Dr Margolin secretly feels a failure."
+      },
+      {
+       "concept_tag": "gretl-character",
+       "learning_objective": "Describe Gretl's background and how her suffering shapes her conduct."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH03-T3",
+     "topic_number": 3,
+     "title": "The journey to Brownsville",
+     "ncert_sections": "Taxi ride and the Eastern Parkway accident (pp. 25-27)",
+     "concepts": [
+      {
+       "concept_tag": "margolin-principles-vanity",
+       "learning_objective": "Identify Dr Margolin's principles and his vanity about his appearance."
+      },
+      {
+       "concept_tag": "journey-foreshadowing",
+       "learning_objective": "Interpret the imagery of the journey and the accident as foreshadowing."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH03-T4",
+     "topic_number": 4,
+     "title": "The wedding hall and the Senciminers",
+     "ncert_sections": "Wedding reception (pp. 27-31)",
+     "concepts": [
+      {
+       "concept_tag": "senciminer-holocaust-memory",
+       "learning_objective": "Explain how the Senciminers' talk keeps returning to the Holocaust dead."
+      },
+      {
+       "concept_tag": "wedding-festivity-contrast",
+       "learning_objective": "Evaluate the contrast between festive merriment and the memory of death."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH03-T5",
+     "topic_number": 5,
+     "title": "The encounter with Raizel and the ending",
+     "ncert_sections": "Raizel episode to the end of the story (pp. 31-35)",
+     "concepts": [
+      {
+       "concept_tag": "raizel-encounter",
+       "learning_objective": "Recall the events of Dr Margolin's meeting with Raizel in the chapel."
+      },
+      {
+       "concept_tag": "astral-body-ending",
+       "learning_objective": "Interpret the 'World of Twilight' idea and the ambiguous ending."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH03-T6",
+     "topic_number": 6,
+     "title": "Language work: sentence variety and word stress",
+     "ncert_sections": "Language Work A (Grammar) and B (Pronunciation)",
+     "concepts": [
+      {
+       "concept_tag": "sentence-variety",
+       "learning_objective": "Classify sentences by structure and explain how variety and tense shape style."
+      },
+      {
+       "concept_tag": "word-stress",
+       "learning_objective": "Identify primary and secondary stress in words from the lesson."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Tomorrow",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH04-T1",
+     "topic_number": 1,
+     "title": "Joseph Conrad and Captain Hagberd's arrival in Colebrook (the barber's account)",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "conrad-story-within-story",
+       "learning_objective": "Recall Conrad's background and explain how the story of Hagberd's past is unfolded through another character's narration."
+      },
+      {
+       "concept_tag": "hagberd-arrival-colebrook",
+       "learning_objective": "Explain what brought Captain Hagberd to Colebrook and why the townspeople did not think well of him."
+      },
+      {
+       "concept_tag": "barber-view-of-hagberd",
+       "learning_objective": "Interpret the barber's sardonic view of Hagberd's craze and his plan to cure it by chaffing."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH04-T2",
+     "topic_number": 2,
+     "title": "Hagberd's 'tomorrow': his seafaring past and preparations for Harry",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "tomorrow-delusion",
+       "learning_objective": "Analyse how Hagberd's hope changes from 'next week' to a permanent 'tomorrow'."
+      },
+      {
+       "concept_tag": "preparations-for-harry",
+       "learning_objective": "Describe how Hagberd prepares a home and a future for his son's return."
+      },
+      {
+       "concept_tag": "hagberd-coasting-life",
+       "learning_objective": "Describe the kind of seaman Hagberd had been and his attitude to the sea."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH04-T3",
+     "topic_number": 3,
+     "title": "Bessie Carvil, her blind father and her bond with Hagberd",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bessie-humouring-hagberd",
+       "learning_objective": "Explain why Bessie listens to and humours Hagberd's ravings without contradicting him."
+      },
+      {
+       "concept_tag": "carvil-domestic-tyrant",
+       "learning_objective": "Describe the character of old Carvil and his treatment of his daughter."
+      },
+      {
+       "concept_tag": "two-kinds-of-blindness",
+       "learning_objective": "Compare Hagberd and Carvil as men blinded in different ways."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH04-T4",
+     "topic_number": 4,
+     "title": "The stranger at the gate: Harry Hagberd returns",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "stranger-at-the-gate",
+       "learning_objective": "Describe Captain Hagberd's reaction to the stranger who claims to bring news of his son."
+      },
+      {
+       "concept_tag": "harry-motives",
+       "learning_objective": "Identify Harry's reasons for coming to Colebrook and his first reading of the word 'tomorrow'."
+      },
+      {
+       "concept_tag": "harry-identity",
+       "learning_objective": "Explain how Bessie becomes convinced that the stranger is really Harry."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH04-T5",
+     "topic_number": 5,
+     "title": "Harry's restless life and the song of the Gambusinos",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "harry-wandering-life",
+       "learning_objective": "Describe the wandering life Harry has led and why he left home."
+      },
+      {
+       "concept_tag": "gambusino-song",
+       "learning_objective": "Interpret the song of the Gambusinos and its bearing on Harry and Bessie."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH04-T6",
+     "topic_number": 6,
+     "title": "The climax and ending: Bessie's heartbreak and the everlasting tomorrow",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "bessie-heartbreak",
+       "learning_objective": "Explain why Harry's return proves a disappointment for Bessie."
+      },
+      {
+       "concept_tag": "inextinguishable-hope",
+       "learning_objective": "Evaluate the irony of Hagberd's hope surviving the actual return of his son."
+      },
+      {
+       "concept_tag": "madness-and-self-esteem",
+       "learning_objective": "Interpret Conrad's remark that every mental state, even madness, has its equilibrium based on self-esteem."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH04-T7",
+     "topic_number": 7,
+     "title": "Language work: allusion and word stress",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "allusion",
+       "learning_objective": "Identify allusions in the story and explain the comparison each makes."
+      },
+      {
+       "concept_tag": "word-stress-shift",
+       "learning_objective": "Mark the shift of primary stress when a verb becomes a noun ending in -tion."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "One Centimetre",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH05-T1",
+     "topic_number": 1,
+     "title": "The author and Tao Ying's bus-ticket habit",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "author-bi-shu-min",
+       "learning_objective": "Recall key facts about Bi Shu-min, the author of 'One Centimetre'."
+      },
+      {
+       "concept_tag": "opening-ticket-logic",
+       "learning_objective": "Explain Tao Ying's reasoning about bus tickets and the significance of the story's first sentence."
+      },
+      {
+       "concept_tag": "realistic-portrayal",
+       "learning_objective": "Evaluate whether the author's portrayal of Tao Ying is sympathetic, critical or realistic."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH05-T2",
+     "topic_number": 2,
+     "title": "Two tickets on the bus: the ideal mother",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "ticket-for-self-esteem",
+       "learning_objective": "Explain why Tao Ying buys a ticket for Xiao Ye although he is one centimetre short."
+      },
+      {
+       "concept_tag": "ideal-mother-example",
+       "learning_objective": "Analyse how Tao Ying's wish to be a perfect example shapes her conduct before her son."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH05-T3",
+     "topic_number": 3,
+     "title": "Lao Chiang's ticket and the temple gate",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "temple-gate-confrontation",
+       "learning_objective": "Describe the confrontation with the guard over Xiao Ye's height at the temple gate."
+      },
+      {
+       "concept_tag": "decision-not-to-buy",
+       "learning_objective": "Interpret why Tao Ying refuses to buy a second ticket and what the outing costs her son's trust."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH05-T4",
+     "topic_number": 4,
+     "title": "The flattering scales and the broken trust",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "flattering-scales",
+       "learning_objective": "Explain how the old woman's 'flattering scales' work and what they suggest about measurement."
+      },
+      {
+       "concept_tag": "mother-son-rift",
+       "learning_objective": "Analyse the conflict between Tao Ying and Xiao Ye after the temple incident."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH05-T5",
+     "topic_number": 5,
+     "title": "The letter, the officials' visit and vindication",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "letter-and-the-writer",
+       "learning_objective": "Recall how Tao Ying writes her letter with the advice of 'the Writer'."
+      },
+      {
+       "concept_tag": "final-vindication",
+       "learning_objective": "Evaluate why Tao Ying refuses compensation and why her final vindication matters to her."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH05-T6",
+     "topic_number": 6,
+     "title": "Language work: figures of speech and word stress",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "simile-and-metaphor",
+       "learning_objective": "Identify similes and metaphors in the story and the elements they compare."
+      },
+      {
+       "concept_tag": "noun-verb-stress",
+       "learning_objective": "Apply the rule of stress shift in words used both as nouns and verbs."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Chapter 6 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl106.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "LEKL1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "Poems by Milton",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH07-T1",
+     "topic_number": 1,
+     "title": "John Milton and the occasion of 'On Shakespeare'",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "milton-poet-background",
+       "learning_objective": "Recall key facts about John Milton and when he wrote 'On Shakespeare'."
+      },
+      {
+       "concept_tag": "epitaph-occasion",
+       "learning_objective": "Identify 'On Shakespeare' as an epitaph and explain what makes it unusual."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH07-T2",
+     "topic_number": 2,
+     "title": "Lines 1-8: no monument of stone is needed",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "rejection-of-stone-monuments",
+       "learning_objective": "Explain why the speaker rejects piled stones and a pyramid as a memorial for Shakespeare."
+      },
+      {
+       "concept_tag": "living-monument-of-wonder",
+       "learning_objective": "Interpret the idea that Shakespeare has built his own monument in the wonder of his readers."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH07-T3",
+     "topic_number": 3,
+     "title": "Lines 9-16: Shakespeare's verse and its effect on readers",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "easy-numbers-vs-laboured-art",
+       "learning_objective": "Explain the contrast between Shakespeare's 'easy numbers' and 'slow-endeavouring art'."
+      },
+      {
+       "concept_tag": "readers-turned-to-marble",
+       "learning_objective": "Interpret how readers, made 'marble' by wonder, become Shakespeare's tomb."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH07-T4",
+     "topic_number": 4,
+     "title": "Form, diction and poetic devices",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "heroic-couplet-form",
+       "learning_objective": "Identify the rhyming couplet form in which the poem is written."
+      },
+      {
+       "concept_tag": "rhetorical-question-and-paradox",
+       "learning_objective": "Analyse the poem's use of rhetorical questions and paradox."
+      },
+      {
+       "concept_tag": "archaic-diction",
+       "learning_objective": "Explain archaic forms such as 'star-ypointing' and 'need'st'."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH07-T5",
+     "topic_number": 5,
+     "title": "Theme: the immortality of art",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "art-outlasts-monuments",
+       "learning_objective": "Explain the theme that a poet's work outlasts any monument of stone."
+      },
+      {
+       "concept_tag": "tribute-poem-evaluation",
+       "learning_objective": "Evaluate the speaker's attitude and the diction that builds the tribute."
+      }
+     ]
+    }
+   ],
+   "content_source": "knowledge"
+  },
+  {
+   "chapter_id": "LEKL1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "Chapter 8 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl108.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "LEKL1-CH09",
+   "chapter_number": 9,
+   "old_chapter_number": null,
+   "title": "Chapter 9 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl109.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "LEKL1-CH10",
+   "chapter_number": 10,
+   "old_chapter_number": null,
+   "title": "Chapter 10 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl110.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "LEKL1-CH11",
+   "chapter_number": 11,
+   "old_chapter_number": null,
+   "title": "A Lecture Upon the Shadow",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl111.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH11-T1",
+     "topic_number": 1,
+     "title": "Donne and the metaphysical mode",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "metaphysical-poetry",
+       "learning_objective": "Identify the features of metaphysical poetry, such as startling imagery, wit and intellect, as seen in Donne's poem."
+      },
+      {
+       "concept_tag": "john-donne-life",
+       "learning_objective": "Recall the key facts about John Donne given in the introductory note."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH11-T2",
+     "topic_number": 2,
+     "title": "Morning shadows: love's early secrecy",
+     "ncert_sections": "Lines 1-11",
+     "concepts": [
+      {
+       "concept_tag": "morning-shadows-disguise",
+       "learning_objective": "Explain how the morning shadows stand for the disguises of a young love hidden from others."
+      },
+      {
+       "concept_tag": "noon-clarity",
+       "learning_objective": "Interpret noon, when no shadows fall, as the stage of open and complete love."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH11-T3",
+     "topic_number": 3,
+     "title": "Afternoon shadows: love's decline",
+     "ncert_sections": "Lines 12-24",
+     "concepts": [
+      {
+       "concept_tag": "afternoon-shadows-self-deception",
+       "learning_objective": "Explain how the afternoon shadows stand for the lovers deceiving each other when love declines."
+      },
+      {
+       "concept_tag": "love-at-noon-stay",
+       "learning_objective": "Analyse the speaker's condition that love must stay at its noon to avoid new shadows."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH11-T4",
+     "topic_number": 4,
+     "title": "Love as light: the closing couplet and the title",
+     "ncert_sections": "Lines 25-26; title",
+     "concepts": [
+      {
+       "concept_tag": "love-as-constant-light",
+       "learning_objective": "Interpret the final couplet's image of love as a growing or full constant light."
+      },
+      {
+       "concept_tag": "title-lecture-upon-shadow",
+       "learning_objective": "Evaluate why the poem is called a lecture upon the shadow and to whom it is addressed."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH11-T5",
+     "topic_number": 5,
+     "title": "Language work: old spellings and adjectives",
+     "ncert_sections": "Language Work; Try this out",
+     "concepts": [
+      {
+       "concept_tag": "archaic-spelling",
+       "learning_objective": "Recognise the final 'e' and other old spellings of Donne's period."
+      },
+      {
+       "concept_tag": "possessive-without-apostrophe",
+       "learning_objective": "Identify how the possessive was written without an apostrophe in Donne's English."
+      },
+      {
+       "concept_tag": "adjective-meaning-in-context",
+       "learning_objective": "Distinguish the meaning of an adjective in isolation from its meaning in a phrase such as 'infant loves'."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH12",
+   "chapter_number": 12,
+   "old_chapter_number": null,
+   "title": "Poems by Milton",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl112.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH12-T1",
+     "topic_number": 1,
+     "title": "John Milton: the poet and his life",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "milton-life-and-works",
+       "learning_objective": "Recall and interpret the key facts of Milton's life, education, blindness and late works given in the introduction."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH12-T2",
+     "topic_number": 2,
+     "title": "On Time: the race of Time and what it devours",
+     "ncert_sections": "Poem I, lines 1-8",
+     "concepts": [
+      {
+       "concept_tag": "envious-time-imagery",
+       "learning_objective": "Explain the images of envious Time, the leaden-stepping hours and the plummet's pace."
+      },
+      {
+       "concept_tag": "temporal-dross",
+       "learning_objective": "Interpret why the loss to humans and the gain to Time are both said to be little."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH12-T3",
+     "topic_number": 3,
+     "title": "On Time: Eternity and the triumph over Time",
+     "ncert_sections": "Poem I, lines 9-22",
+     "concepts": [
+      {
+       "concept_tag": "eternal-bliss",
+       "learning_objective": "Identify what is associated with the eternal and what guides the soul to the supreme Throne."
+      },
+      {
+       "concept_tag": "triumph-over-time",
+       "learning_objective": "Evaluate who finally wins the race against Time and why."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH12-T4",
+     "topic_number": 4,
+     "title": "On Shakespear: no need of a monument of stone",
+     "ncert_sections": "Poem II, lines 1-8",
+     "concepts": [
+      {
+       "concept_tag": "weak-witness-stone-monument",
+       "learning_objective": "Explain why Milton calls a stone monument a 'weak witness' of Shakespeare's name."
+      },
+      {
+       "concept_tag": "live-long-monument",
+       "learning_objective": "Interpret how the readers' wonder becomes Shakespeare's live-long monument."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH12-T5",
+     "topic_number": 5,
+     "title": "On Shakespear: the reader's tribute and the poet's art",
+     "ncert_sections": "Poem II, lines 9-16",
+     "concepts": [
+      {
+       "concept_tag": "delphic-lines-inspiration",
+       "learning_objective": "Explain how Shakespeare's 'easie numbers' and 'Delphic lines' inspire succeeding generations."
+      },
+      {
+       "concept_tag": "marble-sepulchre-paradox",
+       "learning_objective": "Analyse the paradox of readers turned to marble forming a tomb kings would die for."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH12-T6",
+     "topic_number": 6,
+     "title": "Language Study: etymology",
+     "ncert_sections": "Language Study",
+     "concepts": [
+      {
+       "concept_tag": "etymology-definition",
+       "learning_objective": "Define etymology and read the origin note given in a dictionary entry."
+      },
+      {
+       "concept_tag": "french-borrowings",
+       "learning_objective": "Recall the facts about French borrowings into English given in the chapter."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH13",
+   "chapter_number": 13,
+   "old_chapter_number": null,
+   "title": "Poems by Blake",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl113.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH13-T1",
+     "topic_number": 1,
+     "title": "William Blake and the Songs of Innocence and of Experience",
+     "ncert_sections": "Introduction; Note",
+     "concepts": [
+      {
+       "concept_tag": "blake-poet-painter-engraver",
+       "learning_objective": "Describe Blake as poet, painter and engraver and his view of human beings beset with evil yet striving for the divine."
+      },
+      {
+       "concept_tag": "contrary-states-two-volumes",
+       "learning_objective": "Explain how Songs of Innocence and Songs of Experience represent the two contrary states of the human soul."
+      },
+      {
+       "concept_tag": "illuminated-printing",
+       "learning_objective": "Explain why Blake's method of making each copy of his poems makes him the first multi-media artist."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH13-T2",
+     "topic_number": 2,
+     "title": "The Divine Image",
+     "ncert_sections": "Poem I",
+     "concepts": [
+      {
+       "concept_tag": "four-virtues-as-god-and-man",
+       "learning_objective": "Explain how Mercy, Pity, Peace and Love are identified with both God and Man in the poem."
+      },
+      {
+       "concept_tag": "human-form-divine",
+       "learning_objective": "Interpret the images of the human heart, face, form and dress given to the four virtues."
+      },
+      {
+       "concept_tag": "universal-religion",
+       "learning_objective": "Interpret the poem's claim that the human form divine is to be loved in people of every faith and clime."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH13-T3",
+     "topic_number": 3,
+     "title": "The Human Abstract: virtues that depend on misery",
+     "ncert_sections": "Poem II, stanzas 1-3",
+     "concepts": [
+      {
+       "concept_tag": "pity-mercy-depend-on-misery",
+       "learning_objective": "Explain why the speaker says Pity and Mercy exist only because of poverty and unhappiness."
+      },
+      {
+       "concept_tag": "mutual-fear-and-selfish-love",
+       "learning_objective": "Interpret the idea that peace built on mutual fear lasts only till selfish loves increase."
+      },
+      {
+       "concept_tag": "cruelty-and-false-humility",
+       "learning_objective": "Analyse how Cruelty, with holy fears and tears, plants a false Humility."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH13-T4",
+     "topic_number": 4,
+     "title": "The Human Abstract: the tree of Mystery in the human brain",
+     "ncert_sections": "Poem II, stanzas 4-6",
+     "concepts": [
+      {
+       "concept_tag": "tree-of-mystery-and-deceit",
+       "learning_objective": "Interpret the images of the dismal shade of Mystery, the fruit of Deceit, the Caterpillar, the Fly and the Raven."
+      },
+      {
+       "concept_tag": "tree-grows-in-human-brain",
+       "learning_objective": "Evaluate the conclusion that the tree of false virtue grows in the human brain and not in Nature."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH13-T5",
+     "topic_number": 5,
+     "title": "Comparing the poems and language work",
+     "ncert_sections": "Understanding the Poem; Language Work",
+     "concepts": [
+      {
+       "concept_tag": "innocence-versus-experience",
+       "learning_objective": "Compare how the two matched poems present the same virtues in the states of innocence and experience."
+      },
+      {
+       "concept_tag": "capitalisation-personification",
+       "learning_objective": "Explain why abstract words such as Mercy, Cruelty and Mystery are capitalised in the poems."
+      },
+      {
+       "concept_tag": "syllable-pattern-metre",
+       "learning_objective": "Identify the syllable pattern and the unstressed-stressed foot in the lines of The Divine Image."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH14",
+   "chapter_number": 14,
+   "old_chapter_number": null,
+   "title": "Kubla Khan",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl114.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH14-T1",
+     "topic_number": 1,
+     "title": "The poet and the genesis of the poem",
+     "ncert_sections": "Headnote and footnotes",
+     "concepts": [
+      {
+       "concept_tag": "coleridge-romantic-poet",
+       "learning_objective": "Recall Coleridge's place among the Romantic poets and his distinctive contribution."
+      },
+      {
+       "concept_tag": "genesis-of-the-fragment",
+       "learning_objective": "Explain how the poem arose from a dream and why it remained a fragment."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH14-T2",
+     "topic_number": 2,
+     "title": "Xanadu and the stately pleasure-dome",
+     "ncert_sections": "Stanza 1 (lines 1-11)",
+     "concepts": [
+      {
+       "concept_tag": "xanadu-setting",
+       "learning_objective": "Describe the setting of Xanadu, the dome, the gardens and the river Alph."
+      },
+      {
+       "concept_tag": "real-and-imaginary-blend",
+       "learning_objective": "Distinguish the historical elements of the poem from the imaginary ones."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH14-T3",
+     "topic_number": 3,
+     "title": "The romantic chasm and the mighty fountain",
+     "ncert_sections": "Stanza 2 (lines 12-24)",
+     "concepts": [
+      {
+       "concept_tag": "savage-chasm-imagery",
+       "learning_objective": "Interpret the images of the savage, holy and enchanted chasm."
+      },
+      {
+       "concept_tag": "fountain-water-movement",
+       "learning_objective": "Analyse the words used to describe the violent movement of water."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH14-T4",
+     "topic_number": 4,
+     "title": "The sacred river and the ancestral voices",
+     "ncert_sections": "Stanza 2 (lines 25-30)",
+     "concepts": [
+      {
+       "concept_tag": "river-course-meandering",
+       "learning_objective": "Trace the course of the sacred river and identify the sound devices that describe it."
+      },
+      {
+       "concept_tag": "ancestral-voices-war",
+       "learning_objective": "Explain the discordant note of the ancestral voices prophesying war."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH14-T5",
+     "topic_number": 5,
+     "title": "The shadow of the dome: a miracle of rare device",
+     "ncert_sections": "Stanza 3 (lines 31-36)",
+     "concepts": [
+      {
+       "concept_tag": "contrasting-images-sun-ice",
+       "learning_objective": "Analyse the juxtaposition of contrasting images in the sunny dome with caves of ice."
+      },
+      {
+       "concept_tag": "mingled-measure-sound",
+       "learning_objective": "Interpret the images that strike the ear, such as the mingled measure of fountain and caves."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH14-T6",
+     "topic_number": 6,
+     "title": "The Abyssinian maid and poetic ecstasy",
+     "ncert_sections": "Stanza 4 (lines 37-54) and Language Study",
+     "concepts": [
+      {
+       "concept_tag": "damsel-with-dulcimer",
+       "learning_objective": "Recall the vision of the Abyssinian maid and the meaning of dulcimer."
+      },
+      {
+       "concept_tag": "poetic-ecstasy-frenzy",
+       "learning_objective": "Evaluate how the poet likens poetic ecstasy to a divine, magical frenzy."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH15",
+   "chapter_number": 15,
+   "old_chapter_number": null,
+   "title": "Trees",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl115.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH15-T1",
+     "topic_number": 1,
+     "title": "Emily Dickinson: the poet and her style",
+     "ncert_sections": "Introduction to the poet",
+     "concepts": [
+      {
+       "concept_tag": "dickinson-life-and-output",
+       "learning_objective": "Recall the key facts about Emily Dickinson's secluded life and her largely posthumous publication."
+      },
+      {
+       "concept_tag": "dickinson-poetic-style",
+       "learning_objective": "Identify the features of Dickinson's style, such as unconventional capitalisation and dashes, and explain their effect."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH15-T2",
+     "topic_number": 2,
+     "title": "The swaying trees and the music of summer",
+     "ncert_sections": "Stanzas 1-2",
+     "concepts": [
+      {
+       "concept_tag": "tassel-simile-trees",
+       "learning_objective": "Explain the simile of the trees swinging like tassels and the tune rising from tiny creatures."
+      },
+      {
+       "concept_tag": "psalteries-of-summer",
+       "learning_objective": "Interpret 'Far Psalteries of Summer' as the faint, unsatisfying yet enchanting music of summer."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH15-T3",
+     "topic_number": 3,
+     "title": "The capricious Sun",
+     "ncert_sections": "Stanzas 3-4",
+     "concepts": [
+      {
+       "concept_tag": "sun-personification",
+       "learning_objective": "Explain how the Sun is personified as a whimsical owner of 'Estates of Cloud'."
+      },
+      {
+       "concept_tag": "capitalised-pronouns-sun",
+       "learning_objective": "Explain why the pronouns referring to the Sun are capitalised."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH15-T4",
+     "topic_number": 4,
+     "title": "Creatures and flowers of the summer day",
+     "ncert_sections": "Stanzas 5-6",
+     "concepts": [
+      {
+       "concept_tag": "personification-of-creatures",
+       "learning_objective": "Identify the lines in which the bird and other creatures are given human qualities."
+      },
+      {
+       "concept_tag": "hindered-flags-image",
+       "learning_objective": "Interpret the image of flowers opening from the calyx like 'Hindered Flags'."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH15-T5",
+     "topic_number": 5,
+     "title": "Nature beyond the painter's art",
+     "ncert_sections": "Stanza 7; Language Study",
+     "concepts": [
+      {
+       "concept_tag": "vandyke-delineation-inadequate",
+       "learning_objective": "Explain why the poet feels even Vandyke's painting falls short of the real summer day."
+      },
+      {
+       "concept_tag": "close-observation-of-nature",
+       "learning_objective": "Show how the poem grows out of close observation of natural phenomena."
+      },
+      {
+       "concept_tag": "psaltery-dulcimer-vocabulary",
+       "learning_objective": "Recognise the psaltery and the dulcimer as similar stringed musical instruments."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH16",
+   "chapter_number": 16,
+   "old_chapter_number": null,
+   "title": "The Wild Swans at Coole",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl116.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH16-T1",
+     "topic_number": 1,
+     "title": "The poet and the autumn setting",
+     "ncert_sections": "Poet's note; Stanza 1",
+     "concepts": [
+      {
+       "concept_tag": "yeats-poet-background",
+       "learning_objective": "Recall the key facts about W.B. Yeats given with the poem: Irish poet, dramatist and mystic, Irish Literary Revival, Abbey Theatre and the 1923 Nobel Prize."
+      },
+      {
+       "concept_tag": "autumn-setting-imagery",
+       "learning_objective": "Interpret the autumn images of the first stanza and connect them to the poet's own stage of life."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH16-T2",
+     "topic_number": 2,
+     "title": "The count and the swans' sudden flight",
+     "ncert_sections": "Stanza 2",
+     "concepts": [
+      {
+       "concept_tag": "nineteenth-autumn-count",
+       "learning_objective": "Explain the significance of the nineteenth autumn since the poet first counted the swans."
+      },
+      {
+       "concept_tag": "swans-sudden-flight",
+       "learning_objective": "Describe how the swans rise and scatter in 'great broken rings' and what the image conveys."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH16-T3",
+     "topic_number": 3,
+     "title": "The poet's changed heart",
+     "ncert_sections": "Stanza 3",
+     "concepts": [
+      {
+       "concept_tag": "sore-heart-lighter-tread",
+       "learning_objective": "Explain what 'the lighter tread' and 'my heart is sore' refer to in the poet's life."
+      },
+      {
+       "concept_tag": "passage-of-time-change",
+       "learning_objective": "Analyse how the line 'All's changed' expresses the effect of time on the speaker."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH16-T4",
+     "topic_number": 4,
+     "title": "The unchanging swans and human life",
+     "ncert_sections": "Stanza 4",
+     "concepts": [
+      {
+       "concept_tag": "swans-unwearied-youth",
+       "learning_objective": "Identify the qualities of the swans described in the fourth stanza: unwearied, paired, and with hearts that have not grown old."
+      },
+      {
+       "concept_tag": "swans-human-contrast",
+       "learning_objective": "Compare the timeless vitality of the swans with ageing and changing human life."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH16-T5",
+     "topic_number": 5,
+     "title": "Mystery, beauty and the fear of loss",
+     "ncert_sections": "Stanza 5",
+     "concepts": [
+      {
+       "concept_tag": "swans-mystery-beauty",
+       "learning_objective": "Explain what contributes to the beauty and mystery of the swans' lives in the last stanza."
+      },
+      {
+       "concept_tag": "fear-of-loss-ending",
+       "learning_objective": "Interpret the closing question about waking to find the swans have flown away."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH16-T6",
+     "topic_number": 6,
+     "title": "Language study: rhyme scheme and poetic devices",
+     "ncert_sections": "Language Study",
+     "concepts": [
+      {
+       "concept_tag": "rhyme-scheme",
+       "learning_objective": "Work out the rhyme scheme of a stanza by giving a new letter to every new end sound."
+      },
+      {
+       "concept_tag": "imagery-and-sound-devices",
+       "learning_objective": "Identify poetic devices in the poem such as compound words, personification and contrast."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH17",
+   "chapter_number": 17,
+   "old_chapter_number": null,
+   "title": "Time and Time Again",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl117.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH17-T1",
+     "topic_number": 1,
+     "title": "The poet and the poem's opening",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "poet-background",
+       "learning_objective": "Recall A.K. Ramanujan's work as poet, translator and scholar and relate it to the poem."
+      },
+      {
+       "concept_tag": "poem-opening",
+       "learning_objective": "Interpret the effect of the poem's opening with 'Or listen to the clocktowers'."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH17-T2",
+     "topic_number": 2,
+     "title": "The clocktowers and their discordant time",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "reasons-clocks-differ",
+       "learning_objective": "Identify the accidental reasons the poem gives for the clocks keeping different times."
+      },
+      {
+       "concept_tag": "sound-imagery",
+       "learning_objective": "Interpret the sound imagery of the gongs and the irony of the 'well-managed city'."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH17-T3",
+     "topic_number": 3,
+     "title": "Clocks and communities",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "clocks-and-communities",
+       "learning_objective": "Explain the implicit comparison between the clocks and the city's religious communities."
+      },
+      {
+       "concept_tag": "interrupted-chimes",
+       "learning_objective": "Analyse what cuts off the sound of the gongs and what this suggests about city life."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH17-T4",
+     "topic_number": 4,
+     "title": "The silenced clock and the title",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "silenced-clock-imagery",
+       "learning_objective": "Interpret the image of the eyeless, silent clock after its destruction."
+      },
+      {
+       "concept_tag": "violence-and-nature",
+       "learning_objective": "Analyse how the poem sets human violence beside a 'precise act of nature'."
+      },
+      {
+       "concept_tag": "title-significance",
+       "learning_objective": "Evaluate the double meaning of the title 'Time and Time Again'."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH18",
+   "chapter_number": 18,
+   "old_chapter_number": null,
+   "title": "Blood",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl118.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH18-T1",
+     "topic_number": 1,
+     "title": "The crumbling ancestral house",
+     "ncert_sections": "Stanzas 1-2 ('When we were children' to 'To watch it die')",
+     "concepts": [
+      {
+       "concept_tag": "decaying-house-imagery",
+       "learning_objective": "Identify the images of physical and ritual decay through which the great-grandmother describes the three-hundred-year-old house."
+      },
+      {
+       "concept_tag": "great-grandmothers-grief",
+       "learning_objective": "Explain why the decline of the house causes the great-grandmother deep personal grief."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH18-T2",
+     "topic_number": 2,
+     "title": "The childhood promise and the great-grandmother's past",
+     "ncert_sections": "Stanzas 3-4 ('When I grow old, I said' to 'died of fever, in her arms')",
+     "concepts": [
+      {
+       "concept_tag": "childhood-promise",
+       "learning_objective": "Interpret the child's promise to rebuild the house and the great-grandmother's response to it."
+      },
+      {
+       "concept_tag": "faith-and-royal-past",
+       "learning_objective": "Describe the great-grandmother's deep faith and her memories of a wealthy, royal past."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH18-T3",
+     "topic_number": 3,
+     "title": "The 'oldest blood' and class distinction",
+     "ncert_sections": "Stanza 5 ('She told us / That we had the oldest blood' to 'muddy as a ditch')",
+     "concepts": [
+      {
+       "concept_tag": "oldest-blood-pride",
+       "learning_objective": "Explain the great-grandmother's pride in the family's 'oldest blood' and the values it reflects."
+      },
+      {
+       "concept_tag": "class-distinction-critique",
+       "learning_objective": "Analyse how the poem presents and questions the class prejudice behind the idea of superior blood."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH18-T4",
+     "topic_number": 4,
+     "title": "The death of the great-grandmother and the house",
+     "ncert_sections": "Stanzas 6-8 ('Finally she lay dying' to 'the dark rooms heave a sigh')",
+     "concepts": [
+      {
+       "concept_tag": "lessons-of-defeat",
+       "learning_objective": "Interpret what the grown-up poet has learnt about the difficulty of growing rich and keeping her promise."
+      },
+      {
+       "concept_tag": "personified-dying-house",
+       "learning_objective": "Analyse how the great-grandmother's death is linked with the dying house through personification."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH18-T5",
+     "topic_number": 5,
+     "title": "Leaving home: guilt and the conflict of conscience",
+     "ncert_sections": "Stanzas 9-11 ('I set forth again' to 'Elephant ride...')",
+     "concepts": [
+      {
+       "concept_tag": "decay-after-departure",
+       "learning_objective": "Describe the decay of the abandoned house as the poet imagines it from distant towns."
+      },
+      {
+       "concept_tag": "guilt-and-forgiveness",
+       "learning_objective": "Evaluate the poet's guilt, her plea for forgiveness and the conflict in her conscience."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH18-T6",
+     "topic_number": 6,
+     "title": "The poet, poetic devices and style",
+     "ncert_sections": "Introduction to the poet; Language Study",
+     "concepts": [
+      {
+       "concept_tag": "poet-kamala-das",
+       "learning_objective": "Recall key facts about Kamala Das and her place in Indian writing."
+      },
+      {
+       "concept_tag": "figurative-language",
+       "learning_objective": "Identify and interpret the similes, personification and other images used in the poem."
+      },
+      {
+       "concept_tag": "free-verse-modern-idiom",
+       "learning_objective": "Compare the free verse and conversational idiom of 'Blood' with earlier English poetry such as Donne's."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LEKL1-CH19",
+   "chapter_number": 19,
+   "old_chapter_number": null,
+   "title": "Chapter 19 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl119.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "LEKL1-CH20",
+   "chapter_number": 20,
+   "old_chapter_number": null,
+   "title": "Chapter 20 [title unverified]",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl120.pdf",
+   "max_questions": 1000,
+   "topics": []
+  },
+  {
+   "chapter_id": "LEKL1-CH21",
+   "chapter_number": 21,
+   "old_chapter_number": null,
+   "title": "Freedom",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lekl121.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LEKL1-CH21-T1",
+     "topic_number": 1,
+     "title": "Non-fiction and Shaw's idea of a perfectly free person",
+     "ncert_sections": "Non-fiction introduction; Freedom (G.B. Shaw), opening",
+     "concepts": [
+      {
+       "concept_tag": "nonfiction-as-a-form",
+       "learning_objective": "Identify the forms and purpose of non-fiction writing as described in the section introduction."
+      },
+      {
+       "concept_tag": "natural-necessities",
+       "learning_objective": "Explain why Shaw holds that no person can be perfectly free because of natural necessities."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH21-T2",
+     "topic_number": 2,
+     "title": "Natural slavery and the slavery of man to man",
+     "ncert_sections": "Freedom (G.B. Shaw), on stolen labour, governments and Nature",
+     "concepts": [
+      {
+       "concept_tag": "shifting-labour-to-others",
+       "learning_objective": "Explain how, according to Shaw, one class shifts its share of labour on to another."
+      },
+      {
+       "concept_tag": "governments-and-the-vote",
+       "learning_objective": "Interpret Shaw's criticism of governments, elections and the vote."
+      },
+      {
+       "concept_tag": "nature-kind-to-slaves",
+       "learning_objective": "Distinguish the pleasant slavery to Nature from the hateful slavery of man to man."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH21-T3",
+     "topic_number": 3,
+     "title": "The humbug of freedom and the delusion of the master class",
+     "ncert_sections": "Freedom (G.B. Shaw), on propaganda, the gentleman and human nature",
+     "concepts": [
+      {
+       "concept_tag": "myths-of-british-freedom",
+       "learning_objective": "Recall the historical events that people are taught to see as victories for freedom."
+      },
+      {
+       "concept_tag": "delusion-of-master-class",
+       "learning_objective": "Explain why Shaw thinks the master class is more deluded than the enslaved masses."
+      },
+      {
+       "concept_tag": "human-nature-and-education",
+       "learning_objective": "Evaluate the two views Shaw presents on whether human nature can be changed."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH21-T4",
+     "topic_number": 4,
+     "title": "Restrictions on freedom and freedom as leisure",
+     "ncert_sections": "Freedom (G.B. Shaw), summing up",
+     "concepts": [
+      {
+       "concept_tag": "restrictions-on-freedom",
+       "learning_objective": "Identify the ways in which laws, landlords and employers restrict individual freedom."
+      },
+      {
+       "concept_tag": "strike-and-trade-unionism",
+       "learning_objective": "Explain Shaw's view of the strike and the general strike."
+      },
+      {
+       "concept_tag": "freedom-as-leisure",
+       "learning_objective": "Interpret Shaw's advice to call freedom leisure and to work out how much of it a worker has."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH21-T5",
+     "topic_number": 5,
+     "title": "Understanding Freedom and Discipline (J. Krishnamurti)",
+     "ncert_sections": "Understanding Freedom and Discipline",
+     "concepts": [
+      {
+       "concept_tag": "discipline-versus-freedom",
+       "learning_objective": "Explain why Krishnamurti considers discipline and freedom contradictory."
+      },
+      {
+       "concept_tag": "tradition-and-intelligence",
+       "learning_objective": "Analyse how conformity to tradition prevents the growth of intelligence."
+      },
+      {
+       "concept_tag": "fear-and-sensitivity",
+       "learning_objective": "Explain how fear and self-concern destroy sensitivity."
+      }
+     ]
+    },
+    {
+     "topic_id": "LEKL1-CH21-T6",
+     "topic_number": 6,
+     "title": "Language work: sentence types, rhetorical questions and sound sequences",
+     "ncert_sections": "Language Work: Grammar and Pronunciation",
+     "concepts": [
+      {
+       "concept_tag": "sentence-types",
+       "learning_objective": "Classify sentences as simple, complex or compound and identify main clauses."
+      },
+      {
+       "concept_tag": "rhetorical-questions",
+       "learning_objective": "Infer the implied statement behind a rhetorical question."
+      },
+      {
+       "concept_tag": "sound-sequences",
+       "learning_objective": "Write the consonant-vowel sound sequence of a word."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

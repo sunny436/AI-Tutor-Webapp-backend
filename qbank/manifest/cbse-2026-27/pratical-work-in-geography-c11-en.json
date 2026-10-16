@@ -1,0 +1,695 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "pratical-work-in-geography-c11-en",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "geography",
+  "language": "english",
+  "title": "Pratical Work in Geography",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "kegy3"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KEGY3-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "Introduction to Maps",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy301.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY3-CH01-T1",
+     "topic_number": 1,
+     "title": "Meaning of a map",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "map-definition",
+       "learning_objective": "Define a map as a selective, symbolised and generalised representation of the earth at a reduced scale."
+      },
+      {
+       "concept_tag": "map-versus-sketch",
+       "learning_objective": "Distinguish a map from a sketch on the basis of scale and orientation."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH01-T2",
+     "topic_number": 2,
+     "title": "Essentials of map making",
+     "ncert_sections": "Essentials of Map Making",
+     "concepts": [
+      {
+       "concept_tag": "map-scale-and-projection",
+       "learning_objective": "Explain why scale and map projection are the first essentials of map making."
+      },
+      {
+       "concept_tag": "map-generalisation",
+       "learning_objective": "Explain map generalisation as selecting and simplifying content for the map's purpose."
+      },
+      {
+       "concept_tag": "map-design-and-production",
+       "learning_objective": "Describe map design and map construction and production as steps of cartography."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH01-T3",
+     "topic_number": 3,
+     "title": "History of map making",
+     "ncert_sections": "History of Map Making",
+     "concepts": [
+      {
+       "concept_tag": "early-world-cartography",
+       "learning_objective": "Recall the early contributions of Mesopotamia, the Greeks and the Arabs to map making."
+      },
+      {
+       "concept_tag": "map-making-in-india",
+       "learning_objective": "Trace the development of map making in India from the Vedic period to the Survey of India."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH01-T4",
+     "topic_number": 4,
+     "title": "Types of maps based on scale",
+     "ncert_sections": "Types of Maps Based on Scale",
+     "concepts": [
+      {
+       "concept_tag": "large-scale-maps",
+       "learning_objective": "Identify cadastral and topographical maps as large-scale maps and state their purposes."
+      },
+      {
+       "concept_tag": "small-scale-maps",
+       "learning_objective": "Identify wall maps and atlas maps as small-scale maps and compare their scales."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH01-T5",
+     "topic_number": 5,
+     "title": "Types of maps based on function",
+     "ncert_sections": "Types of Maps Based on Function",
+     "concepts": [
+      {
+       "concept_tag": "physical-maps",
+       "learning_objective": "Identify relief, geological, climatic and soil maps as physical maps."
+      },
+      {
+       "concept_tag": "cultural-maps",
+       "learning_objective": "Identify political, population, economic and transportation maps as cultural maps."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH01-T6",
+     "topic_number": 6,
+     "title": "Uses of maps: measuring distance, direction and area",
+     "ncert_sections": "Uses of Maps",
+     "concepts": [
+      {
+       "concept_tag": "measurement-of-distance",
+       "learning_objective": "Choose suitable methods to measure straight and zigzag distances on a map."
+      },
+      {
+       "concept_tag": "measurement-of-direction",
+       "learning_objective": "Explain how directions are determined from the north base line using cardinal points."
+      },
+      {
+       "concept_tag": "measurement-of-area",
+       "learning_objective": "Calculate area on a map using the method of squares and describe the polar planimeter."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY3-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "Map Scale",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy302.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY3-CH02-T1",
+     "topic_number": 1,
+     "title": "What is Scale and Systems of Measurement",
+     "ncert_sections": "What is Scale?; Box 2.1",
+     "concepts": [
+      {
+       "concept_tag": "map-scale-definition",
+       "learning_objective": "Explain map scale as the ratio between map distance and the corresponding ground distance."
+      },
+      {
+       "concept_tag": "systems-of-measurement",
+       "learning_objective": "Recall the units of the Metric and English systems of measurement and convert between them."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH02-T2",
+     "topic_number": 2,
+     "title": "Statement of Scale and Graphical Scale",
+     "ncert_sections": "Methods of Scale 1, 2",
+     "concepts": [
+      {
+       "concept_tag": "statement-of-scale",
+       "learning_objective": "Describe the statement of scale method with its advantages and limitations."
+      },
+      {
+       "concept_tag": "graphical-bar-scale",
+       "learning_objective": "Explain why the graphical or bar scale stays valid when a map is reduced or enlarged."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH02-T3",
+     "topic_number": 3,
+     "title": "Representative Fraction",
+     "ncert_sections": "Methods of Scale 3",
+     "concepts": [
+      {
+       "concept_tag": "rf-meaning",
+       "learning_objective": "Interpret a representative fraction as a ratio of map distance to ground distance in the same units."
+      },
+      {
+       "concept_tag": "rf-universality",
+       "learning_objective": "Explain why the representative fraction is the universal method of scale."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH02-T4",
+     "topic_number": 4,
+     "title": "Conversion of Scale",
+     "ncert_sections": "Conversion of Scale",
+     "concepts": [
+      {
+       "concept_tag": "statement-to-rf",
+       "learning_objective": "Convert a statement of scale into a representative fraction."
+      },
+      {
+       "concept_tag": "rf-to-statement",
+       "learning_objective": "Convert a representative fraction into a statement of scale in a given system."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH02-T5",
+     "topic_number": 5,
+     "title": "Construction of the Graphical Scale",
+     "ncert_sections": "Construction of the Graphical/Bar Scale",
+     "concepts": [
+      {
+       "concept_tag": "bar-scale-calculation",
+       "learning_objective": "Calculate the length of line and divisions needed to construct a graphical scale."
+      },
+      {
+       "concept_tag": "dividing-line-equal-parts",
+       "learning_objective": "Apply the angled-line method to divide an uneven line into equal parts."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY3-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "Latitude, Longitude and Time",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy303.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY3-CH03-T1",
+     "topic_number": 1,
+     "title": "Shape of the Earth and the Geographical Grid",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "oblate-spheroid-shape",
+       "learning_objective": "Explain why the earth is described as an oblate spheroid rather than a perfect sphere."
+      },
+      {
+       "concept_tag": "geographical-grid-coordinates",
+       "learning_objective": "Describe how the poles provide reference points for a grid of parallels and meridians that acts as geographical coordinates."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH03-T2",
+     "topic_number": 2,
+     "title": "Parallels of Latitude",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "latitude-definition-values",
+       "learning_objective": "Define latitude and state the values and number of parallels at one-degree intervals."
+      },
+      {
+       "concept_tag": "length-of-degree-latitude",
+       "learning_objective": "Interpret how the length of a degree of latitude varies slightly between the equator and the poles."
+      },
+      {
+       "concept_tag": "drawing-parallels",
+       "learning_objective": "Describe the steps for drawing a parallel of latitude on a circle using a protractor."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH03-T3",
+     "topic_number": 3,
+     "title": "Meridians of Longitude",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "meridian-properties-prime-meridian",
+       "learning_objective": "State the properties of meridians and the role of the Prime Meridian at Greenwich."
+      },
+      {
+       "concept_tag": "drawing-meridians-polar-view",
+       "learning_objective": "Explain how meridians are drawn as seen from above the North Pole, with east and west reversed."
+      },
+      {
+       "concept_tag": "latitude-longitude-comparison",
+       "learning_objective": "Compare parallels of latitude with meridians of longitude in shape, length and spacing."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH03-T4",
+     "topic_number": 4,
+     "title": "Longitude and Time",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "local-time-calculation",
+       "learning_objective": "Calculate local time from longitude using the rate of 4 minutes per degree."
+      },
+      {
+       "concept_tag": "standard-time-ist",
+       "learning_objective": "Explain the choice of a standard meridian and how Indian Standard Time is derived from 82 degrees 30 minutes E."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH03-T5",
+     "topic_number": 5,
+     "title": "International Date Line",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "international-date-line",
+       "learning_objective": "Explain why the date changes on crossing the International Date Line near the 180 degree meridian."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY3-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "Map Projections",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy304.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY3-CH04-T1",
+     "topic_number": 1,
+     "title": "Map projection and the need for it",
+     "ncert_sections": "Map Projection; Need for Map Projection",
+     "concepts": [
+      {
+       "concept_tag": "map-projection-graticule",
+       "learning_objective": "Define map projection and graticule and explain the limitations of a globe."
+      },
+      {
+       "concept_tag": "need-for-projection",
+       "learning_objective": "Explain why projections are needed and why distortion is inevitable on a flat surface."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH04-T2",
+     "topic_number": 2,
+     "title": "Elements of map projection",
+     "ncert_sections": "Elements of Map Projection",
+     "concepts": [
+      {
+       "concept_tag": "reduced-earth",
+       "learning_objective": "Describe the reduced earth as a model drawn to a reduced scale."
+      },
+      {
+       "concept_tag": "parallels-and-meridians",
+       "learning_objective": "Distinguish parallels of latitude from meridians of longitude."
+      },
+      {
+       "concept_tag": "global-properties",
+       "learning_objective": "Identify the four global properties a projection tries to preserve."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH04-T3",
+     "topic_number": 3,
+     "title": "Classification by drawing technique and developable surface",
+     "ncert_sections": "Classification of Map Projections (a), (b)",
+     "concepts": [
+      {
+       "concept_tag": "drawing-techniques",
+       "learning_objective": "Distinguish perspective, non-perspective and mathematical projections."
+      },
+      {
+       "concept_tag": "developable-surface",
+       "learning_objective": "Classify projections as cylindrical, conical or zenithal and as normal, oblique or polar."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH04-T4",
+     "topic_number": 4,
+     "title": "Classification by global properties and source of light",
+     "ncert_sections": "Classification of Map Projections (c), (d)",
+     "concepts": [
+      {
+       "concept_tag": "property-based-projections",
+       "learning_objective": "Distinguish equal area, orthomorphic, azimuthal and equi-distant projections."
+      },
+      {
+       "concept_tag": "source-of-light",
+       "learning_objective": "Classify gnomonic, stereographic and orthographic projections by the position of the light."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH04-T5",
+     "topic_number": 5,
+     "title": "Conical projection with one standard parallel",
+     "ncert_sections": "Constructing Some Selected Projections (a)",
+     "concepts": [
+      {
+       "concept_tag": "conical-construction",
+       "learning_objective": "Calculate the reduced-earth radius and choose the standard parallel and central meridian for a conical projection."
+      },
+      {
+       "concept_tag": "conical-properties-uses",
+       "learning_objective": "State the properties, limitations and uses of the simple conical projection."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH04-T6",
+     "topic_number": 6,
+     "title": "Cylindrical equal area projection",
+     "ncert_sections": "Constructing Some Selected Projections (b)",
+     "concepts": [
+      {
+       "concept_tag": "cylindrical-calculation",
+       "learning_objective": "Calculate the radius, equator length and interval for a cylindrical equal area projection."
+      },
+      {
+       "concept_tag": "cylindrical-properties-uses",
+       "learning_objective": "State the properties, limitations and uses of the cylindrical equal area projection."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH04-T7",
+     "topic_number": 7,
+     "title": "Mercator's projection",
+     "ncert_sections": "Constructing Some Selected Projections (c)",
+     "concepts": [
+      {
+       "concept_tag": "mercator-properties",
+       "learning_objective": "Explain the orthomorphic properties and rhumb lines of Mercator's projection."
+      },
+      {
+       "concept_tag": "mercator-limitations-uses",
+       "learning_objective": "Evaluate the limitations and uses of Mercator's projection."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY3-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "Topographical Maps",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy305.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY3-CH05-T1",
+     "topic_number": 1,
+     "title": "Topographical maps and their series",
+     "ncert_sections": "Introduction",
+     "concepts": [
+      {
+       "concept_tag": "topographical-map-nature",
+       "learning_objective": "Describe topographical maps as large-scale general purpose base maps prepared by the national mapping organisation."
+      },
+      {
+       "concept_tag": "indian-toposheet-series",
+       "learning_objective": "Relate the scales of Survey of India topographical maps to their latitudinal and longitudinal coverage."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH05-T2",
+     "topic_number": 2,
+     "title": "Methods of relief representation and contours",
+     "ncert_sections": "Methods of Relief Representation; Contours",
+     "concepts": [
+      {
+       "concept_tag": "relief-representation-methods",
+       "learning_objective": "Identify the methods used to show relief on maps, such as hachures, hill shading, layer tints, spot heights and contours."
+      },
+      {
+       "concept_tag": "contour-properties",
+       "learning_objective": "Explain contour interval, horizontal equivalent and the basic features of contour lines."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH05-T3",
+     "topic_number": 3,
+     "title": "Types of slope",
+     "ncert_sections": "Types of slope",
+     "concepts": [
+      {
+       "concept_tag": "slope-types-contour-spacing",
+       "learning_objective": "Distinguish gentle, steep, concave and convex slopes from the spacing of contours."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH05-T4",
+     "topic_number": 4,
+     "title": "Landforms shown by contours",
+     "ncert_sections": "Types of Landform; Valley; Cliff; Waterfall and Rapids",
+     "concepts": [
+      {
+       "concept_tag": "hill-plateau-contours",
+       "learning_objective": "Recognise conical hills, plateaus, cliffs and waterfalls from their contour patterns."
+      },
+      {
+       "concept_tag": "valley-gorge-spur",
+       "learning_objective": "Distinguish V-shaped valleys, U-shaped valleys, gorges and spurs on a contour map."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH05-T5",
+     "topic_number": 5,
+     "title": "Drawing a cross-section",
+     "ncert_sections": "Steps for Drawing a Cross-section",
+     "concepts": [
+      {
+       "concept_tag": "cross-section-steps",
+       "learning_objective": "Apply the steps for drawing a cross-section from contours using a suitable vertical scale."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH05-T6",
+     "topic_number": 6,
+     "title": "Cultural features and map interpretation",
+     "ncert_sections": "Identification of Cultural Features; Interpretation of Topographical Maps; Map Interpretation Procedure",
+     "concepts": [
+      {
+       "concept_tag": "settlement-transport-patterns",
+       "learning_objective": "Identify settlement types, sites and transport patterns shown on topographical sheets."
+      },
+      {
+       "concept_tag": "map-interpretation-procedure",
+       "learning_objective": "Interpret a topographical sheet under its standard heads and by superimposing feature maps."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KEGY3-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "Introduction To Remote Sensing",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/kegy306.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KEGY3-CH06-T1",
+     "topic_number": 1,
+     "title": "Meaning and stages of remote sensing",
+     "ncert_sections": "Introduction; Stages in Remote Sensing",
+     "concepts": [
+      {
+       "concept_tag": "remote-sensing-definition",
+       "learning_objective": "Define remote sensing and identify its three basic components."
+      },
+      {
+       "concept_tag": "stages-of-remote-sensing",
+       "learning_objective": "Sequence the stages of remote sensing data acquisition from energy source to map."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH06-T2",
+     "topic_number": 2,
+     "title": "Electromagnetic radiation and its interactions",
+     "ncert_sections": "Stages b, c and d",
+     "concepts": [
+      {
+       "concept_tag": "electromagnetic-spectrum",
+       "learning_objective": "Identify the regions of the electromagnetic spectrum used in remote sensing."
+      },
+      {
+       "concept_tag": "spectral-response-of-objects",
+       "learning_objective": "Explain why different objects respond differently in different spectral regions."
+      },
+      {
+       "concept_tag": "atmospheric-effects",
+       "learning_objective": "Describe how atmospheric constituents absorb and scatter reflected energy."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH06-T3",
+     "topic_number": 3,
+     "title": "Remote sensing satellites and data reception",
+     "ncert_sections": "Stages e to h; Box 6.1",
+     "concepts": [
+      {
+       "concept_tag": "sun-synchronous-geostationary-orbits",
+       "learning_objective": "Compare sun-synchronous and geostationary satellites by altitude, coverage, resolution and use."
+      },
+      {
+       "concept_tag": "data-reception-processing",
+       "learning_objective": "Describe how image data is received, corrected and converted into maps."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH06-T4",
+     "topic_number": 4,
+     "title": "Sensors and multispectral scanners",
+     "ncert_sections": "Sensors; Multispectral Scanners",
+     "concepts": [
+      {
+       "concept_tag": "sensor-types",
+       "learning_objective": "Distinguish photographic and non-photographic sensors."
+      },
+      {
+       "concept_tag": "whiskbroom-scanner",
+       "learning_objective": "Describe the working of a whiskbroom scanner."
+      },
+      {
+       "concept_tag": "pushbroom-scanner",
+       "learning_objective": "Explain and calculate the detector array of a pushbroom scanner."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH06-T5",
+     "topic_number": 5,
+     "title": "Resolving powers and sensor resolutions",
+     "ncert_sections": "Resolving Powers of the Satellites; Sensor Resolutions; Table 6.1",
+     "concepts": [
+      {
+       "concept_tag": "temporal-resolution",
+       "learning_objective": "Explain temporal resolution and its use in change detection."
+      },
+      {
+       "concept_tag": "spatial-spectral-radiometric-resolution",
+       "learning_objective": "Distinguish spatial, spectral and radiometric resolution using Table 6.1."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH06-T6",
+     "topic_number": 6,
+     "title": "Data products",
+     "ncert_sections": "Data Products",
+     "concepts": [
+      {
+       "concept_tag": "images-vs-photographs",
+       "learning_objective": "Distinguish images from photographs and describe photographic images."
+      },
+      {
+       "concept_tag": "digital-image-pixels",
+       "learning_objective": "Explain pixels and digital numbers in a digital image."
+      }
+     ]
+    },
+    {
+     "topic_id": "KEGY3-CH06-T7",
+     "topic_number": 7,
+     "title": "Elements of visual interpretation",
+     "ncert_sections": "Interpretation of Satellite Imageries; Table 6.2",
+     "concepts": [
+      {
+       "concept_tag": "image-terrain-characteristics",
+       "learning_objective": "Classify elements of visual interpretation into image and terrain characteristics."
+      },
+      {
+       "concept_tag": "tone-fcc-colours",
+       "learning_objective": "Interpret tones and colours of features on a standard false colour composite."
+      },
+      {
+       "concept_tag": "texture-shape-shadow-pattern",
+       "learning_objective": "Apply texture, size, shape, shadow and pattern to identify features."
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

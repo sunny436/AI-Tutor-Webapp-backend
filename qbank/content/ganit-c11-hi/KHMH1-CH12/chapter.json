@@ -1,0 +1,104 @@
+{
+ "chapter_id": "KHMH1-CH12",
+ "title": "सीमा और अवकलज",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHMH1-CH12-T1",
+   "topic_number": 1,
+   "title": "अवकलज का सहजानुभूत बोध",
+   "ncert_sections": "12.1, 12.2",
+   "concepts": [
+    {
+     "concept_tag": "ausat-aur-tatkshanik-veg",
+     "learning_objective": "औसत वेग और तात्क्षणिक वेग में भेद करना तथा तात्क्षणिक वेग को औसत वेगों के सीमांत मान के रूप में समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH12-T2",
+   "topic_number": 2,
+   "title": "सीमाएँ: बाएँ और दाएँ पक्ष की सीमा",
+   "ncert_sections": "12.3",
+   "concepts": [
+    {
+     "concept_tag": "bayein-dayein-paksh-ki-seema",
+     "learning_objective": "किसी बिंदु पर फलन की बाएँ और दाएँ पक्ष की सीमाएँ ज्ञात करना।"
+    },
+    {
+     "concept_tag": "seema-ka-astitva",
+     "learning_objective": "बाएँ और दाएँ पक्ष की सीमाओं की तुलना करके सीमा के अस्तित्व का निर्णय करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH12-T3",
+   "topic_number": 3,
+   "title": "सीमाओं का बीजगणित, बहुपद और परिमेय फलनों की सीमाएँ",
+   "ncert_sections": "12.3.1, 12.3.2",
+   "concepts": [
+    {
+     "concept_tag": "seemaon-ka-beejganit",
+     "learning_objective": "सीमाओं के योग, अंतर, गुणनफल और भागफल के नियमों का प्रयोग करना।"
+    },
+    {
+     "concept_tag": "bahupad-parimey-phalan-seema",
+     "learning_objective": "बहुपद तथा परिमेय फलनों की सीमाएँ, गुणनखंडन द्वारा भी, ज्ञात करना।"
+    },
+    {
+     "concept_tag": "xn-an-pramey",
+     "learning_objective": "(xⁿ – aⁿ)/(x – a) की सीमा n·aⁿ⁻¹ का प्रयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH12-T4",
+   "topic_number": 4,
+   "title": "त्रिकोणमितीय फलनों की सीमाएँ",
+   "ncert_sections": "12.4",
+   "concepts": [
+    {
+     "concept_tag": "sinx-x-seema",
+     "learning_objective": "x → 0 पर sin x/x तथा (1 – cos x)/x की मानक सीमाएँ जानना।"
+    },
+    {
+     "concept_tag": "trikonmitiy-seema-anuprayog",
+     "learning_objective": "मानक त्रिकोणमितीय सीमाओं का प्रयोग करके अन्य सीमाएँ ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH12-T5",
+   "topic_number": 5,
+   "title": "अवकलज की परिभाषा और प्रथम सिद्धांत",
+   "ncert_sections": "12.5",
+   "concepts": [
+    {
+     "concept_tag": "avakalaj-ki-paribhasha",
+     "learning_objective": "किसी बिंदु पर अवकलज की सीमा-आधारित परिभाषा और उसका ज्यामितीय अर्थ जानना।"
+    },
+    {
+     "concept_tag": "pratham-siddhant",
+     "learning_objective": "प्रथम सिद्धांत से सरल फलनों के अवकलज ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHMH1-CH12-T6",
+   "topic_number": 6,
+   "title": "अवकलजों का बीजगणित तथा बहुपद और त्रिकोणमितीय फलनों के अवकलज",
+   "ncert_sections": "12.5.1, 12.5.2",
+   "concepts": [
+    {
+     "concept_tag": "avakalaj-ke-niyam",
+     "learning_objective": "योग, गुणनफल और भागफल नियमों द्वारा अवकलज ज्ञात करना।"
+    },
+    {
+     "concept_tag": "bahupad-trikonmitiy-avakalaj",
+     "learning_objective": "xⁿ, बहुपदों तथा sin x और cos x के अवकलज जानना और प्रयोग करना।"
+    }
+   ]
+  }
+ ]
+}

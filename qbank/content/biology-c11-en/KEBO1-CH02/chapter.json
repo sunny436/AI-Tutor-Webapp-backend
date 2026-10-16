@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KEBO1-CH02",
+ "title": "Biological Classification",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEBO1-CH02-T1",
+   "topic_number": 1,
+   "title": "Changing systems and the five kingdom classification",
+   "ncert_sections": "2 (introduction), Table 2.1",
+   "concepts": [
+    {
+     "concept_tag": "history-of-classification",
+     "learning_objective": "Trace how classification moved from Aristotle's and Linnaeus' systems to Whittaker's five kingdoms and why the two kingdom system was inadequate."
+    },
+    {
+     "concept_tag": "whittaker-five-kingdom-criteria",
+     "learning_objective": "State Whittaker's criteria and compare the five kingdoms on cell type, wall, body organisation and nutrition."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH02-T2",
+   "topic_number": 2,
+   "title": "Kingdom Monera",
+   "ncert_sections": "2.1, 2.1.1, 2.1.2",
+   "concepts": [
+    {
+     "concept_tag": "bacterial-shapes-and-nutrition",
+     "learning_objective": "Identify bacterial shapes and distinguish photosynthetic, chemosynthetic and heterotrophic bacteria."
+    },
+    {
+     "concept_tag": "archaebacteria",
+     "learning_objective": "Explain how archaebacteria survive extreme habitats and name halophiles, thermoacidophiles and methanogens."
+    },
+    {
+     "concept_tag": "eubacteria",
+     "learning_objective": "Describe eubacteria, cyanobacteria with heterocysts, mycoplasma and bacterial reproduction."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH02-T3",
+   "topic_number": 3,
+   "title": "Kingdom Protista",
+   "ncert_sections": "2.2, 2.2.1-2.2.5",
+   "concepts": [
+    {
+     "concept_tag": "chrysophytes-and-dinoflagellates",
+     "learning_objective": "Describe the walls and ecological roles of diatoms and dinoflagellates, including diatomaceous earth and red tides."
+    },
+    {
+     "concept_tag": "euglenoids-and-slime-moulds",
+     "learning_objective": "Explain the pellicle and mixed nutrition of euglenoids and the plasmodium and spores of slime moulds."
+    },
+    {
+     "concept_tag": "protozoans",
+     "learning_objective": "Distinguish the four groups of protozoans with examples."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH02-T4",
+   "topic_number": 4,
+   "title": "Kingdom Fungi",
+   "ncert_sections": "2.3, 2.3.1-2.3.4",
+   "concepts": [
+    {
+     "concept_tag": "fungal-structure-and-nutrition",
+     "learning_objective": "Describe hyphae, mycelium, chitin walls and saprophytic, parasitic and symbiotic fungi."
+    },
+    {
+     "concept_tag": "sexual-reproduction-in-fungi",
+     "learning_objective": "Sequence plasmogamy, karyogamy, dikaryophase and meiosis in the fungal sexual cycle."
+    },
+    {
+     "concept_tag": "classes-of-fungi",
+     "learning_objective": "Compare phycomycetes, ascomycetes, basidiomycetes and deuteromycetes by mycelium, spores and examples."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH02-T5",
+   "topic_number": 5,
+   "title": "Kingdoms Plantae and Animalia",
+   "ncert_sections": "2.4, 2.5",
+   "concepts": [
+    {
+     "concept_tag": "plantae-features",
+     "learning_objective": "State the features of Kingdom Plantae, including partially heterotrophic plants and alternation of generations."
+    },
+    {
+     "concept_tag": "animalia-features",
+     "learning_objective": "State the features of Kingdom Animalia: wall-less cells, holozoic nutrition and food reserves."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEBO1-CH02-T6",
+   "topic_number": 6,
+   "title": "Viruses, viroids, prions and lichens",
+   "ncert_sections": "2.6",
+   "concepts": [
+    {
+     "concept_tag": "virus-structure-and-discovery",
+     "learning_objective": "Describe the discovery, structure and genetic material of viruses and the diseases they cause."
+    },
+    {
+     "concept_tag": "viroids-and-prions",
+     "learning_objective": "Distinguish viroids and prions from viruses."
+    },
+    {
+     "concept_tag": "lichens",
+     "learning_objective": "Explain lichens as a symbiosis of phycobiont and mycobiont and their use as pollution indicators."
+    }
+   ]
+  }
+ ]
+}

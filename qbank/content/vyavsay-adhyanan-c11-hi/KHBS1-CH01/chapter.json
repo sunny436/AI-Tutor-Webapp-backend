@@ -1,0 +1,124 @@
+{
+ "chapter_id": "KHBS1-CH01",
+ "title": "व्यवसाय, व्यापार और वाणिज्य",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHBS1-CH01-T1",
+   "topic_number": 1,
+   "title": "व्यवसाय की भूमिका और भारत में व्यापार का इतिहास",
+   "ncert_sections": "1.1, 1.1.1",
+   "concepts": [
+    {
+     "concept_tag": "bhartiya-vyapar-itihas",
+     "learning_objective": "प्राचीन भारत के व्यापारिक मार्गों, केंद्रों और स्वदेशी बैंकिंग की भूमिका समझना।"
+    },
+    {
+     "concept_tag": "arthvyavastha-mein-vyavsay",
+     "learning_objective": "अर्थव्यवस्था के विकास में व्यवसाय के योगदान और औपनिवेशिक प्रभाव का विश्लेषण करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH01-T2",
+   "topic_number": 2,
+   "title": "व्यवसाय की अवधारणा और विशेषताएँ",
+   "ncert_sections": "1.6, 1.6.1",
+   "concepts": [
+    {
+     "concept_tag": "vyavsay-avdharna",
+     "learning_objective": "व्यवसाय को एक आर्थिक क्रिया के रूप में परिभाषित करना।"
+    },
+    {
+     "concept_tag": "vyavsay-visheshtayen",
+     "learning_objective": "व्यावसायिक क्रियाओं की विशेषताओं को पहचानना और लागू करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH01-T3",
+   "topic_number": 3,
+   "title": "व्यवसाय, पेशा तथा रोज़गार में तुलना",
+   "ncert_sections": "1.6.2",
+   "concepts": [
+    {
+     "concept_tag": "vyavsay-pesha-rozgar",
+     "learning_objective": "व्यवसाय, पेशा और रोज़गार में स्थापना, योग्यता, प्रतिफल और जोखिम के आधार पर अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH01-T4",
+   "topic_number": 4,
+   "title": "व्यावसायिक क्रियाओं का वर्गीकरण: उद्योग",
+   "ncert_sections": "1.7, 1.7.1",
+   "concepts": [
+    {
+     "concept_tag": "prathmik-udyog",
+     "learning_objective": "प्राथमिक उद्योग के निष्कर्षण और जननिक प्रकारों को पहचानना।"
+    },
+    {
+     "concept_tag": "dwitiyak-tritiyak-udyog",
+     "learning_objective": "विनिर्माण, निर्माण और तृतीयक उद्योगों में अंतर करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH01-T5",
+   "topic_number": 5,
+   "title": "वाणिज्य, व्यापार और व्यापार के सहायक",
+   "ncert_sections": "1.7.2, 1.7.3, 1.7.4",
+   "concepts": [
+    {
+     "concept_tag": "vyapar-prakar",
+     "learning_objective": "आंतरिक और बाह्य व्यापार तथा थोक और फुटकर व्यापार में अंतर करना।"
+    },
+    {
+     "concept_tag": "vyapar-sahayak",
+     "learning_objective": "व्यापार के सहायकों द्वारा दूर की जाने वाली बाधाओं को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH01-T6",
+   "topic_number": 6,
+   "title": "व्यवसाय के उद्देश्य",
+   "ncert_sections": "1.8",
+   "concepts": [
+    {
+     "concept_tag": "vyavsay-uddeshya",
+     "learning_objective": "व्यवसाय के आर्थिक और सामाजिक उद्देश्यों तथा लाभ की भूमिका को समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH01-T7",
+   "topic_number": 7,
+   "title": "व्यावसायिक जोखिम",
+   "ncert_sections": "1.9, 1.9.1, 1.9.2",
+   "concepts": [
+    {
+     "concept_tag": "jokhim-prakriti",
+     "learning_objective": "व्यावसायिक जोखिमों की प्रकृति और लाभ को जोखिम के पुरस्कार के रूप में समझना।"
+    },
+    {
+     "concept_tag": "jokhim-karan",
+     "learning_objective": "व्यावसायिक जोखिमों के प्राकृतिक, मानवीय, आर्थिक और अन्य कारणों को वर्गीकृत करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH01-T8",
+   "topic_number": 8,
+   "title": "व्यवसाय शुरू करना — मूल कारक",
+   "ncert_sections": "1.10",
+   "concepts": [
+    {
+     "concept_tag": "vyavsay-arambh-karak",
+     "learning_objective": "व्यवसाय शुरू करने के मूल कारकों और उनके क्रम को समझना।"
+    }
+   ]
+  }
+ ]
+}

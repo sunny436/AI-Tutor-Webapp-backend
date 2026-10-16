@@ -1,0 +1,128 @@
+{
+ "chapter_id": "KHBS1-CH04",
+ "title": "व्यावसायिक सेवाएँ",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KHBS1-CH04-T1",
+   "topic_number": 1,
+   "title": "सेवाओं की प्रकृति और वस्तुओं से अंतर",
+   "ncert_sections": "4.1, 4.2, 4.2.1",
+   "concepts": [
+    {
+     "concept_tag": "sevaon-ki-visheshtayen",
+     "learning_objective": "विद्यार्थी सेवाओं की पाँच विशेषताओं (अमूर्तता, असंगतता, अभिन्नता, इन्वेन्ट्री का अभाव, संबद्धता) को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "seva-aur-vastu-mein-antar",
+     "learning_objective": "विद्यार्थी उदाहरणों के आधार पर सेवाओं और वस्तुओं में अंतर कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH04-T2",
+   "topic_number": 2,
+   "title": "सेवाओं के प्रकार",
+   "ncert_sections": "4.3, 4.3.1",
+   "concepts": [
+    {
+     "concept_tag": "sevaon-ka-vargikaran",
+     "learning_objective": "विद्यार्थी व्यावसायिक, सामाजिक और व्यक्तिगत सेवाओं में अंतर कर सकेंगे।"
+    },
+    {
+     "concept_tag": "vyavsayik-sevaon-ke-udaharan",
+     "learning_objective": "विद्यार्थी व्यावसायिक इकाइयों द्वारा प्रयुक्त बैंकिंग, बीमा, परिवहन और संप्रेषण सेवाओं की पहचान कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH04-T3",
+   "topic_number": 3,
+   "title": "बैंकिंग: बैंकों के प्रकार और वाणिज्यिक बैंक के कार्य",
+   "ncert_sections": "4.4, 4.4.1, 4.4.2",
+   "concepts": [
+    {
+     "concept_tag": "bankon-ke-prakar",
+     "learning_objective": "विद्यार्थी वाणिज्यिक, सहकारी, विशिष्ट और केंद्रीय बैंक की पहचान कर सकेंगे।"
+    },
+    {
+     "concept_tag": "vanijyik-bank-ke-karya",
+     "learning_objective": "विद्यार्थी जमा स्वीकार करना, ऋण देना, चेक सुविधा और धन हस्तांतरण जैसे कार्यों को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "check-ke-prakar",
+     "learning_objective": "विद्यार्थी वाहक चेक और रेखांकित चेक में अंतर कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH04-T4",
+   "topic_number": 4,
+   "title": "ई-बैंकिंग",
+   "ncert_sections": "4.4.3",
+   "concepts": [
+    {
+     "concept_tag": "e-banking-ki-sevayen",
+     "learning_objective": "विद्यार्थी ई-बैंकिंग का अर्थ तथा ए.टी.एम., एन.ई.एफ़.टी. और आर.टी.जी.एस. जैसी सेवाओं को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "e-banking-ke-labh",
+     "learning_objective": "विद्यार्थी ग्राहकों और बैंकों के लिए ई-बैंकिंग के लाभों का विश्लेषण कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH04-T5",
+   "topic_number": 5,
+   "title": "बीमा: अर्थ, कार्य और सिद्धांत",
+   "ncert_sections": "4.5, 4.5.1, 4.5.2, 4.5.3",
+   "concepts": [
+    {
+     "concept_tag": "bima-ka-arth-aur-karya",
+     "learning_objective": "विद्यार्थी बीमा के आधारभूत सिद्धांत (जोखिम का बँटवारा) और उसके कार्यों को समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "bima-ke-siddhant",
+     "learning_objective": "विद्यार्थी पूर्ण सद्विश्वास, बीमायोग्य हित, क्षतिपूर्ति, निकटतम कारण, अधिकार समर्पण, योगदान और हानि कम करने के सिद्धांतों को लागू कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH04-T6",
+   "topic_number": 6,
+   "title": "बीमा के प्रकार",
+   "ncert_sections": "4.5.4",
+   "concepts": [
+    {
+     "concept_tag": "jivan-bima",
+     "learning_objective": "विद्यार्थी जीवन बीमा की विशेषताओं और आजीवन, बंदोबस्ती, संयुक्त जीवन तथा वार्षिकवृत्ति पॉलिसियों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "agni-aur-samudri-bima",
+     "learning_objective": "विद्यार्थी अग्नि बीमा और समुद्री बीमा (जहाज़, माल, भाड़ा) की विशेषताओं की तुलना कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHBS1-CH04-T7",
+   "topic_number": 7,
+   "title": "संप्रेषण सेवाएँ और परिवहन",
+   "ncert_sections": "4.6, 4.7",
+   "concepts": [
+    {
+     "concept_tag": "dak-sevayen",
+     "learning_objective": "विद्यार्थी भारतीय डाक विभाग की वित्तीय और डाक सुविधाओं तथा स्पीड पोस्ट जैसी सेवाओं को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "doorsanchar-sevayen",
+     "learning_objective": "विद्यार्थी सेल्युलर मोबाइल, स्थायी लाइन, केबल, वी.एस.ए.टी. और डी.टी.एच. सेवाओं में अंतर कर सकेंगे।"
+    },
+    {
+     "concept_tag": "parivahan-seva",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि परिवहन स्थान संबंधी बाधा को कैसे दूर करता है।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "chapter_id": "KEMH1-CH02",
+ "title": "Relations and Functions",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEMH1-CH02-T1",
+   "topic_number": 1,
+   "title": "Cartesian Products of Sets",
+   "ncert_sections": "2.2",
+   "concepts": [
+    {
+     "concept_tag": "ordered-pair-equality",
+     "learning_objective": "Use the equality of ordered pairs to find unknown values."
+    },
+    {
+     "concept_tag": "cartesian-product",
+     "learning_objective": "Form the cartesian product of two sets and recognise that A × B and B × A differ."
+    },
+    {
+     "concept_tag": "number-of-elements-in-product",
+     "learning_objective": "Find the number of elements in A × B using n(A × B) = n(A) n(B)."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH02-T2",
+   "topic_number": 2,
+   "title": "Relations",
+   "ncert_sections": "2.3",
+   "concepts": [
+    {
+     "concept_tag": "relation-definition",
+     "learning_objective": "Define a relation from A to B as a subset of A × B."
+    },
+    {
+     "concept_tag": "domain-codomain-range",
+     "learning_objective": "Find the domain, codomain and range of a relation."
+    },
+    {
+     "concept_tag": "number-of-relations",
+     "learning_objective": "Count the relations from A to B as 2 raised to n(A) n(B)."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH02-T3",
+   "topic_number": 3,
+   "title": "Functions",
+   "ncert_sections": "2.4",
+   "concepts": [
+    {
+     "concept_tag": "function-definition",
+     "learning_objective": "Decide whether a relation is a function using the one-and-only-one-image rule."
+    },
+    {
+     "concept_tag": "image-preimage",
+     "learning_objective": "Find the image of an element and the preimage of a value under a function."
+    },
+    {
+     "concept_tag": "linear-function",
+     "learning_objective": "Identify a linear function f(x) = mx + c from given ordered pairs."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH02-T4",
+   "topic_number": 4,
+   "title": "Some Functions and their Graphs",
+   "ncert_sections": "2.4.1",
+   "concepts": [
+    {
+     "concept_tag": "standard-functions",
+     "learning_objective": "Recognise identity, constant, polynomial and rational functions and their graphs."
+    },
+    {
+     "concept_tag": "modulus-signum-greatest-integer",
+     "learning_objective": "Evaluate and describe the modulus, signum and greatest integer functions."
+    },
+    {
+     "concept_tag": "domain-range-real-functions",
+     "learning_objective": "Find the domain and range of simple real functions."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEMH1-CH02-T5",
+   "topic_number": 5,
+   "title": "Algebra of Real Functions",
+   "ncert_sections": "2.4.2",
+   "concepts": [
+    {
+     "concept_tag": "sum-difference-product",
+     "learning_objective": "Find the sum, difference and product of two real functions."
+    },
+    {
+     "concept_tag": "quotient-of-functions",
+     "learning_objective": "Find the quotient of two real functions and state where it is defined."
+    }
+   ]
+  }
+ ]
+}

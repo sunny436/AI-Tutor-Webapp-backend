@@ -1,0 +1,120 @@
+{
+ "chapter_id": "IEMH1-CH04",
+ "title": "Exploring Algebraic Identities",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "IEMH1-CH04-T1",
+   "topic_number": 1,
+   "title": "Identities and visualising (a + b)²",
+   "ncert_sections": "4.1, 4.2",
+   "concepts": [
+    {
+     "concept_tag": "identity-vs-equation",
+     "learning_objective": "Distinguish an algebraic identity, true for all values of its variables, from an equation."
+    },
+    {
+     "concept_tag": "square-of-sum-geometric",
+     "learning_objective": "Interpret (a + b)² = a² + 2ab + b² using a square of side (a + b) partitioned into squares and rectangles."
+    },
+    {
+     "concept_tag": "square-of-sum-application",
+     "learning_objective": "Use (a + b)² = a² + 2ab + b² to expand binomials and evaluate squares of numbers."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH04-T2",
+   "topic_number": 2,
+   "title": "Factorisation using identities and (a − b)²",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "factorise-perfect-square",
+     "learning_objective": "Factorise perfect-square trinomials, taking out a common factor first where needed."
+    },
+    {
+     "concept_tag": "square-of-difference",
+     "learning_objective": "Use (a − b)² = a² − 2ab + b² to factorise expressions and compute squares."
+    },
+    {
+     "concept_tag": "consecutive-squares-proof",
+     "learning_objective": "Use identities to prove patterns among squares of consecutive numbers."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH04-T3",
+   "topic_number": 3,
+   "title": "More identities: (a + b + c)² and a² − b²",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "square-of-trinomial",
+     "learning_objective": "Expand and apply (a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca."
+    },
+    {
+     "concept_tag": "difference-of-squares",
+     "learning_objective": "Apply a² − b² = (a + b)(a − b), and Shridharacharya's form a² = (a + b)(a − b) + b², to quick calculations."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH04-T4",
+   "topic_number": 4,
+   "title": "Factorisation with algebra tiles and by splitting the middle term",
+   "ncert_sections": "4.5, 4.6",
+   "concepts": [
+    {
+     "concept_tag": "algebra-tiles",
+     "learning_objective": "Represent products and factors of quadratic expressions with algebra tiles."
+    },
+    {
+     "concept_tag": "product-of-linear-factors",
+     "learning_objective": "State and use (x + a)(x + b) = x² + (a + b)x + ab."
+    },
+    {
+     "concept_tag": "splitting-middle-term",
+     "learning_objective": "Factorise quadratic expressions by splitting the middle term using a + b and ab."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH04-T5",
+   "topic_number": 5,
+   "title": "Finding new identities: cubes",
+   "ncert_sections": "4.7",
+   "concepts": [
+    {
+     "concept_tag": "cube-of-binomial",
+     "learning_objective": "Use (a + b)³ and (a − b)³ to expand and to recognise perfect cubes."
+    },
+    {
+     "concept_tag": "sum-difference-of-cubes",
+     "learning_objective": "Apply x³ − y³ = (x − y)(x² + xy + y²) and x³ + y³ = (x + y)(x² − xy + y²)."
+    },
+    {
+     "concept_tag": "sum-of-cubes-three-variables",
+     "learning_objective": "Use x³ + y³ + z³ − 3xyz = (x + y + z)(x² + y² + z² − xy − xz − yz) to evaluate expressions."
+    }
+   ]
+  },
+  {
+   "topic_id": "IEMH1-CH04-T6",
+   "topic_number": 6,
+   "title": "Simplifying rational expressions and applications",
+   "ncert_sections": "4.8",
+   "concepts": [
+    {
+     "concept_tag": "simplify-rational-expressions",
+     "learning_objective": "Simplify rational algebraic expressions by factorising and cancelling non-zero common factors."
+    },
+    {
+     "concept_tag": "word-problems-factorisation",
+     "learning_objective": "Form and factorise quadratic expressions to solve area problems."
+    }
+   ]
+  }
+ ]
+}

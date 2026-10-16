@@ -1,0 +1,152 @@
+{
+ "chapter_id": "KEAC1-CH02",
+ "title": "Theory Base of Accounting",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEAC1-CH02-T1",
+   "topic_number": 1,
+   "title": "Need for a theory base and Generally Accepted Accounting Principles",
+   "ncert_sections": "Introduction, 2.1",
+   "concepts": [
+    {
+     "concept_tag": "need-for-theory-base",
+     "learning_objective": "Explain why accounting needs a theory base to make information reliable and comparable."
+    },
+    {
+     "concept_tag": "gaap-meaning-nature",
+     "learning_objective": "Describe the meaning, evolution and changing nature of GAAP."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH02-T2",
+   "topic_number": 2,
+   "title": "Business entity, money measurement and going concern",
+   "ncert_sections": "2.2, 2.2.1, 2.2.2, 2.2.3",
+   "concepts": [
+    {
+     "concept_tag": "business-entity",
+     "learning_objective": "Apply the business entity concept to capital, drawings and personal transactions of the owner."
+    },
+    {
+     "concept_tag": "money-measurement",
+     "learning_objective": "Identify what can be recorded under money measurement and state its limitation."
+    },
+    {
+     "concept_tag": "going-concern",
+     "learning_objective": "Explain how the going concern assumption allows the cost of an asset to be spread over its life."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH02-T3",
+   "topic_number": 3,
+   "title": "Accounting period, cost and dual aspect",
+   "ncert_sections": "2.2.4, 2.2.5, 2.2.6",
+   "concepts": [
+    {
+     "concept_tag": "accounting-period",
+     "learning_objective": "State the meaning of accounting period and the periods for which statements are prepared."
+    },
+    {
+     "concept_tag": "cost-concept",
+     "learning_objective": "Calculate the cost at which an asset is recorded and evaluate the historical cost basis."
+    },
+    {
+     "concept_tag": "dual-aspect",
+     "learning_objective": "Analyse the two-fold effect of transactions using the accounting equation."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH02-T4",
+   "topic_number": 4,
+   "title": "Revenue recognition, matching and full disclosure",
+   "ncert_sections": "2.2.7, 2.2.8, 2.2.9",
+   "concepts": [
+    {
+     "concept_tag": "revenue-recognition",
+     "learning_objective": "Determine when revenue is realised, including time-based incomes."
+    },
+    {
+     "concept_tag": "matching",
+     "learning_objective": "Apply the matching concept to expenses and the cost of goods sold."
+    },
+    {
+     "concept_tag": "full-disclosure",
+     "learning_objective": "State what the full disclosure concept requires of financial statements."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH02-T5",
+   "topic_number": 5,
+   "title": "Consistency, conservatism, materiality and objectivity",
+   "ncert_sections": "2.2.10, 2.2.11, 2.2.12, 2.2.13",
+   "concepts": [
+    {
+     "concept_tag": "consistency",
+     "learning_objective": "Explain why consistent accounting policies are needed for comparison."
+    },
+    {
+     "concept_tag": "conservatism",
+     "learning_objective": "Apply the prudence rule of providing for all losses but not anticipating profits."
+    },
+    {
+     "concept_tag": "materiality-objectivity",
+     "learning_objective": "Distinguish material from immaterial items and explain the need for verifiable evidence."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH02-T6",
+   "topic_number": 6,
+   "title": "Systems and basis of accounting",
+   "ncert_sections": "2.3, 2.4",
+   "concepts": [
+    {
+     "concept_tag": "systems-of-accounting",
+     "learning_objective": "Distinguish the double entry system from the single entry system."
+    },
+    {
+     "concept_tag": "cash-vs-accrual-basis",
+     "learning_objective": "Compare the cash basis and the accrual basis of accounting and compute profit under each."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH02-T7",
+   "topic_number": 7,
+   "title": "Accounting standards",
+   "ncert_sections": "2.5",
+   "concepts": [
+    {
+     "concept_tag": "accounting-standards-meaning",
+     "learning_objective": "State the meaning, issuing body and objectives of accounting standards."
+    },
+    {
+     "concept_tag": "standards-benefits-limitations",
+     "learning_objective": "Evaluate the benefits and limitations of accounting standards."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEAC1-CH02-T8",
+   "topic_number": 8,
+   "title": "Goods and Services Tax",
+   "ncert_sections": "Goods and Services Tax (One Country One Tax)",
+   "concepts": [
+    {
+     "concept_tag": "gst-meaning-features",
+     "learning_objective": "Explain GST as a destination-based tax and state its features and advantages."
+    },
+    {
+     "concept_tag": "cgst-sgst-igst",
+     "learning_objective": "Apply CGST, SGST and IGST to intra-state and inter-state supplies."
+    }
+   ]
+  }
+ ]
+}

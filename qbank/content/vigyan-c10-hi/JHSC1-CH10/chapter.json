@@ -1,0 +1,132 @@
+{
+ "chapter_id": "JHSC1-CH10",
+ "title": "मानव नेत्र तथा रंग-बिरंगा संसार",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHSC1-CH10-T1",
+   "topic_number": 1,
+   "title": "मानव नेत्र की संरचना",
+   "ncert_sections": "10.1",
+   "concepts": [
+    {
+     "concept_tag": "netra-ke-bhag-aur-karya",
+     "learning_objective": "विद्यार्थी मानव नेत्र के कॉर्निया, परितारिका, पुतली, अभिनेत्र लेंस तथा दृष्टिपटल के कार्य पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "drishtipatal-par-pratibimb",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि दृष्टिपटल पर उल्टा वास्तविक प्रतिबिंब बनता है और दृक् तंत्रिका संकेत मस्तिष्क तक ले जाती है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH10-T2",
+   "topic_number": 2,
+   "title": "समंजन क्षमता, निकट-बिंदु तथा दूर-बिंदु",
+   "ncert_sections": "10.1.1",
+   "concepts": [
+    {
+     "concept_tag": "samanjan-kshamata",
+     "learning_objective": "विद्यार्थी पक्ष्माभी पेशियों द्वारा अभिनेत्र लेंस की फोकस दूरी के समायोजन (समंजन) की व्याख्या कर सकेंगे।"
+    },
+    {
+     "concept_tag": "nikat-bindu-door-bindu",
+     "learning_objective": "विद्यार्थी सामान्य नेत्र के निकट-बिंदु (25 cm) तथा दूर-बिंदु (अनंत) बता सकेंगे।"
+    },
+    {
+     "concept_tag": "motiyabind",
+     "learning_objective": "विद्यार्थी मोतियाबिंद की स्थिति और उसके उपचार को पहचान सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH10-T3",
+   "topic_number": 3,
+   "title": "दृष्टि दोष तथा उनका संशोधन",
+   "ncert_sections": "10.2",
+   "concepts": [
+    {
+     "concept_tag": "nikat-drishti-dosh",
+     "learning_objective": "विद्यार्थी निकट-दृष्टि दोष के कारण बताकर अवतल लेंस की क्षमता की गणना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "dirgh-drishti-dosh",
+     "learning_objective": "विद्यार्थी दीर्घ-दृष्टि दोष के संशोधन के लिए उत्तल लेंस की क्षमता की गणना कर सकेंगे।"
+    },
+    {
+     "concept_tag": "jara-doordrishtita",
+     "learning_objective": "विद्यार्थी जरा-दूरदृष्टिता के कारण तथा द्विफोकसी लेंस की संरचना समझा सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH10-T4",
+   "topic_number": 4,
+   "title": "प्रिज़्म से प्रकाश का अपवर्तन",
+   "ncert_sections": "10.3",
+   "concepts": [
+    {
+     "concept_tag": "prism-se-apvartan",
+     "learning_objective": "विद्यार्थी त्रिभुज प्रिज़्म के दोनों अपवर्तक पृष्ठों पर प्रकाश किरण के मुड़ने की दिशा बता सकेंगे।"
+    },
+    {
+     "concept_tag": "vichalan-kon",
+     "learning_objective": "विद्यार्थी प्रिज़्म कोण तथा विचलन कोण को परिभाषित करके काँच के स्लैब से तुलना कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH10-T5",
+   "topic_number": 5,
+   "title": "काँच के प्रिज़्म द्वारा श्वेत प्रकाश का विक्षेपण",
+   "ncert_sections": "10.4",
+   "concepts": [
+    {
+     "concept_tag": "shvet-prakash-ka-vikshepan",
+     "learning_objective": "विद्यार्थी विक्षेपण तथा स्पेक्ट्रम में वर्णों के भिन्न-भिन्न झुकाव की व्याख्या कर सकेंगे।"
+    },
+    {
+     "concept_tag": "spectrum-ka-punaryojan",
+     "learning_objective": "विद्यार्थी न्यूटन के दो प्रिज़्म वाले प्रयोग से श्वेत प्रकाश की प्रकृति का निष्कर्ष निकाल सकेंगे।"
+    },
+    {
+     "concept_tag": "indradhanush",
+     "learning_objective": "विद्यार्थी वर्षा की बूँदों में अपवर्तन, विक्षेपण तथा आंतरिक परावर्तन से इंद्रधनुष बनने की व्याख्या कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH10-T6",
+   "topic_number": 6,
+   "title": "वायुमंडलीय अपवर्तन",
+   "ncert_sections": "10.5",
+   "concepts": [
+    {
+     "concept_tag": "taron-ka-timtimana",
+     "learning_objective": "विद्यार्थी वायुमंडलीय अपवर्तन से तारों के टिमटिमाने और ग्रहों के न टिमटिमाने की व्याख्या कर सकेंगे।"
+    },
+    {
+     "concept_tag": "agrim-suryoday-vilambit-suryast",
+     "learning_objective": "विद्यार्थी अग्रिम सूर्योदय तथा विलंबित सूर्यास्त के कारण और प्रभाव बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHSC1-CH10-T7",
+   "topic_number": 7,
+   "title": "प्रकाश का प्रकीर्णन",
+   "ncert_sections": "10.6, 10.6.1, 10.6.2",
+   "concepts": [
+    {
+     "concept_tag": "tyndall-prabhav",
+     "learning_objective": "विद्यार्थी टिंडल प्रभाव तथा कणों के साइज़ पर प्रकीर्णित प्रकाश के वर्ण की निर्भरता समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "aakash-ka-neela-rang",
+     "learning_objective": "विद्यार्थी प्रकीर्णन से आकाश के नीले रंग और लाल खतरा-संकेत की व्याख्या कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

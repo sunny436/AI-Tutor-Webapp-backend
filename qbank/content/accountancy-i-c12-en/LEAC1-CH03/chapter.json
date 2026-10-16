@@ -1,0 +1,140 @@
+{
+ "chapter_id": "LEAC1-CH03",
+ "title": "Reconstitution of a Partnership Firm – Retirement/Death of a Partner",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LEAC1-CH03-T1",
+   "topic_number": 1,
+   "title": "Amount due to a retiring or deceased partner",
+   "ncert_sections": "3.1",
+   "concepts": [
+    {
+     "concept_tag": "claims-of-outgoing-partner",
+     "learning_objective": "Identify the items that are credited to a retiring or deceased partner when ascertaining the amount due."
+    },
+    {
+     "concept_tag": "deductions-from-outgoing-partner-claim",
+     "learning_objective": "Identify the items deducted from the claim of a retiring or deceased partner and compute the net amount due."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH03-T2",
+   "topic_number": 2,
+   "title": "New profit sharing ratio and gaining ratio",
+   "ncert_sections": "3.2, 3.3",
+   "concepts": [
+    {
+     "concept_tag": "new-profit-sharing-ratio",
+     "learning_objective": "Calculate the new profit sharing ratio of continuing partners after retirement or death of a partner."
+    },
+    {
+     "concept_tag": "gaining-ratio",
+     "learning_objective": "Calculate the gaining ratio as new share minus old share and interpret a gain or sacrifice."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH03-T3",
+   "topic_number": 3,
+   "title": "Treatment of goodwill",
+   "ncert_sections": "3.4, 3.4.1, 3.4.2",
+   "concepts": [
+    {
+     "concept_tag": "goodwill-adjustment-gaining-ratio",
+     "learning_objective": "Adjust the retiring partner's share of goodwill through the gaining partners' capital accounts."
+    },
+    {
+     "concept_tag": "existing-goodwill-write-off",
+     "learning_objective": "Write off goodwill already appearing in the books among all partners in the old ratio."
+    },
+    {
+     "concept_tag": "hidden-goodwill",
+     "learning_objective": "Compute hidden goodwill when a lump sum paid exceeds the amount due to the outgoing partner."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH03-T4",
+   "topic_number": 4,
+   "title": "Revaluation of assets and liabilities and accumulated profits and losses",
+   "ncert_sections": "3.5, 3.6",
+   "concepts": [
+    {
+     "concept_tag": "revaluation-account",
+     "learning_objective": "Prepare the Revaluation Account and distribute the gain or loss among all partners in the old ratio."
+    },
+    {
+     "concept_tag": "accumulated-profits-and-losses",
+     "learning_objective": "Transfer reserves and accumulated losses to all partners' capital accounts in the old ratio."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH03-T5",
+   "topic_number": 5,
+   "title": "Share of profit up to the date of retirement or death",
+   "ncert_sections": "3.6, 3.9",
+   "concepts": [
+    {
+     "concept_tag": "intervening-period-profit",
+     "learning_objective": "Calculate an outgoing partner's share of profit for the intervening period on time, average-profit or sales basis."
+    },
+    {
+     "concept_tag": "profit-and-loss-suspense",
+     "learning_objective": "Record the outgoing partner's share of profit through Profit and Loss Suspense Account and close it."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH03-T6",
+   "topic_number": 6,
+   "title": "Disposal of amount due to retiring partner",
+   "ncert_sections": "3.7",
+   "concepts": [
+    {
+     "concept_tag": "section-37-entitlement",
+     "learning_objective": "State the outgoing partner's entitlement under Section 37 of the Indian Partnership Act, 1932."
+    },
+    {
+     "concept_tag": "retiring-partner-loan-account",
+     "learning_objective": "Prepare the retiring partner's loan account for payment in instalments with interest."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH03-T7",
+   "topic_number": 7,
+   "title": "Adjustment of partners' capitals",
+   "ncert_sections": "3.8",
+   "concepts": [
+    {
+     "concept_tag": "new-capital-in-profit-ratio",
+     "learning_objective": "Determine the new capital of each continuing partner in the new profit sharing ratio."
+    },
+    {
+     "concept_tag": "cash-brought-in-or-withdrawn",
+     "learning_objective": "Compute and record the cash to be brought in or withdrawn by continuing partners."
+    }
+   ]
+  },
+  {
+   "topic_id": "LEAC1-CH03-T8",
+   "topic_number": 8,
+   "title": "Death of a partner and the executors' account",
+   "ncert_sections": "3.9",
+   "concepts": [
+    {
+     "concept_tag": "deceased-partner-claim",
+     "learning_objective": "Compute the components of a deceased partner's claim up to the date of death."
+    },
+    {
+     "concept_tag": "executors-account",
+     "learning_objective": "Transfer the deceased partner's claim to the executors' account and settle it."
+    }
+   ]
+  }
+ ]
+}

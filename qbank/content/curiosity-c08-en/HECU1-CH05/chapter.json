@@ -1,0 +1,136 @@
+{
+ "chapter_id": "HECU1-CH05",
+ "title": "Exploring Forces",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HECU1-CH05-T1",
+   "topic_number": 1,
+   "title": "What is a force and what it can do",
+   "ncert_sections": "5.1, 5.2",
+   "concepts": [
+    {
+     "concept_tag": "force-as-push-or-pull",
+     "learning_objective": "Define force as a push or a pull applied on an object."
+    },
+    {
+     "concept_tag": "effects-of-force",
+     "learning_objective": "Identify how a force can start motion, change speed or direction, or change shape."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH05-T2",
+   "topic_number": 2,
+   "title": "Forces as an interaction between objects",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "force-interaction",
+     "learning_objective": "Explain that a force arises only when at least two objects interact, each feeling a force."
+    },
+    {
+     "concept_tag": "si-unit-of-force",
+     "learning_objective": "State and correctly write the SI unit of force, the newton (N)."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH05-T3",
+   "topic_number": 3,
+   "title": "Contact forces and muscular force",
+   "ncert_sections": "5.4.1",
+   "concepts": [
+    {
+     "concept_tag": "contact-force",
+     "learning_objective": "Recognise contact forces as those acting through direct or indirect physical contact."
+    },
+    {
+     "concept_tag": "muscular-force",
+     "learning_objective": "Describe muscular force and its use by humans and animals, inside and outside the body."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH05-T4",
+   "topic_number": 4,
+   "title": "Friction",
+   "ncert_sections": "5.4.1",
+   "concepts": [
+    {
+     "concept_tag": "friction-opposes-motion",
+     "learning_objective": "Explain that friction arises from surface irregularities and opposes motion or attempted motion."
+    },
+    {
+     "concept_tag": "friction-surfaces-and-fluids",
+     "learning_objective": "Relate the size of friction to the nature of surfaces and to motion through air and water."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH05-T5",
+   "topic_number": 5,
+   "title": "Non-contact forces: magnetic and electrostatic",
+   "ncert_sections": "5.4.2",
+   "concepts": [
+    {
+     "concept_tag": "magnetic-force",
+     "learning_objective": "Describe magnetic force as a non-contact force of attraction or repulsion between magnets."
+    },
+    {
+     "concept_tag": "electrostatic-force",
+     "learning_objective": "Explain electrostatic force between charged objects and the rule that like charges repel and unlike attract."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH05-T6",
+   "topic_number": 6,
+   "title": "Gravitational force and vertical motion",
+   "ncert_sections": "5.4.2",
+   "concepts": [
+    {
+     "concept_tag": "gravitational-force",
+     "learning_objective": "State that gravity is the Earth's always-attractive, non-contact pull on objects."
+    },
+    {
+     "concept_tag": "vertical-motion",
+     "learning_objective": "Describe how speed and direction change when an object moves up and down under gravity."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH05-T7",
+   "topic_number": 7,
+   "title": "Weight and its measurement",
+   "ncert_sections": "5.5",
+   "concepts": [
+    {
+     "concept_tag": "weight-and-spring-balance",
+     "learning_objective": "Define weight as a force and read a spring balance using its range and smallest division."
+    },
+    {
+     "concept_tag": "mass-versus-weight",
+     "learning_objective": "Distinguish mass, which stays the same, from weight, which depends on where the object is."
+    }
+   ]
+  },
+  {
+   "topic_id": "HECU1-CH05-T8",
+   "topic_number": 8,
+   "title": "Upthrust, floating and sinking",
+   "ncert_sections": "5.5, 5.6",
+   "concepts": [
+    {
+     "concept_tag": "buoyant-force",
+     "learning_objective": "Describe the buoyant force (upthrust) that a liquid applies upward on an object."
+    },
+    {
+     "concept_tag": "floating-and-sinking",
+     "learning_objective": "Predict floating or sinking by comparing the gravitational force with the buoyant force."
+    }
+   ]
+  }
+ ]
+}

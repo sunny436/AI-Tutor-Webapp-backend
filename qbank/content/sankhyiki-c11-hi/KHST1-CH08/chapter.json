@@ -1,0 +1,88 @@
+{
+ "chapter_id": "KHST1-CH08",
+ "title": "सांख्यिकीय विधियों के उपयोग",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHST1-CH08-T1",
+   "topic_number": 1,
+   "title": "परियोजना की शुरुआत: समस्या और लक्षित समूह की पहचान",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "samasya-ki-pahchan",
+     "learning_objective": "परियोजना के पहले चरण के रूप में अध्ययन की समस्या या क्षेत्र तथा उद्देश्य को स्पष्ट रूप से पहचानना।"
+    },
+    {
+     "concept_tag": "lakshit-samooh",
+     "learning_objective": "विषय के अनुसार उपयुक्त लक्षित समूह चुनने का महत्व समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH08-T2",
+   "topic_number": 2,
+   "title": "आँकड़ों का संग्रह",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "prathmik-dwitiyak-aankde",
+     "learning_objective": "सर्वेक्षण के उद्देश्य के अनुसार प्राथमिक, द्वितीयक या दोनों प्रकार के आँकड़ों के चयन को समझना।"
+    },
+    {
+     "concept_tag": "prashnavali-sakshatkar",
+     "learning_objective": "प्रश्नावली, साक्षात्कार अनुसूची और डाक प्रश्नावली के साथ आवरण पत्र की भूमिका समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH08-T3",
+   "topic_number": 3,
+   "title": "आँकड़ों का संगठन, विश्लेषण और निष्कर्ष",
+   "ncert_sections": "1",
+   "concepts": [
+    {
+     "concept_tag": "sangathan-prastutikaran",
+     "learning_objective": "सारणीयन और आरेखों द्वारा आँकड़ों के संगठन एवं प्रस्तुतीकरण को समझना।"
+    },
+    {
+     "concept_tag": "vishleshan-nirvachan",
+     "learning_objective": "केंद्रीय प्रवृत्ति, परिक्षेपण और सहसंबंध के मापों का परियोजना विश्लेषण में उपयोग पहचानना।"
+    },
+    {
+     "concept_tag": "nishkarsh-granthsuchi",
+     "learning_objective": "निष्कर्ष निकालने और ग्रंथसूची में द्वितीयक स्रोतों के उल्लेख का महत्व समझना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH08-T4",
+   "topic_number": 4,
+   "title": "सुझाई गई परियोजनाएँ",
+   "ncert_sections": "2",
+   "concepts": [
+    {
+     "concept_tag": "pariyojana-vishay-chayan",
+     "learning_objective": "आर्थिक मुद्दों से जुड़ी परियोजनाओं के लिए उद्देश्य, लक्षित समूह और आँकड़ों का प्रकार तय करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHST1-CH08-T5",
+   "topic_number": 5,
+   "title": "नमूना परियोजना: टूथपेस्ट का कारखाना",
+   "ncert_sections": "3",
+   "concepts": [
+    {
+     "concept_tag": "namuna-prashnavali",
+     "learning_objective": "नमूना परियोजना की प्रश्नावली द्वारा आवश्यक सूचना जुटाने की विधि समझना।"
+    },
+    {
+     "concept_tag": "namuna-vishleshan",
+     "learning_objective": "नमूना परियोजना के आँकड़ों से माध्य, मानक विचलन और प्रेक्षणों की गणना एवं व्याख्या करना।"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "chapter_id": "KHGY3-CH02",
+ "title": "मानचित्र मापनी",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHGY3-CH02-T1",
+   "topic_number": 1,
+   "title": "मापनी का अर्थ और मापन की पद्धतियाँ",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "mapni-ka-arth",
+     "learning_objective": "मानचित्र मापनी को मानचित्र दूरी और धरातलीय दूरी के अनुपात के रूप में समझना।"
+    },
+    {
+     "concept_tag": "mapan-paddhatiyan",
+     "learning_objective": "मापन की मीट्रिक और अंग्रेज़ी पद्धतियों की इकाइयों और उनके संबंधों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH02-T2",
+   "topic_number": 2,
+   "title": "मापनी का कथन और आलेखी मापनी",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "mapni-ka-kathan",
+     "learning_objective": "मापनी के कथन की विधि, उसकी सरलता और सीमाओं को समझना।"
+    },
+    {
+     "concept_tag": "aalekhi-mapni",
+     "learning_objective": "आलेखी या दंड मापनी की विशेषता और मानचित्र छोटा-बड़ा होने पर उसकी वैधता को समझाना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH02-T3",
+   "topic_number": 3,
+   "title": "निरूपक भिन्न",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "nirupak-bhinn",
+     "learning_objective": "निरूपक भिन्न का अर्थ और उसके सार्वभौमिक होने का कारण समझना।"
+    },
+    {
+     "concept_tag": "ansh-aur-har",
+     "learning_objective": "निरूपक भिन्न में अंश और हर द्वारा दर्शाई गई दूरियों को पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH02-T4",
+   "topic_number": 4,
+   "title": "मापनी का रूपांतरण",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "kathan-se-nirupak-bhinn",
+     "learning_objective": "मापनी के कथन को निरूपक भिन्न में बदलना।"
+    },
+    {
+     "concept_tag": "nirupak-bhinn-se-kathan",
+     "learning_objective": "निरूपक भिन्न को मीट्रिक या अंग्रेज़ी पद्धति के कथन में बदलना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHGY3-CH02-T5",
+   "topic_number": 5,
+   "title": "आलेखी मापनी की रचना",
+   "ncert_sections": null,
+   "concepts": [
+    {
+     "concept_tag": "aalekhi-rachna-ganana",
+     "learning_objective": "दिए गए निरूपक भिन्न या कथन से आलेखी मापनी की रेखा की लंबाई की गणना करना।"
+    },
+    {
+     "concept_tag": "prathmik-dwitiyak-bhag",
+     "learning_objective": "आलेखी मापनी के प्राथमिक और द्वितीयक भागों तथा असमान रेखा को बराबर भागों में बाँटने की विधि लागू करना।"
+    }
+   ]
+  }
+ ]
+}

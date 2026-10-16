@@ -1,0 +1,120 @@
+{
+ "chapter_id": "JHVA1-CH01",
+ "title": "वर्ण विचार",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "JHVA1-CH01-T1",
+   "topic_number": 1,
+   "title": "माहेश्वरसूत्राणि",
+   "ncert_sections": "माहेश्वरसूत्र (14 सूत्र)",
+   "concepts": [
+    {
+     "concept_tag": "maheshvara-sutra-utpattih",
+     "learning_objective": "विद्यार्थी माहेश्वरसूत्रों की संख्या और उनकी उत्पत्ति की परम्परा बता सकेंगे।"
+    },
+    {
+     "concept_tag": "sutra-kramah",
+     "learning_objective": "विद्यार्थी चौदह सूत्रों का क्रम और उनमें आए वर्ण पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "antya-hal-varnah",
+     "learning_objective": "विद्यार्थी समझा सकेंगे कि प्रत्येक सूत्र के अन्त में हल् वर्ण किस उद्देश्य से रखा गया है।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH01-T2",
+   "topic_number": 2,
+   "title": "प्रत्याहाराः",
+   "ncert_sections": "प्रत्याहार",
+   "concepts": [
+    {
+     "concept_tag": "pratyahara-niyamah",
+     "learning_objective": "विद्यार्थी प्रत्याहार बनाने का नियम (आदि वर्ण गृहीत, अन्तिम हल् वर्ण त्यक्त) बता सकेंगे।"
+    },
+    {
+     "concept_tag": "pratyahara-varnaganana",
+     "learning_objective": "विद्यार्थी किसी प्रत्याहार में आने वाले वर्ण गिनकर लिख सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH01-T3",
+   "topic_number": 3,
+   "title": "स्वराः",
+   "ncert_sections": "स्वर (अच्): ह्रस्व, दीर्घ, प्लुत; अनुनासिक-निरनुनासिक",
+   "concepts": [
+    {
+     "concept_tag": "svara-paribhasha-matra",
+     "learning_objective": "विद्यार्थी स्वर की परिभाषा तथा मात्रा के आधार पर ह्रस्व, दीर्घ और प्लुत भेद समझा सकेंगे।"
+    },
+    {
+     "concept_tag": "sanyukta-svarah",
+     "learning_objective": "विद्यार्थी ए, ऐ, ओ, औ को दो स्वरों के मेल से बने संयुक्त स्वर के रूप में पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "anunasika-niranunasika",
+     "learning_objective": "विद्यार्थी अनुनासिक और निरनुनासिक स्वरों में भेद कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH01-T4",
+   "topic_number": 4,
+   "title": "व्यञ्जनानि",
+   "ncert_sections": "व्यञ्जन (हल्): स्पर्श, अन्तःस्थ, ऊष्म; अनुस्वार, विसर्ग, संयुक्त व्यञ्जन",
+   "concepts": [
+    {
+     "concept_tag": "sparsha-vargah",
+     "learning_objective": "विद्यार्थी स्पर्श वर्णों और कु, चु, टु, तु, पु वर्गों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "antahstha-ushma",
+     "learning_objective": "विद्यार्थी अन्तःस्थ और ऊष्म वर्णों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "anusvara-visarga-sanyukta",
+     "learning_objective": "विद्यार्थी अनुस्वार, विसर्ग और संयुक्त व्यञ्जनों की विशेषताएँ बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH01-T5",
+   "topic_number": 5,
+   "title": "उच्चारणस्थानानि",
+   "ncert_sections": "उच्चारण स्थान",
+   "concepts": [
+    {
+     "concept_tag": "varna-sthana-nirdharanam",
+     "learning_objective": "विद्यार्थी किसी वर्ण का उच्चारण स्थान बता सकेंगे।"
+    },
+    {
+     "concept_tag": "dvisthana-varnah",
+     "learning_objective": "विद्यार्थी दो स्थानों से उच्चरित होने वाले वर्णों को पहचान सकेंगे।"
+    },
+    {
+     "concept_tag": "visarga-bhedah",
+     "learning_objective": "विद्यार्थी विसर्ग के भेद उपध्मानीय और जिह्वामूलीय का स्थान बता सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "JHVA1-CH01-T6",
+   "topic_number": 6,
+   "title": "प्रयत्नाः",
+   "ncert_sections": "प्रयत्न: आभ्यन्तर और बाह्य",
+   "concepts": [
+    {
+     "concept_tag": "abhyantara-prayatnah",
+     "learning_objective": "विद्यार्थी आभ्यन्तर प्रयत्न के पाँच भेद और उनसे उच्चरित वर्ण बता सकेंगे।"
+    },
+    {
+     "concept_tag": "bahya-prayatnah",
+     "learning_objective": "विद्यार्थी बाह्य प्रयत्नों के आधार पर वर्णों का वर्गीकरण कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

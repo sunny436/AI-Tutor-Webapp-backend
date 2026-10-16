@@ -1,0 +1,120 @@
+{
+ "chapter_id": "KHCH1-CH01",
+ "title": "रसायन विज्ञान की कुछ मूल अवधारणाएँ",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHCH1-CH01-T1",
+   "topic_number": 1,
+   "title": "द्रव्य की प्रकृति एवं वर्गीकरण",
+   "ncert_sections": "1.1, 1.2",
+   "concepts": [
+    {
+     "concept_tag": "dravya-ki-avasthayen",
+     "learning_objective": "द्रव्य की तीनों अवस्थाओं के कणों की व्यवस्था और गुणों में अंतर समझना।"
+    },
+    {
+     "concept_tag": "mishran-aur-shuddh-padarth",
+     "learning_objective": "मिश्रण, तत्व और यौगिक में भेद करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH01-T2",
+   "topic_number": 2,
+   "title": "द्रव्य के गुण एवं उनका मापन",
+   "ncert_sections": "1.3",
+   "concepts": [
+    {
+     "concept_tag": "si-matrak",
+     "learning_objective": "अंतरराष्ट्रीय मात्रक पद्धति के मूल मात्रक और पूर्वलग्न पहचानना।"
+    },
+    {
+     "concept_tag": "ghanatva-aur-taap",
+     "learning_objective": "घनत्व, द्रव्यमान-भार और ताप के मापक्रमों से संबंधित गणनाएँ करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH01-T3",
+   "topic_number": 3,
+   "title": "मापन में अनिश्चितता",
+   "ncert_sections": "1.4",
+   "concepts": [
+    {
+     "concept_tag": "sarthak-ank",
+     "learning_objective": "सार्थक अंकों की गिनती, पूर्णांकन और वैज्ञानिक संकेतन करना।"
+    },
+    {
+     "concept_tag": "parishuddhata-yatharthata",
+     "learning_objective": "परिशुद्धता और यथार्थता में अंतर करना तथा विमीय विश्लेषण से मात्रक बदलना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH01-T4",
+   "topic_number": 4,
+   "title": "रासायनिक संयोजन के नियम एवं डाल्टन का परमाणु सिद्धांत",
+   "ncert_sections": "1.5, 1.6",
+   "concepts": [
+    {
+     "concept_tag": "sanyojan-ke-niyam",
+     "learning_objective": "द्रव्यमान संरक्षण, स्थिर अनुपात, गुणित अनुपात, गेलूसैक तथा आवोगाद्रो के नियम लागू करना।"
+    },
+    {
+     "concept_tag": "dalton-parmanu-siddhant",
+     "learning_objective": "डाल्टन के परमाणु सिद्धांत की मान्यताएँ बताना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH01-T5",
+   "topic_number": 5,
+   "title": "परमाणु एवं आण्विक द्रव्यमान तथा मोल संकल्पना",
+   "ncert_sections": "1.7, 1.8",
+   "concepts": [
+    {
+     "concept_tag": "ausat-parmanu-dravyaman",
+     "learning_objective": "समस्थानिकों की प्रचुरता से औसत परमाणु द्रव्यमान ज्ञात करना।"
+    },
+    {
+     "concept_tag": "mol-sankalpana",
+     "learning_objective": "मोल, आवोगाद्रो संख्या और मोलर द्रव्यमान के संबंध से गणना करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH01-T6",
+   "topic_number": 6,
+   "title": "प्रतिशत संघटन तथा मूलानुपाती और आण्विक सूत्र",
+   "ncert_sections": "1.9",
+   "concepts": [
+    {
+     "concept_tag": "pratishat-sanghatan",
+     "learning_objective": "किसी यौगिक में तत्वों का द्रव्यमान प्रतिशत ज्ञात करना।"
+    },
+    {
+     "concept_tag": "mulanupati-sutra",
+     "learning_objective": "प्रतिशत संघटन से मूलानुपाती और आण्विक सूत्र निकालना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHCH1-CH01-T7",
+   "topic_number": 7,
+   "title": "रससमीकरणमिति एवं रससमीकरणमितीय गणनाएँ",
+   "ncert_sections": "1.10",
+   "concepts": [
+    {
+     "concept_tag": "simant-abhikarmak",
+     "learning_objective": "संतुलित समीकरण से उत्पाद की मात्रा और सीमांत अभिकर्मक ज्ञात करना।"
+    },
+    {
+     "concept_tag": "vilayan-ki-sandrata",
+     "learning_objective": "मोलरता, मोललता और मोल अंश से विलयन की सांद्रता व्यक्त करना।"
+    }
+   ]
+  }
+ ]
+}

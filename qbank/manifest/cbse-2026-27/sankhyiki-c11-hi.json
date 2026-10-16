@@ -1,0 +1,893 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "sankhyiki-c11-hi",
+  "curriculum": "cbse",
+  "class_level": 11,
+  "subject_code": "economics",
+  "language": "hindi",
+  "title": "Sankhyiki",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "khst1"
+ },
+ "chapters": [
+  {
+   "chapter_id": "KHST1-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "परिचय",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khst101.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHST1-CH01-T1",
+     "topic_number": 1,
+     "title": "अर्थशास्त्र क्यों? आर्थिक क्रियाएँ",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "arthik-kriyaen",
+       "learning_objective": "विद्यार्थी मौद्रिक लाभ के लिए की जाने वाली आर्थिक क्रियाओं को अन्य क्रियाओं से अलग पहचानता है।"
+      },
+      {
+       "concept_tag": "upbhokta-utpadak-karmachari",
+       "learning_objective": "विद्यार्थी उपभोक्ता, विक्रेता, उत्पादक, कर्मचारी और नियोक्ता की भूमिकाओं में अंतर करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH01-T2",
+     "topic_number": 2,
+     "title": "दुर्लभता और चुनाव की समस्या",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "durlabhata",
+       "learning_objective": "विद्यार्थी असीमित इच्छाओं और सीमित साधनों से उत्पन्न दुर्लभता को सभी आर्थिक समस्याओं की जड़ के रूप में समझाता है।"
+      },
+      {
+       "concept_tag": "vaikalpik-upyog",
+       "learning_objective": "विद्यार्थी संसाधनों के वैकल्पिक उपयोग से उत्पन्न चुनाव की समस्या को उदाहरण सहित स्पष्ट करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH01-T3",
+     "topic_number": 3,
+     "title": "उपभोग, उत्पादन, वितरण और अर्थशास्त्र की परिभाषा",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "upbhog-utpadan-vitaran",
+       "learning_objective": "विद्यार्थी अर्थशास्त्र के तीन परंपरागत भागों उपभोग, उत्पादन और वितरण को पहचानता है।"
+      },
+      {
+       "concept_tag": "arthashastra-paribhasha",
+       "learning_objective": "विद्यार्थी दुर्लभ और वैकल्पिक उपयोग वाले संसाधनों पर आधारित अर्थशास्त्र की परिभाषा तथा उसमें सांख्यिकी की आवश्यकता को समझाता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH01-T4",
+     "topic_number": 4,
+     "title": "अर्थशास्त्र में सांख्यिकी और सांख्यिकी का अर्थ",
+     "ncert_sections": "2, 3",
+     "concepts": [
+      {
+       "concept_tag": "ankde-vishleshan-niti",
+       "learning_objective": "विद्यार्थी आर्थिक आँकड़ों, समस्या के विश्लेषण और नीति-निर्माण के संबंध को समझाता है।"
+      },
+      {
+       "concept_tag": "matratmak-gunatmak-ankde",
+       "learning_objective": "विद्यार्थी मात्रात्मक और गुणात्मक आँकड़ों में अंतर करता है।"
+      },
+      {
+       "concept_tag": "sankhyiki-arth-charan",
+       "learning_objective": "विद्यार्थी सांख्यिकी का अर्थ और उसके संग्रह, प्रस्तुतीकरण, संक्षेपण तथा विश्लेषण के चरण बताता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH01-T5",
+     "topic_number": 5,
+     "title": "सांख्यिकी क्या करती है और निष्कर्ष",
+     "ncert_sections": "4, 5",
+     "concepts": [
+      {
+       "concept_tag": "sankhyiki-karya",
+       "learning_objective": "विद्यार्थी तथ्यों को सटीक बनाने, आँकड़ों के संक्षेपण, संबंधों के परीक्षण और पूर्वानुमान में सांख्यिकी के कार्यों का विश्लेषण करता है।"
+      },
+      {
+       "concept_tag": "sankhyiki-aur-samanya-buddhi",
+       "learning_objective": "विद्यार्थी मूल्यांकन करता है कि सांख्यिकीय विधियाँ सामान्य बुद्धि का विकल्प नहीं हैं।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHST1-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "आँकड़ों का संग्रह",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khst102.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHST1-CH02-T1",
+     "topic_number": 1,
+     "title": "आँकड़े, चर और आँकड़ों के स्रोत",
+     "ncert_sections": "1, 2",
+     "concepts": [
+      {
+       "concept_tag": "aankde-aur-char",
+       "learning_objective": "आँकड़ों, चर और प्रेक्षण का अर्थ समझना।"
+      },
+      {
+       "concept_tag": "prathmik-dwitiyak-aankde",
+       "learning_objective": "प्राथमिक और द्वितीयक आँकड़ों में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH02-T2",
+     "topic_number": 2,
+     "title": "सर्वेक्षण का उपकरण: प्रश्नावली का निर्माण",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "prashnavali-nirman",
+       "learning_objective": "अच्छी प्रश्नावली बनाने के नियमों को लागू करना।"
+      },
+      {
+       "concept_tag": "band-aur-khule-prashn",
+       "learning_objective": "संवृत (बंद) और विवृत (खुले) प्रश्नों के गुण-दोषों की तुलना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH02-T3",
+     "topic_number": 3,
+     "title": "आँकड़ा संग्रह की विधियाँ और पायलट सर्वेक्षण",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "sangrah-vidhiyan",
+       "learning_objective": "वैयक्तिक साक्षात्कार, डाक प्रश्नावली और टेलीफ़ोन साक्षात्कार के गुण-दोष पहचानना।"
+      },
+      {
+       "concept_tag": "pilot-sarvekshan",
+       "learning_objective": "पायलट सर्वेक्षण (पूर्व-परीक्षण) का उद्देश्य समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH02-T4",
+     "topic_number": 4,
+     "title": "जनगणना और प्रतिदर्श सर्वेक्षण",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "janganana-vidhi",
+       "learning_objective": "जनगणना अथवा संपूर्ण गणना विधि का अर्थ समझना।"
+      },
+      {
+       "concept_tag": "samashti-aur-pratidarsh",
+       "learning_objective": "समष्टि और प्रतिदर्श की पहचान करना तथा प्रतिदर्श सर्वेक्षण के लाभ बताना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH02-T5",
+     "topic_number": 5,
+     "title": "यादृच्छिक और अयादृच्छिक प्रतिचयन",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "yadrichhik-pratichayan",
+       "learning_objective": "यादृच्छिक प्रतिचयन और लॉटरी विधि को समझना तथा लागू करना।"
+      },
+      {
+       "concept_tag": "ayadrichhik-pratichayan",
+       "learning_objective": "अयादृच्छिक प्रतिचयन में अन्वेषक के निर्णय की भूमिका पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH02-T6",
+     "topic_number": 6,
+     "title": "प्रतिचयन और अप्रतिचयन त्रुटियाँ",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "pratichayan-truti",
+       "learning_objective": "प्रतिचयन त्रुटि का अर्थ समझना और उसकी गणना करना।"
+      },
+      {
+       "concept_tag": "apratichayan-truti",
+       "learning_objective": "अप्रतिचयन त्रुटियों के प्रकार पहचानना और उनकी गंभीरता का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH02-T7",
+     "topic_number": 7,
+     "title": "भारत की जनगणना और राष्ट्रीय प्रतिदर्श सर्वेक्षण",
+     "ncert_sections": "6",
+     "concepts": [
+      {
+       "concept_tag": "bharat-ki-janganana",
+       "learning_objective": "भारत की जनगणना द्वारा एकत्र जनांकिकीय आँकड़ों को जानना।"
+      },
+      {
+       "concept_tag": "rashtriya-pratidarsh-sarvekshan",
+       "learning_objective": "राष्ट्रीय प्रतिदर्श सर्वेक्षण के कार्यों और प्रकाशनों को पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHST1-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "आँकड़ों का संगठन",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khst103.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHST1-CH03-T1",
+     "topic_number": 1,
+     "title": "कच्चे आँकड़े और वर्गीकरण की आवश्यकता",
+     "ncert_sections": "1, 2",
+     "concepts": [
+      {
+       "concept_tag": "kachche-aankde",
+       "learning_objective": "कच्चे या अवर्गीकृत आँकड़ों की पहचान करना और उनकी सीमाएँ समझना।"
+      },
+      {
+       "concept_tag": "vargikaran-uddeshya",
+       "learning_objective": "आँकड़ों के वर्गीकरण के उद्देश्य और लाभ को स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH03-T2",
+     "topic_number": 2,
+     "title": "आँकड़ों का वर्गीकरण",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "kalanukramik-sthanik",
+       "learning_objective": "कालानुक्रमिक और स्थानिक वर्गीकरण में अंतर करना।"
+      },
+      {
+       "concept_tag": "gunatmak-matratmak",
+       "learning_objective": "गुणात्मक और मात्रात्मक वर्गीकरण को उदाहरणों द्वारा पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH03-T3",
+     "topic_number": 3,
+     "title": "चर: संतत और विविक्त",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "santat-char",
+       "learning_objective": "संतत चर की विशेषता समझना और उसके उदाहरण पहचानना।"
+      },
+      {
+       "concept_tag": "vivikt-char",
+       "learning_objective": "विविक्त चर को परिभाषित करना और उसे संतत चर से अलग करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH03-T4",
+     "topic_number": 4,
+     "title": "बारंबारता वितरण और उसके पद",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "varg-seema-antaral",
+       "learning_objective": "वर्ग सीमाओं और वर्ग अंतराल को पहचानना और ज्ञात करना।"
+      },
+      {
+       "concept_tag": "varg-chihn",
+       "learning_objective": "वर्ग मध्य-बिंदु या वर्ग चिह्न की गणना करना।"
+      },
+      {
+       "concept_tag": "barambarta-vakra-sapeksh",
+       "learning_objective": "बारंबारता वक्र और सापेक्ष बारंबारता की अवधारणा को लागू करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH03-T5",
+     "topic_number": 5,
+     "title": "बारंबारता वितरण की रचना",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "samaveshi-apvarji",
+       "learning_objective": "समावेशी और अपवर्जी वर्ग अंतरालों में अंतर करना।"
+      },
+      {
+       "concept_tag": "varg-samayojan",
+       "learning_objective": "वर्ग अंतराल में समायोजन द्वारा आँकड़ों की निरंतरता स्थापित करना।"
+      },
+      {
+       "concept_tag": "milan-chihn-suchna-hani",
+       "learning_objective": "मिलान चिह्नों से वर्ग बारंबारता ज्ञात करना और सूचना की हानि को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH03-T6",
+     "topic_number": 6,
+     "title": "असमान वर्ग, बारंबारता सरणी और द्विचर बारंबारता वितरण",
+     "ncert_sections": "5, 6",
+     "concepts": [
+      {
+       "concept_tag": "asaman-varg",
+       "learning_objective": "असमान वर्ग अंतरालों के उपयोग का औचित्य समझना।"
+      },
+      {
+       "concept_tag": "barambarta-sarani",
+       "learning_objective": "विविक्त चर के लिए बारंबारता सरणी को पहचानना।"
+      },
+      {
+       "concept_tag": "dvichar-vitaran",
+       "learning_objective": "द्विचर बारंबारता वितरण की व्याख्या करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHST1-CH04",
+   "chapter_number": 4,
+   "old_chapter_number": null,
+   "title": "आँकड़ों का प्रस्तुतीकरण",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khst104.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHST1-CH04-T1",
+     "topic_number": 1,
+     "title": "आँकड़ों के प्रस्तुतीकरण के रूप और पाठ्य प्रस्तुतीकरण",
+     "ncert_sections": "1, 2",
+     "concepts": [
+      {
+       "concept_tag": "prastutikaran-ke-roop",
+       "learning_objective": "आँकड़ों के प्रस्तुतीकरण के तीन रूपों—पाठ्य, सारणीय और आरेखी—को पहचानना।"
+      },
+      {
+       "concept_tag": "pathya-prastutikaran",
+       "learning_objective": "पाठ्य प्रस्तुतीकरण की उपयुक्तता और उसकी सीमाओं को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH04-T2",
+     "topic_number": 2,
+     "title": "सारणीय प्रस्तुतीकरण और वर्गीकरण के प्रकार",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "sarni-panktiyan-stambh",
+       "learning_objective": "सारणी की पंक्तियों, स्तंभों और कोष्ठों की संरचना समझना।"
+      },
+      {
+       "concept_tag": "vargikaran-prakar",
+       "learning_objective": "गुणात्मक, मात्रात्मक, कालिक और स्थानिक वर्गीकरण में अंतर करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH04-T3",
+     "topic_number": 3,
+     "title": "आँकड़ों का सारणीयन और सारणी के भाग",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "sarni-ke-bhag",
+       "learning_objective": "एक अच्छी सांख्यिकीय सारणी के आवश्यक भागों और उनके स्थान को पहचानना।"
+      },
+      {
+       "concept_tag": "sarni-nirman",
+       "learning_objective": "दिए गए विवरण से सारणी के भागों का उचित उपयोग करके सारणी बनाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH04-T4",
+     "topic_number": 4,
+     "title": "ज्यामितीय आरेख: दंड आरेख और वृत्त आरेख",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "dand-aarekh",
+       "learning_objective": "सरल, बहुगुणी और घटक दंड आरेखों के उपयोग में अंतर करना।"
+      },
+      {
+       "concept_tag": "vritt-aarekh",
+       "learning_objective": "घटकों के प्रतिशत को वृत्त आरेख के कोणों में बदलना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH04-T5",
+     "topic_number": 5,
+     "title": "आवृत्ति आरेख: आयतचित्र, आवृत्ति बहुभुज, आवृत्ति वक्र और तोरण",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "aayatchitra",
+       "learning_objective": "आयतचित्र की रचना, असमान वर्ग-अंतराल में आवृत्ति घनत्व और दंड आरेख से उसका अंतर समझना।"
+      },
+      {
+       "concept_tag": "aavritti-bahubhuj-vakra",
+       "learning_objective": "आवृत्ति बहुभुज और आवृत्ति वक्र बनाने की विधि समझना।"
+      },
+      {
+       "concept_tag": "toran",
+       "learning_objective": "'से कम' और 'से अधिक' तोरण बनाना और उनसे माध्यिका ज्ञात करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH04-T6",
+     "topic_number": 6,
+     "title": "अंकगणितीय रेखाचित्र और उपयुक्त प्रस्तुतीकरण का चयन",
+     "ncert_sections": "5, 6",
+     "concepts": [
+      {
+       "concept_tag": "ankganitiya-rekhachitra",
+       "learning_objective": "काल श्रेणी आँकड़ों के लिए अंकगणितीय रेखाचित्र की रचना और व्याख्या करना।"
+      },
+      {
+       "concept_tag": "aarekh-chayan",
+       "learning_objective": "दिए गए आँकड़ों के लिए उपयुक्त प्रस्तुतीकरण या आरेख का चयन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHST1-CH05",
+   "chapter_number": 5,
+   "old_chapter_number": null,
+   "title": "केंद्रीय प्रवृत्ति की माप",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khst105.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHST1-CH05-T1",
+     "topic_number": 1,
+     "title": "केंद्रीय प्रवृत्ति की आवश्यकता और प्रमुख औसत",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "kendriya-pravritti-avdharna",
+       "learning_objective": "आँकड़ों को एक प्रतिनिधि मान में संक्षेपित करने की आवश्यकता और तीन प्रमुख औसतों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH05-T2",
+     "topic_number": 2,
+     "title": "समांतर माध्य: अवर्गीकृत आँकड़े",
+     "ncert_sections": "2",
+     "concepts": [
+      {
+       "concept_tag": "samantar-madhya-pratyaksh-vidhi",
+       "learning_objective": "प्रत्यक्ष विधि से अवर्गीकृत आँकड़ों का समांतर माध्य ज्ञात करना।"
+      },
+      {
+       "concept_tag": "kalpit-madhya-vidhi",
+       "learning_objective": "कल्पित माध्य और पद विचलन विधियों से समांतर माध्य की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH05-T3",
+     "topic_number": 3,
+     "title": "वर्गीकृत आँकड़ों का समांतर माध्य और भारित माध्य",
+     "ncert_sections": "2",
+     "concepts": [
+      {
+       "concept_tag": "vargikrit-shrenee-madhya",
+       "learning_objective": "खंडित और सतत श्रेणियों का समांतर माध्य ज्ञात करना।"
+      },
+      {
+       "concept_tag": "bharit-samantar-madhya",
+       "learning_objective": "मदों के सापेक्ष महत्व के अनुसार भारित समांतर माध्य की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH05-T4",
+     "topic_number": 4,
+     "title": "माध्यिका",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "madhyika-avargikrit",
+       "learning_objective": "अवर्गीकृत आँकड़ों में माध्यिका को स्थितिक औसत के रूप में ज्ञात करना।"
+      },
+      {
+       "concept_tag": "madhyika-satat-shrenee",
+       "learning_objective": "सतत श्रेणी में सूत्र द्वारा माध्यिका की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH05-T5",
+     "topic_number": 5,
+     "title": "चतुर्थक और शतमक",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "chaturthak",
+       "learning_objective": "चतुर्थकों द्वारा श्रेणी को चार बराबर भागों में बाँटना और उनकी गणना करना।"
+      },
+      {
+       "concept_tag": "shatmak",
+       "learning_objective": "शतमकों का अर्थ और उनकी व्याख्या समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH05-T6",
+     "topic_number": 6,
+     "title": "बहुलक",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "bahulak-avdharna",
+       "learning_objective": "बहुलक को सर्वाधिक बार आने वाले मान के रूप में पहचानना और उसका उपयोग समझना।"
+      },
+      {
+       "concept_tag": "bahulak-satat-shrenee",
+       "learning_objective": "सतत श्रेणी में सूत्र द्वारा बहुलक की गणना करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH05-T7",
+     "topic_number": 7,
+     "title": "माध्य, माध्यिका और बहुलक की सापेक्ष स्थिति तथा उपयुक्त औसत का चयन",
+     "ncert_sections": "6, 7",
+     "concepts": [
+      {
+       "concept_tag": "sapeksh-sthiti",
+       "learning_objective": "समांतर माध्य, माध्यिका और बहुलक की सापेक्ष स्थिति समझना।"
+      },
+      {
+       "concept_tag": "upyukt-ausat-chayan",
+       "learning_objective": "आँकड़ों की प्रकृति और उद्देश्य के अनुसार उपयुक्त औसत का चयन करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHST1-CH06",
+   "chapter_number": 6,
+   "old_chapter_number": null,
+   "title": "सहसंबंध",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khst106.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHST1-CH06-T1",
+     "topic_number": 1,
+     "title": "सहसंबंध का अर्थ और संबंधों के प्रकार",
+     "ncert_sections": "1, 2",
+     "concepts": [
+      {
+       "concept_tag": "sahsambandh-arth",
+       "learning_objective": "विद्यार्थी समझेगा कि सहसंबंध दो चरों के बीच संबंध की दिशा और तीव्रता मापता है, कार्य-कारण संबंध नहीं।"
+      },
+      {
+       "concept_tag": "sanyog-tritiya-char",
+       "learning_objective": "विद्यार्थी संयोगवश संबंध और किसी तीसरे चर के प्रभाव से बने संबंध को पहचानेगा।"
+      },
+      {
+       "concept_tag": "dhanatmak-rinatmak",
+       "learning_objective": "विद्यार्थी धनात्मक और ऋणात्मक सहसंबंध में अंतर उदाहरणों सहित करेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH06-T2",
+     "topic_number": 2,
+     "title": "प्रकीर्ण आरेख",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "prakirn-aarekh",
+       "learning_objective": "विद्यार्थी प्रकीर्ण आरेख से संबंध की दिशा और निकटता का अनुमान लगाएगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH06-T3",
+     "topic_number": 3,
+     "title": "कार्ल पियरसन का सहसंबंध गुणांक",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "pearson-sutra",
+       "learning_objective": "विद्यार्थी सहप्रसरण और मानक विचलनों से कार्ल पियरसन का सहसंबंध गुणांक परिकलित करेगा।"
+      },
+      {
+       "concept_tag": "pad-vichalan-vidhi",
+       "learning_objective": "विद्यार्थी पद-विचलन विधि में मूल और पैमाने के परिवर्तन का प्रयोग करेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH06-T4",
+     "topic_number": 4,
+     "title": "सहसंबंध गुणांक के गुण",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "r-ke-gun",
+       "learning_objective": "विद्यार्थी r के गुण - इकाई रहित होना, -1 से +1 का परिसर और r = 0 का अर्थ - समझेगा।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH06-T5",
+     "topic_number": 5,
+     "title": "स्पीयरमैन का कोटि सहसंबंध",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "spearman-upyog",
+       "learning_objective": "विद्यार्थी बताएगा कि स्पीयरमैन का कोटि सहसंबंध कब उपयुक्त है।"
+      },
+      {
+       "concept_tag": "spearman-ganana",
+       "learning_objective": "विद्यार्थी दी गई, न दी गई और पुनरावृत्त कोटियों में कोटि सहसंबंध परिकलित करेगा।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "KHST1-CH07",
+   "chapter_number": 7,
+   "old_chapter_number": null,
+   "title": "सूचकांक",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khst107.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHST1-CH07-T1",
+     "topic_number": 1,
+     "title": "सूचकांक का अर्थ और आधार अवधि",
+     "ncert_sections": "1, 2",
+     "concepts": [
+      {
+       "concept_tag": "suchkank-arth",
+       "learning_objective": "सूचकांक को संबंधित चरों के समूह में औसत परिवर्तन मापने वाले सांख्यिकीय साधन के रूप में समझना।"
+      },
+      {
+       "concept_tag": "aadhar-avadhi",
+       "learning_objective": "आधार अवधि का अर्थ और सूचकांक के मान की व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH07-T2",
+     "topic_number": 2,
+     "title": "समूहित विधि से सूचकांक की रचना",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "saral-samuhit-suchkank",
+       "learning_objective": "सरल समूहित मूल्य सूचकांक की गणना करना और उसकी सीमाएँ समझना।"
+      },
+      {
+       "concept_tag": "laspeyre-paashe",
+       "learning_objective": "लास्पेयर और पाशे के भारित समूहित मूल्य सूचकांकों की गणना और व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH07-T3",
+     "topic_number": 3,
+     "title": "सापेक्षों का माध्य विधि",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "mulya-sapeksh",
+       "learning_objective": "मूल्य सापेक्ष तथा सापेक्षों के सरल माध्य से सूचकांक की गणना करना।"
+      },
+      {
+       "concept_tag": "bharit-sapeksh-suchkank",
+       "learning_objective": "व्यय-अंश भारों से भारित मूल्य सापेक्ष सूचकांक की गणना और व्याख्या करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH07-T4",
+     "topic_number": 4,
+     "title": "कुछ महत्वपूर्ण सूचकांक",
+     "ncert_sections": "4",
+     "concepts": [
+      {
+       "concept_tag": "upbhokta-mulya-suchkank",
+       "learning_objective": "उपभोक्ता मूल्य सूचकांक के अर्थ और उसके मान की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "thok-mulya-suchkank",
+       "learning_objective": "थोक मूल्य सूचकांक की विशेषताएँ और उसके मान की व्याख्या करना।"
+      },
+      {
+       "concept_tag": "audyogik-utpadan-sensex",
+       "learning_objective": "औद्योगिक उत्पादन सूचकांक और सेंसेक्स की रचना तथा अर्थ समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH07-T5",
+     "topic_number": 5,
+     "title": "सूचकांक की रचना से जुड़े मुद्दे",
+     "ncert_sections": "5",
+     "concepts": [
+      {
+       "concept_tag": "aadhar-varsh-chayan",
+       "learning_objective": "उपयुक्त आधार वर्ष के चयन की शर्तों का मूल्यांकन करना।"
+      },
+      {
+       "concept_tag": "vastu-chayan-sutra",
+       "learning_objective": "प्रतिनिधि वस्तुओं, उपयुक्त सूत्र और विश्वसनीय आँकड़ों के चयन का महत्व समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH07-T6",
+     "topic_number": 6,
+     "title": "अर्थशास्त्र में सूचकांक",
+     "ncert_sections": "6, 7",
+     "concepts": [
+      {
+       "concept_tag": "kray-shakti-vastavik-majdoori",
+       "learning_objective": "मुद्रा की क्रय शक्ति और वास्तविक मज़दूरी की गणना करना।"
+      },
+      {
+       "concept_tag": "mudrasphiti-neeti",
+       "learning_objective": "मुद्रास्फीति मापने और आर्थिक नीति-निर्माण में सूचकांकों के उपयोग को समझना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  },
+  {
+   "chapter_id": "KHST1-CH08",
+   "chapter_number": 8,
+   "old_chapter_number": null,
+   "title": "सांख्यिकीय विधियों के उपयोग",
+   "title_verified": false,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/khst108.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "KHST1-CH08-T1",
+     "topic_number": 1,
+     "title": "परियोजना की शुरुआत: समस्या और लक्षित समूह की पहचान",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "samasya-ki-pahchan",
+       "learning_objective": "परियोजना के पहले चरण के रूप में अध्ययन की समस्या या क्षेत्र तथा उद्देश्य को स्पष्ट रूप से पहचानना।"
+      },
+      {
+       "concept_tag": "lakshit-samooh",
+       "learning_objective": "विषय के अनुसार उपयुक्त लक्षित समूह चुनने का महत्व समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH08-T2",
+     "topic_number": 2,
+     "title": "आँकड़ों का संग्रह",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "prathmik-dwitiyak-aankde",
+       "learning_objective": "सर्वेक्षण के उद्देश्य के अनुसार प्राथमिक, द्वितीयक या दोनों प्रकार के आँकड़ों के चयन को समझना।"
+      },
+      {
+       "concept_tag": "prashnavali-sakshatkar",
+       "learning_objective": "प्रश्नावली, साक्षात्कार अनुसूची और डाक प्रश्नावली के साथ आवरण पत्र की भूमिका समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH08-T3",
+     "topic_number": 3,
+     "title": "आँकड़ों का संगठन, विश्लेषण और निष्कर्ष",
+     "ncert_sections": "1",
+     "concepts": [
+      {
+       "concept_tag": "sangathan-prastutikaran",
+       "learning_objective": "सारणीयन और आरेखों द्वारा आँकड़ों के संगठन एवं प्रस्तुतीकरण को समझना।"
+      },
+      {
+       "concept_tag": "vishleshan-nirvachan",
+       "learning_objective": "केंद्रीय प्रवृत्ति, परिक्षेपण और सहसंबंध के मापों का परियोजना विश्लेषण में उपयोग पहचानना।"
+      },
+      {
+       "concept_tag": "nishkarsh-granthsuchi",
+       "learning_objective": "निष्कर्ष निकालने और ग्रंथसूची में द्वितीयक स्रोतों के उल्लेख का महत्व समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH08-T4",
+     "topic_number": 4,
+     "title": "सुझाई गई परियोजनाएँ",
+     "ncert_sections": "2",
+     "concepts": [
+      {
+       "concept_tag": "pariyojana-vishay-chayan",
+       "learning_objective": "आर्थिक मुद्दों से जुड़ी परियोजनाओं के लिए उद्देश्य, लक्षित समूह और आँकड़ों का प्रकार तय करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "KHST1-CH08-T5",
+     "topic_number": 5,
+     "title": "नमूना परियोजना: टूथपेस्ट का कारखाना",
+     "ncert_sections": "3",
+     "concepts": [
+      {
+       "concept_tag": "namuna-prashnavali",
+       "learning_objective": "नमूना परियोजना की प्रश्नावली द्वारा आवश्यक सूचना जुटाने की विधि समझना।"
+      },
+      {
+       "concept_tag": "namuna-vishleshan",
+       "learning_objective": "नमूना परियोजना के आँकड़ों से माध्य, मानक विचलन और प्रेक्षणों की गणना एवं व्याख्या करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "english_edition"
+  }
+ ]
+}

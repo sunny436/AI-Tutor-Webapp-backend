@@ -1,0 +1,116 @@
+{
+ "chapter_id": "KHPH2-CH01",
+ "title": "ठोसों के यांत्रिक गुण",
+ "title_verified": false,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "KHPH2-CH01-T1",
+   "topic_number": 1,
+   "title": "प्रत्यास्थता और सुघट्यता",
+   "ncert_sections": "8.1",
+   "concepts": [
+    {
+     "concept_tag": "pratyasthata",
+     "learning_objective": "विरूपक बल हटाने पर वस्तु के मूल आकार और आकृति में लौटने के गुण, प्रत्यास्थता, को पहचान सके।"
+    },
+    {
+     "concept_tag": "sughatyata",
+     "learning_objective": "सुघट्य पदार्थों और स्थायी विरूपण का अर्थ समझा सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH01-T2",
+   "topic_number": 2,
+   "title": "प्रतिबल और विकृति",
+   "ncert_sections": "8.2",
+   "concepts": [
+    {
+     "concept_tag": "pratibal",
+     "learning_objective": "प्रतिबल को प्रति एकांक क्षेत्रफल प्रत्यानयन बल के रूप में परिभाषित कर उसका मात्रक और विमा बता सके।"
+    },
+    {
+     "concept_tag": "vikriti-ke-prakar",
+     "learning_objective": "अनुदैर्ध्य, अपरूपण और आयतन विकृति में अंतर कर सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH01-T3",
+   "topic_number": 3,
+   "title": "हुक का नियम और प्रतिबल-विकृति वक्र",
+   "ncert_sections": "8.3, 8.4",
+   "concepts": [
+    {
+     "concept_tag": "hook-ka-niyam",
+     "learning_objective": "अल्प विरूपण के लिए प्रतिबल और विकृति की आनुपातिकता का कथन और उसकी सीमा बता सके।"
+    },
+    {
+     "concept_tag": "pratibal-vikriti-vakra",
+     "learning_objective": "प्रतिबल-विकृति वक्र पर प्रत्यास्थ सीमा, पराभव बिंदु, चरम तनन सामर्थ्य और भंजन बिंदु की व्याख्या कर सके।"
+    },
+    {
+     "concept_tag": "bhangur-tanya-pratyasth-bahulak",
+     "learning_objective": "भंगुर, तन्य पदार्थों और प्रत्यास्थ बहुलकों के वक्रों की तुलना कर सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH01-T4",
+   "topic_number": 4,
+   "title": "यंग गुणांक और अपरूपण गुणांक",
+   "ncert_sections": "8.5.1, 8.5.2",
+   "concepts": [
+    {
+     "concept_tag": "young-gunank",
+     "learning_objective": "यंग गुणांक Y = (F/A)/(ΔL/L) का प्रयोग कर तार के प्रसार की गणना कर सके।"
+    },
+    {
+     "concept_tag": "aparupan-gunank",
+     "learning_objective": "अपरूपण गुणांक G की परिभाषा देकर अपरूपण विस्थापन की गणना कर सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH01-T5",
+   "topic_number": 5,
+   "title": "आयतन गुणांक, पॉयसन अनुपात और प्रत्यास्थ स्थितिज ऊर्जा",
+   "ncert_sections": "8.5.3, 8.5.4, 8.5.5",
+   "concepts": [
+    {
+     "concept_tag": "aayatan-gunank",
+     "learning_objective": "आयतन गुणांक B और संपीड्यता k = 1/B का प्रयोग कर आयतन परिवर्तन ज्ञात कर सके।"
+    },
+    {
+     "concept_tag": "poisson-anupat",
+     "learning_objective": "पॉयसन अनुपात को पार्श्विक और अनुदैर्ध्य विकृति के अनुपात के रूप में परिकलित कर सके।"
+    },
+    {
+     "concept_tag": "pratyasth-sthitij-urja",
+     "learning_objective": "खिंचे तार में प्रति एकांक आयतन संचित ऊर्जा u = ½ × प्रतिबल × विकृति ज्ञात कर सके।"
+    }
+   ]
+  },
+  {
+   "topic_id": "KHPH2-CH01-T6",
+   "topic_number": 6,
+   "title": "पदार्थों के प्रत्यास्थ व्यवहार के अनुप्रयोग",
+   "ncert_sections": "8.6",
+   "concepts": [
+    {
+     "concept_tag": "crane-rassi",
+     "learning_objective": "क्रेन की रस्सी का न्यूनतम अनुप्रस्थ क्षेत्रफल पराभव सामर्थ्य से ज्ञात कर सके।"
+    },
+    {
+     "concept_tag": "dharan-jhukav",
+     "learning_objective": "धरन के झुकाव δ = Wl³/(4bd³Y) के आधार पर I आकृति के धरन की उपयोगिता समझा सके।"
+    },
+    {
+     "concept_tag": "parvat-unchai",
+     "learning_objective": "चट्टानों की प्रत्यास्थ सीमा से पर्वत की अधिकतम ऊँचाई का अनुमान लगा सके।"
+    }
+   ]
+  }
+ ]
+}

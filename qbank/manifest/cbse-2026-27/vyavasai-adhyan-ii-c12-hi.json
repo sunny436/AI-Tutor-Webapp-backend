@@ -1,0 +1,408 @@
+{
+ "syllabus_version": {
+  "code": "cbse-2026-27",
+  "curriculum": "cbse",
+  "academic_session": "2026_27",
+  "title": "CBSE Curriculum for the Academic Year 2026-27",
+  "source_url": "https://cbseacademic.nic.in/curriculum_2027.html"
+ },
+ "book": {
+  "book_id": "vyavasai-adhyan-ii-c12-hi",
+  "curriculum": "cbse",
+  "class_level": 12,
+  "subject_code": "business_studies",
+  "language": "hindi",
+  "title": "Vyavasai Adhyan-II",
+  "edition": "NCERT (prelims: Reprint 2026-27)",
+  "ncert_code": "lhbs2"
+ },
+ "chapters": [
+  {
+   "chapter_id": "LHBS2-CH01",
+   "chapter_number": 1,
+   "old_chapter_number": null,
+   "title": "व्यावसायिक वित्त",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbs201.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBS2-CH01-T1",
+     "topic_number": 1,
+     "title": "व्यावसायिक वित्त और वित्तीय प्रबंध का अर्थ एवं भूमिका",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vyavasayik-vitt-arth",
+       "learning_objective": "व्यावसायिक वित्त का अर्थ और व्यवसाय के जीवनकाल में उसकी आवश्यकता समझाना।"
+      },
+      {
+       "concept_tag": "vittiya-prabandh-bhumika",
+       "learning_objective": "वित्तीय प्रबंध का अर्थ और वित्तीय विवरणों पर उसके प्रभाव को समझाना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH01-T2",
+     "topic_number": 2,
+     "title": "वित्तीय प्रबंध के उद्देश्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "dhan-adhiktamikaran",
+       "learning_objective": "अंशधारियों के धन के अधिकतमीकरण को वित्तीय प्रबंध के प्रमुख उद्देश्य के रूप में पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH01-T3",
+     "topic_number": 3,
+     "title": "वित्तीय निर्णय",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "nivesh-nirnay",
+       "learning_objective": "निवेश निर्णय, पूँजी बजटिंग और उसे प्रभावित करने वाले कारकों को समझाना।"
+      },
+      {
+       "concept_tag": "vittiyan-nirnay",
+       "learning_objective": "वित्तीयन निर्णय में ऋण और स्वामित्व कोषों के चुनाव के आधार समझाना।"
+      },
+      {
+       "concept_tag": "labhansh-nirnay",
+       "learning_objective": "लाभांश निर्णय और उसे प्रभावित करने वाले कारकों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH01-T4",
+     "topic_number": 4,
+     "title": "वित्तीय नियोजन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vittiya-niyojan-uddeshya",
+       "learning_objective": "वित्तीय नियोजन का अर्थ और उसके उद्देश्य बताना।"
+      },
+      {
+       "concept_tag": "vittiya-niyojan-mahatva",
+       "learning_objective": "वित्तीय नियोजन के महत्त्व का मूल्यांकन करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH01-T5",
+     "topic_number": 5,
+     "title": "पूँजी संरचना",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vittiya-uttolak",
+       "learning_objective": "वित्तीय उत्तोलक और समता पर व्यापार की अवधारणा को गणना सहित समझाना।"
+      },
+      {
+       "concept_tag": "punji-sanrachna-karak",
+       "learning_objective": "पूँजी संरचना के चुनाव को प्रभावित करने वाले कारकों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH01-T6",
+     "topic_number": 6,
+     "title": "स्थायी पूँजी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "sthayi-punji-arth",
+       "learning_objective": "स्थायी पूँजी का अर्थ और उसके प्रबंध का महत्त्व समझाना।"
+      },
+      {
+       "concept_tag": "sthayi-punji-karak",
+       "learning_objective": "स्थायी पूँजी की आवश्यकता को प्रभावित करने वाले कारकों का विश्लेषण करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH01-T7",
+     "topic_number": 7,
+     "title": "कार्यशील पूँजी",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "karyashil-punji-arth",
+       "learning_objective": "सकल और शुद्ध कार्यशील पूँजी का अर्थ स्पष्ट करना।"
+      },
+      {
+       "concept_tag": "karyashil-punji-karak",
+       "learning_objective": "कार्यशील पूँजी की आवश्यकता को प्रभावित करने वाले कारकों का विश्लेषण करना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHBS2-CH02",
+   "chapter_number": 2,
+   "old_chapter_number": null,
+   "title": "विपणन",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbs202.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBS2-CH02-T1",
+     "topic_number": 1,
+     "title": "विपणन का अर्थ, विनिमय तथा विपणन एवं विक्रय में अंतर",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vipanan-arth",
+       "learning_objective": "विपणन को ग्राहक की आवश्यकताओं की पहचान से लेकर विनिमय तक की सामाजिक प्रक्रिया के रूप में समझना।"
+      },
+      {
+       "concept_tag": "vinimay-paddhati",
+       "learning_objective": "विनिमय के लिए आवश्यक शर्तों को पहचानना।"
+      },
+      {
+       "concept_tag": "vipanan-vikray-antar",
+       "learning_objective": "विपणन और विक्रय के बीच अंतर स्पष्ट करना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH02-T2",
+     "topic_number": 2,
+     "title": "विपणन प्रबंध दर्शन",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "utpadan-utpad-avdharna",
+       "learning_objective": "उत्पादन तथा उत्पाद अवधारणा के केंद्र और साधनों को पहचानना।"
+      },
+      {
+       "concept_tag": "bikri-vipanan-avdharna",
+       "learning_objective": "बिक्री तथा विपणन अवधारणा की तुलना करना।"
+      },
+      {
+       "concept_tag": "samajik-avdharna",
+       "learning_objective": "विपणन की सामाजिक अवधारणा का अर्थ और महत्त्व समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH02-T3",
+     "topic_number": 3,
+     "title": "विपणन के कार्य",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vipanan-karya",
+       "learning_objective": "बाज़ार सूचना, नियोजन, प्रमापीकरण, श्रेणीकरण, परिवहन, भंडारण आदि कार्यों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH02-T4",
+     "topic_number": 4,
+     "title": "विपणन मिश्र तथा उत्पादों का वर्गीकरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vipanan-mishra",
+       "learning_objective": "विपणन मिश्र के चार तत्वों को पहचानना।"
+      },
+      {
+       "concept_tag": "upbhokta-utpad",
+       "learning_objective": "उपभोक्ता उत्पादों को क्रय प्रयास और उपयोग के आधार पर वर्गीकृत करना।"
+      },
+      {
+       "concept_tag": "audyogik-utpad",
+       "learning_objective": "औद्योगिक उत्पादों के वर्गों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH02-T5",
+     "topic_number": 5,
+     "title": "ब्रांडिंग, पैकेजिंग एवं लेबलिंग",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "brand",
+       "learning_objective": "ब्रांड, ब्रांड नाम, ब्रांड चिह्न और ट्रेड मार्क में अंतर करना।"
+      },
+      {
+       "concept_tag": "packaging",
+       "learning_objective": "पैकेजिंग के स्तर और उसके महत्त्व को समझना।"
+      },
+      {
+       "concept_tag": "labelling",
+       "learning_objective": "लेबल के कार्यों को पहचानना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH02-T6",
+     "topic_number": 6,
+     "title": "मूल्य निर्धारण एवं भौतिक वितरण",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "mulya-nirdharan-tatva",
+       "learning_objective": "किसी उत्पाद के मूल्य निर्धारण को प्रभावित करने वाले तत्वों का विश्लेषण करना।"
+      },
+      {
+       "concept_tag": "bhautik-vitaran",
+       "learning_objective": "भौतिक वितरण के घटकों को समझना।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH02-T7",
+     "topic_number": 7,
+     "title": "प्रवर्तन मिश्र",
+     "ncert_sections": null,
+     "concepts": [
+      {
+       "concept_tag": "vigyapan",
+       "learning_objective": "विज्ञापन की विशेषताएँ, गुण तथा उस पर आपत्तियाँ समझना।"
+      },
+      {
+       "concept_tag": "vaiyaktik-vikray",
+       "learning_objective": "वैयक्तिक विक्रय की विशेषताएँ और विज्ञापन से उसका अंतर जानना।"
+      },
+      {
+       "concept_tag": "vikray-samvardhan-jansampark",
+       "learning_objective": "विक्रय संवर्धन की क्रियाओं तथा उसकी सीमाओं को पहचानना।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  },
+  {
+   "chapter_id": "LHBS2-CH03",
+   "chapter_number": 3,
+   "old_chapter_number": null,
+   "title": "उपभोक्ता संरक्षण",
+   "title_verified": true,
+   "ncert_chapter_id": null,
+   "source_pdf": "https://ncert.nic.in/textbook/pdf/lhbs203.pdf",
+   "max_questions": 1000,
+   "topics": [
+    {
+     "topic_id": "LHBS2-CH03-T1",
+     "topic_number": 1,
+     "title": "उपभोक्ता संरक्षण का महत्व",
+     "ncert_sections": "प्रस्तावना; उपभोक्ता संरक्षण का महत्व",
+     "concepts": [
+      {
+       "concept_tag": "mahatva-upbhokta-drishtikon",
+       "learning_objective": "विद्यार्थी उपभोक्ता के दृष्टिकोण से उपभोक्ता संरक्षण के महत्व को समझाता है।"
+      },
+      {
+       "concept_tag": "mahatva-vyavsay-drishtikon",
+       "learning_objective": "विद्यार्थी व्यवसाय के दृष्टिकोण से उपभोक्ता संरक्षण के कारणों की पहचान करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH03-T2",
+     "topic_number": 2,
+     "title": "उपभोक्ता संरक्षण अधिनियम, 2019 और उपभोक्ता की परिभाषा",
+     "ncert_sections": "उपभोक्ता संरक्षण अधिनियम, 2019; उपभोक्ता कौन है; शब्द और परिभाषाएँ",
+     "concepts": [
+      {
+       "concept_tag": "upbhokta-paribhasha",
+       "learning_objective": "विद्यार्थी अधिनियम के अनुसार यह पहचानता है कि कौन उपभोक्ता है और कौन नहीं।"
+      },
+      {
+       "concept_tag": "adhiniyam-shabdavali",
+       "learning_objective": "विद्यार्थी शिकायत, दोष, कमी, अनुचित और प्रतिबंधात्मक व्यापार पद्धति जैसे शब्दों में अंतर करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH03-T3",
+     "topic_number": 3,
+     "title": "उपभोक्ता अधिकार",
+     "ncert_sections": "उपभोक्ता अधिकार",
+     "concepts": [
+      {
+       "concept_tag": "upbhokta-adhikar",
+       "learning_objective": "विद्यार्थी अधिनियम द्वारा दिए गए छह उपभोक्ता अधिकारों को स्थितियों में पहचानता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH03-T4",
+     "topic_number": 4,
+     "title": "उपभोक्ता दायित्व",
+     "ncert_sections": "उपभोक्ता दायित्व",
+     "concepts": [
+      {
+       "concept_tag": "upbhokta-dayitva",
+       "learning_objective": "विद्यार्थी खरीदारी और उपभोग के समय उपभोक्ता के दायित्वों को समझाता है।"
+      },
+      {
+       "concept_tag": "gunvatta-chinh",
+       "learning_objective": "विद्यार्थी विभिन्न उत्पादों के लिए उपयुक्त गुणवत्ता चिह्नों की पहचान करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH03-T5",
+     "topic_number": 5,
+     "title": "उपभोक्ता संरक्षण के तरीके और साधन",
+     "ncert_sections": "उपभोक्ता संरक्षण के तरीके और साधन",
+     "concepts": [
+      {
+       "concept_tag": "sanrakshan-ke-sadhan",
+       "learning_objective": "विद्यार्थी स्व-नियमन, व्यावसायिक संघ, जागरूकता, उपभोक्ता संगठन और सरकार की भूमिका में अंतर करता है।"
+      },
+      {
+       "concept_tag": "kendriya-pradhikaran",
+       "learning_objective": "विद्यार्थी केंद्रीय उपभोक्ता संरक्षण प्राधिकरण के उद्देश्य को बताता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH03-T6",
+     "topic_number": 6,
+     "title": "निवारण अभिकरण और उपलब्ध राहत",
+     "ncert_sections": "उपभोक्ता संरक्षण अधिनियम के अंतर्गत निवारण अभिकरण; उपलब्ध राहत",
+     "concepts": [
+      {
+       "concept_tag": "nivaran-tantra-kshetradhikar",
+       "learning_objective": "विद्यार्थी त्रि-स्तरीय निवारण तंत्र और प्रत्येक आयोग के आर्थिक क्षेत्राधिकार को लागू करता है।"
+      },
+      {
+       "concept_tag": "apeel-avadhi",
+       "learning_objective": "विद्यार्थी आयोगों के आदेशों के विरुद्ध अपील के स्तर और समय-सीमा को समझाता है।"
+      },
+      {
+       "concept_tag": "uplabdh-rahat",
+       "learning_objective": "विद्यार्थी किसी स्थिति में आयोग द्वारा दी जा सकने वाली उपयुक्त राहत का चयन करता है।"
+      }
+     ]
+    },
+    {
+     "topic_id": "LHBS2-CH03-T7",
+     "topic_number": 7,
+     "title": "उपभोक्ता संगठनों एवं गैर-सरकारी संगठनों की भूमिका",
+     "ncert_sections": "उपभोक्ता संगठनों और गैर-सरकारी संगठनों की भूमिका",
+     "concepts": [
+      {
+       "concept_tag": "upbhokta-sangathan-bhumika",
+       "learning_objective": "विद्यार्थी उपभोक्ता हितों के संरक्षण में उपभोक्ता संगठनों और गैर-सरकारी संगठनों के कार्यों को पहचानता है।"
+      }
+     ]
+    }
+   ],
+   "content_source": "pdf"
+  }
+ ]
+}

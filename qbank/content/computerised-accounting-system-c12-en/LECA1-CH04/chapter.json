@@ -1,0 +1,128 @@
+{
+ "chapter_id": "LECA1-CH04",
+ "title": "Graphs and Charts for Business Data",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "LECA1-CH04-T1",
+   "topic_number": 1,
+   "title": "Graphs and charts: meaning and types",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "graph-dimensions-and-axes",
+     "learning_objective": "Explain that a graph is a pictorial representation of data with at least a two-dimensional relationship shown on X and Y axes."
+    },
+    {
+     "concept_tag": "pie-chart-and-bar-diagram",
+     "learning_objective": "Distinguish a pie chart, which shows sub-groups of a single variable, from a bar diagram, which compares values."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH04-T2",
+   "topic_number": 2,
+   "title": "Basic steps for preparing a chart in Excel",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "excel-chart-creation-steps",
+     "learning_objective": "Describe how a chart is created in MS Excel 2007 from worksheet data using the Insert tab and Charts group."
+    },
+    {
+     "concept_tag": "worksheet-data-for-charts",
+     "learning_objective": "Organise and interpret worksheet data, including row and column totals, before plotting it in a chart."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH04-T3",
+   "topic_number": 3,
+   "title": "Elements of a chart",
+   "ncert_sections": "4.2.1",
+   "concepts": [
+    {
+     "concept_tag": "chart-area-and-plot-area",
+     "learning_objective": "Differentiate the chart area from the plot area of 2-D and 3-D charts."
+    },
+    {
+     "concept_tag": "data-series-and-legend",
+     "learning_objective": "Explain data points, data markers, data series and the legend that identifies them."
+    },
+    {
+     "concept_tag": "titles-and-data-labels",
+     "learning_objective": "Identify the role of chart titles, axis titles and data labels."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH04-T4",
+   "topic_number": 4,
+   "title": "Formatting and resizing a chart",
+   "ncert_sections": "4.2.2, 4.2.4",
+   "concepts": [
+    {
+     "concept_tag": "chart-tools-design-layout-format",
+     "learning_objective": "Use the Design, Layout and Format tabs of Chart Tools to change the look of chart elements."
+    },
+    {
+     "concept_tag": "resizing-a-chart",
+     "learning_objective": "Describe how a chart is selected and resized by dragging its corners or borders."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH04-T5",
+   "topic_number": 5,
+   "title": "Changing the chart type and the pie chart",
+   "ncert_sections": "4.2.3",
+   "concepts": [
+    {
+     "concept_tag": "pie-chart-conditions",
+     "learning_objective": "State the conditions under which data can be plotted as a pie chart and what its slices represent."
+    },
+    {
+     "concept_tag": "pie-chart-creation-steps",
+     "learning_objective": "Follow the steps for creating and formatting a 3-D pie chart in Excel."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH04-T6",
+   "topic_number": 6,
+   "title": "2-D and 3-D charts, radar and doughnut charts",
+   "ncert_sections": "4.2.5",
+   "concepts": [
+    {
+     "concept_tag": "two-d-axes-and-origin",
+     "learning_objective": "Plot independent and dependent values, including negative values, on the X and Y axes around the origin."
+    },
+    {
+     "concept_tag": "three-d-depth-axis",
+     "learning_objective": "Explain the depth (series) axis or Z-axis used in 3-D charts."
+    },
+    {
+     "concept_tag": "radar-and-doughnut-charts",
+     "learning_objective": "Compare radar and doughnut charts with pie charts in terms of axes and data series."
+    }
+   ]
+  },
+  {
+   "topic_id": "LECA1-CH04-T7",
+   "topic_number": 7,
+   "title": "Advantages of using graphs and charts",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "explore-present-convince",
+     "learning_objective": "Explain how graphs help to explore, present and convince."
+    },
+    {
+     "concept_tag": "visualising-trends",
+     "learning_objective": "Evaluate why charts make trends in data easier to grasp than text."
+    }
+   ]
+  }
+ ]
+}

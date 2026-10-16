@@ -1,0 +1,108 @@
+{
+ "chapter_id": "HHGP1-CH05",
+ "title": "संख्याओं का खेल",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "HHGP1-CH05-T1",
+   "topic_number": 1,
+   "title": "क्रमागत संख्याओं का योग और समता",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "kramagat-sankhyaon-ka-yog",
+     "learning_objective": "क्रमागत संख्याओं को बीजीय रूप में लिखकर उनके योग के गुण ज्ञात करना।"
+    },
+    {
+     "concept_tag": "vyanjakon-ki-samta",
+     "learning_objective": "किसी बीजीय व्यंजक के मान की समता (सम या विषम) बिना गणना के पहचानना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH05-T2",
+   "topic_number": 2,
+   "title": "विभाज्यता के गुण: सदैव, कभी-कभी या कभी नहीं",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "vibhajyata-ke-gun",
+     "learning_objective": "गुणजों के योग और अंतर की विभाज्यता को बीजगणित से सिद्ध करना।"
+    },
+    {
+     "concept_tag": "lsp-aur-vibhajyata",
+     "learning_objective": "दो संख्याओं से एक साथ विभाज्यता को उनके लघुत्तम समापवर्त्य से जोड़ना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH05-T3",
+   "topic_number": 3,
+   "title": "शेषफल और बीजीय व्यंजक",
+   "ncert_sections": "5.1",
+   "concepts": [
+    {
+     "concept_tag": "sheshphal-ke-vyanjak",
+     "learning_objective": "किसी निश्चित शेषफल वाली सभी संख्याओं को बीजीय व्यंजक से व्यक्त करना।"
+    },
+    {
+     "concept_tag": "sheshphal-ka-tark",
+     "learning_objective": "शेषफलों के जोड़ से योग और अंतर का शेषफल बिना पूरी गणना के ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH05-T4",
+   "topic_number": 4,
+   "title": "विभाज्यता की शीघ्र जाँच",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "sthaniya-maan-ka-bijiy-roop",
+     "learning_objective": "संख्या को स्थानीय मानों के योग के रूप में लिखकर विभाज्यता नियमों का कारण समझना।"
+    },
+    {
+     "concept_tag": "nau-aur-teen-se-vibhajyata",
+     "learning_objective": "अंकों के योग से 9 और 3 से विभाज्यता की जाँच करना और उसका कारण बताना।"
+    },
+    {
+     "concept_tag": "gyarah-se-vibhajyata",
+     "learning_objective": "एकांतर चिह्नों की विधि से 11 से विभाज्यता और शेषफल ज्ञात करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH05-T5",
+   "topic_number": 5,
+   "title": "अंकीय मूल",
+   "ncert_sections": "5.2",
+   "concepts": [
+    {
+     "concept_tag": "ankiya-mool",
+     "learning_objective": "अंकों को बार-बार जोड़कर किसी संख्या का अंकीय मूल ज्ञात करना।"
+    },
+    {
+     "concept_tag": "ankiya-mool-aur-sheshphal",
+     "learning_objective": "अंकीय मूल और 9 से भाग देने पर प्राप्त शेषफल के संबंध का उपयोग करना।"
+    }
+   ]
+  },
+  {
+   "topic_id": "HHGP1-CH05-T6",
+   "topic_number": 6,
+   "title": "छुपे हुए अंकों की पहेली (गूढ़कलन)",
+   "ncert_sections": "5.3",
+   "concepts": [
+    {
+     "concept_tag": "goodhkalan-ke-niyam",
+     "learning_objective": "गूढ़कलन पहेलियों के नियमों को पहचानना।"
+    },
+    {
+     "concept_tag": "goodhkalan-hal-karna",
+     "learning_objective": "संख्याओं के गुणों और तर्क से गूढ़कलन पहेलियाँ हल करना।"
+    }
+   ]
+  }
+ ]
+}

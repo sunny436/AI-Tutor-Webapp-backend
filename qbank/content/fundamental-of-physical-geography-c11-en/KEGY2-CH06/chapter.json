@@ -1,0 +1,148 @@
+{
+ "chapter_id": "KEGY2-CH06",
+ "title": "Landforms and their Evolution",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "KEGY2-CH06-T1",
+   "topic_number": 1,
+   "title": "Running water and stages of landscape evolution",
+   "ncert_sections": "Introduction; Running Water (Youth, Mature, Old)",
+   "concepts": [
+    {
+     "concept_tag": "landform-landscape-evolution",
+     "learning_objective": "Distinguish a landform from a landscape and explain what evolution of landforms means."
+    },
+    {
+     "concept_tag": "fluvial-stages-youth-mature-old",
+     "learning_objective": "Describe the characteristics of youth, mature and old stages of landscapes shaped by running water."
+    },
+    {
+     "concept_tag": "peneplain-monadnock",
+     "learning_objective": "Explain how stream erosion reduces relief to a peneplain with monadnocks."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH06-T2",
+   "topic_number": 2,
+   "title": "Erosional landforms of running water",
+   "ncert_sections": "Erosional Landforms: Valleys, Potholes and Plunge Pools, Incised Meanders, River Terraces",
+   "concepts": [
+    {
+     "concept_tag": "valleys-gorge-canyon",
+     "learning_objective": "Distinguish between V-shaped valleys, gorges and canyons and relate them to rock type."
+    },
+    {
+     "concept_tag": "potholes-plunge-pools",
+     "learning_objective": "Explain the formation of potholes and plunge pools."
+    },
+    {
+     "concept_tag": "incised-meanders-terraces",
+     "learning_objective": "Explain incised meanders and river terraces as products of vertical erosion."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH06-T3",
+   "topic_number": 3,
+   "title": "Depositional landforms of running water",
+   "ncert_sections": "Depositional Landforms: Alluvial Fans, Deltas, Floodplains, Natural Levees, Point Bars, Meanders",
+   "concepts": [
+    {
+     "concept_tag": "alluvial-fans-deltas",
+     "learning_objective": "Compare alluvial fans and deltas in location and sorting of deposits."
+    },
+    {
+     "concept_tag": "floodplain-levee-point-bar",
+     "learning_objective": "Distinguish floodplains, natural levees and point bars."
+    },
+    {
+     "concept_tag": "meanders-oxbow-lakes",
+     "learning_objective": "Explain why meanders develop and how ox-bow lakes form."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH06-T4",
+   "topic_number": 4,
+   "title": "Groundwater and karst topography",
+   "ncert_sections": "Groundwater: Erosional and Depositional Landforms",
+   "concepts": [
+    {
+     "concept_tag": "karst-solution-process",
+     "learning_objective": "Explain why groundwater forms landforms mainly in limestone through solution and precipitation."
+    },
+    {
+     "concept_tag": "sinkholes-uvalas-lapies",
+     "learning_objective": "Describe swallow holes, sinkholes, uvalas, lapies and caves."
+    },
+    {
+     "concept_tag": "stalactites-stalagmites",
+     "learning_objective": "Explain the formation of stalactites, stalagmites and pillars."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH06-T5",
+   "topic_number": 5,
+   "title": "Glaciers and glacial landforms",
+   "ncert_sections": "Glaciers: Erosional and Depositional Landforms",
+   "concepts": [
+    {
+     "concept_tag": "glacial-erosion-cirque-horn",
+     "learning_objective": "Describe cirques, horns, aretes and glacial troughs formed by glacial erosion."
+    },
+    {
+     "concept_tag": "till-outwash-moraines",
+     "learning_objective": "Distinguish till from outwash deposits and identify types of moraines."
+    },
+    {
+     "concept_tag": "eskers-drumlins",
+     "learning_objective": "Explain the formation of eskers, outwash plains and drumlins."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH06-T6",
+   "topic_number": 6,
+   "title": "Waves and currents: coastal landforms",
+   "ncert_sections": "Waves and Currents: High Rocky Coasts, Low Sedimentary Coasts, Erosional and Depositional Landforms",
+   "concepts": [
+    {
+     "concept_tag": "rocky-vs-sedimentary-coasts",
+     "learning_objective": "Compare high rocky coasts and low sedimentary coasts in processes and landforms."
+    },
+    {
+     "concept_tag": "cliffs-terraces-stacks",
+     "learning_objective": "Explain the formation of sea cliffs, wave-cut terraces, sea caves and stacks."
+    },
+    {
+     "concept_tag": "bars-spits-lagoons",
+     "learning_objective": "Explain how beaches, bars, barriers, spits and lagoons develop."
+    }
+   ]
+  },
+  {
+   "topic_id": "KEGY2-CH06-T7",
+   "topic_number": 7,
+   "title": "Winds and desert landforms",
+   "ncert_sections": "Winds: Erosional and Depositional Landforms",
+   "concepts": [
+    {
+     "concept_tag": "wind-erosion-processes",
+     "learning_objective": "Explain deflation, abrasion and impact and the role of sheet floods in deserts."
+    },
+    {
+     "concept_tag": "pediments-playas-mushroom",
+     "learning_objective": "Describe pediments, pediplains, playas, deflation hollows and mushroom rocks."
+    },
+    {
+     "concept_tag": "sand-dune-types",
+     "learning_objective": "Distinguish barchans, parabolic, seif, longitudinal and transverse dunes."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "chapter_id": "LHMH2-CH05",
+ "title": "त्रि-विमीय ज्यामिति",
+ "title_verified": true,
+ "source": "english_edition",
+ "topics": [
+  {
+   "topic_id": "LHMH2-CH05-T1",
+   "topic_number": 1,
+   "title": "रेखा की दिक्-कोसाइन और दिक्-अनुपात",
+   "ncert_sections": "11.2",
+   "concepts": [
+    {
+     "concept_tag": "dik-cosine",
+     "learning_objective": "विद्यार्थी अक्षों से बने कोणों से किसी रेखा की दिक्-कोसाइन ज्ञात कर सकेंगे और संबंध l² + m² + n² = 1 का प्रयोग कर सकेंगे।"
+    },
+    {
+     "concept_tag": "dik-anupat",
+     "learning_objective": "विद्यार्थी दिक्-अनुपातों से दिक्-कोसाइन प्राप्त कर सकेंगे और दोनों का अंतर समझ सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH05-T2",
+   "topic_number": 2,
+   "title": "दो बिंदुओं को मिलाने वाली रेखा की दिक्-कोसाइन",
+   "ncert_sections": "11.2.1",
+   "concepts": [
+    {
+     "concept_tag": "do-bindu-dik-cosine",
+     "learning_objective": "विद्यार्थी दो दिए गए बिंदुओं को मिलाने वाली रेखा के दिक्-अनुपात और दिक्-कोसाइन ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "sanrekhata",
+     "learning_objective": "विद्यार्थी दिक्-अनुपातों की तुलना करके तीन बिंदुओं की संरेखता की जाँच कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH05-T3",
+   "topic_number": 3,
+   "title": "अंतरिक्ष में रेखा का समीकरण",
+   "ncert_sections": "11.3, 11.3.1",
+   "concepts": [
+    {
+     "concept_tag": "sadish-samikaran",
+     "learning_objective": "विद्यार्थी किसी बिंदु से जाने वाली और दिए गए सदिश के समांतर रेखा का सदिश समीकरण लिख सकेंगे।"
+    },
+    {
+     "concept_tag": "kartiya-samikaran",
+     "learning_objective": "विद्यार्थी रेखा का कार्तीय समीकरण लिख सकेंगे और उसे सदिश रूप में बदल सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH05-T4",
+   "topic_number": 4,
+   "title": "दो रेखाओं के मध्य कोण",
+   "ncert_sections": "11.4",
+   "concepts": [
+    {
+     "concept_tag": "rekhaon-ke-madhya-kon",
+     "learning_objective": "विद्यार्थी दिक्-अनुपातों या दिक्-कोसाइनों से दो रेखाओं के मध्य कोण ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "lamb-samantar-pratibandh",
+     "learning_objective": "विद्यार्थी दो रेखाओं के परस्पर लंब या समांतर होने के प्रतिबंधों का प्रयोग कर सकेंगे।"
+    }
+   ]
+  },
+  {
+   "topic_id": "LHMH2-CH05-T5",
+   "topic_number": 5,
+   "title": "दो रेखाओं के मध्य न्यूनतम दूरी",
+   "ncert_sections": "11.5, 11.5.1, 11.5.2",
+   "concepts": [
+    {
+     "concept_tag": "vishamtaliya-rekhayen",
+     "learning_objective": "विद्यार्थी विषमतलीय रेखाओं को पहचान सकेंगे और न्यूनतम दूरी की रेखा का स्वरूप समझ सकेंगे।"
+    },
+    {
+     "concept_tag": "vishamtaliya-nyuntam-doori",
+     "learning_objective": "विद्यार्थी सूत्र की सहायता से दो विषमतलीय रेखाओं के बीच की न्यूनतम दूरी ज्ञात कर सकेंगे।"
+    },
+    {
+     "concept_tag": "samantar-rekha-doori",
+     "learning_objective": "विद्यार्थी दो समांतर रेखाओं के बीच की दूरी ज्ञात कर सकेंगे।"
+    }
+   ]
+  }
+ ]
+}

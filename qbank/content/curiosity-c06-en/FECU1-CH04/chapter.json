@@ -1,0 +1,108 @@
+{
+ "chapter_id": "FECU1-CH04",
+ "title": "Exploring Magnets",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FECU1-CH04-T1",
+   "topic_number": 1,
+   "title": "Magnets and magnetic materials",
+   "ncert_sections": "4.1",
+   "concepts": [
+    {
+     "concept_tag": "natural-and-artificial-magnets",
+     "learning_objective": "Distinguish naturally occurring magnets (lodestones) from the artificial magnets used in everyday objects."
+    },
+    {
+     "concept_tag": "magnetic-and-non-magnetic-materials",
+     "learning_objective": "Classify materials as magnetic or non-magnetic and name iron, nickel and cobalt as magnetic metals."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH04-T2",
+   "topic_number": 2,
+   "title": "Poles of a magnet",
+   "ncert_sections": "4.2",
+   "concepts": [
+    {
+     "concept_tag": "poles-of-a-magnet",
+     "learning_objective": "Identify the poles as the parts of a magnet where its attraction is strongest."
+    },
+    {
+     "concept_tag": "poles-exist-in-pairs",
+     "learning_objective": "Explain that North and South poles always occur in pairs, whatever the size or shape of the magnet."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH04-T3",
+   "topic_number": 3,
+   "title": "Finding directions with a magnet",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "freely-suspended-magnet",
+     "learning_objective": "Explain that a freely suspended magnet rests along the north-south direction and use this to tell a magnet from an iron bar."
+    },
+    {
+     "concept_tag": "magnetic-compass",
+     "learning_objective": "Describe the parts of a magnetic compass and how it is used to find directions."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH04-T4",
+   "topic_number": 4,
+   "title": "Making a magnet and a compass",
+   "ncert_sections": "4.3",
+   "concepts": [
+    {
+     "concept_tag": "magnetising-a-needle",
+     "learning_objective": "Describe how an iron needle is made into a magnet by stroking it with one pole of a magnet and how to test it."
+    },
+    {
+     "concept_tag": "floating-needle-compass",
+     "learning_objective": "Explain how a magnetised needle on a floating cork, or the matsya-yantra, works as a compass."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH04-T5",
+   "topic_number": 5,
+   "title": "Attraction and repulsion between magnets",
+   "ncert_sections": "4.4",
+   "concepts": [
+    {
+     "concept_tag": "like-and-unlike-poles",
+     "learning_objective": "State that unlike poles attract and like poles repel, and apply this to magnets and compass needles."
+    },
+    {
+     "concept_tag": "repulsion-identifies-magnet",
+     "learning_objective": "Use repulsion to tell a magnet from a piece of iron."
+    },
+    {
+     "concept_tag": "magnetic-effect-through-materials",
+     "learning_objective": "Recognise that the magnetic effect acts through non-magnetic materials such as wood, cardboard, plastic and glass."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH04-T6",
+   "topic_number": 6,
+   "title": "Fun with magnets and caring for magnets",
+   "ncert_sections": "4.5",
+   "concepts": [
+    {
+     "concept_tag": "uses-of-magnets",
+     "learning_objective": "Apply the properties of magnets to solve everyday problems and explain magnet-based toys."
+    },
+    {
+     "concept_tag": "caring-for-magnets",
+     "learning_objective": "State how magnets should be stored and handled so that they stay strong."
+    }
+   ]
+  }
+ ]
+}

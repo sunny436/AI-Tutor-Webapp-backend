@@ -1,0 +1,152 @@
+{
+ "chapter_id": "FECU1-CH03",
+ "title": "Mindful Eating: A Path to a Healthy Body",
+ "title_verified": true,
+ "source": "pdf",
+ "topics": [
+  {
+   "topic_id": "FECU1-CH03-T1",
+   "topic_number": 1,
+   "title": "Food diversity across regions of India",
+   "ncert_sections": "3.1, 3.1.1",
+   "concepts": [
+    {
+     "concept_tag": "food-variety-regions",
+     "learning_objective": "Explain why the food eaten by people varies across the regions of India."
+    },
+    {
+     "concept_tag": "local-crops-traditional-food",
+     "learning_objective": "Relate the traditional food of a state to the crops grown locally."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH03-T2",
+   "topic_number": 2,
+   "title": "Changing culinary practices",
+   "ncert_sections": "3.1.2",
+   "concepts": [
+    {
+     "concept_tag": "traditional-vs-modern-cooking",
+     "learning_objective": "Distinguish traditional cooking and grinding tools from their modern replacements."
+    },
+    {
+     "concept_tag": "causes-of-culinary-change",
+     "learning_objective": "Identify the factors that have changed cooking practices over time."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH03-T3",
+   "topic_number": 3,
+   "title": "Energy-giving and body-building foods",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "carbohydrates-energy",
+     "learning_objective": "Identify carbohydrates and their sources as primary energy-giving foods."
+    },
+    {
+     "concept_tag": "fats-stored-energy",
+     "learning_objective": "Recognise fats and their plant and animal sources as stored energy."
+    },
+    {
+     "concept_tag": "proteins-body-building",
+     "learning_objective": "Explain why proteins are called body-building foods and name their sources."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH03-T4",
+   "topic_number": 4,
+   "title": "Protective nutrients, roughage and water",
+   "ncert_sections": "3.2",
+   "concepts": [
+    {
+     "concept_tag": "vitamins-minerals-deficiency",
+     "learning_objective": "Match vitamins and minerals with their functions, sources and deficiency diseases."
+    },
+    {
+     "concept_tag": "roughage-and-water",
+     "learning_objective": "Explain the roles of dietary fibres and water in the body."
+    },
+    {
+     "concept_tag": "nutrient-loss-in-cooking",
+     "learning_objective": "Explain how cooking and washing cut vegetables can cause loss of some vitamins."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH03-T5",
+   "topic_number": 5,
+   "title": "Testing food for starch, fats and proteins",
+   "ncert_sections": "3.3, 3.3.1, 3.3.2, 3.3.3",
+   "concepts": [
+    {
+     "concept_tag": "starch-iodine-test",
+     "learning_objective": "Describe and interpret the iodine test for starch."
+    },
+    {
+     "concept_tag": "fat-paper-test",
+     "learning_objective": "Describe and interpret the oily-patch paper test for fats."
+    },
+    {
+     "concept_tag": "protein-test",
+     "learning_objective": "Describe and interpret the copper sulfate and caustic soda test for proteins."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH03-T6",
+   "topic_number": 6,
+   "title": "Balanced diet and junk food",
+   "ncert_sections": "3.4",
+   "concepts": [
+    {
+     "concept_tag": "balanced-diet",
+     "learning_objective": "Define a balanced diet and explain why nutritional needs vary between people."
+    },
+    {
+     "concept_tag": "junk-food",
+     "learning_objective": "Use nutritional information to identify junk food and explain why it is unhealthy."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH03-T7",
+   "topic_number": 7,
+   "title": "Millets and fortified foods",
+   "ncert_sections": "3.5",
+   "concepts": [
+    {
+     "concept_tag": "millets-nutri-cereals",
+     "learning_objective": "Explain why millets are called nutri-cereals and how they support a balanced diet."
+    },
+    {
+     "concept_tag": "food-fortification",
+     "learning_objective": "Explain what fortified foods are, with examples."
+    }
+   ]
+  },
+  {
+   "topic_id": "FECU1-CH03-T8",
+   "topic_number": 8,
+   "title": "Food miles: from farm to our plate",
+   "ncert_sections": "3.6",
+   "concepts": [
+    {
+     "concept_tag": "food-miles",
+     "learning_objective": "Define food miles and explain the benefits of reducing them."
+    },
+    {
+     "concept_tag": "farm-to-plate-steps",
+     "learning_objective": "Sequence the steps by which food such as wheat reaches our plate."
+    },
+    {
+     "concept_tag": "food-wastage",
+     "learning_objective": "Explain why we should avoid wasting food."
+    }
+   ]
+  }
+ ]
+}
