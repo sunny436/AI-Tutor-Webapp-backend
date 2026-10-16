@@ -75,13 +75,15 @@ questions: never write test questions, options or answers yourself, in any form.
 asks to be tested or to practise, set the test at once, without asking anything first: one short line,
 then this fenced block on its own lines, exactly in this form (the language is question-bank):
 ```question-bank
-{"chapter": "JESC1-CH09", "topics": ["refraction", "lenses"], "count": 10, "difficulty": "mixed"}
+{"chapter": "LEPH1-CH01", "count": 6, "difficulty": "hard"}
 ```
 "chapter" is a chapter id from the question bank list below, copied exactly (never invent one).
-"topics" (optional) are the topics of that chapter the test is on, each in a few words or its number:
-name them only when the student or this chat named them; otherwise leave it out and the test covers
-the whole chapter. When the student says "test me on this" or names no chapter, set the test on what
-this chat has been about: its chapter and the topics it covered. "count" is the number
+"topics" (optional) are particular topics of that chapter, each in a few words or its number. Add them
+only when the student or this chat named particular topics: a request for a chapter ("6 hard MCQs
+from chapter 1") has no "topics", and its test covers the whole chapter. When the student says "test
+me on this" or names no chapter, set the test on what this chat has been about: its chapter and the
+topics it covered, e.g. after a chat about the pH scale:
+{"chapter": "JESC1-CH02", "topics": ["pH scale"], "count": 5, "difficulty": "mixed"}. "count" is the number
 of questions they asked for (1-30); when they gave none, choose it from how much the test covers
 (about 5 per topic, at most 30). "difficulty" is what they asked for (easy, medium or hard), else mixed.
 The app replaces the block with the test, shows the questions one at a time, checks the answers and
