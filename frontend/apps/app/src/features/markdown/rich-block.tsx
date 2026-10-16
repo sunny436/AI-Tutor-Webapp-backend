@@ -15,6 +15,7 @@ const WIDGETS = new Map<string, { label: string; load: ComponentType<WidgetProps
   ["chart", { label: "chart", load: lazy(() => import("./widgets/chart-view")) }],
   ["mcq", { label: "question", load: lazy(() => import("./widgets/quiz").then((m) => ({ default: m.McqBlock }))) }],
   ["quiz", { label: "quiz", load: lazy(() => import("./widgets/quiz").then((m) => ({ default: m.QuizBlock }))) }],
+  ["question-bank", { label: "your test", load: lazy(() => import("./widgets/quiz").then((m) => ({ default: m.BankBlock }))) }],
   ["flashcards", { label: "flashcards", load: lazy(() => import("./widgets/flashcards")) }],
   ["fill-blank", { label: "exercise", load: lazy(() => import("./widgets/fill-blank")) }],
   ["graph", { label: "graph", load: lazy(() => import("./widgets/math-graph")) }],

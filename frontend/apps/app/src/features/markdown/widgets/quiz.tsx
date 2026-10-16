@@ -262,3 +262,13 @@ export function McqBlock(props: WidgetProps) {
 export function QuizBlock(props: WidgetProps) {
   return <TestBlock {...props} single={false} />;
 }
+
+/**
+ * ```question-bank: the tutor's request for a test from the question bank. The server replaces it
+ * with the test before the reply is saved (app/qbank/chat_tests.py), so a saved reply still holding
+ * one stopped before the test was set: say so, with the request's source.
+ */
+export function BankBlock({ onError }: WidgetProps) {
+  useEffect(() => onError("The test wasn't set because the reply stopped. Ask for it again."), [onError]);
+  return null;
+}

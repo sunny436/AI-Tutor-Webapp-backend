@@ -281,8 +281,11 @@ finished message (`done` and message lists), not while the reply streams.
 
 A reply may hold one practice block: a test (one ```` ```quiz ```` block, or one ```` ```mcq ```` for a
 single question) or an exercise (one ```` ```fill-blank ```` with `[[answer|alternative]]` blanks). The
-tutor writes them when `TUTOR_INTERACTIVE_BLOCKS` is on. The server owns them
-(`app/assessments/state.py`):
+tutor writes them when `TUTOR_INTERACTIVE_BLOCKS` is on. With `QUESTION_BANK_TESTS` on (the default since
+2026-10-16), a test's questions come only from the question bank: the tutor names a chapter in a
+```` ```question-bank ```` block, the server replaces it with a ```` ```quiz ```` of stored questions
+before the reply is saved, and a practice block the tutor writes itself becomes a note
+(docs/question_bank.md, "Tests in the chat"). The server owns them (`app/assessments/state.py`):
 
 - **Built with the reply, whole or not at all.** When a reply completes, its block is checked and
   saved by the same write as the reply, in `metadata.assessments`. A test needs 1-30 questions, 2-8

@@ -40,6 +40,7 @@ from app.llm.base import ChatMessage, GenerationOptions, LLMError
 from app.logging import get_logger, request_id_var
 from app.progress.activity import record_question
 from app.progress.learning import is_meaningful, now, record_learning, tutor_progress
+from app.qbank import chat_tests
 from app.settings import Settings
 
 log = get_logger("app.chat")
@@ -215,6 +216,7 @@ class ChatService:
         # Read before this question is counted: the same as the Settings preview showed.
         student = await self._student(session, user)
         tests = await self._tests(session, conversation.id)
+        bank = await self._bank(session, text, student)
         asked_at = now()
         user_message = Message(conversation_id=conversation.id, role="user", content=text, status="complete")
         session.add(user_message)
@@ -239,6 +241,7 @@ class ChatService:
                 interactive=self.settings.tutor_interactive_blocks,
                 tests=tests,
                 teaching=self.settings.tutor_teaching_policy,
+                bank=bank,
             ),
             files=await files.conversation_files(session, conversation.id, user.id),
             user_attachments=attachments,
@@ -273,6 +276,13 @@ class ChatService:
         )
         student = await self._student(session, user, asked_at)
         tests = await self._tests(session, conversation.id, exclude=last.id)
+        question = await session.scalar(  # the question this answer is for
+            select(Message.content)
+            .where(Message.conversation_id == conversation.id, Message.role == "user")
+            .order_by(Message.created_at.desc(), Message.id.desc())
+            .limit(1)
+        )
+        bank = await self._bank(session, question, student)
         assistant = await self._add_placeholder(session, user.id, conversation.id)
         await repo.touch(conversation.id)
         await session.commit()
@@ -289,6 +299,7 @@ class ChatService:
                 interactive=self.settings.tutor_interactive_blocks,
                 tests=tests,
                 teaching=self.settings.tutor_teaching_policy,
+                bank=bank,
             ),
             replaces_message_id=last.id,
             files=await files.conversation_files(session, conversation.id, user.id),
@@ -499,9 +510,47 @@ class ChatService:
         event.data["requestId"] = request_id_var.get()
         await generation.queue.put(event)
 
-    async def _with_test(self, session: AsyncSession, turn: PreparedTurn, content: str, metadata: dict) -> dict:
+    async def _bank(self, session: AsyncSession, question: str | None, student: StudentContext) -> str | None:
+        """What the tutor is told about the question bank: None when tests are the model's own
+        (QUESTION_BANK_TESTS off); the chapters it may set a test on when the question asks for one
+        (app/qbank/chat_tests.py); "" otherwise."""
+        if not self.settings.question_bank_tests:
+            return None
+        return await chat_tests.menu(session, question or "", student.grade, student.medium)
+
+    async def _with_test(
+        self,
+        session: AsyncSession,
+        turn: PreparedTurn,
+        content: str,
+        metadata: dict,
+        bank: chat_tests.BankTest | None = None,
+    ) -> dict:
         """The reply's practice test, checked whole (app/assessments/state.py) and saved by the same
-        UPDATE as the reply: a test exists exactly when its reply does, and never in part."""
+        UPDATE as the reply: a test exists exactly when its reply does, and never in part. A test the
+        question bank set is built from its own block, with where its questions came from."""
+        extra = {"message_id": str(turn.assistant_id)}
+        if bank is not None:
+            records, problem = assessments.build(f"```quiz\n{bank.body}\n```", None)
+            if not records:
+                log.warning("assessment rejected", extra={**extra, "code": problem, "source": "question_bank"})
+                return {**metadata, "assessmentError": {"code": problem}}
+            records[0]["source"] = {
+                "kind": "question_bank",
+                "chapterId": bank.chapter_id,
+                "topicId": bank.topic_id,
+                "questionIds": list(bank.question_ids),
+            }
+            log.info(
+                "assessment created",
+                extra={
+                    **extra,
+                    "questions": records[0]["total"],
+                    "source": "question_bank",
+                    "chapter_id": bank.chapter_id,
+                },
+            )
+            return {**metadata, "assessments": records}
         if not assessments.has_test(content):
             return metadata
         question = (
@@ -515,7 +564,6 @@ class ChatService:
             )
         )
         records, problem = assessments.build(content, question)
-        extra = {"message_id": str(turn.assistant_id)}
         if records:
             log.info("assessment created", extra={**extra, "questions": records[0]["total"]})
             return {**metadata, "assessments": records}
@@ -546,7 +594,10 @@ class ChatService:
     async def _finalize(self, turn, content, status, metadata, latency_ms, ttft_ms, usage):
         async with self.db.sessionmaker() as session:
             if status == "complete":
-                metadata = await self._with_test(session, turn, content, metadata)
+                bank = None
+                if self.settings.question_bank_tests:  # the test's questions come from the bank
+                    content, bank = await chat_tests.fill(session, content, str(turn.assistant_id))
+                metadata = await self._with_test(session, turn, content, metadata, bank)
             # A cancel written by the cancel endpoint wins over "complete".
             final_status = await session.scalar(
                 update(Message)

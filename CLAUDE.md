@@ -139,6 +139,9 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   as an independent asyncio task registered in `app/chat/streams.py`. It runs the LangGraph graph
   `receive_query → retrieve_context → assemble_context → generate_answer` (`app/rag/graph.py`), emits
   SSE `meta`/`token`/`done`/`error`, and persists the result. Stop and disconnect cancel the task.
+- **Tests in the chat come from the question bank** (`app/qbank/chat_tests.py`, `QUESTION_BANK_TESTS`): the
+  tutor names a chapter in a ```question-bank block, the server swaps in stored questions (SQL) before the
+  reply is saved, and `app/assessments` grades them; no model writes, picks or checks a question.
 - **One model call per turn:** there are no graph retries, and `FallbackProvider` switches providers
   only before the first token.
 - **Retrieval never fails a turn:** it is skipped or fails with a reason code.

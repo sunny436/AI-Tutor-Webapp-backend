@@ -2,7 +2,8 @@
 
 SQL filters and fixed rules only: no model is called and nothing is generated (docs/question_bank.md,
 "Selection contract").
-- **Eligible** = approved, active and matching every filter exactly. A filter is never relaxed, and
+- **Eligible** = servable (approved or awaiting review: the owner's decision, 2026-10-16), active
+  and matching every filter exactly. A filter is never relaxed, and
   nothing is taken from another class, subject, book, chapter, topic, language, difficulty or format.
 - **Too few eligible questions** = a shortage report, and no set (unless the caller allowed a
   partial one).
@@ -45,6 +46,7 @@ from app.errors import Conflict, NotFound, ValidationFailed
 from app.qbank.validate import TARGET_PER_TOPIC
 
 MAX_SET = 100
+SERVABLE = ("approved", "needs_review")  # 0016's index predicate; never draft or rejected
 REQUIRED = ("language", "class_level", "subject_code", "syllabus_version")
 OPTIONAL = ("book_id", "chapter_id", "topic_id", "question_format", "unseen_only")
 
@@ -123,7 +125,7 @@ def _seen(user_id: uuid.UUID) -> Any:
 
 def _eligible(f: Filters, user_id: uuid.UUID) -> list[Any]:
     conditions = [
-        QbQuestion.review_status == "approved",
+        QbQuestion.review_status.in_(SERVABLE),
         QbQuestion.is_active.is_(True),
         QbQuestion.language == f.language,
         QbQuestion.class_level == f.class_level,
@@ -301,7 +303,7 @@ ADAPTIVE_PICK = text(
     CROSS JOIN target t
     LEFT JOIN accuracy a ON a.concept_tag = q.concept_tag
     LEFT JOIN seen s ON s.question_id = q.question_id
-    WHERE q.review_status = 'approved' AND q.is_active
+    WHERE q.review_status IN ('approved', 'needs_review') AND q.is_active
       AND q.topic_id = :topic_id AND q.language = :language AND q.class_level = :class_level
       AND q.subject_code = :subject_code AND q.syllabus_version = :syllabus_version
       AND NOT EXISTS (SELECT 1 FROM qb_set_items x WHERE x.set_id = :set_id AND x.question_id = q.question_id)

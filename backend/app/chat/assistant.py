@@ -62,6 +62,27 @@ Show an attached file on its own line with ::file{ref=F1}, or one page of an att
 ::pdf{ref=F1 page=3}. For a file the student can download, put its name after the language:
 ```csv filename="marks.csv"."""
 
+# The same blocks when tests come from the question bank (QUESTION_BANK_TESTS, app/qbank/chat_tests.py):
+# the model never writes a test's questions; it names a chapter and the app sets the test.
+BANK_BLOCKS = r"""Interactive blocks, only where they genuinely help. Write a fenced code block whose language is
+the type and whose body is one JSON object:
+- question-bank: {"chapter": "JESC1-CH09", "topic": "refraction", "count": 10, "difficulty": "mixed"}
+- flashcards: {"title": "...", "cards": [{"front": "...", "back": "..."}]}
+- graph: {"functions": [{"expr": "x^2 - 2*x", "label": "f(x)"}], "x": [-5, 5]}
+- diagram: {"nodes": [{"id": "a", "label": "...", "detail": "..."}], "edges": [{"from": "a", "to": "b"}]}
+Tests, quizzes, MCQs and practice questions come only from the app's question bank of stored
+questions: never write test questions, options or answers yourself, in any form. When the student
+asks to be tested or to practise, write one short line and then one question-bank block: "chapter" is
+a chapter id from the question bank list below (never invent one); "topic" (optional) names one topic
+of that chapter in a few words; "count" is how many questions they asked for (1-30, else 10);
+"difficulty" is easy, medium, hard or mixed. The app replaces the block with the test, shows the
+questions one at a time, checks the answers and tells you the results. If no list is given, or the
+chapter is not in it, or it is unclear which chapter they mean, ask the student instead. Flashcards,
+graphs and diagrams are not recorded, so if asked how they did with those, say so.
+Show an attached file on its own line with ::file{ref=F1}, or one page of an attached PDF with
+::pdf{ref=F1 page=3}. For a file the student can download, put its name after the language:
+```csv filename="marks.csv"."""
+
 
 @dataclass(frozen=True)
 class AssistantConfig:
@@ -73,15 +94,23 @@ class AssistantConfig:
 
 
 def system_prompt_for(
-    student: StudentContext | None, interactive: bool = False, tests: str = "", *, teaching: bool = False
+    student: StudentContext | None,
+    interactive: bool = False,
+    tests: str = "",
+    *,
+    teaching: bool = False,
+    bank: str | None = None,
 ) -> str:
     """The frozen prompt, then the teaching defaults, then what the student's settings add, then the
-    chat's practice tests as the app recorded them (app/assessments/state.py). Each part only when
-    it says something."""
-    prompt = f"{SYSTEM_PROMPT}\n\n{INTERACTIVE_BLOCKS}" if interactive else SYSTEM_PROMPT
+    question bank's chapters (on a turn that asks for a test), then the chat's practice tests as the
+    app recorded them (app/assessments/state.py). Each part only when it says something. `bank` None:
+    the model writes tests itself (QUESTION_BANK_TESTS off)."""
+    blocks = INTERACTIVE_BLOCKS if bank is None else BANK_BLOCKS
+    prompt = f"{SYSTEM_PROMPT}\n\n{blocks}" if interactive else SYSTEM_PROMPT
     policy = TEACHING_POLICY if teaching else ""
     instructions = build_tutor_instructions(student)
-    return "\n\n".join(part for part in (prompt, policy, instructions, tests) if part)
+    chapters = bank if interactive and bank else ""
+    return "\n\n".join(part for part in (prompt, policy, instructions, chapters, tests) if part)
 
 
 def retrieval_for(student: StudentContext | None) -> RetrievalOptions:
@@ -104,8 +133,9 @@ def resolve_assistant_config(
     interactive: bool = False,
     tests: str = "",
     teaching: bool = False,
+    bank: str | None = None,
 ) -> AssistantConfig:
     return AssistantConfig(
-        system_prompt=system_prompt_for(student, interactive, tests, teaching=teaching),
+        system_prompt=system_prompt_for(student, interactive, tests, teaching=teaching, bank=bank),
         retrieval=retrieval_for(student),
     )

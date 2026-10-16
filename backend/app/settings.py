@@ -184,6 +184,10 @@ class Settings(BaseSettings):
     # diagnosed before they are corrected, one hint at a time when stuck); the student's own settings
     # still come first. Off until the owner turns it on; it costs prompt characters on every turn.
     tutor_teaching_policy: bool = False
+    # Practice tests in the chat come only from the question bank (app/qbank/chat_tests.py): the
+    # model names a chapter, the app sets stored questions, and a practice block the model writes
+    # itself is never shown as a test. The owner's decision, 2026-10-16.
+    question_bank_tests: bool = True
 
     @field_validator("default_timezone")
     @classmethod

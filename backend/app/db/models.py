@@ -1001,7 +1001,7 @@ QB_COMPETENCIES = ("knowledge_understanding", "application", "analysis_evaluatio
 QB_SOURCE_KINDS = ("original", "ncert_exercise", "cbse_official")
 QB_REVIEW_STATUSES = ("draft", "needs_review", "approved", "rejected")
 QB_SET_MODES = ("adaptive", "test")
-QB_SERVABLE = "review_status = 'approved' AND is_active"
+QB_SERVABLE = "review_status IN ('approved', 'needs_review') AND is_active"  # 0016: practice serves unreviewed ones
 
 
 class QbSyllabusVersion(Base):

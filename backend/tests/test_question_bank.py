@@ -257,11 +257,11 @@ async def test_english_and_hindi_books_keep_their_own_chapters_and_questions(ses
 
 
 # ------------------------------------------------------------------ selection
-async def test_a_test_serves_only_approved_active_questions_and_never_relaxes(sessions, tmp_path):
+async def test_a_test_serves_only_servable_active_questions_and_never_relaxes(sessions, tmp_path):
     bank = book(per_level=6)
     records = bank["questions"]["C10-SCI-EN-CH01"]
-    for record in records[6:8]:  # two medium questions not reviewed yet
-        record["review"] = {"status": "needs_review"}
+    for record in records[6:8]:  # two medium questions a reviewer rejected
+        record["review"] = {"status": "rejected", "note": "wrong key"}
     records[8] = {**records[8], "active": False}  # one medium question retired
     assert (await load(sessions, save(tmp_path, bank))).applied
     user = await new_user(sessions)
@@ -270,7 +270,7 @@ async def test_a_test_serves_only_approved_active_questions_and_never_relaxes(se
     assert created["status"] == "created" and created["served"] == 4
     servable = await scalar(
         sessions,
-        "SELECT bool_and(q.review_status = 'approved' AND q.is_active) FROM qb_set_items i "
+        "SELECT bool_and(q.review_status IN ('approved', 'needs_review') AND q.is_active) FROM qb_set_items i "
         "JOIN qb_questions q ON q.question_id = i.question_id WHERE i.set_id = :s",
         s=created["set_id"],
     )
