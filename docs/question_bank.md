@@ -79,25 +79,29 @@ the script's docstring).
 ## Tests in the chat (`app/qbank/chat_tests.py`)
 
 A practice test in the chat is always the bank's, never the model's (`QUESTION_BANK_TESTS`, on by default):
-1. On a turn whose message asks for a test, the tutor is given the chapters it may name: the student's
-   class (or the class the message names) in their medium, plus the English, Hindi and Sanskrit books.
-2. The tutor writes one `question-bank` block: `{"chapter": "<chapter id>", "topic": "...", "count": 10,
-   "difficulty": "easy|medium|hard|mixed"}`. It is taught never to write questions itself.
+1. On a turn whose message asks for a test, the tutor is given the chapters it may name: the class the
+   message names, else the student's, else the last one named earlier in the chat; in the student's
+   medium, plus the English, Hindi and Sanskrit books.
+2. The tutor plans the test and writes one `question-bank` block: `{"chapter": "<chapter id>", "topics":
+   ["...", 4], "count": 10, "difficulty": "easy|medium|hard|mixed"}`. For "test me on this" it uses what the
+   chat covered; with no number asked, it chooses the count from how much the test covers (about 5 per
+   topic, at most 30). It is taught never to write questions itself. A request it fences as JSON, writes
+   inline (`::question-bank{...}`) or as a bare object is read the same way when it names a chapter id.
 3. Before the reply is saved, the server replaces that block with a `quiz` block of stored questions:
-   - SQL alone, on `ix_qb_questions_select`: the chapter's servable questions (the topic's when one is
-     named by number or clearly by its words), of the asked difficulty, `ORDER BY md5(reply id ||
+   - SQL alone, on `ix_qb_questions_select`: the chapter's servable questions (of the named topics, each
+     matched by number or clearly by its words), of the asked difficulty, `ORDER BY md5(reply id ||
      question_id) LIMIT count`, then easy first;
    - the same reply always holds the same questions, a regenerated reply others, and no question repeats
-     in a test;
+     in a test; fewer stored than asked: all of them, and a note says so;
    - questions longer than the quiz card allows (187 case questions with long passages) are left out.
 4. The quiz is recorded, answered and graded like every chat test (`app/assessments/state.py`): answers
    are checked against the stored key, with no model call. The record also keeps
-   `source: {kind: "question_bank", chapterId, topicId, questionIds}`, which clients never see.
+   `source: {kind: "question_bank", chapterId, topicIds, questionIds}`, which clients never see.
 5. A quiz, MCQ or fill-in-the-blanks block the model writes itself is replaced by a note. An unknown
    chapter, or one with no stored questions, gets a note instead of a test.
 
-The model is still called once for the turn (to read the request and name the chapter); it never writes,
-picks, checks or scores a question.
+The model is still called once for the turn: it plans the test (chapter, topics, count, difficulty). It never
+writes, picks, checks or scores a question.
 
 ## Selection contract (`app/qbank/selection.py`)
 

@@ -216,7 +216,7 @@ class ChatService:
         # Read before this question is counted: the same as the Settings preview showed.
         student = await self._student(session, user)
         tests = await self._tests(session, conversation.id)
-        bank = await self._bank(session, text, student)
+        bank = await self._bank(session, text, student, conversation.id)
         asked_at = now()
         user_message = Message(conversation_id=conversation.id, role="user", content=text, status="complete")
         session.add(user_message)
@@ -282,7 +282,7 @@ class ChatService:
             .order_by(Message.created_at.desc(), Message.id.desc())
             .limit(1)
         )
-        bank = await self._bank(session, question, student)
+        bank = await self._bank(session, question, student, conversation.id)
         assistant = await self._add_placeholder(session, user.id, conversation.id)
         await repo.touch(conversation.id)
         await session.commit()
@@ -510,13 +510,24 @@ class ChatService:
         event.data["requestId"] = request_id_var.get()
         await generation.queue.put(event)
 
-    async def _bank(self, session: AsyncSession, question: str | None, student: StudentContext) -> str | None:
+    async def _bank(
+        self, session: AsyncSession, question: str | None, student: StudentContext, conversation_id: uuid.UUID
+    ) -> str | None:
         """What the tutor is told about the question bank: None when tests are the model's own
         (QUESTION_BANK_TESTS off); the chapters it may set a test on when the question asks for one
         (app/qbank/chat_tests.py); "" otherwise."""
         if not self.settings.question_bank_tests:
             return None
-        return await chat_tests.menu(session, question or "", student.grade, student.medium)
+        earlier = ""
+        if student.grade is None and chat_tests.wants_test(question or ""):  # the class may be named earlier
+            said = await session.scalars(
+                select(Message.content)
+                .where(Message.conversation_id == conversation_id, Message.role == "user")
+                .order_by(Message.created_at.desc(), Message.id.desc())
+                .limit(10)
+            )
+            earlier = "\n".join(reversed(list(said)))
+        return await chat_tests.menu(session, question or "", student.grade, student.medium, earlier)
 
     async def _with_test(
         self,
@@ -538,7 +549,7 @@ class ChatService:
             records[0]["source"] = {
                 "kind": "question_bank",
                 "chapterId": bank.chapter_id,
-                "topicId": bank.topic_id,
+                "topicIds": list(bank.topic_ids),
                 "questionIds": list(bank.question_ids),
             }
             log.info(

@@ -66,19 +66,26 @@ Show an attached file on its own line with ::file{ref=F1}, or one page of an att
 # the model never writes a test's questions; it names a chapter and the app sets the test.
 BANK_BLOCKS = r"""Interactive blocks, only where they genuinely help. Write a fenced code block whose language is
 the type and whose body is one JSON object:
-- question-bank: {"chapter": "JESC1-CH09", "topic": "refraction", "count": 10, "difficulty": "mixed"}
 - flashcards: {"title": "...", "cards": [{"front": "...", "back": "..."}]}
 - graph: {"functions": [{"expr": "x^2 - 2*x", "label": "f(x)"}], "x": [-5, 5]}
 - diagram: {"nodes": [{"id": "a", "label": "...", "detail": "..."}], "edges": [{"from": "a", "to": "b"}]}
+Flashcards, graphs and diagrams are not recorded, so if asked how they did with those, say so.
 Tests, quizzes, MCQs and practice questions come only from the app's question bank of stored
 questions: never write test questions, options or answers yourself, in any form. When the student
-asks to be tested or to practise, write one short line and then one question-bank block: "chapter" is
-a chapter id from the question bank list below (never invent one); "topic" (optional) names one topic
-of that chapter in a few words; "count" is how many questions they asked for (1-30, else 10);
-"difficulty" is easy, medium, hard or mixed. The app replaces the block with the test, shows the
-questions one at a time, checks the answers and tells you the results. If no list is given, or the
-chapter is not in it, or it is unclear which chapter they mean, ask the student instead. Flashcards,
-graphs and diagrams are not recorded, so if asked how they did with those, say so.
+asks to be tested or to practise, set the test at once, without asking anything first: one short line,
+then this fenced block on its own lines, exactly in this form (the language is question-bank):
+```question-bank
+{"chapter": "JESC1-CH09", "topics": ["refraction", "lenses"], "count": 10, "difficulty": "mixed"}
+```
+"chapter" is a chapter id from the question bank list below, copied exactly (never invent one).
+"topics" (optional) are the topics of that chapter the test is on, each in a few words or its number;
+leave it out for the whole chapter. When the student says "test me on this" or names no chapter, set
+the test on what this chat has been about: its chapter and the topics it covered. "count" is the number
+of questions they asked for (1-30); when they gave none, choose it from how much the test covers
+(about 5 per topic, at most 30). "difficulty" is what they asked for (easy, medium or hard), else mixed.
+The app replaces the block with the test, shows the questions one at a time, checks the answers and
+tells you the results. Only if no list is given, or the chapter is not in it, or it is unclear which
+chapter they mean, ask which chapter.
 Show an attached file on its own line with ::file{ref=F1}, or one page of an attached PDF with
 ::pdf{ref=F1 page=3}. For a file the student can download, put its name after the language:
 ```csv filename="marks.csv"."""

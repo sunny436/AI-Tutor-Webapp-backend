@@ -34,6 +34,7 @@ NOTE_UNKNOWN = (
 )
 NOTE_EMPTY = "_No test was set: there are no stored questions for that yet._"
 NOTE_MODEL = "_Practice questions come only from the question bank: ask for a test on a chapter._"
+NOTE_FEWER = "_Only {n} stored questions match this, so the test has {n}._"
 
 # A message that may ask for a test: then (only) the tutor is given the chapter list. "question" alone
 # is not one ("I have a question"); "5 questions", "questions on light" and "ask me" are.
@@ -44,7 +45,13 @@ _TEST_REQUEST = re.compile(
     re.I,
 )
 _CLASS = re.compile(r"\b(?:class|grade|std\.?|standard)\s*(\d{1,2})\b|कक्षा\s*(\d{1,2})", re.I)
-_OPEN = re.compile(r"^ {0,3}(`{3,}|~{3,})[ \t]*([\w-]*)[ \t]*$")
+CHAPTER_ID = re.compile(r"[A-Z]{3,6}\d-CH\d{2}")  # qb_chapters ids, e.g. JESC1-CH09
+# A request the model fenced as JSON (or with no language), or wrote inline: ::question-bank{...}
+# (the ::file directive's form) or a bare {"chapter": ...}. Read as a request only when it names
+# a chapter id; anything else stays as it was.
+LOOSE_FENCES = ("json", "jsonc", "")
+_INLINE = re.compile(r"(?:::)?question-bank\s*(?=\{)|(?=\{\s*\"chapter\"\s*:)")
+_OPEN = re.compile(r"^ {0,3}(`{3,}|~{3,})[ \t]*([^\s`]*)[^`]*$")  # any fence; its language is the first word
 _WORD = re.compile(r"\w{3,}")
 
 MENU = text(
@@ -84,7 +91,7 @@ PICK = text(
     LEFT JOIN qb_cases c ON c.case_id = q.case_id
     WHERE q.language = :language AND q.class_level = :class_level AND q.subject_code = :subject_code
       AND q.chapter_id = :chapter_id
-      AND (CAST(:topic_id AS text) IS NULL OR q.topic_id = :topic_id)
+      AND (CAST(:topic_ids AS text[]) IS NULL OR q.topic_id = ANY(CAST(:topic_ids AS text[])))
       AND (CAST(:difficulty AS text) IS NULL OR q.difficulty = :difficulty)
       AND q.review_status IN ('approved', 'needs_review') AND q.is_active
       AND length(q.stem) + coalesce(length(c.title) + length(c.body) + 8, 0) <= 1000
@@ -102,7 +109,7 @@ class BankTest:
 
     body: str
     chapter_id: str
-    topic_id: str | None
+    topic_ids: tuple[str, ...]  # () = the whole chapter
     question_ids: tuple[str, ...]
 
 
@@ -110,12 +117,13 @@ def wants_test(message: str) -> bool:
     return _TEST_REQUEST.search(message or "") is not None
 
 
-async def menu(session: AsyncSession, message: str, grade: str | None, medium: str | None) -> str:
-    """The chapters the tutor may set a test on, when the student's message asks for one: their
-    class (or the one the message names) in their medium, and the language subjects. "" otherwise."""
+async def menu(session: AsyncSession, message: str, grade: str | None, medium: str | None, earlier: str = "") -> str:
+    """The chapters the tutor may set a test on, when the student's message asks for one: the class
+    the message names, else theirs, else the last one named earlier in the chat (`earlier`), in their
+    medium, and the language subjects. "" otherwise."""
     if not wants_test(message):
         return ""
-    named = _CLASS.search(message)
+    named = _CLASS.search(message) or (None if grade else ([*_CLASS.finditer(earlier)] or [None])[-1])
     own = re.fullmatch(r"Class (\d{1,2})", grade or "")
     level = int(next(group for group in named.groups() if group)) if named else int(own[1]) if own else None
     if level is None or not 6 <= level <= 12:
@@ -137,12 +145,18 @@ async def menu(session: AsyncSession, message: str, grade: str | None, medium: s
     return "\n".join(lines)
 
 
-async def _topic(session: AsyncSession, chapter_id: str, wanted: Any) -> Any:
-    """The chapter's topic the block names, by number or by the most words in common; None (the
-    whole chapter) when it names none or none clearly."""
+async def _topics(session: AsyncSession, chapter_id: str, wanted: Any) -> list[Any]:
+    """The chapter's topics the request names (one, or a list), each by number or by the most words
+    in common; [] (the whole chapter) when it names none clearly."""
+    names = wanted if isinstance(wanted, list) else [wanted]
+    topics = (await session.execute(TOPICS, {"chapter_id": chapter_id})).all()
+    found = {topic.topic_id: topic for name in names[:10] if (topic := _topic(topics, name)) is not None}
+    return sorted(found.values(), key=lambda topic: topic.topic_number)
+
+
+def _topic(topics: list[Any], wanted: Any) -> Any:
     if wanted is None or isinstance(wanted, bool):
         return None
-    topics = (await session.execute(TOPICS, {"chapter_id": chapter_id})).all()
     if isinstance(wanted, int) or (isinstance(wanted, str) and wanted.strip().isdigit()):
         return next((topic for topic in topics if topic.topic_number == int(wanted)), None)
     if not isinstance(wanted, str):
@@ -164,23 +178,30 @@ def _question(row: Any) -> dict:
     }
 
 
-async def _set(session: AsyncSession, body: str, seed: str) -> tuple[BankTest | None, str]:
-    """The ```quiz block for one question-bank block, or a note saying why there is none."""
+def _request(spec: Any) -> dict | None:
+    """A question-bank request: a JSON object naming a chapter id."""
+    chapter = spec.get("chapter") if isinstance(spec, dict) else None
+    return spec if isinstance(chapter, str) and CHAPTER_ID.fullmatch(chapter.strip()) else None
+
+
+def _parse(body: str) -> dict | None:
     try:
-        spec = json.loads(body)
+        return _request(json.loads(body))
     except ValueError:
+        return None
+
+
+async def _set(session: AsyncSession, spec: dict | None, seed: str) -> tuple[BankTest | None, str]:
+    """The ```quiz block for one request, or a note saying why there is none."""
+    if spec is None:
         return None, NOTE_UNKNOWN
-    chapter_id = spec.get("chapter") if isinstance(spec, dict) else None
-    if not isinstance(chapter_id, str) or not 0 < len(chapter_id.strip()) <= 120:
-        return None, NOTE_UNKNOWN
-    chapter = (await session.execute(CHAPTER, {"chapter_id": chapter_id.strip()})).one_or_none()
+    chapter = (await session.execute(CHAPTER, {"chapter_id": spec["chapter"].strip()})).one_or_none()
     if chapter is None:
         return None, NOTE_UNKNOWN
-    topic = await _topic(session, chapter.chapter_id, spec.get("topic"))
-    count = spec.get("count")
-    count = (
-        count if isinstance(count, int) and not isinstance(count, bool) and 1 <= count <= MAX_COUNT else DEFAULT_COUNT
-    )
+    topics = await _topics(session, chapter.chapter_id, spec.get("topics", spec.get("topic")))
+    asked = spec.get("count")
+    asked = asked if isinstance(asked, int) and not isinstance(asked, bool) and asked >= 1 else None
+    count = min(asked, MAX_COUNT) if asked else DEFAULT_COUNT
     difficulty = spec.get("difficulty") if spec.get("difficulty") in LEVELS else None
     rows = (
         await session.execute(
@@ -190,7 +211,7 @@ async def _set(session: AsyncSession, body: str, seed: str) -> tuple[BankTest | 
                 "class_level": chapter.class_level,
                 "subject_code": chapter.subject_code,
                 "chapter_id": chapter.chapter_id,
-                "topic_id": topic.topic_id if topic else None,
+                "topic_ids": [topic.topic_id for topic in topics] or None,
                 "difficulty": difficulty,
                 "seed": seed,
                 "n": count,
@@ -200,41 +221,79 @@ async def _set(session: AsyncSession, body: str, seed: str) -> tuple[BankTest | 
     if not rows:
         return None, NOTE_EMPTY
     rows = sorted(rows, key=lambda row: LEVELS[row.difficulty])  # easy first; the seeded order within a level
-    title = f"{chapter.book} · {chapter.chapter_number}. {chapter.title}" + (f" · {topic.title}" if topic else "")
+    named = " · ".join(topic.title for topic in topics)
+    title = f"{chapter.book} · {chapter.chapter_number}. {chapter.title}" + (f" · {named}" if named else "")
     quiz = json.dumps(
         {"title": title[:200], "questions": [_question(row) for row in rows]}, ensure_ascii=False, separators=(",", ":")
     )
-    test = BankTest(quiz, chapter.chapter_id, topic.topic_id if topic else None, tuple(r.question_id for r in rows))
-    return test, f"```quiz\n{quiz}\n```"
+    test = BankTest(quiz, chapter.chapter_id, tuple(t.topic_id for t in topics), tuple(r.question_id for r in rows))
+    fewer = f"\n\n{NOTE_FEWER.format(n=len(rows))}" if asked and len(rows) < asked else ""
+    return test, f"```quiz\n{quiz}\n```{fewer}"
 
 
-async def fill(session: AsyncSession, content: str, seed: str) -> tuple[str, BankTest | None]:
-    """The reply with its first question-bank block set from the bank (a note when it can't be),
-    later ones dropped, and every practice block the model wrote itself replaced by a note."""
-    if "```" not in content and "~~~" not in content:
-        return content, None
+def _segments(content: str) -> list[tuple[str, str, str]]:
+    """The reply in order as prose runs ("prose", "", text) and fenced blocks (language, body, raw).
+    Every fence is read whole, whatever its language, so a closing fence is never taken for an opening one."""
     lines = content.replace("\r\n", "\n").replace("\r", "\n").split("\n")
-    out: list[str] = []
-    test: BankTest | None = None
-    asked = False
+    segments: list[tuple[str, str, str]] = []
+    prose: list[str] = []
     index = 0
     while index < len(lines):
         opened = _OPEN.match(lines[index])
-        if opened is None or opened[2] not in (FENCE, *MODEL_FENCES):
-            out.append(lines[index])
+        if opened is None:
+            prose.append(lines[index])
             index += 1
             continue
+        if prose:
+            segments.append(("prose", "", "\n".join(prose)))
+            prose = []
         fence = opened[1]
         close = re.compile(rf"^ {{0,3}}{re.escape(fence[0])}{{{len(fence)},}}[ \t]*$")
         end = index + 1
         while end < len(lines) and not close.match(lines[end]):
             end += 1
-        body = "\n".join(lines[index + 1 : end])
+        segments.append((opened[2], "\n".join(lines[index + 1 : end]), "\n".join(lines[index : end + 1])))
         index = end + 1
-        if opened[2] != FENCE:
-            out.append(NOTE_MODEL)
-        elif not asked:
-            asked = True
-            test, block = await _set(session, body, seed)
-            out.append(block)
-    return "\n".join(out), test
+    if prose:
+        segments.append(("prose", "", "\n".join(prose)))
+    return segments
+
+
+async def fill(session: AsyncSession, content: str, seed: str) -> tuple[str, BankTest | None]:
+    """The reply with its first test request set from the bank (a note when it can't be), later
+    ones dropped, and every practice block the model wrote itself replaced by a note."""
+    if not any(mark in content for mark in ("```", "~~~", FENCE, '"chapter"')):
+        return content, None
+    parts: list[str] = []
+    test: BankTest | None = None
+    asked = False
+    for language, body, raw in _segments(content):
+        if language == "prose":  # a request written inline, outside any fence
+            pieces: list[str] = []
+            position = 0
+            for match in _INLINE.finditer(raw):
+                if match.start() < position:
+                    continue
+                try:
+                    spec, stop = json.JSONDecoder().raw_decode(raw, match.end())
+                except ValueError:
+                    continue
+                if _request(spec) is None:
+                    continue
+                pieces.append(raw[position : match.start()])
+                if not asked:
+                    asked = True
+                    test, block = await _set(session, spec, seed)
+                    pieces.append(f"\n\n{block}\n\n")
+                position = stop
+            parts.append("".join([*pieces, raw[position:]]) if pieces else raw)
+        elif language in MODEL_FENCES:
+            parts.append(NOTE_MODEL)
+        elif language == FENCE or (language in LOOSE_FENCES and _parse(body) is not None):
+            if not asked:  # later requests are dropped: one test per reply
+                asked = True
+                test, block = await _set(session, _parse(body), seed)
+                parts.append(block)
+        else:
+            parts.append(raw)  # an ordinary code block
+    return "\n".join(parts), test
