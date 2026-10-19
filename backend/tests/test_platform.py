@@ -50,6 +50,7 @@ async def test_database_unavailable_is_503_without_details():
 
 PRODUCTION_LIKE = dict(
     app_env="production",
+    app_name="PadhAI",
     secret_key="s" * 40,
     llm_provider="openai_compatible",
     embedding_provider="openai_compatible",
@@ -67,6 +68,10 @@ def test_production_refuses_unsafe_configuration():
         create_app(make_settings(**{**PRODUCTION_LIKE, "llm_provider": "fake"}))
     with pytest.raises(RuntimeError, match="EMBEDDING_PROVIDER=fake"):
         create_app(make_settings(**{**PRODUCTION_LIKE, "embedding_provider": "fake"}))
+    with pytest.raises(RuntimeError, match="APP_NAME must be PadhAI"):
+        create_app(make_settings(**{**PRODUCTION_LIKE, "app_name": "Assistant"}))
+    with pytest.raises(RuntimeError, match="PUBLIC_APP_URL must be a bare HTTPS origin"):
+        create_app(make_settings(**{**PRODUCTION_LIKE, "public_app_url": "https://padhai.example/path"}))
 
 
 def test_production_hides_api_docs():

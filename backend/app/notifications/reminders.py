@@ -25,6 +25,7 @@ from sqlalchemy import or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.models import NotificationPreferences, User
+from app.email_html import Email, app_link
 from app.learning.context import read_study_time
 from app.notifications import emails
 from app.notifications.alerts import settings_link
@@ -60,7 +61,7 @@ async def plan_reminders(session: AsyncSession, settings: Settings, now: datetim
         return planned
     flags = [getattr(NotificationPreferences, kind) for kind in wanted]
     rows = await session.execute(
-        select(User.id, User.email, User.timezone, *flags)
+        select(User.id, User.email, User.timezone, User.display_name, *flags)
         .join(NotificationPreferences, NotificationPreferences.user_id == User.id)
         .where(User.timezone.is_not(None), User.email_verified_at.is_not(None), or_(*flags))
     )
@@ -74,14 +75,14 @@ async def plan_reminders(session: AsyncSession, settings: Settings, now: datetim
     return planned
 
 
-async def _queue(session: AsyncSession, row, kind: str, period: str, email: tuple[str, str], before: datetime) -> int:
-    subject, body = email
+async def _queue(session: AsyncSession, row, kind: str, period: str, email: Email, before: datetime) -> int:
+    # The outbox keeps a subject and a text body only, so reminders go out as text for now.
     added = await queue_email(
         session,
         kind=kind,
         to=row.email,
-        subject=subject,
-        body=body,
+        subject=email.subject,
+        body=email.body,
         send_before=before,
         user_id=row.id,
         dedup_key=f"{row.id}:{kind}:{period}",
@@ -96,7 +97,7 @@ async def _plan_for(session: AsyncSession, settings: Settings, row, due: set[str
     state = await snapshot(session, row.id, zone, now)
     end_of_day = datetime.combine(state.today, time(23, 59, 59), zone)
     app = settings.app_name
-    app_url = settings.public_app_url.rstrip("/")
+    app_url = app_link(settings, "home") or app
     manage = settings_link(settings)
     queued = 0
 
@@ -104,7 +105,7 @@ async def _plan_for(session: AsyncSession, settings: Settings, row, due: set[str
         start = datetime.combine(state.today, await read_study_time(session, row.id) or DEFAULT_STUDY_TIME, zone)
         if start <= local < start + DAILY_WINDOW:
             unsubscribe = unsubscribe_url(settings, row.id, DAILY_REMINDER)
-            email = emails.daily_reminder(app, app_url, manage, unsubscribe)
+            email = emails.daily_reminder(app, app_url, manage, unsubscribe, name=row.display_name, settings=settings)
             added = await _queue(session, row, DAILY_REMINDER, state.today.isoformat(), email, start + DAILY_WINDOW)
             if added and await in_app_reminders_on(session, row.id):
                 await notify(
@@ -123,7 +124,16 @@ async def _plan_for(session: AsyncSession, settings: Settings, row, due: set[str
         india = now.astimezone(LEARNING_ZONE)
         if not streak.today_active and streak.current >= 2 and STREAK_WINDOW[0] <= india.time() < STREAK_WINDOW[1]:
             unsubscribe = unsubscribe_url(settings, row.id, STREAK_WARNING)
-            email = emails.streak_warning(app, streak.current, app_url, manage, unsubscribe)
+            email = emails.streak_warning(
+                app,
+                streak.current,
+                app_url,
+                manage,
+                unsubscribe,
+                time_left=remaining_label(streak.day_end - now),
+                name=row.display_name,
+                settings=settings,
+            )
             added = await _queue(session, row, STREAK_WARNING, streak.today.isoformat(), email, streak.day_end)
             if added and await in_app_reminders_on(session, row.id):
                 await notify(
@@ -151,6 +161,8 @@ async def _plan_for(session: AsyncSession, settings: Settings, row, due: set[str
                 app_url,
                 manage,
                 unsubscribe,
+                name=row.display_name,
+                settings=settings,
             )
             added = await _queue(session, row, WEEKLY_SUMMARY, f"{year}-W{week:02d}", email, end_of_day)
             if added and await in_app_reminders_on(session, row.id):

@@ -6,6 +6,8 @@ import base64
 import hashlib
 import json
 from datetime import UTC, datetime, timedelta
+from email import policy
+from email.parser import BytesParser
 
 import httpx
 import pytest
@@ -47,6 +49,29 @@ async def test_sends_plain_text_from_the_configured_mailbox():
         "subject": "Your code",
         "text": "Use this code: 123456",
     }
+
+
+async def test_sends_the_optional_html_part_to_ollastack():
+    sender, seen = sender_with(ok)
+    await sender.send("user@example.com", "Your code", "Use this code: 123456", "<p>Use this code: 123456</p>")
+    assert json.loads(seen[0].content) == {
+        "to": "user@example.com",
+        "subject": "Your code",
+        "text": "Use this code: 123456",
+        "html": "<p>Use this code: 123456</p>",
+    }
+
+
+async def test_smtp_sends_text_then_html_as_multipart_alternative():
+    sender = SmtpEmailSender(make_settings(email_backend="smtp"))
+    sent = []
+    sender._send_sync = sent.append
+    await sender.send("user@example.com", "Hello", "Plain ✓", "<p>HTML ✓</p>")
+    parsed = BytesParser(policy=policy.default).parsebytes(sent[0].as_bytes(policy=policy.default))
+    parts = list(parsed.iter_parts())
+    assert parsed.get_content_type() == "multipart/alternative"
+    assert [part.get_content_type() for part in parts] == ["text/plain", "text/html"]
+    assert "Plain ✓" in parts[0].get_content() and "HTML ✓" in parts[1].get_content()
 
 
 @pytest.mark.parametrize(
@@ -111,6 +136,7 @@ async def test_a_sign_in_code_goes_out_through_ollastack(app, client):
     body = json.loads(request.content)
     assert body["to"] == "gil@example.com" and "sign-in code" in body["subject"]
     assert "135790" in body["text"]
+    assert "135790" in body["html"] and "padhai-mark-email.png" not in body["html"]
 
 
 async def test_an_email_change_reports_503_when_ollastack_refuses(app, client):

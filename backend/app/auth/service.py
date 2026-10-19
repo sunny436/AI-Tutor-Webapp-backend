@@ -35,6 +35,7 @@ from app.db.models import (
     UserAvatar,
     UserSettings,
 )
+from app.email_html import Email
 from app.errors import (
     Conflict,
     InvalidCode,
@@ -121,9 +122,9 @@ class AuthService:
     async def _user_by_email(self, email: str) -> User | None:
         return await self.db.scalar(select(User).where(User.email == email))
 
-    async def _deliver(self, to: str, subject: str, body: str) -> None:
+    async def _deliver(self, to: str, email: Email) -> None:
         try:
-            await self.email.send(to, subject, body)
+            await self.email.send(to, email.subject, email.body, html=email.html)
         except Exception as error:  # noqa: BLE001
             log.error("email delivery failed", extra={"error_type": type(error).__name__})
             raise ServiceUnavailable("We could not send the email. Please try again shortly.") from error
@@ -293,8 +294,7 @@ class AuthService:
         )
         if await self._user_by_email(new_email) is not None:
             await self.db.commit()
-            subject, body = email_in_use_email(self.settings.app_name)
-            await self._deliver(new_email, subject, body)
+            await self._deliver(new_email, email_in_use_email(self.settings.app_name, settings=self.settings))
             return
         code = new_email_code()
         self.db.add(
@@ -307,8 +307,10 @@ class AuthService:
             )
         )
         await self.db.commit()
-        subject, body = code_email(self.settings.app_name, "change_email", code, self.settings.email_code_ttl_minutes)
-        await self._deliver(new_email, subject, body)
+        ttl = self.settings.email_code_ttl_minutes
+        await self._deliver(
+            new_email, code_email(self.settings.app_name, "change_email", code, ttl, settings=self.settings)
+        )
 
     async def confirm_email_change(self, user: User, current_session_id: uuid.UUID, new_email: str, code: str) -> User:
         row = await self.db.scalar(
@@ -361,9 +363,9 @@ class AuthService:
         await self.db.commit()
         await self.db.refresh(user)
         # After the commit: the change stands even when the notice cannot be sent right now.
-        subject, body = email_changed_email(self.settings.app_name, new_email)
+        notice = email_changed_email(self.settings.app_name, new_email, settings=self.settings)
         try:
-            await self.email.send(old_email, subject, body)
+            await self.email.send(old_email, notice.subject, notice.body, html=notice.html)
         except Exception as error:  # noqa: BLE001
             log.error("email change notice failed", extra={"error_type": type(error).__name__})
         return user
@@ -378,9 +380,9 @@ class AuthService:
         await self.db.execute(delete(AuthVerification).where(AuthVerification.identifier.in_(otp_identifiers(address))))
         await self.db.commit()
         # After the commit, and best effort: the account is gone whether or not this arrives.
-        subject, body = account_deleted_email(self.settings.app_name)
+        notice = account_deleted_email(self.settings.app_name, settings=self.settings)
         try:
-            await self.email.send(address, subject, body)
+            await self.email.send(address, notice.subject, notice.body, html=notice.html)
         except Exception as error:  # noqa: BLE001
             log.error("account deleted notice failed", extra={"error_type": type(error).__name__})
 

@@ -27,10 +27,11 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.devices import device_label
-from app.auth.emails import EmailSender, code_email
+from app.auth.emails import EmailSender, code_email, welcome_email
 from app.auth.service import utcnow
 from app.db.models import AuthAccount, AuthSession, AuthTwoFactor, AuthVerification, User
 from app.db.session import get_session
+from app.email_html import Email
 from app.errors import NotFound
 from app.logging import get_logger
 from app.notifications.alerts import google_linked_alert, password_changed_alert, sign_in_alert, two_factor_alert
@@ -71,9 +72,9 @@ def code_hash(otp: str) -> str:
     return base64.urlsafe_b64encode(hashlib.sha256(otp.encode()).digest()).rstrip(b"=").decode()
 
 
-async def _send(sender: EmailSender, to: str, subject: str, body: str, what: str) -> None:
+async def _send(sender: EmailSender, to: str, email: Email, what: str) -> None:
     try:
-        await sender.send(to, subject, body)
+        await sender.send(to, email.subject, email.body, html=email.html)
     except Exception as error:  # noqa: BLE001 - logged; the account change stands either way
         log.error("auth email failed", extra={"email_kind": what, "error_type": type(error).__name__})
 
@@ -95,8 +96,8 @@ async def send_code(
     expected = code_hash(body.otp)
     if any(hmac.compare_digest(value.rpartition(":")[0], expected) for value in values):
         settings = request.app.state.settings
-        subject, text = code_email(settings.app_name, CODE_PURPOSE[body.type], body.otp, CODE_MINUTES)
-        background.add_task(_send, request.app.state.email_sender, email, subject, text, CODE_PURPOSE[body.type])
+        message = code_email(settings.app_name, CODE_PURPOSE[body.type], body.otp, CODE_MINUTES, settings=settings)
+        background.add_task(_send, request.app.state.email_sender, email, message, CODE_PURPOSE[body.type])
         log.info("auth code queued", extra={"code_type": body.type})
     else:
         log.warning("auth code refused: no matching fresh code", extra={"code_type": body.type})
@@ -110,7 +111,8 @@ async def auth_event(
     settings = request.app.state.settings
     now = utcnow()
     user = await db.get(User, body.user_id)
-    email: tuple[str, str] | None = None
+    email: Email | None = None
+    what = body.kind
     counted = False
     if user is not None and body.kind == "sign_in" and body.session_id is not None:
         session = await db.get(AuthSession, body.session_id)
@@ -124,9 +126,12 @@ async def auth_event(
                     )
                 )
             )
-            # The sign-up's own session (the account's only one, made with it) is not a new device.
+            # A session created alongside the account is treated as sign-up. Delivery is best effort:
+            # a delayed event can miss it, and a replay can send the welcome again.
             sign_up = not others and session.created_at <= user.created_at + SIGN_UP
-            if not sign_up and not any(device_label(agent) == label for agent in others):
+            if sign_up:
+                email, what = welcome_email(settings.app_name, user.display_name, settings=settings), "welcome"
+            elif not any(device_label(agent) == label for agent in others):
                 email = await sign_in_alert(db, settings, user, label, now)
     elif user is not None and body.kind in ("password_changed", "password_reset"):
         changed = await db.scalar(
@@ -136,7 +141,7 @@ async def auth_event(
         )
         if changed is not None and changed > now - FRESH:
             counted = True
-            email = await password_changed_alert(db, settings, user, now)
+            email = await password_changed_alert(db, settings, user, now, reset=body.kind == "password_reset")
     elif user is not None and body.kind == "google_linked":
         linked = await db.scalar(
             select(AuthAccount.created_at).where(AuthAccount.user_id == user.id, AuthAccount.provider_id == "google")
@@ -155,8 +160,14 @@ async def auth_event(
     await db.commit()
     log.info(
         "auth event",
-        extra={"auth_event": body.kind, "user_id": str(body.user_id), "counted": counted, "emailed": email is not None},
+        extra={
+            "auth_event": body.kind,
+            "user_id": str(body.user_id),
+            "counted": counted,
+            "emailed": email is not None,
+            "email_kind": what if email is not None else None,
+        },
     )
     if email is not None and user is not None:
-        background.add_task(_send, request.app.state.email_sender, user.email, email[0], email[1], body.kind)
+        background.add_task(_send, request.app.state.email_sender, user.email, email, what)
     return Response(status_code=status.HTTP_202_ACCEPTED)

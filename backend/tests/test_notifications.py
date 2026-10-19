@@ -143,8 +143,13 @@ async def test_a_password_change_or_reset_is_always_reported(client, app, databa
     # The credential was just written (as Better Auth's change or reset writes it).
     await _event(client, app, "password_changed", account["email"])
     await _event(client, app, "password_reset", account["email"])
-    subjects = [mail["subject"] for mail in app.state.email_sender.outbox if mail["to"] == account["email"]]
-    assert len(subjects) == 2 and all("password was changed" in subject for subject in subjects)
+    messages = [mail for mail in app.state.email_sender.outbox if mail["to"] == account["email"]]
+    assert len(messages) == 2 and all("password was changed" in mail["subject"] for mail in messages)
+    assert "changed in Settings" in messages[0]["body"]
+    assert "reset with a code" in messages[1]["body"]
+    assert all("Review Privacy & Security" in mail["body"] for mail in messages)
+    assert all("Choose which emails" not in mail["body"] for mail in messages)
+    assert all(mail["html"] is not None for mail in messages)
 
 
 # ------------------------------------------------------------------- unsubscribe

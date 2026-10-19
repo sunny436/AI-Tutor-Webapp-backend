@@ -12,6 +12,7 @@ import hashlib
 import hmac
 import uuid
 
+from app.email_html import app_link
 from app.settings import Settings
 
 PURPOSE = "padhai-unsubscribe-v1"
@@ -53,4 +54,7 @@ def read_token(settings: Settings, token: str) -> tuple[uuid.UUID, str] | None:
 
 
 def unsubscribe_url(settings: Settings, user_id: uuid.UUID, kind: str) -> str:
-    return f"{settings.public_app_url.rstrip('/')}/unsubscribe?token={make_token(settings, user_id, kind)}"
+    base = app_link(settings, "home")
+    if base is None:
+        raise ValueError("PUBLIC_APP_URL is not a valid application origin")
+    return f"{base.rstrip('/')}/unsubscribe?token={make_token(settings, user_id, kind)}"

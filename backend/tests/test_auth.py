@@ -195,7 +195,12 @@ async def test_sign_in_alert_only_for_a_new_device_and_only_for_real_sessions(cl
 
     outbox = app.state.email_sender.outbox
     await event(account["token"])
-    assert outbox == []  # the sign-up's own session, made with the account
+    # The sign-up's own session gets the best-effort welcome, never a sign-in alert.
+    assert [mail["subject"] for mail in outbox] == ["Welcome to Assistant: your personal AI tutor"]
+    assert "because you just created" in outbox[0]["body"]
+    assert "You get this email once." not in outbox[0]["body"]
+    assert outbox[0]["html"] is not None
+    outbox.clear()
     async with app.state.db.sessionmaker() as s:
         user = await s.get(User, user_id)
         user.created_at = datetime.now(UTC) - timedelta(days=3)  # not a brand-new account

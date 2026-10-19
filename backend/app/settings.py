@@ -9,6 +9,7 @@ from __future__ import annotations
 import zoneinfo
 from functools import lru_cache
 from typing import Literal
+from urllib.parse import urlsplit
 
 from pydantic import Field, SecretStr, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -233,11 +234,30 @@ class Settings(BaseSettings):
         """None = every kind."""
         return set(self._items(self.notifications_kinds)) or None
 
+    @property
+    def public_app_origin(self) -> str | None:
+        """PUBLIC_APP_URL as a bare safe origin, or None when unset or invalid."""
+        raw = self.public_app_url.strip().rstrip("/")
+        if not raw or any(ord(char) < 0x21 or char in '\\"<>`\x7f' for char in raw):
+            return None
+        try:
+            parts = urlsplit(raw)
+            _ = parts.port
+        except ValueError:
+            return None
+        local = parts.hostname in ("localhost", "127.0.0.1")
+        secure = parts.scheme == "https" or (parts.scheme == "http" and local and not self.is_production)
+        if not secure or not parts.hostname or parts.username or parts.password:
+            return None
+        if parts.path or parts.query or parts.fragment:
+            return None
+        return f"{parts.scheme}://{parts.netloc}"
+
     def jobs_problems(self) -> list[str]:
         """What stops the worker from sending emails safely (checked by every run)."""
         problems = []
-        if self.notifications_mode != "off" and not self.public_app_url.startswith(("https://", "http://")):
-            problems.append("NOTIFICATIONS_MODE needs PUBLIC_APP_URL (the web app's address, for links in emails)")
+        if self.notifications_mode != "off" and self.public_app_origin is None:
+            problems.append("NOTIFICATIONS_MODE needs a valid PUBLIC_APP_URL (a bare HTTPS origin)")
         if self.notifications_mode == "allowlist" and not self.notification_allowlist:
             problems.append("NOTIFICATIONS_MODE=allowlist needs NOTIFICATIONS_ALLOWLIST")
         return problems
@@ -260,6 +280,10 @@ class Settings(BaseSettings):
             self.ollastack_token.get_secret_value() and self.ollastack_mailbox_id
         ):
             problems.append("EMAIL_BACKEND=ollastack needs OLLASTACK_TOKEN and OLLASTACK_MAILBOX_ID")
+        if self.app_name != "PadhAI":
+            problems.append("APP_NAME must be PadhAI in production")
+        if self.public_app_url and self.public_app_origin is None:
+            problems.append("PUBLIC_APP_URL must be a bare HTTPS origin")
         if self.rag_enabled and self.embedding_provider == "fake":
             problems.append("EMBEDDING_PROVIDER=fake is not allowed in production while RAG is enabled")
         if self.ncert_kb_base_url and not self.ncert_kb_base_url.startswith(

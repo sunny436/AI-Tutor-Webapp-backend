@@ -166,7 +166,8 @@ class FlakySender:
         self.error = error
         self.attempts = 0
 
-    async def send(self, to: str, subject: str, body: str) -> None:
+    async def send(self, to: str, subject: str, body: str, html: str | None = None) -> None:
+        assert html is None  # the queued outbox intentionally stores text only
         self.attempts += 1
         raise self.error
 
@@ -199,13 +200,16 @@ async def test_an_email_that_may_have_gone_out_is_not_retried(client, app, datab
 
 
 # ----------------------------------------------------------------------- reminders
-async def reminder_student(client, app, database, *, study_time: str | None = None, **prefs):
+async def reminder_student(
+    client, app, database, *, study_time: str | None = None, display_name: str | None = None, **prefs
+):
     account = await register(client, app)
     headers = account["headers"]
     me = (await client.get("/v1/me", headers=headers)).json()
-    await client.patch(
-        "/v1/me/profile", json={"version": me["profileVersion"], "set": {"timezone": "Asia/Kolkata"}}, headers=headers
-    )
+    profile = {"timezone": "Asia/Kolkata"}
+    if display_name is not None:
+        profile["displayName"] = display_name
+    await client.patch("/v1/me/profile", json={"version": me["profileVersion"], "set": profile}, headers=headers)
     if study_time:
         await client.patch(
             "/v1/learning/profile", json={"version": 0, "set": {"preferredStudyTime": study_time}}, headers=headers
@@ -231,13 +235,16 @@ async def active_days(database: str, account, *days: date) -> None:
 
 
 async def test_the_daily_reminder_comes_once_in_the_hour_from_the_study_time(client, app, database):
-    account = await reminder_student(client, app, database, study_time="17:30", dailyReminder=True)
+    account = await reminder_student(
+        client, app, database, study_time="17:30", display_name="Aditi Kumar", dailyReminder=True
+    )
     assert (await run(app, ist("2030-01-08T17:29")))["reminders"]["queued"] == 0
     assert (await run(app, ist("2030-01-08T17:30")))["reminders"]["queued"] == 1
     assert (await run(app, ist("2030-01-08T18:10")))["reminders"]["queued"] == 0  # one per day
     assert (await run(app, ist("2030-01-09T18:31")))["reminders"]["queued"] == 0  # the hour has passed
     mail = sent_to(app, account["email"])[-1]
     assert mail["subject"].startswith("Time for today's")
+    assert "Hi Aditi," in mail["body"]
     assert f"{APP_URL}/unsubscribe?token=" in mail["body"]
 
 

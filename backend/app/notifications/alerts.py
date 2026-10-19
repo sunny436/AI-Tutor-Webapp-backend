@@ -19,6 +19,7 @@ from datetime import datetime
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.models import NotificationPreferences, User
+from app.email_html import Email, app_link
 from app.notifications import emails
 from app.notifications.inbox import notify
 from app.notifications.outbox import SECURITY_SIGN_IN
@@ -26,12 +27,9 @@ from app.notifications.tokens import unsubscribe_url
 from app.progress.activity import zone_for
 from app.settings import Settings
 
-Email = tuple[str, str]
-
 
 def settings_link(settings: Settings, section: str = "notifications") -> str:
-    base = settings.public_app_url.rstrip("/")
-    return f"{base}/settings/{section}" if base else f"{settings.app_name} Settings"
+    return app_link(settings, section) or f"{settings.app_name} Settings"
 
 
 def local_time(settings: Settings, user: User, moment: datetime) -> str:
@@ -57,11 +55,18 @@ async def sign_in_alert(
         return None
     unsubscribe = unsubscribe_url(settings, user.id, SECURITY_SIGN_IN) if settings.public_app_url else None
     return emails.sign_in_alert(
-        settings.app_name, device, local_time(settings, user, moment), settings_link(settings), unsubscribe
+        settings.app_name,
+        device,
+        local_time(settings, user, moment),
+        settings_link(settings),
+        unsubscribe,
+        settings=settings,
     )
 
 
-async def password_changed_alert(session: AsyncSession, settings: Settings, user: User, moment: datetime) -> Email:
+async def password_changed_alert(
+    session: AsyncSession, settings: Settings, user: User, moment: datetime, *, reset: bool = False
+) -> Email:
     await notify(
         session,
         user.id,
@@ -72,7 +77,11 @@ async def password_changed_alert(session: AsyncSession, settings: Settings, user
         dedup_key=f"security-password:{uuid.uuid4()}",
     )
     return emails.password_changed(
-        settings.app_name, local_time(settings, user, moment), settings_link(settings, "privacy")
+        settings.app_name,
+        local_time(settings, user, moment),
+        settings_link(settings, "privacy"),
+        reset=reset,
+        settings=settings,
     )
 
 
@@ -87,7 +96,7 @@ async def google_linked_alert(session: AsyncSession, settings: Settings, user: U
         dedup_key=f"security-google:{uuid.uuid4()}",
     )
     return emails.google_linked(
-        settings.app_name, local_time(settings, user, moment), settings_link(settings, "privacy")
+        settings.app_name, local_time(settings, user, moment), settings_link(settings, "privacy"), settings=settings
     )
 
 
@@ -102,5 +111,5 @@ async def two_factor_alert(session: AsyncSession, settings: Settings, user: User
         dedup_key=f"security-two-factor:{uuid.uuid4()}",
     )
     return emails.two_factor(
-        settings.app_name, on, local_time(settings, user, moment), settings_link(settings, "privacy")
+        settings.app_name, on, local_time(settings, user, moment), settings_link(settings, "privacy"), settings=settings
     )
