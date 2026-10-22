@@ -227,11 +227,19 @@ async def run(args: argparse.Namespace) -> int:
 
     model = f"{settings.llm_primary_model} (temperature {settings.llm_temperature})"
     policy = "on" if settings.tutor_teaching_policy else "off"
-    print(f"model: {model}, {args.runs} runs per question, teaching policy {policy}")
+    print(
+        f"model: {model}, {args.runs} runs per question, teaching policy {policy}, "
+        f"question bank {'on' if settings.question_bank_tests else 'off'}, study scope {settings.study_scope}"
+    )
     failed_cases = []
     for case in build_cases():
-        system = system_prompt_for(
-            None, True, state.tutor_summary([case["record"]]), teaching=settings.tutor_teaching_policy
+        system = system_prompt_for(  # the prompt as production builds it: its bank blocks and scope policy
+            None,
+            True,
+            state.tutor_summary([case["record"]]),
+            teaching=settings.tutor_teaching_policy,
+            bank="" if settings.question_bank_tests else None,
+            scoped=settings.study_scope == "on",
         )
         request, reply = case["chat"]
         passed = total = 0

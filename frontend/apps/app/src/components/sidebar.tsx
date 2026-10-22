@@ -13,6 +13,7 @@ import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@v1/ui/tooltip";
 import { cn } from "@v1/ui/utils";
 import {
+  BookOpenCheck,
   ChevronsUpDown,
   FolderOpen,
   LogOut,
@@ -103,7 +104,7 @@ function RailTip({ label, collapsed, children }: { label: string; collapsed: boo
  * chat list ("Recent Doubts") and the account. Rendered in the desktop rail and inside the mobile drawer
  * (`onNavigate` closes the drawer). The collapse control lives in the header.
  */
-/** A sidebar place (File Library, Study Activity): its page and everything under it. */
+/** A sidebar place (My Learning, File Library, Study Activity): its page and everything under it. */
 function PlaceLink({
   href,
   label,
@@ -244,8 +245,9 @@ export function SidebarContent({
           </RailTip>
         </div>
 
-        {/* Places of their own, not Learning Hub items: the files the tutor can read, and your study time. */}
+        {/* Places of their own, not Learning Hub items: your practice, the files the tutor can read, your study time. */}
         <div className={cn("shrink-0 space-y-1", collapsed ? "flex flex-col items-center px-3 pb-3" : "px-3 pb-3")}>
+          <PlaceLink href="/learning" label="My Learning" icon={BookOpenCheck} collapsed={collapsed} onNavigate={onNavigate} />
           <PlaceLink href="/library" label="File Library" icon={FolderOpen} collapsed={collapsed} onNavigate={onNavigate} />
           <PlaceLink href="/study" label="Study Activity" icon={Timer} collapsed={collapsed} onNavigate={onNavigate} />
         </div>

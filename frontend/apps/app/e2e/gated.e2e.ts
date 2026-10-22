@@ -6,7 +6,7 @@ import { expect, test } from "./support";
  * no learning-tool pages, no sample numbers, no "Preview"/"Soon" controls.
  * preview.e2e.ts checks the same build with the switch on.
  */
-const TOOL_PATHS = ["/courses", "/homework", "/summarizer", "/course-creator", "/flashcards"];
+const TOOL_PATHS = ["/homework", "/summarizer"];
 
 test("without preview features the learning tools do not exist", async ({ page, account: _ }) => {
   for (const path of TOOL_PATHS) {

@@ -83,7 +83,7 @@ test("no indigo or violet left anywhere on screen, light and dark", async ({ pag
   const chat = new URL(page.url()).pathname;
   const signedOut = await browser.newPage();
   for (const scheme of ["light", "dark"] as const) {
-    for (const path of ["/", chat, "/settings/profile", "/settings/progress", "/settings/appearance", "/settings/streak", "/no-such-page"]) {
+    for (const path of ["/", chat, "/learning", "/settings/profile", "/settings/progress", "/settings/appearance", "/settings/streak", "/no-such-page"]) {
       await page.emulateMedia({ colorScheme: scheme });
       await page.goto(path);
       await page.waitForLoadState("networkidle");
@@ -113,7 +113,7 @@ test("no indigo or violet left anywhere on screen, light and dark", async ({ pag
 test("with high contrast on, the chat and Settings stay accessible, light and dark", async ({ page, account: _ }) => {
   for (const scheme of ["light", "dark"] as const) {
     await page.emulateMedia({ colorScheme: scheme });
-    for (const path of ["/", "/settings/profile", "/settings/learning"]) {
+    for (const path of ["/", "/learning", "/settings/profile", "/settings/learning"]) {
       await page.goto(path);
       await waitForHydration(page);
       await page.evaluate(() => document.documentElement.setAttribute("data-contrast", "high"));
@@ -149,6 +149,8 @@ test("titles in any script, and very long ones, stay inside the sidebar and the 
     const drawer = width < 768;
     if (drawer) await page.getByRole("button", { name: "Open menu" }).click();
     const panel = drawer ? page.getByRole("dialog", { name: "Navigation" }) : page.getByRole("complementary");
+    // The drawer slides in: measure it where it lands, not on the way.
+    await panel.evaluate((element) => Promise.all(element.getAnimations().map((animation) => animation.finished.catch(() => undefined))));
     const panelBox = await panel.boundingBox();
     for (const [index, id] of ids.entries()) {
       const row = panel.locator(`a[href='/c/${id}']`);

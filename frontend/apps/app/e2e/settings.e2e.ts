@@ -54,6 +54,7 @@ test("the sections: one address each, one heading each, accessible, no sideways 
     ["tutor", "AI Tutor"],
     ["subjects", "Subjects & Study"],
     ["progress", "Progress & Goals"],
+    ["study-tracking", "Study Tracking"],
     ["streak", "Learning & Streak"],
     ["notifications", "Notifications"],
     ["appearance", "Appearance & Accessibility"],
@@ -304,9 +305,12 @@ test("academic profile: catalog choices, a state only with a state board, saved"
 });
 
 test("learning goals: topics, study time and goals, saved", async ({ page, account: _ }) => {
+  // Within the API's window for an exam date: from today to two years ahead.
+  const exam = new Date(Date.now() + 30 * 86_400_000).toISOString().slice(0, 10);
   await page.goto("/settings/goals");
   await page.getByLabel("Main goal").selectOption({ label: "Preparing for a competitive exam" });
   await page.getByLabel("Exam you're preparing for").fill("NEET");
+  await page.getByLabel("Exam date").fill(exam);
   await page.getByLabel("Target score (%)").fill("90");
   const topic = page.getByLabel("Topics you find difficult", { exact: true });
   await topic.fill("Genetics");
@@ -326,14 +330,16 @@ test("learning goals: topics, study time and goals, saved", async ({ page, accou
 
   await page.reload();
   await expect(page.getByLabel("Exam you're preparing for")).toHaveValue("NEET");
+  await expect(page.getByLabel("Exam date")).toHaveValue(exam);
   await expect(page.getByRole("list", { name: "Your difficult topics" }).getByRole("listitem")).toHaveText(["Optics"]);
   const profile = await apiJson(page, "/v1/learning/profile");
-  expect([profile.mainGoal, profile.targetScorePercent, profile.dailyActiveMinutesGoal, profile.preferredStudyTime]).toEqual([
-    "competitive_exam",
-    90,
-    45,
-    "18:30",
-  ]);
+  expect([
+    profile.mainGoal,
+    profile.targetScorePercent,
+    profile.dailyActiveMinutesGoal,
+    profile.preferredStudyTime,
+    profile.examDate,
+  ]).toEqual(["competitive_exam", 90, 45, "18:30", exam]);
   const told = await tutorKnows(page);
   for (const line of [
     "Main goal: preparing for a competitive exam",

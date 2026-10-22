@@ -9,7 +9,7 @@ characters are removed. What is stored is what the tutor is later shown, quoted,
 from __future__ import annotations
 
 import re
-from datetime import datetime
+from datetime import UTC, date, datetime, timedelta
 from typing import Annotated, Literal
 
 from pydantic import BeforeValidator, Field, StringConstraints, field_validator, model_validator
@@ -24,6 +24,7 @@ GOAL_MAX = 280
 TOPIC_MAX = 60
 TOPICS_MAX = 10
 SUBJECTS_MAX = 15
+EXAM_DAYS_AHEAD = 730  # an exam date is from yesterday (any time zone's today) to two years ahead
 
 _INVISIBLE = re.compile(r"[\x00-\x08\x0b-\x1f\x7f-\x9f‪-‮⁦-⁩]")
 
@@ -54,6 +55,7 @@ ProfileField = Literal[
     "preferredStudyTime",
     "shortTermGoal",
     "longTermGoal",
+    "examDate",
 ]
 
 
@@ -74,11 +76,20 @@ class LearnerProfileSet(RequestModel):
     preferred_study_time: Clock | None = None
     short_term_goal: str | None = Field(default=None, min_length=1, max_length=GOAL_MAX)
     long_term_goal: str | None = Field(default=None, min_length=1, max_length=GOAL_MAX)
+    exam_date: date | None = Field(default=None, description="The exam's day: the practice plan's exam window.")
 
     @field_validator("target_exam", "short_term_goal", "long_term_goal", mode="before")
     @classmethod
     def _clean(cls, value: object) -> object:
         return clean_text(value)
+
+    @field_validator("exam_date")
+    @classmethod
+    def _coming(cls, value: date | None) -> date | None:
+        today = datetime.now(UTC).date()
+        if value is not None and not today - timedelta(days=1) <= value <= today + timedelta(days=EXAM_DAYS_AHEAD):
+            raise ValueError(f"the exam date must be from yesterday to {EXAM_DAYS_AHEAD} days ahead")
+        return value
 
     @field_validator("weak_topics")
     @classmethod
@@ -117,6 +128,7 @@ class LearnerProfileOut(ApiModel):
     preferred_study_time: str | None = Field(description='"HH:MM", 24-hour, in the user\'s time zone.')
     short_term_goal: str | None
     long_term_goal: str | None
+    exam_date: date | None
     updated_at: datetime | None
 
 

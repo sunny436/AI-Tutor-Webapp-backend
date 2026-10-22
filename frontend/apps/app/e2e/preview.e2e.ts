@@ -8,11 +8,8 @@ import { composer, expect, expectAccessible, expectNoHorizontalOverflow, test } 
  * gated.e2e.ts checks the other half: none of this exists on the real server.
  */
 const TOOLS = [
-  { path: "/courses", title: "My Courses" },
   { path: "/homework", title: "Homework Helper" },
   { path: "/summarizer", title: "Summarizer" },
-  { path: "/course-creator", title: "Course Creator" },
-  { path: "/flashcards", title: "Flashcards" },
 ];
 
 const SHELL_CALLS = new Set([
@@ -22,6 +19,9 @@ const SHELL_CALLS = new Set([
   "/api/v1/progress/activity",
   "/api/v1/progress/streak",
   "/api/v1/notifications",
+  // Study time (features/study): the header's session state and its beat, on every page of the shell.
+  "/api/v1/study/session",
+  "/api/v1/study/beat",
 ]);
 
 test.beforeAll(async () => {
@@ -34,7 +34,7 @@ test.beforeAll(async () => {
 test("the shell lists every tool, and marks what is not real", async ({ page, account: _ }) => {
   await page.goto("/");
   await expect(composer(page)).toBeVisible();
-  await expect(page.getByRole("navigation", { name: "Learning Hub" }).getByRole("link")).toHaveCount(5); // not the chat itself
+  await expect(page.getByRole("navigation", { name: "Learning Hub" }).getByRole("link")).toHaveCount(TOOLS.length); // not the chat itself
   await expect(page.getByRole("banner").getByRole("link", { name: /day learning streak/ })).toBeVisible(); // the real one
   await expect(page.getByRole("button", { name: /Leaderboard/ })).toBeDisabled();
   // Attach and dictation are real now (not preview): the same, enabled buttons in both modes.
@@ -76,31 +76,3 @@ for (const tool of TOOLS) {
     expect(calls, "the tool page made no API calls").toEqual([]);
   });
 }
-
-test("courses: picking a course shows its chapters", async ({ page, account: _ }) => {
-  await page.goto("/courses");
-  const maths = page.getByRole("button", { name: /Class 10 Mathematics \(CBSE\)/ });
-  await expect(maths).toHaveAttribute("aria-pressed", "false");
-  await maths.click();
-  await expect(maths).toHaveAttribute("aria-pressed", "true");
-  await expect(page.getByRole("heading", { name: "Class 10 Mathematics (CBSE) Chapters" })).toBeVisible();
-  await expect(page.getByRole("progressbar", { name: "Class 10 Mathematics (CBSE) progress" })).toHaveAttribute(
-    "aria-valuenow",
-    "45",
-  );
-});
-
-test("flashcards flip and page through on this device", async ({ page, account: _ }) => {
-  await page.goto("/flashcards");
-  const card = page.getByRole("button", { name: /Question/ });
-  await expect(page.getByText("Flashcard 1 of 5")).toBeVisible();
-  await card.click();
-  await expect(page.getByRole("button", { name: /Answer/ })).toHaveAttribute("aria-pressed", "true");
-  await expect(page.getByText("Fe₂O₃·xH₂O (Hydrated Ferric Oxide)")).toBeVisible();
-  await page.getByRole("button", { name: "Next Card" }).click();
-  await expect(page.getByText("Flashcard 2 of 5")).toBeVisible();
-  await expect(page.getByRole("button", { name: /Question/ })).toHaveAttribute("aria-pressed", "false");
-  await page.getByRole("button", { name: "Previous" }).click();
-  await page.getByRole("button", { name: "Previous" }).click();
-  await expect(page.getByText("Flashcard 5 of 5")).toBeVisible();
-});

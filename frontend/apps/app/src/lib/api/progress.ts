@@ -1,12 +1,18 @@
-/** Progress (active time in PadhAI, questions, streaks) and support requests. */
+/** Progress (active time in PadhAI, questions, streaks, practice) and support requests. */
 
 import { callRoute } from "./http";
 import type {
   ActivityReport,
   LearningDays,
   LearningStreak,
+  Mastery,
+  Mistakes,
   NotificationList,
+  PracticePlan,
+  PracticeTests,
+  PracticeTopics,
   Progress,
+  Revisions,
   SupportRequestIn,
   SupportRequestOut,
 } from "./types";
@@ -38,6 +44,36 @@ export function getStreak(): Promise<LearningStreak> {
 /** Learning days for the calendar (the server bounds the range to a year). */
 export function getLearningDays(range: { from?: string; to?: string } = {}): Promise<LearningDays> {
   return callRoute("GET /v1/progress/learning-days", { query: range });
+}
+
+// My Learning: the student's own record from question-bank tests in the chat, derived on every read.
+
+/** Today's plan: at most six tasks, the same all day. */
+export function getPracticePlan(signal?: AbortSignal): Promise<PracticePlan> {
+  return callRoute("GET /v1/progress/plan", { signal });
+}
+
+export function getMastery(signal?: AbortSignal): Promise<Mastery> {
+  return callRoute("GET /v1/progress/mastery", { signal });
+}
+
+export function getRevisions(signal?: AbortSignal): Promise<Revisions> {
+  return callRoute("GET /v1/progress/revisions", { signal });
+}
+
+/** Wrong answers grouped by concept (the server allows 1 to 200). */
+export function getMistakes(limit = 50, signal?: AbortSignal): Promise<Mistakes> {
+  return callRoute("GET /v1/progress/mistakes", { query: { limit }, signal });
+}
+
+/** Recent question-bank tests, newest first (the server allows 1 to 100). */
+export function getPracticeTests(limit = 20, signal?: AbortSignal): Promise<PracticeTests> {
+  return callRoute("GET /v1/progress/practice-tests", { query: { limit }, signal });
+}
+
+/** The chapters and topics the bank can test the student on (their class and medium). */
+export function getPracticeTopics(signal?: AbortSignal): Promise<PracticeTopics> {
+  return callRoute("GET /v1/progress/practice-topics", { signal });
 }
 
 /** The bell: newest first, never more than 30. */

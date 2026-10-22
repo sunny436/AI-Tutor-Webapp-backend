@@ -435,6 +435,23 @@ async def test_chat_uses_the_knowledge_base_end_to_end(client, app, fake_llm):
     assert "retrieval" not in done["metadata"]  # internal only: the public contract is unchanged
 
 
+async def test_small_talk_that_opens_a_chat_searches_nothing_but_a_follow_up_does(client, app):
+    from tests.conftest import ingest_docs
+
+    await ingest_docs(app, {"quokka.md": KB_DOC})
+    headers = (await register(client, app))["headers"]
+    _, events = await stream_chat(client, headers, "hi")
+    cid = events[0][1]["conversationId"]
+    greeting = await _assistant_row(app, events[-1][1]["message"]["id"])
+    assert greeting.metadata_["retrieval"]["reason"] == "not_requested"
+    _, events = await stream_chat(client, headers, KB_QUESTION, cid)
+    assert (await _assistant_row(app, events[-1][1]["message"]["id"])).metadata_["retrieval"]["status"] == "ok"
+    # "why?" alone would search for nothing; after a question it is searched with it (search_query_for).
+    _, events = await stream_chat(client, headers, "why?", cid)
+    follow_up = (await _assistant_row(app, events[-1][1]["message"]["id"])).metadata_["retrieval"]
+    assert follow_up["status"] == "ok" and follow_up["sources"][0]["uri"] == "quokka.md"
+
+
 async def test_embedding_outage_keeps_chat_working():
     import httpx
 

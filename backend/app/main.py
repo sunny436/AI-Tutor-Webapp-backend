@@ -2,7 +2,7 @@
 
     uvicorn app.main:create_app --factory --host 127.0.0.1 --port 4000
 
-Tests call `create_app(settings, llm=..., email_sender=..., embeddings=...)` to inject fakes.
+Tests call `create_app(settings, llm=..., email_sender=..., embeddings=..., intents=...)` to inject fakes.
 
 This is the composition root: the only place that wires the LLM provider, the embeddings,
 the knowledge store, the LangChain retriever and the LangGraph graph together.
@@ -38,6 +38,7 @@ from app.files.service import MAX_UPLOAD_BYTES
 from app.greetings.refresh import GreetingRefresh
 from app.greetings.router import router as greetings_router
 from app.health import router as health_router
+from app.intents.classifier import IntentClassifier
 from app.learning.router import router as learning_router
 from app.llm.base import LLMProvider
 from app.llm.factory import build_llm
@@ -109,6 +110,7 @@ def create_app(
     llm: LLMProvider | None = None,
     email_sender: EmailSender | None = None,
     embeddings: Embeddings | None = None,
+    intents: IntentClassifier | None = None,
 ) -> FastAPI:
     settings = settings or get_settings()
     settings.validate_for_env()
@@ -146,7 +148,21 @@ def create_app(
         app.state.knowledge, app.state.rag_graph = build_rag(
             settings, app.state.db, app.state.llm, app.state.embeddings, ncert
         )
-        app.state.chat = ChatService(app.state.db, settings, app.state.rag_graph, app.state.generations)
+        # Ollalink's classifier (app/intents): only with INTENT_ROUTER or STUDY_SCOPE on or shadow, and a key.
+        classifier = intents or (
+            IntentClassifier(
+                settings.ollalink_base_url,
+                settings.ollalink_api_key.get_secret_value(),
+                settings.intent_router_timeout_s,
+                settings.intent_min_confidence,
+                settings.intent_min_group_confidence,
+                scope_min_redirect=settings.scope_min_redirect,
+                scope_min_confidence=settings.scope_min_confidence,
+            )
+            if settings.intent_router_enabled or settings.study_scope_enabled
+            else None
+        )
+        app.state.chat = ChatService(app.state.db, settings, app.state.rag_graph, app.state.generations, classifier)
         # Files never delay startup or stop chat: the worker recovers and tests its sandbox in the
         # background, and files stay unavailable until that passes. Tests drive it directly.
         app.state.file_worker = FileWorker(app.state.db, settings, app.state.embeddings)
@@ -166,7 +182,13 @@ def create_app(
             log.warning("startup checks skipped", extra={"error_type": type(error).__name__})
         log.info(
             "started",
-            extra={"env": settings.app_env, "llm": app.state.llm.name, "knowledge": "ncert" if ncert else "pgvector"},
+            extra={
+                "env": settings.app_env,
+                "llm": app.state.llm.name,
+                "knowledge": "ncert" if ncert else "pgvector",
+                "intents": settings.intent_router,
+                "scope": settings.study_scope,
+            },
         )
         retention = None if settings.app_env == "test" else asyncio.create_task(auth_retention())
         try:
@@ -179,6 +201,8 @@ def create_app(
             await app.state.generations.shutdown()
             if ncert is not None:
                 await ncert.aclose()
+            if classifier is not None:
+                await classifier.aclose()
             await app.state.db.dispose()
 
     docs = settings.app_env != "production"

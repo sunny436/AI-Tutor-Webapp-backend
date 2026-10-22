@@ -336,116 +336,6 @@
         "title": "AssessmentAnswerOut",
         "type": "object"
       },
-      "AssessmentOut": {
-        "description": "A practice test or exercise as the student may see it now; also each item of a reply's\n`metadata.assessments`.",
-        "properties": {
-          "answerable": {
-            "title": "Answerable",
-            "type": "boolean"
-          },
-          "answered": {
-            "title": "Answered",
-            "type": "integer"
-          },
-          "current": {
-            "anyOf": [
-              {
-                "type": "integer"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Current"
-          },
-          "earned": {
-            "title": "Earned",
-            "type": "integer"
-          },
-          "hash": {
-            "title": "Hash",
-            "type": "string"
-          },
-          "id": {
-            "title": "Id",
-            "type": "string"
-          },
-          "kind": {
-            "enum": [
-              "test",
-              "exercise"
-            ],
-            "title": "Kind",
-            "type": "string"
-          },
-          "locator": {
-            "title": "Locator",
-            "type": "string"
-          },
-          "position": {
-            "title": "Position",
-            "type": "integer"
-          },
-          "possible": {
-            "title": "Possible",
-            "type": "integer"
-          },
-          "questions": {
-            "items": {
-              "$ref": "#/components/schemas/AssessmentQuestionOut"
-            },
-            "title": "Questions",
-            "type": "array"
-          },
-          "schemaVersion": {
-            "title": "Schemaversion",
-            "type": "integer"
-          },
-          "state": {
-            "enum": [
-              "not_started",
-              "active",
-              "completed"
-            ],
-            "title": "State",
-            "type": "string"
-          },
-          "title": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Title"
-          },
-          "total": {
-            "title": "Total",
-            "type": "integer"
-          }
-        },
-        "required": [
-          "id",
-          "position",
-          "schemaVersion",
-          "kind",
-          "title",
-          "hash",
-          "locator",
-          "state",
-          "answerable",
-          "total",
-          "answered",
-          "current",
-          "earned",
-          "possible",
-          "questions"
-        ],
-        "title": "AssessmentOut",
-        "type": "object"
-      },
       "AssessmentQuestionOut": {
         "description": "One question. A multiple-choice question has `text` and `options`; a fill-in-the-blanks\nexercise has `segments` (the text around the blanks) and `blanks`. The rest are null.",
         "properties": {
@@ -571,6 +461,127 @@
         "title": "AssessmentQuestionOut",
         "type": "object"
       },
+      "AssessmentResponseOut": {
+        "description": "The test as recorded after a response, and `learning` (additive): what this answer did to the\nstreak, as the chat's `done.learning` says it, when this answer to a question-bank test made its\nIndia day a learning day (every 5th of the day; app/progress/learning.py); null otherwise, and\nalways on a replayed response.",
+        "properties": {
+          "answerable": {
+            "title": "Answerable",
+            "type": "boolean"
+          },
+          "answered": {
+            "title": "Answered",
+            "type": "integer"
+          },
+          "current": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Current"
+          },
+          "earned": {
+            "title": "Earned",
+            "type": "integer"
+          },
+          "hash": {
+            "title": "Hash",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "test",
+              "exercise"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "learning": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LearningEventOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "locator": {
+            "title": "Locator",
+            "type": "string"
+          },
+          "position": {
+            "title": "Position",
+            "type": "integer"
+          },
+          "possible": {
+            "title": "Possible",
+            "type": "integer"
+          },
+          "questions": {
+            "items": {
+              "$ref": "#/components/schemas/AssessmentQuestionOut"
+            },
+            "title": "Questions",
+            "type": "array"
+          },
+          "schemaVersion": {
+            "title": "Schemaversion",
+            "type": "integer"
+          },
+          "state": {
+            "enum": [
+              "not_started",
+              "active",
+              "completed"
+            ],
+            "title": "State",
+            "type": "string"
+          },
+          "title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Title"
+          },
+          "total": {
+            "title": "Total",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "position",
+          "schemaVersion",
+          "kind",
+          "title",
+          "hash",
+          "locator",
+          "state",
+          "answerable",
+          "total",
+          "answered",
+          "current",
+          "earned",
+          "possible",
+          "questions",
+          "learning"
+        ],
+        "title": "AssessmentResponseOut",
+        "type": "object"
+      },
       "AssessmentResponseRequest": {
         "additionalProperties": false,
         "description": "Answer or skip the waiting question of a practice test or exercise in a reply. Only which\nquestion and what was chosen or typed: the questions and the grading come from the reply the\nserver saved.",
@@ -682,6 +693,64 @@
           "deprecated"
         ],
         "title": "CatalogEntryOut",
+        "type": "object"
+      },
+      "ChapterMasteryOut": {
+        "properties": {
+          "bookTitle": {
+            "title": "Booktitle",
+            "type": "string"
+          },
+          "chapterId": {
+            "title": "Chapterid",
+            "type": "string"
+          },
+          "coverage": {
+            "title": "Coverage",
+            "type": "number"
+          },
+          "estimate": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Estimate"
+          },
+          "number": {
+            "title": "Number",
+            "type": "integer"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "topicCount": {
+            "title": "Topiccount",
+            "type": "integer"
+          },
+          "topics": {
+            "items": {
+              "$ref": "#/components/schemas/TopicMasteryOut"
+            },
+            "title": "Topics",
+            "type": "array"
+          }
+        },
+        "required": [
+          "chapterId",
+          "number",
+          "title",
+          "bookTitle",
+          "estimate",
+          "coverage",
+          "topicCount",
+          "topics"
+        ],
+        "title": "ChapterMasteryOut",
         "type": "object"
       },
       "ChapterOut": {
@@ -872,6 +941,61 @@
           "message"
         ],
         "title": "ChatResponse",
+        "type": "object"
+      },
+      "ConceptMasteryOut": {
+        "properties": {
+          "answered": {
+            "title": "Answered",
+            "type": "integer"
+          },
+          "conceptTag": {
+            "title": "Concepttag",
+            "type": "string"
+          },
+          "correct": {
+            "title": "Correct",
+            "type": "integer"
+          },
+          "distinctQuestions": {
+            "title": "Distinctquestions",
+            "type": "integer"
+          },
+          "estimate": {
+            "title": "Estimate",
+            "type": "number"
+          },
+          "lastAnsweredAt": {
+            "format": "date-time",
+            "title": "Lastansweredat",
+            "type": "string"
+          },
+          "objective": {
+            "title": "Objective",
+            "type": "string"
+          },
+          "state": {
+            "enum": [
+              "mastered",
+              "learning",
+              "weak",
+              "not_enough_evidence"
+            ],
+            "title": "State",
+            "type": "string"
+          }
+        },
+        "required": [
+          "conceptTag",
+          "objective",
+          "estimate",
+          "state",
+          "answered",
+          "correct",
+          "distinctQuestions",
+          "lastAnsweredAt"
+        ],
+        "title": "ConceptMasteryOut",
         "type": "object"
       },
       "ConversationOut": {
@@ -1344,6 +1468,18 @@
             ],
             "title": "Dailyactiveminutesgoal"
           },
+          "examDate": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Examdate"
+          },
           "grade": {
             "anyOf": [
               {
@@ -1493,6 +1629,7 @@
           "preferredStudyTime",
           "shortTermGoal",
           "longTermGoal",
+          "examDate",
           "updatedAt"
         ],
         "title": "LearnerProfileOut",
@@ -1557,6 +1694,19 @@
               }
             ],
             "title": "Dailyactiveminutesgoal"
+          },
+          "examDate": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The exam's day: the practice plan's exam window.",
+            "title": "Examdate"
           },
           "grade": {
             "anyOf": [
@@ -1758,6 +1908,30 @@
           "days"
         ],
         "title": "LearningDaysOut",
+        "type": "object"
+      },
+      "LearningEventOut": {
+        "description": "What an answer did to the learning streak: the chat's `done.learning` values.",
+        "properties": {
+          "event": {
+            "enum": [
+              "started",
+              "extended",
+              "milestone"
+            ],
+            "title": "Event",
+            "type": "string"
+          },
+          "streak": {
+            "title": "Streak",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "event",
+          "streak"
+        ],
+        "title": "LearningEventOut",
         "type": "object"
       },
       "LearningPreferencesOut": {
@@ -2262,6 +2436,87 @@
         "title": "MarkReadRequest",
         "type": "object"
       },
+      "MasteryModelOut": {
+        "properties": {
+          "guess": {
+            "title": "Guess",
+            "type": "number"
+          },
+          "learn": {
+            "title": "Learn",
+            "type": "number"
+          },
+          "masteredAt": {
+            "title": "Masteredat",
+            "type": "number"
+          },
+          "method": {
+            "const": "bkt",
+            "title": "Method",
+            "type": "string"
+          },
+          "minAnswers": {
+            "title": "Minanswers",
+            "type": "integer"
+          },
+          "minQuestions": {
+            "title": "Minquestions",
+            "type": "integer"
+          },
+          "prior": {
+            "title": "Prior",
+            "type": "number"
+          },
+          "slip": {
+            "title": "Slip",
+            "type": "number"
+          }
+        },
+        "required": [
+          "method",
+          "prior",
+          "learn",
+          "guess",
+          "slip",
+          "masteredAt",
+          "minAnswers",
+          "minQuestions"
+        ],
+        "title": "MasteryModelOut",
+        "type": "object"
+      },
+      "MasteryOut": {
+        "properties": {
+          "answered": {
+            "title": "Answered",
+            "type": "integer"
+          },
+          "model": {
+            "$ref": "#/components/schemas/MasteryModelOut"
+          },
+          "revisedAnswers": {
+            "description": "Answers set aside: their question was edited after it was served.",
+            "title": "Revisedanswers",
+            "type": "integer"
+          },
+          "subjects": {
+            "description": "Practised ones only.",
+            "items": {
+              "$ref": "#/components/schemas/SubjectMasteryOut"
+            },
+            "title": "Subjects",
+            "type": "array"
+          }
+        },
+        "required": [
+          "model",
+          "answered",
+          "revisedAnswers",
+          "subjects"
+        ],
+        "title": "MasteryOut",
+        "type": "object"
+      },
       "MessageAttachmentOut": {
         "properties": {
           "fileId": {
@@ -2367,6 +2622,196 @@
           "nextCursor"
         ],
         "title": "MessagePage",
+        "type": "object"
+      },
+      "MistakeConceptOut": {
+        "properties": {
+          "bookTitle": {
+            "title": "Booktitle",
+            "type": "string"
+          },
+          "chapterId": {
+            "title": "Chapterid",
+            "type": "string"
+          },
+          "chapterNumber": {
+            "title": "Chapternumber",
+            "type": "integer"
+          },
+          "chapterTitle": {
+            "title": "Chaptertitle",
+            "type": "string"
+          },
+          "classLevel": {
+            "title": "Classlevel",
+            "type": "integer"
+          },
+          "conceptTag": {
+            "title": "Concepttag",
+            "type": "string"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/MistakeOut"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "objective": {
+            "title": "Objective",
+            "type": "string"
+          },
+          "prompt": {
+            "title": "Prompt",
+            "type": "string"
+          },
+          "recurring": {
+            "title": "Recurring",
+            "type": "boolean"
+          },
+          "state": {
+            "enum": [
+              "mastered",
+              "learning",
+              "weak",
+              "not_enough_evidence"
+            ],
+            "title": "State",
+            "type": "string"
+          },
+          "subjectCode": {
+            "title": "Subjectcode",
+            "type": "string"
+          },
+          "topicId": {
+            "title": "Topicid",
+            "type": "string"
+          },
+          "topicTitle": {
+            "title": "Topictitle",
+            "type": "string"
+          },
+          "wrong": {
+            "title": "Wrong",
+            "type": "integer"
+          },
+          "wrong14d": {
+            "title": "Wrong14D",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "topicId",
+          "topicTitle",
+          "chapterId",
+          "chapterTitle",
+          "chapterNumber",
+          "bookTitle",
+          "subjectCode",
+          "classLevel",
+          "conceptTag",
+          "objective",
+          "wrong",
+          "wrong14d",
+          "recurring",
+          "state",
+          "prompt",
+          "items"
+        ],
+        "title": "MistakeConceptOut",
+        "type": "object"
+      },
+      "MistakeOut": {
+        "properties": {
+          "answeredAt": {
+            "format": "date-time",
+            "title": "Answeredat",
+            "type": "string"
+          },
+          "chosen": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "title": "Chosen",
+            "type": "string"
+          },
+          "conversationId": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The chat of the test; null once it is deleted.",
+            "title": "Conversationid"
+          },
+          "correct": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "title": "Correct",
+            "type": "string"
+          },
+          "explanation": {
+            "title": "Explanation",
+            "type": "string"
+          },
+          "options": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Options",
+            "type": "array"
+          },
+          "questionId": {
+            "title": "Questionid",
+            "type": "string"
+          },
+          "stem": {
+            "title": "Stem",
+            "type": "string"
+          }
+        },
+        "required": [
+          "questionId",
+          "answeredAt",
+          "stem",
+          "options",
+          "chosen",
+          "correct",
+          "explanation",
+          "conversationId"
+        ],
+        "title": "MistakeOut",
+        "type": "object"
+      },
+      "MistakesOut": {
+        "properties": {
+          "concepts": {
+            "items": {
+              "$ref": "#/components/schemas/MistakeConceptOut"
+            },
+            "title": "Concepts",
+            "type": "array"
+          },
+          "recurringRule": {
+            "$ref": "#/components/schemas/RecurringRuleOut"
+          }
+        },
+        "required": [
+          "recurringRule",
+          "concepts"
+        ],
+        "title": "MistakesOut",
         "type": "object"
       },
       "NotificationOut": {
@@ -2584,6 +3029,582 @@
           "unreadCount"
         ],
         "title": "NotificationsOut",
+        "type": "object"
+      },
+      "PracticeBookOut": {
+        "properties": {
+          "bookId": {
+            "title": "Bookid",
+            "type": "string"
+          },
+          "chapters": {
+            "items": {
+              "$ref": "#/components/schemas/PracticeChapterOut"
+            },
+            "title": "Chapters",
+            "type": "array"
+          },
+          "language": {
+            "enum": [
+              "english",
+              "hindi",
+              "sanskrit"
+            ],
+            "title": "Language",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "bookId",
+          "title",
+          "language",
+          "chapters"
+        ],
+        "title": "PracticeBookOut",
+        "type": "object"
+      },
+      "PracticeChapterOut": {
+        "properties": {
+          "chapterId": {
+            "title": "Chapterid",
+            "type": "string"
+          },
+          "number": {
+            "title": "Number",
+            "type": "integer"
+          },
+          "questions": {
+            "title": "Questions",
+            "type": "integer"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "topics": {
+            "items": {
+              "$ref": "#/components/schemas/PracticeTopicOut"
+            },
+            "title": "Topics",
+            "type": "array"
+          }
+        },
+        "required": [
+          "chapterId",
+          "number",
+          "title",
+          "questions",
+          "topics"
+        ],
+        "title": "PracticeChapterOut",
+        "type": "object"
+      },
+      "PracticePlanOut": {
+        "properties": {
+          "answeredToday": {
+            "title": "Answeredtoday",
+            "type": "integer"
+          },
+          "answersForLearningDay": {
+            "title": "Answersforlearningday",
+            "type": "integer"
+          },
+          "budgetMinutes": {
+            "title": "Budgetminutes",
+            "type": "integer"
+          },
+          "budgetSource": {
+            "enum": [
+              "goal",
+              "default"
+            ],
+            "title": "Budgetsource",
+            "type": "string"
+          },
+          "date": {
+            "format": "date",
+            "title": "Date",
+            "type": "string"
+          },
+          "daysToExam": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Daystoexam"
+          },
+          "examDate": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Examdate"
+          },
+          "insufficientHistory": {
+            "title": "Insufficienthistory",
+            "type": "boolean"
+          },
+          "needsProfile": {
+            "description": "No class 6-12, or none of the student's subjects is in the bank.",
+            "title": "Needsprofile",
+            "type": "boolean"
+          },
+          "summary": {
+            "$ref": "#/components/schemas/PracticeSummaryOut"
+          },
+          "tasks": {
+            "description": "At most 6, chosen from the answers before today.",
+            "items": {
+              "$ref": "#/components/schemas/PracticeTaskOut"
+            },
+            "title": "Tasks",
+            "type": "array"
+          },
+          "timezone": {
+            "title": "Timezone",
+            "type": "string"
+          }
+        },
+        "required": [
+          "date",
+          "timezone",
+          "budgetMinutes",
+          "budgetSource",
+          "insufficientHistory",
+          "needsProfile",
+          "examDate",
+          "daysToExam",
+          "answeredToday",
+          "answersForLearningDay",
+          "summary",
+          "tasks"
+        ],
+        "title": "PracticePlanOut",
+        "type": "object"
+      },
+      "PracticeSubjectOut": {
+        "properties": {
+          "books": {
+            "items": {
+              "$ref": "#/components/schemas/PracticeBookOut"
+            },
+            "title": "Books",
+            "type": "array"
+          },
+          "subjectCode": {
+            "title": "Subjectcode",
+            "type": "string"
+          }
+        },
+        "required": [
+          "subjectCode",
+          "books"
+        ],
+        "title": "PracticeSubjectOut",
+        "type": "object"
+      },
+      "PracticeSummaryOut": {
+        "properties": {
+          "answered": {
+            "description": "Answers counted as evidence (the first to a question on a day).",
+            "title": "Answered",
+            "type": "integer"
+          },
+          "dueRevisions": {
+            "title": "Duerevisions",
+            "type": "integer"
+          },
+          "masteredConcepts": {
+            "title": "Masteredconcepts",
+            "type": "integer"
+          },
+          "overdueRevisions": {
+            "title": "Overduerevisions",
+            "type": "integer"
+          },
+          "practisedConcepts": {
+            "title": "Practisedconcepts",
+            "type": "integer"
+          },
+          "recurringMistakes": {
+            "title": "Recurringmistakes",
+            "type": "integer"
+          },
+          "weakConcepts": {
+            "title": "Weakconcepts",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "answered",
+          "practisedConcepts",
+          "masteredConcepts",
+          "weakConcepts",
+          "dueRevisions",
+          "overdueRevisions",
+          "recurringMistakes"
+        ],
+        "title": "PracticeSummaryOut",
+        "type": "object"
+      },
+      "PracticeTaskOut": {
+        "properties": {
+          "answeredToday": {
+            "title": "Answeredtoday",
+            "type": "integer"
+          },
+          "bookTitle": {
+            "title": "Booktitle",
+            "type": "string"
+          },
+          "chapterId": {
+            "title": "Chapterid",
+            "type": "string"
+          },
+          "chapterNumber": {
+            "title": "Chapternumber",
+            "type": "integer"
+          },
+          "chapterTitle": {
+            "title": "Chaptertitle",
+            "type": "string"
+          },
+          "classLevel": {
+            "title": "Classlevel",
+            "type": "integer"
+          },
+          "conceptTag": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Concepttag"
+          },
+          "done": {
+            "title": "Done",
+            "type": "boolean"
+          },
+          "dueDate": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Duedate"
+          },
+          "estimate": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Estimate"
+          },
+          "kind": {
+            "enum": [
+              "revise",
+              "strengthen",
+              "learn"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "language": {
+            "enum": [
+              "english",
+              "hindi",
+              "sanskrit"
+            ],
+            "title": "Language",
+            "type": "string"
+          },
+          "minutes": {
+            "title": "Minutes",
+            "type": "integer"
+          },
+          "overdueDays": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Overduedays"
+          },
+          "prompt": {
+            "description": "The request the task puts in a new chat; the student sends it.",
+            "title": "Prompt",
+            "type": "string"
+          },
+          "questions": {
+            "title": "Questions",
+            "type": "integer"
+          },
+          "reason": {
+            "enum": [
+              "overdue",
+              "due",
+              "weak_concept",
+              "next_topic",
+              "start_here"
+            ],
+            "title": "Reason",
+            "type": "string"
+          },
+          "subjectCode": {
+            "title": "Subjectcode",
+            "type": "string"
+          },
+          "topicId": {
+            "title": "Topicid",
+            "type": "string"
+          },
+          "topicNumber": {
+            "title": "Topicnumber",
+            "type": "integer"
+          },
+          "topicTitle": {
+            "title": "Topictitle",
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "reason",
+          "subjectCode",
+          "classLevel",
+          "language",
+          "bookTitle",
+          "chapterId",
+          "chapterNumber",
+          "chapterTitle",
+          "topicId",
+          "topicNumber",
+          "topicTitle",
+          "conceptTag",
+          "estimate",
+          "dueDate",
+          "overdueDays",
+          "questions",
+          "minutes",
+          "prompt",
+          "answeredToday",
+          "done"
+        ],
+        "title": "PracticeTaskOut",
+        "type": "object"
+      },
+      "PracticeTestOut": {
+        "properties": {
+          "answered": {
+            "title": "Answered",
+            "type": "integer"
+          },
+          "chapterIds": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Chapterids",
+            "type": "array"
+          },
+          "conversationId": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Null once that chat is deleted.",
+            "title": "Conversationid"
+          },
+          "correct": {
+            "title": "Correct",
+            "type": "integer"
+          },
+          "messageId": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Messageid"
+          },
+          "open": {
+            "title": "Open",
+            "type": "boolean"
+          },
+          "served": {
+            "title": "Served",
+            "type": "integer"
+          },
+          "setId": {
+            "format": "uuid",
+            "title": "Setid",
+            "type": "string"
+          },
+          "startedAt": {
+            "format": "date-time",
+            "title": "Startedat",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "total": {
+            "title": "Total",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "setId",
+          "messageId",
+          "conversationId",
+          "title",
+          "chapterIds",
+          "startedAt",
+          "total",
+          "served",
+          "answered",
+          "correct",
+          "open"
+        ],
+        "title": "PracticeTestOut",
+        "type": "object"
+      },
+      "PracticeTestsOut": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/PracticeTestOut"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "PracticeTestsOut",
+        "type": "object"
+      },
+      "PracticeTopicOut": {
+        "properties": {
+          "number": {
+            "title": "Number",
+            "type": "integer"
+          },
+          "questions": {
+            "title": "Questions",
+            "type": "integer"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "topicId": {
+            "title": "Topicid",
+            "type": "string"
+          }
+        },
+        "required": [
+          "topicId",
+          "number",
+          "title",
+          "questions"
+        ],
+        "title": "PracticeTopicOut",
+        "type": "object"
+      },
+      "PracticeTopicsOut": {
+        "properties": {
+          "available": {
+            "title": "Available",
+            "type": "boolean"
+          },
+          "classLevel": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Classlevel"
+          },
+          "language": {
+            "enum": [
+              "english",
+              "hindi"
+            ],
+            "title": "Language",
+            "type": "string"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "enum": [
+                  "no_class",
+                  "no_questions"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "subjects": {
+            "items": {
+              "$ref": "#/components/schemas/PracticeSubjectOut"
+            },
+            "title": "Subjects",
+            "type": "array"
+          }
+        },
+        "required": [
+          "available",
+          "reason",
+          "classLevel",
+          "language",
+          "subjects"
+        ],
+        "title": "PracticeTopicsOut",
         "type": "object"
       },
       "ProfileSet": {
@@ -2832,6 +3853,24 @@
         "title": "RecentSessionOut",
         "type": "object"
       },
+      "RecurringRuleOut": {
+        "properties": {
+          "days": {
+            "title": "Days",
+            "type": "integer"
+          },
+          "wrong": {
+            "title": "Wrong",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "wrong",
+          "days"
+        ],
+        "title": "RecurringRuleOut",
+        "type": "object"
+      },
       "RenameConversationRequest": {
         "additionalProperties": false,
         "properties": {
@@ -2871,6 +3910,155 @@
           "items"
         ],
         "title": "ReplaceSubjectsRequest",
+        "type": "object"
+      },
+      "RevisionOut": {
+        "properties": {
+          "bookTitle": {
+            "title": "Booktitle",
+            "type": "string"
+          },
+          "chapterId": {
+            "title": "Chapterid",
+            "type": "string"
+          },
+          "chapterNumber": {
+            "title": "Chapternumber",
+            "type": "integer"
+          },
+          "chapterTitle": {
+            "title": "Chaptertitle",
+            "type": "string"
+          },
+          "classLevel": {
+            "title": "Classlevel",
+            "type": "integer"
+          },
+          "dueDate": {
+            "format": "date",
+            "title": "Duedate",
+            "type": "string"
+          },
+          "estimate": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Estimate"
+          },
+          "intervalDays": {
+            "title": "Intervaldays",
+            "type": "integer"
+          },
+          "lastAccuracy": {
+            "title": "Lastaccuracy",
+            "type": "number"
+          },
+          "lastReviewed": {
+            "format": "date",
+            "title": "Lastreviewed",
+            "type": "string"
+          },
+          "overdueDays": {
+            "title": "Overduedays",
+            "type": "integer"
+          },
+          "prompt": {
+            "title": "Prompt",
+            "type": "string"
+          },
+          "recall": {
+            "title": "Recall",
+            "type": "number"
+          },
+          "reviews": {
+            "title": "Reviews",
+            "type": "integer"
+          },
+          "state": {
+            "enum": [
+              "overdue",
+              "due",
+              "done",
+              "upcoming"
+            ],
+            "title": "State",
+            "type": "string"
+          },
+          "subjectCode": {
+            "title": "Subjectcode",
+            "type": "string"
+          },
+          "topicId": {
+            "title": "Topicid",
+            "type": "string"
+          },
+          "topicNumber": {
+            "title": "Topicnumber",
+            "type": "integer"
+          },
+          "topicTitle": {
+            "title": "Topictitle",
+            "type": "string"
+          }
+        },
+        "required": [
+          "topicId",
+          "topicTitle",
+          "topicNumber",
+          "chapterId",
+          "chapterTitle",
+          "chapterNumber",
+          "bookTitle",
+          "subjectCode",
+          "classLevel",
+          "state",
+          "dueDate",
+          "overdueDays",
+          "intervalDays",
+          "recall",
+          "lastReviewed",
+          "lastAccuracy",
+          "reviews",
+          "estimate",
+          "prompt"
+        ],
+        "title": "RevisionOut",
+        "type": "object"
+      },
+      "RevisionsOut": {
+        "properties": {
+          "date": {
+            "format": "date",
+            "title": "Date",
+            "type": "string"
+          },
+          "items": {
+            "description": "Overdue, due (by forgetting risk), done, then upcoming (by date).",
+            "items": {
+              "$ref": "#/components/schemas/RevisionOut"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "ladderDays": {
+            "items": {
+              "type": "integer"
+            },
+            "title": "Ladderdays",
+            "type": "array"
+          }
+        },
+        "required": [
+          "date",
+          "ladderDays",
+          "items"
+        ],
+        "title": "RevisionsOut",
         "type": "object"
       },
       "SegmentOut": {
@@ -3638,6 +4826,59 @@
         "title": "SubjectIn",
         "type": "object"
       },
+      "SubjectMasteryOut": {
+        "properties": {
+          "chapters": {
+            "items": {
+              "$ref": "#/components/schemas/ChapterMasteryOut"
+            },
+            "title": "Chapters",
+            "type": "array"
+          },
+          "classLevel": {
+            "title": "Classlevel",
+            "type": "integer"
+          },
+          "coverage": {
+            "title": "Coverage",
+            "type": "number"
+          },
+          "estimate": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Estimate"
+          },
+          "language": {
+            "enum": [
+              "english",
+              "hindi",
+              "sanskrit"
+            ],
+            "title": "Language",
+            "type": "string"
+          },
+          "subjectCode": {
+            "title": "Subjectcode",
+            "type": "string"
+          }
+        },
+        "required": [
+          "subjectCode",
+          "classLevel",
+          "language",
+          "estimate",
+          "coverage",
+          "chapters"
+        ],
+        "title": "SubjectMasteryOut",
+        "type": "object"
+      },
       "SubjectOut": {
         "properties": {
           "code": {
@@ -3815,6 +5056,70 @@
         "title": "SupportRequestOut",
         "type": "object"
       },
+      "TopicMasteryOut": {
+        "properties": {
+          "conceptCount": {
+            "title": "Conceptcount",
+            "type": "integer"
+          },
+          "concepts": {
+            "items": {
+              "$ref": "#/components/schemas/ConceptMasteryOut"
+            },
+            "title": "Concepts",
+            "type": "array"
+          },
+          "coverage": {
+            "title": "Coverage",
+            "type": "number"
+          },
+          "estimate": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Estimate"
+          },
+          "number": {
+            "title": "Number",
+            "type": "integer"
+          },
+          "state": {
+            "enum": [
+              "mastered",
+              "learning",
+              "weak",
+              "not_enough_evidence"
+            ],
+            "title": "State",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "topicId": {
+            "title": "Topicid",
+            "type": "string"
+          }
+        },
+        "required": [
+          "topicId",
+          "number",
+          "title",
+          "estimate",
+          "state",
+          "coverage",
+          "conceptCount",
+          "concepts"
+        ],
+        "title": "TopicMasteryOut",
+        "type": "object"
+      },
       "TutorPreviewOut": {
         "properties": {
           "instructions": {
@@ -3965,11 +5270,12 @@
                 "weeklyActiveMinutesGoal",
                 "preferredStudyTime",
                 "shortTermGoal",
-                "longTermGoal"
+                "longTermGoal",
+                "examDate"
               ],
               "type": "string"
             },
-            "maxItems": 14,
+            "maxItems": 15,
             "title": "Reset",
             "type": "array"
           },
@@ -5903,7 +7209,7 @@
     },
     "/v1/messages/{message_id}/assessment-responses": {
       "post": {
-        "description": "Answers are final, in order and graded here. Sending the same response again returns the\nsame test unchanged (a safe retry); any other response to an answered question, or to a\nquestion after the waiting one, is 409. The message row is locked while the response is\nrecorded, so two tabs or a double tap record one response.",
+        "description": "Answers are final, in order and graded here. Sending the same response again returns the\nsame test unchanged (a safe retry); any other response to an answered question, or to a\nquestion after the waiting one, is 409. The message row is locked while the response is\nrecorded, so two tabs or a double tap record one response.\n\nA question-bank test also records the answer in the student's practice ledger and, while it is\nadaptive, adds its next question chosen from that answer, all in the same transaction: a retry\nafter a lost reply (with the hash it was shown) gets the test as it is now. `learning` says what\nthis answer did to the streak when it made its India day a learning day (5 answers a day), as the\nchat's `done` does; null otherwise.",
         "operationId": "respond_to_assessment_v1_messages__message_id__assessment_responses_post",
         "parameters": [
           {
@@ -5932,7 +7238,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AssessmentOut"
+                  "$ref": "#/components/schemas/AssessmentResponseOut"
                 }
               }
             },
@@ -6468,6 +7774,188 @@
           }
         },
         "summary": "Get Learning Days",
+        "tags": [
+          "progress"
+        ]
+      }
+    },
+    "/v1/progress/mastery": {
+      "get": {
+        "description": "Estimated mastery per concept (Bayesian knowledge tracing), rolled up to topic, chapter and\nsubject, from the answers to question-bank tests; practised ones only.",
+        "operationId": "get_mastery_v1_progress_mastery_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MasteryOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Get Mastery",
+        "tags": [
+          "progress"
+        ]
+      }
+    },
+    "/v1/progress/mistakes": {
+      "get": {
+        "description": "Wrong answers to question-bank tests by concept, newest first, with each question as it was asked.",
+        "operationId": "get_mistakes_v1_progress_mistakes_get",
+        "parameters": [
+          {
+            "description": "The newest wrong answers to list.",
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 50,
+              "description": "The newest wrong answers to list.",
+              "maximum": 200,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MistakesOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Mistakes",
+        "tags": [
+          "progress"
+        ]
+      }
+    },
+    "/v1/progress/plan": {
+      "get": {
+        "description": "Today's practice plan (India day): revisions due, weak topics, then the next new topic of each\nsubject, within the daily goal. Chosen from the answers before today, so it holds all day; today's\nanswers mark its tasks done. Estimates from practice, never marks (app/progress/practice.py).",
+        "operationId": "get_practice_plan_v1_progress_plan_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PracticePlanOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Get Practice Plan",
+        "tags": [
+          "progress"
+        ]
+      }
+    },
+    "/v1/progress/practice-tests": {
+      "get": {
+        "description": "The student's question-bank tests in the chat, newest first: kept when the chat is deleted.",
+        "operationId": "get_practice_tests_v1_progress_practice_tests_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "maximum": 100,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PracticeTestsOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Practice Tests",
+        "tags": [
+          "progress"
+        ]
+      }
+    },
+    "/v1/progress/practice-topics": {
+      "get": {
+        "description": "The bank's chapters and topics the student can practise: their class (6-12), in their medium,\nand the language subjects.",
+        "operationId": "get_practice_topics_v1_progress_practice_topics_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PracticeTopicsOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Get Practice Topics",
+        "tags": [
+          "progress"
+        ]
+      }
+    },
+    "/v1/progress/revisions": {
+      "get": {
+        "description": "Every practised topic's next revision (a 1-3-7-14-30-60 day ladder), overdue and due first.",
+        "operationId": "get_revisions_v1_progress_revisions_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RevisionsOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Get Revisions",
         "tags": [
           "progress"
         ]

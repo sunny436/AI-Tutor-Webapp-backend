@@ -7,6 +7,8 @@ learnt, a "Learning so far" line follows the prompt (owner decision, 2026-09-29)
 were recorded from the code before any settings existed; if one of these tests fails, the default
 tutor changed. 2026-09-30: the owner asked for study formatting (cards, chemistry, diagrams, charts,
 citations), so the prompt fixtures were re-recorded with that prompt (app/chat/assistant.py).
+2026-10-22: re-recorded for the one line 5bba6fc added on purpose ("Name a textbook page, chapter or
+exercise number only when the reference material shows it."); nothing else changed.
 """
 
 import json

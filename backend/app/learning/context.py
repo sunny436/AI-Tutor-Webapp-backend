@@ -1,20 +1,21 @@
 """The Learning domain's public reads: what the tutor may know about a student (their settings,
-and how they are doing: TutorProgress, read by app.progress.learning), and the student's
-active-time goals.
+and how they are doing: TutorProgress, read by app.progress.learning), the student's
+active-time goals, and what their practice plan needs (read_plan_profile).
 
 Chat reads the context once per turn, inside its prepare transaction (app/chat/service.py);
-Progress reads the goals (app/progress) and reminders the study time (app/notifications). None
-of them touches the learning tables itself. The
+Progress reads the goals and the plan's profile (app/progress) and reminders the study time
+(app/notifications). None of them touches the learning tables itself. The
 context holds display names, not codes, and nothing that identifies the student: no name,
 email address or photo ever reaches the model.
 """
 
 from __future__ import annotations
 
+import re
 import uuid
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
-from datetime import time
+from datetime import date, time
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -31,6 +32,18 @@ class SubjectContext:
 
 
 @dataclass(frozen=True)
+class PracticeProgress:
+    """The practice record as the tutor is told it (app.progress.practice): estimates from the
+    student's answers to question-bank tests, never marks."""
+
+    weakest: tuple[str, ...] = ()  # up to 3 weak concepts, in words, weakest first
+    due: tuple[tuple[str, int], ...] = ()  # up to 3 topics due for revision: (title, days overdue)
+    mastered: int = 0  # concepts estimated as mastered
+    answered_today: int = 0  # answers today (India day)
+    learning_day_answers: int = 0  # the answers in a day that make it a learning day
+
+
+@dataclass(frozen=True)
 class TutorProgress:
     """How the student is doing, as the tutor is told it: the header's learning streak (India
     days) and today's active minutes and questions (the student's own day). Numbers only; read by
@@ -43,6 +56,8 @@ class TutorProgress:
     # and whether today already counts toward the streak. None when not read.
     day_left: str | None = None
     today_counts: bool | None = None
+    # Their practice record; None before their first answer to a question-bank test.
+    practice: PracticeProgress | None = None
 
 
 @dataclass(frozen=True)
@@ -163,6 +178,35 @@ async def read_study_time(session: AsyncSession, user_id: uuid.UUID) -> time | N
     """When the student prefers to study, in their own time zone (read by reminders)."""
     row = await session.get(LearnerProfile, user_id)
     return row.preferred_study_time if row else None
+
+
+@dataclass(frozen=True)
+class PlanProfile:
+    """What the practice plan needs (app/progress/practice.py): the class (6-12, else None), the
+    language of the bank's books in the student's medium, their subjects in order of attention
+    (priority first, then those that need work, each in their own order), the daily goal and the
+    exam date."""
+
+    class_level: int | None = None
+    language: str = "english"
+    subjects: tuple[str, ...] = ()
+    daily_minutes_goal: int | None = None
+    exam_date: date | None = None
+
+
+async def read_plan_profile(session: AsyncSession, user_id: uuid.UUID) -> PlanProfile:
+    profile = await session.get(LearnerProfile, user_id)
+    if profile is None:
+        return PlanProfile()
+    grade = re.fullmatch(r"class_(\d{1,2})", profile.grade or "")
+    subjects = sorted(await read_subjects(session, user_id), key=lambda s: (not s.is_priority, not s.needs_improvement))
+    return PlanProfile(
+        class_level=int(grade[1]) if grade and 6 <= int(grade[1]) <= 12 else None,
+        language="hindi" if profile.medium == "hindi" else "english",  # the bank's books: English or Hindi
+        subjects=tuple(subject.subject_code for subject in subjects),
+        daily_minutes_goal=profile.daily_active_minutes_goal,
+        exam_date=profile.exam_date,
+    )
 
 
 async def read_student_context(

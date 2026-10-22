@@ -11,8 +11,9 @@ SQL filters and fixed rules only: no model is called and nothing is generated (d
   questions, two sets differ. Questions the student has seen come last, or not at all (unseen_only).
 - **A set is created once per request_id**: the same request again gets the same set; another
   request with that id gets 409.
-- **Adaptive**: one question at a time, chosen from the student's previous answer in the topic
-  (ADAPTIVE_PICK), under the set's row lock, so a retried "next" gets the open question back.
+- **Adaptive**: one question at a time, chosen from the student's previous answer (`pick_next`:
+  in the topic for adaptive practice, under the set's row lock, so a retried "next" gets the open
+  question back; in the test so far for a test in the chat, app/qbank/chat_tests.py).
 - **Answers** belong to a served question of the student's own set; the database grades them from
   the key and keeps the first (0015's qb_set_items_answer). The same answer again gets the same
   result; a different one gets 409. An adaptive answer returns the key and explanation at once; a
@@ -268,50 +269,71 @@ async def create_adaptive(
     return {"status": "created", "set_id": set_id, "requested": length, "served": 0}
 
 
-# The next question of an adaptive set, from the student's previous answer in the topic (any set):
+# The next question from a pool of topics, from the student's previous answer:
 #   no history -> medium, the weakest (untried) concept | wrong -> one level easier, same concept
 #   right with a hint -> same level, same concept      | right, no hint -> one level harder, weakest other concept
-# Unseen questions first; never twice in one set; never the previous question while anything else is
-# left; ties by md5(set id || question id). Index ranges only (ix_qb_set_items_user_id_topic_id_answered_at,
-# ix_qb_questions_adaptive).
+#   skipped -> same level, another concept (a skip is not an answer: no step down)
+# "Previous" is the set's question at :previous_position when one is given (a test in the chat), else the
+# student's latest answer in the pool (any set). A concept is a topic's: (topic_id, concept_tag). Unseen
+# questions first; never twice in one set; never the previous question while anything else is left; ties
+# by md5(seed || question id). `available` counts what the pool has left for the set. Index ranges only
+# (ix_qb_set_items_user_id_topic_id_answered_at, ix_qb_questions_adaptive).
 ADAPTIVE_PICK = text(
     """
     WITH history AS (
-        SELECT i.question_id, i.is_correct, i.hinted, i.answered_at, q.level, q.concept_tag
+        SELECT i.question_id, i.is_correct, i.hinted, i.answered_at, q.level,
+               q.topic_id || ' ' || q.concept_tag AS concept
         FROM qb_set_items i JOIN qb_questions q ON q.question_id = i.question_id
-        WHERE i.user_id = :user_id AND i.topic_id = :topic_id AND i.answered_at IS NOT NULL
+        WHERE i.user_id = :user_id AND i.topic_id = ANY(CAST(:topic_ids AS text[])) AND i.answered_at IS NOT NULL
     ), last AS (
-        SELECT * FROM history ORDER BY answered_at DESC LIMIT 1
+        SELECT i.question_id, i.is_correct, i.hinted, i.answered_at IS NULL AS skipped, q.level,
+               q.topic_id || ' ' || q.concept_tag AS concept
+        FROM qb_set_items i JOIN qb_questions q ON q.question_id = i.question_id
+        WHERE i.set_id = :set_id AND i.user_id = :user_id AND i.position = CAST(:previous_position AS integer)
+        UNION ALL
+        (SELECT question_id, is_correct, hinted, false, level, concept FROM history
+         WHERE CAST(:previous_position AS integer) IS NULL ORDER BY answered_at DESC LIMIT 1)
     ), target AS (
         SELECT CASE WHEN l.level IS NULL THEN 2
+                    WHEN l.skipped THEN l.level
                     WHEN NOT l.is_correct THEN greatest(l.level - 1, 1)
                     WHEN l.hinted THEN l.level
                     ELSE least(l.level + 1, 3) END AS level,
-               CASE WHEN NOT l.is_correct OR l.hinted THEN l.concept_tag END AS same_concept,
-               CASE WHEN l.is_correct AND NOT l.hinted THEN l.concept_tag END AS other_than,
+               CASE WHEN NOT l.skipped AND (NOT l.is_correct OR l.hinted) THEN l.concept END AS same_concept,
+               CASE WHEN l.skipped OR (l.is_correct AND NOT l.hinted) THEN l.concept END AS other_than,
                l.question_id AS previous
         FROM (VALUES (1)) AS one (x) LEFT JOIN last l ON true
     ), accuracy AS (
-        SELECT concept_tag, (count(*) FILTER (WHERE is_correct) + 1)::real / (count(*) + 2) AS score
-        FROM history GROUP BY concept_tag
+        SELECT concept, (count(*) FILTER (WHERE is_correct) + 1)::real / (count(*) + 2) AS score
+        FROM history GROUP BY concept
     ), seen AS (
         SELECT DISTINCT ON (question_id) question_id, is_correct AS last_correct, answered_at AS last_at
         FROM history ORDER BY question_id, answered_at DESC
     )
-    SELECT q.question_id, q.topic_id
+    SELECT q.question_id, q.topic_id, q.concept_tag, q.level, q.difficulty, q.stem, q.option_a, q.option_b,
+           q.option_c, q.option_d, q.correct_option, q.explanation, c.title AS case_title, c.body AS case_body,
+           count(*) OVER () AS available
     FROM qb_questions q
+    CROSS JOIN LATERAL (SELECT q.topic_id || ' ' || q.concept_tag AS concept) k
     CROSS JOIN target t
-    LEFT JOIN accuracy a ON a.concept_tag = q.concept_tag
+    LEFT JOIN qb_cases c ON c.case_id = q.case_id
+    LEFT JOIN accuracy a ON a.concept = k.concept
     LEFT JOIN seen s ON s.question_id = q.question_id
     WHERE q.review_status IN ('approved', 'needs_review') AND q.is_active
-      AND q.topic_id = :topic_id AND q.language = :language AND q.class_level = :class_level
-      AND q.subject_code = :subject_code AND q.syllabus_version = :syllabus_version
+      AND q.topic_id = ANY(CAST(:topic_ids AS text[])) AND q.language = :language
+      AND q.class_level = :class_level AND q.subject_code = :subject_code
+      AND (CAST(:syllabus_version AS text) IS NULL OR q.syllabus_version = :syllabus_version)
+      AND (CAST(:difficulty AS text) IS NULL OR q.difficulty = :difficulty)
+      AND (NOT CAST(:card AS boolean) OR (
+          length(q.stem) + coalesce(length(c.title) + length(c.body) + 9, 0) <= 1000
+          AND greatest(length(q.option_a), length(q.option_b), length(q.option_c), length(q.option_d)) <= 400
+          AND length(q.explanation) <= 2000))
       AND NOT EXISTS (SELECT 1 FROM qb_set_items x WHERE x.set_id = :set_id AND x.question_id = q.question_id)
     ORDER BY s.question_id IS NOT NULL,
              q.question_id IS NOT DISTINCT FROM t.previous,
              abs(q.level - t.level),
-             q.concept_tag IS DISTINCT FROM coalesce(t.same_concept, q.concept_tag),
-             coalesce(q.concept_tag = t.other_than, false),
+             k.concept IS DISTINCT FROM coalesce(t.same_concept, k.concept),
+             coalesce(k.concept = t.other_than, false),
              coalesce(a.score, 0.5),
              s.last_correct NULLS FIRST,
              s.last_at NULLS FIRST,
@@ -319,6 +341,52 @@ ADAPTIVE_PICK = text(
     LIMIT 1
     """
 )
+
+
+@dataclass(frozen=True)
+class Pool:
+    """Where the next question comes from: these topics of one class, subject and language (and one
+    syllabus version and difficulty, when given). `card`: only questions the chat's quiz card can show
+    (app/assessments/state.py limits; the few longest case questions are left out)."""
+
+    language: str
+    class_level: int
+    subject_code: str
+    topic_ids: tuple[str, ...]
+    syllabus_version: str | None = None
+    difficulty: str | None = None
+    card: bool = False
+
+
+async def pick_next(
+    session: AsyncSession,
+    user_id: uuid.UUID,
+    pool: Pool,
+    seed: str,
+    set_id: uuid.UUID | None = None,
+    previous_position: int | None = None,
+) -> Any:
+    """The question to serve next (ADAPTIVE_PICK) with its content and key, and how many the pool has
+    left for the set (`available`); None when it has none. Only reads; never commits."""
+    return (
+        await session.execute(
+            ADAPTIVE_PICK,
+            {
+                "user_id": user_id,
+                "set_id": set_id,
+                "seed": seed,
+                "previous_position": previous_position,
+                "topic_ids": list(pool.topic_ids),
+                "language": pool.language,
+                "class_level": pool.class_level,
+                "subject_code": pool.subject_code,
+                "syllabus_version": pool.syllabus_version,
+                "difficulty": pool.difficulty,
+                "card": pool.card,
+            },
+        )
+    ).one_or_none()
+
 
 ITEM = text(
     """
@@ -366,21 +434,8 @@ async def next_item(session: AsyncSession, user_id: uuid.UUID, set_id: uuid.UUID
         await session.commit()
         return {"status": "finished"}
     f = Filters(**found.filters["filters"])
-    picked = (
-        await session.execute(
-            ADAPTIVE_PICK,
-            {
-                "user_id": user_id,
-                "set_id": set_id,
-                "seed": str(set_id),
-                "topic_id": f.topic_id,
-                "language": f.language,
-                "class_level": f.class_level,
-                "subject_code": f.subject_code,
-                "syllabus_version": f.syllabus_version,
-            },
-        )
-    ).one_or_none()
+    pool = Pool(f.language, f.class_level, f.subject_code, (f.topic_id,), f.syllabus_version)
+    picked = await pick_next(session, user_id, pool, str(set_id), set_id)  # from the latest answer in the topic
     if picked is None:
         await session.rollback()
         return {"status": "shortage", "available": 0}

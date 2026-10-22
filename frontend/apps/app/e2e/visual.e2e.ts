@@ -23,7 +23,7 @@ const WIDTHS = [390, 768, 1280];
 const THEMES = ["light", "dark"] as const;
 const HEIGHT = 860;
 const MD = 768;
-const TOOL_PAGES = ["courses", "homework", "summarizer", "course-creator", "flashcards"];
+const TOOL_PAGES = ["homework", "summarizer"];
 
 const MARKDOWN = [
   "## Quadratic equations",

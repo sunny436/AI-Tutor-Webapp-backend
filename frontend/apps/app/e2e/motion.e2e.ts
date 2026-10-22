@@ -110,23 +110,20 @@ test("a dialog scales in place; a menu grows from its trigger; nothing animates 
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog")).toHaveCount(0);
 
-  // The bell's menu opens below the bell, aligned to its end: it grows from its top-right.
+  // The bell's menu opens below the bell, aligned to its end: it grows from its top-right. Until
+  // Radix has placed it, the menu waits off-screen with the default centre origin (a frame a busy
+  // machine can land on), so the side and the origin are read together, in one poll, until placed.
   await bell(page).click();
-  // Read it once Radix has placed the menu and set its origin. Until then the menu waits off-screen
-  // with the default centre origin, a frame a busy machine can land on.
   await expect
-    .poll(() =>
-      page
-        .getByRole("menu")
-        .evaluate((menu) => getComputedStyle(menu).getPropertyValue("--radix-dropdown-menu-content-transform-origin").trim()),
+    .poll(
+      () =>
+        page.getByRole("menu").evaluate((menu: HTMLElement) => {
+          const [x = 0, y = 0] = getComputedStyle(menu).transformOrigin.split(" ").map(Number.parseFloat);
+          return { side: menu.dataset.side, fromTop: y <= 2, fromEnd: x > menu.offsetWidth / 2 };
+        }),
+      { message: "the bell's menu grows from its top-right" },
     )
-    .not.toBe("");
-  const origin = await page.getByRole("menu").evaluate((menu) => {
-    const [x, y] = getComputedStyle(menu).transformOrigin.split(" ").map(Number.parseFloat);
-    return { x: x as number, y: y as number, width: menu.getBoundingClientRect().width };
-  });
-  expect(origin.y, "grows from its top edge").toBeLessThanOrEqual(2);
-  expect(origin.x, "from the end it is aligned to").toBeGreaterThan(origin.width / 2);
+    .toEqual({ side: "bottom", fromTop: true, fromEnd: true });
   await page.keyboard.press("Escape");
   await expect(page.getByRole("menu")).toHaveCount(0);
 
@@ -159,6 +156,11 @@ test("a message arrives once: no replay when its id is confirmed or the chat get
   expect(fresh("Assistant"), "the reply's arrival").toBe(1);
   expect(fresh("You"), "the student's message never replays").toBeLessThanOrEqual(1);
   expect(starts.filter((start) => start.at === "You").length, "the student's message arrives").toBeGreaterThan(0);
+  // A new account's first answer starts its streak, and the "Started" celebration plays (finite, on
+  // purpose) once the chat is still: close it, then nothing may be left animating.
+  const celebration = page.locator("[data-celebration$='-dialog']");
+  if (await celebration.waitFor({ timeout: 10_000 }).then(() => true, () => false)) await page.keyboard.press("Escape");
+  await expect(celebration).toHaveCount(0);
   await page.waitForTimeout(1_000);
   expect(await runningAnimations(page)).toEqual([]);
 });
@@ -197,8 +199,16 @@ test("sending, streaming, menus and Settings shift nothing on the page", async (
   await page.goto("/");
   await waitForHydration(page);
   // Typed text growing the composer is the reader's own doing (a keypress excludes it from the
-  // metric); Playwright's fill() has no keypress, so it is filled before measuring.
+  // metric); Playwright's fill() has no keypress, so it is filled before measuring, and the page is
+  // left to settle around it (the greeting's arrival ends, the grown composer is laid out).
   await composer(page).fill(LONG_MESSAGE);
+  await page.evaluate(async () => {
+    const finite = document
+      .getAnimations()
+      .filter((animation) => animation.playState === "running" && animation.effect?.getTiming().iterations !== Number.POSITIVE_INFINITY);
+    await Promise.all(finite.map((animation) => animation.finished.catch(() => undefined)));
+    await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+  });
   await page.evaluate(() => {
     type Shift = PerformanceEntry & {
       value: number;

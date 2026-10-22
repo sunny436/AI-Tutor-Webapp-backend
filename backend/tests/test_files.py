@@ -272,8 +272,13 @@ async def test_a_machine_problem_requeues_without_using_an_attempt(client, app, 
     monkeypatch.setattr(processing, "ENVIRONMENT_PAUSE_S", 0)
     assert await app.state.file_worker.run_once()
     row = await _get(app, file_id)
-    assert (row.status, row.attempts, row.processing_started_at) == ("processing", 0, None)
+    # The attempt is given back, but the lease is kept (24c0496): the file waits LEASE_S instead
+    # of being claimed again at once.
+    assert (row.status, row.attempts) == ("processing", 0)
+    assert row.processing_started_at is not None
+    assert await app.state.file_worker.run_once() is False  # still leased: not claimed again yet
 
+    await _set(app, file_id, processing_started_at=None)  # the lease ran out: claimable again
     marker = tmp_path / "aichat-deploying"
     marker.write_text("deploying")
     monkeypatch.setattr(processing, "DEPLOY_MARKER", marker)

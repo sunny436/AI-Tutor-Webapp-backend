@@ -404,6 +404,29 @@ test("desktop, 1280px: the chat, menus, streak, bell, branding, dark, a real que
     expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0);
   });
 
+  await check("My Learning: in the sidebar; every panel loads, its six APIs answer (read only), nothing sideways at 320px", async () => {
+    await page.getByRole("complementary").getByRole("link", { name: "My Learning" }).click();
+    await expect(page).toHaveURL("/learning");
+    await expect(page.getByRole("heading", { level: 1, name: "My Learning" })).toBeVisible();
+    const region = page.getByRole("region", { name: "My Learning" });
+    for (const name of ["Today's plan", "Practice by chapter", "Revision due", "Exam date", "Mastery", "Mistakes", "Recent tests"]) {
+      await expect(region.getByRole("heading", { level: 2, name })).toBeVisible();
+    }
+    await expect(region.locator('[aria-busy="true"]')).toHaveCount(0, { timeout: 15_000 });
+    await expect(region.getByRole("alert")).toHaveCount(0); // no panel failed to load
+    for (const path of ["plan", "mastery", "revisions", "mistakes", "practice-tests", "practice-topics"]) {
+      expect((await page.request.get(`/api/v1/progress/${path}`)).status(), path).toBe(200);
+    }
+    // The page scrolls in its own region, so its width is measured there as well as on the page.
+    const inner = () => region.evaluate((element) => element.scrollWidth - element.clientWidth);
+    for (const width of [1280, 320]) {
+      await page.setViewportSize({ width, height: 800 });
+      expect(await sideways(page), `${width}px`).toBeLessThanOrEqual(0);
+      expect(await inner(), `${width}px, inside the page`).toBeLessThanOrEqual(0);
+    }
+    await page.setViewportSize({ width: 1280, height: 800 });
+  });
+
   await check("Settings: 13 sections; Learning & Streak with stats and calendar (one Tab stop, today in view)", async () => {
     await page.getByRole("complementary").getByRole("button", { name: /^Account: / }).click();
     await page.getByRole("menuitem", { name: "Settings" }).click();

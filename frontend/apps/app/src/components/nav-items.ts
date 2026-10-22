@@ -1,4 +1,4 @@
-import { BookOpen, FileEdit, Layers, Lightbulb, type LucideIcon, MessageSquare, Sparkles } from "lucide-react";
+import { FileEdit, Lightbulb, type LucideIcon, MessageSquare } from "lucide-react";
 
 /**
  * The Learning Hub: every tool in the sidebar, in order, with the line under its
@@ -10,7 +10,7 @@ import { BookOpen, FileEdit, Layers, Lightbulb, type LucideIcon, MessageSquare, 
  * preview features are on (lib/preview.ts).
  */
 export type NavItem = {
-  id: "tutor" | "courses" | "homework" | "summarizer" | "course-creator" | "flashcards";
+  id: "tutor" | "homework" | "summarizer";
   href: string;
   label: string;
   description: string;
@@ -31,15 +31,6 @@ export const NAV_ITEMS: readonly NavItem[] = [
     preview: false,
   },
   {
-    id: "courses",
-    href: "/courses",
-    label: "My Courses",
-    description: "CBSE & ICSE Syllabus Tree",
-    icon: BookOpen,
-    accent: "bg-info-soft text-info",
-    preview: true,
-  },
-  {
     id: "homework",
     href: "/homework",
     label: "Homework Helper",
@@ -55,24 +46,6 @@ export const NAV_ITEMS: readonly NavItem[] = [
     description: "2-Min Chapter Recaps & Notes",
     icon: Lightbulb,
     accent: "bg-warning-soft text-warning",
-    preview: true,
-  },
-  {
-    id: "course-creator",
-    href: "/course-creator",
-    label: "Course Creator",
-    description: "Custom AI Study Roadmap Generator",
-    icon: Sparkles,
-    accent: "bg-accent-purple-soft text-accent-purple",
-    preview: true,
-  },
-  {
-    id: "flashcards",
-    href: "/flashcards",
-    label: "Flashcards",
-    description: "Active Recall & Spaced Repetition",
-    icon: Layers,
-    accent: "bg-accent-pink-soft text-accent-pink",
     preview: true,
   },
 ];

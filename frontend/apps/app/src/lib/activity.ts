@@ -9,11 +9,15 @@ export const ACTIVE_WINDOW_MS = 2 * 60_000;
 
 /** Fired on window after the server credited a minute, so a streak shown can refresh. */
 export const ACTIVITY_EVENT = "padhai:activity";
-/** Fired on window when a reply finished: the learning streak and the notifications may have changed. */
+/**
+ * Fired on window when a reply finished or a practice question was answered: the learning streak
+ * and the notifications may have changed.
+ */
 export const LEARNING_EVENT = "padhai:learning";
 /**
- * Fired on window when a finished reply made its day a learning day (the server's `done.learning`):
- * `detail` is a `Celebration` (features/streak/celebrations/queue.ts). Once per learning day.
+ * Fired on window when a finished reply or a practice answer made its day a learning day (the
+ * server's `learning`): `detail` is a `Celebration` (features/streak/celebrations/queue.ts). Once
+ * per learning day.
  */
 export const CELEBRATE_EVENT = "padhai:celebrate";
 

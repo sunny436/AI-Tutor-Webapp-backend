@@ -1,12 +1,15 @@
 """The learning streak: the one place its rules live.
 
 - **A learning day** is a day, in India time (Asia/Kolkata, for every student), on which the
-  tutor fully answered at least one meaningful question. Opening the app, signing in, reading,
-  Settings, the calendar and small talk ("hi", "thanks") never count; neither does a reply that
-  failed or was stopped, nor a regenerated answer. An answer counts for the day its question
-  was asked, so a question asked just before midnight still counts for that day.
+  tutor fully answered at least one meaningful question, or the student answered PRACTICE_ANSWERS
+  questions of question-bank tests in the chat (owner, 2026-10-15: "5 answers make a day").
+  Opening the app, signing in, reading, Settings, the calendar and small talk ("hi", "thanks")
+  never count; neither does a reply that failed or was stopped, a regenerated answer, a skipped
+  question, nor an exercise the tutor wrote. An answer counts for the day its question was asked,
+  so a question asked just before midnight still counts for that day.
 - **Recorded once per answer:** the chat calls `record_learning` in the transaction that
-  finishes a complete reply (app/chat/service.py). One atomic upsert per (student, day), so
+  finishes a complete reply (app/chat/service.py), and `record_practice` in the one that records
+  an answer to a bank test (app/chat/router.py). One atomic upsert per (student, day), so
   retries, tabs and devices can never make two rows for a day.
 - **The streak is derived, never stored:** from the days alone, with `streaks()`. The current
   streak ends today, or yesterday while today has no learning yet (today is then "pending");
@@ -26,11 +29,11 @@ import zoneinfo
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, time, timedelta
 
-from sqlalchemy import func, select
+from sqlalchemy import func, select, text
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.db.models import ActivityDay, LearningDailyActivity
+from app.db.models import ActivityDay, LearningDailyActivity, QbSetItem
 from app.learning.context import TutorProgress
 from app.notifications.inbox import notify
 from app.progress import activity
@@ -38,6 +41,7 @@ from app.progress.activity import ONE_DAY, streaks
 
 LEARNING_ZONE = zoneinfo.ZoneInfo("Asia/Kolkata")
 MILESTONE_EVERY = 7  # days: a milestone at 7, 14, 21, … with no upper limit
+PRACTICE_ANSWERS = 5  # answers to bank tests that count as one answered question (owner, 2026-10-15)
 MAX_RANGE_DAYS = 371
 # Calendar intensity from the day's learning interactions: 1-2 -> 1, 3-5 -> 2, 6-9 -> 3, 10+ -> 4.
 INTENSITY_FLOORS = (1, 3, 6, 10)
@@ -149,7 +153,10 @@ async def tutor_progress(
       of today's count, so it is told the same count as the original answer was.
     The streak counts days with a fully answered question, so an earlier completed answer to the
     same question counts, as it does in the header. Two tabs asking at once each read their own
-    state; a question committing in the other tab at that moment may or may not be in it."""
+    state; a question committing in the other tab at that moment may or may not be in it. And the
+    practice record (app/progress/practice.py), once the student has answered the bank's questions."""
+    from app.progress.practice import tutor_practice  # practice reads this module's India day
+
     state = await streak_state(session, user_id, now)
     zone = activity.zone_for(timezone, default_timezone)
     today = activity.local_date(now, zone)
@@ -163,6 +170,7 @@ async def tutor_progress(
         today_questions=questions,
         day_left=remaining_label(state.day_end - now),
         today_counts=state.today_active,
+        practice=await tutor_practice(session, user_id, now),
     )
 
 
@@ -207,6 +215,28 @@ async def record_learning(
         dedup_key=f"streak-milestone:{began.isoformat()}:{state.current}",
     )
     return StreakEvent("milestone", state.current)
+
+
+async def record_practice(
+    session: AsyncSession, user_id: uuid.UUID, now: datetime, answered_at: datetime
+) -> StreakEvent | None:
+    """One answer to a question-bank test, just recorded in the caller's transaction
+    (app/chat/router.py): every PRACTICE_ANSWERS-th answer of its India day counts as one fully
+    answered question (record_learning), so 5 make that day a learning day.
+
+    The count is exact: each question is answered once (the ledger's trigger), a replayed response
+    never gets here, and a per-student lock makes concurrent answers (two tabs) count one after the
+    other, each statement seeing the answers committed before it."""
+    await session.execute(text("SELECT pg_advisory_xact_lock(hashtextextended(:k, 0))"), {"k": f"practice|{user_id}"})
+    start = datetime.combine(learning_date(answered_at), time(0, 0), LEARNING_ZONE).astimezone(UTC)
+    answers = await session.scalar(
+        select(func.count())
+        .select_from(QbSetItem)
+        .where(QbSetItem.user_id == user_id, QbSetItem.answered_at >= start, QbSetItem.answered_at < start + ONE_DAY)
+    )
+    if not answers or answers % PRACTICE_ANSWERS:
+        return None
+    return await record_learning(session, user_id, now, answered_at)
 
 
 @dataclass(frozen=True)

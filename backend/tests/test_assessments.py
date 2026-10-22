@@ -69,9 +69,9 @@ async def test_a_test_is_built_with_its_reply_then_answered_skipped_completed_an
     assert (last["state"], last["answerable"], last["current"]) == ("completed", False, None)
     assert (last["earned"], last["possible"]) == (1, 3)
 
-    # A reload shows exactly what was recorded.
+    # A reload shows exactly what was recorded (the response adds only `learning`, null for a model's test).
     page = await client.get(f"/v1/conversations/{message['conversationId']}/messages", headers=h)
-    assert page.json()["items"][-1]["metadata"]["assessments"] == [last]
+    assert last.pop("learning") is None and page.json()["items"][-1]["metadata"]["assessments"] == [last]
     assert await stored(app, message["id"]) == [(0, "answered", 1, 1), (1, "skipped", None, 0), (2, "answered", 1, 0)]
 
 
@@ -215,6 +215,7 @@ async def test_a_fill_in_the_blanks_exercise_is_recorded_graded_and_told_to_the_
     other = await respond(client, h, message, 0, value=["100", "0", "solid"])
     assert other.status_code == 409 and other.json()["error"]["code"] == "assessment_answered"
     page = await client.get(f"/v1/conversations/{message['conversationId']}/messages", headers=h)
+    assert checked.pop("learning") is None  # an exercise is never practice evidence
     assert page.json()["items"][-1]["metadata"]["assessments"] == [checked]
 
     fake_llm.reply = lambda messages: "Nice work."

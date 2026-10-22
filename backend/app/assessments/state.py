@@ -18,6 +18,11 @@ graded and recorded by the server (docs/api-contract.md, "Practice tests").
 - **Answers are final and in order.** The same response sent again is the same success, so a
   retry after a lost reply records nothing twice. A different response to an answered question,
   or a response to a question ahead of the waiting one, is refused.
+- **A question-bank test may grow** (`adaptive`, app/qbank/chat_tests.py): it starts with one
+  question, and each response adds the next one (`extend`), chosen from it. Its `total` is fixed
+  when it is set, unless the bank runs out (then it ends with the questions it has). A response
+  names the hash of the questions it was shown, so a retry after a lost reply is still the same
+  success.
 - **Stored on the message** (`messages.metadata.assessments`); the reply's text never changes.
   Only a `complete` reply can be answered: a regenerated (superseded) one is closed with its test.
 """
@@ -71,8 +76,10 @@ _NOT_A_COUNT = {
     "q", "set", "module", "week", "day", "topic",
 }  # fmt: skip
 _CLAIMED = re.compile(r"\bquestion\s+1\s+(?:of|/)\s+(\d{1,3})\b|\b(\d{1,3})[\s-]+question\s+(?:quiz|test)\b", re.I)
-# A blank in a fill-blank exercise, as the web app reads it: [[answer|alternative]].
+# A blank in a fill-blank exercise, as the web app reads it: [[answer|alternative]]. A longer one is a
+# malformed key (the exercise is refused whole), never left in the text.
 _BLANK = re.compile(r"\[\[([^\]\n]{1,80})\]\]")
+_LONG_BLANK = re.compile(r"\[\[[^\]\n]{81,}\]\]")
 
 
 class Refused(Exception):
@@ -197,11 +204,12 @@ def _question(raw: Any) -> dict | None:
 
 def _fill_blank(spec: Any) -> dict | None:
     """A fill-in-the-blanks exercise, read the way the web app reads it: blanks `[[answer|alternative]]`
-    of 1-80 characters, 1-20 of them, each with at least one accepted answer."""
+    of 1-80 characters, 1-20 of them, every alternative an accepted answer (none empty). The key is the
+    tutor's: anything malformed refuses the exercise whole."""
     if not isinstance(spec, dict):
         return None
     text, explanation = spec.get("text"), spec.get("explanation")
-    if not _text(text, 3000):
+    if not _text(text, 3000) or _LONG_BLANK.search(text):
         return None
     if explanation is not None and not (
         isinstance(explanation, str) and len(explanation) <= 2000 and "\x00" not in explanation
@@ -211,8 +219,8 @@ def _fill_blank(spec: Any) -> dict | None:
     answers: list[list[str]] = []
     last = 0
     for match in _BLANK.finditer(text):
-        accepted = [answer.strip() for answer in match[1].split("|") if answer.strip()]
-        if not accepted:
+        accepted = [answer.strip() for answer in match[1].split("|")]
+        if not all(accepted):  # an empty alternative, e.g. [[a|]]
             return None
         segments.append(text[last : match.start()])
         answers.append(accepted)
@@ -388,10 +396,15 @@ def respond(
         raise Refused("closed")
     if fingerprint(record) != record.get("hash"):
         raise Refused("corrupt")
-    if client_hash != record["hash"]:
-        raise Refused("changed")
     questions = record["questions"]
+    seen = record["hash"]
+    if record.get("adaptive") and question < len(questions):  # a growing test: the questions up to this one
+        seen = fingerprint({**record, "questions": questions[: question + 1]})
+    if client_hash not in (seen, record["hash"]):
+        raise Refused("changed")
     if question >= len(questions):
+        if record.get("adaptive") and question < record["total"]:
+            raise Refused("out_of_order")  # a growing test's later questions are not chosen yet
         raise Invalid("question")
     wanted = "answered" if action == "answer" else "skipped"
     value = _answer(questions[question], value) if action == "answer" else None
@@ -404,6 +417,18 @@ def respond(
         raise Refused("out_of_order")
     response = _graded(questions[question], question, wanted, value, at)
     return {**record, "responses": [*record["responses"], response]}, True
+
+
+def extend(record: dict, raw: Any) -> dict:
+    """A growing test with its next question (`raw`, a question in a ```quiz block's form), or, when
+    there is none (the bank ran out), with its total cut to the questions it has. Never changes
+    `record` itself."""
+    question = _question(raw) if raw is not None else None
+    if question is None:
+        grown = {**record, "total": len(record["questions"])}
+    else:
+        grown = {**record, "questions": [*record["questions"], question]}
+    return {**grown, "hash": fingerprint(grown)}
 
 
 def state_of(record: dict) -> str:

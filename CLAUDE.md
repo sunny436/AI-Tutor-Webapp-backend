@@ -90,6 +90,13 @@ Directly, in `frontend/`: `bun run test`, `bun run typecheck`, `bun run lint`. O
     finished test was in the prompt and 26 of 30 replies were still wrong ("you haven't finished", "I can't see"
     your results").
   - `migration_status.py`: schema vs code, as JSON.
+  - `eval_intents.py`: the intent router on synthetic cases (`tests/fixtures/intent_cases.jsonl`), with the
+    release gates and the latency of each request and of both together; `--sweep` on the dev split chooses
+    `INTENT_MIN_CONFIDENCE` and `INTENT_MIN_GROUP_CONFIDENCE`, the test split runs once with both frozen;
+    `--probe` (dev split) compares the compact option texts with the owner's long criteria, `--replay` on the
+    host (the real tutor). It prints ids and numbers only.
+  - `eval_scope.py`: the study scope filter on synthetic cases (`tests/fixtures/scope_cases.jsonl`): false
+    rejections and false acceptances apart; `--sweep` on the dev split, the test split once; ids and numbers only.
   - `import_questions.py ../qbank`: the question bank (`docs/question_bank.md`); dry run by default, `--apply`
     writes (one transaction; production only with the owner's approval). `qbank_coverage.py`: real counts per topic.
 
@@ -123,7 +130,7 @@ longer exists. Change both halves in the same commit, then run `bun run contract
 file is current. A new endpoint for the browser must also be added to `routes.ts`.
 
 **Backend internals.**
-- **Composition root:** `backend/app/main.py` `create_app(settings, *, llm, email_sender, embeddings)`
+- **Composition root:** `backend/app/main.py` `create_app(settings, *, llm, email_sender, embeddings, intents)`
   wires everything; tests inject fakes through it. `Settings.validate_for_env()` refuses unsafe
   production values.
 - **A chat turn** (`app/chat/service.py`): *prepare* runs in the request transaction (conversation,
@@ -140,11 +147,38 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   `receive_query → retrieve_context → assemble_context → generate_answer` (`app/rag/graph.py`), emits
   SSE `meta`/`token`/`done`/`error`, and persists the result. Stop and disconnect cancel the task.
 - **Tests in the chat come from the question bank** (`app/qbank/chat_tests.py`, `QUESTION_BANK_TESTS`): the
-  tutor names a chapter in a ```question-bank block, the server swaps in stored questions (SQL) before the
-  reply is saved, and `app/assessments` grades them; no model writes, picks or checks a question.
+  tutor names a chapter (or up to three, a mock test) in a ```question-bank block, the server swaps in stored
+  questions (SQL) before the reply is saved, and `app/assessments` grades them; no model writes, picks or
+  checks a question. A test is a practice set in the ledger (`qb_sets` mode `chat`) and is adaptive
+  (`ADAPTIVE_CHAT_TESTS`, a kill switch: off = fixed tests): each answer (`app/chat/router.py`, one
+  transaction under the reply's row lock) is recorded in the ledger, brings the next question chosen from
+  it (`selection.pick_next`), and counts toward the learning day (5 answers make one). The practice record
+  (`app/progress/practice.py`, `GET /v1/progress/plan|mastery|revisions|mistakes|practice-tests|practice-topics`)
+  is read from the ledger, survives deleting the chat, and reaches the tutor as one "Practice record" line.
+  The tutor's own fill-in-the-blanks exercises are graded but never evidence.
 - **One model call per turn:** there are no graph retries, and `FallbackProvider` switches providers
-  only before the first token.
-- **Retrieval never fails a turn:** it is skipped or fails with a reason code.
+  only before the first token. `INTENT_ROUTER` (off by default) adds up to two short classification requests
+  before it (Ollalink, `app/intents`): they write no text, are capped together by `INTENT_ROUTER_TIMEOUT_S`,
+  are never retried and never fail a turn. `STUDY_SCOPE` (off by default)
+  adds one more request of its own, the same way.
+- **Intent router** (`app/intents`, `INTENT_ROUTER=off|shadow|on`): Ollalink's classification model reads
+  which of the owner's 46 intents (`taxonomy.py`, `TAXONOMY_VERSION`) a new message asks for, one question per
+  request: the group, then only that group's intents (fixed option texts of at most 80 characters; no second
+  request for `other` or a group below `INTENT_MIN_GROUP_CONFIDENCE`). Applied only when P(group) is at least
+  `INTENT_MIN_GROUP_CONFIDENCE` and P(group) x P(intent | group) at least `INTENT_MIN_CONFIDENCE`. An applied intent
+  adds a "What the latest message asks for" line after the student's settings (`resolve_assistant_config(intent=)`);
+  test intents get the bank's chapters (`chat_tests.menu(asked=True)`); `performance_analysis` and
+  `study_schedule` search nothing. An explicit "hint only" (English, Hindi, Hinglish) is always `hint_only`,
+  with or without the classifier. A regenerated reply reuses its intent; shadow records without applying.
+  Stored in `messages.metadata.intent` (internal), logged as metadata only.
+- **Study scope filter** (`app/intents/scope.py`, `STUDY_SCOPE=off|shadow|on`): is a new message something
+  PadhAI helps with? Its own Ollalink request through the router's client (one choice question: study,
+  support, unclear, mixed, unrelated), never an intent. Fixed rules first (small talk, "hint only", bare
+  files). `on`: a policy paragraph after the frozen prompt on every turn; `REDIRECT` (P(unrelated) ≥
+  `SCOPE_MIN_REDIRECT`) is the app's own reply with no model, search, learning day or title; other decisions
+  add one conditional line; a failure is the tutor with the policy. Stored in `messages.metadata.scope`.
+- **Retrieval never fails a turn:** it is skipped or fails with a reason code. Small talk that opens a chat
+  ("hi": `is_meaningful`) searches nothing; a short follow-up ("why?") is searched with the question before it.
 - **Context budget** (`app/rag/context.py`): system prompt → latest message → whole chunks up to
   `RAG_MAX_CONTEXT_CHARS` → history up to `LLM_MAX_INPUT_CHARS`.
 - **RAG** (`docs/rag.md`): `PgVectorRetriever` → `KnowledgeStore` → pgvector HNSW; or, when

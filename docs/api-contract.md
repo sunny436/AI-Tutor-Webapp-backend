@@ -131,7 +131,9 @@ version, and every edit sends the version it read. One shape, for every such res
 - **Learner profile:** `{version, grade, board, boardState, medium, academicYear, mainGoal, targetExam (≤ 80),
   targetScorePercent (0–100), weakTopics (≤ 10 × 60), dailyActiveMinutesGoal (0–720),
   weeklyActiveMinutesGoal (0–5040), preferredStudyTime ("HH:MM"), shortTermGoal (≤ 280), longTermGoal (≤ 280),
-  updatedAt}`. Nothing else about the student (no date of birth, gender, phone, school or country) is asked for.
+  examDate ("YYYY-MM-DD", from yesterday to 730 days ahead; additive, 2026-10-22), updatedAt}`. Nothing else
+  about the student (no date of birth, gender, phone, school or country) is asked for. `examDate` sets the
+  practice plan's exam window ([The practice record](#the-practice-record)).
   - `grade`, `board`, `boardState`, `medium` and `academicYear` are catalog codes: an unknown code is 422
     `unknown_code`. `boardState` needs `board: "state"` (422 `requires_state_board`).
   - Free text is stored on one line: runs of whitespace become one space; control characters are removed.
@@ -155,7 +157,7 @@ version, and every edit sends the version it read. One shape, for every such res
 |---|---|---|---|
 | POST | `/v1/progress/activity` | – | `{credited, date}`: one active minute; 6 reports per minute at most |
 | GET | `/v1/progress?days=14` | – (`days` 7–90) | `{timezone, timezoneIsDefault, today, thisWeek, streak, goals, days}` |
-| GET | `/v1/progress/streak` | – | `{currentStreak, longestStreak, todayActive, todayDate, timezone, dayEnd, previousStreak, lastLearningDate}`: the learning streak (India days with a meaningful, fully answered question; app/progress/learning.py). `previousStreak` is the streak that ended, > 0 only once `currentStreak` is 0 after a whole missed day (never while today is pending); `lastLearningDate` the latest learning day, null before the first |
+| GET | `/v1/progress/streak` | – | `{currentStreak, longestStreak, todayActive, todayDate, timezone, dayEnd, previousStreak, lastLearningDate}`: the learning streak (India days with a meaningful, fully answered question, or 5 answers to question-bank tests; app/progress/learning.py). `previousStreak` is the streak that ended, > 0 only once `currentStreak` is 0 after a whole missed day (never while today is pending); `lastLearningDate` the latest learning day, null before the first |
 
 - **What is measured:** time active in PadhAI, not study time. A client reports a minute while PadhAI is open and
   visible and the student interacted with it (or a reply was streaming) within the last two minutes. The server
@@ -172,6 +174,47 @@ version, and every edit sends the version it read. One shape, for every such res
   null without a goal.
 - `today`/`days[]`: `{date, activeMinutes, questions}`; `days` lists the last `days` days, oldest first,
   including days without activity.
+
+## The practice record
+
+What the student's answers to question-bank tests in the chat say (`app/progress/practice.py`; additive,
+2026-10-22). Every endpoint is the signed-in student's own, read-only, and takes no ids. Dates are India
+learning days (`Asia/Kolkata`). Every number is an estimate from practice, never a mark.
+
+| Method | Path | Success |
+|---|---|---|
+| GET | `/v1/progress/plan` | `{date, timezone, budgetMinutes, budgetSource: goal\|default, insufficientHistory, needsProfile, examDate, daysToExam, answeredToday, answersForLearningDay, summary: {answered, practisedConcepts, masteredConcepts, weakConcepts, dueRevisions, overdueRevisions, recurringMistakes}, tasks: [...]}` |
+| GET | `/v1/progress/mastery` | `{model: {method: "bkt", prior, learn, guess, slip, masteredAt, minAnswers, minQuestions}, answered, revisedAnswers, subjects: [{subjectCode, classLevel, language, estimate, coverage, chapters: [{chapterId, number, title, bookTitle, estimate, coverage, topicCount, topics: [{topicId, number, title, estimate, state, coverage, conceptCount, concepts: [{conceptTag, objective, estimate, state, answered, correct, distinctQuestions, lastAnsweredAt}]}]}]}]}` |
+| GET | `/v1/progress/revisions` | `{date, ladderDays: [1, 3, 7, 14, 30, 60], items: [{topicId, topicTitle, topicNumber, chapterId, chapterTitle, chapterNumber, bookTitle, subjectCode, classLevel, state: overdue\|due\|done\|upcoming, dueDate, overdueDays, intervalDays, recall, lastReviewed, lastAccuracy, reviews, estimate, prompt}]}` |
+| GET | `/v1/progress/mistakes?limit=50` (1–200) | `{recurringRule: {wrong: 2, days: 14}, concepts: [{topicId, topicTitle, chapterId, chapterTitle, chapterNumber, bookTitle, subjectCode, classLevel, conceptTag, objective, wrong, wrong14d, recurring, state, prompt, items: [{questionId, answeredAt, stem, options, chosen, correct, explanation, conversationId}]}]}` |
+| GET | `/v1/progress/practice-tests?limit=20` (1–100) | `{items: [{setId, messageId, conversationId, title, chapterIds, startedAt, total, served, answered, correct, open}]}`, newest first |
+| GET | `/v1/progress/practice-topics` | `{available, reason: no_class\|no_questions\|null, classLevel, language: english\|hindi, subjects: [{subjectCode, books: [{bookId, title, language, chapters: [{chapterId, number, title, questions, topics: [{topicId, number, title, questions}]}]}]}]}`: the bank's chapters with servable questions for the student's class, in their medium, plus the English, Hindi and Sanskrit books; their own subjects first |
+
+- **Evidence:** an answer to a question of the student's practice sets, graded by the database: only the
+  first answer to a question on a day counts, and an answer to a question edited since it was served is set
+  aside (`revisedAnswers`). Skips, flashcards and the tutor's own fill-in-the-blanks exercises never count.
+  Deleting a chat keeps its answers (`conversationId` and `messageId` become null); deleting the account
+  deletes them.
+- **Mastery** per concept is Bayesian knowledge tracing (the `model` values): `mastered` at 0.95 with 3
+  answers to at least 2 of its questions (or all it has), `weak` below 0.5 after a wrong answer,
+  `not_enough_evidence` under 3 answers, else `learning`. A topic is mastered when all its concepts are.
+  Topics, chapters and subjects show the mean over what was practised, and `coverage`: how much of it was.
+  Only practised ones are listed.
+- **Revision** per topic: a day with answers is a review, recalled with 75% right. The next review is 1, 3,
+  7, 14, 30 or 60 days after the last, one step further for each recalled day in a row, back to 1 day after a
+  lapse, and at most 3 days while the topic is weak. States are scheduled from the days before today, so
+  they hold all day (`done`: reviewed today while due or overdue). Ordered overdue, due (each the lowest
+  `recall` first, then the weaker topic), done, then upcoming by `dueDate`.
+- **The plan:** at most 6 tasks (`revise`, `strengthen` or `learn`; `reason`: `overdue`, `due`,
+  `weak_concept`, `next_topic`, `start_here`) of 5 questions (about 8 minutes) each, within the daily goal
+  (`budgetMinutes`; 30 without one): revisions due, then weak topics (the weakest first), then the next new
+  topic of each of the student's subjects (in a chapter already begun first, then in book order). Within 30
+  days of `examDate` at most one new topic, and none in the last 7. Chosen from the answers before today, so
+  it holds all day; today's answers fill in `answeredToday` and `done`. `needsProfile`: no class 6–12, or
+  none of the student's subjects is in the bank (then `learn` tasks are `start_here`, over the bank's subjects).
+  A task's `prompt` (also a revision's and a mistake's) is the request a client puts in a new chat for the
+  student to send, e.g. `Test me on Class 10 Science (Science) Chapter 2 "Acids, Bases and Salts", topic "pH
+  scale": 5 questions.`
 
 ## Study time: estimated, in the sessions a student starts
 
@@ -275,7 +318,7 @@ finished message (`done` and message lists), not while the reply streams.
 | POST | `/v1/messages/{id}/cancel` | – | `{status}` — stops a `streaming` reply (idempotent) |
 | PUT | `/v1/messages/{id}/feedback` | `{rating: up\|down, comment?}` | `{messageId, rating, comment}` (assistant messages only; upsert) |
 | GET / DELETE | `/v1/messages/{id}/feedback` | – | read / remove your feedback |
-| POST | `/v1/messages/{id}/assessment-responses` | `{position, hash, question, action: answer\|skip, value? (answers only: an option index, or one text per blank)}` | The test as recorded (below). 409 `assessment_answered` / `assessment_out_of_order` / `assessment_changed` / `assessment_closed`, 422 no such question or option, 404 not the student's reply or no such test |
+| POST | `/v1/messages/{id}/assessment-responses` | `{position, hash, question, action: answer\|skip, value? (answers only: an option index, or one text per blank)}` | The test as recorded (below), and `learning` (additive, 2026-10-22): `{event: started\|extended\|milestone, streak}` when this answer made its India day a learning day, else null. 409 `assessment_answered` / `assessment_out_of_order` / `assessment_changed` / `assessment_closed`, 422 no such question or option, 404 not the student's reply or no such test |
 
 ### Practice tests
 
@@ -284,13 +327,15 @@ single question) or an exercise (one ```` ```fill-blank ```` with `[[answer|alte
 tutor writes them when `TUTOR_INTERACTIVE_BLOCKS` is on. With `QUESTION_BANK_TESTS` on (the default since
 2026-10-16), a test's questions come only from the question bank: the tutor names a chapter in a
 ```` ```question-bank ```` block, the server replaces it with a ```` ```quiz ```` of stored questions
-before the reply is saved, and a practice block the tutor writes itself becomes a note
-(docs/question_bank.md, "Tests in the chat"). The server owns them (`app/assessments/state.py`):
+before the reply is saved, and a test block the tutor writes itself becomes a note; a fill-in-the-blanks
+exercise it writes is kept (2026-10-22) (docs/question_bank.md, "Tests in the chat"). The server owns them
+(`app/assessments/state.py`):
 
 - **Built with the reply, whole or not at all.** When a reply completes, its block is checked and
   saved by the same write as the reply, in `metadata.assessments`. A test needs 1-30 questions, 2-8
   distinct options each, an answer naming exactly one option, and the number of questions the
-  student asked for. An exercise needs 1-20 blanks, each with an accepted answer. A reply that wrote
+  student asked for. An exercise needs 1-20 blanks of at most 80 characters, each with accepted answers
+  and none of them empty (2026-10-22: `[[a|]]` is refused, not read as `[[a]]`). A reply that wrote
   a block the server can't accept has none, and `metadata.assessmentError: {code}` (`multiple_tests`,
   `nested_test`, `incomplete_test`, `invalid_json`, `invalid_test`, `invalid_question`,
   `too_many_questions`, `count_mismatch`). Regenerate is the retry. A reply saved before its kind of block
@@ -317,6 +362,17 @@ before the reply is saved, and a practice block the tutor writes itself becomes 
   spacing and a trailing `.;,!`. Answers are final. The same response sent again returns the record
   unchanged (a safe retry); any other response to an answered question is 409. The questions and the
   grading never come from the client.
+- **A question-bank test grows** (2026-10-22): it starts with its first question (`questions` has one,
+  `total` says how many it will have), and each response adds the next one, chosen from that answer, in
+  the same transaction; the response returns the grown test with its new `hash`. A response names the hash
+  of the questions it was shown, so a retry after a lost reply (with the old hash) is the same success and
+  returns the test as it is now; a question not chosen yet is 409 `assessment_out_of_order`. If the bank has
+  nothing left, `total` shrinks to the questions it has and the test is complete. Clients draw only what the
+  record holds, so nothing else changes for them. Answers to these tests are the student's practice record
+  ([The practice record](#the-practice-record)), and every 5th answer of an India day counts as one fully
+  answered question, so 5 make a learning day: that response's `learning` says so, as `done.learning` does
+  (null on every other response, and on a replay).
+  Fill-in-the-blanks exercises the tutor writes are never practice evidence.
 - **The tutor** is told the chat's practice record on every turn, the latest first, in words checked
   against the model (`scripts/eval_tutor_record.py`): finished or not, the score, every answer,
   and what to do when asked how they did. Flashcards, graphs and diagrams are not recorded, and the

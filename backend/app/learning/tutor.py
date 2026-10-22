@@ -9,6 +9,8 @@ what a student previews is exactly what the tutor is told.
   existed (tests/test_legacy_tutor.py). Once they have learnt, every student also gets one
   "Learning so far" line: their streak, today's activity (owner decision, 2026-09-29), and the
   header's countdown: whether today counts yet and how long the learning day has left (2026-10-01).
+  Once they have answered questions of the question bank's tests, one "Practice record" line too
+  (2026-10-22): their weakest concepts, the topics due for revision and today's answers.
 - **Student text is information, never instructions.** It is shown on one line, in quotes that
   it cannot close (a double quote in it becomes a single one), under a heading that tells the
   model not to follow instructions inside it. Line breaks were already removed when it was
@@ -33,6 +35,7 @@ from datetime import time
 from app.learning.context import StudentContext, TutorProgress
 
 MAX_TUTOR_BLOCK_CHARS = 6000
+PRACTICE_NAME_MAX = 60  # each concept or topic named in the practice line
 
 ABOUT_HEADING = (
     "## About this student\n"
@@ -139,11 +142,26 @@ TEACHING_TEXT: dict[str, dict[str, str]] = {
 }
 
 # If the block is ever over the cap, these "About" lines go first, in this order.
-DROP_ORDER = ("progress", "study_time", "long_term_goal", "short_term_goal", "weak_topics", "target_exam", "subjects")
+DROP_ORDER = (
+    "practice",
+    "progress",
+    "study_time",
+    "long_term_goal",
+    "short_term_goal",
+    "weak_topics",
+    "target_exam",
+    "subjects",
+)
 
 
 def quote(text: str) -> str:
     return '"' + " ".join(text.split()).replace('"', "'") + '"'
+
+
+def _name(text: str) -> str:
+    """A concept or topic of the practice record, quoted, at most PRACTICE_NAME_MAX characters."""
+    flat = " ".join(text.split())
+    return quote(flat if len(flat) <= PRACTICE_NAME_MAX else flat[: PRACTICE_NAME_MAX - 1] + "…")
 
 
 def _subject(subject) -> str:
@@ -188,6 +206,30 @@ def _progress(progress: TutorProgress | None) -> str:
     return "- Learning so far: " + "; ".join(parts) if parts else ""
 
 
+def _overdue(days: int) -> str:
+    return "due today" if days <= 0 else f"{days} day{'s' if days != 1 else ''} overdue"
+
+
+def _practice(progress: TutorProgress | None) -> str:
+    """Nothing until the student has answered the question bank's questions; empty parts are left out."""
+    practice = progress.practice if progress else None
+    if practice is None:
+        return ""
+    parts = []
+    if practice.weakest:
+        parts.append("weakest " + ", ".join(_name(concept) for concept in practice.weakest))
+    if practice.due:
+        parts.append("revision due " + ", ".join(f"{_name(topic)} ({_overdue(days)})" for topic, days in practice.due))
+    if practice.mastered:
+        parts.append(f"{practice.mastered} concept{'s' if practice.mastered != 1 else ''} mastered")
+    answered, needed = practice.answered_today, practice.learning_day_answers
+    if 0 < answered < needed:
+        parts.append(f"today {answered} of the {needed} answers that make a learning day")
+    elif answered:
+        parts.append(f"today {answered} answers")
+    return "- Practice record (the app's question bank; estimates, not marks): " + "; ".join(parts) if parts else ""
+
+
 def _about_lines(student: StudentContext) -> list[tuple[str, str]]:
     board = student.board
     if board and student.board_state:
@@ -217,6 +259,7 @@ def _about_lines(student: StudentContext) -> list[tuple[str, str]]:
         ("long_term_goal", f"- Long-term goal: {quote(student.long_term_goal)}" if student.long_term_goal else ""),
         ("study_time", _study_time(student)),
         ("progress", _progress(student.progress)),
+        ("practice", _practice(student.progress)),
     ]
     return [(key, line) for key, line in lines if line]
 

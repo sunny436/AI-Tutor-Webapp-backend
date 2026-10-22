@@ -1,11 +1,10 @@
 /**
  * PREVIEW FEATURES: interface built ahead of its backend.
  *
- * The learning tools (courses, homework, summaries, study plans, flashcards), the
- * streak and XP, the leaderboard and the class/board line all exist as UI only,
- * with sample data. None of it may reach a real user looking like a working
- * feature, so all of it is behind this one switch, and the switch is OFF unless
- * the server's environment says exactly `PREVIEW_FEATURES=1`.
+ * The learning tools (homework, summaries), the leaderboard and the class/board
+ * line exist as UI only, with sample data. None of it may reach a real user
+ * looking like a working feature, so all of it is behind this one switch, and the
+ * switch is OFF unless the server's environment says exactly `PREVIEW_FEATURES=1`.
  *
  * Production never sets it (deploy/env/web.env.example). A local or staging
  * build sets it to review the screens; every preview surface then says so on

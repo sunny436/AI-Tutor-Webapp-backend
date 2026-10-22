@@ -3,9 +3,10 @@ import type { LearningStreak, StreamLearning } from "@/lib/api/types";
 /**
  * The streak celebrations' rules, kept pure so they can be tested without a page.
  *
- * What is celebrated comes only from the server: a finished reply's `done.learning` (sent once,
- * by the answer that made its day a learning day; app/progress/learning.py) and a confirmed lost
- * streak (`currentStreak` 0 after a whole missed India day, never while today is pending).
+ * What is celebrated comes only from the server: a finished reply's `done.learning` or a practice
+ * answer's `learning` (sent once, by the answer that made its day a learning day;
+ * app/progress/learning.py) and a confirmed lost streak (`currentStreak` 0 after a whole missed
+ * India day, never while today is pending).
  */
 export type Celebration =
   | { kind: StreamLearning["event"]; streak: number; key: string }
@@ -18,6 +19,11 @@ export const EMPTY_QUEUE: QueueState = { items: [], seen: new Set(), learned: fa
 /** A finished reply's streak event: one per reply, keyed by its message. */
 export function fromReply(learning: StreamLearning, messageId: string): Celebration {
   return { kind: learning.event, streak: learning.streak, key: `msg:${messageId}` };
+}
+
+/** A practice answer's streak event: keyed by the test's message and the answer, apart from the reply's own. */
+export function fromAnswer(learning: StreamLearning, messageId: string, answered: number): Celebration {
+  return { kind: learning.event, streak: learning.streak, key: `answer:${messageId}:${answered}` };
 }
 
 /** A confirmed lost streak, keyed per account and per lost streak; null when there is none. */

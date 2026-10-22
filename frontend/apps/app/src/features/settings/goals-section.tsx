@@ -9,6 +9,7 @@ import { type KeyboardEvent, useId, useState } from "react";
 import { describeError } from "@/lib/api/errors";
 import {
   DAILY_MINUTES_MAX,
+  EXAM_DATE_MAX_DAYS,
   GOAL_MAX,
   type LearnerProfileField,
   MAIN_GOALS,
@@ -26,6 +27,7 @@ import { SaveFooter, selectClass, useProfileForm } from "./profile-form";
 const FIELDS = [
   "mainGoal",
   "targetExam",
+  "examDate",
   "targetScorePercent",
   "weakTopics",
   "dailyActiveMinutesGoal",
@@ -34,6 +36,18 @@ const FIELDS = [
   "shortTermGoal",
   "longTermGoal",
 ] as const satisfies readonly LearnerProfileField[];
+
+/** "YYYY-MM-DD" of the day `offset` days from today, on this device's calendar. */
+function localDay(offset = 0): string {
+  const date = new Date();
+  date.setDate(date.getDate() + offset);
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+}
+
+/** "YYYY-MM-DD" of the day `offset` days from today in UTC, the calendar the API checks an exam date on. */
+function utcDay(offset: number): string {
+  return new Date(Date.now() + offset * 86_400_000).toISOString().slice(0, 10);
+}
 
 /** A whole number within [0, max], or null for empty. */
 function wholeNumber(text: string, max: number): number | null {
@@ -121,6 +135,7 @@ export function GoalsSection() {
   const form = useProfileForm(FIELDS, "Goals saved.");
   const draft = form.draft;
   const check = (field: LearnerProfileField) => (form.invalid(field) ? "Check this value." : null);
+  const today = localDay();
 
   return (
     <>
@@ -172,6 +187,26 @@ export function GoalsSection() {
                   value={draft.targetExam ?? ""}
                   maxLength={TARGET_EXAM_MAX}
                   onChange={(event) => form.change({ targetExam: event.target.value })}
+                />
+              )}
+            </Field>
+            <Field
+              label="Exam date"
+              hint="Optional. As it gets close, your plan in My Learning turns to revision."
+              error={check("examDate")}
+            >
+              {(props) => (
+                <Input
+                  {...props}
+                  className="w-full sm:w-44"
+                  type="date"
+                  // A new date is from today; one that has passed is left as it is, so saving the
+                  // other goals never stops at it. The last day is the API's (UTC), which this
+                  // device's calendar may already be a day past.
+                  min={draft.examDate && draft.examDate < today ? undefined : today}
+                  max={utcDay(EXAM_DATE_MAX_DAYS)}
+                  value={draft.examDate ?? ""}
+                  onChange={(event) => form.change({ examDate: event.target.value || null })}
                 />
               )}
             </Field>

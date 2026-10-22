@@ -54,7 +54,15 @@ export const CONTRACT = {
       ]
     }
   },
-  "AssessmentOut": {
+  "AssessmentQuestionOut": {
+    "kind": {
+      "enum": [
+        "mcq",
+        "fill_blank"
+      ]
+    }
+  },
+  "AssessmentResponseOut": {
     "kind": {
       "enum": [
         "test",
@@ -66,14 +74,6 @@ export const CONTRACT = {
         "not_started",
         "active",
         "completed"
-      ]
-    }
-  },
-  "AssessmentQuestionOut": {
-    "kind": {
-      "enum": [
-        "mcq",
-        "fill_blank"
       ]
     }
   },
@@ -111,6 +111,16 @@ export const CONTRACT = {
     "message": {
       "maxLength": 16000,
       "minLength": 1
+    }
+  },
+  "ConceptMasteryOut": {
+    "state": {
+      "enum": [
+        "mastered",
+        "learning",
+        "weak",
+        "not_enough_evidence"
+      ]
     }
   },
   "CreateConversationRequest": {
@@ -263,6 +273,15 @@ export const CONTRACT = {
     "intensity": {
       "maximum": 4,
       "minimum": 1
+    }
+  },
+  "LearningEventOut": {
+    "event": {
+      "enum": [
+        "started",
+        "extended",
+        "milestone"
+      ]
     }
   },
   "LearningPreferencesOut": {
@@ -484,11 +503,95 @@ export const CONTRACT = {
       "maxItems": 30
     }
   },
+  "MistakeConceptOut": {
+    "state": {
+      "enum": [
+        "mastered",
+        "learning",
+        "weak",
+        "not_enough_evidence"
+      ]
+    }
+  },
+  "MistakeOut": {
+    "chosen": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "correct": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    }
+  },
   "NotificationPreferencesOut": {
     "delivery": {
       "enum": [
         "active",
         "paused"
+      ]
+    }
+  },
+  "PracticeBookOut": {
+    "language": {
+      "enum": [
+        "english",
+        "hindi",
+        "sanskrit"
+      ]
+    }
+  },
+  "PracticePlanOut": {
+    "budgetSource": {
+      "enum": [
+        "goal",
+        "default"
+      ]
+    }
+  },
+  "PracticeTaskOut": {
+    "kind": {
+      "enum": [
+        "revise",
+        "strengthen",
+        "learn"
+      ]
+    },
+    "language": {
+      "enum": [
+        "english",
+        "hindi",
+        "sanskrit"
+      ]
+    },
+    "reason": {
+      "enum": [
+        "overdue",
+        "due",
+        "weak_concept",
+        "next_topic",
+        "start_here"
+      ]
+    }
+  },
+  "PracticeTopicsOut": {
+    "language": {
+      "enum": [
+        "english",
+        "hindi"
+      ]
+    },
+    "reason": {
+      "enum": [
+        "no_class",
+        "no_questions"
       ]
     }
   },
@@ -539,6 +642,16 @@ export const CONTRACT = {
     },
     "version": {
       "minimum": 0
+    }
+  },
+  "RevisionOut": {
+    "state": {
+      "enum": [
+        "overdue",
+        "due",
+        "done",
+        "upcoming"
+      ]
     }
   },
   "SegmentOut": {
@@ -612,6 +725,15 @@ export const CONTRACT = {
       "pattern": "^[a-z0-9_]+$"
     }
   },
+  "SubjectMasteryOut": {
+    "language": {
+      "enum": [
+        "english",
+        "hindi",
+        "sanskrit"
+      ]
+    }
+  },
   "SupportRequestIn": {
     "kind": {
       "enum": [
@@ -647,6 +769,16 @@ export const CONTRACT = {
       "enum": [
         "open",
         "closed"
+      ]
+    }
+  },
+  "TopicMasteryOut": {
+    "state": {
+      "enum": [
+        "mastered",
+        "learning",
+        "weak",
+        "not_enough_evidence"
       ]
     }
   },
@@ -696,10 +828,11 @@ export const CONTRACT = {
           "weeklyActiveMinutesGoal",
           "preferredStudyTime",
           "shortTermGoal",
-          "longTermGoal"
+          "longTermGoal",
+          "examDate"
         ]
       },
-      "maxItems": 14
+      "maxItems": 15
     },
     "version": {
       "minimum": 0

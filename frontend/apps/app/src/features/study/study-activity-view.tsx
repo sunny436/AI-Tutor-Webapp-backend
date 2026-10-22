@@ -28,7 +28,8 @@ type Range = (typeof RANGES)[number]["value"];
 
 const link = "focus-ring rounded font-semibold text-brand underline underline-offset-2";
 
-function Panel({ id, title, children }: { id: string; title: string; children: ReactNode }) {
+/** A titled card of the page (an `h2`; the app header owns the `h1`). Also used by My Learning. */
+export function Panel({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
     <section aria-labelledby={id} className="rounded-2xl border border-border bg-card p-4 elev-1 sm:p-5">
       <h2 id={id} className="mb-3 text-sm font-bold text-foreground">
@@ -39,7 +40,8 @@ function Panel({ id, title, children }: { id: string; title: string; children: R
   );
 }
 
-function Stat({ value, label, hint }: { value: string; label: string; hint?: string }) {
+/** A number and what it is, inside a `<dl>`. Also used by My Learning. */
+export function Stat({ value, label, hint }: { value: string; label: string; hint?: string }) {
   return (
     <div className="flex min-w-0 flex-col">
       <dt className="order-2 text-xs text-text-secondary">{label}</dt>

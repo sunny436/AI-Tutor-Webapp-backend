@@ -50,7 +50,7 @@ export const SETTINGS_SECTIONS = [
     title: "Learning Goals",
     description: "What you're working towards, and your study time.",
     icon: Target,
-    keywords: ["exam", "target score", "difficult topics", "weak topics", "daily goal", "weekly goal", "active time"],
+    keywords: ["exam", "exam date", "target score", "difficult topics", "weak topics", "daily goal", "weekly goal", "active time"],
   },
   {
     slug: "learning",

@@ -138,7 +138,7 @@ describe("what this tab reports", () => {
 
   test("learning views are the tutor and the File Library", () => {
     for (const path of ["/", "/c/11111111-1111-4111-8111-111111111111", "/library"]) expect(isLearningView(path)).toBe(true);
-    for (const path of ["/settings/profile", "/study", "/help", "/about", "/library-old", "/courses", null]) {
+    for (const path of ["/settings/profile", "/study", "/learning", "/help", "/about", "/library-old", null]) {
       expect(isLearningView(path)).toBe(false);
     }
   });

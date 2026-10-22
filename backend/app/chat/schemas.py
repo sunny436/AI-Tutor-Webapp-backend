@@ -118,3 +118,19 @@ class AssessmentOut(ApiModel):
     earned: int
     possible: int
     questions: list[AssessmentQuestionOut]
+
+
+class LearningEventOut(ApiModel):
+    """What an answer did to the learning streak: the chat's `done.learning` values."""
+
+    event: Literal["started", "extended", "milestone"]
+    streak: int
+
+
+class AssessmentResponseOut(AssessmentOut):
+    """The test as recorded after a response, and `learning` (additive): what this answer did to the
+    streak, as the chat's `done.learning` says it, when this answer to a question-bank test made its
+    India day a learning day (every 5th of the day; app/progress/learning.py); null otherwise, and
+    always on a replayed response."""
+
+    learning: LearningEventOut | None

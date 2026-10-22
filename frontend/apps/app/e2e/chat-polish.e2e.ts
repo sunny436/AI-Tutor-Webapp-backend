@@ -578,10 +578,11 @@ test("a long title moves only while its row is hovered or keyboard-focused; at r
   expect((await state(short)).running).toBe(0);
   expect(await state(long)).toMatchObject({ running: 0, mask: "none", textOverflow: "ellipsis" });
 
-  // Keyboard focus moves it; moving focus on stops it.
+  // Keyboard focus moves it; moving focus on stops it. (Reached back from its own Rename button,
+  // whatever the sidebar lists above the chats.)
   await page.mouse.move(900, 400);
-  await page.getByRole("complementary").getByRole("link", { name: "Ask New Doubt" }).focus();
-  await page.keyboard.press("Tab");
+  await page.getByRole("complementary").getByRole("button", { name: `Rename “${LONG}”` }).focus();
+  await page.keyboard.press("Shift+Tab");
   await expect(row(long)).toBeFocused();
   await page.waitForTimeout(600);
   expect((await state(long)).animation).toBe("marquee");
@@ -650,7 +651,10 @@ test("keyboard: the controls come in reading order", async ({ page, account: _ }
   await page.goto("/");
   await waitForHydration(page);
   const names: string[] = [];
-  for (let press = 0; press < 18; press++) {
+  // Enough presses to reach the message box (about 17 now) with room to spare: the sidebar's places
+  // (My Learning, File Library, Study Activity) sit between "Ask New Doubt" and the chats. The order
+  // below is checked, not the count.
+  for (let press = 0; press < 24; press++) {
     await page.keyboard.press("Tab");
     names.push(
       await page.evaluate(() => {

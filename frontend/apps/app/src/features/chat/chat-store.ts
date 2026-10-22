@@ -32,6 +32,7 @@ import type { StreamHandlers, StreamOutcome } from "@/lib/api/chat";
 import { ApiError, type ErrorCode, describeError, isAbortError } from "@/lib/api/errors";
 import type {
   Assessment,
+  AssessmentResponse,
   AssessmentResponseRequest,
   ChatRequest,
   Conversation,
@@ -41,6 +42,7 @@ import type {
   MessagePage,
   StreamDone,
   StreamFailure,
+  StreamLearning,
   StreamMeta,
 } from "@/lib/api/types";
 import { MESSAGE_MAX } from "@/lib/api/types";
@@ -60,7 +62,7 @@ export type ChatApi = {
   setFeedback: (messageId: string, rating: FeedbackRating) => Promise<unknown>;
   clearFeedback: (messageId: string) => Promise<unknown>;
   deleteConversation: (conversationId: string) => Promise<void>;
-  respondToAssessment: (messageId: string, request: AssessmentResponseRequest) => Promise<Assessment>;
+  respondToAssessment: (messageId: string, request: AssessmentResponseRequest) => Promise<AssessmentResponse>;
 };
 
 export type MessageError = { code: ErrorCode; retryable: boolean; requestId?: string };
@@ -175,6 +177,12 @@ export class ChatStore {
   onConversationUpdated?: (conversation: Conversation) => void;
   /** A reply finished (the streak may have changed: the header and the bell refresh). */
   onReplyFinished?: (done: StreamDone) => void;
+  /**
+   * A practice question was answered (the streak may have changed: the header and the bell
+   * refresh, after a retried answer too, whose response never has `learning`). `learning` when
+   * this answer made its day a learning day (the server says so once): `answered` keys it.
+   */
+  onPracticeAnswered?: (learning: StreamLearning | null, messageId: string, answered: number) => void;
 
   constructor(options: ChatStoreOptions) {
     this.api = options.api;
@@ -595,8 +603,10 @@ export class ChatStore {
 
   /**
    * Answer or skip the waiting question of a reply's practice test. The server grades and records
-   * it, and the reply's test becomes what it returns. A 409 means the test moved on elsewhere
-   * (another tab) or was replaced: the conversation is read again. Errors are rethrown for the card.
+   * it, and the reply's test becomes what it returns; an answer goes on to `onPracticeAnswered`,
+   * with its `learning` when it made its day a learning day, like a reply's `done`. A 409 means
+   * the test moved on elsewhere (another tab) or was replaced: the conversation is read again.
+   * Errors are rethrown for the card.
    */
   async respondToTest(
     key: string,
@@ -606,7 +616,8 @@ export class ChatStore {
   ): Promise<void> {
     const canonical = this.resolve(key);
     try {
-      const test = await this.api.respondToAssessment(messageId, { position, ...request });
+      const { learning, ...test } = await this.api.respondToAssessment(messageId, { position, ...request });
+      if (request.action === "answer") this.onPracticeAnswered?.(learning ?? null, messageId, test.answered);
       const current = this.getMessage(canonical, messageId);
       const tests = current?.metadata?.assessments;
       const index = tests?.findIndex((item) => item.position === position) ?? -1;

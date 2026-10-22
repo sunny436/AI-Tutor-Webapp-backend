@@ -138,6 +138,8 @@ export type LearnerProfileValues = {
   preferredStudyTime: string;
   shortTermGoal: string;
   longTermGoal: string;
+  /** "YYYY-MM-DD": the next exam, from today to two years ahead (My Learning's plan counts down to it). */
+  examDate: string;
 };
 export type LearnerProfileField = keyof LearnerProfileValues;
 export type LearnerProfile = { [K in Exclude<LearnerProfileField, "weakTopics">]: LearnerProfileValues[K] | null } & {
@@ -168,6 +170,8 @@ export const TOPIC_MAX = CONTRACT.LearnerProfileSet.weakTopics.items.maxLength;
 export const TOPICS_MAX = CONTRACT.LearnerProfileSet.weakTopics.maxItems;
 export const DAILY_MINUTES_MAX = CONTRACT.LearnerProfileSet.dailyActiveMinutesGoal.maximum;
 export const WEEKLY_MINUTES_MAX = CONTRACT.LearnerProfileSet.weeklyActiveMinutesGoal.maximum;
+/** The furthest exam date the API accepts, in days from today (the contract has no limit for dates). */
+export const EXAM_DATE_MAX_DAYS = 730;
 export const SUBJECTS_MAX = CONTRACT.ReplaceSubjectsRequest.items.maxItems;
 
 // ------------------------------------------------------------------ progress
@@ -221,6 +225,205 @@ export type Progress = {
   days: ProgressDay[];
 };
 export type ActivityReport = { credited: boolean; date: string };
+
+// ------------------------------------------------------- practice (My Learning)
+//
+// The student's own record from question-bank tests in the chat, derived by the server on every
+// read (GET /v1/progress/plan, mastery, revisions, mistakes, practice-tests, practice-topics).
+// Estimates are the server's; dates are India learning days ("YYYY-MM-DD"). The unions below are
+// the backend's Literals, restated until `bun run contract` generates them.
+
+export type PracticeLanguage = "english" | "hindi" | "sanskrit";
+export type MasteryState = "mastered" | "learning" | "weak" | "not_enough_evidence";
+export type OptionLetter = "A" | "B" | "C" | "D";
+
+export type PlanTask = {
+  kind: "revise" | "strengthen" | "learn";
+  reason: "overdue" | "due" | "weak_concept" | "next_topic" | "start_here";
+  subjectCode: string;
+  classLevel: number;
+  language: PracticeLanguage;
+  bookTitle: string;
+  chapterId: string;
+  chapterNumber: number;
+  chapterTitle: string;
+  topicId: string;
+  topicNumber: number;
+  topicTitle: string;
+  conceptTag: string | null;
+  estimate: number | null;
+  dueDate: string | null;
+  overdueDays: number | null;
+  questions: number;
+  minutes: number;
+  /** The chat request for this task: My Learning fills it in, the student sends it. */
+  prompt: string;
+  answeredToday: number;
+  done: boolean;
+};
+export type PracticePlan = {
+  date: string;
+  timezone: string;
+  budgetMinutes: number;
+  budgetSource: "goal" | "default";
+  insufficientHistory: boolean;
+  /** The plan needs the student's class, 6 to 12 (Academic Profile), or one of the bank's subjects among theirs (Subjects & Study). */
+  needsProfile: boolean;
+  examDate: string | null;
+  daysToExam: number | null;
+  answeredToday: number;
+  /** Practice answers that make a day a learning day (the streak). */
+  answersForLearningDay: number;
+  summary: {
+    answered: number;
+    practisedConcepts: number;
+    masteredConcepts: number;
+    weakConcepts: number;
+    dueRevisions: number;
+    overdueRevisions: number;
+    recurringMistakes: number;
+  };
+  /** At most six, the same all day. */
+  tasks: PlanTask[];
+};
+
+export type MasteryConcept = {
+  conceptTag: string;
+  objective: string;
+  estimate: number;
+  state: MasteryState;
+  answered: number;
+  correct: number;
+  distinctQuestions: number;
+  lastAnsweredAt: Timestamp;
+};
+export type MasteryTopic = {
+  topicId: string;
+  number: number;
+  title: string;
+  estimate: number | null;
+  state: MasteryState;
+  coverage: number;
+  conceptCount: number;
+  concepts: MasteryConcept[];
+};
+export type MasteryChapter = {
+  chapterId: string;
+  number: number;
+  title: string;
+  bookTitle: string;
+  estimate: number | null;
+  coverage: number;
+  topicCount: number;
+  topics: MasteryTopic[];
+};
+export type MasterySubject = {
+  subjectCode: string;
+  classLevel: number;
+  language: PracticeLanguage;
+  estimate: number | null;
+  coverage: number;
+  chapters: MasteryChapter[];
+};
+/** Practised items only: empty lists until there is evidence. */
+export type Mastery = {
+  model: {
+    method: "bkt";
+    prior: number;
+    learn: number;
+    guess: number;
+    slip: number;
+    masteredAt: number;
+    minAnswers: number;
+    minQuestions: number;
+  };
+  answered: number;
+  revisedAnswers: number;
+  subjects: MasterySubject[];
+};
+
+export type RevisionItem = {
+  topicId: string;
+  topicTitle: string;
+  topicNumber: number;
+  chapterId: string;
+  chapterTitle: string;
+  chapterNumber: number;
+  bookTitle: string;
+  subjectCode: string;
+  classLevel: number;
+  state: "overdue" | "due" | "done" | "upcoming";
+  dueDate: string;
+  overdueDays: number;
+  intervalDays: number;
+  recall: number;
+  lastReviewed: string;
+  lastAccuracy: number;
+  reviews: number;
+  estimate: number | null;
+  prompt: string;
+};
+/** Overdue, then due (by forgetting risk), done, then upcoming (by due date). */
+export type Revisions = { date: string; ladderDays: number[]; items: RevisionItem[] };
+
+export type MistakeItem = {
+  questionId: string;
+  answeredAt: Timestamp;
+  stem: string;
+  options: string[];
+  chosen: OptionLetter;
+  correct: OptionLetter;
+  explanation: string;
+  /** Null once that chat was deleted (the evidence is kept). */
+  conversationId: Uuid | null;
+};
+export type MistakeConcept = {
+  topicId: string;
+  topicTitle: string;
+  chapterId: string;
+  chapterTitle: string;
+  chapterNumber: number;
+  bookTitle: string;
+  subjectCode: string;
+  classLevel: number;
+  conceptTag: string;
+  objective: string;
+  wrong: number;
+  wrong14d: number;
+  recurring: boolean;
+  state: MasteryState;
+  prompt: string;
+  items: MistakeItem[];
+};
+export type Mistakes = { recurringRule: { wrong: number; days: number }; concepts: MistakeConcept[] };
+
+export type PracticeTest = {
+  setId: string;
+  messageId: Uuid | null;
+  /** Null once that chat was deleted (the test still counts). */
+  conversationId: Uuid | null;
+  title: string;
+  chapterIds: string[];
+  startedAt: Timestamp;
+  total: number;
+  served: number;
+  answered: number;
+  correct: number;
+  open: boolean;
+};
+export type PracticeTests = { items: PracticeTest[] };
+
+export type PracticeTopic = { topicId: string; number: number; title: string; questions: number };
+export type PracticeChapter = { chapterId: string; number: number; title: string; questions: number; topics: PracticeTopic[] };
+export type PracticeBook = { bookId: string; title: string; language: PracticeLanguage; chapters: PracticeChapter[] };
+/** The bank's chapters for the student's class, in their medium plus the language subjects. */
+export type PracticeTopics = {
+  available: boolean;
+  reason: "no_class" | "no_questions" | null;
+  classLevel: number | null;
+  language: "english" | "hindi";
+  subjects: { subjectCode: string; books: PracticeBook[] }[];
+};
 
 // --------------------------------------------------------------- study time
 
@@ -432,6 +635,12 @@ export type Assessment = {
   possible: number;
   questions: AssessmentQuestion[];
 };
+
+/**
+ * What an answer returns: the test as recorded, and `learning` only when this answer made its day a
+ * learning day (question-bank answers count in fives; the server reports the day once, like `done`).
+ */
+export type AssessmentResponse = Assessment & { learning?: StreamLearning | null };
 
 export type AssessmentResponseRequest = {
   position: number;

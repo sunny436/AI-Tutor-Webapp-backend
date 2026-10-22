@@ -76,6 +76,7 @@ def profile_out(row: LearnerProfile | None) -> LearnerProfileOut:
         preferred_study_time=row.preferred_study_time.strftime("%H:%M") if row.preferred_study_time else None,
         short_term_goal=row.short_term_goal,
         long_term_goal=row.long_term_goal,
+        exam_date=row.exam_date,
         updated_at=row.updated_at,
     )
 

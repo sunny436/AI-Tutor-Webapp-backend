@@ -22,7 +22,7 @@ import { findFile, getFile, retryFile, sha256Hex, uploadFile } from "@/lib/api/f
 import { deleteConversation, listConversations, listMessages, renameConversation } from "@/lib/api/conversations";
 import { retargetAppPath } from "@/features/navigation/app-return";
 import { leaving } from "@/features/navigation/leaving";
-import { fromReply } from "@/features/streak/celebrations/queue";
+import { fromAnswer, fromReply } from "@/features/streak/celebrations/queue";
 import { CELEBRATE_EVENT, LEARNING_EVENT } from "@/lib/activity";
 import { FALLBACK_GREETING } from "@/lib/greeting";
 import { onUnauthorized } from "@/lib/api/http";
@@ -106,6 +106,13 @@ export function ChatProvider({
         window.dispatchEvent(new CustomEvent(CELEBRATE_EVENT, { detail: fromReply(done.learning, done.message.id) }));
       }
     };
+    // A practice answer (bank answers count in fives): the same again.
+    chat.onPracticeAnswered = (learning, messageId, answered) => {
+      window.dispatchEvent(new Event(LEARNING_EVENT));
+      if (learning) {
+        window.dispatchEvent(new CustomEvent(CELEBRATE_EVENT, { detail: fromAnswer(learning, messageId, answered) }));
+      }
+    };
     chat.onSendRefused = (key, attachments) => stores.attachments.restore(key, attachments);
     stores.attachments.onStorageFull = () => setStorageFull(true);
 
@@ -129,6 +136,7 @@ export function ChatProvider({
       chat.onConversationCreated = undefined;
       chat.onConversationUpdated = undefined;
       chat.onReplyFinished = undefined;
+      chat.onPracticeAnswered = undefined;
       chat.onSendRefused = undefined;
       stores.attachments.onStorageFull = undefined;
     };

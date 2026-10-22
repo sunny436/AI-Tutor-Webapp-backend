@@ -27,11 +27,13 @@ Browser ──► Web app (Next.js, frontend/; 127.0.0.1:3000)
                ├─ auth            users, sessions, email codes, throttling, profile photo, devices
                ├─ learning        academic catalog, learner profile, subjects, learning preferences,
                │                  and what they add to the tutor's instructions (app/learning/tutor.py)
-               ├─ progress        active time in PadhAI (deduplicated minutes), questions, streaks, goals
+               ├─ progress        active time in PadhAI (deduplicated minutes), questions, streaks, goals, and
+               │                  the practice record read from the question bank's ledger (app/progress/practice.py)
                ├─ notifications   preferences, the email outbox, security alerts, reminders, unsubscribe
                ├─ support         support requests (forwarded through the outbox)
                ├─ conversations   list/create/rename/delete, message history
                ├─ chat            ChatService + SSE + stop + regenerate + feedback + quotas
+               ├─ intents         what a message asks for: Ollalink's classifier, 46 intents (INTENT_ROUTER)
                ├─ rag             LangGraph turn graph + LangChain retriever over pgvector (docs/rag.md)
                └─ llm             LLMProvider protocol → OpenAI-compatible providers
                ▼
@@ -93,11 +95,14 @@ citations) without schema changes.
    still generating; enforce the per-user quota (from `usage_events`); insert the user message, an
    assistant placeholder (`streaming`) and a usage event; commit.
 2. **Generate** (independent asyncio task, so the result is persisted even if the client leaves):
-   load the conversation from PostgreSQL and run the LangGraph graph
+   load the conversation from PostgreSQL; with `INTENT_ROUTER` on, read what the new message asks for
+   (`app/intents`: up to two short classification requests to Ollalink, the group and then the intent
+   within it, capped together by `INTENT_ROUTER_TIMEOUT_S`, never retried, never failing the turn) and
+   rebuild the prompt with it; run the LangGraph graph
    (`receive_query → retrieve_context → assemble_context → generate_answer`, see [rag.md](rag.md));
    push `token` events; stop on cancel (cancelling the graph step cancels the LLM stream).
-3. **Finalize**: write content, status and metadata (including the internal retrieval summary);
-   update the usage event; emit `done` or `error`.
+3. **Finalize**: write content, status and metadata (including the internal retrieval summary and the
+   intent router's reading, `metadata.intent`); update the usage event; emit `done` or `error`.
 
 The browser sends only `{conversationId, message}`; it never writes messages or sends history.
 

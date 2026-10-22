@@ -8,7 +8,7 @@ import { expect, expectNoHorizontalOverflow, test } from "./support";
 
 const WIDTHS = [320, 375, 768, 1024, 1280, 1440];
 // Every section (src/features/settings/sections.ts), including the calendar, sessions and topic chips.
-const SECTIONS = ["profile", "academic", "goals", "learning", "tutor", "subjects", "progress", "streak", "notifications", "appearance", "privacy", "help"];
+const SECTIONS = ["profile", "academic", "goals", "learning", "tutor", "subjects", "progress", "study-tracking", "streak", "notifications", "appearance", "privacy", "help"];
 
 test("every Settings section fits at 320 to 1440px, cards included", async ({ page, account: _ }) => {
   test.setTimeout(6 * 60_000);

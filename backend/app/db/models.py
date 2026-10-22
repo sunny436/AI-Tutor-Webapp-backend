@@ -210,6 +210,8 @@ class LearnerProfile(Base):
     short_term_goal: Mapped[str | None] = mapped_column(String(280))
     long_term_goal: Mapped[str | None] = mapped_column(String(280))
     updated_at: Mapped[datetime] = _created()
+    # The exam the student prepares for (0017): the practice plan's exam window (app/progress/practice.py).
+    exam_date: Mapped[date | None] = mapped_column(Date)
 
 
 class LearnerSubject(Base):
@@ -1000,7 +1002,7 @@ QB_FORMATS = ("mcq", "assertion_reason", "case_based", "source_based")
 QB_COMPETENCIES = ("knowledge_understanding", "application", "analysis_evaluation")
 QB_SOURCE_KINDS = ("original", "ncert_exercise", "cbse_official")
 QB_REVIEW_STATUSES = ("draft", "needs_review", "approved", "rejected")
-QB_SET_MODES = ("adaptive", "test")
+QB_SET_MODES = ("adaptive", "test", "chat")  # 0017: "chat", a question-bank test in the chat
 QB_SERVABLE = "review_status IN ('approved', 'needs_review') AND is_active"  # 0016: practice serves unreviewed ones
 
 
@@ -1193,8 +1195,9 @@ class QbQuestion(Base):
 
 
 class QbSet(Base):
-    """A practice set (adaptive, one question at a time) or a test, owned by one student.
-    request_id makes creating it idempotent."""
+    """A practice set (adaptive, one question at a time), a test, or a test in the chat (`chat`: its
+    request_id is the reply's id; app/qbank/chat_tests.py), owned by one student. request_id makes
+    creating it idempotent. It has no link to a conversation: deleting the chat keeps its answers."""
 
     __tablename__ = "qb_sets"
     __table_args__ = (
@@ -1246,3 +1249,5 @@ class QbSetItem(Base):
     hinted: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
     is_correct: Mapped[bool | None] = mapped_column(Boolean)
     answered_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    # The question's content_hash when it was served, set by the trigger (0017); NULL before 0017.
+    served_hash: Mapped[str | None] = mapped_column(Text)

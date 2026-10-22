@@ -20,9 +20,19 @@ import type { TestState } from "./context";
 const load = () => import("./message-content");
 
 const Renderer = lazy(() => load().then((module) => ({ default: module.MessageContent })));
+const InlineRenderer = lazy(() => load().then((module) => ({ default: module.InlineMarkdown })));
 
 export function preloadMessageContent(): void {
   void load();
+}
+
+/** A short piece of Markdown outside the chat (a missed question, an option): plain text until the renderer loads. */
+export function LazyInlineMarkdown({ text }: { text: string }) {
+  return (
+    <Suspense fallback={text}>
+      <InlineRenderer text={text} />
+    </Suspense>
+  );
 }
 
 /**

@@ -11,7 +11,7 @@ not in checking answers, and not in explaining them. `tests/test_architecture_gu
 The tutor's own practice blocks in chat (`app/assessments`) are separate and unchanged.
 
 - Code: `backend/app/qbank/`
-- Schema: `backend/alembic/versions/0015_question_bank.py`
+- Schema: `backend/alembic/versions/0015_question_bank.py` (and 0016, 0017)
 - Content: `qbank/` (see [qbank/README.md](../qbank/README.md))
 - Reference SQL: [question_bank_queries.sql](question_bank_queries.sql)
 
@@ -79,29 +79,68 @@ the script's docstring).
 ## Tests in the chat (`app/qbank/chat_tests.py`)
 
 A practice test in the chat is always the bank's, never the model's (`QUESTION_BANK_TESTS`, on by default):
-1. On a turn whose message asks for a test, the tutor is given the chapters it may name: the class the
-   message names, else the student's, else the last one named earlier in the chat; in the student's
-   medium, plus the English, Hindi and Sanskrit books.
+1. On a turn whose message asks for a test (its words do, or the intent router reads it as a test request:
+   `INTENT_ROUTER=on`, `app/intents`), the tutor is given the chapters it may name: the class the message
+   names, else the student's, else the last one named earlier in the chat; in the student's medium, plus
+   the English, Hindi and Sanskrit books.
 2. The tutor plans the test and writes one `question-bank` block: `{"chapter": "<chapter id>", "topics":
-   ["...", 4], "count": 10, "difficulty": "easy|medium|hard|mixed"}`. For "test me on this" it uses what the
-   chat covered; with no number asked, it chooses the count from how much the test covers (about 5 per
-   topic, at most 30). It is taught never to write questions itself. A request it fences as JSON, writes
-   inline (`::question-bank{...}`) or as a bare object is read the same way when it names a chapter id.
-3. Before the reply is saved, the server replaces that block with a `quiz` block of stored questions:
-   - SQL alone, on `ix_qb_questions_select`: the chapter's servable questions (of the named topics, each
-     matched by number or clearly by its words), of the asked difficulty, `ORDER BY md5(reply id ||
-     question_id) LIMIT count`, then easy first;
-   - the same reply always holds the same questions, a regenerated reply others, and no question repeats
-     in a test; fewer stored than asked: all of them, and a note says so;
-   - questions longer than the quiz card allows (187 case questions with long passages) are left out.
+   ["...", 4], "count": 10, "difficulty": "easy|medium|hard|mixed"}`, or, for a mock test over up to three
+   chapters of one class, subject and language, `{"chapters": ["<id>", "<id>"], "count": 25}` (whole
+   chapters, no topics). For "test me on this" it uses what the chat covered; with no number asked, it
+   chooses the count from how much the test covers (about 5 per topic, at most 30). It is taught never to
+   write questions itself. A request it fences as JSON, writes inline (`::question-bank{...}`) or as a bare
+   object is read the same way when it names chapter ids.
+3. Before the reply is saved, the server replaces that block with a `quiz` block and opens the student's
+   practice set for the test ("The practice ledger", below):
+   - the pool is the servable questions of the named topics (each matched by number or clearly by its
+     words), else of the whole chapters, of the asked difficulty; questions longer than the quiz card
+     allows (187 case questions with long passages) are left out;
+   - the test has as many questions as asked, at most 30 and at most what the pool has (fewer: a note says
+     so); no question repeats in a test, and the same reply always starts with the same question (ties are
+     seeded by the reply's id);
+   - **adaptive** (`ADAPTIVE_CHAT_TESTS`, on by default): the block holds the first question, and each
+     answer brings the next one, chosen from it (`selection.pick_next`, below). Off: every question is
+     chosen when the test is set, by the same rules, and the test is fixed. It is a kill switch: turning it
+     off needs no rollback, and those tests are recorded the same way.
 4. The quiz is recorded, answered and graded like every chat test (`app/assessments/state.py`): answers
-   are checked against the stored key, with no model call. The record also keeps
-   `source: {kind: "question_bank", chapterId, topicIds, questionIds}`, which clients never see.
-5. A quiz, MCQ or fill-in-the-blanks block the model writes itself is replaced by a note. An unknown
-   chapter, or one with no stored questions, gets a note instead of a test.
+   are checked against the stored key, with no model call. The record also keeps `adaptive` and
+   `source: {kind: "question_bank", chapterIds, topicIds, questionIds, setId}`, which clients never see.
+5. A quiz or MCQ block the model writes itself is replaced by a note. An unknown chapter, chapters of
+   different subjects, or a chapter with no stored questions gets a note instead of a test. A
+   fill-in-the-blanks exercise the tutor writes is kept (the owner's decision, 2026-10-22): it is recorded
+   and graded as before (`[[answer|alternative]]`, ignoring case, spacing and a trailing `.;,!`), and a
+   malformed key (an empty alternative, a blank over 80 characters, more than 20 blanks, invalid JSON)
+   refuses it whole, so it is shown read-only. Its key is the model's, so it is never practice evidence:
+   no mastery, mistakes, revision or learning day.
+
+**Each answer** (`POST /v1/messages/{id}/assessment-responses`, `app/chat/router.py`) is one transaction,
+under the reply's row lock: the response is checked and recorded on the reply; the answer is written to
+the ledger and graded by the database; an adaptive test gets its next question chosen from that answer, or
+the set is closed once the test is complete (or the bank has nothing left for it); the answer counts toward
+the day's learning (5 answers make a learning day, `app/progress/learning.py`); then it commits. A response
+names the hash of the questions it was shown, so a retry after a lost reply, a double tap or a second tab
+is a replay of the test as it is now, never a second answer. A skip writes nothing to the ledger.
 
 The model is still called once for the turn: it plans the test (chapter, topics, count, difficulty). It never
 writes, picks, checks or scores a question.
+
+### The practice ledger
+
+- One `qb_sets` row per test in the chat (`mode = 'chat'`; `request_id` is the reply's id; `filters` hold
+  the chapters, the topic pool, the named topics, the difficulty, the conversation and the title), and one
+  `qb_set_items` row per question served, with `served_hash`: the question's `content_hash` when it was
+  served (0017, set by the trigger and final).
+- A set is closed when its test is complete (ended early when the bank ran out: `requested` becomes what was
+  served), when its reply is regenerated or stopped as it is saved, or when its block can't be built.
+- Deleting a chat keeps its sets and answers: they have no link to conversations, so the practice record
+  outlives the chat (the owner's decision). Deleting the account deletes them. There is no API to delete a
+  set.
+- **A served question can't move to another topic**: the item's foreign key to (question, topic) has no ON
+  UPDATE, so retire it and add it again. An edited question gets a new `content_hash`, so an answer given
+  before the edit is set aside from mastery (`served_hash` <> `content_hash`); items served before 0017 have
+  no `served_hash` and count as current.
+- What the record says (`app/progress/practice.py`: mastery, mistakes, revision, the day's plan): see
+  [api-contract.md](api-contract.md), "The practice record".
 
 ## Selection contract (`app/qbank/selection.py`)
 
@@ -119,8 +158,9 @@ writes, picks, checks or scores a question.
 - The order is seeded by the set ID, and questions the student has seen come last.
 - The key and the explanations come with the results, once the test is closed or fully answered.
 
-**Adaptive practice** (`create_adaptive`, `next_item`): one topic, one question at a time. Each choice
-depends on the student's previous answer in that topic:
+**Adaptive practice** (`create_adaptive`, `next_item`; and tests in the chat): one question at a time
+(`pick_next`), from a pool of topics (adaptive practice: one). Each choice depends on the student's previous
+answer: in that topic, for adaptive practice; in the test so far, for a test in the chat.
 
 | Previous answer | Next question |
 |---|---|
@@ -128,10 +168,11 @@ depends on the student's previous answer in that topic:
 | wrong | one level easier, same concept |
 | right with a hint | same level, same concept |
 | right, no hint | one level harder, the weakest other concept |
+| skipped (a test in the chat) | same level, another concept: a skip is not an answer, so no step down |
 
-"Weakest" is smoothed accuracy, (right + 1) / (tries + 2): a practice signal, not a validated measure of
-mastery. Questions are never repeated within a set. "Next" runs under the set's row lock, so a retry
-returns the open question.
+A concept is a topic's (topic, concept tag). "Weakest" is smoothed accuracy, (right + 1) / (tries + 2): a
+practice signal, not a validated measure of mastery. Questions the student has not answered come first, and
+none is repeated within a set. "Next" runs under the set's row lock, so a retry returns the open question.
 
 **Answers** (`answer`):
 - An answer is accepted only for a question served in the student's own set; otherwise it is 404.
@@ -146,12 +187,15 @@ returns the open question.
 |---|---|
 | At most `max_questions` (≤ 1,000) questions per chapter | A counter on the chapter row, kept by triggers on insert, delete and move, and checked by `ck_qb_chapters_question_count`. Concurrent writers serialise on that row; lowering the limit below the count is refused; nothing else can write the counter. |
 | Consistent identity | Composite foreign keys: a question cannot claim a language, class, subject or chapter other than its book's, cite another topic's case, or use another topic's concept. |
-| Answers | Served unanswered, answered once, graded by the database, final. |
-| Clean account deletion | A student's sets and answers are deleted with their account. |
+| Answers | Served unanswered, answered once, graded by the database, final. A served item keeps the question's content hash of that moment (`served_hash`, 0017). |
+| Clean account deletion | A student's sets and answers are deleted with their account (not with a chat). |
 
-## Status (2026-10-16)
+## Status (2026-10-16; 2026-10-22: adaptive tests in the chat, the practice ledger and record)
 - **Released:** schema (0015, and 0016's servable indexes), importer, selection, coverage, and tests in the
-  chat.
+  chat. 2026-10-22 (0017): tests in the chat are adaptive and recorded in the ledger, mock tests span up to
+  three chapters, and the practice record (`GET /v1/progress/plan`, `/mastery`, `/revisions`, `/mistakes`,
+  `/practice-tests`, `/practice-topics`) reads it. Tests in the chat set before then have no ledger rows:
+  the record starts with this release.
 - **Inventory (`qbank/manifest/cbse-2026-27/`):** every NCERT book of Classes 6–12 in the app's subject
   catalog, from NCERT's own textbook index: 167 books (80 English, 76 Hindi, 11 Sanskrit), 1,442 chapters.
   - Not in the bank: subjects outside the catalog (e.g. Sociology, Informatics Practices, Home Science,
@@ -162,5 +206,6 @@ returns the open question.
   - **0 are approved**: all are `needs_review`, and all are servable by the owner's decision.
   - 24 chapters have no topics: NCERT has no text for them or they are not chapters (the list is in
     [question_bank_coverage.md](question_bank_coverage.md), generated by `qbank_coverage.py --markdown`).
-- **Not built:** pages or an API for practice outside the chat (`create_test`, `create_adaptive` and the
-  `qb_sets` tables are ready for one).
+- **Not built:** an API for practice outside the chat (`create_test`, `create_adaptive` and the `qb_sets`
+  tables are ready for one; My Learning's practice picker starts a test in the chat), a way to delete a set,
+  or to report a question.

@@ -131,6 +131,27 @@ class Settings(BaseSettings):
     stream_stale_after_s: int = 300
     stream_cancel_poll_s: float = 1.0
 
+    # ---- intent router (app/intents): Ollalink's classification model reads what each new message
+    # asks for (one of 46 intents). off: nothing is sent; shadow: read and recorded beside the reply,
+    # never applied; on: applied. Rollout off -> shadow -> on (docs/deployment.md). The key is a secret.
+    intent_router: Literal["off", "shadow", "on"] = "off"
+    ollalink_base_url: str = "https://ai.ollalink.com"
+    ollalink_api_key: SecretStr = SecretStr("")
+    # The whole reading (both requests); never retried. Then the turn goes on without an intent.
+    intent_router_timeout_s: float = Field(default=1.5, gt=0, le=5)
+    # An intent is applied only when P(group) and P(group) x P(intent | group) reach these; below the
+    # group threshold the second request is not made. scripts/eval_intents.py chooses both (dev split).
+    intent_min_confidence: float = Field(default=0.5, ge=0, le=1)
+    intent_min_group_confidence: float = Field(default=0.5, ge=0, le=1)
+    # ---- study scope (app/intents/scope.py): is the latest message something PadhAI helps with? One more
+    # Ollalink request, with the router's key, client and time limit. off: nothing is sent; shadow: read
+    # and recorded, never applied; on: unrelated requests are redirected and the tutor keeps to learning.
+    study_scope: Literal["off", "shadow", "on"] = "off"
+    # P(unrelated) needed to redirect, and P(support | unclear | mixed) needed to apply one: chosen with
+    # scripts/eval_scope.py on the dev split (no learning request there above 0.31 for unrelated).
+    scope_min_redirect: float = Field(default=0.5, ge=0, le=1)
+    scope_min_confidence: float = Field(default=0.5, ge=0, le=1)
+
     # ---- Study time (app/study): how long without input counts as idle, by mode. Reading allows
     # longer (reading and thinking need no clicks); the reading prompt is always shorter than this.
     study_idle_reading_s: int = Field(default=300, ge=60, le=1800)
@@ -146,10 +167,10 @@ class Settings(BaseSettings):
     rag_hnsw_ef_search: int = 100
     # The NCERT Knowledge Service (app/rag/ncert.py): with a URL and a key, the tutor's knowledge
     # source; empty = the pgvector knowledge base. The key is the service's client key (a secret).
-    # The timeout is the whole call; the service's vector search takes ~0.3 s (p95 0.5 s).
+    # The timeout is the whole call: live searches took ~1.7 s, p95 2.8 s, at most 3.9 s (2026-10-15..19).
     ncert_kb_base_url: str = ""
     ncert_kb_api_key: SecretStr = SecretStr("")
-    ncert_kb_timeout_s: float = Field(default=4.0, gt=0, le=10)
+    ncert_kb_timeout_s: float = Field(default=6.0, gt=0, le=10)
     rag_chunk_size: int = 1_000
     rag_chunk_overlap: int = 150
     rag_max_document_bytes: int = 5 * 1024 * 1024
@@ -189,6 +210,10 @@ class Settings(BaseSettings):
     # model names a chapter, the app sets stored questions, and a practice block the model writes
     # itself is never shown as a test. The owner's decision, 2026-10-16.
     question_bank_tests: bool = True
+    # A bank test chooses each next question from the answer before it (app/qbank/chat_tests.py). Off:
+    # every question is chosen when the test is set (a fixed-length test), still recorded as practice.
+    # A kill switch, no rollback needed (docs/question_bank.md).
+    adaptive_chat_tests: bool = True
 
     @field_validator("default_timezone")
     @classmethod
@@ -210,6 +235,16 @@ class Settings(BaseSettings):
     @property
     def ncert_kb_enabled(self) -> bool:
         return bool(self.ncert_kb_base_url and self.ncert_kb_api_key.get_secret_value())
+
+    @property
+    def intent_router_enabled(self) -> bool:
+        """Whether messages are sent to be classified (an explicit "hint only" needs no classifier)."""
+        return self.intent_router != "off" and bool(self.ollalink_api_key.get_secret_value())
+
+    @property
+    def study_scope_enabled(self) -> bool:
+        """Whether messages are sent for their study scope (small talk and bare files need no classifier)."""
+        return self.study_scope != "off" and bool(self.ollalink_api_key.get_secret_value())
 
     @property
     def files_runner(self) -> Literal["subprocess", "systemd"] | None:
@@ -290,6 +325,12 @@ class Settings(BaseSettings):
             ("https://", "http://127.0.0.1:", "http://localhost:")
         ):
             problems.append("NCERT_KB_BASE_URL must be https:// or loopback (the key travels with every call)")
+        if self.intent_router != "off" and not self.ollalink_api_key.get_secret_value():
+            problems.append("INTENT_ROUTER needs OLLALINK_API_KEY")
+        if self.study_scope != "off" and not self.ollalink_api_key.get_secret_value():
+            problems.append("STUDY_SCOPE needs OLLALINK_API_KEY")
+        if not self.ollalink_base_url.startswith("https://"):
+            problems.append("OLLALINK_BASE_URL must be https:// (the key travels with every call)")
         if problems:
             raise RuntimeError("Unsafe production configuration: " + "; ".join(problems))
 

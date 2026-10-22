@@ -11,7 +11,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.assessments import state as assessments
 from app.auth.dependencies import Principal, get_principal
 from app.chat.schemas import (
-    AssessmentOut,
+    AssessmentResponseOut,
     AssessmentResponseRequest,
     CancelOut,
     ChatRequest,
@@ -28,7 +28,8 @@ from app.db.models import MessageFeedback
 from app.db.session import get_session
 from app.errors import Conflict, NotFound, ValidationFailed, error_body
 from app.logging import get_logger
-from app.progress.learning import now
+from app.progress.learning import StreakEvent, now, record_practice
+from app.qbank import chat_tests
 
 router = APIRouter(prefix="/v1", tags=["chat"])
 log = get_logger("app.assessments")
@@ -164,9 +165,40 @@ REFUSED = {
 }
 
 
+async def _bank_step(
+    db: AsyncSession, user_id: uuid.UUID, record: dict, extra: dict
+) -> tuple[dict, StreakEvent | None]:
+    """A question-bank test's new response in the practice ledger (app/qbank/chat_tests.py), in the
+    transaction and under the lock that records it on the message: the answer (a skip records
+    nothing), then the next question of an adaptive test chosen from it, or the set closed once the
+    test is complete; then the learning day the answer may make (record_practice)."""
+    source = record["source"]
+    set_id = uuid.UUID(source["setId"])
+    response = record["responses"][-1]
+    position = response["question"] + 1  # the ledger counts served questions from 1
+    answered = None
+    if response["status"] == "answered":
+        letter = assessments.LETTERS[response["value"]]
+        answered = await chat_tests.answer(db, user_id, set_id, position, letter)
+        if answered is not None and answered[1] != bool(response["earned"]):
+            # Only a question edited since it was served is graded differently now; the student keeps
+            # the grade of the key they saw, and mastery sets the answer aside (its served_hash).
+            log.warning("assessment key drift", extra={**extra, "set_id": str(set_id)})
+    planned = record["total"]
+    if record.get("adaptive") and assessments.state_of(record) != "completed" and position == len(record["questions"]):
+        row = await chat_tests.next_question(db, user_id, set_id, position)
+        record = assessments.extend(record, chat_tests.quiz_question(row) if row is not None else None)
+        if row is not None:
+            record["source"] = {**source, "questionIds": [*source["questionIds"], row.question_id]}
+    if assessments.state_of(record) == "completed":
+        await chat_tests.close(db, user_id, set_id, ended_early=record["total"] < planned)
+    learning = await record_practice(db, user_id, now(), answered[0]) if answered is not None else None
+    return record, learning
+
+
 @router.post(
     "/messages/{message_id}/assessment-responses",
-    response_model=AssessmentOut,
+    response_model=AssessmentResponseOut,
     tags=["assessments"],
     summary="Answer or skip the waiting question of a practice test in a reply",
 )
@@ -179,7 +211,13 @@ async def respond_to_assessment(
     """Answers are final, in order and graded here. Sending the same response again returns the
     same test unchanged (a safe retry); any other response to an answered question, or to a
     question after the waiting one, is 409. The message row is locked while the response is
-    recorded, so two tabs or a double tap record one response."""
+    recorded, so two tabs or a double tap record one response.
+
+    A question-bank test also records the answer in the student's practice ledger and, while it is
+    adaptive, adds its next question chosen from that answer, all in the same transaction: a retry
+    after a lost reply (with the hash it was shown) gets the test as it is now. `learning` says what
+    this answer did to the streak when it made its India day a learning day (5 answers a day), as the
+    chat's `done` does; null otherwise."""
     message = await ConversationRepository(db).get_message(principal.user.id, message_id, lock=True)
     if message is None or message.role != "assistant":
         raise NotFound("Message not found.")
@@ -209,7 +247,10 @@ async def respond_to_assessment(
     except assessments.Invalid as invalid:
         log.info("assessment invalid", extra={**extra, "reason": str(invalid)})
         raise ValidationFailed("No such question, option or blank.") from None
+    learning = None
     if changed:
+        if (record.get("source") or {}).get("setId"):  # a question-bank test (since 0017)
+            record, learning = await _bank_step(db, principal.user.id, record, extra)
         records[body.position] = record
         message.metadata_ = {**message.metadata_, "assessments": records}
         await db.commit()
@@ -220,7 +261,8 @@ async def respond_to_assessment(
         if assessments.state_of(record) == "completed":
             earned = sum(response["earned"] for response in record["responses"])
             log.info("assessment completed", extra={**extra, "earned": earned, "possible": record["total"]})
-    return assessments.public(record, message.id, message.status)
+    event = {"event": learning.kind, "streak": learning.streak} if learning is not None else None
+    return {**assessments.public(record, message.id, message.status), "learning": event}
 
 
 @router.delete("/messages/{message_id}/feedback", status_code=status.HTTP_204_NO_CONTENT, tags=["feedback"])

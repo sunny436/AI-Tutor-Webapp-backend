@@ -3,10 +3,10 @@
 prepare (request transaction)                      generate (independent task)
 ───────────────────────────────                    ────────────────────────────────────
 load / create conversation (owned)                 load the conversation from PostgreSQL
-sweep stale `streaming` rows, 409 if one is live   run the LangGraph turn graph (retrieve ->
-per-user quota (usage_events)                        assemble -> generate), push token events
-insert user message + assistant placeholder        stop on cancel (event or DB flag)
-  (+ its attached files, owned and ready)
+sweep stale `streaming` rows, 409 if one is live   read what it asks for (INTENT_ROUTER, app/intents)
+per-user quota (usage_events)                      run the LangGraph turn graph (retrieve ->
+insert user message + assistant placeholder          assemble -> generate), push token events
+  (+ its attached files, owned and ready)          stop on cancel (event or DB flag)
 commit                                             persist content + status + retrieval summary
 
 The browser only ever sends a conversation id, the new text and the ids of files it attaches.
@@ -35,6 +35,10 @@ from app.db.models import Conversation, Message, MessageAttachment, UsageEvent, 
 from app.db.session import Database
 from app.errors import Conflict, NotFound, RateLimited, ValidationFailed
 from app.files import service as files
+from app.intents.classifier import HINT_ONLY, IntentClassifier, Routed, explicit_hint_only
+from app.intents.scope import ALLOW_STUDY, INSTRUCTIONS, NOT_LEARNING, REDIRECT, Scope, redirect_copy, settled
+from app.intents.scope import stored as stored_scope
+from app.intents.taxonomy import BANK_INTENTS, INTENTS
 from app.learning.context import StudentContext, read_student_context
 from app.llm.base import ChatMessage, GenerationOptions, LLMError
 from app.logging import get_logger, request_id_var
@@ -106,6 +110,16 @@ class PreparedTurn:
     user_attachments: list[MessageAttachment] = field(default_factory=list)
     # When the question was accepted (the app's clock): the learning day it counts for.
     asked_at: datetime | None = None
+    # What `config` was built from, so an intent the router applies can build it again (_route).
+    student: StudentContext | None = None
+    tests: str = ""
+    bank: str | None = None
+    attached_kinds: tuple[str, ...] = ()  # the kinds of the files the new message attaches (pdf, image, ...)
+    # messages.metadata.intent (internal) of a regenerated reply, read when it was prepared; a new
+    # message is read when its reply is generated (_route).
+    intent: dict | None = None
+    # messages.metadata.scope (internal, STUDY_SCOPE): the same, for the study scope (_scope).
+    scope: dict | None = None
 
     def meta_event(self) -> ChatEvent:
         return ChatEvent(
@@ -125,11 +139,19 @@ class PreparedTurn:
 
 
 class ChatService:
-    def __init__(self, db: Database, settings: Settings, rag_graph, generations: ActiveGenerations) -> None:
+    def __init__(
+        self,
+        db: Database,
+        settings: Settings,
+        rag_graph,
+        generations: ActiveGenerations,
+        intents: IntentClassifier | None = None,
+    ) -> None:
         self.db = db
         self.settings = settings
         self.rag_graph = rag_graph  # compiled LangGraph graph (app.rag.graph.build_rag_graph)
         self.generations = generations
+        self.intents = intents  # None: no classifier (INTENT_ROUTER off, or no key)
 
     # ------------------------------------------------------------------ prepare
     async def _sweep_stale(self, session: AsyncSession, conversation_id: uuid.UUID | None = None) -> None:
@@ -192,6 +214,34 @@ class ChatService:
         )
         return await read_student_context(session, user.id, progress)
 
+    def _config(
+        self,
+        user: User,
+        conversation: Conversation,
+        student: StudentContext | None,
+        tests: str,
+        bank: str | None,
+        intent: str | None = None,
+        *,
+        search: bool = True,
+        scope: str | None = None,
+    ) -> AssistantConfig:
+        """The turn's prompt and retrieval (app/chat/assistant.py), the same way for a new message, a
+        regenerated reply, an intent the router applies (_route) and a study scope decision (_scope)."""
+        return resolve_assistant_config(
+            user,
+            conversation,
+            student,
+            interactive=self.settings.tutor_interactive_blocks,
+            tests=tests,
+            teaching=self.settings.tutor_teaching_policy,
+            bank=bank,
+            intent=intent,
+            search=search,
+            scoped=self.settings.study_scope == "on",
+            scope=scope,
+        )
+
     async def prepare_message(
         self,
         session: AsyncSession,
@@ -217,6 +267,11 @@ class ChatService:
         student = await self._student(session, user)
         tests = await self._tests(session, conversation.id)
         bank = await self._bank(session, text, student, conversation.id)
+        # Small talk that opens a chat ("hi") searches nothing; "why?" after a question still does.
+        search = is_meaningful(text)
+        if not search and conversation_id is not None:
+            questions = select(Message.id).where(Message.conversation_id == conversation.id, Message.role == "user")
+            search = await session.scalar(questions.limit(1)) is not None
         asked_at = now()
         user_message = Message(conversation_id=conversation.id, role="user", content=text, status="complete")
         session.add(user_message)
@@ -234,18 +289,14 @@ class ChatService:
             conversation,
             user_message,
             assistant.id,
-            resolve_assistant_config(
-                user,
-                conversation,
-                student,
-                interactive=self.settings.tutor_interactive_blocks,
-                tests=tests,
-                teaching=self.settings.tutor_teaching_policy,
-                bank=bank,
-            ),
+            self._config(user, conversation, student, tests, bank, search=search),
             files=await files.conversation_files(session, conversation.id, user.id),
             user_attachments=attachments,
             asked_at=asked_at,
+            student=student,
+            tests=tests,
+            bank=bank,
+            attached_kinds=tuple(file.kind for file in attached),
         )
 
     async def prepare_regenerate(self, session: AsyncSession, user: User, conversation_id: uuid.UUID) -> PreparedTurn:
@@ -263,6 +314,8 @@ class ChatService:
         if last is None or last.role != "assistant":
             raise Conflict("There is no reply to regenerate.")
         last.status = "superseded"
+        await session.flush()  # the reply row first, then its set: the order an answer locks them in
+        await chat_tests.close_for_message(session, user.id, last.id)  # its test can't be answered any more
         # The question this answer is for: left out of today's count, as when it was first sent.
         asked_at = await session.scalar(
             select(Message.created_at)
@@ -276,13 +329,21 @@ class ChatService:
         )
         student = await self._student(session, user, asked_at)
         tests = await self._tests(session, conversation.id, exclude=last.id)
-        question = await session.scalar(  # the question this answer is for
-            select(Message.content)
-            .where(Message.conversation_id == conversation.id, Message.role == "user")
-            .order_by(Message.created_at.desc(), Message.id.desc())
-            .limit(1)
+        asked = list(
+            await session.scalars(  # the question this answer is for, and the one before it
+                select(Message.content)
+                .where(Message.conversation_id == conversation.id, Message.role == "user")
+                .order_by(Message.created_at.desc(), Message.id.desc())
+                .limit(2)
+            )
         )
-        bank = await self._bank(session, question, student, conversation.id)
+        question = asked[0] if asked else ""
+        intent = self._reused_intent(last, question)
+        applied = intent["id"] if intent else None
+        scope = self._reused_scope(last)
+        bank = await self._bank(session, question, student, conversation.id, asked=applied in BANK_INTENTS or None)
+        if intent is not None:
+            intent["bankMenu"] = _bank_menu(bank, question, applied)
         assistant = await self._add_placeholder(session, user.id, conversation.id)
         await repo.touch(conversation.id)
         await session.commit()
@@ -292,18 +353,46 @@ class ChatService:
             conversation,
             None,
             assistant.id,
-            resolve_assistant_config(
+            self._config(
                 user,
                 conversation,
                 student,
-                interactive=self.settings.tutor_interactive_blocks,
-                tests=tests,
-                teaching=self.settings.tutor_teaching_policy,
-                bank=bank,
+                tests,
+                bank,
+                applied,
+                search=is_meaningful(question) or len(asked) > 1,
+                scope=_decision(scope),
             ),
             replaces_message_id=last.id,
             files=await files.conversation_files(session, conversation.id, user.id),
+            student=student,
+            tests=tests,
+            bank=bank,
+            intent=intent,
+            scope=scope,
         )
+
+    def _reused_intent(self, last: Message, question: str) -> dict | None:
+        """A regenerated reply's intent (INTENT_ROUTER): hint_only when its question explicitly asks only
+        for a hint, else the intent the replaced reply was given. Never a new classification."""
+        if self.settings.intent_router == "off":
+            return None
+        applied = self.settings.intent_router == "on"
+        if explicit_hint_only(question):
+            return HINT_ONLY.record(applied, "explicit")
+        stored = (last.metadata_ or {}).get("intent") or {}
+        intent = stored.get("id")
+        if not isinstance(intent, str) or intent not in INTENTS:
+            return None
+        return Routed(intent, intent, INTENTS[intent].group).record(applied, "regenerate")
+
+    def _reused_scope(self, last: Message) -> dict | None:
+        """A regenerated reply's study scope (STUDY_SCOPE): the decision the replaced reply was given, so
+        the same message is decided the same way. Never a new reading."""
+        if self.settings.study_scope == "off":
+            return None
+        found = stored_scope(last.metadata_)
+        return found.record(self.settings.study_scope == "on") if found else None
 
     # ----------------------------------------------------------------- generate
     def start(self, turn: PreparedTurn) -> Generation:
@@ -377,6 +466,89 @@ class ChatService:
             await generation.queue.put(None)  # end of stream, always
             self.generations.remove(turn.assistant_id)
 
+    async def _route(
+        self, turn: PreparedTurn, conversation: list[ChatMessage], generation: Generation
+    ) -> tuple[AssistantConfig, dict | None, asyncio.Task | None]:
+        """What a new message asks for (INTENT_ROUTER, app/intents): read, then applied to the turn's
+        prompt and retrieval (on), or only recorded (shadow: the reading runs beside the reply, which
+        never waits for it). A message that explicitly asks only for a hint is hint_only without asking
+        the classifier. Returns the turn's config, its messages.metadata.intent, and the shadow reading
+        still running. A regenerated reply was routed when it was prepared (_reused_intent)."""
+        mode = self.settings.intent_router
+        if mode == "off" or turn.user_message is None:
+            return turn.config, turn.intent, None
+        question = turn.user_message.content
+        if explicit_hint_only(question):
+            routed, source = HINT_ONLY, "explicit"
+        elif self.intents is None:
+            return turn.config, None, None
+        elif mode == "shadow":
+            return turn.config, None, asyncio.ensure_future(self.intents.classify(conversation, turn.attached_kinds))
+        else:
+            ok, routed = await self._wait(self.intents.classify(conversation, turn.attached_kinds), generation)
+            if not ok:  # stopped while reading: the graph's first step stops at once too
+                return turn.config, None, None
+            source = "classifier"
+        applied = mode == "on" and routed.intent is not None
+        config, bank = await self._apply(turn, routed.intent) if applied else (turn.config, turn.bank)
+        record = routed.record(applied, source)
+        return config, {**record, "bankMenu": _bank_menu(bank, question, record["id"])}, None
+
+    async def _scope(
+        self, turn: PreparedTurn, conversation: list[ChatMessage], generation: Generation
+    ) -> tuple[dict | None, asyncio.Task | None]:
+        """Is the new message something PadhAI helps with (STUDY_SCOPE, app/intents/scope.py)? The fixed
+        rules first (a hint-only request, small talk, files without a real question), then the classifier:
+        applied (on), or only recorded (shadow: read beside the reply, which never waits for it). Returns
+        messages.metadata.scope and the shadow reading still running. A regenerated reply's was read when
+        it was prepared (_reused_scope)."""
+        mode = self.settings.study_scope
+        if mode == "off" or turn.user_message is None:
+            return turn.scope, None
+        question = turn.user_message.content
+        if explicit_hint_only(question):
+            found = Scope(ALLOW_STUDY, reason="hint_only", source="rule")
+        else:
+            found = settled(is_meaningful(question), turn.attached_kinds)
+        if found is None:
+            if self.intents is None:
+                return None, None
+            if mode == "shadow":
+                return None, asyncio.ensure_future(self.intents.scope(conversation, turn.attached_kinds))
+            ok, found = await self._wait(self.intents.scope(conversation, turn.attached_kinds), generation)
+            if not ok:  # stopped while reading: the turn stops at once
+                return None, None
+        return found.record(mode == "on"), None
+
+    async def _apply(self, turn: PreparedTurn, intent: str) -> tuple[AssistantConfig, str | None]:
+        """The turn's config with an intent, and the question bank's chapters it gives the tutor: a test
+        intent gets them even when the message's words did not ask for a test (chat_tests.menu)."""
+        bank = turn.bank
+        if INTENTS[intent].bank and bank == "":
+            try:
+                async with self.db.sessionmaker() as session:
+                    bank = await self._bank(
+                        session, turn.user_message.content, turn.student, turn.conversation.id, asked=True
+                    )
+            except Exception as error:  # noqa: BLE001 - the chapters as prepared; the turn goes on
+                log.warning(
+                    "intent bank menu failed",
+                    extra={"error_type": type(error).__name__, "message_id": str(turn.assistant_id)},
+                )
+        # An intent can turn the knowledge search off, never on (small talk that opened the chat).
+        search = turn.config.retrieval is not None
+        config = self._config(
+            turn.user,
+            turn.conversation,
+            turn.student,
+            turn.tests,
+            bank,
+            intent,
+            search=search,
+            scope=_decision(turn.scope),
+        )
+        return config, bank
+
     async def _run(self, turn: PreparedTurn, generation: Generation) -> None:
         started = time.monotonic()
         pieces: list[str] = []
@@ -387,6 +559,10 @@ class ChatService:
         error_code: str | None = None
         provider = model = None
         retrieval_summary: dict | None = None
+        intent: dict | None = None
+        shadow: asyncio.Task | None = None
+        scope: dict | None = None
+        scope_shadow: asyncio.Task | None = None
         options = GenerationOptions(
             model=turn.config.model,
             temperature=turn.config.temperature
@@ -397,43 +573,66 @@ class ChatService:
         try:
             async with self.db.sessionmaker() as session:
                 conversation = await self._conversation(session, turn.conversation.id)
-            state = {
-                "user_id": turn.user.id,
-                "conversation": conversation,
-                "system_prompt": turn.config.system_prompt,
-                "retrieval": turn.config.retrieval,
-                "generation": options,
-                "files": turn.files,
-            }
-            events = self.rag_graph.astream(state, stream_mode="custom").__aiter__()
-            try:
-                while True:
-                    ok, event = await self._wait(_next(events), generation)
-                    if not ok:
-                        status = "cancelled"  # cancelling the pending step cancelled the running node
-                        break
-                    if event is None:
-                        break
-                    kind = event.get("event")
-                    if kind == "token":
-                        if ttft_ms is None:
-                            ttft_ms = int((time.monotonic() - started) * 1000)
-                        pieces.append(event["text"])
-                        await generation.queue.put(ChatEvent("token", {"text": event["text"]}))
-                    elif kind == "llm_started":
-                        provider, model = event["provider"], event["model"]
-                    elif kind == "llm_finished":
-                        usage, finish_reason = event.get("usage"), event.get("finish_reason")
-                    elif kind == "retrieval":
-                        retrieval_summary = event["summary"]
-                        # Before the first token, so a client can show [1]/[F1] as chips while it streams.
-                        citations = public_citations(retrieval_summary)
-                        if citations:
-                            await generation.queue.put(
-                                ChatEvent("citations", {"messageId": str(turn.assistant_id), "citations": citations})
-                            )
-            finally:
-                await events.aclose()
+            scope, scope_shadow = await self._scope(turn, conversation, generation)
+            turn.scope = scope
+            decision = _decision(scope)
+            if decision == REDIRECT:  # not learning: the app's own short reply, without the model or a search
+                language = dict(turn.student.preferences).get("language") if turn.student else None
+                text = redirect_copy(turn.user_message.content if turn.user_message is not None else "", language)
+                ttft_ms = int((time.monotonic() - started) * 1000)
+                pieces.append(text)
+                await generation.queue.put(ChatEvent("token", {"text": text}))
+            else:
+                if turn.user_message is not None and decision in INSTRUCTIONS:  # its line, in the prompt
+                    turn.config = self._config(
+                        turn.user,
+                        turn.conversation,
+                        turn.student,
+                        turn.tests,
+                        turn.bank,
+                        search=turn.config.retrieval is not None,
+                        scope=decision,
+                    )
+                config, intent, shadow = await self._route(turn, conversation, generation)
+                state = {
+                    "user_id": turn.user.id,
+                    "conversation": conversation,
+                    "system_prompt": config.system_prompt,
+                    "retrieval": config.retrieval,
+                    "generation": options,
+                    "files": turn.files,
+                }
+                events = self.rag_graph.astream(state, stream_mode="custom").__aiter__()
+                try:
+                    while True:
+                        ok, event = await self._wait(_next(events), generation)
+                        if not ok:
+                            status = "cancelled"  # cancelling the pending step cancelled the running node
+                            break
+                        if event is None:
+                            break
+                        kind = event.get("event")
+                        if kind == "token":
+                            if ttft_ms is None:
+                                ttft_ms = int((time.monotonic() - started) * 1000)
+                            pieces.append(event["text"])
+                            await generation.queue.put(ChatEvent("token", {"text": event["text"]}))
+                        elif kind == "llm_started":
+                            provider, model = event["provider"], event["model"]
+                        elif kind == "llm_finished":
+                            usage, finish_reason = event.get("usage"), event.get("finish_reason")
+                        elif kind == "retrieval":
+                            retrieval_summary = event["summary"]
+                            # Before the first token, so a client can show [1]/[F1] as chips while it streams.
+                            citations = public_citations(retrieval_summary)
+                            if citations:
+                                await generation.queue.put(
+                                    ChatEvent(
+                                        "citations", {"messageId": str(turn.assistant_id), "citations": citations}
+                                    )
+                                )
+                finally:
+                    await events.aclose()
         except LLMError as error:
             status, error_code = "error", error.code
             log.warning(
@@ -443,6 +642,19 @@ class ChatService:
         except Exception:  # noqa: BLE001
             status, error_code = "error", "internal_error"
             log.exception("generation crashed")
+        if shadow is not None:  # recorded, never applied
+            if status == "cancelled":
+                shadow.cancel()
+            (routed,) = await asyncio.gather(shadow, return_exceptions=True)
+            if isinstance(routed, Routed):
+                question = turn.user_message.content
+                intent = {**routed.record(False, "classifier"), "bankMenu": _bank_menu(turn.bank, question, None)}
+        if scope_shadow is not None:  # recorded, never applied
+            if status == "cancelled":
+                scope_shadow.cancel()
+            (found,) = await asyncio.gather(scope_shadow, return_exceptions=True)
+            if isinstance(found, Scope):
+                scope = found.record(False)
 
         latency_ms = int((time.monotonic() - started) * 1000)
         content = "".join(pieces)
@@ -459,6 +671,10 @@ class ChatService:
             "retrieval": retrieval_summary,
             # Public: what the reply's [1] and [F1] markers point at (None when nothing is numbered).
             "citations": public_citations(retrieval_summary),
+            # Internal: what the intent router read in the message and whether this turn used it.
+            "intent": intent,
+            # Internal: the study scope's decision (app/intents/scope.py) and whether this turn used it.
+            "scope": scope,
         }
         metadata = {k: v for k, v in metadata.items() if v is not None}
         log.info(
@@ -471,6 +687,8 @@ class ChatService:
                 "ttft_ms": ttft_ms,
                 "output_tokens": metadata.get("outputTokens"),
                 "retrieval_status": (retrieval_summary or {}).get("status"),
+                "intent": (intent or {}).get("id"),
+                "scope": (scope or {}).get("decision"),
                 "message_id": str(turn.assistant_id),
             },
         )
@@ -511,15 +729,20 @@ class ChatService:
         await generation.queue.put(event)
 
     async def _bank(
-        self, session: AsyncSession, question: str | None, student: StudentContext, conversation_id: uuid.UUID
+        self,
+        session: AsyncSession,
+        question: str | None,
+        student: StudentContext,
+        conversation_id: uuid.UUID,
+        asked: bool | None = None,
     ) -> str | None:
         """What the tutor is told about the question bank: None when tests are the model's own
         (QUESTION_BANK_TESTS off); the chapters it may set a test on when the question asks for one
-        (app/qbank/chat_tests.py); "" otherwise."""
+        (app/qbank/chat_tests.py; `asked`: the intent router read it as a test request); "" otherwise."""
         if not self.settings.question_bank_tests:
             return None
         earlier = ""
-        if student.grade is None and chat_tests.wants_test(question or ""):  # the class may be named earlier
+        if student.grade is None and (asked or chat_tests.wants_test(question or "")):  # the class may be named earlier
             said = await session.scalars(
                 select(Message.content)
                 .where(Message.conversation_id == conversation_id, Message.role == "user")
@@ -527,7 +750,7 @@ class ChatService:
                 .limit(10)
             )
             earlier = "\n".join(reversed(list(said)))
-        return await chat_tests.menu(session, question or "", student.grade, student.medium, earlier)
+        return await chat_tests.menu(session, question or "", student.grade, student.medium, earlier, asked=asked)
 
     async def _with_test(
         self,
@@ -539,18 +762,22 @@ class ChatService:
     ) -> dict:
         """The reply's practice test, checked whole (app/assessments/state.py) and saved by the same
         UPDATE as the reply: a test exists exactly when its reply does, and never in part. A test the
-        question bank set is built from its own block, with where its questions came from."""
+        question bank set is built from its own block, with where its questions came from and its
+        practice set (an adaptive one shows its first question and grows a question per answer)."""
         extra = {"message_id": str(turn.assistant_id)}
         if bank is not None:
             records, problem = assessments.build(f"```quiz\n{bank.body}\n```", None)
             if not records:
                 log.warning("assessment rejected", extra={**extra, "code": problem, "source": "question_bank"})
+                await chat_tests.close(session, turn.user.id, bank.set_id)  # nothing can be answered
                 return {**metadata, "assessmentError": {"code": problem}}
+            records[0] |= {"total": bank.total, "adaptive": bank.adaptive}  # the hash covers the questions only
             records[0]["source"] = {
                 "kind": "question_bank",
-                "chapterId": bank.chapter_id,
+                "chapterIds": list(bank.chapter_ids),
                 "topicIds": list(bank.topic_ids),
                 "questionIds": list(bank.question_ids),
+                "setId": str(bank.set_id),
             }
             log.info(
                 "assessment created",
@@ -558,7 +785,8 @@ class ChatService:
                     **extra,
                     "questions": records[0]["total"],
                     "source": "question_bank",
-                    "chapter_id": bank.chapter_id,
+                    "chapter_ids": list(bank.chapter_ids),
+                    "adaptive": bank.adaptive,
                 },
             )
             return {**metadata, "assessments": records}
@@ -604,10 +832,17 @@ class ChatService:
 
     async def _finalize(self, turn, content, status, metadata, latency_ms, ttft_ms, usage):
         async with self.db.sessionmaker() as session:
+            bank = None
             if status == "complete":
-                bank = None
                 if self.settings.question_bank_tests:  # the test's questions come from the bank
-                    content, bank = await chat_tests.fill(session, content, str(turn.assistant_id))
+                    content, bank = await chat_tests.fill(
+                        session,
+                        content,
+                        str(turn.assistant_id),
+                        turn.user.id,
+                        turn.conversation.id,
+                        adaptive=self.settings.adaptive_chat_tests,
+                    )
                 metadata = await self._with_test(session, turn, content, metadata, bank)
             # A cancel written by the cancel endpoint wins over "complete".
             final_status = await session.scalar(
@@ -620,15 +855,20 @@ class ChatService:
                 )
                 .returning(Message.status)
             )
-            # A fully answered, meaningful question makes its day a learning day (app/progress/learning.py).
+            if bank is not None and final_status != "complete":  # the cancel won: its test can't be answered
+                await chat_tests.close(session, turn.user.id, bank.set_id)
+            # A fully answered, meaningful question makes its day a learning day (app/progress/learning.py);
+            # a message the study scope turned away (STUDY_SCOPE on) never does, and never names the chat.
             learning = None
+            turned_away = _decision(metadata.get("scope")) in NOT_LEARNING
             if (
                 final_status == "complete"
                 and turn.user_message is not None
                 and is_meaningful(turn.user_message.content)
+                and not turned_away
             ):
                 learning = await record_learning(session, turn.user.id, now(), turn.asked_at)
-            if final_status == "complete" and turn.conversation.title == DEFAULT_TITLE:
+            if final_status == "complete" and turn.conversation.title == DEFAULT_TITLE and not turned_away:
                 await self._name_conversation(session, turn, content)
             await session.execute(
                 update(UsageEvent)
@@ -705,6 +945,19 @@ class ChatService:
             self.generations.cancel(message_id)
             return "cancelled"
         return message.status
+
+
+def _decision(scope: dict | None) -> str | None:
+    """The study scope decision a turn applies (messages.metadata.scope); None when off, shadow or failed."""
+    return scope["decision"] if scope and scope.get("applied") else None
+
+
+def _bank_menu(bank: str | None, question: str, intent: str | None) -> str:
+    """How the tutor got the question bank's chapters on a turn (messages.metadata.intent): the message's
+    words asked for a test (regex), an applied test intent asked for them (forced), or it got none."""
+    if not bank:
+        return "none"
+    return "forced" if intent in BANK_INTENTS and not chat_tests.wants_test(question) else "regex"
 
 
 async def _next(iterator):

@@ -2,7 +2,8 @@
 
 Native, domain-neutral RAG: **LangGraph** orchestrates each chat turn, **LangChain** provides the
 document / embeddings / retriever / text-splitter abstractions, and **PostgreSQL + pgvector** is the
-only store. No external RAG service and no other vector database is used.
+only store. No other vector database is used. The NCERT textbooks are the one external source: a separate
+service, the NCERT Knowledge Service, called through its API only ("NCERT textbooks", below).
 
 ## Dependency direction
 
@@ -26,7 +27,7 @@ START → receive_query → retrieve_context → assemble_context → generate_a
 
 | Node | Does |
 |---|---|
-| `receive_query` | Takes the latest user message; decides whether retrieval is skipped (`disabled`, `not_requested`, `empty_query`, `embeddings_unconfigured`). |
+| `receive_query` | Takes the latest user message; decides whether retrieval is skipped (`disabled`, `not_requested`, `empty_query`, `embeddings_unconfigured`). `not_requested`: the turn's `AssistantConfig.retrieval` is None, for small talk that opens a chat ("hi", "thanks": `is_meaningful`; "why?" after a question is still searched) or an intent answered from the app's own records (`performance_analysis`, `study_schedule`; `app/intents`). |
 | `retrieve_context` | If the caller can see no chunks for the configured embedding model → skip (`empty_knowledge_base`, no embedding call). Otherwise builds the retriever for this turn and calls it, bounded by `RAG_RETRIEVAL_TIMEOUT_S`. Any failure → status `failed` + reason; the turn continues without context. |
 | `assemble_context` | Builds the LLM input under one character budget (below) and emits the retrieval summary. |
 | `generate_answer` | Streams from the `LLMProvider`; emits `token` events; closes the provider stream on success, error or cancellation. |
@@ -146,11 +147,13 @@ of pgvector; attached files stay in pgvector.
 - **Response:** results are validated field by field and malformed ones dropped; each passage is capped at
   4,000 characters, and the context budget below still decides what fits. `[n]` is titled
   "NCERT <book> (Class n), Ch k: <chapter>, p. <printed page>".
-- **Failure:** `ncert_timeout` (`NCERT_KB_TIMEOUT_S`, 4 s; the live Classes 1-12 build answered in 1.4-3.3 s on
-  2026-10-14, so 2 s timed out most searches),
+- **Failure:** `ncert_timeout` (`NCERT_KB_TIMEOUT_S`, 6 s: live searches took ~1.7 s, p95 2.8 s and at most 3.9 s
+  from 2026-10-15 to 10-19, too close to the earlier 4 s),
   `ncert_unauthorized`, `ncert_unavailable`, `ncert_bad_response`; after 3 in a row, `ncert_paused` for 30 s
   (no call). Each is a retrieval failure with that reason: the reply goes on without textbook context.
-- **Privacy:** only the question and the class and subjects are sent: no user id, name or email.
+- **Privacy:** only the search query (at most 32 words of the question, with the question before it for a
+  short follow-up) and the fixed Classes 6-12 scope are sent. The student's class and subjects never leave
+  this app (they only rank the results here), and nothing that identifies them: no user id, name or email.
 
 ## Context budget (`app/rag/context.py`)
 

@@ -1,30 +1,42 @@
 """Practice tests in the chat come from the question bank, never from the model.
 
 The tutor is taught one block for tests (app/chat/assistant.py BANK_BLOCKS): ```question-bank with a
-chapter id from the list it is given on a turn that asks for a test (`menu`). Before the reply is
-saved, `fill` replaces that block with a ```quiz block of stored questions and removes any practice
-block the model wrote itself. The quiz is then recorded, answered and graded like every chat test
-(app/assessments/state.py, app/chat/service.py), so no model call checks or scores anything.
+chapter id (or up to three, for a mock test) from the list it is given on a turn that asks for a test
+(`menu`). Before the reply is saved, `fill` replaces that block with a ```quiz block of stored
+questions and removes any test block the model wrote itself (a fill-in-the-blanks exercise it writes
+stays: app/assessments grades it, and it is never practice evidence). The quiz is then recorded,
+answered and graded like every chat test (app/assessments/state.py, app/chat/service.py), so no model
+call checks or scores anything.
 
-Choosing the questions is SQL alone, on ix_qb_questions_select: the chapter's servable questions
-(selection.SERVABLE), in an order seeded by the reply's id. The same reply always holds the same
-questions, a regenerated one others, and no question appears twice in a test.
+Every test is a practice set in the ledger (qb_sets mode `chat`, its request id the reply's id; one
+qb_set_items row per question served), whose answers are the evidence app/progress/practice.py reads.
+Choosing the questions is SQL alone (selection.pick_next): the servable questions of the named topics,
+or of the whole chapters, picked from the student's previous answer. An adaptive test
+(ADAPTIVE_CHAT_TESTS) shows its first question; app/chat/router.py records each answer in the ledger
+and serves the next question in the transaction that records it (`answer`, `next_question`, `close`).
+Otherwise every question is chosen when the test is set. The same reply always starts with the same
+question, and no question appears twice in a test.
 """
 
 from __future__ import annotations
 
 import json
 import re
+import uuid
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Any
 
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.qbank import selection
+
 FENCE = "question-bank"
-MODEL_FENCES = ("quiz", "mcq", "fill-blank")  # practice blocks the model may no longer write
+MODEL_FENCES = ("quiz", "mcq")  # test blocks the model may no longer write (fill-blank exercises it may)
 LANGUAGE_SUBJECTS = ("english", "hindi", "sanskrit")  # taught in their own language, whatever the medium
 MAX_COUNT = 30  # app/assessments/state.py MAX_QUESTIONS
+MAX_CHAPTERS = 3  # a mock test's chapters, all of one class, subject and language
 DEFAULT_COUNT = 10
 LEVELS = {"easy": 1, "medium": 2, "hard": 3}
 
@@ -34,6 +46,7 @@ NOTE_UNKNOWN = (
 )
 NOTE_EMPTY = "_No test was set: there are no stored questions for that yet._"
 NOTE_MODEL = "_Practice questions come only from the question bank: ask for a test on a chapter._"
+NOTE_EXERCISE = "_One practice block per reply: ask for the exercise again once the test is done._"
 NOTE_FEWER = "_Only {n} stored questions match this, so the test has {n}._"
 
 # A message that may ask for a test: then (only) the tutor is given the chapter list. "question" alone
@@ -47,10 +60,10 @@ _TEST_REQUEST = re.compile(
 _CLASS = re.compile(r"\b(?:class|grade|std\.?|standard)\s*(\d{1,2})\b|कक्षा\s*(\d{1,2})", re.I)
 CHAPTER_ID = re.compile(r"[A-Z]{3,6}\d-CH\d{2}")  # qb_chapters ids, e.g. JESC1-CH09
 # A request the model fenced as JSON (or with no language), or wrote inline: ::question-bank{...}
-# (the ::file directive's form) or a bare {"chapter": ...}. Read as a request only when it names
-# a chapter id; anything else stays as it was.
+# (the ::file directive's form) or a bare {"chapter": ...} or {"chapters": [...]}. Read as a request
+# only when it names chapter ids; anything else stays as it was.
 LOOSE_FENCES = ("json", "jsonc", "")
-_INLINE = re.compile(r"(?:::)?question-bank\s*(?=\{)|(?=\{\s*\"chapter\"\s*:)")
+_INLINE = re.compile(r"(?:::)?question-bank\s*(?=\{)|(?=\{\s*\"chapters?\"\s*:)")
 # Any fence, as app/assessments/state.py finds them: after indentation, list markers or quote marks;
 # its language is the first word of its info.
 _OPEN = re.compile(
@@ -86,46 +99,77 @@ TOPICS = text(
     "SELECT topic_id, topic_number, title FROM qb_topics WHERE chapter_id = :chapter_id ORDER BY topic_number"
 )
 
-# The quiz card's limits (app/assessments/state.py _question) leave out the few longest case questions.
-PICK = text(
+# The ledger (0015, 0017): a test in the chat is a practice set of the reply (its request id); its
+# questions are served as items and answered once, graded by the database (qb_set_items_answer).
+NEW_SET = text(
     """
-    SELECT q.question_id, q.difficulty, q.stem, q.option_a, q.option_b, q.option_c, q.option_d, q.correct_option,
-           q.explanation, c.title AS case_title, c.body AS case_body
-    FROM qb_questions q
-    LEFT JOIN qb_cases c ON c.case_id = q.case_id
-    WHERE q.language = :language AND q.class_level = :class_level AND q.subject_code = :subject_code
-      AND q.chapter_id = :chapter_id
-      AND (CAST(:topic_ids AS text[]) IS NULL OR q.topic_id = ANY(CAST(:topic_ids AS text[])))
-      AND (CAST(:difficulty AS text) IS NULL OR q.difficulty = :difficulty)
-      AND q.review_status IN ('approved', 'needs_review') AND q.is_active
-      AND length(q.stem) + coalesce(length(c.title) + length(c.body) + 8, 0) <= 1000
-      AND greatest(length(q.option_a), length(q.option_b), length(q.option_c), length(q.option_d)) <= 400
-      AND length(q.explanation) <= 2000
-    ORDER BY md5(CAST(:seed AS text) || q.question_id)
-    LIMIT :n
+    INSERT INTO qb_sets (user_id, request_id, mode, filters, requested, served)
+    VALUES (:user_id, :request_id, 'chat', CAST(:filters AS jsonb), :requested, :served)
+    RETURNING id
+    """
+)
+SERVE = text(
+    "INSERT INTO qb_set_items (set_id, position, user_id, question_id, topic_id) "
+    "VALUES (:set_id, :position, :user_id, :question_id, :topic_id)"
+)
+SERVED = text("UPDATE qb_sets SET served = :served, requested = :requested WHERE id = :set_id AND user_id = :user_id")
+CHAT_SET = text(
+    "SELECT request_id, filters, requested FROM qb_sets WHERE id = :set_id AND user_id = :user_id AND mode = 'chat'"
+)
+ANSWER = text(
+    """
+    UPDATE qb_set_items SET chosen = :chosen
+    WHERE set_id = :set_id AND position = :position AND user_id = :user_id AND answered_at IS NULL
+    RETURNING answered_at, is_correct
+    """
+)
+CLOSE = text(
+    """
+    UPDATE qb_sets SET closed_at = clock_timestamp(),
+                       requested = CASE WHEN CAST(:ended_early AS boolean) THEN served ELSE requested END
+    WHERE id = :set_id AND user_id = :user_id AND closed_at IS NULL
+    """
+)
+CLOSE_FOR_MESSAGE = text(
+    """
+    UPDATE qb_sets SET closed_at = clock_timestamp()
+    WHERE user_id = :user_id AND request_id = :message_id AND mode = 'chat' AND closed_at IS NULL
     """
 )
 
 
 @dataclass(frozen=True)
 class BankTest:
-    """A test the bank set in a reply: its ```quiz block's body, and where its questions came from."""
+    """A test the bank set in a reply: its ```quiz block's body (the first question of an adaptive
+    test, every question of a fixed one), its practice set, and where its questions came from."""
 
     body: str
-    chapter_id: str
-    topic_ids: tuple[str, ...]  # () = the whole chapter
+    chapter_ids: tuple[str, ...]
+    topic_ids: tuple[str, ...]  # the topics the request named; () = the whole chapters
     question_ids: tuple[str, ...]
+    set_id: uuid.UUID
+    total: int  # the questions the test will have
+    adaptive: bool
 
 
 def wants_test(message: str) -> bool:
     return _TEST_REQUEST.search(message or "") is not None
 
 
-async def menu(session: AsyncSession, message: str, grade: str | None, medium: str | None, earlier: str = "") -> str:
+async def menu(
+    session: AsyncSession,
+    message: str,
+    grade: str | None,
+    medium: str | None,
+    earlier: str = "",
+    *,
+    asked: bool | None = None,
+) -> str:
     """The chapters the tutor may set a test on, when the student's message asks for one: the class
     the message names, else theirs, else the last one named earlier in the chat (`earlier`), in their
-    medium, and the language subjects. "" otherwise."""
-    if not wants_test(message):
+    medium, and the language subjects. "" otherwise. `asked`: whether the message asks for a test, as
+    the intent router read it (app/intents); None: its words decide (wants_test)."""
+    if not (wants_test(message) if asked is None else asked):
         return ""
     named = _CLASS.search(message) or (None if grade else ([*_CLASS.finditer(earlier)] or [None])[-1])
     own = re.fullmatch(r"Class (\d{1,2})", grade or "")
@@ -172,7 +216,9 @@ def _topic(topics: list[Any], wanted: Any) -> Any:
     return scored[0][1]
 
 
-def _question(row: Any) -> dict:
+def quiz_question(row: Any) -> dict:
+    """A stored question in a ```quiz block's form (app/assessments/state.py reads it), its case
+    passage before the stem."""
     stem = row.stem if row.case_body is None else f"**{row.case_title}:** {row.case_body} ➜ {row.stem}"
     return {
         "question": stem,
@@ -183,9 +229,16 @@ def _question(row: Any) -> dict:
 
 
 def _request(spec: Any) -> dict | None:
-    """A question-bank request: a JSON object naming a chapter id."""
-    chapter = spec.get("chapter") if isinstance(spec, dict) else None
-    return spec if isinstance(chapter, str) and CHAPTER_ID.fullmatch(chapter.strip()) else None
+    """A question-bank request: a JSON object naming a chapter id ("chapter"), or up to MAX_CHAPTERS
+    ("chapters", a mock test); with its chapter ids as "chapters"."""
+    named = spec.get("chapters", spec.get("chapter")) if isinstance(spec, dict) else None
+    named = [named] if isinstance(named, str) else named
+    if not isinstance(named, list) or not all(isinstance(chapter, str) for chapter in named):
+        return None
+    chapters = list(dict.fromkeys(chapter.strip() for chapter in named))
+    if not 1 <= len(chapters) <= MAX_CHAPTERS or not all(CHAPTER_ID.fullmatch(chapter) for chapter in chapters):
+        return None
+    return {**spec, "chapters": chapters}
 
 
 def _parse(body: str) -> dict | None:
@@ -195,44 +248,125 @@ def _parse(body: str) -> dict | None:
         return None
 
 
-async def _set(session: AsyncSession, spec: dict | None, seed: str) -> tuple[BankTest | None, str]:
-    """The ```quiz block for one request, or a note saying why there is none."""
+async def _set(
+    session: AsyncSession, spec: dict | None, seed: str, user_id: uuid.UUID, conversation_id: uuid.UUID, adaptive: bool
+) -> tuple[BankTest | None, str]:
+    """The ```quiz block for one request, and its practice set with the questions served so far; or a
+    note saying why there is none. Never commits."""
     if spec is None:
         return None, NOTE_UNKNOWN
-    chapter = (await session.execute(CHAPTER, {"chapter_id": spec["chapter"].strip()})).one_or_none()
-    if chapter is None:
-        return None, NOTE_UNKNOWN
-    topics = await _topics(session, chapter.chapter_id, spec.get("topics", spec.get("topic")))
+    chapters = [(await session.execute(CHAPTER, {"chapter_id": name})).one_or_none() for name in spec["chapters"]]
+    if None in chapters or len({(c.class_level, c.subject_code, c.language) for c in chapters}) > 1:
+        return None, NOTE_UNKNOWN  # a mock test is one class, subject and language
+    first = chapters[0]
+    named = []  # topics are named within one chapter; a mock test covers its chapters whole
+    if len(chapters) == 1:
+        named = await _topics(session, first.chapter_id, spec.get("topics", spec.get("topic")))
+    pool = [topic.topic_id for topic in named]
+    if not named:
+        for chapter in chapters:
+            pool += [topic.topic_id for topic in await session.execute(TOPICS, {"chapter_id": chapter.chapter_id})]
     asked = spec.get("count")
     asked = asked if isinstance(asked, int) and not isinstance(asked, bool) and asked >= 1 else None
     count = min(asked, MAX_COUNT) if asked else DEFAULT_COUNT
     difficulty = spec.get("difficulty") if spec.get("difficulty") in LEVELS else None
-    rows = (
-        await session.execute(
-            PICK,
-            {
-                "language": chapter.language,
-                "class_level": chapter.class_level,
-                "subject_code": chapter.subject_code,
-                "chapter_id": chapter.chapter_id,
-                "topic_ids": [topic.topic_id for topic in topics] or None,
-                "difficulty": difficulty,
-                "seed": seed,
-                "n": count,
-            },
-        )
-    ).all()
-    if not rows:
-        return None, NOTE_EMPTY
-    rows = sorted(rows, key=lambda row: LEVELS[row.difficulty])  # easy first; the seeded order within a level
-    named = " · ".join(topic.title for topic in topics)
-    title = f"{chapter.book} · {chapter.chapter_number}. {chapter.title}" + (f" · {named}" if named else "")
-    quiz = json.dumps(
-        {"title": title[:200], "questions": [_question(row) for row in rows]}, ensure_ascii=False, separators=(",", ":")
+    scope = selection.Pool(
+        first.language, first.class_level, first.subject_code, tuple(pool), difficulty=difficulty, card=True
     )
-    test = BankTest(quiz, chapter.chapter_id, tuple(t.topic_id for t in topics), tuple(r.question_id for r in rows))
-    fewer = f"\n\n{NOTE_FEWER.format(n=len(rows))}" if asked and len(rows) < asked else ""
+    row = await selection.pick_next(session, user_id, scope, seed)
+    if row is None:
+        return None, NOTE_EMPTY
+    total = min(count, row.available)
+    books = " · ".join(dict.fromkeys(chapter.book for chapter in chapters))
+    title = f"{books} · " + " · ".join(f"{chapter.chapter_number}. {chapter.title}" for chapter in chapters)
+    title = (title + "".join(f" · {topic.title}" for topic in named))[:200]
+    filters = {
+        "chapter_ids": [chapter.chapter_id for chapter in chapters],
+        "language": first.language,
+        "class_level": first.class_level,
+        "subject_code": first.subject_code,
+        "topic_ids": pool,
+        "topics": [topic.topic_id for topic in named],
+        "difficulty": difficulty,
+        "conversation_id": str(conversation_id),
+        "message_id": seed,
+        "title": title,
+    }
+    values = {"user_id": user_id, "request_id": uuid.UUID(seed), "filters": json.dumps(filters, ensure_ascii=False)}
+    set_id = await session.scalar(NEW_SET, {**values, "requested": total, "served": 0})
+    rows = [row]
+    while True:  # an adaptive test serves its first question; a fixed one all of them now, in that order
+        item = {"set_id": set_id, "position": len(rows), "user_id": user_id}
+        await session.execute(SERVE, {**item, "question_id": row.question_id, "topic_id": row.topic_id})
+        if adaptive or len(rows) == total:
+            break
+        row = await selection.pick_next(session, user_id, scope, seed, set_id)
+        if row is None:
+            break
+        rows.append(row)
+    total = total if adaptive else len(rows)
+    await session.execute(SERVED, {"served": len(rows), "requested": total, "set_id": set_id, "user_id": user_id})
+    quiz = json.dumps(
+        {"title": title, "questions": [quiz_question(row) for row in rows]}, ensure_ascii=False, separators=(",", ":")
+    )
+    test = BankTest(
+        quiz,
+        tuple(filters["chapter_ids"]),
+        tuple(filters["topics"]),
+        tuple(row.question_id for row in rows),
+        set_id,
+        total,
+        adaptive,
+    )
+    fewer = f"\n\n{NOTE_FEWER.format(n=total)}" if asked and total < asked else ""
     return test, f"```quiz\n{quiz}\n```{fewer}"
+
+
+async def answer(
+    session: AsyncSession, user_id: uuid.UUID, set_id: uuid.UUID, position: int, letter: str
+) -> tuple[datetime, bool] | None:
+    """Record the student's answer to the question served at `position` of their test: graded by the
+    database from the key. (answered_at, is_correct), or None when it already has an answer or there
+    is no such question. Never commits."""
+    params = {"chosen": letter, "set_id": set_id, "position": position, "user_id": user_id}
+    found = (await session.execute(ANSWER, params)).one_or_none()
+    return (found.answered_at, found.is_correct) if found is not None else None
+
+
+async def next_question(session: AsyncSession, user_id: uuid.UUID, set_id: uuid.UUID, position: int) -> Any:
+    """Serve the question after `position` of an adaptive test, chosen from the answer to that one (or
+    its skip): the stored question, or None when its chapters have nothing left. Never commits."""
+    found = (await session.execute(CHAT_SET, {"set_id": set_id, "user_id": user_id})).one_or_none()
+    if found is None:
+        return None
+    filters = found.filters
+    scope = selection.Pool(
+        filters["language"],
+        filters["class_level"],
+        filters["subject_code"],
+        tuple(filters["topic_ids"]),
+        difficulty=filters["difficulty"],
+        card=True,
+    )
+    row = await selection.pick_next(session, user_id, scope, str(found.request_id), set_id, position)
+    if row is None:
+        return None
+    item = {"set_id": set_id, "user_id": user_id}
+    question = {"question_id": row.question_id, "topic_id": row.topic_id}
+    await session.execute(SERVE, {**item, **question, "position": position + 1})
+    await session.execute(SERVED, {**item, "served": position + 1, "requested": found.requested})
+    return row
+
+
+async def close(session: AsyncSession, user_id: uuid.UUID, set_id: uuid.UUID, ended_early: bool = False) -> None:
+    """A test is over: completed, or no longer answerable (regenerated, stopped, never shown). Ended
+    early (the bank ran out): it holds what was served. Never commits."""
+    await session.execute(CLOSE, {"set_id": set_id, "user_id": user_id, "ended_early": ended_early})
+
+
+async def close_for_message(session: AsyncSession, user_id: uuid.UUID, message_id: uuid.UUID) -> None:
+    """Close the test a reply set, if it has one (the reply was regenerated). Never commits."""
+    await session.execute(CLOSE_FOR_MESSAGE, {"user_id": user_id, "message_id": message_id})
 
 
 def _segments(content: str) -> list[tuple[str, str, str]]:
@@ -264,12 +398,22 @@ def _segments(content: str) -> list[tuple[str, str, str]]:
     return segments
 
 
-async def fill(session: AsyncSession, content: str, seed: str) -> tuple[str, BankTest | None]:
-    """The reply with its first test request set from the bank (a note when it can't be), later
-    ones dropped, and every practice block the model wrote itself replaced by a note."""
-    if not any(mark in content for mark in ("```", "~~~", FENCE, '"chapter"')):
+async def fill(
+    session: AsyncSession,
+    content: str,
+    seed: str,
+    user_id: uuid.UUID,
+    conversation_id: uuid.UUID,
+    *,
+    adaptive: bool = True,
+) -> tuple[str, BankTest | None]:
+    """The reply (its id is `seed`) with its first test request set from the bank as the student's
+    practice set (a note when it can't be), later ones dropped, and every test block the model wrote
+    itself replaced by a note. Never commits: the set is saved with the reply."""
+    if not any(mark in content for mark in ("```", "~~~", FENCE, '"chapter')):
         return content, None
     parts: list[str] = []
+    exercises: list[int] = []  # the model's fill-blank blocks
     test: BankTest | None = None
     asked = False
     for language, body, raw in _segments(content):
@@ -283,7 +427,8 @@ async def fill(session: AsyncSession, content: str, seed: str) -> tuple[str, Ban
                     spec, stop = json.JSONDecoder().raw_decode(raw, match.end())
                 except ValueError:
                     continue
-                if _request(spec) is None:
+                spec = _request(spec)
+                if spec is None:
                     continue
                 start = match.start()
                 before = raw[:start].rstrip(" \t")
@@ -295,7 +440,7 @@ async def fill(session: AsyncSession, content: str, seed: str) -> tuple[str, Ban
                 pieces.append(raw[position:start])
                 if not asked:
                     asked = True
-                    test, block = await _set(session, spec, seed)
+                    test, block = await _set(session, spec, seed, user_id, conversation_id, adaptive)
                     pieces.append(f"\n\n{block}\n\n")
                 position = stop
             parts.append("".join([*pieces, raw[position:]]) if pieces else raw)
@@ -304,8 +449,13 @@ async def fill(session: AsyncSession, content: str, seed: str) -> tuple[str, Ban
         elif language == FENCE or (language in LOOSE_FENCES and _parse(body) is not None):
             if not asked:  # later requests are dropped: one test per reply
                 asked = True
-                test, block = await _set(session, _parse(body), seed)
+                test, block = await _set(session, _parse(body), seed, user_id, conversation_id, adaptive)
                 parts.append(block)
         else:
+            if language == "fill-blank":
+                exercises.append(len(parts))
             parts.append(raw)  # an ordinary code block
+    if test is not None:  # one practice block per reply: the bank's test, recorded; not an unrecorded exercise
+        for index in exercises:
+            parts[index] = NOTE_EXERCISE
     return "\n".join(parts), test

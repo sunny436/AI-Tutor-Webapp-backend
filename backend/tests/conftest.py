@@ -60,6 +60,7 @@ def make_settings(**overrides) -> Settings:
         stream_cancel_poll_s=0.1,
         log_level="WARNING",
         question_bank_tests=False,  # tests/test_assessments.py: tests the fake model writes
+        intent_router="off",  # tests/test_intents.py turns it on with a fake classifier
     )
     values.update(overrides)
     return Settings(_env_file=None, **values)
