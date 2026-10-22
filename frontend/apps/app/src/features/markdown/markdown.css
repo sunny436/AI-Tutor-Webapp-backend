@@ -65,6 +65,12 @@
   font-weight: 600;
 }
 
+/* Reading text keeps a comfortable line (about 75 characters) on wide screens; tables, code,
+   equations and charts still use the whole chat column. */
+.message-content :is(p, ul, ol, blockquote, h3, h4, h5, h6) {
+  max-width: 75ch;
+}
+
 /* Wide equations scroll inside the reply instead of widening the page. */
 .message-content .katex-display {
   overflow-x: auto;

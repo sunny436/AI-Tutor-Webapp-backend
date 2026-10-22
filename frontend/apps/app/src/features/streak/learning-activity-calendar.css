@@ -52,3 +52,18 @@
     opacity: 0;
   }
 }
+
+/* On a narrow screen the year scrolls sideways: the side with more of it out of view fades, so the
+   grid reads as continuing (with a hint below it, LearningActivityCalendar.tsx). */
+.learning-calendar[data-more="left"] {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 1.5rem);
+  mask-image: linear-gradient(to right, transparent, #000 1.5rem);
+}
+.learning-calendar[data-more="right"] {
+  -webkit-mask-image: linear-gradient(to left, transparent, #000 1.5rem);
+  mask-image: linear-gradient(to left, transparent, #000 1.5rem);
+}
+.learning-calendar[data-more="both"] {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 1.5rem, #000 calc(100% - 1.5rem), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 1.5rem, #000 calc(100% - 1.5rem), transparent);
+}

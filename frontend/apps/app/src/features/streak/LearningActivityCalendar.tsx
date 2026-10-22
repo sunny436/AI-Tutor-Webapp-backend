@@ -6,7 +6,7 @@
 // day clicks out.
 import { CalendarHeatmap } from "@goujon/react-calendar-heatmap";
 import { useTheme } from "next-themes";
-import { type KeyboardEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { type KeyboardEvent, type UIEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import type { LearningDay } from "@/lib/api/types";
 import "./learning-activity-calendar.css";
@@ -126,8 +126,11 @@ export function LearningActivityCalendar({
   const { resolvedTheme } = useTheme();
   const [colors, setColors] = useState<string[] | null>(null);
   const [available, setAvailable] = useState(0);
+  // Which sides have more of the year scrolled out of view (a narrow screen): faded, with a hint.
+  const [more, setMore] = useState<Sides>(null);
   const box = useRef<HTMLDivElement>(null);
   const focused = useRef<number | null>(null);
+  const onScroll = useCallback((event: UIEvent<HTMLDivElement>) => setMore(hiddenSides(event.currentTarget)), []);
 
   useEffect(() => {
     // Recomputed after the theme class lands on <html>.
@@ -140,10 +143,16 @@ export function LearningActivityCalendar({
   useEffect(() => {
     const root = box.current;
     if (!root || !colors) return;
-    const resize = new ResizeObserver(([entry]) => setAvailable(Math.floor(entry?.contentRect.width ?? 0)));
+    const resize = new ResizeObserver(([entry]) => {
+      setAvailable(Math.floor(entry?.contentRect.width ?? 0));
+      setMore(hiddenSides(root));
+    });
     resize.observe(root);
     // The library redraws on a new size or new data: prepare each drawing.
-    const drawn = new MutationObserver(() => afterDraw(root, focused.current));
+    const drawn = new MutationObserver(() => {
+      afterDraw(root, focused.current);
+      setMore(hiddenSides(root));
+    });
     drawn.observe(root, { childList: true, subtree: true });
     // A new theme redraws in the library's own effect, which runs before this one: prepare that drawing now.
     afterDraw(root, focused.current);
@@ -201,32 +210,50 @@ export function LearningActivityCalendar({
   if (!colors) return <div className="h-40" aria-hidden />;
   const size = layout(available);
   return (
-    <div ref={box} className="learning-calendar scrollbar-subtle overflow-x-auto" onKeyDown={onKeyDown}>
-      {available > 0 && (
-        <CalendarHeatmap
-          key={`${resolvedTheme}-${colors.join()}`}
-          data={data}
-          startDate={start}
-          dateParser={parseDay}
-          weekStart="monday"
-          width={size.width}
-          cellSize={size.cell}
-          cellPadding={CELL_PADDING}
-          legendWidth={size.legend}
-          max={LEVELS}
-          colorRange={colors}
-          tooltipEnabled
-          legendEnabled
-          accessibilityTable={false}
-          labels={DAY_LABELS}
-          ariaLabel="Learning days in the last year"
-          ariaDescription="Use the arrow keys to move between days, and Enter to see a day."
-          formatters={formatters}
-          onHover={showTooltip}
-          onFocus={showTooltip}
-          onClick={choose}
-        />
-      )}
-    </div>
+    <>
+      <div
+        ref={box}
+        className="learning-calendar scrollbar-subtle overflow-x-auto"
+        data-more={more ?? undefined}
+        onKeyDown={onKeyDown}
+        onScroll={onScroll}
+      >
+        {available > 0 && (
+          <CalendarHeatmap
+            key={`${resolvedTheme}-${colors.join()}`}
+            data={data}
+            startDate={start}
+            dateParser={parseDay}
+            weekStart="monday"
+            width={size.width}
+            cellSize={size.cell}
+            cellPadding={CELL_PADDING}
+            legendWidth={size.legend}
+            max={LEVELS}
+            colorRange={colors}
+            tooltipEnabled
+            legendEnabled
+            accessibilityTable={false}
+            labels={DAY_LABELS}
+            ariaLabel="Learning days in the last year"
+            ariaDescription="Use the arrow keys to move between days, and Enter to see a day."
+            formatters={formatters}
+            onHover={showTooltip}
+            onFocus={showTooltip}
+            onClick={choose}
+          />
+        )}
+      </div>
+      {more && <p className="mt-1 text-2xs text-text-secondary">Scroll sideways to see the whole year.</p>}
+    </>
   );
+}
+
+type Sides = "left" | "right" | "both" | null;
+
+/** The sides of the year that are scrolled out of view, if any. */
+function hiddenSides(root: HTMLElement): Sides {
+  const left = root.scrollLeft > 2;
+  const right = root.scrollLeft + root.clientWidth < root.scrollWidth - 2;
+  return left && right ? "both" : left ? "left" : right ? "right" : null;
 }
