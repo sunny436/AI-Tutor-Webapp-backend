@@ -149,6 +149,10 @@ if [ "$DO_BUILD" = 1 ]; then
     NEW_BUILD=.next-prev
   else
     step "frontend build (beside the build being served; Next's cache kept in .next-cache)"
+    # The served build's generated route types describe its own pages, and tsconfig includes them: a page
+    # this commit removes would fail the new build's typecheck. Next uses them only to typecheck, never
+    # to serve, so the served build keeps working without them.
+    rm -rf "$WEBDIR/.next/types"
     rm -rf "$WEBDIR/.next-build"
     mkdir -p "$WEBDIR/.next-cache" "$WEBDIR/.next-build"
     ln -s ../.next-cache "$WEBDIR/.next-build/cache"
