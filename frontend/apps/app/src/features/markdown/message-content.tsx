@@ -43,7 +43,7 @@ import { CitationMark, Sources } from "./citation";
 import { CodeBlock } from "./code-block";
 import { CitationsContext, LiveContext, TestContext, type TestState } from "./context";
 import { FileEmbed } from "./file-embed";
-import { type HastNode, hastText, languageOf, rehypeMarkBlockCode, rehypeRawAsText } from "./hast";
+import { type HastNode, hastText, languageOf, rehypeFocusableMaths, rehypeMarkBlockCode, rehypeRawAsText } from "./hast";
 import { remarkTutor } from "./remark-tutor";
 import { RichBlock, isRichLanguage } from "./rich-block";
 import { safeUrl, sanitizeSchema } from "./sanitize-schema";
@@ -69,6 +69,7 @@ const rehypePlugins = [
       maxExpand: 1000,
     },
   ],
+  rehypeFocusableMaths,
   // Program output is shown as it was printed, never coloured as a shell session.
   [rehypeHighlight, { detect: false, plainText: ["output", "console", "stdout", "terminal"] }],
 ] as Plugins;

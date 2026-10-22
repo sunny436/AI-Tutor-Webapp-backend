@@ -13,11 +13,13 @@ import {
 } from "./support";
 
 /**
- * The layout at every width it has to hold: 320 is WCAG's reflow width, 767/768
- * straddle the `md` breakpoint where the drawer gives way to the rail, and 1440 is
- * a wide desktop. The phone device itself (touch, DPR) is covered by mobile.e2e.ts.
+ * The layout at every width it has to hold: 320 is WCAG's reflow width, 360-430
+ * common phones, 600 and 820 small and large tablets, 767/768 straddle the `md`
+ * breakpoint where the drawer gives way to the rail, 1280-1440 laptops and 1920/2560
+ * large and ultrawide screens. The phone device itself (touch, DPR) is covered by
+ * mobile.e2e.ts.
  */
-const WIDTHS = [320, 390, 767, 768, 1024, 1440];
+const WIDTHS = [320, 360, 375, 390, 414, 430, 600, 767, 768, 820, 1024, 1280, 1366, 1440, 1920, 2560];
 const HEIGHT = 800;
 const MD = 768;
 const DARK_TOO = new Set([390, 1440]);

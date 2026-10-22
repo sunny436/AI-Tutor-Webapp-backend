@@ -275,7 +275,7 @@ function NameAndZoneCard() {
               {...props}
               value={draft.timezone}
               onChange={(event) => setDraft({ ...draft, timezone: event.target.value })}
-              className="focus-field h-10 w-full rounded-xl border border-input bg-card px-3 text-sm sm:max-w-[20rem]"
+              className="focus-field h-10 w-full rounded-xl border border-input bg-card px-3 text-base sm:max-w-[20rem] sm:text-sm"
             >
               <option value="">Not set</option>
               {options.map((zone) => (

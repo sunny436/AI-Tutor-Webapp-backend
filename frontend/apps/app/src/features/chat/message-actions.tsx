@@ -65,7 +65,7 @@ export function MessageActions({
     <div
       className={cn(
         "mt-1 flex items-center gap-0.5 transition-opacity",
-        alwaysVisible ? "opacity-100" : "opacity-100 md:opacity-0 md:focus-within:opacity-100 md:group-hover:opacity-100",
+        alwaysVisible ? "opacity-100" : "opacity-100 md:[@media(hover:hover)_and_(pointer:fine)]:opacity-0 md:focus-within:opacity-100 md:group-hover:opacity-100",
       )}
     >
       <button type="button" onClick={copy} className={actionClass} aria-label={copied ? "Copied" : "Copy reply"}>

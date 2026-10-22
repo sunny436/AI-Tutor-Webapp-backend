@@ -130,7 +130,7 @@ function SupportForm() {
             maxLength={SUPPORT_MESSAGE_MAX}
             required
             onChange={(event) => setMessage(event.target.value)}
-            className="focus-field w-full rounded-xl border border-input bg-card px-3 py-2 text-sm sm:max-w-[28rem]"
+            className="focus-field w-full rounded-xl border border-input bg-card px-3 py-2 text-base sm:max-w-[28rem] sm:text-sm"
           />
         )}
       </Field>

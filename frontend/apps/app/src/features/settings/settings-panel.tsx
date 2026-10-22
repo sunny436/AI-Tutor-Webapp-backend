@@ -104,7 +104,7 @@ export function SettingsPanel({ variant }: { variant: "panel" | "list" }) {
             placeholder="Search settings"
             autoComplete="off"
             aria-controls={listId}
-            className="focus-field h-11 w-full rounded-xl border border-input bg-card pl-9 pr-3 text-sm text-foreground placeholder:text-text-secondary md:h-10"
+            className="focus-field h-11 w-full rounded-xl border border-input bg-card pl-9 pr-3 text-base text-foreground placeholder:text-text-secondary sm:text-sm md:h-10"
           />
         </div>
         <p role="status" className="sr-only">

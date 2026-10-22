@@ -42,6 +42,26 @@ export function rehypeMarkBlockCode() {
 }
 
 /**
+ * Rehype plugin: a display equation is a focusable, named region, as a table is
+ * (`@v1/ui/table`). On a narrow screen a long one scrolls sideways
+ * (markdown.css), and a scrollable region must be reachable by keyboard. Runs
+ * after rehype-katex, so the marker cannot come from content.
+ */
+export function rehypeFocusableMaths() {
+  return (tree: HastNode) => {
+    const visit = (node: HastNode) => {
+      const className = node.properties?.className;
+      if (node.type === "element" && Array.isArray(className) && className.includes("katex-display")) {
+        node.properties = { ...node.properties, className: [...className, "focus-ring"], tabIndex: 0, role: "region", ariaLabel: "Equation" };
+        return;
+      }
+      for (const child of node.children ?? []) visit(child);
+    };
+    visit(tree);
+  };
+}
+
+/**
  * Rehype plugin: show raw HTML from a reply as text instead of dropping it.
  *
  * Without `rehype-raw` the HTML is never parsed, but the sanitizer would delete

@@ -14,7 +14,7 @@ import { STUDY_ACTIVITIES, type StudyActivity, type StudyChapters, type StudySes
 import { ACTIVITY_LABELS, formatStudyTime, isLearningView } from "./study-client";
 import { type StudySnapshot, studyStore, useStudy } from "./study-store";
 
-const selectClass = "focus-field h-10 w-full rounded-xl border border-input bg-card px-3 text-sm";
+const selectClass = "focus-field h-10 w-full rounded-xl border border-input bg-card px-3 text-base sm:text-sm";
 
 export type TabStatus = "studying" | "idle" | "prompting" | "paused" | "elsewhere" | "offline";
 
