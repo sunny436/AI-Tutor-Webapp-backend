@@ -366,7 +366,7 @@ export function SidebarContent({
                           <MarqueeTitle title={item.title} />
                         </Link>
                         {/* Always visible on touch; on hover/focus with a pointer. */}
-                        <span className="flex shrink-0 items-center gap-0.5 pr-1 opacity-100 transition-opacity md:opacity-0 md:focus-within:opacity-100 md:group-hover:opacity-100">
+                        <span className="flex shrink-0 items-center gap-0.5 pr-1 opacity-100 transition-opacity md:[@media(hover:hover)_and_(pointer:fine)]:opacity-0 md:focus-within:opacity-100 md:group-hover:opacity-100">
                           <button
                             type="button"
                             onClick={() => setRenaming(item)}
