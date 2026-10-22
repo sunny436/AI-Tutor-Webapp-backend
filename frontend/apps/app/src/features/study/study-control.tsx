@@ -9,10 +9,10 @@ import { useState } from "react";
 
 import { formatStudyTime, isLearningView } from "./study-client";
 import { STATUS_LABELS, StudySessionPanel, type TabStatus, tabStatus } from "./study-session-panel";
-import { studyStore, useStudy } from "./study-store";
+import { studyStore, type StudySnapshot, useStudy } from "./study-store";
 
 const pill =
-  "focus-ring inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full border border-border bg-card px-3 text-sm font-semibold tabular-nums text-foreground hover:bg-surface-2";
+  "focus-ring inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-sm font-semibold tabular-nums text-foreground hover:bg-surface-2 sm:px-3";
 
 const DOTS: Record<TabStatus, string> = {
   studying: "bg-success",
@@ -22,6 +22,11 @@ const DOTS: Record<TabStatus, string> = {
   elsewhere: "border border-text-secondary",
   offline: "border border-text-secondary",
 };
+
+/** One source of truth for whether the header capsule needs the Study segment. */
+export function studyControlVisible(study: StudySnapshot, pathname: string | null): boolean {
+  return Boolean(study.server) && (study.server?.session !== null || isLearningView(pathname));
+}
 
 /**
  * The header's study status: Studying, Idle, Paused, "Not counted on this page" or Offline, and the
@@ -35,7 +40,7 @@ export function StudyControl() {
   const [open, setOpen] = useState(false);
   const session = study.server?.session ?? null;
   const status = tabStatus(study, pathname);
-  if (!study.server || (!session && !isLearningView(pathname))) return null;
+  if (!studyControlVisible(study, pathname)) return null;
 
   const label = session
     ? `${STATUS_LABELS[status ?? "studying"]}: ${formatStudyTime(session.activeSeconds)} of estimated study time. Study session controls`

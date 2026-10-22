@@ -25,13 +25,13 @@ export function ChatEmptyState({ chatKey }: { chatKey: string }) {
   const ref = useLineGradient(greeting);
 
   return (
-    <div className="mx-auto flex w-full max-w-prose flex-1 flex-col justify-end px-5 pb-6 pt-10 sm:px-6">
+    <div className="mx-auto flex w-full flex-1 flex-col justify-end px-5 pb-6 pt-10 sm:px-6 lg:w-[min(100%,clamp(42.5rem,75%,72rem))]">
       <StudyIllustration />
       <h2
         key={greeting ?? ""}
         ref={ref}
         data-greeting=""
-        className="text-balance text-center font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl"
+        className="text-balance text-center font-display text-[length:clamp(1.5rem,1.05rem+2.2vw,2.25rem)] font-semibold leading-[1.2] tracking-tight text-foreground"
       >
         {greeting === null ? (
           <span className="invisible">&nbsp;</span>

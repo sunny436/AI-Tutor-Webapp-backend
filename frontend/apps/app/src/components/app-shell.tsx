@@ -1,18 +1,22 @@
 "use client";
 
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@v1/ui/sheet";
+import { cn } from "@v1/ui/utils";
 import { Menu, Plus, Trophy } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { type ReactNode, type RefObject, useEffect, useRef, useState } from "react";
 
+import { useAppearance } from "@/components/appearance-provider";
 import { useConversations } from "@/features/chat/chat-context";
 import { rememberAppPath } from "@/features/navigation/app-return";
 import { useFocusOnArrival } from "@/features/navigation/route-focus";
 import { NotificationBell } from "@/features/notifications/notification-bell";
 import { CelebrationHost } from "@/features/streak/celebrations/celebration-host";
-import { DayCountdown, StreakBadge } from "@/features/streak/header-streak";
-import { StudyControl } from "@/features/study/study-control";
+import { DayCountdown, StreakBadge, dayCountdownVisible, streakBadgeVisible } from "@/features/streak/header-streak";
+import { useStreak } from "@/features/streak/streak-store";
+import { StudyControl, studyControlVisible } from "@/features/study/study-control";
+import { useStudy } from "@/features/study/study-store";
 import { APP_NAME } from "@/lib/brand";
 import { navItemFor } from "./nav-items";
 import { PreviewBadge } from "./preview-badge";
@@ -98,6 +102,14 @@ function Header({
 }) {
   const pathname = usePathname();
   const preview = usePreview();
+  const appearance = useAppearance();
+  const streak = useStreak();
+  const study = useStudy();
+  const showStudy = studyControlVisible(study, pathname);
+  const showStreak = streakBadgeVisible(appearance);
+  const showCountdown = dayCountdownVisible(streak);
+  const showCapsule = showStudy || showStreak || showCountdown;
+  const showCapsuleOnMobile = showStudy || showStreak;
   const { title, subtitle } = useHeading(pathname);
 
   return (
@@ -144,9 +156,18 @@ function Header({
       )}
 
       <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
-        <StudyControl />
-        <StreakBadge />
-        <DayCountdown className="hidden sm:inline-flex" />
+        {showCapsule && (
+          <div
+            className={cn(
+              "shrink-0 items-center gap-0.5 rounded-full border border-border bg-card p-0.5 sm:gap-1",
+              showCapsuleOnMobile ? "flex" : "hidden sm:flex",
+            )}
+          >
+            <StudyControl />
+            <StreakBadge />
+            <DayCountdown className="hidden sm:inline-flex" />
+          </div>
+        )}
         <NotificationBell />
         <ThemeMenu />
       </div>

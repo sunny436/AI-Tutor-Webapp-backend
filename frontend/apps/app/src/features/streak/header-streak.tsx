@@ -7,10 +7,18 @@ import { useEffect, useRef, useState } from "react";
 
 import { useAppearance } from "@/components/appearance-provider";
 import { dayHasEnded, describeRemaining } from "./countdown";
-import { refreshStreak, useStreak } from "./streak-store";
+import { refreshStreak, type StreakState, useStreak } from "./streak-store";
 
 const pill =
-  "focus-ring inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full border border-border bg-card px-3 text-sm font-semibold tabular-nums text-foreground";
+  "focus-ring inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-sm font-semibold tabular-nums text-foreground sm:px-3";
+
+export function streakBadgeVisible(appearance: ReturnType<typeof useAppearance>): boolean {
+  return !(appearance?.appearance && !appearance.appearance.showStreak);
+}
+
+export function dayCountdownVisible(streak: StreakState): boolean {
+  return Boolean(streak.data?.dayEnd);
+}
 
 /**
  * 🔥 N in the header: the server's learning streak, a link to Settings > Learning & Streak.
@@ -26,7 +34,7 @@ export function StreakBadge() {
   const first = useRef<number | null>(null);
   if (first.current === null && shown !== null) first.current = shown;
   const rise = shown !== null && shown !== first.current;
-  if (appearance?.appearance && !appearance.appearance.showStreak) return null;
+  if (!streakBadgeVisible(appearance)) return null;
   const label = known
     ? `${data.currentStreak} day learning streak${data.todayActive ? "" : ", today's learning still to do"}`
     : "Learning streak unavailable";
