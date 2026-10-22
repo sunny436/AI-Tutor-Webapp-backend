@@ -671,6 +671,18 @@
     font-size: 125%;
   }
 
+  /* A text field under 16px makes iOS zoom the page in when it takes focus, and the page stays
+     zoomed after the keyboard closes ("small" text size makes 1rem 14px). On touch screens every
+     text field is at least 16px, whatever the text size or the field's own class (the :not() lifts
+     these above a utility class). Pinch-zoom is untouched. */
+  @media (pointer: coarse) {
+    input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"], [type="color"], [type="button"], [type="submit"], [type="reset"], [type="image"], [type="hidden"]),
+    textarea:not([hidden]),
+    select:not([hidden]) {
+      font-size: max(16px, 1rem);
+    }
+  }
+
   /* High contrast: secondary text moves most of the way to the main text colour, and every
      edge (borders, field outlines) becomes clearly visible. Measured: light, text #3B434D
      9.43:1 on the page and 10.02:1 on a card, edges #66707D 5.02:1 on a card; dark, text

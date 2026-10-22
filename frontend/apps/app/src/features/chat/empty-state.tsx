@@ -15,7 +15,8 @@ import { StudyIllustration } from "./study-illustration";
  * The words arrive one after another, each painted with its slice of ONE gradient that runs across
  * its line (measured, so the colour flows through the words instead of restarting in each). It is
  * one heading with the whole sentence, so a screen reader reads it once. Reduced motion (the
- * device's or the app's) shows the words at once (globals.css).
+ * device's or the app's) shows the words at once (globals.css). It is one line on every screen: the
+ * CSS size is the largest, and a sentence too wide for it is set smaller (fitOneLine).
  */
 export function ChatEmptyState({ chatKey }: { chatKey: string }) {
   const pool = useStudyGreetings();
@@ -51,13 +52,33 @@ export function ChatEmptyState({ chatKey }: { chatKey: string }) {
   );
 }
 
-/** Sizes each word's gradient to its whole line and offsets it by the word's place in that line. */
+/** The smallest the greeting is set to stay on one line; a longer one wraps (balanced) at this size. */
+const SMALLEST_PX = 12;
+
+/** Shrinks the heading's font in proportion when the sentence is wider than the heading. */
+function fitOneLine(heading: HTMLElement) {
+  heading.style.fontSize = "";
+  heading.style.whiteSpace = "nowrap";
+  const natural = heading.scrollWidth;
+  const room = heading.clientWidth;
+  heading.style.whiteSpace = "";
+  if (natural <= room) return;
+  const size = Number.parseFloat(getComputedStyle(heading).fontSize);
+  // 1% to spare, so rounding never pushes the last word onto a second line.
+  heading.style.fontSize = `${Math.max(SMALLEST_PX, (size * room * 0.99) / natural)}px`;
+}
+
+/**
+ * Fits the greeting on one line, then sizes each word's gradient to its whole line and offsets it
+ * by the word's place in that line.
+ */
 function useLineGradient(greeting: string | null) {
   const ref = useRef<HTMLHeadingElement>(null);
   useLayoutEffect(() => {
     const heading = ref.current;
     if (!heading || greeting === null) return;
     const paint = () => {
+      fitOneLine(heading);
       const lines = new Map<number, HTMLElement[]>();
       for (const word of heading.querySelectorAll<HTMLElement>("[data-greeting-word]")) {
         // Layout positions (offset*), which ignore the arrival transform.

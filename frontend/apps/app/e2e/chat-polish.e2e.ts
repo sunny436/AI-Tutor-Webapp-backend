@@ -408,7 +408,7 @@ async function renderedGreetingContrast(page: Page): Promise<number> {
 const SHORT_GREETING = "Ready to learn?";
 const LONG_GREETING = "Ready to turn a confusing chapter into real clarity today?";
 
-test("the greeting as rendered clears 4.5:1 at every point: light and dark, one line and two, wide and narrow", async ({
+test("the greeting as rendered clears 4.5:1 at every point: light and dark, short and long, wide and narrow", async ({
   page,
   account: _,
 }) => {
@@ -425,7 +425,7 @@ test("the greeting as rendered clears 4.5:1 at every point: light and dark, one 
           await expect(emptyGreeting(page)).toHaveText(text);
           const words = emptyGreeting(page).locator("[data-greeting-word]");
           const lines = await words.evaluateAll((spans) => new Set(spans.map((span) => (span as HTMLElement).offsetTop)).size);
-          if (text === LONG_GREETING && width === 390) expect(lines, "the long greeting wraps on a phone").toBeGreaterThan(1);
+          expect(lines, "the greeting stays on one line, phone or desktop").toBe(1);
           const lowest = await renderedGreetingContrast(page);
           expect(lowest, `"${text}", ${lines} line(s), ${scheme}, ${width}px`).toBeGreaterThanOrEqual(4.5);
           // Reduced motion: every word in place at once.
