@@ -4,7 +4,8 @@ The tutor is taught one block for tests (app/chat/assistant.py BANK_BLOCKS): ```
 chapter id (or up to three, for a mock test) from the list it is given on a turn that asks for a test
 (`menu`). Before the reply is saved, `fill` replaces that block with a ```quiz block of stored
 questions and removes any test block the model wrote itself (a fill-in-the-blanks exercise it writes
-stays: app/assessments grades it, and it is never practice evidence). The quiz is then recorded,
+stays, in its fence even if the model left that out: app/assessments grades it, and it is never
+practice evidence). The quiz is then recorded,
 answered and graded like every chat test (app/assessments/state.py, app/chat/service.py), so no model
 call checks or scores anything.
 
@@ -64,6 +65,14 @@ CHAPTER_ID = re.compile(r"[A-Z]{3,6}\d-CH\d{2}")  # qb_chapters ids, e.g. JESC1-
 # only when it names chapter ids; anything else stays as it was.
 LOOSE_FENCES = ("json", "jsonc", "")
 _INLINE = re.compile(r"(?:::)?question-bank\s*(?=\{)|(?=\{\s*\"chapters?\"\s*:)")
+# A fill-in-the-blanks exercise the model wrote without its fence: {"text": "... [[answer]] ...",
+# "explanation": "..."} bare in the text, as a ::: card (`:::fill-blank`, the study cards' form; most of
+# them on 2026-10-23), or in a block with another language (json, none, a misspelt one). Put in its
+# fence, or the student would read the answer key instead of an exercise to answer.
+_BARE_EXERCISE = re.compile(r"\{\s*\"text\"\s*:")
+_CARD_OPEN = re.compile(r"(?:^|\n)[ \t]*:{3,}[ \t]*[\w-]*(?:fill|blank)[\w-]*(?:\[[^\]\n]*\]|\{[^}\n]*\})*\s*$", re.I)
+_CARD_CLOSE = re.compile(r"\s*\n[ \t]*:{3,}[ \t]*(?=\n|$)")
+EXERCISE_KEYS = {"title", "text", "explanation"}
 # Any fence, as app/assessments/state.py finds them: after indentation, list markers or quote marks;
 # its language is the first word of its info.
 _OPEN = re.compile(
@@ -398,6 +407,59 @@ def _segments(content: str) -> list[tuple[str, str, str]]:
     return segments
 
 
+def _exercise(value: Any) -> bool:
+    """Whether JSON is a fill-in-the-blanks exercise: text with a [[blank]], and no other fields."""
+    return (
+        isinstance(value, dict)
+        and isinstance(value.get("text"), str)
+        and "[[" in value["text"]
+        and set(value) <= EXERCISE_KEYS
+    )
+
+
+def _fenced(content: str) -> str:
+    """The reply with each exercise the model wrote without its fence put in a ```fill-blank fence;
+    the reply as it was when there is none."""
+    parts: list[str] = []
+    repaired = False
+    for language, body, raw in _segments(content):
+        if language == "prose":
+            pieces: list[str] = []
+            position = 0
+            for match in _BARE_EXERCISE.finditer(raw):
+                if match.start() < position or raw[match.start() - 1 : match.start()] == "`":  # inline code
+                    continue
+                try:
+                    value, stop = json.JSONDecoder().raw_decode(raw, match.start())
+                except ValueError:
+                    continue
+                if _exercise(value):
+                    block = f"```fill-blank\n{raw[match.start() : stop]}\n```"
+                    before = raw[position : match.start()]
+                    card = _CARD_OPEN.search(before)
+                    if card is not None:  # its ::: card goes, closing line included
+                        before = before[: card.start()]
+                        closed = _CARD_CLOSE.match(raw, stop)
+                        stop = closed.end() if closed else stop
+                    pieces += [before, f"\n\n{block}\n\n"]
+                    position = stop
+            parts.append("".join([*pieces, raw[position:]]))
+            repaired = repaired or bool(pieces)
+            continue
+        value = None
+        if language != "fill-blank":
+            try:
+                value = json.loads(body)
+            except ValueError:
+                pass
+        if _exercise(value):
+            parts.append(f"```fill-blank\n{body}\n```")
+            repaired = True
+        else:
+            parts.append(raw)
+    return "\n".join(parts).strip("\n") if repaired else content
+
+
 async def fill(
     session: AsyncSession,
     content: str,
@@ -408,8 +470,11 @@ async def fill(
     adaptive: bool = True,
 ) -> tuple[str, BankTest | None]:
     """The reply (its id is `seed`) with its first test request set from the bank as the student's
-    practice set (a note when it can't be), later ones dropped, and every test block the model wrote
-    itself replaced by a note. Never commits: the set is saved with the reply."""
+    practice set (a note when it can't be), later ones dropped, every test block the model wrote
+    itself replaced by a note, and an exercise written without its fence put in one. Never commits:
+    the set is saved with the reply."""
+    if "[[" in content:
+        content = _fenced(content)
     if not any(mark in content for mark in ("```", "~~~", FENCE, '"chapter')):
         return content, None
     parts: list[str] = []

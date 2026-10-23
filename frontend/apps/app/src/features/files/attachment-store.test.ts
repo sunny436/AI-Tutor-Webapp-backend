@@ -86,6 +86,16 @@ describe("AttachmentStore", () => {
     expect(store.get("c1")[0]?.state).toBe("ready");
   });
 
+  test("the same bytes, failed before for a passing reason, are tried again", async () => {
+    const failed = libraryFile({ status: "failed", errorCode: "embedding_failed", retryable: true });
+    const { store, calls, flush } = setup({ findFile: async () => failed });
+    store.add("c1", [pdf()]);
+    await flush();
+    await flush();
+    expect(calls.uploads).toBe(0);
+    expect(store.get("c1")[0]?.state).toBe("processing");
+  });
+
   test("wrong types, oversized files and more than five are refused before any upload", () => {
     const { store } = setup();
     const result = store.add("c1", [

@@ -396,3 +396,10 @@ async def test_the_tutor_may_write_a_fill_in_the_blanks_exercise_which_is_never_
     for malformed in ("Water boils at [[100|]] °C.", "Water boils at [[" + "1" * 81 + "]] °C and freezes at [[0]] °C."):
         block = "```fill-blank\n" + json.dumps({"text": malformed}) + "\n```"
         assert assessments.build(block, None) == (None, "invalid_question")  # the tutor's key: refused whole
+    # Written as a ::: card, the study cards' form (seen live): put in its fence, so the student gets the
+    # exercise and not its answer key.
+    fake_llm.reply = lambda messages: ":::fill-blank\n" + json.dumps(exercise, indent=2) + "\n:::"
+    response, events = await stream_chat(client, headers, "Another fill in the blanks on water, please")
+    message = events[-1][1]["message"]
+    assert message["content"] == "```fill-blank\n" + json.dumps(exercise, indent=2) + "\n```"
+    assert message["metadata"]["assessments"][0]["kind"] == "exercise"

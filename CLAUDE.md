@@ -157,6 +157,8 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   is read from the ledger, survives deleting the chat, and reaches the tutor as one "Practice record" line.
   The tutor's own fill-in-the-blanks exercises are graded but never evidence. The model never sees an exercise's
   answer key in the chat history (`assessments.for_model`), and an unanswered one is told to it as having no score.
+  One it writes without its fence (a `:::fill-blank` card, bare JSON, a json block) is put in a ```fill-blank
+  fence before the reply is saved (`chat_tests.fill`), or the student would read the answer key.
 - **One model call per turn:** there are no graph retries, and `FallbackProvider` switches providers
   only before the first token. `INTENT_ROUTER` (off by default) adds up to two short classification requests
   before it (Ollalink, `app/intents`): they write no text, are capped together by `INTENT_ROUTER_TIMEOUT_S`,

@@ -298,6 +298,10 @@ export class AttachmentStore {
       key = this.where(localId);
       if (!key) return; // removed meanwhile
       let stored = existing;
+      if (existing?.status === "failed" && existing.retryable) {
+        // The same bytes failed before for a passing reason (e.g. reading was down): try them again.
+        stored = await this.api.retryFile(existing.id).catch(() => existing);
+      }
       if (!stored) {
         this.patch(key, localId, { state: "uploading", progress: 0 });
         stored = await this.api.uploadFile(file, {

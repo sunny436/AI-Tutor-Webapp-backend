@@ -328,7 +328,8 @@ tutor writes them when `TUTOR_INTERACTIVE_BLOCKS` is on. With `QUESTION_BANK_TES
 2026-10-16), a test's questions come only from the question bank: the tutor names a chapter in a
 ```` ```question-bank ```` block, the server replaces it with a ```` ```quiz ```` of stored questions
 before the reply is saved, and a test block the tutor writes itself becomes a note; a fill-in-the-blanks
-exercise it writes is kept (2026-10-22) (docs/question_bank.md, "Tests in the chat"). The server owns them
+exercise it writes is kept (2026-10-22), put in its fence if it wrote one without (2026-10-23)
+(docs/question_bank.md, "Tests in the chat"). The server owns them
 (`app/assessments/state.py`):
 
 - **Built with the reply, whole or not at all.** When a reply completes, its block is checked and

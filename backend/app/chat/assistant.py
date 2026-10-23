@@ -69,8 +69,8 @@ Show an attached file on its own line with ::file{ref=F1}, or one page of an att
 
 # The same blocks when tests come from the question bank (QUESTION_BANK_TESTS, app/qbank/chat_tests.py):
 # the model never writes a test's questions; it names a chapter and the app sets the test.
-BANK_BLOCKS = r"""Interactive blocks, only where they genuinely help. Write a fenced code block whose language is
-the type and whose body is one JSON object:
+BANK_BLOCKS = r"""Interactive blocks, only where they genuinely help. Write a fenced code block (three backticks,
+never a ::: card) whose language is the type and whose body is one JSON object:
 - flashcards: {"title": "...", "cards": [{"front": "...", "back": "..."}]}
 - fill-blank: {"text": "Water boils at [[100]] °C at sea level.", "explanation": "..."}
 - graph: {"functions": [{"expr": "x^2 - 2*x", "label": "f(x)"}], "x": [-5, 5]}
