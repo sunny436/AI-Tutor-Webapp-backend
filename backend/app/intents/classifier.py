@@ -398,7 +398,11 @@ class IntentClassifier:
         started = time.perf_counter()
         try:
             async with asyncio.timeout(WARM_TIMEOUT_S):
-                response = await self._client.post(CLASSIFY_PATH, json=request_body(WARM_TEXT, SCOPE_ID))
+                # Its own time limit: the client's (INTENT_ROUTER_TIMEOUT_S) would cut a cold start short and
+                # throw its connection away, the very connection the next message should reuse.
+                response = await self._client.post(
+                    CLASSIFY_PATH, json=request_body(WARM_TEXT, SCOPE_ID), timeout=WARM_TIMEOUT_S
+                )
             outcome = str(response.status_code)
         except (TimeoutError, httpx.HTTPError) as error:
             outcome = type(error).__name__
