@@ -244,7 +244,12 @@ async def run(args: argparse.Namespace) -> int:
         request, reply = case["chat"]
         passed = total = 0
         for question in case["questions"]:
-            chat = [ChatMessage("user", request), ChatMessage("assistant", reply), ChatMessage("user", question)]
+            # The reply as the chat shows it to the model (its own exercise answers blanked).
+            chat = [
+                ChatMessage("user", request),
+                ChatMessage("assistant", state.for_model(reply)),
+                ChatMessage("user", question),
+            ]
             messages = build_llm_messages(
                 system,
                 chat,

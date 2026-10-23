@@ -50,6 +50,25 @@ USE_RECORD = (
     "- When the student asks how they did, answer from this record: the score, what they got right and "
     "wrong, and the ideas behind the wrong answers. Never say you cannot see their answers."
 )
+NOT_ANSWERED = (
+    "- There is no score yet: the student has not checked a single blank. If they ask how they did, say "
+    "they haven't answered it yet and invite them to fill in the blanks and press Check answers. Never "
+    "state, guess or imply a score, or which blanks are right or wrong."
+)
+# A fill-blank block's answers, as the model wrote them: `[[answer]]` or `[[answer|alternative]]`.
+_ANSWER_KEY = re.compile(r"\[\[[^\[\]]*\]\]")
+_FILL_FENCE = re.compile(r"(^|\n)([ \t]*)(`{3,}|~{3,})[ \t]*fill-blank\b[^\n]*\n.*?\n[ \t]*\3[ \t]*(?=\n|$)", re.S)
+
+
+def for_model(content: str) -> str:
+    """A reply as the tutor is shown it in the chat history: each fill-in-the-blanks exercise with its
+    answers replaced by blanks. The record (tutor_summary) is the only place the tutor reads results and
+    right answers from, so the exercise's own answer key can never be mistaken for the student's answers."""
+    if "fill-blank" not in content:
+        return content
+    return _FILL_FENCE.sub(lambda match: _ANSWER_KEY.sub("____", match.group(0)), content)
+
+
 SUMMARY_MAX = 2600  # the whole block; the latest record comes first and is never cut
 LATEST_MAX = 2100
 MISSED_SHOWN = 5  # missed questions told with their wording
@@ -578,9 +597,12 @@ def _exercise_lines(record: dict) -> list[str]:
             )
         ]
         lines.append(f"- Blanks (what they typed; right answer in brackets): {'; '.join(typed)}")
-    lines.append(USE_RECORD)
     if response is None:
+        # Nothing is graded yet, so there is no score to tell: USE_RECORD would ask for one.
+        lines.append(NOT_ANSWERED)
         lines.append("- They type into the blanks in the exercise card and press Check answers.")
+    else:
+        lines.append(USE_RECORD)
     lines.append("- Never rewrite or re-grade this exercise.")
     return lines
 

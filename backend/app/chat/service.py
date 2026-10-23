@@ -374,12 +374,13 @@ class ChatService:
 
     def _reused_intent(self, last: Message, question: str) -> dict | None:
         """A regenerated reply's intent (INTENT_ROUTER): hint_only when its question explicitly asks only
-        for a hint, else the intent the replaced reply was given. Never a new classification."""
+        for a hint (in every mode, as for a new message), else the intent the replaced reply was given. Never
+        a new classification."""
+        if explicit_hint_only(question):
+            return HINT_ONLY.record(True, "explicit")
         if self.settings.intent_router == "off":
             return None
         applied = self.settings.intent_router == "on"
-        if explicit_hint_only(question):
-            return HINT_ONLY.record(applied, "explicit")
         stored = (last.metadata_ or {}).get("intent") or {}
         intent = stored.get("id")
         if not isinstance(intent, str) or intent not in INTENTS:
@@ -419,7 +420,14 @@ class ChatService:
                 .limit(self.settings.chat_history_max_messages)
             )
         )
-        return [ChatMessage(role=row.role, content=row.content) for row in reversed(rows) if row.content]
+        # A reply's own fill-in-the-blanks answers stay out of the model's view (assessments.for_model).
+        return [
+            ChatMessage(
+                role=row.role, content=assessments.for_model(row.content) if row.role == "assistant" else row.content
+            )
+            for row in reversed(rows)
+            if row.content
+        ]
 
     async def _cancel_requested(self, message_id: uuid.UUID) -> bool:
         try:
@@ -475,12 +483,12 @@ class ChatService:
         the classifier. Returns the turn's config, its messages.metadata.intent, and the shadow reading
         still running. A regenerated reply was routed when it was prepared (_reused_intent)."""
         mode = self.settings.intent_router
-        if mode == "off" or turn.user_message is None:
+        if turn.user_message is None:
             return turn.config, turn.intent, None
         question = turn.user_message.content
-        if explicit_hint_only(question):
+        if explicit_hint_only(question):  # a fixed rule on the student's own words: in every mode, even off
             routed, source = HINT_ONLY, "explicit"
-        elif self.intents is None:
+        elif mode == "off" or self.intents is None:
             return turn.config, None, None
         elif mode == "shadow":
             return turn.config, None, asyncio.ensure_future(self.intents.classify(conversation, turn.attached_kinds))
@@ -489,7 +497,7 @@ class ChatService:
             if not ok:  # stopped while reading: the graph's first step stops at once too
                 return turn.config, None, None
             source = "classifier"
-        applied = mode == "on" and routed.intent is not None
+        applied = routed.intent is not None and (mode == "on" or source == "explicit")
         config, bank = await self._apply(turn, routed.intent) if applied else (turn.config, turn.bank)
         record = routed.record(applied, source)
         return config, {**record, "bankMenu": _bank_menu(bank, question, record["id"])}, None

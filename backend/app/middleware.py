@@ -99,3 +99,19 @@ class RequestContextMiddleware:
             }
         )
         await send({"type": "http.response.body", "body": body})
+
+
+class ClassifierWarmMiddleware:
+    """Each signed-in request nudges Ollalink's classifier (IntentClassifier.nudge), which sends one small
+    warm-up only after a quiet spell, so a student's next message isn't slow. Pure ASGI: streams and
+    client disconnects pass through untouched. Nothing when there is no classifier."""
+
+    def __init__(self, app: ASGIApp) -> None:
+        self.app = app
+
+    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+        if scope["type"] == "http":
+            classifier = getattr(scope["app"].state, "classifier", None) if "app" in scope else None
+            if classifier is not None and any(name == b"authorization" for name, _ in scope["headers"]):
+                classifier.nudge()
+        await self.app(scope, receive, send)

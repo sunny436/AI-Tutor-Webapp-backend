@@ -7,6 +7,7 @@ import asyncio
 import json
 import logging
 import math
+import time
 from contextlib import asynccontextmanager
 from datetime import UTC, datetime
 
@@ -181,6 +182,10 @@ def test_an_explicit_request_for_a_hint_only_is_read_in_english_hindi_and_hingli
         "just tell me the first step please",
         "bas pehla step bata do",
         "बस पहला चरण बताओ",
+        "I want to do it myself, just tell me how to start",  # solve it myself + how to begin
+        "Main khud solve karna chahta hoon, bas shuruaat batao",
+        "मैं खुद हल करूँगा, बस पहला कदम बताओ",
+        "No complete solution, just a nudge please",
     ):
         assert explicit_hint_only(text), text
     for text in (
@@ -201,6 +206,10 @@ def test_an_explicit_request_for_a_hint_only_is_read_in_english_hindi_and_hingli
         "Only the first step is hard, explain the whole thing",
         "What is the next step in the water cycle?",
         "sirf pehla step mushkil hai, poora samjhao",
+        "I don't want to solve it myself, just give me the answer",
+        "Give me the full solution and the first step",
+        "How do I start this essay?",  # how to begin, without wanting to solve it themselves
+        "I solved it myself, is my first step right?",
     ):
         assert not explicit_hint_only(text), text
 
@@ -401,8 +410,50 @@ async def test_shadow_mode_records_the_reading_and_changes_nothing(monkeypatch):
             [row.get("intent") for row in rows],
         )
     assert seen["shadow"][:2] == seen["off"][:2]
-    assert seen["off"][1] == ["empty_knowledge_base"] * 3 and seen["off"][2] == [None] * 3
-    quiz, plan, hint = seen["shadow"][2]
+    assert seen["off"][1] == ["empty_knowledge_base"] * 3 and seen["off"][2][:2] == [None] * 2
+    # An explicit "hint only" is a fixed rule, not a reading: applied in every mode, the router off too.
+    assert intent_block("hint_only") in seen["off"][0][2] and intent_block("hint_only") not in seen["off"][0][1]
+    for mode in ("off", "shadow"):
+        hint = seen[mode][2][2]
+        assert (hint["id"], hint["forced"], hint["applied"], hint["source"]) == ("hint_only", True, True, "explicit")
+    quiz, plan, _ = seen["shadow"][2]
     assert (quiz["id"], quiz["best"], quiz["applied"], quiz["bankMenu"]) == (None, "conduct_quiz", False, "none")
     assert (plan["id"], plan["best"], plan["applied"]) == (None, "study_schedule", False)
-    assert (hint["id"], hint["best"], hint["forced"], hint["applied"]) == (None, "hint_only", True, False)
+
+
+async def test_a_quiet_classifier_is_warmed_once_by_a_signed_in_request():
+    sent = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        sent.append(json.loads(request.content))
+        return httpx.Response(503) if len(sent) == 3 else httpx.Response(200, json={"answers": {}})
+
+    def warm(after: float) -> IntentClassifier:
+        return IntentClassifier(
+            "https://ai.ollalink.test", KEY, 1.0, 0.5, 0.5, transport=httpx.MockTransport(handler), warm_after_s=after
+        )
+
+    found = warm(60)
+    found.nudge()
+    found.nudge()  # one warm-up, however many requests arrive
+    await found._warming
+    assert len(sent) == 1 and sent[0]["text"] == "Current message: hello" and list(sent[0]["questions"]) == ["scope"]
+    found.nudge()  # just warmed: nothing
+    assert len(sent) == 1
+    found._used -= 61  # a quiet minute later: once more
+    found.nudge()
+    await found._warming
+    assert len(sent) == 2
+    found._used -= 61
+    found.nudge()  # a failed warm-up (503) is only logged: no retry, nothing raised
+    await found._warming
+    assert len(sent) == 3
+    found._used -= 61
+    found._paused_until = time.monotonic() + 30  # paused after failures: no warm-up
+    found.nudge()
+    assert len(sent) == 3
+    off = warm(0)  # 0: never
+    off.nudge()
+    assert off._warming is None and len(sent) == 3
+    await found.aclose()
+    await off.aclose()

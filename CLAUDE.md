@@ -155,7 +155,8 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   it (`selection.pick_next`), and counts toward the learning day (5 answers make one). The practice record
   (`app/progress/practice.py`, `GET /v1/progress/plan|mastery|revisions|mistakes|practice-tests|practice-topics`)
   is read from the ledger, survives deleting the chat, and reaches the tutor as one "Practice record" line.
-  The tutor's own fill-in-the-blanks exercises are graded but never evidence.
+  The tutor's own fill-in-the-blanks exercises are graded but never evidence. The model never sees an exercise's
+  answer key in the chat history (`assessments.for_model`), and an unanswered one is told to it as having no score.
 - **One model call per turn:** there are no graph retries, and `FallbackProvider` switches providers
   only before the first token. `INTENT_ROUTER` (off by default) adds up to two short classification requests
   before it (Ollalink, `app/intents`): they write no text, are capped together by `INTENT_ROUTER_TIMEOUT_S`,
@@ -169,7 +170,10 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   adds a "What the latest message asks for" line after the student's settings (`resolve_assistant_config(intent=)`);
   test intents get the bank's chapters (`chat_tests.menu(asked=True)`); `performance_analysis` and
   `study_schedule` search nothing. An explicit "hint only" (English, Hindi, Hinglish) is always `hint_only`,
-  with or without the classifier. A regenerated reply reuses its intent; shadow records without applying.
+  with or without the classifier and in every mode, `off` included (a fixed rule, never a reading: a hint asked for by name,
+  only the next step, or wanting to solve it themselves with asking how to begin). A regenerated reply reuses its intent;
+  shadow records without applying. While students use the app, signed-in requests nudge the classifier
+  (`OLLALINK_WARM_AFTER_S`, `ClassifierWarmMiddleware`): one small warm-up after a quiet spell, so the next message is not slow.
   Stored in `messages.metadata.intent` (internal), logged as metadata only.
 - **Study scope filter** (`app/intents/scope.py`, `STUDY_SCOPE=off|shadow|on`): is a new message something
   PadhAI helps with? Its own Ollalink request through the router's client (one choice question: study,

@@ -9,6 +9,7 @@ import uuid
 
 from sqlalchemy import update
 
+from app.assessments import state as assessments
 from app.db.models import Message
 from tests.conftest import parse_sse, register, stream_chat
 
@@ -224,6 +225,36 @@ async def test_a_fill_in_the_blanks_exercise_is_recorded_graded_and_told_to_the_
     assert "CHECKED. Score 2 out of 3 blanks (2 right, 1 wrong)." in system
     assert '1 "Hundred." right; 2 "ZERO" right; 3 "liquid" wrong ("solid")' in system
     assert '- Text: "Water boils at __1__ °C and freezes at __2__ °C. Ice is __3__."' in system
+
+
+async def test_an_unanswered_exercise_has_no_score_and_the_tutor_never_sees_its_answer_key(client, app, fake_llm):
+    account, message = await quiz_reply(client, app, fake_llm, reply=EXERCISE, ask="Give me a fill in the blanks")
+    fake_llm.reply = lambda messages: "You haven't answered it yet."
+    await stream_chat(client, account["headers"], "did I get the blanks right?", message["conversationId"])
+    system, *history = fake_llm.calls[-1]
+    assert "NOT ANSWERED YET" in system.content and "There is no score yet" in system.content
+    assert "answer from this record: the score" not in system.content  # nothing asks it for a score
+    shown = next(turn.content for turn in history if turn.role == "assistant")
+    assert "fill-blank" in shown and "[[" not in shown and shown.count("____") == 3  # the key never reaches it
+
+    # Empty and blank-only answers are answers, checked and wrong; an accepted spelling and partial credit count.
+    [record], _ = assessments.build(EXERCISE, "q")
+    checked, changed = assessments.respond(
+        record,
+        status="complete",
+        client_hash=record["hash"],
+        question=0,
+        action="answer",
+        value=["", "   ", "Solid."],
+        at="2026-10-23T10:00:00+00:00",
+    )
+    response = checked["responses"][0]
+    assert changed and (response["status"], response["earned"], response["marks"]) == (
+        "answered",
+        1,
+        [False, False, True],
+    )
+    assert "CHECKED. Score 1 out of 3 blanks (1 right, 2 wrong)." in assessments.tutor_summary([checked])
 
 
 async def test_a_reply_saved_before_its_block_was_recorded_becomes_answerable(client, app, fake_llm):

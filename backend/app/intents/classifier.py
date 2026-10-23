@@ -72,6 +72,11 @@ SLOW_PAUSE_S = 60.0
 KEY_PAUSE_S = 600.0
 RETRY_AFTER_S = (1, 30, 300)  # the shortest, the default and the longest pause after a 429
 KINDS = {"image": "an image", "pdf": "a PDF"}  # any other attached file is "a file"
+# Warm-ups (IntentClassifier.nudge): what one asks (no student's words), how long it may take (a whole cold
+# start; it never holds up a reply), and how long an idle connection is kept (httpx's default is 5 s).
+WARM_TEXT = "Current message: hello"
+WARM_TIMEOUT_S = 10.0
+KEEPALIVE_S = 300.0
 FAILED = frozenset(
     {"timeout", "unavailable", "unauthorized", "rate_limited", "bad_request", "bad_response", "internal_error"}
 )
@@ -113,7 +118,30 @@ _HINT_ONLY = re.compile(
     r"|\b(?:give|tell|show)\s+(?:me\s+)?(?:only|just)\s+(?:the\s+)?(?:next|first)\s+step\b"
     r"|\b(?:only|just)\s+(?:give|tell|show)\s+(?:me\s+)?(?:the\s+)?(?:next|first)\s+step\b"
     r"|\b(?:bas|sirf|sirff|keval|kewal)\s+(?:pehla|pahla|agla|next|first)\s+step\s+(?:bata|batao|batana|btao|dikha|dikhao|do)\b"
-    r"|(?:सिर्फ़?|केवल|बस)\s*(?:पहला|अगला)\s*(?:चरण|स्टेप)\s*(?:बताओ|बताइए|बताना|बता\s*दो|दिखाओ)",
+    r"|(?:सिर्फ़?|केवल|बस)\s*(?:पहला|अगला)\s*(?:चरण|स्टेप)\s*(?:बताओ|बताइए|बताना|बता\s*दो|दिखाओ)"
+    # No full solution; just a pointer to where to begin.
+    r"|\bno\s+(?:full|complete|whole|entire)\s+(?:solution|answer)s?\b"
+    r"|\b(?:don'?t|do\s+not)\s+(?:want|need)\s+(?:the\s+)?(?:full|complete|whole|entire)\s+(?:solution|answer)\b"
+    r"|\b(?:only|just)\s+(?:tell|show|give)\s+(?:me\s+)?(?:where|how)\s+to\s+(?:begin|start)\b"
+    r"|\bjust\s+point\s+me\s+in\s+the\s+right\s+direction\b"
+    r"|\bbas\s+(?:idea|shuruaat|shuruat)\b|बस\s*(?:पहला|अगला)\s*कदम",
+    re.I,
+)
+# Wanting to solve it themselves (_SELF) and asking how to begin (_START), in the same message: a hint by
+# another name ("I'll crack this myself, just tell me where to begin"). Either alone is not.
+_SELF = re.compile(
+    r"\b(?:solve|do|crack|try|work\s+out|figure\s+out|attempt)\s+(?:it|this|this\s+one|the\s+rest|that)?\s*"
+    r"(?:myself|by\s+myself|on\s+my\s+own)\b"
+    r"|\bkhud\s+(?:se\s+)?(?:solve|karna|karunga|karungi|karoonga|try|hal)\b"
+    r"|(?:खुद|स्वयं)\s*(?:से\s*)?(?:हल|करना|करूँगा|करूंगा|करूंगी|कोशिश)",
+    re.I,
+)
+_START = re.compile(
+    r"\b(?:where|how)\s+(?:to|do\s+i|should\s+i|can\s+i)\s+(?:begin|start)\b|\bpoint\s+me\s+in\s+the\s+right\s+direction\b"
+    r"|\b(?:first|next)\s+step\b|\b(?:an?\s+)?(?:idea|nudge|clue|pointer)\b"
+    r"|\b(?:kaise|kahan\s+se)\s+(?:start|shuru|shuruaat|shuruat)\b|\b(?:shuruaat|shuruat)\b|\bidea\s+do\b"
+    r"|\b(?:pehla|pahla|agla)\s+step\b"
+    r"|(?:पहला|अगला)\s*(?:कदम|चरण|स्टेप)|कैसे\s*शुरू|शुरुआत",
     re.I,
 )
 _NO_HINT = re.compile(
@@ -123,7 +151,10 @@ _NO_HINT = re.compile(
     r"|\bhints?\s+(?:do\s+not|don'?t|does\s+not|doesn'?t)\s+help\b"
     r"|\bnot\s+(?:just|only|merely)\s+(?:a\s+|one\s+)?hints?\b"
     r"|\b(?:no|not)\s+(?:a\s+|any\s+)?hints?\b|\bhints?\s+(?:nahi|nahin|nhi|mat)\b"
-    r"|(?:संकेत|हिंट|इशारा)\s+(?:नहीं|मत)",
+    r"|(?:संकेत|हिंट|इशारा)\s+(?:नहीं|मत)"
+    # Not wanting to solve it themselves; asking for the whole answer.
+    r"|\b(?:don'?t|do\s+not|not)\s+(?:want|like|going)\s+to\s+(?:solve|do|try|crack|work\s+out|figure\s+out)\b"
+    r"|\b(?:give|show|tell)\s+me\s+the\s+(?:full|complete|whole|entire)\s+(?:answer|solution)\b",
     re.I,
 )
 
@@ -286,9 +317,11 @@ def score(group_payload: Any, intent_payload: Any = None) -> Scored | None:
 
 def explicit_hint_only(text: str) -> bool:
     """Does the message itself ask only for a hint, not the answer? A fixed rule on the student's own
-    words, applied before (or without) the classifier."""
+    words, applied before (or without) the classifier: a hint asked for by name, only the next step, no
+    full solution, or wanting to solve it themselves together with asking how to begin."""
     text = unicodedata.normalize("NFC", text).replace("’", "'").replace("‘", "'")
-    return _HINT_ONLY.search(text) is not None and _NO_HINT.search(text) is None
+    asked = _HINT_ONLY.search(text) is not None or (_SELF.search(text) is not None and _START.search(text) is not None)
+    return asked and _NO_HINT.search(text) is None
 
 
 def _error_code(response: httpx.Response) -> str | None:
@@ -320,14 +353,18 @@ class IntentClassifier:
         *,
         scope_min_redirect: float = 0.5,
         scope_min_confidence: float = 0.5,
+        warm_after_s: float = 0.0,
     ):
         self._client = httpx.AsyncClient(
             base_url=base_url.rstrip("/"),
             headers={KEY_HEADER: api_key, "User-Agent": USER_AGENT, "Accept": "application/json"},
             timeout=httpx.Timeout(timeout_s, connect=min(1.0, timeout_s)),
-            limits=httpx.Limits(max_connections=4),
+            limits=httpx.Limits(max_connections=4, keepalive_expiry=KEEPALIVE_S),
             transport=transport,
         )
+        self.warm_after_s = warm_after_s
+        self._used = 0.0  # time.monotonic() of the latest request to Ollalink, of any kind
+        self._warming: asyncio.Task | None = None
         self.timeout_s = timeout_s
         self.min_confidence = min_confidence
         self.min_group_confidence = min_group_confidence
@@ -338,7 +375,37 @@ class IntentClassifier:
         self._paused = False
 
     async def aclose(self) -> None:
+        if self._warming is not None:
+            self._warming.cancel()
         await self._client.aclose()
+
+    def nudge(self) -> None:
+        """A student is using the app (any signed-in request): when nothing has been sent to Ollalink for
+        warm_after_s, send one small warm-up in the background, so their next message doesn't wait for
+        the service to wake (after a quiet minute or two a request took 1.2-1.8 s, after a long quiet
+        3.6 s, against 0.3 s warm; measured 2026-10-23 from the server). At most one at a time and one
+        per warm_after_s, never retried, never while paused; nobody using the app sends nothing. It makes
+        the next request likely fast, not certain: that one still has its time limit and fallback."""
+        now = time.monotonic()
+        if not self.warm_after_s or now - self._used < self.warm_after_s or now < self._paused_until:
+            return
+        if self._warming is not None and not self._warming.done():
+            return
+        self._used = now
+        self._warming = asyncio.get_running_loop().create_task(self._warm())
+
+    async def _warm(self) -> None:
+        started = time.perf_counter()
+        try:
+            async with asyncio.timeout(WARM_TIMEOUT_S):
+                response = await self._client.post(CLASSIFY_PATH, json=request_body(WARM_TEXT, SCOPE_ID))
+            outcome = str(response.status_code)
+        except (TimeoutError, httpx.HTTPError) as error:
+            outcome = type(error).__name__
+        log.info(
+            "classifier warmed",
+            extra={"outcome": outcome, "latency_ms": int((time.perf_counter() - started) * 1000)},
+        )
 
     async def classify(self, conversation: list[ChatMessage], attachments: tuple[str, ...] = ()) -> Routed:
         """The intent of the conversation's latest message. Never raises (but when cancelled): a failure
@@ -369,6 +436,7 @@ class IntentClassifier:
 
     async def _ask(self, text: str, question: str) -> Any:
         """One request with one question: the response's JSON (raises _Refused, BadResponse, httpx errors)."""
+        self._used = time.monotonic()
         response = await self._client.post(CLASSIFY_PATH, json=request_body(text, question))
         if response.status_code != 200:
             raise _Refused(response)

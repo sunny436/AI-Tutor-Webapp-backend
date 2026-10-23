@@ -43,7 +43,7 @@ from app.learning.router import router as learning_router
 from app.llm.base import LLMProvider
 from app.llm.factory import build_llm
 from app.logging import configure_logging, get_logger
-from app.middleware import RequestContextMiddleware
+from app.middleware import ClassifierWarmMiddleware, RequestContextMiddleware
 from app.notifications.router import router as notifications_router
 from app.progress.router import router as progress_router
 from app.rag.embeddings import build_embeddings, embedding_model_id, is_configured
@@ -158,10 +158,12 @@ def create_app(
                 settings.intent_min_group_confidence,
                 scope_min_redirect=settings.scope_min_redirect,
                 scope_min_confidence=settings.scope_min_confidence,
+                warm_after_s=settings.ollalink_warm_after_s,
             )
             if settings.intent_router_enabled or settings.study_scope_enabled
             else None
         )
+        app.state.classifier = classifier  # nudged by signed-in requests (ClassifierWarmMiddleware)
         app.state.chat = ChatService(app.state.db, settings, app.state.rag_graph, app.state.generations, classifier)
         # Files never delay startup or stop chat: the worker recovers and tests its sandbox in the
         # background, and files stay unavailable until that passes. Tests drive it directly.
@@ -243,6 +245,7 @@ def create_app(
             allow_methods=["GET", "POST", "PATCH", "PUT", "DELETE"],
             allow_headers=["Authorization", "Content-Type", "X-Request-ID"],
         )
+    app.add_middleware(ClassifierWarmMiddleware)
     app.add_middleware(
         RequestContextMiddleware,
         max_body_bytes=settings.max_body_bytes,

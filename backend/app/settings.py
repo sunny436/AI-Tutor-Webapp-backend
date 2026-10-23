@@ -151,6 +151,9 @@ class Settings(BaseSettings):
     # scripts/eval_scope.py on the dev split (no learning request there above 0.31 for unrelated).
     scope_min_redirect: float = Field(default=0.5, ge=0, le=1)
     scope_min_confidence: float = Field(default=0.5, ge=0, le=1)
+    # While students use the app, one small warm-up to Ollalink when nothing was sent for this long, so a
+    # message after a quiet spell is not slow (IntentClassifier.nudge). 0: never.
+    ollalink_warm_after_s: float = Field(default=45.0, ge=0, le=3600)
 
     # ---- Study time (app/study): how long without input counts as idle, by mode. Reading allows
     # longer (reading and thinking need no clicks); the reading prompt is always shorter than this.
