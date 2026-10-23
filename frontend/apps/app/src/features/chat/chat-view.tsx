@@ -61,6 +61,18 @@ export function ChatView() {
           empty ? "opacity-100" : "opacity-0",
         )}
       />
+      {/* The spacer is first in the page and last on screen (order-last): a page painted before the
+          rest of it has arrived (a slow parse) is already split around the composer's place, so the
+          greeting never jumps from the bottom to the middle (a layout shift of 0.05 on arrival,
+          2026-10-23). */}
+      <div
+        aria-hidden
+        data-composer-spacer=""
+        className={cn(
+          "order-last min-h-0 shrink-0 basis-0 transition-[flex-grow] duration-slow ease-standard",
+          empty ? "grow" : "grow-0",
+        )}
+      />
       <MessageList chatKey={chatKey} scrollRef={scrollRef} />
       <Composer
         chatKey={chatKey}
@@ -69,14 +81,6 @@ export function ChatView() {
           const element = scrollRef.current;
           if (element) element.scrollTo({ top: element.scrollHeight });
         }}
-      />
-      <div
-        aria-hidden
-        data-composer-spacer=""
-        className={cn(
-          "min-h-0 shrink-0 basis-0 transition-[flex-grow] duration-slow ease-standard",
-          empty ? "grow" : "grow-0",
-        )}
       />
       <Announcer chatKey={chatKey} />
     </div>

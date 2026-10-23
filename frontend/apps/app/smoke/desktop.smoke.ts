@@ -146,7 +146,7 @@ test("desktop, 1280px: the chat, menus, streak, bell, branding, dark, a real que
     const rows = page.locator("nav[aria-labelledby='chats-heading'] a[href^='/c/']");
     const rest = await rows.locator(".marquee").evaluateAll((boxes) =>
       boxes.map((box) => ({
-        overflowing: box.hasAttribute("data-overflowing"),
+        overflowing: box.scrollWidth > box.clientWidth, // measured by the title itself only when hovered
         mask: getComputedStyle(box).maskImage || "none",
         textOverflow: getComputedStyle(box).textOverflow,
         running: (box.querySelector(".marquee-track") as HTMLElement).getAnimations().length,

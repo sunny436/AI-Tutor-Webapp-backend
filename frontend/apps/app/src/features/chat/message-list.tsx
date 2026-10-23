@@ -6,6 +6,7 @@ import { ArrowDown, MessageSquareOff } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 
+import { useRendererReady } from "@/features/markdown/lazy-message-content";
 import { describeCode } from "@/lib/api/errors";
 import { useChatEntry, useStores } from "./chat-context";
 import type { ChatEntry } from "./chat-store";
@@ -31,6 +32,12 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
 
   const order = entry?.order ?? [];
   const status = entry?.status ?? "idle";
+  // An opened chat keeps its skeleton until its replies can be drawn (never while a reply streams, and
+  // never again once they are on screen).
+  const rendererReady = useRendererReady();
+  const drawn = useRef(false);
+  const drawing = rendererReady || Boolean(entry?.stream) || drawn.current;
+  if (drawing && order.length > 0) drawn.current = true;
 
   const loadOlder = async () => {
     const element = scrollRef.current;
@@ -77,7 +84,7 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
         )}
       </div>
     );
-  } else if ((status === "loading" || status === "idle") && order.length === 0) {
+  } else if (((status === "loading" || status === "idle") && order.length === 0) || (!drawing && order.length > 0)) {
     body = (
       <SkeletonGroup label="Loading conversation" className="mx-auto w-full px-5 sm:px-6 lg:w-[min(100%,clamp(42.5rem,75%,57rem))] space-y-8 py-8">
         <Skeleton className="ml-auto h-10 w-2/5 rounded-2xl" />

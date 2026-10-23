@@ -14,8 +14,10 @@ const MIN_CYCLE_MS = 8000;
  * motion, the device's or the app's, never moves it. The text is always the whole title, so the
  * link's accessible name is the whole title however it is drawn.
  *
- * All this measures is how far the title overflows its row. No timers, no animation frames: the
- * movement is a CSS transform, and the observer is disconnected with the row.
+ * All this measures is how far the title overflows its row, and only when its row is hovered or
+ * takes focus, the only times it can move: measuring every title as the list mounts or resizes
+ * forced a reflow per title (0.5 s opening the phone's drawer, CPU 4x, 2026-10-23), and a touch
+ * screen never needs it. No timers, no animation frames: the movement is a CSS transform.
  */
 export function MarqueeTitle({ title }: { title: string }) {
   const box = useRef<HTMLSpanElement>(null);
@@ -23,21 +25,18 @@ export function MarqueeTitle({ title }: { title: string }) {
 
   useLayoutEffect(() => {
     const element = box.current;
-    if (!element) return;
-    let mounted = true;
+    const row = element?.closest("li") ?? element;
+    if (!element || !row) return;
+    setShift(0); // a renamed chat is measured again on its next hover or focus
     const measure = () => {
       const overflow = element.scrollWidth - element.clientWidth;
       setShift(overflow > 1 ? overflow + FADE_PX : 0);
     };
-    measure();
-    // The row's width changes with the sidebar, the drawer and the text size...
-    const observer = new ResizeObserver(measure);
-    observer.observe(element);
-    // ...and the title's own width once the web font has arrived.
-    void document.fonts?.ready.then(() => mounted && measure());
+    row.addEventListener("pointerenter", measure);
+    row.addEventListener("focusin", measure);
     return () => {
-      mounted = false;
-      observer.disconnect();
+      row.removeEventListener("pointerenter", measure);
+      row.removeEventListener("focusin", measure);
     };
   }, [title]);
 

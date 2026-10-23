@@ -24,11 +24,15 @@ import { unreadBadge } from "./celebrate";
  * The header's bell: every in-app notification (streak reminders and milestones, security
  * alerts, reminders the worker plans), newest first. Plain text only. A milestone is celebrated
  * where it is reached (features/streak/celebrations), never again here. Fetched when shown, when
- * the window regains focus and after a reply finishes; no polling. Opening it reads nothing:
+ * the window regains focus (not within FRESH_MS of the last load) and after a reply finishes; no
+ * polling. Opening it reads nothing:
  * choosing a notification marks that one read, "Read all" marks every one read (also those
  * beyond the 30 shown) and "Clear all" empties it; the server keeps both after a reload. If it
  * can't load, the bell stays and says so; the header keeps working.
  */
+/** A window focused again this soon after the last load (switching windows and back) asks nothing. */
+const FRESH_MS = 15_000;
+
 export function NotificationBell() {
   const [list, setList] = useState<NotificationList | null>(null);
   const [failed, setFailed] = useState(false);
@@ -36,12 +40,14 @@ export function NotificationBell() {
   // Each load and each change made here takes a number; only the latest load's list is shown, so
   // a list fetched before a change never puts back what the change removed.
   const latest = useRef(0);
+  const loadedAt = useRef(0);
 
   const load = useCallback(async () => {
     const mine = ++latest.current;
     try {
       const next = await getNotifications();
       if (mine !== latest.current) return;
+      loadedAt.current = Date.now();
       setList(next);
       setFailed(false);
     } catch {
@@ -52,10 +58,13 @@ export function NotificationBell() {
   useEffect(() => {
     void load();
     const reload = () => void load();
-    window.addEventListener("focus", reload);
+    const onFocus = () => {
+      if (Date.now() - loadedAt.current >= FRESH_MS) void load();
+    };
+    window.addEventListener("focus", onFocus);
     window.addEventListener(LEARNING_EVENT, reload);
     return () => {
-      window.removeEventListener("focus", reload);
+      window.removeEventListener("focus", onFocus);
       window.removeEventListener(LEARNING_EVENT, reload);
     };
   }, [load]);

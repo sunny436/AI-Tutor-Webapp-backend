@@ -6,7 +6,7 @@ import { EmptyState, ErrorState } from "@v1/ui/empty-state";
 import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import { CheckCircle2, ChevronDown, ClipboardList } from "lucide-react";
 import Link from "next/link";
-import { type ReactNode, useEffect, useId, useState } from "react";
+import { type ReactNode, useEffect, useId, useRef, useState } from "react";
 
 import { LazyInlineMarkdown } from "@/features/markdown/lazy-message-content";
 import { useCatalog } from "@/features/settings/learning-data";
@@ -586,6 +586,9 @@ export function MyLearningView() {
   const profile = useResource(() => getLearnerProfile());
 
   const subjectName = (code: string) => catalog?.subjects.find((entry) => entry.code === code)?.name ?? code;
+  // The panels under the plan show once it has answered, and then stay (retrying a failed plan never hides them).
+  const planAnswered = useRef(false);
+  if (plan.data || plan.error) planAnswered.current = true;
 
   return (
     <div
@@ -602,49 +605,54 @@ export function MyLearningView() {
           </Loaded>
         </Panel>
 
-        <Panel id="learning-practice" title="Practice by chapter">
-          <PracticePicker subjectName={subjectName} />
-        </Panel>
+        {/* The rest shows once the plan has answered. Drawn under the plan's two-line skeleton, a plan
+            arriving taller pushed every panel down (a layout shift of 0.61 on a phone, 2026-10-23); they
+            are mounted from the start, hidden, so their requests (the chapters' too) run at once. */}
+        <div className={planAnswered.current ? "contents" : "hidden"}>
+          <Panel id="learning-practice" title="Practice by chapter">
+            <PracticePicker subjectName={subjectName} />
+          </Panel>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-          <Panel id="learning-revision" title="Revision due">
-            <Loaded resource={revisions} what="your revision">
-              {(data) => <Revision revisions={data} subjectName={subjectName} />}
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <Panel id="learning-revision" title="Revision due">
+              <Loaded resource={revisions} what="your revision">
+                {(data) => <Revision revisions={data} subjectName={subjectName} />}
+              </Loaded>
+            </Panel>
+            <Panel id="learning-exam" title="Exam date">
+              <Loaded resource={profile} what="your exam date">
+                {(data) => <ExamDate profile={data} plan={plan.data} />}
+              </Loaded>
+            </Panel>
+          </div>
+
+          <Panel id="learning-mastery" title="Mastery">
+            <Loaded resource={mastery} what="your mastery">
+              {(data) => <MasteryList mastery={data} subjectName={subjectName} />}
             </Loaded>
           </Panel>
-          <Panel id="learning-exam" title="Exam date">
-            <Loaded resource={profile} what="your exam date">
-              {(data) => <ExamDate profile={data} plan={plan.data} />}
+
+          <Panel id="learning-mistakes" title="Mistakes">
+            <Loaded resource={mistakes} what="your mistakes">
+              {(data) => <MistakeList mistakes={data} subjectName={subjectName} />}
             </Loaded>
           </Panel>
+
+          <Panel id="learning-tests" title="Recent tests">
+            <Loaded resource={tests} what="your tests">
+              {(data) => <TestList tests={data} />}
+            </Loaded>
+          </Panel>
+
+          <p className="text-xs leading-relaxed text-text-secondary">
+            Everything here comes only from your answers to question-bank tests in the chat: flashcards and exercises the
+            tutor writes itself are not counted. Only you can see it. Your study time is in{" "}
+            <Link href="/study" className={link}>
+              Study Activity
+            </Link>
+            .
+          </p>
         </div>
-
-        <Panel id="learning-mastery" title="Mastery">
-          <Loaded resource={mastery} what="your mastery">
-            {(data) => <MasteryList mastery={data} subjectName={subjectName} />}
-          </Loaded>
-        </Panel>
-
-        <Panel id="learning-mistakes" title="Mistakes">
-          <Loaded resource={mistakes} what="your mistakes">
-            {(data) => <MistakeList mistakes={data} subjectName={subjectName} />}
-          </Loaded>
-        </Panel>
-
-        <Panel id="learning-tests" title="Recent tests">
-          <Loaded resource={tests} what="your tests">
-            {(data) => <TestList tests={data} />}
-          </Loaded>
-        </Panel>
-
-        <p className="text-xs leading-relaxed text-text-secondary">
-          Everything here comes only from your answers to question-bank tests in the chat: flashcards and exercises the tutor
-          writes itself are not counted. Only you can see it. Your study time is in{" "}
-          <Link href="/study" className={link}>
-            Study Activity
-          </Link>
-          .
-        </p>
       </div>
     </div>
   );

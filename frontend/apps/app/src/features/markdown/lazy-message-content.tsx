@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 
 import type { Citation } from "@/lib/api/types";
 import type { TestState } from "./context";
@@ -15,9 +15,40 @@ import type { TestState } from "./context";
  * interactive: `preloadMessageContent()` starts the download when the chat
  * mounts, so by the time a conversation's messages arrive it is usually there.
  *
- * Until it is, a reply shows as plain text — which is exactly what it is.
+ * Until it is, a reply shows as plain text — which is exactly what it is. An opened chat waits for
+ * it a little (`useRendererReady`): its replies drawn as plain text and then redrawn moved the whole
+ * transcript (a layout shift of 0.23 opening a long chat, 2026-10-23).
  */
-const load = () => import("./message-content");
+let loaded = false;
+const waiting = new Set<() => void>();
+const load = () =>
+  import("./message-content").then((module) => {
+    loaded = true;
+    for (const notify of waiting) notify();
+    waiting.clear();
+    return module;
+  });
+
+/** At most this long a transcript waits for the renderer; then its replies show as plain text. */
+const RENDERER_WAIT_MS = 2500;
+
+/** Whether replies can be drawn now: the renderer has loaded, failed, or RENDERER_WAIT_MS have passed. */
+export function useRendererReady(): boolean {
+  const [ready, setReady] = useState(loaded);
+  useEffect(() => {
+    if (ready) return;
+    const finish = () => setReady(true);
+    if (loaded) return finish();
+    waiting.add(finish);
+    load().catch(finish);
+    const timer = setTimeout(finish, RENDERER_WAIT_MS);
+    return () => {
+      waiting.delete(finish);
+      clearTimeout(timer);
+    };
+  }, [ready]);
+  return ready;
+}
 
 const Renderer = lazy(() => load().then((module) => ({ default: module.MessageContent })));
 const InlineRenderer = lazy(() => load().then((module) => ({ default: module.InlineMarkdown })));

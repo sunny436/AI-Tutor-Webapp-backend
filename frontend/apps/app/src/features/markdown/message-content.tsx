@@ -27,7 +27,7 @@
 
 import "katex/contrib/mhchem";
 import { Image as ImageIcon } from "lucide-react";
-import { Fragment, memo } from "react";
+import { Fragment, memo, useEffect, useRef, useState } from "react";
 import type { ComponentPropsWithoutRef, JSX, ReactNode } from "react";
 import ReactMarkdown, { type Components } from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
@@ -301,6 +301,27 @@ export const InlineMarkdown = memo(function InlineMarkdown({ text }: { text: str
   );
 });
 
+/**
+ * The streaming last block as it should be parsed now. A long one (a table, a code block, a long list)
+ * is parsed again every 100-300 ms by its length instead of at every reveal tick (~50 ms): each parse
+ * redoes the whole block, and on a slow phone (CPU 4x) the parses kept typing waiting (2026-10-23).
+ * A short block, and every block once the reply has finished, is the text itself.
+ */
+function useStreamingBlock(block: string, live: boolean): string {
+  const every = block.length < 1000 ? 0 : block.length < 2000 ? 100 : block.length < 3000 ? 200 : 300;
+  const slow = live && every > 0;
+  const [shown, setShown] = useState(block);
+  const latest = useRef(block);
+  latest.current = block;
+  useEffect(() => {
+    if (!slow) return;
+    setShown(latest.current);
+    const timer = setInterval(() => setShown(latest.current), every);
+    return () => clearInterval(timer);
+  }, [slow, every]);
+  return slow ? shown : block;
+}
+
 function MessageContentImpl({
   content,
   streaming = false,
@@ -315,6 +336,7 @@ function MessageContentImpl({
 }) {
   const blocks = splitBlocks(content);
   const last = blocks.length - 1;
+  const tail = useStreamingBlock(blocks[last] ?? "", streaming);
   return (
     <CitationsContext.Provider value={citations}>
       <TestContext.Provider value={tests}>
@@ -325,7 +347,7 @@ function MessageContentImpl({
               {/* The same line break the parser puts between top-level elements: identical HTML. */}
               {index > 0 && "\n"}
               <LiveContext.Provider value={streaming && index === last}>
-                <Markdown text={streaming && index === last ? streamSafe(block) : block} />
+                <Markdown text={streaming && index === last ? streamSafe(tail) : block} />
               </LiveContext.Provider>
             </Fragment>
           ))}

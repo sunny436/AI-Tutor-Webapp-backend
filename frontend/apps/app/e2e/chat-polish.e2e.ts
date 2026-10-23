@@ -548,11 +548,12 @@ test("a long title moves only while its row is hovered or keyboard-focused; at r
   const moving = () =>
     page.locator(".marquee-track").evaluateAll((tracks) => tracks.reduce((count, track) => count + track.getAnimations().length, 0));
 
-  // At rest: still, an ellipsis, no mask, the first letter fully inside; nothing moves anywhere.
+  // At rest: still, an ellipsis, no mask, the first letter fully inside; nothing moves anywhere. (It is
+  // measured only when hovered or focused, the only times it can move.)
   await page.mouse.move(900, 400);
   await expect(row(long)).toHaveAccessibleName(LONG);
   expect(await state(long)).toEqual({
-    overflowing: true,
+    overflowing: false,
     textOverflow: "ellipsis",
     mask: "none",
     animation: "none",
