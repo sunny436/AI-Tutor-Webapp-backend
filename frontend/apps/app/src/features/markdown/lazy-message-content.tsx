@@ -19,22 +19,38 @@ import type { TestState } from "./context";
  * it a little (`useRendererReady`): its replies drawn as plain text and then redrawn moved the whole
  * transcript (a layout shift of 0.23 opening a long chat, 2026-10-23).
  */
-let loaded = false;
+type Renderers = typeof import("./message-content");
+let loaded: Renderers | null = null;
 const waiting = new Set<() => void>();
 const load = () =>
   import("./message-content").then((module) => {
-    loaded = true;
+    loaded = module;
     for (const notify of waiting) notify();
     waiting.clear();
     return module;
   });
+
+/**
+ * What `lazy` loads. Once the renderer is here it is handed over at once, by a thenable that calls
+ * back synchronously: `lazy` hears from a resolved Promise only a microtask later, so the first reply
+ * drawn would still show its plain-text fallback for a frame and be redrawn (the same layout shift).
+ */
+function renderer<T>(pick: (module: Renderers) => T): () => Promise<{ default: T }> {
+  return () => {
+    const ready = loaded;
+    if (!ready) return load().then((module) => ({ default: pick(module) }));
+    const result = { default: pick(ready) };
+    // biome-ignore lint/suspicious/noThenProperty: a synchronous thenable on purpose (React's lazy reads it at once)
+    return { then: (resolve: (value: typeof result) => void) => resolve(result) } as unknown as Promise<typeof result>;
+  };
+}
 
 /** At most this long a transcript waits for the renderer; then its replies show as plain text. */
 const RENDERER_WAIT_MS = 2500;
 
 /** Whether replies can be drawn now: the renderer has loaded, failed, or RENDERER_WAIT_MS have passed. */
 export function useRendererReady(): boolean {
-  const [ready, setReady] = useState(loaded);
+  const [ready, setReady] = useState(loaded !== null);
   useEffect(() => {
     if (ready) return;
     const finish = () => setReady(true);
@@ -50,8 +66,8 @@ export function useRendererReady(): boolean {
   return ready;
 }
 
-const Renderer = lazy(() => load().then((module) => ({ default: module.MessageContent })));
-const InlineRenderer = lazy(() => load().then((module) => ({ default: module.InlineMarkdown })));
+const Renderer = lazy(renderer((module) => module.MessageContent));
+const InlineRenderer = lazy(renderer((module) => module.InlineMarkdown));
 
 export function preloadMessageContent(): void {
   void load();
