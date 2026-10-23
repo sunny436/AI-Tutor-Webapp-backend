@@ -73,6 +73,11 @@ _BARE_EXERCISE = re.compile(r"\{\s*\"text\"\s*:")
 _CARD_OPEN = re.compile(r"(?:^|\n)[ \t]*:{3,}[ \t]*[\w-]*(?:fill|blank)[\w-]*(?:\[[^\]\n]*\]|\{[^}\n]*\})*\s*$", re.I)
 _CARD_CLOSE = re.compile(r"\s*\n[ \t]*:{3,}[ \t]*(?=\n|$)")
 EXERCISE_KEYS = {"title", "text", "explanation"}
+# Or with no JSON at all: a ::: card whose own text has the [[blanks]] (`:::steps[...]`, `:::fill-blank`;
+# a third of the Hindi exercises on 2026-10-23). That text is the exercise.
+_CARD_START = re.compile(r"^[ \t]*:{3,}[ \t]*[\w-]+(?:\[(?P<title>[^\]\n]*)\])?")
+_CARD_END = re.compile(r"^[ \t]*:{3,}[ \t]*$")
+_BOLD_BLANK = re.compile(r"\*\*(\[\[[^\]\n]+\]\])\*\*")
 # Any fence, as app/assessments/state.py finds them: after indentation, list markers or quote marks;
 # its language is the first word of its info.
 _OPEN = re.compile(
@@ -417,6 +422,27 @@ def _exercise(value: Any) -> bool:
     )
 
 
+def _card_exercises(text: str) -> str:
+    """Text with each ::: card whose own text has [[blanks]] (and no JSON or block) as a ```fill-blank
+    block of that text, after its title."""
+    lines = text.split("\n")
+    out: list[str] = []
+    index = 0
+    while index < len(lines):
+        opened = _CARD_START.match(lines[index])
+        end = next((at for at in range(index + 1, len(lines)) if _CARD_END.match(lines[at])), None) if opened else None
+        body = "\n".join(lines[index + 1 : end]).strip() if opened and end is not None else ""
+        if "[[" not in body or "```" in body or _BARE_EXERCISE.search(body):
+            out.append(lines[index])
+            index += 1
+            continue
+        title = (opened["title"] or "").strip()
+        exercise = json.dumps({"text": _BOLD_BLANK.sub(r"\1", body)}, ensure_ascii=False)
+        out.append((f"**{title}**\n\n" if title else "") + f"```fill-blank\n{exercise}\n```")
+        index = end + 1
+    return "\n".join(out)
+
+
 def _fenced(content: str) -> str:
     """The reply with each exercise the model wrote without its fence put in a ```fill-blank fence;
     the reply as it was when there is none."""
@@ -443,8 +469,10 @@ def _fenced(content: str) -> str:
                         stop = closed.end() if closed else stop
                     pieces += [before, f"\n\n{block}\n\n"]
                     position = stop
-            parts.append("".join([*pieces, raw[position:]]))
-            repaired = repaired or bool(pieces)
+            text = "".join([*pieces, raw[position:]])
+            carded = _card_exercises(text) if "[[" in text else text
+            parts.append(carded)
+            repaired = repaired or bool(pieces) or carded != text
             continue
         value = None
         if language != "fill-blank":

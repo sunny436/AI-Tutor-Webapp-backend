@@ -112,8 +112,9 @@ A practice test in the chat is always the bank's, never the model's (`QUESTION_B
    malformed key (an empty alternative, a blank over 80 characters, more than 20 blanks, invalid JSON)
    refuses it whole, so it is shown read-only. Its key is the model's, so it is never practice evidence:
    no mastery, mistakes, revision or learning day. An exercise the model writes without its fence (as a
-   `:::fill-blank` card, the study cards' form; as bare JSON; or in a json or misnamed block) is put in its
-   fill-blank fence first: on 2026-10-23 most exercises came that way and showed their answer key as text.
+   `:::fill-blank` card, the study cards' form; as bare JSON; in a json or misnamed block; or as a card's
+   plain text with `[[blanks]]`, often in Hindi) is put in its fill-blank fence first: on 2026-10-23 most
+   exercises came that way and showed their answer key as text.
 
 **Each answer** (`POST /v1/messages/{id}/assessment-responses`, `app/chat/router.py`) is one transaction,
 under the reply's row lock: the response is checked and recorded on the reply; the answer is written to
