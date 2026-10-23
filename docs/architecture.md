@@ -98,7 +98,8 @@ citations) without schema changes.
    load the conversation from PostgreSQL; with `INTENT_ROUTER` on, read what the new message asks for
    (`app/intents`: up to two short classification requests to Ollalink, the group and then the intent
    within it, capped together by `INTENT_ROUTER_TIMEOUT_S`, never retried, never failing the turn) and
-   rebuild the prompt with it; run the LangGraph graph
+   rebuild the prompt with it, while the graph's first two steps (the knowledge search) already run
+   (`graph.prefetch`; used only when the intent kept the search on); run the LangGraph graph
    (`receive_query → retrieve_context → assemble_context → generate_answer`, see [rag.md](rag.md));
    push `token` events; stop on cancel (cancelling the graph step cancels the LLM stream).
 3. **Finalize**: write content, status and metadata (including the internal retrieval summary and the

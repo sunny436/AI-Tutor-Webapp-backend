@@ -474,6 +474,16 @@ class ChatService:
             await generation.queue.put(None)  # end of stream, always
             self.generations.remove(turn.assistant_id)
 
+    def _classifies(self, turn: PreparedTurn) -> bool:
+        """Whether _route will wait for the classifier on this turn (INTENT_ROUTER=on, a new message that
+        is not an explicit hint-only request)."""
+        return (
+            self.settings.intent_router == "on"
+            and self.intents is not None
+            and turn.user_message is not None
+            and not explicit_hint_only(turn.user_message.content)
+        )
+
     async def _route(
         self, turn: PreparedTurn, conversation: list[ChatMessage], generation: Generation
     ) -> tuple[AssistantConfig, dict | None, asyncio.Task | None]:
@@ -603,6 +613,21 @@ class ChatService:
                         search=turn.config.retrieval is not None,
                         scope=decision,
                     )
+                # While the router reads the message (INTENT_ROUTER=on: two Ollalink requests, about 1.1 s from
+                # the server), the knowledge search already runs: an intent can only turn it off, so it is the
+                # search the graph would make. The router then adds only what it takes beyond the search.
+                prepared, ahead = turn.config.retrieval, None
+                if self._classifies(turn):
+                    ahead = asyncio.ensure_future(
+                        self.rag_graph.prefetch(
+                            {
+                                "user_id": turn.user.id,
+                                "conversation": conversation,
+                                "retrieval": prepared,
+                                "files": turn.files,
+                            }
+                        )
+                    )
                 config, intent, shadow = await self._route(turn, conversation, generation)
                 state = {
                     "user_id": turn.user.id,
@@ -612,6 +637,17 @@ class ChatService:
                     "generation": options,
                     "files": turn.files,
                 }
+                if ahead is not None:
+                    found = None
+                    if config.retrieval == prepared:  # else the intent turned the search off: the graph as before
+                        try:
+                            _, found = await self._wait(ahead, generation)
+                        except Exception:  # noqa: BLE001 - never fails a turn: the graph searches itself
+                            found = None
+                    if found is None:  # stopped (the graph's first step stops too), or not used
+                        ahead.cancel()
+                    else:
+                        state.update(found)
                 events = self.rag_graph.astream(state, stream_mode="custom").__aiter__()
                 try:
                     while True:

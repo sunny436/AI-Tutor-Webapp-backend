@@ -73,7 +73,11 @@ class StudyStore {
   }
 
   apply(server: StudyState): void {
-    this.set({ server, loadError: null, offline: false });
+    // Never back to an older state: a beat sent before an action can be answered after it, and its
+    // session (the segment before a resume, say) would make the next action a 409.
+    const shown = this.snapshot.server;
+    const older = shown !== null && Date.parse(server.serverTime) < Date.parse(shown.serverTime);
+    this.set({ ...(older ? {} : { server }), loadError: null, offline: false });
   }
 
   async refresh(): Promise<void> {

@@ -16,6 +16,10 @@ Failure policy: retrieval never fails a turn (it degrades to "no context" with a
 reason code); LLM errors propagate unchanged (typed LLMError) to the chat layer.
 Cancelling the consumer cancels the running node, which closes the LLM stream.
 
+Ahead of the graph: `graph.prefetch(state)` runs receive_query and retrieve_context alone, so the chat
+layer can search while it waits for something else (the intent router); a state given their result
+with `prefetched` skips both steps. The search is the one the graph would make with the same state.
+
 This module depends on abstractions only: an LLMProvider, a retriever factory that
 returns a LangChain BaseRetriever, and a knowledge-presence check.
 """
@@ -58,6 +62,8 @@ class TurnState(TypedDict, total=False):
     # files attached to this conversation that the turn may read (app/files): dicts with
     # id, filename, char_count, chunk_count; most recently attached first
     files: list[dict]
+    # receive_query and retrieve_context already ran (graph.prefetch): their result is in the state
+    prefetched: bool
     # produced by nodes
     question: str
     search_query: str  # what the knowledge base is searched with (search_query_for)
@@ -99,6 +105,8 @@ def build_rag_graph(deps: RagDependencies):
     settings = deps.settings
 
     async def receive_query(state: TurnState) -> dict:
+        if state.get("prefetched"):
+            return {}
         conversation = state.get("conversation") or []
         question = conversation[-1].content if conversation and conversation[-1].role == "user" else ""
         reason = None
@@ -115,6 +123,8 @@ def build_rag_graph(deps: RagDependencies):
         return {"question": question, "search_query": search_query, "retrieval_summary": summary, "documents": []}
 
     async def retrieve_context(state: TurnState) -> dict:
+        if state.get("prefetched"):
+            return {}
         # Attached files are read whether or not the knowledge base is searched: RAG_ENABLED and
         # the knowledge base's own skip reasons concern the knowledge base only.
         result = await retrieve_knowledge(state)
@@ -252,6 +262,11 @@ def build_rag_graph(deps: RagDependencies):
         writer({"event": "llm_finished", "usage": usage, "finish_reason": finish_reason})
         return {"answer": "".join(pieces)}
 
+    async def prefetch(state: TurnState) -> dict:
+        """receive_query then retrieve_context, outside the graph: their result, for a state marked prefetched."""
+        found = await receive_query(state)
+        return {**found, **await retrieve_context({**state, **found}), "prefetched": True}
+
     graph = StateGraph(TurnState)
     for name, node in zip(NODES, (receive_query, retrieve_context, assemble_context, generate_answer), strict=True):
         graph.add_node(name, node)
@@ -259,4 +274,6 @@ def build_rag_graph(deps: RagDependencies):
     for current, following in zip(NODES, NODES[1:], strict=False):
         graph.add_edge(current, following)
     graph.add_edge(NODES[-1], END)
-    return graph.compile()
+    compiled = graph.compile()
+    compiled.prefetch = prefetch
+    return compiled

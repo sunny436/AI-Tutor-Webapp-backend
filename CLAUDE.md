@@ -163,8 +163,10 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 - **One model call per turn:** there are no graph retries, and `FallbackProvider` switches providers
   only before the first token. `INTENT_ROUTER` (off by default) adds up to two short classification requests
   before it (Ollalink, `app/intents`): they write no text, are capped together by `INTENT_ROUTER_TIMEOUT_S`,
-  are never retried and never fail a turn. `STUDY_SCOPE` (off by default)
-  adds one more request of its own, the same way.
+  are never retried and never fail a turn. While they run (about 1.1 s from the server: 141 ms of network
+  each, Ollalink serves one request at a time), the graph's own search already runs (`graph.prefetch`, the
+  same search: an intent can only turn it off), so the router adds only its time beyond the search.
+  `STUDY_SCOPE` (off by default) adds one more request of its own, the same way, before both.
 - **Intent router** (`app/intents`, `INTENT_ROUTER=off|shadow|on`): Ollalink's classification model reads
   which of the owner's 46 intents (`taxonomy.py`, `TAXONOMY_VERSION`) a new message asks for, one question per
   request: the group, then only that group's intents (fixed option texts of at most 80 characters; no second

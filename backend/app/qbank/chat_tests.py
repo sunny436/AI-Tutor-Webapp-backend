@@ -78,6 +78,11 @@ EXERCISE_KEYS = {"title", "text", "explanation"}
 _CARD_START = re.compile(r"^[ \t]*:{3,}[ \t]*[\w-]+(?:\[(?P<title>[^\]\n]*)\])?")
 _CARD_END = re.compile(r"^[ \t]*:{3,}[ \t]*$")
 _BOLD_BLANK = re.compile(r"\*\*(\[\[[^\]\n]+\]\])\*\*")
+# Or as a leaf directive, the ::file{ref=F1} form: ::fill-blank{text="... [[answer]] ..." explanation="..."}.
+_DIRECTIVE = re.compile(r"^[ \t]*::[\w-]*(?:fill|blank)[\w-]*\{(?P<attrs>.*?\")\s*\}[ \t]*$", re.I | re.M | re.S)
+_ATTRIBUTE = re.compile(r"(\w+)\s*=\s*\"((?:[^\"\\]|\\.)*)\"")
+# Or in its block but not strict JSON: line breaks inside its strings, or `text: ...` lines.
+_KEY_LINE = re.compile(r"^\s*\"?(text|explanation)\"?\s*:\s*(.+?)\s*,?\s*$", re.M)
 # Any fence, as app/assessments/state.py finds them: after indentation, list markers or quote marks;
 # its language is the first word of its info.
 _OPEN = re.compile(
@@ -443,6 +448,33 @@ def _card_exercises(text: str) -> str:
     return "\n".join(out)
 
 
+def _directive_exercises(text: str) -> str:
+    """Text with each ::fill-blank{text="..."} directive as a ```fill-blank block of its fields."""
+
+    def block(match: re.Match) -> str:
+        fields = {name: value.replace('\\"', '"') for name, value in _ATTRIBUTE.findall(match["attrs"])}
+        value = {key: fields[key] for key in ("text", "explanation") if key in fields}
+        return f"```fill-blank\n{json.dumps(value, ensure_ascii=False)}\n```" if _exercise(value) else match[0]
+
+    return _DIRECTIVE.sub(block, text)
+
+
+def _lenient(body: str) -> str | None:
+    """A fill-blank block's body that is not strict JSON but reads as an exercise, as strict JSON; None
+    when it is strict JSON already, or not an exercise."""
+    try:
+        json.loads(body)
+        return None
+    except ValueError:
+        pass
+    try:
+        value = json.loads(body, strict=False)  # line breaks and tabs inside its strings
+    except ValueError:
+        fields = dict(_KEY_LINE.findall(body))
+        value = {key: fields[key].strip().strip('"') for key in ("text", "explanation") if key in fields}
+    return json.dumps(value, ensure_ascii=False) if _exercise(value) else None
+
+
 def _fenced(content: str) -> str:
     """The reply with each exercise the model wrote without its fence put in a ```fill-blank fence;
     the reply as it was when there is none."""
@@ -470,9 +502,13 @@ def _fenced(content: str) -> str:
                     pieces += [before, f"\n\n{block}\n\n"]
                     position = stop
             text = "".join([*pieces, raw[position:]])
-            carded = _card_exercises(text) if "[[" in text else text
+            carded = _card_exercises(_directive_exercises(text)) if "[[" in text else text
             parts.append(carded)
             repaired = repaired or bool(pieces) or carded != text
+            continue
+        if language == "fill-blank" and (strict := _lenient(body)) is not None:
+            parts.append(f"```fill-blank\n{strict}\n```")
+            repaired = True
             continue
         value = None
         if language != "fill-blank":

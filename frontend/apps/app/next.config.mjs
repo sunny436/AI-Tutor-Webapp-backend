@@ -31,20 +31,23 @@ const KATEX = createRequire(import.meta.url).resolve("katex").replace(/katex\.js
  * loading remote scripts or sending data anywhere but here. Dev adds
  * 'unsafe-eval' and ws: for Fast Refresh only.
  *
- * One outside origin: Cloudflare Turnstile (challenges.cloudflare.com), the CAPTCHA the sign-in
- * form shows only when an address is being hammered (lib/auth/config.ts). Its script, and the
- * iframe it draws the check in.
+ * Outside origins: Cloudflare Turnstile (challenges.cloudflare.com), the CAPTCHA the sign-in
+ * form shows only when an address is being hammered (lib/auth/config.ts): its script, and the
+ * iframe it draws the check in. And Cloudflare Web Analytics, which the site's Cloudflare zone adds
+ * to every page it serves (cookieless page timings; Cloudflare already carries every request):
+ * its script and where it reports. Blocked, it was a console error on every page (2026-10-23).
  */
 const isDev = process.env.NODE_ENV !== "production";
 const TURNSTILE = "https://challenges.cloudflare.com";
+const CF_INSIGHTS = { script: "https://static.cloudflareinsights.com", report: "https://cloudflareinsights.com" };
 const contentSecurityPolicy = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline' ${TURNSTILE}${isDev ? " 'unsafe-eval'" : ""}`,
+  `script-src 'self' 'unsafe-inline' ${TURNSTILE} ${CF_INSIGHTS.script}${isDev ? " 'unsafe-eval'" : ""}`,
   `frame-src ${TURNSTILE}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self' data:",
-  `connect-src 'self'${isDev ? " ws: wss:" : ""}`,
+  `connect-src 'self' ${CF_INSIGHTS.report}${isDev ? " ws: wss:" : ""}`,
   "object-src 'none'",
   "base-uri 'none'",
   "form-action 'self'",
