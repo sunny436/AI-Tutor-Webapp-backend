@@ -4,7 +4,7 @@ import { Button } from "@v1/ui/button";
 import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import { ArrowDown, MessageSquareOff } from "lucide-react";
 import Link from "next/link";
-import { useRef } from "react";
+import { startTransition, useEffect, useRef, useState } from "react";
 
 import { useRendererReady } from "@/features/markdown/lazy-message-content";
 import { describeCode } from "@/lib/api/errors";
@@ -33,11 +33,18 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
   const order = entry?.order ?? [];
   const status = entry?.status ?? "idle";
   // An opened chat keeps its skeleton until its replies can be drawn (never while a reply streams, and
-  // never again once they are on screen).
+  // never again once they are on screen), then draws them in a transition: React renders a long
+  // transcript in slices, not as one long task (2.2 s opening a 50-message chat on a phone, CPU 4x).
   const rendererReady = useRendererReady();
-  const drawn = useRef(false);
-  const drawing = rendererReady || Boolean(entry?.stream) || drawn.current;
-  if (drawing && order.length > 0) drawn.current = true;
+  const [drawn, setDrawn] = useState(false);
+  const live = Boolean(entry?.stream);
+  const hasMessages = order.length > 0;
+  useEffect(() => {
+    if (drawn || !hasMessages) return;
+    if (live) setDrawn(true);
+    else if (rendererReady) startTransition(() => setDrawn(true));
+  }, [drawn, hasMessages, live, rendererReady]);
+  const drawing = drawn || live;
 
   const loadOlder = async () => {
     const element = scrollRef.current;
