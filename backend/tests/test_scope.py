@@ -225,6 +225,19 @@ async def test_the_chat_redirects_unrelated_messages_and_keeps_learning_requests
             assert (rule["decision"], rule["source"]) == (ALLOW_STUDY, "rule")
         assert len(sent) == asked
 
+        # In a chat with a test or an exercise, a message read as unrelated is not turned away: "how did I
+        # do on the exercise?" (seen live) is about it. The tutor, with the policy, answers it.
+        original, exercise = fake_llm.reply, {"text": "Plants make food by [[photosynthesis]]."}
+        fake_llm.reply = lambda messages: "Try this.\n\n```fill-blank\n" + json.dumps(exercise) + "\n```"
+        replies["payload"] = reading("study")
+        await stream_chat(client, headers, "Give me a fill in the blanks on plants", conversation_id)
+        fake_llm.reply, replies["payload"], calls = original, reading("unrelated"), len(fake_llm.calls)
+        _, events = await stream_chat(client, headers, "how did I do on the exercise?", conversation_id)
+        assert len(fake_llm.calls) == calls + 1 and events[-1][1]["message"]["content"] != COPY["english"]
+        kept = (await row(app, events[-1][1]["message"]["id"])).metadata_["scope"]
+        assert (kept["decision"], kept["best"], kept["reason"]) == (ALLOW_STUDY, "unrelated", "practice")
+        assert kept["applied"] is True
+
 
 @pytest.mark.parametrize("mode", ["off", "shadow"])
 async def test_off_and_shadow_change_nothing(mode):

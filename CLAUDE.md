@@ -182,7 +182,8 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   PadhAI helps with? Its own Ollalink request through the router's client (one choice question: study,
   support, unclear, mixed, unrelated), never an intent. Fixed rules first (small talk, "hint only", bare
   files). `on`: a policy paragraph after the frozen prompt on every turn; `REDIRECT` (P(unrelated) ≥
-  `SCOPE_MIN_REDIRECT`) is the app's own reply with no model, search, learning day or title; other decisions
+  `SCOPE_MIN_REDIRECT`, never in a chat with a test or an exercise: reason `practice`) is the app's own
+  reply with no model, search, learning day or title; other decisions
   add one conditional line; a failure is the tutor with the policy. Stored in `messages.metadata.scope`.
 - **Retrieval never fails a turn:** it is skipped or fails with a reason code. Small talk that opens a chat
   ("hi": `is_meaningful`) searches nothing; a short follow-up ("why?") is searched with the question before it.

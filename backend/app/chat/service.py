@@ -526,6 +526,8 @@ class ChatService:
             ok, found = await self._wait(self.intents.scope(conversation, turn.attached_kinds), generation)
             if not ok:  # stopped while reading: the turn stops at once
                 return None, None
+            if found.decision == REDIRECT and turn.tests:  # the chat has a test or an exercise: most likely about it
+                found = Scope(ALLOW_STUDY, found.best, found.confidence, "practice", found.source, found.latency_ms)
         return found.record(mode == "on"), None
 
     async def _apply(self, turn: PreparedTurn, intent: str) -> tuple[AssistantConfig, str | None]:

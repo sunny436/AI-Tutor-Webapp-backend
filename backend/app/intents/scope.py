@@ -15,7 +15,9 @@ only records it (shadow), as messages.metadata.scope (internal).
   message is turned away only when the model is sure it is unrelated (SCOPE_MIN_REDIRECT, chosen on
   labelled cases): a learning question must not be refused on a guess. Support, unclear and mixed need
   SCOPE_MIN_CONFIDENCE; below it the message is a learning request. No reading at all (a failure, a
-  pause) is no decision: the tutor as usual, with POLICY.
+  pause) is no decision: the tutor as usual, with POLICY. In a chat with a test or an exercise, an
+  unrelated reading is not turned away either (reason `practice`, service.py): "how did I do on the
+  exercise?" was read as unrelated (2026-10-23), and the tutor, with POLICY, still declines a real one.
 - **What each decision does** (service.py): POLICY goes into every system prompt (also with no
   decision), so the tutor itself declines unrelated tasks and answers the learning part of a mixed
   message. REDIRECT sends `redirect_copy` without the model, retrieval or the question bank, and never
