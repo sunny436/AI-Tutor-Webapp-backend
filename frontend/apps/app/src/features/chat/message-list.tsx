@@ -79,7 +79,7 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
     );
   } else if ((status === "loading" || status === "idle") && order.length === 0) {
     body = (
-      <SkeletonGroup label="Loading conversation" className="mx-auto w-full px-5 sm:px-6 lg:w-[min(100%,clamp(42.5rem,75%,72rem))] space-y-8 py-8">
+      <SkeletonGroup label="Loading conversation" className="mx-auto w-full px-5 sm:px-6 lg:w-[min(100%,clamp(42.5rem,75%,57rem))] space-y-8 py-8">
         <Skeleton className="ml-auto h-10 w-2/5 rounded-2xl" />
         <Skeleton className="h-24 w-4/5 rounded-2xl" />
         <Skeleton className="ml-auto h-10 w-1/3 rounded-2xl" />
@@ -89,7 +89,7 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
     body = <ChatEmptyState chatKey={chatKey} />;
   } else {
     body = (
-      <div className="mx-auto w-full px-5 sm:px-6 lg:w-[min(100%,clamp(42.5rem,75%,72rem))] space-y-8 py-8">
+      <div className="mx-auto w-full px-5 sm:px-6 lg:w-[min(100%,clamp(42.5rem,75%,57rem))] space-y-8 py-8">
         {entry?.nextCursor && (
           <div className="flex justify-center">
             <Button type="button" variant="ghost" size="sm" onClick={loadOlder} disabled={entry.loadingOlder}>

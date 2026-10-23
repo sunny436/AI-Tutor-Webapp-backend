@@ -25,6 +25,8 @@ export function ChatEmptyState({ chatKey }: { chatKey: string }) {
   useLayoutEffect(() => setGreeting(pickGreeting(chatKey, pool)), [chatKey, pool]);
   const ref = useLineGradient(greeting);
 
+  // Wider than the chat column (57rem, message-list.tsx): at 57rem a long greeting is shrunk to one line
+  // only when the web font arrives, and its height change moves the page (a layout shift).
   return (
     <div className="mx-auto flex w-full flex-1 flex-col justify-end px-5 pb-6 pt-10 sm:px-6 lg:w-[min(100%,clamp(42.5rem,75%,72rem))]">
       <StudyIllustration />
