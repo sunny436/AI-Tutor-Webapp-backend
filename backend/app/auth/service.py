@@ -218,6 +218,21 @@ class AuthService:
         await self._throttle("file_upload_user", key, FILES_UPLOADS_PER_WINDOW)
         await self.db.commit()
 
+    async def throttle_voice(self, user: User, lane: str) -> None:
+        """Voice mode (app/voice), `lane` "stt" or "tts": VOICE_*_PER_MINUTE and VOICE_*_PER_DAY per student.
+        Counted before OllaLink is asked, so refused and failed requests cost an attempt too."""
+        settings = self.settings
+        per_minute, per_day = (
+            (settings.voice_transcriptions_per_minute, settings.voice_transcriptions_per_day)
+            if lane == "stt"
+            else (settings.voice_speech_per_minute, settings.voice_speech_per_day)
+        )
+        scope, key = f"voice_{lane}_user", str(user.id)
+        if await self._count_attempts(scope, key, minutes=24 * 60) >= per_day:
+            raise RateLimited("You've reached today's voice limit. Please try again tomorrow.")
+        await self._throttle(scope, key, per_minute, minutes=1)
+        await self.db.commit()
+
     async def set_avatar(self, user: User, avatar: ProcessedAvatar) -> User:
         # The upsert locks the photo row until commit, so concurrent uploads apply one after the
         # other and users.avatar_hash always names the stored image.

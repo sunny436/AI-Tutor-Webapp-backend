@@ -46,6 +46,8 @@ from app.progress.activity import record_question
 from app.progress.learning import is_meaningful, now, record_learning, tutor_progress
 from app.qbank import chat_tests
 from app.settings import Settings
+from app.voice.expression import expression_for
+from app.voice.policy import speaks_their_language
 
 log = get_logger("app.chat")
 
@@ -120,6 +122,8 @@ class PreparedTurn:
     intent: dict | None = None
     # messages.metadata.scope (internal, STUDY_SCOPE): the same, for the study scope (_scope).
     scope: dict | None = None
+    # Spoken in voice mode (app/voice) by a student it is for: the tutor is told, and the face's expression is sent.
+    voice: bool = False
 
     def meta_event(self) -> ChatEvent:
         return ChatEvent(
@@ -225,6 +229,7 @@ class ChatService:
         *,
         search: bool = True,
         scope: str | None = None,
+        voice: bool = False,
     ) -> AssistantConfig:
         """The turn's prompt and retrieval (app/chat/assistant.py), the same way for a new message, a
         regenerated reply, an intent the router applies (_route) and a study scope decision (_scope)."""
@@ -240,6 +245,7 @@ class ChatService:
             search=search,
             scoped=self.settings.study_scope == "on",
             scope=scope,
+            voice=voice,
         )
 
     async def prepare_message(
@@ -249,6 +255,8 @@ class ChatService:
         conversation_id: uuid.UUID | None,
         text: str,
         attachment_ids: list[uuid.UUID] | None = None,
+        *,
+        voice: bool = False,
     ) -> PreparedTurn:
         if len(text) > self.settings.chat_max_message_chars:
             raise ValidationFailed("The message is too long.")
@@ -265,6 +273,8 @@ class ChatService:
 
         # Read before this question is counted: the same as the Settings preview showed.
         student = await self._student(session, user)
+        # Voice mode is English only (app/voice): for anyone else a spoken message is a typed one.
+        voice = voice and self.settings.voice_rollout_allows(user.email) and speaks_their_language(student)
         tests = await self._tests(session, conversation.id)
         bank = await self._bank(session, text, student, conversation.id)
         # Small talk that opens a chat ("hi") searches nothing; "why?" after a question still does.
@@ -289,7 +299,7 @@ class ChatService:
             conversation,
             user_message,
             assistant.id,
-            self._config(user, conversation, student, tests, bank, search=search),
+            self._config(user, conversation, student, tests, bank, search=search, voice=voice),
             files=await files.conversation_files(session, conversation.id, user.id),
             user_attachments=attachments,
             asked_at=asked_at,
@@ -297,6 +307,7 @@ class ChatService:
             tests=tests,
             bank=bank,
             attached_kinds=tuple(file.kind for file in attached),
+            voice=voice,
         )
 
     async def prepare_regenerate(self, session: AsyncSession, user: User, conversation_id: uuid.UUID) -> PreparedTurn:
@@ -540,6 +551,17 @@ class ChatService:
                 found = Scope(ALLOW_STUDY, found.best, found.confidence, "practice", found.source, found.latency_ms)
         return found.record(mode == "on"), None
 
+    async def _expression(
+        self, turn: PreparedTurn, generation: Generation, intent: dict | None, decision: str | None
+    ) -> None:
+        """Voice mode: the face's expression for this reply (app/voice/expression.py), before its first words.
+        Only the expression word is sent; a typed turn sends nothing."""
+        if turn.voice:
+            expression = expression_for(intent, decision, self.settings.intent_min_group_confidence)
+            await generation.queue.put(
+                ChatEvent("expression", {"messageId": str(turn.assistant_id), "expression": expression})
+            )
+
     async def _apply(self, turn: PreparedTurn, intent: str) -> tuple[AssistantConfig, str | None]:
         """The turn's config with an intent, and the question bank's chapters it gives the tutor: a test
         intent gets them even when the message's words did not ask for a test (chat_tests.menu)."""
@@ -566,6 +588,7 @@ class ChatService:
             intent,
             search=search,
             scope=_decision(turn.scope),
+            voice=turn.voice,
         )
         return config, bank
 
@@ -601,6 +624,7 @@ class ChatService:
                 text = redirect_copy(turn.user_message.content if turn.user_message is not None else "", language)
                 ttft_ms = int((time.monotonic() - started) * 1000)
                 pieces.append(text)
+                await self._expression(turn, generation, None, decision)
                 await generation.queue.put(ChatEvent("token", {"text": text}))
             else:
                 if turn.user_message is not None and decision in INSTRUCTIONS:  # its line, in the prompt
@@ -612,6 +636,7 @@ class ChatService:
                         turn.bank,
                         search=turn.config.retrieval is not None,
                         scope=decision,
+                        voice=turn.voice,
                     )
                 # While the router reads the message (INTENT_ROUTER=on: two Ollalink requests, about 1.1 s from
                 # the server), the knowledge search already runs: an intent can only turn it off, so it is the
@@ -629,6 +654,7 @@ class ChatService:
                         )
                     )
                 config, intent, shadow = await self._route(turn, conversation, generation)
+                await self._expression(turn, generation, intent, decision)
                 state = {
                     "user_id": turn.user.id,
                     "conversation": conversation,

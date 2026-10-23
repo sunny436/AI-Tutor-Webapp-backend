@@ -154,6 +154,30 @@ class Settings(BaseSettings):
     # While students use the app, one small warm-up to Ollalink when nothing was sent for this long, so a
     # message after a quiet spell is not slow (IntentClassifier.nudge). 0: never.
     ollalink_warm_after_s: float = Field(default=45.0, ge=0, le=3600)
+    # ---- voice mode (app/voice): the student speaks, OllaLink's speech-to-text hears it, the tutor answers as
+    # for a typed message, and OllaLink's text-to-speech reads the answer aloud, sentence by sentence. English
+    # only (OllaLink's speech output has no Hindi), for students whose tutor language is English or unset.
+    # Rollout off -> qa (only the accounts in VOICE_QA_EMAILS, comma-separated) -> on; every voice route checks
+    # it itself. The key is OLLALINK_API_KEY.
+    voice_mode: Literal["off", "qa", "on"] = "off"
+    voice_qa_emails: str = ""
+    voice_provider: Literal["ollalink", "fake"] = "ollalink"
+    ollalink_stt_url: str = "https://gpu-transcribe.ollalink.com"
+    ollalink_tts_url: str = "https://gpu-tts.ollalink.com"
+    voice_tts_voice: str = "hadley"  # English; GET {OLLALINK_TTS_URL}/voices lists them (hadley is its default)
+    # Per student, counted in auth_attempts (they hold across processes and restarts).
+    voice_transcriptions_per_minute: int = Field(default=20, ge=1, le=600)
+    voice_transcriptions_per_day: int = Field(default=400, ge=1, le=100_000)
+    voice_speech_per_minute: int = Field(default=120, ge=1, le=6000)
+    voice_speech_per_day: int = Field(default=3000, ge=1, le=1_000_000)
+    # Calls to OllaLink at once, counted in THIS process (the API runs as one: deploy/systemd/aichat-api.service);
+    # with more processes each would allow these. Per student, and in all.
+    voice_transcriptions_in_flight_per_user: int = Field(default=1, ge=1, le=8)
+    voice_speech_in_flight_per_user: int = Field(default=2, ge=1, le=8)
+    voice_transcriptions_in_flight: int = Field(default=8, ge=1, le=256)
+    voice_speech_in_flight: int = Field(default=16, ge=1, le=256)
+    # Speech for one reply at most (characters, summed over its sentences), also counted in this process.
+    voice_speech_chars_per_message: int = Field(default=8_000, ge=600, le=100_000)
 
     # ---- Study time (app/study): how long without input counts as idle, by mode. Reading allows
     # longer (reading and thinking need no clicks); the reading prompt is always shorter than this.
@@ -250,6 +274,16 @@ class Settings(BaseSettings):
         return self.study_scope != "off" and bool(self.ollalink_api_key.get_secret_value())
 
     @property
+    def voice_qa_list(self) -> frozenset[str]:
+        return frozenset(email.strip().lower() for email in self.voice_qa_emails.split(",") if email.strip())
+
+    def voice_rollout_allows(self, email: str) -> bool:
+        """VOICE_MODE for this account: `on` everyone, `qa` only the listed accounts, `off` nobody."""
+        if self.voice_mode == "on":
+            return True
+        return self.voice_mode == "qa" and email.strip().lower() in self.voice_qa_list
+
+    @property
     def files_runner(self) -> Literal["subprocess", "systemd"] | None:
         """How files are parsed, or None when that would be unsafe (production without systemd)."""
         runner = self.files_extractor
@@ -334,6 +368,14 @@ class Settings(BaseSettings):
             problems.append("STUDY_SCOPE needs OLLALINK_API_KEY")
         if not self.ollalink_base_url.startswith("https://"):
             problems.append("OLLALINK_BASE_URL must be https:// (the key travels with every call)")
+        if self.voice_provider == "fake":  # whatever VOICE_MODE says
+            problems.append("VOICE_PROVIDER=fake is not allowed in production")
+        if self.voice_mode != "off" and not self.ollalink_api_key.get_secret_value():
+            problems.append("VOICE_MODE needs OLLALINK_API_KEY")
+        if self.voice_mode == "qa" and not self.voice_qa_list:
+            problems.append("VOICE_MODE=qa needs VOICE_QA_EMAILS")
+        if not (self.ollalink_stt_url.startswith("https://") and self.ollalink_tts_url.startswith("https://")):
+            problems.append("OLLALINK_STT_URL and OLLALINK_TTS_URL must be https:// (the key travels with every call)")
         if problems:
             raise RuntimeError("Unsafe production configuration: " + "; ".join(problems))
 

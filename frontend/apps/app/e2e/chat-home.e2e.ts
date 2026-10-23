@@ -63,9 +63,10 @@ test("a new chat: this week's study greeting, the composer centred, then ONE com
   await waitForHydration(page);
   await expectStudyGreeting(page);
   await expect(page.getByRole("list", { name: "Suggested questions" })).toHaveCount(0);
-  // Attach, Send and (where the browser can dictate) Dictate; nothing else.
+  // Attach, Voice mode (the e2e API offers it), Send and (where the browser can dictate) Dictate; nothing else.
+  await expect(page.getByRole("button", { name: "Voice mode" })).toBeVisible();
   const buttons = await page.getByRole("main").getByRole("button").evaluateAll((all) => all.map((b) => b.getAttribute("aria-label")));
-  expect(buttons.filter((name) => name !== "Dictate")).toEqual(["Attach files", "Send message"]);
+  expect(buttons.filter((name) => name !== "Dictate")).toEqual(["Attach files", "Voice mode", "Send message"]);
   expect(await layout(page)).toMatchObject({ centred: true, pageScroll: 0 });
   await mark(page);
 

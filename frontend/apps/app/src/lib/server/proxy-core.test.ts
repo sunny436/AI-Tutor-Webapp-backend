@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { serializeSignedCookie } from "better-call";
 
 import { PLAIN_COOKIE, SECURE_COOKIE } from "./cookies";
-import { MAX_BODY_BYTES, proxyRequest } from "./proxy-core";
+import { MAX_BODY_BYTES, VOICE_IN_FLIGHT_MAX, proxyRequest } from "./proxy-core";
 
 const SECRET = "a-test-secret-that-is-long-enough-for-better-auth";
 /** A session token as Better Auth makes them (32 letters and digits). */
@@ -439,6 +439,65 @@ describe("files", () => {
     const response = await run(browser("GET", `/v1/me/avatar?v=${HASH}`), "/v1/me/avatar", fetchImpl);
     expect(response.status).toBe(404);
     expect(response.headers.get("cache-control")).toBe("no-store");
+  });
+});
+
+describe("voice", () => {
+  function recording(signal?: AbortSignal): Request {
+    const headers = new Headers({ host: "chat.example.com", "x-forwarded-proto": "https", origin: APP, "content-type": "audio/webm" });
+    headers.set("cookie", SIGNED);
+    return new Request("http://localhost:3000/api/v1/voice/transcriptions?seconds=3", {
+      method: "POST",
+      headers,
+      body: new Uint8Array(200 * 1024), // over the 64 KB at which uploads take the 2 file slots
+      signal,
+    });
+  }
+  const path = "/v1/voice/transcriptions?seconds=3";
+
+  test("voice has its own class: far more than the 2 upload slots at once, then 503 busy before reading", async () => {
+    let release: () => void = () => undefined;
+    const gate = new Promise<void>((resolve) => {
+      release = resolve;
+    });
+    const { calls, fetchImpl } = upstream(async () => {
+      await gate;
+      return json(200, { text: "", seconds: 3 });
+    });
+    const held = Array.from({ length: VOICE_IN_FLIGHT_MAX }, () => run(recording(), path, fetchImpl));
+    await new Promise((resolve) => setTimeout(resolve, 20));
+    expect(calls.length).toBe(VOICE_IN_FLIGHT_MAX); // all of them reached the API, none queued behind files
+    const over = await run(recording(), path, fetchImpl);
+    expect(over.status).toBe(503);
+    expect(((await over.json()) as { error: { code: string } }).error.code).toBe("busy");
+    expect(calls.length).toBe(VOICE_IN_FLIGHT_MAX); // refused before anything was read or sent on
+    // Files are not held up by voice, nor voice by files.
+    const photo = new Request("http://localhost:3000/api/v1/me/avatar", {
+      method: "PUT",
+      headers: { host: "chat.example.com", "x-forwarded-proto": "https", origin: APP, "content-type": "image/png", cookie: SIGNED },
+      body: new Uint8Array(70 * 1024),
+    });
+    const quick = upstream(() => json(200, {}));
+    expect((await run(photo, "/v1/me/avatar", quick.fetchImpl)).status).toBe(200);
+    release();
+    for (const response of await Promise.all(held)) expect(response.status).toBe(200);
+    expect((await run(recording(), path, fetchImpl)).status).toBe(200); // the slots are free again
+  });
+
+  test("a student who goes away frees the slot at once", async () => {
+    const { fetchImpl } = upstream(
+      (call) =>
+        new Promise<Response>((_, reject) => {
+          call.init.signal?.addEventListener("abort", () => reject(new DOMException("aborted", "AbortError")));
+        }),
+    );
+    const leaving = Array.from({ length: VOICE_IN_FLIGHT_MAX }, () => new AbortController());
+    const pending = leaving.map((controller) => run(recording(controller.signal), path, fetchImpl));
+    await new Promise((resolve) => setTimeout(resolve, 20));
+    for (const controller of leaving) controller.abort();
+    await Promise.all(pending);
+    const after = upstream(() => json(200, { text: "", seconds: 3 }));
+    expect((await run(recording(), path, after.fetchImpl)).status).toBe(200);
   });
 });
 

@@ -578,6 +578,8 @@ export type MessageMetadata = {
   assessments?: Assessment[];
   /** The reply wrote a test the server could not accept whole (no test was kept). */
   assessmentError?: { code: string };
+  /** Client-side, voice turns only (the stream's `expression`): the tutor face's manner; never shown as text. */
+  expression?: string;
 };
 
 // --------------------------------------------------------- practice tests
@@ -671,11 +673,25 @@ export type MessagePage = { items: Message[]; nextCursor: string | null };
 
 // -------------------------------------------------------------------- chat
 
-export type ChatRequest = { conversationId?: Uuid | null; message: string; attachmentIds?: Uuid[] };
+export type ChatRequest = {
+  conversationId?: Uuid | null;
+  message: string;
+  attachmentIds?: Uuid[];
+  /** "voice": spoken in voice mode, the reply will be read aloud (a typed message for anyone it is not for). */
+  mode?: "text" | "voice";
+};
 /** The API rejects longer messages (the contract's ChatRequest.message). */
 export const MESSAGE_MAX = CONTRACT.ChatRequest.message.maxLength;
 /** Files one message may attach (the contract's ChatRequest.attachmentIds). */
 export const ATTACHMENTS_MAX = CONTRACT.ChatRequest.attachmentIds.maxItems;
+
+// -------------------------------------------------------------------- voice
+/** GET /v1/voice: whether voice mode is offered to this student (every voice route checks it too). */
+export type VoiceAvailability = { enabled: boolean };
+/** POST /v1/voice/transcriptions: what was said; "" when nothing was heard. */
+export type VoiceTranscript = { text: string; seconds: number | null };
+/** POST /v1/voice/speech: one sentence of the student's own reply. */
+export type SpeechRequest = { messageId: Uuid; text: string };
 
 // -------------------------------------------------------------------- files
 
@@ -719,6 +735,9 @@ export type StreamToken = { text: string };
 
 /** What the reply's [1] / [F1] markers point at; sent before the first token when there are any. */
 export type StreamCitations = { messageId: Uuid; citations: Citation[] };
+
+/** Voice turns only, before the first token: the tutor face's manner for this reply (never shown as text). */
+export type StreamExpression = { messageId: Uuid; expression: string };
 
 /** Authoritative final state. `message.status` may be `cancelled`. */
 /** What the answer did to the learning streak: only on the answer that made its day a learning day. */

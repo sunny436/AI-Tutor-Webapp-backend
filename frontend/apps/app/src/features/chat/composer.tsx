@@ -1,10 +1,12 @@
 "use client";
 
 import { cn } from "@v1/ui/utils";
-import { Mic, Paperclip, Send, Square, X } from "lucide-react";
+import { AudioLines, Mic, Paperclip, Send, Square, X } from "lucide-react";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { AttachmentChip } from "@/features/files/attachment-chip";
+import { unlockAudio } from "@/features/voice/audio-unlock";
+import { useVoiceOffered } from "@/features/voice/availability";
 import { canSendDraft } from "@/features/files/attachment-store";
 import { describeCode } from "@/lib/api/errors";
 import { FILE_ACCEPT } from "@/lib/api/files";
@@ -19,7 +21,7 @@ const MAX_HEIGHT_PX = 200;
 const COUNTER_FROM = MESSAGE_MAX - 1000;
 
 /**
- * The message box: [Attach] [text] [Mic] [Send].
+ * The message box: [Attach] [text] [Mic] [Voice] [Send].
  *
  *   - grows with its text up to a limit, then scrolls
  *   - Enter sends, Shift+Enter adds a line; Enter while an IME is composing does not
@@ -32,12 +34,23 @@ const COUNTER_FROM = MESSAGE_MAX - 1000;
  *     chip only takes it off this message; the file stays in the library.
  *   - the mic types what the browser's speech recognition heard (final text only, added after
  *     the draft, never sent by itself); it is shown only where the browser can do it
+ *   - Voice opens voice mode over this chat (features/voice): only where the API offers it and the
+ *     browser can record and play; filled while the box is empty, quieter once Send has something
  *   - 16 px text on phones: iOS zooms the page when a focused field is smaller
  *   - no placeholder and no lines under it: its name ("Ask your doubt") and the keys are
  *     for assistive technology; only the character count shows, near the limit
  */
-export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => void }) {
+export function Composer({
+  chatKey,
+  onSent,
+  onVoice,
+}: {
+  chatKey: string;
+  onSent?: () => void;
+  onVoice?: () => void;
+}) {
   const { chat, attachments } = useStores();
+  const voiceOffered = useVoiceOffered();
   const entry = useChatEntry(chatKey);
   const chips = useAttachments(chatKey);
   const [value, setValue] = useState(() => chat.getDraft(chatKey));
@@ -264,6 +277,26 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
                   aria-hidden
                   className={cn("h-5 w-5", dictation.state === "listening" && "motion-safe:animate-pulse")}
                 />
+              </button>
+            )}
+            {voiceOffered && onVoice && (
+              <button
+                type="button"
+                onClick={() => {
+                  unlockAudio(); // in the click itself: browsers only start sound from a gesture
+                  abortDictation(); // one listener on the microphone at a time
+                  onVoice();
+                }}
+                aria-label="Voice mode"
+                title="Voice mode: talk with your tutor"
+                className={cn(
+                  "focus-ring grid h-11 w-11 shrink-0 place-items-center rounded-full transition-colors sm:h-10 sm:w-10",
+                  value.trim()
+                    ? "text-brand hover:bg-brand-soft"
+                    : "elev-1 bg-brand text-brand-foreground hover:bg-brand-hover",
+                )}
+              >
+                <AudioLines aria-hidden className="h-5 w-5" />
               </button>
             )}
             {stream ? (

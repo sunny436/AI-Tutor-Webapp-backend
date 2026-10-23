@@ -73,6 +73,9 @@ export default defineConfig({
               CHAT_GENERATIONS_PER_DAY: "100000",
               // Shared with the web app's Better Auth (below): it asks the API to email codes.
               AUTH_INTERNAL_TOKEN: E2E_INTERNAL_TOKEN,
+              // Voice mode with the API's fake speech (app/voice/provider.py FakeVoice): e2e/voice*.e2e.ts.
+              VOICE_MODE: "on",
+              VOICE_PROVIDER: "fake",
             },
           },
         ]

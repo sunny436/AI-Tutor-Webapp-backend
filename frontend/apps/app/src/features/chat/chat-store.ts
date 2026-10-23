@@ -341,7 +341,12 @@ export class ChatStore {
   onSendRefused?: (key: string, attachments: MessageAttachment[]) => void;
 
   /** Send a message in a conversation (or a draft, which the server then creates), with ready files. */
-  async send(key: string, rawText: string, attachments: MessageAttachment[] = []): Promise<void> {
+  async send(
+    key: string,
+    rawText: string,
+    attachments: MessageAttachment[] = [],
+    options: { mode?: "voice" } = {},
+  ): Promise<void> {
     const text = rawText.trim();
     const entry = this.ensureEntry(key);
     if (!text || entry.stream) return;
@@ -375,6 +380,7 @@ export class ChatStore {
 
     const request: ChatRequest = { conversationId: entry.conversationId, message: text };
     if (attachments.length) request.attachmentIds = attachments.flatMap((a) => (a.fileId ? [a.fileId] : []));
+    if (options.mode === "voice") request.mode = "voice"; // spoken in voice mode (features/voice)
     await this.runStream(key, optimisticId, text, (handlers, signal) =>
       this.api.streamChat(request, handlers, { signal }),
     );
@@ -468,6 +474,11 @@ export class ChatStore {
         // The reply's [1] / [F1] become chips while it is still being written.
         const current = this.getMessage(canonical, messageId);
         if (current) this.putMessage(canonical, { ...current, metadata: { ...current.metadata, citations } });
+      },
+      onExpression: ({ messageId, expression }) => {
+        // Voice mode: the face's manner for this reply, before its first words.
+        const current = this.getMessage(canonical, messageId);
+        if (current) this.putMessage(canonical, { ...current, metadata: { ...current.metadata, expression } });
       },
       onDone: (done: StreamDone) => {
         this.flush(canonical, done.message.id);

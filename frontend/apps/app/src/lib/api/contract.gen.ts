@@ -111,6 +111,12 @@ export const CONTRACT = {
     "message": {
       "maxLength": 16000,
       "minLength": 1
+    },
+    "mode": {
+      "enum": [
+        "text",
+        "voice"
+      ]
     }
   },
   "ConceptMasteryOut": {
@@ -668,6 +674,12 @@ export const CONTRACT = {
         "study",
         "paused"
       ]
+    }
+  },
+  "SpeechRequest": {
+    "text": {
+      "maxLength": 600,
+      "minLength": 1
     }
   },
   "StudyContextChangeIn": {

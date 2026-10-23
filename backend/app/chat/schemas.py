@@ -14,6 +14,9 @@ class ChatRequest(RequestModel):
     message: str = Field(min_length=1, max_length=16_000)
     # Ready files from the student's File Library to attach to this message (app/files).
     attachment_ids: list[uuid.UUID] = Field(default_factory=list, max_length=5)
+    # "voice": the message was spoken in voice mode (app/voice) and the reply will be read aloud; for a student
+    # voice mode is not for, it is a typed message.
+    mode: Literal["text", "voice"] = "text"
 
     @field_validator("message")
     @classmethod

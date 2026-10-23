@@ -32,6 +32,8 @@
  *               cache never), and the file can never run as a page (nosniff, a
  *               sandboxing CSP). Files are read whole, a few at a time (the rest
  *               queue), like uploads.
+ *   VOICE       Voice mode's routes (`voice`: a recording, a sentence's audio) have a class of
+ *               their own, never behind the file queues: small, and waited on mid-conversation.
  *
  * Pure (no Next.js imports) so it is unit-tested directly.
  */
@@ -198,8 +200,28 @@ async function fileSlot(): Promise<() => void> {
   };
 }
 
+/**
+ * Voice mode's requests at once in this process: a recording (up to 1 MiB) or a sentence's audio (up to 2 MB)
+ * each, so at most about 40 MB in memory. The API's own caps are 8 transcriptions and 16 sentences at once in all,
+ * so this is what both may use; beyond it, 503 `busy` before anything is read. Their own class because the
+ * upload queue turned 6 of 8 students talking at once away as `busy` (e2e stack, 2026-10-23).
+ */
+export const VOICE_IN_FLIGHT_MAX = 24;
+let voiceInFlight = 0;
+
 export async function proxyRequest(request: Request, segments: string[], deps: ProxyDeps): Promise<Response> {
   const spec = matchRoute(request.method.toUpperCase(), `/v1/${segments.join("/")}`)?.spec;
+  if (spec?.voice) {
+    if (voiceInFlight >= VOICE_IN_FLIGHT_MAX) {
+      return envelope(503, "busy", deps.requestId?.() ?? crypto.randomUUID().replace(/-/g, ""));
+    }
+    voiceInFlight += 1;
+    try {
+      return await forward(request, segments, deps);
+    } finally {
+      voiceInFlight -= 1; // success, failure, a timeout or the browser leaving (its abort ends forward)
+    }
+  }
   if (spec?.file) {
     const release = await fileSlot();
     try {

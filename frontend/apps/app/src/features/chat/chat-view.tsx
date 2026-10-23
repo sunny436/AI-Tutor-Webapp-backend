@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
@@ -11,6 +12,9 @@ import { cn } from "@v1/ui/utils";
 import { useChatEntry, useConversations, useStores } from "./chat-context";
 import { Composer } from "./composer";
 import { MessageList, isEmptyChat } from "./message-list";
+
+// Voice mode loads only when it is opened (features/voice).
+const VoiceMode = dynamic(() => import("@/features/voice/voice-mode"), { ssr: false });
 
 /**
  * The chat screen, for both `/` (a new chat) and `/c/[conversationId]`.
@@ -51,6 +55,14 @@ export function ChatView() {
   useDocumentTitle(conversationId);
   const empty = isEmptyChat(useChatEntry(chatKey));
 
+  // Voice mode, over this chat: open while the chat is the same conversation (a new chat getting its address
+  // is the same one), closed by going to another chat.
+  const [voiceKey, setVoiceKey] = useState<string | null>(null);
+  const voiceOpen = voiceKey !== null && chat.resolve(voiceKey) === chat.resolve(chatKey);
+  useEffect(() => {
+    if (voiceKey !== null && !voiceOpen) setVoiceKey(null);
+  }, [voiceKey, voiceOpen]);
+
   return (
     <div className="relative isolate flex h-full min-h-0 flex-col">
       {/* A faint warmth in the corners while the chat is empty (globals.css `.empty-atmosphere`). */}
@@ -73,15 +85,28 @@ export function ChatView() {
           empty ? "grow" : "grow-0",
         )}
       />
-      <MessageList chatKey={chatKey} scrollRef={scrollRef} />
-      <Composer
-        chatKey={chatKey}
-        onSent={() => {
-          // Sending re-attaches the view to the bottom.
-          const element = scrollRef.current;
-          if (element) element.scrollTo({ top: element.scrollHeight });
-        }}
-      />
+      {/* Under voice mode the chat stays mounted (its draft and place kept) but cannot be reached. */}
+      <div className="contents" inert={voiceOpen || undefined}>
+        <MessageList chatKey={chatKey} scrollRef={scrollRef} />
+        <Composer
+          chatKey={chatKey}
+          onSent={() => {
+            // Sending re-attaches the view to the bottom.
+            const element = scrollRef.current;
+            if (element) element.scrollTo({ top: element.scrollHeight });
+          }}
+          onVoice={() => setVoiceKey(chatKey)}
+        />
+      </div>
+      {voiceOpen && voiceKey && (
+        <VoiceMode
+          chatKey={voiceKey}
+          onClose={(focusComposer) => {
+            setVoiceKey(null);
+            if (focusComposer) requestAnimationFrame(() => document.getElementById(`composer-${chatKey}`)?.focus());
+          }}
+        />
+      )}
       <Announcer chatKey={chatKey} />
     </div>
   );

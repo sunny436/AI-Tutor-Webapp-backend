@@ -42,6 +42,8 @@ export type RouteSpec = {
   upload?: { types: readonly string[]; maxBytes: number };
   /** The response is a file, not JSON: its content types. See the BFF's FILES note. */
   file?: { types: readonly string[] };
+  /** Voice mode's speech (features/voice): its own bounded class in the BFF, never queued behind files. */
+  voice?: true;
 };
 
 export const IMAGE_UPLOAD = { types: ["image/jpeg", "image/png", "image/webp"], maxBytes: 5 * 1024 * 1024 } as const;
@@ -62,6 +64,11 @@ export const FILE_CONTENT = {
     "image/webp",
   ],
 } as const;
+
+/** Voice mode: one utterance, as the browser's own recorder made it (the API's `x-max-bytes`). */
+export const VOICE_UPLOAD = { types: ["audio/webm", "audio/mp4", "audio/wav"], maxBytes: 1024 * 1024 } as const;
+/** One sentence of a reply read aloud: MP3 (WAV only from the e2e stack's fake provider). */
+export const VOICE_SPEECH = { types: ["audio/mpeg", "audio/wav"] } as const;
 
 export const ROUTES = {
   "POST /v1/auth/logout": { auth: true, session: "clear" },
@@ -134,6 +141,10 @@ export const ROUTES = {
   "GET /v1/files/{file_id}/content": { auth: true, file: FILE_CONTENT },
   "POST /v1/files/{file_id}/retry": { auth: true },
   "DELETE /v1/files/{file_id}": { auth: true },
+
+  "GET /v1/voice": { auth: true },
+  "POST /v1/voice/transcriptions": { auth: true, query: ["seconds"], upload: VOICE_UPLOAD, voice: true },
+  "POST /v1/voice/speech": { auth: true, body: "SpeechRequest", file: VOICE_SPEECH, voice: true },
 } as const satisfies Record<string, RouteSpec>;
 
 export type RouteKey = keyof typeof ROUTES;

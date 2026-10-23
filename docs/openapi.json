@@ -908,6 +908,15 @@
             "minLength": 1,
             "title": "Message",
             "type": "string"
+          },
+          "mode": {
+            "default": "text",
+            "enum": [
+              "text",
+              "voice"
+            ],
+            "title": "Mode",
+            "type": "string"
           }
         },
         "required": [
@@ -4247,6 +4256,28 @@
         "title": "SettingsOut",
         "type": "object"
       },
+      "SpeechRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "messageId": {
+            "format": "uuid",
+            "title": "Messageid",
+            "type": "string"
+          },
+          "text": {
+            "maxLength": 600,
+            "minLength": 1,
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "messageId",
+          "text"
+        ],
+        "title": "SpeechRequest",
+        "type": "object"
+      },
       "StreakOut": {
         "properties": {
           "currentDays": {
@@ -5120,6 +5151,31 @@
         "title": "TopicMasteryOut",
         "type": "object"
       },
+      "TranscriptOut": {
+        "properties": {
+          "seconds": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Seconds"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "text",
+          "seconds"
+        ],
+        "title": "TranscriptOut",
+        "type": "object"
+      },
       "TutorPreviewOut": {
         "properties": {
           "instructions": {
@@ -5558,6 +5614,19 @@
           "type"
         ],
         "title": "ValidationError",
+        "type": "object"
+      },
+      "VoiceOut": {
+        "properties": {
+          "enabled": {
+            "title": "Enabled",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "enabled"
+        ],
+        "title": "VoiceOut",
         "type": "object"
       }
     }
@@ -8445,6 +8514,148 @@
         "summary": "Create Support Request",
         "tags": [
           "support"
+        ]
+      }
+    },
+    "/v1/voice": {
+      "get": {
+        "description": "For the web app's button only: every voice route checks the same itself.",
+        "operationId": "get_voice_v1_voice_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Whether voice mode is offered to this student",
+        "tags": [
+          "voice"
+        ]
+      }
+    },
+    "/v1/voice/speech": {
+      "post": {
+        "description": "Up to 600 characters of a reply in the student's own conversation, up to VOICE_SPEECH_CHARS_PER_MESSAGE for\none reply. Never stored or cached.",
+        "operationId": "speak_v1_voice_speech_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpeechRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "audio/mpeg": {
+                "schema": {
+                  "format": "binary",
+                  "type": "string"
+                }
+              },
+              "audio/wav": {
+                "schema": {
+                  "format": "binary",
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "One sentence of the student's own reply, read aloud (MP3; English)",
+        "tags": [
+          "voice"
+        ]
+      }
+    },
+    "/v1/voice/transcriptions": {
+      "post": {
+        "description": "WebM (Opus), MP4 (AAC or Opus) or WAV, up to 1 MiB and 60 s. Nothing is stored. `text` \"\" = nothing heard.",
+        "operationId": "transcribe_v1_voice_transcriptions_post",
+        "parameters": [
+          {
+            "description": "The recording's length, client-measured",
+            "in": "query",
+            "name": "seconds",
+            "required": true,
+            "schema": {
+              "description": "The recording's length, client-measured",
+              "exclusiveMinimum": 0,
+              "maximum": 60,
+              "title": "Seconds",
+              "type": "number"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "audio/mp4": {
+              "schema": {
+                "format": "binary",
+                "type": "string"
+              }
+            },
+            "audio/wav": {
+              "schema": {
+                "format": "binary",
+                "type": "string"
+              }
+            },
+            "audio/webm": {
+              "schema": {
+                "format": "binary",
+                "type": "string"
+              }
+            }
+          },
+          "required": true,
+          "x-max-bytes": 1048576
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TranscriptOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "What the student said (one utterance, the raw audio as the body; English)",
+        "tags": [
+          "voice"
         ]
       }
     }

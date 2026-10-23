@@ -1,0 +1,299 @@
+/*
+ * Voice mode's tutor face (tutor-face.tsx), from the owner's prototype in PadhAI's calm colours: a blue glow
+ * while listening, amber while thinking, green while speaking (never violet or indigo). Colour and movement say
+ * what it is doing; eyes, mouth and hands its manner (data-expression). Only transform and opacity move, on the
+ * motion tokens; with reduced motion, the device's or the app's, it holds still. The mic's level (--voice-level,
+ * 0-1, set by the view) grows the glow a little while it listens.
+ */
+
+.tutor {
+  --tutor-size: clamp(8.5rem, 32vmin, 11.25rem);
+  --tutor-head: hsl(212 18% 19%);
+  --tutor-head-light: hsl(212 16% 27%);
+  --tutor-glow: hsl(207 72% 72%);
+  --voice-level: 0;
+  position: relative;
+  display: grid;
+  width: var(--tutor-size);
+  height: var(--tutor-size);
+  place-items: center;
+}
+
+.dark .tutor {
+  --tutor-head: hsl(216 18% 24%);
+  --tutor-head-light: hsl(216 16% 32%);
+}
+
+.tutor[data-face="thinking"] {
+  --tutor-glow: hsl(42 76% 64%);
+}
+
+.tutor[data-face="speaking"] {
+  --tutor-glow: hsl(113 52% 62%);
+}
+
+.tutor[data-face="resting"] {
+  --tutor-glow: hsl(210 10% 62%);
+}
+
+.tutor-ring {
+  position: absolute;
+  inset: -14%;
+  border-radius: 44%;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--tutor-glow) 30%, transparent), transparent);
+  transform: scale(calc(1 + var(--voice-level) * 0.18));
+  transition: transform var(--motion-fast) var(--ease-standard);
+}
+
+.tutor-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 11%;
+  border-radius: 40%;
+  background: linear-gradient(145deg, var(--tutor-head-light), var(--tutor-head));
+  box-shadow:
+    0 20px 50px -14px color-mix(in srgb, var(--tutor-glow) 38%, transparent),
+    inset 0 0 0 4px color-mix(in srgb, var(--tutor-glow) 20%, transparent);
+}
+
+.tutor-eyes {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 18%;
+  transition: transform var(--motion-base) var(--ease-standard);
+}
+
+.tutor-eye {
+  width: 11%;
+  aspect-ratio: 20 / 32;
+  border-radius: 999px;
+  background: var(--tutor-glow);
+  box-shadow: 0 0 14px var(--tutor-glow);
+}
+
+.tutor-mouth {
+  width: 18%;
+  height: 3.4%;
+  border-radius: 999px;
+  background: var(--tutor-glow);
+  box-shadow: 0 0 10px var(--tutor-glow);
+}
+
+.tutor-hand {
+  position: absolute;
+  z-index: 2;
+  bottom: 11%;
+  width: 20%;
+  height: 20%;
+  border-radius: 40%;
+  background: linear-gradient(145deg, var(--tutor-head-light), var(--tutor-head));
+  box-shadow: 0 10px 20px -6px hsl(212 30% 10% / 0.45);
+  transition: transform var(--motion-slow) var(--ease-standard);
+}
+
+.tutor-hand-left {
+  left: -24%;
+}
+
+.tutor-hand-right {
+  right: -24%;
+}
+
+/* What it is doing. */
+.tutor[data-face="listening"] .tutor-head {
+  animation: tutor-float 4s ease-in-out infinite;
+}
+
+.tutor[data-face="listening"] .tutor-eye {
+  animation: tutor-blink 4s infinite;
+}
+
+.tutor[data-face="listening"] .tutor-mouth {
+  width: 9%;
+}
+
+.tutor[data-face="thinking"] .tutor-eyes {
+  animation: tutor-look 2.2s ease-in-out infinite;
+}
+
+.tutor[data-face="thinking"] .tutor-eye {
+  width: 9%;
+  aspect-ratio: 1;
+}
+
+.tutor[data-face="thinking"] .tutor-mouth {
+  width: 6%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.tutor[data-face="thinking"] .tutor-hand-left {
+  transform: translate(190%, -60%) scale(0.8);
+}
+
+.tutor[data-face="speaking"] .tutor-head {
+  animation: tutor-float 2.4s ease-in-out infinite;
+}
+
+.tutor[data-face="speaking"] .tutor-eye {
+  aspect-ratio: 20 / 24;
+  border-radius: 999px 999px 40% 40%;
+}
+
+.tutor[data-face="speaking"] .tutor-mouth {
+  width: 24%;
+  animation: tutor-talk 0.18s ease-in-out infinite alternate;
+}
+
+.tutor[data-face="speaking"] .tutor-hand-left {
+  animation: tutor-gesture-left 2s ease-in-out infinite;
+}
+
+.tutor[data-face="speaking"] .tutor-hand-right {
+  animation: tutor-gesture-right 2s ease-in-out 0.3s infinite;
+}
+
+.tutor[data-face="resting"] .tutor-head {
+  opacity: 0.85;
+}
+
+/* Its manner: chosen by the app from what the message asked for (never shown in words). */
+.tutor[data-expression="happy"] .tutor-eye,
+.tutor[data-expression="encouraging"] .tutor-eye {
+  border-radius: 999px 999px 40% 40%;
+}
+
+.tutor[data-expression="happy"] .tutor-mouth,
+.tutor[data-expression="encouraging"] .tutor-mouth {
+  width: 22%;
+  height: 8%;
+  border-radius: 4px 4px 999px 999px;
+}
+
+.tutor[data-expression="explaining"] .tutor-mouth {
+  width: 14%;
+  height: 7%;
+  border-radius: 4px 4px 999px 999px;
+}
+
+.tutor[data-expression="explaining"] .tutor-hand-left {
+  transform: translate(60%, -230%) rotate(15deg);
+}
+
+.tutor[data-expression="focused"] .tutor-eye {
+  width: 15%;
+  aspect-ratio: 28 / 10;
+}
+
+.tutor[data-expression="focused"] .tutor-mouth {
+  width: 9%;
+}
+
+.tutor[data-expression="thinking"] .tutor-eyes {
+  transform: translate(6%, -8%);
+}
+
+.tutor[data-expression="thinking"] .tutor-hand-left {
+  transform: translate(190%, -60%) scale(0.8);
+}
+
+.tutor[data-expression="encouraging"] .tutor-hand-left {
+  transform: translate(150%, -150%) rotate(40deg);
+}
+
+.tutor[data-expression="encouraging"] .tutor-hand-right {
+  transform: translate(-150%, -150%) rotate(-40deg);
+}
+
+/* A hand held in a manner's pose does not also gesture. */
+.tutor[data-expression="explaining"] .tutor-hand-left,
+.tutor[data-expression="thinking"] .tutor-hand-left,
+.tutor[data-expression="encouraging"] .tutor-hand {
+  animation: none;
+}
+
+@keyframes tutor-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes tutor-blink {
+  0%,
+  96%,
+  98%,
+  100% {
+    transform: scaleY(1);
+  }
+  97%,
+  99% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes tutor-look {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-12%);
+  }
+  75% {
+    transform: translateX(12%);
+  }
+}
+
+@keyframes tutor-talk {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(3.2);
+  }
+}
+
+@keyframes tutor-gesture-left {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-40%, -60%) rotate(-15deg);
+  }
+}
+
+@keyframes tutor-gesture-right {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(40%, -70%) rotate(15deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tutor,
+  .tutor * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+html[data-motion="reduce"] .tutor,
+html[data-motion="reduce"] .tutor * {
+  animation: none !important;
+  transition: none !important;
+}

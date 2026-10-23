@@ -187,6 +187,13 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   `SCOPE_MIN_REDIRECT`, never in a chat with a test or an exercise: reason `practice`) is the app's own
   reply with no model, search, learning day or title; other decisions
   add one conditional line; a failure is the tutor with the policy. Stored in `messages.metadata.scope`.
+- **Voice mode** (`app/voice`, `VOICE_MODE=off|qa|on`, `VOICE_QA_EMAILS`; `features/voice` in the web app): the
+  browser records each utterance (its own VAD), the API transcribes it with OllaLink (`gpu-transcribe`, batch:
+  realtime is a WebSocket the BFF cannot carry), the words go to the chat as `mode: "voice"` (one prompt line,
+  an `expression` SSE event from scope + Jev), and the reply is read aloud sentence by sentence (OllaLink TTS,
+  `hadley`; no TTS streaming). English only: OllaLink speaks no Hindi, so it is for English/unset tutor
+  languages. Every voice route checks the rollout and the language itself; nothing is stored. The BFF gives
+  voice routes their own bounded class (`voice: true`, 24 at once), never behind the 2-slot file queue.
 - **Retrieval never fails a turn:** it is skipped or fails with a reason code. Small talk that opens a chat
   ("hi": `is_meaningful`) searches nothing; a short follow-up ("why?") is searched with the question before it.
 - **Context budget** (`app/rag/context.py`): system prompt → latest message → whole chunks up to

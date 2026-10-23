@@ -312,7 +312,7 @@ finished message (`done` and message lists), not while the reply streams.
 
 | Method | Path | Body | Response |
 |---|---|---|---|
-| POST | `/v1/chat/stream` | `{conversationId?, message (1-16000), attachmentIds? (≤ 5 ready files)}` | `text/event-stream` (below). No `conversationId` → a new conversation. A file that is not the student's, or not `ready`: 422 `fields: [{field: "attachmentIds", reason: "not_found" \| "not_ready"}]` |
+| POST | `/v1/chat/stream` | `{conversationId?, message (1-16000), attachmentIds? (≤ 5 ready files), mode? ("text" \| "voice", default "text"; added 2026-10-23: see Voice)}` | `text/event-stream` (below). No `conversationId` → a new conversation. A file that is not the student's, or not `ready`: 422 `fields: [{field: "attachmentIds", reason: "not_found" \| "not_ready"}]` |
 | POST | `/v1/chat` | same | 200 `{conversation, userMessage, message}`; LLM errors → 502/504/422 with the error envelope |
 | POST | `/v1/conversations/{id}/regenerate/stream` | – | SSE; the last reply becomes `superseded` and a new one streams |
 | POST | `/v1/messages/{id}/cancel` | – | `{status}` — stops a `streaming` reply (idempotent) |
@@ -390,6 +390,10 @@ event: citations                         (at most once, before the first token; 
 data: {"messageId","citations":[...]}      prompt numbered sources or files: the Message
                                            `metadata.citations` shape, which `done` repeats)
 
+event: expression                       (voice turns only, at most once, before the first
+data: {"messageId","expression"}           token: neutral|happy|explaining|focused|thinking|
+                                           encouraging, the tutor face's manner; see Voice)
+
 event: token
 data: {"text":"partial text"}            (repeated)
 
@@ -413,7 +417,7 @@ data: {"code":"llm_unavailable|llm_timeout|llm_bad_request|service_unavailable|i
 - Stopping: call `POST /v1/messages/{assistantMessageId}/cancel`; the stream then ends with `done`
   whose message has `status: "cancelled"`. Closing the connection also stops the reply (same result).
 - Unknown event types may be added later and must be ignored by clients (`citations` was, on
-  2026-09-30).
+  2026-09-30; `expression`, on 2026-10-23).
 
 ## Files (the File Library)
 
@@ -440,6 +444,34 @@ CSV, TXT, MD (2 MB). Upload errors: 415 `unsupported_file_type` / `type_mismatch
 `content_too_large`, `timeout`, `processing_interrupted` (final); `embedding_failed`,
 `extractor_failed`, `chunk_limit_reached`, `files_capacity_reached`, `model_changed` (retryable).
 A message's `attachments`: `[{fileId | null, filename}]` (user messages).
+
+## Voice
+
+Voice mode (`app/voice`, added 2026-10-23): the student speaks, the API transcribes it with OllaLink, the
+client sends the words as an ordinary chat message with `mode: "voice"`, and reads the reply aloud one
+sentence at a time with OllaLink's speech. **English only** (OllaLink speaks no Hindi), so it is offered to a
+student whose tutor language is English or unset, and only as the rollout allows (`VOICE_MODE`
+`off` → `qa` → `on`, docs/deployment.md). Every voice route checks both itself: for anyone else it is a 404
+and nothing is sent to OllaLink.
+
+| Method | Path | Body | Response |
+|---|---|---|---|
+| GET | `/v1/voice` | – | `{enabled}`: whether to offer voice mode (for showing a button; decides nothing) |
+| POST | `/v1/voice/transcriptions?seconds=` | the raw recording: `audio/webm` (Opus), `audio/mp4` (AAC or Opus) or `audio/wav`, up to 1 MiB (`x-max-bytes`) and 60 s | `{text, seconds}`; `text` "" when nothing was heard. 415 another type, 413 too big, 422 `voice_unreadable` |
+| POST | `/v1/voice/speech` | `{messageId (the student's own reply), text (1-600)}` | `audio/mpeg`, `Cache-Control: no-store`. 404 not the student's reply |
+
+- A voice message is a typed one in every other way (quotas, scope, intents, search, learning day, title).
+  For a student voice mode is not for, `mode: "voice"` is ignored. A voice turn's prompt has one more line
+  (spoken style: short sentences, no tables or code blocks, maths in words), and its stream an `expression`
+  event: the face's manner from the study scope and the intent router (worry → encouraging, unclear →
+  thinking, explain/materials/visual → explaining, solve/tests/feedback/planning → focused, a greeting →
+  happy, anything else → neutral). Only that word is sent, never the intent or a confidence.
+- Limits per student (counted in `auth_attempts`, so they hold across processes): transcriptions 20 a minute
+  and 400 a day, speech 120 a minute and 3000 a day (429 `rate_limited`); at once, counted in the API's one
+  process, 1 transcription and 2 speech requests per student and 8 and 16 in all (429 / 503 `voice_busy`);
+  8000 characters of speech per reply (429). OllaLink failing is 503 `voice_unavailable`.
+- Nothing is stored: not the audio, not the speech. Logs carry sizes and times only. A client that goes away
+  cancels its OllaLink call.
 
 ## Health
 

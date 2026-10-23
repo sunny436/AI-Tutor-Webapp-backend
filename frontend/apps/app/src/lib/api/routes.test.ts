@@ -94,7 +94,13 @@ const SENT_BODIES: Record<string, Record<string, unknown>[]> = {
   TutorPreviewRequest: [{}, { profile: { grade: "class_9" }, subjects: [{ code: "physics" }], preferences: { pace: "fast" } }],
   DeleteMeRequest: [{ password: "x" }, {}],
   RenameConversationRequest: [{ title: "T" }],
-  ChatRequest: [{ message: "hi" }, { conversationId: ID, message: "hi" }, { message: "hi", attachmentIds: [ID] }],
+  ChatRequest: [
+    { message: "hi" },
+    { conversationId: ID, message: "hi" },
+    { message: "hi", attachmentIds: [ID] },
+    { message: "hi", mode: "voice" },
+  ],
+  SpeechRequest: [{ messageId: ID, text: "Osmosis is water moving." }],
   FeedbackRequest: [{ rating: "up" }],
   AssessmentResponseRequest: [
     { position: 0, hash: "a".repeat(64), question: 0, action: "answer", value: 1 },

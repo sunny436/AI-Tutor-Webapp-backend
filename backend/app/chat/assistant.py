@@ -125,6 +125,16 @@ class AssistantConfig:
     temperature: float | None = None  # None = settings.llm_temperature
 
 
+# Voice mode (app/voice): the reply is read aloud by an English voice, sentence by sentence, as it is written.
+VOICE_TURN = (
+    "This message was spoken in voice mode: your reply will be read aloud by an English voice as you write it, "
+    "and it also stays in the chat. Reply in English, in short, natural spoken sentences, most important first; "
+    "keep it brief unless the student asks for more. Do not use tables, code blocks, diagrams or headings. Say "
+    'formulas, symbols and units in words (for example, "x squared plus 2x" or "9.8 metres per second '
+    'squared"), keeping every number exact.'
+)
+
+
 def system_prompt_for(
     student: StudentContext | None,
     interactive: bool = False,
@@ -135,6 +145,7 @@ def system_prompt_for(
     intent: str | None = None,
     scoped: bool = False,
     scope: str | None = None,
+    voice: bool = False,
 ) -> str:
     """The frozen prompt, then the teaching defaults, then what the student's settings add, then what
     the latest message asks for (`intent`, applied by the intent router), then the question bank's
@@ -147,9 +158,10 @@ def system_prompt_for(
     keep = prompt_block(scope) if scoped else ""
     policy = TEACHING_POLICY if teaching else ""
     instructions = build_tutor_instructions(student)
+    spoken = VOICE_TURN if voice else ""
     asks = intent_block(intent)
     chapters = bank if interactive and bank else ""
-    return "\n\n".join(part for part in (prompt, keep, policy, instructions, asks, chapters, tests) if part)
+    return "\n\n".join(part for part in (prompt, keep, policy, instructions, spoken, asks, chapters, tests) if part)
 
 
 def retrieval_for(student: StudentContext | None) -> RetrievalOptions:
@@ -177,6 +189,7 @@ def resolve_assistant_config(
     search: bool = True,
     scoped: bool = False,
     scope: str | None = None,
+    voice: bool = False,
 ) -> AssistantConfig:
     """`intent`: what the intent router read in the latest message (app/intents/taxonomy.py); an intent
     answered from the app's own records searches no knowledge. `search` False: no knowledge search on
@@ -185,7 +198,15 @@ def resolve_assistant_config(
     search = search and (wanted is None or wanted.retrieval)
     return AssistantConfig(
         system_prompt=system_prompt_for(
-            student, interactive, tests, teaching=teaching, bank=bank, intent=intent, scoped=scoped, scope=scope
+            student,
+            interactive,
+            tests,
+            teaching=teaching,
+            bank=bank,
+            intent=intent,
+            scoped=scoped,
+            scope=scope,
+            voice=voice,
         ),
         retrieval=retrieval_for(student) if search else None,
     )

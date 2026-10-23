@@ -87,9 +87,14 @@ test("desktop, 1280px: the chat, menus, streak, bell, branding, dark, a real que
     await expect(banner(page).getByRole("heading", { level: 1 })).toHaveText("New chat");
     await expect(page.getByText(/AI Tutor|Personal Doubts Solver|Powered by|can make mistakes/)).toHaveCount(0);
     await expect(page.getByRole("navigation", { name: "Learning Hub" })).toHaveCount(0);
-    // Attach files, Send and (where the browser can dictate) Dictate; nothing else.
+    // Attach files, Send, (where the browser can dictate) Dictate and (where the API offers it to this account)
+    // Voice mode; nothing else.
+    const voice = (await (await page.request.get("/api/v1/voice")).json()).enabled === true;
+    if (voice) await expect(page.getByRole("button", { name: "Voice mode" })).toBeVisible();
     const buttons = await page.getByRole("main").getByRole("button").evaluateAll((all) => all.map((b) => b.getAttribute("aria-label")));
-    expect(buttons.filter((name) => name !== "Dictate")).toEqual(["Attach files", "Send message"]);
+    expect(buttons.filter((name) => name !== "Dictate")).toEqual(
+      voice ? ["Attach files", "Voice mode", "Send message"] : ["Attach files", "Send message"],
+    );
     await expect(page.getByRole("textbox", { name: "Ask your doubt" })).toBeEditable();
     expect(await page.locator("form:has(textarea)").count()).toBe(1);
     const centred = await page.evaluate(() => {

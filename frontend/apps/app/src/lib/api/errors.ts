@@ -44,6 +44,10 @@ export type ErrorCode =
   | "too_many_files"
   | "retry_not_allowed"
   | "busy"
+  // voice mode
+  | "voice_unreadable"
+  | "voice_unavailable"
+  | "voice_busy"
   // client-side only
   | "attachment_unavailable"
   | "network_error"
@@ -121,6 +125,9 @@ const KNOWN = new Set<ErrorCode>([
   "too_many_files",
   "retry_not_allowed",
   "busy",
+  "voice_unreadable",
+  "voice_unavailable",
+  "voice_busy",
   "attachment_unavailable",
   "network_error",
   "stream_interrupted",
@@ -340,6 +347,21 @@ const COPY: Record<ErrorCode, { title: string; message: string; action: Recovery
     title: "Can't try again",
     message: "This file can't be read. Delete it and upload another copy.",
     action: "none",
+  },
+  voice_unreadable: {
+    title: "Didn't catch that",
+    message: "Please say it again.",
+    action: "retry",
+  },
+  voice_unavailable: {
+    title: "Voice isn't working",
+    message: "Voice isn't available right now. Type your question, or try again shortly.",
+    action: "wait",
+  },
+  voice_busy: {
+    title: "Voice is busy",
+    message: "Lots of students are talking to the tutor right now. Please try again in a moment.",
+    action: "retry",
   },
   busy: {
     title: "Busy right now",

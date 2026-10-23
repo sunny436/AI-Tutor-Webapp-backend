@@ -57,6 +57,9 @@ from app.settings import Settings, get_settings
 from app.study.router import router as study_router
 from app.study.service import Chapters
 from app.support.router import router as support_router
+from app.voice.provider import VoiceProvider, build_voice
+from app.voice.router import MAX_AUDIO_BYTES, InFlight, SpeechBudget
+from app.voice.router import router as voice_router
 
 log = get_logger("app")
 # Auth retention (app/auth/retention.py): first run a few minutes after start, then hourly.
@@ -111,6 +114,7 @@ def create_app(
     email_sender: EmailSender | None = None,
     embeddings: Embeddings | None = None,
     intents: IntentClassifier | None = None,
+    voice: VoiceProvider | None = None,
 ) -> FastAPI:
     settings = settings or get_settings()
     settings.validate_for_env()
@@ -190,6 +194,9 @@ def create_app(
                 "knowledge": "ncert" if ncert else "pgvector",
                 "intents": settings.intent_router,
                 "scope": settings.study_scope,
+                # Voice limits on calls at once are counted in this process (app/voice/router.py InFlight).
+                "voice": settings.voice_mode if app.state.voice else "off",
+                "voice_concurrency": "per process",
             },
         )
         retention = None if settings.app_env == "test" else asyncio.create_task(auth_retention())
@@ -205,6 +212,8 @@ def create_app(
                 await ncert.aclose()
             if classifier is not None:
                 await classifier.aclose()
+            if app.state.voice is not None:
+                await app.state.voice.aclose()
             await app.state.db.dispose()
 
     docs = settings.app_env != "production"
@@ -235,6 +244,10 @@ def create_app(
     app.state.study_action_limiter = SlidingWindowLimiter(limit=30, window_s=60)
     # Unsubscribe links need no sign-in: limited per client address instead.
     app.state.unsubscribe_limiter = SlidingWindowLimiter(limit=30, window_s=60)
+    # Voice mode (app/voice): OllaLink's speech, only when VOICE_MODE is not off and it is configured.
+    app.state.voice = voice if voice is not None else build_voice(settings)
+    app.state.voice_calls = InFlight()
+    app.state.voice_budget = SpeechBudget(settings.voice_speech_chars_per_message)
 
     install_error_handlers(app)
     if settings.cors_origins:
@@ -249,7 +262,11 @@ def create_app(
     app.add_middleware(
         RequestContextMiddleware,
         max_body_bytes=settings.max_body_bytes,
-        body_limits={("PUT", "/v1/me/avatar"): settings.avatar_max_bytes, ("POST", "/v1/files"): MAX_UPLOAD_BYTES},
+        body_limits={
+            ("PUT", "/v1/me/avatar"): settings.avatar_max_bytes,
+            ("POST", "/v1/files"): MAX_UPLOAD_BYTES,
+            ("POST", "/v1/voice/transcriptions"): MAX_AUDIO_BYTES,
+        },
     )
 
     app.include_router(health_router)
@@ -260,6 +277,7 @@ def create_app(
     app.include_router(learning_router)
     app.include_router(progress_router)
     app.include_router(notifications_router)
+    app.include_router(voice_router)
     app.include_router(support_router)
     app.include_router(appearance_router)
     app.include_router(greetings_router)

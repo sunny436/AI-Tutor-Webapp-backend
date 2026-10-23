@@ -1,0 +1,589 @@
+/**
+ * One voice conversation in one chat. The microphone is listened to; each thing the student says is recorded,
+ * transcribed (OllaLink, through the API) and sent as their message in this chat, exactly like a typed one
+ * (mode "voice"); the reply is read aloud while it is still being written (speech-text.ts, scheduler.ts). The
+ * student can interrupt by speaking or with a tap, mute the microphone, go back to the chat or end.
+ *
+ * STATES (TRANSITIONS, tested): idle → starting → listening → transcribing → thinking → speaking → listening …;
+ * also interrupted, muted, error and ending. Every asynchronous result carries its session and turn and is
+ * dropped unless both are still current: a transcript, a reply or a sentence from an earlier turn never lands
+ * in a newer one. Ending releases everything: the microphone, the recorder, audio, timers, listeners, requests.
+ * The reply being written when voice mode ends still finishes in the chat; only its speech stops.
+ *
+ * Nothing is kept: the recording goes to the API once and is dropped; timings stay in this page (for QA).
+ */
+
+import { ApiError } from "@/lib/api/errors";
+import type { SpeechRequest, VoiceTranscript } from "@/lib/api/types";
+import type { ChatStore } from "@/features/chat/chat-store";
+import { type AudioOut, type Playable, SpeechScheduler } from "./scheduler";
+import { SpeechChunker, type SpeechChunk } from "./speech-text";
+import { END_MS, FRAME_MS, type Vad, freshVad, recorderType, resetVad, rms, vadStep, voiceBand } from "./vad";
+
+export type VoiceState =
+  | "idle"
+  | "starting"
+  | "listening"
+  | "transcribing"
+  | "thinking"
+  | "speaking"
+  | "interrupted"
+  | "muted"
+  | "error"
+  | "ending";
+
+/** Where each state may go; anything else is a bug (refused and reported in development). */
+export const TRANSITIONS: Record<VoiceState, readonly VoiceState[]> = {
+  idle: ["starting"],
+  starting: ["listening", "muted", "error", "ending"],
+  listening: ["transcribing", "muted", "error", "ending"],
+  transcribing: ["thinking", "listening", "muted", "interrupted", "error", "ending"],
+  thinking: ["speaking", "listening", "muted", "interrupted", "error", "ending"],
+  speaking: ["listening", "muted", "interrupted", "error", "ending"],
+  interrupted: ["transcribing", "listening", "muted", "error", "ending"],
+  muted: ["listening", "ending", "error"],
+  error: ["starting", "ending"],
+  ending: ["idle"],
+};
+
+export function canMove(from: VoiceState, to: VoiceState): boolean {
+  return TRANSITIONS[from].includes(to);
+}
+
+export const EXPRESSIONS = new Set(["neutral", "happy", "explaining", "focused", "thinking", "encouraging"]);
+/** The longest utterance, and the most of it to record (VOICE_UPLOAD's 1 MiB, with room for the container). */
+export const MAX_UTTERANCE_MS = 60_000;
+const MAX_RECORDING_BYTES = 960 * 1024;
+/** Without speech, a recording is begun again this often, so it never carries a long silence. */
+const IDLE_RECORDING_MS = 8_000;
+const STREAM_END_WAIT_MS = 10_000;
+
+export type VoiceSnapshot = Readonly<{
+  state: VoiceState;
+  muted: boolean;
+  expression: string;
+  heard: string; // what the student said last
+  speaking: string; // the sentence being read aloud
+  notice: string | null; // a recoverable problem, said plainly
+  error: string | null; // why the session stopped
+}>;
+
+export type TurnTimings = {
+  speechEnd?: number;
+  transcript?: number;
+  firstToken?: number;
+  firstSpeechRequest?: number;
+  firstAudio?: number;
+  replyDone?: number;
+  interrupted?: number;
+  silent?: number;
+};
+
+export type VoiceDeps = {
+  transcribe: (audio: Blob, seconds: number, signal?: AbortSignal) => Promise<VoiceTranscript>;
+  synthesize: (request: SpeechRequest, signal?: AbortSignal) => Promise<ArrayBuffer>;
+  getUserMedia: (constraints: MediaStreamConstraints) => Promise<MediaStream>;
+  audio: () => AudioContext;
+  now?: () => number;
+};
+
+type Store = Pick<ChatStore, "send" | "stop" | "getEntry" | "subscribe" | "getMessage" | "subscribeMessage">;
+
+const MESSAGES = {
+  denied: "Microphone access is blocked. Allow it for this site in your browser settings, then try again.",
+  noMic: "No microphone was found.",
+  lost: "The microphone stopped. Check it is connected, then try again.",
+  format: "This browser can't record in a format voice mode supports. Try Chrome, Edge or Safari.",
+  notHeard: "Didn't catch that. Please say it again.",
+  incomplete: "Couldn't read the rest aloud; it's in the chat.",
+  failed: "Something went wrong. Your chat is safe; try again.",
+};
+
+function webAudio(context: AudioContext): AudioOut {
+  return {
+    async decode(bytes) {
+      const buffer = await context.decodeAudioData(bytes);
+      return Object.assign({ duration: buffer.duration, bytes: buffer.length * buffer.numberOfChannels * 4 }, { buffer });
+    },
+    play(audio: Playable, at: number) {
+      const source = context.createBufferSource();
+      source.buffer = (audio as Playable & { buffer: AudioBuffer }).buffer;
+      source.connect(context.destination);
+      let done: () => void = () => {};
+      const ended = new Promise<void>((resolve) => {
+        done = resolve;
+      });
+      source.onended = () => done();
+      source.start(at);
+      return {
+        stop() {
+          try {
+            source.stop();
+          } catch {
+            // never started: nothing to stop
+          }
+          source.disconnect();
+          done();
+        },
+        ended,
+      };
+    },
+    now: () => context.currentTime,
+  };
+}
+
+/** Timings of the latest turns, in this page only (the QA spec reads them; nothing is sent anywhere). */
+function record(timings: TurnTimings): void {
+  const store = globalThis as { __padhaiVoice?: { turns: TurnTimings[] } };
+  store.__padhaiVoice ??= { turns: [] };
+  store.__padhaiVoice.turns.push(timings);
+  if (store.__padhaiVoice.turns.length > 50) store.__padhaiVoice.turns.shift();
+}
+
+export class VoiceSession {
+  private snapshot: VoiceSnapshot = {
+    state: "idle",
+    muted: false,
+    expression: "neutral",
+    heard: "",
+    speaking: "",
+    notice: null,
+    error: null,
+  };
+  private readonly listeners = new Set<() => void>();
+  private readonly now: () => number;
+  private session = 0;
+  private turn = 0;
+  private context: AudioContext | null = null;
+  private stream: MediaStream | null = null;
+  private analyser: AnalyserNode | null = null;
+  private timer: ReturnType<typeof setInterval> | null = null;
+  private samples = new Float32Array(1024);
+  private spectrum = new Float32Array(512);
+  private vad: Vad = freshVad();
+  private recorder: MediaRecorder | null = null;
+  private recorded: Blob[] = [];
+  private recordedBytes = 0;
+  private recordingSince = 0;
+  private speechSince = 0;
+  private requests = new AbortController();
+  private scheduler: SpeechScheduler | null = null;
+  private chunker: SpeechChunker | null = null;
+  private waiting: SpeechChunk[] = [];
+  private reply: string | null = null;
+  private finished = false;
+  private spoke = false;
+  private timings: TurnTimings = {};
+  private unwatch: (() => void)[] = [];
+  /** The level of the microphone, for the face (set by the view, called at most every FRAME_MS). */
+  onLevel: ((level: number) => void) | null = null;
+
+  constructor(
+    private readonly chat: Store,
+    private readonly chatKey: string,
+    private readonly deps: VoiceDeps,
+  ) {
+    this.now = deps.now ?? (() => performance.now());
+  }
+
+  subscribe = (listener: () => void): (() => void) => {
+    this.listeners.add(listener);
+    return () => this.listeners.delete(listener);
+  };
+
+  getSnapshot = (): VoiceSnapshot => this.snapshot;
+
+  private set(change: Partial<VoiceSnapshot>): void {
+    this.snapshot = { ...this.snapshot, ...change };
+    for (const listener of this.listeners) listener();
+  }
+
+  private move(to: VoiceState): boolean {
+    const from = this.snapshot.state;
+    if (from === to) return true;
+    if (!canMove(from, to)) {
+      if (process.env.NODE_ENV !== "production") console.warn(`voice: ${from} → ${to} refused`);
+      return false;
+    }
+    this.set({ state: to });
+    return true;
+  }
+
+  // ------------------------------------------------------------------ the session
+  start = (): void => {
+    const state = this.snapshot.state;
+    if (state !== "idle" && state !== "error") return;
+    this.move("starting");
+    this.set({ error: null, notice: null });
+    const session = ++this.session;
+    this.context = this.deps.audio();
+    void this.context.resume().catch(() => undefined);
+    void this.open(session);
+  };
+
+  private async open(session: number): Promise<void> {
+    let stream: MediaStream;
+    try {
+      stream = await this.deps.getUserMedia({
+        audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 },
+      });
+    } catch (error) {
+      if (session !== this.session) return;
+      const name = (error as { name?: string })?.name;
+      return this.fail(name === "NotAllowedError" || name === "SecurityError" ? MESSAGES.denied : MESSAGES.noMic);
+    }
+    if (session !== this.session || !this.context) {
+      for (const track of stream.getTracks()) track.stop();
+      return;
+    }
+    if (!recorderType((type) => MediaRecorder.isTypeSupported(type))) {
+      for (const track of stream.getTracks()) track.stop();
+      return this.fail(MESSAGES.format);
+    }
+    this.stream = stream;
+    for (const track of stream.getAudioTracks()) {
+      track.enabled = !this.snapshot.muted;
+      track.onended = () => session === this.session && this.fail(MESSAGES.lost);
+    }
+    const analyser = this.context.createAnalyser();
+    analyser.fftSize = 1024;
+    this.context.createMediaStreamSource(stream).connect(analyser);
+    this.analyser = analyser;
+    this.samples = new Float32Array(analyser.fftSize);
+    this.spectrum = new Float32Array(analyser.frequencyBinCount);
+    this.vad = freshVad();
+    this.timer = setInterval(() => this.frame(session), FRAME_MS);
+    this.listen();
+  }
+
+  /** End the session: everything is released; a reply still being written finishes in the chat. */
+  end = (): void => {
+    const state = this.snapshot.state;
+    if (state === "idle" || state === "ending") return;
+    this.session += 1;
+    this.turn += 1;
+    this.move("ending");
+    this.release();
+    this.move("idle");
+  };
+
+  private release(): void {
+    this.scheduler?.stop();
+    this.scheduler = null;
+    this.requests.abort();
+    this.requests = new AbortController();
+    this.dropRecorder();
+    for (const stop of this.unwatch) stop();
+    this.unwatch = [];
+    if (this.timer) clearInterval(this.timer);
+    this.timer = null;
+    for (const track of this.stream?.getTracks() ?? []) {
+      track.onended = null;
+      track.stop();
+    }
+    this.stream = null;
+    this.analyser = null;
+    void this.context?.close().catch(() => undefined);
+    this.context = null;
+  }
+
+  private fail(message: string): void {
+    this.turn += 1;
+    this.release();
+    this.set({ error: message, speaking: "" });
+    this.move("error");
+  }
+
+  setMuted = (muted: boolean): void => {
+    this.set({ muted });
+    for (const track of this.stream?.getAudioTracks() ?? []) track.enabled = !muted;
+    const state = this.snapshot.state;
+    if (muted && state === "listening") {
+      this.dropRecorder();
+      this.move("muted");
+    } else if (!muted && state === "muted") {
+      this.listen();
+    }
+  };
+
+  /** Stop the tutor (a tap, or the student starting to speak) and listen. */
+  interrupt = (byVoice = false): void => {
+    const state = this.snapshot.state;
+    if (state !== "speaking" && state !== "thinking" && state !== "transcribing") return;
+    this.timings.interrupted = this.now();
+    this.turn += 1; // nothing of the old turn may land now
+    this.scheduler?.stop();
+    this.scheduler = null;
+    this.timings.silent = this.now();
+    record(this.timings);
+    this.timings = {};
+    for (const stop of this.unwatch) stop();
+    this.unwatch = [];
+    if (this.chat.getEntry(this.chatKey)?.stream) void this.chat.stop(this.chatKey);
+    this.set({ speaking: "" });
+    this.move("interrupted");
+    if (byVoice && !this.snapshot.muted) {
+      this.startRecorder(); // the student is already talking: their utterance ends at their next pause
+      this.vad = { ...resetVad(this.vad), speaking: true };
+      this.speechSince = this.now();
+    } else {
+      this.listen();
+    }
+  };
+
+  // ------------------------------------------------------------------ listening
+  private listen(): void {
+    if (this.snapshot.muted) {
+      this.dropRecorder();
+      this.move("muted");
+      return;
+    }
+    if (!this.move("listening")) return;
+    this.vad = resetVad(this.vad);
+    this.startRecorder();
+  }
+
+  private frame(session: number): void {
+    if (session !== this.session || !this.analyser || !this.context) return;
+    this.analyser.getFloatTimeDomainData(this.samples);
+    this.analyser.getFloatFrequencyData(this.spectrum);
+    const level = rms(this.samples);
+    this.onLevel?.(level);
+    if (this.snapshot.muted) return;
+    const state = this.snapshot.state;
+    const mode = state === "speaking" || state === "thinking" ? "playback" : "listen";
+    if (state !== "listening" && state !== "interrupted" && mode !== "playback") return;
+    const { vad, event } = vadStep(this.vad, level, voiceBand(this.spectrum, this.context.sampleRate), mode);
+    this.vad = vad;
+    const now = this.now();
+    if (event === "start") {
+      if (mode === "playback") this.interrupt(true);
+      else this.speechSince = now;
+      return;
+    }
+    if (event === "end" || (vad.speaking && now - this.speechSince > MAX_UTTERANCE_MS)) {
+      if (state === "listening" || state === "interrupted") void this.endUtterance();
+      return;
+    }
+    if (this.recordedBytes > MAX_RECORDING_BYTES && (state === "listening" || state === "interrupted")) {
+      if (vad.speaking) void this.endUtterance();
+      else this.startRecorder();
+      return;
+    }
+    // No speech for a while: begin the recording again, so it never carries a long silence.
+    if (!vad.speaking && state === "listening" && now - this.recordingSince > IDLE_RECORDING_MS) this.startRecorder();
+  }
+
+  private startRecorder(): void {
+    this.dropRecorder();
+    if (!this.stream) return;
+    const type = recorderType((candidate) => MediaRecorder.isTypeSupported(candidate));
+    if (!type) {
+      this.fail(MESSAGES.format);
+      return;
+    }
+    const recorder = new MediaRecorder(this.stream, { mimeType: type, audioBitsPerSecond: 24_000 });
+    this.recorded = [];
+    this.recordedBytes = 0;
+    this.recordingSince = this.now();
+    recorder.ondataavailable = (event) => {
+      if (recorder !== this.recorder || !event.data.size) return;
+      this.recorded.push(event.data);
+      this.recordedBytes += event.data.size;
+    };
+    this.recorder = recorder;
+    recorder.start(250);
+  }
+
+  private dropRecorder(): void {
+    const recorder = this.recorder;
+    this.recorder = null;
+    this.recorded = [];
+    this.recordedBytes = 0;
+    if (recorder && recorder.state !== "inactive") recorder.stop();
+  }
+
+  /** The recording so far, whole (the recorder's last data arrives with its stop). */
+  private finishRecording(): Promise<{ audio: Blob; seconds: number } | null> {
+    const recorder = this.recorder;
+    if (!recorder) return Promise.resolve(null);
+    this.recorder = null;
+    const parts = this.recorded;
+    const seconds = (this.now() - this.recordingSince) / 1000;
+    return new Promise((resolve) => {
+      recorder.ondataavailable = (event) => event.data.size && parts.push(event.data);
+      recorder.onstop = () => resolve({ audio: new Blob(parts, { type: recorder.mimeType }), seconds });
+      if (recorder.state === "inactive") resolve({ audio: new Blob(parts, { type: recorder.mimeType }), seconds });
+      else recorder.stop();
+    });
+  }
+
+  // ------------------------------------------------------------------ one turn
+  private async endUtterance(): Promise<void> {
+    const turn = ++this.turn;
+    this.timings = { speechEnd: this.now() - END_MS };
+    if (!this.move("transcribing")) return;
+    const recording = await this.finishRecording();
+    if (turn !== this.turn) return;
+    if (!recording || recording.audio.size === 0) return this.listen();
+    let text = "";
+    try {
+      text = (await this.deps.transcribe(recording.audio, recording.seconds, this.requests.signal)).text.trim();
+    } catch (error) {
+      if (turn !== this.turn) return;
+      const code = error instanceof ApiError ? error.code : "network_error";
+      if (code === "voice_unreadable") this.set({ notice: MESSAGES.notHeard });
+      else this.set({ notice: describe(code) });
+      return this.listen();
+    }
+    if (turn !== this.turn) return;
+    this.timings.transcript = this.now();
+    if (!text) {
+      this.set({ notice: MESSAGES.notHeard });
+      return this.listen();
+    }
+    this.set({ heard: text, notice: null });
+    await this.ask(text, turn);
+  }
+
+  private async ask(text: string, turn: number): Promise<void> {
+    // The chat sends nothing while a reply streams (after an interruption, its stop is on the way).
+    await this.untilIdle();
+    if (turn !== this.turn) return;
+    if (!this.move("thinking")) return;
+    this.set({ expression: "neutral", speaking: "" });
+    this.reply = null;
+    this.finished = false;
+    this.spoke = false;
+    this.waiting = [];
+    this.chunker = new SpeechChunker();
+    const signal = this.requests.signal;
+    const out = this.context ? webAudio(this.context) : null;
+    if (!out) return;
+    this.scheduler = new SpeechScheduler(
+      (sentence, chunkSignal) => {
+        if (!this.reply) return Promise.reject(new Error("no reply"));
+        if (!this.timings.firstSpeechRequest) this.timings.firstSpeechRequest = this.now();
+        return this.deps.synthesize({ messageId: this.reply, text: sentence }, anySignal(signal, chunkSignal));
+      },
+      out,
+      {
+        onStart: (_seq, sentence) => {
+          if (turn !== this.turn) return;
+          if (!this.timings.firstAudio) this.timings.firstAudio = this.now();
+          this.spoke = true;
+          this.set({ speaking: sentence });
+          this.move("speaking");
+        },
+        onIdle: () => turn === this.turn && this.afterReply(),
+        onIncomplete: () => {
+          if (turn !== this.turn) return;
+          this.set({ notice: MESSAGES.incomplete });
+          this.afterReply();
+        },
+        onRoom: () => turn === this.turn && this.feed(turn),
+      },
+    );
+    this.unwatch.push(this.chat.subscribe(this.chatKey, () => this.watch(turn)));
+    const sent = this.chat.send(this.chatKey, text, [], { mode: "voice" });
+    this.watch(turn);
+    await sent;
+    if (turn !== this.turn) return;
+    this.watch(turn);
+    if (!this.reply) {
+      // Refused before any reply (a reply still being written, busy, a limit, offline): the store put the words
+      // back in the draft.
+      const entry = this.chat.getEntry(this.chatKey);
+      this.set({ notice: describe(entry?.stream ? "conflict" : (entry?.composerError?.code ?? "network_error")) });
+      this.scheduler?.stop();
+      this.listen();
+    }
+  }
+
+  /** The reply this turn is waiting for: its id once the stream has it, then its words as they come. */
+  private watch(turn: number): void {
+    if (turn !== this.turn) return;
+    const id = this.chat.getEntry(this.chatKey)?.stream?.assistantId ?? null;
+    if (id && id !== this.reply) {
+      this.reply = id;
+      this.unwatch.push(this.chat.subscribeMessage(this.chatKey, id, () => this.feed(turn)));
+      this.feed(turn);
+    }
+  }
+
+  private feed(turn: number): void {
+    if (turn !== this.turn || !this.reply || !this.chunker || !this.scheduler) return;
+    const message = this.chat.getMessage(this.chatKey, this.reply);
+    if (!message) return;
+    const expression = message.metadata?.expression;
+    if (expression && EXPRESSIONS.has(expression) && expression !== this.snapshot.expression) this.set({ expression });
+    if (message.content && !this.timings.firstToken) this.timings.firstToken = this.now();
+    const done = message.status !== "streaming";
+    if (!this.finished) {
+      this.waiting.push(...(done ? this.chunker.finish(message.content) : this.chunker.next(message.content)));
+      if (done) {
+        this.finished = true;
+        this.timings.replyDone = this.now();
+      }
+    }
+    while (this.waiting.length && this.scheduler.enqueue(this.waiting[0] as SpeechChunk)) this.waiting.shift();
+    if (this.finished && !this.waiting.length) {
+      this.scheduler.finish();
+      if (message.status === "error") this.set({ notice: "The tutor couldn't finish this answer; what it wrote is in the chat." });
+    }
+  }
+
+  private afterReply(): void {
+    record(this.timings);
+    this.timings = {};
+    for (const stop of this.unwatch) stop();
+    this.unwatch = [];
+    this.scheduler = null;
+    this.set({ speaking: "" });
+    this.listen();
+  }
+
+  private untilIdle(): Promise<void> {
+    if (!this.chat.getEntry(this.chatKey)?.stream) return Promise.resolve();
+    return new Promise((resolve) => {
+      const timeout = setTimeout(done, STREAM_END_WAIT_MS);
+      const stop = this.chat.subscribe(this.chatKey, () => {
+        if (!this.chat.getEntry(this.chatKey)?.stream) done();
+      });
+      function done() {
+        clearTimeout(timeout);
+        stop();
+        resolve();
+      }
+    });
+  }
+}
+
+/** One signal for a request that either the turn or its chunk may cancel. */
+function anySignal(...signals: AbortSignal[]): AbortSignal {
+  const controller = new AbortController();
+  for (const signal of signals) {
+    if (signal.aborted) controller.abort();
+    else signal.addEventListener("abort", () => controller.abort(), { once: true });
+  }
+  return controller.signal;
+}
+
+function describe(code: string): string {
+  switch (code) {
+    case "rate_limited":
+      return "That's a lot of questions at once. Please wait a moment, then speak again.";
+    case "voice_busy":
+    case "busy":
+      return "Voice is busy right now. Please speak again in a moment.";
+    case "voice_unavailable":
+    case "service_unavailable":
+      return "Voice isn't working right now. You can type your question in the chat.";
+    case "network_error":
+      return "You seem to be offline. Check your connection, then speak again.";
+    case "conflict":
+      return "A reply is still being written in this chat. Please wait a moment.";
+    default:
+      return MESSAGES.failed;
+  }
+}
