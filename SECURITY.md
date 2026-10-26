@@ -2,9 +2,7 @@
 
 ## Reporting a vulnerability
 
-> **Security contact: TO BE FILLED IN BY THE OWNER** (an email address or form that Networkers Home monitors).
-
-Until the contact above is filled in, report a suspected vulnerability privately to the repository's owner.
+Report a suspected vulnerability privately by email to **sunny@networkershome.com**.
 **Don't open a public GitHub issue**, and don't discuss it in public.
 
 Please include:

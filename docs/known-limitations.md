@@ -61,7 +61,7 @@ to its reason in [decisions.md](decisions.md). Planned work is in [ROADMAP.md](.
 | **The local setup steps are verified by reading the code**, not by running them on that PC; macOS isn't verified at all | [beginner-guide.md](beginner-guide.md) |
 | **The example env files leave settings out:** the web app's sign-in settings, the API's `AUTH_INTERNAL_TOKEN`, and the voice, study-time and question-bank settings | [environment-variables.md](environment-variables.md#what-the-example-files-list) |
 | **`HOST` and `PORT` are declared in the API's settings, but never read.** uvicorn's flags decide | `app/settings.py`; `scripts/run.mjs` |
-| **A CI job is red:** "Integration (end-to-end)" at `0e33ec0` (2026-10-26), after "Backend (lint, contract, tests)" on 2026-10-22 and 10-23. It was observed, not investigated | [testing.md](testing.md#known-baseline) |
+| **A CI job is red:** "Integration (end-to-end)" at `0e33ec0` (2026-10-26), after "Backend (lint, contract, tests)" on 2026-10-22 and 10-23. At `0e33ec0` it is one flaky WebKit Settings test (190 passed, 1 failed), not yet fixed | [testing.md](testing.md#known-baseline) |
 | **The visual regression baselines were recorded on Windows**, so they are meant to run there | `e2e/visual-regression.e2e.ts` |
 | **Fake embeddings only match shared words.** They prove the plumbing, not search quality | [rag.md](rag.md) |
 

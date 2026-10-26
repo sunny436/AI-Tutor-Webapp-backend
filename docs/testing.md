@@ -163,7 +163,7 @@ What `bun run status` reported for CI on `main`:
 | Date | Commit | Verdict |
 |---|---|---|
 | 2026-10-22, 2026-10-23 | the releases of those days | **Backend (lint, contract, tests): failure** |
-| 2026-10-26 | `0e33ec0` | **Integration (end-to-end): failure**; the Backend and Frontend jobs didn't fail |
+| 2026-10-26 | `0e33ec0` | **Integration (end-to-end): failure**: 190 passed and 1 failed, WebKit `settings-workspace.e2e.ts` "resizing across 768px keeps you where you are" (a navigation interrupted another). At `eedcb67`, a different test in the same spec failed (axe at 767px), so it looks like a flaky Settings spec. The Backend and Frontend jobs didn't fail |
 
-These were observed, not investigated here. They didn't block releases, because CI is advisory. Check the current
+The 2026-10-22/23 failures were observed, not investigated; the 2026-10-26 one was read from the CI log, not fixed. They didn't block releases, because CI is advisory. Check the current
 verdict with `bun run status` before assuming a red job is yours.
