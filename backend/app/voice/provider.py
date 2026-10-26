@@ -33,6 +33,10 @@ from app.logging import get_logger
 log = get_logger("app.voice")
 
 RETRY_DELAY_S = 0.3
+# Connections to OllaLink are kept a minute (httpx's default is 5 s): a voice conversation's next request usually
+# comes 10-30 s after the last, and a new TLS connection costs about 0.3 s (two 141 ms round trips) before every
+# transcription and every reply's first sentence. A connection OllaLink closed meanwhile is never reused.
+KEEPALIVE_S = 60.0
 # Largest speech answer accepted from the provider: a 600-character sentence is about 40 s of mp3 at the
 # measured 16 KB/s, so 2 MB is ample; anything bigger is refused, never passed on.
 MAX_SPEECH_BYTES = 2 * 1024 * 1024
@@ -84,7 +88,7 @@ class OllalinkVoice:
         self.tts_timeout_s = tts_timeout_s
         self._client = httpx.AsyncClient(
             headers={"X-NH-GPU-Key": api_key},
-            limits=httpx.Limits(max_connections=16, max_keepalive_connections=8),
+            limits=httpx.Limits(max_connections=16, max_keepalive_connections=8, keepalive_expiry=KEEPALIVE_S),
             transport=transport,
         )
 

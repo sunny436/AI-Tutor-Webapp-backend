@@ -30,7 +30,7 @@ import { speakLatex } from "./latex";
 
 export const MIN_CHUNK = 25;
 export const MAX_CHUNK = 220;
-export const FIRST_COMMA = 40;
+export const FIRST_COMMA = 24; // was 40: the voice starts about three words sooner
 
 const processor = unified()
   .use(remarkParse)

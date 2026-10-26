@@ -12,7 +12,7 @@
 export const FRAME_MS = 30;
 export const CALIBRATE_MS = 500;
 export const ONSET_MS = { listen: 150, playback: 400 };
-export const END_MS = 800;
+export const END_MS = 600; // the owner's choice (2026-10-26): a 0.6 s pause ends the question (was 0.8 s)
 // The room's level is never taken as more than `max`: a student who speaks while it is being learnt still
 // clears the bar (3 x 0.02) with ordinary speech.
 const FLOOR = { min: 0.002, max: 0.02 };

@@ -34,12 +34,13 @@ const CONTROL =
   "focus-ring grid h-12 w-12 place-items-center rounded-full transition-colors hover:bg-surface-2 disabled:opacity-50";
 
 /**
- * Voice mode over the chat it belongs to (chat-view.tsx): the tutor's face, what it is doing in words, what the
- * student said and what is being read aloud, and three controls: back to the chat (to type), the microphone on
- * or off, and end. The chat stays mounted underneath, so its draft and its place are there to come back to, and
- * everything said here is in it as ordinary messages. Escape goes back to the chat.
+ * Voice mode over the chat it belongs to (chat-view.tsx): only the tutor's face, what it is doing in a word or
+ * two, and three controls: back to the chat (to type), the microphone on or off, and end. Nothing said is
+ * written here, neither the student's words nor the reply (owner's decision, 2026-10-26): the chat stays mounted
+ * underneath, so its draft and its place are there to come back to, and everything said here is in it as
+ * ordinary messages. Escape goes back to the chat.
  *
- * The state line is announced; the captions are not (a screen reader would talk over the tutor's voice).
+ * The state line is announced.
  */
 export default function VoiceMode({ chatKey, onClose }: { chatKey: string; onClose: (focusComposer: boolean) => void }) {
   const voice = useVoiceSession(chatKey);
@@ -119,12 +120,6 @@ export default function VoiceMode({ chatKey, onClose }: { chatKey: string; onClo
         </button>
 
         <div className="min-h-[4.5rem] space-y-2">
-          {voice.heard && (
-            <p className="text-sm text-text-secondary">
-              <span className="sr-only">You said: </span>“{voice.heard}”
-            </p>
-          )}
-          {voice.speaking && <p className="text-base leading-relaxed text-foreground">{voice.speaking}</p>}
           {voice.notice && (
             <p role="status" className="text-sm text-text-secondary">
               {voice.notice}

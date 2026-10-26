@@ -62,8 +62,6 @@ export type VoiceSnapshot = Readonly<{
   state: VoiceState;
   muted: boolean;
   expression: string;
-  heard: string; // what the student said last
-  speaking: string; // the sentence being read aloud
   notice: string | null; // a recoverable problem, said plainly
   error: string | null; // why the session stopped
 }>;
@@ -145,8 +143,6 @@ export class VoiceSession {
     state: "idle",
     muted: false,
     expression: "neutral",
-    heard: "",
-    speaking: "",
     notice: null,
     error: null,
   };
@@ -290,7 +286,7 @@ export class VoiceSession {
   private fail(message: string): void {
     this.turn += 1;
     this.release();
-    this.set({ error: message, speaking: "" });
+    this.set({ error: message });
     this.move("error");
   }
 
@@ -320,7 +316,6 @@ export class VoiceSession {
     for (const stop of this.unwatch) stop();
     this.unwatch = [];
     if (this.chat.getEntry(this.chatKey)?.stream) void this.chat.stop(this.chatKey);
-    this.set({ speaking: "" });
     this.move("interrupted");
     if (byVoice && !this.snapshot.muted) {
       this.startRecorder(); // the student is already talking: their utterance ends at their next pause
@@ -426,6 +421,7 @@ export class VoiceSession {
     const recording = await this.finishRecording();
     if (turn !== this.turn) return;
     if (!recording || recording.audio.size === 0) return this.listen();
+    if (this.context) chime(this.context);
     let text = "";
     try {
       text = (await this.deps.transcribe(recording.audio, recording.seconds, this.requests.signal)).text.trim();
@@ -442,7 +438,7 @@ export class VoiceSession {
       this.set({ notice: MESSAGES.notHeard });
       return this.listen();
     }
-    this.set({ heard: text, notice: null });
+    this.set({ notice: null });
     await this.ask(text, turn);
   }
 
@@ -451,7 +447,7 @@ export class VoiceSession {
     await this.untilIdle();
     if (turn !== this.turn) return;
     if (!this.move("thinking")) return;
-    this.set({ expression: "neutral", speaking: "" });
+    this.set({ expression: "neutral" });
     this.reply = null;
     this.finished = false;
     this.spoke = false;
@@ -468,11 +464,10 @@ export class VoiceSession {
       },
       out,
       {
-        onStart: (_seq, sentence) => {
+        onStart: () => {
           if (turn !== this.turn) return;
           if (!this.timings.firstAudio) this.timings.firstAudio = this.now();
           this.spoke = true;
-          this.set({ speaking: sentence });
           this.move("speaking");
         },
         onIdle: () => turn === this.turn && this.afterReply(),
@@ -539,7 +534,6 @@ export class VoiceSession {
     for (const stop of this.unwatch) stop();
     this.unwatch = [];
     this.scheduler = null;
-    this.set({ speaking: "" });
     this.listen();
   }
 
@@ -556,6 +550,29 @@ export class VoiceSession {
         resolve();
       }
     });
+  }
+}
+
+/**
+ * A soft two-note chime when a question is sent: heard, the tutor is on it (the owner's choice, 2026-10-26, so the
+ * wait is not silent). Not listened to: the detector rests while a question is transcribed.
+ */
+function chime(context: AudioContext): void {
+  const at = context.currentTime;
+  const gain = context.createGain();
+  gain.connect(context.destination);
+  gain.gain.setValueAtTime(0.0001, at);
+  gain.gain.exponentialRampToValueAtTime(0.05, at + 0.02);
+  gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.3);
+  for (const [frequency, offset] of [
+    [660, 0],
+    [880, 0.09],
+  ] as const) {
+    const tone = context.createOscillator();
+    tone.frequency.value = frequency;
+    tone.connect(gain);
+    tone.start(at + offset);
+    tone.stop(at + 0.32);
   }
 }
 

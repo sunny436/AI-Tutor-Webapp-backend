@@ -33,9 +33,9 @@ test("a spoken question is heard, sent in this chat, answered and read aloud; th
 
   // The microphone speaks; the tutor thinks, then speaks, then listens again.
   await expect(dialog).toHaveAttribute("data-voice-state", /transcribing|thinking|speaking/, { timeout: 15_000 });
-  await expect(dialog.getByText("“What is photosynthesis?”")).toBeVisible({ timeout: 15_000 });
   await expect(dialog).toHaveAttribute("data-voice-state", "speaking", { timeout: 15_000 });
-  await expect(dialog.getByText("You said: What is photosynthesis?")).toBeVisible();
+  // Only the tutor: neither what was said nor the reply is written here (both are in the chat).
+  await expect(dialog).not.toContainText(/photosynthesis/i);
   await expect(dialog).toHaveAttribute("data-voice-state", "listening", { timeout: 15_000 });
 
   // In order and measured: heard, answered, spoken.
