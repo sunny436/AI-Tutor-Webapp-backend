@@ -158,6 +158,12 @@ status` shows its verdict.
 
 ## Known baseline
 
-On 2026-10-22 and 2026-10-23, `bun run status` reported the CI job **Backend (lint, contract, tests): failure** on
-`main`. It was observed, not investigated here, and it didn't block releases, because CI is advisory. Check the
-current verdict with `bun run status` before assuming a red job is yours.
+What `bun run status` reported for CI on `main`:
+
+| Date | Commit | Verdict |
+|---|---|---|
+| 2026-10-22, 2026-10-23 | the releases of those days | **Backend (lint, contract, tests): failure** |
+| 2026-10-26 | `0e33ec0` | **Integration (end-to-end): failure**; the Backend and Frontend jobs didn't fail |
+
+These were observed, not investigated here. They didn't block releases, because CI is advisory. Check the current
+verdict with `bun run status` before assuming a red job is yours.

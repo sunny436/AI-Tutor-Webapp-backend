@@ -1,7 +1,7 @@
 # Features
 
 > Verified at commit `0e33ec0` (2026-10-26) against the code. **Production states** come from `bun run status`
-> (2026-10-22) and the release session's reports (2026-10-23); they are settings in `api.env` and `web.env`, not
+> (2026-10-26) and the release session's reports (2026-10-23); they are settings in `api.env` and `web.env`, not
 > code, and can change without a commit. Screenshots: [the gallery](screenshots/README.md).
 
 **Status key:**
@@ -43,9 +43,9 @@
 | Feature | Status | What a student gets | Where |
 |---|---|---|---|
 | Sign up and sign in | On | Email first (a code, then a password); sign in by password or email code; password reset by code | `lib/auth/`; [screenshot](screenshots/desktop/sign-in.png) |
-| Google sign-in | On when configured (configured in production, 2026-10-22) | "Continue with Google" | `GOOGLE_CLIENT_ID` and secret |
+| Google sign-in | On when configured (configured in production, 2026-10-26) | "Continue with Google" | `GOOGLE_CLIENT_ID` and secret |
 | Two-step sign-in | On | An authenticator app and recovery codes, asked for at every way in | Settings > Privacy & Security |
-| Adaptive CAPTCHA | Flag: Turnstile keys (production: **not configured**, 2026-10-22) | A challenge only when an address is being hammered | `lib/auth/config.ts` |
+| Adaptive CAPTCHA | Flag: Turnstile keys (production: **not configured**, 2026-10-26) | A challenge only when an address is being hammered | `lib/auth/config.ts` |
 | Breached-password check | On | Passwords seen in a breach are refused | `lib/auth/protection.ts` |
 | Devices and sign-out | On | The list of signed-in devices (masked addresses); sign out one or all others | Settings > Privacy & Security |
 | Profile, email change, account deletion | On | Photo, name, time zone; changing the email by code; deleting the account and all its data | Settings > Profile, Privacy & Security |

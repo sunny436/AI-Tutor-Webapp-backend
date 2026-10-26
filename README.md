@@ -245,8 +245,8 @@ bun run test:e2e   # Playwright + axe, against a local API with the fake model
 - Frontend (typecheck, lint, tests, build);
 - Integration (end-to-end).
 
-CI is advisory: a deploy never waits for it. On 2026-10-22 and 10-23, the Backend job was reported as failing.
-That was observed but not investigated ([docs/testing.md](docs/testing.md#known-baseline)). Test layers, and what
+CI is advisory: a deploy never waits for it. At `0e33ec0` (2026-10-26), `bun run status` reported the Integration
+job as failing. That was observed but not investigated ([docs/testing.md](docs/testing.md#known-baseline)). Test layers, and what
 each needs: [docs/testing.md](docs/testing.md).
 
 ## Deployment

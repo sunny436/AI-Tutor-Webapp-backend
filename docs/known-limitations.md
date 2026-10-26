@@ -28,7 +28,7 @@ to its reason in [decisions.md](decisions.md). Planned work is in [ROADMAP.md](.
 | **On a phone, the year's activity calendar scrolls sideways** | Settings > Learning & Streak ("Scroll sideways to see the whole year") |
 | **The intent router is off in production** (2026-10-23); the study scope filter is on | `INTENT_ROUTER`, `STUDY_SCOPE` |
 | **The teaching defaults are off** by default | `TUTOR_TEACHING_POLICY` |
-| **The adaptive CAPTCHA isn't configured in production** (2026-10-22) | `TURNSTILE_*` unset |
+| **The adaptive CAPTCHA isn't configured in production** (2026-10-26) | `TURNSTILE_*` unset |
 | **Homework Helper and Summarizer are sample-data previews** and never appear in production | `PREVIEW_FEATURES` |
 
 ## Files
@@ -61,7 +61,7 @@ to its reason in [decisions.md](decisions.md). Planned work is in [ROADMAP.md](.
 | **The local setup steps are verified by reading the code**, not by running them on that PC; macOS isn't verified at all | [beginner-guide.md](beginner-guide.md) |
 | **The example env files leave settings out:** the web app's sign-in settings, the API's `AUTH_INTERNAL_TOKEN`, and the voice, study-time and question-bank settings | [environment-variables.md](environment-variables.md#what-the-example-files-list) |
 | **`HOST` and `PORT` are declared in the API's settings, but never read.** uvicorn's flags decide | `app/settings.py`; `scripts/run.mjs` |
-| **CI's "Backend (lint, contract, tests)" job was red** on 2026-10-22 and 10-23. It was observed, not investigated | [testing.md](testing.md#known-baseline) |
+| **A CI job is red:** "Integration (end-to-end)" at `0e33ec0` (2026-10-26), after "Backend (lint, contract, tests)" on 2026-10-22 and 10-23. It was observed, not investigated | [testing.md](testing.md#known-baseline) |
 | **The visual regression baselines were recorded on Windows**, so they are meant to run there | `e2e/visual-regression.e2e.ts` |
 | **Fake embeddings only match shared words.** They prove the plumbing, not search quality | [rag.md](rag.md) |
 
