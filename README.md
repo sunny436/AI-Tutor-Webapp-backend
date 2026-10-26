@@ -62,9 +62,9 @@ The full catalogue is [docs/features.md](docs/features.md).
 | My Learning | Today's plan, revisions due, mastery, mistakes and recent tests | On |
 | Streak and study time | Learning days in India time, celebrations, and estimated active study time | On |
 | Own files | PDF, Office files, CSV, text and images (OCR in English and Hindi) that the tutor reads and cites | On |
-| Voice mode | Talk with the tutor and hear the answer (English) | Flag `VOICE_MODE` (on, 2026-10-23) |
-| Study scope | Keeps the tutor to learning, and redirects unrelated requests | Flag `STUDY_SCOPE` (on, 2026-10-23) |
-| Intent router | Tailors each answer to the kind of help asked for | Flag `INTENT_ROUTER` (off, 2026-10-23) |
+| Voice mode | Talk with the tutor and hear the answer (English) | Flag `VOICE_MODE` (on, 2026-10-26) |
+| Study scope | Keeps the tutor to learning, and redirects unrelated requests | Flag `STUDY_SCOPE` (on, 2026-10-26) |
+| Intent router | Tailors each answer to the kind of help asked for | Flag `INTENT_ROUTER` (on, 2026-10-26) |
 | Sign-in | Email code or password, Google, two-step sign-in, a breached-password check | On (the adaptive CAPTCHA isn't configured in production) |
 | Homework Helper, Summarizer | Sample-data pages | Preview |
 

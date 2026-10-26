@@ -1,7 +1,7 @@
 # Features
 
 > Verified at commit `0e33ec0` (2026-10-26) against the code. **Production states** come from `bun run status`
-> (2026-10-26) and the release session's reports (2026-10-23); they are settings in `api.env` and `web.env`, not
+> (2026-10-26) and the release session's report (2026-10-26); they are settings in `api.env` and `web.env`, not
 > code, and can change without a commit. Screenshots: [the gallery](screenshots/README.md).
 
 **Status key:**
@@ -19,11 +19,11 @@
 | Rich answers | On | Tables, code, maths and chemistry (KaTeX with mhchem), study cards, diagrams, charts, graphs, flashcards, and citations to textbook pages | `features/markdown/`; [screenshot](screenshots/desktop/tutor-answer.png), [2](screenshots/desktop/tutor-answer-table.png) |
 | NCERT textbook grounding | On when configured (configured in production) | Answers draw on the NCERT books for Classes 6–12, with the student's own class and subjects ranked first, and cite them | `app/rag/ncert.py`, [rag.md](rag.md) |
 | Personalised tutor | On | Class, board, medium, goals, subjects and preferences (language, depth, pace, examples, tone and more) shape every answer. Settings > AI Tutor previews exactly what the tutor is told | `app/learning/tutor.py`, Settings; [screenshot](screenshots/desktop/settings-ai-tutor.png) |
-| Study scope (JEV) | Flag `STUDY_SCOPE` (production: **on**, 2026-10-23) | The tutor keeps to learning; clearly unrelated requests get a short redirect | `app/intents/scope.py` |
-| Intent router (JEV) | Flag `INTENT_ROUTER` (production: **off**, 2026-10-23) | Tailors each answer to the kind of help asked for (46 intents) | `app/intents/` |
+| Study scope (JEV) | Flag `STUDY_SCOPE` (production: **on**, 2026-10-26) | The tutor keeps to learning; clearly unrelated requests get a short redirect | `app/intents/scope.py` |
+| Intent router (JEV) | Flag `INTENT_ROUTER` (production: **on**, 2026-10-26) | Tailors each answer to the kind of help asked for (46 intents) | `app/intents/` |
 | Attach your own files | On | PDF, Word, PowerPoint, Excel, CSV, text, Markdown and images (OCR in English and Hindi) can be attached to a chat; the tutor reads them and cites `[F1]` | `features/files/`, `app/files/`; [screenshot](screenshots/desktop/file-library.png) |
 | Dictation | On (where the browser supports it) | Speak into the composer with the browser's own speech recognition; text is added to the draft, never sent by itself | `features/chat/dictation.ts` |
-| Voice mode | Flag `VOICE_MODE` (production: **on**, 2026-10-23) | Talk with the tutor and hear the answer, with an animated face. English only, so it's offered when the tutor language is English or unset | `features/voice/`, `app/voice/`; [screenshot](screenshots/workflows/voice-mode.png) |
+| Voice mode | Flag `VOICE_MODE` (production: **on**, 2026-10-26) | Talk with the tutor and hear the answer, with an animated face. English only, so it's offered when the tutor language is English or unset | `features/voice/`, `app/voice/`; [screenshot](screenshots/workflows/voice-mode.png) |
 | Weekly study greeting | On | A fresh line above each new chat, from a weekly pool | `app/greetings/`; [screenshot](screenshots/desktop/new-chat.png), [2](screenshots/mobile/new-chat.png) |
 | Teaching defaults | Flag `TUTOR_TEACHING_POLICY` (default off) | Direct answers when asked, mistakes diagnosed before correction, one hint at a time | `app/chat/teaching.py` |
 

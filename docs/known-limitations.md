@@ -26,7 +26,6 @@ to its reason in [decisions.md](decisions.md). Planned work is in [ROADMAP.md](.
 | **Learning days follow India time** for every student | `app/progress/learning.py` (`Asia/Kolkata`) |
 | **Dictation depends on the browser's speech recognition.** Without it, there is no dictation button | `features/chat/dictation.ts` |
 | **On a phone, the year's activity calendar scrolls sideways** | Settings > Learning & Streak ("Scroll sideways to see the whole year") |
-| **The intent router is off in production** (2026-10-23); the study scope filter is on | `INTENT_ROUTER`, `STUDY_SCOPE` |
 | **The teaching defaults are off** by default | `TUTOR_TEACHING_POLICY` |
 | **The adaptive CAPTCHA isn't configured in production** (2026-10-26) | `TURNSTILE_*` unset |
 | **Homework Helper and Summarizer are sample-data previews** and never appear in production | `PREVIEW_FEATURES` |
@@ -46,6 +45,7 @@ to its reason in [decisions.md](decisions.md). Planned work is in [ROADMAP.md](.
 | Limitation | Where it shows |
 |---|---|
 | **The jobs worker isn't enabled.** So nothing sends reminder emails (daily, streak, weekly summary) or forwards support requests by email, and the outbox redaction and the read-notification purge don't run. Sign-in codes and security emails are not affected: the API sends them directly | `JOBS_ENABLED`, `NOTIFICATIONS_MODE`; [deployment.md](deployment.md#jobs-worker) |
+| **No fallback model is configured in production** (2026-10-26), so if the primary provider is down, replies fail until it is back | `LLM_FALLBACK_MODEL` unset; [operations.md](operations.md#runbooks) |
 | **One host:** no staging environment, no replica, no load balancing. A host failure is an outage until restored | [INFRASTRUCTURE.md](../INFRASTRUCTURE.md), "Known limits" |
 | **The API is one process**, and it tracks replies in flight in that process | `aichat-api.service`; `app/chat/streams.py` |
 | **A deploy that restarts the API ends any reply being written at that moment**; it is saved as cancelled | [INFRASTRUCTURE.md](../INFRASTRUCTURE.md), "Known limits" |

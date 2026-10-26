@@ -186,7 +186,8 @@ Read it before changing any of them. A decision marked **owner's rule** changes 
   - `391d732` (2026-10-22);
   - `INTENT_ROUTER` and `STUDY_SCOPE` are off by default, and capped by `INTENT_ROUTER_TIMEOUT_S`;
   - they are never retried.
-- **Production (as reported, 2026-10-23):** the scope filter is on, and the router is off.
+- **Production (as reported, 2026-10-26):** both are on; the router's time cap is 5 s there (owner's decision,
+  2026-10-23).
 
 ### Chat titles without a model
 

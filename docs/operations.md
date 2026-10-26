@@ -80,7 +80,7 @@ older commit with identical code, which is still `MATCH`.
 ## Performance
 
 Where a reply's time goes, in order:
-1. JEV classification, when on, capped by `INTENT_ROUTER_TIMEOUT_S` (1.5 s). The knowledge search starts in
+1. JEV classification, when on, capped by `INTENT_ROUTER_TIMEOUT_S` (1.5 s by default; 5 s in production, 2026-10-26). The knowledge search starts in
    parallel (`graph.prefetch`).
 2. The knowledge search. The NCERT service's searches were measured at about 1.7 s typical, p95 2.8 s and at most
    3.9 s (2026-10-15 to 10-19, [rag.md](rag.md)), against a 6 s timeout.

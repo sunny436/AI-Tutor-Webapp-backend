@@ -248,9 +248,9 @@ The flow is in [request-lifecycle.md, "A voice turn"](request-lifecycle.md#a-voi
 
 | Flag | Code default | Production (as reported by the release session) |
 |---|---|---|
-| `INTENT_ROUTER` | `off` | `off` (2026-10-23) |
-| `STUDY_SCOPE` | `off` | `on` (2026-10-23) |
-| `VOICE_MODE` | `off` | `on` (2026-10-23) |
+| `INTENT_ROUTER` | `off` | `on`, with `INTENT_ROUTER_TIMEOUT_S=5` (owner's decision, 2026-10-23; confirmed 2026-10-26) |
+| `STUDY_SCOPE` | `off` | `on` (confirmed 2026-10-26) |
+| `VOICE_MODE` | `off` | `on` (confirmed 2026-10-26) |
 | `QUESTION_BANK_TESTS`, `ADAPTIVE_CHAT_TESTS` | `true` | not reported; the code defaults apply unless `api.env` overrides them |
 | `TUTOR_INTERACTIVE_BLOCKS`, `TUTOR_TEACHING_POLICY` | `false` | not reported here |
 
