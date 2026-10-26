@@ -182,6 +182,13 @@ class Settings(BaseSettings):
     # 2026-10-26; the web app's own audio, nothing is sent anywhere). Rolled out like VOICE_MODE, to the same
     # VOICE_QA_EMAILS for `qa`.
     voice_ack: Literal["off", "qa", "on"] = "off"
+    # Voice turns, rolled out the same way (latency, measured 2026-10-26). The study scope, the intent router and
+    # the knowledge search start together, not scope first: the same requests on the same words, so the same
+    # decisions (OllaLink answers them one at a time, so together they take ~1.4 s instead of ~1.9 s).
+    voice_parallel_routing: Literal["off", "qa", "on"] = "off"
+    # The reply's first words spoken by the server from its tokens and sent with the reply, a round trip sooner
+    # than the web app asking for them (app/voice/first_speech.py).
+    voice_server_speech: Literal["off", "qa", "on"] = "off"
 
     # ---- Study time (app/study): how long without input counts as idle, by mode. Reading allows
     # longer (reading and thinking need no clicks); the reading prompt is always shorter than this.

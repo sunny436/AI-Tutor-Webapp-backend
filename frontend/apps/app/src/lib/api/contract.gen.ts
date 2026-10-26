@@ -117,6 +117,13 @@ export const CONTRACT = {
         "text",
         "voice"
       ]
+    },
+    "speechFormat": {
+      "enum": [
+        "mp3",
+        "opus",
+        "aac"
+      ]
     }
   },
   "ConceptMasteryOut": {

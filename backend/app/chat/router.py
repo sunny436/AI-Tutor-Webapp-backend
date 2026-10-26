@@ -59,7 +59,13 @@ async def chat_stream(
     chat: ChatService = Depends(get_chat_service),
 ):
     turn = await chat.prepare_message(
-        db, principal.user, body.conversation_id, body.message, body.attachment_ids, voice=body.mode == "voice"
+        db,
+        principal.user,
+        body.conversation_id,
+        body.message,
+        body.attachment_ids,
+        voice=body.mode == "voice",
+        speech_format=body.speech_format,
     )
     return _stream(chat, turn, request)
 
@@ -72,7 +78,13 @@ async def chat_complete(
     chat: ChatService = Depends(get_chat_service),
 ):
     turn = await chat.prepare_message(
-        db, principal.user, body.conversation_id, body.message, body.attachment_ids, voice=body.mode == "voice"
+        db,
+        principal.user,
+        body.conversation_id,
+        body.message,
+        body.attachment_ids,
+        voice=body.mode == "voice",
+        speech_format=body.speech_format,
     )
     generation = chat.start(turn)
     final, _ = await collect(generation)

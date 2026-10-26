@@ -917,6 +917,22 @@
             ],
             "title": "Mode",
             "type": "string"
+          },
+          "speechFormat": {
+            "anyOf": [
+              {
+                "enum": [
+                  "mp3",
+                  "opus",
+                  "aac"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Speechformat"
           }
         },
         "required": [
@@ -5635,6 +5651,11 @@
           },
           "enabled": {
             "title": "Enabled",
+            "type": "boolean"
+          },
+          "serverSpeech": {
+            "default": false,
+            "title": "Serverspeech",
             "type": "boolean"
           }
         },

@@ -17,15 +17,18 @@ belong to the graph (app/rag/graph.py); this layer never touches embeddings or p
 from __future__ import annotations
 
 import asyncio
+import base64
 import time
 import uuid
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
+from typing import TYPE_CHECKING
 
 from sqlalchemy import case, func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.assessments import state as assessments
+from app.auth.service import AuthService
 from app.chat.assistant import AssistantConfig, resolve_assistant_config
 from app.chat.streams import ActiveGenerations, ChatEvent, Generation
 from app.chat.titles import topic_title
@@ -46,14 +49,21 @@ from app.progress.activity import record_question
 from app.progress.learning import is_meaningful, now, record_learning, tutor_progress
 from app.qbank import chat_tests
 from app.settings import Settings
+from app.voice import first_speech
 from app.voice.expression import expression_for
 from app.voice.policy import speaks_their_language
+from app.voice.provider import VoiceProvider
+
+if TYPE_CHECKING:
+    from app.voice.router import SpeechBudget
 
 log = get_logger("app.chat")
 
 # A reply this slow is logged as a warning (operators see it without reading every "generation finished").
 SLOW_TTFT_MS = 20_000
 SLOW_TOTAL_MS = 120_000
+# The longest the reply's end waits for the server's first words to be spoken (VOICE_SERVER_SPEECH).
+FIRST_SPEECH_WAIT_S = 6.0
 
 PUBLIC_ERRORS = {
     "llm_unavailable": ("The AI service is temporarily unavailable. Please try again.", True),
@@ -124,6 +134,9 @@ class PreparedTurn:
     scope: dict | None = None
     # Spoken in voice mode (app/voice) by a student it is for: the tutor is told, and the face's expression is sent.
     voice: bool = False
+    # Voice turns: the server speaks the reply's first words itself (VOICE_SERVER_SPEECH), in the browser's format.
+    server_speech: bool = False
+    speech_format: str = "mp3"
 
     def meta_event(self) -> ChatEvent:
         return ChatEvent(
@@ -150,12 +163,16 @@ class ChatService:
         rag_graph,
         generations: ActiveGenerations,
         intents: IntentClassifier | None = None,
+        voice: VoiceProvider | None = None,
+        voice_budget: SpeechBudget | None = None,
     ) -> None:
         self.db = db
         self.settings = settings
         self.rag_graph = rag_graph  # compiled LangGraph graph (app.rag.graph.build_rag_graph)
         self.generations = generations
         self.intents = intents  # None: no classifier (INTENT_ROUTER off, or no key)
+        self.voice = voice  # voice mode's speech (app/voice): the first words of a voice reply (_speak_first)
+        self.voice_budget = voice_budget
 
     # ------------------------------------------------------------------ prepare
     async def _sweep_stale(self, session: AsyncSession, conversation_id: uuid.UUID | None = None) -> None:
@@ -257,6 +274,7 @@ class ChatService:
         attachment_ids: list[uuid.UUID] | None = None,
         *,
         voice: bool = False,
+        speech_format: str | None = None,
     ) -> PreparedTurn:
         if len(text) > self.settings.chat_max_message_chars:
             raise ValidationFailed("The message is too long.")
@@ -275,6 +293,11 @@ class ChatService:
         student = await self._student(session, user)
         # Voice mode is English only (app/voice): for anyone else a spoken message is a typed one.
         voice = voice and self.settings.voice_rollout_allows(user.email) and speaks_their_language(student)
+        server_speech = (
+            voice
+            and self.voice is not None
+            and self.settings.voice_feature_allows(self.settings.voice_server_speech, user.email)
+        )
         tests = await self._tests(session, conversation.id)
         bank = await self._bank(session, text, student, conversation.id)
         # Small talk that opens a chat ("hi") searches nothing; "why?" after a question still does.
@@ -308,6 +331,8 @@ class ChatService:
             bank=bank,
             attached_kinds=tuple(file.kind for file in attached),
             voice=voice,
+            server_speech=server_speech,
+            speech_format=speech_format or "mp3",
         )
 
     async def prepare_regenerate(self, session: AsyncSession, user: User, conversation_id: uuid.UUID) -> PreparedTurn:
@@ -495,14 +520,78 @@ class ChatService:
             and not explicit_hint_only(turn.user_message.content)
         )
 
+    def _parallel(self, turn: PreparedTurn) -> bool:
+        """Voice turns (VOICE_PARALLEL_ROUTING): the intent router and the search start beside the study scope."""
+        return (
+            turn.voice
+            and self.settings.study_scope == "on"
+            and self.settings.voice_feature_allows(self.settings.voice_parallel_routing, turn.user.email)
+            and self._classifies(turn)
+        )
+
+    async def _plan_first_words(
+        self, turn: PreparedTurn, generation: Generation, text: str
+    ) -> tuple[bool, asyncio.Task | None]:
+        """Voice turns (server_speech): once the reply's first words are known (app/voice/first_speech.py), say
+        which and start speaking them, or say none will be. Returns whether it is still undecided, and the speech."""
+        found = first_speech.first_speakable(text)
+        message_id = str(turn.assistant_id)
+        if found is None:
+            if not first_speech.settled(text):
+                return True, None
+            await generation.queue.put(ChatEvent("speech", {"messageId": message_id, "state": "skipped"}))
+            return False, None
+        chars, words = found
+        planned = {"messageId": message_id, "state": "planned", "chars": chars, "text": words}
+        await generation.queue.put(ChatEvent("speech", planned))
+        return False, asyncio.ensure_future(self._speak_first(turn, generation, chars, words))
+
+    async def _speak_first(self, turn: PreparedTurn, generation: Generation, chars: int, words: str) -> None:
+        """The reply's first words as audio, sent with the reply (or `failed`: the web app speaks them itself).
+        Counted like the web app's own speech requests: the reply's budget and the student's limits."""
+        event = {"messageId": str(turn.assistant_id), "chars": chars, "text": words}
+        started = time.monotonic()
+        try:
+            if self.voice is None or (self.voice_budget and not self.voice_budget.spend(turn.assistant_id, len(words))):
+                raise RateLimited("No speech left for this reply.")
+            async with self.db.sessionmaker() as session:
+                # Only the per-student speech limits are used: no passwords or email here.
+                await AuthService(session, self.settings, None, None).throttle_voice(turn.user, "tts")  # type: ignore[arg-type]
+            audio, media = await self.voice.synthesize(words, turn.speech_format)
+            event |= {"state": "ready", "type": media, "audio": base64.b64encode(audio).decode("ascii")}
+            log.info(
+                "voice first words",
+                extra={
+                    "chars": len(words),
+                    "format": turn.speech_format,
+                    "bytes": len(audio),
+                    "latency_ms": int((time.monotonic() - started) * 1000),
+                    "message_id": str(turn.assistant_id),
+                },
+            )
+        except asyncio.CancelledError:
+            raise
+        except Exception as error:  # noqa: BLE001 - never fails the reply: the web app speaks these words
+            log.info(
+                "voice first words failed",
+                extra={"error_type": type(error).__name__, "message_id": str(turn.assistant_id)},
+            )
+            event["state"] = "failed"
+        await generation.queue.put(ChatEvent("speech", event))
+
     async def _route(
-        self, turn: PreparedTurn, conversation: list[ChatMessage], generation: Generation
+        self,
+        turn: PreparedTurn,
+        conversation: list[ChatMessage],
+        generation: Generation,
+        reading: asyncio.Task | None = None,
     ) -> tuple[AssistantConfig, dict | None, asyncio.Task | None]:
         """What a new message asks for (INTENT_ROUTER, app/intents): read, then applied to the turn's
         prompt and retrieval (on), or only recorded (shadow: the reading runs beside the reply, which
         never waits for it). A message that explicitly asks only for a hint is hint_only without asking
         the classifier. Returns the turn's config, its messages.metadata.intent, and the shadow reading
-        still running. A regenerated reply was routed when it was prepared (_reused_intent)."""
+        still running. A regenerated reply was routed when it was prepared (_reused_intent). `reading`: the
+        classifier's reading, already started (_parallel)."""
         mode = self.settings.intent_router
         if turn.user_message is None:
             return turn.config, turn.intent, None
@@ -514,7 +603,8 @@ class ChatService:
         elif mode == "shadow":
             return turn.config, None, asyncio.ensure_future(self.intents.classify(conversation, turn.attached_kinds))
         else:
-            ok, routed = await self._wait(self.intents.classify(conversation, turn.attached_kinds), generation)
+            reading = reading if reading is not None else self.intents.classify(conversation, turn.attached_kinds)
+            ok, routed = await self._wait(reading, generation)
             if not ok:  # stopped while reading: the graph's first step stops at once too
                 return turn.config, None, None
             source = "classifier"
@@ -606,6 +696,10 @@ class ChatService:
         shadow: asyncio.Task | None = None
         scope: dict | None = None
         scope_shadow: asyncio.Task | None = None
+        reading: asyncio.Task | None = None  # the intent router's reading, started beside the scope (_parallel)
+        ahead: asyncio.Task | None = None  # the knowledge search, started ahead of the graph
+        speaking: asyncio.Task | None = None  # the server's first words (server_speech)
+        planning = turn.server_speech
         options = GenerationOptions(
             model=turn.config.model,
             temperature=turn.config.temperature
@@ -616,6 +710,22 @@ class ChatService:
         try:
             async with self.db.sessionmaker() as session:
                 conversation = await self._conversation(session, turn.conversation.id)
+            # Voice turns (VOICE_PARALLEL_ROUTING): the router's reading and the knowledge search start now, beside the
+            # study scope, not after it: the same requests on the same words, so the same decisions (OllaLink answers
+            # them one after another anyway). A redirect cancels both; an intent that turns the search off drops it.
+            prepared = turn.config.retrieval
+            if self._parallel(turn):
+                reading = asyncio.ensure_future(self.intents.classify(conversation, turn.attached_kinds))
+                ahead = asyncio.ensure_future(
+                    self.rag_graph.prefetch(
+                        {
+                            "user_id": turn.user.id,
+                            "conversation": conversation,
+                            "retrieval": prepared,
+                            "files": turn.files,
+                        }
+                    )
+                )
             scope, scope_shadow = await self._scope(turn, conversation, generation)
             turn.scope = scope
             decision = _decision(scope)
@@ -641,8 +751,8 @@ class ChatService:
                 # While the router reads the message (INTENT_ROUTER=on: two Ollalink requests, about 1.1 s from
                 # the server), the knowledge search already runs: an intent can only turn it off, so it is the
                 # search the graph would make. The router then adds only what it takes beyond the search.
-                prepared, ahead = turn.config.retrieval, None
-                if self._classifies(turn):
+                if ahead is None and self._classifies(turn):
+                    prepared = turn.config.retrieval
                     ahead = asyncio.ensure_future(
                         self.rag_graph.prefetch(
                             {
@@ -653,7 +763,7 @@ class ChatService:
                             }
                         )
                     )
-                config, intent, shadow = await self._route(turn, conversation, generation)
+                config, intent, shadow = await self._route(turn, conversation, generation, reading)
                 await self._expression(turn, generation, intent, decision)
                 state = {
                     "user_id": turn.user.id,
@@ -689,6 +799,8 @@ class ChatService:
                                 ttft_ms = int((time.monotonic() - started) * 1000)
                             pieces.append(event["text"])
                             await generation.queue.put(ChatEvent("token", {"text": event["text"]}))
+                            if planning:
+                                planning, speaking = await self._plan_first_words(turn, generation, "".join(pieces))
                         elif kind == "llm_started":
                             provider, model = event["provider"], event["model"]
                         elif kind == "llm_finished":
@@ -714,6 +826,20 @@ class ChatService:
         except Exception:  # noqa: BLE001
             status, error_code = "error", "internal_error"
             log.exception("generation crashed")
+        for task in (reading, ahead):  # a redirect, a stop or a failure left them running
+            if task is not None and not task.done():
+                task.cancel()
+        if planning and status != "cancelled":  # the reply ended before its first words were settled
+            await generation.queue.put(ChatEvent("speech", {"messageId": str(turn.assistant_id), "state": "skipped"}))
+        if speaking is not None:  # its event goes out before the reply's last
+            if status == "cancelled":
+                speaking.cancel()
+            finished, _ = await asyncio.wait({speaking}, timeout=FIRST_SPEECH_WAIT_S)
+            if not finished:
+                speaking.cancel()
+                await generation.queue.put(
+                    ChatEvent("speech", {"messageId": str(turn.assistant_id), "state": "failed"})
+                )
         if shadow is not None:  # recorded, never applied
             if status == "cancelled":
                 shadow.cancel()

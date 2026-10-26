@@ -14,7 +14,7 @@
  */
 
 import { ApiError } from "@/lib/api/errors";
-import type { SpeechFormat, SpeechRequest, VoiceAvailability, VoiceTranscript } from "@/lib/api/types";
+import type { SpeechFormat, SpeechRequest, StreamSpeech, VoiceAvailability, VoiceTranscript } from "@/lib/api/types";
 import type { ChatStore } from "@/features/chat/chat-store";
 import { type AudioOut, type Playable, SpeechScheduler } from "./scheduler";
 import { SpeechChunker, type SpeechChunk } from "./speech-text";
@@ -192,6 +192,10 @@ export class VoiceSession {
   private ackCount = 0;
   private ackEnd = 0; // on the audio clock: when the acknowledgement playing ends
   private quietUntil = 0; // on this.now(): the detector rests until then (the acknowledgement)
+  private serverSpeech = false; // the server speaks a reply's first words (GET /v1/voice serverSpeech)
+  private planWaiting = false; // this reply's first words: waiting for the server to say which
+  private premade = new Map<string, Promise<ArrayBuffer>>(); // words the server is speaking: their audio
+  private firstWords: { text: string; resolve: (audio: Promise<ArrayBuffer>) => void } | null = null;
   /** The level of the microphone, for the face (set by the view, called at most every FRAME_MS). */
   onLevel: ((level: number) => void) | null = null;
 
@@ -298,6 +302,7 @@ export class VoiceSession {
         if (session !== this.session) return;
         this.format = format;
         this.acks = offered?.ack ? [first, ...rest] : [];
+        this.serverSpeech = Boolean(offered?.serverSpeech);
         return;
       } catch {
         if (session !== this.session) return; // else: the next format
@@ -523,6 +528,9 @@ export class VoiceSession {
     this.spoke = false;
     this.waiting = [];
     this.chunker = new SpeechChunker();
+    this.planWaiting = this.serverSpeech;
+    this.premade = new Map();
+    this.firstWords = null;
     const signal = this.requests.signal;
     const out = this.context ? webAudio(this.context, () => this.ackEnd) : null;
     if (!out) return;
@@ -530,6 +538,11 @@ export class VoiceSession {
       (sentence, chunkSignal) => {
         if (!this.reply) return Promise.reject(new Error("no reply"));
         if (!this.timings.firstSpeechRequest) this.timings.firstSpeechRequest = this.now();
+        const premade = this.premade.get(sentence);
+        if (premade) {
+          this.premade.delete(sentence);
+          return premade;
+        }
         return this.deps.synthesize({ messageId: this.reply, text: sentence, format: this.format }, anySignal(signal, chunkSignal));
       },
       out,
@@ -550,7 +563,7 @@ export class VoiceSession {
       },
     );
     this.unwatch.push(this.chat.subscribe(this.chatKey, () => this.watch(turn)));
-    const sent = this.chat.send(this.chatKey, text, [], { mode: "voice" });
+    const sent = this.chat.send(this.chatKey, text, [], { mode: "voice", speechFormat: this.format });
     this.watch(turn);
     await sent;
     if (turn !== this.turn) return;
@@ -584,6 +597,7 @@ export class VoiceSession {
     if (expression && EXPRESSIONS.has(expression) && expression !== this.snapshot.expression) this.set({ expression });
     if (message.content && !this.timings.firstToken) this.timings.firstToken = this.now();
     const done = message.status !== "streaming";
+    if (!this.takeFirstWords(message.metadata?.speech, done)) return;
     if (!this.finished) {
       this.waiting.push(...(done ? this.chunker.finish(message.content) : this.chunker.next(message.content)));
       if (done) {
@@ -596,6 +610,44 @@ export class VoiceSession {
       this.scheduler.finish();
       if (message.status === "error") this.set({ notice: "The tutor couldn't finish this answer; what it wrote is in the chat." });
     }
+  }
+
+  /**
+   * The reply's first words when the server speaks them (`serverSpeech`): the chunker waits until the server
+   * says which words it took, then reads on after them; their audio comes with the reply (or, if the server's
+   * speech failed, is made here). False while still waiting.
+   */
+  private takeFirstWords(speech: StreamSpeech | undefined, done: boolean): boolean {
+    if (this.planWaiting) {
+      // Every speech event names the words (a later one may be the first seen here).
+      if (speech && speech.state !== "skipped" && typeof speech.chars === "number" && speech.text && this.chunker) {
+        this.planWaiting = false;
+        this.chunker.skip(speech.chars);
+        let resolve: (audio: Promise<ArrayBuffer>) => void = () => {};
+        this.premade.set(speech.text, new Promise<ArrayBuffer>((settle) => {
+          resolve = (audio) => settle(audio);
+        }));
+        this.firstWords = { text: speech.text, resolve };
+        this.waiting.push({ seq: 0, text: speech.text });
+      } else if (speech?.state === "skipped" || done) {
+        this.planWaiting = false;
+      } else {
+        return false;
+      }
+    }
+    const first = this.firstWords;
+    if (first && (speech?.state === "ready" || speech?.state === "failed")) {
+      this.firstWords = null;
+      const reply = this.reply;
+      first.resolve(
+        speech.state === "ready" && speech.audio
+          ? Promise.resolve(bytes(speech.audio))
+          : reply
+            ? this.deps.synthesize({ messageId: reply, text: first.text, format: this.format }, this.requests.signal)
+            : Promise.reject(new Error("no reply")),
+      );
+    }
+    return true;
   }
 
   private afterReply(): void {
@@ -659,6 +711,14 @@ function chime(context: AudioContext): void {
     tone.start(at + offset);
     tone.stop(at + 0.32);
   }
+}
+
+/** Base64 audio from the stream as bytes. */
+function bytes(base64: string): ArrayBuffer {
+  const raw = atob(base64);
+  const out = new Uint8Array(raw.length);
+  for (let i = 0; i < raw.length; i++) out[i] = raw.charCodeAt(i);
+  return out.buffer;
 }
 
 /** One signal for a request that either the turn or its chunk may cancel. */

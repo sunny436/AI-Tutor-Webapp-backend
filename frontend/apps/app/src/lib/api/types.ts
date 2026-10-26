@@ -580,6 +580,8 @@ export type MessageMetadata = {
   assessmentError?: { code: string };
   /** Client-side, voice turns only (the stream's `expression`): the tutor face's manner; never shown as text. */
   expression?: string;
+  /** Client-side, voice turns only (the stream's `speech`): the reply's first words, spoken by the server. */
+  speech?: StreamSpeech;
 };
 
 // --------------------------------------------------------- practice tests
@@ -679,6 +681,8 @@ export type ChatRequest = {
   attachmentIds?: Uuid[];
   /** "voice": spoken in voice mode, the reply will be read aloud (a typed message for anyone it is not for). */
   mode?: "text" | "voice";
+  /** Voice turns: the audio this browser decodes, for the first words the server speaks (`serverSpeech`). */
+  speechFormat?: SpeechFormat;
 };
 /** The API rejects longer messages (the contract's ChatRequest.message). */
 export const MESSAGE_MAX = CONTRACT.ChatRequest.message.maxLength;
@@ -687,10 +691,11 @@ export const ATTACHMENTS_MAX = CONTRACT.ChatRequest.attachmentIds.maxItems;
 
 // -------------------------------------------------------------------- voice
 /**
- * GET /v1/voice: whether voice mode is offered to this student (every voice route checks it too), and whether a
- * short pre-recorded word is said when they stop speaking (`ack`).
+ * GET /v1/voice: whether voice mode is offered to this student (every voice route checks it too), whether a
+ * short pre-recorded word is said when they stop speaking (`ack`), and whether the server speaks a reply's first
+ * words itself (`serverSpeech`: the stream's `speech` events).
  */
-export type VoiceAvailability = { enabled: boolean; ack?: boolean };
+export type VoiceAvailability = { enabled: boolean; ack?: boolean; serverSpeech?: boolean };
 /** POST /v1/voice/transcriptions: what was said; "" when nothing was heard. */
 export type VoiceTranscript = { text: string; seconds: number | null };
 /** The audio a browser decodes, smallest first: Ogg Opus, ADTS AAC, MP3. */
@@ -743,6 +748,20 @@ export type StreamCitations = { messageId: Uuid; citations: Citation[] };
 
 /** Voice turns only, before the first token: the tutor face's manner for this reply (never shown as text). */
 export type StreamExpression = { messageId: Uuid; expression: string };
+
+/**
+ * Voice turns only (`serverSpeech`): the reply's first words, spoken by the server. `planned`: its first `chars`
+ * characters are `text`, being spoken; then `ready` (the audio, base64, of `type`) or `failed` (the client
+ * speaks them itself). `skipped`: the server speaks none of it.
+ */
+export type StreamSpeech = {
+  messageId: Uuid;
+  state: "planned" | "ready" | "failed" | "skipped";
+  chars?: number;
+  text?: string;
+  type?: string;
+  audio?: string;
+};
 
 /** Authoritative final state. `message.status` may be `cancelled`. */
 /** What the answer did to the learning streak: only on the answer that made its day a learning day. */

@@ -38,6 +38,7 @@ import type {
   StreamMeta,
   StreamCitations,
   StreamExpression,
+  StreamSpeech,
   StreamToken,
 } from "./types";
 
@@ -46,6 +47,7 @@ export type StreamHandlers = {
   onToken?: (token: StreamToken) => void;
   onCitations?: (citations: StreamCitations) => void;
   onExpression?: (expression: StreamExpression) => void;
+  onSpeech?: (speech: StreamSpeech) => void;
   onDone?: (done: StreamDone) => void;
   onError?: (failure: StreamFailure) => void;
 };
@@ -131,6 +133,11 @@ async function openStream(
       case "expression": {
         const found = parseJson<StreamExpression>(data);
         if (found?.messageId && typeof found.expression === "string") handlers.onExpression?.(found);
+        return;
+      }
+      case "speech": {
+        const found = parseJson<StreamSpeech>(data);
+        if (found?.messageId && typeof found.state === "string") handlers.onSpeech?.(found);
         return;
       }
       case "done": {

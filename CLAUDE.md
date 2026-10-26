@@ -193,7 +193,9 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   an `expression` SSE event from scope + Jev), and the reply is read aloud sentence by sentence (OllaLink TTS,
   `hadley`; no TTS streaming), its first chunk ending at its first pause, in the smallest audio the browser
   decodes (Ogg Opus, AAC, MP3: found by decoding a clip). `VOICE_ACK` (off|qa|on) says a pre-recorded word
-  (`public/voice/ack-*`) when the student stops. English only: OllaLink speaks no Hindi, so it is for
+  (`public/voice/ack-*`) when the student stops. `VOICE_PARALLEL_ROUTING` starts scope, JEV and search together
+  on voice turns (the same decisions); `VOICE_SERVER_SPEECH` has the server speak a reply's first words
+  (`app/voice/first_speech.py`, the stream's `speech` event). English only: OllaLink speaks no Hindi, so it is for
   English/unset tutor languages. Every voice route checks the rollout and the language itself; nothing is stored.
   The BFF gives voice routes their own bounded class (`voice: true`, 24 at once), never behind the 2-slot file queue.
   Latency measured 2026-10-26 (the end of speech to the answer's first word, P50 7.0 s, n=20): the tutor's first

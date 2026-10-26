@@ -294,6 +294,12 @@ export class SpeechChunker {
     return this.take(content, false);
   }
 
+  /** The reply's first `chars` characters were spoken elsewhere (the server's first words, as chunk 0). */
+  skip(chars: number): void {
+    this.spoken = Math.max(this.spoken, chars);
+    this.seq = Math.max(this.seq, 1);
+  }
+
   finish(content: string): SpeechChunk[] {
     return this.take(content, true);
   }

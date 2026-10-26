@@ -14,13 +14,18 @@ import pytest
 
 from app.auth.emails import MemoryEmailSender
 from app.chat.assistant import VOICE_TURN, system_prompt_for
+from app.db.models import Message
+from app.intents.classifier import IntentClassifier
 from app.intents.scope import ALLOW_STUDY, ALLOW_SUPPORT, CLARIFY, REDIRECT
 from app.llm.fake import FakeProvider
 from app.main import create_app
 from app.voice.expression import EXPRESSIONS, expression_for
+from app.voice.first_speech import first_speakable, settled
 from app.voice.provider import FakeVoice, OllalinkVoice, Transcript, VoiceError, build_voice
 from app.voice.router import MAX_AUDIO_BYTES, ClientGone, SpeechBudget, _unless_gone
 from tests.conftest import make_settings, parse_sse, register
+from tests.test_intents import answer as intent_answer
+from tests.test_scope import reading as scope_reading
 
 KEY = "sk_test_0123456789abcdefghijklmnopqrstuvwxyz"
 AUDIO = b"\x1aE\xdf\xa3" + b"\x00" * 4000  # bytes only: the fake provider hears any recording the same way
@@ -63,7 +68,11 @@ async def test_off_by_default_and_then_nothing_reaches_the_provider():
     voice = FakeVoice()
     async with voice_app(voice, voice_mode="off") as (app, client):
         student = await register(client, app)
-        assert (await client.get("/v1/voice", headers=student["headers"])).json() == {"enabled": False}
+        assert (await client.get("/v1/voice", headers=student["headers"])).json() == {
+            "enabled": False,
+            "ack": False,
+            "serverSpeech": False,
+        }
         assert (await transcribe(client, student["headers"])).status_code == 404
         message = await reply_id(client, student["headers"])
         assert (await speak(client, student["headers"], message, "Hi.")).status_code == 404
@@ -76,8 +85,16 @@ async def test_qa_only_the_listed_accounts_and_every_route_checks_it_itself():
     async with voice_app(voice, voice_mode="qa", voice_qa_emails="QA@Example.com, other@example.com") as (app, client):
         qa = await register(client, app, email="qa@example.com")
         student = await register(client, app)
-        assert (await client.get("/v1/voice", headers=qa["headers"])).json() == {"enabled": True}
-        assert (await client.get("/v1/voice", headers=student["headers"])).json() == {"enabled": False}
+        assert (await client.get("/v1/voice", headers=qa["headers"])).json() == {
+            "enabled": True,
+            "ack": False,
+            "serverSpeech": False,
+        }
+        assert (await client.get("/v1/voice", headers=student["headers"])).json() == {
+            "enabled": False,
+            "ack": False,
+            "serverSpeech": False,
+        }
         assert (await transcribe(client, student["headers"])).status_code == 404
         theirs = await reply_id(client, student["headers"])
         assert (await speak(client, student["headers"], theirs, "Hi.")).status_code == 404
@@ -92,8 +109,16 @@ async def test_english_only_a_hindi_student_gets_none_of_it():
         english, hindi = await register(client, app), await register(client, app)
         await set_language(client, english["headers"], "english")
         await set_language(client, hindi["headers"], "hindi")
-        assert (await client.get("/v1/voice", headers=english["headers"])).json() == {"enabled": True}
-        assert (await client.get("/v1/voice", headers=hindi["headers"])).json() == {"enabled": False}
+        assert (await client.get("/v1/voice", headers=english["headers"])).json() == {
+            "enabled": True,
+            "ack": False,
+            "serverSpeech": False,
+        }
+        assert (await client.get("/v1/voice", headers=hindi["headers"])).json() == {
+            "enabled": False,
+            "ack": False,
+            "serverSpeech": False,
+        }
         assert (await transcribe(client, hindi["headers"])).status_code == 404
         assert voice.heard == []
         assert (await client.get("/v1/voice")).status_code == 401
@@ -450,3 +475,72 @@ def test_the_face_follows_the_scope_and_the_router_and_is_neutral_when_unsure():
     assert expression_for({"applied": False, "group": "solve", "reason": "low_confidence"}, None, 0.5) == "neutral"
     assert expression_for(None, None, 0.5) == "neutral"
     assert set(EXPRESSIONS) == {"neutral", "happy", "explaining", "focused", "thinking", "encouraging"}
+
+
+# ------------------------------------------------------------------ latency (2026-10-26)
+def test_the_servers_first_words_are_plain_prose_up_to_their_first_pause():
+    assert first_speakable(
+        "Osmosis is the movement of water molecules, from a dilute solution to a strong one. It"
+    ) == (
+        43,
+        "Osmosis is the movement of water molecules,",
+    )
+    assert first_speakable("Osmosis is the movement of water molecules, from a") is None  # not yet: ask again
+    assert first_speakable("Osmosis [1] is the movement of water across a membrane [2]. It matters.") == (
+        59,
+        "Osmosis is the movement of water across a membrane.",
+    )
+    assert first_speakable("Dr. Kalam was a scientist who led India's missile programme for years. He")[0] == 70
+    for text in (
+        "**Osmosis** is water moving, across a membrane, which matters.",
+        "g is 9.8 m/s squared, a lot.",
+        "# Osmosis\n",
+    ):
+        assert first_speakable(text) is None and settled(text)  # the web app reads these itself
+
+
+LONG = "Explain osmosis, the movement of water across a membrane, in a few simple words please."
+
+
+def classify(request: httpx.Request) -> httpx.Response:
+    """OllaLink's classifier: the scope reads study, the router define_term."""
+    (question,) = json.loads(request.content)["questions"]
+    return httpx.Response(
+        200, json=scope_reading("study") if question == "scope" else intent_answer(question, "define_term")
+    )
+
+
+async def voice_turn(**flags):
+    settings = make_settings(voice_mode="on", study_scope="on", intent_router="on", **flags)
+    intents = IntentClassifier("https://ai.ollalink.test", KEY, 1.0, 0.5, 0.5, transport=httpx.MockTransport(classify))
+    app = create_app(settings, llm=FakeProvider(), email_sender=MemoryEmailSender(), voice=FakeVoice(), intents=intents)
+    async with app.router.lifespan_context(app):
+        async with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://t") as client:
+            headers = (await register(client, app))["headers"]
+            events = await stream(client, headers, message=LONG, mode="voice", speechFormat="opus")
+            reply = next(data["message"]["id"] for name, data in events if name == "done")
+            async with app.state.db.sessionmaker() as session:
+                metadata = (await session.get(Message, reply)).metadata_
+            return events, system_prompt(app), metadata
+
+
+async def test_parallel_routing_and_the_servers_first_words_change_no_decision():
+    events, prompt, metadata = await voice_turn()
+    fast_events, fast_prompt, fast_metadata = await voice_turn(voice_parallel_routing="on", voice_server_speech="on")
+    assert fast_prompt == prompt  # the same scope line, the same intent line, the same sources
+    for key in ("intent", "scope"):
+        keep = ("id", "applied", "group") if key == "intent" else ("decision", "best")
+        assert {k: fast_metadata[key].get(k) for k in keep} == {k: metadata[key].get(k) for k in keep}
+    assert fast_metadata["intent"]["applied"] and fast_metadata["intent"]["id"] == "define_term"
+    assert [data["text"] for name, data in fast_events if name == "token"] == [
+        data["text"] for name, data in events if name == "token"
+    ]
+    assert all(name != "speech" for name, _ in events)  # off: nothing is spoken by the server
+    names = [name for name, _ in fast_events]
+    speech = [data for name, data in fast_events if name == "speech"]
+    assert [data["state"] for data in speech] == ["planned", "ready"]
+    assert speech[0]["text"] == "You said: Explain osmosis,"  # its first pause 24 characters in or more
+    assert speech[0]["chars"] == len(speech[0]["text"]) and speech[1]["audio"] and speech[1]["type"] == "audio/wav"
+    assert names.index("speech") > names.index("token") and len(names) - 1 - names[::-1].index("speech") < names.index(
+        "done"
+    )

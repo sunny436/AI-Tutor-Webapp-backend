@@ -17,6 +17,9 @@ class ChatRequest(RequestModel):
     # "voice": the message was spoken in voice mode (app/voice) and the reply will be read aloud; for a student
     # voice mode is not for, it is a typed message.
     mode: Literal["text", "voice"] = "text"
+    # Voice turns: the audio the browser decodes, for the reply's first words when the server speaks them
+    # (VOICE_SERVER_SPEECH); ignored otherwise.
+    speech_format: Literal["mp3", "opus", "aac"] | None = None
 
     @field_validator("message")
     @classmethod

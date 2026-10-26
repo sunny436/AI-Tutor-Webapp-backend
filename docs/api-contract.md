@@ -394,6 +394,12 @@ event: expression                       (voice turns only, at most once, before 
 data: {"messageId","expression"}           token: neutral|happy|explaining|focused|thinking|
                                            encouraging, the tutor face's manner; see Voice)
 
+event: speech                           (voice turns only, VOICE_SERVER_SPEECH: the reply's
+data: {"messageId","state","chars",        first words spoken by the server. `planned` names
+       "text","type","audio"}              them (its first `chars` characters, said as `text`);
+                                           then `ready` (`audio` base64 of `type`) or `failed`
+                                           (the client speaks them); `skipped`: none. Before `done`)
+
 event: token
 data: {"text":"partial text"}            (repeated)
 
@@ -417,7 +423,7 @@ data: {"code":"llm_unavailable|llm_timeout|llm_bad_request|service_unavailable|i
 - Stopping: call `POST /v1/messages/{assistantMessageId}/cancel`; the stream then ends with `done`
   whose message has `status: "cancelled"`. Closing the connection also stops the reply (same result).
 - Unknown event types may be added later and must be ignored by clients (`citations` was, on
-  2026-09-30; `expression`, on 2026-10-23).
+  2026-09-30; `expression`, on 2026-10-23; `speech`, on 2026-10-26).
 
 ## Files (the File Library)
 
@@ -456,11 +462,14 @@ and nothing is sent to OllaLink.
 
 | Method | Path | Body | Response |
 |---|---|---|---|
-| GET | `/v1/voice` | – | `{enabled, ack}`: whether to offer voice mode (for showing a button; decides nothing), and whether to say a short pre-recorded word (the web app's own audio) when the student stops (`VOICE_ACK`, rolled out like `VOICE_MODE`) |
+| GET | `/v1/voice` | – | `{enabled, ack, serverSpeech}`: whether to offer voice mode (for showing a button; decides nothing), whether to say a short pre-recorded word (the web app's own audio) when the student stops (`VOICE_ACK`), and whether the server speaks a voice reply's first words itself (`VOICE_SERVER_SPEECH`: the stream's `speech` events; the client then waits for them before its first chunk). Both rolled out like `VOICE_MODE` |
 | POST | `/v1/voice/transcriptions?seconds=` | the raw recording: `audio/webm` (Opus), `audio/mp4` (AAC or Opus) or `audio/wav`, up to 1 MiB (`x-max-bytes`) and 60 s | `{text, seconds}`; `text` "" when nothing was heard. 415 another type, 413 too big, 422 `voice_unreadable` |
 | POST | `/v1/voice/speech` | `{messageId (the student's own reply), text (1-600), format?}`: `format` `mp3` (default), `opus` or `aac`, what the client can decode | `audio/mpeg`, `audio/ogg` (Opus) or `audio/aac` (ADTS) as asked, `Cache-Control: no-store`. 404 not the student's reply |
 
 - A voice message is a typed one in every other way (quotas, scope, intents, search, learning day, title).
+  Its chat request may say `speechFormat` (`mp3`, `opus`, `aac`): the audio of the server's first words.
+  With `VOICE_PARALLEL_ROUTING` the study scope, the intent router and the search start together rather than
+  scope first: the same requests on the same words, so the same decisions (measured faster; docs/deployment.md).
   For a student voice mode is not for, `mode: "voice"` is ignored. A voice turn's prompt has one more line
   (spoken style: short sentences, no tables or code blocks, maths in words), and its stream an `expression`
   event: the face's manner from the study scope and the intent router (worry → encouraging, unclear →

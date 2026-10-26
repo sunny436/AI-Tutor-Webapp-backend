@@ -55,6 +55,8 @@ class VoiceOut(ApiModel):
     enabled: bool
     # Say a short pre-recorded word when the student stops, before the answer (VOICE_ACK). The web app's own audio.
     ack: bool = False
+    # The server speaks a reply's first words itself (VOICE_SERVER_SPEECH): its stream's `speech` events.
+    server_speech: bool = False
 
 
 class TranscriptOut(ApiModel):
@@ -182,8 +184,12 @@ async def get_voice(
     """For the web app's button only: every voice route checks the same itself."""
     enabled = await available(request, principal, db) is not None
     settings = request.app.state.settings
-    ack = enabled and settings.voice_feature_allows(settings.voice_ack, principal.user.email)
-    return VoiceOut(enabled=enabled, ack=ack)
+    email = principal.user.email
+    return VoiceOut(
+        enabled=enabled,
+        ack=enabled and settings.voice_feature_allows(settings.voice_ack, email),
+        server_speech=enabled and settings.voice_feature_allows(settings.voice_server_speech, email),
+    )
 
 
 @router.post(

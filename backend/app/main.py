@@ -168,7 +168,15 @@ def create_app(
             else None
         )
         app.state.classifier = classifier  # nudged by signed-in requests (ClassifierWarmMiddleware)
-        app.state.chat = ChatService(app.state.db, settings, app.state.rag_graph, app.state.generations, classifier)
+        app.state.chat = ChatService(
+            app.state.db,
+            settings,
+            app.state.rag_graph,
+            app.state.generations,
+            classifier,
+            voice=app.state.voice,
+            voice_budget=app.state.voice_budget,
+        )
         # Files never delay startup or stop chat: the worker recovers and tests its sandbox in the
         # background, and files stay unavailable until that passes. Tests drive it directly.
         app.state.file_worker = FileWorker(app.state.db, settings, app.state.embeddings)
