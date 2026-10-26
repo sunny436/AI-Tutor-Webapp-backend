@@ -1,5 +1,8 @@
 # How the web app uses the API
 
+> **See also:** [frontend-architecture.md](frontend-architecture.md) for how the web app is built, and
+> [api-reference.md](api-reference.md) for every route on each surface.
+
 The web app lives in `frontend/` in this repository, and this is what it relies on from the API.
 The full contract is [api-contract.md](api-contract.md) / [openapi.json](openapi.json), which the
 frontend's `routes.test.ts` checks against on every commit.
@@ -9,24 +12,26 @@ frontend's `routes.test.ts` checks against on every commit.
 The API binds to `127.0.0.1:4000` (development) or `127.0.0.1:4100` (production, set through `API_BASE_URL`) and has no public hostname. The web app exposes its own
 same-origin routes (for example `/api/v1/*`) that forward to `API_BASE_URL`:
 
-- Read the session token from an **httpOnly, Secure, SameSite=Lax** cookie and send it as
-  `Authorization: Bearer <token>`. The browser never sees the token.
-- Forward `X-Request-ID` (generate one if absent) and set `X-Forwarded-For` to the client IP
-  (the API trusts it when `TRUST_FORWARDED_FOR=true`).
+- Read the session token from Better Auth's **httpOnly, SameSite=Lax** cookie (Secure, `__Host-padhai_session`,
+  over HTTPS), check its signature, and send it as `Authorization: Bearer <token>`. The browser never sees the
+  token.
+- Send a new `X-Request-ID` with every request, and set `X-Forwarded-For` to the client IP taken from
+  `cf-connecting-ip` only (the API trusts the first address when `TRUST_FORWARDED_FOR=true`).
 - Reject cross-site mutations: accept JSON only and check the `Origin` header on POST/PATCH/PUT/DELETE.
 - Pass SSE responses through **unbuffered** (`new Response(upstream.body)`), and pass the
   browser's abort signal to the upstream fetch.
 
 ## 2. Sessions
 
+Sign-up, sign-in and password reset belong to the web app: Better Auth (`/api/auth/*`, an exact allowlist in
+`lib/auth/routes.ts`) creates the session and sets the cookie, and the API finds the session by its token's
+SHA-256 ([architecture.md](architecture.md), "Identity"). The API has no sign-up, sign-in or password-reset routes
+of its own.
+
 | After | Do |
 |---|---|
-| `verify-email`, `login`, `password/reset` → `{user, session:{token, expiresAt}}` | set the cookie from `session.token` (Max-Age from `expiresAt`), strip the token from the body you return to the browser |
-| `logout`, `DELETE /v1/me`, any 401 from the API | clear the cookie and send the user to sign-in |
-
-Sign-up flow: `signup` (202) → user types the 6-digit code from email → `verify-email`.
-Unverified login returns 403 `email_not_verified` → offer `resend-code` and the code form.
-Forgot password: `password/forgot` (202) → code + new password → `password/reset`.
+| `POST /v1/auth/logout`, `DELETE /v1/me` | clear the cookie (both are marked `session: "clear"` in `routes.ts`) and send the user to sign-in |
+| Any 401 from the API, except `invalid_credentials` (a wrong current password in a confirmation field) | clear the cookie and send the user to sign-in. Pages go through `/api/session/expired`, which asks the API again before clearing anything |
 
 ## 3. Chat screen
 

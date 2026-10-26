@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | Target (this repository) | One Ubuntu 24.04 host under systemd: PostgreSQL 16 + pgvector, the API and the web app, run from one production checkout of `main` (`/opt/aichat/app`); a deploy rebuilds and restarts only the parts a commit changes. Described below, in [deploy/](deploy/) and in [docs/deployment.md](docs/deployment.md). |
-| Production today | `ayur.namahos.com` serves this application. From 2026-09-25 it ran the release layout (`/opt/aichat/current` -> `releases/<commit>`); the first `bun run deploy` of the checkout model moves it to `/opt/aichat/app` and leaves the release directories in place, unused, until the owner removes them. The older two-checkout leftovers (`/opt/aichat/{backend,frontend}`, `/root/aichat-bundles`, saved units `aichat-*.before-*`) and the legacy Ayurveda services also still exist ([production-migration.md](docs/production-migration.md)). |
+| Production today | `ayur.namahos.com` serves this application from the production checkout (`/opt/aichat/app`) only. On 2026-09-29 the owner removed the earlier release layout (`/opt/aichat/{releases,current}`), the two-checkout leftovers (`/opt/aichat/{backend,frontend}`, `/root/aichat-bundles`, saved units `aichat-*.before-*`) and the legacy Ayurveda services; PostgreSQL's container is the only one left. The history is in [production-migration.md](docs/production-migration.md). |
 
 ## Layout
 
@@ -14,7 +14,7 @@
 | `aichat-postgres.service` | 127.0.0.1:5432 | PostgreSQL 16 + pgvector (Docker, `/opt/aichat/shared/postgres/docker-compose.yml`; volume `compose_pgdata`); the only datastore; not part of releases |
 | `aichat-api.service` | 127.0.0.1:4100 | FastAPI API from `/opt/aichat/app/backend`; `MemoryMax=900M`; never migrates on start; `GET /health` reports the commit it started from |
 | `aichat-web.service` | 127.0.0.1:3000 | Next.js web app from `/opt/aichat/app/frontend/apps/app` (the `.next` build), on the pinned Node (`.node-version`); reaches the API through `API_BASE_URL`; `GET /api/health` reports its commit (loopback only) |
-| `aichat-pg-backup.timer` | – | nightly `pg_dump` at 03:15 to `/var/backups/aichat` (without `file_chunks`, which is rebuilt), `KEEP_DAYS` retention (7); refuses to dump with less than twice the database's size free; the same service runs before every migration |
+| `aichat-pg-backup.timer` | – | nightly `pg_dump` at 03:15 to `/var/backups/aichat` (without the rows of `file_chunks`, which are rebuilt, or of `auth_sessions` and `auth_verifications`, which hold live tokens and codes; without the NCERT service's schema), `KEEP_DAYS` retention (7); refuses to dump with less than twice the database's size free; the same service runs before every migration |
 | `aichat-deploy-*` | – | transient units: one deploy or rollback, detached from SSH, one at a time |
 | `aichat-extract-*` | – | transient units started by the API: one student file read in a sandbox (no network, no secrets, 512 MB, 300 s); needs Tesseract (`eng`, `hin`) on the host |
 | `cloudflared` | outbound | publishes **only the web app hostname** (`deploy/cloudflared/config.yml.template`) |

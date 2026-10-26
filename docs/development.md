@@ -1,5 +1,8 @@
 # Local development
 
+> **New to the project?** [beginner-guide.md](beginner-guide.md) walks through the same setup one step at a time,
+> with what you should see and what to do when a step fails.
+
 One clone has everything: `backend/` (FastAPI) and `frontend/` (Next.js). Requirements: Python 3.12,
 [Bun](https://bun.sh) 1.3.14 (`.bun-version`), Node 24 (`.node-version`; the end-to-end tests run the
 web app on Node, as production does), Docker (Docker Desktop on Windows). Run the commands from the repository
@@ -48,8 +51,8 @@ The backend suite creates and migrates its own database `aichat_test` (override 
 `TEST_DATABASE_URL`; the name must end in `_test`), truncates tables before each test, uses a fake
 LLM and an in-memory mailbox, and never touches the development database. CI (GitHub Actions) runs
 three jobs on every push and pull request: Backend (lint, contract, tests), Frontend (typecheck, lint,
-tests incl. contract, build) and Integration (end-to-end). A commit can only be deployed when all
-three passed on that exact commit.
+tests incl. contract, build) and Integration (end-to-end). CI is advisory: `bun run deploy` never waits
+for it, and `bun run status` shows its verdict ([deployment.md](deployment.md)).
 
 ## Dependencies
 
