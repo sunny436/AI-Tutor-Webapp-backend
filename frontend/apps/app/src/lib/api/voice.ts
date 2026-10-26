@@ -61,7 +61,7 @@ export function synthesize(request: SpeechRequest, signal?: AbortSignal): Promis
   return once(async () => {
     const response = await send("POST /v1/voice/speech", {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "audio/mpeg, audio/wav" },
+      headers: { "Content-Type": "application/json", Accept: "audio/ogg, audio/aac, audio/mpeg, audio/wav" },
       body: JSON.stringify(request),
       signal,
     });

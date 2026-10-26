@@ -5,6 +5,7 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import { useStores } from "@/features/chat/chat-context";
 import { synthesize, transcribe } from "@/lib/api/voice";
 import { takeUnlockedAudio } from "./audio-unlock";
+import { voiceConfig } from "./availability";
 import { VoiceSession } from "./voice-session";
 
 /**
@@ -20,6 +21,7 @@ export function useVoiceSession(chatKey: string) {
         synthesize,
         getUserMedia: (constraints) => navigator.mediaDevices.getUserMedia(constraints),
         audio: () => takeUnlockedAudio() ?? new AudioContext(),
+        config: voiceConfig,
       }),
   );
   const snapshot = useSyncExternalStore(session.subscribe, session.getSnapshot, session.getSnapshot);

@@ -178,6 +178,10 @@ class Settings(BaseSettings):
     voice_speech_in_flight: int = Field(default=16, ge=1, le=256)
     # Speech for one reply at most (characters, summed over its sentences), also counted in this process.
     voice_speech_chars_per_message: int = Field(default=8_000, ge=600, le=100_000)
+    # A short pre-recorded word ("Okay.") the moment the student stops, before the answer (owner's decision,
+    # 2026-10-26; the web app's own audio, nothing is sent anywhere). Rolled out like VOICE_MODE, to the same
+    # VOICE_QA_EMAILS for `qa`.
+    voice_ack: Literal["off", "qa", "on"] = "off"
 
     # ---- Study time (app/study): how long without input counts as idle, by mode. Reading allows
     # longer (reading and thinking need no clicks); the reading prompt is always shorter than this.
@@ -279,9 +283,13 @@ class Settings(BaseSettings):
 
     def voice_rollout_allows(self, email: str) -> bool:
         """VOICE_MODE for this account: `on` everyone, `qa` only the listed accounts, `off` nobody."""
-        if self.voice_mode == "on":
+        return self.voice_feature_allows(self.voice_mode, email)
+
+    def voice_feature_allows(self, mode: str, email: str) -> bool:
+        """A voice rollout setting (off|qa|on) for this account: `qa` is the VOICE_QA_EMAILS accounts."""
+        if mode == "on":
             return True
-        return self.voice_mode == "qa" and email.strip().lower() in self.voice_qa_list
+        return mode == "qa" and email.strip().lower() in self.voice_qa_list
 
     @property
     def files_runner(self) -> Literal["subprocess", "systemd"] | None:

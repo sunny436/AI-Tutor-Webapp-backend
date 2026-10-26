@@ -14,7 +14,7 @@
  */
 
 import { ApiError } from "@/lib/api/errors";
-import type { SpeechRequest, VoiceTranscript } from "@/lib/api/types";
+import type { SpeechFormat, SpeechRequest, VoiceAvailability, VoiceTranscript } from "@/lib/api/types";
 import type { ChatStore } from "@/features/chat/chat-store";
 import { type AudioOut, type Playable, SpeechScheduler } from "./scheduler";
 import { SpeechChunker, type SpeechChunk } from "./speech-text";
@@ -57,6 +57,16 @@ const MAX_RECORDING_BYTES = 960 * 1024;
 /** Without speech, a recording is begun again this often, so it never carries a long silence. */
 const IDLE_RECORDING_MS = 8_000;
 const STREAM_END_WAIT_MS = 10_000;
+/**
+ * The pre-recorded acknowledgements (public/voice/ack-<n>.<ext>, the tutor's own voice), said in turn, and the
+ * formats they come in, smallest first: the first one this browser decodes is the one its speech is asked in.
+ */
+const ACKS = 4;
+const FORMATS: readonly (readonly [SpeechFormat, string])[] = [
+  ["opus", "ogg"],
+  ["aac", "aac"],
+  ["mp3", "mp3"],
+];
 
 export type VoiceSnapshot = Readonly<{
   state: VoiceState;
@@ -68,6 +78,7 @@ export type VoiceSnapshot = Readonly<{
 
 export type TurnTimings = {
   speechEnd?: number;
+  ack?: number;
   transcript?: number;
   firstToken?: number;
   firstSpeechRequest?: number;
@@ -82,6 +93,10 @@ export type VoiceDeps = {
   synthesize: (request: SpeechRequest, signal?: AbortSignal) => Promise<ArrayBuffer>;
   getUserMedia: (constraints: MediaStreamConstraints) => Promise<MediaStream>;
   audio: () => AudioContext;
+  /** What the API offers this student (the acknowledgement); none: no acknowledgement. */
+  config?: () => Promise<VoiceAvailability>;
+  /** A clip's bytes (public/voice); fetch by default. */
+  fetchAudio?: (url: string) => Promise<ArrayBuffer>;
   now?: () => number;
 };
 
@@ -97,7 +112,8 @@ const MESSAGES = {
   failed: "Something went wrong. Your chat is safe; try again.",
 };
 
-function webAudio(context: AudioContext): AudioOut {
+/** Web Audio; nothing of a reply starts before `notBefore()` (the acknowledgement playing). */
+function webAudio(context: AudioContext, notBefore: () => number): AudioOut {
   return {
     async decode(bytes) {
       const buffer = await context.decodeAudioData(bytes);
@@ -126,7 +142,7 @@ function webAudio(context: AudioContext): AudioOut {
         ended,
       };
     },
-    now: () => context.currentTime,
+    now: () => Math.max(context.currentTime, notBefore()),
   };
 }
 
@@ -171,6 +187,11 @@ export class VoiceSession {
   private spoke = false;
   private timings: TurnTimings = {};
   private unwatch: (() => void)[] = [];
+  private format: SpeechFormat = "mp3"; // until a smaller one is seen to decode (prepareSpeech)
+  private acks: Clip[] = [];
+  private ackCount = 0;
+  private ackEnd = 0; // on the audio clock: when the acknowledgement playing ends
+  private quietUntil = 0; // on this.now(): the detector rests until then (the acknowledgement)
   /** The level of the microphone, for the face (set by the view, called at most every FRAME_MS). */
   onLevel: ((level: number) => void) | null = null;
 
@@ -250,6 +271,55 @@ export class VoiceSession {
     this.vad = freshVad();
     this.timer = setInterval(() => this.frame(session), FRAME_MS);
     this.listen();
+    void this.prepareSpeech(session);
+  }
+
+  /**
+   * The audio this browser really decodes (an acknowledgement, decoded, smallest format first: browsers' own
+   * claims are not trusted), and the acknowledgements themselves when the API offers them. MP3 until then.
+   */
+  private async prepareSpeech(session: number): Promise<void> {
+    const context = this.context;
+    if (!context) return;
+    const offered = await this.deps.config?.().catch(() => null);
+    const load =
+      this.deps.fetchAudio ??
+      (async (url: string) => {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`${response.status}`);
+        return response.arrayBuffer();
+      });
+    const clip = async (n: number, extension: string) =>
+      spoken(await context.decodeAudioData(await load(`/voice/ack-${n}.${extension}`)));
+    for (const [format, extension] of FORMATS) {
+      try {
+        const first = await clip(1, extension);
+        const rest = offered?.ack ? await Promise.all(Array.from({ length: ACKS - 1 }, (_, n) => clip(n + 2, extension))) : [];
+        if (session !== this.session) return;
+        this.format = format;
+        this.acks = offered?.ack ? [first, ...rest] : [];
+        return;
+      } catch {
+        if (session !== this.session) return; // else: the next format
+      }
+    }
+  }
+
+  /** The acknowledgement ("Okay.") the moment a question is sent, else the chime; the detector rests meanwhile. */
+  private acknowledge(context: AudioContext): void {
+    const clip = this.acks[this.ackCount++ % Math.max(1, this.acks.length)];
+    if (!clip) {
+      chime(context);
+      return;
+    }
+    const source = context.createBufferSource();
+    source.buffer = clip.buffer;
+    source.connect(context.destination);
+    Object.defineProperty(source, "padhaiAck", { value: true }); // the QA benchmark tells it from the answer
+    source.start(0, clip.offset, clip.duration);
+    this.ackEnd = context.currentTime + clip.duration;
+    this.quietUntil = this.now() + clip.duration * 1000 + 150;
+    this.timings.ack = this.now();
   }
 
   /** End the session: everything is released; a reply still being written finishes in the chat. */
@@ -344,7 +414,7 @@ export class VoiceSession {
     this.analyser.getFloatFrequencyData(this.spectrum);
     const level = rms(this.samples);
     this.onLevel?.(level);
-    if (this.snapshot.muted) return;
+    if (this.snapshot.muted || this.now() < this.quietUntil) return;
     const state = this.snapshot.state;
     const mode = state === "speaking" || state === "thinking" ? "playback" : "listen";
     if (state !== "listening" && state !== "interrupted" && mode !== "playback") return;
@@ -421,7 +491,7 @@ export class VoiceSession {
     const recording = await this.finishRecording();
     if (turn !== this.turn) return;
     if (!recording || recording.audio.size === 0) return this.listen();
-    if (this.context) chime(this.context);
+    if (this.context) this.acknowledge(this.context);
     let text = "";
     try {
       text = (await this.deps.transcribe(recording.audio, recording.seconds, this.requests.signal)).text.trim();
@@ -454,13 +524,13 @@ export class VoiceSession {
     this.waiting = [];
     this.chunker = new SpeechChunker();
     const signal = this.requests.signal;
-    const out = this.context ? webAudio(this.context) : null;
+    const out = this.context ? webAudio(this.context, () => this.ackEnd) : null;
     if (!out) return;
     this.scheduler = new SpeechScheduler(
       (sentence, chunkSignal) => {
         if (!this.reply) return Promise.reject(new Error("no reply"));
         if (!this.timings.firstSpeechRequest) this.timings.firstSpeechRequest = this.now();
-        return this.deps.synthesize({ messageId: this.reply, text: sentence }, anySignal(signal, chunkSignal));
+        return this.deps.synthesize({ messageId: this.reply, text: sentence, format: this.format }, anySignal(signal, chunkSignal));
       },
       out,
       {
@@ -551,6 +621,21 @@ export class VoiceSession {
       }
     });
   }
+}
+
+type Clip = { buffer: AudioBuffer; offset: number; duration: number };
+
+/** Only the spoken part of a clip (its file has silence around the word): it starts at once and rests the detector less. */
+function spoken(buffer: AudioBuffer): Clip {
+  const data = buffer.getChannelData(0);
+  let first = 0;
+  while (first < data.length && Math.abs(data[first] ?? 0) < 0.01) first += 1;
+  let last = data.length - 1;
+  while (last > first && Math.abs(data[last] ?? 0) < 0.01) last -= 1;
+  const pad = Math.floor(buffer.sampleRate * 0.03);
+  const start = Math.max(0, first - pad);
+  const end = Math.min(data.length, last + pad);
+  return { buffer, offset: start / buffer.sampleRate, duration: Math.max(0.05, (end - start) / buffer.sampleRate) };
 }
 
 /**

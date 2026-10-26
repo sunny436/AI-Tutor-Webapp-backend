@@ -456,9 +456,9 @@ and nothing is sent to OllaLink.
 
 | Method | Path | Body | Response |
 |---|---|---|---|
-| GET | `/v1/voice` | – | `{enabled}`: whether to offer voice mode (for showing a button; decides nothing) |
+| GET | `/v1/voice` | – | `{enabled, ack}`: whether to offer voice mode (for showing a button; decides nothing), and whether to say a short pre-recorded word (the web app's own audio) when the student stops (`VOICE_ACK`, rolled out like `VOICE_MODE`) |
 | POST | `/v1/voice/transcriptions?seconds=` | the raw recording: `audio/webm` (Opus), `audio/mp4` (AAC or Opus) or `audio/wav`, up to 1 MiB (`x-max-bytes`) and 60 s | `{text, seconds}`; `text` "" when nothing was heard. 415 another type, 413 too big, 422 `voice_unreadable` |
-| POST | `/v1/voice/speech` | `{messageId (the student's own reply), text (1-600)}` | `audio/mpeg`, `Cache-Control: no-store`. 404 not the student's reply |
+| POST | `/v1/voice/speech` | `{messageId (the student's own reply), text (1-600), format?}`: `format` `mp3` (default), `opus` or `aac`, what the client can decode | `audio/mpeg`, `audio/ogg` (Opus) or `audio/aac` (ADTS) as asked, `Cache-Control: no-store`. 404 not the student's reply |
 
 - A voice message is a typed one in every other way (quotas, scope, intents, search, learning day, title).
   For a student voice mode is not for, `mode: "voice"` is ignored. A voice turn's prompt has one more line

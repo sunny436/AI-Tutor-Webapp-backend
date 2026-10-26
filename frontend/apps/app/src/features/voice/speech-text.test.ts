@@ -116,6 +116,12 @@ describe("a reply's spoken copy (speech-text.ts)", () => {
 
   test("chunks are never fragments nor paragraphs: short sentences join, long ones split at a comma", () => {
     expect(speak("Yes. That's right. Well done today.")).toEqual(["Yes. That's right. Well done today."]);
+    // A long first sentence goes at its first pause, so the voice starts sooner; a short tail stays on.
+    expect(speak("Osmosis is the movement of water molecules, from a dilute solution to a concentrated one.")).toEqual([
+      "Osmosis is the movement of water molecules,",
+      "from a dilute solution to a concentrated one.",
+    ]);
+    expect(speak("The area is pi r squared, so it grows fast.")).toEqual(["The area is pi r squared, so it grows fast."]);
     const long = `${"Plants take in carbon dioxide from the air, ".repeat(8)}and give out oxygen.`;
     const pieces = speak(long);
     expect(pieces.length).toBeGreaterThan(1);

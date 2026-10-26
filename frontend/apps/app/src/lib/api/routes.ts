@@ -67,8 +67,8 @@ export const FILE_CONTENT = {
 
 /** Voice mode: one utterance, as the browser's own recorder made it (the API's `x-max-bytes`). */
 export const VOICE_UPLOAD = { types: ["audio/webm", "audio/mp4", "audio/wav"], maxBytes: 1024 * 1024 } as const;
-/** One sentence of a reply read aloud: MP3 (WAV only from the e2e stack's fake provider). */
-export const VOICE_SPEECH = { types: ["audio/mpeg", "audio/wav"] } as const;
+/** One sentence of a reply read aloud: Ogg Opus, AAC or MP3, as the browser asked (WAV only from the e2e stack's fake provider). */
+export const VOICE_SPEECH = { types: ["audio/ogg", "audio/aac", "audio/mpeg", "audio/wav"] } as const;
 
 export const ROUTES = {
   "POST /v1/auth/logout": { auth: true, session: "clear" },

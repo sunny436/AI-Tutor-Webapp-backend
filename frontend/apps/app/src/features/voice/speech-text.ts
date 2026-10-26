@@ -15,8 +15,9 @@
  * it may close an open mark, so its text is not a prefix to cut at.)
  *
  * CHUNKS. Sentences are merged to at least MIN_CHUNK characters and split at a comma or a space past MAX_CHUNK,
- * so a request is neither a fragment nor a paragraph; the very first chunk may end at a comma after FIRST_COMMA
- * characters, so the voice starts sooner. Each chunk has the next sequence number.
+ * so a request is neither a fragment nor a paragraph; the very first chunk ends at its first pause (a comma,
+ * semicolon, colon or dash after FIRST_COMMA characters), even in a sentence that has already arrived whole, so
+ * the voice starts sooner. Each chunk has the next sequence number.
  */
 
 import remarkGfm from "remark-gfm";
@@ -183,6 +184,24 @@ export function sentences(text: string): string[] {
   return out;
 }
 
+const CLAUSE = /[,;:](?= )| [—–](?= )/g;
+
+/**
+ * A reply's first words, up to their first pause (a comma, semicolon, colon or dash at least FIRST_COMMA
+ * characters in), and the rest: the first request is short, so the voice starts sooner. A tutor's first sentence
+ * is often 100 to 200 characters (measured 2026-10-26), a whole second of speech to make before the first word.
+ * Kept whole when what would follow the pause is too short to stand on its own.
+ */
+export function firstClause(text: string): string[] {
+  for (const found of text.matchAll(CLAUSE)) {
+    const at = (found.index ?? 0) + found[0].length;
+    if (at < FIRST_COMMA) continue;
+    if (text.length - at < MIN_CHUNK) break;
+    return [text.slice(0, at).trim(), text.slice(at).trim()];
+  }
+  return [text];
+}
+
 /** A long sentence in pieces of at most MAX_CHUNK, at a comma or semicolon if there is one, else at a space. */
 export function split(text: string): string[] {
   const pieces: string[] = [];
@@ -333,7 +352,9 @@ export class SpeechChunker {
     for (const sentence of texts.flatMap(sentences)) {
       buffer = buffer ? `${buffer} ${sentence}` : sentence;
       if (buffer.length >= MIN_CHUNK) {
-        for (const piece of split(buffer)) out.push({ seq: this.seq++, text: piece });
+        // Only a first sentence on its own: short ones joined together stay one chunk.
+        const parts = this.seq === 0 && buffer === sentence ? firstClause(buffer) : [buffer];
+        for (const part of parts) for (const piece of split(part)) out.push({ seq: this.seq++, text: piece });
         buffer = "";
       }
     }

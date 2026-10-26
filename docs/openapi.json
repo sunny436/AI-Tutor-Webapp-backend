@@ -4259,6 +4259,16 @@
       "SpeechRequest": {
         "additionalProperties": false,
         "properties": {
+          "format": {
+            "default": "mp3",
+            "enum": [
+              "mp3",
+              "opus",
+              "aac"
+            ],
+            "title": "Format",
+            "type": "string"
+          },
           "messageId": {
             "format": "uuid",
             "title": "Messageid",
@@ -5618,6 +5628,11 @@
       },
       "VoiceOut": {
         "properties": {
+          "ack": {
+            "default": false,
+            "title": "Ack",
+            "type": "boolean"
+          },
           "enabled": {
             "title": "Enabled",
             "type": "boolean"
@@ -8556,7 +8571,19 @@
         "responses": {
           "200": {
             "content": {
+              "audio/aac": {
+                "schema": {
+                  "format": "binary",
+                  "type": "string"
+                }
+              },
               "audio/mpeg": {
+                "schema": {
+                  "format": "binary",
+                  "type": "string"
+                }
+              },
+              "audio/ogg": {
                 "schema": {
                   "format": "binary",
                   "type": "string"

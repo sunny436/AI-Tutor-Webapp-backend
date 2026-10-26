@@ -686,12 +686,17 @@ export const MESSAGE_MAX = CONTRACT.ChatRequest.message.maxLength;
 export const ATTACHMENTS_MAX = CONTRACT.ChatRequest.attachmentIds.maxItems;
 
 // -------------------------------------------------------------------- voice
-/** GET /v1/voice: whether voice mode is offered to this student (every voice route checks it too). */
-export type VoiceAvailability = { enabled: boolean };
+/**
+ * GET /v1/voice: whether voice mode is offered to this student (every voice route checks it too), and whether a
+ * short pre-recorded word is said when they stop speaking (`ack`).
+ */
+export type VoiceAvailability = { enabled: boolean; ack?: boolean };
 /** POST /v1/voice/transcriptions: what was said; "" when nothing was heard. */
 export type VoiceTranscript = { text: string; seconds: number | null };
+/** The audio a browser decodes, smallest first: Ogg Opus, ADTS AAC, MP3. */
+export type SpeechFormat = "opus" | "aac" | "mp3";
 /** POST /v1/voice/speech: one sentence of the student's own reply. */
-export type SpeechRequest = { messageId: Uuid; text: string };
+export type SpeechRequest = { messageId: Uuid; text: string; format?: SpeechFormat };
 
 // -------------------------------------------------------------------- files
 

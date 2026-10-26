@@ -677,6 +677,13 @@ export const CONTRACT = {
     }
   },
   "SpeechRequest": {
+    "format": {
+      "enum": [
+        "mp3",
+        "opus",
+        "aac"
+      ]
+    },
     "text": {
       "maxLength": 600,
       "minLength": 1

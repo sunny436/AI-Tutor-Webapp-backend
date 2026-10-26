@@ -16,6 +16,7 @@ import time
 import uuid
 from collections import OrderedDict
 from contextlib import asynccontextmanager
+from typing import Literal
 
 from fastapi import APIRouter, Depends, Query, Request, Response
 from pydantic import Field
@@ -42,7 +43,7 @@ router = APIRouter(prefix="/v1/voice", tags=["voice"])
 MAX_AUDIO_BYTES = 1024 * 1024
 MAX_AUDIO_SECONDS = 60
 AUDIO_TYPES = ("audio/webm", "audio/mp4", "audio/wav")
-SPEECH_TYPES = ("audio/mpeg", "audio/wav")  # wav: the fake provider only (tests, e2e)
+SPEECH_TYPES = ("audio/mpeg", "audio/ogg", "audio/aac", "audio/wav")  # wav: the fake provider only (tests, e2e)
 BINARY = {"schema": {"type": "string", "format": "binary"}}
 UPLOAD_BODY = {
     "requestBody": {"required": True, "content": {kind: BINARY for kind in AUDIO_TYPES}, "x-max-bytes": MAX_AUDIO_BYTES}
@@ -52,6 +53,8 @@ SPEECH_RESPONSE = {200: {"content": {kind: BINARY for kind in SPEECH_TYPES}}}
 
 class VoiceOut(ApiModel):
     enabled: bool
+    # Say a short pre-recorded word when the student stops, before the answer (VOICE_ACK). The web app's own audio.
+    ack: bool = False
 
 
 class TranscriptOut(ApiModel):
@@ -62,6 +65,8 @@ class TranscriptOut(ApiModel):
 class SpeechRequest(RequestModel):
     message_id: uuid.UUID  # the reply being read aloud: the student's own
     text: str = Field(min_length=1, max_length=600)
+    # The audio the browser can decode, smallest first: opus (Ogg), aac (ADTS), mp3.
+    format: Literal["mp3", "opus", "aac"] = "mp3"
 
 
 class VoiceUnreadable(AppError):
@@ -175,7 +180,10 @@ async def get_voice(
     request: Request, principal: Principal = Depends(get_principal), db: AsyncSession = Depends(get_session)
 ):
     """For the web app's button only: every voice route checks the same itself."""
-    return VoiceOut(enabled=await available(request, principal, db) is not None)
+    enabled = await available(request, principal, db) is not None
+    settings = request.app.state.settings
+    ack = enabled and settings.voice_feature_allows(settings.voice_ack, principal.user.email)
+    return VoiceOut(enabled=enabled, ack=ack)
 
 
 @router.post(
@@ -257,11 +265,16 @@ async def speak(
         async with request.app.state.voice_calls.slot(
             "tts", principal.user.id, settings.voice_speech_in_flight_per_user, settings.voice_speech_in_flight
         ):
-            audio, media = await _unless_gone(request, provider.synthesize(body.text))
+            audio, media = await _unless_gone(request, provider.synthesize(body.text, body.format))
     except ClientGone:
         return Response(status_code=499)
     log.info(
         "voice spoken",
-        extra={"chars": len(body.text), "bytes": len(audio), "latency_ms": int((time.monotonic() - started) * 1000)},
+        extra={
+            "chars": len(body.text),
+            "format": body.format,
+            "bytes": len(audio),
+            "latency_ms": int((time.monotonic() - started) * 1000),
+        },
     )
     return Response(content=audio, media_type=media, headers={"Cache-Control": "no-store"})

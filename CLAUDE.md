@@ -191,9 +191,13 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   browser records each utterance (its own VAD), the API transcribes it with OllaLink (`gpu-transcribe`, batch:
   realtime is a WebSocket the BFF cannot carry), the words go to the chat as `mode: "voice"` (one prompt line,
   an `expression` SSE event from scope + Jev), and the reply is read aloud sentence by sentence (OllaLink TTS,
-  `hadley`; no TTS streaming). English only: OllaLink speaks no Hindi, so it is for English/unset tutor
-  languages. Every voice route checks the rollout and the language itself; nothing is stored. The BFF gives
-  voice routes their own bounded class (`voice: true`, 24 at once), never behind the 2-slot file queue.
+  `hadley`; no TTS streaming), its first chunk ending at its first pause, in the smallest audio the browser
+  decodes (Ogg Opus, AAC, MP3: found by decoding a clip). `VOICE_ACK` (off|qa|on) says a pre-recorded word
+  (`public/voice/ack-*`) when the student stops. English only: OllaLink speaks no Hindi, so it is for
+  English/unset tutor languages. Every voice route checks the rollout and the language itself; nothing is stored.
+  The BFF gives voice routes their own bounded class (`voice: true`, 24 at once), never behind the 2-slot file queue.
+  Latency measured 2026-10-26 (the end of speech to the answer's first word, P50 7.0 s, n=20): the tutor's first
+  token (scope + JEV + search ~1.9 s, the LLM ~1.3 s) and the first sentence's TTS dominate.
 - **Retrieval never fails a turn:** it is skipped or fails with a reason code. Small talk that opens a chat
   ("hi": `is_meaningful`) searches nothing; a short follow-up ("why?") is searched with the question before it.
 - **Context budget** (`app/rag/context.py`): system prompt → latest message → whole chunks up to

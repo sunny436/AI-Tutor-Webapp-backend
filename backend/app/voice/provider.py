@@ -3,8 +3,9 @@
 Speech-to-text: `POST {OLLALINK_STT_URL}/v1/audio/transcriptions` (the fast file lane, gpu-transcribe): multipart
 `file` + `language=en`, one whole utterance per request. Its realtime lane is a WebSocket that needs the key in a
 header, which the web app's HTTP proxy cannot carry, so nothing here streams. Text-to-speech: `POST
-{OLLALINK_TTS_URL}/v1/audio/speech`, JSON `input`, `language`, `voice`, `response_format=mp3`, one sentence per
-request (no streaming is documented). Both with the header `X-NH-GPU-Key`: the key is the credential, never logged.
+{OLLALINK_TTS_URL}/v1/audio/speech`, JSON `input`, `language`, `voice`, `response_format` (mp3, opus or aac:
+what the browser decodes), one sentence per request (no streaming: its `X-Generate-Seconds` header is sent with
+the whole audio). Both with the header `X-NH-GPU-Key`: the key is the credential, never logged.
 
 Measured from the production host on 2026-10-23: a 4.6 s question transcribed in 0.90 s (p50 of 3), a sentence of a
 reply spoken in 0.70 s (p50 of 5); empty or unreadable audio is a fast 400 `bad_audio`; speech output has only
@@ -40,7 +41,10 @@ KEEPALIVE_S = 60.0
 # Largest speech answer accepted from the provider: a 600-character sentence is about 40 s of mp3 at the
 # measured 16 KB/s, so 2 MB is ample; anything bigger is refused, never passed on.
 MAX_SPEECH_BYTES = 2 * 1024 * 1024
-SPEECH_TYPE = "audio/mpeg"
+# What the browser can decode, smallest first (features/voice decides by decoding a real clip): Ogg Opus and
+# ADTS AAC are half the bytes of MP3 for the same speech (19 KB vs 41 KB for a 33-character phrase, measured
+# 2026-10-26), which arrives from OllaLink about 160 ms sooner (141 ms round trips) and sooner to every phone.
+SPEECH_FORMATS = {"mp3": "audio/mpeg", "opus": "audio/ogg", "aac": "audio/aac"}
 
 
 @dataclass(frozen=True)
@@ -62,7 +66,7 @@ class VoiceProvider(Protocol):
 
     async def transcribe(self, audio: bytes, content_type: str) -> Transcript: ...
 
-    async def synthesize(self, text: str) -> tuple[bytes, str]: ...
+    async def synthesize(self, text: str, fmt: str = "mp3") -> tuple[bytes, str]: ...
 
     async def aclose(self) -> None: ...
 
@@ -121,23 +125,24 @@ class OllalinkVoice:
             raise VoiceError("unavailable")
         return Transcript(" ".join(text.split()), float(seconds) if isinstance(seconds, (int, float)) else None)
 
-    async def synthesize(self, text: str) -> tuple[bytes, str]:
+    async def synthesize(self, text: str, fmt: str = "mp3") -> tuple[bytes, str]:
+        expected = SPEECH_FORMATS[fmt]
         response = await self._send(
             "tts",
             lambda: self._client.post(
                 self.tts_url,
-                json={"input": text, "language": "en", "voice": self.voice, "response_format": "mp3"},
+                json={"input": text, "language": "en", "voice": self.voice, "response_format": fmt},
                 timeout=httpx.Timeout(self.tts_timeout_s - 3, connect=3.0),
             ),
             self.tts_timeout_s,
             retry_unavailable=False,
         )
         media = response.headers.get("content-type", "").split(";")[0].strip().lower()
-        if response.status_code != 200 or media != SPEECH_TYPE or not response.content:
+        if response.status_code != 200 or media != expected or not response.content:
             raise VoiceError("unavailable")
         if len(response.content) > MAX_SPEECH_BYTES:
             raise VoiceError("unavailable")
-        return response.content, SPEECH_TYPE
+        return response.content, expected
 
     async def _send(self, lane: str, request, deadline_s: float, *, retry_unavailable: bool) -> httpx.Response:
         started = time.monotonic()
@@ -228,7 +233,7 @@ class FakeVoice:
         self.heard.append((len(audio), content_type))
         return Transcript(self.transcript, 1.0)
 
-    async def synthesize(self, text: str) -> tuple[bytes, str]:
+    async def synthesize(self, text: str, fmt: str = "mp3") -> tuple[bytes, str]:
         self.spoken.append(text)
         return tone_wav(min(3.0, max(0.3, 0.09 * len(text)))), "audio/wav"
 
